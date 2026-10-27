@@ -1,0 +1,3134 @@
+{
+  "schema_version": 1,
+  "parish_slug": "fields-of-grace",
+  "status": "ready",
+  "as_of": "2026-10-25T13:15:56Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:59:04Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches in one family of parishes. The page 1 worship-site, Confession and Adoration boxes are identical in all five bulletins read and the weekly intentions agree, so every slot is settled. First Saturday Masses and First Friday Adoration and Confession are weekly with weeks_of_month first. The Nov 2 Evening of Remembrance is a prayer service, not a Mass, and is excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3e13eeef2865b7d62a4255c201925e28da19785c9741d9d23d6c7c4e297770a8",
+      "fetched_at": "2026-10-25T13:15:56Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "f9b3658e4cc3e14858450fa2df33e8301facb23e3e1d52099a528926e3e08e86",
+      "fetched_at": "2026-10-18T12:42:44Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "ca7091112bcf390b2fa9ba7328cbc5c492f4034cec981950f3959e579506d5d9",
+      "fetched_at": "2026-10-11T16:33:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "33e914c4c00b8557f806ccb4cfa8537bdf16129ae24b2b8cf7a9c5fd09375366",
+      "fetched_at": "2026-10-04T14:24:59Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "645e6e44adfea59b2d48856b8064fa004404c6ccdff9d9a171766a669e85ec12",
+      "fetched_at": "2026-09-26T18:53:44Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Saturday 16:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Saturday 16:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Saturday 16:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Saturday 16:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Saturday 16:00 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Sunday | 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Sunday | 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Sunday | 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Sunday | 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Sunday | 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Sunday 11:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Sunday 11:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Sunday 11:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Sunday 11:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Sunday 11:30 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Monday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Monday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Monday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Monday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Monday | 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Monday 08:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Monday 08:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Monday 08:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Monday 08:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Monday 08:30 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Tuesday | 7:00pm (followed by Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Tuesday | 7:00pm (followed by Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Tuesday | 7:00pm (followed by Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Tuesday | 7:00pm (followed by Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE Tuesday | 7:00pm (followed by Adoration and Confession)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Tuesday 19:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Tuesday 19:00 st-cecilia-sheldon  “Followed by Adoration and Confession”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Tuesday 19:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Tuesday 19:00 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Tuesday 19:00 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE 1st Saturday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE 1st Saturday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE 1st Saturday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE 1st Saturday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. CECILIA WORSHIP SITE 1st Saturday | 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Saturday 08:30 st-cecilia-sheldon  “1st Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Saturday 08:30 st-cecilia-sheldon  “First Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Saturday 08:30 st-cecilia-sheldon  “1st Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Saturday 08:30 st-cecilia-sheldon  “1st Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Saturday 08:30 st-cecilia-sheldon  “1st Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree. The newest week (Oct 25 - Nov 1) holds no first Saturday, but the standing box prints it, so it is settled on the newest bulletin (R1); the Oct 4 and Sep 27 issues' intentions show Saturday Oct 3 at this time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-varysburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Sunday 08:00 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Sunday 08:00 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Sunday 08:00 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Sunday 08:00 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Sunday 08:00 st-joseph-varysburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-varysburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Tuesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Tuesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Tuesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Tuesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Tuesday | 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Tuesday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Tuesday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Tuesday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Tuesday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Tuesday 08:30 st-joseph-varysburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-varysburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Thursday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Thursday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Thursday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Thursday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. JOSEPH WORSHIP SITE Thursday | 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Thursday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Thursday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Thursday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Thursday 08:30 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Thursday 08:30 st-joseph-varysburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Saturday Vigil | 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Saturday Vigil | 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Saturday Vigil | 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Saturday Vigil | 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Saturday Vigil | 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Saturday 18:00 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Saturday 18:00 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Saturday 18:00 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Saturday 18:00 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Saturday 18:00 st-vincent-de-paul-attica",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Sunday | 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Sunday | 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Sunday | 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Sunday | 9:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Sunday | 9:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Sunday 09:45 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Sunday 09:45 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Sunday 09:45 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Sunday 09:45 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Sunday 09:45 st-vincent-de-paul-attica",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Wednesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Wednesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Wednesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Wednesday | 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Wednesday | 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Wednesday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Wednesday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Wednesday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Wednesday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Wednesday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Friday | 8:30am (1st Friday followed by Adoration and Confession until 7pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Friday | 8:30am (1st Friday followed by Adoration and Confession until 7pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Friday | 8:30am (1st Friday followed by Adoration and Confession until 7pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Friday | 8:30am (1st Friday followed by Adoration and Confession until 7pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. VINCENT WORSHIP SITE Friday | 8:30am (1st Friday followed by Adoration and Confession until 7pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Friday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Friday 08:30 st-vincent-de-paul-attica  “First Friday followed by Adoration and Confession until 7:00 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Friday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Friday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Friday 08:30 st-vincent-de-paul-attica",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pavilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Sunday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Sunday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Sunday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Sunday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Sunday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Sunday 08:00 st-mary-pavilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pavilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Tuesday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Tuesday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Tuesday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Tuesday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Tuesday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Tuesday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Tuesday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Tuesday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Tuesday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Tuesday 08:00 st-mary-pavilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pavilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Friday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MARY WORSHIP SITE Friday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Friday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Friday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Friday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Friday 08:00 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Friday 08:00 st-mary-pavilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Saturday Vigil | 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Saturday 16:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Saturday 16:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Saturday 16:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Saturday 16:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Saturday 16:00 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Sunday | 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Sunday | 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Sunday 10:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Sunday 10:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Sunday 10:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Sunday 10:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Sunday 10:00 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Monday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Monday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Monday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Monday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Monday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Monday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Monday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Monday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Monday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Monday 08:00 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Wednesday | 5:00pm (followed by Holy Rosary, Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Wednesday | 5:00pm (followed by Holy Rosary, Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Wednesday | 5:00pm (followed by Holy Rosary, Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Wednesday | 5:00pm (followed by Holy Rosary, Adoration and Confession)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Wednesday | 5:00pm (followed by Holy Rosary, Adoration and Confession)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Wednesday 17:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Wednesday 17:00 st-michael-warsaw  “Followed by Adoration and Confession”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Wednesday 17:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Wednesday 17:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Wednesday 17:00 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Thursday | 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE Thursday | 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Thursday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Thursday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Thursday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Thursday 08:00 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Thursday 08:00 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE 1st Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE 1st Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE 1st Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE 1st Saturday | 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "ST. MICHAEL WORSHIP SITE 1st Saturday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly mass Saturday 09:00 st-michael-warsaw  “1st Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly mass Saturday 09:00 st-michael-warsaw  “First Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly mass Saturday 09:00 st-michael-warsaw  “1st Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly mass Saturday 09:00 st-michael-warsaw  “1st Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly mass Saturday 09:00 st-michael-warsaw  “1st Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the worship-site schedule box on page 1 lists it in all five bulletins read (the page 1 times are identical in each); the weekly Mass intentions on page 3 agree. The newest week (Oct 25 - Nov 1) holds no first Saturday, but the standing box prints it, so it is settled on the newest bulletin (R1); the Oct 4 and Sep 27 issues' intentions show Saturday Oct 3 at this time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pavilion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. MARY, PAVILION: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. MARY, PAVILION: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. MARY, PAVILION: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. MARY, PAVILION: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. MARY, PAVILION: 7:30-7:50 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Sunday 07:30–07:50 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Sunday 07:30–07:50 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Sunday 07:30–07:50 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Sunday 07:30–07:50 st-mary-pavilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Sunday 07:30–07:50 st-mary-pavilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-varysburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. JOSEPH, VARYSBURG: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. JOSEPH, VARYSBURG: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. JOSEPH, VARYSBURG: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. JOSEPH, VARYSBURG: 7:30-7:50 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SUNDAYS ST. JOSEPH, VARYSBURG: 7:30-7:50 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Sunday 07:30–07:50 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Sunday 07:30–07:50 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Sunday 07:30–07:50 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Sunday 07:30–07:50 st-joseph-varysburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Sunday 07:30–07:50 st-joseph-varysburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE TUESDAYS ST. CECILIA, SHELDON: 7:30-8:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE TUESDAYS ST. CECILIA, SHELDON: 7:30-8:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE TUESDAYS ST. CECILIA, SHELDON: 7:30-8:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE TUESDAYS ST. CECILIA, SHELDON: 7:30-8:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE TUESDAYS ST. CECILIA, SHELDON: 7:30-8:15 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Tuesday 19:30–20:15 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Tuesday 19:30–20:15 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Tuesday 19:30–20:15 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Tuesday 19:30–20:15 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Tuesday 19:30–20:15 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE WEDNESDAYS ST. MICHAEL, WARSAW: 5:30-6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE WEDNESDAYS ST. MICHAEL, WARSAW: 5:30-6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE WEDNESDAYS ST. MICHAEL, WARSAW: 5:30-6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE WEDNESDAYS ST. MICHAEL, WARSAW: 5:30-6:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE WEDNESDAYS ST. MICHAEL, WARSAW: 5:30-6:15 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Wednesday 17:30–18:15 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Wednesday 17:30–18:15 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Wednesday 17:30–18:15 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Wednesday 17:30–18:15 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Wednesday 17:30–18:15 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. CECILIA, SHELDON: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. CECILIA, SHELDON: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. CECILIA, SHELDON: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. CECILIA, SHELDON: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. CECILIA, SHELDON: 3:15-3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Saturday 15:15–15:45 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Saturday 15:15–15:45 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Saturday 15:15–15:45 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Saturday 15:15–15:45 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Saturday 15:15–15:45 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. MICHAEL, WARSAW: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. MICHAEL, WARSAW: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. MICHAEL, WARSAW: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. MICHAEL, WARSAW: 3:15-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. MICHAEL, WARSAW: 3:15-3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Saturday 15:15–15:45 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Saturday 15:15–15:45 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Saturday 15:15–15:45 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Saturday 15:15–15:45 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Saturday 15:15–15:45 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. VINCENT, ATTICA: 5:30-5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. VINCENT, ATTICA: 5:30-5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. VINCENT, ATTICA: 5:30-5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. VINCENT, ATTICA: 5:30-5:50 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE SATURDAYS ST. VINCENT, ATTICA: 5:30-5:50 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Saturday 17:30–17:50 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Saturday 17:30–17:50 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Saturday 17:30–17:50 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Saturday 17:30–17:50 st-vincent-de-paul-attica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Saturday 17:30–17:50 st-vincent-de-paul-attica",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 9:00-10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 9:00-10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 9:00-10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 9:00-10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 9:00-10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Friday 09:00–10:00 st-vincent-de-paul-attica  “1st Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Friday 09:00–10:00 st-vincent-de-paul-attica  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Friday 09:00–10:00 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Friday 09:00–10:00 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Friday 09:00–10:00 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week). Named first-Friday service (POLICY, Weekly or dated, rule 2); the standing box prints it, so it is settled on the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 6:45-7:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 6:45-7:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 6:45-7:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 6:45-7:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "CONFESSION SCHEDULE FIRST FRIDAYS ST. VINCENT, ATTICA: 6:45-7:15 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly confession Friday 18:45–19:15 st-vincent-de-paul-attica  “1st Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly confession Friday 18:45–19:15 st-vincent-de-paul-attica  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly confession Friday 18:45–19:15 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly confession Friday 18:45–19:15 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly confession Friday 18:45–19:15 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Confession Schedule box on page 1 gives the clock times in all five bulletins read (identical each week). Named first-Friday service (POLICY, Weekly or dated, rule 2); the standing box prints it, so it is settled on the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE TUESDAYS 7:30PM-8:30PM ST. CECILIA, SHELDON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE TUESDAYS 7:30PM-8:30PM ST. CECILIA, SHELDON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE TUESDAYS 7:30PM-8:30PM ST. CECILIA, SHELDON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE TUESDAYS 7:30PM-8:30PM ST. CECILIA, SHELDON"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE TUESDAYS 7:30PM-8:30PM ST. CECILIA, SHELDON"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly adoration Tuesday 19:30–20:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly adoration Tuesday 19:30–20:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly adoration Tuesday 19:30–20:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly adoration Tuesday 19:30–20:30 st-cecilia-sheldon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly adoration Tuesday 19:30–20:30 st-cecilia-sheldon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Eucharistic Adoration Schedule box on page 1 gives the clock times in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE WEDNESDAYS 5:30PM-6:30PM ST. MICHAEL, WARSAW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE WEDNESDAYS 5:30PM-6:30PM ST. MICHAEL, WARSAW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE WEDNESDAYS 5:30PM-6:30PM ST. MICHAEL, WARSAW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE WEDNESDAYS 5:30PM-6:30PM ST. MICHAEL, WARSAW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE WEDNESDAYS 5:30PM-6:30PM ST. MICHAEL, WARSAW"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-michael-warsaw",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-michael-warsaw",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Eucharistic Adoration Schedule box on page 1 gives the clock times in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE 1ST FRIDAYS 9:00AM-7:00PM ST. VINCENT, ATTICA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9b3658e",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE 1ST FRIDAYS 9:00AM-7:00PM ST. VINCENT, ATTICA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca709111",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE 1ST FRIDAYS 9:00AM-7:00PM ST. VINCENT, ATTICA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "33e914c4",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE 1ST FRIDAYS 9:00AM-7:00PM ST. VINCENT, ATTICA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "645e6e44",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION SCHEDULE 1ST FRIDAYS 9:00AM-7:00PM ST. VINCENT, ATTICA"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "weekly adoration Friday 09:00–19:00 st-vincent-de-paul-attica  “1st Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f9b3658e4cc3",
+          "said": "weekly adoration Friday 09:00–19:00 st-vincent-de-paul-attica  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7091112bcf",
+          "said": "weekly adoration Friday 09:00–19:00 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "33e914c4c00b",
+          "said": "weekly adoration Friday 09:00–19:00 st-vincent-de-paul-attica  “1st Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "645e6e44adfe",
+          "said": "weekly adoration Friday 09:00–19:00 st-vincent-de-paul-attica  “1st Friday; benediction at 7:00 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Eucharistic Adoration Schedule box on page 1 gives the clock times in all five bulletins read. Named first-Friday service (POLICY, Weekly or dated, rule 2); the standing box prints it, so it is settled on the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-pavilion",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Evening of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 6,
+          "said": "All Souls Evening of Remembrance, November 2, 7:00 PM. SERVICES WILL BE HELD AT ALL FIVE WORSHIP SITES ... St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 4,
+          "said": "Monday, November 2, Evening of Remembrance, All Sites, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "specific_date mass 2026-11-02 19:00 st-mary-pavilion  “All Souls Evening of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24: the Nov 2 'All Souls Evening of Remembrance' is described as a service of readings, prayers, music and reflection with a reception, not as a Mass; the flyer also asks families to contact the site's office by October 21 to confirm attendance. History read it as a Mass at each site (R9), so each site has its own excluded slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-varysburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Evening of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 6,
+          "said": "All Souls Evening of Remembrance, November 2, 7:00 PM. SERVICES WILL BE HELD AT ALL FIVE WORSHIP SITES ... St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 4,
+          "said": "Monday, November 2, Evening of Remembrance, All Sites, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "specific_date mass 2026-11-02 19:00 st-joseph-varysburg  “All Souls Evening of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24: the Nov 2 'All Souls Evening of Remembrance' is described as a service of readings, prayers, music and reflection with a reception, not as a Mass; the flyer also asks families to contact the site's office by October 21 to confirm attendance. History read it as a Mass at each site (R9), so each site has its own excluded slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-attica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Evening of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 6,
+          "said": "All Souls Evening of Remembrance, November 2, 7:00 PM. SERVICES WILL BE HELD AT ALL FIVE WORSHIP SITES ... St. Vincent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 4,
+          "said": "Monday, November 2, Evening of Remembrance, All Sites, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "specific_date mass 2026-11-02 19:00 st-vincent-de-paul-attica  “All Souls Evening of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24: the Nov 2 'All Souls Evening of Remembrance' is described as a service of readings, prayers, music and reflection with a reception, not as a Mass; the flyer also asks families to contact the site's office by October 21 to confirm attendance. History read it as a Mass at each site (R9), so each site has its own excluded slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-sheldon",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Evening of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 6,
+          "said": "All Souls Evening of Remembrance, November 2, 7:00 PM. SERVICES WILL BE HELD AT ALL FIVE WORSHIP SITES ... St. Cecilia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 4,
+          "said": "Monday, November 2, Evening of Remembrance, All Sites, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "specific_date mass 2026-11-02 19:00 st-cecilia-sheldon  “All Souls Evening of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24: the Nov 2 'All Souls Evening of Remembrance' is described as a service of readings, prayers, music and reflection with a reception, not as a Mass; the flyer also asks families to contact the site's office by October 21 to confirm attendance. History read it as a Mass at each site (R9), so each site has its own excluded slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-warsaw",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Evening of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 6,
+          "said": "All Souls Evening of Remembrance, November 2, 7:00 PM. SERVICES WILL BE HELD AT ALL FIVE WORSHIP SITES ... St. Michael"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 4,
+          "said": "Monday, November 2, Evening of Remembrance, All Sites, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3e13eeef2865",
+          "said": "specific_date mass 2026-11-02 19:00 st-michael-warsaw  “All Souls Evening of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24: the Nov 2 'All Souls Evening of Remembrance' is described as a service of readings, prayers, music and reflection with a reception, not as a Mass; the flyer also asks families to contact the site's office by October 21 to confirm attendance. History read it as a Mass at each site (R9), so each site has its own excluded slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3e13eeef",
+          "page": 3,
+          "said": "Rosary: Join us in praying the Rosary - Sundays, PVN, 7:35am and SLN, 9:30am, Mondays, SLN, 8am, First Saturdays, SLN, 9:30am and Wednesdays, WRW, 5:30 pm"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

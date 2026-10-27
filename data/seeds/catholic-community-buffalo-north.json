@@ -1,0 +1,2183 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-community-buffalo-north",
+  "status": "ready",
+  "as_of": "2026-10-25T13:14:25Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:59:05Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches in the CCBN family. The weekend, weekday, Confession and Friday Adoration schedule is clear and agrees in the newest bulletins; a new weekday schedule began Oct 12 and replaced the older St. Rose 7 AM and Central Office Chapel Masses. Saturday Confession moved from St. Rose to St. Mark in the Oct 18 issue (R40). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0ad1c2a28fa0bce3592368610e55a82ace45f7bde9cf0d892ace423b9dc0dd30",
+      "fetched_at": "2026-10-25T13:14:25Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "8e3dc7678313351b19dfde3310e7150da47bf5ad42113a63f3d44835d5fc5d39",
+      "fetched_at": "2026-10-18T12:41:10Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "c04f4256520020b277895eb29bf23fd9a686e8c5e907cf354c7d72c62b74b7ca",
+      "fetched_at": "2026-10-11T16:31:51Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9b3390dbe6ddc6c736d4b4fee47421ca07d12ae316c86d23ffecdf26582ce2aa",
+      "fetched_at": "2026-10-04T14:20:06Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "8ce2422862eb21a1d4dd37bf8b1399caf8fbc249d89d6bfc34e333f7c91a43f8",
+      "fetched_at": "2026-09-26T18:52:50Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Saturday 16:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Saturday 16:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Saturday 16:00 st-mark-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: weekend schedule box on p7 of the newest bulletin. The two oldest issues put the 4:00 PM Saturday Mass at St. Rose; the three newest (R40, newer explicit church assignment) say St. Mark, and p5 announces a new schedule from Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "4:30 p.m. at Assumption"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Saturday 16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Saturday 16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Saturday 16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Saturday 16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Saturday 16:30 assumption-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "8:00 a.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "8:00 a.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "8:00 a.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "8:00 a.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "8:00 a.m. at St. Mark"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Sunday 08:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Sunday 08:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Sunday 08:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Sunday 08:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Sunday 08:00 st-mark-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "9:30 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "9:30 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "9:30 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "9:30 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "9:30 a.m. at St. Margaret"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Sunday 09:30 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Sunday 09:30 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Sunday 09:30 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Sunday 09:30 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Sunday 09:30 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "specific_date mass 2026-10-04 09:30 st-margaret-buffalo  “Padre Pio Mass followed by procession”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "10:00 a.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "10:00 a.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "10:00 a.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "10:00 a.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "10:00 a.m. at Assumption"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Sunday 10:00 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Sunday 10:00 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Sunday 10:00 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Sunday 10:00 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Sunday 10:00 assumption-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "10:30 a.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "10:30 a.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "10:30 a.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "10:30 a.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "10:30 a.m. at St. Rose"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "11:00 a.m. at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "11:00 a.m. at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "11:00 a.m. at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "11:00 a.m. at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "11:00 a.m. at Holy Spirit"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Sunday 11:00 holy-spirit-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Sunday 11:00 holy-spirit-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Sunday 11:00 holy-spirit-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Sunday 11:00 holy-spirit-buffalo  “Children's Liturgy offered on select Sundays”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Sunday 11:00 holy-spirit-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "specific_date mass 2026-10-04 11:00 holy-spirit-buffalo  “Children's Liturgy Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "specific_date mass 2026-10-18 11:00 holy-spirit-buffalo  “Children's Liturgy Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: weekend schedule box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Monday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Monday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Monday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "specific_date mass 2026-10-05 07:00 st-margaret-buffalo  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: p7 box and the p3 calendar of the newest bulletin. The new weekday schedule began Oct 12 (p5 of the two preceding issues); the older 7:00 AM St. Rose and 8:30 Central Office Chapel weekday Masses are superseded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Tuesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Tuesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Tuesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "specific_date mass 2026-10-06 07:00 st-margaret-buffalo  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: p7 box and the p3 calendar of the newest bulletin. The new weekday schedule began Oct 12 (p5 of the two preceding issues); the older 7:00 AM St. Rose and 8:30 Central Office Chapel weekday Masses are superseded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Wednesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Wednesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Wednesday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "specific_date mass 2026-10-07 07:00 st-margaret-buffalo  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: p7 box and the p3 calendar of the newest bulletin. The new weekday schedule began Oct 12 (p5 of the two preceding issues); the older 7:00 AM St. Rose and 8:30 Central Office Chapel weekday Masses are superseded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Thursday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Thursday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Thursday 08:00 st-margaret-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: p7 box and the p3 calendar of the newest bulletin. The new weekday schedule began Oct 12 (p5 of the two preceding issues); the older 7:00 AM St. Rose and 8:30 Central Office Chapel weekday Masses are superseded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "WEEKDAY MASSES Monday - Friday 8:00 a.m. at St. Margaret"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Beginning Monday, October 12th the NEW CCBN Weekday Mass schedule will be: Monday through Friday 8:00am Mass at St. Margaret Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Friday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Friday 08:00 st-margaret-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Friday 08:00 st-margaret-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: p7 box and the p3 calendar of the newest bulletin. The new weekday schedule began Oct 12 (p5 of the two preceding issues); the older 7:00 AM St. Rose and 8:30 Central Office Chapel weekday Masses are superseded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "Monday 5:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "Monday 5:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "Monday 5:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "We will now offer 2 evening Masses at 5:30pm in the CCBN family. Mondays at Assumption Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "We will now offer 2 evening Masses at 5:30pm in the CCBN family. Mondays at Assumption Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Monday 17:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Monday 17:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Monday 17:30 assumption-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: p7 box and p3 calendar (5:30 p.m. Monday Evening Mass - Assumption Church); new from Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "Friday 5:30 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "Friday 5:30 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "Friday 5:30 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Fridays at St. Rose of Lima | 500 Parker Ave."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Fridays at St. Rose of Lima | 500 Parker Ave."
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Friday 17:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Friday 17:30 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Friday 17:30 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: p7 box and p3 calendar (5:30 p.m. Evening Mass - St. Rose); new from Oct 12.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "FIRST SATURDAY MASS 12:00 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "FIRST SATURDAY MASS 12:00 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "FIRST SATURDAY MASS 12:00 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "FIRST SATURDAY MASS 12:00 p.m. at St. Rose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "FIRST SATURDAY MASS 12:00 p.m. at St. Rose"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "specific_date mass 2026-11-07 12:00 st-rose-of-lima-buffalo  “First Saturday Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Saturday 12:00 st-rose-of-lima-buffalo  “First Saturday of the month”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Saturday 12:00 st-rose-of-lima-buffalo  “First Saturday of the month”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "specific_date mass 2026-10-03 12:00 st-rose-of-lima-buffalo  “First Saturday Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Saturday 12:00 st-rose-of-lima-buffalo  “First Saturday of the month”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: named First Saturday Mass printed in the p7 box of all five bulletins; the newest week holds no first Saturday, but the standing box prints it. POLICY, Weekly or dated rule 2: weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "CONFESSIONS ON SATURDAY 3:00 - 4:00 p.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "CONFESSIONS ON SATURDAY 3:00 - 4:00 p.m. at St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly confession Saturday 15:00–16:00 st-mark-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly confession Saturday 15:00–16:00 st-mark-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R40: the two newest issues name St. Mark for the 3:00-4:00 PM Saturday Confession; the three older issues named St. Rose of Lima. A newer explicit church assignment corrects the older one, and it fits the 4:00 PM Saturday Mass moving to St. Mark.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "3:30 - 4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 7,
+          "said": "3:30 - 4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "3:30 - 4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "3:30 - 4:30 p.m. at Assumption"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "3:30 - 4:30 p.m. at Assumption"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly confession Saturday 15:30–16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly confession Saturday 15:30–16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly confession Saturday 15:30–16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly confession Saturday 15:30–16:30 assumption-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly confession Saturday 15:30–16:30 assumption-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: p7 box, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 6,
+          "said": "EUCHARISTIC ADORATION St. Mark Church every Friday 9 AM-1 PM ***Until further notice the new time is 9 AM -1 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 3,
+          "said": "Friday, October 30 9:00 a.m.- 1:00 p.m. - Eucharistic Adoration - St. Mark"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 6,
+          "said": "St. Mark Church every Friday 9 AM-3 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 6,
+          "said": "St. Mark Church every Friday 9 AM-3 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly adoration Friday 09:00–13:00 st-mark-buffalo",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly adoration Friday 09:00–15:00 st-mark-buffalo",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly adoration Friday 09:00–15:00 st-mark-buffalo  “Eucharistic Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly adoration Friday 09:00–15:00 st-mark-buffalo",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly adoration Friday 09:00–15:00 st-mark-buffalo",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: newest bulletin states the current time 9 AM-1 PM until further notice; older issues said 9 AM-3 PM (history reads the same change).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 1,
+          "said": "All Souls Day Mass - there will be a special commemoration of All Soul's Day on Monday, November 2 at 6:30 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 3,
+          "said": "Annual Bereavement Mass in observance of All Souls' Day ... Monday, November 2nd, at 6:30 PM at St. Rose of Lima Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "specific_date mass 2026-11-02 18:30 st-rose-of-lima-buffalo  “All Souls Day Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "specific_date mass 2026-11-02 18:30 st-rose-of-lima-buffalo  “Annual Bereavement Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "specific_date mass 2026-11-02 18:30 st-rose-of-lima-buffalo  “All Souls' Day Bereavement Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass at a listed church, open to all, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "School Mass, closed to the public"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "Wednesday 8:00 a.m. at St. Mark (During the school year when school is in session) CLOSED TO THE PUBLIC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 3,
+          "said": "8:00 a.m - St. Mark School Mass - Not open to the public"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "weekly mass Wednesday 08:00 st-mark-buffalo  “School Mass; closed to the public”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8e3dc7678313",
+          "said": "weekly mass Wednesday 08:00 st-mark-buffalo  “School Mass; not open to the public”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly mass Wednesday 08:00 st-mark-buffalo  “School Mass, closed to public during school year”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Wednesday 08:00 st-mark-buffalo  “Closed to the public during the school year”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Wednesday 08:00 st-mark-buffalo  “Closed to public when school in session”",
+          "page": 7
+        }
+      ],
+      "rationale": "R24, POLICY What to extract: school Mass closed to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Saturdays: 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Saturday 16:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Saturday 16:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: the old Saturday 4:00 PM St. Rose Mass appears only in the two oldest issues; the new schedule (from Oct 12) puts it at St. Mark, as the three newest issues print.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Monday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Monday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: replaced by the new CCBN weekday schedule from Monday Oct 12 (8:00 AM at St. Margaret, plus 5:30 PM Monday and Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Tuesday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Tuesday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: replaced by the new CCBN weekday schedule from Monday Oct 12 (8:00 AM at St. Margaret, plus 5:30 PM Monday and Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Wednesday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Wednesday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: replaced by the new CCBN weekday schedule from Monday Oct 12 (8:00 AM at St. Margaret, plus 5:30 PM Monday and Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Thursday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Thursday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: replaced by the new CCBN weekday schedule from Monday Oct 12 (8:00 AM at St. Margaret, plus 5:30 PM Monday and Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "Monday - Friday 7:00 a.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly mass Friday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly mass Friday 07:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R7, R40: replaced by the new CCBN weekday schedule from Monday Oct 12 (8:00 AM at St. Margaret, plus 5:30 PM Monday and Friday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Superseded"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8ce24228",
+          "page": 7,
+          "said": "3:00 - 4:00 p.m. at St. Rose of Lima"
+        },
+        {
+          "source": "history",
+          "bulletin": "c04f42565200",
+          "said": "weekly confession Saturday 15:00–16:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "weekly confession Saturday 15:00–16:00 st-rose-of-lima-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8ce2422862eb",
+          "said": "weekly confession Saturday 15:00–16:00 st-rose-of-lima-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R40: the two newest issues assign this 3:00-4:00 PM Saturday Confession to St. Mark, so the older St. Rose assignment is corrected.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after Rosary"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 5,
+          "said": "Rosary Devotions begin Monday, October 5th and are held every Monday through October 26th at 6:30pm at Assumption Church. Benediction will follow the rosary."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c04f4256",
+          "page": 5,
+          "said": "Rosary Devotions begin Monday, October 5th and are held every Monday through October 26th at 6:30pm at Assumption Church. Benediction will follow the rosary."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e3dc767",
+          "page": 5,
+          "said": "Rosary Devotions begin Monday, October 5th and are held every Monday through October 26th at 6:30pm at Assumption Church. Benediction will follow the rosary."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 3,
+          "said": "6:30 p.m. - Rosary Devotions - Assumption Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "9b3390dbe6dd",
+          "said": "specific_date adoration 2026-10-26 18:30 assumption-buffalo  “Rosary and Benediction”",
+          "page": 5
+        }
+      ],
+      "rationale": "POLICY Final source checks, R26: only the Rosary has a clock time (6:30 PM); Benediction merely follows it with no start time of its own, and the Rosary's time may not be copied onto it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "18:30",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "CCBN Moms, chapel at Central Office"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 5,
+          "said": "CCBN MOMS UPCOMING MEETINGS Wednesday, November 4th 6:30pm-8:00pm Assumption Church | CCBN Central Office, 16 Peter St. Adoration will take place in the chapel until 6:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b3390db",
+          "page": 5,
+          "said": "LOCATION: CCBN Central Office, 16 Peter Street ... 6:30 PM: Adoration in the chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "specific_date adoration 2026-11-04 18:30–18:45 assumption-buffalo  “CCBN Moms”",
+          "page": 5
+        }
+      ],
+      "rationale": "R22, R23: the chapel is at the CCBN Central Office, 16 Peter St., an address not on the church list; the newest bulletin's heading names both Assumption and the Central Office, so the location is unclear.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-02",
+        "start_time": "18:30",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "CCBN Moms, chapel at Central Office"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 5,
+          "said": "CCBN MOMS UPCOMING MEETINGS Wednesday, December 2nd 6:30pm-8:00pm Assumption Church | CCBN Central Office, 16 Peter St. Adoration will take place in the chapel until 6:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "0ad1c2a28fa0",
+          "said": "specific_date adoration 2026-12-02 18:30–18:45 assumption-buffalo  “CCBN Moms”",
+          "page": 5
+        }
+      ],
+      "rationale": "R22, R23: same as the November 4 meeting; chapel at the Central Office, not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "HOLY DAY OF OBLIGATION MASSES 8:00 a.m. at St. Margaret; 6:00 p.m. at St. Rose (Vigil Mass)"
+        }
+      ],
+      "rationale": "R24, POLICY Dates: generic holy day times with no date pinned (the next one, Nov 1, falls on the Sunday schedule); the Oct 4 and Sep 27 issues printed different holy day times, so they are not a standing weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0ad1c2a2",
+          "page": 7,
+          "said": "CONFESSIONS ... Or by appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "CCBN Central Office Chapel, 16 Peter St., Buffalo",
+      "said": "WEEKDAY MASSES Monday - Friday 8:30 a.m. at Central Office Chapel",
+      "bulletin": "9b3390db",
+      "page": 7
+    }
+  ]
+}

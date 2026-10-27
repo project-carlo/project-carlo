@@ -1,0 +1,1728 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-rome",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:19:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:53:22Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four listed churches in Rome and Lee Center. The parish Mass schedule box (weekday at St. Peter's, Saturday at St. John's, St. Paul's and St. Joseph's, Sunday at St. John's and St. Peter's), Friday 5-6 PM Confession at St. Peter's and Tuesday 5-6 PM Adoration at St. Joseph's agree in all five bulletins. Open: a daily 7 AM-7 PM Adoration box that names no church (seven grouped slots, leaning leave out). First-Friday Solemn Vespers is left out as not Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c35b723f80ecc142542e4a292c23d3577082e1e514b3b2b1de8d7ef52d8ad509",
+      "fetched_at": "2026-10-25T13:19:58Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "2a9e9ed1552184d92c4bfa614cdd386c4055988ab2b39670c74ad2baf115d1b8",
+      "fetched_at": "2026-10-18T12:47:24Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "91b2bdc6ff13a860319be8ec13e98024dfc8e168d33148decf9128f7d7f94f59",
+      "fetched_at": "2026-10-11T16:35:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c19005669ec5b9b1375d9583f33ebfc3001b0ec118dbebaac45825efc72163de",
+      "fetched_at": "2026-10-04T14:38:25Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "915cb859aba5e759dcfc37a2c19af93a535e04cd6b31c4efd77fa618df65bc42",
+      "fetched_at": "2026-09-28T00:09:24Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Monday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Monday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Monday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Monday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Monday 07:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the parish Mass schedule box of all five bulletins; the 10/25 Mass intentions on p2 list Monday, Wednesday and Friday at 7:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Wednesday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Wednesday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Wednesday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Wednesday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Wednesday 07:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the parish Mass schedule box of all five bulletins; the 10/25 Mass intentions on p2 list Monday, Wednesday and Friday at 7:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "WEEKDAYS M-W-F 7:00am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Friday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Friday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Friday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Friday 07:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Friday 07:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the parish Mass schedule box of all five bulletins; the 10/25 Mass intentions on p2 list Monday, Wednesday and Friday at 7:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Tuesday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Tuesday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Tuesday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Tuesday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Tuesday 08:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the parish Mass schedule box of all five bulletins; the 10/25 Mass intentions list Tuesday and Thursday at 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "T-TH 8:00am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Thursday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Thursday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Thursday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Thursday 08:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Thursday 08:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the parish Mass schedule box of all five bulletins; the 10/25 Mass intentions list Tuesday and Thursday at 8:00am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "SATURDAYS 8:00 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "SATURDAYS 8:00 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "SATURDAYS 8:00 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "SATURDAYS 8:00 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "SATURDAYS 8:00 am St. John's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Saturday 08:00 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Saturday 08:00 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Saturday 08:00 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Saturday 08:00 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Saturday 08:00 st-john-the-baptist-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "4:00 pm St. Paul's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "4:00 pm St. Paul's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "4:00 pm St. Paul's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "4:00 pm St. Paul's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "4:00 pm St. Paul's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Saturday 16:00 st-paul-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Saturday 16:00 st-paul-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Saturday 16:00 st-paul-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Saturday 16:00 st-paul-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Saturday 16:00 st-paul-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lee-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "6:00 pm St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "6:00 pm St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "6:00 pm St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "6:00 pm St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "6:00 pm St. Joseph's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Saturday 18:00 st-joseph-lee-center",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Saturday 18:00 st-joseph-lee-center",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Saturday 18:00 st-joseph-lee-center",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Saturday 18:00 st-joseph-lee-center",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Saturday 18:00 st-joseph-lee-center",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "SUNDAYS 8:30 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "SUNDAYS 8:30 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "SUNDAYS 8:30 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "SUNDAYS 8:30 am St. John's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "SUNDAYS 8:30 am St. John's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "10:30 am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "10:30 am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "10:30 am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "10:30 am St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "10:30 am St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Sunday 10:30 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Sunday 10:30 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Sunday 10:30 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Sunday 10:30 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Sunday 10:30 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "6:00 pm St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "6:00 pm St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "6:00 pm St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "6:00 pm St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "6:00 pm St. Peter's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly mass Sunday 18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly mass Sunday 18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly mass Sunday 18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly mass Sunday 18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly mass Sunday 18:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION/CONFESSION Friday, 5:00 - 6:00 pm at St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION/CONFESSION Friday, 5:00 - 6:00 pm at St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION/CONFESSION Friday, 5:00 - 6:00 pm at St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION/CONFESSION Friday, 5:00 - 6:00 pm at St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "SACRAMENT OF RECONCILIATION/CONFESSION Friday, 5:00 - 6:00 pm at St. Peter's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 2,
+          "said": "Friday, October 30, 2026 ... 5:00-6:00pm Confessions"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly confession Friday 17:00–18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly confession Friday 17:00–18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly confession Friday 17:00–18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "weekly confession Friday 17:00–18:00 st-peter-rome",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "weekly confession Friday 17:00–18:00 st-peter-rome",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed in the box of all five bulletins and in the 10/30 Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lee-center",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Tuesday: Adoration of the Blessed Sacrament at St. Joseph's 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Tuesday: Adoration of the Blessed Sacrament at St. Joseph's 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Tuesday: Adoration of the Blessed Sacrament at St. Joseph's 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Tuesday: Adoration of the Blessed Sacrament at St. Joseph's 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Tuesday: Adoration of the Blessed Sacrament at St. Joseph's 5:00-6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c35b723f80ec",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-joseph-lee-center",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2a9e9ed15521",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-joseph-lee-center  “Adoration of the Blessed Sacrament”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-joseph-lee-center",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "c19005669ec5",
+          "said": "specific_date adoration 2026-10-06 17:00–18:00 st-joseph-lee-center",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "915cb859aba5",
+          "said": "specific_date adoration 2026-09-29 17:00–18:00 st-joseph-lee-center",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the Week at a Glance lists it on the Tuesday of each of the five issue weeks (Sept 29 to Oct 27), so it is weekly (POLICY, Weekly or dated, rule 4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-rome",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemn Vespers"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 3,
+          "said": "SOLEMN VESPERS 1st Friday of the month at St. Peter's 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 3,
+          "said": "SOLEMN VESPERS 1st Friday of the month at St. Peter's 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 3,
+          "said": "SOLEMN VESPERS 1st Friday of the month at St. Peter's 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 3,
+          "said": "SOLEMN VESPERS 1st Friday of the month at St. Peter's 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 3,
+          "said": "SOLEMN VESPERS 1st Friday of the month at St. Peter's 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 2,
+          "said": "6:00pm First Friday Vespers"
+        },
+        {
+          "source": "history",
+          "bulletin": "91b2bdc6ff13",
+          "said": "weekly adoration Friday 17:30 st-peter-rome  “1st Friday of the month; Solemn Vespers”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, R24: history read the first-Friday Solemn Vespers as Adoration. Vespers is not a Mass, Confession or Adoration, and no bulletin mentions exposition or Benediction with it (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stmarysstpeters.com/reconciliation/",
+          "said": "Friday 5:00 - 6:00 pm at St. Peter's Church with Benediction to follow, or by Appointment"
+        }
+      ],
+      "rationale": "R26: the website says Benediction follows Friday Confession, but no bulletin does and neither gives a start time (POLICY: no definite start time).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Eucharistic Adoration. Adoration Hours are 7:00 am - 7:00 pm. Contact one of our Day Captains for an hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Eucharistic Adoration. Adoration Hours are 7:00 am - 7:00 pm. Contact one of our Day Captains for an hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Eucharistic Adoration. Adoration Hours are 7:00 am - 7:00 pm. Contact one of our Day Captains for an hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Eucharistic Adoration. Adoration Hours are 7:00 am - 7:00 pm. Contact one of our Day Captains for an hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Eucharistic Adoration. Adoration Hours are 7:00 am - 7:00 pm. Contact one of our Day Captains for an hour"
+        }
+      ],
+      "rationale": "R32: no church or chapel is named in the box or anywhere else in five bulletins (the one Tuesday 5-6pm Adoration at St. Joseph's is listed separately). The four listed churches are all possible; leaning toward leaving it out since a wrong place is worse than a missing one.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Monday: Bernedette Kapps. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Monday: Bernedette Kapps. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Monday: Bernedette Kapps. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Monday: Bernedette Kapps. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Monday: Bernedette Kapps. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Tuesday: Jesse & Anne Ruiz. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Tuesday: Jesse & Anne Ruiz. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Tuesday: Jesse & Anne Ruiz. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Tuesday: Jesse & Anne Ruiz. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Tuesday: Jesse & Anne Ruiz. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church. Tuesday also has a separate 5-6pm Adoration at St. Joseph's.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Wednesday: Caren Libertella. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Wednesday: Caren Libertella. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Wednesday: Caren Libertella. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Wednesday: Caren Libertella. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Wednesday: Caren Libertella. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Thursday: Chris and Brenda Klara. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Thursday: Chris and Brenda Klara. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Thursday: Chris and Brenda Klara. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Thursday: Chris and Brenda Klara. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Thursday: Chris and Brenda Klara. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Friday Captain - Cyndy Lamascola. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Friday Captain - Cyndy Lamascola. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Friday Captain - Cyndy Lamascola. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Friday Captain - Cyndy Lamascola. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Friday Captain - Cyndy Lamascola. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c35b723f",
+          "page": 5,
+          "said": "Saturday Captain - Jean Gudaitis. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a9e9ed1",
+          "page": 5,
+          "said": "Saturday Captain - Jean Gudaitis. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91b2bdc6",
+          "page": 5,
+          "said": "Saturday Captain - Jean Gudaitis. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c1900566",
+          "page": 5,
+          "said": "Saturday Captain - Jean Gudaitis. Adoration Hours are 7:00 am - 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "915cb859",
+          "page": 5,
+          "said": "Saturday Captain - Jean Gudaitis. Adoration Hours are 7:00 am - 7:00 pm"
+        }
+      ],
+      "rationale": "R32: same question as Sunday; the box gives no church.",
+      "question": "Add daily Eucharistic Adoration, 7 AM to 7 PM, at St. Peter's?",
+      "options": [
+        {
+          "label": "Daily 7 AM-7 PM at St. Peter's",
+          "entry": {
+            "church_slug": "st-peter-rome",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "daily-adoration"
+    }
+  ]
+}

@@ -1,0 +1,3493 @@
+{
+  "schema_version": 1,
+  "parish_slug": "wheat-family-east-aurora",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:18:13Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T02:01:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four listed churches in one family bulletin: Annunciation, Immaculate Conception, St. Vincent de Paul and the Memorare Chapel. There is no schedule box; weekly times come from the Mass calendar and the Adoration and Confession lists on page 2, repeated in all five bulletins read. Open: the First Friday overnight Adoration at Annunciation.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8949be0c6c797a1f67e6320bcc78404a1ac9f6cceecd27764a9251f6e8e5d901",
+      "fetched_at": "2026-10-25T13:18:13Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "dc891c6f52569042efaff99527a16506c33235bc94afdd8496ddae52a9eec15c",
+      "fetched_at": "2026-10-18T12:44:59Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "21c8218ce2a11d54c30cf23936c419b1080ab3d62066e7506384ea7f3295dc91",
+      "fetched_at": "2026-10-11T16:34:45Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "79b18cfeb430892083383851af83a9026378aa01547a24b072b1f61f86e5cdc3",
+      "fetched_at": "2026-10-04T14:31:19Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "fccf2b1297aabb0c0254e7c79b2cf67375ace082dc1a5c39b27cb91dbe423f7e",
+      "fetched_at": "2026-09-26T18:55:11Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Mass calendar on page 2 lists these three Sunday Masses in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 11:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 11:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 11:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 11:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 11:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Mass calendar on page 2 lists these three Sunday Masses in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "The Church of Annunciation: Sunday 9:00am, 11:00am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 17:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 17:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 17:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 17:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 17:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Mass calendar on page 2 lists these three Sunday Masses in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Monday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Monday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Monday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Monday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Monday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Monday, Wednesday and Friday in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Wednesday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Wednesday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Wednesday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Wednesday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Wednesday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Monday, Wednesday and Friday in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Monday / Wednesday / Friday 9:00am (Annunciation)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Friday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Friday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Friday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Friday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Friday 09:00 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Monday, Wednesday and Friday in all five weekly bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Confessions for our Community: Sun. 4:30 pm Annunciation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Confessions for our Community: Sun. 4:30 pm Annunciation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Confessions for our Community: Sun. 4:30 pm Annunciation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Confessions for our Community: Sun. 4:30 pm Annunciation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Confessions for our Community: Sun. 4:30 pm Annunciation"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Sunday 16:30 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly confession Sunday 16:30 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Sunday 16:30 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly confession Sunday 16:30 church-of-the-annunciation-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly confession Sunday 16:30 church-of-the-annunciation-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: start time only, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary and Holy Hour in the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Monday ~ Annunciation Rosary/Holy Hour 9:30-10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Monday at Annunciation 9:30 am Rosary for Life & Healing with Holy Hour until 10:30 am - Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Mon. Annunciation 9:30-10:30 am-Rosary/Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Monday 09:30–10:30 church-of-the-annunciation-elma  “Rosary and Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Monday 09:30–10:30 church-of-the-annunciation-elma  “Rosary/Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Monday 09:30–10:30 church-of-the-annunciation-elma  “Includes Rosary and Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Monday 09:30–10:30 church-of-the-annunciation-elma  “Rosary and Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Monday 09:30–10:30 church-of-the-annunciation-elma  “Rosary/Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: a Holy Hour is Adoration (POLICY, What to extract); listed under the Adoration heading with clock times in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "church-of-the-annunciation-elma",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Starts 11:30 AM if there is a funeral at 10:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "3rd Friday ~ Annunciation Adoration from 9:30 am to 7:30 pm (if there's a funeral at 10 am, Adoration starts at 11:30 am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "3rd Friday ~ Annunciation Adoration from 9:30 am to 7:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Friday 09:30–19:30 church-of-the-annunciation-elma  “3rd Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Friday 09:30–19:30 church-of-the-annunciation-elma  “3rd Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Friday 09:30–19:30 church-of-the-annunciation-elma  “3rd Friday of the month; starts 11:30 AM if funeral at 10:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: a named monthly service; the newest bulletin prints it, though its week holds no third Friday (Oct 16 fell in the Oct 11 issue). Printed identically in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Monday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Monday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Monday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Monday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Monday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Thursday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Thursday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Thursday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Thursday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Thursday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Immaculate Conception: Monday, Wednesday, Thursday, Friday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Friday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Friday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Friday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Friday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Friday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Thursday, October 29 9:15am Robin Grillo ~ Children and Grand Children"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Thursday, October 15 9:15am Michael Wardenski"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Thursday, October 8 9:15am Jim Grubka"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Thursday, October 1, 2026 9:15AM Mary Kreutzer"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Thursday 09:15 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Thursday 09:15 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Thursday 09:15 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Thursday 09:15 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: a second Thursday Mass at 9:15 printed in the newest bulletin and in three older weeks; the Oct 22 issue lists only the 8:00 Mass, which is one silent issue (R36 spirit) and not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Saturday, October 31 4:30pm All Souls Intentions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Saturday, October 24 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Saturday, October 17 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Saturday, October 10 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Saturday 16:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Saturday 16:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Saturday 16:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Saturday 16:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Saturday 08:00 immaculate-conception-east-aurora  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Saturday vigil listed in four consecutive weeks. The Oct 3 issue showed an 8:00 AM Saturday Mass instead (first Saturday, one dated listing, before as_of, R13).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Sunday 8:00am, 9:30am (Immaculate Conception)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sat. 3:30 pm Immaculate"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Sat. 3:30 pm Immaculate"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Sat. 3:30 pm Immaculate"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Sat. 3:30 pm Immaculate"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Sat. 3:30 pm Immaculate"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: start time only, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-east-aurora",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Wednesdays ~ Immaculate 8:30 am - 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Wednesdays ~ Immaculate 8:30 am - 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Wednesdays ~ Immaculate 8:30 am - 12 noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Wednesdays 8:30 am - 12 noon ~ Immaculate"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Wednesdays 8:30 am - 12 noon ~ Immaculate"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Wednesday 08:30–12:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Wednesday 08:30–12:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Wednesday 08:30–12:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Wednesday 08:30–12:00 immaculate-conception-east-aurora",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Wednesday 08:30–12:00 immaculate-conception-east-aurora",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: clock times in the Adoration list of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Memorare Chapel, 74 Old Glenwood Rd., West Falls: Monday, October 26 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Memorare Chapel Monday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Memorare Chapel Monday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Memorare Chapel Monday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Memorare Chapel Monday 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Monday 08:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Monday 08:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Monday 08:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Monday 08:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Monday 08:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Monday in all five bulletins; the chapel is on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Memorare Chapel: Saturday, October 31 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Memorare Chapel Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Memorare Chapel Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Memorare Chapel Saturday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Memorare Chapel Saturday 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Saturday 09:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Saturday 09:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Saturday 09:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Saturday 09:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Saturday 09:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Saturday in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Monday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Monday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Monday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Monday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Monday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Tuesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Tuesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Tuesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Tuesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Tuesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Wednesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Wednesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Wednesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Wednesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Wednesday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Thursday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Thursday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Thursday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Thursday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Thursday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Friday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Friday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Friday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Friday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Friday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Saturday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Saturday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Saturday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Saturday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Saturday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "memorare-chapel-west-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorare Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament: Daily~The Memorare Chapel in West Falls 7am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Sunday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Sunday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Sunday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Sunday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Sunday 07:00–19:00 memorare-chapel-west-falls",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish gives daily Adoration hours at the Memorare Chapel, which is a listed church. Exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Tuesday, October 27 8:00am Lois Weber; Novena to Our Lady of Perpetual Help Prayed after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Tuesday 8:00am Mass, Novena prayed after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Tuesday 8:00am Mass, Novena prayed after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Tuesday 8:00am Mass, Novena prayed after 8 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Tuesday 8:00am Mass, Novena prayed after 8 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Tuesday 08:00 st-vincent-de-paul-springbrook",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Tuesday 08:00 st-vincent-de-paul-springbrook  “Novena to Our Lady of Perpetual Help after Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Tuesday 08:00 st-vincent-de-paul-springbrook  “Novena follows Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Tuesday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Tuesday 08:00 st-vincent-de-paul-springbrook  “Novena prayed after Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: weekday Mass listed every Tuesday in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Tuesday, October 27 5:30 pm Confession, 6 pm Mass, 6:30 pm Adoration; Thursday, October 29 5:30 pm Confession, 6 pm Mass, 6:30 pm Adoration - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Tuesday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Tuesday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Tuesday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Tuesday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Tuesday and Thursday in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Tuesday, October 27 5:30 pm Confession, 6 pm Mass, 6:30 pm Adoration; Thursday, October 29 5:30 pm Confession, 6 pm Mass, 6:30 pm Adoration - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Tuesday and Thursday 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Thursday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Thursday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Thursday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Thursday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Thursday 18:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every Tuesday and Thursday in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Confessions for our Community: Tues. & Thurs. 5:30 pm St. Vincent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "5:30 pm Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Tuesday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly confession Tuesday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Tuesday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly confession Tuesday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly confession Tuesday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: start time only, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Confessions for our Community: Tues. & Thurs. 5:30 pm St. Vincent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "5:30 pm Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Thursday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly confession Thursday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Thursday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly confession Thursday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly confession Thursday 17:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: start time only, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Tuesday & Thursday St. Vincent's 6:30-7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "6:30 pm Adoration - Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Adoration list gives 6:30-7:30 pm in all five bulletins; the parish calendar says 6:30 pm Adoration in Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Tuesday & Thursday St. Vincent's 6:30-7:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "6:30 pm Adoration - Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly adoration Thursday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly adoration Thursday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Thursday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly adoration Thursday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly adoration Thursday 18:30–19:30 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Adoration list gives 6:30-7:30 pm in all five bulletins; the parish calendar says 6:30 pm Adoration in Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Saturday, October 31 3 pm Confession, 4 pm Mass - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Saturday 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Saturday vigil listed every week in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sat. 3 pm St. Vincent"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Saturday, October 31 3 pm Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Saturday 15:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly confession Saturday 15:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Saturday 15:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly confession Saturday 15:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly confession Saturday 15:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: start time only, no end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Sunday, October 25 8 am Mass & 10 am Mass - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 08:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "Sunday, October 25 8 am Mass & 10 am Mass - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc891c6f",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79b18cfe",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Sunday 8:00am, 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Sunday 10:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Sunday 10:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Sunday 10:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "79b18cfeb430",
+          "said": "weekly mass Sunday 10:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "weekly mass Sunday 10:00 st-vincent-de-paul-springbrook",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed every week in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "1st Friday Family Devotions at St. Vincent's: 5:30 pm pizza & bounce house, 6:15 Confession, 6:30 Rosary, 7 Mass, then Anointing of the Sick by request, 7:30 Social"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fccf2b12",
+          "page": 2,
+          "said": "Friday, October 2 7:00pm 1st Friday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly mass Friday 19:00 st-vincent-de-paul-springbrook  “1st Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc891c6f5256",
+          "said": "weekly mass Friday 19:00 st-vincent-de-paul-springbrook  “1st Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly mass Friday 19:00 st-vincent-de-paul-springbrook  “1st Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "specific_date mass 2026-10-02 19:00 st-vincent-de-paul-springbrook  “First Friday; Anointing of the Sick by request”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: a named monthly service printed in the newest bulletin (its week holds no first Friday; Oct 2 fell in the Sep 27 issue, which lists the Mass). The Rosary and Anointing are not recorded (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "1st Friday Family Devotions at St. Vincent's: 6:15 Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "weekly confession Friday 18:15 st-vincent-de-paul-springbrook  “1st Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly confession Friday 18:15 st-vincent-de-paul-springbrook  “1st Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "specific_date confession 2026-10-02 18:15 st-vincent-de-paul-springbrook  “First Friday”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: first-Friday Confession with a clock time in the newest bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-springbrook",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 5,
+          "said": "REMEMBERING OUR BELOVED DECEASED AT A SPECIAL MASS WED., NOV. 4th AT 7 PM ... Family, friends, and all who are grieving are very welcome to join us"
+        },
+        {
+          "source": "history",
+          "bulletin": "8949be0c6c79",
+          "said": "specific_date mass 2026-11-04 19:00 st-vincent-de-paul-springbrook  “Mass of Remembrance”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass outside the weekly schedule that invites everyone, so it is not a closed memorial Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8949be0c",
+          "page": 2,
+          "said": "1st Friday ~ Annunciation Nocturnal Adoration. Call Bob Flumerfeldt to join the team: 716 652-2393"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21c8218c",
+          "page": 3,
+          "said": "Adorations from 8PM on the First Friday of the month and ends at 6AM Saturday morning. There are 10 teams who take one hour each month on a rotational basis."
+        },
+        {
+          "source": "history",
+          "bulletin": "21c8218ce2a1",
+          "said": "weekly adoration Friday 20:00–06:00 church-of-the-annunciation-elma  “Nocturnal Adoration; 1st Friday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "fccf2b1297aa",
+          "said": "specific_date adoration 2026-10-02 20:00–06:00 church-of-the-annunciation-elma  “First Friday Nocturnal Adoration; ends Saturday 6:00 AM”",
+          "page": 3
+        }
+      ],
+      "rationale": "R30: the newest bulletin prints no time; the Oct 11 issue gives 8 PM to 6 AM, which crosses midnight. It is staffed by a rota of sign-up teams, so it is unclear it is open to all. Leaning include because it is parish Adoration under its own heading.",
+      "question": "Add the Annunciation First Friday overnight Nocturnal Adoration, 8:00 PM to 6:00 AM Saturday?",
+      "options": [
+        {
+          "label": "First Fridays 8:00 PM-6:00 AM",
+          "entry": {
+            "church_slug": "church-of-the-annunciation-elma",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": "06:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Nocturnal Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

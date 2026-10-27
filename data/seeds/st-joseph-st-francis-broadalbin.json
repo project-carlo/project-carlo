@@ -1,0 +1,1002 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-st-francis-broadalbin",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:12:15Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:00:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches in one linked parish, both on the church list. Weekday, weekend and confession times print in the same schedule box in every bulletin read. The newest issue cancels the Mass on Oct 26, 27, 29 and 30; the summer-only St. Francis Saturday vigil is left out. One open question: the Nov 13 'Memoria Mass'.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c2dc48b77051a6e74ce2cc2fca4383b06529eecd7acdb1cc832dbfc737fdbe53",
+      "fetched_at": "2026-10-25T13:12:15Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "5c1e209b173b9d83b5c7202edbe8568e9352addf1f0e371389b3ccc4c2a0f696",
+      "fetched_at": "2026-10-18T12:43:27Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "ff711de90288248e1f57b4f4a6b89005905bb268a6c0bea4812290477613e3f2",
+      "fetched_at": "2026-10-11T16:27:57Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "0d1d84b28090c0991b08b853624ae0aa17124c3f93d774a7e70d436279bbf20c",
+      "fetched_at": "2026-10-04T14:54:26Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "2287cc2231e82bb6dbf52cca9b9ccf99be9787f5cda4f307dd3a149eb91d32bb",
+      "fetched_at": "2026-09-28T22:03:52Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Monday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Monday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Monday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Monday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Monday 08:30 st-joseph-broadalbin",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the Mass schedule box of every bulletin read. The newest bulletin's 'No Mass' on Monday Oct 26 and Friday Oct 30 are dated cancellations of this weekly slot (recorded below), not a change to it. Monday Nov 2 8:30 AM All Souls Day Mass in the events list is this weekly Monday Mass (POLICY, Weekly or dated rule 7), so no separate dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Daily Mass Monday & Friday | 8:30 am St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Friday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Friday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Friday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Friday 08:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Friday 08:30 st-joseph-broadalbin",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the Mass schedule box of every bulletin read. The newest bulletin's 'No Mass' on Monday Oct 26 and Friday Oct 30 are dated cancellations of this weekly slot (recorded below), not a change to it. Monday Nov 2 8:30 AM All Souls Day Mass in the events list is this weekly Monday Mass (POLICY, Weekly or dated rule 7), so no separate dated entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Tuesday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Tuesday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Tuesday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Tuesday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Tuesday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the Mass schedule box of every bulletin read. The newest bulletin's 'No Mass' on Tuesday Oct 27 and Thursday Oct 29 are dated cancellations (recorded below), not a change to the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Tuesday & Thurs. 8:30 am St. Francis"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Thursday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Thursday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Thursday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Thursday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Thursday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed in the Mass schedule box of every bulletin read. The newest bulletin's 'No Mass' on Tuesday Oct 27 and Thursday Oct 29 are dated cancellations (recorded below), not a change to the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Saturday | 4 pm St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Saturday | 4 pm St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Saturday | 4 pm St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Saturday 16:00 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Saturday 16:00 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Saturday 16:00 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Saturday 16:00 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Saturday 16:00 st-joseph-broadalbin",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Sunday | 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Sunday | 8:30 am St. Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Sunday | 8:30 am St. Francis"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-northville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "10:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "10:30 am St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "10:30 am St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Sunday 10:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Sunday 10:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Sunday 10:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly mass Sunday 10:30 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly mass Sunday 10:30 st-joseph-broadalbin",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Confession Saturday | 3:15 pm St Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Confession Saturday | 3:15 pm St Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Confession Saturday | 3:15 pm St Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly confession Saturday 15:15 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly confession Saturday 15:15 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly confession Saturday 15:15 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly confession Saturday 15:15 st-joseph-broadalbin",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly confession Saturday 15:15 st-joseph-broadalbin",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of every bulletin read; no end time is given, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "Sunday | 8:00 am St Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 1,
+          "said": "Sunday | 8:00 am St Francis"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2287cc22",
+          "page": 1,
+          "said": "Sunday | 8:00 am St Francis"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly confession Sunday 08:00 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly confession Sunday 08:00 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly confession Sunday 08:00 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0d1d84b28090",
+          "said": "weekly confession Sunday 08:00 st-francis-of-assisi-northville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2287cc2231e8",
+          "said": "weekly confession Sunday 08:00 st-francis-of-assisi-northville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of every bulletin read; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 2,
+          "said": "ST. JOSEPH'S MASS INTENTIONS: Monday (Oct. 26) No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "specific_date mass 2026-10-26 08:30 st-joseph-broadalbin  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says no Mass on this date; the weekly Monday slot stays (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-broadalbin",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 2,
+          "said": "ST. JOSEPH'S MASS INTENTIONS: Friday (Oct. 30) No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "specific_date mass 2026-10-30 08:30 st-joseph-broadalbin  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says no Mass on this date; the weekly Friday slot stays (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 2,
+          "said": "ST. FRANCIS MASS INTENTIONS: Tuesday (Oct. 27) No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "specific_date mass 2026-10-27 08:30 st-francis-of-assisi-northville  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says no Mass on this date; the weekly Tuesday slot stays (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 2,
+          "said": "ST. FRANCIS MASS INTENTIONS: Thurs. (Oct. 29) No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "specific_date mass 2026-10-29 08:30 st-francis-of-assisi-northville  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says no Mass on this date; the weekly Thursday slot stays (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-northville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer only, July 4 to Labor Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 1,
+          "said": "6:00 pm St. Francis - July 4-Labor Day"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Saturday 18:00 st-francis-of-assisi-northville 'July 4-Labor Day'"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "weekly mass Saturday 18:00 st-francis-of-assisi-northville  “July 4—Labor Day”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "weekly mass Saturday 18:00 st-francis-of-assisi-northville  “July 4 — Labor Day”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ff711de90288",
+          "said": "weekly mass Saturday 18:00 st-francis-of-assisi-northville  “July 4 through Labor Day”",
+          "page": 1
+        }
+      ],
+      "rationale": "R33, R9: a summer-only Saturday vigil; Labor Day's date moves each year, so the format cannot express the season's end, and it is not in effect at as_of (the October bulletins still print it). Update mode will read it again next summer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 3,
+          "said": "Each Monday & Friday after SJ 8:30 am Mass - Pray the Rosary; 1st Sundays of the Month - SF - 8 am pray the Rosary; Rosary before each weekend Mass during October, 3:30 on Sat. & 10:00 am on Sun."
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2dc48b7",
+          "page": 3,
+          "said": "Fri., Nov. 13, - SJ-6:30 pm-Memoria Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c1e209b",
+          "page": 3,
+          "said": "Fri., Nov. 13, - SJ-6:30 pm-Memoria Mass"
+        },
+        {
+          "source": "history",
+          "said": "specific_date mass 2026-11-13 18:30 st-joseph-broadalbin 'Memoria Mass'"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2dc48b77051",
+          "said": "specific_date mass 2026-11-13 18:30 st-joseph-broadalbin  “Memoria Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5c1e209b173b",
+          "said": "specific_date mass 2026-11-13 18:30 st-joseph-broadalbin  “Memoria Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R30: a dated evening Mass at a listed church, announced in the parish events list in two issues. Whether a 'Memoria Mass' is open to all or a closed memorial for specific families (POLICY, What to extract) is not explained in any bulletin read; leaning to include because it is listed in the parish events calendar with no restriction.",
+      "question": "Add the Friday, Nov 13, 6:30 PM 'Memoria Mass' at St. Joseph's?",
+      "options": [
+        {
+          "label": "Add it (one dated Mass)",
+          "entry": {
+            "church_slug": "st-joseph-broadalbin",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-13",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Memoria Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

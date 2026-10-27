@@ -1,0 +1,698 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-stamford",
+  "status": "ready",
+  "as_of": "2026-10-25T13:26:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:57:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Sacred Heart in Stamford (Sunday 12:30, Monday 9:00, First Monday Adoration after Mass, Confession after Sunday and Monday Mass) and St. Philip Neri in Grand Gorge (Sunday 11:00). The schedule box is the same in all five bulletins. Confessions are timed only relative to Mass, so only the after-Mass ones get a time; the unquantified before-Mass ones are left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e99c39cf0a0d304980da9ddbd0f37ceeece5abf4a1c8a1172f5da46046e11fec",
+      "fetched_at": "2026-10-25T13:26:30Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "aa6b94923fb8402243ebbba1b53cdcc4b817cfd7695d33fbe911a3b7a649857f",
+      "fetched_at": "2026-10-18T12:57:16Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "3536505fae5207f52022fc44395ff75db91788b0c0a0e8b30e63177f2b610783",
+      "fetched_at": "2026-10-11T16:32:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7adade1581ea7933646a87c009c04ed98c0d1869c1e20820905ae18d7c742e2f",
+      "fetched_at": "2026-10-04T14:51:31Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ce054171eee1ec47e41371dc0bb34249f74630e715ab309db0342d5252584a0e",
+      "fetched_at": "2026-09-28T22:01:38Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "Sunday 12:30 pm - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "Sunday 12:30 pm - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "Sunday 12:30 pm - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "Sunday 12:30 pm - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "Sunday 12:30 pm - Sacred Heart Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly mass Sunday 12:30 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly mass Sunday 12:30 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly mass Sunday 12:30 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7adade1581ea",
+          "said": "weekly mass Sunday 12:30 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly mass Sunday 12:30 sacred-heart-stamford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed under Weekend Masses in the Mass Schedule box of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-grand-gorge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "Sunday 11:00 am - St. Philip Neri Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "Sunday 11:00 am - St. Philip Neri Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "Sunday 11:00 am - St. Philip Neri Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "Sunday 11:00 am - St. Philip Neri Mission Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "Sunday 11:00 am - St. Philip Neri Mission Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly mass Sunday 11:00 st-philip-neri-grand-gorge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly mass Sunday 11:00 st-philip-neri-grand-gorge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly mass Sunday 11:00 st-philip-neri-grand-gorge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7adade1581ea",
+          "said": "weekly mass Sunday 11:00 st-philip-neri-grand-gorge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly mass Sunday 11:00 st-philip-neri-grand-gorge",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed under Weekend Masses in the Mass Schedule box of all five bulletins; St. Philip Neri is the Grand Gorge church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "Weekday Masses at Sacred Heart Church: Monday at 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "Weekday Masses at Sacred Heart Church: Monday at 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "Weekday Masses at Sacred Heart Church: Monday at 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "Weekday Masses at Sacred Heart Church: Monday at 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "Weekday Masses at Sacred Heart Church: Monday at 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly mass Monday 09:00 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly mass Monday 09:00 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly mass Monday 09:00 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7adade1581ea",
+          "said": "weekly mass Monday 09:00 sacred-heart-stamford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly mass Monday 09:00 sacred-heart-stamford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed under Weekday Masses in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: First Monday of the Month AFTER 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: First Monday of the Month AFTER 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: First Monday of the Month AFTER 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: First Monday of the month followed by 9 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: First Monday of the month followed by 9 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly adoration Monday 09:30 sacred-heart-stamford  “First Monday of the month; follows 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly adoration Monday 09:30 sacred-heart-stamford  “First Monday of the month after 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly adoration Monday 09:30 sacred-heart-stamford  “First Monday of the month; follows 9:00 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the newest bulletin names it First Monday, AFTER the 9 am weekday Mass, with no clock time, so POLICY works it out at 30 minutes after the weekday Mass (9:30 AM), no end time. The two oldest bulletins say 'followed by 9 am Mass', which looks like an earlier wording of the same line; the three newest all say AFTER. The Oct 5 first-Monday week (issue 10/04) still lists the 9:00 Mass, so no contradiction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass or Before or After Mass on Monday or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass or Before or After Mass on Monday or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass or Before or After Mass on Monday or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass or Before or After Mass on Monday or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "SHC in Stamford - Before or after Mass on Monday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly confession Monday 09:30 sacred-heart-stamford  “After 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly confession Monday 09:30 sacred-heart-stamford  “After Monday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly confession Monday 09:30 sacred-heart-stamford  “After Monday Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: after the Monday weekday Mass with no clock time, so 30 minutes after the 9:00 AM start (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aa6b9492",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3536505f",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7adade15",
+          "page": 1,
+          "said": "SHC in Stamford - After Sunday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "After Mass on Sunday at 12:30 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly confession Sunday 13:30 sacred-heart-stamford  “After 12:30 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly confession Sunday 13:30 sacred-heart-stamford  “After Sunday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly confession Sunday 13:30 sacred-heart-stamford  “After Sunday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly confession Sunday 12:30 sacred-heart-stamford  “After Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: after the Sunday 12:30 Mass at Sacred Heart with no clock time, so one hour after the weekend Mass starts (13:30). The 9/27 issue ties it explicitly to the 12:30 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "SHC in Stamford - ... Before or After Mass on Monday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly confession Monday 08:30 sacred-heart-stamford  “Before 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly confession Monday 08:30 sacred-heart-stamford  “Before Monday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly confession Monday 08:30 sacred-heart-stamford  “Before Monday Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R24: 'before Mass on Monday' gives no clock time and no number of minutes, and POLICY only works out 'N minutes before Mass'; a wrong time is worse than a missing one. History's 8:30 AM is a guess that the bulletin never prints.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-neri-grand-gorge",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "SPN in Grand Gorge - Before Sunday Mass or by Appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "e99c39cf0a0d",
+          "said": "weekly confession Sunday 10:30 st-philip-neri-grand-gorge  “Before 11:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aa6b94923fb8",
+          "said": "weekly confession Sunday 10:30 st-philip-neri-grand-gorge  “Before Sunday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3536505fae52",
+          "said": "weekly confession Sunday 10:30 st-philip-neri-grand-gorge  “Before Sunday Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly confession Sunday 11:00 st-philip-neri-grand-gorge  “Before Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R24: 'before Sunday Mass' gives no clock time and no number of minutes, and POLICY only works out 'N minutes before Mass'; a wrong time is worse than a missing one. History's 10:30 AM is a guess that the bulletin never prints.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e99c39cf",
+          "page": 1,
+          "said": "or by Appointment"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-stamford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before or after Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ce054171",
+          "page": 1,
+          "said": "SHC in Stamford - Before or after Mass on Monday"
+        },
+        {
+          "source": "history",
+          "bulletin": "ce054171eee1",
+          "said": "weekly confession Monday 09:00 sacred-heart-stamford  “Before or after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R9, R24: an older-bulletin history reading puts this at 9:00 AM, the Mass's own start; the bulletin gives no clock time. The after-Mass part is slot s5 (9:30) and the before-Mass part is excluded as s7 (no minutes given).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,2060 @@
+{
+  "schema_version": 1,
+  "parish_slug": "niagara-frontier-catholic",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:16:26Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:59:08Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three worship sites in one community. Cover-page Mass and Confession times agree across the five bulletins read; Confession times follow the cover (the page 10 Sacraments box disagrees and looks stale; the website supports the cover). Included: Immaculate Conception Wed and Fri Adoration, a first-Friday St. Peter Adoration (R12), three monthly midnight holy hours, an Oct 30 Adoration evening, Nov 2 All Souls Mass and Nov 6 Latin Requiem Mass. Open: whether the Friday 9:00 AM (School) Mass is a public Mass at St. Peter.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "01480495e977a80ca076ce6ed5134a878f3d48ecfd624985851d605a8bb5b6e3",
+      "fetched_at": "2026-10-25T13:16:26Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "6c2c43252cec097ed784d21d73af548380c3f252fef47c81a6305b81dd21f21e",
+      "fetched_at": "2026-10-18T12:43:25Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "b7b9fd315ed780a153f508bca5c2ffe5b8a2d45878ab3d16bd7debd9a9e34e1c",
+      "fetched_at": "2026-10-11T16:33:45Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "70a4f4272728ca0d91d34f35c7f541a8e81f2323812194e6add1b58a63b790c8",
+      "fetched_at": "2026-10-04T14:26:06Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ebf578624ee0774056c93f526cc8bf5bb745058b094fbb6f42f3aeda091923a2",
+      "fetched_at": "2026-09-26T18:54:15Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "ST. PETER RC PARISH, St. Peter Worship Site, Mass Times: Saturday Vigil @ 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "ST. PETER RC PARISH, St. Peter Worship Site, Mass Times: Saturday Vigil @ 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "ST. PETER RC PARISH, St. Peter Worship Site, Mass Times: Saturday Vigil @ 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Saturday October 31, 2026 4:30pm: Angelo Morreale by Tina & Larry Pietrobon"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Saturday 16:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Saturday 16:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Saturday 16:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Saturday 16:30 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Sunday 08:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Sunday 08:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Sunday 08:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Sunday 08:00 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list 8:00am and 10:00am each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Sunday @ 8:00 a.m. & 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Sunday 10:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Sunday 10:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Sunday 10:00 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Sunday 10:00 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list 8:00am and 10:00am each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Monday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Monday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Monday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Monday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Tuesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Tuesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Tuesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Tuesday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Wednesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Wednesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Wednesday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Wednesday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Thursday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Thursday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Thursday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Thursday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Friday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Friday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Friday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Friday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday-Saturday @ 7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26 through Saturday October 31, 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Saturday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Saturday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Saturday 07:45 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Saturday 07:45 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list a 7:45am Mass each day Monday to Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30pm Or anytime by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30pm Or anytime by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Confessions: Saturday 3:30pm Or anytime by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 10,
+          "said": "Saturdays at 3:30pm at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly confession Saturday 15:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly confession Saturday 15:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly confession Saturday 15:30 st-peter-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly confession Saturday 15:30 st-peter-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule and the Sacraments box (page 10) agree on 3:30pm. No end time is printed; 'anytime by appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "IMMACULATE CONCEPTION RC PARISH Mass Times: Saturday Vigil @ 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "IMMACULATE CONCEPTION RC PARISH Mass Times: Saturday Vigil @ 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "IMMACULATE CONCEPTION RC PARISH Mass Times: Saturday Vigil @ 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list 4:00pm each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Sunday @ 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Sunday @ 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Sunday @ 9:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Sunday 09:30 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read; intentions list 9:30am each Sunday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Monday @ 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Monday @ 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Monday @ 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Monday October 26, 2026 8:30am: Alan Montanari by Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Monday 08:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Monday 08:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Monday 08:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Monday 08:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Monday 08:30 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule and weekly intentions (Oct 5, 12, 19, 26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Wednesday @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Wednesday @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Wednesday @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Wednesday October 28, 2026 6:30pm: Margaret Joy by Karli Leggett"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Wednesday 18:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Wednesday 18:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Wednesday 18:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Wednesday 18:30 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Wednesday 18:30 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule and weekly intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Confessions: Saturday 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Confessions: Saturday 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Confessions: Saturday 3:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.niagarafrontiercatholic.org/mass-times-popup",
+          "said": "Reconciliation Wed. - 6:00-6:20pm, Sat. - 3:00-3:45pm @ Immaculate Conception"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly confession Saturday 15:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly confession Saturday 15:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly confession Saturday 15:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly confession Saturday 15:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly confession Saturday 15:00 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R28: the cover schedule on every bulletin read and the parish website's Mass-times page both say Saturday 3:00 (the website adds a 3:45 end). Only page 10's Sacraments box says 3:15pm, a boilerplate outlier. I keep the bulletin's start and leave end_time empty because no bulletin prints one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Confessions: ... Wednesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Confessions: ... Wednesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Confessions: ... Wednesday 6:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.niagarafrontiercatholic.org/mass-times-popup",
+          "said": "Reconciliation Wed. - 6:00-6:20pm @ Immaculate Conception"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly confession Wednesday 18:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly confession Wednesday 18:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly confession Wednesday 18:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly confession Wednesday 18:00 immaculate-conception-ransomville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly confession Wednesday 18:00 immaculate-conception-ransomville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule on every bulletin read agrees with the website's Mass-times page; page 10's Sacraments box says 5:45pm, an outlier (a boilerplate box that also says St. Bernard's Mass is at 7:00pm against the 6:30pm printed everywhere else).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-youngstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "ST. PETER RC PARISH ~St. Bernard Worship Site~ Mass Times: Sunday @ 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "ST. PETER RC PARISH ~St. Bernard Worship Site~ Mass Times: Sunday @ 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "ST. PETER RC PARISH ~St. Bernard Worship Site~ Mass Times: Sunday @ 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Sunday November 1, 2026 11:30am: (St. Bernard) Rev. Msgr. J. Thomas Moran"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Sunday 11:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Sunday 11:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Sunday 11:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Sunday 11:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Sunday 11:30 st-bernard-youngstown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule and intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-youngstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Thursday Evening @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Thursday Evening @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Thursday Evening @ 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Thursday October 29, 2026 6:30pm (St. Bernard) Paul & Marjory Moretta"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Thursday 18:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Thursday 18:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly mass Thursday 18:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Thursday 18:30 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly mass Thursday 18:30 st-bernard-youngstown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover schedule, intentions and the St. Peregrine flyer (page 6) all say 6:30pm. Page 10's Anointing line mentions a 7:00pm Mass, which looks like boilerplate.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-youngstown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 1,
+          "said": "Confessions: Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 1,
+          "said": "Confessions: Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 1,
+          "said": "Confessions: Thursday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 6,
+          "said": "St. Peregrine Healing Mass ... St. Bernard Worship Site ... Confessions @ 6:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.niagarafrontiercatholic.org/mass-times-popup",
+          "said": "Reconciliation Thurs. 6:00-6:20pm @St. Bernard"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly confession Thursday 18:00 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly confession Thursday 18:00 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly confession Thursday 18:00 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly confession Thursday 18:00 st-bernard-youngstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly confession Thursday 18:00 st-bernard-youngstown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R28: cover schedule, the page 6 flyer and the website agree on 6:00pm; page 10 says Thursdays at 6:30pm, which reads as the Mass time and is the outlier.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "IMMACULATE CONCEPTION Every Wed. 5:00 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "IMMACULATE CONCEPTION Every Wed. 5:00 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 7,
+          "said": "IMMACULATE CONCEPTION Every Wed. 5:00 - 6:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly adoration Wednesday 17:00–18:30 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly adoration Wednesday 17:00–18:30 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly adoration Wednesday 17:00–18:30 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly adoration Wednesday 17:00–18:30 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly adoration Wednesday 17:00–18:30 immaculate-conception-ransomville",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration box on page 7 of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "Every Friday 10:00am - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "Every Friday 10:00am - 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 7,
+          "said": "Every Friday 10:00am - 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly adoration Friday 10:00–16:00 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly adoration Friday 10:00–16:00 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly adoration Friday 10:00–16:00 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly adoration Friday 10:00–16:00 immaculate-conception-ransomville",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "ebf578624ee0",
+          "said": "weekly adoration Friday 10:00–16:00 immaculate-conception-ransomville",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration box on page 7 of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows the 9:00 AM Mass; Family Adoration at 6:00 PM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 7,
+          "said": "ST. PETER WORSHIP SITE First Friday of every month following 9:00am Mass until 8:00pm with Family Adoration at 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "First Friday of every month following 9:00am Mass until 8:00pm with Family Adoration at 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "First Friday of every month following 9:00am Mass until 8:00pm with Family Adoration at 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly adoration Friday 09:00–20:00 st-peter-lewiston  “First Friday of every month; Family Adoration at 6:00 PM”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "weekly adoration Friday 09:00–20:00 st-peter-lewiston  “First Friday of every month; includes Family Adoration at 6:00 PM”  (a different time)",
+          "page": 7
+        }
+      ],
+      "rationale": "R12, R10: a named first-Friday service. The newest bulletin's week (Oct 25 to Nov 1) holds no first Friday; the Sep 27 issue's week holds Fri Oct 2 and prints it. Start is 30 minutes after the 9:00am Mass (weekday Mass, POLICY, Times); history's 9:00 is the Mass time itself (R8). The website says 'Following 7:45am Mass' but its Sacraments page still names Rev. Luke Uebler as pastor, so I treat that page as older than the bulletins. The 6:00 PM Family Adoration lies inside this period (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "00:00",
+        "end_time": "03:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pray for priests and vocations"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "Once a month we gather to pray for our priests and for more vocations ... Thursday October 29, 2026 ~ Midnight until 3:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "Once a month we gather to pray for our priests and for more vocations ... Thursday October 29, 2026 ~ Midnight until 3:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "specific_date adoration 2026-10-29 00:00–03:00 immaculate-conception-ransomville  “Midnight until 3:00 AM”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "specific_date adoration 2026-10-29 00:00–03:00 immaculate-conception-ransomville",
+          "page": 7
+        }
+      ],
+      "rationale": "R14, R16: the monthly dates fall on different weeks (4th/last, 3rd, 3rd Thursday), so the pattern cannot be written as a weekly slot (R33); each printed date on or after as_of is a dated entry. The date is taken as printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-19",
+        "start_time": "00:00",
+        "end_time": "03:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pray for priests and vocations"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "Thursday November 19, 2026~ Midnight until 3:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "Thursday November 19, 2026~ Midnight until 3:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "specific_date adoration 2026-11-19 00:00–03:00 immaculate-conception-ransomville",
+          "page": 7
+        }
+      ],
+      "rationale": "R14, R16: printed date on or after as_of; see the October 29 slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-ransomville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "00:00",
+        "end_time": "03:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Pray for priests and vocations"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 7,
+          "said": "Thursday December 17, 2026~ Midnight until 3:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c2c4325",
+          "page": 7,
+          "said": "Thursday December 17, 2026~ Midnight until 3:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "specific_date adoration 2026-12-17 00:00–03:00 immaculate-conception-ransomville",
+          "page": 7
+        }
+      ],
+      "rationale": "R14, R16: printed date on or after as_of; see the October 29 slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "17:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Come Into the Light"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 3,
+          "said": "Come Into the Light: Join us in Adoration of the Blessed Sacrament ... Friday, October 30th 2026 5:00 - 9:00 PM St. Peter R.C. Church. All are welcome."
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "specific_date adoration 2026-10-30 17:00–21:00 st-peter-lewiston",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "specific_date adoration 2026-10-30 17:00–21:00 st-peter-lewiston  “Come Into the Light”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated Adoration with a printed date and hours; it is not a first Friday (Oct 30 is the last Friday), so POLICY, Weekly or dated, rule 3 makes it dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 6,
+          "said": "All Soul's Day Mass ... Celebrated at: Saint Peter Roman Catholic Church 620 Center Street Lewiston ... Monday, November 2, 2026 6:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "specific_date mass 2026-11-02 18:30 st-peter-lewiston  “All Souls' Day Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass at a listed church, open to all (To pray for those who have died during this past year).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-lewiston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-06",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemn Requiem Mass in Latin"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 8,
+          "said": "Solemn Requiem Mass in Latin Friday, November 6, 2026 7:00pm Saint Peter Roman Catholic Church 600 Center St. Lewiston, NY ... Sung Mass in Latin for the Intention of All Souls. All Are Welcome"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "specific_date mass 2026-11-06 19:00 st-peter-lewiston  “Solemn Requiem Mass in Latin”",
+          "page": 8
+        }
+      ],
+      "rationale": "R1, R16: dated Mass open to all (for the intention of All Souls, not one person). The flyer prints 600 Center St. where the church list and page 6 give 620 Center St.; it names Saint Peter Roman Catholic Church in Lewiston, the only such church, so I treat 600 as a typo.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-youngstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Peregrine Healing Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 6,
+          "said": "St. Peregrine Healing Mass Thursday October 29, 2026 6:30pm, St. Peter RC Parish @ St. Bernard Worship Site"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a named Mass at the regular Thursday 6:30 PM St. Bernard Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "01480495",
+          "page": 2,
+          "said": "Friday October 30, 2026 7:45am: Hope Hastings by Estate; 9:00am (School) All Souls"
+        },
+        {
+          "source": "agent",
+          "bulletin": "70a4f427",
+          "page": 2,
+          "said": "Friday October 9, 2026 9:00am (School) No School Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ebf57862",
+          "page": 2,
+          "said": "Friday October 2, 2026 9:00am (School) Katie O'Hara Barrett by The LaNasa Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "01480495e977",
+          "said": "weekly mass Friday 09:00 st-peter-lewiston  “School Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6c2c43252cec",
+          "said": "weekly mass Friday 09:00 st-peter-lewiston  “First Friday of every month”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b7b9fd315ed7",
+          "said": "specific_date mass 2026-10-16 09:00 st-peter-lewiston  “School Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "70a4f4272728",
+          "said": "weekly mass Friday 09:00 st-peter-lewiston  “School Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R30: a 9:00 AM Mass tagged (School) is listed in the Friday intentions of every bulletin read (Oct 2, 9 'No School Mass', 16, 23, 30) but never in the cover schedule, whose weekday line is Monday-Saturday 7:45am. The tag marks a place the way (St. Bernard) does, and the school is at 145 N. Sixth St. (page 4), which POLICY leaves out when it is another address; but the First Friday Adoration at the church follows a 9:00am Mass, so it may be held in the church. Leaning leave out: no public church time is printed. History had it as a weekly Friday 9:00 Mass.",
+      "question": "Add a Friday 9:00 AM School Mass at St. Peter?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Fridays 9:00 AM at St. Peter",
+          "entry": {
+            "church_slug": "st-peter-lewiston",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

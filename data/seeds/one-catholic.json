@@ -1,0 +1,3076 @@
+{
+  "schema_version": 1,
+  "parish_slug": "one-catholic",
+  "status": "ready",
+  "as_of": "2026-10-25T13:16:31Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:08:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches: Holy Family (Albion), St. Mary's (Holley) and Holy Trinity (Medina, church st-mary-medina). The bulletin has no Mass schedule box, so Masses come from the Mass Intentions list, which repeats the same days and times in all five bulletins read, plus printed Confession and Adoration lists. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fcc4ec282ca522dbcdd7aaf11531bfaa74ecb53b4084a8cbd4f3ff562f0c6274",
+      "fetched_at": "2026-10-25T13:16:31Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "8596831f38b25919f07160fa59a66f66cca984c8711bfc1325f684dba71806e9",
+      "fetched_at": "2026-10-18T12:43:28Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "7635bf36ed6399f226000541fc23ffe4e54101575c2d8bb5c5ae6d009101c789",
+      "fetched_at": "2026-10-11T16:33:50Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "a3c9aa5a3db48a2d1d3e8bf50849abeaf42305fe0764ee409d13d3191530a44d",
+      "fetched_at": "2026-10-04T14:26:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "5c548970dfeb807564a122e10f730436862634643930381882c726e626535cec",
+      "fetched_at": "2026-09-26T18:54:17Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Saturday 16:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Saturday 16:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Saturday 16:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Saturday 16:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Saturday 16:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Saturday 4:00 PM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Saturday 4:00 PM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Saturday 16:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Saturday 16:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Saturday 16:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Saturday 16:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Saturday 16:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Saturday 4:00 PM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Saturday 5:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Saturday 5:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Saturday 5:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Saturday 5:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Saturday 5:30 PM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Saturday 17:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Saturday 17:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Saturday 17:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Saturday 17:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Saturday 17:30 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Saturday 5:30 PM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 8:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 8:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 8:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 8:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 8:00 AM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 08:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 08:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 08:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 08:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 08:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 8:00 AM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 8:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 8:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 8:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 8:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 8:30 AM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 08:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 08:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 08:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 08:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 08:30 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 8:30 AM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 10:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 10:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 10:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 10:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 10:00 AM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 10:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 10:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 10:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 10:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 10:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 10:00 AM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 10:30 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 10:30 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 10:30 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 10:30 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 10:30 AM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 10:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 10:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 10:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 10:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 10:30 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 10:30 AM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 11:00 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 11:00 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 11:00 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 11:00 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 11:00 AM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 11:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 11:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 11:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 11:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 11:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 11:00 AM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Sunday 12:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Sunday 12:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Sunday 12:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Sunday 12:30 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Sunday 12:30 PM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Sunday 12:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Sunday 12:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Sunday 12:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Sunday 12:30 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Sunday 12:30 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Sunday 12:30 PM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Monday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Monday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Monday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Monday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Monday 7:30 AM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Monday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Monday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Monday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Monday 07:30 st-mary-medina  “Holy Half Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Monday 07:30 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Monday 7:30 AM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Monday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Monday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Monday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Monday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Monday 9:00 AM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Monday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Monday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Monday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Monday 09:00 holy-family-albion  “Holy Half Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Monday 09:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Monday 9:00 AM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Tuesday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Tuesday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Tuesday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Tuesday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Tuesday 8:00 AM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Tuesday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Tuesday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Tuesday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Tuesday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Tuesday 08:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Tuesday 8:00 AM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Tuesday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Tuesday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Tuesday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Tuesday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Tuesday 9:00 AM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Tuesday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Tuesday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Tuesday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Tuesday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Tuesday 09:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Tuesday 9:00 AM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Tuesday 6:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Tuesday 6:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Tuesday 6:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Tuesday 6:00 PM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Tuesday 6:00 PM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Tuesday 18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Tuesday 18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Tuesday 18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Tuesday 18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Tuesday 18:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Tuesday 6:00 PM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Wednesday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Wednesday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Wednesday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Wednesday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Wednesday 7:30 AM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Wednesday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Wednesday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Wednesday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Wednesday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Wednesday 07:30 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Wednesday 7:30 AM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Wednesday 6:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Wednesday 6:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Wednesday 6:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Wednesday 6:00 PM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Wednesday 6:00 PM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Wednesday 18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Wednesday 18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Wednesday 18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Wednesday 18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Wednesday 18:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Wednesday 6:00 PM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Thursday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Thursday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Thursday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Thursday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Thursday 8:00 AM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Thursday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Thursday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Thursday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Thursday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Thursday 08:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Thursday 8:00 AM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Thursday 6:00 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Thursday 6:00 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Thursday 6:00 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Thursday 6:00 PM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Thursday 6:00 PM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Thursday 18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Thursday 18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Thursday 18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Thursday 18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Annual Mass of Remembrance”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Thursday 18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Thursday 6:00 PM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Friday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Friday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Friday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Friday 7:30 AM (Medina)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Friday 7:30 AM (Medina)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Friday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Friday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Friday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Friday 07:30 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Friday 07:30 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Friday 7:30 AM at Holy Trinity, Medina on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Friday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Friday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Friday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Friday 8:00 AM (Holley)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Friday 8:00 AM (Holley)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Friday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Friday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Friday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Friday 08:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Friday 08:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Friday 8:00 AM at St. Mary's, Holley on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "Friday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "Friday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "Friday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "Friday 9:00 AM (Albion)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "Friday 9:00 AM (Albion)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly mass Friday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly mass Friday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly mass Friday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly mass Friday 09:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly mass Friday 09:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: the Mass Intentions list of the newest bulletin and the four older ones (five different weeks) shows Friday 9:00 AM at Holy Family, Albion on the same weekday and time; no separate Mass schedule box is printed. Holy Trinity is the Medina church (211 Eagle Street) and St. Mary's is Holley (13 South Main Street), per the bulletin's office block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): Holy Trinity is the Medina church; the weekly calendar calls it Holy Hour & Confessions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): St. Mary's is Holley.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): Holy Family is Albion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 1:00-2:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 1:00-2:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 1:00-2:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 1:00-2:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 1:00-2:00 PM, Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Saturday 13:00–14:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Saturday 13:00–14:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Saturday 13:00–14:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Saturday 13:00–14:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Saturday 13:00–14:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): Holy Family is Albion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): St. Mary's is Holley.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "CONFESSION: Saturday, 3:00-3:45 PM: Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confession list on page 4 of all five bulletins read (five different weeks): Holy Trinity is Medina.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Monday, 8:00 AM-8:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Monday, 8:00 AM-8:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Monday, 8:00 AM-8:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Monday, 8:00 AM-8:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Monday, 8:00 AM-8:00 PM, St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Monday 08:00–20:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Monday 08:00–20:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Monday 08:00–20:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Monday 08:00–20:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Monday 08:00–20:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): St. Mary's is Holley.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Tuesday, 5:00-6:00 PM: Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): Holy Trinity is Medina; the calendar calls it a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-holley",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday, 5:00-6:00 PM, St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-mary-holley  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-mary-holley  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-mary-holley  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-mary-holley",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): St. Mary's is Holley; the calendar calls it a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday ... and 8:00 AM-8:00 PM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday ... and 8:00 AM-8:00 PM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday ... and 8:00 AM-8:00 PM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday ... and 8:00 AM-8:00 PM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Wednesday ... and 8:00 AM-8:00 PM, Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-mary-medina",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): Holy Trinity is Medina.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Thursday, 5:00-6:00 PM, Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Thursday 17:00–18:00 holy-family-albion  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Thursday 17:00–18:00 holy-family-albion  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Thursday 17:00–18:00 holy-family-albion  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Thursday 17:00–18:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): Holy Family is Albion; the calendar calls it a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-medina",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 8:00-9:00 AM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 8:00-9:00 AM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 8:00-9:00 AM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 8:00-9:00 AM, Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 8:00-9:00 AM, Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-medina  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-medina",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): Holy Trinity is Medina; the calendar calls it a Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 9:30 AM-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 9:30 AM-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7635bf36",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 9:30 AM-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3c9aa5a",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 9:30 AM-6:00 PM, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c548970",
+          "page": 4,
+          "said": "EUCHARISTIC ADORATION: Friday, 9:30 AM-6:00 PM, Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc4ec282ca5",
+          "said": "weekly adoration Friday 09:30–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "weekly adoration Friday 09:30–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "weekly adoration Friday 09:30–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "weekly adoration Friday 09:30–18:00 holy-family-albion",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "weekly adoration Friday 09:30–18:00 holy-family-albion",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R35: printed in the Eucharistic Adoration list on page 4 of all five bulletins read (five different weeks): Holy Family is Albion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-albion",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-05",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 1,
+          "said": "MASS OF REMEMBRANCE Thursday, November 5th 6:00 PM Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8596831f",
+          "page": 5,
+          "said": "Our Annual Mass of Remembrance will be celebrated on Thursday, November 5, 2026 at 6:00 PM at Holy Family."
+        },
+        {
+          "source": "history",
+          "bulletin": "8596831f38b2",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7635bf36ed63",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3c9aa5a3db4",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Annual Mass of Remembrance”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5c548970dfeb",
+          "said": "specific_date mass 2026-11-05 18:00 holy-family-albion  “Mass of Remembrance”",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7, R9: the Mass of Remembrance is a named Mass at the regular Thursday 6:00 PM Holy Family Mass, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fcc4ec28",
+          "page": 4,
+          "said": "CONFESSION ANY TIME BY APPOINTMENT"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

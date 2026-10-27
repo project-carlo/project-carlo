@@ -1,0 +1,1113 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-st-paul-binghamton",
+  "status": "ready",
+  "as_of": "2026-10-25T13:12:34Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:57:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (St. Mary of the Assumption and St. Paul). The front-page schedule box is identical in all five bulletins read; the Sunday 2:00 PM Latin Mass at St. Mary's appears only in the Mass intentions, every week (R35). Also a dated Nov 2 Mass of Remembrance at St. Paul. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6c9ac61fc27bbc12ecfc226d9678921328feeb92f03aa3a31316ad1208274e0a",
+      "fetched_at": "2026-10-25T13:12:34Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "a085edc7c8e9588d5cc03b35d362edbe10f0ae908f27acddbb3b5f89ee5a8b3f",
+      "fetched_at": "2026-10-18T12:38:35Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "f45f9c13cf30ea71dc1fef374b137e4ecb2a1272b1fb6a74c2259bdfec039af7",
+      "fetched_at": "2026-10-11T16:28:06Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "a8e783affb83c524d66947124c1490c4a1ffa82d179f2e529a6394969d1ea1cc",
+      "fetched_at": "2026-10-04T14:43:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "add269cfda604d80cc61b3423b326a4545408f045495a9e3d192091e0fb2ac56",
+      "fetched_at": "2026-09-28T00:15:24Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Tuesday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Tuesday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Tuesday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Tuesday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Tuesday 12:10 st-paul-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Weekday Masses Tuesday & Thursday 12:10 p.m. St. Paul's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Thursday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Thursday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Thursday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Thursday 12:10 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Thursday 12:10 st-paul-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Wednesday & Friday 12:10 p.m. St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Friday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Friday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Friday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Friday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Friday 12:10 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Saturday Vigil 5:00 p.m. St. Paul's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Saturday 17:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Saturday 17:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Saturday 17:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Saturday 17:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Saturday 17:00 st-paul-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Sunday 7:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Sunday 7:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Sunday 7:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Sunday 7:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Sunday 7:30 a.m. St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. St. Paul's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Sunday 09:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Sunday 09:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Sunday 09:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Sunday 09:00 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Sunday 09:00 st-paul-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Sunday 11:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Sunday 11:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Sunday 11:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly mass Sunday 11:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Sunday 11:30 st-mary-of-the-assumption-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 2,
+          "said": "SUNDAY, October 25, 2026 2:00 PM (SMA) LATIN MASS; SUNDAY, November 1 2:00 PM (SMA) LATIN MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 2,
+          "said": "2:00 PM (SMA) LATIN MASS under each Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 2,
+          "said": "2:00 PM (SMA) LATIN MASS under each Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 2,
+          "said": "2:00 PM (SMA) LATIN MASS under each Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 2,
+          "said": "2:00 PM (SMA) LATIN MASS under each Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly mass Sunday 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly mass Sunday 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly mass Sunday 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "specific_date mass 2026-10-04 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "specific_date mass 2026-10-11 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly mass Sunday 14:00 st-mary-of-the-assumption-binghamton  “Latin Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: the Sunday 2:00 PM Latin Mass at St. Mary's is listed under every Sunday in the Mass intentions of all five bulletins (five different weeks), not marked special. The front-page box omits it, but that is a missing header only (C1 conflict absent). A generic open Mass; history (3/4) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:15-4:45 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:15-4:45 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:15-4:45 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:15-4:45 p.m. St. Paul's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Reconciliation Saturday 4:15-4:45 p.m. St. Paul's"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:40",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:10 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 1,
+          "said": "Reconciliation Wednesday Following the 12:10 p.m. Mass, St. Mary's. Or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 1,
+          "said": "Reconciliation Wednesday Following the 12:10 p.m. Mass, St. Mary's. Or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 1,
+          "said": "Reconciliation Wednesday Following the 12:10 p.m. Mass, St. Mary's. Or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8e783af",
+          "page": 1,
+          "said": "Reconciliation Wednesday Following the 12:10 p.m. Mass, St. Mary's. Or by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "add269cf",
+          "page": 1,
+          "said": "Reconciliation Wednesday Following the 12:10 p.m. Mass, St. Mary's. Or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "weekly confession Wednesday 12:40 st-mary-of-the-assumption-binghamton  “Following 12:10 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a085edc7c8e9",
+          "said": "weekly confession Wednesday 12:40 st-mary-of-the-assumption-binghamton  “Following 12:10 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8e783affb83",
+          "said": "weekly confession Wednesday 12:40 st-mary-of-the-assumption-binghamton  “Following the 12:10 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "add269cfda60",
+          "said": "weekly confession Wednesday 12:40 st-mary-of-the-assumption-binghamton  “Following the 12:10 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f45f9c13cf30",
+          "said": "weekly confession Wednesday 12:10 st-mary-of-the-assumption-binghamton  “Following 12:10 PM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: printed with no clock time, following the weekday 12:10 Mass, so POLICY (Times) puts it 30 minutes after the start, 12:40 PM, with no end. 'Or by appointment' is an extra option, not the whole offer. History reads it at 12:10 in one bulletin and 12:40 in others (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 2,
+          "said": "A Mass of Remembrance will be celebrated in honor of our parishioners who passed away during the past year. ... Monday, November 2, 2026, at 6:00 PM at St. Paul. We invite family members, friends, and members of our parish community to join us"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c9ac61fc27b",
+          "said": "specific_date mass 2026-11-02 18:00 st-paul-binghamton  “Mass of Remembrance”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: dated Mass on or after as_of at a listed church, with an invitation to the whole parish (POLICY: open to all, so not a closed memorial).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6c9ac61f",
+          "page": 2,
+          "said": "Sunday, November 1, 2026, at 11:30 AM at St. Mary of the Assumption (Mass of Remembrance)"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the Nov 1 Mass of Remembrance is celebrated at the regular Sunday 11:30 AM St. Mary's Mass, already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 3,
+          "said": "Mondays: 7:15 AM Communion Service (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f45f9c13",
+          "page": 3,
+          "said": "Mondays: 7:15 AM Communion Service (SP)"
+        }
+      ],
+      "rationale": "POLICY, What to extract / R24, R25: a Communion Service is not a Mass; no replaced Mass is announced.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a085edc7",
+          "page": 3,
+          "said": "Tuesdays: Miraculous Medal Novena following 12:10 PM Mass (SP)"
+        }
+      ],
+      "rationale": "R24: a Novena is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

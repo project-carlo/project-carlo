@@ -1,0 +1,1068 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patricks-family-of-churches",
+  "status": "ready",
+  "as_of": "2026-10-25T13:15:44Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:06:56Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (Belfast, Fillmore, Canaseraga). Mass, Confession and Adoration times are printed in boxes on pages 1 and 9 and agree in all bulletins read. A weekday schedule change starting November 2 is announced and left out under R20. The Oct 30 Fatima Shrine pilgrimage is excluded as another church. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "938661c0adc0552d31255a005e5bbed6f54ed3e4ccac43e94be5e0450e4eab3c",
+      "fetched_at": "2026-10-25T13:15:44Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "f3370d0e72fc0f6b9bc96ef2102896e4d0e0b24ebaefcdf07ab8a410e0c5af60",
+      "fetched_at": "2026-10-18T12:41:09Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "c960f3e2edb2eacfe16f19d9dcfaddbe633d551ce9c660794417b5a541e78ed0",
+      "fetched_at": "2026-10-11T16:30:55Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "09f5e5cf1dec4c8815b271216b7b72e50fe705a41306f314050eba4b5e6d7779",
+      "fetched_at": "2026-10-04T14:28:42Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "58b7854d294f78d5604b2611db767d37d1fed128f52ef0ebcd31a72d1d81fe7c",
+      "fetched_at": "2026-09-26T18:54:59Z",
+      "published_date": "2026-09-26",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-canaseraga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "Saturday: 4pm Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "Saturday: 4pm Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "Saturday: 4pm Canaseraga"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Saturday 16:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Saturday 16:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Saturday 16:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Saturday 16:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Saturday 16:00 st-mary-canaseraga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of every bulletin read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-canaseraga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "Sunday: 8am Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "Sunday: 8am Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "Sunday: 8am Canaseraga"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Sunday 08:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Sunday 08:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Sunday 08:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Sunday 08:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Sunday 08:00 st-mary-canaseraga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box, page 1, same in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belfast",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "10am Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "10am Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "10am Belfast"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Sunday 10:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Sunday 10:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Sunday 10:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Sunday 10:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Sunday 10:00 st-patrick-belfast",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box, page 1, same in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-fillmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "11:30am Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "11:30am Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "11:30am Fillmore"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Sunday 11:30 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Sunday 11:30 st-patrick-fillmore  “Also livestreamed on YouTube”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Sunday 11:30 st-patrick-fillmore  “Live-streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Sunday 11:30 st-patrick-fillmore  “Livestreamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Sunday 11:30 st-patrick-fillmore",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box, page 1, same in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-fillmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "Wed.: 6pm Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "Wed.: 6pm Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "Wed.: 6pm Fillmore"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Wednesday 18:00 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Wednesday 18:00 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Wednesday 18:00 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Wednesday 18:00 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Wednesday 18:00 st-patrick-fillmore",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R20: Mass Schedule box; page 3 announces that from November 2 weekday Masses move to Monday (Belfast) and Tuesday (Fillmore), which is later than now, so the current schedule is kept and the future one left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belfast",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "Thursday: 6pm Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "Thursday: 6pm Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "Thursday: 6pm Belfast"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Thursday 18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Thursday 18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Thursday 18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Thursday 18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Thursday 18:00 st-patrick-belfast",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R20: Mass Schedule box; the November 2 weekday change is left out until it takes effect.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-canaseraga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "Friday: 9am Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "Friday: 9am Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "Friday: 9am Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 3,
+          "said": "Friday: Canaseraga (remains the same): 9am Holy Mass, Adoration 10am-6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly mass Friday 09:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly mass Friday 09:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly mass Friday 09:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly mass Friday 09:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly mass Friday 09:00 st-mary-canaseraga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box; page 3 says the Friday Mass remains the same after November 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belfast",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "5-6pm: Thurs.: St. Patrick's, Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "5-6pm: Thurs.: St. Patrick's, Belfast"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "5-6pm: Thurs.: St. Patrick's, Belfast"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly confession Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly confession Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly confession Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly confession Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly confession Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box, page 1, same in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-canaseraga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "5-6pm: Friday: St. Mary's, Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "5-6pm: Friday: St. Mary's, Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "5-6pm: Friday: St. Mary's, Canaseraga"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly confession Friday 17:00–18:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly confession Friday 17:00–18:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly confession Friday 17:00–18:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly confession Friday 17:00–18:00 st-mary-canaseraga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly confession Friday 17:00–18:00 st-mary-canaseraga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box, page 1, same in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-fillmore",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 1,
+          "said": "12:30pm:Sunday: St. Patrick's, Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f3370d0e",
+          "page": 1,
+          "said": "12:30pm:Sunday: St. Patrick's, Fillmore"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c960f3e2",
+          "page": 1,
+          "said": "12:30pm:Sunday: St. Patrick's, Fillmore"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly confession Sunday 12:30 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly confession Sunday 12:30 st-patrick-fillmore  “After 11:30 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly confession Sunday 12:30 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly confession Sunday 12:30 st-patrick-fillmore",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly confession Sunday 12:30 st-patrick-fillmore",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box gives a clock time, which wins (POLICY, Times); the 10-18 history note 'after 11:30 AM Mass' agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-fillmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 9,
+          "said": "Adoration 5-6pm: Wed: St. Patrick's, Fillmore"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-patrick-fillmore",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-patrick-fillmore",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-patrick-fillmore",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-patrick-fillmore",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly adoration Wednesday 17:00–18:00 st-patrick-fillmore",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R20: Adoration box on page 9; the November 2 change moves Fillmore's weekday adoration to Tuesday, later than now, so the current Wednesday slot is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-belfast",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 9,
+          "said": "5-6pm: Thurs.: St. Patrick's, Belfast"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly adoration Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly adoration Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly adoration Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly adoration Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly adoration Thursday 17:00–18:00 st-patrick-belfast",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R20: Adoration box on page 9; the November 2 change moves Belfast's weekday adoration to Monday, later than now, so the Thursday slot is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-canaseraga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 9,
+          "said": "10am- 6pm, Fri.: St. Mary's, Canaseraga"
+        },
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 3,
+          "said": "Friday: Canaseraga (remains the same): Adoration 10am-6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "938661c0adc0",
+          "said": "weekly adoration Friday 10:00–18:00 st-mary-canaseraga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "f3370d0e72fc",
+          "said": "weekly adoration Friday 10:00–18:00 st-mary-canaseraga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "c960f3e2edb2",
+          "said": "weekly adoration Friday 10:00–18:00 st-mary-canaseraga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "09f5e5cf1dec",
+          "said": "weekly adoration Friday 10:00–18:00 st-mary-canaseraga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "58b7854d294f",
+          "said": "weekly adoration Friday 10:00–18:00 st-mary-canaseraga",
+          "page": 9
+        }
+      ],
+      "rationale": "R1: Adoration box on page 9, confirmed on page 3 as unchanged.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish pilgrimage to Fatima Shrine"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 7,
+          "said": "Fatima Shrine: Friday, October 30 ... attend mass at 11:30"
+        }
+      ],
+      "rationale": "R22: Our Lady of Fatima Shrine in Lewiston is not one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish pilgrimage to Fatima Shrine"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 7,
+          "said": "Confessions will be heard beginning at 11:15"
+        }
+      ],
+      "rationale": "R22: held at the Fatima Shrine in Lewiston, not at a parish church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "938661c0",
+          "page": 7,
+          "said": "After mass, we will stay for adoration"
+        }
+      ],
+      "rationale": "R22, R26: Adoration at the Fatima Shrine has no stated time and is at another church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

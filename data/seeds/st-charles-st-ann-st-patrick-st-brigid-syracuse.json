@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-charles-st-ann-st-patrick-st-brigid-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-25T13:20:35Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:56:59Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Linked parish with two listed churches, but every Mass is held at St. Patrick (St. Charles is under renovation and has no Masses; its former 5:15 and 10:30 Sunday/Saturday times are now at St. Patrick and St. Brigid). Weekend, Mon-Thu 8 AM Mass, first-Saturday confession and first-Thursday Holy Hour all read clearly. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "be7d44ee3a8f283c5f34fcd72e739c22e565202499211877bb22ddf78ff72c50",
+      "fetched_at": "2026-10-25T13:20:35Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "1a4c6ccba7a5cc2d9741a861962381e7ada606670ff8138e5e11b255b3bad06d",
+      "fetched_at": "2026-10-18T12:48:06Z",
+      "published_date": "2026-10-18",
+      "read": false
+    },
+    {
+      "content_hash": "53eb69cc6b69765e9884b212e80cfd94a0efb51a8be7f1887140e8010f6d1e5e",
+      "fetched_at": "2026-10-11T16:36:19Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "bda916c57961fd013edd2630ba3c0b951a6e53f4449620667d0fd00e05f623c8",
+      "fetched_at": "2026-10-04T14:40:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "06b1599674b2db8aa4d1729e8c60a39163c622925e697b68d4491e0b84153903",
+      "fetched_at": "2026-09-28T00:11:20Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Saturday 16:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Saturday 16:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Saturday 16:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Saturday 16:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Saturday 16:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box on page 1 of all three bulletins read; St. Patrick and St. Brigid is the listed St. Patrick's Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "5:15pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "5:15pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "5:15pm at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Saturday 17:15 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Saturday 17:15 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Saturday 17:15 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Saturday 17:15 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Saturday 17:15 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read, at St. Patrick and St. Brigid (the 5:15 Mass formerly at St. Charles is now at St. Patrick's during the St. Charles renovation). The Oct 10 no-5:15 notice (wedding) is a past one-off, before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Sunday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Sunday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Sunday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Sunday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Sunday 08:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Sunday, 8am at St. Patrick and St. Brigid; 10:30am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Sunday 10:30 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Sunday 10:30 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Sunday 10:30 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Sunday 10:30 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Sunday 10:30 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Monday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Monday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Monday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Monday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Monday 08:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Tuesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Tuesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Tuesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Tuesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Tuesday 08:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Wednesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Wednesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Wednesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Wednesday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Wednesday 08:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Monday, Tuesday, Wednesday, Thursday 8am at St. Patrick and St. Brigid"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly mass Thursday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly mass Thursday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly mass Thursday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly mass Thursday 08:00 st-patrick-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly mass Thursday 08:00 st-patrick-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of all three bulletins read. No Friday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 1,
+          "said": "Father Kevin will hear confessions on the first Saturday of the month from 3:15-4pm at St. Patrick and St. Brigid's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 1,
+          "said": "Father Kevin will hear confessions on the first Saturday of the month from 3:15-4pm at St. Patrick and St. Brigid's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 1,
+          "said": "Father Kevin will hear confessions on the first Saturday of the month from 3:15-4pm at St. Patrick and St. Brigid's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "be7d44ee3a8f",
+          "said": "weekly confession Saturday 15:15–16:00 st-patrick-syracuse  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a4c6ccba7a5",
+          "said": "weekly confession Saturday 15:15–16:00 st-patrick-syracuse  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "53eb69cc6b69",
+          "said": "weekly confession Saturday 15:15–16:00 st-patrick-syracuse  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly confession Saturday 15:15–16:00 st-patrick-syracuse  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly confession Saturday 15:15–16:00 st-patrick-syracuse  “First Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: named first-Saturday service printed in the schedule box on page 1 of the newest bulletin. POLICY, Weekly qualifiers: weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bda916c5",
+          "page": 5,
+          "said": "There is a Holy Hour the first Thursday of each month, 6:30pm. Can you spend one hour with me? at St. Patrick's. For the month of October our Holy Hour will be on Thursday October 8th."
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "weekly adoration Thursday 18:30–19:30 st-patrick-syracuse  “First Thursday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bda916c57961",
+          "said": "specific_date adoration 2026-10-08 18:30–19:30 st-patrick-syracuse  “Includes reflection”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "06b1599674b2",
+          "said": "weekly adoration Thursday 18:30–19:30 st-patrick-syracuse  “Holy Hour, first Thursday of each month”",
+          "page": 5
+        },
+        {
+          "source": "agent",
+          "bulletin": "06b15996",
+          "page": 5,
+          "said": "There is a Holy Hour the first Thursday of each month, 6:30pm. Can you spend one hour with me? at St. Patrick's"
+        }
+      ],
+      "rationale": "R12: named first-Thursday service. The newest bulletin's week (Oct 25-Nov 1) holds no first Thursday, so it is settled from the newest read bulletin whose week does, the Sep 27 issue (week holds Thursday Oct 1), which prints 'first Thursday of each month, 6:30pm ... at St. Patrick's'. The Oct 4 issue repeats it and sets October's on Thursday Oct 8; the newest says 'each month at 6:30pm'. POLICY: a Holy Hour is Adoration; the end time follows the stated one hour (history reads 6:30-7:30 too).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be7d44ee",
+          "page": 3,
+          "said": "MONTH OF THE ROSARY ... We meet at St. Patrick and St. Brigid's at 7pm Sunday evenings"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

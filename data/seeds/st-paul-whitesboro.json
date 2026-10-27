@@ -1,0 +1,1159 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-whitesboro",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:21:47Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:59:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Paul's, Whitesboro and St. Leo & St. Ann's, Holland Patent. The newest bulletin has no front-page schedule box, so its times come from the Mass intentions and weekly listings and the older bulletins' front-page boxes; all agree. One open question: whether the Nov 3 Deacon Speakin evening (talk plus Eucharistic Adoration, 6-7 PM) should be recorded as Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "96c493c0d84451c70e0d72deb9dfa7a6567972a53ed53753931eb1d6c9871afc",
+      "fetched_at": "2026-10-25T13:21:47Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "12df549996a1b38ce06f914b803c7a9070c359804272a8a7c82c13031c40bc9b",
+      "fetched_at": "2026-10-18T12:49:27Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "2341e119dc773bf311d28d108e3399fc7cca80495c1bd6a519ffe1c250d1c799",
+      "fetched_at": "2026-10-11T16:36:59Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c90fd29e85d41637813bfd9247a67ee6b28be7702a30b593ebc3a5523acbfb91",
+      "fetched_at": "2026-10-04T14:44:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "eb705e24a16776f521dfdefef94ba31c873434485fbca796a43276935b7e37fa",
+      "fetched_at": "2026-09-28T00:16:45Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Saturday, Oct. 24th 4:00pm; Saturday, Oct. 31st 4:00pm - For our loved ones who are no longer with us"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "St. Paul's Mass Times: Sat. 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "St. Paul's Mass Times: Sat. 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "St. Paul's Mass Times: Sat. 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "St. Paul's Mass Times: Sat. 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Saturday 16:00 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Saturday 16:00 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Saturday 16:00 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Saturday 16:00 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Saturday 16:00 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass intentions list Saturday 4:00pm in two weeks of the newest bulletin (POLICY, Weekly or dated rule 4) and the front-page box of the four older bulletins prints it as the regular Mass time. The newest cover has no schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Sunday, Oct. 25th 7:30am; Sunday, Nov. 1st 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Sunday 07:30 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Sunday 07:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Sunday 07:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Sunday 07:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Sunday 07:30 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: intentions in two weeks of the newest bulletin, and the older front-page boxes give it as the regular time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Sunday, Oct. 25th 10:30am; Sunday, Nov. 1st 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Sunday 10:30 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Sunday 10:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Sunday 10:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Sunday 10:30 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Sunday 10:30 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: intentions in two weeks of the newest bulletin, and the older front-page boxes give it as the regular time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Monday Oct. 26th through Friday Oct. 30th 8:15am (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Monday 08:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Monday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Monday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Monday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Monday 08:15 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists an 8:15am Mass every weekday and the older front-page boxes print the regular Daily Mass Mon-Fri 8:15am. Past one-day cancellations (Oct 6-9, 12-14, Columbus Day, etc.) are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Monday Oct. 26th through Friday Oct. 30th 8:15am (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Tuesday 08:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Tuesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Tuesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Tuesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Tuesday 08:15 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists an 8:15am Mass every weekday and the older front-page boxes print the regular Daily Mass Mon-Fri 8:15am. Past one-day cancellations (Oct 6-9, 12-14, Columbus Day, etc.) are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Monday Oct. 26th through Friday Oct. 30th 8:15am (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Wednesday 08:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Wednesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Wednesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Wednesday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Wednesday 08:15 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists an 8:15am Mass every weekday and the older front-page boxes print the regular Daily Mass Mon-Fri 8:15am. Past one-day cancellations (Oct 6-9, 12-14, Columbus Day, etc.) are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Monday Oct. 26th through Friday Oct. 30th 8:15am (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Thursday 08:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Thursday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Thursday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Thursday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Thursday 08:15 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists an 8:15am Mass every weekday and the older front-page boxes print the regular Daily Mass Mon-Fri 8:15am. Past one-day cancellations (Oct 6-9, 12-14, Columbus Day, etc.) are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Monday Oct. 26th through Friday Oct. 30th 8:15am (Mass intentions each day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Daily Mass Mon-Fri: 8:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Friday 08:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Friday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Friday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Friday 08:15 st-paul-whitesboro",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Friday 08:15 st-paul-whitesboro",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists an 8:15am Mass every weekday and the older front-page boxes print the regular Daily Mass Mon-Fri 8:15am. Past one-day cancellations (Oct 6-9, 12-14, Columbus Day, etc.) are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-st-ann-holland-patent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 5,
+          "said": "Sunday, October 25th 9:00 a.m.; Sunday, November 1st 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "St. Leo & St. Ann's Mass Times: Sunday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "St. Leo & St. Ann's Mass Times: Sunday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "St. Leo & St. Ann's Mass Times: Sunday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "St. Leo & St. Ann's Mass Times: Sunday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Sunday 09:00 st-leo-st-ann-holland-patent",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Sunday 09:00 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Sunday 09:00 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Sunday 09:00 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Sunday 09:00 st-leo-st-ann-holland-patent",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass intentions in two weeks of the newest bulletin (under St. Leo & St. Ann's Happenings, which identifies the church) and the older front-page boxes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-st-ann-holland-patent",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 5,
+          "said": "Wednesday, Oct. 28th 4:30pm - Mass (this week at St. Leo/St. Ann's; intentions 4:30pm Sts. Simon and Jude)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Weekday Mass Wednesday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Weekday Mass Wednesday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Weekday Mass Wednesday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Weekday Mass Wednesday: 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly mass Wednesday 16:30 st-leo-st-ann-holland-patent",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly mass Wednesday 16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly mass Wednesday 16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly mass Wednesday 16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly mass Wednesday 16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists the Wed 4:30pm Mass for Oct 28 and the older front-page boxes print it as the regular weekday Mass. The Oct 7 and Oct 14 cancellations are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-st-ann-holland-patent",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 5,
+          "said": "Wednesday, Oct. 28th 4:00-4:30pm - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 1,
+          "said": "Confession: Wednesday: 4:00 - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 1,
+          "said": "Confession: Wednesday: 4:00 - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 1,
+          "said": "Confession: Wednesday: 4:00 - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eb705e24",
+          "page": 1,
+          "said": "Confession: Wednesday: 4:00 - 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly confession Wednesday 16:00–16:30 st-leo-st-ann-holland-patent",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly confession Wednesday 16:00–16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly confession Wednesday 16:00–16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c90fd29e85d4",
+          "said": "weekly confession Wednesday 16:00–16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eb705e24a167",
+          "said": "weekly confession Wednesday 16:00–16:30 st-leo-st-ann-holland-patent",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists it for Oct 28 and the older front-page boxes print it as the regular Wednesday Confession. The Oct 7 and Oct 14 cancellations are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-whitesboro",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Saturday, Oct. 31st 2:30pm - 3:15pm - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 3,
+          "said": "Saturday, Oct. 24th 2:30 - 3:15pm - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2341e119",
+          "page": 3,
+          "said": "Saturday, Oct. 17th 2:30 - 3:15pm - Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "weekly confession Saturday 14:30–15:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "weekly confession Saturday 14:30–15:15 st-paul-whitesboro",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2341e119dc77",
+          "said": "weekly confession Saturday 14:30–15:15 st-paul-whitesboro",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the same Saturday 2:30-3:15pm Confession is listed in three bulletins for three consecutive Saturdays (Oct 17, 24, 31), none marked special; the Oct 4 and Sep 27 bulletins' week lists stop before Saturday. History reads it weekly in 3/4. No regular-schedule box mentions it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 4,
+          "said": "Deacon Speakin, The How, the Why and the What of Adoration, NOV. 3rd 6:00 - 7:00pm. Join us for spiritual nourishment with Eucharistic Adoration. *We are moving to one hour through the winter months"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c90fd29e",
+          "page": 4,
+          "said": "Deacon Speakin, Tues., Oct. 6th 6:00pm, Come join us for spiritual nourishment with Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "12df5499",
+          "page": 4,
+          "said": "same flyer, NOV. 3rd 6:00 - 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "96c493c0d844",
+          "said": "specific_date adoration 2026-11-03 18:00–19:00 st-paul-whitesboro  “The How, the Why, and the What of Adoration”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "12df549996a1",
+          "said": "specific_date adoration 2026-11-03 18:00–19:00 st-paul-whitesboro  “Includes presentation on Adoration”",
+          "page": 4
+        }
+      ],
+      "rationale": "R30/POLICY, Final source checks: the 6:00-7:00 hours belong to a talk-plus-Adoration event, and the flyer does not separate the Adoration's own hours. The note about 'moving to one hour' suggests the Adoration is the hour, so lean include. Church is St. Paul's (flyer is on the St. Paul's Happenings page). Dated only: Oct 6 and Nov 3 are both first Tuesdays but the bulletins never say so (R13), so no weekly pattern is recorded.",
+      "question": "Add the Nov 3 Eucharistic Adoration at St. Paul's, 6:00-7:00 PM?",
+      "options": [
+        {
+          "label": "Nov 3, 6:00-7:00 PM Adoration",
+          "entry": {
+            "church_slug": "st-paul-whitesboro",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-03",
+            "start_time": "18:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Deacon Speakin: presentation on Adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "Tuesday, Oct. 27th After 8:15am Liturgy - Recitation of Divine Mercy Chaplet"
+        }
+      ],
+      "rationale": "R24: a Chaplet is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96c493c0",
+          "page": 3,
+          "said": "ROSARY RALLY NOV. 7TH, Village Green Whitesboro, 12:00-12:30pm"
+        }
+      ],
+      "rationale": "R24: a Rosary rally is a devotion, and it is held at the Village Green, not a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

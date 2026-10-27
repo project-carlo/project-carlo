@@ -1,0 +1,2927 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-hope-whitehall",
+  "status": "ready",
+  "as_of": "2026-10-25T13:19:18Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T02:02:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four listed churches (Our Lady of Hope, St. Ann's, St. Mary's, Chapel of the Assumption) share one bulletin whose page 2 schedule box is identical in all five issues read. Weekend, weekday, Adoration and Confession times are settled from it, with a split Monday-Tuesday adoration period at Our Lady of Hope and a November-only Knights of Columbus Holy Hour at St. Mary's. The chapel's Saturday 6 PM Mass is excluded because the parish website limits it to Memorial Day through Columbus Day. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "11a716b1e5c64b549cdcd3d7216e1f1b7d44944eb86641b1b8897500e8e17f85",
+      "fetched_at": "2026-10-25T13:19:18Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "05b1555d87cc50e59b378b65c29adb3695292697653440424c51ca4c597f63a3",
+      "fetched_at": "2026-10-18T12:46:25Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "b87037c622a33b2e8bf04e4608ab25ce89dc6c9dd225cae91a20aa6770878a6a",
+      "fetched_at": "2026-10-11T16:33:37Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8565915aab22c207d0d5f4b4cefa8b649cf8d246ac2a4c3a12c40a280932773e",
+      "fetched_at": "2026-10-04T14:50:05Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "313fa0935f26cdf111ed57ee0fd215f19a4857c85b1da395047a3edfda4f3fd3",
+      "fetched_at": "2026-09-28T22:00:05Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Saturday: 4:00 pm Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Saturday: 4:00 pm Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Saturday: 4:00 pm Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Saturday: 4:00 pm Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Saturday: 4:00 pm Our Lady of Hope"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Holy Sacrifice of the Mass box, identical in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Sunday: 8:30 am St. Ann's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Sunday: 8:30 am St. Ann's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Sunday: 8:30 am St. Ann's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Sunday: 8:30 am St. Ann's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Sunday: 8:30 am St. Ann's"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Sunday 08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Sunday 08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Sunday 08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Sunday 08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Sunday 08:30 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box, identical in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "10:30 am Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "10:30 am Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "10:30 am Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "10:30 am Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "10:30 am Our Lady of Hope"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Sunday 10:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Sunday 10:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Sunday 10:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Sunday 10:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Sunday 10:30 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box, identical in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "12:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "12:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "12:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "12:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "12:30 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Sunday 12:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Sunday 12:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Sunday 12:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Sunday 12:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Sunday 12:30 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box, identical in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Weekdays: 6:30 am St. Mary's (Monday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Weekdays: 6:30 am St. Mary's (Monday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Weekdays: 6:30 am St. Mary's (Monday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Weekdays: 6:30 am St. Mary's (Monday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Weekdays: 6:30 am St. Mary's (Monday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Monday 06:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Monday 06:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Monday 06:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Monday 06:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Monday 06:30 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box in all five bulletins. R18: the Oct 12-16 weekday Masses were cancelled (Father away, Oct 11 bulletin), before as_of; Mon 10/26 is in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "6:00 pm St. Ann's -- LM (Tuesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "6:00 pm St. Ann's -- LM (Tuesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "6:00 pm St. Ann's -- LM (Tuesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "6:00 pm St. Ann's -- LM (Tuesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "6:00 pm St. Ann's -- LM (Tuesday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Tuesday 18:00 st-ann-fort-ann  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Tuesday 18:00 st-ann-fort-ann  “Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Tuesday 18:00 st-ann-fort-ann  “Low Latin Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Tuesday 18:00 st-ann-fort-ann  “Latin Mass (LM)”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Tuesday 18:00 st-ann-fort-ann  “Latin Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box in all five bulletins; LM is the Latin Mass (history also reads Latin Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "9:00 am St. Mary's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "9:00 am St. Mary's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "9:00 am St. Mary's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "9:00 am St. Mary's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "9:00 am St. Mary's (Wednesday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Wednesday 09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Wednesday 09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Wednesday 09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Wednesday 09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Wednesday 09:00 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Thursday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Thursday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Thursday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Thursday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Thursday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box in all five bulletins. R18: the Oct 12-16 cancellation is in the past.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "9:00 am O.L. of Hope (Thurs. & Fri.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass box in all five bulletins. R18: the Oct 12-16 cancellation is in the past.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "9:00 am St. Ann's (First Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "9:00 am St. Ann's (First Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "9:00 am St. Ann's (First Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "9:00 am St. Ann's (First Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "9:00 am St. Ann's (First Saturday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Saturday 09:00 st-ann-fort-ann  “First Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Saturday 09:00 st-ann-fort-ann  “First Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Saturday 09:00 st-ann-fort-ann  “First Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Saturday 09:00 st-ann-fort-ann  “First Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Saturday 09:00 st-ann-fort-ann  “First Saturday of the month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the Mass box prints the First Saturday Mass in the newest bulletin, so R12 is not needed. The newest week holds only the fifth/last Saturday (Oct 31); the Sept 27 issue's week held Sat Oct 3, a first Saturday, and prints the same line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "last"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Latin Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "6:30 am St. Ann's -- LM (other Saturdays except for the last)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "6:30 am St. Ann's -- LM (other Saturdays except for the last)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "6:30 am St. Ann's -- LM (other Saturdays except for the last)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "6:30 am St. Ann's -- LM (other Saturdays except for the last)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "6:30 am St. Ann's -- LM (other Saturdays except for the last)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 3,
+          "said": "Sat 10/24, 6:30 am St. Ann's John Deignan (d) by Mary Beres"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Saturday 06:30 st-ann-fort-ann  “Latin Mass; Saturdays except first and last of month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Saturday 06:30 st-ann-fort-ann  “Latin Mass; held every Saturday except the last of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Saturday 06:30 st-ann-fort-ann  “Low Latin Mass; excludes the last Saturday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Saturday 06:30 st-ann-fort-ann  “Latin Mass (LM); other Saturdays except for the last”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Saturday 06:30 st-ann-fort-ann  “Latin Mass; Saturdays except for the last of the month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: 'other Saturdays except for the last' is every Saturday except the first (which has the 9:00 AM Mass) and the last; weeks_of_month first,last with exclude_weeks says exactly that. Intentions show it on Oct 10 (2nd), 17 (3rd) and 24 (4th).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "chapel-of-the-assumption-huletts-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Summer schedule, Memorial Day to Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "6:00 pm *Chapel of the Assumption (*summer schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "6:00 pm *Chapel of the Assumption (*summer schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "6:00 pm *Chapel of the Assumption (*summer schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "6:00 pm *Chapel of the Assumption (*summer schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "6:00 pm *Chapel of the Assumption (*summer schedule)"
+        },
+        {
+          "source": "website",
+          "url": "https://olhstann.org/mass-times",
+          "said": "6:00 pm Chapel of the Assumption (Memorial Day-Columbus Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 3,
+          "said": "Sat 10/10, 6:00 pm Chapel For the health & healing of Carol Pell by the Pell family"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly mass Saturday 18:00 chapel-of-the-assumption-huletts-landing  “Summer schedule”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly mass Saturday 18:00 chapel-of-the-assumption-huletts-landing  “Summer schedule”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly mass Saturday 18:00 chapel-of-the-assumption-huletts-landing  “Summer schedule”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly mass Saturday 18:00 chapel-of-the-assumption-huletts-landing  “Summer schedule”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly mass Saturday 18:00 chapel-of-the-assumption-huletts-landing  “Summer schedule”",
+          "page": 2
+        }
+      ],
+      "rationale": "R33, R6: the bulletin box keeps printing the summer line, but the parish's Mass Times page limits it to Memorial Day through Columbus Day (Oct 12, 2026); the last chapel intention is Sat Oct 10 and none follows on Oct 17 or 24. Those dates move each year and the season field cannot say them, so no season is invented. Update mode will see it again in the summer bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm, Sun. 8-8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm, Sun. 8-8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm, Sun. 8-8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm, Sun. 8-8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm, Sun. 8-8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Sunday 08:00–08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Sunday 08:00–08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Sunday 08:00–08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Sunday 08:00–08:30 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Sunday 08:00–08:30 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Tuesday 10:00–13:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Tuesday 10:00–18:00 st-ann-fort-ann  “Combined hours from summary and parish page”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Tuesday 10:00–13:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Tuesday 10:00–13:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Tuesday 10:00–13:00 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration box, identical in all five bulletins. Page 5 asks for adorers Tuesdays 1-5 PM, so the gap is real. The parish website's adoration page lists a 10-1 St. Ann's block on Wednesday, which the five bulletins do not support.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Ann's: Tues. 10am-1pm & 5-6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Tuesday 17:00–18:00 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Eucharistic Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chaplet of the Holy Face"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 4,
+          "said": "The Chaplet of the Holy Face of Jesus is recited on Tuesday evenings from 6 to 7 p.m. at St. Mary's during exposition of the Most Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-mary-granville  “Includes Chaplet of the Holy Face”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-mary-granville  “Includes exposition of the Most Blessed Sacrament”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-mary-granville  “Includes recitation of the Chaplet of the Holy Face”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-mary-granville  “During exposition”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Tuesday 18:00–19:00 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, and page 4 confirms exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Wednesday 08:00–09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Wednesday 08:00–09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Wednesday 08:00–09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Wednesday 08:00–09:00 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Wednesday 08:00–09:00 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "12:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "St. Mary's: Tues. 6-7pm, Wed. 8-9am, & Sun. 11:15am-12:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Sunday 11:15–12:15 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Sunday 11:15–12:15 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Sunday 11:15–12:15 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Sunday 11:15–12:15 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Sunday 11:15–12:15 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous from Monday 9 AM until Tuesday 9 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm, Wed. 9am-7pm, Thu. 7am-9pm, Fri. 3am-6pm; and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm, Wed. 9am-7pm, Thu. 7am-9pm, Fri. 3am-6pm; and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm, Wed. 9am-7pm, Thu. 7am-9pm, Fri. 3am-6pm; and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm, Wed. 9am-7pm, Thu. 7am-9pm, Fri. 3am-6pm; and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm, Wed. 9am-7pm, Thu. 7am-9pm, Fri. 3am-6pm; and before Masses."
+        },
+        {
+          "source": "website",
+          "url": "https://olhstann.org/adoration",
+          "said": "Adoration continues overnight Monday into Tuesday"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Monday 09:00 our-lady-of-hope-whitehall  “Continues until Tuesday 9:00 PM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Monday 09:00 our-lady-of-hope-whitehall  “Continuous from Monday morning to Tuesday evening; also 30 minutes before all Masses”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Monday 09:00 our-lady-of-hope-whitehall  “Continuous exposition until Tuesday 9:00 PM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Monday 09:00–23:59 our-lady-of-hope-whitehall  “Continuous through Tuesday 9:00 PM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Monday 09:00–23:59 our-lady-of-hope-whitehall  “Continuous through Tuesday 9:00 PM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the period runs past midnight, so it is written as Monday from 9:00 AM to midnight plus Tuesday from midnight to 9:00 PM. The website's adoration page says 8 AM for Monday; the five bulletins say 9 AM and the website page is clearly out of date (it puts St. Ann's block on Wednesday and omits St. Mary's), so the bulletin governs.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continuous from Monday 9 AM until Tuesday 9 PM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "O.L. of Hope: Mon. 9am-Tue. 9pm"
+        },
+        {
+          "source": "website",
+          "url": "https://olhstann.org/adoration",
+          "said": "Tuesday 12 am Tuesday - 9 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Tuesday 00:00–21:00 our-lady-of-hope-whitehall  “Continuous from Monday 9:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Tuesday 00:00–21:00 our-lady-of-hope-whitehall  “Continuous from Monday 9:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: second half of the Monday-to-Tuesday adoration period, split at midnight.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Wed. 9am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Wed. 9am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Wed. 9am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Wed. 9am-7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Wed. 9am-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Wednesday 09:00–19:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Wednesday 09:00–19:00 our-lady-of-hope-whitehall  “Also 30 minutes before all Masses”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Wednesday 09:00–19:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Wednesday 09:00–19:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Wednesday 09:00–19:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, identical in all five bulletins (the website page says 8 AM; the bulletin governs).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Thu. 7am-9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Thu. 7am-9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Thu. 7am-9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Thu. 7am-9pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Thu. 7am-9pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Thursday 07:00–21:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Thursday 07:00–21:00 our-lady-of-hope-whitehall  “Also 30 minutes before all Masses”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Thursday 07:00–21:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Thursday 07:00–21:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Thursday 07:00–21:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "03:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Fri. 3am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Fri. 3am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Fri. 3am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Fri. 3am-6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Fri. 3am-6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly adoration Friday 03:00–18:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Friday 03:00–18:00 our-lady-of-hope-whitehall  “Also 30 minutes before all Masses”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Friday 03:00–18:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Friday 03:00–18:00 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly adoration Friday 03:00–18:00 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": null,
+          "end_month": 11,
+          "end_day": null
+        },
+        "note": "Holy Hour, Knights of Columbus"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 4,
+          "said": "Knights of Columbus invite you to Holy Hour on the 2nd and 4th Fridays in November at 6 PM at St. Mary's. The next Holy Hour is November 13th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 4,
+          "said": "Holy Hour on the 2nd and 4th Fridays in October at 6 PM at St. Mary's. The next Holy Hour is Oct. 23rd."
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "specific_date adoration 2026-11-13 18:00 st-mary-granville  “Friday Holy Hour; sponsored by Knights of Columbus”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly adoration Friday 18:00 st-mary-granville  “Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly adoration Friday 18:00 st-mary-granville  “2nd and 4th Friday of the month”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "specific_date adoration 2026-10-09 18:00 st-mary-granville  “Friday Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "specific_date adoration 2026-10-23 18:00 st-mary-granville  “Friday Holy Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated rule 2, Weekly qualifiers): a named 2nd and 4th Friday service, limited by the bulletin to the month it names. A Holy Hour is Adoration under POLICY. The newest bulletin names November, so the season is November only; the October 2nd and 4th Fridays are past. Nov 13 is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Eucharistic Adoration ... O.L. of Hope: ... and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Eucharistic Adoration ... O.L. of Hope: ... and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Eucharistic Adoration ... O.L. of Hope: ... and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Eucharistic Adoration ... O.L. of Hope: ... and before Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Eucharistic Adoration ... O.L. of Hope: ... and before Masses."
+        }
+      ],
+      "rationale": "R26: 'and before Masses' gives no start time or length, and the Mass times already carry the Thursday and Friday blocks; nothing definite to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Devotions: The Holy Rosary or Divine Mercy Chaplet, 30 minutes before all Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Devotions: The Holy Rosary or Divine Mercy Chaplet, 30 minutes before all Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Devotions: The Holy Rosary or Divine Mercy Chaplet, 30 minutes before all Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Devotions: The Holy Rosary or Divine Mercy Chaplet, 30 minutes before all Masses."
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Devotions: The Holy Rosary or Divine Mercy Chaplet, 30 minutes before all Masses."
+        }
+      ],
+      "rationale": "R24: a Rosary or Chaplet is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Tuesday 17:00–17:45 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Tuesday 17:00–17:45 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Tuesday 17:00–17:45 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Tuesday 17:00–17:45 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Tuesday 17:00–17:45 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Tues: 5:00-5:45 pm, 6:45-7:00 pm (St. Ann's)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Tuesday 18:45–19:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Tuesday 18:45–19:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Tuesday 18:45–19:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Tuesday 18:45–19:00 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Tuesday 18:45–19:00 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-granville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Wed.: 8:00-8:30 am (St. Mary's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Wed.: 8:00-8:30 am (St. Mary's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Wed.: 8:00-8:30 am (St. Mary's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Wed.: 8:00-8:30 am (St. Mary's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Wed.: 8:00-8:30 am (St. Mary's)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Wednesday 08:00–08:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Wednesday 08:00–08:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Wednesday 08:00–08:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Wednesday 08:00–08:30 st-mary-granville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Wednesday 08:00–08:30 st-mary-granville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Thurs: 8:00-8:30 am (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Thurs: 8:00-8:30 am (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Thurs: 8:00-8:30 am (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Thurs: 8:00-8:30 am (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Thurs: 8:00-8:30 am (Our Lady of Hope)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Thursday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Thursday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Thursday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Thursday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Thursday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Friday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Friday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Friday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Friday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Friday 08:00–08:30 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Fri.: 8:00-8:30 am, 5:00-5:50 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Friday 17:00–17:50 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Friday 17:00–17:50 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Friday 17:00–17:50 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Friday 17:00–17:50 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Friday 17:00–17:50 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-whitehall",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Sat.: 3:00-3:30 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Sat.: 3:00-3:30 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Sat.: 3:00-3:30 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Sat.: 3:00-3:30 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Sat.: 3:00-3:30 pm (Our Lady of Hope)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-hope-whitehall",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-hope-whitehall",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 2,
+          "said": "Sun: 8:00-8:20 am (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "05b1555d",
+          "page": 2,
+          "said": "Sun: 8:00-8:20 am (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b87037c6",
+          "page": 2,
+          "said": "Sun: 8:00-8:20 am (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8565915a",
+          "page": 2,
+          "said": "Sun: 8:00-8:20 am (St. Ann's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "313fa093",
+          "page": 2,
+          "said": "Sun: 8:00-8:20 am (St. Ann's)"
+        },
+        {
+          "source": "history",
+          "bulletin": "11a716b1e5c6",
+          "said": "weekly confession Sunday 08:00–08:20 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "05b1555d87cc",
+          "said": "weekly confession Sunday 08:00–08:20 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b87037c622a3",
+          "said": "weekly confession Sunday 08:00–08:20 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly confession Sunday 08:00–08:20 st-ann-fort-ann",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "313fa0935f26",
+          "said": "weekly confession Sunday 08:00–08:20 st-ann-fort-ann",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession box, identical in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ann-fort-ann",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "11a716b1",
+          "page": 5,
+          "said": "St. Ann's: Adorers needed on Tuesdays from 1 p.m. to 5 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "8565915aab22",
+          "said": "weekly adoration Tuesday 13:00–17:00 st-ann-fort-ann",
+          "page": 5
+        }
+      ],
+      "rationale": "R9, R24: page 5 is a call for adorers, not a schedule; the Adoration box lists only 10-1 and 5-6 on Tuesdays, so 1-5 PM has no adoration (history read it from this appeal).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

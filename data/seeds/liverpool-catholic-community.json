@@ -1,0 +1,2386 @@
+{
+  "schema_version": 1,
+  "parish_slug": "liverpool-catholic-community",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:11:56Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:07:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (Christ the King, Epiphany, Pope John XXIII). Masses are in the daily calendar of all five bulletins and match the site; Epiphany weekday Masses are in its chapel on the parish grounds. Confession and Adoration use the page 1 boxes, with monthly ones cited from older bulletins (R12). Open: Monday Adoration end time (4:00 or 4:30), the Monday 4:30 Novena (the site calls it a Mass), and whether Nov 7 First Saturday adoration is monthly.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "76e8d973ed36e3cf2ac8cd50cebbe8b3e90c187d098995627df57c314696e71d",
+      "fetched_at": "2026-10-25T13:11:56Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "8486e428ec8f3b7258de932adc4d414a31dbe3670f4776dfbb636050e7a9d908",
+      "fetched_at": "2026-10-18T12:37:12Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "13703a1950f0344daa71b93d2ff11c9745c42cb9b3b9ce57adfa683f39eb324b",
+      "fetched_at": "2026-10-11T16:27:29Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "21371c797c6d14697555f4c5cfebd39e80ebad70f337668d504e4089b96ad759",
+      "fetched_at": "2026-10-04T14:36:04Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d564cc85cf1c27c0e4721bd19d83839e2275f8211bf65d88b1e2ae54c7c96d3e",
+      "fetched_at": "2026-09-28T00:07:25Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "4:00PM Vigil Mass - Fr. Zach (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "4:00PM Vigil Mass - Fr. Zach (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "4:00PM Vigil Mass - Fr. Zach (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "4:00PM Vigil Mass - Fr. Zach (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "4:00PM Vigil Mass - Fr. Zach (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Saturday 16:00 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Saturday 16:00 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Saturday 16:00 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Saturday 16:00 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Saturday 16:00 christ-the-king-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil at Christ the King is in the calendar of all five bulletins; POLICY, Weekly or dated rule 4. The website lists it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "4:00PM Vigil Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "4:00PM Vigil Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "4:00PM Vigil Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "4:00PM Vigil Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "4:00PM Vigil Mass (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Saturday 16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Saturday 16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Saturday 16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Saturday 16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Saturday 16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil at Epiphany is in the calendar of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "5:30PM Vigil Mass - Fr. Zach (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "5:30PM Vigil Mass - Fr. Zach (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "5:30PM Vigil Mass - Fr. Zach (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "5:30PM Vigil Mass - Fr. Zach (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "5:30PM Vigil Mass - Fr. Zach (PJXXIII)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Saturday 17:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Saturday 17:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Saturday 17:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Saturday 17:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Saturday 17:30 pope-john-xxiii-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Saturday vigil at Pope John XXIII is in the calendar of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:30AM Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:30AM Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:30AM Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:30AM Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "8:30AM Mass (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Sunday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Sunday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Sunday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Sunday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Sunday 08:30 christ-the-king-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:30 at Christ the King in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Sunday 08:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Sunday 08:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Sunday 08:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Sunday 08:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Sunday 08:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses at Epiphany are in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Sunday 09:30 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Sunday 09:30 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Sunday 09:30 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Sunday 09:30 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Sunday 09:30 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses at Epiphany are in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "8:00AM Mass (EP); 9:30AM Mass (EP); 11:00AM Mass (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Sunday 11:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Sunday 11:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Sunday 11:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Sunday 11:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Sunday 11:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the three Sunday Masses at Epiphany are in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "10:30AM Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "10:30AM Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "10:30AM Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "10:30AM Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "10:30AM Mass (PJXXIII)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Sunday 10:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Sunday 10:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Sunday 10:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Sunday 10:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Sunday 10:30 pope-john-xxiii-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Sunday 10:30 at Pope John XXIII in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Monday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Monday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "specific_date mass 2026-11-02 08:30 pope-john-xxiii-liverpool  “All Souls' Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Monday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Monday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Monday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Monday and Wednesday 8:30 at Pope John XXIII are in the newest calendar. The Oct 4 bulletin shows no Wednesday Oct 7 Mass and the Sep 27 one a Communion Service on Sep 30, but those dates are before as_of and not weekly changes. The website lists Mon Wed 8:30 at Pope John XXIII.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:30AM Daily Mass (PJXXIII)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Wednesday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Wednesday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Wednesday 08:30 pope-john-xxiii-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Wednesday 08:30 pope-john-xxiii-liverpool",
+          "page": 8
+        }
+      ],
+      "rationale": "R1, R35: Monday and Wednesday 8:30 at Pope John XXIII are in the newest calendar. The Oct 4 bulletin shows no Wednesday Oct 7 Mass and the Sep 27 one a Communion Service on Sep 30, but those dates are before as_of and not weekly changes. The website lists Mon Wed 8:30 at Pope John XXIII.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Tuesday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Tuesday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Tuesday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Tuesday 08:30 christ-the-king-liverpool",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "specific_date mass 2026-10-06 08:30 christ-the-king-liverpool  “St. Michael Angelic Mission; includes exposition”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Tuesday and Thursday 8:30 at Christ the King are in the newest calendar. The Oct 4 bulletin shows no Tuesday Oct 6 Mass and the Sep 27 one a Communion Service on Sep 29, which are before as_of and not weekly changes. The website lists Tue Thu 8:30 at Christ the King.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "8:30AM Daily Mass (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Thursday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Thursday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Thursday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Thursday 08:30 christ-the-king-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Thursday 08:30 christ-the-king-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: Tuesday and Thursday 8:30 at Christ the King are in the newest calendar. The Oct 4 bulletin shows no Tuesday Oct 6 Mass and the Sep 27 one a Communion Service on Sep 29, which are before as_of and not weekly changes. The website lists Tue Thu 8:30 at Christ the King.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "9:00AM Daily Mass in Chapel (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Mon Thu 9:00 AM English EN Epiphany Parish in Chapel (Upper Parking Lot)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Monday 09:00 epiphany-st-joseph-the-worker-liverpool  “In Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Monday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "specific_date mass 2026-11-02 09:00 epiphany-st-joseph-the-worker-liverpool  “All Souls' Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "specific_date mass 2026-11-02 09:00 epiphany-st-joseph-the-worker-liverpool  “All Souls' Day Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Monday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Monday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the bulletin's key files the chapel under EP (Epiphany Parish), and the Epiphany Parish Chapel is in the upper parking lot of that parish's grounds (POLICY, Churches and chapels), so it is recorded at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "9:00AM Daily Mass in Chapel (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Mon Thu 9:00 AM English EN Epiphany Parish in Chapel (Upper Parking Lot)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Tuesday 09:00 epiphany-st-joseph-the-worker-liverpool  “In Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Tuesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Tuesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Tuesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Tuesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the bulletin's key files the chapel under EP (Epiphany Parish), and the Epiphany Parish Chapel is in the upper parking lot of that parish's grounds (POLICY, Churches and chapels), so it is recorded at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "9:00AM Daily Mass in Chapel (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Mon Thu 9:00 AM English EN Epiphany Parish in Chapel (Upper Parking Lot)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Wednesday 09:00 epiphany-st-joseph-the-worker-liverpool  “In Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Wednesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Wednesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Wednesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Wednesday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the bulletin's key files the chapel under EP (Epiphany Parish), and the Epiphany Parish Chapel is in the upper parking lot of that parish's grounds (POLICY, Churches and chapels), so it is recorded at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "9:00AM Daily Mass in Chapel (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "13703a19",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "9:00AM Daily Mass (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Mon Thu 9:00 AM English EN Epiphany Parish in Chapel (Upper Parking Lot)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly mass Thursday 09:00 epiphany-st-joseph-the-worker-liverpool  “In Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly mass Thursday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly mass Thursday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly mass Thursday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Thursday 09:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the bulletin's key files the chapel under EP (Epiphany Parish), and the Epiphany Parish Chapel is in the upper parking lot of that parish's grounds (POLICY, Churches and chapels), so it is recorded at the church with a note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "8:30AM First Friday Mass (CTK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 4,
+          "said": "First Fridays at Christ the King Immediately following 8:30 AM Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "1st Friday : 8:30 AM English EN Christ the King"
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly mass Friday 08:30 christ-the-king-liverpool  “First Friday”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12: a named first-Friday Mass; the newest bulletin's week (Oct 25 to Nov 1) holds only a fifth Friday, so it is cited from the Sep 27 issue, whose week holds Friday Oct 2. The Oct 18 issue and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "21371c79",
+          "page": 1,
+          "said": "First Monday 4:30 PM -5:30 PM at Pope John XXIII"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/confession",
+          "said": "4:30 PM to 5:30 PM 1st Monday at Pope John XXIII"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly confession Monday 16:30–17:30 pope-john-xxiii-liverpool  “First Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly confession Monday 16:30–17:30 pope-john-xxiii-liverpool  “First Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly confession Monday 16:30–17:30 pope-john-xxiii-liverpool  “First Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly confession Monday 16:30–17:30 pope-john-xxiii-liverpool  “First Monday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly confession Monday 16:30–17:30 pope-john-xxiii-liverpool  “First Monday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12, R40: the newest week holds no first Monday; the Oct 4 issue's week holds Monday Oct 5. Its box and all other bulletins and the website say Pope John XXIII, while its dated calendar for Oct 5 lists Confessions at CTK. That is one dated exception (before as_of), not a change to the standing schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "Second & Fourth Monday 4:30 PM -5:30 PM at Epiphany Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "Monday, October 26th 4:30PM Confessions (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly confession Monday 16:30–17:30 epiphany-st-joseph-the-worker-liverpool  “Second & Fourth Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly confession Monday 16:30–17:30 epiphany-st-joseph-the-worker-liverpool  “Second & fourth Mondays of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly confession Monday 16:30–17:30 epiphany-st-joseph-the-worker-liverpool  “Second & Fourth Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly confession Monday 16:30–17:30 epiphany-st-joseph-the-worker-liverpool  “Second and fourth Mondays of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly confession Monday 16:30–17:30 epiphany-st-joseph-the-worker-liverpool  “Second & Fourth Monday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R12: the newest week holds the fourth Monday (Oct 26) and the calendar prints it at Epiphany. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 1,
+          "said": "Third Monday 4:30 PM -5:30 PM at Christ the King"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8486e428",
+          "page": 2,
+          "said": "Monday, October 19th 4:30PM Confessions (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly confession Monday 16:30–17:30 christ-the-king-liverpool  “Third Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly confession Monday 16:30–17:30 christ-the-king-liverpool  “Third Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly confession Monday 16:30–17:30 christ-the-king-liverpool  “Third Monday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly confession Monday 16:30–17:30 christ-the-king-liverpool  “Third Monday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "specific_date confession 2026-10-05 16:30–17:30 christ-the-king-liverpool  “Special location for this date only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly confession Monday 16:30–17:30 christ-the-king-liverpool  “Third Monday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12: the newest week holds no third Monday; the Oct 18 issue's week holds Oct 19 and prints it at Christ the King. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "Thursdays 9 AM - 10 AM at Christ the King"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "Thursday, October 29th 9:00AM Adoration & Rosary (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly adoration Thursday 09:00–10:00 christ-the-king-liverpool",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly adoration Thursday 09:00–10:00 christ-the-king-liverpool  “Includes Rosary”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly adoration Thursday 09:00–10:00 christ-the-king-liverpool  “Includes Rosary”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly adoration Thursday 09:00–10:00 christ-the-king-liverpool",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Thursday 09:00–10:00 christ-the-king-liverpool",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekly Thursday Adoration at Christ the King. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 1,
+          "said": "First Fridays 9 AM - 9:30 AM at Christ the King"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "Friday, October 2nd 9:00AM First Friday Adoration (CTK)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly adoration Friday 09:00–09:30 christ-the-king-liverpool  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly adoration Friday 09:00–09:30 christ-the-king-liverpool  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly adoration Friday 09:00–09:30 christ-the-king-liverpool  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly adoration Friday 09:00–09:30 christ-the-king-liverpool  “First Friday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Friday 09:00–09:30 christ-the-king-liverpool  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12: named first-Friday Adoration; the newest week holds only a fifth Friday, so it is cited from the Sep 27 issue, whose week holds Oct 2. The newest box also lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "First Sundays 6 PM - 7 PM at Pope John XXIII"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "Sunday, November 1st 6:00PM Adoration (PJXXIII)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly adoration Sunday 18:00–19:00 pope-john-xxiii-liverpool  “First Sunday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly adoration Sunday 18:00–19:00 pope-john-xxiii-liverpool  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly adoration Sunday 18:00–19:00 pope-john-xxiii-liverpool  “First Sunday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly adoration Sunday 18:00–19:00 pope-john-xxiii-liverpool  “First Sunday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Sunday 18:00–19:00 pope-john-xxiii-liverpool  “First Sunday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R12: the newest week holds the first Sunday (Nov 1) and prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "Fourth Tuesdays 6 PM - 7 PM at Epiphany Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "monthly Holy Hour on Tuesday, October 27th from 6 to 7 PM in the Epiphany Parish Chapel (upper parking lot)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly adoration Tuesday 18:00–19:00 epiphany-st-joseph-the-worker-liverpool  “Fourth Tuesday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly adoration Tuesday 18:00–19:00 epiphany-st-joseph-the-worker-liverpool  “Fourth Tuesday of the month; in the Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly adoration Tuesday 18:00–19:00 epiphany-st-joseph-the-worker-liverpool  “Fourth Tuesday; Epiphany Parish Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly adoration Tuesday 18:00–19:00 epiphany-st-joseph-the-worker-liverpool  “Fourth Tuesday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Tuesday 18:00–19:00 epiphany-st-joseph-the-worker-liverpool  “Fourth Tuesday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R38: the newest week holds the fourth Tuesday (Oct 27) and prints it; a Holy Hour is Adoration (POLICY); chapel on Epiphany's grounds as for the weekday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-liverpool",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "All Souls' Day Masses ... Nov 2nd ... 6PM at Christ the King"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "specific_date mass 2026-11-02 18:00 christ-the-king-liverpool  “All Souls’ Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "specific_date mass 2026-11-02 18:00 christ-the-king-liverpool  “All Souls' Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "specific_date mass 2026-11-02 18:00 christ-the-king-liverpool  “All Souls' Day Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: a dated Monday evening Mass; Christ the King has no regular Monday Mass, so it is not covered by a weekly slot. It is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "pope-john-xxiii-liverpool",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "8:30 AM at Pope John XXIII"
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "specific_date mass 2026-11-02 08:30 pope-john-xxiii-liverpool  “All Souls' Day”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, POLICY Weekly or dated rule 7: Monday 8:30 at Pope John XXIII is the regular weekly Mass, so the All Souls' Mass is not a separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "9 AM at Epiphany Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "specific_date mass 2026-11-02 09:00 epiphany-st-joseph-the-worker-liverpool  “All Souls' Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "specific_date mass 2026-11-02 09:00 epiphany-st-joseph-the-worker-liverpool  “All Souls' Day Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R9, POLICY Weekly or dated rule 7: Monday 9:00 at Epiphany is the regular weekday Mass, so the All Souls' Mass is not a separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "12PM at Our Lady of Peace Cemetery with Bishop Lucia"
+        }
+      ],
+      "rationale": "R22, POLICY Churches and chapels: a Mass at a cemetery is not at one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "Or by appointment."
+        }
+      ],
+      "rationale": "R26: confession by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 7,
+          "said": "Mass, and Adoration on Saturday, November 21st from 9:30 AM to 4 PM at Holy Family Church in Fairmount"
+        }
+      ],
+      "rationale": "R22: a diocesan youth event at another parish's church, with no definite Mass or Adoration time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 1,
+          "said": "Mondays 3PM- 4 PM at Epiphany Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "Monday, October 26th 3:00PM Adoration in Chapel (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Adoration Times Monday : 3:00 PM to 4:30 PM Epiphany Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "weekly adoration Monday 15:00–16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8486e428ec8f",
+          "said": "weekly adoration Monday 15:00–16:00 epiphany-st-joseph-the-worker-liverpool  “In the Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "13703a1950f0",
+          "said": "weekly adoration Monday 15:00–16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21371c797c6d",
+          "said": "weekly adoration Monday 15:00–16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Monday 15:00–16:00 epiphany-st-joseph-the-worker-liverpool",
+          "page": 1
+        }
+      ],
+      "rationale": "R28: the box in all five bulletins says 3-4 PM; the parish site says 3:00 to 4:30 PM and the 4:30 PM Novena follows. Neither explains the difference. Leaning on the newest bulletin's 4 PM (C8).",
+      "question": "Monday Adoration at Epiphany: does it end at 4:00 PM or 4:30 PM?",
+      "options": [
+        {
+          "label": "Mondays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Mondays 3:00-4:30 PM",
+          "entry": {
+            "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 2,
+          "said": "Monday, October 26th 4:30PM Novena in Chapel (EP)"
+        },
+        {
+          "source": "website",
+          "url": "https://liverpoolnycatholic.org/",
+          "said": "Monday : 4:30 PM English EN Novena Mass at Epiphany Parish in Chapel (Upper Parking Lot)"
+        }
+      ],
+      "rationale": "R30: every bulletin calls it only a Novena, which POLICY leaves out unless the bulletin calls it a Mass; the parish site lists it among its Mass times as a Novena Mass. Leaning toward leaving it out because the bulletin never calls it Mass.",
+      "question": "Monday 4:30 PM Novena at Epiphany's chapel: add it as a Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Mondays 4:30 PM Mass",
+          "entry": {
+            "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Novena Mass, in the chapel"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "76e8d973",
+          "page": 3,
+          "said": "First Saturday Rosary Devotions on Saturday, November 7th in the upstairs chapel at Epiphany Parish. The Blessed Sacrament will be exposed at 2:30 PM for a time of silent prayer and adoration ... followed by the First Saturday Rosary ... at 3 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d564cc85",
+          "page": 2,
+          "said": "Saturday, October 3rd 2:30PM First Saturday Rosary (EP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "76e8d973ed36",
+          "said": "specific_date adoration 2026-11-07 14:30–15:00 epiphany-st-joseph-the-worker-liverpool  “First Saturday Rosary devotions”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d564cc85cf1c",
+          "said": "weekly adoration Saturday 14:30–15:00 epiphany-st-joseph-the-worker-liverpool  “First Saturday; upstairs chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R30, R33: the devotion is named for the first Saturday and was listed Oct 3 at 2:30, but only this notice says the Sacrament is exposed, and no bulletin says it happens every month; the page never says one-time. POLICY rule 5: prefer dated when unclear. The end time is the Rosary's 3:00 start.",
+      "question": "First Saturday Rosary at Epiphany, November 7: Blessed Sacrament exposed 2:30 PM. Record as monthly or one date?",
+      "options": [
+        {
+          "label": "Nov 7 only, 2:30-3:00 PM",
+          "entry": {
+            "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-07",
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Saturday Rosary devotions, upstairs chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every first Saturday 2:30-3:00 PM",
+          "entry": {
+            "church_slug": "epiphany-st-joseph-the-worker-liverpool",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Saturday Rosary devotions, upstairs chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "church_list_issues": []
+}

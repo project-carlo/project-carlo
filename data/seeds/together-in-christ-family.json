@@ -1,0 +1,2731 @@
+{
+  "schema_version": 1,
+  "parish_slug": "together-in-christ-family",
+  "status": "ready",
+  "as_of": "2026-10-25T13:17:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:04:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three listed churches (Nativity BVM Williamsville, Sacred Heart Bowmansville, St. Mary's Swormville) share one bulletin whose page 3 Mass box and page 4 Confession and Adoration lists are stable across all four issues. Weekend and daily Masses, the first-Friday and first-Saturday services at Sacred Heart, Wednesday Adoration at Nativity and Saturday Confessions are settled. St. Mary's Mon-Thu 9:00 AM Mass is in its chapel. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b1d4838531aae9e9d5d5190452e8878eeb796a913240f308692a00c443a06ad8",
+      "fetched_at": "2026-10-25T13:17:30Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "03cff8828f5f5dfb1f4a3639c4f4781a2cd7050acc89c7ceac3912f6654187d3",
+      "fetched_at": "2026-10-11T16:34:31Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "b2501168744888a10e31ba6dc03717e4f629f7911a98ae13645dd527bb7f22e5",
+      "fetched_at": "2026-10-04T14:29:33Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d2f4157f58ee5614d131ea8b83e03521379ae4bc154206781ab733e3a7b78439",
+      "fetched_at": "2026-09-26T18:55:04Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "VIGIL, SATURDAY EVENING 4:30 PM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "VIGIL, SATURDAY EVENING 4:30 PM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "VIGIL, SATURDAY EVENING 4:30 PM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "VIGIL, SATURDAY EVENING 4:30 PM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 16:30 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 16:30 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 16:30 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 16:30 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read; Nativity's Sat 10/24 and 10/31 vigils are 4:30 PM in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "SUNDAY MORNING 8:00 AM | Nativity BVM; 10:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 10:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 10:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 10:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 10:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Monday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Monday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Monday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Monday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Wednesday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Wednesday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Wednesday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Wednesday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Thursday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Thursday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Thursday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Thursday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Friday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Friday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Friday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Friday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Nativity BVM & Sacred Heart of Jesus (Mon, Wed, Thu, Fri); SATURDAY 8:00 AM | Nativity BVM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 08:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "TUESDAY 9:00 AM | Nativity BVM & St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "TUESDAY 9:00 AM | Nativity BVM & St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "TUESDAY 9:00 AM | Nativity BVM & St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "TUESDAY 9:00 AM | Nativity BVM & St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Tuesday 09:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Tuesday 09:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Tuesday 09:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Tuesday 09:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read; Nativity's Tue 10/27 9:00 AM is in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With Divine Mercy Chaplet"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "ADORATION Nativity BVM | Wednesdays 7:30-8:30 PM with Divine Mercy Chaplet"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "ADORATION Nativity BVM | Wednesdays 7:30-8:30 PM with Divine Mercy Chaplet"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "ADORATION Nativity BVM | Wednesdays 7:30-8:30 PM with Divine Mercy Chaplet"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "ADORATION Nativity BVM | Wednesdays 7:30-8:30 PM with Divine Mercy Chaplet"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly adoration Wednesday 19:30–20:30 nativity-of-the-blessed-virgin-mary-williamsville  “With Divine Mercy Chaplet”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly adoration Wednesday 19:30–20:30 nativity-of-the-blessed-virgin-mary-williamsville  “With Divine Mercy Chaplet”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly adoration Wednesday 19:30–20:30 nativity-of-the-blessed-virgin-mary-williamsville  “With Divine Mercy Chaplet”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly adoration Wednesday 19:30–20:30 nativity-of-the-blessed-virgin-mary-williamsville  “Includes Divine Mercy Chaplet”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Adoration list of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-the-blessed-virgin-mary-williamsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "CONFESSION Nativity BVM | Every Saturday 3:00-4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "CONFESSION Nativity BVM | Every Saturday 3:00-4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "CONFESSION Nativity BVM | Every Saturday 3:00-4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "CONFESSION Nativity BVM | Every Saturday 3:00-4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly confession Saturday 15:00–16:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly confession Saturday 15:00–16:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly confession Saturday 15:00–16:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly confession Saturday 15:00–16:00 nativity-of-the-blessed-virgin-mary-williamsville",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Confession list of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 16:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 16:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 16:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 16:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:30 AM | Sacred Heart of Jesus (9:00 AM beginning October 4)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 09:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 09:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 09:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 08:30 sacred-heart-of-jesus-bowmansville  “Time changes to 9:00 AM beginning October 4”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R20: 9:00 AM in the three bulletins since October 4; the Sept 27 issue announced the change from 8:30 AM, so 8:30 is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Monday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Monday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Monday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Monday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Thursday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Thursday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Thursday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Thursday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "8:00 AM | Sacred Heart of Jesus (Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Friday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Friday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Friday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Friday 08:00 sacred-heart-of-jesus-bowmansville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "6:30 PM | (First Fridays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "6:30 PM | (First Fridays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "6:30 PM | (First Fridays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "6:30 PM | (First Fridays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Friday 18:30 sacred-heart-of-jesus-bowmansville  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Friday 18:30 sacred-heart-of-jesus-bowmansville  “First Fridays Only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Friday 18:30 sacred-heart-of-jesus-bowmansville  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Friday 18:30 sacred-heart-of-jesus-bowmansville  “First Fridays only”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: named monthly Mass printed in the newest bulletin's schedule box; the newest week holds no first Friday (R11/R12 not needed since the box prints it), and the Sept 27 issue's week held Fri Oct 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "SATURDAY 8:00 AM | Nativity BVM & (First Saturdays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "SATURDAY 8:00 AM | Nativity BVM & (First Saturdays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "SATURDAY 8:00 AM | Nativity BVM & (First Saturdays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "SATURDAY 8:00 AM | Nativity BVM & (First Saturdays Only) Sacred Heart of Jesus"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 08:00 sacred-heart-of-jesus-bowmansville  “First Saturdays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 08:00 sacred-heart-of-jesus-bowmansville  “First Saturdays Only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 08:00 sacred-heart-of-jesus-bowmansville  “First Saturdays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 08:00 sacred-heart-of-jesus-bowmansville  “First Saturdays only”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: named monthly Mass printed in the newest bulletin's schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8 AM Mass; Closing Benediction at 4 PM"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "ADORATION Sacred Heart of Jesus | First Friday after 8 AM Mass, with Closing Benediction at 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "ADORATION Sacred Heart of Jesus | First Friday after 8 AM Mass, with Closing Benediction at 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "ADORATION Sacred Heart of Jesus | First Friday after 8 AM Mass, with Closing Benediction at 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "ADORATION Sacred Heart of Jesus | First Friday after 8 AM Mass, with Closing Benediction at 4 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly adoration Friday 08:30–16:00 sacred-heart-of-jesus-bowmansville  “First Fridays only; Closing Benediction at 4 PM”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly adoration Friday 08:30–16:00 sacred-heart-of-jesus-bowmansville  “First Fridays; with closing benediction at 4 PM”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly adoration Friday 08:30–16:00 sacred-heart-of-jesus-bowmansville  “First Fridays after 8:00 AM Mass; includes benediction”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "specific_date adoration 2026-10-02 08:30–18:30 sacred-heart-of-jesus-bowmansville  “Pilgrimage Day; includes Children's & Family Holy Hour from 4:00-5:00 PM”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R10: named monthly Adoration in the newest box. 'After 8 AM Mass' gives no clock time, so it starts 30 minutes after the weekday Mass (8:30) and ends at the 4 PM Benediction. The Sept 27 issue's Oct 2 'Promises of Jesus Pilgrimage' program ran adoration to 6:30 PM; it is labeled a pilgrimage-day program for that date, so under R40 the standing box times stay.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's & Family Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 2,
+          "said": "Every First Friday of the month, from 4 - 5 PM, at Sacred Heart of Jesus Parish & Diocesan Shrine in Bowmansville ... Children's & Family Holy Hour. Our next ... is Friday, November 6, 4:00 - 5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 5,
+          "said": "4 - 5 PM - Children's & Family Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly adoration Friday 16:00–17:00 sacred-heart-of-jesus-bowmansville  “Children’s & Family Holy Hour; First Fridays”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12, POLICY (Holy Hour is Adoration): named 'Every First Friday' service. The newest bulletin's week holds no first Friday and does not print it; the Sept 27 issue (week of Fri Oct 2) is the newest read issue whose week holds one and prints the 4-5 PM hour. The Oct 18 issue confirms 'every First Friday'. Nov 6 is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "Sacred Heart of Jesus | Every Saturday 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "Sacred Heart of Jesus | Every Saturday 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "Sacred Heart of Jesus | Every Saturday 3:00-3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "Sacred Heart of Jesus | Every Saturday 3:00-3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly confession Saturday 15:00–15:45 sacred-heart-of-jesus-bowmansville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly confession Saturday 15:00–15:45 sacred-heart-of-jesus-bowmansville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly confession Saturday 15:00–15:45 sacred-heart-of-jesus-bowmansville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly confession Saturday 15:00–15:45 sacred-heart-of-jesus-bowmansville",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Confession list of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "4:00 PM | St. Mary's & Sacred Heart of Jesus"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 16:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 16:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 16:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 16:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read; Sat 10/31 4:00 PM is in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 07:30 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 07:30 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 07:30 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 07:30 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read. The Nov 1 All Saints Day Mass (9:00) and All Souls' Day Mass (11:00) are these weekly Masses (POLICY, Weekly or dated rule 7), so no dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "specific_date mass 2026-11-01 09:00 st-mary-swormville  “All Saints' Day Mass”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read. The Nov 1 All Saints Day Mass (9:00) and All Souls' Day Mass (11:00) are these weekly Masses (POLICY, Weekly or dated rule 7), so no dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "7:30 AM | St. Mary's; 9:00 AM | St. Mary's & Sacred Heart of Jesus; 11:00 AM | St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Sunday 11:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Sunday 11:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Sunday 11:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Sunday 11:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass Schedule of all four bulletins read. The Nov 1 All Saints Day Mass (9:00) and All Souls' Day Mass (11:00) are these weekly Masses (POLICY, Weekly or dated rule 7), so no dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "As of October 19, we are celebrating 9:00 AM Daily Mass, Monday - Thursday, in the chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Monday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Monday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Monday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Monday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the newest bulletin says the Mon-Thu 9:00 AM Mass is in the chapel at St. Mary's, which is part of the church campus; the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "As of October 19, we are celebrating 9:00 AM Daily Mass, Monday - Thursday, in the chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Tuesday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Tuesday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Tuesday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Tuesday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the newest bulletin says the Mon-Thu 9:00 AM Mass is in the chapel at St. Mary's, which is part of the church campus; the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "As of October 19, we are celebrating 9:00 AM Daily Mass, Monday - Thursday, in the chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Wednesday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Wednesday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Wednesday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Wednesday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the newest bulletin says the Mon-Thu 9:00 AM Mass is in the chapel at St. Mary's, which is part of the church campus; the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "As of October 19, we are celebrating 9:00 AM Daily Mass, Monday - Thursday, in the chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Thursday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Thursday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Thursday 09:00 st-mary-swormville  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Thursday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Churches and chapels): the newest bulletin says the Mon-Thu 9:00 AM Mass is in the chapel at St. Mary's, which is part of the church campus; the note says where.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "9:00 AM Daily Mass, Friday & Saturday, is celebrated in the main church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Friday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Friday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Friday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Friday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 9,
+          "said": "9:00 AM Daily Mass, Friday & Saturday, is celebrated in the main church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 3,
+          "said": "9:00 AM | St. Mary's (Fri, Sat)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly mass Saturday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly mass Saturday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly mass Saturday 09:00 st-mary-swormville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly mass Saturday 09:00 st-mary-swormville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Daily Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "St. Mary's | Every Saturday 2:30-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "St. Mary's | Every Saturday 2:30-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "St. Mary's | Every Saturday 2:30-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "St. Mary's | Every Saturday 2:30-3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly confession Saturday 14:30–15:30 st-mary-swormville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly confession Saturday 14:30–15:30 st-mary-swormville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly confession Saturday 14:30–15:30 st-mary-swormville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly confession Saturday 14:30–15:30 st-mary-swormville",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Confession list of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-swormville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9 AM Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "St. Mary's | ... First Saturdays after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03cff882",
+          "page": 4,
+          "said": "St. Mary's | ... First Saturdays after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b2501168",
+          "page": 4,
+          "said": "St. Mary's | ... First Saturdays after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2f4157f",
+          "page": 4,
+          "said": "St. Mary's | ... First Saturdays after 9 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "03cff8828f5f",
+          "said": "weekly confession Saturday 09:30 st-mary-swormville  “First Saturdays after 9 AM Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d4838531aa",
+          "said": "weekly confession Saturday 09:45 st-mary-swormville  “First Saturdays only; after 9 AM Mass”  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly confession Saturday 09:45 st-mary-swormville  “First Saturdays after 9:00 AM Mass”  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d2f4157f58ee",
+          "said": "weekly confession Saturday 09:45 st-mary-swormville  “First Saturdays following 9:00 AM Mass”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R8, R10: named monthly Confession in the newest box. No clock time, so 30 minutes after the 9:00 AM Saturday (weekday) Mass starts; history reads 9:45 in three issues, but POLICY gives 9:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "ROSARY St. Mary's | Monday-Saturday 8:30 AM; & Wednesday 7 PM in the Chapel ... Nativity BVM ... after 8 AM Mass ... Sacred Heart of Jesus | Monday-Friday after 8 AM Mass"
+        }
+      ],
+      "rationale": "R24: the Rosary lists on page 4 are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 2,
+          "said": "The season of Fatima runs May through October, every month on the thirteenth day at 6:30 PM!"
+        }
+      ],
+      "rationale": "R33, R24: Sacred Heart's Fatima devotion on the 13th, May through October, is over for 2026 and its day-of-month pattern cannot be written in the file. It is not in the weekly box. Update mode will see it again next spring.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-of-jesus-bowmansville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8 AM Mass; Closing Benediction at 4 PM"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b1d48385",
+          "page": 4,
+          "said": "Sacred Heart of Jesus | First Friday after 8 AM Mass, with Closing Benediction at 4 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b25011687448",
+          "said": "weekly adoration Friday 08:45–16:00 sacred-heart-of-jesus-bowmansville  “First Friday after 8 AM Mass; includes Benediction at 4 PM”",
+          "page": 4
+        }
+      ],
+      "rationale": "R7, R9: history read one issue as starting 8:45; POLICY works 'after the 8 AM weekday Mass' out as 8:30, which the included slot uses. This is the same service, not a second one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

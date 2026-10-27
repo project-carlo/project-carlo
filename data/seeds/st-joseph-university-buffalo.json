@@ -1,0 +1,1351 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-university-buffalo",
+  "status": "ready",
+  "as_of": "2026-10-25T13:17:19Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:57:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two listed churches: St. Joseph University (SJUP) and the UB Newman Center (UBNC), one campus-ministry bulletin. Weekend Masses, Confessions, student Masses, UBNC daily Mass and Adoration are in all three bulletins read; SJUP weekday Masses come from the intentions calendar. The Buffalo State Newman Center Mass is left out (not this parish's church). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7a52035bd360de3797fa855aa54b1bfac7ca4a30c42b6098bc5d50db0936f003",
+      "fetched_at": "2026-10-25T13:17:19Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "b64193d91a9ff845abfa0cf46c542b6729f5fe0741ff64ac291d58220d87aeea",
+      "fetched_at": "2026-10-18T12:44:32Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "5b41005b2512b7ae79c2de25c488272fbb47407e3717bb53182afacd4d297352",
+      "fetched_at": "2026-10-11T16:34:20Z",
+      "published_date": "2026-10-11",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 3:00 PM Confessions (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 3:00 PM Confessions (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 3:00 PM Confessions (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly confession Saturday 15:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly confession Saturday 15:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly confession Saturday 15:00 st-joseph-university-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins; start time only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "4:00 PM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "4:00 PM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "4:00 PM (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Saturday 16:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Saturday 16:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Saturday 16:00 st-joseph-university-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Saturday vigil in the Mass Times box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "Sunday Masses 8:30 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "Sunday Masses 8:30 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "Sunday Masses 8:30 AM (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 08:30 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 08:30 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 08:30 st-joseph-university-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "10:00 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "10:00 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "10:00 AM (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 10:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 10:00 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 10:00 st-joseph-university-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "11:30 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "11:30 AM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "11:30 AM (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 11:30 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 11:30 st-joseph-university-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 11:30 st-joseph-university-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Student Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "Sunday Student Masses 7:00 PM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "Sunday Student Masses 7:00 PM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "Sunday Student Masses 7:00 PM (SJUP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 3,
+          "said": "Sundays at 7:00 PM (SJUP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 19:00 st-joseph-university-buffalo  “Student Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 19:00 st-joseph-university-buffalo  “Student Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 19:00 st-joseph-university-buffalo  “Student Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: listed in the Mass Times box; the bulletin does not limit it to students, so POLICY's closed-to-the-public exclusion does not apply.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Tuesday, October 27th 8:30 AM: For the People of Family 36; Wednesday, October 28th 8:30 AM: Leising Family; Thursday, October 29th 8:30 AM: Therese CiCaello"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 7,
+          "said": "Tuesday, October 20th 8:30 AM; Wednesday, October 21st 8:30 AM; Thursday, October 22nd 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 7,
+          "said": "Tuesday, October 13th 8:30 AM; Wednesday, October 14th 8:30 AM; Thursday, October 15th 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Tuesday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Tuesday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "specific_date mass 2026-10-13 08:30 st-joseph-university-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R35, R1: the Mass-intentions calendar lists St. Joe's Tuesday, Wednesday and Thursday 8:30 AM Masses in all three weekly bulletins; the weekend-only box on page 1 does not disprove them. No Monday or Friday weekday Mass is listed in any week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Tuesday, October 27th 8:30 AM: For the People of Family 36; Wednesday, October 28th 8:30 AM: Leising Family; Thursday, October 29th 8:30 AM: Therese CiCaello"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 7,
+          "said": "Tuesday, October 20th 8:30 AM; Wednesday, October 21st 8:30 AM; Thursday, October 22nd 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 7,
+          "said": "Tuesday, October 13th 8:30 AM; Wednesday, October 14th 8:30 AM; Thursday, October 15th 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Wednesday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Wednesday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "specific_date mass 2026-10-14 08:30 st-joseph-university-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R35, R1: the Mass-intentions calendar lists St. Joe's Tuesday, Wednesday and Thursday 8:30 AM Masses in all three weekly bulletins; the weekend-only box on page 1 does not disprove them. No Monday or Friday weekday Mass is listed in any week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-university-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Tuesday, October 27th 8:30 AM: For the People of Family 36; Wednesday, October 28th 8:30 AM: Leising Family; Thursday, October 29th 8:30 AM: Therese CiCaello"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 7,
+          "said": "Tuesday, October 20th 8:30 AM; Wednesday, October 21st 8:30 AM; Thursday, October 22nd 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 7,
+          "said": "Tuesday, October 13th 8:30 AM; Wednesday, October 14th 8:30 AM; Thursday, October 15th 8:30 AM (St. Joe's intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Thursday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Thursday 08:30 st-joseph-university-buffalo",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "specific_date mass 2026-10-15 08:30 st-joseph-university-buffalo",
+          "page": 7
+        }
+      ],
+      "rationale": "R35, R1: the Mass-intentions calendar lists St. Joe's Tuesday, Wednesday and Thursday 8:30 AM Masses in all three weekly bulletins; the weekend-only box on page 1 does not disprove them. No Monday or Friday weekday Mass is listed in any week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "4:30 PM Confessions (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "4:30 PM Confessions (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "4:30 PM Confessions (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly confession Saturday 16:30 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly confession Saturday 16:30 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly confession Saturday 16:30 ub-newman-center-amherst",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins; start time only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "5:15 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "5:15 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "5:15 PM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Saturday 17:15 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Saturday 17:15 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Saturday 17:15 ub-newman-center-amherst",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Saturday vigil in the Mass Times box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "9:15 AM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "9:15 AM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "9:15 AM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 09:15 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 09:15 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 09:15 ub-newman-center-amherst",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "10:45 AM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "10:45 AM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "10:45 AM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 10:45 ub-newman-center-amherst",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 10:45 ub-newman-center-amherst  “Children's Liturgy of the Word available except 1st Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 10:45 ub-newman-center-amherst  “Liturgy of the Word for Children (not first Sundays)”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "specific_date mass 2026-11-01 10:45 ub-newman-center-amherst  “Children's Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: Mass Times box on page 1 of all three bulletins. The Children's Mass on Sunday, November 1 is this Mass (see the excluded dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Student Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "Sunday Student Masses 6:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "Sunday Student Masses 6:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "6:00 PM (UBNC)* please note new time"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 3,
+          "said": "Sundays at 6:00 PM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Sunday 18:00 ub-newman-center-amherst  “Student Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Sunday 18:00 ub-newman-center-amherst  “Student Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Sunday 18:00 ub-newman-center-amherst  “Student Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: 6:00 PM in all three bulletins (the Oct 11 issue flags it as a new time); not limited to students by the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Thursday, October 29th 12:00 PM: Rose Glorioso"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Monday 12:00 ub-newman-center-amherst",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Monday 12:00 ub-newman-center-amherst",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Monday 12:00 ub-newman-center-amherst",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R39: stated weekly schedule on page 6 of all three bulletins; Monday's intention is printed 'no intention', which does not remove the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 6,
+          "said": "Daily Mass: When: Mondays and Thursdays at 12:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Thursday, October 29th 12:00 PM: Rose Glorioso"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Thursday 12:00 ub-newman-center-amherst",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly mass Thursday 12:00 ub-newman-center-amherst",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Thursday 12:00 ub-newman-center-amherst",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R39: stated weekly schedule on page 6 of all three bulletins; Monday's intention is printed 'no intention', which does not remove the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary and Adoration"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 6,
+          "said": "Adoration: When: Tuesdays from 6:30 PM till 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 6,
+          "said": "Adoration: When: Tuesdays from 6:30 PM till 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 6,
+          "said": "Adoration: When: Tuesdays from 6:30 PM till 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 3,
+          "said": "Rosary and Adoration: Tuesdays from 6:30 PM till 7:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 3,
+          "said": "Rosary and Adoration: Tuesdays from 6:30 PM till 7:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 3,
+          "said": "Rosary and Adoration: Tuesdays from 6:30 PM till 7:00 PM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly adoration Tuesday 18:30–19:00 ub-newman-center-amherst  “Includes Rosary”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly adoration Tuesday 18:30–19:00 ub-newman-center-amherst  “Rosary and Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly adoration Tuesday 18:30–19:00 ub-newman-center-amherst  “Includes Rosary”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: clock times given on pages 3 and 6 of all three bulletins; the Rosary goes with the Adoration (POLICY: What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:00 PM Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 6,
+          "said": "Adoration: Thursdays after the 12:00 PM mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 6,
+          "said": "Adoration: Thursdays after the 12:00 PM mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 6,
+          "said": "Adoration: Thursdays after the 12:00 PM mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly adoration Thursday 12:00 ub-newman-center-amherst  “Following 12:00 PM Mass”  (a different time)",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "weekly adoration Thursday 12:00 ub-newman-center-amherst  “Immediately following the 12:00 PM Mass”  (a different time)",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly adoration Thursday 12:00 ub-newman-center-amherst  “Starts after 12:00 PM Mass”  (a different time)",
+          "page": 6
+        }
+      ],
+      "rationale": "R10: timed only relative to a weekday Mass, so POLICY puts it 30 minutes after the 12:00 PM Mass starts, 12:30 PM, no end time. History read 12:00 (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Student Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 3,
+          "said": "Student Masses: Last Monday of month at 4:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 3,
+          "said": "Student Masses: Last Monday of month at 4:00 PM (UBNC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 3,
+          "said": "Student Masses: Last Monday of month at 4:00 PM (UBNC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a52035bd360",
+          "said": "weekly mass Monday 16:00 ub-newman-center-amherst  “Student Mass, Last Monday of month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b64193d91a9f",
+          "said": "specific_date mass 2026-10-26 16:00 ub-newman-center-amherst  “Monthly Student Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "weekly mass Monday 16:00 ub-newman-center-amherst  “Student Mass; Last Monday of the month”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R39: a named monthly service, printed on page 3 of the newest bulletin, whose week holds the last Monday (Oct 26). Its intentions row lists only the 12:00 PM Mass, but a missing intention proves neither Mass nor no Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Buffalo State University Newman Center, 435 Amherst Street"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 1,
+          "said": "Sunday Masses 10:00 AM (Buff State NC); Buffalo State University Newman Center, 435 Amherst Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b64193d9",
+          "page": 1,
+          "said": "Sunday Masses 10:00 AM (Buff State NC); Buffalo State University Newman Center, 435 Amherst Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b41005b",
+          "page": 1,
+          "said": "Sunday Masses 10:00 AM (Buff State NC); Buffalo State University Newman Center, 435 Amherst Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 7,
+          "said": "Buffalo State, Sunday, November 1st 10:00 AM: Buffalo State Newman Center Community"
+        }
+      ],
+      "rationale": "R22: the Buffalo State Newman Center is not one of this parish's listed churches; its address, 435 Amherst Street, is the listed address of Assumption Church, which belongs to another parish (catholic-community-buffalo-north).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ub-newman-center-amherst",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Children's Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a52035b",
+          "page": 6,
+          "said": "Children's Mass: When: Sunday, November 1st, at 10:45 AM mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b41005b2512",
+          "said": "specific_date mass 2026-11-01 10:45 ub-newman-center-amherst  “Children's Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R9, POLICY Weekly or dated 7: the Children's Mass is a special occasion at the regular Sunday 10:45 AM Mass, which is already a weekly slot; history read it as a dated Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

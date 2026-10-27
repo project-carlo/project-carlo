@@ -1,0 +1,1305 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-hudson",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:22:43Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:04:03Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches: St. Mary (Hudson), Church of the Resurrection (Germantown), Nativity Chapel (Linlithgo, seasonal). Weekday, weekend and Saturday confession times are printed in all five bulletins and agree with the parish site. Germantown confession is before and after Masses with no clock time; before uses the site's 15 minutes, after uses POLICY. Open: how to record the Linlithgo Mass season (site says last Mass Nov 21, resumes Apr 3).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6bd184195080ae637e619ee4b3cb340afa3948444a00a1d4985c079bba74e612",
+      "fetched_at": "2026-10-25T13:22:43Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "265dc4e46326bccaf846fdc785009bcb4d5bbaa287044421ad92ab295d4ec912",
+      "fetched_at": "2026-10-18T12:50:44Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "bae100a22f688db2e131d13dec11d2d0d37d99cdb4621cd8116cab25f6677c52",
+      "fetched_at": "2026-10-11T16:37:33Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "5add3ce71721d24413e98d9d6f242aba4359a548dea45ccfc864d59f12421097",
+      "fetched_at": "2026-10-04T14:48:07Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "90bd50d36dff4b1636320086fb675595f9b3711c930f5c3d903665a4bdbdc3e2",
+      "fetched_at": "2026-09-28T21:58:22Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Monday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Monday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Monday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Monday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "specific_date mass 2026-10-12 09:00 st-mary-hudson  “Columbus Day”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed daily in Masses for This Week in the newest bulletin and in all three older ones read; website lists Weekday Mass (Monday - Friday) 7:15 a.m. at St. Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Tuesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Tuesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Tuesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Tuesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Tuesday 07:15 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed daily in Masses for This Week in the newest bulletin and in all three older ones read; website lists Weekday Mass (Monday - Friday) 7:15 a.m. at St. Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Wednesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Wednesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Wednesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Wednesday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Wednesday 07:15 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed daily in Masses for This Week in the newest bulletin and in all three older ones read; website lists Weekday Mass (Monday - Friday) 7:15 a.m. at St. Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Thursday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Thursday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Thursday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Thursday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Thursday 07:15 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed daily in Masses for This Week in the newest bulletin and in all three older ones read; website lists Weekday Mass (Monday - Friday) 7:15 a.m. at St. Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "7:15 am (HUD) Weekday Mass, Monday to Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Friday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Friday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Friday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Friday 07:15 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Friday 07:15 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed daily in Masses for This Week in the newest bulletin and in all three older ones read; website lists Weekday Mass (Monday - Friday) 7:15 a.m. at St. Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "SATURDAY VIGIL MASS 4:00 pm (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "SATURDAY VIGIL MASS 4:00 pm (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "SATURDAY VIGIL MASS 4:00 pm (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "SATURDAY VIGIL MASS 4:00 pm (HUD)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Saturday 16:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Saturday 16:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Saturday 16:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Saturday 16:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Saturday 16:00 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Saturday vigil at Hudson printed in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 9:00 am (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 9:00 am (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 9:00 am (HUD)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 9:00 am (HUD)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Sunday 09:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Sunday 09:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Sunday 09:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Sunday 09:00 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Sunday 09:00 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Sunday 9:00 at Hudson printed in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "FRIDAY 9:00 am (G'TWN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "FRIDAY 9:00 am (G'TWN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "FRIDAY 9:00 am (G'TWN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "FRIDAY 9:00 am (G'TWN)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Friday 09:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Friday 09:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Friday 09:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Friday 09:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Friday 09:00 resurrection-germantown",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Friday 9:00 at Germantown printed in every bulletin read; website says Weekday Mass (Fridays only) 9:00 a.m. at the Church of the Resurrection.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 11:00 am (G'TWN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 11:00 am (G'TWN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "SUNDAY MORNING MASS 11:00 am (G'TWN)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Sunday 11:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Sunday 11:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Sunday 11:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Sunday 11:00 resurrection-germantown",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Sunday 11:00 resurrection-germantown",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Sunday 11:00 at Germantown printed in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hudson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly confession Saturday 14:30–15:45 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly confession Saturday 14:30–15:45 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly confession Saturday 14:30–15:45 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly confession Saturday 14:30–15:45 st-mary-hudson",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly confession Saturday 14:30–15:45 st-mary-hudson",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Hudson confession has a definite clock time in every bulletin; website agrees (Saturday afternoons 2:30 to 3:45 p.m.).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "5:30 pm (LNLTH) SATURDAY VIGIL MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "5:30 pm (LNLTH) For the Living & Deceased of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "5:30 pm (LNLTH) For the Living & Deceased of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "5:30 pm (LNLTH) For the Living & Deceased of the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "5:30 pm (LNLTH) For the Living & Deceased of the Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holytrinityhudson.org/mass-schedule",
+          "said": "Chapel of the Nativity of the Lord ... Saturday Vigil Mass: 5:30 p.m. Last Mass for this season will be on Saturday 21 November 2026. This Mass will resume on Saturday 3 April 2027"
+        },
+        {
+          "source": "history",
+          "bulletin": "6bd184195080",
+          "said": "weekly mass Saturday 17:30 nativity-linlithgo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "265dc4e46326",
+          "said": "weekly mass Saturday 17:30 nativity-linlithgo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly mass Saturday 17:30 nativity-linlithgo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly mass Saturday 17:30 nativity-linlithgo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly mass Saturday 17:30 nativity-linlithgo",
+          "page": 3
+        }
+      ],
+      "rationale": "R6, R1: the bulletin prints the Mass weekly and the parish site gives this season's last Mass (Nov 21, 2026) and its resumption (Apr 3, 2027), so a season applies. Those are the only dates given; they are one year's dates and may not repeat next year, hence the question (R30). Leaning toward the dated season because showing the Mass in winter is the worse error.",
+      "question": "Saturday 5:30 PM Mass at Nativity Chapel, Linlithgo: how should the season be recorded?",
+      "options": [
+        {
+          "label": "Sat 5:30 PM, season April 3 to November 21",
+          "entry": {
+            "church_slug": "nativity-linlithgo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": {
+              "start_month": 4,
+              "start_day": 3,
+              "end_month": 11,
+              "end_day": 21
+            },
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Sat 5:30 PM every week, no season",
+          "entry": {
+            "church_slug": "nativity-linlithgo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holytrinityhudson.org/reconciliation-schedule",
+          "said": "Resurrection Church, 9 Church Avenue, Germantown: 15 minutes prior to each Mass and anytime by appointment",
+          "schedule_check": {
+            "checked_at": "2026-10-25T19:06:52Z",
+            "current_because": "The page is the parish's own eCatholic Reconciliation Schedule page; the same site's Mass Schedule page names the 21 November 2026 end of the Linlithgo season, so it is maintained this year; it names Hudson times that match the bulletin.",
+            "bulletin": "6bd18419",
+            "fits_because": "The newest bulletin (Oct 25) says confession is before and after Masses in Germantown without a time; the site gives 15 minutes before each Mass, and the Germantown Masses (Fri 9:00, Sun 11:00) match the bulletin."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson, before and after Masses in Germantown, or at anytime by appointment"
+        }
+      ],
+      "rationale": "R6, R10: bulletin says confession is before Masses in Germantown without a clock time; the parish site supplies 15 minutes prior, so it runs from 15 minutes before to the Mass start (POLICY, Times). History's Fri 09:00 and Sun 11:00 confession readings put the Mass time as the confession time (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "15 minutes before Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holytrinityhudson.org/reconciliation-schedule",
+          "said": "Resurrection Church, 9 Church Avenue, Germantown: 15 minutes prior to each Mass and anytime by appointment",
+          "schedule_check": {
+            "checked_at": "2026-10-25T19:06:52Z",
+            "current_because": "The page is the parish's own eCatholic Reconciliation Schedule page; the same site's Mass Schedule page names the 21 November 2026 end of the Linlithgo season, so it is maintained this year; it names Hudson times that match the bulletin.",
+            "bulletin": "6bd18419",
+            "fits_because": "The newest bulletin (Oct 25) says confession is before and after Masses in Germantown without a time; the site gives 15 minutes before each Mass, and the Germantown Masses (Fri 9:00, Sun 11:00) match the bulletin."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "RECONCILIATION: Celebrated on Saturdays 2.30-3.45 pm in Hudson, before and after Masses in Germantown, or at anytime by appointment"
+        }
+      ],
+      "rationale": "R6, R10: bulletin says confession is before Masses in Germantown without a clock time; the parish site supplies 15 minutes prior, so it runs from 15 minutes before to the Mass start (POLICY, Times). History's Sun 11:00 confession reading puts the Mass time as the confession time (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "RECONCILIATION: ... before and after Masses in Germantown, or at anytime by appointment (Note: it is best to call ahead first to check on the availability of a priest)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        }
+      ],
+      "rationale": "R10: the bulletin says confession is after Masses in Germantown with no clock time and the site is silent on after-Mass confession (not a conflict, R6). POLICY works a weekday Mass out at 30 minutes after its start: 9:30. The bulletin's call-ahead note applies to every confession line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "RECONCILIATION: ... before and after Masses in Germantown, or at anytime by appointment (Note: it is best to call ahead first to check on the availability of a priest)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "265dc4e4",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bae100a2",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5add3ce7",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90bd50d3",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        }
+      ],
+      "rationale": "R10: the bulletin says confession is after Masses in Germantown with no clock time and the site is silent on after-Mass confession (not a conflict, R6). POLICY works a weekend Mass out at 1 hour after its start: 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "ANOINTING OF THE SICK: Priests regularly visit the hospitals, nursing homes and the homebound. Please do contact the Parish Office"
+        }
+      ],
+      "rationale": "R24, R26: Anointing is not Mass, Confession or Adoration and has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.holytrinityhudson.org/olv-perpetual-eucharistic-adoration-chapel",
+          "said": "Our Lady of Victory Eucharistic Adoration Chapel ... We are hopeful that we will be able to reinstitute perpetual adoration of the Eucharist in the near future."
+        }
+      ],
+      "rationale": "R26: the Our Lady of Victory adoration chapel linked from the site is a Hudson Valley vicariate ministry that is not running perpetual adoration now; no time or location in the bulletins, so nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before and after Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly confession Friday 09:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly confession Friday 09:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly confession Friday 09:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: history reads confession at the Mass's own start time. The bulletin gives no clock time; the real windows are the 15 minutes before and the 30 minutes after Mass (s12, s14).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-germantown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before and after Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6bd18419",
+          "page": 3,
+          "said": "before and after Masses in Germantown"
+        },
+        {
+          "source": "history",
+          "bulletin": "bae100a22f68",
+          "said": "weekly confession Sunday 11:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5add3ce71721",
+          "said": "weekly confession Sunday 11:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90bd50d36dff",
+          "said": "weekly confession Sunday 11:00 resurrection-germantown  “Before and after Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: history reads confession at the Mass's own start time. The bulletin gives no clock time; the real windows are the 15 minutes before and the hour after Mass (s13, s15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

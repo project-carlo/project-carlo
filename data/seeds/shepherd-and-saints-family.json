@@ -1,0 +1,3354 @@
+{
+  "schema_version": 1,
+  "parish_slug": "shepherd-and-saints-family",
+  "status": "ready",
+  "as_of": "2026-10-25T13:16:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:00:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three listed churches in the Shepherd and Saints Family. The Family Mass Schedule box, Family Confessions and the Eucharistic Adoration & Devotions box on p2 are the same in all five bulletins read. Includes St. Gregory's 24/7 Adoration (recorded 12:00 AM-11:59 PM daily), the St. Pius X Adoration Chapel, First Friday Adoration and the fourth-Monday Healing Mass with Confession at St. Pius X. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "32457793380284a1a09bda6204b0d54f99cc3758f0d1510f1c1fa61a3a9497a4",
+      "fetched_at": "2026-10-25T13:16:54Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "032f2a029ab9b3b73154ea51035e5117681aee254c80ed6b5ad3021095700f36",
+      "fetched_at": "2026-10-18T12:43:58Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "889c837f0b3bca6ba26a13eba140f2593a92e243438147e82f4f6bf589ca09a9",
+      "fetched_at": "2026-10-11T16:34:03Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d82792dd7d5ccad4071ef62d0a5b3fd32abcf2052ca7f4dbff6b1955b9aa1b2f",
+      "fetched_at": "2026-10-04T14:27:23Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a9e8b381928dbee7126680f5840e7ec36f0f940124bee7197250dfdb72cca210",
+      "fetched_at": "2026-09-26T18:54:26Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Monday, October 26 7:00 am; Tuesday 7:00 am; Wednesday 7:00 am; Thursday 7:00 am; Friday 7:00 am (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Monday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Monday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Monday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Monday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Monday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Schedule box of the newest bulletin, with the same box in all four older issues, and each day's 7:00 am intention in the p3 St. Gregory the Great column.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Monday, October 26 7:00 am; Tuesday 7:00 am; Wednesday 7:00 am; Thursday 7:00 am; Friday 7:00 am (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Tuesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Tuesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Tuesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Tuesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Tuesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Schedule box of the newest bulletin, with the same box in all four older issues, and each day's 7:00 am intention in the p3 St. Gregory the Great column.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Monday, October 26 7:00 am; Tuesday 7:00 am; Wednesday 7:00 am; Thursday 7:00 am; Friday 7:00 am (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Wednesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Wednesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Wednesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Wednesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Wednesday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Schedule box of the newest bulletin, with the same box in all four older issues, and each day's 7:00 am intention in the p3 St. Gregory the Great column.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Monday, October 26 7:00 am; Tuesday 7:00 am; Wednesday 7:00 am; Thursday 7:00 am; Friday 7:00 am (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Thursday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Thursday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Thursday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Thursday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Thursday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Schedule box of the newest bulletin, with the same box in all four older issues, and each day's 7:00 am intention in the p3 St. Gregory the Great column.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 7:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Monday, October 26 7:00 am; Tuesday 7:00 am; Wednesday 7:00 am; Thursday 7:00 am; Friday 7:00 am (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Friday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Friday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Friday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Friday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Friday 07:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Schedule box of the newest bulletin, with the same box in all four older issues, and each day's 7:00 am intention in the p3 St. Gregory the Great column.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "12:00 pm Monday through Friday (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Monday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Monday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Monday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Monday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Monday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p2 of all five bulletins; noon intentions listed each day on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "12:00 pm Monday through Friday (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Tuesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Tuesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Tuesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Tuesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Tuesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p2 of all five bulletins; noon intentions listed each day on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "12:00 pm Monday through Friday (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Wednesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Wednesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Wednesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Wednesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Wednesday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p2 of all five bulletins; noon intentions listed each day on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "12:00 pm Monday through Friday (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Thursday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Thursday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Thursday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Thursday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Thursday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p2 of all five bulletins; noon intentions listed each day on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY MASS SCHEDULE Monday-Friday 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "12:00 pm Monday through Friday (St. Gregory the Great intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Friday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Friday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Friday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Friday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Friday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p2 of all five bulletins; noon intentions listed each day on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Good Shepherd Monday, October 26 8:30 am; Wednesday, October 28 8:30 am; Friday, October 30 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Monday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Monday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Monday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Monday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Monday 08:30 good-shepherd-pendleton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box lists Good Shepherd 8:30 am on Monday, Wednesday and Friday in all five bulletins and p3 shows an intention each of those days. The special All Souls Day Mass on Monday Nov 2 at 8:30 am (p8) is the regular Monday Mass (POLICY, Weekly or dated rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Good Shepherd Monday, October 26 8:30 am; Wednesday, October 28 8:30 am; Friday, October 30 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Wednesday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Wednesday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Wednesday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Wednesday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Wednesday 08:30 good-shepherd-pendleton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box lists Good Shepherd 8:30 am on Monday, Wednesday and Friday in all five bulletins and p3 shows an intention each of those days. The special All Souls Day Mass on Monday Nov 2 at 8:30 am (p8) is the regular Monday Mass (POLICY, Weekly or dated rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "8:30 am Good Shepherd (Monday, Wednesday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Good Shepherd Monday, October 26 8:30 am; Wednesday, October 28 8:30 am; Friday, October 30 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Friday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Friday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Friday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Friday 08:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Friday 08:30 good-shepherd-pendleton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box lists Good Shepherd 8:30 am on Monday, Wednesday and Friday in all five bulletins and p3 shows an intention each of those days. The special All Souls Day Mass on Monday Nov 2 at 8:30 am (p8) is the regular Monday Mass (POLICY, Weekly or dated rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SATURDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SATURDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SATURDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SATURDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SATURDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Saturday, October 31 8:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Saturday 08:00 st-gregory-the-great-williamsville  “First Saturday includes devotions and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Saturday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Saturday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Saturday 08:00 st-gregory-the-great-williamsville  “First Saturday Devotion follows this Mass on 1st Saturdays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Saturday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins. The first-Saturday devotion follows this Mass (p2) and does not change it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Saturday, October 31 VIGIL MASS 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Saturday 16:00 st-gregory-the-great-williamsville  “First Saturday includes anointing after Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Saturday 16:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Saturday 16:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Saturday 16:00 st-gregory-the-great-williamsville  “First Saturday Anointing follows this Mass on 1st Saturdays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Saturday 16:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SATURDAY VIGIL 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 3,
+          "said": "Saturday, October 31 VIGIL MASS 4:30 pm Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Saturday 16:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Saturday 16:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Saturday 16:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Saturday 16:30 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Saturday 16:30 good-shepherd-pendleton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SUNDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SUNDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SUNDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SUNDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SUNDAY 8:00 am St. Gregory the Great"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Sunday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Sunday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Sunday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Sunday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Sunday 08:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins; p3 lists it on Oct 25 and Nov 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SUNDAY 9:00 am Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SUNDAY 9:00 am Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SUNDAY 9:00 am Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SUNDAY 9:00 am Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SUNDAY 9:00 am Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Sunday 09:00 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Sunday 09:00 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Sunday 09:00 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Sunday 09:00 good-shepherd-pendleton",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Sunday 09:00 good-shepherd-pendleton",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins; p3 lists it on Oct 25 and Nov 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SUNDAY 10:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SUNDAY 10:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SUNDAY 10:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SUNDAY 10:00 am St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SUNDAY 10:00 am St. Gregory the Great"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Sunday 10:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Sunday 10:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Sunday 10:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Sunday 10:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Sunday 10:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins; p3 lists it on Oct 25 and Nov 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SUNDAY 11:00 am St. Pius X"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SUNDAY 11:00 am St. Pius X"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SUNDAY 11:00 am St. Pius X"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SUNDAY 11:00 am St. Pius X"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SUNDAY 11:00 am St. Pius X"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Sunday 11:00 st-pius-x-getzville  “Second Sunday includes novena after Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Sunday 11:00 st-pius-x-getzville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Sunday 11:00 st-pius-x-getzville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Sunday 11:00 st-pius-x-getzville  “Monthly Novena follows Mass on 2nd Sundays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Sunday 11:00 st-pius-x-getzville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins; p3 lists it on Oct 25 and Nov 1 (St. Pius X Worship Site column).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "SUNDAY 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "SUNDAY 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "SUNDAY 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "SUNDAY 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "SUNDAY 12:00 pm St. Gregory the Great"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly mass Sunday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Sunday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly mass Sunday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Sunday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly mass Sunday 12:00 st-gregory-the-great-williamsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box in all five bulletins; p3 lists it on Oct 25 and Nov 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "FAMILY CONFESSIONS SATURDAY 2:30 pm - 3:45 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "FAMILY CONFESSIONS SATURDAY 2:30 pm - 3:45 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "FAMILY CONFESSIONS SATURDAY 2:30 pm - 3:45 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "FAMILY CONFESSIONS SATURDAY 2:30 pm - 3:45 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "FAMILY CONFESSIONS SATURDAY 2:30 pm - 3:45 pm St. Gregory the Great"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 1,
+          "said": "CONFESSIONS SAT 2:30 pm - 3:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly confession Saturday 14:30–15:45 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly confession Saturday 14:30–15:45 st-gregory-the-great-williamsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly confession Saturday 14:30–15:45 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly confession Saturday 14:30–15:45 st-gregory-the-great-williamsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly confession Saturday 14:30–15:45 st-gregory-the-great-williamsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Confessions box on p2 and the p1 cover, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Monday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Monday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Monday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Monday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Monday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Tuesday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Wednesday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Thursday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Thursday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Thursday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Thursday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Thursday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Friday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Friday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Friday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Friday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Friday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Saturday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Saturday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Saturday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Saturday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Saturday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open 24/7; access code needed 9:00 PM-6:00 AM"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. GREGORY THE GREAT Adoration—Open 24/7. An access code is needed between 9:00 pm—6:00 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Sunday 00:00–00:00 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Sunday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Sunday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9 PM - 6 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Sunday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; Access code needed 9:00 PM to 6:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Sunday 00:00–23:59 st-gregory-the-great-williamsville  “Open 24/7; access code needed 9:00 PM - 6:00 AM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish lists this Adoration under the St. Gregory the Great heading of its Eucharistic Adoration & Devotions box in every bulletin, open all day and night (24/7), with a code after hours. Recorded 12:00 AM-11:59 PM daily, as in other 24-hour seeds; the bulletin does not say the Sacrament is exposed, so the note only says it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Monday 09:00–12:30 st-pius-x-getzville  “In Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Monday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Monday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Monday 09:00–12:30 st-pius-x-getzville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Monday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names the Adoration Chapel under the St. Pius X Worship Site heading, with hours, in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Tuesday 09:00–12:30 st-pius-x-getzville  “In Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Tuesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Tuesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Tuesday 09:00–12:30 st-pius-x-getzville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Tuesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names the Adoration Chapel under the St. Pius X Worship Site heading, with hours, in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Wednesday 09:00–12:30 st-pius-x-getzville  “In Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Wednesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Wednesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Wednesday 09:00–12:30 st-pius-x-getzville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Wednesday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names the Adoration Chapel under the St. Pius X Worship Site heading, with hours, in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration Chapel—Monday-Wednesday, Friday 9:00 am—12:30 pm. Closed Thursdays."
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Friday 09:00–12:30 st-pius-x-getzville  “In Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Friday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "889c837f0b3b",
+          "said": "weekly adoration Friday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly adoration Friday 09:00–12:30 st-pius-x-getzville  “12:00 PM to 3:00 PM on 1st Fridays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "weekly adoration Friday 09:00–12:30 st-pius-x-getzville  “Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names the Adoration Chapel under the St. Pius X Worship Site heading, with hours, in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration—First Friday of the month from 12:00 noon to 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration—First Friday of the month from 12:00 noon to 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration—First Friday of the month from 12:00 noon to 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration—First Friday of the month from 12:00 noon to 3:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "ST. PIUS X WORSHIP SITE Adoration—First Friday of the month from 12:00 noon to 3:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "weekly adoration Friday 12:00–15:00 st-pius-x-getzville  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly adoration Friday 12:00–15:00 st-pius-x-getzville  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "specific_date adoration 2026-10-02 12:00–15:00 st-pius-x-getzville  “First Friday Adoration”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: a named First Friday service printed in the standing box of all five bulletins is weekly with weeks_of_month first. The newest week holds no first Friday, but the box prints it (R11). It overlaps the Friday Adoration Chapel hours for 30 minutes (12:00-12:30) on first Fridays; the bulletin prints them as two separate items, so both are kept as printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 5,
+          "said": "HEALING MASS at St. Pius X will take place on Monday, October 26 ... Mass at 7:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "specific_date mass 2026-10-26 19:30 st-pius-x-getzville  “Healing Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly mass Monday 19:30 st-pius-x-getzville  “Fourth Monday of the month; Healing Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly mass Monday 19:30 st-pius-x-getzville  “4th Monday of the month; Healing Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "specific_date mass 2026-09-28 19:30 st-pius-x-getzville  “Healing Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: named fourth-Monday service; the newest bulletin's week holds the fourth Monday (Oct 26) and prints it on p5 too. Open to all (All are welcome).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-pius-x-getzville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "032f2a02",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "889c837f",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d82792dd",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a9e8b381",
+          "page": 2,
+          "said": "Healing Mass—Fourth Monday of the month with Confessions at 6:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 5,
+          "said": "join us for Confessions at 6:30 pm, Rosary at 7:00 pm, and Mass at 7:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "324577933802",
+          "said": "specific_date confession 2026-10-26 18:30 st-pius-x-getzville  “Healing Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "032f2a029ab9",
+          "said": "weekly confession Monday 18:30 st-pius-x-getzville  “Fourth Monday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d82792dd7d5c",
+          "said": "weekly confession Monday 18:30 st-pius-x-getzville  “4th Monday of the month before Healing Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a9e8b381928d",
+          "said": "specific_date confession 2026-09-28 18:30 st-pius-x-getzville  “Before Healing Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: the clock time 6:30 pm is printed; no end time is given. Fourth Mondays only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Mass for the Loss of a Child"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 10,
+          "said": "The Mass will be held on Saturday, November 14, at 12:00 noon, at St. Timothy Church, 565 East Park Drive, Tonawanda NY"
+        }
+      ],
+      "rationale": "R22: held at St. Timothy Church, another parish's church (Light of Christ, Kenmore), so the Mass belongs to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "good-shepherd-pendleton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass with procession to the cemetery"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 8,
+          "said": "ALL SOULS DAY Join us for a special All Souls Day morning Mass at Good Shepherd at 8:30 am on Monday, November 2."
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Monday 8:30 am Good Shepherd Mass is not recorded separately; the weekly Monday slot covers it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gregory-the-great-williamsville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-06",
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Mass for the Knights Coffee Club"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 6,
+          "said": "Join Us When: Friday, November 6, 7:00 am Mass & Prayer Devotions, Fellowship Where: St. Gregory the Great Church"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: the group attends the regular Friday 7:00 am Mass; only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "32457793",
+          "page": 2,
+          "said": "Divine Mercy and Rosary after the 7:00 am and 12:00 noon daily Masses; Rosary for Our Country 12:00 noon Saturdays; Vespers every Tuesday 6:30 pm; Stations of the Cross third Friday 12:00 noon; Monthly Novena second Sunday after the 11:00 am Mass; First Saturday Anointing after the 4:00 pm Vigil Mass; Rosary before the Good Shepherd Masses"
+        }
+      ],
+      "rationale": "R24: these are devotions, Vespers or Anointing, not Mass, Confession or Adoration. The First Saturday Devotion follows the existing 8:00 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
