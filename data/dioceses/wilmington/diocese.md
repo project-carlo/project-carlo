@@ -189,6 +189,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Self-hosted WordPress bulletin pages can list dated posts (category 'bulletin') that each wrap a PDF with no PDF link on the listing: pin `dated-post <bulletins page>`, not `page-pdfs` (St. Paul, Delaware City); the site's /wp-json/wp/v2/media?mime_type=application/pdf lists the uploads to confirm.
 - GCatholic's holyspiritchurchde.org is now a third-party 'Archive' page, not the parish: HTTP 200 does not mean the old domain is alive; read the page.
 - `probe pdf` prints pypdf font warnings on stderr; redirect 2>/dev/null before piping to jq.
+- LPi covers can be image-only (probe pdf finds text only on the ad pages at the end, e.g. St. John the Beloved 03/1288 and St. Catherine 03/1410): render page 1 with render.py to read the masthead; the LPi footer 'Parish, City, DE 03-NNNN' is the text quote that names the container.
+- LPi posts the next weekend's issue early, so fetch:check can report freshness 'future' (-5 days) for a ParishesOnline row (St. Catherine of Siena, 20261101 on 2026-10-27); that's not a wrong pick.
+- A ParishesOnline org's own address pin can be wrong (St. Catherine's org pin is ~3 km from the church); don't use it for coordinates.
 
 ## Rules settled for this diocese
 
