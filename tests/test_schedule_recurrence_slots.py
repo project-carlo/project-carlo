@@ -9,7 +9,7 @@ import pytest
 
 from pdf_extract.db import _migration_files, create_db, migrate
 from pdf_extract.schedule.edits import EditError, edit_entry
-from pdf_extract.schedule.entries import parse_entry
+from pdf_extract.schedule.entries import BOUND_COLUMNS, ENTRY_COLUMNS, parse_entry
 from pdf_extract.schedule.policy import (
     APPLIED,
     DUPLICATE,
@@ -281,6 +281,11 @@ def test_migration_rekeys_history_and_current_without_changing_content_or_refere
         if number < 9:
             (previous / path.name).write_text(path.read_text())
     conn = connect_db(tmp_path / "old.db")
+    # The old application's entries had no date bounds.
+    old_columns = tuple(c for c in ENTRY_COLUMNS if c not in BOUND_COLUMNS)
+    old_app = pytest.MonkeyPatch()
+    old_app.setattr("pdf_extract.schedule.entries.ENTRY_COLUMNS", old_columns)
+    old_app.setattr("pdf_extract.schedule.store.ENTRY_COLUMNS", old_columns)
     try:
         migrate(conn, previous)
         with conn:
@@ -301,6 +306,7 @@ def test_migration_rekeys_history_and_current_without_changing_content_or_refere
         before = load_entries(conn, [r[0] for r in conn.execute("SELECT id FROM schedule_entry")])
         hashes = list(map(tuple, conn.execute("SELECT id,hash FROM schedule_entry")))
         changes = list(map(tuple, conn.execute("SELECT * FROM schedule_change")))
+        old_app.undo()
         assert migrate(conn) == len(_migration_files()) - 8
         assert load_entries(conn, before) == before
         assert list(map(tuple, conn.execute("SELECT id,hash FROM schedule_entry"))) == hashes
@@ -315,4 +321,5 @@ def test_migration_rekeys_history_and_current_without_changing_content_or_refere
         assert conn.execute("PRAGMA foreign_key_check").fetchall() == []
         assert migrate(conn) == 0
     finally:
+        old_app.undo()
         conn.close()

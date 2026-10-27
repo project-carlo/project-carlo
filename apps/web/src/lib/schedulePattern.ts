@@ -41,6 +41,8 @@ export interface SchedulePattern {
   exclude_weeks?: boolean;
   /** The part of the year it runs; null means all year. */
   season: Season | null;
+  valid_from?: string | null;
+  valid_until?: string | null;
 }
 
 const MONTH_NAMES = [
@@ -122,13 +124,14 @@ export function dateMatchesPattern(
 ): boolean {
   return (
     dateMatchesWeeks(date, pattern.weeks_of_month, pattern.exclude_weeks) &&
-    dateInSeason(date, pattern.season)
+    dateInSeason(date, pattern.season) && dateInValidity(date, pattern)
   );
 }
 
 /** True when the slot is a plain every-week, all-year one. */
 export function isPlainWeekly(pattern: SchedulePattern): boolean {
-  return pattern.weeks_of_month.length === 0 && pattern.season === null;
+  return pattern.weeks_of_month.length === 0 && pattern.season === null &&
+    !pattern.valid_from && !pattern.valid_until;
 }
 
 /** Stable identity for a pattern, for grouping slots that share a schedule. */
@@ -144,6 +147,8 @@ export function patternKey(pattern: SchedulePattern): string {
     season?.start_day ?? "",
     season?.end_month ?? "",
     season?.end_day ?? "",
+    ...(pattern.valid_from || pattern.valid_until
+      ? [pattern.valid_from ?? "", pattern.valid_until ?? ""] : []),
   ].join(":");
 }
 
@@ -228,6 +233,20 @@ export function describeSchedulePattern(
       pattern.exclude_weeks,
     ),
     describeSeason(pattern.season),
+    pattern.valid_from ? `From ${formatValidityDate(pattern.valid_from)}` : null,
+    pattern.valid_until ? `Through ${formatValidityDate(pattern.valid_until)}` : null,
   ].filter((part): part is string => part !== null);
   return parts.length > 0 ? parts.join(", ") : null;
+}
+
+/** Absolute bounds do not repeat next year. Compare local dates, not UTC. */
+export function dateInValidity(date: Date, pattern: Pick<SchedulePattern, "valid_from" | "valid_until">): boolean {
+  const at = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  return (!pattern.valid_from || at >= pattern.valid_from) &&
+    (!pattern.valid_until || at <= pattern.valid_until);
+}
+
+function formatValidityDate(iso: string): string {
+  const [year, month, day] = iso.split("-").map(Number);
+  return `${MONTH_NAMES[month - 1]} ${day}, ${year}`;
 }

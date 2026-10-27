@@ -350,10 +350,15 @@ and entry, and never on `schedule_entry`.
   the seed method knows its bulletin and page. A hand edit does not inherit the
   page of the entry it replaced: the edit may be because the bulletin changed.
 
-**Changes take effect immediately.** There is no `valid_from`/`valid_until`.
-The policy prompt says which changes to propose when (see
-[Prompt rules](#prompt-rules)). Effective dates can be added later as columns
-on `schedule_entry`.
+**Weekly entries may carry effective dates.** A weekly entry's optional
+`valid_from` and `valid_until` are inclusive absolute dates (not an annual
+season), so an announced change is stored as soon as it is printed: the old
+entry ends the day before, the new one starts that day (see
+[Prompt rules](#prompt-rules)). The view, the snapshot and the site honor them
+without another bulletin. A weekly entry whose `valid_until` has passed is left
+out of the view and the snapshot, ignored by the policy's checks, and deleted
+at the start of the parish's next revision, so it never blocks a new entry for
+its slot.
 
 ### Churches leaving the CSV
 
@@ -384,7 +389,7 @@ may name (`unknown_church`).
 ### Input: the view
 
 The canonical JSON of the parish's current schedule, with dated entries before
-the call date left out. Keys are sorted, entries ordered by church, kind,
+the call date, and weekly entries that ended before it, left out. Keys are sorted, entries ordered by church, kind,
 weekday or date, then time, and there is no whitespace, so the same schedule
 always hashes the same. `id` is the entry id:
 
@@ -440,10 +445,12 @@ The policy prompt tells the model:
   Propose a delete only when the bulletin says the entry is discontinued, or
   prints what is clearly the full schedule for that church and event type
   without it.
-- **Weekly changes wait until they are in effect.** Propose a change to a
-  weekly entry only when it is already in effect in the bulletin's week. An
-  announced future change ("from November 1 the vigil moves to 5 PM") waits
-  for a bulletin from a week where it is in effect.
+- **Weekly changes retain their effective dates.** End the old weekly entry
+  with inclusive `valid_until` the day before the change, and add the new weekly
+  entry with inclusive `valid_from`. These dates are absolute, unlike an annual
+  season. Retain other qualifiers and any existing end date; do not invent a
+  return date. Both versions are stored in the current schedule and exported.
+  The website selects applicable occurrences without another bulletin or build.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas,
   Holy Week, one-off events) and cancellations for any date from today on.
 - **Cancelling a weekly slot** is an add of a dated entry with
@@ -487,7 +494,7 @@ proposals before it left it, and is **rejected** when:
 | its entry names a church outside the parish | `unknown_church` |
 | its entry fails the entry checks (a weekly entry with a date, say) | `invalid_entry` |
 | it is a modify that changes its target's church, event type or kind | `invalid_modify` |
-| it is an add or modify of a dated entry before the call date | `past_date` |
+| it is an add or modify of a dated entry before the call date, or an add of a weekly entry that ended before it | `past_date` |
 | its target isn't a live entry of the parish (including one an earlier proposal in the call already changed) | `unknown_item` |
 | it would create a second live entry for a slot | `duplicate` |
 
@@ -758,7 +765,6 @@ LEFT JOIN llm_call c ON c.id = (
 - Running a parish in both modes, or in update mode in shadow.
 - Validating the update calls (eval cases, replays of past bulletins). That
   is separate work.
-- Changes effective from a future date (`valid_from` / `valid_until`).
 - Holding doubtful changes for corroboration by a later bulletin or for a
   person's review. Everything applies or is rejected at once in v1.
 - Showing on the site that an entry isn't in this week's bulletin, or when it

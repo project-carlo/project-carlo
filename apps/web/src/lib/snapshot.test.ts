@@ -174,3 +174,22 @@ describe("parseSnapshot", () => {
     expect(() => parseSnapshot("null")).toThrow(/format version undefined/);
   });
 });
+
+describe("effective-date snapshot compatibility", () => {
+  it("reads an existing version 2 snapshot with no date bounds", () => {
+    const { valid_from: _from, valid_until: _until, ...events } = fixture.events;
+    void _from; void _until;
+    const old = parseSnapshot(JSON.stringify({...fixture, version: 2, events}));
+    expect(old.events.every(e => e.valid_from === null && e.valid_until === null)).toBe(true);
+  });
+
+  it("uses bounds from a version 3 snapshot", () => {
+    const s = parseSnapshot(JSON.stringify({...fixture, events: {...fixture.events,
+      valid_until: ["2026-10-30", null, null, null],
+      valid_from: [null, null, null, "2026-10-31"],
+    }}));
+    expect(computeNextOccurrence(s.events[0], new Date(2026, 10, 1))).toBeNull();
+    expect(new Date(computeNextOccurrence(s.events[3], new Date(2026, 9, 25))!))
+      .toEqual(new Date(2026, 10, 6, 19));
+  });
+});

@@ -135,7 +135,8 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
     """Entry id -> content of every entry the parish's current schedule holds.
 
     Dated entries in the past are still live: they expire from the view and the
-    snapshot, never from the schedule.
+    snapshot, never from the schedule. Weekly entries that have ended stay live
+    until the next revision retires them (`retire_ended`).
     """
     rows = conn.execute(
         f"""SELECT e.id, {", ".join(f"e.{c}" for c in ENTRY_COLUMNS)}
@@ -144,6 +145,19 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
         (parish_id,),
     ).fetchall()
     return {row["id"]: entry_from_row(row) for row in rows}
+
+
+def retire_ended(live: dict[int, Entry], today: date) -> list[Change]:
+    """Deletes for the weekly entries whose `valid_until` is before `today`, taken out of `live`.
+
+    An ended entry is hidden from the view, the snapshot and the model, so it
+    must not count toward the checks or block a new entry for its slot. A
+    revision written on `today` starts with these deletes.
+    """
+    ended = sorted(i for i, e in live.items() if e.weekly and e.expired_before(today))
+    for entry_id in ended:
+        del live[entry_id]
+    return [Change(DELETE, before_entry_id=entry_id) for entry_id in ended]
 
 
 def current_revision(conn: sqlite3.Connection, parish_id: int) -> int:
@@ -179,7 +193,7 @@ def render_view(
     slugs = church_slugs(conn, [e.church_id for e in live.values()])
     by_church: dict[str, list[tuple[tuple, dict[str, Any]]]] = {slug: [] for slug in churches}
     for entry_id, entry in live.items():
-        if entry.dated_before(call_date):
+        if entry.expired_before(call_date):
             continue
         slug = slugs[entry.church_id]
         by_church.setdefault(slug, []).append((_view_order(entry, slug), entry.view(entry_id)))

@@ -64,6 +64,7 @@ EVENT_ROWS = [
     (15, 7, "adoration", "weekly", "Friday", None, 1140, 1200, 0, 3, "Midnight", [], None, None,
      None, None, None, False),
 ]
+EVENT_ROWS = [(*row, None, None) for row in EVENT_ROWS]
 
 
 def _add_bulletin(url: str, published_date: str, events: list[dict]) -> None:
@@ -381,7 +382,7 @@ def test_verify_fails_when_weekly_events_and_churches_change(tmp_path: Path) -> 
     other = (2, 1, "b", "B", None, None, None, None, None, None, None, None, None, None)
     weekly = [
         (i, 1, "mass", "weekly", "Sunday", None, 480 + 60 * i, None, 0, None, None,
-         [], None, None, None, None, None, False)
+         [], None, None, None, None, None, False, None, None)
         for i in range(1, 11)
     ]
     moved = [(*row[:6], row[6] + 15, *row[7:]) for row in weekly]

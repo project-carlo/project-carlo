@@ -16,8 +16,8 @@ import { computeNextOccurrence } from "./schedule";
  */
 export const SNAPSHOT_FILE = "frontend.json.gz";
 
-/** The format version this code reads; must match the pipeline's SNAPSHOT_VERSION. */
-export const SNAPSHOT_VERSION = 2;
+/** Latest format; must match the pipeline. The reader also accepts format 2. */
+export const SNAPSHOT_VERSION = 3;
 
 type Column<T> =
   | T[]
@@ -40,8 +40,8 @@ type Columns<Row> = { [K in keyof Row]: Row[K][] };
  */
 type AddedChurchColumns = "bulletin_week";
 
-/** Event columns added since version 1 shipped; a snapshot without one reads it as false. */
-type AddedEventColumns = "exclude_weeks";
+/** Older snapshots have no exclusions or absolute date bounds. */
+type AddedEventColumns = "exclude_weeks" | "valid_from" | "valid_until";
 
 /** An event row's columns as stored, the added ones possibly missing. */
 type EventTable = Table<Omit<EventRow, AddedEventColumns>> &
@@ -119,6 +119,8 @@ class SnapshotEvent implements RawEvent {
   season_end_month: number | null;
   season_end_day: number | null;
   cancels_event_id: number | null;
+  valid_from: string | null;
+  valid_until: string | null;
   private readonly cancelledDates: CancelledDates;
   private nextOccurrence: string | null | undefined = undefined;
 
@@ -145,6 +147,8 @@ class SnapshotEvent implements RawEvent {
     this.season_end_month = columns.season_end_month[row];
     this.season_end_day = columns.season_end_day[row];
     this.cancels_event_id = columns.cancels_event_id[row];
+    this.valid_from = columns.valid_from?.[row] ?? null;
+    this.valid_until = columns.valid_until?.[row] ?? null;
     this.cancelledDates = cancelledDates;
   }
 
@@ -182,7 +186,7 @@ export class SnapshotVersionError extends Error {
 /** Decode the (already gunzipped) snapshot JSON. */
 export function parseSnapshot(json: string): Snapshot {
   const document = JSON.parse(json) as SnapshotDocument;
-  if (document?.version !== SNAPSHOT_VERSION) {
+  if (![2, SNAPSHOT_VERSION].includes(document?.version)) {
     throw new SnapshotVersionError(
       `${SNAPSHOT_FILE} is format version ${String(document?.version)}, but this ` +
         `code reads version ${SNAPSHOT_VERSION}. Rebuild it with the pipeline ` +

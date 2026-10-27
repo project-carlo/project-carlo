@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import csv
 import logging
+import runpy
 import sqlite3
 from pathlib import Path
 from typing import Any
@@ -42,7 +43,7 @@ class DatabaseMissingError(FileNotFoundError):
 # ── Migrations ──────────────────────────────────────────────────────────────
 def _migration_files(migrations_dir: Path = MIGRATIONS_DIR) -> list[tuple[int, Path]]:
     files: list[tuple[int, Path]] = []
-    for path in sorted(migrations_dir.glob("*.sql")):
+    for path in sorted(p for p in migrations_dir.iterdir() if p.suffix in (".sql", ".py")):
         prefix = path.name.split("_", 1)[0]
         if not prefix.isdigit():
             raise ValueError(f"Migration file name must start with a number: {path.name}")
@@ -85,11 +86,14 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
             # executescript would commit on its own; wrap it so the version bump
             # is part of the same transaction as the migration's statements.
             try:
-                conn.executescript(
-                    "BEGIN;\n"
-                    + path.read_text(encoding="utf-8")
-                    + f"\nPRAGMA user_version = {number};"
-                )
+                if path.suffix == ".sql":
+                    conn.executescript("BEGIN;\n" + path.read_text(encoding="utf-8"))
+                else:
+                    # Commit any pending transaction first, as executescript does.
+                    conn.commit()
+                    conn.execute("BEGIN")
+                    runpy.run_path(str(path))["migrate"](conn)
+                conn.execute(f"PRAGMA user_version = {number}")
                 violations = conn.execute("PRAGMA foreign_key_check").fetchall()
                 if violations:
                     raise RuntimeError(

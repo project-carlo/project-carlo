@@ -1,4 +1,4 @@
-"""The decision policy (v1): apply or reject each change a call proposes.
+"""The decision policy: apply or reject each change a call proposes.
 
 Every proposal is decided when its call is processed; nothing waits for a
 later bulletin or a person. The whole call is rejected, every proposal with the
@@ -28,7 +28,7 @@ from pdf_extract.schedule.entries import (
 )
 from pdf_extract.schedule.store import ADD, DELETE, MODIFY
 
-POLICY_VERSION = "1"
+POLICY_VERSION = "2"
 DECIDED_BY = f"policy@{POLICY_VERSION}"
 
 APPLIED = "applied"
@@ -170,8 +170,12 @@ def check_proposal(
         != (target.church_id, target.event_type, target.event_kind)
     ):
         return entry, INVALID_MODIFY, "a modify can't change the church, event type or kind"
-    if entry is not None and entry.dated_before(today):
-        return entry, PAST_DATE, f"{entry.date} is before {today.isoformat()}"
+    # A modify may end a weekly entry in the past (a change already in effect); an
+    # add may not, as nothing would ever show it. The next revision retires it.
+    if entry is not None and (
+        entry.expired_before(today) if op == ADD else entry.dated_before(today)
+    ):
+        return entry, PAST_DATE, f"{entry.date or entry.valid_until} is before {today.isoformat()}"
     if op in (MODIFY, DELETE) and target is None:
         return entry, UNKNOWN_ITEM, f"entry {target_entry_id} is not in the current schedule"
     if entry is not None and schedule.conflicts(entry, excluding=target_entry_id):

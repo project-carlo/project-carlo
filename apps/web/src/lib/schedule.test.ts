@@ -625,3 +625,27 @@ describe("parseIsoDateLocal", () => {
     expect(parseIsoDateLocal("not-a-date")).toBeNull();
   });
 });
+
+describe("absolute effective dates", () => {
+  it("changes Saturday Mass without another snapshot or annual repetition", () => {
+    const old = weeklyOccurrence("Saturday", 17 * 60, { valid_until: "2026-10-30" });
+    const winter = weeklyOccurrence("Saturday", 16 * 60, { valid_from: "2026-10-31" });
+    expect(computeNextOccurrence(old, new Date(2026, 9, 25))).toBeNull();
+    expect(new Date(computeNextOccurrence(winter, new Date(2026, 9, 25))!))
+      .toEqual(new Date(2026, 9, 31, 16));
+    expect(new Date(computeNextOccurrence(winter, new Date(2026, 10, 1))!))
+      .toEqual(new Date(2026, 10, 7, 16));
+    expect(computeNextOccurrence(old, new Date(2027, 9, 25))).toBeNull();
+  });
+
+  it("includes both boundaries and preserves monthly and annual qualifiers", () => {
+    const e = weeklyOccurrence("Friday", 9 * 60, {
+      weeks_of_month: ["first"], valid_from: "2026-11-01", valid_until: "2026-12-04",
+    });
+    expect(new Date(computeNextOccurrence(e, new Date(2026, 10, 1))!))
+      .toEqual(new Date(2026, 10, 6, 9));
+    expect(new Date(computeNextOccurrence(e, new Date(2026, 11, 4))!))
+      .toEqual(new Date(2026, 11, 4, 9));
+    expect(computeNextOccurrence(e, new Date(2026, 11, 5))).toBeNull();
+  });
+});

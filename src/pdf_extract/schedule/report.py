@@ -40,7 +40,11 @@ def describe_entry(entry: Entry) -> str:
         mask_to_weeks(entry.weeks_of_month), entry.season(), entry.day_of_week,
         mask_excludes_weeks(entry.weeks_of_month),
     )
-    qualifiers = [part for part in (pattern, entry.note) if part]
+    qualifiers = [part for part in (
+        pattern, entry.note,
+        f"from {entry.valid_from}" if entry.valid_from else None,
+        f"through {entry.valid_until}" if entry.valid_until else None,
+    ) if part]
     return text + (f" ({'; '.join(qualifiers)})" if qualifiers else "")
 
 

@@ -33,6 +33,7 @@ from pdf_extract.schedule.store import (
     is_update_mode,
     live_entries,
     parish_churches,
+    retire_ended,
 )
 
 
@@ -86,7 +87,9 @@ def apply_proposals(
     result = EditResult(parish_id=call["parish_id"])
     today = today or date.today()
     with conn:
-        schedule = Schedule(ids=live_entries(conn, call["parish_id"]))
+        live = live_entries(conn, call["parish_id"])
+        retired = retire_ended(live, today)
+        schedule = Schedule(ids=live)
         churches = parish_churches(conn, call["parish_id"])
         for row in rows:
             if row["decision"] == APPLIED:
@@ -117,7 +120,7 @@ def apply_proposals(
         changes = [change for _, change in sorted(applied, key=lambda item: item[0])]
         if changes:
             result.revision = append_revision(
-                conn, call["parish_id"], source_kind=HUMAN, changes=changes, actor=actor,
+                conn, call["parish_id"], source_kind=HUMAN, changes=retired + changes, actor=actor,
                 note=note or f"applied proposals of call {llm_call_id}",
             )
     return result
@@ -146,17 +149,19 @@ def edit_entry(
         raise EditError("add and modify need the new entry; delete takes none")
     _require_update_mode(conn, parish_id)
     result = EditResult(parish_id=parish_id)
+    today = today or date.today()
     with conn:
+        live = live_entries(conn, parish_id)
+        retired = retire_ended(live, today)
         parsed, reason, detail = check_proposal(
-            op, target_entry_id, entry,
-            schedule=Schedule(ids=live_entries(conn, parish_id)),
-            churches=parish_churches(conn, parish_id), today=today or date.today(),
+            op, target_entry_id, entry, schedule=Schedule(ids=live),
+            churches=parish_churches(conn, parish_id), today=today,
         )
         if reason is not None:
             raise EditError(f"{reason}: {detail}")
         result.revision = append_revision(
             conn, parish_id, source_kind=HUMAN,
-            changes=[Change(
+            changes=[*retired, Change(
                 op, before_entry_id=target_entry_id,
                 after_entry_id=intern_entry(conn, parsed) if parsed else None,
             )],
