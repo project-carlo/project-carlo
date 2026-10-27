@@ -206,6 +206,10 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish's own Duda/eCatholic bulletin page can be stale while the bulletin runs elsewhere: St. Hedwig's /bulletin page ends December 2024 but its home page links church-bulletin.org/?id=317 (John Patrick 317, current); check the home page's bulletin link, and an eCatholic /bulletins list can also stop months early (St. Paul, Wilmington: last file 2 August 2026).
+- St. Anthony of Padua, Wilmington self-hosts on WordPress (/bulletin-archive/, Bulletin-<Month>-<DD>-<YYYY>.pdf; the page also lists forms and calendars, so pin `filename=Bulletin-*.pdf`); the Bon Venture footer on its last pages is the ad seller, not a bulletin feed.
+- Nominatim (curl with a descriptive user agent) answered from the sandbox and returns OSM church building centres, useful to arbitrate when the directory pin and GCatholic's Plus Code differ (St. Elizabeth: directory ~110 m off).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
