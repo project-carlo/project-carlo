@@ -245,7 +245,7 @@ the Run's history. You handle review comments in your
 own session.
 
 CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
-cost [--stage]`.
+quota [--by ...] [--windows] [backfill] | cost [--stage]`.
 
 ### Worker setup
 
@@ -500,6 +500,47 @@ Where the implementation had to decide something this spec left open.
 - `pnpm factory resume --override-caps` starts jobs whatever the caps say until the next
   `pause` or `resume`. A worker's rate-limit error still makes its job wait.
 
+**Measuring quota per job.** Quota points, not API-price dollars, are what limit the
+factory, so each attempt's five-hour and weekly points are measured from readings of the
+usage endpoint (`quota.py`):
+
+- **Readings.** The reading taken to choose an account is the chosen account's `before`
+  reading for the attempt; an `after` reading follows as soon as the worker returns (if
+  it fails, that is logged and the job carries on). Once an account has been idle
+  `quota_settle_seconds` (default 150) after its last attempt, the dispatcher takes one
+  `settled` reading of it, since the meter lags a minute or two; and every
+  `quota_sample_minutes` (default 15) a `periodic` reading of every account. Each reading
+  keeps the whole response (`raw`: model-specific and extra windows too), with anything
+  that looks like a credential removed. None of this runs without accounts (stub Runs).
+- **Calibration gap.** `calibration_gap_seconds` (default 0: nothing waits) holds the
+  next job on an account until that long after its last attempt finished, so every
+  attempt gets a settled reading. Set it at or above `quota_settle_seconds`, for
+  calibration runs only; it is a setting, with no CLI flag.
+- **Attribution** is computed when a report asks, never stored, as a range with a label.
+  `settled`: an idle reading before, a settled one after, no other attempt on the account
+  in between: the delta ±1 for whole-percent rounding (a displayed 0 is `<1`).
+  `immediate`: only an early reading after: a minimum. `shared`: another attempt on the
+  account started less than `quota_settle_seconds` after this one ended: the group's
+  total over its combined interval, with its attempts, and no exact share (the first
+  attempt's early reading still gives it a minimum). `reset`: the window's reset time
+  moved by more than 3 minutes (reset times jitter by a second between readings), or
+  passed: a minimum. `missing`, or `inconsistent` (the meter fell without a reset): no
+  number. The meter rising between two readings while the account was idle is outside
+  use, and attempts within an hour of it are flagged.
+- **Window totals** (`factory quota --windows`): per account and window instance (keyed
+  by its reset time), the points used, the factory's settled, shared and uncertain
+  portions, and what's unexplained (outside use, usage lagging past an early reading, use
+  before the first reading). They stay useful when per-attempt attribution isn't.
+- **Work units**: a map job's batch entries, a seed or seed-review job's parishes, 1
+  for any other stage. `factory quota` reports points per unit of completed work by
+  stage, or within each stage by model, effort, mode (entrypoint), account, plan, date or
+  hour (`--tz`): the median and range over settled samples, uncertain jobs apart, with
+  sample counts, coverage, first-try gate passes, retries, send-backs, crashes and
+  partials, unresolved and parked work, and dollars last as a diagnostic. It fits no
+  model and assumes no peak hours or quota multipliers; those are questions for its data.
+- **Plans** come from each login's `.credentials.json` (`subscriptionType`,
+  `rateLimitTier`), else `plan:` on the account in `local.yaml`.
+
 ### Issues and answers
 
 - The dispatcher's own comments carry `<!-- factory -->` and are never read as answers,
@@ -515,6 +556,26 @@ Where the implementation had to decide something this spec left open.
   block, truncated), gate results, actions done after the gates, flags, leads, lessons,
   reviewer verdicts, seed-review's decisions and usage readings. Transcripts are copied to
   `data/factory/runs/<run>/<job>/<session>.jsonl` after each attempt.
+- **Quota tables.** `usage` rows carry their `source` (`select`, `before`, `after`,
+  `settled`, `periodic`), the attempt and job a reading is for, and the scrubbed `raw`
+  response. `rate_limit_event` keeps every SDK rate-limit event in full (type, status,
+  utilization, reset time, overage, raw), besides its `rate_limit` step. `attempt_meta`,
+  one row per attempt: requested model and effort (the stage spec's), the models it
+  actually used (side calls included), SDK and CLI versions, entrypoint, the account's
+  plan, a hash of the stage spec, prompt file and skill names at its commit, the attempt
+  whose session it resumed, tokens (input; output, of which thinking is a part; cache
+  reads; cache writes kept apart by 5-minute and 1-hour TTL; web searches) in total and
+  per model, distinct messages and repeated transcript records, work units, gaps, and its
+  `source`: `live` (the ResultMessage), `transcript` (a crash or timeout, parsed from its
+  transcript: messages counted once by id, from the attempt's start, so a resumed
+  session's earlier attempts aren't counted again) or `backfill`.
+- An older ledger gains the new columns when the dispatcher opens it.
+- **Backfill.** `pnpm factory quota backfill` fills `attempt_meta` for attempts without
+  it, from their copied transcripts and the stage spec at their commit (`git show`), and
+  links the selection readings around them by time. Its quota is `approximate`: a
+  minimum at best, never settled. Each attempt lists what couldn't be recovered (the SDK
+  version, utilization dropped from old rate-limit steps, no settled reading, the plan
+  then). Running it again changes nothing.
 - The nightly backup goes to R2 under `factory/backups/` when the local hour passes
   `backup_hour`; without keys that can write it stays in `data/factory/backups/`.
 

@@ -167,20 +167,72 @@ CREATE TABLE IF NOT EXISTS verdict (   -- every reviewer verdict on a piece of w
     problems TEXT NOT NULL DEFAULT '[]',
     at TEXT NOT NULL
 );
-CREATE TABLE IF NOT EXISTS usage (
+CREATE TABLE IF NOT EXISTS usage (   -- quota readings from the usage endpoint
     id INTEGER PRIMARY KEY,
     account TEXT NOT NULL,
     at TEXT NOT NULL,
     five_hour REAL,
     five_hour_resets TEXT,
     seven_day REAL,
-    seven_day_resets TEXT
+    seven_day_resets TEXT,
+    source TEXT NOT NULL DEFAULT 'select',  -- select | before | after | settled | periodic
+    attempt_id INTEGER,             -- the attempt a before, after or settled reading is for
+    job_id INTEGER,
+    raw TEXT                        -- JSON: the whole response, every window, no credentials
+);
+CREATE TABLE IF NOT EXISTS rate_limit_event (  -- the SDK's, in full, during an attempt
+    id INTEGER PRIMARY KEY,
+    attempt_id INTEGER NOT NULL REFERENCES attempt(id),
+    at TEXT NOT NULL,
+    type TEXT,
+    status TEXT,
+    utilization REAL,               -- 0..1
+    resets_at TEXT,
+    overage_status TEXT,
+    overage_resets_at TEXT,
+    overage_disabled_reason TEXT,
+    raw TEXT
+);
+CREATE TABLE IF NOT EXISTS attempt_meta (  -- how an attempt ran and the tokens it used
+    attempt_id INTEGER PRIMARY KEY REFERENCES attempt(id),
+    source TEXT NOT NULL,           -- live | transcript | backfill
+    approximate INTEGER NOT NULL DEFAULT 0,
+    requested_model TEXT,
+    effort TEXT,
+    model TEXT,                     -- the main model it actually used
+    models TEXT,                    -- JSON: every model, side calls included
+    sdk_version TEXT,
+    cli_version TEXT,
+    entrypoint TEXT,                -- sdk-py: the execution mode
+    plan TEXT,                      -- the account's plan, when known
+    config_hash TEXT,               -- stage spec + prompt + skill names at its commit
+    resumed_from INTEGER,           -- the attempt whose session it resumed
+    input_tokens INTEGER,
+    output_tokens INTEGER,          -- thinking included
+    thinking_tokens INTEGER,        -- a part of output_tokens
+    cache_read_tokens INTEGER,
+    cache_write_5m_tokens INTEGER,
+    cache_write_1h_tokens INTEGER,
+    web_search_requests INTEGER,
+    per_model TEXT,                 -- JSON
+    messages INTEGER,               -- distinct assistant messages
+    duplicate_records INTEGER,      -- repeated records of them, not counted again
+    work_units INTEGER,             -- batch entries, parishes, or 1
+    gaps TEXT NOT NULL DEFAULT '[]',  -- JSON: what couldn't be recovered
+    at TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS kv (key TEXT PRIMARY KEY, value TEXT);
 CREATE INDEX IF NOT EXISTS job_run ON job (run_id, status);
 CREATE INDEX IF NOT EXISTS flag_run ON flag (run_id, status);
 CREATE INDEX IF NOT EXISTS step_attempt ON step (attempt_id);
+CREATE INDEX IF NOT EXISTS rate_limit_attempt ON rate_limit_event (attempt_id);
 """
+
+# Columns added since a table was first created: an older ledger gains them on open.
+COLUMNS = {
+    "usage": [("source", "TEXT NOT NULL DEFAULT 'select'"), ("attempt_id", "INTEGER"),
+              ("job_id", "INTEGER"), ("raw", "TEXT")],
+}
 
 
 def now() -> str:
@@ -198,6 +250,15 @@ class Ledger:
         self.conn.execute("PRAGMA journal_mode = WAL")
         self.conn.execute("PRAGMA foreign_keys = ON")
         self.conn.executescript(SCHEMA)
+        self._migrate()
+        self.conn.execute("CREATE INDEX IF NOT EXISTS usage_account ON usage (account, at)")
+
+    def _migrate(self) -> None:
+        for table, columns in COLUMNS.items():
+            have = {r["name"] for r in self.conn.execute(f"PRAGMA table_info({table})")}
+            for name, decl in columns:
+                if name not in have:
+                    self.conn.execute(f"ALTER TABLE {table} ADD COLUMN {name} {decl}")
 
     def close(self) -> None:
         self.conn.close()
@@ -296,11 +357,11 @@ class Ledger:
 
     # ── Attempts and steps ──────────────────────────────────────────────────
     def add_attempt(self, job_id: int, kind: str, prompt: str, account: str | None,
-                    commit_sha: str | None) -> int:
+                    commit_sha: str | None, at: str | None = None) -> int:
         n = 1 + self.one("SELECT COUNT(*) AS n FROM attempt WHERE job_id = ?", job_id)["n"]
         return self.run_sql(
             "INSERT INTO attempt (job_id, n, kind, prompt, account, commit_sha, started_at) "
-            "VALUES (?,?,?,?,?,?,?)", job_id, n, kind, prompt, account, commit_sha, now())
+            "VALUES (?,?,?,?,?,?,?)", job_id, n, kind, prompt, account, commit_sha, at or now())
 
     def finish_attempt(self, attempt_id: int, **values: Any) -> None:
         values.setdefault("finished_at", now())
@@ -311,6 +372,36 @@ class Ledger:
                  detail: str | None) -> None:
         self.run_sql("INSERT INTO step (attempt_id, n, kind, name, detail, at) "
                      "VALUES (?,?,?,?,?,?)", attempt_id, n, kind, name, detail, now())
+
+    # ── Quota ───────────────────────────────────────────────────────────────
+    def add_usage(self, account: str, at: str, usage: Any, source: str,
+                  attempt_id: int | None = None, job_id: int | None = None) -> int:
+        """A reading (`usage.Usage`); its raw response is already scrubbed of credentials."""
+        raw = getattr(usage, "raw", None)
+        return self.run_sql(
+            "INSERT INTO usage (account, at, five_hour, five_hour_resets, seven_day, "
+            "seven_day_resets, source, attempt_id, job_id, raw) VALUES (?,?,?,?,?,?,?,?,?,?)",
+            account, at, usage.five_hour, usage.five_hour_resets.isoformat(), usage.seven_day,
+            usage.seven_day_resets.isoformat(), source, attempt_id, job_id,
+            json.dumps(raw) if raw is not None else None)
+
+    def add_rate_limit_event(self, attempt_id: int, info: dict[str, Any],
+                             at: str | None = None) -> None:
+        self.run_sql(
+            "INSERT INTO rate_limit_event (attempt_id, at, type, status, utilization, resets_at, "
+            "overage_status, overage_resets_at, overage_disabled_reason, raw) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?)", attempt_id, at or now(), info.get("type"),
+            info.get("status"), info.get("utilization"), info.get("resets_at"),
+            info.get("overage_status"), info.get("overage_resets_at"),
+            info.get("overage_disabled_reason"), json.dumps(info.get("raw") or {}))
+
+    def set_attempt_meta(self, attempt_id: int, **values: Any) -> None:
+        values = {k: json.dumps(v) if isinstance(v, (list, dict)) else v
+                  for k, v in values.items()}
+        values.setdefault("at", now())
+        cols = ", ".join(values)
+        self.run_sql(f"INSERT OR REPLACE INTO attempt_meta (attempt_id, {cols}) VALUES "
+                     f"(?, {','.join('?' * len(values))})", attempt_id, *values.values())
 
     def add_gate(self, job_id: int, attempt_id: int | None, name: str, passed: bool,
                  output: str) -> None:

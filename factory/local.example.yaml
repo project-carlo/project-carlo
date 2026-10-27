@@ -1,6 +1,7 @@
 # Copy to data/factory/local.yaml in the dispatcher's checkout and fill in.
 
 # Each account is signed in once: CLAUDE_CONFIG_DIR=<config_dir> claude /login
+# `plan:` (pro, max...) is only read when the login's .credentials.json doesn't say.
 accounts:
   - name: first
     config_dir: ~/.claude

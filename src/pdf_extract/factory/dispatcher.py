@@ -58,11 +58,20 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
-from pdf_extract.factory.plan import diocese_dir, next_job, read_seed, seed_status
+from pdf_extract.factory.plan import (
+    diocese_dir,
+    next_job,
+    ordered_batches,
+    read_seed,
+    seed_status,
+)
+from pdf_extract.factory.quota import fingerprint, work_units
 from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
+from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
 from pdf_extract.factory.usage import (
     Fetch,
     UsageError,
+    account_plan,
     choose,
     fetch_usage,
     next_eligible,
@@ -76,6 +85,7 @@ from pdf_extract.factory.workers import (
     USAGE,
     Worker,
     WorkerRequest,
+    WorkerResult,
     copy_transcript,
     prompt_body,
 )
@@ -342,22 +352,31 @@ class Dispatcher:
             self._push(run, worktree)
         return None
 
-    def _account(self, job: Any) -> tuple[Account | None, Outcome | None]:
+    def _stamp(self) -> str:
+        return self.clock().isoformat(timespec="microseconds")
+
+    def _account(self, job: Any) -> tuple[Account | None, int | None, Outcome | None]:
+        """The account for the job's next attempt, and the id of its reading taken now."""
         if not self.config.accounts:
-            return None, None  # stub runs and tests: no usage to check
+            return None, None, None  # stub runs and tests: no usage to check
         override = self.ledger.get("override_caps", False)
+        only = job["account"]
+        held = self._calibration_holds()
+        open_ = [a for a in self.config.accounts if a.name not in held
+                 and (only is None or a.name == only)]
+        until = min((t for name, t in held.items() if only is None or name == only),
+                    default=None)
+        if not open_ and until is not None:
+            return None, None, Outcome("waiting", f"calibration gap until {until}", until)
         try:
             rows = standings(self.config, self.fetch_usage, self.clock())
         except UsageError as exc:
             self.ledger.set("paused", {"reason": f"usage check failed: {exc}", "at": now()})
-            return None, Outcome("paused", str(exc))
-        for s in rows:
-            self.ledger.run_sql(
-                "INSERT INTO usage (account, at, five_hour, five_hour_resets, seven_day, "
-                "seven_day_resets) VALUES (?,?,?,?,?,?)", s.account.name, now(),
-                s.usage.five_hour, s.usage.five_hour_resets.isoformat(), s.usage.seven_day,
-                s.usage.seven_day_resets.isoformat())
-        only = job["account"]
+            return None, None, Outcome("paused", str(exc))
+        stamp = self._stamp()
+        ids = {s.account.name: self.ledger.add_usage(s.account.name, stamp, s.usage, "select")
+               for s in rows}
+        rows = [s for s in rows if s.account.name not in held]
         if override:
             pick = next((s for s in rows if only is None or s.account.name == only), None)
         else:
@@ -365,8 +384,61 @@ class Dispatcher:
         if pick is None:
             until = next_eligible(rows, only=only) or self.clock() + timedelta(minutes=30)
             self.ledger.set_job(job["id"], status=WAITING_USAGE, wait_until=until.isoformat())
-            return None, Outcome("waiting", f"no account under its caps until {until}", until)
-        return pick.account, None
+            return None, None, Outcome("waiting", f"no account under its caps until {until}",
+                                       until)
+        return pick.account, ids[pick.account.name], None
+
+    def _last_finished(self, account: str) -> datetime | None:
+        row = self.ledger.one("SELECT MAX(finished_at) AS at FROM attempt WHERE account = ?",
+                              account)
+        return datetime.fromisoformat(row["at"]) if row and row["at"] else None
+
+    def _calibration_holds(self) -> dict[str, datetime]:
+        """Accounts still in their calibration gap after their last attempt, and until when.
+        With `calibration_gap_seconds` 0 (the default) nothing waits."""
+        gap = timedelta(seconds=self.config.calibration_gap_seconds)
+        if not gap:
+            return {}
+        at, held = self.clock(), {}
+        for a in self.config.accounts:
+            last = self._last_finished(a.name)
+            if last is not None and at < last + gap:
+                held[a.name] = last + gap
+        return held
+
+    def _reading(self, account: Account, source: str, attempt_id: int | None = None,
+                 job_id: int | None = None) -> None:
+        """A quota reading for measuring, not choosing: a failure is logged, nothing more."""
+        try:
+            usage = self.fetch_usage(account)
+        except (UsageError, OSError) as exc:
+            LOGGER.warning("%s quota reading of %s failed: %s", source, account.name, exc)
+            return
+        self.ledger.add_usage(account.name, self._stamp(), usage, source, attempt_id, job_id)
+
+    def sample_quota(self) -> None:
+        """A settled reading of each account idle `quota_settle_seconds` since its last
+        attempt (once per attempt), and one of every account each `quota_sample_minutes`."""
+        if not self.config.accounts:
+            return
+        at = self.clock()
+        settle = timedelta(seconds=self.config.quota_settle_seconds)
+        for a in self.config.accounts:
+            last = self.ledger.one("SELECT id, job_id, finished_at FROM attempt WHERE "
+                                   "account = ? AND finished_at IS NOT NULL ORDER BY "
+                                   "finished_at DESC, id DESC LIMIT 1", a.name)
+            if last is None:
+                continue
+            # Not for an attempt long finished (the dispatcher was down or paused).
+            finished = datetime.fromisoformat(last["finished_at"])
+            if not finished + settle <= at <= finished + settle + timedelta(hours=1):
+                continue
+            if not self.ledger.one("SELECT 1 FROM usage WHERE source = 'settled' AND "
+                                   "attempt_id = ?", last["id"]):
+                self._reading(a, "settled", last["id"], last["job_id"])
+        if self._due("quota_sampled", timedelta(minutes=self.config.quota_sample_minutes), at):
+            for a in self.config.accounts:
+                self._reading(a, "periodic")
 
     def _next_prompt(self, run: Any, job: Any, spec: StageSpec,
                      values: dict[str, str]) -> tuple[str, str, str | None]:
@@ -399,7 +471,7 @@ class Dispatcher:
                 # Its session can only be resumed from the account that stores it.
                 self.ledger.set_job(job["id"], account=original["account"])
                 job = self.ledger.job(job["id"])
-        account, waiting = self._account(job)
+        account, reading, waiting = self._account(job)
         if waiting is not None:
             return waiting
         job = self.ledger.job(job["id"])
@@ -410,8 +482,13 @@ class Dispatcher:
             # A send-back or an answer needs a new handoff: the old one mustn't pass again.
             handoff_path(worktree, run["id"], job["name"]).unlink(missing_ok=True)
         commit_sha = git.head(worktree)
+        started = self._stamp()
         attempt_id = self.ledger.add_attempt(job["id"], kind, prompt,
-                                             account.name if account else None, commit_sha)
+                                             account.name if account else None, commit_sha,
+                                             at=started)
+        if reading is not None:  # the selection's reading of this account is its before
+            self.ledger.run_sql("UPDATE usage SET source = 'before', attempt_id = ?, job_id = ? "
+                                "WHERE id = ?", attempt_id, job["id"], reading)
         self.ledger.set_job(job["id"], status=RUNNING, started_at=job["started_at"] or now(),
                             account=job["account"] or (account.name if account else None),
                             commit_sha=job["commit_sha"] or commit_sha, wait_until=None,
@@ -423,13 +500,23 @@ class Dispatcher:
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
+            on_rate_limit=lambda info: self.ledger.add_rate_limit_event(attempt_id, info,
+                                                                        self._stamp()),
         )
         result = self.worker.run(request)
+        finished = self._stamp()
+        if account is not None:
+            self._reading(account, "after", attempt_id, job["id"])
         transcript = copy_transcript(result, self.runs_dir / run["id"] / job["name"])
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
-                                   session_id=result.session_id,
+                                   session_id=result.session_id, finished_at=finished,
                                    transcript=str(transcript) if transcript else None)
+        try:
+            self._record_meta(attempt_id, run, job, spec, worktree, account, result,
+                              transcript, session, started)
+        except Exception:  # metadata never stops a job
+            LOGGER.exception("attempt %s: recording its metadata failed", attempt_id)
         job = self.ledger.job(job["id"])
         self.ledger.set_job(job["id"], cost_usd=job["cost_usd"] + result.cost_usd,
                             turns=job["turns"] + result.turns,
@@ -463,6 +550,45 @@ class Dispatcher:
         assert result.outcome == OK
         self.ledger.set_job(job["id"], status=GATING, pending_prompt=None)
         return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
+
+    def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
+                     worktree: Path, account: Account | None, result: WorkerResult,
+                     transcript: Path | None, session: str | None, started: str) -> None:
+        """How the attempt ran and its tokens: from the ResultMessage, else (a crash, a
+        timeout) from its transcript."""
+        info, gaps = result.info, []
+        if result.usage or result.model_usage:
+            source = "live"
+            tokens = from_result(result.usage, result.model_usage, info.get("messages", 0),
+                                 info.get("duplicates", 0))
+        elif transcript is not None:
+            source = "transcript"
+            with transcript.open(encoding="utf-8") as f:
+                tokens = parse_transcript(f, since=datetime.fromisoformat(started))
+        else:
+            source, tokens = "live", Tokens()
+            gaps.append("no token usage reported")
+        prompt = (worktree / spec.prompt).read_text(encoding="utf-8") \
+            if spec.prompt and (worktree / spec.prompt).exists() else ""
+        spec_path = worktree / "factory" / "stages" / f"{job['stage']}.yaml"
+        spec_text = spec_path.read_text(encoding="utf-8") if spec_path.exists() else ""
+        resumed = self.ledger.one("SELECT id FROM attempt WHERE session_id = ? AND id < ? "
+                                  "ORDER BY id DESC LIMIT 1", session, attempt_id) \
+            if session else None
+        models = sorted(set(tokens.per_model) | set(info.get("models") or []))
+        self.ledger.set_attempt_meta(
+            attempt_id, source=source, approximate=0, requested_model=spec.model,
+            effort=spec.effort, sdk_version=info.get("sdk_version"),
+            cli_version=info.get("cli_version") or tokens.cli_version,
+            entrypoint=info.get("entrypoint") or tokens.entrypoint,
+            plan=account_plan(account) if account else None,
+            config_hash=fingerprint(spec_text, prompt, list(spec.skills)),
+            resumed_from=resumed["id"] if resumed else None,
+            work_units=work_units(job["stage"], json.loads(job["input"]),
+                                  ordered_batches(worktree, run["diocese"])),
+            gaps=gaps + tokens.gaps,
+            **(tokens.columns() | {"models": models,
+                                   "model": tokens.model or info.get("model")}))
 
     def _partial(self, run: Any, job: Any, why: str) -> Outcome:
         if job["continues"] < 1:
@@ -860,6 +986,7 @@ class Dispatcher:
         """Each step on its own: one failing (GitHub down, R2 keys wrong) is logged and
         tried again on its next turn, without stopping the others or the jobs."""
         at = self.clock()
+        self._safely("quota", self.sample_quota)
         if self._due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes), at):
             self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),
                                             self.poll_issues(), self.check_merged()))
