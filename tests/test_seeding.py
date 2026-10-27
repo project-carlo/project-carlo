@@ -56,7 +56,6 @@ from pdf_extract.seeding.queries import (
     list_bulletins,
     page_texts,
     parish_bulletins,
-    pick,
     recent_history,
     render_pages,
     resolve_bulletin,
@@ -617,14 +616,6 @@ def test_brief_is_where_a_draft_starts(conn, tmp_path):
     assert our_lady["history"] == [] and "path" in our_lady["pdf"]
 
 
-def test_pick_leaves_out_drafted_parishes_and_takes_one_church_first(conn, demo):
-    picked = pick(conn, seeds_dir=demo["seeds_dir"], limit=0)
-    slugs = [p["parish"] for p in picked["parishes"]]
-    assert PARISH not in slugs  # it has a seed file
-    assert set(slugs) == {"st-anne-demo", "our-lady-demo"}
-    assert all(p["churches"] == 1 for p in picked["parishes"])
-
-
 # ── External calls ──────────────────────────────────────────────────────────
 class _FakeClassifier:
     name = "fake-extract"
@@ -1102,6 +1093,8 @@ def test_seed_command_prints_text_or_json(pipeline_dir: Path, capsys):
     assert "no seed file" in capsys.readouterr().out
     assert main(["seed", "bulletins", "nope"]) == 1
     assert "Parish not found" in capsys.readouterr().err
+    assert main(["seed", "pick"]) == 1  # production seeds come from the factory
+    assert "name it with --eval RUN" in capsys.readouterr().err
 
 
 @pytest.fixture
@@ -1373,7 +1366,7 @@ def test_cli_starts_an_eval_and_routes_all_parish_commands(routed_cli, seed, cap
     production = {**seed, "summary": "Production must remain unchanged."}
     write_seed_file(production)
 
-    assert main(["seed", "pick", "--labeled", "--eval", "new-run"]) == 0
+    assert main(["seed", "pick", "--eval", "new-run"]) == 0
     manifest = Path("data/seed-evals/new-run/run.json")
     original_manifest = manifest.read_bytes()
     ctx = SeedContext.for_run("new-run")
@@ -1386,9 +1379,9 @@ def test_cli_starts_an_eval_and_routes_all_parish_commands(routed_cli, seed, cap
 
     # Picking again keeps cutoffs; --resume offers an interrupted eval draft.
     capsys.readouterr()
-    assert main(["seed", "pick", "--labeled", "--eval", "new-run", "--json"]) == 0
+    assert main(["seed", "pick", "--eval", "new-run", "--json"]) == 0
     assert json.loads(capsys.readouterr().out)["parishes"] == []
-    assert main(["seed", "pick", "--labeled", "--eval", "new-run", "--resume",
+    assert main(["seed", "pick", "--eval", "new-run", "--resume",
                  "--json"]) == 0
     picked = json.loads(capsys.readouterr().out)
     assert [p["parish"] for p in picked["parishes"]] == [PARISH]
@@ -1424,18 +1417,6 @@ def test_resume_preserves_decisions_evidence_and_paid_call_limit(
         seed_calls.run_extract(conn, SeedContext(seeds_dir=demo_cli["seeds_dir"]),
                                PARISH, "latest", OPENAI_MODEL)
     assert _FakeClassifier.calls == 0
-
-
-def test_pick_resume_offers_only_unfinished_existing_drafts(conn, demo, seed):
-    seed["status"] = "drafting"
-    write_seed_file(seed, demo["seeds_dir"])
-    assert PARISH not in {p["parish"] for p in pick(conn, seeds_dir=demo["seeds_dir"])["parishes"]}
-    assert PARISH in {p["parish"] for p in pick(
-        conn, seeds_dir=demo["seeds_dir"], resume=True)["parishes"]}
-    for status in (READY, APPROVED, "blocked"):
-        write_seed_file({**seed, "status": status}, demo["seeds_dir"])
-        assert PARISH not in {p["parish"] for p in pick(
-            conn, seeds_dir=demo["seeds_dir"], resume=True)["parishes"]}
 
 
 def test_mark_read_preserves_a_consulted_bulletin_without_slot_citations(demo_cli, seed, capsys):
@@ -2033,7 +2014,7 @@ def test_site_is_refused_in_a_historical_test_run(routed_cli, seed, capsys):
     labels = Path("data/labels") / PARISH
     labels.mkdir(parents=True)
     (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
-    assert main(["seed", "pick", "--labeled", "--eval", "run1"]) == 0
+    assert main(["seed", "pick", "--eval", "run1"]) == 0
     capsys.readouterr()
     assert main(["seed", "site", PARISH, "--eval", "run1"]) == 1
     assert "may not read live websites" in capsys.readouterr().err
@@ -2436,7 +2417,7 @@ def test_slot_writes_follow_eval_and_refuse_websites_there(routed_cli, seed, cap
     labels = Path("data/labels") / PARISH
     labels.mkdir(parents=True)
     (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
-    assert main(["seed", "pick", "--labeled", "--eval", "run1"]) == 0
+    assert main(["seed", "pick", "--eval", "run1"]) == 0
     assert main(["seed", "start", PARISH, "--eval", "run1"]) == 0
     capsys.readouterr()
     args = ["seed", "slot", "include", PARISH, "mass Sat 16:00 @holy-family", "--why", "R1: x",

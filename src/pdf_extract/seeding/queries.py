@@ -5,7 +5,7 @@ as the labeler does, and nothing calls a model.
 
 A **test run** (`--eval RUN`, docs/seeding-plan.md "Testing it first") drafts
 seeds for the parishes behind the labels as of each labeled bulletin's fetch
-time. `seed pick --labeled --eval RUN` writes the run's manifest, which fixes
+time. `seed pick --eval RUN` writes the run's manifest, which fixes
 that time per parish (`SeedContext.cutoff`), and every query then hides the
 bulletins fetched after it, so the agent sees what it would have seen then.
 """
@@ -17,7 +17,7 @@ import json
 import re
 import sqlite3
 from dataclasses import dataclass, field
-from datetime import UTC, datetime, timedelta
+from datetime import timedelta
 from pathlib import Path
 from typing import Any
 
@@ -26,7 +26,6 @@ from pypdf import PdfReader
 
 from pdf_extract.blobstore import CachedBlobStore, bulletin_pdf_key, get_store
 from pdf_extract.bulletin_week import bulletin_week
-from pdf_extract.dioceses.records import PARISH, diocese_dir
 from pdf_extract.labeling.labels import (
     DAYS,
     LABELS_DIR,
@@ -34,7 +33,7 @@ from pdf_extract.labeling.labels import (
     is_valid_hash,
     is_valid_slug,
 )
-from pdf_extract.schedule.store import normalize_as_of, update_mode_slugs
+from pdf_extract.schedule.store import normalize_as_of
 from pdf_extract.seeding.checks import COVERED_DAYS, covered_weeks
 from pdf_extract.seeding.files import (
     SEED_EVALS_DIR,
@@ -53,8 +52,6 @@ from pdf_extract.timeparse import time_to_minutes
 
 # Shortest hash prefix a command accepts for a bulletin.
 MIN_REF_CHARS = 6
-# What `seed pick` calls a recent bulletin.
-RECENT_DAYS = 14
 MANIFEST_NAME = "run.json"
 # Fewer characters than this on a page: it is only an image (`seed text`).
 MIN_PAGE_TEXT_CHARS = 40
@@ -91,7 +88,7 @@ class SeedContext:
         manifest_path = run_dir / MANIFEST_NAME
         if not manifest_path.is_file():
             raise SeedError(
-                f"No test run {eval_run!r}: start one with `pnpm seed pick --labeled --eval "
+                f"No test run {eval_run!r}: start one with `pnpm seed pick --eval "
                 f"{eval_run}`"
             )
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -639,39 +636,7 @@ def brief(
     }
 
 
-# ── Picking a batch ─────────────────────────────────────────────────────────
-def _weekly_slots(conn: sqlite3.Connection, bulletin_id: int) -> set[tuple]:
-    return {
-        (ev["church_slug"], ev["event_type"], ev["day_of_week"], ev["start_time"])
-        for ev in load_events(conn, [bulletin_id]) if ev["event_kind"] == "weekly"
-    }
-
-
-def _stability(conn: sqlite3.Connection, bulletins: list[dict[str, Any]]) -> float | None:
-    """How alike extract mode's weekly slots were in the parish's two newest bulletins (0-1)."""
-    processed = [b for b in bulletins if b["processed_at"] and not b["wrong_bulletin"]
-                 and b["duplicate_of"] is None][:2]
-    if len(processed) < 2:
-        return None
-    a, b = (_weekly_slots(conn, row["id"]) for row in processed)
-    if not a and not b:
-        return None
-    return round(len(a & b) / len(a | b), 2)
-
-
-def _age_days(fetched_at: str | None, now: datetime) -> int | None:
-    if not isinstance(fetched_at, str):
-        return None
-    moment = datetime.fromisoformat(normalize_as_of(fetched_at).replace("Z", "+00:00"))
-    return (now - moment).days
-
-
-def diocese_parishes(diocese: str) -> set[str]:
-    """The parish slugs a diocese's records name (as `weekly --diocese` reads them)."""
-    folder = diocese_dir(diocese) / PARISH.dir
-    return {path.stem for path in folder.glob("*.md")} if folder.is_dir() else set()
-
-
+# ── Test runs ─────────────────────────────────────────────────────────────
 def labeled_parishes(labels_dir: Path = LABELS_DIR) -> dict[str, list[str]]:
     """Parish slug -> content hashes of its labels marked done."""
     out: dict[str, list[str]] = {}
@@ -688,57 +653,6 @@ def labeled_parishes(labels_dir: Path = LABELS_DIR) -> dict[str, list[str]]:
     return out
 
 
-def pick(
-    conn: sqlite3.Connection,
-    *,
-    limit: int = 8,
-    diocese: str | None = None,
-    seeds_dir: Path = SEEDS_DIR,
-    now: datetime | None = None,
-    resume: bool = False,
-) -> dict[str, Any]:
-    """`seed pick`: parishes with no seed and no seed file, easiest first.
-
-    Easiest is one church, a bulletin fetched in the last two weeks, and extract
-    mode's weekly slots alike in its two newest bulletins.
-    """
-    now = now or datetime.now(UTC)
-    in_update_mode = update_mode_slugs(conn)
-    drafted = set(seed_slugs(seeds_dir))
-    unfinished = drafting_slugs(seeds_dir) if resume else set()
-    only = diocese_parishes(diocese) if diocese else None
-    candidates = []
-    for parish in conn.execute("SELECT id, slug, name FROM parish ORDER BY slug").fetchall():
-        slug = parish["slug"]
-        if (slug in in_update_mode or (slug in drafted and slug not in unfinished)
-                or (only is not None and slug not in only)):
-            continue
-        bulletins = parish_bulletins(conn, slug)
-        if not bulletins:
-            continue
-        churches = len(list_churches(conn, parish["id"]))
-        age = _age_days(bulletins[0]["fetched_at"], now)
-        stability = _stability(conn, bulletins)
-        candidates.append({
-            "parish": slug,
-            "name": parish["name"],
-            "churches": churches,
-            "bulletins": len(bulletins),
-            "newest_fetched_at": bulletins[0]["fetched_at"],
-            "newest_age_days": age,
-            "stability": stability,
-        })
-    candidates.sort(key=lambda c: (
-        c["churches"] != 1,
-        c["newest_age_days"] is None or c["newest_age_days"] > RECENT_DAYS,
-        -(c["stability"] or 0.0),
-        c["churches"],
-        c["parish"],
-    ))
-    shown = candidates[:limit] if limit > 0 else candidates
-    return {"parishes": shown, "remaining": len(candidates) - len(shown)}
-
-
 def start_eval_run(
     conn: sqlite3.Connection,
     eval_run: str,
@@ -748,7 +662,7 @@ def start_eval_run(
     evals_dir: Path = SEED_EVALS_DIR,
     resume: bool = False,
 ) -> dict[str, Any]:
-    """`seed pick --labeled --eval RUN`: the labeled parishes, and the run's manifest.
+    """`seed pick --eval RUN`: the labeled parishes, and the run's manifest.
 
     Each parish's cutoff is the fetch time of its newest labeled bulletin (a
     label marked done). A run that already has a manifest keeps it, so its

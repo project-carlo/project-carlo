@@ -14,8 +14,8 @@ has the explicit timing exception in POLICY. Do not ask again when a rule settle
 Everything still unclear is `needs_human`: a short question, the options, exactly one
 `"leaning": true`, and why you lean that way. Candidates (C…) are not in force and cannot
 override a clear active rule or POLICY. When no active rule settles a candidate's case,
-ask and lean as the candidate says. The reviewer works in the labeler and never sees your
-report. A doubt kept only in the report or a settled slot's rationale is lost.
+ask and lean as the candidate says. The reviewers (`seed-review`, then the owner in the
+factory's PR) work from the seed file and never see your report or handoff. A doubt kept only in the report or a settled slot's rationale is lost.
 
 **Citing.** A settled slot's `rationale` starts with the rule it rests on ("R1: printed in
 the schedule box of all three bulletins") or names the POLICY section ("POLICY, Times").

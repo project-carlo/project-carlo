@@ -28,7 +28,7 @@ from pdf_extract.storage import utc_now_iso
 
 SCHEMA_VERSION = 1
 SEEDS_DIR = DATA_DIR / "seeds"
-# Test runs on the labeled parishes (`seed pick --labeled --eval RUN`): drafts
+# Test runs on the labeled parishes (`seed pick --eval RUN`): drafts
 # under `<run>/seeds/`, never loaded, and the run's manifest and score beside them.
 SEED_EVALS_DIR = DATA_DIR / "seed-evals"
 # Where `seed pdf` and `seed pages` put the files they make (gitignored).
@@ -127,7 +127,7 @@ def read_seed(parish_slug: str, seeds_dir: Path = SEEDS_DIR) -> dict[str, Any] |
 
 
 def drafting_slugs(seeds_dir: Path = SEEDS_DIR) -> set[str]:
-    """Unfinished drafts to offer again with `seed pick --resume`.
+    """Unfinished drafts to offer again with `seed pick --eval RUN --resume`.
 
     Malformed files are reported by `seed check --all`, rather than assigned
     automatically to a new writer.

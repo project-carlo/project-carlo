@@ -19,7 +19,7 @@ Run `pnpm data:pull` once before assigning work. Commands use the local database
 R2 read keys; only model second opinions need API keys. Run plain `pnpm seed ...` (this
 pnpm rejects `-s`). `pnpm seed --help` lists the commands by phase.
 
-`pnpm seed pick --labeled --eval RUN [--limit N] [--resume]` creates the run's manifest or
+`pnpm seed pick --eval RUN [--limit N] [--resume]` creates the run's manifest or
 reuses it. Pass `--eval RUN` to every command after that, including `check`, `finalize`
 and `status`. Use a new run name for each batch-size or model comparison; reusing a run
 keeps its manifest and its existing drafts.

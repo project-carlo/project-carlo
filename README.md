@@ -739,7 +739,7 @@ pnpm seed start st-mary-albany          # start or resume a draft; prints where 
 pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
 pnpm seed check --all                   # check every file; `status` lists them
 pnpm seed questions --answered --by person   # the owner's changed answers, to find new rules
-pnpm seed pick --labeled --eval try-1   # start an eval run on the labeled parishes (`seed-evals` skill)
+pnpm seed pick --eval try-1            # start an eval run on the labeled parishes (`seed-evals` skill)
 pnpm seed score try-1                   # score its drafts against the labels
 ```
 

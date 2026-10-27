@@ -1,8 +1,7 @@
 """`python -m pdf_extract seed ...` (`pnpm seed ...`): the seeding agent's tools.
 
 Batch: choosing parishes, verifying drafts, reviews (the factory, an eval run)
-  pick      [--limit N] [--diocese D] [--resume]   parishes to seed next, easiest first
-            --labeled --eval RUN [--resume]         start or reuse a test run's manifest
+  pick      --eval RUN [--limit N] [--resume]      start or reuse a test run on the labeled parishes
   status                                            every file's status, questions, loaded
   check     <parish>... | --all                     check files against the database
   score     <run>                                   a test run's drafts against the labels
@@ -110,7 +109,7 @@ def _connect():
 
 def _ctx(args: argparse.Namespace) -> SeedContext:
     if args.seed_command == "pick":
-        # `pick --labeled` creates the manifest that other commands require.
+        # `pick` creates the test run's manifest that other commands require.
         return SeedContext()
     return SeedContext.for_run(getattr(args, "eval", None))
 
@@ -130,14 +129,10 @@ def _with_conn(fn: Callable[[Any, SeedContext, argparse.Namespace], Result]):
 
 # ── Handlers ────────────────────────────────────────────────────────────────
 def _pick(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    if args.labeled:
-        if not args.eval:
-            raise SeedError("--labeled starts a test run: name it with --eval RUN")
-        return queries.start_eval_run(conn, args.eval, limit=args.limit, resume=args.resume)
-    if args.eval:
-        raise SeedError("--eval with pick needs --labeled")
-    return queries.pick(conn, limit=args.limit, diocese=args.diocese, seeds_dir=ctx.seeds_dir,
-                        resume=args.resume)
+    if not args.eval:
+        raise SeedError("pick starts a test run: name it with --eval RUN (production seeds "
+                        "come from the factory's seed Runs)")
+    return queries.start_eval_run(conn, args.eval, limit=args.limit, resume=args.resume)
 
 
 def _no_seed_file(ctx: SeedContext, slug: str) -> str:
@@ -494,18 +489,9 @@ def _row(ev: dict[str, Any], lead: str = "  ") -> str:
 
 
 def _text_pick(r: Result) -> str:
-    if "eval_run" in r:
-        lines = [f"Test run {r['eval_run']} ({r['manifest']}): {r['drafted']} drafted"]
-        lines += [f"  {p['parish']:45} cutoff {_when(p['cutoff'])}  label {p['label_hash'][:12]}"
-                  for p in r["parishes"]]
-    else:
-        lines = ["parish                                        churches newest           "
-                 "age  stable"]
-        for p in r["parishes"]:
-            stable = "—" if p["stability"] is None else f"{p['stability']:.2f}"
-            age = "—" if p["newest_age_days"] is None else f"{p['newest_age_days']}d"
-            lines.append(f"{p['parish']:45} {p['churches']:8} {_when(p['newest_fetched_at']):16} "
-                         f"{age:>4} {stable:>7}")
+    lines = [f"Test run {r['eval_run']} ({r['manifest']}): {r['drafted']} drafted"]
+    lines += [f"  {p['parish']:45} cutoff {_when(p['cutoff'])}  label {p['label_hash'][:12]}"
+              for p in r["parishes"]]
     if r["remaining"]:
         lines.append(f"…{r['remaining']} more")
     return "\n".join(lines)
@@ -850,11 +836,9 @@ def add_seed_parser(
         p.add_argument("bulletin", help="`latest` or a prefix of the content hash")
 
     # Batch
-    p = leaf("pick", "Parishes to seed next, easiest first", _with_conn(_pick), _text_pick)
+    p = leaf("pick", "Start or reuse a test run on the labeled parishes (--eval RUN)",
+             _with_conn(_pick), _text_pick)
     p.add_argument("--limit", type=int, default=8, help="How many (0: all; default 8)")
-    p.add_argument("--diocese", help="Only this diocese's parishes")
-    p.add_argument("--labeled", action="store_true",
-                   help="The labeled parishes instead, for a test run (with --eval RUN)")
     p.add_argument("--resume", action="store_true",
                    help="Also offer unfinished drafts (each resumed with `seed start`)")
 

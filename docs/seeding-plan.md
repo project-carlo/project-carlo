@@ -190,8 +190,9 @@ or approve the held run by hand.
 
 ## Testing it first
 
-Before seeding for real, run the agent on the parishes behind the labeled
-bulletins (`pnpm seed pick --labeled --eval RUN`). For these, `as_of` is fixed at the
+To measure a change to the drafting skill, its rules or a model, run the
+drafter on the parishes behind the labeled bulletins (`pnpm seed pick --eval
+RUN`, the `seed-evals` skill). For these, `as_of` is fixed at the
 labeled bulletin's fetch time, and `seed bulletins`, `history` and `pdf` hide
 anything newer, so the agent sees what it would have seen then. The drafts go
 to `data/seed-evals/<run>/`, not `data/seeds/`, so they are never loaded.
@@ -256,9 +257,6 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
   which downloads those PDFs, as the agent will read them anyway. A bulletin
   whose PDF is another row's (stored before fetch compared downloads by their
   bytes) is listed as a duplicate, and the other commands skip it.
-- **`seed pick`'s "easiest"**, in order: one church, a newest bulletin fetched
-  in the last 14 days, and extract mode's weekly slots alike in the two newest
-  processed bulletins (their Jaccard similarity).
 - **`seed pdf` and `seed pages`** write to `data/seed-work/<parish>/`
   (gitignored): the PDF the pipeline reads, and PNGs at `--dpi` (150).
 - **Calls.** Both ask the bulletin as of its fetch date, as the evals do, so a
@@ -385,7 +383,7 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 
 ### Test runs
 
-- **`seed pick --labeled --eval RUN`** writes `data/seed-evals/RUN/run.json`:
+- **`seed pick --eval RUN`** writes `data/seed-evals/RUN/run.json`:
   each labeled parish (a label marked done) with the fetch time of its newest
   labeled bulletin, the cutoff. A run keeps its manifest once written;
   `--resume` also offers unfinished drafts. Every parish command, including
