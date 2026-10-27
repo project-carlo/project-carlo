@@ -43,8 +43,7 @@ the pipeline loads it.
   machine with the R2 read keys, `OPENAI_API_KEY` and `GEMINI_API_KEY`.
 - **Seed files are committed**, like the labels, and the pipeline loads the
   approved ones. Nothing is written to the published database by hand.
-- **One parish per seed job.** Evals assign 3 parishes per drafter by default,
-  and can compare other batch sizes.
+- **One parish per seed job.**
 
 ## How a parish is seeded
 
@@ -70,9 +69,7 @@ seed Run ─► seed job per parish ─► data/seeds/<parish>.json ─► seed-
 `.claude/skills/draft-parish-seed/SKILL.md` is the drafting procedure for one parish.
 The factory's seed stage (`factory/stages/seed.yaml`, prompt `factory/prompts/seed.md`)
 runs it with the drafter's write boundaries; the `foreman` skill proposes new rules from
-the owner's changes to seed-review's answers. For evals, `.claude/skills/seed-evals/`
-assigns the labeled parishes to `seed-drafter` agents (`.claude/agents/seed-drafter.md`).
-The drafting skill keeps its references beside it:
+the owner's changes to seed-review's answers. The drafting skill keeps its references beside it:
 
 - [rules.md](../.claude/skills/draft-parish-seed/rules.md) holds every seeding decision
   rule, with stable IDs that rationales cite. Its default is to ask: a slot no rule covers
@@ -188,43 +185,22 @@ much changes at once, and a batch of newly seeded parishes is compared with
 their last extracted schedules. Merge seeds in batches small enough to pass,
 or approve the held run by hand.
 
-## Testing it first
-
-To measure a change to the drafting skill, its rules or a model, run the
-drafter on the parishes behind the labeled bulletins (`pnpm seed pick --eval
-RUN`, the `seed-evals` skill). For these, `as_of` is fixed at the
-labeled bulletin's fetch time, and `seed bulletins`, `history` and `pdf` hide
-anything newer, so the agent sees what it would have seen then. The drafts go
-to `data/seed-evals/<run>/`, not `data/seeds/`, so they are never loaded.
-
-`pnpm seed score <run>` compares each draft with its label, using the eval
-report's matching (`evals/report.py`). It compares only what a seed holds:
-weekly rows, and dated rows and cancellations on or after `as_of`. It reports:
-
-- the accuracy of the agent's `settled` slots, the number that matters most,
-  since a reviewer may approve them without reading each one
-- how often its leaning answer to an open question matched the label
-- open questions per parish, and external calls and their cost per parish
-
-Running it with 3 parishes per drafter and then with 8 shows whether batch
-size costs accuracy.
-
 ## What changes in the code
 
 | Where | Change |
 | :-- | :-- |
-| new `src/pdf_extract/seeding/` | the file format and its checks, the bulletin and history queries, `ask`, the loader, `score`, and the `seed` CLI |
+| new `src/pdf_extract/seeding/` | the file format and its checks, the bulletin and history queries, `ask`, the loader and the `seed` CLI |
 | `classifiers/` | the `ask` prompt and schema, versioned like the others |
 | `db.py` (or wherever pipeline commands bring the database up to date) | load approved seed files after the CSVs |
 | `report.py` | list seeds loaded and seeds skipped in the run report |
 | `labeling/server.py`, `apps/labeler/` | the Seeds routes and views |
-| `.claude/skills/draft-parish-seed/`, `.claude/skills/seed-evals/` | drafting and eval skills; the drafting skill's `rules.md` (decision rules) and `file-format.md` (the file) |
+| `.claude/skills/draft-parish-seed/` | the drafting skill, its `rules.md` (decision rules) and `file-format.md` (the file) |
 | `package.json`, `README.md` | `pnpm seed`, and a section on seeding |
 
 ## Out of scope
 
-- Using websites as the primary seed source, or consulting live websites in
-  historical evals (rules.md says how far a website counts in production).
+- Using websites as the primary seed source (rules.md says how far a website
+  counts).
   Phone calls and the diocesan directory remain out of scope.
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.
@@ -239,8 +215,7 @@ size costs accuracy.
 
 Decisions made while implementing this plan, where it was silent or where the
 code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
-`classifiers/seed_ask.py`, the eval skill `.claude/skills/seed-evals/SKILL.md`,
-the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
+`classifiers/seed_ask.py`, the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 `file-format.md`), and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
 
 ### Commands
@@ -290,11 +265,6 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 - **`bulletins` in a source** is shorthand for drafting only: `finalize`
   expands it, and `seed check` rejects a file that still has it, so the
   stored format, the loader and the labeler never see it.
-- **A forgotten `--eval`.** A command that needs a parish's file (`mark-read`,
-  `diff`, `finalize`, `check` of named parishes), run without `--eval` when only
-  a test run has a draft of the parish, names that run ("did you mean --eval
-  RUN?"). `start` warns instead, since a test run's parish may be seeded for
-  real.
 - **`seed questions`** lists every question in the seed files (a group once),
   with its options, the leaning, the answer and how it relates to the leaning
   (`leaning`, `other`, `dropped`, `edited`; a drop counts as matching a
@@ -313,8 +283,7 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
   It refuses a reviewer not starting `agent:`, a file missing, `drafting`,
   `approved` or `blocked`, an answer to a slot that isn't an open question,
   an option that can't settle every slot of its group, and questions still
-  open after the answers (naming their slots). It has no `--eval`: test runs
-  are scored, not approved.
+  open after the answers (naming their slots).
 
 ### The file
 
@@ -326,13 +295,12 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
   evidence for monthly or future dated entries (R12/R19), and an established
   weekly schedule retained after one omission (R36). These exceptions have a
   null slot page rather than a manufactured newest-bulletin sighting. R2 still
-  requires the newest listed bulletin to be marked read; historical evals
-  reject website sources (R5). A reviewer's answer may include an older candidate.
+  requires the newest listed bulletin to be marked read. A reviewer's answer may include an older candidate.
 - **Batch failures.** `check --all` and multi-parish `finalize` report malformed
   files individually and continue with the other parishes.
 
 - **Every key is present** in the file, slot and option, as in the labels.
-  Entries have 24-hour `HH:MM` times (what the labels and the scorer use).
+  Entries have 24-hour `HH:MM` times (as the labels have them).
 - **An answer** is `{"choice", "by", "at"}`: `choice` is the option's index,
   `edited` (the reviewer's own entry), or `dropped` (the slot left out). An
   excluded slot keeps an entry for review: its own, or else the option the
@@ -380,22 +348,4 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
   loading. Entry validity, duplicate slots, scope and file shape remain checked.
   A sighting is written only when the newest read bulletin is in the database.
 - **The run report** has a Seeds section: what loaded and what was skipped.
-
-### Test runs
-
-- **`seed pick --eval RUN`** writes `data/seed-evals/RUN/run.json`:
-  each labeled parish (a label marked done) with the fetch time of its newest
-  labeled bulletin, the cutoff. A run keeps its manifest once written;
-  `--resume` also offers unfinished drafts. Every parish command, including
-  `church`, takes `--eval RUN`, reading and writing drafts in
-  `data/seed-evals/RUN/seeds/` and hiding bulletins fetched after the cutoff.
-  Live website sources are forbidden, and `seed check` requires `as_of` to
-  be the cutoff.
-- **`seed score RUN`** writes `report.md` and `report.json` beside the drafts.
-  Settled precision is reported at the eval report's strict and core levels.
-  A leaning answer matches when its entry pairs with a row the label wants
-  (required, or optional and preferably included), or, when it leans to
-  leaving the slot out, when no option pairs with a required row. It also
-  counts settled slots left out that a required label row the settled slots
-  miss matches.
 

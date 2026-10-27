@@ -1,5 +1,5 @@
 """Seeding believed schedules (docs/seeding-plan.md): seed files, the agent's tools,
-the labeler's review, loading approved seeds, and scoring test runs."""
+the labeler's review and loading approved seeds."""
 
 from __future__ import annotations
 
@@ -18,7 +18,6 @@ from pdf_extract.blobstore import CachedBlobStore, LocalBlobStore, bulletin_pdf_
 from pdf_extract.classifiers.seed_ask import GEMINI_MODEL, OPENAI_MODEL, SeedAsker
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.labeling.demo import build_demo, make_pdf
-from pdf_extract.labeling.labels import write_label
 from pdf_extract.labeling.server import LabelerApp, make_server
 from pdf_extract.report import render_seeds
 from pdf_extract.schedule.store import (
@@ -59,7 +58,6 @@ from pdf_extract.seeding.queries import (
     recent_history,
     render_pages,
     resolve_bulletin,
-    start_eval_run,
     stored_pdfs,
 )
 from pdf_extract.seeding.review import (
@@ -69,7 +67,6 @@ from pdf_extract.seeding.review import (
     seed_detail,
     seed_queue,
 )
-from pdf_extract.seeding.score import score_parish, score_run
 from pdf_extract.seeding.slots import Draft
 from pdf_extract.storage import connect_db
 
@@ -452,11 +449,9 @@ def test_check_reports_bulletins_the_database_lacks_and_drafts(conn, seed):
 
 
 # ── The agent's queries ─────────────────────────────────────────────────────
-def test_bulletins_newest_first_and_hidden_after_a_cutoff(conn):
+def test_bulletins_newest_first(conn):
     bulletins = parish_bulletins(conn, PARISH)
     assert [b["published_date"] for b in bulletins] == ["2026-09-27", "2026-09-20"]
-    hidden = parish_bulletins(conn, PARISH, cutoff="2026-09-19T00:00:00Z")
-    assert [b["published_date"] for b in hidden] == ["2026-09-20"]
     listed = list_bulletins(conn, PARISH)
     assert listed["bulletins"][0]["pages"] == 3
     assert listed["bulletins"][0]["stored"] is True
@@ -496,9 +491,8 @@ def test_resolve_bulletin_by_latest_or_prefix(conn):
     assert resolve_bulletin(conn, PARISH, older["content_hash"][:8])["id"] == older["id"]
     with pytest.raises(SeedError, match="at least 6"):
         resolve_bulletin(conn, PARISH, "abc")
-    with pytest.raises(SeedError, match="cutoff"):
-        resolve_bulletin(conn, PARISH, newest["content_hash"][:10],
-                         cutoff="2026-09-19T00:00:00Z")
+    with pytest.raises(SeedError, match="has no bulletin"):
+        resolve_bulletin(conn, PARISH, "f" * 10)
     with pytest.raises(SeedError, match="Parish not found"):
         resolve_bulletin(conn, "no-such-parish", "latest")
 
@@ -510,8 +504,6 @@ def test_history_is_extract_modes_events_per_bulletin(conn):
     assert {"church_slug": HF, "event_type": "mass", "day_of_week": "Saturday",
             "start_time": "16:00"}.items() <= next(
         e for e in vigil if e["day_of_week"] == "Saturday" and e["event_type"] == "mass").items()
-    assert history(conn, PARISH, cutoff="2026-09-19T00:00:00Z")["bulletins"][0][
-        "published_date"] == "2026-09-20"
 
 
 def test_pdf_and_pages_are_written_for_the_agent(conn, tmp_path: Path):
@@ -922,42 +914,6 @@ def test_ensure_db_loads_approved_seeds_unless_told_not_to(pipeline_dir: Path):
     assert ensure_db()["seeds"] == {"loaded": [], "skipped": []}
 
 
-# ── Test runs ───────────────────────────────────────────────────────────────
-def test_a_test_run_hides_newer_bulletins_and_scores_the_drafts(conn, demo, seed, tmp_path):
-    newest = parish_bulletins(conn, PARISH)[0]
-    labels_dir = tmp_path / "labels"
-    events = []
-    for slot in included_slots(_settle_all(seed)):
-        events.append({**slot["entry"], "page_number": 2, "origin": "human", "optional": None})
-    events[0] = {**events[0], "start_time": "17:00"}  # the label says 5 PM for the vigil
-    write_label({
-        "schema_version": 1, "parish_slug": PARISH, "content_hash": newest["content_hash"],
-        "source_url": "", "status": "done",
-        "flags": {f: False for f in ("wrong_bulletin", "unreadable", "no_schedule",
-                                     "church_missing", "conflicting_info")},
-        "published_date": "2026-09-27", "note": "", "labeler": "t", "seconds_spent": 1,
-        "updated_at": "", "events": events,
-    }, parish_slug=PARISH, content_hash=newest["content_hash"], source_url="",
-        labels_dir=labels_dir)
-    evals_dir = tmp_path / "seed-evals"
-    started = start_eval_run(conn, "try-1", labels_dir=labels_dir, evals_dir=evals_dir)
-    assert [p["parish"] for p in started["parishes"]] == [PARISH]
-    ctx = SeedContext.for_run("try-1", evals_dir=evals_dir)
-    assert ctx.cutoff(PARISH) == newest["fetched_at"]
-    with pytest.raises(SeedError, match="not in test run"):
-        ctx.cutoff("st-anne-demo")
-    write_seed_file(seed, ctx.seeds_dir)
-    assert check_seed(conn, seed, parish_slug=PARISH, cutoff=ctx.cutoff(PARISH)) == []
-
-    report = score_run("try-1", labels_dir=labels_dir, ctx=ctx)
-    parish = report["parishes"][PARISH]
-    assert parish["settled_included"] == 14
-    assert parish["settled"]["strict"]["found"] == 13  # the vigil is at the wrong time
-    assert parish["open_questions"] == 2
-    assert all(x["matched_label"] for x in parish["leaning"])
-    assert (evals_dir / "try-1" / "report.md").read_text().startswith("# Seeding test run")
-
-
 # ── HTTP ────────────────────────────────────────────────────────────────────
 @pytest.fixture
 def server(demo, tmp_path: Path):
@@ -1093,8 +1049,6 @@ def test_seed_command_prints_text_or_json(pipeline_dir: Path, capsys):
     assert "no seed file" in capsys.readouterr().out
     assert main(["seed", "bulletins", "nope"]) == 1
     assert "Parish not found" in capsys.readouterr().err
-    assert main(["seed", "pick"]) == 1  # production seeds come from the factory
-    assert "name it with --eval RUN" in capsys.readouterr().err
 
 
 @pytest.fixture
@@ -1142,32 +1096,10 @@ def test_seed_help_lists_every_command_by_phase(capsys):
                                     "\nPaid calls:")]
     assert heads == sorted(heads)
     listed = {line.split()[0] for line in out.splitlines() if line.startswith("  ")}
-    assert listed >= {"pick", "status", "check", "score", "questions", "start", "brief",
+    assert listed >= {"status", "check", "questions", "approve", "start", "brief",
                       "mark-read", "finalize", "bulletins", "pdf", "text", "pages", "grep",
                       "history", "diff", "church", "site", "ask", "extract"}
     assert "init" not in listed
-
-
-def test_a_command_missing_eval_names_the_test_run_holding_the_draft(demo_cli, seed, capsys):
-    other = "st-anne-demo"
-    write_seed_file({**seed, "parish_slug": other}, Path("data/seed-evals/try-1/seeds"))
-    for args in (["mark-read", other, "latest"], ["diff", other]):
-        assert main(["seed", *args]) == 1
-        assert "has no seed file in data/seeds/, but test run try-1 has a draft of it: " \
-            "did you mean --eval try-1?" in capsys.readouterr().err
-    for command in ("check", "finalize"):
-        assert main(["seed", command, other]) == 1
-        assert "did you mean --eval try-1?" in capsys.readouterr().out
-    # Without a test run's draft, the hint is to start one.
-    assert main(["seed", "diff", "no-such-demo"]) == 1
-    assert "start one with `pnpm seed start no-such-demo`" in capsys.readouterr().err
-    # A test run's parish may still be seeded for real: start warns, and goes on.
-    assert main(["seed", "start", other]) == 0
-    out = capsys.readouterr().out
-    assert out.startswith(f"{seed_path(other, demo_cli['seeds_dir']).relative_to(Path.cwd())}"
-                          ": a new draft")
-    assert "warning: test run try-1 has a draft of st-anne-demo" in out
-    assert main(["seed", "mark-read", other, "latest"]) == 0
 
 
 def test_questions_lists_each_question_its_leaning_and_answer(demo_cli, seed, capsys):
@@ -1319,20 +1251,6 @@ def test_one_seed_file_that_raises_does_not_stop_the_others(conn, demo, seed, mo
     assert result["skipped"] == [{"parish": PARISH, "reason": "RuntimeError: boom"}]
 
 
-def test_total_precision_leaves_out_slots_matching_only_optional_rows():
-    sunday = {"church_slug": HF, "event_type": "mass", "event_kind": "weekly",
-              "day_of_week": "Sunday", "date": None, "start_time": "09:00", "end_time": None,
-              "cancelled": False, "weeks_of_month": [], "season": None, "note": None}
-    monday = {**sunday, "day_of_week": "Monday", "start_time": "08:00"}
-    slots = [{"id": f"s{i}", "status": "settled", "decision": "include", "entry": e}
-             for i, e in enumerate((sunday, monday))]
-    label = {"events": [{**sunday, "optional": None}, {**monday, "optional": "include"}]}
-    parish = score_parish({"slots": slots, "calls": []}, label, "2026-10-01")
-    assert parish["settled_scored"] == 1
-    assert parish["settled"]["strict"] == {"precision": 1.0, "recall": 1.0, "found": 1,
-                                           "covered": 1}
-
-
 def test_a_call_keeps_what_the_file_gained_while_it_ran(conn, demo, monkeypatch):
     ctx = SeedContext(seeds_dir=demo["seeds_dir"])
     extract = _FakeClassifier.extract
@@ -1356,46 +1274,6 @@ def routed_cli(demo, tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     monkeypatch.setattr(seed_cli, "_connect", lambda: connect_db(demo["db_path"]))
     return demo
-
-
-def test_cli_starts_an_eval_and_routes_all_parish_commands(routed_cli, seed, capsys):
-    newest = seed["bulletins"][0]
-    labels = Path("data/labels") / PARISH
-    labels.mkdir(parents=True)
-    (labels / f"{newest['content_hash']}.json").write_text('{"status": "done"}')
-    production = {**seed, "summary": "Production must remain unchanged."}
-    write_seed_file(production)
-
-    assert main(["seed", "pick", "--eval", "new-run"]) == 0
-    manifest = Path("data/seed-evals/new-run/run.json")
-    original_manifest = manifest.read_bytes()
-    ctx = SeedContext.for_run("new-run")
-    assert ctx.cutoff(PARISH) == newest["fetched_at"]
-    assert main(["seed", "start", PARISH, "--eval", "new-run"]) == 0
-    assert read_seed(PARISH, ctx.seeds_dir)["status"] == "drafting"
-    assert main(["seed", "mark-read", PARISH, "latest", "--eval", "new-run"]) == 0
-    assert read_seed(PARISH, ctx.seeds_dir)["bulletins"][0]["read"]
-    assert main(["seed", "church", "rochester", "--eval", "new-run"]) == 0
-
-    # Picking again keeps cutoffs; --resume offers an interrupted eval draft.
-    capsys.readouterr()
-    assert main(["seed", "pick", "--eval", "new-run", "--json"]) == 0
-    assert json.loads(capsys.readouterr().out)["parishes"] == []
-    assert main(["seed", "pick", "--eval", "new-run", "--resume",
-                 "--json"]) == 0
-    picked = json.loads(capsys.readouterr().out)
-    assert [p["parish"] for p in picked["parishes"]] == [PARISH]
-    assert manifest.read_bytes() == original_manifest
-
-    write_seed_file(seed, ctx.seeds_dir)
-    assert main(["seed", "finalize", PARISH, "--eval", "new-run"]) == 0
-    assert main(["seed", "check", "--all", "--eval", "new-run"]) == 0
-    capsys.readouterr()
-    assert main(["seed", "status", "--eval", "new-run", "--json"]) == 0
-    status = json.loads(capsys.readouterr().out)
-    assert status["eval_run"] == "new-run"
-    assert status["seeds"][0]["loaded"] is None
-    assert read_seed(PARISH) == production
 
 
 def test_resume_preserves_decisions_evidence_and_paid_call_limit(
@@ -1498,14 +1376,6 @@ def test_check_requires_reading_the_newest_listed_bulletin(conn, seed):
     assert any("newest listed bulletin" in p for p in check_seed(conn, seed, parish_slug=PARISH))
 
 
-def test_historical_evals_reject_live_website_evidence(conn, seed):
-    _slot(seed, "s1")["sources"].append(
-        {"source": "website", "url": "https://example.org/times", "said": "Saturday 4 PM"})
-    assert check_seed(conn, seed, parish_slug=PARISH) == []
-    assert any("website sources are not allowed" in p for p in check_seed(
-        conn, seed, parish_slug=PARISH, cutoff=seed["as_of"]))
-
-
 def _website_slot(seed):
     slot = _slot(seed, "s1")
     slot.update(page=None, sources=[{
@@ -1532,13 +1402,6 @@ def test_assessed_website_schedule_can_be_settled_without_a_bulletin_time(conn, 
     finalized = finalize_seed(seed, [HF, SJ])
     assert _slot(finalized, "s1")["sources"] == slot["sources"]
     assert check_seed(conn, finalized, parish_slug=PARISH) == []
-    for evidence_check in (True, False):
-        assert any("website sources are not allowed" in p for p in check_seed(
-            conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"],
-            check_evidence=evidence_check))
-    finalized.update(status="blocked", blocked_reason="Other schedules remain unclear.")
-    assert any("website sources are not allowed" in p for p in check_seed(
-        conn, finalized, parish_slug=PARISH, cutoff=seed["as_of"]))
 
 
 @pytest.mark.parametrize("change, message", [
@@ -1614,25 +1477,6 @@ def test_each_excluded_history_event_needs_a_structured_slot(seed):
     # Mentioning both in a rationale alone does not account for the second event.
     assert len(diff({**seed, "slots": [first]}, past)["missing"]) == 1
     assert diff({**seed, "slots": [first, second]}, past)["missing"] == []
-
-
-def test_mark_read_obeys_the_eval_cutoff_and_preserves_the_file(routed_cli, seed, capsys):
-    old = seed["bulletins"][1]
-    folder = Path("data/seed-evals/old-run")
-    folder.mkdir(parents=True)
-    (folder / "run.json").write_text(json.dumps({"parishes": {
-        PARISH: {"fetched_at": old["fetched_at"], "label_hash": old["content_hash"]}}}))
-    assert main(["seed", "start", PARISH, "--eval", "old-run"]) == 0
-    path = seed_path(PARISH, folder / "seeds")
-    before = path.read_bytes()
-    assert main(["seed", "mark-read", PARISH, seed["bulletins"][0]["content_hash"],
-                 "--eval", "old-run"]) == 1
-    assert "cutoff" in capsys.readouterr().err
-    assert path.read_bytes() == before
-    assert main(["seed", "mark-read", PARISH, "latest", "--eval", "old-run"]) == 0
-    marked = read_seed(PARISH, folder / "seeds")
-    assert [(b["content_hash"], b["read"]) for b in marked["bulletins"]] == [
-        (old["content_hash"], True)]
 
 
 @pytest.mark.parametrize("command", ["check", "finalize"])
@@ -1754,7 +1598,6 @@ def _omission_problems(conn, seed, **kwargs):
 def test_established_weekly_slot_can_survive_one_assessed_omission(conn, seed):
     slot = _weekly_omission_slot(seed)
     assert _omission_problems(conn, seed) == []
-    assert _omission_problems(conn, seed, cutoff=seed["as_of"]) == []
     finalized = finalize_seed(seed, [HF, SJ])
     assert _slot(finalized, "s1")["weekly_omission"] == slot["weekly_omission"]
     assert _slot(finalized, "s1")["page"] is None
@@ -2008,16 +1851,6 @@ def test_site_falls_back_to_the_browser_and_says_when_it_cant_read(tmp_path, mon
     monkeypatch.setattr(site, "_browser_html", no_browser)
     with pytest.raises(SeedError, match="Could not read .*Missing X server"):
         site.read_site("p", "https://example.org/x", work_dir=tmp_path)
-
-
-def test_site_is_refused_in_a_historical_test_run(routed_cli, seed, capsys):
-    labels = Path("data/labels") / PARISH
-    labels.mkdir(parents=True)
-    (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
-    assert main(["seed", "pick", "--eval", "run1"]) == 0
-    capsys.readouterr()
-    assert main(["seed", "site", PARISH, "--eval", "run1"]) == 1
-    assert "may not read live websites" in capsys.readouterr().err
 
 
 # ── Writing slots by command (`seed slot`, `summary`, `church-issue`, `block`) ──
@@ -2411,25 +2244,3 @@ def test_slot_writes_refuse_an_approved_file(demo_cli, seed, capsys):
         assert "belongs to its reviewer" in capsys.readouterr().err
     assert path.read_bytes() == before
     assert main(["seed", "slot", "list", PARISH]) == 0  # reading is fine
-
-
-def test_slot_writes_follow_eval_and_refuse_websites_there(routed_cli, seed, capsys):
-    labels = Path("data/labels") / PARISH
-    labels.mkdir(parents=True)
-    (labels / f"{seed['bulletins'][0]['content_hash']}.json").write_text('{"status": "done"}')
-    assert main(["seed", "pick", "--eval", "run1"]) == 0
-    assert main(["seed", "start", PARISH, "--eval", "run1"]) == 0
-    capsys.readouterr()
-    args = ["seed", "slot", "include", PARISH, "mass Sat 16:00 @holy-family", "--why", "R1: x",
-            "--eval", "run1", "--src", "latest p2: Sat 4"]
-    assert main([*args, "--src", "web https://example.org/times: Sat 4 PM"]) == 1
-    assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
-    assert main([*args, "--src", "web https://example.org/times: Sat 4 PM",
-                 "--website-current", "The parish home page links this schedule.",
-                 "--website-context", "The bulletin refers to the website."]) == 1
-    assert "website sources are not allowed in a historical test run" in capsys.readouterr().err
-    assert main(args) == 0
-    capsys.readouterr()
-    assert [s["id"] for s in read_seed(PARISH, SeedContext.for_run("run1").seeds_dir)[
-        "slots"]] == ["s1"]
-    assert read_seed(PARISH) is None

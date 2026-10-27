@@ -1,7 +1,6 @@
 # Seed file format
 
-`data/seeds/<parish>.json` (a test run's: `data/seed-evals/RUN/seeds/`). This is the
-file's shape; what to decide for each slot is in [rules.md](rules.md).
+`data/seeds/<parish>.json`. This is the file's shape; what to decide for each slot is in [rules.md](rules.md).
 
 `seed start` creates the complete top-level object. Keep its `schema_version`,
 `parish_slug`, `drafted_by`, `drafted_at`, `bulletins` and `calls`, and add your `summary`
@@ -113,8 +112,7 @@ one, a dated cancellation, and an open question, each rationale citing its rule:
   quote in `said`, its URL in `url`, and the slot's `page` null. The exact time need
   not appear in a bulletin. Validation requires the assessment's shape and newest
   bulletin reference; the agent judges credibility and freshness. It imposes no
-  fixed age or frequency threshold. Website sources remain forbidden in historical
-  test runs. `finalize` preserves assessments and never creates one.
+  fixed age or frequency threshold. `finalize` preserves assessments and never creates one.
 - An every-week slot retained after one omission may carry `weekly_omission`:
   `{"bulletin": "9f2c41d0", "reason": "..."}`. The reference must name the newest
   read issue; `reason` explicitly assesses why that issue merely omits the established

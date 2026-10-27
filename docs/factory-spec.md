@@ -391,9 +391,9 @@ rows first.
 - The `diocese-surveyor`, `parish-scout` and `seed-drafter` agents become the prompts
   `factory/prompts/survey.md`, `map.md` and `seed.md`.
 - The `map-diocese` and `seed-parishes` orchestrators are retired: mapping and seeding
-  run only through the factory. Historical seed evals keep their own skill
-  (`seed-evals`) and an eval-only `seed-drafter` agent; proposing candidate rules from
-  the owner's answers moves to the foreman.
+  run only through the factory. Seeding's historical evals (`seed pick --labeled`,
+  `seed score`) are removed with them, and proposing candidate rules from the owner's
+  answers moves to the foreman.
 - New: a `foreman` skill (§9).
 
 ## 13. MVP

@@ -72,7 +72,7 @@ ENTRY: words in any order
 SOURCE: "HEAD: what it said, in its words"
   latest p2: ...             the newest listed bulletin, page 2
   9f2c41d0,1ab3e7c2 p2: ...  several bulletins: one source each
-  web https://...: ...       a page `seed site` printed (never in a test run)
+  web https://...: ...       a page `seed site` printed
   history [9f2c41d0]: ...    only what history can't say itself
   c1 p3: ...                 a paid call
   A slot's --page defaults to its source's page on the newest bulletin, and a
@@ -445,7 +445,6 @@ class Draft:
 
     seed: dict[str, Any]
     church_ids: dict[str, int]  # the parish's churches, slug -> id
-    eval_run: str | None = None
     touched: list[str] = field(default_factory=list)
     removed: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
@@ -480,8 +479,6 @@ class Draft:
 
     def sources(self, args: argparse.Namespace) -> list[dict[str, Any]]:
         out = [s for spec in args.src or [] for s in parse_source(self.seed, spec)]
-        if self.eval_run is not None and any(s["source"] == WEBSITE for s in out):
-            raise SeedError("website sources are not allowed in a historical test run (R5)")
         current, context = args.website_current, args.website_context
         if current is not None or context is not None:
             if not (current and current.strip() and context and context.strip()):

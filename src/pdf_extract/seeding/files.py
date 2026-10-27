@@ -28,9 +28,6 @@ from pdf_extract.storage import utc_now_iso
 
 SCHEMA_VERSION = 1
 SEEDS_DIR = DATA_DIR / "seeds"
-# Test runs on the labeled parishes (`seed pick --eval RUN`): drafts
-# under `<run>/seeds/`, never loaded, and the run's manifest and score beside them.
-SEED_EVALS_DIR = DATA_DIR / "seed-evals"
 # Where `seed pdf` and `seed pages` put the files they make (gitignored).
 WORK_DIR = DATA_DIR / "seed-work"
 
@@ -124,31 +121,6 @@ def read_seed(parish_slug: str, seeds_dir: Path = SEEDS_DIR) -> dict[str, Any] |
     if not isinstance(data, dict):
         raise SeedFileError(f"{path} must hold a JSON object")
     return data
-
-
-def drafting_slugs(seeds_dir: Path = SEEDS_DIR) -> set[str]:
-    """Unfinished drafts to offer again with `seed pick --eval RUN --resume`.
-
-    Malformed files are reported by `seed check --all`, rather than assigned
-    automatically to a new writer.
-    """
-    slugs = set()
-    for slug in seed_slugs(seeds_dir):
-        try:
-            seed = read_seed(slug, seeds_dir)
-        except SeedFileError:
-            continue
-        if seed is not None and seed.get("status") == DRAFTING:
-            slugs.add(slug)
-    return slugs
-
-
-def eval_drafts(parish_slug: str, evals_dir: Path = SEED_EVALS_DIR) -> list[str]:
-    """The test runs holding a draft of the parish, for a command that forgot `--eval`."""
-    seed_path(parish_slug, evals_dir)  # rejects an unsafe slug
-    if not evals_dir.is_dir():
-        return []
-    return sorted(p.parent.parent.name for p in evals_dir.glob(f"*/seeds/{parish_slug}.json"))
 
 
 def write_seed_file(seed: dict[str, Any], seeds_dir: Path = SEEDS_DIR) -> Path:

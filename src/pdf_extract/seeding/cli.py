@@ -1,10 +1,8 @@
 """`python -m pdf_extract seed ...` (`pnpm seed ...`): the seeding agent's tools.
 
-Batch: choosing parishes, verifying drafts, reviews (the factory, an eval run)
-  pick      --eval RUN [--limit N] [--resume]      start or reuse a test run on the labeled parishes
+Batch: verifying drafts, reviews (the factory)
   status                                            every file's status, questions, loaded
   check     <parish>... | --all                     check files against the database
-  score     <run>                                   a test run's drafts against the labels
   questions [--open | --answered] [--by agent|person]
                                                     every question, its leaning and answer
   approve   <parish> --reviewer agent:NAME@COMMIT [--answers FILE]
@@ -42,22 +40,18 @@ Compare: other sources
   diff      <parish> [--bulletins N]    history no slot covers, and slots history lacks
   church    <query>                     whose church a name, town or address is
   site      <parish> [path or address] [--fresh] [--no-browser]
-                                        a website page as text (never in a test run)
+                                        a website page as text
 
 Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per parish (4)
   ask       <parish> <bulletin> --model M "question"   one question about one bulletin
   extract   <parish> <bulletin> --model M              a full extraction with POLICY
 
 A bulletin is `latest` or a prefix of its content hash; M is gpt-6.1-sol or
-gemini-3-flash-preview. Every command but `score` and `approve` takes `--eval RUN`
-to work on a test run's drafts (data/seed-evals/RUN/seeds/); one that needs a file
-and finds only a test run's draft asks whether you meant `--eval RUN`. Output is
-compact text, or the JSON result with `--json`. Drafters run `finalize`,
-which checks; the factory's gates and an eval's verification run `check`. `approve`
-is the factory's seed-review agent's (docs/factory-spec.md); the owner changes an
-answer in the labeler. Workflow: docs/factory-spec.md (seed Runs),
-.claude/skills/seed-evals/ (eval runs) and .claude/skills/draft-parish-seed/
-(drafting; rules.md holds the decision rules).
+gemini-3-flash-preview. Output is compact text, or the JSON result with `--json`.
+Drafters run `finalize`, which checks; the factory's gates run `check`. `approve` is
+the factory's seed-review agent's (docs/factory-spec.md); the owner changes an answer
+in the labeler. Workflow: docs/factory-spec.md (seed Runs) and
+.claude/skills/draft-parish-seed/ (drafting; rules.md holds the decision rules).
 """
 
 from __future__ import annotations
@@ -85,7 +79,6 @@ from pdf_extract.seeding.files import (
     SeedFileError,
     SeedSummary,
     asked_questions,
-    eval_drafts,
     read_seed,
     seed_path,
     seed_slugs,
@@ -95,7 +88,6 @@ from pdf_extract.seeding.finalize import finalize_seed
 from pdf_extract.seeding.loader import is_loaded
 from pdf_extract.seeding.queries import SeedContext, SeedError
 from pdf_extract.seeding.review import SeedReviewError, approve_seed, is_agent
-from pdf_extract.seeding.score import score_run
 from pdf_extract.seeding.site import read_site, resolve_url
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 
@@ -108,10 +100,7 @@ def _connect():
 
 
 def _ctx(args: argparse.Namespace) -> SeedContext:
-    if args.seed_command == "pick":
-        # `pick` creates the test run's manifest that other commands require.
-        return SeedContext()
-    return SeedContext.for_run(getattr(args, "eval", None))
+    return SeedContext()
 
 
 def _with_conn(fn: Callable[[Any, SeedContext, argparse.Namespace], Result]):
@@ -128,19 +117,7 @@ def _with_conn(fn: Callable[[Any, SeedContext, argparse.Namespace], Result]):
 
 
 # ── Handlers ────────────────────────────────────────────────────────────────
-def _pick(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    if not args.eval:
-        raise SeedError("pick starts a test run: name it with --eval RUN (production seeds "
-                        "come from the factory's seed Runs)")
-    return queries.start_eval_run(conn, args.eval, limit=args.limit, resume=args.resume)
-
-
-def _no_seed_file(ctx: SeedContext, slug: str) -> str:
-    """Why a command needing the parish's file can't run: often a forgotten `--eval`."""
-    runs = eval_drafts(slug) if ctx.eval_run is None else []
-    if runs:
-        return (f"no seed file in data/seeds/, but test run {', '.join(runs)} has a draft "
-                f"of it: did you mean {' or '.join(f'--eval {r}' for r in runs)}?")
+def _no_seed_file(slug: str) -> str:
     return f"no seed file: start one with `pnpm seed start {slug}`"
 
 
@@ -152,14 +129,8 @@ def _start(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     if resumed:
         if seed.get("status") == APPROVED:
             raise SeedError("An approved seed belongs to its reviewer; it cannot be resumed")
-        ctx.cutoff(args.parish)
         path = seed_path(args.parish, ctx.seeds_dir)
     else:
-        runs = eval_drafts(args.parish) if ctx.eval_run is None else []
-        if runs:
-            # Not an error: a test run's parish can be seeded for real too.
-            warnings.append(f"test run {', '.join(runs)} has a draft of {args.parish}; this "
-                            "started a production draft (to resume that one, pass --eval RUN)")
         seed = load_or_start(conn, ctx, args.parish)
         path = write_seed_file(seed, ctx.seeds_dir)
     held = queries.stored_pdfs(args.parish)
@@ -175,11 +146,11 @@ def _start(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _mark_read(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed = read_seed(args.parish, ctx.seeds_dir)
     if seed is None:
-        raise SeedError(f"{args.parish} has {_no_seed_file(ctx, args.parish)}")
+        raise SeedError(f"{args.parish} has {_no_seed_file(args.parish)}")
     if seed.get("status") == APPROVED:
         raise SeedError("An approved seed belongs to its reviewer; it cannot be changed")
     bulletin = queries.resolve_bulletin(
-        conn, args.parish, args.bulletin, cutoff=ctx.cutoff(args.parish),
+        conn, args.parish, args.bulletin,
     )
     listed = next((b for b in seed["bulletins"]
                    if b["content_hash"] == bulletin["content_hash"]), None)
@@ -193,36 +164,34 @@ def _mark_read(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 
 def _brief(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    return queries.brief(conn, args.parish, cutoff=ctx.cutoff(args.parish))
+    return queries.brief(conn, args.parish)
 
 
 def _bulletins(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.list_bulletins(
-        conn, args.parish, cutoff=ctx.cutoff(args.parish), limit=args.limit,
+        conn, args.parish, limit=args.limit,
     )
 
 
 def _pdf(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    return queries.export_pdf(conn, args.parish, args.bulletin, cutoff=ctx.cutoff(args.parish))
+    return queries.export_pdf(conn, args.parish, args.bulletin)
 
 
 def _text(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.page_texts(
-        conn, args.parish, args.bulletin, page=args.page, cutoff=ctx.cutoff(args.parish),
+        conn, args.parish, args.bulletin, page=args.page,
     )
 
 
 def _pages(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.render_pages(
         conn, args.parish, args.bulletin, page=args.page, dpi=args.dpi,
-        cutoff=ctx.cutoff(args.parish),
     )
 
 
 def _grep(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.grep_bulletins(
         conn, args.parish, args.pattern, bulletins=args.bulletins,
-        cutoff=ctx.cutoff(args.parish),
     )
 
 
@@ -231,9 +200,6 @@ def _church(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 
 def _site(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
-    if ctx.eval_run is not None:
-        raise SeedError("A historical test run may not read live websites: they can show "
-                        "changes after its cutoff")
     parish = queries.parish_row(conn, args.parish)
     url = resolve_url(parish["homepage_url"], args.where)
     return read_site(args.parish, url, browser=not args.no_browser, fresh=args.fresh)
@@ -242,16 +208,16 @@ def _site(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 def _diff(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     seed = read_seed(args.parish, ctx.seeds_dir)
     if seed is None:
-        raise SeedError(f"{args.parish} has {_no_seed_file(ctx, args.parish)}")
+        raise SeedError(f"{args.parish} has {_no_seed_file(args.parish)}")
     past = queries.recent_history(
-        conn, args.parish, bulletins=args.bulletins, cutoff=ctx.cutoff(args.parish),
+        conn, args.parish, bulletins=args.bulletins,
     )
     return {"parish": args.parish, **diff(seed, past)}
 
 
 def _history(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return queries.history(
-        conn, args.parish, bulletins=args.bulletins, cutoff=ctx.cutoff(args.parish),
+        conn, args.parish, bulletins=args.bulletins,
     )
 
 
@@ -275,7 +241,7 @@ def _finalize(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
                 continue  # the check below reports it
             parish = queries.parish_row(conn, slug)
             churches = sorted(parish_churches(conn, parish["id"]))
-            past = queries.recent_history(conn, slug, cutoff=ctx.cutoff(slug))
+            past = queries.recent_history(conn, slug)
             seed = {**finalize_seed(seed, churches, past), "parish_slug": slug}
             write_seed_file(seed, ctx.seeds_dir)
             if seed.get("status") not in (APPROVED, BLOCKED):
@@ -303,16 +269,15 @@ def _check(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     for slug in slugs:
         try:
             seed = read_seed(slug, ctx.seeds_dir)
-            cutoff = ctx.cutoff(slug)
-        except (SeedFileError, SeedError) as exc:
+        except SeedFileError as exc:
             files.append({"parish": slug, "status": "invalid", "problems": [str(exc)]})
             continue
         if seed is None:
             files.append({"parish": slug, "status": None,
-                          "problems": [_no_seed_file(ctx, slug)]})
+                          "problems": [_no_seed_file(slug)]})
             continue
         # An approved file is its reviewer's: newer drafting evidence rules don't apply.
-        problems = check_seed(conn, seed, parish_slug=slug, cutoff=cutoff,
+        problems = check_seed(conn, seed, parish_slug=slug,
                               check_evidence=seed.get("status") != APPROVED)
         summary = SeedSummary.of(slug, seed)
         files.append({
@@ -331,14 +296,14 @@ def _status(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         except SeedFileError as exc:
             seed, summary = None, SeedSummary.of(slug, None, problem=str(exc))
         loaded = None
-        if ctx.eval_run is None and seed is not None:
+        if seed is not None:
             parish = conn.execute("SELECT id FROM parish WHERE slug = ?", (slug,)).fetchone()
             loaded = parish is not None and is_loaded(conn, parish["id"], seed)
         rows.append({**summary.__dict__, "loaded": loaded})
     counts: dict[str, int] = {}
     for row in rows:
         counts[row["status"]] = counts.get(row["status"], 0) + 1
-    return {"eval_run": ctx.eval_run, "counts": counts, "seeds": rows}
+    return {"counts": counts, "seeds": rows}
 
 
 def _questions(args: argparse.Namespace) -> Result:
@@ -364,7 +329,7 @@ def _questions(args: argparse.Namespace) -> Result:
             questions.append({"parish": slug, **q, "answered_by": by})
     answered = [q for q in questions if q["answer"]]
     return {
-        "eval_run": ctx.eval_run, "questions": questions, "problems": problems,
+        "questions": questions, "problems": problems,
         "totals": {"questions": len(questions), "answered": len(answered),
                    "matched_leaning": sum(1 for q in answered if q["matched"]),
                    "answered_by_person": sum(1 for q in answered
@@ -398,21 +363,10 @@ def _approve(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
     return {**result, "path": Path(os.path.relpath(path)).as_posix()}
 
 
-def _score(args: argparse.Namespace) -> Result:
-    report = score_run(args.run)
-    run_dir = SeedContext.for_run(args.run).seeds_dir.parent
-    return {
-        "eval_run": args.run,
-        "totals": report["totals"],
-        "not_drafted": report["not_drafted"],
-        "report": (run_dir / "report.md").as_posix(),
-    }
-
-
 def _read_for_slots(ctx: SeedContext, slug: str) -> dict[str, Any]:
     seed = read_seed(slug, ctx.seeds_dir)
     if seed is None:
-        raise SeedError(f"{slug} has {_no_seed_file(ctx, slug)}")
+        raise SeedError(f"{slug} has {_no_seed_file(slug)}")
     if seed.get("parish_slug") != slug:
         raise SeedError(f"the file's parish_slug is {seed.get('parish_slug')!r}, not {slug}")
     return seed
@@ -432,9 +386,8 @@ def _writer(verb: str):
     apply it to the file in memory, check the slots it touched, and write the file."""
     def handler(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
         seed = _read_for_slots(ctx, args.parish)
-        ctx.cutoff(args.parish)  # a test run's parish must be in the run
         parish = queries.parish_row(conn, args.parish)
-        draft = slot_writes.Draft(seed, parish_churches(conn, parish["id"]), ctx.eval_run)
+        draft = slot_writes.Draft(seed, parish_churches(conn, parish["id"]))
         if verb == "batch":
             if args.file in (None, "-"):
                 text = sys.stdin.read()
@@ -488,18 +441,8 @@ def _row(ev: dict[str, Any], lead: str = "  ") -> str:
             + (f"  {p['extra']}" if p["extra"] else ""))
 
 
-def _text_pick(r: Result) -> str:
-    lines = [f"Test run {r['eval_run']} ({r['manifest']}): {r['drafted']} drafted"]
-    lines += [f"  {p['parish']:45} cutoff {_when(p['cutoff'])}  label {p['label_hash'][:12]}"
-              for p in r["parishes"]]
-    if r["remaining"]:
-        lines.append(f"…{r['remaining']} more")
-    return "\n".join(lines)
-
-
 def _text_bulletins(r: Result) -> str:
-    lines = [f"{r['parish']}: bulletins, newest fetched first"
-             + (f" (test run: none after {r['cutoff']})" if r["cutoff"] else "")]
+    lines = [f"{r['parish']}: bulletins, newest fetched first"]
     for b in r["bulletins"]:
         flags = []
         if b["wrong_bulletin"]:
@@ -596,25 +539,6 @@ def _text_status(r: Result) -> str:
         lines.append(f"  {s['parish_slug']:45} {s['status']:12} {s['open_questions']:2} open  "
                      f"{s['included']:3} slots  {loaded:10} {detail}")
     return "\n".join(lines)
-
-
-def _text_score(r: Result) -> str:
-    t = r["totals"]
-
-    def pct(v: float | None) -> str:
-        return "—" if v is None else f"{100 * v:.0f}%"
-
-    return "\n".join([
-        f"Test run {r['eval_run']}: {t['parishes']} parishes scored"
-        + (f", {len(r['not_drafted'])} not drafted" if r["not_drafted"] else ""),
-        f"  settled precision {pct(t['settled_precision_strict'])} strict, "
-        f"{pct(t['settled_precision_core'])} core; covers {pct(t['settled_recall_core'])} "
-        "of label rows",
-        f"  open questions {t['open_questions']} ({t['open_questions_per_parish']} per parish); "
-        f"leaning matched {pct(t['leaning_matched'])}",
-        f"  calls {t['calls']} ({t['paid_calls']} paid), ${t['cost_usd']:.4f}",
-        f"  {r['report']}",
-    ])
 
 
 def _text_file_head(r: Result, n_slots: int) -> list[str]:
@@ -810,22 +734,20 @@ def add_seed_parser(
     # argparse has no subcommand groups, so `seed --help` prints this module's
     # docstring, which lists the commands by phase, instead of its own list.
     parser = subparsers.add_parser(
-        "seed", help="Draft, check and score parish seeds (docs/seeding-plan.md)",
+        "seed", help="Draft and check parish seeds (docs/seeding-plan.md)",
         description=__doc__, usage="%(prog)s <command> ...",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.set_defaults(help_parser=parser)
     sub = parser.add_subparsers(dest="seed_command", metavar="<command>", help=argparse.SUPPRESS)
 
-    def leaf(name: str, help_text: str, handler, render, *, eval_run: bool = True,
+    def leaf(name: str, help_text: str, handler, render, *,
              listed: bool = True, under: Any = None, prog: str | None = None):
         p = (under or sub).add_parser(name, help=help_text if listed else None,
                                       description=help_text,
                                       prog=f"{prog or parser.prog} {name}")
         p.set_defaults(handler=handler, render=render)
         p.add_argument("--json", action="store_true", help="Print the JSON result")
-        if eval_run:
-            p.add_argument("--eval", metavar="RUN", help="Work on a test run's drafts")
         add_common_args(p)
         return p
 
@@ -836,12 +758,6 @@ def add_seed_parser(
         p.add_argument("bulletin", help="`latest` or a prefix of the content hash")
 
     # Batch
-    p = leaf("pick", "Start or reuse a test run on the labeled parishes (--eval RUN)",
-             _with_conn(_pick), _text_pick)
-    p.add_argument("--limit", type=int, default=8, help="How many (0: all; default 8)")
-    p.add_argument("--resume", action="store_true",
-                   help="Also offer unfinished drafts (each resumed with `seed start`)")
-
     leaf("status", "Every seed file's status, and whether it is loaded", _with_conn(_status),
          _text_status)
 
@@ -849,10 +765,6 @@ def add_seed_parser(
     p.add_argument("parish", nargs="*", help="Parish slugs")
     p.add_argument("--all", action="store_true", help="Every seed file")
     p.set_defaults(fail_on_verification_error=True)
-
-    p = leaf("score", "Score a test run's drafts against the labels", _score, _text_score,
-             eval_run=False)
-    p.add_argument("run", help="The test run's name")
 
     p = leaf("questions", "Every question the seed files asked: options, leaning, answer, "
              "and the rules its rationale cites", _questions, _text_questions)
@@ -863,8 +775,7 @@ def add_seed_parser(
                    help="Only questions answered by an agent reviewer, or by a person")
 
     p = leaf("approve", "Answer a seed's open questions and approve it, for an agent reviewer "
-             "(people approve in the labeler)", _with_conn(_approve), _text_approve,
-             eval_run=False)
+             "(people approve in the labeler)", _with_conn(_approve), _text_approve)
     parish(p)
     p.add_argument("--reviewer", required=True, metavar="agent:NAME@COMMIT",
                    help="The agent reviewer, recorded as each answer's `by` and as `reviewer`")

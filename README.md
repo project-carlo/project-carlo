@@ -739,8 +739,6 @@ pnpm seed start st-mary-albany          # start or resume a draft; prints where 
 pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
 pnpm seed check --all                   # check every file; `status` lists them
 pnpm seed questions --answered --by person   # the owner's changed answers, to find new rules
-pnpm seed pick --eval try-1            # start an eval run on the labeled parishes (`seed-evals` skill)
-pnpm seed score try-1                   # score its drafts against the labels
 ```
 
 ## Onboarding factory
@@ -776,7 +774,7 @@ pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answe
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
-- `data/seeds/` - parish seed files, drafted by an agent and approved in the labeler (committed); `data/seed-evals/` holds test runs on the labeled parishes
+- `data/seeds/` - parish seed files, drafted and approved by the factory's seed Runs (committed)
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -792,7 +790,7 @@ pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answe
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
-  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, scoring test runs, the labeler's review
+  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, the labeler's review
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command

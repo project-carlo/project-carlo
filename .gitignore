@@ -70,7 +70,7 @@ scratch-detail-*.log
 data/out/
 data/pipeline/
 # PDFs and page images `pnpm seed pdf|pages` write for the seeding agent to read.
-# Seed files (data/seeds/) and test runs (data/seed-evals/) are committed.
+# Seed files (data/seeds/) are committed.
 data/seed-work/
 scratch/
 # `pnpm label --demo` builds its generated dataset here. Real labels
