@@ -341,7 +341,6 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
-- **2026-10-27**: rechecked `open/maria-house-healing-mass` (a seed draft flagged All Saints, Waterford's Thursday healing Mass at "Maria House"). Maria House Project's site and All Saints' Mass Times don't place or mention it; still open, with a research entry. Coverage unchanged: directory 128/128; gcatholic 150/150.
 - **2026-10-23**, mapped (orchestrator, 26 batches by 25 parish-scout runs of 3–9 roster
   pairs each, batches 25–26 combined, plus one fetch-check run): 61 parish rows (57 with a
   readable bulletin, 4 `no_bulletin`), 110 churches, 42 exclusions, 9 open questions.
