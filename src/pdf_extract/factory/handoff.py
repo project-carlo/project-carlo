@@ -78,6 +78,8 @@ class SeedReview(Handoff):
 
 
 MODELS: dict[str, type[Handoff]] = {"survey-review": SurveyReview, "seed-review": SeedReview}
+# Only these stages can set a parish aside: answering requeues the parish's own job.
+PARKING_STAGES = ("map", "seed")
 
 
 def handoff_path(worktree: Path, run: str, job: str) -> Path:
@@ -117,6 +119,12 @@ def read_handoff(path: Path, stage: str) -> tuple[Handoff | None, list[str]]:
                 problems.append(f"flag about {f.subject}: seed-review decides every question "
                                 "itself; answer it (basis judgment, saying what made it hard) "
                                 "instead of a blocking flag")
+    elif stage not in PARKING_STAGES:
+        for f in handoff.flags:
+            if f.severity == BLOCKING and f.scope == "parish":
+                problems.append(f"flag about {f.subject}: only map and seed jobs set a parish "
+                                "aside; make it `scope: run` if the Run can't go on without "
+                                "an answer, or `advisory`")
     return (None, problems) if problems else (handoff, [])
 
 

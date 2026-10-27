@@ -39,8 +39,15 @@ from pdf_extract.factory.ledger import (
     Ledger,
 )
 from pdf_extract.factory.stages import in_scope
-from pdf_extract.factory.usage import Usage, choose, standing
-from pdf_extract.factory.workers import OK, USAGE, StubAction, StubWorker, WorkerRequest
+from pdf_extract.factory.usage import Usage, choose, parse_usage, standing
+from pdf_extract.factory.workers import (
+    OK,
+    USAGE,
+    StubAction,
+    StubWorker,
+    WorkerRequest,
+    WorkerResult,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 D = "testd"
@@ -495,6 +502,70 @@ def test_answers_after_the_pr_opened_go_to_a_follow_up_run(env: Env) -> None:
     assert first["kind"] == "start" and "It is open; map it." in first["prompt"]
 
 
+def test_a_squash_merged_pr_counts_as_merged(env: Env) -> None:
+    d = env.dispatcher(map_script())
+    drive(d)
+    run = map_run(env)
+    d.check_merged()
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+    env.forge.merge_pr(run["pr_url"])  # squashed: the Run's commits aren't in main
+    d.check_merged()
+    assert env.ledger.run(run["id"])["status"] == MERGED
+
+
+def test_github_failing_partway_waits_and_tries_again(env: Env) -> None:
+    open_pr = env.forge.open_pr
+    calls = []
+
+    def flaky(*args: Any) -> str:
+        calls.append(args)
+        if len(calls) == 1:
+            raise FactoryError("gh pr create: connection reset")
+        return open_pr(*args)
+
+    env.forge.open_pr = flaky  # type: ignore[method-assign]
+    d = env.dispatcher(map_script())
+    out = drive(d)
+    assert out[-1].startswith("waiting") and "connection reset" in out[-1]
+    drive(d)
+    run = map_run(env)
+    assert run["status"] == IN_REVIEW and len(calls) == 2
+
+
+def test_github_failing_again_and_again_blocks_the_run(env: Env) -> None:
+    open_pr = env.forge.open_pr
+
+    def down(*args: Any) -> str:
+        raise FactoryError("gh: authentication expired")
+
+    env.forge.open_pr = down  # type: ignore[method-assign]
+    d = env.dispatcher(map_script())
+    drive(d)
+    assert d.tick().action == "waiting"
+    out = d.tick()
+    assert out.action == "blocked" and "failed 3 times" in out.detail
+    assert map_run(env)["status"] == BLOCKED
+    # Once it's fixed and the issue closed, the job carries on where it stopped.
+    env.forge.open_pr = open_pr  # type: ignore[method-assign]
+    env.answer(1, "Signed in to gh again.")
+    d.poll_issues()
+    drive(d)
+    assert map_run(env)["status"] == IN_REVIEW
+    assert len(env.ledger.jobs(map_run(env)["id"], "pr")) == 1
+
+
+def test_a_parish_flag_from_a_stage_that_cant_park_is_sent_back(tmp_path: Path) -> None:
+    path = tmp_path / "h.json"
+    path.write_text(json.dumps({"status": "done", "summary": "s", "verdict": "approve",
+                                "flags": [{"severity": "blocking", "scope": "parish",
+                                           "subject": "directory:3", "question": "q"}]}))
+    assert "only map and seed" in read_handoff(path, "survey-review")[1][0]
+    data = json.loads(path.read_text())
+    del data["verdict"]
+    path.write_text(json.dumps(data))
+    assert not read_handoff(path, "map")[1]  # a map job parks the parish
+
+
 def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
     def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
@@ -877,6 +948,28 @@ def test_a_seed_that_parks_itself_is_not_held_to_seed_check(env: Env) -> None:
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
 
 
+def test_approvals_that_fail_their_check_are_kept_for_the_resumed_review(env: Env) -> None:
+    run = seed_env(env)
+    d = env.dispatcher(seed_script)
+    d.tick()  # st-clare's seed
+    env.failing["pnpm seed check st-clare"] = 1  # the approved seed fails its check once
+    out = d.tick()  # its review approves it, then the check fails
+    assert out.action == "blocked"
+    wt = Path(run["worktree"])
+    assert "approvals, check failing" in git(wt, "log", "-1", "--format=%s")
+    assert not git(wt, "status", "--porcelain")
+    env.answer(1, "Fixed the seed by hand.")
+    d.poll_issues()
+    drive(d)
+    review = env.ledger.jobs(run["id"], "seed-review")[0]
+    assert env.ledger.job(review["id"])["send_backs"] == 0  # not blamed for the approvals
+    assert not env.ledger.all("SELECT * FROM gate WHERE job_id = ? AND name = 'diff-scope' "
+                              "AND passed = 0", review["id"])
+    seed = json.loads((wt / "data" / "seeds" / "st-clare.json").read_text())
+    assert seed["status"] == "approved"
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
 def test_an_approved_seed_is_not_drafted_again(env: Env) -> None:
     env.commit_main({"data/seeds/st-clare.json": seed_file("st-clare", "approved")},
                     "st-clare approved")
@@ -939,6 +1032,19 @@ def test_follow_up_seed_run_waits_for_all_or_six_weeks(env: Env) -> None:
     assert r.start == ["b"] and r.overdue == ["c"]
 
 
+def test_first_seed_run_starts_after_six_weeks_even_short_of_80_percent(env: Env) -> None:
+    parishes = [f"p{i}" for i in range(10)]
+    merged_map(env, parishes, env.now)
+    db = env.tmp / "db.sqlite"
+    make_db(db, {p: (2 if i < 5 else 0) for i, p in enumerate(parishes)})
+    r = readiness.assess(env.ledger, env.config, D, db, repo=env.repo,
+                         at=env.now + timedelta(weeks=5))
+    assert r is not None and r.start == [] and r.overdue == []
+    r = readiness.assess(env.ledger, env.config, D, db, repo=env.repo,
+                         at=env.now + timedelta(weeks=6, hours=1))
+    assert r.start == parishes[:5] and r.overdue == parishes[5:]
+
+
 def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env) -> None:
     merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
     env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.tmp / "wt", status=MERGED,
@@ -971,6 +1077,55 @@ def test_usage_caps_and_weekly_pacing() -> None:
             for n, u in (("a", 50), ("b", 20))]
     assert choose(rows).account.name == "b"
     assert choose(rows, only="a").account.name == "a"
+
+
+def test_an_unused_usage_window_has_no_reset_time() -> None:
+    at = datetime(2026, 11, 2, tzinfo=UTC)
+    usage = parse_usage({"five_hour": {"utilization": 0, "resets_at": None},
+                         "seven_day": {"utilization": None, "resets_at": None}}, at)
+    assert usage.five_hour == 0 and usage.five_hour_resets == at + timedelta(hours=5)
+    assert usage.seven_day_resets == at + timedelta(days=7)
+    assert standing(Account("a", Path("/x")), usage, Config(), at).eligible
+
+
+def test_a_job_that_waited_on_usage_merges_main_first(env: Env) -> None:
+    env.config.accounts = [Account("a", Path("/x"))]
+    week = env.now + timedelta(days=3)
+    usage = {"five_hour": 90.0}
+    d = env.dispatcher(map_script(), fetch_usage=lambda a: Usage(
+        usage["five_hour"], env.now + timedelta(hours=1), 1, week))
+    assert d.tick().action == "waiting"  # the survey, before its first attempt
+    env.commit_main({"README.md": "new spec\n"}, "spec change")
+    usage["five_hour"] = 1.0
+    env.now += timedelta(hours=2)
+    assert d.tick().action == "ran"
+    assert (Path(map_run(env)["worktree"]) / "README.md").read_text() == "new spec\n"
+
+
+def test_a_usage_limit_without_a_session_keeps_what_the_job_was_told(env: Env) -> None:
+    class NoSession(StubWorker):
+        """A worker whose session never started (the CLI died before its first message)."""
+
+        def run(self, request: WorkerRequest) -> WorkerResult:
+            result = super().run(request)
+            result.session_id = None
+            return result
+
+    def surveying(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt == 2:
+            return StubAction(outcome=USAGE, resets_at=env.now + timedelta(hours=1))
+        return StubAction(files=survey_files(), handoff=done())
+
+    env.failing["diocese validate"] = 1  # attempt 1 is sent back
+    d = env.dispatcher(map_script(survey=surveying))
+    d.worker = env.worker = NoSession(map_script(survey=surveying))
+    drive(d)
+    env.now += timedelta(hours=2)
+    drive(d)
+    survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
+    prompts = [a["prompt"] for a in env.ledger.all(
+        "SELECT prompt FROM attempt WHERE job_id = ? ORDER BY n", survey["id"])]
+    assert len(prompts) == 3 and "failed on purpose" in prompts[2]
 
 
 def test_accounts_out_of_headroom_wait(env: Env) -> None:

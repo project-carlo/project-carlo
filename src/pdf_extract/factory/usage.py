@@ -24,6 +24,7 @@ from pdf_extract.factory.config import Account, Config
 
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 WEEK = timedelta(days=7)
+FIVE_HOURS = timedelta(hours=5)
 
 
 class UsageError(RuntimeError):
@@ -49,16 +50,21 @@ class Standing:
     eligible_at: datetime  # when it can next take a job, if not now
 
 
-def _parse_time(value: Any) -> datetime:
+def _parse_time(value: Any, unused: timedelta, at: datetime) -> datetime:
+    """A window's reset time. A window with no usage yet has none: it would start now."""
+    if value is None:
+        return at + unused
     when = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
     return when if when.tzinfo else when.replace(tzinfo=UTC)
 
 
-def parse_usage(body: Any) -> Usage:
+def parse_usage(body: Any, at: datetime | None = None) -> Usage:
+    at = at or datetime.now(UTC)
     try:
         five, week = body["five_hour"], body["seven_day"]
-        return Usage(float(five["utilization"] or 0), _parse_time(five["resets_at"]),
-                     float(week["utilization"] or 0), _parse_time(week["resets_at"]))
+        return Usage(float(five["utilization"] or 0),
+                     _parse_time(five["resets_at"], FIVE_HOURS, at),
+                     float(week["utilization"] or 0), _parse_time(week["resets_at"], WEEK, at))
     except (KeyError, TypeError, ValueError) as exc:
         raise UsageError(f"unexpected usage response: {exc!r}") from None
 
@@ -75,8 +81,11 @@ def _token(account: Account) -> str:
             return str(oauth["accessToken"])
         if attempt == 0:
             # Claude Code refreshes an expired login when it starts.
-            subprocess.run(["claude", "auth", "status"], capture_output=True, timeout=60,
-                           env={**os.environ, "CLAUDE_CONFIG_DIR": str(account.config_dir)})
+            try:
+                subprocess.run(["claude", "auth", "status"], capture_output=True, timeout=60,
+                               env={**os.environ, "CLAUDE_CONFIG_DIR": str(account.config_dir)})
+            except (OSError, subprocess.SubprocessError):
+                pass  # still expired below: the error says how to sign in again
     raise UsageError(f"{account.name}: the Claude login has expired; "
                      f"run CLAUDE_CONFIG_DIR={account.config_dir} claude /login")
 

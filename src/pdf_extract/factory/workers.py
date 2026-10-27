@@ -146,15 +146,16 @@ class SdkWorker:
             env=worker_env(request.account),
         )
         result = WorkerResult(CRASH, session_id=request.session_id, error="no result")
-        n = 0
         async for message in query(prompt=request.prompt, options=options):
             if isinstance(message, SystemMessage) and message.subtype == "init":
                 self._session = message.data.get("session_id") or self._session
             elif isinstance(message, AssistantMessage):
+                # Counted as they come, so a crash or timeout still reports its turns (the
+                # ResultMessage, when there is one, gives the exact count).
+                self._turns += 1
                 if message.error == "rate_limit":  # keep a RateLimitEvent's reset time
                     result = WorkerResult(USAGE, error="rate limit", resets_at=result.resets_at)
                 for block in message.content:
-                    n += 1
                     if isinstance(block, ToolUseBlock):
                         request.on_step("tool", block.name, json.dumps(block.input)[:500])
                     elif isinstance(block, TextBlock):

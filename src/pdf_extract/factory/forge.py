@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import urllib.parse
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Protocol
@@ -39,6 +40,7 @@ class Forge(Protocol):
     def reopen(self, number: int, body: str) -> None: ...
     def close(self, number: int, body: str) -> None: ...
     def open_pr(self, cwd: Path, branch: str, base: str, title: str, body: str) -> str: ...
+    def pr_merged(self, url: str) -> bool: ...
 
 
 def answer(issue: Issue, owner: str, suggestion: str) -> str | None:
@@ -138,6 +140,10 @@ class GhForge:
         return _gh("pr", "create", "--head", branch, "--base", base, "--title", title,
                    "--body-file", "-", cwd=cwd, input=body).strip()
 
+    def pr_merged(self, url: str) -> bool:
+        return _gh("pr", "view", url, "--json", "state", "--jq", ".state",
+                   cwd=self.cwd).strip() == "MERGED"
+
 
 def owner_login() -> str:
     return _gh("api", "user", "--jq", ".login").strip()
@@ -198,3 +204,14 @@ class LocalForge:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(f"# {title}\n\nbase: {base}\n\n{body}\n", encoding="utf-8")
         return path.resolve().as_uri()
+
+    def merge_pr(self, url: str) -> None:
+        """Mark a PR merged, as a squash merge on GitHub would (its commits aren't in main)."""
+        self._pr_path(url).with_suffix(".merged").touch()
+
+    def pr_merged(self, url: str) -> bool:
+        return self._pr_path(url).with_suffix(".merged").exists()
+
+    @staticmethod
+    def _pr_path(url: str) -> Path:
+        return Path(urllib.parse.unquote(urllib.parse.urlparse(url).path))

@@ -2,8 +2,9 @@
 
 A parish from a merged map Run is ready once the database has at least 2 of its
 bulletins. Only parishes promoted with a bulletin source count. The first seed Run
-starts once 80% are ready; a follow-up seeds the rest once they are all ready, or
-6 weeks after the map Run merged, when each one still not ready gets an issue.
+starts once 80% are ready; a follow-up seeds the rest once they are all ready. 6 weeks
+after the map Run merged, whatever is ready is seeded (even short of 80%, for the first
+Run), and each parish still not ready gets an issue.
 """
 
 from __future__ import annotations
@@ -62,12 +63,12 @@ def assess(ledger: Ledger, config: Config, diocese: str, db_path: Path,
     result = Readiness(diocese, seedable, seeding, ready, not_ready)
     if not remaining or any(r["status"] in (ACTIVE, BLOCKED, PENDING) for r in seed_runs):
         return result
-    if not seed_runs:
+    merged = [datetime.fromisoformat(r["merged_at"]) for r in maps if r["merged_at"]]
+    waited = bool(merged) and at >= min(merged) + timedelta(weeks=config.seed_follow_up_weeks)
+    if not seed_runs and not waited:
         if seedable and len(ready) >= config.seed_first_run_share * len(seedable):
             result.start = ready
         return result
-    merged_at = min(datetime.fromisoformat(r["merged_at"]) for r in maps if r["merged_at"])
-    waited = at >= merged_at + timedelta(weeks=config.seed_follow_up_weeks)
     if not not_ready or waited:
         result.start = ready
         result.overdue = not_ready if waited else []

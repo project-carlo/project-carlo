@@ -228,8 +228,9 @@ Each tick:
    Each step after the gates is recorded in the ledger as it completes, so a dispatcher
    restarted partway through skips what's done instead of committing or appending lessons
    twice.
-5. **Flags.** Advisory flags are stored for the PR. A blocking flag about a parish
-   **parks** that parish and opens an issue (§7); the Run carries on with the next job. A
+5. **Flags.** Advisory flags are stored for the PR. A blocking flag about a parish, from a
+   map or seed job (other stages are sent back for one), **parks** that parish and opens
+   an issue (§7); the Run carries on with the next job. A
    blocking flag about the Run (a bad survey, a merge conflict, a gate the worker can't pass
    on shared files) opens an issue and blocks the Run.
 
@@ -238,8 +239,9 @@ Job states: `queued → running → (gating) → done`, plus `waiting_usage`, `s
 state comes from its files (`diocese todo`, `seed status`), not the ledger.
 
 A Run in review becomes `merged` when its last commit is in `origin/main`, which the
-dispatcher checks after each `git fetch`; factory PRs are merged with a merge commit, not
-squashed or rebased. It doesn't watch the PR itself. You handle review comments in your
+dispatcher checks after each `git fetch`, or, for a PR squashed or rebased, when GitHub
+says its PR is merged. Merge factory PRs with a merge commit where you can, so main keeps
+the Run's history. You handle review comments in your
 own session.
 
 CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
@@ -372,7 +374,8 @@ rows first.
   count, for readiness and for the 80% below; excluded and open ones never do. Once a day the dispatcher refreshes its database copy
   (`pnpm data:pull`) and counts them.
 - **First seed Run.** Starts once 80% of the diocese's mapped parishes are ready, and
-  seeds those.
+  seeds those. If that hasn't happened 6 weeks after the map Run merged, it starts then
+  with whatever is ready, and each parish still not ready gets an issue, as below.
 - **Follow-up seed Run.** Seeds the rest. It starts when they are all ready, or 6 weeks
   after the map Run merged, whichever comes first. Each parish still not ready then gets an
   issue, since its bulletin source is probably broken.

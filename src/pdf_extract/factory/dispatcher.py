@@ -26,6 +26,7 @@ from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.handoff import (
     APPROVE,
     BLOCKING,
+    PARKING_STAGES,
     SEND_BACK,
     Handoff,
     SeedReview,
@@ -81,6 +82,10 @@ from pdf_extract.factory.workers import (
 
 LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
+MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
+FAILURE_RETRY = timedelta(minutes=5)
+# What a git, gh or command call raises when it fails; a job's tick waits and tries again.
+TRANSIENT = (FactoryError, OSError, subprocess.SubprocessError)
 REGENERATE = "pnpm --silent diocese promote {diocese}"
 
 
@@ -168,7 +173,39 @@ class Dispatcher:
             until = datetime.fromisoformat(job["wait_until"])
             if until > self.clock():
                 return Outcome("waiting", f"job {job['id']} until {job['wait_until']}", until)
-        return self.work(job)
+        key = f"failures:{job['id']}"
+        try:
+            outcome = self.work(job)
+        except TRANSIENT as exc:
+            return self._work_failed(job, key, exc)
+        if self.ledger.get(key):
+            self.ledger.set(key, 0)
+        return outcome
+
+    def _work_failed(self, job: Any, key: str, exc: Exception) -> Outcome:
+        """git or GitHub failed partway through a job (a network blip, an expired login).
+        Each step after the gates runs once, so trying the job again picks up where it
+        stopped; after a few failures in a row the Run blocks on an issue instead."""
+        LOGGER.warning("job %s failed: %s", job["id"], exc)
+        failures = (self.ledger.get(key) or 0) + 1
+        self.ledger.set(key, failures)
+        job = self.ledger.job(job["id"])
+        if job["status"] == RUNNING:
+            # Its worker's result, if any, is lost: resume the session.
+            self.ledger.set_job(job["id"], status=QUEUED, pending_prompt=json.dumps(
+                {"kind": "resume", "prompt": None}) if job["session_id"]
+                else job["pending_prompt"])
+        if failures >= MAX_FAILURES:
+            # The Run blocks, not the job: once the issue is closed, the job carries on
+            # from the step that failed instead of starting its worker again.
+            self.ledger.set(key, 0)
+            return self._block_run(self.ledger.run(job["run_id"]), None,
+                                   f"Job {job['name']} ({job['stage']}) failed {failures} "
+                                   f"times in a row: {exc}",
+                                   suggestion="Fix what failed (git, GitHub or the network), "
+                                   "then close this issue to try the job again.")
+        until = self.clock() + FAILURE_RETRY
+        return Outcome("waiting", f"job {job['id']} failed ({exc}); trying again", until)
 
     # ── Picking (§3) ────────────────────────────────────────────────────────
     def pick(self) -> Any | None:
@@ -270,7 +307,7 @@ class Dispatcher:
         spec = load_stage(job["stage"], worktree)
         if job["status"] == GATING:
             return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
-        if job["status"] == QUEUED and not self._attempts(job["id"]):
+        if job["status"] in (QUEUED, WAITING_USAGE) and not self._attempts(job["id"]):
             merged = self._merge_main(run, job, worktree)
             if merged is not None:
                 return merged
@@ -400,8 +437,12 @@ class Dispatcher:
         job = self.ledger.job(job["id"])
         if result.outcome == USAGE:
             until = result.resets_at or self.clock() + timedelta(minutes=30)
+            # With a session, it continues where it stopped. Without one, the next attempt
+            # starts fresh and still needs what this one was told (problems, an answer).
+            pending = (json.dumps({"kind": "continue", "prompt": None}) if job["session_id"]
+                       else job["pending_prompt"])
             self.ledger.set_job(job["id"], status=WAITING_USAGE, wait_until=until.isoformat(),
-                                pending_prompt=json.dumps({"kind": "continue", "prompt": None}))
+                                pending_prompt=pending)
             return Outcome("waiting", f"job {job['id']} hit a usage limit", until)
         if result.outcome == CRASH:
             pending = json.dumps({"kind": "resume", "prompt": None})
@@ -593,8 +634,17 @@ class Dispatcher:
             if self.ledger.get(f"approved:{job['id']}"):
                 problems = self._stage_gates(job, spec, values, worktree, None)
                 if problems:
+                    # Commit the approvals and precedents already written, so they aren't
+                    # taken for the reviewer's out-of-scope edits when it resumes. Once
+                    # fixed, the check passes on the next try.
+                    self._once(job, "approvals", lambda: git.commit(
+                        worktree, f"{self._subject(run, job)}: approvals, check failing",
+                        _trailers(run, job)))
+                    self._push(run, worktree)
                     return self._block_run(run, job, "Approved seeds fail their check:\n"
-                                           + "\n".join(problems))
+                                           + "\n".join(problems), suggestion="Fix the seeds "
+                                           "on the Run branch, or answer how the reviewer "
+                                           "should fix them, then close this issue.")
         self._once(job, "lessons", lambda: self._lessons(run, job, worktree, handoff))
         self._once(job, "leads", lambda: [self.ledger.run_sql(
             "INSERT INTO lead (run_id, job_id, touches, note) VALUES (?,?,?,?)",
@@ -860,12 +910,11 @@ class Dispatcher:
     def act_on_answer(self, flag: Any) -> None:
         run = self.ledger.run(flag["run_id"])
         job = self.ledger.job(flag["job_id"]) if flag["job_id"] else None
-        if flag["scope"] == "run":
+        if flag["scope"] == "run" or job is None or job["stage"] not in PARKING_STAGES:
+            # Only map and seed jobs park a parish to be requeued on its own (the handoff
+            # check refuses parish flags from other stages).
             if job is not None and job["status"] in (JOB_BLOCKED, SENT_BACK):
                 self._resume_blocked(run, job, flag)
-            self.ledger.run_sql("UPDATE flag SET status = ? WHERE id = ?", SETTLED, flag["id"])
-            return
-        if job is None:
             self.ledger.run_sql("UPDATE flag SET status = ? WHERE id = ?", SETTLED, flag["id"])
             return
         data = json.loads(job["input"])
@@ -874,10 +923,8 @@ class Dispatcher:
                                     "subject": subject, "flag": flag["id"]}
         if job["stage"] == "map":
             requeued |= {"batch": data.get("batch"), "entries": [subject]}
-        elif job["stage"] == "seed":
-            requeued |= {"parish": subject, "batch": data.get("batch")}
         else:
-            requeued |= {"entries": [subject]}
+            requeued |= {"parish": subject, "batch": data.get("batch")}
         target = run
         if run["status"] in (IN_REVIEW, MERGED):
             target = self._follow_up(run, subject)
@@ -911,8 +958,13 @@ class Dispatcher:
         return self.ledger.run(run_id)
 
     def check_merged(self) -> None:
+        """Its last commit in main, or (squashed or rebased, so it isn't) its PR merged."""
         for run in self.ledger.runs(IN_REVIEW):
-            if run["head_sha"] and git.is_merged(self.repo, run["head_sha"], self.config.upstream):
+            merged = run["head_sha"] and git.is_merged(self.repo, run["head_sha"],
+                                                       self.config.upstream)
+            if not merged and run["pr_url"]:
+                merged = self.forge.pr_merged(run["pr_url"])
+            if merged:
                 self.ledger.set_run(run["id"], status=MERGED, merged_at=now())
                 self.retire(self.ledger.run(run["id"]))
 

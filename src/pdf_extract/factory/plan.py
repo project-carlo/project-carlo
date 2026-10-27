@@ -93,7 +93,7 @@ def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:
     """The map Run's batches as parish slugs, keeping only `parishes`; the rest last."""
     records = parish_records(worktree, diocese)
-    wanted = [p for p in parishes]
+    wanted = list(parishes)
     placed: set[str] = set()
     out = []
     for batch in ordered_batches(worktree, diocese):

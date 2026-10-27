@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import playbook
-from pdf_extract.factory.handoff import schema_text
+from pdf_extract.factory.handoff import PARKING_STAGES, schema_text
 from pdf_extract.factory.ledger import LISTED, Ledger
 from pdf_extract.factory.plan import describe_entry, diocese_dir, ordered_batches
 from pdf_extract.factory.stages import StageSpec, fill
@@ -50,14 +50,24 @@ Before you end, write `{handoff_rel(run['id'], job['name'])}`, about 300 tokens:
 
 - `status`: `done` when the job is finished; `partial` if you ran out of room and should be
   continued; `blocked` when nothing more can be done without a decision.
-- `flags`: `blocking` sets a parish aside (`scope: parish`, subject `roster:id` or the
-  parish slug) until the owner answers an issue, while the rest of the Run carries on; a
-  blocking flag with `scope: run` stops the Run. `advisory` is listed in the PR: leave
-  that parish open or excluded with a reason. Give evidence and what you would do.
+{_flags_help(job['stage'])}
 - `leads`: something outside your input that later work should know, naming the batch id
   or `roster:id` it touches.
 - `lessons`: only what is reusable beyond one parish, one line each.
 """
+
+
+def _flags_help(stage: str) -> str:
+    if stage in PARKING_STAGES:
+        return """\
+- `flags`: `blocking` sets a parish aside (`scope: parish`, subject `roster:id` or the
+  parish slug) until the owner answers an issue, while the rest of the Run carries on; a
+  blocking flag with `scope: run` stops the Run. `advisory` is listed in the PR: leave
+  that parish open or excluded with a reason. Give evidence and what you would do."""
+    return """\
+- `flags`: a `blocking` flag (`scope: run`) stops the Run until the owner answers an
+  issue; this stage can't set a single parish aside. `advisory` is listed in the PR.
+  Give evidence and what you would do."""
 
 
 def _lines(items: list[str]) -> str:
