@@ -23,26 +23,42 @@ export const approximateLocationQuery = {
 } as const;
 
 /**
+ * Whether the home map opens on a first visit: no view in the URL and no
+ * church handed over by the landing page to fly to. Only then does it wait on
+ * the queries above before mounting. HomePage and the prefetch below both ask
+ * this, so they always agree on which fetches to make.
+ */
+export function isFirstVisitStart(search: string, navState: unknown): boolean {
+  if (decodeMapViewFromParams(new URLSearchParams(search)) != null) {
+    return false;
+  }
+  const centerOn =
+    typeof navState === "object" && navState !== null && "centerOn" in navState
+      ? navState.centerOn
+      : undefined;
+  return !centerOn;
+}
+
+/**
  * Starts the home map's startup fetches when the page loads straight onto the
  * map, instead of after the router has fetched the HomePage chunk. That saves
- * a round of requests before the first map tiles can load. Only the fetches
- * HomePage would make itself are started: the IP lookup only for a first
- * visit (no view in the URL, nothing handed over by the landing page).
+ * a round of requests before the first map tiles can load. Only a first visit
+ * waits on these, so a return visit (a view in the URL) fetches nothing early.
  */
 export function prefetchHomeStart(queryClient: QueryClient): void {
-  if (window.location.pathname !== "/") return;
-  void queryClient.prefetchQuery(churchSearchIndexQuery);
-  const hasView =
-    decodeMapViewFromParams(new URLSearchParams(window.location.search)) !=
-    null;
-  // React Router keeps navigation state under `usr` in history.state.
-  const routerState = (window.history.state as { usr?: unknown } | null)?.usr;
-  const hasCenterOn =
-    typeof routerState === "object" &&
-    routerState !== null &&
-    "centerOn" in routerState &&
-    routerState.centerOn != null;
-  if (!hasView && !hasCenterOn) {
-    void queryClient.prefetchQuery(approximateLocationQuery);
+  const { pathname, search } = window.location;
+  let firstVisit: boolean;
+  if (pathname === "/") {
+    // React Router keeps navigation state under `usr` in history.state.
+    const navState = (window.history.state as { usr?: unknown } | null)?.usr;
+    firstVisit = isFirstVisitStart(search, navState);
+  } else if (pathname === "/map") {
+    // The old map path redirects to a bare "/", dropping any query or state.
+    firstVisit = true;
+  } else {
+    return;
   }
+  if (!firstVisit) return;
+  void queryClient.prefetchQuery(churchSearchIndexQuery);
+  void queryClient.prefetchQuery(approximateLocationQuery);
 }

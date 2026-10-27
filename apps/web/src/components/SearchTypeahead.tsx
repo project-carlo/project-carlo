@@ -4,10 +4,11 @@ import {
   useCallback,
   useMemo,
   useLayoutEffect,
+  type RefObject,
   useRef,
   type ReactNode,
 } from "react";
-import { Command as CommandPrimitive } from "cmdk";
+import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { useQuery } from "@tanstack/react-query";
 import type FuseType from "fuse.js";
 import type { ChurchSearchResult } from "../api";
@@ -230,20 +231,7 @@ export function SearchTypeahead({
     ? "Search for a city, ZIP code, or address"
     : "Search for a church by name";
 
-  // cmdk marks its input expanded and pointing at its list at all times, but
-  // the list only exists while the dropdown is open. Keep both attributes
-  // true to the page. cmdk passes the same values on every render, so React
-  // never writes over these.
   const inputRef = useRef<HTMLInputElement | null>(null);
-  useLayoutEffect(() => {
-    const input = inputRef.current;
-    if (!input) return;
-    input.setAttribute("aria-expanded", String(showDropdown));
-    const listId = input.dataset.listId ?? input.getAttribute("aria-controls");
-    if (listId) input.dataset.listId = listId;
-    if (showDropdown && listId) input.setAttribute("aria-controls", listId);
-    else input.removeAttribute("aria-controls");
-  }, [showDropdown]);
 
   return (
     <Command
@@ -253,6 +241,7 @@ export function SearchTypeahead({
       label={inputLabel}
       className="overflow-visible bg-transparent p-0"
     >
+      <ComboboxAriaSync inputRef={inputRef} open={showDropdown} />
       <Popover open={showDropdown} onOpenChange={setIsOpen}>
         <PopoverAnchor asChild>
           <div ref={searchAnchorRef} className="relative w-full">
@@ -292,7 +281,6 @@ export function SearchTypeahead({
                 }}
                 placeholder={placeholder}
                 ref={inputRef}
-                aria-label={inputLabel}
                 autoComplete="off"
                 className={`min-w-0 flex-1 bg-transparent font-serif text-ink outline-none placeholder:text-ink-soft placeholder:italic ${
                   size === "lg" ? "text-[1.375rem]" : "text-[1.0625rem]"
@@ -455,4 +443,44 @@ export function SearchTypeahead({
       </Popover>
     </Command>
   );
+}
+
+/**
+ * cmdk's input always says it is expanded and points at its list and selected
+ * item, but here the list only exists while the dropdown is open. cmdk sets
+ * those attributes after the props it is given, so they can't be overridden
+ * as props; this corrects them on the element after every render instead.
+ * Rendered inside <Command> so it re-renders whenever the selection changes.
+ * e2e/home.spec.ts checks the result, so a cmdk change that breaks it fails
+ * a test.
+ */
+function ComboboxAriaSync({
+  inputRef,
+  open,
+}: {
+  inputRef: RefObject<HTMLInputElement | null>;
+  open: boolean;
+}) {
+  const selectedItemId = useCommandState((state) => state.selectedItemId);
+  // cmdk's list id, read from the input before it is first taken away.
+  const listIdRef = useRef<string | null>(null);
+  useLayoutEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+    listIdRef.current ??= input.getAttribute("aria-controls");
+    const listId = listIdRef.current;
+    input.setAttribute("aria-expanded", String(open));
+    setOrRemove(input, "aria-controls", open ? listId : null);
+    setOrRemove(
+      input,
+      "aria-activedescendant",
+      open ? (selectedItemId ?? null) : null,
+    );
+  });
+  return null;
+}
+
+function setOrRemove(el: Element, name: string, value: string | null) {
+  if (value == null) el.removeAttribute(name);
+  else el.setAttribute(name, value);
 }

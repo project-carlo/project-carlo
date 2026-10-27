@@ -34,6 +34,7 @@ import {
 import {
   approximateLocationQuery,
   churchSearchIndexQuery,
+  isFirstVisitStart,
 } from "../lib/homeStartQueries";
 import { firstVisitStart, type MapStart } from "../lib/mapStart";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
@@ -141,10 +142,8 @@ export function HomePage() {
   // because the estimate can be well off, or else on the whole area the site
   // covers. The map waits for the estimate, which is capped at a short
   // timeout, rather than jump once it arrives.
-  const [wantsFirstVisitStart] = useState(
-    () =>
-      urlMapView == null &&
-      !(location.state as HomeNavState | null)?.centerOn,
+  const [wantsFirstVisitStart] = useState(() =>
+    isFirstVisitStart(window.location.search, location.state),
   );
   const { data: approximateLocation, isPending: approximatePending } =
     useQuery({ ...approximateLocationQuery, enabled: wantsFirstVisitStart });
