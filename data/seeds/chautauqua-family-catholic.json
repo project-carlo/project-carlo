@@ -1,0 +1,2571 @@
+{
+  "schema_version": 1,
+  "parish_slug": "chautauqua-family-catholic",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:24Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:11:17Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches in one family (BP = Our Lady of Lourdes Bemus Point, M = St. Mary Mayville, FC = Christ Our Hope = St. Matthias Clymer, W = St. Dominic = St. James Major Westfield). Weekend, weekday, Saturday/Sunday confession and Friday Adoration times agree in all five bulletins; the holiday schedule on p7 is recorded as dated Masses. Open: whether the Westfield Saturday 4 PM Mass runs on first Saturdays (First Saturday Masses discontinued) and whether a Friday Adoration at Bemus Point that disappeared from the last two bulletins continues.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "887cb65d687b5e02b429b3ec458fd53c066bffa669f5a4604f02ebdb68125275",
+      "fetched_at": "2026-10-25T13:15:24Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "bc7fac1d75df9856a79bdc15a51c5475442bd303e9570ba419b675e4afbec293",
+      "fetched_at": "2026-10-18T12:42:07Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "3609f7439e9c3800920a6ff99126e613c26ff854d08b92f09c7fa8d2796a3c62",
+      "fetched_at": "2026-10-11T16:32:55Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "30ef1e19398fef707ed29541a93f79532d0b863fb31c97e1fb0ad915b69a3315",
+      "fetched_at": "2026-10-04T14:23:49Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "62351eb1ce0ef24849701a06af9218c492dd1da6235d4ed243e48fe8b70f953f",
+      "fetched_at": "2026-09-26T18:53:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[BP] 4:00PM (Saturday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[BP] 4:00PM (Saturday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[BP] 4:00PM (Saturday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[BP] 4:00PM (Saturday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Saturday 16:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Saturday 16:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Saturday 16:00 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Saturday 16:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Saturday 16:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Saturday 4:00 PM at Bemus Point (BP = St. Mary of Lourdes, 41 Main Street) is listed in the Mass listing of every bulletin read; R35 weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[BP] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[BP] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[BP] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[BP] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Sunday 08:45 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Sunday 08:45 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Sunday 08:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Sunday 08:45 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Sunday 08:45 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday 8:45 AM at Bemus Point is in the Mass listing of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[M] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[M] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[M] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[M] 8:45AM (Sunday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Sunday 08:45 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Sunday 08:45 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Sunday 08:45 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Sunday 08:45 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Sunday 08:45 st-mary-mayville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday 8:45 AM at Mayville (M = St. Mary of Lourdes, 22 East Chautauqua Street) is in the Mass listing of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[FC] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[FC] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[FC] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[FC] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Sunday 11:15 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Sunday 11:15 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Sunday 11:15 st-matthias-clymer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Sunday 11:15 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Sunday 11:15 st-matthias-clymer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday 11:15 AM at French Creek (FC = Christ Our Hope, 1762 French Creek Mina Rd = St. Matthias Clymer on the church list) is in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[W] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[W] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[W] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[W] 11:15AM (Sunday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Sunday 11:15 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Sunday 11:15 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Sunday 11:15 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Sunday 11:15 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Sunday 11:15 st-james-major-westfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday 11:15 AM at Westfield (W = St. Dominic, 15 Union Street = St. James Major Westfield on the church list) is in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "MONDAY [FC] 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "MONDAY [FC] 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "MONDAY [FC] 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "MONDAY [FC] 9:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Monday 09:00 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Monday 09:00 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Monday 09:00 st-matthias-clymer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Monday 09:00 st-matthias-clymer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Monday 09:00 st-matthias-clymer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Monday 9:00 AM at French Creek (St. Matthias, Clymer) is in the Mass listing every week read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "TUESDAY [M] 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "TUESDAY [M] 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "TUESDAY [M] 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "TUESDAY [M] 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Tuesday 08:00 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Tuesday 08:00 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Tuesday 08:00 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Tuesday 08:00 st-mary-mayville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Tuesday 08:00 st-mary-mayville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Tuesday 8:00 AM at Mayville is in the Mass listing every week read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "WEDNESDAY [BP) 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "WEDNESDAY [BP) 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "WEDNESDAY [BP) 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "WEDNESDAY [BP) 12:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Wednesday 12:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Wednesday 12:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Wednesday 12:00 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Wednesday 12:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Wednesday 12:00 our-lady-of-lourdes-bemus-point",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Wednesday 12:00 PM at Bemus Point is in the Mass listing every week read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "FRIDAY [W] 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "FRIDAY [W] 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "FRIDAY [W] 8:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "FRIDAY [W] 8:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Friday 08:30 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Friday 08:30 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Friday 08:30 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Friday 08:30 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Friday 08:30 st-james-major-westfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Friday 8:30 AM at Westfield is in the Mass listing every week read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 13,
+          "end_month": 10,
+          "end_day": 28
+        },
+        "note": "Fr. Romey Montero's Mass with Novena to Our Mother of Perpetual Help"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 6,
+          "said": "Fr. Romey Montero will lead Our Mother of Perpetual Help Novena, Wednesdays from May 13 - October 28 at St. Mary of Lourdes R.C. Church, Mayville ... 4-5pm Novena to Our Mother of Perpetual Help, Holy Mass (This is not a regularly scheduled Mass in the Chautauqua Family of Catholic Churches; it is an invitation to Fr. Romey's personal daily Mass.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "[M] Devotion/Mass to Our Lady of Perpetual Help - 3-5 pm (Wed, EVERY WEEK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 3,
+          "said": "[M] Devotion/Mass to Our Lady of Perpetual Help - 3-5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 3,
+          "said": "[M] Devotion/Mass to Our Lady of Perpetual Help - 3-5 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Wednesday 16:00 st-mary-mayville  “Devotion and Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Wednesday 16:00 st-mary-mayville  “Seasonal (May 13 - October 28); part of Novena to Our Mother of Perpetual Help”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Wednesday 16:00 st-mary-mayville  “Personal Mass of Fr. Romey Montero; Seasonal: May 13 - October 28”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Wednesday 16:00 st-mary-mayville  “Devotion/Mass to Our Lady of Perpetual Help”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Wednesday 15:00 st-mary-mayville  “Seasonal: Our Mother of Perpetual Help Novena and Mass (ends Oct 28)”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly qualifiers, Weekdays): seasonal weekly event listed in the 'Every Week' events with its season May 13 - October 28 (both ends given). The flyer calls it an invitation to Fr. Romey's personal daily Mass, extended to all, so it is not closed to the public (POLICY, What to extract); it is not part of the regular Mass schedule, which is why the note says so. As of Oct 25 only Wed Oct 28 remains in season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[BP] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[BP] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[BP] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[BP] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-lourdes-bemus-point",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Regularly scheduled confession times, Saturday night, in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[W] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[W] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[W] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[W] 3:15- 3:45 pm Saturday Night"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly confession Saturday 15:15–15:45 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly confession Saturday 15:15–15:45 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly confession Saturday 15:15–15:45 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly confession Saturday 15:15–15:45 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly confession Saturday 15:15–15:45 st-james-major-westfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Regularly scheduled confession times, Saturday night, in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[M] 8:00-8:30 am Sunday Morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[M] 8:00-8:30 am Sunday Morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[M] 8:00-8:30 am Sunday Morning"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[M] 8:00-8:30 am Sunday Morning"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly confession Sunday 08:00–08:30 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly confession Sunday 08:00–08:30 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly confession Sunday 08:00–08:30 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly confession Sunday 08:00–08:30 st-mary-mayville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly confession Sunday 08:00–08:30 st-mary-mayville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Regularly scheduled confession times, Sunday morning, in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[FC] After daily Mass on Monday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 2,
+          "said": "[FC] After daily Mass on Monday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 2,
+          "said": "[FC] After daily Mass on Monday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "[FC] After daily Mass on Monday"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly confession Monday 09:30 st-matthias-clymer  “After daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly confession Monday 09:30 st-matthias-clymer  “After daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly confession Monday 09:30 st-matthias-clymer  “After 9:00 AM daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly confession Monday 09:30 st-matthias-clymer  “After 9:00 AM daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly confession Monday 09:30 st-matthias-clymer  “After daily Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: the bulletin gives only 'after daily Mass on Monday' (Monday Mass is 9:00 AM), so POLICY's weekday rule puts it 30 minutes after the Mass starts; no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": true,
+        "season": null,
+        "note": "Adoration and devotion"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield  “Adoration and devotion”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "specific_date adoration 2026-10-02 09:00–15:00 st-james-major-westfield  “First Friday Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly qualifiers): Fridays 9-10 AM at Westfield, except first Fridays, which the same line extends to 9-3 PM (separate slot). Recorded as the weeks that remain so the two do not overlap (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bc7fac1d",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am; First Fridays 9-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Friday 09:00–15:00 st-james-major-westfield  “First Fridays only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly adoration Friday 09:00–10:00 st-james-major-westfield  “Adoration and devotion”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "specific_date adoration 2026-10-02 09:00–15:00 st-james-major-westfield  “First Friday Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R12: named monthly service, printed on p3 of the newest bulletin ('First Fridays 9-3pm') and the calendar lists 11/6 FIRST FRIDAY. The newest week (Oct 25-Nov 1) holds no first Friday, but the line is printed in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 13,
+          "end_month": 10,
+          "end_day": 28
+        },
+        "note": "Holy Hour with Exposition and Benediction"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 6,
+          "said": "Wednesdays from May 13 - October 28 at St. Mary of Lourdes R.C. Church, Mayville 3-4pm Holy Hour, Exposition of the Blessed Sacrament, Chaplet of the Divine Mercy, Holy Rosary, Confession, Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 3,
+          "said": "[M] Devotion/Mass to Our Lady of Perpetual Help - 3-5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 3,
+          "said": "[M] Devotion/Mass to Our Lady of Perpetual Help - 3-5 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Wednesday 15:00–16:00 st-mary-mayville  “Seasonal (May 13 - October 28); Holy Hour and Exposition”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Wednesday 15:00–16:00 st-mary-mayville  “Exposition of the Blessed Sacrament; Seasonal: May 13 - October 28”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly adoration Wednesday 15:00–16:00 st-mary-mayville  “Holy Hour; Exposition of the Blessed Sacrament, Benediction”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-mayville  “Seasonal: Includes Holy Hour, Exposition, and Benediction (ends Oct 28)”  (a different time)",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-mayville  “Holy Hour, Exposition and Benediction”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, POLICY (What to extract): Holy Hour with Exposition and Benediction is one Adoration event with the note Benediction; seasonal May 13 - October 28 (both ends given). History's alternate times (15:00-16:00 vs 16:00-17:00) differ by bulletin; the flyer in the newest issue says 3-4 PM for the Holy Hour and 4-5 PM for Mass (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": 13,
+          "end_month": 10,
+          "end_day": 28
+        },
+        "note": "During Adoration"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 6,
+          "said": "3-4pm Holy Hour, Exposition of the Blessed Sacrament, Chaplet of the Divine Mercy, Holy Rosary, Confession, Benediction"
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly confession Wednesday 15:00–16:00 st-mary-mayville  “During Holy Hour”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-mayville  “Seasonal (ends Oct 28)”  (a different time)",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-mayville  (a different time)",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-mayville  “Seasonal: May 13 - October 28”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, POLICY (Times): Confession is listed within the 3-4 PM Holy Hour with Exposition, so it takes the Adoration's hours with the note During Adoration. Older history read this as 4-5 PM; the flyer's 3-4 block is the Holy Hour.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "[W] 4:00PM (Saturday Oct 24 listing)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "11/7 FIRST SATURDAY - NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 4,
+          "said": "...decided to discontinue the Celebration of First Saturday Masses at St. Dominic's Parish. Poor attendance, pastoral needs, and parish time concerns"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 3 ... [W] 4:00PM (DM)/[DQ] Katie Fighera"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "weekly mass Saturday 16:00 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "weekly mass Saturday 16:00 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly mass Saturday 16:00 st-james-major-westfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly mass Saturday 16:00 st-james-major-westfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly mass Saturday 16:00 st-james-major-westfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R30/R28: The Saturday 4:00 PM Mass at Westfield is printed every week. On the first Saturday (Oct 3) the Mass listing, which is complete (it even says 'NO SCHEDULED MASS' for Thursdays), shows no Mass other than the 4:00 PM, so the discontinued 'First Saturday Mass' may be that 4:00 PM Mass. The newest calendar says 'FIRST SATURDAY - NO MASS' on Nov 7 but never says the vigil is cancelled (R17). Leaning to every Saturday except the first because a wrong Mass time is worse than a missing one; History cancelled only Nov 7 at 4 PM.",
+      "question": "Keep the Westfield (St. Dominic) Saturday 4:00 PM Mass on first Saturdays?",
+      "options": [
+        {
+          "label": "Every Saturday except first Saturdays",
+          "entry": {
+            "church_slug": "st-james-major-westfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": true,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Saturday",
+          "entry": {
+            "church_slug": "st-james-major-westfield",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3609f743",
+          "page": 3,
+          "said": "[BP] Adoration 10:45 -11:45pm (under Fri, EVERY WEEK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "30ef1e19",
+          "page": 3,
+          "said": "[BP] Adoration 10:45 -11:45pm (under Fri, EVERY WEEK)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "Fri [W] Adoration and devotion 9-10am / First Fridays 9-3pm (no [BP] Adoration line)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "weekly adoration Friday 22:45–23:45 our-lady-of-lourdes-bemus-point  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "30ef1e19398f",
+          "said": "weekly adoration Friday 22:45–23:45 our-lady-of-lourdes-bemus-point  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "62351eb1ce0e",
+          "said": "weekly adoration Friday 22:45–23:45 our-lady-of-lourdes-bemus-point  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R29/R31: three older bulletins (9/27, 10/4, 10/11) list '[BP] Adoration 10:45-11:45pm' under Friday; the last two (10/18, 10/25) drop it with no word. The printed 'pm' (10:45 PM) is not plausible, so the time is probably 10:45 AM. Leaning to leave it out because it is gone from the last two bulletins and the time is unreadable.",
+      "question": "Add Friday Adoration at Our Lady of Lourdes, Bemus Point?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Fridays 10:45-11:45 AM",
+          "entry": {
+            "church_slug": "our-lady-of-lourdes-bemus-point",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "10:45",
+            "end_time": "11:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thursday Bible Study line only"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "Thurs. [FC] Bible Study - after 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 2,
+          "said": "THURSDAY - OCTOBER 29 NO SCHEDULED MASS IN FAMILY #5"
+        }
+      ],
+      "rationale": "R39, R24: the events list mentions a 9:00 AM Mass only as the time of the Thursday Bible Study, while every bulletin's Mass listing says 'NO SCHEDULED MASS' on Thursday; the Bible Study line looks like a stale reference, and a Bible Study is not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-25",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Eve; with anointing of the sick"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Thanksgiving Eve 6:30 PM Westfield (with anointing of the sick) (St. Dominic) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-11-25 18:30 st-james-major-westfield  “Thanksgiving Eve; with anointing of the sick”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-11-25 18:30 st-james-major-westfield  “Thanksgiving Eve with anointing of the sick”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-11-25 18:30 st-james-major-westfield  “Thanksgiving Eve Mass with anointing of the sick”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass in the newest bulletin's Holiday and Holy Day Schedule (image page).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Thanksgiving Day 9:30 AM Mayville (St. Mary of Lourdes) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-11-26 09:30 st-mary-mayville  “Thanksgiving Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-11-26 09:30 st-mary-mayville  “Thanksgiving Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-11-26 09:30 st-mary-mayville  “Thanksgiving Day Mass”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass in the newest bulletin's Holiday and Holy Day Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Solemnity of the Immaculate Conception, Tuesday, December 8, 2026: 9:00 AM French Creek (Christ Our Hope) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-08 09:00 st-matthias-clymer  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-08 09:00 st-matthias-clymer  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-08 09:00 st-matthias-clymer  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass; POLICY (Weekly or dated, rule 7): holy days are dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Solemnity of the Immaculate Conception: 12:00 PM Bemus Point (St. Mary of Lourdes) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-08 12:00 our-lady-of-lourdes-bemus-point  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-08 12:00 our-lady-of-lourdes-bemus-point  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-08 12:00 our-lady-of-lourdes-bemus-point  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Solemnity of the Immaculate Conception: 4:00 PM Mayville (St. Mary of Lourdes) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-08 16:00 st-mary-mayville  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-08 16:00 st-mary-mayville  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-08 16:00 st-mary-mayville  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemnity of the Immaculate Conception"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Solemnity of the Immaculate Conception: 6:30 PM Westfield (St. Dominic) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-08 18:30 st-james-major-westfield  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-08 18:30 st-james-major-westfield  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-08 18:30 st-james-major-westfield  “Solemnity of the Immaculate Conception”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated holy day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Christmas Eve 4:00 PM Bemus Point (St. Mary of Lourdes) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-24 16:00 our-lady-of-lourdes-bemus-point  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-24 16:00 our-lady-of-lourdes-bemus-point  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-24 16:00 our-lady-of-lourdes-bemus-point  “Christmas Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass in the Holiday and Holy Day Schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Christmas Eve 4:00 PM Mayville (St. Mary of Lourdes) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-24 16:00 st-mary-mayville  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-24 16:00 st-mary-mayville  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-24 16:00 st-mary-mayville  “Christmas Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Christmas Eve 6:30 PM French Creek (Christ Our Hope) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-24 18:30 st-matthias-clymer  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-24 18:30 st-matthias-clymer  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-24 18:30 st-matthias-clymer  “Christmas Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-24",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Christmas Eve 6:30 PM Westfield (St. Dominic) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-24 18:30 st-james-major-westfield  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-24 18:30 st-james-major-westfield  “Christmas Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-24 18:30 st-james-major-westfield  “Christmas Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Christmas Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "Christmas Day 9:00 AM Mayville (St. Mary of Lourdes) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-25 09:00 st-mary-mayville  “Christmas Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-25 09:00 st-mary-mayville  “Christmas Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-25 09:00 st-mary-mayville  “Christmas Day”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated Christmas Day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "New Year's Eve 4:00 PM Mayville (St. Mary of Lourdes) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-31 16:00 st-mary-mayville  “New Year's Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-31 16:00 st-mary-mayville  “New Year's Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-31 16:00 st-mary-mayville  “New Year's Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Eve"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "New Year's Eve 4:00 PM Westfield (St. Dominic) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2026-12-31 16:00 st-james-major-westfield  “New Year's Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-12-31 16:00 st-james-major-westfield  “New Year's Eve”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2026-12-31 16:00 st-james-major-westfield  “New Year's Eve”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Eve Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-bemus-point",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day, Solemnity of Mary the Mother of God"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "New Year's Day 9:00 AM Bemus Point (St. Mary of Lourdes) DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2027-01-01 09:00 our-lady-of-lourdes-bemus-point  “New Year's Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2027-01-01 09:00 our-lady-of-lourdes-bemus-point  “New Year's Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2027-01-01 09:00 our-lady-of-lourdes-bemus-point  “New Year's Day”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthias-clymer",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-01-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "New Year's Day, Solemnity of Mary the Mother of God"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 7,
+          "said": "New Year's Day 9:00 AM French Creek (Christ Our Hope) RM"
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date mass 2027-01-01 09:00 st-matthias-clymer  “New Year's Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2027-01-01 09:00 st-matthias-clymer  “New Year's Day”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "3609f7439e9c",
+          "said": "specific_date mass 2027-01-01 09:00 st-matthias-clymer  “New Year's Day”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: dated New Year's Day Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-mayville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-17",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Family-wide Penance Service"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 5,
+          "said": "the Family wide Penance Service being held in Mayville at 6:30 PM on Thursday, December 17th."
+        },
+        {
+          "source": "history",
+          "bulletin": "887cb65d687b",
+          "said": "specific_date confession 2026-12-17 18:30 st-mary-mayville  “Family wide Penance Service”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: dated Penance Service (Reconciliation) at St. Mary of Lourdes, Mayville; the Liturgy/Spiritual Life recap prints date, time and place.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-major-westfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Mass discontinued"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 3,
+          "said": "11/7 FIRST SATURDAY - NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "887cb65d",
+          "page": 4,
+          "said": "decided to discontinue the Celebration of First Saturday Masses at St. Dominic's Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc7fac1d75df",
+          "said": "specific_date mass 2026-11-07 16:00 st-james-major-westfield  CANCELLED; “First Saturday Mass discontinued”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, R27: not a separate decision. The Nov 7 4 PM Mass at Westfield is covered by the open question about first Saturdays (its first option, every Saturday except the first, leaves Nov 7 without a Mass). The bulletin never says the 4 PM vigil is cancelled (R17), so a standalone dated cancellation is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

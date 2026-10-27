@@ -1,0 +1,1953 @@
+{
+  "schema_version": 1,
+  "parish_slug": "central-niagara-catholic",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:12Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:11:19Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Central Niagara Catholic Family has six listed churches. The schedule box and the weekly intentions agree across the three recent issues read, so weekend, weekday, Adoration and confession slots are settled; All Saints (Jan-Jun) and St. John (Jul-Dec) alternate the Saturday vigil and its confession. The All Souls Masses at All Saints and Newfane on Nov 2 are dated. Open: the third-Sunday Spanish Mass time (12:30 in three places, 12:00 in one notice). The Olcott summer Mass is excluded because Memorial Day to Labor Day cannot be written as a season.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "96643f86360d090c57643db4052f6f2ed67894a160bdc17bdaa1f6893dbe17eb",
+      "fetched_at": "2026-10-25T13:15:12Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3132cecda06f65fdd67cfd5cac83708ed9c4030921f5a7c5e496efa347b55607",
+      "fetched_at": "2026-10-18T12:42:01Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "e3dfdead8705f23146947c4a9f8b26830637487ff78eac8444774c2966bc6fbb",
+      "fetched_at": "2026-10-11T16:32:42Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "23c17e5338d5cd0ba25fa29d97ddfe5f97d3df85379ee7f1baa077181df015f0",
+      "fetched_at": "2026-10-04T14:23:22Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "8f344188ddbc81296b65231b12f80314c96e3fe229d97e51fe7c8d970d7a28bb",
+      "fetched_at": "2026-09-26T18:53:27Z",
+      "published_date": "2026-09-26",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 7,
+          "start_day": null,
+          "end_month": 12,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "Saturday Vigil 4:00pm St. John Baptist (SJB - December)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Saturday, October 24 4:00pm SJB- Jane Arlington by St. John's Finance Council"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "4:00pm St. John Baptist (SJB - December) (ASP January - June)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-lockport  “July to December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-lockport  “July-December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-lockport  “July through December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-lockport  “Listed in current intentions despite seasonal schedule note”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-lockport  “July - December”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the schedule box prints SJB through December and All Saints for January-June; SJB's own confession line says Jul-Dec, so the season is July-December. Weekly intentions list SJB 4:00 PM each Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 1,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "Saturday Vigil ... (ASP January - June)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "(ASP January - June)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Saturday 16:00 all-saints-lockport  “January to June”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Saturday 16:00 all-saints-lockport  “January through June”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box in both bulletins read as All Saints' January-June Saturday vigil; it is out of season now, so no weekly intention lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-wilson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "4:00pm St. Brendan on the Lake (SBW)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Saturday, October 24 4:00pm SBW-Anthony & Theresa Moley by Mary Moley Palacios"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Saturday, October 17 4:00pm SBW-Carl Kilroy by Linda Moran"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-rosary-wilson",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: SBW is St. Brendan Wilson (the former Our Lady of the Rosary), listed in the schedule box and every Saturday's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-wilson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "St. Brendan on the Lake Sat. 3:15-3:50pm (Wilson)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "Sat. 3:15-3:50pm(Wilson)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly confession Saturday 15:15–15:50 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly confession Saturday 15:15–15:50 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly confession Saturday 15:15–15:50 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly confession Saturday 15:15–15:50 our-lady-of-the-rosary-wilson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly confession Saturday 15:15–15:50 our-lady-of-the-rosary-wilson",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the confession box of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-lockport",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 1,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "All Saints: Sat. 3:00-3:50pm (Jan-Jun)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "All Saints: Sat. 3:00-3:50pm (Jan-Jun)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly confession Saturday 15:00–15:50 all-saints-lockport  “January to June”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly confession Saturday 15:00–15:50 all-saints-lockport  “January through June”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the confession box gives the months, which POLICY keeps as the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 7,
+          "start_day": null,
+          "end_month": 12,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "St. John the Baptist Sat. 3:00-3:50pm (Jul-Dec)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "St. John the Baptist Sat. 3:00-3:50pm (Jul-Dec)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly confession Saturday 15:00–15:50 st-john-baptist-lockport  “July to December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly confession Saturday 15:00–15:50 st-john-baptist-lockport  “July-December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly confession Saturday 15:00–15:50 st-john-baptist-lockport  “July through December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly confession Saturday 15:00–15:50 st-john-baptist-lockport  “July - December”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly confession Saturday 15:00–15:50 st-john-baptist-lockport  “July - December”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the confession box gives the months, which POLICY keeps as the season. The website's June 20 start is not used; the bulletin's months are.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bridget-newfane",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "Sat. 3:15-3:50pm(Wilson) Fri. 8:00-8:25am(Newfane)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "Fri. 8:00-8:25am(Newfane)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly confession Friday 08:00–08:25 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly confession Friday 08:00–08:25 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly confession Friday 08:00–08:25 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly confession Friday 08:00–08:25 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly confession Friday 08:00–08:25 st-bridget-newfane",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the confession box of both bulletins. The website lists a different Newfane confession (Sun 7:30-7:50) but its schedule is out of date against the bulletins (it also lists a Friday SJB Mass the bulletins never show), so the bulletins decide.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-barker",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:10",
+        "end_time": "08:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "Our Lady of the Lake Sun. 8:10-8:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "Our Lady of the Lake Sun. 8:10-8:25am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly confession Sunday 08:10–08:25 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly confession Sunday 08:10–08:25 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly confession Sunday 08:10–08:25 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly confession Sunday 08:10–08:25 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly confession Sunday 08:10–08:25 st-patrick-barker",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Our Lady of the Lake is the Barker church. Printed in the confession box of both bulletins; the website's Sun 9:15-9:25 is out of date against the bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "7:00am St. John the Baptist (SJB)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Sunday, October 25 7:00am SJB -Brian O'Donnell Toal"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 07:00 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 07:00 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 07:00 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 07:00 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 07:00 st-john-baptist-lockport",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-barker",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "8:30am Our Lady of the Lake, Barker (OLL)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Sunday, October 25 8:30am OLL - Lawrence Schmitt"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 08:30 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 08:30 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 08:30 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 08:30 st-patrick-barker",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 08:30 st-patrick-barker",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "9:00am All Saints (ASP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Sunday, October 25 9:00am ASP - Carl Layer"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 09:00 all-saints-lockport  “Live-streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 09:00 all-saints-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 09:00 all-saints-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 09:00 all-saints-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 09:00 all-saints-lockport",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bridget-newfane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "10:00am St. Brendan on the Lake, Newfane (SBN)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Sunday, October 25 10:00am SBN - William Rettberg"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 10:00 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 10:00 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 10:00 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 10:00 st-bridget-newfane",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 10:00 st-bridget-newfane",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule and in every week's intentions. The St. Brendan page's sidebar line 'Live Stream: 8:00am Sunday' looks like a leftover from an older schedule and is not a Mass time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "10:30am St. John the Baptist (SJB)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Sunday, October 25 10:30am SJB - Paul Yoviene"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 10:30 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 10:30 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 10:30 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 10:30 st-john-baptist-lockport",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 10:30 st-john-baptist-lockport",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday schedule and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "3rd Sunday of the Month 12:30pm, Spanish Mass (SJB)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 6,
+          "said": "Nov 15: 12:30 pm: (SJB Church) Misa en espanol"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 10,
+          "said": "La proxima Misa en espanol se celebrara aqui, en la iglesia de San Juan Bautista, el 15 de noviembre a las 12:00 p. m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Sunday, October 18 12:30pm, SJB - La Familia Mandujano Paredes, en accion de gracias"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 12:30 st-john-baptist-lockport  “3rd Sunday of the month; Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Sunday 12:30 st-john-baptist-lockport  “3rd Sunday of the month, Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "specific_date mass 2026-10-18 12:30 st-john-baptist-lockport  “Spanish Mass”",
+          "page": 10
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Sunday 12:30 st-john-baptist-lockport  “3rd Sunday of the month; Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Sunday 12:30 st-john-baptist-lockport  “3rd Sunday of the month, Spanish Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R28: a named monthly service (R11/R12 pattern; Nov 15 is the next one). The schedule box, the November calendar and the October 18 intention say 12:30; one Spanish-language notice on p10 says 12:00. Leaning 12:30 because three specific sources agree.",
+      "question": "Third-Sunday Spanish Mass at St. John the Baptist: 12:30 PM or 12:00 PM?",
+      "options": [
+        {
+          "label": "Third Sundays 12:30 PM",
+          "entry": {
+            "church_slug": "st-john-baptist-lockport",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Third Sundays 12:00 PM",
+          "entry": {
+            "church_slug": "st-john-baptist-lockport",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "third"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Monday, October 26 7:30am SJB - Mother of Eileen Coleman"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Monday, October 19 7:30am SJB - Mark Leitner"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Monday, October 12 7:30am SJB - Teresa, John & Camillo Angelucci"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Monday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Monday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Monday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Monday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Monday 07:30 st-john-baptist-lockport",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same church, weekday and time in three bulletins covering different weeks; the Monday-Thursday listings in the intentions are the weekday Mass schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Tuesday, October 27 7:30am SJB - People of the Central Niagara Catholic Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Tuesday, October 20 7:30am SJB - Pat Joensen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Tuesday, October 13 7:30am SJB - Mike Cutter"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Tuesday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Tuesday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Tuesday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Tuesday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Tuesday 07:30 st-john-baptist-lockport",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Wednesday, October 28 12:10pm SJB - Louis & Carmella Scinta"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Wednesday, October 21 12:10pm SJB - Mary Jane Riley"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Wednesday, October 14 12:10pm SJB - Joan Dolansky"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Wednesday 12:10 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Wednesday 12:10 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Wednesday 12:10 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Wednesday 12:10 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Wednesday 12:10 st-john-baptist-lockport",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Thursday, October 29 7:30am SJB - Patricia Joesen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Thursday, October 22 7:30am SJB - Jennifer Ann Blackley"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Thursday, October 15 7:30am SJB - Bob Newton"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Thursday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Thursday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Thursday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Thursday 07:30 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Thursday 07:30 st-john-baptist-lockport",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-wilson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Tuesday, October 27 8:30am, SBW - Paul J Tarajos"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Tuesday, October 20 8:30am, SBW - Richard Beyea II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Tuesday, October 13 8:30am, SBW - Gerard Kieman"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-the-rosary-wilson",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-the-rosary-wilson",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-the-rosary-wilson",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-the-rosary-wilson",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-the-rosary-wilson",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: SBW is St. Brendan Wilson; same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-barker",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Thursday, October 29 8:30am OLL- Living & Deceased members of the Rosary Altar Society"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 8,
+          "said": "Join us for Thursday morning at the 8:30 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Thursday, October 22 8:30am OLL- Dr. David Ludwig"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Thursday, October 15 8:30am OLL-Joan Harriss"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Thursday 08:30 st-patrick-barker",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Thursday 08:30 st-patrick-barker",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Thursday 08:30 st-patrick-barker",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Thursday 08:30 st-patrick-barker",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Thursday 08:30 st-patrick-barker",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: OLL is Our Lady of the Lake, Barker; same slot in three bulletins covering different weeks. The Rosary at 8:05 and the Litany after Mass are devotions and are not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bridget-newfane",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Friday, October 30 8:30am SBN -John F Blackley"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Friday, October 23 8:30am SBN -Joseph Bittner"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Friday, October 16 8:30am SBN -Francis Blackley"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Friday 08:30 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly mass Friday 08:30 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Friday 08:30 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly mass Friday 08:30 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly mass Friday 08:30 st-bridget-newfane",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bridget-newfane",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Monday, October 26 4:00-7:00pm SBN - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Monday, October 19 4:00-7:00pm SBN - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Monday, October 12 4:00-7:00pm SBN - NO Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly adoration Monday 16:00–19:00 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly adoration Monday 16:00–19:00 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly adoration Monday 16:00–19:00 st-bridget-newfane",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly adoration Monday 16:00–19:00 st-bridget-newfane",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly adoration Monday 16:00–19:00 st-bridget-newfane",
+          "page": 3
+        }
+      ],
+      "rationale": "R18, R35: printed weekly in the intentions; the October 12 'NO' was a one-off for Columbus Day (before as_of, so no cancellation is kept), and history shows the slot every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-lockport",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Tuesday, October 27 12:00-4:00pm, SJB - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Tuesday, October 20 12:00-4:00pm, SJB - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Tuesday, October 13 12:00-4:00pm, SJB - Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly adoration Tuesday 12:00–16:00 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly adoration Tuesday 12:00–16:00 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly adoration Tuesday 12:00–16:00 st-john-baptist-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly adoration Tuesday 12:00–16:00 st-john-baptist-lockport",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly adoration Tuesday 12:00–16:00 st-john-baptist-lockport",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-lockport",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 2,
+          "said": "Thursday, October 29 8:45am-12:00noon ASP - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 2,
+          "said": "Thursday, October 22 8:45am-12:00noon ASP - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3dfdead",
+          "page": 2,
+          "said": "Thursday, October 15 8:45am-12:00noon ASP - Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly adoration Thursday 08:45–12:00 all-saints-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3132cecda06f",
+          "said": "weekly adoration Thursday 08:45–12:00 all-saints-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly adoration Thursday 08:45–12:00 all-saints-lockport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "23c17e5338d5",
+          "said": "weekly adoration Thursday 08:45–12:00 all-saints-lockport",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8f344188ddbc",
+          "said": "weekly adoration Thursday 08:45–12:00 all-saints-lockport",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: same slot in three bulletins covering different weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "all-saints-lockport",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass of Remembrance"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 3,
+          "said": "Mass Schedule for Monday, November 2nd 7:30am at St. John's, 6:00pm at All Saints, 7:00pm at St. Brendan - Newfane"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 5,
+          "said": "November 2, 2026 6:00PM All Souls' Day Mass, All Saints Parish, 76 Church Street"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 6,
+          "said": "Nov 2: 6:00 pm: (ASP Church) All Souls' Day Mass of Remembrance"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "specific_date mass 2026-11-02 18:00 all-saints-lockport  “All Souls' Day Mass of Remembrance”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass at a listed church on or after as_of, printed on three pages.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bridget-newfane",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass of Remembrance"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 3,
+          "said": "7:00pm at St. Brendan - Newfane"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 9,
+          "said": "All Souls Day Mass of Remembrance ... Monday, November 2 at 7:00 pm St. Brendan on the Lake in Newfane"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 6,
+          "said": "Nov 2: 7:00 pm (SBN Church) All Souls' Day Mass of Remembrance"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "specific_date mass 2026-11-02 19:00 st-bridget-newfane  “All Souls' Day Mass of Remembrance”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass at a listed church on or after as_of. The 7:30 AM at SJB that day is the regular Monday Mass (POLICY, Weekly or dated rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-charles-borromeo-olcott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Day to Labor Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 1,
+          "said": "11:00am St. Brendan on the Lake (SBO) (Memorial Day - Labor Day.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3132cecd",
+          "page": 1,
+          "said": "11:00am St. Brendan on the Lake (SBO) (Memorial Day - Labor Day.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "96643f86360d",
+          "said": "weekly mass Sunday 11:00 st-charles-borromeo-olcott  “Memorial Day to Labor Day”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e3dfdead8705",
+          "said": "weekly mass Sunday 11:00 st-charles-borromeo-olcott  “Memorial Day through Labor Day”",
+          "page": 1
+        }
+      ],
+      "rationale": "R33: the summer season is bounded by Memorial Day and Labor Day, which move between years (May 25-31 and Sept 1-7); the file's season holds only fixed months or days, so any season would be false for up to a week at each end. It is out of season now; update mode can read it again in the spring.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96643f86",
+          "page": 4,
+          "said": "Mass for the Loss of a Child ... Saturday, November 14, at noon, at St. Timothy church, 565 East Park Drive, Tonawanda 14150"
+        }
+      ],
+      "rationale": "R22: the Nov 14 noon Mass for the Loss of a Child is held at St. Timothy, Tonawanda, another parish's church, so it has no church of this parish to attach to.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

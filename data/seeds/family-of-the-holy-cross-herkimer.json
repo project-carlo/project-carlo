@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "parish_slug": "family-of-the-holy-cross-herkimer",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:19:11Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:55:01Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches (Blessed Sacrament Mohawk, St. Francis de Sales Herkimer, St. John the Baptist Newport, Sts. Anthony & Joseph Herkimer). The newest (Nov 1, 3-page) bulletin prints no Mass schedule: only Saturday 3:00 Reconciliation and a Thursday Noon Mass reference at Sts. Anthony & Joseph. Weekend Masses are settled from the Oct 11 intentions plus the parish's current Mass Times page (R6), as are the Tuesday and Friday weekday Masses. Open: Thursday 12:00 vs 12:05, a Friday Holy Hour at Newport, and the Wednesday Mass pattern.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "258d6c5cc304b584fe86b8a36db6a0b9b55cc4b2b861396ab2c8025147ecd120",
+      "fetched_at": "2026-10-25T13:19:11Z",
+      "published_date": "2026-11-01",
+      "read": true
+    },
+    {
+      "content_hash": "c775171e03419a7941321add81b1d06098effab227b70d0169a6bbc8fc899865",
+      "fetched_at": "2026-09-28T21:57:24Z",
+      "published_date": "2026-10-11",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-anthony-joseph-herkimer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "258d6c5c",
+          "page": 1,
+          "said": "Reconciliation: St. Anthony & St. Joseph Church on Saturday's 3.00-3.45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 1,
+          "said": "Reconciliation: St. Anthony & St. Joseph Church on Saturday's 3.00-3.45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "258d6c5cc304",
+          "said": "weekly confession Saturday 15:00–15:45 sts-anthony-joseph-herkimer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly confession Saturday 15:00–15:45 sts-anthony-joseph-herkimer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacramental Information box on page 1 of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-anthony-joseph-herkimer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 2,
+          "said": "Mass Intentions ~ St. Anthony & St. Joseph Church, Saturday, October 10 ~ 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Saturday: 4:00 PM English St. Anthony & St. Joseph Church, Herkimer",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the parish's live eCatholic calendar list this slot as repeating weekly through the fall of 2026, and the Oct 11 bulletin prints the same Saturday time.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin (Nov 1) prints no Mass schedule or intentions, only a Thursday noon Mass at Sts. Anthony & Joseph and Saturday 3:00 Reconciliation at that church, which fit the site; the Oct 11 bulletin's Mass intentions show this time and church."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/vigil-mass/20261010",
+          "said": "Saturday, October 10, 2026, 4:00 PM Repeats every Saturday. Location: Sts. Anthony and Joseph Church",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the parish's live eCatholic calendar list this slot as repeating weekly through the fall of 2026, and the Oct 11 bulletin prints the same Saturday time.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin (Nov 1) prints no Mass schedule or intentions, only a Thursday noon Mass at Sts. Anthony & Joseph and Saturday 3:00 Reconciliation at that church, which fit the site; the Oct 11 bulletin's Mass intentions show this time and church."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly mass Saturday 16:00 sts-anthony-joseph-herkimer",
+          "page": 2
+        }
+      ],
+      "rationale": "R6, R35: the newest bulletin prints no weekend Mass times (3-page issue with no intentions); the parish's own current Mass Times page gives it and the Oct 11 intentions confirm the time and church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-mohawk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 2,
+          "said": "Mass Intentions ~ Blessed Sacrament Church, Saturday, October 10 ~ 5:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Saturday: 5:30 PM English Blessed Sacrament Church, Mohawk",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page is the parish's own and matches the live calendar, which has recurring weekly Mass events running through November 2026.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The Oct 11 bulletin's Mass intentions show Saturday 5:30 PM at Blessed Sacrament; the newest bulletin prints no weekend schedule, and nothing in it contradicts the site."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly mass Saturday 17:30 blessed-sacrament-mohawk",
+          "page": 2
+        }
+      ],
+      "rationale": "R6, R35: weekend Mass absent from the newest bulletin; the parish's current site and the Oct 11 intentions agree on time and church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-newport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 2,
+          "said": "Mass Intentions ~ St. John the Baptist, Sunday, October 11 ~ 8:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Sunday: 8:00 AM English St. John the Baptist Church, Newport",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the live calendar both show this as a recurring weekly Sunday Mass in October 2026.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The Oct 11 bulletin's intentions list the Sunday 8:00 AM Mass at St. John the Baptist; the newest bulletin has no weekend schedule to conflict."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/mass/20261004",
+          "said": "Sunday, October 4, 2026, 8:00 AM - 9:00 AM Repeats every Sunday. Location: St. John the Baptist Church",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the live calendar both show this as a recurring weekly Sunday Mass in October 2026.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The Oct 11 bulletin's intentions list the Sunday 8:00 AM Mass at St. John the Baptist; the newest bulletin has no weekend schedule to conflict."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly mass Sunday 08:00 st-john-the-baptist-newport",
+          "page": 2
+        }
+      ],
+      "rationale": "R6, R35: weekend Mass absent from the newest bulletin; current site and Oct 11 intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-de-sales-herkimer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 2,
+          "said": "Mass Intentions ~ St. Francis de Sales Church, Sunday, October 11 ~ 10:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Sunday: 10:00 AM English St. Francis de Sales Church, Herkimer",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the live calendar both show this as a recurring weekly Sunday Mass in October 2026.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The Oct 11 bulletin's intentions list the Sunday 10:00 AM Mass at St. Francis de Sales; the newest bulletin has no weekend schedule to conflict (it mentions a Knights of Columbus coffee after Mass Sunday Nov 1 at St. Francis)."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/mass-1/20261004",
+          "said": "Sunday, October 4, 2026, 10:00 AM - 11:00 AM Repeats every Sunday. Location: St. Francis De Sales Church",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "The Mass Times page and the live calendar both show this as a recurring weekly Sunday Mass in October 2026.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The Oct 11 bulletin's intentions list the Sunday 10:00 AM Mass at St. Francis de Sales; the newest bulletin has no weekend schedule to conflict (it mentions a Knights of Columbus coffee after Mass Sunday Nov 1 at St. Francis)."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly mass Sunday 10:00 st-francis-de-sales-herkimer",
+          "page": 2
+        }
+      ],
+      "rationale": "R6, R35: weekend Mass absent from the newest bulletin; current site and Oct 11 intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-mohawk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Tuesday: 8:30 AM English Blessed Sacrament Church, Mohawk",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "Both the Mass Times page and a dated calendar event in October 2026 give it; the calendar series repeats weekly into late November, so it is the current fall schedule.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin prints no weekday schedule other than Thursday noon Mass; the site's Thursday noon Mass at Sts. Anthony & Joseph matches the bulletin's Thursday Noon Mass line, so the site's weekday schedule fits it."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/mass-11/20261006",
+          "said": "MASS- Blessed Sacrament, Tuesday, October 6, 2026, 8:30 AM - 9:00 AM Repeats every Tuesday until November 24, 2026. Location: Blessed Sacrament",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "Both the Mass Times page and a dated calendar event in October 2026 give it; the calendar series repeats weekly into late November, so it is the current fall schedule.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin prints no weekday schedule other than Thursday noon Mass; the site's Thursday noon Mass at Sts. Anthony & Joseph matches the bulletin's Thursday Noon Mass line, so the site's weekday schedule fits it."
+          }
+        }
+      ],
+      "rationale": "R6: weekday Mass the bulletins never print; the parish's own current schedule and calendar give the time and church. The calendar's end date of Nov 24 looks like a calendar horizon (all weekday series stop Nov 24-27), not a season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-newport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Friday: 8:30 AM English St. John the Baptist, Newport",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "Both the Mass Times page and a dated calendar event in October 2026 give it; the series repeats weekly into late November.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin prints no weekday schedule other than Thursday noon Mass, which the site matches; nothing in either bulletin contradicts the Friday Mass."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/adoration-noon-mass-2/20261009",
+          "said": "MASS-Newport, Friday, October 9, 2026, 8:30 AM - 9:00 AM Repeats every Friday until November 27, 2026. Location: St. John the Baptist Church. Followed by HOLYY HOUR until 10.00",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:58:05Z",
+            "current_because": "Both the Mass Times page and a dated calendar event in October 2026 give it; the series repeats weekly into late November.",
+            "bulletin": "258d6c5c",
+            "fits_because": "The newest bulletin prints no weekday schedule other than Thursday noon Mass, which the site matches; nothing in either bulletin contradicts the Friday Mass."
+          }
+        }
+      ],
+      "rationale": "R6: weekday Mass the bulletins never print; the parish's own current schedule and calendar give the time and church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "258d6c5c",
+          "page": 3,
+          "said": "Every THURSDAY after NOON MASS senior citizens gathering in St. Anthony's Parish Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c775171e",
+          "page": 5,
+          "said": "Every THURSDAY after NOON MASS senior citizens gathering in St. Anthony's Parish Hall"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Thursday: 12:05 PM English St. Anthony & St Joseph Church, Herkimer"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/noon-mass/20261001",
+          "said": "MASS- SA & J, Thursday, October 1, 2026, 12:00 PM - 12:30 PM Repeats every Thursday until November 26, 2026. Location: Sts. Anthony and Joseph Church. Mass will begin at 12.05"
+        },
+        {
+          "source": "history",
+          "bulletin": "258d6c5cc304",
+          "said": "weekly mass Thursday 12:00 sts-anthony-joseph-herkimer  “Noon Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c775171e0341",
+          "said": "weekly mass Thursday 12:00 sts-anthony-joseph-herkimer",
+          "page": 5
+        }
+      ],
+      "rationale": "R28/C8: both bulletins call it the Noon Mass (R1 would time it 12:00 under POLICY), but the parish's own site says Mass begins at 12:05. Leaning 12:05 as the explicit parish time; history reads 12:00.",
+      "question": "What time is the Thursday Mass at Sts. Anthony & St. Joseph?",
+      "options": [
+        {
+          "label": "12:05 PM",
+          "entry": {
+            "church_slug": "sts-anthony-joseph-herkimer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:05",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "12:00 PM (noon)",
+          "entry": {
+            "church_slug": "sts-anthony-joseph-herkimer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/holy-hour-9/20261009",
+          "said": "HOLY HOUR, Friday, October 9, 2026, 9:00 AM - 10:00 AM Repeats every Friday until November 20, 2026"
+        },
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/events/adoration-noon-mass-2/20261009",
+          "said": "MASS-Newport, Friday 8:30 AM - 9:00 AM, St. John the Baptist Church. Followed by HOLYY HOUR until 10.00"
+        }
+      ],
+      "rationale": "R32/R6: website only; the Holy Hour event page names no church. The Newport Friday Mass event says it is followed by a Holy Hour until 10:00, so Newport is likely, and a Holy Hour is Adoration (POLICY). The series ends Nov 20 (a week before the Mass series), so continuation is also unclear. Not in either bulletin.",
+      "question": "Add a Friday 9:00-10:00 AM Holy Hour at St. John the Baptist, Newport?",
+      "options": [
+        {
+          "label": "Fridays 9:00-10:00 AM",
+          "entry": {
+            "church_slug": "st-john-the-baptist-newport",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "10:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour after the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Wednesday: 8:30 AM English St. Francis De Sales, Herkimer (First Wednesday 9 am- Children's Mass)"
+        }
+      ],
+      "rationale": "C4/R32: website only. Leaning on C4: the first-Wednesday 9 AM Children's Mass seems to replace the 8:30 on that week. A separate site calendar page titled NO MASS for Wednesday, Sept 30 (no repeat, no location) is unexplained.",
+      "question": "What is the Wednesday morning Mass schedule at St. Francis de Sales?",
+      "options": [
+        {
+          "label": "Wednesdays 8:30 AM except the first",
+          "entry": {
+            "church_slug": "st-francis-de-sales-herkimer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": true,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Every Wednesday 8:30 AM",
+          "entry": {
+            "church_slug": "st-francis-de-sales-herkimer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.familyoftheholycross.org/mass-times",
+          "said": "Wednesday: 8:30 AM ... St. Francis De Sales, Herkimer (First Wednesday 9 am- Children's Mass)"
+        }
+      ],
+      "rationale": "R32/POLICY: a Mass the schedule lists for children is open unless limited; the site gives no limit. Website only; the newest bulletin's week holds a first Wednesday (Nov 4) but prints nothing about it.",
+      "question": "Add a first-Wednesday 9:00 AM Children's Mass at St. Francis de Sales?",
+      "options": [
+        {
+          "label": "First Wednesdays 9:00 AM",
+          "entry": {
+            "church_slug": "st-francis-de-sales-herkimer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Children's Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

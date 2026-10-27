@@ -1,0 +1,1351 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-spirit-sacred-heart-east-greenbush",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:22:32Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:58:38Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Holy Spirit (Sat 4 PM, Sun 11 AM, Tue 6:30 PM Mass, Tuesday 7 PM Adoration and Confession) and Sacred Heart (Sun 9 AM Mass, Sunday Confession), all printed alike in five bulletins. The Monday to Friday 8 AM Mass is at the Sisters of the Resurrection, which is not on the church list, so it is left out. Open: the Wednesday rectory chapel Mass location, the Nov 2 school Mass and the Nov 7 Confirmation Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ceac59dae2cc78ec8ce77ea4faba1d40d6b6cea3d176b88eb786395271d4abd3",
+      "fetched_at": "2026-10-25T13:22:32Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "18e954162aa40119e4ae2444ab600bc7bcca37459fa3cbb5f07c6f04691c488d",
+      "fetched_at": "2026-10-18T12:50:28Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "617e4c5dc0ac2234f11b2732eb72e7f0505b96a9709438830fc36e26686a8512",
+      "fetched_at": "2026-10-11T16:37:26Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "b250bdd2c9823ceebe8a18e9eec1e119fa3637aca201a71378ee0baec2069344",
+      "fetched_at": "2026-10-04T14:47:52Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "28528be1cc745565e62a7822d39d4e11d50bdc43a41bb0e7230a39b37c328e47",
+      "fetched_at": "2026-09-28T21:58:09Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Saturday Vigil: 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Saturday 16:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly mass Saturday 16:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Saturday 16:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly mass Saturday 16:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Saturday 16:00 holy-spirit-east-greenbush",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read; the weekly intentions list also shows 4pm Vigil Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Sunday: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Church of the Holy Spirit Mass Schedule: Sunday: 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Sunday 11:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly mass Sunday 11:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Sunday 11:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly mass Sunday 11:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Sunday 11:00 holy-spirit-east-greenbush",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: Mass Schedule box, all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Tuesday 18:30 holy-spirit-east-greenbush  “In the church”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly mass Tuesday 18:30 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "specific_date mass 2026-11-03 18:30 holy-spirit-east-greenbush  “Installation Mass for Fr. Tim”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Tuesday 18:30 holy-spirit-east-greenbush  “In the church”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly mass Tuesday 18:30 holy-spirit-east-greenbush  “In the church”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Tuesday 18:30 holy-spirit-east-greenbush  “In the church”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R18: Mass Schedule box in all five bulletins; the Oct 6 and 13 cancellations (Fr. Tim on vacation) were before as_of (R16) and the newest lists Tuesday 10/27 6:30pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Sacred Heart Church Mass Schedule: Sundays at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Sacred Heart Church Mass Schedule: Sundays at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Sacred Heart Church Mass Schedule: Sundays at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Sacred Heart Church Mass Schedule: Sundays at 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Sacred Heart Church Mass Schedule: Sundays at 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Sunday 09:00 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly mass Sunday 09:00 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Sunday 09:00 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly mass Sunday 09:00 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Sunday 09:00 sacred-heart-castleton-on-hudson",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: Mass Schedule box and weekly list, all five bulletins read. The Sept 27 'no Mass at Sacred Heart' notice is a one-time past date (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Reconciliation - Sacred Heart (Sunday 8:15-8:45am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Reconciliation - Sacred Heart (Sunday 8:15-8:45am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Reconciliation - Sacred Heart (Sunday 8:15-8:45am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Reconciliation - Sacred Heart (Sunday 8:15-8:45am)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Reconciliation - Sacred Heart (Sunday 8:15-8:45am)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly confession Sunday 08:15–08:45 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly confession Sunday 08:15–08:45 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly confession Sunday 08:15–08:45 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly confession Sunday 08:15–08:45 sacred-heart-castleton-on-hudson",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly confession Sunday 08:15–08:45 sacred-heart-castleton-on-hudson",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: Sacraments of Healing box, all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Reconciliation - Holy Spirit (Tuesday 7:00-7:45pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Reconciliation - Holy Spirit (Tuesday 7:00-7:45pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Reconciliation - Holy Spirit (Tuesday 7:00-7:45pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Reconciliation - Holy Spirit (Tuesday 7:00-7:45pm)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Reconciliation - Holy Spirit (Tuesday 7:00-7:45pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly confession Tuesday 19:00–19:45 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly confession Tuesday 19:00–19:45 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly confession Tuesday 19:00–19:45 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly confession Tuesday 19:00–19:45 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly confession Tuesday 19:00–19:45 holy-spirit-east-greenbush",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: Sacraments of Healing box gives a clock time, all five bulletins read; POLICY, Times: a stated clock time wins over 'during Adoration'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary and Divine Mercy Chaplet"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Eucharistic Adoration every Tuesday evening beginning at 7:00 pm at Holy Spirit. We will be praying the Rosary & Divine Mercy Chaplet."
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Eucharistic Adoration every Tuesday evening beginning at 7:00 pm at Holy Spirit. We will be praying the Rosary & Divine Mercy Chaplet."
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Eucharistic Adoration every Tuesday evening beginning at 7:00 pm at Holy Spirit. We will be praying the Rosary & Divine Mercy Chaplet."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Eucharistic Adoration every Tuesday evening beginning at 7:00 pm at Holy Spirit. We will be praying the Rosary & Divine Mercy Chaplet."
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Eucharistic Adoration every Tuesday evening beginning at 7:00 pm at Holy Spirit. We will be praying the Rosary & Divine Mercy Chaplet."
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly adoration Tuesday 19:00 holy-spirit-east-greenbush",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly adoration Tuesday 19:00 holy-spirit-east-greenbush  “Includes Rosary and Divine Mercy Chaplet”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly adoration Tuesday 19:00 holy-spirit-east-greenbush  “Includes Rosary, Divine Mercy Chaplet, and confession”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly adoration Tuesday 19:00 holy-spirit-east-greenbush  “Includes Rosary and Divine Mercy Chaplet”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly adoration Tuesday 19:00 holy-spirit-east-greenbush  “Includes Rosary and Divine Mercy Chaplet”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed identically in all five bulletins; no end time is given, so none is recorded (POLICY, Times). The parish site (hsceg.org/eucharistic-adoration) also lists a Tuesday 7:00 p.m. holy hour with exposition. Adoration continued during the Oct 6-15 weekday-Mass vacation (Oct 11 p5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Mon 11/2 All Soul's Day Mass 6:00pm Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 5,
+          "said": "All Soul's Day - Monday, November 2nd ... 6:00pm - Holy Spirit"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "specific_date mass 2026-11-02 18:00 holy-spirit-east-greenbush  “All Souls Day Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, POLICY, Weekly or dated rule 7: a feast-day Mass at a time outside the weekly schedule is dated; Nov 2 is after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-east-greenbush",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass for Fr. Tim"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Fr. Tim's Installation Mass will be on Tuesday, November 3 at 6:30pm at Holy Spirit Church with Bishop Mark."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Installation Mass for Fr. Tim: Tuesday 11/3 at 6:30pm at Holy Spirit."
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "specific_date mass 2026-11-03 18:30 holy-spirit-east-greenbush  “Installation Mass for Fr. Tim”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, POLICY, Weekly or dated rule 7: the Installation Mass falls at the regular Tuesday 6:30 PM Mass at Holy Spirit, so only the weekly slot is recorded (history kept it as a dated event).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At the Sisters of the Resurrection"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 5,
+          "said": "All Soul's Day - Monday, November 2nd 8:00am - Sisters of the Resurrection"
+        }
+      ],
+      "rationale": "R23: the same Sisters of the Resurrection chapel, which is not on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church & Wednesday 9:00am in the rectory chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18e95416",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church & Wednesday 9:00am in the rectory chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "617e4c5d",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church & Wednesday 9:00am in the rectory chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b250bdd2",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church & Wednesday 9:00am in the rectory chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "28528be1",
+          "page": 4,
+          "said": "Weekday Mass: Tuesday 6:30pm in the church & Wednesday 9:00am in the rectory chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Wednesday 09:00 holy-spirit-east-greenbush  “In the rectory chapel”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "18e954162aa4",
+          "said": "weekly mass Wednesday 09:00 holy-spirit-east-greenbush  “In the rectory chapel”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Wednesday 09:00 holy-spirit-east-greenbush  “In the rectory chapel”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b250bdd2c982",
+          "said": "weekly mass Wednesday 09:00 holy-spirit-east-greenbush  “In the rectory chapel”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Wednesday 09:00 holy-spirit-east-greenbush  “In the rectory chapel”",
+          "page": 4
+        }
+      ],
+      "rationale": "R32, POLICY Churches and chapels: printed weekly under the Church of the Holy Spirit's own schedule heading (667 Columbia Turnpike), but no bulletin says the rectory is at that address, and POLICY leaves out a chapel whose location is unclear. Lean to include because it is the parish's own Mass on its own church-specific schedule. The Oct 7 and 14 Masses were cancelled for Fr. Tim's vacation, before as_of.",
+      "question": "Is the Wednesday 9:00 AM Mass in the Holy Spirit rectory chapel on the church grounds, so it belongs at Holy Spirit?",
+      "options": [
+        {
+          "label": "Wednesdays 9:00 AM at Holy Spirit, rectory chapel",
+          "entry": {
+            "church_slug": "holy-spirit-east-greenbush",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Rectory chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 5,
+          "said": "All Soul's Day - Monday, November 2nd 9:00am - Holy Spirit School Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "specific_date mass 2026-11-02 09:00 holy-spirit-east-greenbush  “All Souls Day School Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: the listing does not say whether the public is welcome or the Mass is for students only (POLICY leaves out a school Mass limited to its students). Only the school Mass is listed under the day's times; leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Include the Holy Spirit School Mass at 9:00 AM on Monday, November 2 (All Souls)?",
+      "options": [
+        {
+          "label": "Include 9:00 AM",
+          "entry": {
+            "church_slug": "holy-spirit-east-greenbush",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls Day School Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Sat 11/7 Confirmation Mass 11:00am Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 5,
+          "said": "Confirmation Candidates who will complete their initiation ... on Saturday, November 7th at 11:00am at Holy Spirit Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "specific_date mass 2026-11-07 11:00 holy-spirit-east-greenbush  “Confirmation Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: the Mass is listed in Holy Spirit's public Upcoming Events with a time and place, and the bulletin does not limit attendance, but a Confirmation Mass for named candidates may be mainly for their families. Leaning to include since POLICY treats an unlimited special Mass at a time outside the weekly schedule as dated and open.",
+      "question": "Include the Confirmation Mass at Holy Spirit on Saturday, November 7 at 11:00 AM?",
+      "options": [
+        {
+          "label": "Include Nov 7, 11:00 AM",
+          "entry": {
+            "church_slug": "holy-spirit-east-greenbush",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-07",
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Sisters of the Resurrection (weekday Mass chapel)",
+      "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection; All Soul's Day Nov 2 8:00am",
+      "bulletin": "ceac59da",
+      "page": 3
+    }
+  ]
+}

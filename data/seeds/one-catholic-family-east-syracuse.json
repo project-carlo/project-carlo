@@ -1,0 +1,775 @@
+{
+  "schema_version": 1,
+  "parish_slug": "one-catholic-family-east-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-25T13:19:31Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:53:34Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three linked parishes (St Francis Bridgeport, St Mary Minoa, St Matthew East Syracuse). The bulletin prints no standing schedule box; Masses come from the Weekend Mass Schedule and weekday intentions, which agree across all five bulletins, plus a Confession notice. Mon/Wed/Fri 9 AM Masses were cancelled with 'NO MASS' for two weeks in October but are back in the newest issue. No open questions; a dated Nov 6 Adoration at St Mary is included.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7c5df5213c15d19faee6c9b339657d68e38ab0495e21d788a69577ca79311f1b",
+      "fetched_at": "2026-10-25T13:19:31Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "27a3cdd2ad3fad0f36d4c444509b8800c52279343873d5c50c33c7932b4a9b7d",
+      "fetched_at": "2026-10-18T12:46:54Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "f9a9543a9f5d8c9d78f4d1d9fb435526c756522dc0f9f07a00d3deda578438a3",
+      "fetched_at": "2026-10-11T16:35:42Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "5aac9efff969d503e81f9d2962db8c0e2d6b6812025f56fc4cab51da0bed7ff4",
+      "fetched_at": "2026-10-04T14:36:31Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "2f21d4e387430e7e268bfcd94d61b90aa223eb7f93f0176add23b71e2af6a6a7",
+      "fetched_at": "2026-09-28T00:08:13Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-east-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Saturday @ St Matthew's 4:30pm (Weekend Mass Schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Saturday @ St Matthew's 4:30pm (Weekend Mass Schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Saturday @ St Matthew's 4:30pm (Weekend Mass Schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Saturday @ St Matthew's 4:30pm (Weekend Mass Schedule)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Saturday @ St Matthew's 4:30pm (Weekend Mass Schedule)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Saturday 16:30 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly mass Saturday 16:30 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly mass Saturday 16:30 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Saturday 16:30 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Saturday 16:30 st-matthew-east-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the Weekend Mass Schedule lists the Saturday 4:30 PM Mass at St Matthew's in all five bulletins read (five different weeks); no standing schedule box is printed, so the listing under that heading is the evidence.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-east-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Sunday @ St. Matthew's 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Sunday @ St. Matthew's 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Sunday @ St. Matthew's 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Sunday @ St. Matthew's 8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Sunday @ St. Matthew's 8am"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Sunday 08:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly mass Sunday 08:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly mass Sunday 08:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Sunday 08:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Sunday 08:00 st-matthew-east-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: listed under the Weekend Mass Schedule in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-bridgeport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Sunday @ St Francis 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Sunday @ St Francis 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Sunday @ St Francis 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Sunday @ St Francis 9:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Sunday @ St Francis 9:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Sunday 09:30 st-francis-of-assisi-bridgeport",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly mass Sunday 09:30 st-francis-of-assisi-bridgeport",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly mass Sunday 09:30 st-francis-of-assisi-bridgeport",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Sunday 09:30 st-francis-of-assisi-bridgeport",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Sunday 09:30 st-francis-of-assisi-bridgeport",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: listed under the Weekend Mass Schedule in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-minoa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Sunday @ St Mary 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Sunday @ St Mary 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Sunday @ St Mary 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Sunday @ St Mary 11am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Sunday @ St Mary 11am"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: listed under the Weekend Mass Schedule in all five bulletins read; confession notice also says 'after 11am Mass' at St Mary.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-minoa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Monday, October 26 @ St Mary 9am Ron Hill"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Monday, October 5 @ St Mary 9am Terry Pease"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35, R18: Monday 9 AM Mass at St Mary has intentions in the newest bulletin and in the Oct 4 one. The Oct 11 and 18 issues print 'NO MASS' for Oct 12 and 19 and the Sept 27 issue 'NO MASS - Priest Convocation' for Sept 28; those dated cancellations are before as_of (R16), and the newest bulletin shows the weekly Mass back.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-minoa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Wednesday, October 28 @ St Mary 9am Carol Canorro"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Wednesday, October 7 @ St Mary 9am Francis Visconti"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Wednesday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Wednesday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Wednesday 09:00 st-mary-of-the-assumption-minoa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35, R18: Wednesday 9 AM Mass at St Mary has intentions in the newest bulletin and in the Oct 4 one. 'NO MASS' on Sept 30, Oct 14 and Oct 21 are dated cancellations before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-east-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Friday, October 30 @ St Matthew's 9am Michael Jacopelle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Friday, October 9 @ St Matthew's 9am Florine Bonacci"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Friday October 2 @ St Matthew's 9am Tommy Russell"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly mass Friday 09:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly mass Friday 09:00 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly mass Friday 09:00 st-matthew-east-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35, R18: Friday 9 AM Mass at St Matthew's has intentions in the newest bulletin and in two older ones. 'NO MASS' on Oct 16 and 23 are dated cancellations before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-matthew-east-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Sacrament of Penance (Confession) Saturdays @ St Matthew's 3:30-4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Sacrament of Penance (Confession) Saturdays @ St Matthew's 3:30-4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Sacrament of Penance (Confession) Saturdays @ St Matthew's 3:30-4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Sacrament of Penance (Confession) Saturdays @ St Matthew's 3:30-4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Sacrament of Penance (Confession) Saturdays @ St Matthew's 3:30-4:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly confession Saturday 15:30–16:15 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly confession Saturday 15:30–16:15 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly confession Saturday 15:30–16:15 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly confession Saturday 15:30–16:15 st-matthew-east-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly confession Saturday 15:30–16:15 st-matthew-east-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-minoa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 5,
+          "said": "Sundays @ St Mary after 11am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "27a3cdd2",
+          "page": 5,
+          "said": "Sundays @ St Mary after 11am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f9a9543a",
+          "page": 5,
+          "said": "Sundays @ St Mary after 11am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5aac9eff",
+          "page": 5,
+          "said": "Sundays @ St Mary after 11am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2f21d4e3",
+          "page": 5,
+          "said": "Sundays @ St Mary after 11am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "weekly confession Sunday 12:00 st-mary-of-the-assumption-minoa  “Following 11:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "27a3cdd2ad3f",
+          "said": "weekly confession Sunday 12:00 st-mary-of-the-assumption-minoa  “Following 11:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "5aac9efff969",
+          "said": "weekly confession Sunday 12:00 st-mary-of-the-assumption-minoa  “Following 11:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2f21d4e38743",
+          "said": "weekly confession Sunday 12:00 st-mary-of-the-assumption-minoa  “Following 11:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f9a9543a9f5d",
+          "said": "weekly confession Sunday 11:00 st-mary-of-the-assumption-minoa  “After 11:00 AM Mass”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R10: no clock time, so POLICY works it out as one hour after the 11:00 AM weekend Mass starts. History read 11:00 in one issue (R8); 12:00 is the POLICY time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-minoa",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-06",
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c5df521",
+          "page": 4,
+          "said": "Eucharistic Adoration, Saint Mary Church, 9am-Noon, Join us, Friday, November 6th"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c5df5213c15",
+          "said": "specific_date adoration 2026-11-06 09:00–12:00 st-mary-of-the-assumption-minoa",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3 and R13: a dated announcement that does not say 'First Friday' or any recurring pattern is dated, and its date is after as_of. The Sept 27 calendar shows '9-Noon Adoration' on Oct 2 without naming a church (color-coded blue, as are St Francis items), so it is not used to claim a monthly pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

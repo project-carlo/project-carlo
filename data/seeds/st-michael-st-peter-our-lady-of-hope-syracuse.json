@@ -1,0 +1,978 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-st-peter-our-lady-of-hope-syracuse",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:25:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:20:29Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches share one Mass table (OLOH and SMSP). The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so the schedule rests on the Oct 11, Oct 4 and Sep 27 bulletins and the parish website, which agree. Open: whether the Tuesday Adoration chapel on Velasko Rd is at the church.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1afe3ca1dc887823f9030e44ae3f824ccc5516a4aa3ec500759b2635e5a1a59b",
+      "fetched_at": "2026-10-25T13:25:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "be3c18674c3ada08b4b65a6b2db0d8700c4334f7a8efd538aae71a87ac9960a7",
+      "fetched_at": "2026-10-11T16:31:17Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7fdddceed5e254ec4abc61c7bd8c4d15ad596c04f106fd37cf43c19eed356c9c",
+      "fetched_at": "2026-10-04T14:43:55Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "99699ca02b134cee9600cb06b0c63495fc5b7ce711dad5d2669e78466a7e635e",
+      "fetched_at": "2026-09-28T00:15:34Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 1,
+          "said": "Weekend Masses, Saturday Vigil 4:00 pm OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 1,
+          "said": "Weekend Masses, Saturday Vigil 4:00 pm OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 1,
+          "said": "Weekend Masses, Saturday Vigil 4:00 pm OLOH"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Saturday 16:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Saturday Evening Vigil Mass 4:00 PM Our Lady of Hope",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:02Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest listed file (Oct 25) is a Haiti flyer with no schedule, so the newest real bulletin (Oct 11) and the two before it all print it on page 1; the parish website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm - SMSP"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Saturday 17:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Saturday 17:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Saturday 17:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Saturday Evening Vigil Mass 5:30 PM St. Michael & St Peter",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:07Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest listed file is a flyer with no schedule; the three real bulletins all print it on page 1 and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 1,
+          "said": "Sunday 8:00 am - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 1,
+          "said": "Sunday 8:00 am - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 1,
+          "said": "Sunday 8:00 am - OLOH"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Sunday 08:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Sunday 08:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Sunday 08:00 our-lady-of-hope-syracuse",
+          "page": 1
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Sunday Masses 8:00 AM Our Lady of Hope",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:13Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest listed file is a flyer with no schedule; the three real bulletins all print it and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 1,
+          "said": "Sunday 9:30 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 1,
+          "said": "Sunday 9:30 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 1,
+          "said": "Sunday 9:30 am - SMSP"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Sunday 09:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Sunday 09:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Sunday 09:30 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Sunday Masses 9:30 AM St. Michael & St. Peter",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:18Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest listed file is a flyer with no schedule; the three real bulletins all print it and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 1,
+          "said": "11:00 am SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 1,
+          "said": "11:00 am SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 1,
+          "said": "11:00 am SMSP"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Sunday 11:00 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Sunday 11:00 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Sunday 11:00 st-michael-st-peter-syracuse",
+          "page": 1
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Sunday Masses 11:00 AM St. Michael & St. Peter",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:23Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest listed file is a flyer with no schedule; the three real bulletins all print it and the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "Monday, October 5 7:00 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "Monday, September 28 7:00 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "Monday, October 12 No Mass - Columbus Day"
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Monday 07:00 st-michael-st-peter-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Monday 07:00 st-michael-st-peter-syracuse",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Daily Masses: Monday and Wednesday 7 AM St, Michael-St. Peter",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:28Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R18: the newest real bulletin skips Monday only for a stated reason (Columbus Day: 'There will be no Mass'); the two earlier bulletins and the website print the 7:00 am SMSP Mass. The Oct 12 date is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "Tuesday, October 13 9:00 am - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "Tuesday, October 6 9:00 am - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "Tuesday 9:00 am - OLOH"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "specific_date mass 2026-09-29 09:00 our-lady-of-hope-syracuse  “Communion Service”",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Daily Masses: Tuesday and Friday 9 AM at Our Lady of Hope",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:32Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest real bulletin and the two earlier ones print it; the website agrees. The Sept 29 Communion Service was a past one-off.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "Wednesday, October 14 7:00 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "Wednesday, October 7 7:00 am - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "Wednesday 7:00 am - SMSP"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Wednesday 07:00 st-michael-st-peter-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Wednesday 07:00 st-michael-st-peter-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Wednesday 07:00 st-michael-st-peter-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "specific_date mass 2026-09-30 07:00 st-michael-st-peter-syracuse  “Communion Service”",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Daily Masses: Monday and Wednesday 7 AM St, Michael-St. Peter",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:37Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest real bulletin and the two earlier ones print it; the website agrees. The Sept 30 Communion Service was a past one-off.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "Friday, October 16 9:00 am - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "Friday, October 9 9:00 am - Our Lady of Hope"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "Friday 9:00 am - OLOH"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly mass Friday 09:00 our-lady-of-hope-syracuse",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Daily Masses: Tuesday and Friday 9 AM at Our Lady of Hope",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:42Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: the newest real bulletin and the two earlier ones print it; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 1st and 3rd Saturday - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 1st and 3rd Saturday - OLOH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 1st and 3rd Saturday - OLOH"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly confession Saturday 14:30–15:15 our-lady-of-hope-syracuse  “1st and 3rd Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly confession Saturday 14:30–15:15 our-lady-of-hope-syracuse  “1st and 3rd Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly confession Saturday 14:30–15:15 our-lady-of-hope-syracuse  “1st and 3rd Saturday”",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Reconciliation 2:30 PM - 3:15 PM - 1st and 3rd Saturday of the month at Our Lady of Hope and by appointment",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:46Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3: named by week of the month in all three real bulletins; the newest real bulletin's week holds Oct 17, the third Saturday. The website agrees. 'By appointment' has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-st-peter-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 2nd and 4th Saturday - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 2nd and 4th Saturday - SMSP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 2,
+          "said": "CONFESSIONS SATURDAY 2:30 PM - 3:15 PM, 2nd and 4th Saturday - SMSP"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly confession Saturday 14:30–15:15 st-michael-st-peter-syracuse  “2nd and 4th Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly confession Saturday 14:30–15:15 st-michael-st-peter-syracuse  “2nd and 4th Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly confession Saturday 14:30–15:15 st-michael-st-peter-syracuse  “2nd and 4th Saturday”",
+          "page": 2
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmichael-stpeter.org/",
+          "said": "Reconciliation 2:30 PM - 3:15 PM - 2nd and 4th Saturday of the month at St. Michael & St Peter and by appointment",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:23:51Z",
+            "current_because": "The Mass Schedule page on the parish's own site, fetched 2026-10-26, lists the same weekend, daily and Reconciliation times that the Oct 11, Oct 4 and Sept 27 bulletins print, and names today's OLOH/SMSP split, so it is not a stale page.",
+            "bulletin": "1afe3ca1",
+            "fits_because": "The newest listed file (Oct 25) is a Haiti fundraiser flyer with no schedule, so nothing in it contradicts the site; the site's schedule matches the newest real bulletin (Oct 11) item for item, and the flyer confirms the church's address and the Velasko Rd lot."
+          }
+        }
+      ],
+      "rationale": "R1, R3, R12: named by week of the month in all three real bulletins; the Oct 4 bulletin's week holds Oct 10, the second Saturday. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-hope-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Men's Group Eucharistic Adoration, Oct 5 only"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 4,
+          "said": "Mon., Oct. 5 - Eucharistic Adoration - 6:00-9:00 PM; EUCHARISTIC ADORATION Monday, October 5 - 6:00-9:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly adoration Monday 18:00–21:00 our-lady-of-hope-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "R13, R16: printed once, with a date only (Oct 5) and no 'first Monday' wording; the date is before as_of. History read it as weekly; nothing in the Oct 11 bulletin repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 5,
+          "said": "Adoration at St. Michael & St. Peter's Tuesdays in the Chapel (Velasko Rd) 11-9 pm. All Are Welcomed!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "be3c1867",
+          "page": 3,
+          "said": "Tuesday, October 13 11-9 pm - Adoration - C"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fdddcee",
+          "page": 5,
+          "said": "Adoration at St. Michael & St. Peter's Tuesdays in the Chapel (Velasko Rd) 11-9 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "99699ca0",
+          "page": 3,
+          "said": "Tuesday, September 29 11-9 pm - Adoration - Cp - Velasko Rd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1afe3ca1",
+          "page": 2,
+          "said": "St Michael/St Peter Church Parking lot (Velasko Rd), 4791 W Seneca Turnpike, Syracuse, NY 13215"
+        },
+        {
+          "source": "history",
+          "bulletin": "be3c18674c3a",
+          "said": "weekly adoration Tuesday 11:00–21:00 st-michael-st-peter-syracuse  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7fdddceed5e2",
+          "said": "weekly adoration Tuesday 11:00–21:00 st-michael-st-peter-syracuse  “In the Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "99699ca02b13",
+          "said": "weekly adoration Tuesday 11:00–21:00 st-michael-st-peter-syracuse  “In the Chapel (Velasko Rd)”",
+          "page": 5
+        }
+      ],
+      "rationale": "R38/R32: the parish announces Tuesday Adoration at its own chapel in all three bulletins, but gives no street address for the chapel, only 'Velasko Rd'. The Haiti flyer places the church's parking lot on Velasko Rd at the church's own address (4791 W Seneca Turnpike), so I lean toward on-site. The website has no Adoration page. Not exposed-Sacrament claim.",
+      "question": "Add Tuesday 11 AM-9 PM Adoration in the chapel on Velasko Rd?",
+      "options": [
+        {
+          "label": "Tuesdays 11:00 AM-9:00 PM",
+          "entry": {
+            "church_slug": "st-michael-st-peter-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": "21:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel (Velasko Rd)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

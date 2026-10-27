@@ -1,0 +1,2513 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-family-south-buffalo",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:19:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches: St. Ambrose, Holy Family, St. Martin of Tours, St. Teresa and Our Lady of Perpetual Help. The bulletins print no schedule box, so weekly Masses come from the Mass intentions (R35) and the parish website, Confessions from the Confessions box, and the 24/7 chapel at St. Martin from the bulletin. The newest PDF (Oct 25) is 514 MB and the pipeline cannot open it; I read its text with pdftotext. St. Ambrose closes after its final Mass on Nov 1; its slots stay for now (R20). The Oct 25 notice about moving St. Ambrose intentions mentions a Holy Family 8:00 AM Mass that no other source shows, and its times look garbled; left out. Open: whether Tuesday 6:00 PM Adoration at Our Lady of Perpetual Help starts at that time.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c1d9c9e9a04f8da045f61b7a1f21496f4a05bc7343b77c0540f454b114e4c51b",
+      "fetched_at": "2026-10-25T13:15:00Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "054038ed2feafe396cd58956cf3f126ed3ff681feacc80f7437ef22aeca604a6",
+      "fetched_at": "2026-10-18T12:41:39Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "9b12e3f652a0b9984c72b9e360d760fc2932b48f9b7161bc5625c05a64f97e6f",
+      "fetched_at": "2026-10-11T16:32:22Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "36f7063f171093315635351635e5edd2201d886559f602debd3b743f329819dc",
+      "fetched_at": "2026-10-04T14:20:52Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "07a22b39d2a3a226f99060b467b80935e192955801ad4963cb91ca94f09affbf",
+      "fetched_at": "2026-09-26T18:53:17Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "4:00pm • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "4:00pm • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "4:00pm • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "4:00pm • St. Ambrose"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "Our Lady of Charity (St. Ambrose Site) 4:00 PM Saturday (Vigil Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Saturday 16:00 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Saturday 16:00 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Saturday 16:00 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Saturday 16:00 st-ambrose-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: the bulletin has no schedule box; the Saturday 4:00pm St. Ambrose line is in the weekly Mass intentions of every issue read (four different weeks) and matches the parish website. The Oct 18 and Oct 25 bulletins announce St. Ambrose closes after its final Mass on Nov 1 (9:30 AM); R20: keep the current schedule, update mode will read the bulletins that show the change. The newest PDF (c1d9c9e9) is 514 MB and the pipeline cannot open it; I read its text with pdftotext.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "9:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "9:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "9:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "9:30am • St. Ambrose"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "Our Lady of Charity (St. Ambrose Site) 9:30 AM Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 09:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 09:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 09:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 09:30 st-ambrose-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 9:30am St. Ambrose in the Mass intentions of every issue read, and on the website. R20: St. Ambrose's final Mass is Nov 1 at 9:30 (Oct 18 p4); keep the current schedule until a later bulletin changes it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "11:30am • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "11:30am • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "11:30am • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "11:30am • The Church of the Holy Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "11:30 AM Sunday (Holy Family Site)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 11:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 11:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 11:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 11:30 holy-family-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 11:30am Holy Family in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "4:00pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "4:00pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "4:00pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "4:00pm • St. Martin of Tours"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Martin of Tours 4:00 PM Saturday (Vigil Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Saturday 16:00 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Saturday 16:00 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Saturday 16:00 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Saturday 16:00 st-martin-of-tours-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Saturday 4:00pm St. Martin of Tours in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "9:00am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "9:00am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "9:00am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "9:00am • St. Martin of Tours"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Martin of Tours 9:00 AM Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 09:00 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 09:00 st-martin-of-tours-buffalo  “Children's Liturgy on 2nd and 4th Sundays”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 09:00 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 09:00 st-martin-of-tours-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 9:00am St. Martin of Tours in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "6:30pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "6:30pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "6:30pm • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "6:30pm • St. Martin of Tours"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Martin of Tours 6:30 PM Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 18:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 18:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 18:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 18:30 st-martin-of-tours-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 6:30pm St. Martin of Tours in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "4:30pm • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "4:30pm • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "4:30pm • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "4:30pm • St. Teresa"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Teresa of Avila 4:30 PM Saturday (Vigil Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Saturday 16:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Saturday 16:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Saturday 16:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Saturday 16:30 st-teresa-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Saturday 4:30pm St. Teresa in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "11:00am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "11:00am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "11:00am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "11:00am • St. Teresa"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Teresa of Avila 11:00 AM Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 11:00 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 11:00 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 11:00 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 11:00 st-teresa-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 11:00am St. Teresa in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "10:00am • Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "10:00am • Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "10:00am • Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "10:00am • Our Lady of Perpetual Help"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "Our Lady of Perpetual Help 10:00 AM Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Sunday 10:00 our-lady-of-perpetual-help-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Sunday 10:00 our-lady-of-perpetual-help-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Sunday 10:00 our-lady-of-perpetual-help-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Sunday 10:00 our-lady-of-perpetual-help-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Sunday 10:00am Our Lady of Perpetual Help in the Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Mon., Oct. 26 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Mon., Oct. 26 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Mon., Oct. 26 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Mon., Oct. 26 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Martin of Tours 8:30 AM Monday and Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Monday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Monday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Monday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Monday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Monday 8:30am St. Martin of Tours in the weekday Mass intentions of every issue read (Oct 26, Oct 19, Oct 12, Oct 5), and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Sat., Oct. 31 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Sat., Oct. 31 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Sat., Oct. 31 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Sat., Oct. 31 - 8:30am • St. Martin of Tours"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Martin of Tours 8:30 AM Monday and Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Saturday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Saturday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Saturday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Saturday 08:30 st-martin-of-tours-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Saturday 8:30am St. Martin of Tours in the weekday Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Tues., Oct. 27 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Tues., Oct. 27 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Tues., Oct. 27 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Tues., Oct. 27 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Teresa of Avila 8:30 AM Tuesday and Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Tuesday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Tuesday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Tuesday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Tuesday 08:30 st-teresa-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Tuesday 8:30am St. Teresa in the weekday Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 8:30am • St. Teresa"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "St. Teresa of Avila 8:30 AM Tuesday and Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Thursday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Thursday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Thursday 08:30 st-teresa-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Thursday 08:30 st-teresa-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Thursday 8:30am St. Teresa in the weekday Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Wed., Oct. 28 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Wed., Oct. 28 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Wed., Oct. 28 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Wed., Oct. 28 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "Our Lady of Charity 8:30 AM Wednesday and Friday (St. Ambrose Site)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Wednesday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Wednesday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Wednesday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Wednesday 08:30 st-ambrose-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Wednesday 8:30am St. Ambrose in the weekday Mass intentions of every issue read, and on the website. R20: St. Ambrose closes after Nov 1 (Oct 18 p4, Oct 25 p4); the closure is a later change, so the current slot stays until a later bulletin shows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Fri., Oct. 30 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Fri., Oct. 30 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Fri., Oct. 30 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Fri., Oct. 30 - 8:30am • St. Ambrose"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "Our Lady of Charity 8:30 AM Wednesday and Friday (St. Ambrose Site)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Friday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Friday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Friday 08:30 st-ambrose-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Friday 08:30 st-ambrose-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Friday 8:30am St. Ambrose in the weekday Mass intentions of every issue read, and on the website. R20: St. Ambrose closes after Nov 1; keep the current slot until a later bulletin shows the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 6:30pm • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 6:30pm • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 6:30pm • The Church of the Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "Thurs., Oct. 29 - 6:30pm • The Church of the Holy Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "6:30 PM Thursday (Holy Family Site)- Adoration at 6:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly mass Thursday 18:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly mass Thursday 18:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly mass Thursday 18:30 holy-family-buffalo",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly mass Thursday 18:30 holy-family-buffalo",
+          "page": 8
+        }
+      ],
+      "rationale": "R35, R1: Thursday 6:30pm Holy Family in the weekday Mass intentions of every issue read, and on the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 4,
+          "said": "Normal Confession Times: Thursday: 6:00pm - 6:30pm, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 4,
+          "said": "Normal Confession Times: Thursday: 6:00pm - 6:30pm, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 4,
+          "said": "Normal Confession Times: Thursday: 6:00pm - 6:30pm, Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 4,
+          "said": "Normal Confession Times: Thursday: 6:00pm - 6:30pm, Holy Family"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Confessions",
+          "said": "6:00-6:30 PM Thursday (Holy Family Site)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly confession Thursday 18:00–18:30 holy-family-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly confession Thursday 18:00–18:30 holy-family-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly confession Thursday 18:00–18:30 holy-family-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly confession Thursday 18:00–18:30 holy-family-buffalo",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the bulletin's Confessions box (page 4 in every issue read) and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Martin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Martin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Martin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Martin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Confessions",
+          "said": "St. Martin of Tours 3:00-3:30 PM Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly confession Saturday 15:00–15:30 st-martin-of-tours-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly confession Saturday 15:00–15:30 st-martin-of-tours-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly confession Saturday 15:00–15:30 st-martin-of-tours-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly confession Saturday 15:00–15:30 st-martin-of-tours-buffalo",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the bulletin's Confessions box (page 4 in every issue read) and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 4,
+          "said": "Saturday: 4:00pm - 4:30pm, St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 4,
+          "said": "Saturday: 4:00pm - 4:30pm, St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 4,
+          "said": "Saturday: 4:00pm - 4:30pm, St. Teresa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 4,
+          "said": "Saturday: 4:00pm - 4:30pm, St. Teresa"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Confessions",
+          "said": "St. Teresa of Avila 4:00-4:25 PM Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly confession Saturday 16:00–16:30 st-teresa-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly confession Saturday 16:00–16:30 st-teresa-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly confession Saturday 16:00–16:30 st-teresa-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly confession Saturday 16:00–16:30 st-teresa-buffalo",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the bulletin's Confessions box prints 4:00-4:30 in every issue read; the website's 4:25 end differs slightly, and the bulletin is the stated source (R40, newest service-specific bulletin time). Not worth a question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Ambrose"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 4,
+          "said": "Saturday: 3:00pm - 3:30pm, St. Ambrose"
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Confessions",
+          "said": "Our Lady of Charity 3:00-3:30 PM Saturday (St. Ambrose Site)"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly confession Saturday 15:00–15:30 st-ambrose-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly confession Saturday 15:00–15:30 st-ambrose-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly confession Saturday 15:00–15:30 st-ambrose-buffalo",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly confession Saturday 15:00–15:30 st-ambrose-buffalo",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the bulletin's Confessions box (page 4 in every issue read) and the website agree. R20: St. Ambrose closes after Nov 1; keep the current slot until a later bulletin shows the change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Monday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "weekly adoration Monday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Monday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Tuesday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Tuesday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Wednesday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Wednesday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Thursday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Thursday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Friday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Friday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Saturday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Saturday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, open 24/7; a code is needed"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 3,
+          "said": "24/7 Eucharistic Adoration. The Eucharistic Adoration Chapel at the St. Martin of Tours worship site, 1140 Abbott Rd. in Buffalo is open 24/7 for prayer before Jesus in the Most Blessed Sacrament."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "The Adoration Chapel at St. Martin of Tours in open 24/7 for adorers to come and pray before the Blessed Sacrament."
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "weekly adoration Sunday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "36f7063f1710",
+          "said": "weekly adoration Sunday 00:00 st-martin-of-tours-buffalo  “24/7 Adoration”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "weekly adoration Sunday 00:00 st-martin-of-tours-buffalo  “Adoration Chapel open 24/7”",
+          "page": 3
+        }
+      ],
+      "rationale": "R38, R1: the parish calls it the Eucharistic Adoration Chapel at 1140 Abbott Rd., St. Martin's own address, open around the clock; seven daily slots 00:00-23:59 as other seeds do for 24/7 Adoration. History reads it as 00:00 starts (3/4 bulletins).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:30 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "Adoration takes place at Holy Family Church at 6:00 PM each Thursday evening, before the 6:30 PM Mass",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:25:32Z",
+            "current_because": "The parish's own site, copyright 2026, lists the same weekend and weekday Masses the Oct 11-25 bulletins print and still shows St. Ambrose open; the Adoration line appears on two separate pages (Mass Times and Adoration/Devotion).",
+            "bulletin": "c1d9c9e9",
+            "fits_because": "The Oct 18 bulletin (and the newest) prints Holy Family Thursday 6:30pm Mass and a Thursday 6:00pm-6:30pm Holy Family Confession, so a 6:00 PM Adoration before that Mass fits."
+          }
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Mass-Times",
+          "said": "6:30 PM Thursday (Holy Family Site)- Adoration at 6:00 PM",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:25:32Z",
+            "current_because": "The parish's own site, copyright 2026, lists the same weekend and weekday Masses the Oct 11-25 bulletins print and still shows St. Ambrose open; the Adoration line appears on two separate pages (Mass Times and Adoration/Devotion).",
+            "bulletin": "c1d9c9e9",
+            "fits_because": "The Oct 18 bulletin (and the newest) prints Holy Family Thursday 6:30pm Mass and a Thursday 6:00pm-6:30pm Holy Family Confession, so a 6:00 PM Adoration before that Mass fits."
+          }
+        }
+      ],
+      "rationale": "R6: website-only start time at a listed church; no end time is given ('before the 6:30 PM Mass'), so end_time stays null (POLICY, Times). The bulletins never mention it, which is a missing mention, not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "First Friday Adoration is held monthly at Our Lady of Perpetual Help at 6 :00 PM.",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:25:32Z",
+            "current_because": "The parish's own site, copyright 2026, matches the bulletins' Sunday and weekday Mass times and its calendar shows October 2026 events; the First Friday line is on the Adoration/Devotion page with the other current Adoration times.",
+            "bulletin": "c1d9c9e9",
+            "fits_because": "Our Lady of Perpetual Help is one of the parish's listed churches and the bulletins print its Sunday 10:00am Mass; the newest bulletin's week holds no first Friday, and the bulletins do not print Adoration schedules apart from the 24/7 chapel, so silence there is not a conflict."
+          }
+        }
+      ],
+      "rationale": "R6, R12: a named monthly service (first Fridays) the newest bulletin's week cannot show; website-only evidence, page null. The Sept 27 issue's week held Friday Oct 2 and says nothing either way (its Adoration notices are only the 24/7 chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "Our Lady of Perpetual Help offers Adoration each Tuesday evening at 6:00PM after novena devotions and recitation of the rosary."
+        },
+        {
+          "source": "website",
+          "url": "https://www.catholicsouthbuffalo.com/Worship/Adoration-Devotion",
+          "said": "A novena to Our Lady of Perpetual Help takes place each Tuesday at 6:00 PM followed by the recitation of the rosary and adoration."
+        }
+      ],
+      "rationale": "R6, R30: the website gives 6:00 PM for both the novena and the Adoration that follows the novena and Rosary, so the Adoration start time is unclear; leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add Tuesday 6:00 PM Adoration at Our Lady of Perpetual Help?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Tuesdays 6:00 PM",
+          "entry": {
+            "church_slug": "our-lady-of-perpetual-help-buffalo",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After novena and Rosary"
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 6,
+          "said": "On November 2nd, there will be four special All Souls Masses within our Family of Parishes. ... 6:30 PM at the Church of the Holy Family"
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass, open to all (names of those who died this past year read, candle lit). Printed in the newest bulletin, whose PDF the pipeline cannot open; read with pdftotext.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-teresa-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 6,
+          "said": "6:30 PM at St. Teresa"
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass, open to all. Printed in the newest bulletin (read with pdftotext).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 6,
+          "said": "7:00 PM at Our Lady of Perpetual Help"
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass, open to all. Printed in the newest bulletin (read with pdftotext). The 8:30 AM All Souls Mass at St. Martin of Tours is the regular Monday 8:30 Mass (slot above), so it gets no dated slot (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "07:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Martin of Tours 100th anniversary Jubilee, all-day Adoration"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 6,
+          "said": "St. Martin Church will be open all day on November 11th for Eucharistic Adoration ... From 7:00 AM ... until 3:45 PM (before the 4:00 PM concluding Jubilee Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 7,
+          "said": "St. Martin of Tours Jubilee Nov 11 Eucharistic Adoration at St. Martin 7:00 AM-3:45 PM 4:00 PM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "specific_date adoration 2026-11-11 07:00–15:45 st-martin-of-tours-buffalo  “Jubilee Adoration”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "specific_date adoration 2026-11-11 07:00–15:45 st-martin-of-tours-buffalo  “Jubilee Adoration”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "specific_date adoration 2026-11-11 07:00–15:45 st-martin-of-tours-buffalo  “Jubilee Day of Prayer”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R19, R16: dated Jubilee Adoration announced in the Oct 18 flyer and repeated in the newest bulletin; history reads it in 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-of-tours-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Martin of Tours 100th anniversary Jubilee Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 6,
+          "said": "Join us for a Mass for Jubilee at 4 PM on November 11th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 7,
+          "said": "St. Martin of Tours Jubilee Nov 11 ... 4:00 PM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "054038ed2fea",
+          "said": "specific_date mass 2026-11-11 16:00 st-martin-of-tours-buffalo  “Jubilee Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9b12e3f652a0",
+          "said": "specific_date mass 2026-11-11 16:00 st-martin-of-tours-buffalo  “Jubilee Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "07a22b39d2a3",
+          "said": "specific_date mass 2026-11-11 16:00 st-martin-of-tours-buffalo  “Jubilee Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R19, R16: dated Jubilee Mass announced in the Oct 18 flyer and repeated in the newest bulletin; open to all, history reads it in 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c1d9c9e9",
+          "page": 8,
+          "said": "12:00pm • Mercy Hospital Chapel All Souls Intentions; Sun 10:00am • Mercy Hospital Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 8,
+          "said": "12:00pm • Mercy Hospital Chapel All Souls Intentions; Sun 10:00am • Mercy Hospital Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9b12e3f6",
+          "page": 8,
+          "said": "12:00pm • Mercy Hospital Chapel All Souls Intentions; Sun 10:00am • Mercy Hospital Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "36f7063f",
+          "page": 8,
+          "said": "12:00pm • Mercy Hospital Chapel All Souls Intentions; Sun 10:00am • Mercy Hospital Chapel"
+        }
+      ],
+      "rationale": "R23: Mercy Hospital Chapel is a hospital chapel at another address and is not on the church list (Mon-Sat 12:00pm, Sun 10:00am All Souls intentions).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "054038ed",
+          "page": 6,
+          "said": "The Novena to St. Jude ... will be recited daily following the 8:30 AM Mass from Tues., October 20, through Wed., October 28."
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Mercy Hospital Chapel, Buffalo",
+      "said": "12:00pm • Mercy Hospital Chapel, All Souls Intentions (Mon-Sat); 10:00am Sunday",
+      "bulletin": "c1d9c9e9",
+      "page": 8
+    }
+  ]
+}

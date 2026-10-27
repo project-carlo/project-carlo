@@ -1,0 +1,2479 @@
+{
+  "schema_version": 1,
+  "parish_slug": "spirit-of-hope-oneida",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:20:11Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:55:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four listed churches (Oneida, Canastota, Vernon, Verona Beach). Weekend and weekday Masses and Confessions agree in all three bulletins; the St. Mary summer-only slots are excluded because their season floats and ends Columbus Day weekend. Open: whether the St. Agatha and St. Joseph perpetual Adoration chapels count (both lean out: location and hours unclear).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ec90a9882aaeee9c4cd7fcb0d73680702e3fe9e2be7cb07c3dfc818dc578a4ab",
+      "fetched_at": "2026-10-25T13:20:11Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "86e47a993b7b6716b225e2574362c0103f985912c5478998bea965330c55007f",
+      "fetched_at": "2026-10-18T12:47:40Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "6a65a3373371b9ea3c7415743e8aacff5b8cf631920bceb3a6842767cf1329e9",
+      "fetched_at": "2026-10-11T16:36:04Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "ac0c4dd3ff548e327c16beff1be06d262294c41423a7dfe38273625945072c83",
+      "fetched_at": "2026-10-04T14:38:49Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "6c998817c53cdd19df5c525e309332165e1053e06a85850a032c89ad8e4ca67b",
+      "fetched_at": "2026-09-28T00:09:57Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Saturday Vigil 4:00PM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Saturday Vigil 4:00PM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Saturday Vigil 4:00PM at St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Saturday 16:00 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Saturday 16:00 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Saturday 16:00 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Saturday 16:00 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Saturday 16:00 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read; the website's Mass schedule page gives the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Sunday Morning 7AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Sunday Morning 7AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Sunday Morning 7AM at Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Sunday 07:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Sunday 07:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Sunday 07:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Sunday 07:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Sunday 07:00 holy-family-vernon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-agatha-canastota",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "8:45AM at St. Agatha"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "8:45AM at St. Agatha"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "8:45AM at St. Agatha"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Sunday 08:45 st-agatha-canastota",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Sunday 08:45 st-agatha-canastota",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Sunday 08:45 st-agatha-canastota",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Sunday 08:45 st-agatha-canastota",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Sunday 08:45 st-agatha-canastota",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-vernon",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "10:00AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "10:00AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "10:00AM at Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Sunday 10:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Sunday 10:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Sunday 10:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Sunday 10:00 holy-family-vernon",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Sunday 10:00 holy-family-vernon",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "10:45AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "10:45AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "10:45AM at St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Sunday 10:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Sunday 10:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Sunday 10:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Sunday 10:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Sunday 10:45 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "8:30am Monday, October 26 @ SJ ... 8:30am Friday, October 30 @ SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Monday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Monday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Monday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Monday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Monday 08:30 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in the newest Mass intentions. The Oct. 12 Columbus Day cancellation in an older issue is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "8:30am Monday, October 26 @ SJ ... 8:30am Friday, October 30 @ SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Tuesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Tuesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Tuesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Tuesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Tuesday 08:30 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in the newest Mass intentions. The Oct. 12 Columbus Day cancellation in an older issue is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "8:30am Monday, October 26 @ SJ ... 8:30am Friday, October 30 @ SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Wednesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Wednesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Wednesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Wednesday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Wednesday 08:30 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in the newest Mass intentions. The Oct. 12 Columbus Day cancellation in an older issue is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "8:30am Monday, October 26 @ SJ ... 8:30am Friday, October 30 @ SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Thursday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Thursday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Thursday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Thursday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Thursday 08:30 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in the newest Mass intentions. The Oct. 12 Columbus Day cancellation in an older issue is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Daily Mass Monday-Friday: 8:30AM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "8:30am Monday, October 26 @ SJ ... 8:30am Friday, October 30 @ SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Friday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Friday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Friday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Friday 08:30 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Friday 08:30 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in the newest Mass intentions. The Oct. 12 Columbus Day cancellation in an older issue is before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oneida",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:45",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Saturdays: 2:45PM-3:45PM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Saturdays: 2:45PM-3:45PM at St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Saturdays: 2:45PM-3:45PM at St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly confession Saturday 14:45–15:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly confession Saturday 14:45–15:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly confession Saturday 14:45–15:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly confession Saturday 14:45–15:45 st-joseph-oneida",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly confession Saturday 14:45–15:45 st-joseph-oneida",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacrament of Reconciliation box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-vernon",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "First Sunday of the Month: 9:15AM-9:45AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "First Sunday of the Month: 9:15AM-9:45AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "First Sunday of the Month: 9:15AM-9:45AM at Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 3,
+          "said": "Sunday, November 1 ... Confessions, 9:15am @ HF"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly confession Sunday 09:15–09:45 holy-family-vernon  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly confession Sunday 09:15–09:45 holy-family-vernon  “First Sunday of the Month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly confession Sunday 09:15–09:45 holy-family-vernon  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly confession Sunday 09:15–09:45 holy-family-vernon  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly confession Sunday 09:15–09:45 holy-family-vernon  “First Sunday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: named first-Sunday service printed in all three bulletins; the newest week holds the first Sunday (Nov 1) and its calendar lists it (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-vernon",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the sacristy"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "Holy Family Church Sacristy, Vernon, Fridays: Every Friday 7am - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "Holy Family Church Sacristy, Vernon, Fridays: Every Friday 7am - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "Holy Family Church Sacristy, Vernon, Fridays: Every Friday 7am - 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 3,
+          "said": "Friday, October 30 - 12 Hour Adoration, 7am @ HF"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly adoration Friday 07:00–19:00 holy-family-vernon",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Friday 07:00–19:00 holy-family-vernon  “Sacristy”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly adoration Friday 07:00–19:00 holy-family-vernon",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Friday 07:00–19:00 holy-family-vernon  “HF Sacristy”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly adoration Friday 07:00–19:00 holy-family-vernon  “In the sacristy”",
+          "page": 8
+        }
+      ],
+      "rationale": "R1: given as a weekly Adoration time in the sacristy of Holy Family Church (on-site) in all three bulletins; the calendar confirms 12-hour Adoration at HF on Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-vernon",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Vocations"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 3,
+          "said": "Holy Hour for Vocations ... The next one will take place at 6pm on Tuesday, November 17 at Holy Family Church."
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "specific_date adoration 2026-11-17 18:00 holy-family-vernon  “Holy Hour for Vocations”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated Holy Hour (Adoration, POLICY) on or after as_of; it moves between churches (St. Joseph on Oct. 20), so it is dated, not weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-verona-beach",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Day weekend to Columbus Day weekend"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Saturday Vigil 5:30PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Saturday Vigil 5:30PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Saturday Vigil 5:30PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 9,
+          "said": "Saturday, October 31 5:30pm at SM: Closed Columbus Day to Memorial Day Weekend"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        }
+      ],
+      "rationale": "R33: a seasonal slot whose ends float (Memorial Day weekend to Columbus Day weekend) cannot be written with month-only season fields without showing it on October dates the newest bulletin says it is closed; it is closed now (Oct 24 and Oct 31 listed as closed). Update mode will see it again in the summer bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-verona-beach",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Day weekend to Columbus Day weekend"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Saturdays: 4:30PM-5:15PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 1,
+          "said": "Saturdays: 4:30PM-5:15PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 1,
+          "said": "Saturdays: 4:30PM-5:15PM at St. Mary - Memorial Day to Columbus Day Weekend"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-lake-verona-beach  “Memorial Day to Columbus Day Weekend”",
+          "page": 1
+        }
+      ],
+      "rationale": "R33: same floating summer-only season as the St. Mary vigil Mass; closed from Columbus Day weekend to Memorial Day weekend.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-verona-beach",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 6,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": "First Friday Adoration, no time given"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Mary, Verona Beach - 1st Friday Adoration: There will be Adoration at St. Mary's the first Friday of the month from June until October."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Mary, Verona Beach - 1st Friday Adoration: There will be Adoration at St. Mary's the first Friday of the month from June until October."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Mary, Verona Beach - 1st Friday Adoration: There will be Adoration at St. Mary's the first Friday of the month from June until October."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Mary, Verona Beach - 1st Friday Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "weekly adoration Friday 09:00–09:00 st-mary-of-the-lake-verona-beach  “First Friday of the month, June through October; 24-hour duration”",
+          "page": 8
+        }
+      ],
+      "rationale": "R26: the bulletin gives no clock time or duration (history's 9:00 to 9:00 24-hour reading is not printed), and the June-until-October season is over for this year.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 3,
+          "said": "All Souls' Day Mass Monday, November 2nd, 6 pm. St. Mary Irish Ridge, 6148 Irish Ridge Road"
+        }
+      ],
+      "rationale": "R23: St. Mary, Irish Ridge is not in data/churches.csv, so the dated All Souls Mass cannot be attached.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... Or By Appointment"
+        }
+      ],
+      "rationale": "R26: by appointment has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 4,
+          "said": "Veterans Day Prayer Service November 10, 2026 6pm at St. Joseph's Church"
+        }
+      ],
+      "rationale": "R24: a prayer service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Monday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Monday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Tuesday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Tuesday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Wednesday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Wednesday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Thursday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Thursday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Friday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Friday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Saturday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Saturday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 5,
+          "said": "St. Agatha Adoration Chapel. Open hours: 11:00pm through 4:00am. Please check the Hourly Charts on the Foyer Table"
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Sunday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel; check hours charts in chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly adoration Sunday 00:00 st-agatha-canastota  “Perpetual Adoration Chapel”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Sunday 23:00–04:00 st-agatha-canastota  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Agatha Perpetual Adoration Chapel, Canastota: Please check the Hours Charts located in the Chapel to see open day or night hours."
+        }
+      ],
+      "rationale": "R32/R30: the parish calls it a Perpetual chapel but gives no hours, only 'open' (unfilled) hours: the St. Agatha ad lists 11pm-4am, and the St. Joseph list of open hours changes from week to week, so they are hours that need adorers, not a schedule. The chapel's location is not stated. Leaning to leave out (a wrong time is worse than a missing one).",
+      "question": "Add St. Agatha Adoration Chapel (Canastota) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-agatha-canastota",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-agatha-chapel"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Monday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Monday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Tuesday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Tuesday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly adoration Tuesday 23:00–00:00 st-joseph-oneida  (a different time)",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "specific_date adoration 2026-10-20 18:00 st-joseph-oneida  “Holy Hour for Vocations”  (a different time)",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c998817c53c",
+          "said": "specific_date adoration 2026-10-20 18:00 st-joseph-oneida  “Holy Hour for Vocations”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Wednesday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Wednesday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Thursday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Thursday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly adoration Thursday 03:00–04:00 st-joseph-oneida  (a different time)",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Friday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Friday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ec90a9882aae",
+          "said": "weekly adoration Friday 22:00–23:00 st-joseph-oneida  (a different time)",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Saturday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Saturday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec90a988",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "86e47a99",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a65a337",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Tuesdays 11pm-12am, Thursdays 3am-4am, Fridays 10pm-11pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "86e47a993b7b",
+          "said": "weekly adoration Sunday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6a65a3373371",
+          "said": "weekly adoration Sunday 00:00 st-joseph-oneida  “Perpetual Adoration Chapel 24/7”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "ac0c4dd3ff54",
+          "said": "weekly adoration Sunday 00:00 st-joseph-oneida  “Perpetual 24/7”",
+          "page": 8
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c998817",
+          "page": 8,
+          "said": "St. Joseph Adoration Chapel Perpetual 24/7, Oneida - Open Hours: Sundays 8am-9am, 3pm-4pm, Tuesdays 4pm-5pm, 10pm-11pm, 11pm-12am, Wednesdays 3am-4am, Fridays 2pm-3pm, 10pm-11pm. Please help sub if you are able."
+        }
+      ],
+      "rationale": "R32/R30: titled Perpetual 24/7, but the only hours printed are 'Open Hours' that change week to week (unfilled hours needing adorers), and the chapel's location is not stated. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add St. Joseph Adoration Chapel (Oneida) as around-the-clock Adoration?",
+      "options": [
+        {
+          "label": "Daily 24 hours",
+          "entry": {
+            "church_slug": "st-joseph-oneida",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual 24/7 Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "st-joseph-chapel"
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. Mary, Irish Ridge (6148 Irish Ridge Road)",
+      "said": "All Souls' Day Mass Monday, November 2nd, 6 pm",
+      "bulletin": "ec90a988",
+      "page": 3
+    }
+  ]
+}

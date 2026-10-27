@@ -1,0 +1,3398 @@
+{
+  "schema_version": 1,
+  "parish_slug": "lakeshore-catholic-faith-community",
+  "status": "ready",
+  "as_of": "2026-10-25T13:16:10Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:24:27Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches in one family (St. Francis worship site is listed as 'St. Mary of the Lake (St. Francis)' in the schedule box). Weekend, weekday, Reconciliation and Adoration times agree across all five bulletins; Adoration after Mass is worked out under R10. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9ece6bb978c05823ab7b30b02c3e59dbb49c2af6df4d0d158a051412adc0f589",
+      "fetched_at": "2026-10-25T13:16:10Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "4f6edf3574e9c0aecb61b8aa7b3bbcb7a10259b7bcaa4458c7180c18a3848296",
+      "fetched_at": "2026-10-18T12:43:08Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "fcc60cd6a154b57df79055c9cf79db114f7e939aec4a5f121c7567781887b5e3",
+      "fetched_at": "2026-10-11T16:33:30Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8315a8eb60f9fb748a8306e4d3ed88142d8b761f24da06ee3369e7b546c10a1c",
+      "fetched_at": "2026-10-04T14:25:47Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "2d38348a0bee6e177d65dfc97b89fb4c01b5a34e56be1cf0b06947d58a6050fe",
+      "fetched_at": "2026-09-26T18:54:08Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- St. Mary of the Lake"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 PM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Saturday 16:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Saturday 16:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Saturday 16:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Saturday 16:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Saturday 16:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 PM- St. John Paul II"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Saturday 16:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Saturday 16:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Saturday 16:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Saturday 16:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Saturday 16:30 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 08:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 8:00 AM- Most Precious Blood; 10:30 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 10:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 10:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 10:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 10:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 10:30 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 11:00 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 11:00 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 11:00 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 11:00 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 11:00 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-lake-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 12:30 PM- St. Mary of the Lake (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 12:30 PM- St. Mary of the Lake (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 12:30 PM- St. Mary of the Lake (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 12:30 PM- St. Mary of the Lake (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 12:30 PM- St. Mary of the Lake (Spanish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 12:30 st-mary-of-the-lake-hamburg  “Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 12:30 st-mary-of-the-lake-hamburg  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 12:30 st-mary-of-the-lake-hamburg  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 12:30 st-mary-of-the-lake-hamburg  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 12:30 st-mary-of-the-lake-hamburg  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read; POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 09:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 09:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 09:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 09:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 09:00 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 9:00 AM- St. John Paul II; 11:30 AM- St. John Paul II"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 11:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 11:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 11:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 11:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 11:30 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 4,
+          "said": "Sun. 10/25 SMOL St. Francis 8:30am; Sun. 10/25 SMOL St. Francis 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 08:30 st-francis-of-assisi-athol-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box lists these as St. Mary of the Lake (St. Francis); the Mass-intentions table gives the location as St. Francis, which is the listed church St. Francis of Assisi, Athol Springs (POLICY, Final source checks: resolve venue labels from the bulletin's own context).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Sunday: 8:30 AM- St. Mary of the Lake (St. Francis); 6:00 PM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 4,
+          "said": "Sun. 10/25 SMOL St. Francis 8:30am; Sun. 10/25 SMOL St. Francis 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Sunday 18:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Sunday 18:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Sunday 18:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Sunday 18:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Sunday 18:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box lists these as St. Mary of the Lake (St. Francis); the Mass-intentions table gives the location as St. Francis, which is the listed church St. Francis of Assisi, Athol Springs (POLICY, Final source checks: resolve venue labels from the bulletin's own context).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 4,
+          "said": "Mon. 10/26 SMOL St. Francis 8:00am; Wed. 10/28 SMOL St. Francis 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Monday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Monday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Monday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Monday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Monday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box's (St. Francis) weekday Masses; the intentions table places them at St. Francis.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Monday: 8:00 AM- St. Mary of the Lake (St. Francis); Wednesday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 4,
+          "said": "Mon. 10/26 SMOL St. Francis 8:00am; Wed. 10/28 SMOL St. Francis 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Wednesday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Wednesday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Wednesday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Wednesday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Wednesday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the box's (St. Francis) weekday Masses; the intentions table places them at St. Francis.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Saturday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Saturday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Saturday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Saturday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Saturday: 8:00 AM- St. Mary of the Lake (St. Francis)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 4,
+          "said": "Sat. 10/31 SMOL St. Francis 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Saturday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Saturday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Saturday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Saturday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Saturday 08:00 st-francis-of-assisi-athol-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in all five bulletins; the intentions table places it at St. Francis.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Monday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Monday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Monday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Monday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Monday 08:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Wednesday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Wednesday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Wednesday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Wednesday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Wednesday 08:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Monday 8:00 AM- Most Precious Blood; Wednesday 8:00 AM- Most Precious Blood; Friday 8:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Friday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Friday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Friday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Friday 08:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Friday 08:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Tuesday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Tuesday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Tuesday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Tuesday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Tuesday 09:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 9:00 AM- Most Precious Blood; Thursday 9:00 AM- Most Precious Blood"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Thursday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Thursday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Thursday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Thursday 09:00 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Thursday 09:00 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Tuesday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 8:15 AM- St. Mary of the Lake; Thursday 8:15 AM- St. Mary of the Lake"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Thursday 08:15 st-mary-of-the-lake-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Tuesday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Tuesday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Tuesday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Tuesday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Tuesday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Tuesday 8:30 AM- St. John Paul II; Friday 8:30 AM- St. John Paul II"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly mass Friday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly mass Friday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly mass Friday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly mass Friday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly mass Friday 08:30 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "RECONCILIATION Tuesday: 5:30pm to 6:30pm (Most Precious Blood)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "RECONCILIATION Tuesday: 5:30pm to 6:30pm (Most Precious Blood)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "RECONCILIATION Tuesday: 5:30pm to 6:30pm (Most Precious Blood)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "RECONCILIATION Tuesday: 5:30pm to 6:30pm (Most Precious Blood)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "RECONCILIATION Tuesday: 5:30pm to 6:30pm (Most Precious Blood)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly confession Tuesday 17:30–18:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly confession Tuesday 17:30–18:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly confession Tuesday 17:30–18:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly confession Tuesday 17:30–18:30 most-precious-blood-angola",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly confession Tuesday 17:30–18:30 most-precious-blood-angola",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Thursday: 5:30pm to 6:30pm (St. Mary of the Lake)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Thursday: 5:30pm to 6:30pm (St. Mary of the Lake)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Thursday: 5:30pm to 6:30pm (St. Mary of the Lake)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Thursday: 5:30pm to 6:30pm (St. Mary of the Lake)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Thursday: 5:30pm to 6:30pm (St. Mary of the Lake)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-of-the-lake-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-of-the-lake-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 1,
+          "said": "Saturday: 3pm to 4pm (St. John Paul II)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 1,
+          "said": "Saturday: 3pm to 4pm (St. John Paul II)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 1,
+          "said": "Saturday: 3pm to 4pm (St. John Paul II)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 1,
+          "said": "Saturday: 3pm to 4pm (St. John Paul II)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Saturday: 3pm to 4pm (St. John Paul II)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly confession Saturday 15:00–16:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly confession Saturday 15:00–16:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly confession Saturday 15:00–16:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly confession Saturday 15:00–16:00 st-john-paul-ii-lake-view",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly confession Saturday 15:00–16:00 st-john-paul-ii-lake-view",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-athol-springs",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION St. Francis: Monday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION St. Francis: Monday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION St. Francis: Monday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION St. Francis: Monday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "EUCHARISTIC ADORATION St. Francis: Monday following 8am Mass for one hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly adoration Monday 08:30–09:30 st-francis-of-assisi-athol-springs  “Following 8am Mass for one hour”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Monday 08:30–09:30 st-francis-of-assisi-athol-springs  “Following 8am Mass for one hour”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Monday 08:00–09:00 st-francis-of-assisi-athol-springs  “Following 8am Mass”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly adoration Monday 09:00–10:00 st-francis-of-assisi-athol-springs  “Following 8:00 AM Mass”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Monday 09:00–10:00 st-francis-of-assisi-athol-springs  “Following 8:00 AM Mass”  (a different time)",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R10: a clock time is not printed; Adoration for one hour after the 8:00 AM weekday Mass starts 30 minutes after it (8:30) and ends 9:30. History's other times (8:00-9:00, 9:00-10:00) are readings of the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel; concluding with Benediction"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. Mary of the Lake: Thursday from 3pm to 7pm in the chapel, concluding with benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. Mary of the Lake: Thursday from 3pm to 7pm in the chapel, concluding with benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. Mary of the Lake: Thursday from 3pm to 7pm in the chapel, concluding with benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. Mary of the Lake: Thursday from 3pm to 7pm in the chapel, concluding with benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. Mary of the Lake: Thursday from 3pm to 7pm in the chapel, concluding with benediction"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Thursday 15:00–19:00 st-mary-of-the-lake-hamburg  “In the chapel; concluding with benediction”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly adoration Thursday 15:00–19:00 st-mary-of-the-lake-hamburg  “In the chapel, concluding with benediction”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Thursday 15:00–19:00 st-mary-of-the-lake-hamburg  “Concluding with benediction”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly adoration Thursday 15:00–19:00 st-mary-of-the-lake-hamburg  “In the chapel; concluding with benediction”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Thursday 15:00–19:00 st-mary-of-the-lake-hamburg  “Concluding with benediction”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration list of all five bulletins; the chapel is on site (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-lake-hamburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "First Friday of the month from 10am to 4pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "First Friday of the month from 10am to 4pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "First Friday of the month from 10am to 4pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "First Friday of the month from 10am to 4pm in the chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "First Friday of the month from 10am to 4pm in the chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Friday 10:00–16:00 st-mary-of-the-lake-hamburg  “First Friday of the month; in the chapel”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "specific_date adoration 2026-11-06 10:00–16:00 st-mary-of-the-lake-hamburg  “First Friday of the month in the chapel”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Friday 10:00–16:00 st-mary-of-the-lake-hamburg  “First Friday of the month”",
+          "page": 7
+        }
+      ],
+      "rationale": "R12, R11: named monthly service; the newest bulletin's week holds no first Friday (Nov 6 is next), so it is cited from 2d38348a (week of Sept 27, holding Oct 2) and the later issues that print the same box on p7.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "Most Precious Blood: Wednesday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "Most Precious Blood: Wednesday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "Most Precious Blood: Wednesday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "Most Precious Blood: Wednesday following 8am Mass for one hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "Most Precious Blood: Wednesday following 8am Mass for one hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly adoration Wednesday 08:30–09:30 most-precious-blood-angola  “Following 8am Mass for one hour”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Wednesday 08:30–09:30 most-precious-blood-angola  “Following 8am Mass for one hour”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Wednesday 08:00–09:00 most-precious-blood-angola  “Following 8am Mass”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly adoration Wednesday 09:00–10:00 most-precious-blood-angola  “Following 8:00 AM Mass”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Wednesday 09:00–10:00 most-precious-blood-angola  “Following 8:00 AM Mass”  (a different time)",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R10: Adoration one hour after the 8:00 AM weekday Mass starts at 8:30 and ends 9:30. History's 8:00-9:00 and 9:00-10:00 are other readings of the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "most-precious-blood-angola",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "First Friday of the month following 8am Mass until 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "First Friday of the month following 8am Mass until 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "First Friday of the month following 8am Mass until 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "First Friday of the month following 8am Mass until 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "First Friday of the month following 8am Mass until 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "specific_date adoration 2026-11-06 08:30–11:00 most-precious-blood-angola  “First Friday of the month following 8am Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Friday 08:00–11:00 most-precious-blood-angola  “First Friday of the month; following 8am Mass”  (a different time)",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Friday 09:00–11:00 most-precious-blood-angola  “First Friday of the month, following 8:00 AM Mass”  (a different time)",
+          "page": 7
+        }
+      ],
+      "rationale": "R12, R10, R11: named monthly service; the newest week holds no first Friday, so it is cited from 2d38348a (week holding Oct 2) and later issues (p7 box). Starts 30 minutes after the 8:00 AM weekday Mass, until the stated 11:00 AM. History has it only as dated Nov 6 or a weekly 8:00-11:00 Friday; the bulletin names the first Friday, so it is weekly with weeks_of_month first (POLICY, Weekly or dated rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Monday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "weekly adoration Monday 00:00 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Monday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "2d38348a0bee",
+          "said": "weekly adoration Monday 00:00 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Thursday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Thursday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Friday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Friday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Saturday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Saturday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual adoration in the little church"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4f6edf35",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fcc60cd6",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8315a8eb",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 7,
+          "said": "St. John Paul II: Perpetual adoration in the little church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 6,
+          "said": "LAKE VIEW FOOD PANTRY Located in front of the little church at St. John Paul II."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "weekly adoration Sunday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "fcc60cd6a154",
+          "said": "weekly adoration Sunday 00:00–23:59 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "8315a8eb60f9",
+          "said": "weekly adoration Sunday 00:00 st-john-paul-ii-lake-view  “Perpetual adoration in the little church”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R38: the parish lists perpetual adoration in the little church on the St. John Paul II grounds. Seven daily slots, 00:00-23:59, as done elsewhere for round-the-clock Adoration. History reads it as 24 hours on some days only; the bulletin says perpetual.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-paul-ii-lake-view",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance (All Souls Day)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 3,
+          "said": "On Monday, November 2... The Family is celebrating a special Mass at St. John Paul II at 6:30pm and you are invited."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 9,
+          "said": "MASS OF REMEMBRANCE ... Monday, November 2 at St. John Paul II beginning at 6:30pm. All are welcome."
+        },
+        {
+          "source": "history",
+          "bulletin": "9ece6bb978c0",
+          "said": "specific_date mass 2026-11-02 18:30 st-john-paul-ii-lake-view  “Mass of Remembrance / All Souls Day”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "4f6edf3574e9",
+          "said": "specific_date mass 2026-11-02 18:30 st-john-paul-ii-lake-view  “Mass of Remembrance”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: dated Mass open to all, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. John Kwiecien's 50th ordination anniversary"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 9,
+          "said": "Mass is at 4:00 pm followed by a reception in the Parish Hall. Those wishing to attend must RSVP by October 30."
+        }
+      ],
+      "rationale": "R22: St. Aloysius, Springville belongs to another parish (Cattaraugus Creek Catholic); also an RSVP anniversary celebration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "First Saturday Devotion: Following 8am Mass at St. Francis"
+        }
+      ],
+      "rationale": "R24: a devotion with no stated Mass, Confession or Adoration time of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ece6bb9",
+          "page": 7,
+          "said": "All are invited to recite the rosary at 8:00 am prior to the 8:30 Sunday Mass at St. Francis"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2d38348a",
+          "page": 1,
+          "said": "Confessions can be scheduled as needed by contacting the family office."
+        }
+      ],
+      "rationale": "R26: by arrangement, no definite time (that line is in 2d38348a only).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}
