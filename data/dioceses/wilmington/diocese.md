@@ -212,6 +212,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - jppc.net/onlinebulletins/<id>template.pdf redirects to the church-bulletin.org slug for that number, so a short curl -L scan of ids names the parish behind each (Delaware parishes are 300-320, 732); a church-bulletin.org slug guess returns the generic home page with HTTP 200, so don't trust it. A listing can outlive its parish (no. 313 Christ Our King lists no PDFs).
 - When a parish site fails TLS (ERR_CERT_COMMON_NAME_INVALID) in curl and Chrome, the Wayback copy (archive.org/wayback/available?url=...) still shows which eCatholic id it runs; a bulletin's own letterhead can name the working domain (St. Joseph: sjfschurch.org).
 - The Dialog's deanery lists name one parish per canonical cluster inconsistently; the Downtown Catholic scanned cover (page 1 image) must be rendered with render.py to read the masthead, and an href-only link is not a recheck-able quote: quote visible text.
+- Duda parish sites (iccelkton.org) list weekly PDFs on /bulletins as irp.cdn-website.com/<site>/files/uploaded/<date>.pdf newest-first, so `page-pdfs <bulletins page>` works with no filename filter.
+- A spoofed browser user-agent on curl is refused by the sandbox; plain curl, probe pdf and visit.py are enough for these sites.
+- A campus Newman Center can restrict Mass to the university community and publish only a semester newsletter; a shared pastor with a parish does not put it in the parish bulletin.
 
 ## Rules settled for this diocese
 
