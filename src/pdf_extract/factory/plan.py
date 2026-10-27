@@ -164,13 +164,13 @@ def _next_seed(ledger: Ledger, run: Any) -> Next | None:
         pending_review = []
         redrafted = []
         for parish in slugs:
-            if parish in parked:
+            if parish in parked or seed_status(worktree, parish) == "approved":
                 continue
             mine = [j for j in seeds if json.loads(j["input"]).get("parish") == parish]
             if not mine:
                 return Next("seed", {"parish": parish, "batch": batch})
             job = mine[-1]
-            if job["status"] != DONE or seed_status(worktree, parish) == "approved":
+            if job["status"] != DONE:
                 continue
             seen = verdicts.get(parish)
             if seen is None or seen["at"] <= job["finished_at"]:

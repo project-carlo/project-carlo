@@ -511,6 +511,32 @@ def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
     assert kinds == ["start", "answer"]
 
 
+def test_every_answer_to_a_jobs_run_level_flags_reaches_it(env: Env) -> None:
+    def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt == 1:
+            return StubAction(handoff={"status": "blocked", "summary": "s", "flags": [
+                {"severity": "blocking", "scope": "run", "subject": "testd-map-1",
+                 "question": "Two batches claim St. Bede"},
+                {"severity": "blocking", "scope": "run", "subject": "testd-map-1",
+                 "question": "Is the roster's St. Clare the Lewes one?"}]})
+        return StubAction(handoff=done())
+
+    d = env.dispatcher(map_script(reconcile=reconciling))
+    drive(d)
+    run = map_run(env)
+    env.answer(1, "St. Bede belongs to b1.")
+    d.poll_issues()
+    assert env.ledger.run(run["id"])["status"] == BLOCKED  # the other issue is still open
+    env.answer(2, "Yes, Lewes.")
+    d.poll_issues()
+    drive(d)
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+    reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
+    answer = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND kind = 'answer'",
+                            reconcile["id"])["prompt"]
+    assert "St. Bede belongs to b1." in answer and "Yes, Lewes." in answer
+
+
 # ── Merging main ─────────────────────────────────────────────────────────────
 def test_main_is_merged_at_the_start_of_each_stage(env: Env) -> None:
     d = env.dispatcher(map_script())
@@ -644,6 +670,45 @@ def test_a_seed_past_its_send_backs_is_parked(env: Env) -> None:
     parked = env.ledger.parked(run["id"])
     assert [f["subject"] for f in parked] == ["st-clare"]
     assert run["status"] == IN_REVIEW  # st-ann was still seeded and reviewed
+    # The parked draft was committed as it stood, so st-ann's job wasn't blamed for it.
+    ann = next(j for j in env.ledger.jobs(run["id"], "seed")
+               if json.loads(j["input"])["parish"] == "st-ann")
+    assert ann["send_backs"] == 0
+    wt = Path(run["worktree"])
+    assert "data/seeds/st-clare.json" in git(wt, "ls-files", "data/seeds")
+    assert "seed st-clare, parked" in git(wt, "log", "--format=%s")
+    assert not git(wt, "status", "--porcelain")
+
+
+def test_a_seed_that_parks_itself_is_not_held_to_seed_check(env: Env) -> None:
+    env.failing["pnpm seed check st-clare"] = 99  # an unfinished draft fails the check
+    run = seed_env(env)
+
+    def script(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.stage == "seed" and req.values["parish"] == "st-clare":
+            return StubAction(
+                files={"data/seeds/{parish}.json": seed_file("st-clare", "drafting")},
+                handoff={"status": "blocked", "summary": "s", "flags": [{
+                    "severity": "blocking", "scope": "parish", "subject": "st-clare",
+                    "question": "The bulletin lists two 9:00 Masses; which church?"}]})
+        return seed_script(req, attempt)
+
+    d = env.dispatcher(script)
+    drive(d)
+    clare = env.ledger.jobs(run["id"], "seed")[0]
+    assert clare["status"] == DONE and clare["send_backs"] == 0
+    assert [f["subject"] for f in env.ledger.parked(run["id"])] == ["st-clare"]
+    assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
+
+
+def test_an_approved_seed_is_not_drafted_again(env: Env) -> None:
+    env.commit_main({"data/seeds/st-clare.json": seed_file("st-clare", "approved")},
+                    "st-clare approved")
+    run = seed_env(env)
+    d = env.dispatcher(seed_script)
+    drive(d)
+    parishes = {json.loads(j["input"]).get("parish") for j in env.ledger.jobs(run["id"], "seed")}
+    assert parishes == {"st-ann"}
 
 
 # ── Readiness (§11) ──────────────────────────────────────────────────────────
@@ -772,6 +837,15 @@ def test_handoff_validation(tmp_path: Path) -> None:
         {"parish": "p", "verdict": "approve", "answers": [
             {"slot": "s1", "choice": 0, "basis": "rule", "why": "w"}]}]}))
     assert read_handoff(path, "seed-review")[1]  # a rule-covered question is a send-back
+
+
+def test_runs_take_their_branch_prefix(tmp_path: Path) -> None:
+    ledger = Ledger(tmp_path / "ledger.db")
+    stub = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path,
+                          branch_prefix="factory-stub/")
+    assert ledger.run(stub)["branch"] == f"factory-stub/{D}-map-1"
+    real = ledger.add_run(diocese=D, kind=SEED, worktrees_dir=tmp_path)
+    assert ledger.run(real)["branch"] == f"factory/{D}-seed-1"
 
 
 def test_write_globs() -> None:

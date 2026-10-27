@@ -20,6 +20,8 @@ DATA = Path("data") / "factory"
 LOCAL_PATH = DATA / "local.yaml"
 LEDGER_PATH = DATA / "factory.db"
 RUNS_DIR = DATA / "runs"
+# A stub run's ledger, worktrees, issues and PRs, apart from the real ones.
+STUB_DATA = DATA / "stub"
 
 
 class FactoryError(RuntimeError):
@@ -49,6 +51,7 @@ class Config:
     backup_prefix: str = "factory/backups/"
     base_branch: str = "main"
     remote: str = "origin"
+    branch_prefix: str = "factory/"  # a Run's branch is <prefix><run>
     # This machine's, from local.yaml.
     accounts: list[Account] = field(default_factory=list)
     owner: str = ""

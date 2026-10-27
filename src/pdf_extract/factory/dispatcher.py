@@ -229,6 +229,7 @@ class Dispatcher:
             if item["diocese"] not in mapped:
                 self.ledger.add_run(diocese=item["diocese"], kind=MAP,
                                     worktrees_dir=self.config.worktrees_dir,
+                                    branch_prefix=self.config.branch_prefix,
                                     notes=item.get("notes", ""))
                 return True
         return False
@@ -339,7 +340,9 @@ class Dispatcher:
                 if original["session_id"] and original["run_id"] == run["id"]:
                     return "answer", inputs.answer_prompt(
                         data.get("question", ""), data.get("answer", ""), rel,
-                        data.get("subject", "the parish you set aside")), original["session_id"]
+                        data.get("subject", "the parish you set aside"),
+                        only=data.get("subject") if job["stage"] == "seed-review" else None,
+                    ), original["session_id"]
             return "start", inputs.job_input(self.ledger, run, job, spec, values), None
         if not job["session_id"]:
             first = self._attempts(job["id"])
@@ -454,7 +457,10 @@ class Dispatcher:
             return self._partial(run, job, "the handoff says partial")
         run_blocked = handoff is not None and any(
             f.severity == BLOCKING and f.scope == "run" for f in handoff.flags)
-        if not problems and not run_blocked and job["stage"] != "seed-review":
+        parks_itself = job["stage"] == "seed" and handoff is not None and any(
+            f.severity == BLOCKING and f.subject == values["parish"] for f in handoff.flags)
+        if not problems and not run_blocked and not parks_itself \
+                and job["stage"] != "seed-review":
             problems += self._stage_gates(job, spec, values, worktree, attempt)
         if problems:
             return self._send_back(run, job, problems)
@@ -497,12 +503,19 @@ class Dispatcher:
                                 "prompt": inputs.send_back_prompt(problems, rel)}))
         return Outcome("ran", f"job {job['id']} sent back: {len(problems)} problems")
 
-    def _exhausted(self, run: Any, job: Any, problems: list[str]) -> Outcome:
-        """Past its send-backs: a seed parks its parish; anything else blocks the Run."""
+    def _exhausted(self, run: Any, job: Any, problems: list[str], *,
+                   own_work: bool = True) -> Outcome:
+        """Past its send-backs: a seed parks its parish; anything else blocks the Run.
+
+        `own_work` is false when a reviewer's verdict exhausts a job that finished earlier,
+        whose work is already committed (the tree holds the reviewer's approvals instead).
+        """
         question = (f"Job {job['name']} ({job['stage']}) still has problems after "
                     f"{job['send_backs']} send-backs:\n\n" + "\n".join(f"- {p}" for p in problems))
         parish = json.loads(job["input"]).get("parish")
         if job["stage"] == "seed" and parish:
+            if own_work:
+                self._commit_parked(run, job, parish)
             flag = self.ledger.add_flag(run["id"], job["id"], severity=BLOCKING, scope="parish",
                                         subject=parish, question=question,
                                         suggestion="Answer how the drafter should fix it.")
@@ -510,6 +523,18 @@ class Dispatcher:
             self.ledger.set_job(job["id"], status=JOB_BLOCKED, finished_at=now())
             return Outcome("blocked", f"parked {parish}")
         return self._block_run(run, job, question)
+
+    def _commit_parked(self, run: Any, job: Any, parish: str) -> None:
+        """Commit a parked seed's draft as it stands, so the next job's diff is only its own
+        and the job resumed with the owner's answer finds the draft on disk."""
+        worktree = Path(run["worktree"])
+        writes = [fill(w, self.values(run, job)) for w in load_stage(job["stage"], worktree).writes]
+        outside = [p for p in git.changed_paths(worktree) if not in_scope(p, writes)]
+        if outside:
+            git.revert(worktree, outside)
+        git.commit(worktree, f"{run['diocese']}: seed {parish}, parked ({run['id']})",
+                   {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]})
+        self._push(run, worktree)
 
     def _block_run(self, run: Any, job: Any | None, question: str, suggestion: str = "") -> Outcome:
         flag = self.ledger.add_flag(run["id"], job["id"] if job else None, severity=BLOCKING,
@@ -629,7 +654,7 @@ class Dispatcher:
     def _send_back_to(self, run: Any, reviewed: Any, problems: list[str]) -> None:
         """A reviewer's send-back goes to the session that did the work, and counts there."""
         if reviewed["send_backs"] >= self.config.max_send_backs:
-            self._exhausted(run, reviewed, problems)
+            self._exhausted(run, reviewed, problems, own_work=False)
             return
         rel = inputs.handoff_rel(run["id"], reviewed["name"])
         self.ledger.clear_actions(reviewed["id"])
@@ -776,7 +801,7 @@ class Dispatcher:
         run = self.ledger.run(flag["run_id"])
         job = self.ledger.job(flag["job_id"]) if flag["job_id"] else None
         if flag["scope"] == "run":
-            if job is not None and job["status"] == JOB_BLOCKED:
+            if job is not None and job["status"] in (JOB_BLOCKED, SENT_BACK):
                 self._resume_blocked(run, job, flag)
             self.ledger.run_sql("UPDATE flag SET status = ? WHERE id = ?", SETTLED, flag["id"])
             return
@@ -804,6 +829,10 @@ class Dispatcher:
     def _resume_blocked(self, run: Any, job: Any, flag: Any) -> None:
         rel = inputs.handoff_rel(run["id"], job["name"])
         prompt = inputs.answer_prompt(flag["question"], flag["answer"], rel, "this job")
+        pending = json.loads(job["pending_prompt"] or "null")
+        if job["status"] == SENT_BACK and pending:
+            # Another of its flags was answered first: the job gets both answers.
+            prompt = f"{pending.get('prompt') or ''}\n\n{prompt}".strip()
         self.ledger.clear_actions(job["id"])
         self.ledger.set_job(job["id"], status=SENT_BACK, send_backs=0, continues=0,
                             pending_prompt=json.dumps({"kind": "answer", "prompt": prompt}))
@@ -817,7 +846,8 @@ class Dispatcher:
                     self.ledger.set_run(other["id"], parishes=json.dumps(parishes + [subject]))
                 return self.ledger.run(other["id"])
         run_id = self.ledger.add_run(diocese=run["diocese"], kind=run["kind"],
-                                     worktrees_dir=self.config.worktrees_dir, status=PENDING,
+                                     worktrees_dir=self.config.worktrees_dir,
+                                     branch_prefix=self.config.branch_prefix, status=PENDING,
                                      follow_up_of=run["id"], parishes=[subject],
                                      notes=f"Follow-up of {run['id']}")
         return self.ledger.run(run_id)
@@ -841,6 +871,7 @@ class Dispatcher:
             if result.start:
                 self.ledger.add_run(diocese=diocese, kind=SEED, status=PENDING,
                                     worktrees_dir=self.config.worktrees_dir,
+                                    branch_prefix=self.config.branch_prefix,
                                     parishes=result.start,
                                     notes=f"{len(result.start)} parishes ready")
             for parish in result.overdue:

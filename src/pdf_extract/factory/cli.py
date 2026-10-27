@@ -2,8 +2,9 @@
 
   status                       Runs, the running job, usage, what waits on you
   queue                        the dioceses waiting for a map Run (factory/queue.json)
-  run [--once] [--stub FILE]   the dispatcher; --stub plays canned workers, with issues
-                               and PRs as files under data/factory/stub/ and no pushes
+  run [--once] [--stub FILE]   the dispatcher; --stub plays canned workers, with its own
+                               ledger, worktrees, issues and PRs under data/factory/stub/,
+                               branches factory-stub/<run> and no pushes
   pause [REASON]               stop starting jobs (the running one finishes)
   resume [--override-caps]     start again; --override-caps ignores the usage caps
   retry <job>                  run a blocked or failed job again from where it stopped
@@ -12,8 +13,9 @@
   cost [--stage]               cost by Run, or by stage
   backup                       back the ledger up to R2 now
 
-A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). Run it from the
-dispatcher's own checkout; see docs/factory-spec.md.
+A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). `--stub` on the
+other commands reads the stub runs' ledger. Run it from the dispatcher's own checkout;
+see docs/factory-spec.md.
 """
 
 from __future__ import annotations
@@ -30,9 +32,9 @@ from typing import Any
 from pdf_extract.factory import report
 from pdf_extract.factory.backup import backup_ledger
 from pdf_extract.factory.config import (
-    DATA,
     LEDGER_PATH,
     RUNS_DIR,
+    STUB_DATA,
     FactoryError,
     load_config,
 )
@@ -51,36 +53,37 @@ from pdf_extract.factory.ledger import (
 Result = dict[str, Any]
 
 
-def _ledger() -> Ledger:
-    return Ledger(LEDGER_PATH)
+def _ledger(args: argparse.Namespace) -> Ledger:
+    """The real ledger, or the stub runs' (`--stub`), so a stub Run never reaches the real one."""
+    return Ledger(STUB_DATA / LEDGER_PATH.name if args.stub else LEDGER_PATH)
 
 
 def _status(args: argparse.Namespace) -> Result:
-    return report.status(_ledger())
+    return report.status(_ledger(args))
 
 
 def _queue(args: argparse.Namespace) -> Result:
     from pdf_extract.factory.dispatcher import main_queue
 
-    return report.queue(_ledger(), main_queue(_repo(), load_config().upstream))
+    return report.queue(_ledger(args), main_queue(_repo(), load_config().upstream))
 
 
 def _pause(args: argparse.Namespace) -> Result:
-    ledger = _ledger()
+    ledger = _ledger(args)
     ledger.set("paused", {"reason": args.reason or "paused by the owner", "at": now()})
     ledger.set("override_caps", False)
     return {"paused": True}
 
 
 def _resume(args: argparse.Namespace) -> Result:
-    ledger = _ledger()
+    ledger = _ledger(args)
     ledger.set("paused", None)
     ledger.set("override_caps", bool(args.override_caps))
     return {"paused": False, "override_caps": bool(args.override_caps)}
 
 
 def _retry(args: argparse.Namespace) -> Result:
-    ledger = _ledger()
+    ledger = _ledger(args)
     try:
         job = report.find_job(ledger, args.job)
     except KeyError:
@@ -102,7 +105,7 @@ def _retry(args: argparse.Namespace) -> Result:
 
 
 def _inspect(args: argparse.Namespace) -> Result:
-    ledger = _ledger()
+    ledger = _ledger(args)
     if args.stage:
         args.render = report.text_recent
         return report.recent(ledger, args.stage, args.last)
@@ -117,11 +120,11 @@ def _inspect(args: argparse.Namespace) -> Result:
                            job["id"])
         args.render = lambda r: r["prompt"]
         return {"prompt": first["prompt"] if first else None}
-    return report.inspect(ledger, job, RUNS_DIR)
+    return report.inspect(ledger, job, STUB_DATA / RUNS_DIR.name if args.stub else RUNS_DIR)
 
 
 def _cost(args: argparse.Namespace) -> Result:
-    return report.cost(_ledger(), args.stage)
+    return report.cost(_ledger(args), args.stage)
 
 
 def _backup(args: argparse.Namespace) -> Result:
@@ -145,11 +148,13 @@ def _run(args: argparse.Namespace) -> Result:
     # Each Run worktree has its own .venv; `uv run` would warn about this one's.
     os.environ.pop("VIRTUAL_ENV", None)
     config = load_config()
-    ledger = _ledger()
+    ledger = _ledger(args)
     stub = args.stub is not None
     if stub:
         worker: Any = StubWorker(scenario_script(Path(args.stub)))
-        the_forge: Any = forge.LocalForge(DATA / "stub")
+        the_forge: Any = forge.LocalForge(STUB_DATA)
+        config.worktrees_dir = STUB_DATA / "worktrees"
+        config.branch_prefix = "factory-stub/"
         config.accounts = []
         config.owner = config.owner or "owner"
     else:
@@ -167,6 +172,7 @@ def _run(args: argparse.Namespace) -> Result:
 
     dispatcher = Dispatcher(
         ledger, config, repo=_repo(), worker=worker, forge=the_forge,
+        runs_dir=STUB_DATA / RUNS_DIR.name if stub else RUNS_DIR,
         pull_data=None if stub else pull,
         backup=None if stub else (lambda: backup_ledger(LEDGER_PATH, config.backup_prefix)),
         push=not (stub or args.no_push),
@@ -200,6 +206,9 @@ def add_factory_parser(
         p = sub.add_parser(name, description=handler.__doc__)
         p.set_defaults(handler=handler, render=render)
         p.add_argument("--json", action="store_true", help="Print the JSON result")
+        if name != "run":
+            p.add_argument("--stub", action="store_true",
+                           help="The stub runs' ledger (data/factory/stub/), not the real one")
         add_common_args(p)
         return p
 

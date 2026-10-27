@@ -229,7 +229,11 @@ def resume_prompt(handoff: str) -> str:
             f"where you left off, and write your handoff at `{handoff}`.")
 
 
-def answer_prompt(question: str, answer: str, handoff: str, scope: str) -> str:
+def answer_prompt(question: str, answer: str, handoff: str, scope: str,
+                  only: str | None = None) -> str:
+    """`only`: the one parish a resumed `seed-review` gives a verdict for."""
+    covers = (f" Its `seeds` gives a verdict for `{only}` only; the other parishes of the "
+              "batch are settled." if only else "")
     return (f"The owner answered the question you raised about {scope}.\n\nYou asked: "
             f"{question}\nThey answered: {answer}\n\nFinish that work now, following the "
-            f"answer, and write a new handoff at `{handoff}`.")
+            f"answer, and write a new handoff at `{handoff}`.{covers}")

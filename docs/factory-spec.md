@@ -417,8 +417,10 @@ you've already mapped. You review its PRs closely; they are the test of the fact
    same for the second. List them, your GitHub login and any paths in
    `data/factory/local.yaml` (`factory/local.example.yaml`). `gh` must be signed in.
 4. Try it without spending usage: `pnpm factory run --stub scenario.json` plays canned
-   workers (`workers.scenario_script`), with issues and PRs as files under
-   `data/factory/stub/` and nothing pushed.
+   workers (`workers.scenario_script`). A stub run has its own ledger, worktrees, issues
+   and PRs under `data/factory/stub/` and branches `factory-stub/<run>`, and pushes
+   nothing, so it never touches the real Runs; `pnpm factory status --stub` (and
+   `inspect`, `cost`... `--stub`) reads it.
 5. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
    `pnpm factory status` shows what it is doing and what waits on you.
 
@@ -455,10 +457,14 @@ Where the implementation had to decide something this spec left open.
   anyway, the gate resets it softly and sends the job back.
 - **A handoff with status `blocked`** must carry a blocking flag. A blocking flag with
   `scope: run` blocks the Run without running the stage gates; parish flags don't stop
-  the job finishing.
+  the job finishing. When a job raised several Run-level flags, it resumes once all are
+  answered, with every answer.
 - **seed-review must cover its batch**: a verdict or a blocking flag for every parish,
   or it is sent back. Its `basis` is `precedent` or `judgment` only; a question a rule
   covers is a send-back.
+- **A parked seed's draft is committed** as it stands (`seed <parish>, parked`), so the
+  next job's diff-scope gate sees only its own changes and the answered job finds the
+  draft. A seed job whose handoff parks its own parish isn't held to `seed check`.
 - **`seed approve` failing** on a reviewer's answers sends the seed back to its drafter
   with the error, like any send-back. The stage gate `pnpm seed check {approved}` runs
   after the approvals.

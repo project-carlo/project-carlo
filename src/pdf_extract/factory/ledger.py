@@ -245,7 +245,7 @@ class Ledger:
 
     def add_run(self, *, diocese: str, kind: str, worktrees_dir: Path, status: str = ACTIVE,
                 follow_up_of: str | None = None, parishes: list[str] | None = None,
-                notes: str = "") -> str:
+                notes: str = "", branch_prefix: str = "factory/") -> str:
         with self.tx():
             number = 1 + (self.one("SELECT MAX(number) AS n FROM run WHERE diocese = ? AND "
                                    "kind = ?", diocese, kind)["n"] or 0)
@@ -253,7 +253,7 @@ class Ledger:
             self.run_sql(
                 "INSERT INTO run (id, diocese, kind, number, status, branch, worktree, "
                 "follow_up_of, parishes, notes, created_at) VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-                run_id, diocese, kind, number, status, f"factory/{run_id}",
+                run_id, diocese, kind, number, status, f"{branch_prefix}{run_id}",
                 str(worktrees_dir / run_id), follow_up_of,
                 json.dumps(parishes) if parishes is not None else None, notes, now())
         return run_id
