@@ -788,6 +788,28 @@ function ClusteredChurchMarkers({
     [index, viewport],
   );
 
+  // Pins and roundels fade in as a pan or zoom brings them in, but a filter
+  // change (dragging the time slider, say) shows its result at once: fading
+  // in on every step of a drag only blurs what the filter is doing. Any index
+  // but the one the map opened with means the filters (or the data) changed.
+  // The markers' own effects have added them to the map by the time this one
+  // runs, so their fade-ins can be skipped to the end; again on the next
+  // frame, for markers StrictMode removes and adds back after this effect.
+  const [firstIndex] = useState(index);
+  useEffect(() => {
+    if (index === firstIndex) return;
+    const pane = map.getPane("markerPane");
+    if (!pane || typeof pane.getAnimations !== "function") return;
+    const skipFadeIns = () => {
+      for (const animation of pane.getAnimations({ subtree: true })) {
+        if ("animationName" in animation) animation.finish();
+      }
+    };
+    skipFadeIns();
+    const frame = requestAnimationFrame(skipFadeIns);
+    return () => cancelAnimationFrame(frame);
+  }, [index, firstIndex, map]);
+
   const zoomInto = useCallback(
     (cluster: MapCluster) => {
       setHovered(null);
