@@ -226,6 +226,10 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- FATA Online covers can put the church names for each Mass box in an image layer (text layer has the times only): render page 1 to see which churches the parish lists, then quote trustee/calendar lines from the text.
+- A directory's single Mass time for a chapel can be one annual Mass (St. Patrick Chapel, Conowingo 'Sat 10:00' = the 12 Sep annual Mass); check the bulletin before recording it as weekly.
+- eCatholic sites behind Cloudflare answer plain curl 403 on inner pages but visit.py reads /mass-times and /church-addresses; their Bulletins button can go to FATA with no files on eCatholic.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
