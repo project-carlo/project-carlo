@@ -253,6 +253,9 @@ export function FilterPanel({
   if (isDesktop) {
     return (
       <section className="rise-in h-fit w-full overflow-hidden border border-rule-strong bg-paper/96 shadow-missal-panel backdrop-blur-sm">
+        {/* Names the panel, as the phone sheet's title does, and gives its
+         *  section headings an h2 to sit under. */}
+        <h2 className="sr-only">Filters</h2>
         <ScrollArea className="max-h-[calc(100svh-12rem)]">
           {panelBody}
         </ScrollArea>

@@ -3,13 +3,16 @@ import {
   useEffect,
   useCallback,
   useMemo,
+  useLayoutEffect,
+  type RefObject,
   useRef,
   type ReactNode,
 } from "react";
-import { Command as CommandPrimitive } from "cmdk";
+import { Command as CommandPrimitive, useCommandState } from "cmdk";
 import { useQuery } from "@tanstack/react-query";
 import type FuseType from "fuse.js";
-import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
+import type { ChurchSearchResult } from "../api";
+import { churchSearchIndexQuery } from "../lib/homeStartQueries";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
@@ -75,11 +78,9 @@ export function SearchTypeahead({
     return () => clearTimeout(t);
   }, [query]);
 
-  const { data: allChurches = [], isLoading: churchesLoading } = useQuery({
-    queryKey: ["church-search-index"],
-    queryFn: fetchAllChurchesForSearch,
-    staleTime: 5 * 60 * 1000,
-  });
+  const { data: allChurches = [], isLoading: churchesLoading } = useQuery(
+    churchSearchIndexQuery,
+  );
 
   const trimmedDebouncedQuery = debouncedQuery.trim();
   const shouldSearchPlaces =
@@ -226,11 +227,21 @@ export function SearchTypeahead({
     [],
   );
 
+  const inputLabel = isPlaceMode
+    ? "Search for a city, ZIP code, or address"
+    : "Search for a church by name";
+
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
   return (
     <Command
       shouldFilter={false}
+      // cmdk names its input by a hidden label of its own (aria-labelledby),
+      // which outranks aria-label, so the name has to go here.
+      label={inputLabel}
       className="overflow-visible bg-transparent p-0"
     >
+      <ComboboxAriaSync inputRef={inputRef} open={showDropdown} />
       <Popover open={showDropdown} onOpenChange={setIsOpen}>
         <PopoverAnchor asChild>
           <div ref={searchAnchorRef} className="relative w-full">
@@ -269,11 +280,7 @@ export function SearchTypeahead({
                   }
                 }}
                 placeholder={placeholder}
-                aria-label={
-                  isPlaceMode
-                    ? "Search for a city, ZIP code, or address"
-                    : "Search for a church by name"
-                }
+                ref={inputRef}
                 autoComplete="off"
                 className={`min-w-0 flex-1 bg-transparent font-serif text-ink outline-none placeholder:text-ink-soft placeholder:italic ${
                   size === "lg" ? "text-[1.375rem]" : "text-[1.0625rem]"
@@ -436,4 +443,44 @@ export function SearchTypeahead({
       </Popover>
     </Command>
   );
+}
+
+/**
+ * cmdk's input always says it is expanded and points at its list and selected
+ * item, but here the list only exists while the dropdown is open. cmdk sets
+ * those attributes after the props it is given, so they can't be overridden
+ * as props; this corrects them on the element after every render instead.
+ * Rendered inside <Command> so it re-renders whenever the selection changes.
+ * e2e/home.spec.ts checks the result, so a cmdk change that breaks it fails
+ * a test.
+ */
+function ComboboxAriaSync({
+  inputRef,
+  open,
+}: {
+  inputRef: RefObject<HTMLInputElement | null>;
+  open: boolean;
+}) {
+  const selectedItemId = useCommandState((state) => state.selectedItemId);
+  // cmdk's list id, read from the input before it is first taken away.
+  const listIdRef = useRef<string | null>(null);
+  useLayoutEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+    listIdRef.current ??= input.getAttribute("aria-controls");
+    const listId = listIdRef.current;
+    input.setAttribute("aria-expanded", String(open));
+    setOrRemove(input, "aria-controls", open ? listId : null);
+    setOrRemove(
+      input,
+      "aria-activedescendant",
+      open ? (selectedItemId ?? null) : null,
+    );
+  });
+  return null;
+}
+
+function setOrRemove(el: Element, name: string, value: string | null) {
+  if (value == null) el.removeAttribute(name);
+  else el.setAttribute(name, value);
 }
