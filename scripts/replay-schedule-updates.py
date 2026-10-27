@@ -27,6 +27,7 @@ from pdf_extract.classifiers.schedule_update import (
     parse_response,
     render_context,
 )
+from pdf_extract.db import migrate
 from pdf_extract.schedule.policy import APPLIED, Proposal, decide, whole_call_reason
 from pdf_extract.schedule.store import (
     Change,
@@ -40,11 +41,12 @@ from pdf_extract.schedule.store import (
 from pdf_extract.storage import church_list_for_prompt
 
 
-def trial(db: Path, case: dict, number: int, out: Path, tier: str) -> dict:
+def trial(db: Path, case: dict, number: int, out: Path, tier: str, detail: str = 'low') -> dict:
     conn = sqlite3.connect(":memory:")
     conn.row_factory = sqlite3.Row
     with sqlite3.connect(f"file:{db.resolve()}?mode=ro", uri=True) as source:
         source.backup(conn)
+    migrate(conn)
     calls = [dict(conn.execute(
         "SELECT c.*, b.content_hash FROM llm_call c JOIN bulletin b ON b.id=c.bulletin_id "
         "WHERE c.id=?", (call_id,),
@@ -55,7 +57,7 @@ def trial(db: Path, case: dict, number: int, out: Path, tier: str) -> dict:
     conn.execute("DELETE FROM current_schedule WHERE parish_id=?", (parish_id,))
     for revision in range(1, calls[0]["base_revision"] + 1):
         fold_revision(conn, parish_id, revision)
-    updater = OpenAIScheduleUpdater(service_tier=tier)
+    updater = OpenAIScheduleUpdater(service_tier=tier, file_detail=detail)
     records = []
     for original in calls:
         today = date.fromisoformat(original["call_date"])
@@ -105,7 +107,8 @@ def trial(db: Path, case: dict, number: int, out: Path, tier: str) -> dict:
         )
     checks["responses_valid"] = all(
         not json.loads(r["reply"]["text"])["wrong_bulletin"]
-        and all(d["decision"] == APPLIED for d in r["decisions"]) for r in records
+        and all(d["decision"] == APPLIED or d["reason"] in case.get("allowed_rejection_reasons", [])
+                for d in r["decisions"]) for r in records
     )
     result = {"parish": case["parish"], "trial": number,
               "required": case.get("required", True), "checks": checks,
@@ -122,6 +125,7 @@ def main() -> None:
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--trials", type=int, default=3)
     parser.add_argument("--service-tier", default="default", choices=("default", "flex"))
+    parser.add_argument("--file-detail", default="low", choices=("auto", "low", "high"))
     args = parser.parse_args()
     if args.trials < 1:
         parser.error("--trials must be positive")
@@ -129,14 +133,16 @@ def main() -> None:
     args.out.mkdir(parents=True, exist_ok=True)
     cases = json.loads(args.spec.read_text())["cases"]
     with ThreadPoolExecutor(max_workers=3) as pool:
-        futures = [pool.submit(trial, args.db, case, n, args.out, args.service_tier)
+        futures = [pool.submit(trial, args.db, case, n, args.out, args.service_tier, args.file_detail)
                    for case in cases for n in range(1, args.trials + 1)]
         results = []
         for future in futures:
             result = future.result()
             results.append(result)
             print(json.dumps(result), flush=True)
-    summary = {"policy_hash": POLICY_HASH, "version": OpenAIScheduleUpdater().version,
+    summary = {"policy_hash": POLICY_HASH,
+               "version": OpenAIScheduleUpdater(file_detail=args.file_detail).version,
+               "file_detail": args.file_detail,
                "service_tier": args.service_tier, "results": results,
                "passed": all(r["passed"] for r in results if r["required"]),
                "all_expectations_passed": all(r["passed"] for r in results)}

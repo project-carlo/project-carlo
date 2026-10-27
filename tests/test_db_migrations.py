@@ -42,7 +42,7 @@ EVENT_ROW = {
 
 
 def _count_migrations() -> int:
-    return len(list(MIGRATIONS_DIR.glob("*.sql")))
+    return len(_migration_files())
 
 
 def _count(conn: sqlite3.Connection, table: str) -> int:

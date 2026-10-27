@@ -1,0 +1,218 @@
+{
+  "policy_hash": "8a1676e6e9981bce22469d72d62f5d55efdf95abc33bcccb046a91d0d86f8189",
+  "version": "2c50e66bee89c86e05a91526bec1f6ad9e8bac0cbec14005479d26257fb5f081",
+  "file_detail": "low",
+  "service_tier": "default",
+  "results": [
+    {
+      "parish": "st-vincent-de-paul-blessed-sacrament-vestal",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_1845_retained": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-31\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-vincent-de-paul-blessed-sacrament-vestal",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_1845_retained": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-31\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "holy-spirit-st-josephs",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Friday\", \"end_time\": 1200, \"event_type\": \"adoration\", \"start_time\": 600}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "holy-spirit-st-josephs",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Friday\", \"end_time\": 1200, \"event_type\": \"adoration\", \"start_time\": 600}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "transfiguration-syracuse",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_1901_retained": true,
+        "entry_1905_retained": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-29\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-30\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "present_{\"date\": \"2026-10-28\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "present_{\"date\": \"2026-10-28\", \"end_time\": 385, \"event_type\": \"confession\", \"start_time\": 370}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "transfiguration-syracuse",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_1901_retained": true,
+        "entry_1905_retained": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-29\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "absent_{\"cancelled\": 1, \"date\": \"2026-10-30\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "present_{\"date\": \"2026-10-28\", \"event_type\": \"mass\", \"start_time\": 390}": true,
+        "present_{\"date\": \"2026-10-28\", \"end_time\": 385, \"event_type\": \"confession\", \"start_time\": 370}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-michael-the-archangel-south-glens-falls",
+      "trial": 1,
+      "required": false,
+      "checks": {
+        "present_{\"date\": \"2026-11-02\", \"event_type\": \"mass\", \"start_time\": 1140}": false,
+        "responses_valid": true
+      },
+      "passed": false
+    },
+    {
+      "parish": "st-michael-the-archangel-south-glens-falls",
+      "trial": 2,
+      "required": false,
+      "checks": {
+        "present_{\"date\": \"2026-11-02\", \"event_type\": \"mass\", \"start_time\": 1140}": false,
+        "responses_valid": true
+      },
+      "passed": false
+    },
+    {
+      "parish": "catholic-community-st-stephen-st-patrick-whitney-point",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Saturday\", \"event_type\": \"mass\", \"start_time\": 960, \"valid_from\": \"2026-10-31\"}": true,
+        "present_{\"day_of_week\": \"Saturday\", \"event_type\": \"mass\", \"start_time\": 1020, \"valid_until\": \"2026-10-30\"}": true,
+        "present_{\"day_of_week\": \"Saturday\", \"end_time\": 945, \"event_type\": \"confession\", \"start_time\": 900, \"valid_from\": \"2026-10-31\"}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "catholic-community-st-stephen-st-patrick-whitney-point",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Saturday\", \"event_type\": \"mass\", \"start_time\": 960, \"valid_from\": \"2026-10-31\"}": true,
+        "present_{\"day_of_week\": \"Saturday\", \"event_type\": \"mass\", \"start_time\": 1020, \"valid_until\": \"2026-10-30\"}": true,
+        "present_{\"day_of_week\": \"Saturday\", \"end_time\": 945, \"event_type\": \"confession\", \"start_time\": 900, \"valid_from\": \"2026-10-31\"}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "sacred-heart-lake-george",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "absent_{\"valid_from\": \"2027-06-01\"}": true,
+        "present_{\"day_of_week\": \"Wednesday\", \"event_type\": \"mass\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "present_{\"day_of_week\": \"Friday\", \"event_type\": \"mass\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "present_{\"day_of_week\": \"Wednesday\", \"event_type\": \"adoration\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "sacred-heart-lake-george",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "absent_{\"valid_from\": \"2027-06-01\"}": true,
+        "present_{\"day_of_week\": \"Wednesday\", \"event_type\": \"mass\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "present_{\"day_of_week\": \"Friday\", \"event_type\": \"mass\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "present_{\"day_of_week\": \"Wednesday\", \"event_type\": \"adoration\", \"valid_from\": \"2026-11-01\", \"valid_until\": null}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-bartholomew-norwich",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Monday\", \"event_type\": \"mass\", \"start_time\": 540, \"valid_from\": \"2026-11-02\"}": true,
+        "present_{\"day_of_week\": \"Tuesday\", \"event_type\": \"mass\", \"start_time\": 540, \"valid_until\": \"2026-11-01\"}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-bartholomew-norwich",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "present_{\"day_of_week\": \"Monday\", \"event_type\": \"mass\", \"start_time\": 540, \"valid_from\": \"2026-11-02\"}": true,
+        "present_{\"day_of_week\": \"Tuesday\", \"event_type\": \"mass\", \"start_time\": 540, \"valid_until\": \"2026-11-01\"}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "sacred-heart-divine-mercy-cicero",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "absent_{\"date\": \"2026-11-15\", \"event_type\": \"confession\", \"start_time\": 120}": true,
+        "absent_{\"date\": \"2026-11-15\", \"event_type\": \"confession\", \"start_time\": 840}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "sacred-heart-divine-mercy-cicero",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "absent_{\"date\": \"2026-11-15\", \"event_type\": \"confession\", \"start_time\": 120}": true,
+        "absent_{\"date\": \"2026-11-15\", \"event_type\": \"confession\", \"start_time\": 840}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-jerome",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "entry_1996_retained": true,
+        "absent_{\"date\": \"2026-10-31\", \"event_type\": \"adoration\", \"start_time\": 900}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    },
+    {
+      "parish": "st-jerome",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "entry_1996_retained": true,
+        "absent_{\"date\": \"2026-10-31\", \"event_type\": \"adoration\", \"start_time\": 900}": true,
+        "responses_valid": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "all_expectations_passed": false
+}

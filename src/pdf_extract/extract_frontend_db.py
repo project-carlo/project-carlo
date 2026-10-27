@@ -5,10 +5,10 @@ stripped down to what the web app reads. It is gzipped JSON, written to
 apps/web/public/frontend.json.gz for Vite to serve as an opaque static asset;
 the app (apps/web/src/lib/snapshot.ts) decodes it into memory.
 
-Format (version 2). Each table is stored column by column, as parallel arrays:
+Format (version 3). Each table is stored column by column, as parallel arrays:
 
     {
-      "version": 2,
+      "version": 3,
       "churches": {"id": [...], "parish_id": [...], "slug": [...], ...},
       "events": {"id": {"deltas": [...]}, "church_id": [...], ...}
     }
@@ -56,6 +56,9 @@ version 1 snapshot.
 the app takes as false.
 
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
+Version 3 adds inclusive absolute valid_from/valid_until dates for weekly
+entries. They do not repeat annually. Older web readers must refuse version 3
+rather than advertise expired times; the new reader also accepts version 2.
 A new column needs no bump when its absence reads as null: list it in
 ADDED_COLUMNS, and the app and `read_snapshot` take a snapshot written before
 it (an older published run, or the live site's while a deploy is pending)
@@ -94,9 +97,9 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DB = DEFAULT_DB_PATH
 SNAPSHOT_NAME = "frontend.json.gz"
 DEST_SNAPSHOT = ROOT / "apps" / "web" / "public" / SNAPSHOT_NAME
-SNAPSHOT_VERSION = 2
-# Versions `read_snapshot` reads. The app reads only SNAPSHOT_VERSION.
-READABLE_VERSIONS = (1, 2)
+SNAPSHOT_VERSION = 3
+# Versions `read_snapshot` reads. The app accepts 2 and 3.
+READABLE_VERSIONS = (1, 2, 3)
 
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
@@ -108,6 +111,7 @@ EVENT_COLUMNS = (
     "end_time", "cancelled", "page_number", "note",
     "weeks_of_month", "season_start_month", "season_start_day", "season_end_month",
     "season_end_day", "cancels_event_id", "exclude_weeks",
+    "valid_from", "valid_until",
 )
 # The columns version 2 added. A version 1 snapshot's rows read as every
 # week ([]), no season and no cancellation (None) in them.
@@ -117,7 +121,9 @@ _V2_DEFAULTS = frozenset({
 })
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
-ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": {"exclude_weeks"}}
+ADDED_COLUMNS = {
+    "churches": {"bulletin_week"}, "events": {"exclude_weeks", "valid_from", "valid_until"},
+}
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
@@ -242,7 +248,7 @@ def _extract_mode_events(conn: sqlite3.Connection, update_mode: set[int]) -> lis
         """
     ).fetchall()
     return [
-        (*row[:11], [], None, None, None, None, None, False)
+        (*row[:11], [], None, None, None, None, None, False, None, None)
         for row in rows if row[11] not in update_mode
     ]
 
@@ -253,12 +259,15 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
     The page is the entry's sighting in its parish's current bulletin, the one
     the church's `bulletin_url` opens.
     """
+    columns = {row[1] for row in conn.execute('PRAGMA table_info(schedule_entry)')}
+    bounds = ', '.join(f'e.{name}' if name in columns else 'NULL'
+                       for name in ('valid_from', 'valid_until'))
     rows = conn.execute(
         f"""
         SELECT e.id, e.church_id, e.event_type, e.event_kind, e.day_of_week, e.date,
                e.start_time, e.end_time, e.cancelled, sighting.page_number, e.note,
                e.weeks_of_month, e.season_start_month, e.season_start_day,
-               e.season_end_month, e.season_end_day
+               e.season_end_month, e.season_end_day, {bounds}
         FROM current_schedule s
         JOIN schedule_entry e ON e.id = s.entry_id
         LEFT JOIN ({_LATEST_BULLETIN}) latest ON latest.parish_id = s.parish_id AND latest.rn = 1
@@ -273,6 +282,7 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
         (
             -row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None,
             mask_excludes_weeks(row[11]),
+            *row[16:18],
         )
         for row in rows
     ]
@@ -291,6 +301,8 @@ _CANCELLED = EVENT_COLUMNS.index("cancelled")
 _CANCELS = EVENT_COLUMNS.index("cancels_event_id")
 _WEEKS = EVENT_COLUMNS.index("weeks_of_month")
 _EXCLUDE_WEEKS = EVENT_COLUMNS.index("exclude_weeks")
+_VALID_FROM = EVENT_COLUMNS.index("valid_from")
+_VALID_UNTIL = EVENT_COLUMNS.index("valid_until")
 _SEASON = slice(EVENT_COLUMNS.index("season_start_month"), EVENT_COLUMNS.index("season_end_day") + 1)
 
 
@@ -305,7 +317,10 @@ def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     then the lowest id is named.
     """
     today = build_date.isoformat()
-    rows = [r for r in rows if r[_KIND] != "specific_date" or (r[_DATE] or "") >= today]
+    rows = [r for r in rows if (
+        (r[_KIND] != "specific_date" or (r[_DATE] or "") >= today)
+        and (r[_VALID_UNTIL] is None or r[_VALID_UNTIL] >= today)
+    )]
     weekly: dict[tuple, list[tuple]] = {}
     for row in sorted(rows, key=lambda r: r[_ID]):
         if row[_KIND] == "weekly":
@@ -325,6 +340,8 @@ def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
                     day, weeks_to_mask(candidate[_WEEKS], candidate[_EXCLUDE_WEEKS]),
                     *candidate[_SEASON],
                 )
+                and (candidate[_VALID_FROM] is None or candidate[_VALID_FROM] <= row[_DATE])
+                and (candidate[_VALID_UNTIL] is None or candidate[_VALID_UNTIL] >= row[_DATE])
             ), None)
             if match is None:
                 continue

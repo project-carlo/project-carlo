@@ -47,6 +47,7 @@ INVALID_ENTRY = "invalid_entry"
 ENTRY_KEYS = frozenset({
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "note",
+    "valid_from", "valid_until",
 })
 
 
@@ -68,10 +69,16 @@ class Entry:
     season_end_month: int | None
     season_end_day: int | None
     note: str | None
+    valid_from: str | None = None
+    valid_until: str | None = None
 
     @property
     def hash(self) -> str:
-        return sha256(json.dumps(astuple(self)).encode("utf-8")).hexdigest()
+        # Preserve the content hashes of entries written before date bounds existed.
+        content = astuple(self)
+        if self.valid_from is None and self.valid_until is None:
+            content = content[:-2]
+        return sha256(json.dumps(content).encode("utf-8")).hexdigest()
 
     @property
     def slot_key(self) -> str:
@@ -85,7 +92,10 @@ class Entry:
             return self.slot_key
         qualifiers = (self.weeks_of_month, self.season_start_month, self.season_start_day,
                       self.season_end_month, self.season_end_day)
-        return self.slot_key + "|" + "|".join(str(value or 0) for value in qualifiers)
+        key = self.slot_key + "|" + "|".join(str(value or 0) for value in qualifiers)
+        if self.valid_from is not None or self.valid_until is not None:
+            key += f"|{self.valid_from or ''}|{self.valid_until or ''}"
+        return key
 
     def conflicts_with(self, other: Entry) -> bool:
         """Whether entries duplicate a pattern or claim the same occurrence.
@@ -97,6 +107,10 @@ class Entry:
             return False
         if not self.weekly or self.identity_key == other.identity_key:
             return True
+        if max(self.valid_from or '0001-01-01', other.valid_from or '0001-01-01') > min(
+            self.valid_until or '9999-12-31', other.valid_until or '9999-12-31',
+        ):
+            return False
         return bool(self._recurrence_mask() & other._recurrence_mask())
 
     def _recurrence_mask(self) -> int:
@@ -112,6 +126,11 @@ class Entry:
     def dated_before(self, day: date) -> bool:
         """Whether this is a dated entry for a day before `day`."""
         return not self.weekly and self.date is not None and self.date < day.isoformat()
+
+    def expired_before(self, day: date) -> bool:
+        return self.dated_before(day) or (
+            self.weekly and self.valid_until is not None and self.valid_until < day.isoformat()
+        )
 
     def season(self) -> dict[str, int | None] | None:
         return columns_to_season(
@@ -136,6 +155,8 @@ class Entry:
                 exclude_weeks=mask_excludes_weeks(self.weeks_of_month),
                 season=self.season(),
             )
+            if self.valid_from is not None or self.valid_until is not None:
+                out.update(valid_from=self.valid_from, valid_until=self.valid_until)
         else:
             out.update(date=self.date, cancelled=bool(self.cancelled))
         return out
@@ -152,7 +173,7 @@ ENTRY_COLUMNS = tuple(f.name for f in fields(Entry))
 
 def entry_from_row(row: Any) -> Entry:
     """An Entry from a `schedule_entry` row (anything indexable by column name)."""
-    return Entry(**{name: row[name] for name in ENTRY_COLUMNS})
+    return Entry(**{name: row[name] for name in ENTRY_COLUMNS if name in row.keys()})
 
 
 class EntryError(ValueError):
@@ -243,6 +264,17 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
     note = raw.get("note")
     if note is not None and not isinstance(note, str):
         raise EntryError(INVALID_ENTRY, "note must be text or null")
+    bounds = {}
+    for name in ("valid_from", "valid_until"):
+        value = raw.get(name)
+        parsed = parse_iso_date(value) if isinstance(value, str) else None
+        if value is not None and (kind != "weekly" or parsed is None):
+            raise EntryError(INVALID_ENTRY, f"{name} must be a weekly YYYY-MM-DD date or null")
+        bounds[name] = parsed.isoformat() if parsed else None
+    if bounds['valid_from'] and bounds['valid_until'] and (
+        bounds['valid_from'] > bounds['valid_until']
+    ):
+        raise EntryError(INVALID_ENTRY, "valid_until must not precede valid_from")
     return Entry(
         church_id=churches[slug],
         event_type=event_type,
@@ -258,4 +290,5 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
         season_end_month=season[2],
         season_end_day=season[3],
         note=note.strip() or None if isinstance(note, str) else None,
+        **bounds,
     )

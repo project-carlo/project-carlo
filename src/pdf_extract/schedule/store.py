@@ -48,10 +48,11 @@ def intern_entry(conn: sqlite3.Connection, entry: Entry) -> int:
     row = conn.execute("SELECT id FROM schedule_entry WHERE hash = ?", (entry_hash,)).fetchone()
     if row is not None:
         return int(row[0])
-    values = [getattr(entry, name) for name in ENTRY_COLUMNS]
+    columns = ENTRY_COLUMNS if entry.valid_from or entry.valid_until else ENTRY_COLUMNS[:-2]
+    values = [getattr(entry, name) for name in columns]
     cursor = conn.execute(
-        f"""INSERT INTO schedule_entry (hash, identity_key, {", ".join(ENTRY_COLUMNS)})
-            VALUES (?, ?, {", ".join("?" * len(ENTRY_COLUMNS))})""",
+        f"""INSERT INTO schedule_entry (hash, identity_key, {", ".join(columns)})
+            VALUES (?, ?, {", ".join("?" * len(columns))})""",
         (entry_hash, entry.identity_key, *values),
     )
     return int(cursor.lastrowid)
@@ -63,7 +64,7 @@ def load_entries(conn: sqlite3.Connection, entry_ids: Iterable[int]) -> dict[int
     for start in range(0, len(ids), 500):
         chunk = ids[start:start + 500]
         rows = conn.execute(
-            f"SELECT id, {', '.join(ENTRY_COLUMNS)} FROM schedule_entry"
+            "SELECT * FROM schedule_entry"
             f" WHERE id IN ({', '.join('?' * len(chunk))})",
             chunk,
         ).fetchall()
@@ -138,7 +139,7 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
     snapshot, never from the schedule.
     """
     rows = conn.execute(
-        f"""SELECT e.id, {", ".join(f"e.{c}" for c in ENTRY_COLUMNS)}
+        """SELECT e.*
             FROM current_schedule s JOIN schedule_entry e ON e.id = s.entry_id
             WHERE s.parish_id = ?""",
         (parish_id,),
@@ -179,7 +180,7 @@ def render_view(
     slugs = church_slugs(conn, [e.church_id for e in live.values()])
     by_church: dict[str, list[tuple[tuple, dict[str, Any]]]] = {slug: [] for slug in churches}
     for entry_id, entry in live.items():
-        if entry.dated_before(call_date):
+        if entry.expired_before(call_date):
             continue
         slug = slugs[entry.church_id]
         by_church.setdefault(slug, []).append((_view_order(entry, slug), entry.view(entry_id)))

@@ -1,0 +1,30 @@
+{
+  "policy_hash": "8a1676e6e9981bce22469d72d62f5d55efdf95abc33bcccb046a91d0d86f8189",
+  "version": "7d45cd26c13652668d80c270dd18f44dedba10bcc5df146408c6c94a05015b47",
+  "file_detail": "high",
+  "service_tier": "default",
+  "results": [
+    {
+      "parish": "st-michael-the-archangel-south-glens-falls",
+      "trial": 1,
+      "required": true,
+      "checks": {
+        "present_{\"date\": \"2026-11-02\", \"event_type\": \"mass\", \"start_time\": 1140}": false,
+        "responses_valid": true
+      },
+      "passed": false
+    },
+    {
+      "parish": "st-michael-the-archangel-south-glens-falls",
+      "trial": 2,
+      "required": true,
+      "checks": {
+        "present_{\"date\": \"2026-11-02\", \"event_type\": \"mass\", \"start_time\": 1140}": false,
+        "responses_valid": true
+      },
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "all_expectations_passed": false
+}

@@ -37,6 +37,9 @@ export interface EventSummary {
   exclude_weeks: boolean;
   /** Weekly slots only: the part of the year it runs; null for all year. */
   season: Season | null;
+  /** Inclusive absolute dates, distinct from an annually repeating season. */
+  valid_from?: string | null;
+  valid_until?: string | null;
 }
 
 /** The church fields every view reads. */
@@ -95,4 +98,6 @@ export interface RawEvent {
    * `date` it cancels. Null on every other row.
    */
   cancels_event_id: number | null;
+  valid_from?: string | null;
+  valid_until?: string | null;
 }

@@ -9,7 +9,7 @@ import {
   type CityIndex,
   type CityLink,
 } from "./lib/cities";
-import { compareSchedule, parseIsoDateLocal, seasonOf } from "./lib/schedule";
+import { compareSchedule, computeNextOccurrence, parseIsoDateLocal, seasonOf } from "./lib/schedule";
 import {
   CHURCH_MAP_CANVAS,
   CITY_MAP_CANVAS,
@@ -30,7 +30,7 @@ import {
   SnapshotVersionError,
   type Snapshot,
 } from "./lib/snapshot";
-import { dateInSeason, patternKey } from "./lib/schedulePattern";
+import { dateInSeason, dateInValidity, patternKey } from "./lib/schedulePattern";
 import { reloadForNewVersion } from "./lib/staleDeploy";
 import type {
   ChurchBase,
@@ -120,6 +120,8 @@ function toEventSummary(ev: RawEvent): EventSummary {
     weeks_of_month: ev.weeks_of_month,
     exclude_weeks: ev.exclude_weeks,
     season: seasonOf(ev),
+    valid_from: ev.valid_from ?? null,
+    valid_until: ev.valid_until ?? null,
   };
 }
 
@@ -132,8 +134,16 @@ export function eventMatchesFilters(
   // The map answers "where can I go this week", so a slot that does not resume
   // until October is not an answer in September. Monthly slots stay: they do
   // run at this time of year, and the popup says which week of the month.
-  if (ev.event_kind === "weekly" && !dateInSeason(today, seasonOf(ev))) {
-    return false;
+  if (ev.event_kind === "weekly") {
+    if (!dateInSeason(today, seasonOf(ev))) return false;
+    if (ev.valid_from || ev.valid_until) {
+      const next = computeNextOccurrence(ev, new Date(today.getFullYear(), today.getMonth(), today.getDate()));
+      if (!next) return false;
+      // Show the version that can occur in the coming week, including a
+      // transition before its next weekday. Do not advertise an expired time.
+      if (!dateInValidity(today, ev) &&
+        new Date(next).getTime() - today.getTime() > 7 * 86400000) return false;
+    }
   }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {
     if (ev.event_kind === "weekly" && ev.day_of_week) {

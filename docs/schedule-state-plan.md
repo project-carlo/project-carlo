@@ -440,10 +440,12 @@ The policy prompt tells the model:
   Propose a delete only when the bulletin says the entry is discontinued, or
   prints what is clearly the full schedule for that church and event type
   without it.
-- **Weekly changes wait until they are in effect.** Propose a change to a
-  weekly entry only when it is already in effect in the bulletin's week. An
-  announced future change ("from November 1 the vigil moves to 5 PM") waits
-  for a bulletin from a week where it is in effect.
+- **Weekly changes retain their effective dates.** End the old weekly entry
+  with inclusive `valid_until` the day before the change, and add the new weekly
+  entry with inclusive `valid_from`. These dates are absolute, unlike an annual
+  season. Retain other qualifiers and any existing end date; do not invent a
+  return date. Both versions are stored in the current schedule and exported.
+  The website selects applicable occurrences without another bulletin or build.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas,
   Holy Week, one-off events) and cancellations for any date from today on.
 - **Cancelling a weekly slot** is an add of a dated entry with
@@ -758,7 +760,6 @@ LEFT JOIN llm_call c ON c.id = (
 - Running a parish in both modes, or in update mode in shadow.
 - Validating the update calls (eval cases, replays of past bulletins). That
   is separate work.
-- Changes effective from a future date (`valid_from` / `valid_until`).
 - Holding doubtful changes for corroboration by a later bulletin or for a
   person's review. Everything applies or is rejected at once in v1.
 - Showing on the site that an entry isn't in this week's bulletin, or when it

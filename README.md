@@ -700,6 +700,19 @@ service. Draft summaries are left out. Context is stored and hashed with the
 view, so editing a reviewed rationale changes the request/cache key without
 re-seeding or replacing the current schedule.
 
+Announced weekly changes are retained immediately with inclusive absolute
+`valid_from` / `valid_until` dates. The old entry ends the day before the new
+entry starts. These bounds apply to times, weekdays and location notes, and
+do not repeat annually like a season. The snapshot and website honor them
+without another bulletin or pipeline run. Snapshot format 3 carries the bounds;
+the new web reader also accepts existing format 2 snapshots. Deploy the web
+reader before publishing a format 3 snapshot.
+
+New services starting before 5 AM are rejected as `unusual_time_review` and
+listed in the update report for review. They are never silently changed to PM.
+After checking the source, a reviewer can approve them with `schedule apply`.
+Existing night services and dated cancellations do not require another approval.
+
 When a cancellation's duration is unclear, update mode keeps the weekly slot
 and cancels only the dated occurrences the bulletin establishes. Repeated
 omissions or cancellations do not establish permanent discontinuation on their
@@ -711,6 +724,9 @@ The [October 18 replay report](data/update-evals/2026-10-18/report.md) records
 the source cases, real model reruns, remaining ambiguity, and the guarded data
 repair in migration 0008. Replays can be repeated with
 `uv run python scripts/replay-schedule-updates.py --help`.
+The [October 25 audit](data/update-evals/2026-10-25/verification.md) and its
+[implementation report](data/update-evals/2026-10-25/implementation.md) document
+the guarded repairs, future transitions, and model replay results.
 
 `pnpm schedule` looks at and hand-edits believed schedules:
 

@@ -538,10 +538,9 @@ def test_weekly_repair_appends_inverse_changes_but_preserves_later_reviews(
                actor="Reviewer")
     old_state = set(live_entries(conn, parish_id))
     old_proposals = _proposals(conn)
-    latest_version = conn.execute("PRAGMA user_version").fetchone()[0]
-    conn.execute("PRAGMA user_version = 7")
     conn.commit()
-    assert migrate(conn) == latest_version - 7
+    repair_sql = Path(__file__).resolve().parents[1] / "data/migrations/0008_repair_reviewed_weekly_slots.sql"
+    conn.executescript(repair_sql.read_text())
     state = set(live_entries(conn, parish_id))
     if later_review:
         assert state == old_state
