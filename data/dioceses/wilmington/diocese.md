@@ -186,6 +186,10 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Self-hosted WordPress bulletin pages can list dated posts (category 'bulletin') that each wrap a PDF with no PDF link on the listing: pin `dated-post <bulletins page>`, not `page-pdfs` (St. Paul, Delaware City); the site's /wp-json/wp/v2/media?mime_type=application/pdf lists the uploads to confirm.
+- GCatholic's holyspiritchurchde.org is now a third-party 'Archive' page, not the parish: HTTP 200 does not mean the old domain is alive; read the page.
+- `probe pdf` prints pypdf font warnings on stderr; redirect 2>/dev/null before piping to jq.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
