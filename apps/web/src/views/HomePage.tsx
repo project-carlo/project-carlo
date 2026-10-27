@@ -11,6 +11,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
 import { fetchChurches } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
+import { MapLoadingIndicator } from "../components/MapLoadingIndicator";
 import {
   FULL_WINDOW_CORNER_CLASS,
   MapCornerControls,
@@ -339,19 +340,7 @@ export function HomePage() {
       </div>
 
       {/* Initial load only — filter changes keep the map mounted via placeholderData */}
-      {!mapReady && !error ? (
-        <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center">
-          <div className="pointer-events-auto flex items-center gap-3 border border-rule-strong bg-paper/95 px-5 py-3 shadow-missal-loading">
-            <span
-              className="h-2 w-2 animate-pulse rounded-full bg-rubric"
-              aria-hidden
-            />
-            <span className="font-serif text-sm text-ink-soft">
-              Loading map…
-            </span>
-          </div>
-        </div>
-      ) : null}
+      {!mapReady && !error ? <MapLoadingIndicator /> : null}
       {error ? (
         <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center p-4">
           <div className="pointer-events-auto max-w-sm border border-rule-strong bg-paper/95 px-6 py-5 shadow-missal-overlay">

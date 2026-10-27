@@ -50,7 +50,28 @@
     <!-- WebSite/Organization JSON-LD is injected at build time from src/lib/seo.ts (see vite.config.ts). -->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Until the app's code has loaded, the home map shows a static copy
+           of MapLoadingIndicator (src/components/MapLoadingIndicator.tsx);
+           keep the two in step. React replaces it when it first renders. Like
+           the router's first-load copy, its text skips the web font, which
+           would otherwise download ahead of the app's code. -->
+      <main id="boot-map-loading" class="fixed inset-x-0 top-0 h-dvh bg-paper" hidden>
+        <div class="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center">
+          <div class="pointer-events-auto flex items-center gap-3 border border-rule-strong bg-paper/95 px-5 py-3 shadow-missal-loading">
+            <span class="h-2 w-2 animate-pulse rounded-full bg-rubric" aria-hidden="true"></span>
+            <span class="text-sm text-ink-soft" style="font-family: &quot;Iowan Old Style&quot;, Georgia, serif">Loading map…</span>
+          </div>
+        </div>
+      </main>
+      <script>
+        // Only the home map: the other pages served from this shell
+        // (landing.html, about.html, 404.html) load without it.
+        if (location.pathname === "/") {
+          document.getElementById("boot-map-loading").hidden = false;
+        }
+      </script>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
