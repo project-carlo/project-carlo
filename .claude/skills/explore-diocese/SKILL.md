@@ -1,6 +1,6 @@
 ---
 name: explore-diocese
-description: Research a diocese the pipeline does not cover yet, or audit or extend one already explored, in data/dioceses/<diocese>/, using the `pnpm diocese` CLI. Covers finding each parish's bulletin, deciding which parishes share one, recording churches, closures and other exclusions with dated evidence, measuring coverage against diocesan lists, and promoting the result into data/parishes.csv and data/churches.csv. Use when asked to explore, add, research, audit or fix a diocese, a parish, a church or an exclusion.
+description: The method for researching a diocese in data/dioceses/<diocese>/ with the `pnpm diocese` CLI, followed by the onboarding factory's survey, map, reconcile and integrate stages, and used directly to audit or fix a diocese already mapped. Covers finding each parish's bulletin, deciding which parishes share one, recording churches, closures and other exclusions with dated evidence, measuring coverage against diocesan lists, and promoting the result into data/parishes.csv and data/churches.csv. Use when asked to research, audit or fix a mapped diocese, a parish, a church or an exclusion. A new diocese is mapped by the factory: add it to factory/queue.json.
 ---
 
 # Exploring a diocese
@@ -9,9 +9,8 @@ Read `data/dioceses/README.md` before your first write. It has the rules, the fi
 the explanation standard, which sources to trust, and the traps. This page is the short
 version.
 
-To map a whole new diocese, follow the `map-diocese` skill: a `diocese-surveyor` agent sets
-it up and plans small batches for `parish-scout` agents. This page is the method each of
-them follows.
+A whole new diocese is mapped by the onboarding factory (`docs/factory-spec.md`): add it to
+`factory/queue.json`. Its survey, map, reconcile and integrate jobs follow this page.
 
 ## The three rules
 
@@ -72,8 +71,8 @@ Then, cheapest first:
    downloads a row's bulletin before it is promoted (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome
    xvfb-run -a` in the cloud sandbox). Review transport, document type, parish identity and
    freshness separately; successful transport alone isn't a verified current bulletin.
-9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`), a
-   dated line in `diocese.md`'s *Log* with the coverage numbers, commit.
+9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`).
+   A change to a mapped diocese also gets a dated line in `diocese.md`'s *Log*.
 
 A closure after the fact: `pnpm diocese exclude <d> <church> --reason closed --last-mass
 <date>`, then write why in the new `excluded/` file. Something you can't settle yet goes in

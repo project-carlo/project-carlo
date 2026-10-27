@@ -723,30 +723,25 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 ## Seeding parishes
 
-A parish's first seed (`data/seeds/<parish>.json`) is drafted by Claude Code agents from its
-bulletins and approved by a person ([docs/seeding-plan.md](docs/seeding-plan.md)). The
-`seed-parishes` skill runs batches through `seed-drafter` agents, which follow the
-`draft-parish-seed` skill. Its [rules.md](.claude/skills/draft-parish-seed/rules.md) holds
-every seeding decision (a slot no rule covers becomes a question for the reviewer), and
+A parish's first seed (`data/seeds/<parish>.json`) is drafted from its bulletins and
+approved by the onboarding factory's seed Runs (below; [docs/seeding-plan.md](docs/seeding-plan.md)).
+Its drafters follow the `draft-parish-seed` skill, whose
+[rules.md](.claude/skills/draft-parish-seed/rules.md) holds every seeding decision (a slot no
+rule covers becomes a question), and
 [file-format.md](.claude/skills/draft-parish-seed/file-format.md) holds the file format.
-`pnpm seed --help` lists every command by phase.
+`seed-review` answers the questions and approves; the factory's PR lists each answer, and
+the owner changes one in the labeler's **Seeds** mode (`pnpm label`) before merging.
+Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
+in update mode (a deploy never loads them). `pnpm seed --help` lists every command by phase.
 
 ```bash
-pnpm seed pick                          # parishes to seed next, easiest first
 pnpm seed start st-mary-albany          # start or resume a draft; prints where it starts from
 pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
-pnpm seed check --all                   # the orchestrator's check; `status` lists every file
-pnpm seed questions --answered          # reviewers' answers against the leanings, to find new rules
-pnpm seed pick --labeled --eval try-1   # start a test run on the labeled parishes
+pnpm seed check --all                   # check every file; `status` lists them
+pnpm seed questions --answered --by person   # the owner's changed answers, to find new rules
+pnpm seed pick --labeled --eval try-1   # start an eval run on the labeled parishes (`seed-evals` skill)
 pnpm seed score try-1                   # score its drafts against the labels
 ```
-
-Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
-Enter your reviewer name and click **Approve all ready (N)** in the Seeds queue to
-approve every **Ready to approve** seed, regardless of the status filter. Each file
-runs the usual approval checks; failures stay unapproved and appear with their problems.
-Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
-in update mode (a deploy never loads them).
 
 ## Onboarding factory
 

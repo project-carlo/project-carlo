@@ -21,6 +21,7 @@ from pdf_extract.dioceses.records import NO_BULLETIN, parse_file
 from pdf_extract.factory import git, playbook
 from pdf_extract.factory.handoff import APPROVE
 from pdf_extract.factory.ledger import DONE, MAP, Ledger
+from pdf_extract.seeding import files
 
 OTHER_BATCH = "(no batch)"
 
@@ -116,12 +117,17 @@ def _handoff(job: Any) -> dict[str, Any]:
     return json.loads(job["handoff"] or "{}")
 
 
-def seed_status(worktree: Path, parish: str) -> str | None:
-    path = worktree / "data" / "seeds" / f"{parish}.json"
+def read_seed(worktree: Path, parish: str) -> dict[str, Any] | None:
+    """The parish's seed file in the worktree; None when it is missing or unreadable."""
     try:
-        return json.loads(path.read_text(encoding="utf-8")).get("status")
-    except (OSError, ValueError):
+        return files.read_seed(parish, worktree / "data" / "seeds")
+    except files.SeedFileError:
         return None
+
+
+def seed_status(worktree: Path, parish: str) -> str | None:
+    seed = read_seed(worktree, parish)
+    return seed.get("status") if seed else None
 
 
 def next_job(ledger: Ledger, run: Any, *, lessons_before_integrate: int) -> Next | None:

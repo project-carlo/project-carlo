@@ -18,9 +18,10 @@ from typing import Any
 
 import pytest
 
+from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import playbook, readiness, report
-from pdf_extract.factory.config import Account, Config
+from pdf_extract.factory.config import Account, Config, FactoryError
 from pdf_extract.factory.dispatcher import Dispatcher
 from pdf_extract.factory.forge import LocalForge
 from pdf_extract.factory.handoff import read_handoff
@@ -129,6 +130,8 @@ class Env:
             parish, reviewer = parts[3], parts[parts.index("--reviewer") + 1]
             path = cwd / "data" / "seeds" / f"{parish}.json"
             seed = json.loads(path.read_text())
+            if seed["status"] == "approved":  # as `seed approve` refuses
+                return False, f"Already approved by {seed['reviewer']}"
             seed |= {"status": "approved", "reviewer": reviewer}
             path.write_text(json.dumps(seed))
         if "diocese coverage" in command:
@@ -171,7 +174,6 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
     git(e.repo, "config", "user.email", "factory@example.com")
     git(e.repo, "config", "user.name", "Factory")
     shutil.copytree(ROOT / "factory", e.repo / "factory")
-    shutil.copytree(ROOT / ".claude" / "agents", e.repo / ".claude" / "agents")
     (e.repo / "factory" / "queue.json").write_text(json.dumps([{"diocese": D, "notes": "Test"}]))
     (e.repo / ".gitignore").write_text("scratch/\ndata/factory/\n")
     (e.repo / "data").mkdir()
@@ -541,6 +543,121 @@ def test_every_answer_to_a_jobs_run_level_flags_reaches_it(env: Env) -> None:
     assert "St. Bede belongs to b1." in answer and "Yes, Lewes." in answer
 
 
+def test_a_run_level_flag_raised_again_after_its_answer_is_asked_again(env: Env) -> None:
+    flag = {"severity": "blocking", "scope": "run", "subject": "testd-map-1",
+            "question": "Two batches claim St. Bede"}
+
+    def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt <= 2:
+            return StubAction(handoff={"status": "blocked", "summary": "s", "flags": [flag]})
+        return StubAction(handoff=done())
+
+    d = env.dispatcher(map_script(reconcile=reconciling))
+    drive(d)
+    run = map_run(env)
+    env.answer(1, "St. Bede belongs to b1.")
+    d.poll_issues()
+    drive(d)
+    # The same question again is a new issue, not a Run blocked with nothing to answer.
+    assert env.ledger.run(run["id"])["status"] == BLOCKED
+    assert [f["issue_number"] for f in env.ledger.flags(run["id"], "open")] == [2]
+    env.answer(2, "Still b1.")
+    d.poll_issues()
+    drive(d)
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+    assert len(env.ledger.jobs(run["id"], "reconcile")) == 1
+
+
+def test_an_answered_job_needs_a_new_handoff(env: Env) -> None:
+    def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt == 1:
+            return StubAction(handoff={"status": "blocked", "summary": "s", "flags": [{
+                "severity": "blocking", "scope": "run", "subject": "testd-map-1",
+                "question": "Two batches claim St. Bede"}]})
+        if attempt == 2:
+            return StubAction()  # ends without writing a handoff
+        return StubAction(handoff=done())
+
+    d = env.dispatcher(map_script(reconcile=reconciling))
+    drive(d)
+    run = map_run(env)
+    env.answer(1, "St. Bede belongs to b1.")
+    d.poll_issues()
+    drive(d)
+    reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
+    assert reconcile["send_backs"] == 1  # the first handoff didn't count again
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
+def test_an_issue_github_refused_is_opened_on_a_later_poll(env: Env) -> None:
+    opened = env.forge.open_issue
+    refusals = [1]
+
+    def flaky(title: str, body: str, labels: list[str]) -> int:
+        if refusals and refusals.pop():
+            raise FactoryError("gh issue: HTTP 502")
+        return opened(title, body, labels)
+
+    env.forge.open_issue = flaky  # type: ignore[method-assign]
+    env.failing["batches validate"] = 99
+    d = env.dispatcher(map_script())
+    drive(d)
+    run = map_run(env)
+    assert run["status"] == BLOCKED
+    flag = env.ledger.flags(run["id"], "open")[0]
+    assert flag["issue_number"] is None
+    d.poll_issues()
+    assert env.ledger.flags(run["id"], "open")[0]["issue_number"] == 1
+
+
+def test_crashes_count_again_once_the_owner_unblocks_the_job(env: Env) -> None:
+    def surveying(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt <= 4:
+            return StubAction(outcome="crash")
+        return StubAction(files=survey_files(), handoff=done())
+
+    d = env.dispatcher(map_script(survey=surveying))
+    drive(d)
+    run = map_run(env)
+    assert run["status"] == BLOCKED and "crashed 3 times" in run["blocked_reason"]
+    env.answer(1, "The SDK is fixed; go again.")
+    d.poll_issues()
+    drive(d)
+    survey = env.ledger.jobs(run["id"], "survey")[0]
+    assert survey["status"] == DONE
+    attempts = env.ledger.all("SELECT kind, prompt FROM attempt WHERE job_id = ? ORDER BY n",
+                              survey["id"])
+    assert [a["kind"] for a in attempts] == ["start", "resume", "fresh", "answer", "fresh"]
+    # The answer's session couldn't be resumed: the fresh worker gets the whole job input.
+    assert attempts[-1]["prompt"].startswith("# Factory job")
+    assert "The SDK is fixed" in attempts[-1]["prompt"]
+
+
+def test_a_failed_worktree_setup_runs_again(env: Env) -> None:
+    env.config.setup = ["uv sync"]
+    env.failing["uv sync"] = 1
+    d = env.dispatcher(map_script())
+    drive(d)
+    run = map_run(env)
+    assert run["status"] == BLOCKED
+    env.answer(1, "Fixed the lockfile.")
+    d.poll_issues()
+    drive(d)
+    assert env.commands_run.count("uv sync") == 2
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
+def test_a_failing_backup_does_not_stop_the_dispatcher(env: Env) -> None:
+    def backup() -> str:
+        raise BlobStoreError("R2 unreachable")
+
+    env.config.backup_hour = 0
+    d = env.dispatcher(map_script(), backup=backup)
+    drive(d)
+    assert env.ledger.run(map_run(env)["id"])["status"] == IN_REVIEW
+    assert env.ledger.get("backed_up")  # tried again tomorrow, not every tick
+
+
 # ── Merging main ─────────────────────────────────────────────────────────────
 def test_main_is_merged_at_the_start_of_each_stage(env: Env) -> None:
     d = env.dispatcher(map_script())
@@ -646,6 +763,24 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     approve = [c for c in env.commands_run if c.startswith("pnpm seed approve st-ann")][0]
     answers = json.loads((wt / approve.split("--answers ")[1]).read_text())
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
+
+
+def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
+    run = seed_env(env)
+    d = env.dispatcher(seed_script)
+    drive(d)
+    review = env.ledger.jobs(run["id"], "seed-review")[0]  # approved st-clare
+    handoff, _ = read_handoff(Path(run["worktree"]) / "scratch" / run["id"] / review["name"]
+                              / "handoff.json", "seed-review")
+    approvals = len([c for c in env.commands_run if c.startswith("pnpm seed approve")])
+    # A resumed review, a retry or a restart applies them again.
+    assert d._seed_verdicts(env.ledger.run(run["id"]), review, Path(run["worktree"]),
+                            handoff) == ["st-clare"]
+    assert len([c for c in env.commands_run if c.startswith("pnpm seed approve")]) == approvals
+    clare = env.ledger.jobs(run["id"], "seed")[0]
+    assert env.ledger.job(clare["id"])["status"] == DONE
+    assert len(env.ledger.all("SELECT * FROM verdict WHERE job_id = ?", review["id"])) == 1
+    assert len(env.ledger.all("SELECT * FROM decision WHERE job_id = ?", review["id"])) == 1
 
 
 def test_seed_review_must_cover_every_parish(env: Env) -> None:

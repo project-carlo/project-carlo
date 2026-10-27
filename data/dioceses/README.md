@@ -248,11 +248,11 @@ Use a concrete next action and trigger to bound negative research, not a fixed n
 request budget that sacrifices evidence. Parish-specific attempts and decisions stay in
 the record; the shared publisher playbook keeps only reusable methods and new lessons.
 
-## Scout batch plans
+## Batch plans
 
-New whole-diocese surveys save their reviewable plan in
-`data/dioceses/<d>/batches.json`. Scratch `batches.md` may hold progress notes, but the
-JSON is the source of roster assignments. Existing mapped dioceses need no backfill.
+The factory's survey saves a diocese's reviewable plan in `data/dioceses/<d>/batches.json`,
+the source of roster assignments: the factory runs a map job per batch, in
+`batches.json`'s order with `first_batch` first. Existing mapped dioceses need no backfill.
 
 ```json
 {
@@ -269,19 +269,19 @@ JSON is the source of roster assignments. Existing mapped dioceses need no backf
 }
 ```
 
-Run `pnpm --silent diocese batches validate <d>` before any scout starts and whenever
+Run `pnpm --silent diocese batches validate <d>` before any map job starts and whenever
 rosters or assignments change. `--file <path>` checks a proposed manifest elsewhere.
 The command reads every local roster, fetches nothing and changes no files. It exits
 1 on errors and reports `passed`, counts, batch sizes, `missing`, `unknown` and duplicate
 reference locations. Every `<roster>:<id>` must occur exactly once, either in a nonempty
 batch or as an exclusion with a reason. Batch ids must be unique, names and grouping
 reasons nonempty, and `first_batch` must name a batch. Missing/malformed rosters cannot
-produce a successful check. Excluding a duplicate roster entry from scouting does not
+produce a successful check. Excluding a duplicate roster entry from the batches does not
 exclude the church from the diocese; normal coverage must still account for it.
 
 The validator checks assignments, not whether a shared pastor implies a shared bulletin.
-The orchestrator still reviews grouping and chooses a typical first batch. Commit the
-plan with the rosters so future reviewers can reproduce the assignment check.
+`survey-review` still reviews the grouping and the choice of a typical first batch. The
+plan is committed with the rosters so future reviewers can reproduce the assignment check.
 
 ## The explanation
 

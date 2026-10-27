@@ -1,6 +1,6 @@
 ---
 name: draft-parish-seed
-description: Draft, resume or repair a parish's believed-schedule seed with the pnpm seed CLI. Use for an individual seed or when assigned parishes by the seed-parishes orchestrator.
+description: Draft, resume or repair a parish's believed-schedule seed with the pnpm seed CLI. The method the onboarding factory's seed jobs follow, and the seed-drafter agents of a historical eval run.
 ---
 
 # Drafting a parish seed
@@ -8,13 +8,10 @@ description: Draft, resume or repair a parish's believed-schedule seed with the 
 A seed becomes the schedule that update mode maintains. Before your first draft, read three
 things: `POLICY` in `src/pdf_extract/classifiers/schedule_policy.py`, in full, which says
 what one bulletin shows; [rules.md](rules.md), which holds every seeding decision; and
-[file-format.md](file-format.md), which describes the JSON. Your write boundaries and the
-end-of-run report are in `.claude/agents/seed-drafter.md`, and they also apply when you
-draft on a direct request.
+[file-format.md](file-format.md), which describes the JSON.
 
-Use the local database (`pnpm data:pull`, which the orchestrator runs first) and the R2
-read keys. On a direct request, pull once yourself and make a private scratch folder. Run
-plain `pnpm seed ...`, since this pnpm rejects `-s`. `pnpm seed --help` lists every
+Use the local database (`pnpm data:pull` has been run before you start) and the R2 read
+keys. Run plain `pnpm seed ...`, since this pnpm rejects `-s`. `pnpm seed --help` lists every
 command, and `--json` gives a command's full output. In a test run, pass `--eval RUN` to
 every parish command; drafts then go to `data/seed-evals/RUN/seeds/`.
 

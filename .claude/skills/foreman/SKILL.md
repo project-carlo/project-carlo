@@ -67,6 +67,15 @@ Then read the lines around each place that matters with `sed -n 'A,Bp' T | jq ..
 - **Instructions ignored or misread:** quote the instruction and the step that broke it.
   Two workers misreading the same line means the line is wrong, not the workers.
 
+## Candidate seeding rules
+
+When reviewing seed Runs, run `pnpm seed questions --answered --by person`: the answers
+the owner changed in seed-review's decisions before merging. Look for answers that repeat
+a situation, and above all answers that go against the leaning. Propose each as a
+candidate for rules.md, in the same form as its Candidates section: a When, a Lean, and
+the parishes and slots as evidence. seed-review's own answers (`--by agent`) aren't by
+themselves evidence for a candidate.
+
 ## Report
 
 1. **What went wrong**, in a few sentences per problem, most costly first.

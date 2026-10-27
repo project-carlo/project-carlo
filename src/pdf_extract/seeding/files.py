@@ -34,7 +34,7 @@ SEED_EVALS_DIR = DATA_DIR / "seed-evals"
 # Where `seed pdf` and `seed pages` put the files they make (gitignored).
 WORK_DIR = DATA_DIR / "seed-work"
 
-DRAFTED_BY = "claude-code/seed-parishes"
+DRAFTED_BY = "claude-code/draft-parish-seed"
 
 DRAFTING = "drafting"
 NEEDS_REVIEW = "needs_review"

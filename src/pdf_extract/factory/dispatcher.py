@@ -20,6 +20,7 @@ from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import git, inputs, playbook, readiness, report
+from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.config import QUEUE_PATH, RUNS_DIR, Account, Config, FactoryError
 from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.handoff import (
@@ -56,7 +57,7 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
-from pdf_extract.factory.plan import diocese_dir, next_job, seed_status
+from pdf_extract.factory.plan import diocese_dir, next_job, read_seed, seed_status
 from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.usage import (
     Fetch,
@@ -158,10 +159,7 @@ class Dispatcher:
         paused = self.ledger.get("paused")
         if paused:
             return Outcome("paused", paused.get("reason", ""))
-        try:
-            self.housekeeping()
-        except FactoryError as exc:
-            LOGGER.warning("housekeeping: %s", exc)
+        self.housekeeping()
         job = self.pick()
         if job is None:
             return Outcome("idle")
@@ -236,17 +234,22 @@ class Dispatcher:
 
     # ── One job ─────────────────────────────────────────────────────────────
     def _worktree(self, run: Any) -> Path:
+        """The Run's worktree, set up: until its setup has passed once, a new or recreated
+        worktree gets the database and the setup commands again."""
         path = Path(run["worktree"])
         created = git.ensure_worktree(self.repo, path, run["branch"], remote=self.config.remote,
                                       base=self.config.upstream)
-        if created:
+        key = f"set_up:{run['id']}"
+        if created or not self.ledger.get(key):
+            self.ledger.set(key, False)
             if self.db_path.exists():
                 (path / "data").mkdir(exist_ok=True)
-                shutil.copyfile(self.db_path, path / "data" / self.db_path.name)
+                copy_database(self.db_path, path / "data" / self.db_path.name)
             for command in self.config.setup:
                 ok, out = self.commands(command, path)
                 if not ok:
                     raise FactoryError(f"setup `{command}` failed in {path}: {out[-500:]}")
+            self.ledger.set(key, True)
         return path
 
     def values(self, run: Any, job: Any) -> dict[str, str]:
@@ -343,9 +346,8 @@ class Dispatcher:
                         data.get("subject", "the parish you set aside")), original["session_id"]
             return "start", inputs.job_input(self.ledger, run, job, spec, values), None
         if not job["session_id"]:
-            first = self._attempts(job["id"])
-            prompt = first[0]["prompt"] if first else inputs.job_input(
-                self.ledger, run, job, spec, values)
+            # A fresh worker needs the whole job input, whatever the last attempt was told.
+            prompt = inputs.job_input(self.ledger, run, job, spec, values)
             extra = pending.get("prompt")
             return "fresh", prompt + (f"\n\n{extra}" if extra else ""), None
         kind = pending["kind"]
@@ -365,7 +367,11 @@ class Dispatcher:
             return waiting
         job = self.ledger.job(job["id"])
         values = self.values(run, job)
+        pending = json.loads(job["pending_prompt"] or "null") or {}
         kind, prompt, session = self._next_prompt(run, job, spec, values)
+        if pending.get("kind") not in ("resume", "continue"):
+            # A send-back or an answer needs a new handoff: the old one mustn't pass again.
+            handoff_path(worktree, run["id"], job["name"]).unlink(missing_ok=True)
         commit_sha = git.head(worktree)
         attempt_id = self.ledger.add_attempt(job["id"], kind, prompt,
                                              account.name if account else None, commit_sha)
@@ -398,15 +404,18 @@ class Dispatcher:
                                 pending_prompt=json.dumps({"kind": "continue", "prompt": None}))
             return Outcome("waiting", f"job {job['id']} hit a usage limit", until)
         if result.outcome == CRASH:
+            pending = json.dumps({"kind": "resume", "prompt": None})
             if session and result.turns == 0:
-                # The session couldn't be resumed: a fresh worker gets the files on disk.
+                # The session couldn't be resumed: a fresh worker gets the files on disk,
+                # and what this attempt was told (problems to fix, an answer) again.
                 self.ledger.set_job(job["id"], session_id=None)
-            crashes = sum(1 for a in self._attempts(job["id"]) if a["outcome"] == CRASH)
+                pending = job["pending_prompt"] or pending
+            crashes = job["crashes"] + 1
+            self.ledger.set_job(job["id"], crashes=crashes)
             if crashes >= MAX_CRASHES:
                 return self._block_run(run, job, f"The worker crashed {crashes} times: "
                                        f"{result.error}")
-            self.ledger.set_job(job["id"], status=QUEUED,
-                                pending_prompt=json.dumps({"kind": "resume", "prompt": None}))
+            self.ledger.set_job(job["id"], status=QUEUED, pending_prompt=pending)
             return Outcome("ran", f"job {job['id']} crashed; resuming")
         if result.outcome in (PARTIAL, TIMEOUT):
             return self._partial(run, job, f"the session ended early ({result.outcome})")
@@ -441,12 +450,10 @@ class Dispatcher:
         self.ledger.add_gate(job["id"], attempt, "handoff", not handoff_problems,
                              "\n".join(handoff_problems) or "ok")
         problems += handoff_problems
-        writes = [fill(w, values) for w in spec.writes]
-        outside = [p for p in git.changed_paths(worktree) if not in_scope(p, writes)]
+        outside = self._revert_outside(worktree, spec, values)
         self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside,
                              "\n".join(outside) or "ok")
         if outside:
-            git.revert(worktree, outside)
             problems.append("You changed files outside your write boundaries; they were "
                             "reverted: " + ", ".join(outside))
         if handoff is not None and not problems:
@@ -477,8 +484,18 @@ class Dispatcher:
                      if v.parish not in wanted]
         return problems
 
+    def _revert_outside(self, worktree: Path, spec: StageSpec,
+                        values: dict[str, str]) -> list[str]:
+        """Revert every change outside the stage's write boundaries; returns those paths."""
+        writes = [fill(w, values) for w in spec.writes]
+        outside = [p for p in git.changed_paths(worktree) if not in_scope(p, writes)]
+        if outside:
+            git.revert(worktree, outside)
+        return outside
+
     def _stage_gates(self, job: Any, spec: StageSpec, values: dict[str, str], worktree: Path,
-                     attempt: int | None) -> list[str]:
+                     attempt: int | None, *, first_failure: bool = False) -> list[str]:
+        """Run the stage's gate commands; `first_failure` stops at the first that fails."""
         problems = []
         for gate in spec.gates:
             if any(not values.get(name) for name in placeholders(gate)):
@@ -487,7 +504,9 @@ class Dispatcher:
             ok, out = self.commands(command, worktree)
             self.ledger.add_gate(job["id"], attempt, command, ok, out)
             if not ok:
-                problems.append(f"`{command}` failed:\n{out[-2000:]}")
+                problems.append(f"`{command}` failed:\n\n```\n{out[-2500:]}\n```")
+                if first_failure:
+                    break
         return problems
 
     def _send_back(self, run: Any, job: Any, problems: list[str]) -> Outcome:
@@ -525,12 +544,9 @@ class Dispatcher:
         """Commit a parked seed's draft as it stands, so the next job's diff is only its own
         and the job resumed with the owner's answer finds the draft on disk."""
         worktree = Path(run["worktree"])
-        writes = [fill(w, self.values(run, job)) for w in load_stage(job["stage"], worktree).writes]
-        outside = [p for p in git.changed_paths(worktree) if not in_scope(p, writes)]
-        if outside:
-            git.revert(worktree, outside)
+        self._revert_outside(worktree, load_stage(job["stage"], worktree), self.values(run, job))
         git.commit(worktree, f"{run['diocese']}: seed {parish}, parked ({run['id']})",
-                   {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]})
+                   _trailers(run, job))
         self._push(run, worktree)
 
     def _block_run(self, run: Any, job: Any | None, question: str, suggestion: str = "") -> Outcome:
@@ -544,14 +560,20 @@ class Dispatcher:
         return Outcome("blocked", question[:200])
 
     def _open_issue(self, run: Any, job: Any | None, flag_id: int) -> None:
+        """The flag's issue. If GitHub refuses, the flag stays open without one and
+        `poll_issues` opens it on a later poll."""
         flag = self.ledger.one("SELECT * FROM flag WHERE id = ?", flag_id)
         if flag["issue_number"]:
             return
         stage = job["stage"] if job else "dispatcher"
         title = f"[factory] {run['id']}: {flag['subject']}: {flag['question'].splitlines()[0]}"
-        number = self.forge.open_issue(
-            title[:120], forge_mod.issue_body(flag, run, job),
-            ["factory", f"run:{run['diocese']}", f"stage:{stage}"])
+        try:
+            number = self.forge.open_issue(
+                title[:120], forge_mod.issue_body(flag, run, job),
+                ["factory", f"run:{run['diocese']}", f"stage:{stage}"])
+        except FactoryError as exc:
+            LOGGER.warning("couldn't open the issue for flag %s: %s", flag_id, exc)
+            return
         self.ledger.run_sql("UPDATE flag SET issue_number = ? WHERE id = ?", number, flag_id)
 
     # ── After the gates: each action once ────────────────────────────────────
@@ -579,10 +601,10 @@ class Dispatcher:
             run["id"], job["id"], lead.touches, lead.note) for lead in handoff.leads] and None)
         self._once(job, "flags", lambda: self._flags(run, job, handoff))
         self._once(job, "commit", lambda: git.commit(
-            worktree, self._subject(run, job),
-            {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]}))
+            worktree, self._subject(run, job), _trailers(run, job)))
         self._once(job, "push", lambda: self._push(run, worktree))
-        run_flag = any(f.severity == BLOCKING and f.scope == "run" for f in handoff.flags)
+        run_flag = self.ledger.one("SELECT id FROM flag WHERE job_id = ? AND scope = 'run' AND "
+                                   "status = ?", job["id"], OPEN) is not None
         self.ledger.set_job(job["id"], status=JOB_BLOCKED if run_flag else DONE,
                             finished_at=now())
         if run_flag:
@@ -612,8 +634,11 @@ class Dispatcher:
         return playbook.append(meta, playbook.NEW_LESSONS, handoff.lessons)
 
     def _flags(self, run: Any, job: Any, handoff: Handoff) -> None:
+        """Record the handoff's flags. One this job raised and the owner already settled is
+        a new question when raised again; only a flag still open (a restart partway through
+        this step) or listed is skipped."""
         existing = {(f["subject"], f["question"]) for f in self.ledger.all(
-            "SELECT * FROM flag WHERE job_id = ?", job["id"])}
+            "SELECT * FROM flag WHERE job_id = ? AND status != ?", job["id"], SETTLED)}
         for f in handoff.flags:
             if (f.subject, f.question) in existing:
                 continue
@@ -667,38 +692,50 @@ class Dispatcher:
         return jobs[-1] if jobs else None
 
     def _seed_verdicts(self, run: Any, job: Any, worktree: Path, review: SeedReview) -> Any:
+        """Approve or send back each seed. Safe to repeat (a resumed or retried review, a
+        restart partway): a parish this job already gave a verdict keeps it."""
         approved: list[str] = []
         reviewer = f"agent:seed-review@{(job['commit_sha'] or 'unknown')[:12]}"
         scratch = handoff_path(worktree, run["id"], job["name"]).parent
+        given = {r["subject"]: r["verdict"] for r in self.ledger.all(
+            "SELECT subject, verdict FROM verdict WHERE job_id = ?", job["id"])}
         for verdict in review.seeds:
+            if verdict.parish in given:
+                if given[verdict.parish] == APPROVE:
+                    approved.append(verdict.parish)
+                continue
             drafted = self._seed_job(run, verdict.parish)
             problems = list(verdict.problems)
             if verdict.verdict == APPROVE:
-                seed = _read_seed(worktree, verdict.parish)
-                answers = [a.model_dump(exclude_none=True) for a in verdict.answers]
-                path = scratch / f"answers-{verdict.parish}.json"
-                path.parent.mkdir(parents=True, exist_ok=True)
-                path.write_text(json.dumps(answers, indent=1), encoding="utf-8")
-                ok, out = self.commands(
-                    f"pnpm seed approve {verdict.parish} --reviewer {reviewer} --answers "
-                    f"{path.relative_to(worktree).as_posix()}", worktree)
+                seed = read_seed(worktree, verdict.parish)
+                ok, out = True, ""
+                if (seed or {}).get("status") != "approved":  # approved before a restart
+                    answers = [a.model_dump(exclude_none=True) for a in verdict.answers]
+                    path = scratch / f"answers-{verdict.parish}.json"
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_text(json.dumps(answers, indent=1), encoding="utf-8")
+                    ok, out = self.commands(
+                        f"pnpm seed approve {verdict.parish} --reviewer {reviewer} --answers "
+                        f"{path.relative_to(worktree).as_posix()}", worktree)
                 if ok:
                     approved.append(verdict.parish)
+                    self._decisions(run, job, worktree, verdict, seed)
                     self._verdict_row(job, drafted["id"] if drafted else None, verdict.parish,
                                       APPROVE, [])
-                    self._decisions(run, job, worktree, verdict, seed)
                     continue
                 problems = [f"`pnpm seed approve` refused the reviewer's answers: {out[-1500:]}"]
-            self._verdict_row(job, drafted["id"] if drafted else None, verdict.parish,
-                              SEND_BACK, problems)
             if drafted is not None:
                 self._send_back_to(run, drafted, problems)
+            self._verdict_row(job, drafted["id"] if drafted else None, verdict.parish,
+                              SEND_BACK, problems)
         self.ledger.set(f"approved:{job['id']}", approved)
         return approved
 
     def _decisions(self, run: Any, job: Any, worktree: Path, verdict: Any,
                    seed: dict[str, Any] | None) -> None:
         slots = {s.get("id"): s for s in (seed or {}).get("slots", [])}
+        self.ledger.run_sql("DELETE FROM decision WHERE job_id = ? AND parish = ?", job["id"],
+                            verdict.parish)  # a restart before its verdict row
         precedents = []
         for a in verdict.answers:
             slot = slots.get(a.slot, {})
@@ -732,17 +769,12 @@ class Dispatcher:
                             commit_sha=job["commit_sha"] or git.head(worktree))
         if job["stage"] == "pr":
             return self._pr(run, job, worktree)
-        values = self.values(run, job)
-        for gate in spec.gates:
-            command = fill(gate, values)
-            ok, out = self.commands(command, worktree)
-            self.ledger.add_gate(job["id"], None, command, ok, out)
-            if not ok:
-                return self._block_run(run, job, f"`{command}` failed in {job['stage']}:\n\n"
-                                       f"```\n{out[-2500:]}\n```")
+        problems = self._stage_gates(job, spec, self.values(run, job), worktree, None,
+                                     first_failure=True)
+        if problems:
+            return self._block_run(run, job, f"{job['stage']}: {problems[0]}")
         self._once(job, "commit", lambda: git.commit(
-            worktree, self._subject(run, job),
-            {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]}))
+            worktree, self._subject(run, job), _trailers(run, job)))
         self._once(job, "push", lambda: self._push(run, worktree))
         self.ledger.set_job(job["id"], status=DONE, finished_at=now())
         return Outcome("ran", f"job {job['id']} {job['stage']} done")
@@ -770,23 +802,31 @@ class Dispatcher:
                 dropped.append(parish)
         if dropped:
             git.commit(worktree, f"{run['diocese']}: leave out seeds not approved ({run['id']})",
-                       {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": "pr"})
+                       _trailers(run, job))
         return dropped
 
     # ── Housekeeping: issues, merges, readiness, backups ─────────────────────
     def housekeeping(self) -> None:
+        """Each step on its own: one failing (GitHub down, R2 keys wrong) is logged and
+        tried again on its next turn, without stopping the others or the jobs."""
         at = self.clock()
         if self._due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes), at):
-            git.fetch(self.repo, self.config.remote)
-            self.poll_issues()
-            self.check_merged()
+            self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),
+                                            self.poll_issues(), self.check_merged()))
         if self._due("readiness_checked", timedelta(hours=self.config.readiness_check_hours), at):
-            self.check_readiness()
+            self._safely("readiness", self.check_readiness)
         local = at.astimezone()
         if local.hour >= self.config.backup_hour and self.backup is not None \
                 and self.ledger.get("backed_up") != local.date().isoformat():
-            self.ledger.set("backup", self.backup())
+            # Marked first, so a failing backup is tried again tomorrow, not every tick.
             self.ledger.set("backed_up", local.date().isoformat())
+            self._safely("backup", lambda: self.ledger.set("backup", self.backup()))
+
+    def _safely(self, name: str, fn: Callable[[], Any]) -> None:
+        try:
+            fn()
+        except Exception:  # housekeeping never stops the dispatcher
+            LOGGER.exception("housekeeping %s failed", name)
 
     def _due(self, key: str, every: timedelta, at: datetime) -> bool:
         last = self.ledger.get(key)
@@ -796,6 +836,11 @@ class Dispatcher:
         return True
 
     def poll_issues(self) -> None:
+        for flag in self.ledger.all("SELECT * FROM flag WHERE status = ? AND severity = ? AND "
+                                    "issue_number IS NULL ORDER BY id", OPEN, BLOCKING):
+            self._open_issue(self.ledger.run(flag["run_id"]),
+                             self.ledger.job(flag["job_id"]) if flag["job_id"] else None,
+                             flag["id"])
         for flag in self.ledger.all("SELECT * FROM flag WHERE status = ? AND issue_number IS "
                                     "NOT NULL ORDER BY id", OPEN):
             issue = self.forge.issue(flag["issue_number"])
@@ -847,7 +892,7 @@ class Dispatcher:
             # Another of its flags was answered first: the job gets both answers.
             prompt = f"{pending.get('prompt') or ''}\n\n{prompt}".strip()
         self.ledger.clear_actions(job["id"])
-        self.ledger.set_job(job["id"], status=SENT_BACK, send_backs=0, continues=0,
+        self.ledger.set_job(job["id"], status=SENT_BACK, send_backs=0, continues=0, crashes=0,
                             pending_prompt=json.dumps({"kind": "answer", "prompt": prompt}))
 
     def _follow_up(self, run: Any, subject: str) -> Any:
@@ -916,9 +961,5 @@ class Dispatcher:
                 self.ledger.set(key, number)
 
 
-def _read_seed(worktree: Path, parish: str) -> dict[str, Any] | None:
-    try:
-        return json.loads((worktree / "data" / "seeds" / f"{parish}.json").read_text("utf-8"))
-    except (OSError, ValueError):
-        return None
-
+def _trailers(run: Any, job: Any) -> dict[str, str]:
+    return {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]}

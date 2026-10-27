@@ -178,7 +178,7 @@ def approve_seed(
             raise SeedReviewError("No seed file for this parish")
         status = current.get("status")
         if status == DRAFTING:
-            raise SeedReviewError("A subagent is still drafting this parish; review it when "
+            raise SeedReviewError("A drafter is still drafting this parish; review it when "
                                   "it is done")
         if status == APPROVED:
             raise SeedReviewError(f"Already approved by {current.get('reviewer')}")
@@ -289,7 +289,7 @@ def _save(
     if current is None:
         raise SeedReviewError("No seed file for this parish")
     if current.get("status") == DRAFTING:
-        raise SeedReviewError("A subagent is still drafting this parish; review it when it is done")
+        raise SeedReviewError("A drafter is still drafting this parish; review it when it is done")
     if not isinstance(body, dict) or body.get("parish_slug") != parish_slug:
         raise SeedReviewError("The seed's parish_slug does not match the parish")
     if body.get("status") not in REVIEW_STATUSES:

@@ -4,9 +4,9 @@ You review one diocese's survey before any map job starts. Every batch is built 
 missed roster, two parishes that share a bulletin split across batches, or a wrong
 exclusion costs a map job each, so this is the one place the factory reads the survey
 closely. Your job input gives the survey job's id, the paths to `diocese.md`,
-`batches.json`, the surveyor's manifest `survey.json` (with its proposed rules) and
-`batches.md`, and the `batches validate` result. The explore-diocese skill and
-`data/dioceses/README.md` (*Scout batch plans*, *Sources*) are the standard you judge by.
+`batches.json` and the surveyor's manifest `survey.json` (with its proposed rules), and
+the `batches validate` result. The explore-diocese skill and `data/dioceses/README.md`
+(*Batch plans*, *Sources*) are the standard you judge by.
 
 ## Your job
 

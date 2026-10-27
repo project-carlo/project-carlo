@@ -16,13 +16,14 @@ the paid-call counter. Each entry of `bulletins` has `read`, which `seed mark-re
 | :-- | :-- |
 | `drafting` | Work in progress, including an interrupted draft |
 | `needs_review` | At least one open question |
-| `ready` | No open questions; waiting for a person to approve |
-| `approved` | A person approved it; it is the reviewer's |
+| `ready` | No open questions; waiting for `seed-review` to approve |
+| `approved` | `seed-review` approved it; it is the reviewer's |
 | `blocked` | Cannot be seeded now; `blocked_reason` explains why |
 
 `seed status` reads whether a file is loaded from the database; this is not a file field.
 An answer is `{"choice": <option index, "edited", or "dropped">, "by": "<reviewer>",
-"at": "<ISO time>"}`. The labeler sets it and updates the slot's entry, decision and status.
+"at": "<ISO time>"}`. `seed approve` sets it from `seed-review`'s answers and updates the
+slot's entry, decision and status, as the labeler does.
 
 ## Slots and sources
 

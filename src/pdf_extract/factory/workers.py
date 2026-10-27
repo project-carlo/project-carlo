@@ -151,8 +151,8 @@ class SdkWorker:
             if isinstance(message, SystemMessage) and message.subtype == "init":
                 self._session = message.data.get("session_id") or self._session
             elif isinstance(message, AssistantMessage):
-                if message.error == "rate_limit":
-                    result = WorkerResult(USAGE, error="rate limit")
+                if message.error == "rate_limit":  # keep a RateLimitEvent's reset time
+                    result = WorkerResult(USAGE, error="rate limit", resets_at=result.resets_at)
                 for block in message.content:
                     n += 1
                     if isinstance(block, ToolUseBlock):

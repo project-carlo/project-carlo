@@ -2,7 +2,7 @@ stage: survey
 kind: agent
 model: claude-opus-5-5
 effort: high
-prompt: .claude/agents/diocese-surveyor.md
+prompt: factory/prompts/survey.md
 skills: [explore-diocese, parish-site-access]
 tools: [Bash, Read, Edit, Write]
 writes:

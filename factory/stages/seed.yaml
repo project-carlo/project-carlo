@@ -2,7 +2,7 @@ stage: seed
 kind: agent
 model: claude-sonnet-5-5
 effort: high
-prompt: .claude/agents/seed-drafter.md
+prompt: factory/prompts/seed.md
 skills: [draft-parish-seed]
 tools: [Bash, Read, Edit, Write]
 writes:

@@ -38,9 +38,7 @@ runs one job and ends. Code scheduled you, and no person is watching.
 - You can't commit, push, use `gh` or start agents. When you finish, the dispatcher runs
   its gates ({gates}), then commits your work.
 - Nobody answers questions during the job. A decision you can't make becomes a flag in
-  your handoff. Where your instructions mention the orchestrator, that is the dispatcher,
-  which reads only your handoff; where they say to return a JSON report, write the
-  handoff instead (a manifest they ask for goes in your scratch folder).
+  your handoff, which is all the dispatcher reads.
 
 ## Handoff
 
@@ -77,10 +75,8 @@ def stage_input(ledger: Ledger, run: Any, job: Any, values: dict[str, str]) -> s
 
 {run['notes'] or 'No notes from the queue.'}
 
-Use `{tools}` as the tools folder and write `scratch/{run_id}/batches.md` and your
-manifest `scratch/{run_id}/survey.json` (with a `proposed_rules` list) where your
-instructions say `scratch/map-<d>/`. Put the proposed rules in your handoff `summary`
-too, briefly. `survey-review` checks your work next and may send it back to you.
+The Run's scratch folder is `scratch/{run_id}/`: write your manifest
+`scratch/{run_id}/survey.json` there, and use `{tools}` as the tools folder.
 """
     if stage == "survey-review":
         earlier = [json.loads(r["problems"]) for r in ledger.all(
@@ -92,8 +88,8 @@ too, briefly. `survey-review` checks your work next and may send it back to you.
 ## Your job: review the survey of `{diocese}`
 
 The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/diocese.md`,
-`data/dioceses/{diocese}/batches.json`, `scratch/{run_id}/survey.json` and
-`scratch/{run_id}/batches.md`. `pnpm --silent diocese batches validate {diocese}` passed.
+`data/dioceses/{diocese}/batches.json` and `scratch/{run_id}/survey.json`.
+`pnpm --silent diocese batches validate {diocese}` passed.
 {sent}"""
     if stage == "map":
         return _map_input(ledger, run, job, inputs)
@@ -129,12 +125,9 @@ Parked parishes (an issue waits for the owner; leave their records alone):
         return f"""\
 ## Your job: seed `{inputs['parish']}`
 
-Draft `data/seeds/{inputs['parish']}.json` (production, not `--eval`), with
-`scratch/{run_id}/{job['name']}/` as your scratch folder. `pnpm data:pull` has been run.
-If you block the parish (R34) or can't finish it, raise a blocking flag with
-`scope: parish` and the parish slug as subject. Lessons go to the ledger for foreman
-reviews, not to the diocese.
-{_answer(inputs)}"""
+Draft `data/seeds/{inputs['parish']}.json`, with `scratch/{run_id}/{job['name']}/` as
+your scratch folder.
+"""
     if stage == "seed-review":
         return _seed_review_input(ledger, run, inputs, values)
     return ""
@@ -157,7 +150,8 @@ def _map_input(ledger: Ledger, run: Any, job: Any, inputs: dict[str, Any]) -> st
                   if b["id"] == inputs.get("batch")), {})
     entries = inputs.get("entries") or batch.get("entries") or []
     touches = {inputs.get("batch"), *entries}
-    leads = ledger.all("SELECT * FROM lead WHERE run_id = ? AND used_by IS NULL", run_id)
+    leads = ledger.all("SELECT * FROM lead WHERE run_id = ? AND (used_by IS NULL OR "
+                       "used_by = ?)", run_id, job["id"])  # the same leads for a fresh worker
     mine = [r for r in leads if r["touches"] in touches]
     for r in mine:
         ledger.run_sql("UPDATE lead SET used_by = ? WHERE id = ?", job["id"], r["id"])
@@ -172,12 +166,11 @@ Roster entries:
 {_lines([describe_entry(worktree, diocese, e) for e in entries])}
 
 Use `scratch/{run_id}/{job['name']}/` as your scratch folder and `scratch/{run_id}/tools/`
-as the tools folder. Don't edit `diocese.md`: report reusable lessons in your handoff,
-and the dispatcher adds them to *New lessons*.
+as the tools folder.
 
 Leads from earlier jobs:
 {_lines([f"{r['touches']}: {r['note']}" for r in mine])}
-{_answer(inputs)}"""
+"""
 
 
 def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
@@ -206,12 +199,13 @@ Redrafted after a send-back:
 
 This diocese's seeding precedents (`diocese.md`, *Seeding precedents*):
 {precedents or '(none yet)'}
-{_answer(inputs)}"""
+"""
 
 
 def job_input(ledger: Ledger, run: Any, job: Any, spec: StageSpec,
               values: dict[str, str]) -> str:
-    return header(run, job, spec, values) + "\n" + stage_input(ledger, run, job, values)
+    return (header(run, job, spec, values) + "\n" + stage_input(ledger, run, job, values)
+            + _answer(json.loads(job["input"])))
 
 
 def send_back_prompt(problems: list[str], handoff: str) -> str:

@@ -79,13 +79,13 @@ for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you 
 
 | Stage | Run | Kind | Model | Does | Gates |
 |---|---|---|---|---|---|
-| survey | map | agent | Opus, high | `init`, rosters, `diocese.md` intro and sources, `batches.json` (today's `diocese-surveyor`) | `batches validate`, `diocese validate` |
+| survey | map | agent | Opus, high | `init`, rosters, `diocese.md` intro and sources, `batches.json` | `batches validate`, `diocese validate` |
 | survey-review | map | reviewer | Opus | Checks grouping, exclusion reasons and proposed rules | none |
-| map | map | agent | Sonnet, high | Maps about 4 parishes: bulletin source, churches, exclusions and open records (today's `parish-scout`) | `diocese validate` |
+| map | map | agent | Sonnet, high | Maps about 4 parishes: bulletin source, churches, exclusions and open records | `diocese validate` |
 | integrate | map | agent | Opus | Merges *New lessons* into the playbook in `diocese.md` | `diocese validate` |
 | reconcile | map | agent | Opus | `coverage --link`, `audit --fetch`, peer `publication_reviews`, merges across batches, `fetch:check --diocese`, a last integrate | `batches validate`, `diocese validate` |
 | promote | map | code | none | `promote --dry-run`, `promote`, `uv run pytest`, lint, commit | its own exit codes |
-| seed | seed | agent | Sonnet, high | Drafts one parish's seed (today's `seed-drafter`) | `seed check` |
+| seed | seed | agent | Sonnet, high | Drafts one parish's seed | `seed check` |
 | seed-review | seed | reviewer | Opus | Answers every open question in the batch (by a rule, the diocese's precedents or its own judgment) and approves each seed; sends a seed back only for an error an answer can't fix (§8) | `seed check` on approved files |
 | pr | both | code | none | Pushes, opens the PR and writes its summary (§10) | none |
 
@@ -118,7 +118,7 @@ stage: map
 kind: agent                    # agent | reviewer | code
 model: claude-sonnet-5-5
 effort: high
-prompt: .claude/agents/parish-scout.md
+prompt: factory/prompts/map.md
 skills: [explore-diocese, parish-site-access]
 tools: [Bash, Read, Edit, Write]
 writes:                        # globs, checked by the diff-scope gate
@@ -388,10 +388,12 @@ rows first.
 ## 12. What carries over
 
 - `explore-diocese`, `draft-parish-seed` and `parish-site-access` become stage skills.
-- `diocese-surveyor`, `parish-scout` and `seed-drafter` become the prompts for the
-  `survey`, `map` and `seed` stage specs.
-- `map-diocese` and `seed-parishes` are the orchestrators the factory replaces. Keep
-  them for manual sessions until the factory has proven itself, then retire them.
+- The `diocese-surveyor`, `parish-scout` and `seed-drafter` agents become the prompts
+  `factory/prompts/survey.md`, `map.md` and `seed.md`.
+- The `map-diocese` and `seed-parishes` orchestrators are retired: mapping and seeding
+  run only through the factory. Historical seed evals keep their own skill
+  (`seed-evals`) and an eval-only `seed-drafter` agent; proposing candidate rules from
+  the owner's answers moves to the foreman.
 - New: a `foreman` skill (§9).
 
 ## 13. MVP
@@ -459,11 +461,11 @@ Where the implementation had to decide something this spec left open.
   Code's system prompt. The first message is built in code (`inputs.py`): a header with the
   write boundaries, the gates, the handoff path and schema, then the stage's input.
   Resumed attempts get only the problems, your answer, or "continue".
-- **New stage prompts** are `factory/prompts/<stage>.md` (survey-review, integrate,
-  reconcile, seed-review). The surveyor and scout agent files gained a sentence each for
-  running under the factory.
+- **Stage prompts** are `factory/prompts/<stage>.md`, one per agent and reviewer stage.
 - **Crashes.** A crashed attempt resumes its session; one that couldn't resume (no turns)
-  gets a fresh worker; the third crash blocks the Run. `max_turns` and `max_minutes` end an
+  gets a fresh worker, with the whole job input and whatever that attempt was told (the
+  problems to fix, an answer). The third crash since the owner last unblocked the job
+  (an answer or `factory retry`) blocks the Run. `max_turns` and `max_minutes` end an
   attempt as `partial`.
 - **Workers can't move HEAD.** Besides `git commit`, `git push` and `gh`, the deny rules
   cover `git reset`, `checkout`, `switch`, `rebase`, `merge` and `stash`. If HEAD moved

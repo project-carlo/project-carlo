@@ -2,7 +2,7 @@ stage: map
 kind: agent
 model: claude-sonnet-5-5
 effort: high
-prompt: .claude/agents/parish-scout.md
+prompt: factory/prompts/map.md
 skills: [explore-diocese, parish-site-access]
 tools: [Bash, Read, Edit, Write]
 writes:

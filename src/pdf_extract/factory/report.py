@@ -15,7 +15,7 @@ from pdf_extract.factory.ledger import (
     PENDING,
     Ledger,
 )
-from pdf_extract.factory.plan import diocese_dir
+from pdf_extract.factory.plan import diocese_dir, read_seed
 
 Commands = Callable[[str, Path], tuple[bool, str]]
 
@@ -270,11 +270,8 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
         title = f"{name}: seed {len(json.loads(run['parishes'] or '[]'))} parishes ({run['id']})"
         by_status: dict[str, list[str]] = {}
         for parish in json.loads(run["parishes"] or "[]"):
-            path = worktree / "data" / "seeds" / f"{parish}.json"
-            try:
-                state = json.loads(path.read_text(encoding="utf-8")).get("status", "?")
-            except (OSError, ValueError):
-                state = "no file"
+            seed = read_seed(worktree, parish)
+            state = seed.get("status", "?") if seed else "no file"
             by_status.setdefault(state, []).append(parish)
         decisions = ledger.all("SELECT * FROM decision WHERE run_id = ? "
                                "ORDER BY against_lean DESC, parish, slot", run["id"])

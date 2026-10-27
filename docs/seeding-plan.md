@@ -14,14 +14,15 @@ time. So the seed has to be right. A wrong slot in a seed stays until a
 bulletin makes the model propose changing it, and a slot the seed misses is
 only added when a bulletin makes the model notice it is missing.
 
-Seeds are drafted by a Claude Code agent, which reads the parish's bulletins
+Seeds are drafted by the onboarding factory's seed Runs
+([factory-spec.md](factory-spec.md)). A drafter reads the parish's bulletins
 itself against the extraction policy (`classifiers/schedule_policy.POLICY`).
 It writes down, for every slot, what each source said, what it decided and
-why. Where it can't decide, it writes a question for a person. A person
-settles those questions in the labeler and approves the parish. The approved
-seed file is committed, and the pipeline loads it. In the onboarding factory
-([factory-spec.md](factory-spec.md)), an agent reviewer may answer and approve
-instead (see [Approval by an agent](#approval-by-an-agent)).
+why. Where it can't decide, it writes a question. The factory's `seed-review`
+agent answers those questions and approves the parish (see
+[Approval by seed-review](#approval-by-seed-review)). The approved seed file
+reaches main through the factory's PR, where the owner reads every answer, and
+the pipeline loads it.
 
 ## Decisions
 
@@ -38,41 +39,40 @@ instead (see [Approval by an agent](#approval-by-an-agent)).
 - **Seed scope:** weekly slots, plus dated entries and cancellations from the
   seed's `as_of` date on, since update mode starts after `as_of` (rules.md
   R16).
-- **Runs locally**, in Claude Code on the maintainer's machine, with the R2
-  read keys, `OPENAI_API_KEY` and `GEMINI_API_KEY`.
+- **Runs in the factory**, one parish per seed job, on the dispatcher's
+  machine with the R2 read keys, `OPENAI_API_KEY` and `GEMINI_API_KEY`.
 - **Seed files are committed**, like the labels, and the pipeline loads the
   approved ones. Nothing is written to the published database by hand.
-- **Subagents default to 3 parishes each**, fewer for complex parishes. Other
-  batch sizes can be compared in evals; the default is not a measured cost ratio.
+- **One parish per seed job.** Evals assign 3 parishes per drafter by default,
+  and can compare other batch sizes.
 
 ## How a parish is seeded
 
 ```
-pnpm seed pick ─► subagent per 3 parishes ─► data/seeds/<parish>.json ─► labeler review ─► approved, committed ─► next pipeline command loads it
-                  (reads bulletins, history,      (every slot, its sources,    (open questions,
-                   asks models when needed)        decision, rationale)         approve)
+seed Run ─► seed job per parish ─► data/seeds/<parish>.json ─► seed-review ─► factory PR ─► merged ─► next pipeline command loads it
+            (reads bulletins, history,  (every slot, its sources,   (answers, approves)   (owner reads
+             asks models when needed)    decision, rationale)                              every answer)
 ```
 
-1. The orchestrating agent picks a batch (`pnpm seed pick`) and hands the
-   parishes to subagents, a few each.
-2. Each subagent drafts one parish at a time and writes its seed file before
-   starting the next, so an interrupted subagent loses at most the parish it
-   was on.
-3. A person opens the labeler's Seeds view, answers the open questions,
-   checks whatever else they want to, and approves the parish.
-4. The approved files are committed and merged. Every pipeline command loads
-   the approved seeds not yet in its database (see
-   [Loading seeds](#loading-seeds)), so the parish is in update mode from the
-   next weekly run.
+1. A seed Run starts once a mapped diocese's parishes have enough bulletins
+   (factory-spec.md §3), and runs one seed job per parish, a batch at a time.
+2. Each seed job drafts its parish and writes its seed file; the dispatcher
+   checks it (`seed check`) and commits it.
+3. `seed-review` reviews the batch's seeds, answers every open question and
+   approves each seed, or sends it back to its drafter.
+4. The factory's PR lists every answer and why. The owner changes any in the
+   labeler's Seeds view, then merges. Every pipeline command loads the approved
+   seeds not yet in its database (see [Loading seeds](#loading-seeds)), so the
+   parish is in update mode from the next weekly run.
 
 ## The agent
 
-Two skills split the work. `.claude/skills/seed-parishes/SKILL.md` selects, assigns and
-verifies batches, and proposes new rules from reviewers' answers.
-`.claude/skills/draft-parish-seed/SKILL.md` is the drafting procedure for one parish. The
-`seed-drafter` agent (`.claude/agents/seed-drafter.md`) preloads only the drafting skill,
-and holds the drafter's write boundaries. The drafting skill keeps its references beside
-it:
+`.claude/skills/draft-parish-seed/SKILL.md` is the drafting procedure for one parish.
+The factory's seed stage (`factory/stages/seed.yaml`, prompt `factory/prompts/seed.md`)
+runs it with the drafter's write boundaries; the `foreman` skill proposes new rules from
+the owner's changes to seed-review's answers. For evals, `.claude/skills/seed-evals/`
+assigns the labeled parishes to `seed-drafter` agents (`.claude/agents/seed-drafter.md`).
+The drafting skill keeps its references beside it:
 
 - [rules.md](../.claude/skills/draft-parish-seed/rules.md) holds every seeding decision
   rule, with stable IDs that rationales cite. Its default is to ask: a slot no rule covers
@@ -94,7 +94,7 @@ batch, draft, read, compare and paid calls.
 
 `M` is `gpt-6.1-sol` or `gemini-3-flash-preview`. `extract` and `ask` refuse
 once a parish has used its call limit (`CARLO_SEED_CALL_LIMIT`, default 4),
-so a confused subagent can't run up the bill. A cache hit doesn't count.
+so a confused drafter can't run up the bill. A cache hit doesn't count.
 
 `ask` needs a new small prompt: `POLICY`, the parish's churches, the date,
 then the question, with a schema of `answer`, `page` and `quote`. It is
@@ -143,7 +143,7 @@ already has (`/api/bulletins/<parish>/<hash>/pdf`) serves the bulletins. The
 server validates every write and confines paths to `data/seeds`, as for the
 labels.
 
-## Approval by an agent
+## Approval by seed-review
 
 The onboarding factory ([factory-spec.md](factory-spec.md), §8 and §11) has a
 `seed-review` agent review the seeds of a seed Run. When it approves one, the
@@ -158,9 +158,10 @@ are a person's approval's.
   or from a borderline case the owner agrees with.
 - **Rules stay the owner's.** The factory never edits rules.md; the owner adds
   a rule in a separate PR.
-- **People still approve in the labeler.** `seed approve` refuses a reviewer
-  not starting `agent:`. `seed-review` answers every open question, and the
-  factory's PR lists each answer and why, for the owner to read and change.
+- **The owner changes answers in the labeler.** `seed approve` refuses a
+  reviewer not starting `agent:`. `seed-review` answers every open question,
+  and the factory's PR lists each answer and why; an answer the owner changes
+  in Seeds mode is theirs (`by` their name).
 
 ## Loading seeds
 
@@ -204,7 +205,7 @@ weekly rows, and dated rows and cancellations on or after `as_of`. It reports:
 - how often its leaning answer to an open question matched the label
 - open questions per parish, and external calls and their cost per parish
 
-Running it with 3 parishes per subagent and then with 8 shows whether batch
+Running it with 3 parishes per drafter and then with 8 shows whether batch
 size costs accuracy.
 
 ## What changes in the code
@@ -216,7 +217,7 @@ size costs accuracy.
 | `db.py` (or wherever pipeline commands bring the database up to date) | load approved seed files after the CSVs |
 | `report.py` | list seeds loaded and seeds skipped in the run report |
 | `labeling/server.py`, `apps/labeler/` | the Seeds routes and views |
-| `.claude/skills/seed-parishes/`, `.claude/skills/draft-parish-seed/` | orchestrator and drafting skills; the drafting skill's `rules.md` (decision rules) and `file-format.md` (the file) |
+| `.claude/skills/draft-parish-seed/`, `.claude/skills/seed-evals/` | drafting and eval skills; the drafting skill's `rules.md` (decision rules) and `file-format.md` (the file) |
 | `package.json`, `README.md` | `pnpm seed`, and a section on seeding |
 
 ## Out of scope
@@ -224,24 +225,20 @@ size costs accuracy.
 - Using websites as the primary seed source, or consulting live websites in
   historical evals (rules.md says how far a website counts in production).
   Phone calls and the diocesan directory remain out of scope.
-- Running the agent unattended (in CI or on a schedule), except as the
-  onboarding factory's seed Runs ([factory-spec.md](factory-spec.md)).
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.
 
 ## Open questions
 
-- **Approving parishes with no open questions.** People approve `ready`
-  parishes in bulk (**Approve all ready**). In the factory, `seed-review`
-  approves them with `seed approve` and no answers. Whether an agent's approval
-  is reliable enough is for the factory's PRs to show.
-- **Subagent batch size**, settled by the test run.
+- **Approving parishes with no open questions.** `seed-review` approves them
+  with `seed approve` and no answers. Whether its approval is reliable enough
+  is for the factory's PRs to show.
 
 ## Implementation decisions
 
 Decisions made while implementing this plan, where it was silent or where the
 code departs from it. The code is `src/pdf_extract/seeding/`, the `ask` prompt
-`classifiers/seed_ask.py`, the skill `.claude/skills/seed-parishes/SKILL.md`,
+`classifiers/seed_ask.py`, the eval skill `.claude/skills/seed-evals/SKILL.md`,
 the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
 `file-format.md`), and the labeler's `views/SeedPage.tsx` and `lib/seeds.ts`.
 

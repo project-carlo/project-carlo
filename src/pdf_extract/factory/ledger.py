@@ -60,6 +60,7 @@ CREATE TABLE IF NOT EXISTS job (
     commit_sha TEXT,                -- the commit it ran at: its stage spec, skills, CLI
     send_backs INTEGER NOT NULL DEFAULT 0,
     continues INTEGER NOT NULL DEFAULT 0,
+    crashes INTEGER NOT NULL DEFAULT 0,  -- since the owner last unblocked it
     pending_prompt TEXT,            -- what the next attempt is told (problems, an answer)
     handoff TEXT,                   -- JSON, once it passed the handoff gate
     resumes_job INTEGER,            -- a parked parish's job, resumed with your answer

@@ -1,6 +1,6 @@
 """`python -m pdf_extract seed ...` (`pnpm seed ...`): the seeding agent's tools.
 
-Batch: choosing parishes, verifying drafts, learning from reviews (the orchestrator)
+Batch: choosing parishes, verifying drafts, reviews (the factory, an eval run)
   pick      [--limit N] [--diocese D] [--resume]   parishes to seed next, easiest first
             --labeled --eval RUN [--resume]         start or reuse a test run's manifest
   status                                            every file's status, questions, loaded
@@ -54,10 +54,11 @@ gemini-3-flash-preview. Every command but `score` and `approve` takes `--eval RU
 to work on a test run's drafts (data/seed-evals/RUN/seeds/); one that needs a file
 and finds only a test run's draft asks whether you meant `--eval RUN`. Output is
 compact text, or the JSON result with `--json`. Drafters run `finalize`,
-which checks; orchestrators run `check`. `approve` is the factory's seed-review
-agent's (docs/factory-spec.md); people approve in the labeler.
-Workflow: .claude/skills/seed-parishes/ (batches) and
-.claude/skills/draft-parish-seed/ (drafting; rules.md holds the decision rules).
+which checks; the factory's gates and an eval's verification run `check`. `approve`
+is the factory's seed-review agent's (docs/factory-spec.md); the owner changes an
+answer in the labeler. Workflow: docs/factory-spec.md (seed Runs),
+.claude/skills/seed-evals/ (eval runs) and .claude/skills/draft-parish-seed/
+(drafting; rules.md holds the decision rules).
 """
 
 from __future__ import annotations

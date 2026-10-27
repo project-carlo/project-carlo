@@ -92,8 +92,8 @@ def _retry(args: argparse.Namespace) -> Result:
         raise FactoryError(f"job {job['id']} is {job['status']}; only blocked or failed jobs "
                            "are retried")
     ledger.clear_actions(job["id"])
-    ledger.set_job(job["id"], status=QUEUED, send_backs=0, continues=0, finished_at=None,
-                   pending_prompt=json.dumps({"kind": "resume", "prompt": None}))
+    ledger.set_job(job["id"], status=QUEUED, send_backs=0, continues=0, crashes=0,
+                   finished_at=None, pending_prompt=json.dumps({"kind": "resume", "prompt": None}))
     for flag in ledger.all("SELECT * FROM flag WHERE job_id = ? AND status = ?", job["id"], OPEN):
         ledger.run_sql("UPDATE flag SET status = ?, answer = ? WHERE id = ?", SETTLED,
                        "retried by the owner", flag["id"])
