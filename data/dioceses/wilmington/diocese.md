@@ -209,6 +209,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish's own Duda/eCatholic bulletin page can be stale while the bulletin runs elsewhere: St. Hedwig's /bulletin page ends December 2024 but its home page links church-bulletin.org/?id=317 (John Patrick 317, current); check the home page's bulletin link, and an eCatholic /bulletins list can also stop months early (St. Paul, Wilmington: last file 2 August 2026).
 - St. Anthony of Padua, Wilmington self-hosts on WordPress (/bulletin-archive/, Bulletin-<Month>-<DD>-<YYYY>.pdf; the page also lists forms and calendars, so pin `filename=Bulletin-*.pdf`); the Bon Venture footer on its last pages is the ad seller, not a bulletin feed.
 - Nominatim (curl with a descriptive user agent) answered from the sandbox and returns OSM church building centres, useful to arbitrate when the directory pin and GCatholic's Plus Code differ (St. Elizabeth: directory ~110 m off).
+- jppc.net/onlinebulletins/<id>template.pdf redirects to the church-bulletin.org slug for that number, so a short curl -L scan of ids names the parish behind each (Delaware parishes are 300-320, 732); a church-bulletin.org slug guess returns the generic home page with HTTP 200, so don't trust it. A listing can outlive its parish (no. 313 Christ Our King lists no PDFs).
+- When a parish site fails TLS (ERR_CERT_COMMON_NAME_INVALID) in curl and Chrome, the Wayback copy (archive.org/wayback/available?url=...) still shows which eCatholic id it runs; a bulletin's own letterhead can name the working domain (St. Joseph: sjfschurch.org).
+- The Dialog's deanery lists name one parish per canonical cluster inconsistently; the Downtown Catholic scanned cover (page 1 image) must be rendered with render.py to read the masthead, and an href-only link is not a recheck-able quote: quote visible text.
 
 ## Rules settled for this diocese
 
