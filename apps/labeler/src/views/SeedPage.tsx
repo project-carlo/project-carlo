@@ -153,7 +153,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     let why: string | null = null;
     if (savingRef.current) why = "Still saving the last change; try again in a moment.";
     else if (advancingRef.current) why = "Still finding the next seed; try again in a moment.";
-    else if (drafting) why = "A subagent is still drafting this parish.";
+    else if (drafting) why = "A drafter is still drafting this parish.";
     else if (!reviewer) why = "Type your name as the reviewer first.";
     if (why) setMessage(why);
     return !why;
@@ -374,7 +374,7 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
             {seed.approved_at && ` · approved ${seed.approved_at.slice(0, 10)}`}
           </p>
           {seed.status === "blocked" && <p className="text-sm text-zinc-700">Blocked: {seed.blocked_reason}</p>}
-          {drafting && <p className="text-sm text-amber-800">A subagent is still drafting this parish; it can't be reviewed yet.</p>}
+          {drafting && <p className="text-sm text-amber-800">A drafter is still drafting this parish; it can't be reviewed yet.</p>}
           {detail.problems.length > 0 && (
             <ul className="list-disc pl-5 text-xs text-red-700" data-testid="seed-problems">
               {detail.problems.map((p) => (

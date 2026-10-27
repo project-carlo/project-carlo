@@ -1,0 +1,21 @@
+# The dispatcher as a systemd user service (docs/factory-spec.md §5).
+#
+#   cp factory/carlo-factory.service ~/.config/systemd/user/
+#   # set WorkingDirectory to the dispatcher's own checkout, then:
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now carlo-factory
+#   loginctl enable-linger "$USER"   # keep it running after you log out
+#   journalctl --user -u carlo-factory -f
+[Unit]
+Description=Project Carlo onboarding factory dispatcher
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/carlo-factory
+ExecStart=/usr/bin/env pnpm factory run
+Restart=always
+RestartSec=30
+Environment=PATH=%h/.local/bin:%h/.local/share/pnpm:/usr/local/bin:/usr/bin:/bin
+
+[Install]
+WantedBy=default.target

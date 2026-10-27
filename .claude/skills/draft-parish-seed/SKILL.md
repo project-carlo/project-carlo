@@ -1,6 +1,6 @@
 ---
 name: draft-parish-seed
-description: Draft, resume or repair a parish's believed-schedule seed with the pnpm seed CLI. Use for an individual seed or when assigned parishes by the seed-parishes orchestrator.
+description: Draft, resume or repair a parish's believed-schedule seed with the pnpm seed CLI. The method the onboarding factory's seed jobs follow.
 ---
 
 # Drafting a parish seed
@@ -8,15 +8,11 @@ description: Draft, resume or repair a parish's believed-schedule seed with the 
 A seed becomes the schedule that update mode maintains. Before your first draft, read three
 things: `POLICY` in `src/pdf_extract/classifiers/schedule_policy.py`, in full, which says
 what one bulletin shows; [rules.md](rules.md), which holds every seeding decision; and
-[file-format.md](file-format.md), which describes the JSON. Your write boundaries and the
-end-of-run report are in `.claude/agents/seed-drafter.md`, and they also apply when you
-draft on a direct request.
+[file-format.md](file-format.md), which describes the JSON.
 
-Use the local database (`pnpm data:pull`, which the orchestrator runs first) and the R2
-read keys. On a direct request, pull once yourself and make a private scratch folder. Run
-plain `pnpm seed ...`, since this pnpm rejects `-s`. `pnpm seed --help` lists every
-command, and `--json` gives a command's full output. In a test run, pass `--eval RUN` to
-every parish command; drafts then go to `data/seed-evals/RUN/seeds/`.
+Use the local database (`pnpm data:pull` has been run before you start) and the R2 read
+keys. Run plain `pnpm seed ...`, since this pnpm rejects `-s`. `pnpm seed --help` lists every
+command, and `--json` gives a command's full output.
 
 Do one parish at a time. Finish and finalize each before starting the next.
 
@@ -44,7 +40,7 @@ Do one parish at a time. Finish and finalize each before starting the next.
    [--page N]`, which usually costs less context than the PDF. Use `seed pages` only for a
    page that is an image or whose layout matters. Run `seed mark-read` on each bulletin
    you read. To look up a church, use `seed church <name and town>` (R21).
-5. **Website (production only, when R5 calls for it).** `seed site <parish>` prints the
+5. **Website (when R5 calls for it).** `seed site <parish>` prints the
    homepage's text and the links that look like schedules. `seed site <parish>
    /mass-times` (or a full address) prints one of those pages, and each page is kept for
    a day. Under R6 a real, current parish schedule that fits the bulletin may supply a

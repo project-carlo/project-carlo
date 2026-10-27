@@ -13,8 +13,7 @@ it instead. `PLAYWRIGHT_HEADLESS` decides whether that browser shows a window, a
 everywhere else; Cloudflare passes a headed one more often.
 
 Each page's text is kept under `data/seed-work/<parish>/site/` for a day, so
-reading it again costs nothing. A historical test run may not look at live
-websites at all (they can show what changed after its cutoff).
+reading it again costs nothing.
 """
 
 from __future__ import annotations

@@ -733,30 +733,42 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 ## Seeding parishes
 
-A parish's first seed (`data/seeds/<parish>.json`) is drafted by Claude Code agents from its
-bulletins and approved by a person ([docs/seeding-plan.md](docs/seeding-plan.md)). The
-`seed-parishes` skill runs batches through `seed-drafter` agents, which follow the
-`draft-parish-seed` skill. Its [rules.md](.claude/skills/draft-parish-seed/rules.md) holds
-every seeding decision (a slot no rule covers becomes a question for the reviewer), and
+A parish's first seed (`data/seeds/<parish>.json`) is drafted from its bulletins and
+approved by the onboarding factory's seed Runs (below; [docs/seeding-plan.md](docs/seeding-plan.md)).
+Its drafters follow the `draft-parish-seed` skill, whose
+[rules.md](.claude/skills/draft-parish-seed/rules.md) holds every seeding decision (a slot no
+rule covers becomes a question), and
 [file-format.md](.claude/skills/draft-parish-seed/file-format.md) holds the file format.
-`pnpm seed --help` lists every command by phase.
+`seed-review` answers the questions and approves; the factory's PR lists each answer, and
+the owner changes one in the labeler's **Seeds** mode (`pnpm label`) before merging.
+Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
+in update mode (a deploy never loads them). `pnpm seed --help` lists every command by phase.
 
 ```bash
-pnpm seed pick                          # parishes to seed next, easiest first
 pnpm seed start st-mary-albany          # start or resume a draft; prints where it starts from
 pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
-pnpm seed check --all                   # the orchestrator's check; `status` lists every file
-pnpm seed questions --answered          # reviewers' answers against the leanings, to find new rules
-pnpm seed pick --labeled --eval try-1   # start a test run on the labeled parishes
-pnpm seed score try-1                   # score its drafts against the labels
+pnpm seed check --all                   # check every file; `status` lists them
+pnpm seed questions --answered --by person   # the owner's changed answers, to find new rules
 ```
 
-Reviewers answer the questions and approve in the labeler's **Seeds** mode (`pnpm label`).
-Enter your reviewer name and click **Approve all ready (N)** in the Seeds queue to
-approve every **Ready to approve** seed, regardless of the status filter. Each file
-runs the usual approval checks; failures stay unapproved and appear with their problems.
-Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
-in update mode (a deploy never loads them).
+## Onboarding factory
+
+The factory takes a diocese from nothing to seeded parishes without a person in the loop,
+apart from merging its PRs and answering its GitHub issues
+([docs/factory-spec.md](docs/factory-spec.md)). A dispatcher runs small agent jobs one at a
+time: a map Run (survey, batches of parishes, reconcile, promote, PR) for each diocese in
+`factory/queue.json`, then seed Runs once the mapped parishes have bulletins. Stage specs
+and prompts are in `factory/`; the ledger, transcripts and Run worktrees are in
+`data/factory/` of the dispatcher's own checkout.
+
+```bash
+uv sync --group dev --group factory            # the Agent SDK
+pnpm factory run --stub scenario.json          # canned workers: no usage, no GitHub
+pnpm factory run                               # the dispatcher (or factory/carlo-factory.service)
+pnpm factory status                            # Runs, the running job, usage, open issues
+pnpm factory inspect wilmington-map-1/004-map  # one job in full; the `foreman` skill starts here
+pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answers.json
+```
 
 ## Project layout
 
@@ -772,7 +784,7 @@ in update mode (a deploy never loads them).
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
-- `data/seeds/` - parish seed files, drafted by an agent and approved in the labeler (committed); `data/seed-evals/` holds test runs on the labeled parishes
+- `data/seeds/` - parish seed files, drafted and approved by the factory's seed Runs (committed)
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -788,7 +800,7 @@ in update mode (a deploy never loads them).
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
-  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, scoring test runs, the labeler's review
+  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, the labeler's review
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command

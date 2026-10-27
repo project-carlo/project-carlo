@@ -1,0 +1,13 @@
+stage: seed
+kind: agent
+model: claude-sonnet-5-5
+effort: high
+prompt: factory/prompts/seed.md
+skills: [draft-parish-seed]
+tools: [Bash, Read, Edit, Write]
+writes:
+  - data/seeds/{parish}.json
+  - scratch/{run}/{job}/**
+gates:
+  - pnpm seed check {parish}
+limits: { max_turns: 150, max_minutes: 60 }

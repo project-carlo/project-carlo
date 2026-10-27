@@ -14,8 +14,8 @@ has the explicit timing exception in POLICY. Do not ask again when a rule settle
 Everything still unclear is `needs_human`: a short question, the options, exactly one
 `"leaning": true`, and why you lean that way. Candidates (C…) are not in force and cannot
 override a clear active rule or POLICY. When no active rule settles a candidate's case,
-ask and lean as the candidate says. The reviewer works in the labeler and never sees your
-report. A doubt kept only in the report or a settled slot's rationale is lost.
+ask and lean as the candidate says. The reviewers (`seed-review`, then the owner in the
+factory's PR) work from the seed file and never see your report or handoff. A doubt kept only in the report or a settled slot's rationale is lost.
 
 **Citing.** A settled slot's `rationale` starts with the rule it rests on ("R1: printed in
 the schedule box of all three bulletins") or names the POLICY section ("POLICY, Times").
@@ -56,9 +56,8 @@ questions` lists answered questions, their leanings and what they cite.
   call.
 
 **R5. The website: when to look.**
-- When: production only, and a slot needs it: the bulletins disagree, or a slot's location
-  or regularity is unclear. Never in a historical eval (`seed check` rejects website
-  sources there).
+- When: a slot needs it: the bulletins disagree, or a slot's location or regularity is
+  unclear.
 - Do: quote the page in its own words as a `website` source, never a time you worked out.
   If the site can't be read, say so in the rationale and rely on the bulletins.
 
@@ -71,7 +70,7 @@ questions` lists answered questions, their leanings and what they cite.
   and announcements clearly belonging to an earlier period. An old copyright year alone
   does not make a schedule stale. A real conflict with the bulletin is still asked; a
   missing mention alone is not a conflict. Ask if you still doubt the time, place or
-  whether the service continues. Never use a live website in a historical evaluation.
+  whether the service continues.
 - For an agent-settled website-backed inclusion, set `page: null` and record the website
   source's `schedule_check`: when checked, why it appears current, the newest read
   bulletin, and why it fits that bulletin. Use paired `--website-current` and

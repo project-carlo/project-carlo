@@ -10,15 +10,14 @@ rules it enforces are .claude/skills/draft-parish-seed/rules.md R1, R2, R5):
 - no two included entries share a slot;
 - the dated entries a seed holds are on or after its `as_of` date;
 - the file's bulletins are the parish's, and `as_of` is the fetch time of the
-  newest one the agent read (in a test run, of the labeled bulletin);
+  newest one the agent read;
 - the newest listed bulletin is marked read, and an agent's settled inclusions
   cite its own reading there at their page (reviewer answers may include older slots),
   or cite an assessed current website schedule in that bulletin's context,
   or retain an established weekly slot after one assessed omission;
   except what the newest bulletin can't be expected to print (`older_evidence_ok`):
   a weeks-of-the-month slot none of whose weeks fall in the newest bulletin's
-  week, or a dated entry from `as_of` on that an older bulletin announced;
-- a historical eval contains no live website evidence.
+  week, or a dated entry from `as_of` on that an older bulletin announced.
 """
 
 from __future__ import annotations
@@ -210,7 +209,6 @@ def check_seed(
     seed: Any,
     *,
     parish_slug: str,
-    cutoff: str | None = None,
     check_bulletins: bool = True,
     check_evidence: bool = True,
 ) -> list[str]:
@@ -233,13 +231,6 @@ def check_seed(
         problems.append(
             "status is still drafting: set needs_review (open questions) or ready, or blocked"
         )
-    if cutoff is not None:
-        for i, slot in enumerate(seed["slots"]):
-            if any(source.get("source") == WEBSITE for source in slot["sources"]):
-                problems.append(
-                    f"slots[{i}] ({slot['id']}): website sources are not allowed in a "
-                    "historical test run; use only bulletins and history within its cutoff"
-                )
     if seed["status"] == BLOCKED:
         return problems
 
@@ -325,18 +316,16 @@ def check_seed(
                 f"as_of must be the fetch time of the newest bulletin read "
                 f"({newest['fetched_at']}, {newest['content_hash'][:12]}), not {seed['as_of']}"
             )
-        if cutoff is not None and as_of != normalize_as_of(cutoff):
-            problems.append(f"in a test run as_of is the labeled bulletin's fetch time, {cutoff}")
         for b in seed["bulletins"]:
             if normalize_as_of(b["fetched_at"]) > as_of and b["read"]:
                 problems.append(f"bulletin {b['content_hash'][:12]} is read but newer than as_of")
     if check_bulletins:
-        problems.extend(_bulletin_problems(conn, seed, parish_id, cutoff))
+        problems.extend(_bulletin_problems(conn, seed, parish_id))
     return problems
 
 
 def _bulletin_problems(
-    conn: sqlite3.Connection, seed: dict[str, Any], parish_id: int, cutoff: str | None,
+    conn: sqlite3.Connection, seed: dict[str, Any], parish_id: int,
 ) -> list[str]:
     problems = []
     for b in seed["bulletins"]:
@@ -354,6 +343,4 @@ def _bulletin_problems(
                 f"bulletin {short} was fetched at {', '.join(sorted(fetched))}, "
                 f"not {b['fetched_at']}"
             )
-        if cutoff is not None and normalize_as_of(b["fetched_at"]) > normalize_as_of(cutoff):
-            problems.append(f"bulletin {short} was fetched after the test run's cutoff")
     return problems

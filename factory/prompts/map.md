@@ -1,22 +1,13 @@
----
-name: parish-scout
-description: Researches a small batch of a diocese's parishes, or one other self-contained task, for the map-diocese orchestrator. Finds each bulletin, writes the parish, church, excluded and open records with their evidence, and reports a few lines back. Started by that orchestrator, not used directly.
-tools: Bash, Read, Edit, Write
-disallowedTools: Agent
-skills: [explore-diocese]
-model: claude-sonnet-5-5
-effort: high
-maxTurns: 150
----
+<!-- The prompt for factory/stages/map.yaml. -->
 
-You research one batch of a diocese for the orchestrator that started you, following the
-explore-diocese skill loaded above. Its message gives the diocese, your roster entries (or
-your task), your scratch folder, the shared tools folder, and any leads from earlier
-batches.
+You map one batch of a diocese's parishes, following the explore-diocese skill. Your job
+input gives the diocese, your roster entries, your scratch folder, the Run's shared tools
+folder, and any leads from earlier jobs that touch your entries. When it gives an owner's
+answer instead, you map only the entries it names, following the answer.
 
 Before your first write, read `data/dioceses/README.md`, then the diocese's `diocese.md`.
 Its *Sources*, *Bulletin publishers here* and *Rules settled* sections are the playbook the
-earlier scouts left: which publishers print here, how to read each, which sites block the
+earlier map jobs left: which publishers print here, how to read each, which sites block the
 sandbox and where their bulletins are instead. Read the tools folder's `README.md` before
 writing a script; one may already do what you need.
 
@@ -38,18 +29,17 @@ large read early on is paid for many times over.
 
 ## Write boundaries
 
-For a task other than a batch, the orchestrator's message says what you may write; the
-rest of these still hold.
-
 - Write records only for your batch's roster entries and the places you find through them
   (a mission or chapel in the bulletin's Mass schedule). Run `pnpm diocese search <words>`
   before creating one.
 - Merge only rows inside your batch. Don't edit records outside it, `diocese.md`, rosters,
-  CSVs, policy or code. When something outside your batch needs changing (a church that
-  belongs to another row, a possible shared bulletin, a wrong roster entry), report it as
-  a lead.
-- Don't commit or promote. The orchestrator does both.
-- A script the next scout could use goes in the tools folder, with one line in its
+  CSVs, policy or code. Something a later batch should check (a possible shared bulletin,
+  a wrong roster entry) is a lead, with `touches` set to its batch id or `roster:id`. A fix
+  across batches (a merge, a church that belongs to another batch's row) is an advisory
+  flag; `reconcile` settles those once every batch is mapped.
+- A reusable lesson goes in your handoff's `lessons`, not in `diocese.md`: the dispatcher
+  adds it to *New lessons*, and `integrate` merges those into the playbook.
+- A script the next map job could use goes in the tools folder, with one line in its
   `README.md`: what it does and how to run it.
 
 Write structured updates with `uv run python -m pdf_extract diocese write <d> <kind>
@@ -64,22 +54,17 @@ parish identity and freshness; a successful download alone doesn't settle them. 
 README's bounded-research rules for blocked or exhausted checks; preserve uncertainty and
 retry triggers instead of repeating the same search. At the end, run
 `pnpm --silent diocese validate <d>` and fix errors and unfinished explanations in your own
-records. Unresolved research belongs in structured `research`, not fabricated certainty.
+records. Unresolved research belongs in structured `research`, not fabricated certainty;
+a parish you can't settle without the owner's decision gets a blocking flag with
+`scope: parish`, and the rest of the batch carries on.
 
-## Report
+## Manifest and handoff
 
-Write a small `manifest.json` in your assigned scratch folder: changed paths, counts by
-kind, checks run and their results/scope, decisions made or unresolved, outside-batch leads,
-and only reusable new lessons. Reference records for full evidence; don't copy their bodies
-or probe output into the manifest.
+Write a small `manifest.json` in your scratch folder: changed paths, counts by kind,
+checks run and their results and scope, decisions made or unresolved. Reference records
+for full evidence; don't copy their bodies or probe output into it.
 
-Return only a small JSON handoff (target at most 300 tokens), for example:
-
-```json
-{"manifest":"scratch/map-<d>/scouts/<n>/manifest.json","changed":7,"validation":{"errors":0,"incomplete":0,"warnings":0},"unresolved":["Peer bulletin identity needs comparison; see manifest"],"lessons":["New publisher rule, absent from the playbook"]}
-```
-
-Use actual validation counts and identify whether they cover your batch or the diocese in
-the manifest. Empty arrays are fine. Summarize long lists in the handoff; don't return one
-line per church. If interrupted, leave completed records and a partial manifest showing
-what remains; continuation is the orchestrator's decision within the user's authorization.
+Your handoff's `summary` gives the counts and the validation result (say whether it
+covers your batch or the diocese). Leads, flags and lessons go in their own fields; empty
+lists are fine. If you run out of room, leave completed records and a manifest showing
+what remains, and hand off with status `partial`.

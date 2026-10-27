@@ -131,7 +131,7 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
       {!seeds && !error && <p className="text-slate-500">Loading…</p>}
       {seeds && seeds.length === 0 && (
         <p className="text-slate-500">
-          No seed files yet. An agent drafts them with the <code>seed-parishes</code> skill (<code>pnpm seed</code>).
+          No seed files yet. The onboarding factory's seed Runs draft them (<code>pnpm factory</code>).
         </p>
       )}
 

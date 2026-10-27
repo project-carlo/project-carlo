@@ -1,0 +1,11 @@
+stage: survey-review
+kind: reviewer
+model: claude-opus-5-5
+effort: high
+prompt: factory/prompts/survey-review.md
+skills: [explore-diocese]
+tools: [Bash, Read, Write]
+writes:
+  - scratch/{run}/{job}/**
+gates: []
+limits: { max_turns: 80, max_minutes: 45 }
