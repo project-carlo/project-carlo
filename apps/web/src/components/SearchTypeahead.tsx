@@ -3,13 +3,15 @@ import {
   useEffect,
   useCallback,
   useMemo,
+  useLayoutEffect,
   useRef,
   type ReactNode,
 } from "react";
 import { Command as CommandPrimitive } from "cmdk";
 import { useQuery } from "@tanstack/react-query";
 import type FuseType from "fuse.js";
-import { fetchAllChurchesForSearch, type ChurchSearchResult } from "../api";
+import type { ChurchSearchResult } from "../api";
+import { churchSearchIndexQuery } from "../lib/homeStartQueries";
 import { formatAddress } from "../utils";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
@@ -75,11 +77,9 @@ export function SearchTypeahead({
     return () => clearTimeout(t);
   }, [query]);
 
-  const { data: allChurches = [], isLoading: churchesLoading } = useQuery({
-    queryKey: ["church-search-index"],
-    queryFn: fetchAllChurchesForSearch,
-    staleTime: 5 * 60 * 1000,
-  });
+  const { data: allChurches = [], isLoading: churchesLoading } = useQuery(
+    churchSearchIndexQuery,
+  );
 
   const trimmedDebouncedQuery = debouncedQuery.trim();
   const shouldSearchPlaces =
@@ -226,9 +226,31 @@ export function SearchTypeahead({
     [],
   );
 
+  const inputLabel = isPlaceMode
+    ? "Search for a city, ZIP code, or address"
+    : "Search for a church by name";
+
+  // cmdk marks its input expanded and pointing at its list at all times, but
+  // the list only exists while the dropdown is open. Keep both attributes
+  // true to the page. cmdk passes the same values on every render, so React
+  // never writes over these.
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  useLayoutEffect(() => {
+    const input = inputRef.current;
+    if (!input) return;
+    input.setAttribute("aria-expanded", String(showDropdown));
+    const listId = input.dataset.listId ?? input.getAttribute("aria-controls");
+    if (listId) input.dataset.listId = listId;
+    if (showDropdown && listId) input.setAttribute("aria-controls", listId);
+    else input.removeAttribute("aria-controls");
+  }, [showDropdown]);
+
   return (
     <Command
       shouldFilter={false}
+      // cmdk names its input by a hidden label of its own (aria-labelledby),
+      // which outranks aria-label, so the name has to go here.
+      label={inputLabel}
       className="overflow-visible bg-transparent p-0"
     >
       <Popover open={showDropdown} onOpenChange={setIsOpen}>
@@ -269,11 +291,8 @@ export function SearchTypeahead({
                   }
                 }}
                 placeholder={placeholder}
-                aria-label={
-                  isPlaceMode
-                    ? "Search for a city, ZIP code, or address"
-                    : "Search for a church by name"
-                }
+                ref={inputRef}
+                aria-label={inputLabel}
                 autoComplete="off"
                 className={`min-w-0 flex-1 bg-transparent font-serif text-ink outline-none placeholder:text-ink-soft placeholder:italic ${
                   size === "lg" ? "text-[1.375rem]" : "text-[1.0625rem]"

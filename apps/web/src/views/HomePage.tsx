@@ -9,7 +9,7 @@ import {
 import { useLocation, useNavigation, useSearchParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
-import { fetchAllChurchesForSearch, fetchChurches } from "../api";
+import { fetchChurches } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
 import {
   FULL_WINDOW_CORNER_CLASS,
@@ -31,7 +31,10 @@ import {
   encodeMapViewToParams,
   type MapView,
 } from "../lib/mapView";
-import { fetchApproximateLocation } from "../lib/approximateLocation";
+import {
+  approximateLocationQuery,
+  churchSearchIndexQuery,
+} from "../lib/homeStartQueries";
 import { firstVisitStart, type MapStart } from "../lib/mapStart";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { useMapSelection } from "../hooks/useMapSelection";
@@ -144,20 +147,12 @@ export function HomePage() {
       !(location.state as HomeNavState | null)?.centerOn,
   );
   const { data: approximateLocation, isPending: approximatePending } =
-    useQuery({
-      queryKey: ["approximate-location"],
-      queryFn: ({ signal }) => fetchApproximateLocation(signal),
-      enabled: wantsFirstVisitStart,
-      staleTime: Infinity,
-      retry: false,
-    });
+    useQuery({ ...approximateLocationQuery, enabled: wantsFirstVisitStart });
   const approximateSettled = !wantsFirstVisitStart || !approximatePending;
   // Every church, not just the ones the filters leave: the start mustn't
   // depend on the filters in a link. The search box shares this query.
   const { data: allChurches } = useQuery({
-    queryKey: ["church-search-index"],
-    queryFn: fetchAllChurchesForSearch,
-    staleTime: 5 * 60 * 1000,
+    ...churchSearchIndexQuery,
     enabled: wantsFirstVisitStart,
   });
   const mapViewTimerRef = useRef<number | null>(null);
