@@ -18,10 +18,11 @@ promotes the diocese, so its parishes go live in extract mode like every parish 
 **seed Run** starts once those parishes have bulletins in the database, and seeds them with
 today's seeding tools.
 
-An agent reviewer approves the seeds, which replaces `seeding-plan.md`'s rule that a person
-approves every seed. You stay involved through the borderline cases: every PR lists the
-decisions the factory made that no rule covered (§10). If one looks wrong, you change the
-policy (`rules.md`, a skill) in a separate PR. The factory never changes `rules.md`.
+An agent reviewer decides every open question and approves the seeds, which replaces
+`seeding-plan.md`'s rule that a person approves every seed. You stay involved through the
+PR: it lists every decision the reviewer made and why (§10), and you change any that's
+wrong before merging. If one shows a gap in the policy, you change it (`rules.md`, a
+skill) in a separate PR. The factory never changes `rules.md`.
 
 ## 2. Vocabulary
 
@@ -85,7 +86,7 @@ for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you 
 | reconcile | map | agent | Opus | `coverage --link`, `audit --fetch`, peer `publication_reviews`, merges across batches, `fetch:check --diocese`, a last integrate | `batches validate`, `diocese validate` |
 | promote | map | code | none | `promote --dry-run`, `promote`, `uv run pytest`, lint, commit | its own exit codes |
 | seed | seed | agent | Sonnet, high | Drafts one parish's seed (today's `seed-drafter`) | `seed check` |
-| seed-review | seed | reviewer | Opus | Settles each seed in the batch: sends back a question a rule already covers, decides the rest by the diocese's precedents or its own judgment, then approves (§8) | `seed check` on approved files |
+| seed-review | seed | reviewer | Opus | Answers every open question in the batch (by a rule, the diocese's precedents or its own judgment) and approves each seed; sends a seed back only for an error an answer can't fix (§8) | `seed check` on approved files |
 | pr | both | code | none | Pushes, opens the PR and writes its summary (§10) | none |
 
 ### Integrating what batches learn
@@ -166,9 +167,9 @@ Reviewers add their verdicts:
 - `survey-review`: `"verdict": "approve | send_back"`, `"problems": [...]`, and
   `"rules": [...]`, the proposed rules it accepts, as written.
 - `seed-review`: `"seeds": [{ "parish", "verdict": "approve | send_back", "answers":
-  [{ "question", "choice", "basis": "precedent | judgment", "why" }], "problems": [...]
-  }]`. A question a rule covers is never answered here; it is a problem, and the seed
-  goes back.
+  [{ "question", "choice", "basis": "rule | precedent | judgment", "why" }], "problems":
+  [...] }]`, a verdict for every parish. It never raises a blocking parish flag: it
+  decides the question instead.
 
 The dispatcher takes the changed paths from `git`, not from the handoff.
 
@@ -237,8 +238,9 @@ Job states: `queued → running → (gating) → done`, plus `waiting_usage`, `s
 state comes from its files (`diocese todo`, `seed status`), not the ledger.
 
 A Run in review becomes `merged` when its last commit is in `origin/main`, which the
-dispatcher checks after each `git fetch`. It doesn't watch the PR itself. You handle
-review comments in your own session.
+dispatcher checks after each `git fetch`; factory PRs are merged with a merge commit, not
+squashed or rebased. It doesn't watch the PR itself. You handle review comments in your
+own session.
 
 CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
 cost [--stage]`.
@@ -300,18 +302,21 @@ dispatcher acts on its verdicts:
    drafted it, and counts against that seed job. When the redrafts pass their gates, a
    new `seed-review` job reviews only those seeds. A seed past its 2 send-backs gets a
    blocking flag, and its parish is parked.
-3. **Flag**, which becomes an issue when it's blocking.
+3. **Flag**, which becomes an issue when it's blocking. `survey-review` may raise one;
+   `seed-review` raises only advisory flags.
 
-How `seed-review` settles a question:
+`seed-review` answers every open question and approves the seed. It sends a seed back
+only for an error an answer can't fix (a settled slot the newest bulletin contradicts,
+broken evidence), never for an open question. How it answers one:
 
-- **A rule in `rules.md` covers it.** The drafter should have applied it, so the seed goes
-  back citing the rule.
-- **A precedent in this diocese covers it.** Follow the precedent.
+- **A rule in `rules.md` covers it.** Answer as the rule says (basis `rule`). The drafter
+  should have applied it, which is a lesson for foreman reviews.
+- **A precedent in this diocese covers it.** Follow the precedent (basis `precedent`).
 - **Neither covers it.** Decide, preferring the drafter's lean unless the evidence is
-  against it, and say why. This is a borderline case, and it is listed in the PR. If it
-  can't decide on the evidence, it raises a blocking flag instead.
+  against it, and say why (basis `judgment`). It decides even when the evidence is thin,
+  choosing what the evidence best supports and saying what was missing.
 
-Answers against the drafter's lean are also recorded for foreman reviews.
+Every answer is listed in the PR, and recorded in the ledger for foreman reviews.
 
 ## 9. Foreman
 
@@ -347,11 +352,15 @@ a stage's recent jobs, or a Run, and it tells you what went wrong and how to imp
 - The `pr` code step writes the PR summary from the ledger and the CLIs:
   - **map Run:** coverage numbers, advisory flags, parked parishes, and `reconcile`'s
     lessons for every diocese;
-  - **seed Run:** seeds by status, advisory flags, parked parishes, and **decisions without
-    a rule**: every question `seed-review` settled by judgment, with the parish and slot,
-    the drafter's lean, the choice and why. Answers against the lean come first. These are
-    the cases to read; a wrong one is a reason to change the policy.
-- **You merge.** Seeds load as they do today once the seed PR is merged.
+  - **seed Run:** seeds by status, advisory flags, parked parishes, and **every decision
+    `seed-review` made**, by judgment, by precedent and by a rule, each with the parish
+    and slot, the drafter's lean, the choice and why. Answers against the lean come first.
+    You change any that's wrong before merging; a wrong judgment may be a reason to change
+    the policy.
+  - Only approved seeds go to main: a parked parish's draft is left out of the PR, and its
+    follow-up Run drafts it again with your answer.
+- **You merge**, with a merge commit. Seeds load as they do today once the seed PR is
+  merged.
 
 ## 11. Seed Runs
 
@@ -435,6 +444,10 @@ Where the implementation had to decide something this spec left open.
   dispatcher's database and `uv sync --group dev` (`setup`). Workers resume a session
   only in the worktree that made it, so a follow-up Run's jobs start fresh workers with
   your answer in their input.
+- **A merged Run's worktree is deleted**, with its local branch, once the dispatcher sees
+  the merge: nothing needs it after that, since answers go to a follow-up Run and seed
+  readiness reads the parish records from `origin/main`. Its `scratch/<run>/` (handoffs,
+  manifests, tools) is copied to `data/factory/runs/<run>/scratch/` first.
 - **The next job is computed, not queued ahead** (`plan.py`): a queued job (a send-back,
   an answer) first, then the stage order. A seed Run's batches are the map Run's
   `batches.json`, each parish placed by the roster refs in its record; parishes in no
@@ -459,12 +472,12 @@ Where the implementation had to decide something this spec left open.
   `scope: run` blocks the Run without running the stage gates; parish flags don't stop
   the job finishing. When a job raised several Run-level flags, it resumes once all are
   answered, with every answer.
-- **seed-review must cover its batch**: a verdict or a blocking flag for every parish,
-  or it is sent back. Its `basis` is `precedent` or `judgment` only; a question a rule
-  covers is a send-back.
+- **seed-review must cover its batch**: a verdict for every parish, and no blocking
+  parish flag, or it is sent back. Only `judgment` answers become precedents.
 - **A parked seed's draft is committed** as it stands (`seed <parish>, parked`), so the
-  next job's diff-scope gate sees only its own changes and the answered job finds the
-  draft. A seed job whose handoff parks its own parish isn't held to `seed check`.
+  next job's diff-scope gate sees only its own changes and a job answered within the Run
+  finds the draft. The `pr` step then takes every seed that isn't approved back out. A
+  seed job whose handoff parks its own parish isn't held to `seed check`.
 - **`seed approve` failing** on a reviewer's answers sends the seed back to its drafter
   with the error, like any send-back. The stage gate `pnpm seed check {approved}` runs
   after the approvals.
@@ -511,7 +524,7 @@ Where the implementation had to decide something this spec left open.
   `parish-site-access`'s headed Chrome works inside it.
 - **More at once.** Several Runs, or several workers, in parallel.
 - **Overrules and auto-merge.** Record your corrections against reviewer decisions,
-  shorten the PR's list of decisions without a rule once the record supports it, and
+  shorten the PR's list of seed-review's decisions once the record supports it, and
   merge automatically when gates pass.
 - **Measuring spec changes.** Foremen that run on their own, and replay evals to show a
   change helped.

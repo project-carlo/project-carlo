@@ -16,7 +16,7 @@ from pathlib import Path
 
 from pdf_extract.factory.config import Config
 from pdf_extract.factory.ledger import ACTIVE, BLOCKED, MAP, MERGED, PENDING, SEED, Ledger
-from pdf_extract.factory.plan import seedable_parishes
+from pdf_extract.factory.plan import seedable_on_main
 
 
 def bulletin_counts(db_path: Path, parishes: list[str]) -> dict[str, int]:
@@ -46,12 +46,13 @@ class Readiness:
 
 
 def assess(ledger: Ledger, config: Config, diocese: str, db_path: Path,
-           at: datetime | None = None) -> Readiness | None:
+           at: datetime | None = None, *, repo: Path) -> Readiness | None:
+    """`repo` is the dispatcher's checkout: the mapped parishes are read from its main."""
     at = at or datetime.now(UTC)
     maps = [r for r in ledger.runs(MERGED) if r["diocese"] == diocese and r["kind"] == MAP]
     if not maps:
         return None
-    seedable = sorted({p for r in maps for p in seedable_parishes(Path(r["worktree"]), diocese)})
+    seedable = sorted(seedable_on_main(repo, config.upstream, diocese))
     seed_runs = [r for r in ledger.runs() if r["diocese"] == diocese and r["kind"] == SEED]
     seeding = sorted({p for r in seed_runs for p in json.loads(r["parishes"] or "[]")})
     remaining = [p for p in seedable if p not in seeding]

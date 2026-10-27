@@ -56,7 +56,7 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
-from pdf_extract.factory.plan import diocese_dir, next_job
+from pdf_extract.factory.plan import diocese_dir, next_job, seed_status
 from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.usage import (
     Fetch,
@@ -340,9 +340,7 @@ class Dispatcher:
                 if original["session_id"] and original["run_id"] == run["id"]:
                     return "answer", inputs.answer_prompt(
                         data.get("question", ""), data.get("answer", ""), rel,
-                        data.get("subject", "the parish you set aside"),
-                        only=data.get("subject") if job["stage"] == "seed-review" else None,
-                    ), original["session_id"]
+                        data.get("subject", "the parish you set aside")), original["session_id"]
             return "start", inputs.job_input(self.ledger, run, job, spec, values), None
         if not job["session_id"]:
             first = self._attempts(job["id"])
@@ -469,13 +467,12 @@ class Dispatcher:
         return self._finish(run, job, spec, worktree, handoff)
 
     def _coverage_problems(self, job: Any, handoff: Handoff) -> list[str]:
-        """A seed-review gives every parish a verdict or a blocking flag."""
+        """A seed-review gives every parish a verdict."""
         if not isinstance(handoff, SeedReview):
             return []
         wanted = set(json.loads(job["input"]).get("parishes") or [])
-        covered = {v.parish for v in handoff.seeds} | {
-            f.subject for f in handoff.flags if f.severity == BLOCKING}
-        problems = [f"no verdict or blocking flag for {p}" for p in sorted(wanted - covered)]
+        covered = {v.parish for v in handoff.seeds}
+        problems = [f"no verdict for {p}" for p in sorted(wanted - covered)]
         problems += [f"{v.parish} is not one of the seeds to review" for v in handoff.seeds
                      if v.parish not in wanted]
         return problems
@@ -751,12 +748,30 @@ class Dispatcher:
         return Outcome("ran", f"job {job['id']} {job['stage']} done")
 
     def _pr(self, run: Any, job: Any, worktree: Path) -> Outcome:
+        self._once(job, "text", lambda: report.pr_text(self.ledger, run, worktree, self.commands))
+        title, body = self.ledger.action_result(job["id"], "text")
+        if run["kind"] == SEED:
+            self._once(job, "drop drafts", lambda: self._drop_unapproved(run, job, worktree))
         self._once(job, "push", lambda: self._push(run, worktree))
-        title, body = report.pr_text(self.ledger, run, worktree, self.commands)
         url = self.forge.open_pr(worktree, run["branch"], self.config.base_branch, title, body)
         self.ledger.set_run(run["id"], status=IN_REVIEW, pr_url=url, head_sha=git.head(worktree))
         self.ledger.set_job(job["id"], status=DONE, finished_at=now())
         return Outcome("ran", f"opened {url}")
+
+    def _drop_unapproved(self, run: Any, job: Any, worktree: Path) -> list[str]:
+        """Only approved seeds go to main: a parked parish's draft is left out of the PR.
+
+        Its answer goes to a follow-up Run, whose drafter starts again with the answer.
+        """
+        dropped = []
+        for parish in json.loads(run["parishes"] or "[]"):
+            if seed_status(worktree, parish) not in (None, "approved"):
+                git.revert(worktree, [f"data/seeds/{parish}.json"], source=self.config.upstream)
+                dropped.append(parish)
+        if dropped:
+            git.commit(worktree, f"{run['diocese']}: leave out seeds not approved ({run['id']})",
+                       {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": "pr"})
+        return dropped
 
     # ── Housekeeping: issues, merges, readiness, backups ─────────────────────
     def housekeeping(self) -> None:
@@ -816,8 +831,6 @@ class Dispatcher:
             requeued |= {"batch": data.get("batch"), "entries": [subject]}
         elif job["stage"] == "seed":
             requeued |= {"parish": subject, "batch": data.get("batch")}
-        elif job["stage"] == "seed-review":
-            requeued |= {"parishes": [subject], "batch": data.get("batch")}
         else:
             requeued |= {"entries": [subject]}
         target = run
@@ -856,6 +869,20 @@ class Dispatcher:
         for run in self.ledger.runs(IN_REVIEW):
             if run["head_sha"] and git.is_merged(self.repo, run["head_sha"], self.config.upstream):
                 self.ledger.set_run(run["id"], status=MERGED, merged_at=now())
+                self.retire(self.ledger.run(run["id"]))
+
+    def retire(self, run: Any) -> None:
+        """A merged Run's worktree is no longer needed: answers after the merge go to a
+        follow-up Run with its own worktree, and readiness reads main. Its scratch (handoffs,
+        manifests, tools) is kept in data/factory/runs/<run>/scratch/ for foreman reviews."""
+        path = Path(run["worktree"])
+        scratch = path / "scratch" / run["id"]
+        if scratch.is_dir():
+            shutil.copytree(scratch, self.runs_dir / run["id"] / "scratch", dirs_exist_ok=True)
+        try:
+            git.remove_worktree(self.repo, path, run["branch"])
+        except FactoryError as exc:
+            LOGGER.warning("couldn't remove %s: %s", path, exc)
 
     def check_readiness(self) -> None:
         dioceses = readiness.dioceses_to_check(self.ledger)
@@ -865,7 +892,7 @@ class Dispatcher:
             self.pull_data()
         for diocese in dioceses:
             result = readiness.assess(self.ledger, self.config, diocese, self.db_path,
-                                      self.clock())
+                                      self.clock(), repo=self.repo)
             if result is None:
                 continue
             if result.start:

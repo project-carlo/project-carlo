@@ -62,7 +62,7 @@ class SeedAnswer(_Strict):
     choice: int | Literal["dropped", "edited"]
     entry: dict | None = None  # the entry, for `edited`
     page: int | None = None
-    basis: Literal["precedent", "judgment"]
+    basis: Literal["rule", "precedent", "judgment"]
     why: str = Field(min_length=1)
 
 
@@ -112,6 +112,11 @@ def read_handoff(path: Path, stage: str) -> tuple[Handoff | None, list[str]]:
             for a in v.answers:
                 if a.choice == "edited" and not a.entry:
                     problems.append(f"seeds[{v.parish}] slot {a.slot}: edited needs an entry")
+        for f in handoff.flags:
+            if f.severity == BLOCKING and f.scope == "parish":
+                problems.append(f"flag about {f.subject}: seed-review decides every question "
+                                "itself; answer it (basis judgment, saying what made it hard) "
+                                "instead of a blocking flag")
     return (None, problems) if problems else (handoff, [])
 
 
@@ -137,7 +142,7 @@ def schema_text(stage: str) -> str:
             "parish": "slug", "verdict": "approve | send_back",
             "answers": [{"slot": "slot id", "question": "...",
                          "choice": "option index | dropped | edited",
-                         "entry": "only for edited", "basis": "precedent | judgment",
+                         "entry": "only for edited", "basis": "rule | precedent | judgment",
                          "why": "..."}],
             "problems": ["..."],
         }]}

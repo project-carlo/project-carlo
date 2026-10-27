@@ -479,6 +479,10 @@ def test_answers_after_the_pr_opened_go_to_a_follow_up_run(env: Env) -> None:
     git(env.repo, "fetch", "-q", "origin")
     d.check_merged()
     assert env.ledger.run(run["id"])["status"] == MERGED
+    # Its worktree and local branch are gone; its scratch was kept for foreman reviews.
+    assert not Path(run["worktree"]).exists()
+    assert not git(env.repo, "branch", "--list", run["branch"]).strip()
+    assert (env.tmp / "runs" / run["id"] / "scratch" / "001-survey" / "handoff.json").exists()
     drive(d)
     follow = env.ledger.run(follow["id"])
     assert [j["stage"] for j in env.ledger.jobs(follow["id"])] == ["map", "promote", "pr"]
@@ -675,9 +679,46 @@ def test_a_seed_past_its_send_backs_is_parked(env: Env) -> None:
                if json.loads(j["input"])["parish"] == "st-ann")
     assert ann["send_backs"] == 0
     wt = Path(run["worktree"])
-    assert "data/seeds/st-clare.json" in git(wt, "ls-files", "data/seeds")
     assert "seed st-clare, parked" in git(wt, "log", "--format=%s")
     assert not git(wt, "status", "--porcelain")
+    # Only approved seeds go to main: the PR leaves the parked draft out.
+    assert git(wt, "ls-files", "data/seeds").split() == ["data/seeds/st-ann.json"]
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    assert "st-clare (not approved: left out of this PR)" in pr
+
+
+def test_seed_review_decides_instead_of_flagging_and_lists_every_decision(env: Env) -> None:
+    run = seed_env(env)
+
+    def script(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.stage == "seed-review" and req.values["parishes"] == "st-clare" and attempt == 1:
+            return StubAction(handoff=done(seeds=[], flags=[{
+                "severity": "blocking", "scope": "parish", "subject": "st-clare",
+                "question": "Is the 9:00 Mass weekly?"}]))
+        if req.stage == "seed-review":
+            seeds = [{"parish": p, "verdict": "approve", "answers": [{
+                "slot": "s1", "question": "Is the 9:00 Mass weekly?", "choice": 0,
+                "basis": "rule" if p == "st-ann" else "judgment",
+                "why": "R12" if p == "st-ann" else "Printed every week."}]}
+                for p in req.values["parishes"].split()]
+            return StubAction(handoff=done(seeds=seeds))
+        return seed_script(req, attempt)
+
+    d = env.dispatcher(script)
+    drive(d)
+    review = env.ledger.jobs(run["id"], "seed-review")[0]
+    assert review["send_backs"] == 1 and not env.ledger.parked(run["id"])
+    gate = env.ledger.one("SELECT output FROM gate WHERE job_id = ? AND name = 'handoff' "
+                          "AND passed = 0", review["id"])
+    assert "decides every question" in gate["output"]
+    assert not list((env.forge.folder / "issues").glob("*.json"))
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    assert "### By judgment" in pr and "### By a rule the drafter missed" in pr
+    assert "`st-ann` s1" in pr and "R12" in pr
+    # Only judgments become precedents.
+    precedents = playbook.bullets(Path(run["worktree"]) / "data" / "dioceses" / D / "diocese.md",
+                                  playbook.PRECEDENTS)
+    assert len(precedents) == 1 and "st-clare" in precedents[0]
 
 
 def test_a_seed_that_parks_itself_is_not_held_to_seed_check(env: Env) -> None:
@@ -726,12 +767,12 @@ def make_db(path: Path, counts: dict[str, int]) -> None:
 
 
 def merged_map(env: Env, parishes: list[str], merged_at: datetime) -> None:
+    """A merged map Run: its records are in main, and its worktree is gone."""
     run_id = env.ledger.add_run(diocese=D, kind=MAP, worktrees_dir=env.tmp / "wt", status=MERGED)
-    folder = env.tmp / "wt" / run_id / "data" / "dioceses" / D / "parishes"
-    folder.mkdir(parents=True)
-    for p in parishes:
-        (folder / f"{p}.md").write_text(parish_record("directory:1"))
-    (folder / "gone.md").write_text("---\nname: Gone\nbulletin_provider: no_bulletin\n---\n")
+    folder = f"data/dioceses/{D}/parishes"
+    env.commit_main({**{f"{folder}/{p}.md": parish_record("directory:1") for p in parishes},
+                     f"{folder}/gone.md": "---\nname: Gone\nbulletin_provider: no_bulletin\n---\n"},
+                    "mapped")
     env.ledger.set_run(run_id, merged_at=merged_at.isoformat())
 
 
@@ -740,11 +781,11 @@ def test_readiness_starts_the_first_seed_run_at_80_percent(env: Env) -> None:
     merged_map(env, parishes, env.now)
     db = env.tmp / "db.sqlite"
     make_db(db, {p: (2 if i < 7 else 1) for i, p in enumerate(parishes)})
-    r = readiness.assess(env.ledger, env.config, D, db, env.now)
+    r = readiness.assess(env.ledger, env.config, D, db, env.now, repo=env.repo)
     assert r is not None and r.start == [] and len(r.seedable) == 10  # 70%: not yet
     db.unlink()
     make_db(db, {p: (2 if i < 8 else 0) for i, p in enumerate(parishes)})
-    r = readiness.assess(env.ledger, env.config, D, db, env.now)
+    r = readiness.assess(env.ledger, env.config, D, db, env.now, repo=env.repo)
     assert r.start == parishes[:8]
 
 
@@ -755,9 +796,11 @@ def test_follow_up_seed_run_waits_for_all_or_six_weeks(env: Env) -> None:
                        parishes=["a"])
     db = env.tmp / "db.sqlite"
     make_db(db, {"a": 3, "b": 2, "c": 0})
-    r = readiness.assess(env.ledger, env.config, D, db, env.now + timedelta(weeks=1))
+    r = readiness.assess(env.ledger, env.config, D, db, repo=env.repo,
+                         at=env.now + timedelta(weeks=1))
     assert r.start == [] and r.not_ready == ["c"]
-    r = readiness.assess(env.ledger, env.config, D, db, env.now + timedelta(weeks=6, hours=1))
+    r = readiness.assess(env.ledger, env.config, D, db, repo=env.repo,
+                         at=env.now + timedelta(weeks=6, hours=1))
     assert r.start == ["b"] and r.overdue == ["c"]
 
 
@@ -836,7 +879,10 @@ def test_handoff_validation(tmp_path: Path) -> None:
     path.write_text(json.dumps({"status": "done", "summary": "s", "seeds": [
         {"parish": "p", "verdict": "approve", "answers": [
             {"slot": "s1", "choice": 0, "basis": "rule", "why": "w"}]}]}))
-    assert read_handoff(path, "seed-review")[1]  # a rule-covered question is a send-back
+    assert not read_handoff(path, "seed-review")[1]  # a rule-covered question is answered
+    path.write_text(json.dumps({"status": "blocked", "summary": "s", "seeds": [], "flags": [{
+        "severity": "blocking", "scope": "parish", "subject": "p", "question": "q"}]}))
+    assert "decides every question" in read_handoff(path, "seed-review")[1][0]
 
 
 def test_runs_take_their_branch_prefix(tmp_path: Path) -> None:

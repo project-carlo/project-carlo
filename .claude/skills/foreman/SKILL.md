@@ -20,7 +20,7 @@ You change nothing unless the owner asks.
   `pnpm factory cost --stage` shows where usage goes. Pick the jobs worth reading: sent
   back, blocked, flagged, or far over the stage's usual cost or turns.
 - **A Run:** `pnpm factory status`, then inspect the jobs that were sent back or raised
-  flags, and the PR's list of decisions without a rule.
+  flags, and the PR's list of seed-review's decisions.
 
 Start from what later stages said: a reviewer's send-back problems, a gate's failure or
 the owner's issue answer usually point straight at the mistake. Then read the spec as the

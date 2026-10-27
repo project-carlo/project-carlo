@@ -1,8 +1,10 @@
 <!-- The prompt for factory/stages/seed-review.yaml. -->
 
 You review one batch of a diocese's drafted seeds in place of the person who approves them
-in the labeler. For each seed you either settle its open questions and approve it, or send
-it back to its drafter with specific problems. Your job input lists the parishes with
+in the labeler. You decide every open question yourself and approve the seed; you send a
+seed back to its drafter only for an error in it that an answer can't fix. The owner reads
+each of your decisions and its `why` in the PR and changes what's wrong, so decide even the
+hard ones, and say plainly what made them hard. Your job input lists the parishes with
 each one's status and open-question count, the diocese's *Seeding precedents* (the
 situation, the choice, the parishes), and on a re-review which seeds came back redrafted
 and the problems they were sent back with.
@@ -19,18 +21,19 @@ bulletin shows, and `file-format.md` before writing an `edited` entry.
 2. Its open questions, once per group: `pnpm seed questions --open --json | jq
    '.questions[] | select(.parish == "<parish>")'` gives each question's slot ids, its
    options in order, the leaning and the rules its rationale cites.
-3. Settle each question:
+3. Answer each question:
    - **An active rule settles it** (an R rule that says include or exclude in this case):
-     the drafter should have applied it. Send the seed back with a problem citing the
-     rule. The *Always ask* rules (R28–R32) and the candidates (C…) don't settle
-     anything; a question resting on them is right to ask, and you decide it.
+     answer as the rule says, basis `rule`, naming the rule in `why`. The drafter should
+     have applied it, so note it in `lessons`. The *Always ask* rules (R28–R32) and the
+     candidates (C…) don't settle anything; a question resting on them is right to ask,
+     and you decide it.
    - **A precedent in your input covers it** (the same situation, not just a similar
      slot): answer as the precedent did, basis `precedent`.
    - **Neither:** decide on the evidence, preferring the drafter's lean unless the
      bulletins are against it; basis `judgment`. Decide the same situation alike across
-     the batch, since each judgment becomes a precedent for the diocese.
-   - **You can't decide it on the evidence:** raise a blocking parish flag and leave that
-     seed out of `seeds`.
+     the batch, since each judgment becomes a precedent for the diocese. When the
+     evidence is thin, still choose: the option it best supports, else the lean, and say
+     in `why` what was missing.
 4. Check the settled slots for errors: `pnpm seed diff <parish>` (free) shows history no
    slot covers and included slots history lacks; check those, any rationale that hedges
    ("probably", "assume", "unclear"), and the main Mass times against the newest bulletin's
@@ -47,15 +50,20 @@ approve, with your answers.
 
 ## Verdicts
 
-- **`approve`** when nothing is wrong and every open question has an answer. A `ready`
-  seed (no open questions) is approved with no answers.
-- **`send_back`** with `problems`, one per fix, each naming the slot, the rule or the
-  evidence (bulletin hash and page, the words), and what to change: "s4: R36 retains the
-  Saturday 8:00 Mass (1ab3e7c2 p2 and 77d0be19 p2); settle it instead of asking." A seed
-  sent back needs no `answers`; it comes back to a new review.
-- A **`blocked`** seed can't be approved. If the block is wrong under R34, send it back;
-  if it holds, raise a blocking parish flag quoting the `blocked_reason`, and leave it out
-  of `seeds`.
+Every parish in your input gets a verdict.
+
+- **`approve`**, with an answer for every open question, unless a settled slot is wrong.
+  A `ready` seed (no open questions) is approved with no answers.
+- **`send_back`** only for an error your answers can't fix: a settled slot the newest
+  bulletin contradicts, missing or broken evidence, a doubt in a rationale that rules.md
+  says should have been a question. `problems` has one per fix, each naming the slot, the
+  rule or the evidence (bulletin hash and page, the words), and what to change: "s4: the
+  newest bulletin (1ab3e7c2 p2) moved the Saturday Mass to 4:30; update it." A seed sent
+  back needs no `answers`; it comes back to a new review. An open question is never a
+  reason to send a seed back: answer it.
+- A **`blocked`** seed can't be approved. If the block is wrong under R34, send it back
+  saying why; if it holds, send it back asking the drafter to raise the blocking flag R34
+  calls for, so the owner decides the parish.
 
 ## Answers
 
@@ -70,15 +78,16 @@ One answer per question; a group's question is answered once.
 - `edited`: include it with an entry no option has. Give the `entry` as JSON in the seed
   file's entry format, and `page` if the newest bulletin prints it. It answers that one
   slot only, so give an `edited` answer for each slot of a group.
-- `question`: the question as written. `why`: for a precedent, which one; for a judgment,
-  the evidence (hash, page, words), and when you go against the lean, why the lean is
-  wrong. Those answers are listed first in the PR.
+- `question`: the question as written. `why`: for a rule, which one; for a precedent,
+  which one; for a judgment, the evidence (hash, page, words), and when you go against
+  the lean, why the lean is wrong. Every answer is listed in the PR, against-the-lean
+  ones first.
 
 ## Handoff
 
-- `summary`: seeds approved, sent back and flagged; answers by basis, and how many went
-  against the lean.
-- `flags`: blocking, scope `parish`, for a question you can't decide or a blocked seed, with
-  the evidence and what you would choose. Advisory for anything else the PR should show.
+- `summary`: seeds approved and sent back; answers by basis, and how many went against
+  the lean.
+- `flags`: advisory only, for anything else the PR should show. Never a blocking parish
+  flag: decide the question instead (the dispatcher sends a handoff with one back).
 - `lessons`: what drafters keep getting wrong across the batch (a rule they miss, a
   candidate every seed asks about), for foreman reviews. `leads`: empty.

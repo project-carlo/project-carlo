@@ -198,8 +198,8 @@ def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
 Parishes (`pnpm seed status` shows each one's status and open questions):
 {_lines(list(inputs.get('parishes') or []))}
 
-Give every parish above a verdict in `seeds`, or a blocking flag with the parish slug as
-subject when you can't decide on the evidence.
+Give every parish above a verdict in `seeds`. Decide every open question yourself, even a
+hard one: the owner reads each decision and its `why` in the PR and changes what's wrong.
 
 Redrafted after a send-back:
 {_lines(redrafted)}
@@ -229,11 +229,7 @@ def resume_prompt(handoff: str) -> str:
             f"where you left off, and write your handoff at `{handoff}`.")
 
 
-def answer_prompt(question: str, answer: str, handoff: str, scope: str,
-                  only: str | None = None) -> str:
-    """`only`: the one parish a resumed `seed-review` gives a verdict for."""
-    covers = (f" Its `seeds` gives a verdict for `{only}` only; the other parishes of the "
-              "batch are settled." if only else "")
+def answer_prompt(question: str, answer: str, handoff: str, scope: str) -> str:
     return (f"The owner answered the question you raised about {scope}.\n\nYou asked: "
             f"{question}\nThey answered: {answer}\n\nFinish that work now, following the "
-            f"answer, and write a new handoff at `{handoff}`.{covers}")
+            f"answer, and write a new handoff at `{handoff}`.")

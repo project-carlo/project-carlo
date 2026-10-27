@@ -326,6 +326,10 @@ class Ledger:
         self.run_sql("INSERT OR REPLACE INTO action (job_id, name, result, at) VALUES (?,?,?,?)",
                      job_id, name, json.dumps(result), now())
 
+    def action_result(self, job_id: int, name: str) -> Any:
+        row = self.one("SELECT result FROM action WHERE job_id = ? AND name = ?", job_id, name)
+        return json.loads(row["result"]) if row else None
+
     def clear_actions(self, job_id: int) -> None:
         self.run_sql("DELETE FROM action WHERE job_id = ?", job_id)
 

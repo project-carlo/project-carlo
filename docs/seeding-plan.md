@@ -159,8 +159,8 @@ are a person's approval's.
 - **Rules stay the owner's.** The factory never edits rules.md; the owner adds
   a rule in a separate PR.
 - **People still approve in the labeler.** `seed approve` refuses a reviewer
-  not starting `agent:`. The factory's PR lists every question `seed-review`
-  settled by judgment, for the owner to read.
+  not starting `agent:`. `seed-review` answers every open question, and the
+  factory's PR lists each answer and why, for the owner to read and change.
 
 ## Loading seeds
 

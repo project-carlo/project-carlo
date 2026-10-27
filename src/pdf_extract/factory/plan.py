@@ -12,12 +12,13 @@ A queued job (a send-back, a parked parish answered) always comes first.
 from __future__ import annotations
 
 import json
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.dioceses.records import NO_BULLETIN, parse_file
-from pdf_extract.factory import playbook
+from pdf_extract.factory import git, playbook
 from pdf_extract.factory.handoff import APPROVE
 from pdf_extract.factory.ledger import DONE, MAP, Ledger
 
@@ -74,6 +75,18 @@ def seedable_parishes(worktree: Path, diocese: str) -> list[str]:
     """Parishes the map Run promoted with a bulletin source; excluded and open ones never."""
     return [slug for slug, r in parish_records(worktree, diocese).items()
             if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN]
+
+
+def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
+    """`seedable_parishes` as main (`ref`) has them, since a merged Run's worktree is gone."""
+    with tempfile.TemporaryDirectory() as tmp:
+        folder = diocese_dir(Path(tmp), diocese) / "parishes"
+        folder.mkdir(parents=True)
+        for name, text in git.read_folder(
+                repo, ref, f"data/dioceses/{diocese}/parishes").items():
+            if name.endswith(".md"):
+                (folder / name).write_text(text, encoding="utf-8")
+        return seedable_parishes(Path(tmp), diocese)
 
 
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:

@@ -71,11 +71,11 @@ def changed_paths(cwd: Path) -> list[str]:
     return sorted(set(paths))
 
 
-def revert(cwd: Path, paths: list[str]) -> None:
-    """Put paths back as HEAD has them; delete those HEAD lacks."""
+def revert(cwd: Path, paths: list[str], source: str = "HEAD") -> None:
+    """Put paths back as `source` has them; delete those it lacks."""
     for path in paths:
-        if ok(cwd, "cat-file", "-e", f"HEAD:{path}"):
-            git(cwd, "restore", "--source=HEAD", "--staged", "--worktree", "--", path)
+        if ok(cwd, "cat-file", "-e", f"{source}:{path}"):
+            git(cwd, "restore", f"--source={source}", "--staged", "--worktree", "--", path)
             continue
         git(cwd, "rm", "--cached", "--quiet", "--ignore-unmatch", "--", path, check=False)
         target = cwd / path
@@ -120,6 +120,20 @@ def merge_upstream(cwd: Path, upstream: str) -> Merge:
         return Merge(merged=True, repromote=True)
     git(cwd, "merge", "--abort", check=False)
     return Merge(conflicts=conflicts or ["(merge failed)"])
+
+
+def remove_worktree(repo: Path, path: Path, branch: str) -> None:
+    """Delete a merged Run's worktree and its local branch (the pushed branch stays)."""
+    if path.exists():
+        git(repo, "worktree", "remove", "--force", str(path))
+    git(repo, "worktree", "prune")
+    git(repo, "branch", "-D", branch, check=False)
+
+
+def read_folder(repo: Path, ref: str, folder: str) -> dict[str, str]:
+    """The files directly in `folder` as `ref` has them: name to text."""
+    names = git(repo, "ls-tree", "--name-only", ref, f"{folder.rstrip('/')}/").split("\n")
+    return {Path(n).name: git(repo, "show", f"{ref}:{n}") for n in names if n}
 
 
 def is_merged(cwd: Path, sha: str, upstream: str) -> bool:
