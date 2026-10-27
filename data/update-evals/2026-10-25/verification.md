@@ -1,6 +1,6 @@
 # October 25 seeded-parish error verification
 
-Reviewed October 26, 2026. This records the investigation before implementation. See [implementation.md](implementation.md) for subsequent code and data repairs; published data was not changed by the investigation.
+Reviewed October 26, 2026. This records the investigation before implementation; migration 0012 applies the repairs. The unusual-time review flag suggested below was tried and dropped, as it also held every Midnight Mass. Published data was not changed by the investigation.
 
 ## Evidence and scope
 

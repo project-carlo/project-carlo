@@ -704,10 +704,9 @@ Announced weekly changes are retained immediately with inclusive absolute
 `valid_from` / `valid_until` dates. The old entry ends the day before the new
 entry starts. These bounds apply to times, weekdays and location notes, and
 do not repeat annually like a season. The snapshot and website honor them
-without another bulletin or pipeline run. Snapshot format 3 carries the bounds;
-the new web reader also accepts existing format 2 snapshots. Deploy the web
-reader before publishing a format 3 snapshot. A weekly entry whose end date
-has passed is deleted at the start of the parish's next revision.
+without another bulletin or pipeline run. Snapshot format 3 carries the bounds.
+A weekly entry whose end date has passed is deleted at the start of the
+parish's next revision.
 
 When a cancellation's duration is unclear, update mode keeps the weekly slot
 and cancels only the dated occurrences the bulletin establishes. Repeated
@@ -720,9 +719,8 @@ The [October 18 replay report](data/update-evals/2026-10-18/report.md) records
 the source cases, real model reruns, remaining ambiguity, and the guarded data
 repair in migration 0008. Replays can be repeated with
 `uv run python scripts/replay-schedule-updates.py --help`.
-The [October 25 audit](data/update-evals/2026-10-25/verification.md) and its
-[implementation report](data/update-evals/2026-10-25/implementation.md) document
-the guarded repairs, future transitions, and model replay results.
+The [October 25 audit](data/update-evals/2026-10-25/verification.md) records
+the source evidence behind the guarded repairs in migration 0012.
 
 `pnpm schedule` looks at and hand-edits believed schedules:
 

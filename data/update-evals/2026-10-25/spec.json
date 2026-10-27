@@ -170,17 +170,17 @@
         {
           "event_type": "confession",
           "date": "2026-11-15",
-          "start_time": 120
-        },
-        {
-          "event_type": "confession",
-          "date": "2026-11-15",
           "start_time": 840
         }
       ],
-      "allowed_rejection_reasons": [
-        "unusual_time_review"
-      ]
+      "present": [
+        {
+          "event_type": "confession",
+          "date": "2026-11-15",
+          "start_time": 120
+        }
+      ],
+      "purpose": "Copies the printed 2 AM faithfully rather than guessing 2 PM."
     },
     {
       "parish": "st-jerome",

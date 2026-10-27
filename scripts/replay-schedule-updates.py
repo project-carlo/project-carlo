@@ -109,8 +109,7 @@ def trial(db: Path, case: dict, number: int, out: Path, tier: str, detail: str =
         )
     checks["responses_valid"] = all(
         not json.loads(r["reply"]["text"])["wrong_bulletin"]
-        and all(d["decision"] == APPLIED or d["reason"] in case.get("allowed_rejection_reasons", [])
-                for d in r["decisions"]) for r in records
+        and all(d["decision"] == APPLIED for d in r["decisions"]) for r in records
     )
     result = {"parish": case["parish"], "trial": number,
               "required": case.get("required", True), "checks": checks,

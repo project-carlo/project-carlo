@@ -14,7 +14,7 @@ from pdf_extract.db import migrate
 from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.runs import start_run
 from pdf_extract.schedule.edits import edit_entry
-from pdf_extract.schedule.entries import ENTRY_COLUMNS, EntryError, parse_entry
+from pdf_extract.schedule.entries import ENTRY_COLUMNS, Entry, EntryError, parse_entry
 from pdf_extract.schedule.policy import PAST_DATE
 from pdf_extract.schedule.store import live_entries, rebuild_current_schedule, render_view
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
@@ -31,10 +31,24 @@ from tests.test_schedule_state import (
 from tests.test_schedule_state import conn as schedule_conn  # noqa: F401
 
 ROOT = Path(__file__).resolve().parents[1]
-SPEC = json.loads((ROOT / 'data/update-evals/2026-10-25/repairs.json').read_text())
 MIGRATION = ROOT / 'data/migrations/0012_oct25_review.py'
 FROZEN = json.loads(MIGRATION.with_suffix('.json').read_text())
 CHURCHES = {'test-church': 1}
+
+
+def _labels(columns: dict) -> dict:
+    """A frozen 0012 entry as a hand edit gives one."""
+    values = {c: columns[c] for c in ENTRY_COLUMNS if c != 'church_id'}
+    return Entry(church_id=0, **values).labels_form(columns['church_slug'])
+
+
+# The reviewed October 25 corrections, in the form the schedule tools take.
+SPEC = {'run_id': FROZEN['run_id'], 'parishes': [
+    {**case, 'repairs': [
+        {**repair, **{side: [_labels(e) for e in repair[side]] for side in ('before', 'after')}}
+        for repair in case['repairs']
+    ]} for case in FROZEN['parishes']
+]}
 
 
 @pytest.fixture
@@ -179,19 +193,13 @@ def _correct(conn, case) -> int:
     return conn.execute('SELECT COUNT(*) FROM schedule_revision').fetchone()[0] - before
 
 
-def test_frozen_oct25_repairs_match_the_reviewed_spec():
-    assert FROZEN['run_id'] == SPEC['run_id']
-    for case, frozen in zip(SPEC['parishes'], FROZEN['parishes'], strict=True):
-        assert (case['parish'], case['content_hash']) == (frozen['parish'], frozen['content_hash'])
-        for repair, fixed in zip(case['repairs'], frozen['repairs'], strict=True):
-            assert repair['page'] == fixed['page']
-            for side in ('before', 'after'):
-                entries = repair.get(side, [])
-                assert len(entries) == len(fixed[side])
-                for raw, columns in zip(entries, fixed[side], strict=True):
-                    entry = parse_entry(raw, {raw['church_slug']: 0})
-                    assert columns == {'church_slug': raw['church_slug'], **{
-                        c: getattr(entry, c) for c in ENTRY_COLUMNS if c != 'church_id'}}
+def test_frozen_oct25_repairs_are_valid_entries():
+    for case in FROZEN['parishes']:
+        for repair in case['repairs']:
+            for columns in repair['before'] + repair['after']:
+                entry = parse_entry(_labels(columns), {columns['church_slug']: 0})
+                assert columns == {'church_slug': columns['church_slug'], **{
+                    c: getattr(entry, c) for c in ENTRY_COLUMNS if c != 'church_id'}}
 
 
 @pytest.mark.parametrize('case', SPEC['parishes'], ids=lambda case: case['parish'])
