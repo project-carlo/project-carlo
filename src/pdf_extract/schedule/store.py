@@ -48,11 +48,10 @@ def intern_entry(conn: sqlite3.Connection, entry: Entry) -> int:
     row = conn.execute("SELECT id FROM schedule_entry WHERE hash = ?", (entry_hash,)).fetchone()
     if row is not None:
         return int(row[0])
-    columns = ENTRY_COLUMNS if entry.valid_from or entry.valid_until else ENTRY_COLUMNS[:-2]
-    values = [getattr(entry, name) for name in columns]
+    values = [getattr(entry, name) for name in ENTRY_COLUMNS]
     cursor = conn.execute(
-        f"""INSERT INTO schedule_entry (hash, identity_key, {", ".join(columns)})
-            VALUES (?, ?, {", ".join("?" * len(columns))})""",
+        f"""INSERT INTO schedule_entry (hash, identity_key, {", ".join(ENTRY_COLUMNS)})
+            VALUES (?, ?, {", ".join("?" * len(ENTRY_COLUMNS))})""",
         (entry_hash, entry.identity_key, *values),
     )
     return int(cursor.lastrowid)
@@ -64,7 +63,7 @@ def load_entries(conn: sqlite3.Connection, entry_ids: Iterable[int]) -> dict[int
     for start in range(0, len(ids), 500):
         chunk = ids[start:start + 500]
         rows = conn.execute(
-            "SELECT * FROM schedule_entry"
+            f"SELECT id, {', '.join(ENTRY_COLUMNS)} FROM schedule_entry"
             f" WHERE id IN ({', '.join('?' * len(chunk))})",
             chunk,
         ).fetchall()
@@ -136,15 +135,29 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
     """Entry id -> content of every entry the parish's current schedule holds.
 
     Dated entries in the past are still live: they expire from the view and the
-    snapshot, never from the schedule.
+    snapshot, never from the schedule. Weekly entries that have ended stay live
+    until the next revision retires them (`retire_ended`).
     """
     rows = conn.execute(
-        """SELECT e.*
+        f"""SELECT e.id, {", ".join(f"e.{c}" for c in ENTRY_COLUMNS)}
             FROM current_schedule s JOIN schedule_entry e ON e.id = s.entry_id
             WHERE s.parish_id = ?""",
         (parish_id,),
     ).fetchall()
     return {row["id"]: entry_from_row(row) for row in rows}
+
+
+def retire_ended(live: dict[int, Entry], today: date) -> list[Change]:
+    """Deletes for the weekly entries whose `valid_until` is before `today`, taken out of `live`.
+
+    An ended entry is hidden from the view, the snapshot and the model, so it
+    must not count toward the checks or block a new entry for its slot. A
+    revision written on `today` starts with these deletes.
+    """
+    ended = sorted(i for i, e in live.items() if e.weekly and e.expired_before(today))
+    for entry_id in ended:
+        del live[entry_id]
+    return [Change(DELETE, before_entry_id=entry_id) for entry_id in ended]
 
 
 def current_revision(conn: sqlite3.Connection, parish_id: int) -> int:

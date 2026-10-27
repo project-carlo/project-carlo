@@ -89,6 +89,8 @@ def migrate(conn: sqlite3.Connection, migrations_dir: Path = MIGRATIONS_DIR) -> 
                 if path.suffix == ".sql":
                     conn.executescript("BEGIN;\n" + path.read_text(encoding="utf-8"))
                 else:
+                    # Commit any pending transaction first, as executescript does.
+                    conn.commit()
                     conn.execute("BEGIN")
                     runpy.run_path(str(path))["migrate"](conn)
                 conn.execute(f"PRAGMA user_version = {number}")

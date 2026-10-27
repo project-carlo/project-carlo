@@ -706,12 +706,8 @@ entry starts. These bounds apply to times, weekdays and location notes, and
 do not repeat annually like a season. The snapshot and website honor them
 without another bulletin or pipeline run. Snapshot format 3 carries the bounds;
 the new web reader also accepts existing format 2 snapshots. Deploy the web
-reader before publishing a format 3 snapshot.
-
-New services starting before 5 AM are rejected as `unusual_time_review` and
-listed in the update report for review. They are never silently changed to PM.
-After checking the source, a reviewer can approve them with `schedule apply`.
-Existing night services and dated cancellations do not require another approval.
+reader before publishing a format 3 snapshot. A weekly entry whose end date
+has passed is deleted at the start of the parish's next revision.
 
 When a cancellation's duration is unclear, update mode keeps the weekly slot
 and cancels only the dated occurrences the bulletin establishes. Repeated

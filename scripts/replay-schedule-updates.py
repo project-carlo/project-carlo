@@ -37,6 +37,7 @@ from pdf_extract.schedule.store import (
     live_entries,
     parish_churches,
     render_view,
+    retire_ended,
 )
 from pdf_extract.storage import church_list_for_prompt
 
@@ -77,12 +78,13 @@ def trial(db: Path, case: dict, number: int, out: Path, tier: str, detail: str =
             seq=p.seq, op=p.op, raw=p.raw, target_entry_id=p.entry_id,
             entry=p.entry, page_number=p.page_number, rationale=p.rationale,
         ) for p in parsed.changes]
+        live = live_entries(conn, parish_id)
+        retired = retire_ended(live, today)
         whole = whole_call_reason(
-            wrong_bulletin=parsed.wrong_bulletin, stale=False,
-            proposals=proposals, live=live_entries(conn, parish_id),
+            wrong_bulletin=parsed.wrong_bulletin, stale=False, proposals=proposals, live=live,
         )
         decisions = decide(
-            proposals, live=live_entries(conn, parish_id),
+            proposals, live=live,
             churches=parish_churches(conn, parish_id), today=today, whole_call=whole,
             targetable={e["id"] for c in json.loads(view)["churches"] for e in c["entries"]},
         )
@@ -91,7 +93,7 @@ def trial(db: Path, case: dict, number: int, out: Path, tier: str, detail: str =
             after_entry_id=intern_entry(conn, d.entry) if d.entry else None,
         ) for d in decisions if d.decision == APPLIED]
         if changes:
-            append_revision(conn, parish_id, source_kind="human", changes=changes,
+            append_revision(conn, parish_id, source_kind="human", changes=retired + changes,
                             actor="isolated-replay")
         records.append({"original_call_id": original["id"], "context": context,
                         "reply": asdict(reply), "decisions": [asdict(d) for d in decisions]})

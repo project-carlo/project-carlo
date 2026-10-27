@@ -89,6 +89,7 @@ from pdf_extract.schedule.store import (
     parish_churches,
     render_view,
     replace_sightings,
+    retire_ended,
     sha256_text,
     store_prompt_blob,
     store_view,
@@ -377,6 +378,7 @@ def decide_and_apply(
             record=record, parsed=parsed,
         )
         live = live_entries(conn, parish_id)
+        retired = retire_ended(live, prepared.call_date)
         proposals = [
             Proposal(
                 seq=c.seq, op=c.op, raw=c.raw,
@@ -426,7 +428,7 @@ def decide_and_apply(
         changes = [change for _, change in sorted(applied_changes, key=lambda item: item[0])]
         if changes:
             append_revision(
-                conn, parish_id, source_kind=LLM, changes=changes, llm_call_id=call_id,
+                conn, parish_id, source_kind=LLM, changes=retired + changes, llm_call_id=call_id,
                 run_id=run_id,
             )
         if not parsed.wrong_bulletin and not stale:

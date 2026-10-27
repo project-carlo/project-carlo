@@ -21,7 +21,7 @@ the model's answer, a hand edit or a seed. `parse_entry` checks one and turns it
 from __future__ import annotations
 
 import json
-from dataclasses import astuple, dataclass, fields
+from dataclasses import dataclass, fields
 from datetime import date
 from hashlib import sha256
 from typing import Any
@@ -74,11 +74,14 @@ class Entry:
 
     @property
     def hash(self) -> str:
-        # Preserve the content hashes of entries written before date bounds existed.
-        content = astuple(self)
-        if self.valid_from is None and self.valid_until is None:
-            content = content[:-2]
+        # Unset bounds are left out, so entries written before they existed keep their hashes.
+        content = [getattr(self, name) for name in ENTRY_COLUMNS
+                   if self.bounded or name not in BOUND_COLUMNS]
         return sha256(json.dumps(content).encode("utf-8")).hexdigest()
+
+    @property
+    def bounded(self) -> bool:
+        return self.valid_from is not None or self.valid_until is not None
 
     @property
     def slot_key(self) -> str:
@@ -93,7 +96,7 @@ class Entry:
         qualifiers = (self.weeks_of_month, self.season_start_month, self.season_start_day,
                       self.season_end_month, self.season_end_day)
         key = self.slot_key + "|" + "|".join(str(value or 0) for value in qualifiers)
-        if self.valid_from is not None or self.valid_until is not None:
+        if self.bounded:
             key += f"|{self.valid_from or ''}|{self.valid_until or ''}"
         return key
 
@@ -128,6 +131,7 @@ class Entry:
         return not self.weekly and self.date is not None and self.date < day.isoformat()
 
     def expired_before(self, day: date) -> bool:
+        """Whether this is a dated entry before `day` or a weekly one that ended before it."""
         return self.dated_before(day) or (
             self.weekly and self.valid_until is not None and self.valid_until < day.isoformat()
         )
@@ -155,7 +159,7 @@ class Entry:
                 exclude_weeks=mask_excludes_weeks(self.weeks_of_month),
                 season=self.season(),
             )
-            if self.valid_from is not None or self.valid_until is not None:
+            if self.bounded:
                 out.update(valid_from=self.valid_from, valid_until=self.valid_until)
         else:
             out.update(date=self.date, cancelled=bool(self.cancelled))
@@ -169,11 +173,12 @@ class Entry:
 
 
 ENTRY_COLUMNS = tuple(f.name for f in fields(Entry))
+BOUND_COLUMNS = ("valid_from", "valid_until")
 
 
 def entry_from_row(row: Any) -> Entry:
     """An Entry from a `schedule_entry` row (anything indexable by column name)."""
-    return Entry(**{name: row[name] for name in ENTRY_COLUMNS if name in row.keys()})
+    return Entry(**{name: row[name] for name in ENTRY_COLUMNS})
 
 
 class EntryError(ValueError):

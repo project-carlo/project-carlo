@@ -7,7 +7,8 @@ No remote database or published snapshot was changed during implementation.
 
 ## Data repairs
 
-Migration 0012 reads [repairs.json](repairs.json), matches the original weekly
+Migration 0012 applies [repairs.json](repairs.json) (frozen in column form as
+`data/migrations/0012_oct25_review.json`), matches the original weekly
 run, parish and bulletin content hash, and appends eight human revisions:
 
 - Vestal: remove the false October 31, 4 PM cancellation.
@@ -73,6 +74,9 @@ slot. Humans can use the existing `schedule apply` or `schedule add` commands
 after verification. For Cicero's historical proposal, already applied before the
 repair, use `schedule add` if subsequently confirmed; do not attempt to reapply
 the historical applied proposal.
+
+The `unusual_time_review` hold was later removed in review: it also held every
+Christmas Midnight Mass. Services before 5 AM are applied like any other.
 
 ## Real model replays and limits
 

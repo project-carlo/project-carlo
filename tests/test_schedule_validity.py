@@ -1,6 +1,8 @@
 """Announced transitions and reviewed repairs survive through storage and export."""
 
 import json
+import runpy
+import sqlite3
 from dataclasses import astuple
 from datetime import date
 from hashlib import sha256
@@ -11,10 +13,9 @@ import pytest
 from pdf_extract.db import migrate
 from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.runs import start_run
-from pdf_extract.schedule.edits import apply_proposals, edit_entry
-from pdf_extract.schedule.entries import EntryError, parse_entry
-from pdf_extract.schedule.policy import UNUSUAL_TIME
-from pdf_extract.schedule.repairs import apply_review
+from pdf_extract.schedule.edits import edit_entry
+from pdf_extract.schedule.entries import ENTRY_COLUMNS, EntryError, parse_entry
+from pdf_extract.schedule.policy import PAST_DATE
 from pdf_extract.schedule.store import live_entries, rebuild_current_schedule, render_view
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
 from tests.test_schedule_state import (
@@ -31,6 +32,8 @@ from tests.test_schedule_state import conn as schedule_conn  # noqa: F401
 
 ROOT = Path(__file__).resolve().parents[1]
 SPEC = json.loads((ROOT / 'data/update-evals/2026-10-25/repairs.json').read_text())
+MIGRATION = ROOT / 'data/migrations/0012_oct25_review.py'
+FROZEN = json.loads(MIGRATION.with_suffix('.json').read_text())
 CHURCHES = {'test-church': 1}
 
 
@@ -107,29 +110,49 @@ def test_cancellation_targets_the_version_effective_on_its_date(conn, tmp_path, 
     assert target['note'] == ('Chapel' if day == '2026-10-25' else None)
 
 
-def test_new_night_service_waits_for_review_but_human_can_approve(conn):
+def test_midnight_and_night_services_apply_without_review(conn):
     _seed(conn, [SUN_9])
-    _bulletin(conn, 'night', '2026-10-25T10:00:00Z')
-    night = {**SUN_9, 'event_kind': 'specific_date', 'day_of_week': None,
-             'date': '2026-10-31', 'start_time': '3:00 AM', 'event_type': 'adoration'}
-    result = _run(conn, FakeUpdater(_reply(published_date='2026-10-25', changes=[
-        {'op': 'add', 'entry': night},
+    _bulletin(conn, 'christmas', '2026-12-13T10:00:00Z')
+    midnight = {**SUN_9, 'event_kind': 'specific_date', 'day_of_week': None,
+                'date': '2026-12-25', 'start_time': '12:00 AM'}
+    result = _run(conn, FakeUpdater(_reply(published_date='2026-12-13', changes=[
+        {'op': 'add', 'entry': midnight},
+        {'op': 'add', 'entry': {**SAT_5, 'start_time': '3:00 AM', 'event_type': 'adoration'}},
     ])))
-    assert result['update_changes_rejected'] == 1
-    proposal = conn.execute('SELECT * FROM proposed_change').fetchone()
-    assert proposal['reason'] == UNUSUAL_TIME
-    assert not any(e.start_time == 180 for e in live_entries(conn, 1).values())
-    approved = apply_proposals(conn, proposal['llm_call_id'], actor='Reviewer',
-                               today=date(2026, 10, 26), note='Confirmed parish source')
-    assert approved.applied == [1]
-    assert any(e.start_time == 180 for e in live_entries(conn, 1).values())
-    # Correcting the note on the already approved service does not require another approval.
-    _bulletin(conn, 'night-next', '2026-10-26T10:00:00Z')
-    entry_id = next(i for i, e in live_entries(conn, 1).items() if e.start_time == 180)
-    result = _run(conn, FakeUpdater(_reply(published_date='2026-10-26', changes=[
-        {'op': 'modify', 'entry_id': entry_id, 'entry': {**night, 'note': 'Benediction'}},
+    assert result['update_changes_applied'] == 2
+    assert {0, 180} <= {e.start_time for e in live_entries(conn, 1).values()}
+
+
+def test_ended_entry_is_retired_and_does_not_block_its_slot(conn, tmp_path):
+    _seed(conn, [SUN_9, {**SAT_5, 'valid_until': '2026-10-30'}])
+    _bulletin(conn, 'spring', '2027-04-03T10:00:00Z')
+    result = _run(conn, FakeUpdater(_reply(published_date='2027-04-03', changes=[
+        {'op': 'add', 'entry': SAT_5},
     ])))
     assert result['update_changes_applied'] == 1
+    assert sorted(e.valid_until or '' for e in live_entries(conn, 1).values()) == ['', '']
+    assert rebuild_current_schedule(conn)['differing_rows'] == 0
+    # A hand edit retires an ended entry the same way.
+    _seed(conn, [SUN_9, {**SAT_5, 'valid_until': '2026-10-30'}])
+    edit_entry(conn, 1, 'add', entry=SAT_5, actor='Reviewer', today=date(2027, 4, 3))
+    assert all(e.valid_until is None for e in live_entries(conn, 1).values())
+
+
+def test_add_that_already_ended_is_rejected_but_a_late_transition_applies(conn):
+    _seed(conn, [SAT_5])
+    original = _ids(conn)['mass Saturday 1020']
+    _bulletin(conn, 'late', '2026-11-02T10:00:00Z')
+    result = _run(conn, FakeUpdater(_reply(published_date='2026-11-02', changes=[
+        {'op': 'add', 'entry': {**SUN_9, 'valid_until': '2026-10-20'}},
+        {'op': 'modify', 'entry_id': original, 'entry': {**SAT_5, 'valid_until': '2026-10-31'}},
+        {'op': 'add', 'entry': {**SAT_5, 'start_time': '4:00 PM', 'valid_from': '2026-11-01'}},
+    ])))
+    assert result['update_changes_applied'] == 2
+    reasons = [r[0] for r in conn.execute('SELECT reason FROM proposed_change ORDER BY seq')]
+    assert reasons == [PAST_DATE, 'auto', 'auto']
+    view, _ = render_view(conn, 1, date(2026, 11, 2))
+    [entry] = json.loads(view)['churches'][1]['entries']
+    assert entry['start_time'] == '4:00 PM'
 
 
 def test_approved_night_slot_can_transition_and_be_cancelled(conn):
@@ -146,6 +169,29 @@ def test_approved_night_slot_can_transition_and_be_cancelled(conn):
     ])))
     assert result['update_changes_applied'] == 3
     assert result['update_changes_rejected'] == 0
+
+
+def _correct(conn, case) -> int:
+    """Run migration 0012 for one parish; how many revisions it appended."""
+    frozen = next(c for c in FROZEN['parishes'] if c['parish'] == case['parish'])
+    before = conn.execute('SELECT COUNT(*) FROM schedule_revision').fetchone()[0]
+    runpy.run_path(str(MIGRATION))['_correct'](conn, FROZEN['run_id'], frozen)
+    return conn.execute('SELECT COUNT(*) FROM schedule_revision').fetchone()[0] - before
+
+
+def test_frozen_oct25_repairs_match_the_reviewed_spec():
+    assert FROZEN['run_id'] == SPEC['run_id']
+    for case, frozen in zip(SPEC['parishes'], FROZEN['parishes'], strict=True):
+        assert (case['parish'], case['content_hash']) == (frozen['parish'], frozen['content_hash'])
+        for repair, fixed in zip(case['repairs'], frozen['repairs'], strict=True):
+            assert repair['page'] == fixed['page']
+            for side in ('before', 'after'):
+                entries = repair.get(side, [])
+                assert len(entries) == len(fixed[side])
+                for raw, columns in zip(entries, fixed[side], strict=True):
+                    entry = parse_entry(raw, {raw['church_slug']: 0})
+                    assert columns == {'church_slug': raw['church_slug'], **{
+                        c: getattr(entry, c) for c in ENTRY_COLUMNS if c != 'church_id'}}
 
 
 @pytest.mark.parametrize('case', SPEC['parishes'], ids=lambda case: case['parish'])
@@ -178,7 +224,7 @@ def test_oct25_repairs_match_sources_preserve_later_reviews_and_replay(conn, cas
     before = live_entries(conn, 1)
     calls = list(map(tuple, conn.execute('SELECT * FROM llm_call')))
     with conn:
-        count = apply_review(conn, {**SPEC, 'parishes': [case]})
+        count = _correct(conn, case)
     assert (count == 0) == later_review
     if later_review:
         assert live_entries(conn, 1) == before
@@ -186,7 +232,7 @@ def test_oct25_repairs_match_sources_preserve_later_reviews_and_replay(conn, cas
         for repair in case['repairs']:
             for e in repair['after']:
                 assert parse_entry(e, {church: 1}) in live_entries(conn, 1).values()
-    assert apply_review(conn, {**SPEC, 'parishes': [case]}) == 0
+    assert _correct(conn, case) == 0
     assert list(map(tuple, conn.execute('SELECT * FROM llm_call'))) == calls
     assert rebuild_current_schedule(conn)['differing_rows'] == 0
     assert not list(conn.execute('PRAGMA foreign_key_check'))
@@ -204,3 +250,17 @@ def test_python_migration_rolls_back_data_and_version(tmp_path):
             migrate(db, migrations)
         assert db.execute('PRAGMA user_version').fetchone()[0] == 0
         assert db.execute("SELECT 1 FROM sqlite_master WHERE name='t'").fetchone() is None
+
+
+def test_python_migration_commits_a_pending_write_first(tmp_path):
+    migrations = tmp_path / 'migrations'
+    migrations.mkdir()
+    (migrations / '0001_first.py').write_text(
+        "def migrate(conn):\n    conn.execute('CREATE TABLE t (id INTEGER)')\n"
+    )
+    with connect_db(tmp_path / 'db') as db:
+        db.execute('CREATE TABLE pending (id INTEGER)')
+        db.execute('INSERT INTO pending VALUES (1)')
+        assert migrate(db, migrations) == 1
+    with sqlite3.connect(tmp_path / 'db') as check:
+        assert check.execute('SELECT id FROM pending').fetchall() == [(1,)]

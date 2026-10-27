@@ -350,10 +350,15 @@ and entry, and never on `schedule_entry`.
   the seed method knows its bulletin and page. A hand edit does not inherit the
   page of the entry it replaced: the edit may be because the bulletin changed.
 
-**Changes take effect immediately.** There is no `valid_from`/`valid_until`.
-The policy prompt says which changes to propose when (see
-[Prompt rules](#prompt-rules)). Effective dates can be added later as columns
-on `schedule_entry`.
+**Weekly entries may carry effective dates.** A weekly entry's optional
+`valid_from` and `valid_until` are inclusive absolute dates (not an annual
+season), so an announced change is stored as soon as it is printed: the old
+entry ends the day before, the new one starts that day (see
+[Prompt rules](#prompt-rules)). The view, the snapshot and the site honor them
+without another bulletin. A weekly entry whose `valid_until` has passed is left
+out of the view and the snapshot, ignored by the policy's checks, and deleted
+at the start of the parish's next revision, so it never blocks a new entry for
+its slot.
 
 ### Churches leaving the CSV
 
@@ -384,7 +389,7 @@ may name (`unknown_church`).
 ### Input: the view
 
 The canonical JSON of the parish's current schedule, with dated entries before
-the call date left out. Keys are sorted, entries ordered by church, kind,
+the call date, and weekly entries that ended before it, left out. Keys are sorted, entries ordered by church, kind,
 weekday or date, then time, and there is no whitespace, so the same schedule
 always hashes the same. `id` is the entry id:
 
@@ -489,7 +494,7 @@ proposals before it left it, and is **rejected** when:
 | its entry names a church outside the parish | `unknown_church` |
 | its entry fails the entry checks (a weekly entry with a date, say) | `invalid_entry` |
 | it is a modify that changes its target's church, event type or kind | `invalid_modify` |
-| it is an add or modify of a dated entry before the call date | `past_date` |
+| it is an add or modify of a dated entry before the call date, or an add of a weekly entry that ended before it | `past_date` |
 | its target isn't a live entry of the parish (including one an earlier proposal in the call already changed) | `unknown_item` |
 | it would create a second live entry for a slot | `duplicate` |
 

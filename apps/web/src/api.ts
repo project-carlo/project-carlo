@@ -9,7 +9,7 @@ import {
   type CityIndex,
   type CityLink,
 } from "./lib/cities";
-import { compareSchedule, computeNextOccurrence, parseIsoDateLocal, seasonOf } from "./lib/schedule";
+import { compareSchedule, parseIsoDateLocal, seasonOf } from "./lib/schedule";
 import {
   CHURCH_MAP_CANVAS,
   CITY_MAP_CANVAS,
@@ -136,13 +136,15 @@ export function eventMatchesFilters(
   // run at this time of year, and the popup says which week of the month.
   if (ev.event_kind === "weekly") {
     if (!dateInSeason(today, seasonOf(ev))) return false;
-    if (ev.valid_from || ev.valid_until) {
-      const next = computeNextOccurrence(ev, new Date(today.getFullYear(), today.getMonth(), today.getDate()));
-      if (!next) return false;
-      // Show the version that can occur in the coming week, including a
-      // transition before its next weekday. Do not advertise an expired time.
-      if (!dateInValidity(today, ev) &&
-        new Date(next).getTime() - today.getTime() > 7 * 86400000) return false;
+    if ((ev.valid_from || ev.valid_until) && ev.day_of_week) {
+      // Judge a dated version by its weekday's next date, so the map shows the
+      // time that applies this week, including a change that starts before
+      // then, and never an ended one.
+      const next = new Date(
+        today.getFullYear(), today.getMonth(),
+        today.getDate() + ((jsDayFor(ev.day_of_week) - today.getDay() + 7) % 7),
+      );
+      if (!dateInValidity(next, ev)) return false;
     }
   }
   if (filters.daysOfWeek && filters.daysOfWeek.length > 0) {

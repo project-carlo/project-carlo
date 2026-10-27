@@ -46,12 +46,10 @@ UNKNOWN_ITEM = "unknown_item"
 DUPLICATE = "duplicate"
 # A modify whose new entry is exactly its target: there is nothing to change.
 NO_CHANGE = "no_change"
-UNUSUAL_TIME = "unusual_time_review"
 
 WHOLE_CALL_REASONS = (WRONG_BULLETIN, STALE_BULLETIN, MASS_DELETE)
 PROPOSAL_REASONS = (
     UNKNOWN_CHURCH, INVALID_ENTRY, INVALID_MODIFY, PAST_DATE, UNKNOWN_ITEM, DUPLICATE, NO_CHANGE,
-    UNUSUAL_TIME,
 )
 
 # A call deleting at least this many weekly entries, and more than half of the
@@ -172,8 +170,12 @@ def check_proposal(
         != (target.church_id, target.event_type, target.event_kind)
     ):
         return entry, INVALID_MODIFY, "a modify can't change the church, event type or kind"
-    if entry is not None and entry.dated_before(today):
-        return entry, PAST_DATE, f"{entry.date} is before {today.isoformat()}"
+    # A modify may end a weekly entry in the past (a change already in effect); an
+    # add may not, as nothing would ever show it. The next revision retires it.
+    if entry is not None and (
+        entry.expired_before(today) if op == ADD else entry.dated_before(today)
+    ):
+        return entry, PAST_DATE, f"{entry.date or entry.valid_until} is before {today.isoformat()}"
     if op in (MODIFY, DELETE) and target is None:
         return entry, UNKNOWN_ITEM, f"entry {target_entry_id} is not in the current schedule"
     if entry is not None and schedule.conflicts(entry, excluding=target_entry_id):
@@ -202,12 +204,8 @@ def check_in_order(
     churches: dict[str, int],
     today: date,
     targetable: Collection[int] | None = None,
-    review_unusual_times: bool = False,
 ) -> list[Outcome]:
     """Check and apply (op, target, raw entry) proposals in the order given; one outcome each.
-
-    `review_unusual_times` holds new services before 5 AM for a human. A human
-    edit or approval uses the same structural checks with this flag off.
 
     Each is checked against the schedule as the proposals before it left it, with
     one exception, so that a merge the model lists in either order is kept
@@ -224,7 +222,6 @@ def check_in_order(
     outcomes: list[Outcome | None] = [None] * len(proposals)
     waiting: dict[int, Outcome] = {}
     applied = 0
-    approved_night = [e for e in schedule.ids.values() if e.weekly and e.start_time < 5 * 60]
 
     def removable(position: int, index: int) -> set[int]:
         """Entries that proposals after `position`, or other waiting ones, may still remove."""
@@ -242,16 +239,6 @@ def check_in_order(
             op, target, raw, schedule=schedule, churches=churches, today=today,
             targetable=targetable,
         )
-        target_entry = schedule.ids.get(target) if target is not None else None
-        if reason is None and review_unusual_times and entry is not None and (
-            not entry.cancelled and entry.start_time < 5 * 60
-            and not (target_entry is not None and target_entry.start_time == entry.start_time)
-            and not any(
-                entry.slot_key == old.slot_key and entry.weeks_of_month == old.weeks_of_month
-                and entry.season() == old.season() for old in approved_night
-            )
-        ):
-            reason, detail = UNUSUAL_TIME, "new service before 5 AM needs human confirmation"
         if reason is None:
             schedule.apply(op, target, entry)
             waiting.pop(index, None)
@@ -313,7 +300,6 @@ def decide(
         [(p.op, p.target_entry_id, p.entry) for p in ordered],
         schedule=Schedule(ids=dict(live)), churches=churches, today=today,
         targetable=targetable,
-        review_unusual_times=True,
     )
     return [
         Decision(p, APPLIED, AUTO, o.entry, order=o.order) if o.reason is None
