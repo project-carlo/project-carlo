@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
   "parish_slug": "catholic-community-buffalo-north",
-  "status": "ready",
+  "status": "needs_review",
   "as_of": "2026-10-25T13:14:25Z",
   "drafted_by": "claude-code/seed-parishes",
   "drafted_at": "2026-10-26T01:59:05Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Five churches in the CCBN family. The weekend, weekday, Confession and Friday Adoration schedule is clear and agrees in the newest bulletins; a new weekday schedule began Oct 12 and replaced the older St. Rose 7 AM and Central Office Chapel Masses. Saturday Confession moved from St. Rose to St. Mark in the Oct 18 issue (R40). No open questions.",
+  "summary": "Five churches in the CCBN family. The weekend, weekday, Confession and Friday Adoration schedule is clear and agrees in the newest bulletins; a new weekday schedule began Oct 12 and replaced the older St. Rose 7 AM and Central Office Chapel (part of Assumption's parcel) Masses. Saturday Confession moved from St. Rose to St. Mark in the Oct 18 issue (R40). Open: whether the 15-minute Adoration opening the CCBN Moms meetings (Nov 4 and Dec 2, Central Office chapel at Assumption) counts, since the audience is a moms' group; leaning out.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -2053,22 +2053,9 @@
     },
     {
       "id": "s29",
-      "decision": "exclude",
-      "status": "settled",
-      "entry": {
-        "church_slug": "assumption-buffalo",
-        "event_type": "adoration",
-        "event_kind": "specific_date",
-        "day_of_week": null,
-        "date": "2026-11-04",
-        "start_time": "18:30",
-        "end_time": "18:45",
-        "cancelled": false,
-        "weeks_of_month": [],
-        "exclude_weeks": false,
-        "season": null,
-        "note": "CCBN Moms, chapel at Central Office"
-      },
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
       "page": 5,
       "sources": [
         {
@@ -2090,29 +2077,40 @@
           "page": 5
         }
       ],
-      "rationale": "R22, R23: the chapel is at the CCBN Central Office, 16 Peter St., an address not on the church list; the newest bulletin's heading names both Assumption and the Central Office, so the location is unclear.",
-      "question": null,
-      "options": null,
-      "answer": null
+      "rationale": "R30: POLICY and the rules do not settle whether Adoration that opens a group's meeting counts as public. The location is settled (R21-R23: the Central Office chapel is on Assumption's tax parcel, so it is assumption-buffalo), and date and time are clear (newest bulletin p5: 'Adoration will take place in the chapel until 6:45pm'; the Sep 27 and Oct 4 notices give '6:30 PM: Adoration in the chapel'). But the audience is the CCBN Moms group ('a community meant to bring Catholic moms together'), not the whole parish; C7 does not apply because no heading says the events are open to everyone. Leaning to leave out: POLICY leaves out Masses limited to a group, a wrong listing is worse than a missing one, and the notice invites moms only. Against: anyone may come late or leave early, and the Adoration is in a listed church's chapel.",
+      "question": "Include the 15-minute Adoration that opens each CCBN Moms meeting (Wed Nov 4 and Wed Dec 2, 6:30-6:45 PM, Central Office chapel at Assumption)?",
+      "options": [
+        {
+          "label": "Include Nov 4 and Dec 2 Adoration",
+          "entry": {
+            "church_slug": "assumption-buffalo",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-04",
+            "start_time": "18:30",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "CCBN Moms, chapel at Central Office"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ccbn-moms-adoration"
     },
     {
       "id": "s30",
-      "decision": "exclude",
-      "status": "settled",
-      "entry": {
-        "church_slug": "assumption-buffalo",
-        "event_type": "adoration",
-        "event_kind": "specific_date",
-        "day_of_week": null,
-        "date": "2026-12-02",
-        "start_time": "18:30",
-        "end_time": "18:45",
-        "cancelled": false,
-        "weeks_of_month": [],
-        "exclude_weeks": false,
-        "season": null,
-        "note": "CCBN Moms, chapel at Central Office"
-      },
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
       "page": 5,
       "sources": [
         {
@@ -2128,10 +2126,34 @@
           "page": 5
         }
       ],
-      "rationale": "R22, R23: same as the November 4 meeting; chapel at the Central Office, not on the church list.",
-      "question": null,
-      "options": null,
-      "answer": null
+      "rationale": "R30: POLICY and the rules do not settle whether Adoration that opens a group's meeting counts as public. The location is settled (R21-R23: the Central Office chapel is on Assumption's tax parcel, so it is assumption-buffalo), and date and time are clear (newest bulletin p5: 'Adoration will take place in the chapel until 6:45pm'; the Sep 27 and Oct 4 notices give '6:30 PM: Adoration in the chapel'). But the audience is the CCBN Moms group ('a community meant to bring Catholic moms together'), not the whole parish; C7 does not apply because no heading says the events are open to everyone. Leaning to leave out: POLICY leaves out Masses limited to a group, a wrong listing is worse than a missing one, and the notice invites moms only. Against: anyone may come late or leave early, and the Adoration is in a listed church's chapel.",
+      "question": "Include the 15-minute Adoration that opens each CCBN Moms meeting (Wed Nov 4 and Wed Dec 2, 6:30-6:45 PM, Central Office chapel at Assumption)?",
+      "options": [
+        {
+          "label": "Include Nov 4 and Dec 2 Adoration",
+          "entry": {
+            "church_slug": "assumption-buffalo",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-12-02",
+            "start_time": "18:30",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "CCBN Moms, chapel at Central Office"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ccbn-moms-adoration"
     },
     {
       "id": "s31",
@@ -2172,12 +2194,5 @@
       "answer": null
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "CCBN Central Office Chapel, 16 Peter St., Buffalo",
-      "said": "WEEKDAY MASSES Monday - Friday 8:30 a.m. at Central Office Chapel",
-      "bulletin": "9b3390db",
-      "page": 7
-    }
-  ]
+  "church_list_issues": []
 }

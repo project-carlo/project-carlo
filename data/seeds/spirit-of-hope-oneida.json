@@ -7,7 +7,7 @@
   "drafted_at": "2026-10-27T00:55:18Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Four listed churches (Oneida, Canastota, Vernon, Verona Beach). Weekend and weekday Masses and Confessions agree in all three bulletins; the St. Mary summer-only slots are excluded because their season floats and ends Columbus Day weekend. Open: whether the St. Agatha and St. Joseph perpetual Adoration chapels count (both lean out: location and hours unclear).",
+  "summary": "Five listed churches (Oneida, Canastota, Vernon, Verona Beach, Irish Ridge). Weekend and weekday Masses and Confessions agree in all three bulletins; the St. Mary of the Lake summer-only slots are excluded because their season floats and ends Columbus Day weekend. The Nov 2 6 PM All Souls' Mass at St. Mary Irish Ridge is included. Open: whether the St. Agatha and St. Joseph perpetual Adoration chapels count (both lean out: location and hours unclear).",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -1306,9 +1306,22 @@
     },
     {
       "id": "s18",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
-      "entry": null,
+      "entry": {
+        "church_slug": "st-mary-irish-ridge",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
       "page": 3,
       "sources": [
         {
@@ -1318,7 +1331,7 @@
           "said": "All Souls' Day Mass Monday, November 2nd, 6 pm. St. Mary Irish Ridge, 6148 Irish Ridge Road"
         }
       ],
-      "rationale": "R23: St. Mary, Irish Ridge is not in data/churches.csv, so the dated All Souls Mass cannot be attached.",
+      "rationale": "R1, POLICY Weekly or dated rule 7: the newest bulletin's All Souls' Day box invites the parish to a Mass on Monday, November 2 at 6 pm at St. Mary Irish Ridge, 6148 Irish Ridge Road. Date, time and church are clear and it is open to all (names of the parish's deceased read, collection, live-streamed). St. Mary, Irish Ridge is now on the church list at that address, so the earlier R23 exclusion no longer applies.",
       "question": null,
       "options": null,
       "answer": null
@@ -2468,12 +2481,5 @@
       "group": "st-joseph-chapel"
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "St. Mary, Irish Ridge (6148 Irish Ridge Road)",
-      "said": "All Souls' Day Mass Monday, November 2nd, 6 pm",
-      "bulletin": "ec90a988",
-      "page": 3
-    }
-  ]
+  "church_list_issues": []
 }

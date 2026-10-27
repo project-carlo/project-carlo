@@ -7,7 +7,7 @@
   "drafted_at": "2026-10-26T01:48:20Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Three churches: St. Ambrose, St. James and St. John the Evangelist. The Mass Schedule and Confession boxes are identical in all five bulletins read, and First Friday Adoration at St. Ambrose is printed in the Adoration box. The Perpetual Adoration Chapel at 123 Whittington Road is not on the church list, so its Holy Hours are excluded. No open questions.",
+  "summary": "Three churches: St. Ambrose, St. James and St. John the Evangelist. The Mass Schedule and Confession boxes are identical in all five bulletins read, and First Friday Adoration at St. Ambrose is printed in the Adoration box. The Perpetual Adoration Chapel at 123 Whittington Road is Adoration only (locked, door code, no Mass), so its Holy Hours are excluded. No open questions.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -1512,7 +1512,7 @@
           "page": 3
         }
       ],
-      "rationale": "R23: the Perpetual Adoration Chapel at 123 Whittington Road (the former St. James Convent, per the parish website) is a separate address that is not on the church list; its weekly events are left out. History placed this at St. Ambrose or St. James; the bulletin places it at the chapel.",
+      "rationale": "R22: held at the Perpetual Adoration Chapel, 123 Whittington Rd, the former St. James Convent. Settled as an exclusion (no-public-mass): the chapel is for Adoration only, kept locked 24/7 with the door code from the parish office, and has no Mass, so it is not a church row. Its holy hours are not shown as Adoration at St. Ambrose or St. James (data/dioceses/rochester/excluded/perpetual-adoration-chapel-rochester.md).",
       "question": null,
       "options": null,
       "answer": null
@@ -1576,7 +1576,7 @@
           "page": 3
         }
       ],
-      "rationale": "R23: held at the Perpetual Adoration Chapel, 123 Whittington Road, which is not on the church list. History placed it at St. Ambrose or St. James.",
+      "rationale": "R22: held at the Perpetual Adoration Chapel, 123 Whittington Rd, the former St. James Convent. Settled as an exclusion (no-public-mass): the chapel is for Adoration only, kept locked 24/7 with the door code from the parish office, and has no Mass, so it is not a church row. Its holy hours are not shown as Adoration at St. Ambrose or St. James (data/dioceses/rochester/excluded/perpetual-adoration-chapel-rochester.md).",
       "question": null,
       "options": null,
       "answer": null
@@ -1614,7 +1614,7 @@
           "page": 3
         }
       ],
-      "rationale": "R23, R9: same event as the St. Ambrose entry above (history sometimes assigned it to St. James); held at the chapel at 123 Whittington Road, not on the church list.",
+      "rationale": "R22: held at the Perpetual Adoration Chapel, 123 Whittington Rd, the former St. James Convent. Settled as an exclusion (no-public-mass): the chapel is for Adoration only, kept locked 24/7 with the door code from the parish office, and has no Mass, so it is not a church row. Its holy hours are not shown as Adoration at St. Ambrose or St. James (data/dioceses/rochester/excluded/perpetual-adoration-chapel-rochester.md).",
       "question": null,
       "options": null,
       "answer": null
@@ -1654,18 +1654,11 @@
           "page": 3
         }
       ],
-      "rationale": "R23, R9: same event as the St. Ambrose entry above (history sometimes assigned it to St. James); held at the chapel at 123 Whittington Road, not on the church list.",
+      "rationale": "R22: held at the Perpetual Adoration Chapel, 123 Whittington Rd, the former St. James Convent. Settled as an exclusion (no-public-mass): the chapel is for Adoration only, kept locked 24/7 with the door code from the parish office, and has no Mass, so it is not a church row. Its holy hours are not shown as Adoration at St. Ambrose or St. James (data/dioceses/rochester/excluded/perpetual-adoration-chapel-rochester.md).",
       "question": null,
       "options": null,
       "answer": null
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "Perpetual Adoration Chapel, 123 Whittington Road, Rochester (former St. James Convent)",
-      "said": "PERPETUAL ADORATION CHAPEL 123 Whittington Road: Tuesdays 10:00 AM Family Friendly Holy Hour; First Tuesdays 7:00 PM Mothers of Lu Holy Hour for Vocations",
-      "bulletin": "14424d94",
-      "page": 3
-    }
-  ]
+  "church_list_issues": []
 }

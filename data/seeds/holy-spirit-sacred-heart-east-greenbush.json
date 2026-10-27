@@ -7,7 +7,7 @@
   "drafted_at": "2026-10-27T00:58:38Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Two churches: Holy Spirit (Sat 4 PM, Sun 11 AM, Tue 6:30 PM Mass, Tuesday 7 PM Adoration and Confession) and Sacred Heart (Sun 9 AM Mass, Sunday Confession), all printed alike in five bulletins. The Monday to Friday 8 AM Mass is at the Sisters of the Resurrection, which is not on the church list, so it is left out. Open: the Wednesday rectory chapel Mass location, the Nov 2 school Mass and the Nov 7 Confirmation Mass.",
+  "summary": "Three churches: Holy Spirit (Sat 4 PM, Sun 11 AM, Tue 6:30 PM Mass, Tuesday 7 PM Adoration and Confession) and Sacred Heart (Sun 9 AM Mass, Sunday Confession), all printed alike in five bulletins. The Sisters of the Resurrection chapel (Sacred Heart's weekday Mass site) is now on the church list: Tue/Wed/Fri 8 AM and the Nov 2 8 AM Mass are included. Open: whether Monday and Thursday 8 AM also exist (bulletin says M-F, Sacred Heart's website says Tue/Wed/Fri), the Wednesday rectory chapel Mass location, the Nov 2 school Mass and the Nov 7 Confirmation Mass.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -741,22 +741,9 @@
     },
     {
       "id": "s10",
-      "decision": "exclude",
-      "status": "settled",
-      "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
-        "event_type": "mass",
-        "event_kind": "weekly",
-        "day_of_week": "Monday",
-        "date": null,
-        "start_time": "08:00",
-        "end_time": null,
-        "cancelled": false,
-        "weeks_of_month": [],
-        "exclude_weeks": false,
-        "season": null,
-        "note": "At the Sisters of the Resurrection"
-      },
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
       "page": 3,
       "sources": [
         {
@@ -806,19 +793,48 @@
           "bulletin": "28528be1cc74",
           "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
           "page": 3
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartcastleton.org/",
+          "said": "Weekday Mass Tuesday, Wednesday, Friday at 8:00AM at: The Sisters of the Resurrection 35 Boltwood Avenue Castleton, NY 12033"
         }
       ],
-      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
-      "question": null,
-      "options": null,
-      "answer": null
+      "rationale": "R28/R6: a real conflict between current sources. All five bulletins print 'Weekly Mass M - F 8am Mass at the Sisters of the Resurrection' (a one-line template, no Monday or Thursday intention listed), while Sacred Heart's own website (and Discover Mass, per the diocese record) say Tuesday, Wednesday, Friday only. Neither explains the difference (R40) and the website is undated. Leaning to include per the bulletin, which is the newest and recurs unchanged for five weeks; the church record also says the bulletin is followed for whether Mass is held.",
+      "question": "Is there a weekly 8:00 AM Mass on Monday and Thursday at the Sisters of the Resurrection, as the bulletin says (Mon-Fri), or only Tue, Wed, Fri, as the parish website says?",
+      "options": [
+        {
+          "label": "Leave out Monday and Thursday",
+          "entry": null
+        },
+        {
+          "label": "Include Monday and Thursday 8:00 AM",
+          "entry": {
+            "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Sisters of the Resurrection chapel"
+          },
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "sisters-mon-thu"
     },
     {
       "id": "s11",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
       "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
         "event_type": "mass",
         "event_kind": "weekly",
         "day_of_week": "Tuesday",
@@ -829,7 +845,7 @@
         "weeks_of_month": [],
         "exclude_weeks": false,
         "season": null,
-        "note": "At the Sisters of the Resurrection"
+        "note": "Sisters of the Resurrection chapel"
       },
       "page": 3,
       "sources": [
@@ -880,19 +896,24 @@
           "bulletin": "28528be1cc74",
           "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
           "page": 3
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartcastleton.org/",
+          "said": "Weekday Mass Tuesday, Wednesday, Friday at 8:00AM at: The Sisters of the Resurrection 35 Boltwood Avenue Castleton, NY 12033"
         }
       ],
-      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "rationale": "R1: the Sacred Heart schedule in all five bulletins prints 'Weekly Mass M - F 8am Mass at the Sisters of the Resurrection', and Sacred Heart's own website independently gives Tue, Wed, Fri 8:00 AM at the same address, so Tuesday, Wednesday and Friday are not in dispute. The chapel is now on the church list (sisters-of-the-resurrection-castleton-on-hudson, 35 Boltwood Ave.), so the earlier R23 exclusion no longer applies. Monday and Thursday are asked separately.",
       "question": null,
       "options": null,
       "answer": null
     },
     {
       "id": "s12",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
       "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
         "event_type": "mass",
         "event_kind": "weekly",
         "day_of_week": "Wednesday",
@@ -903,7 +924,7 @@
         "weeks_of_month": [],
         "exclude_weeks": false,
         "season": null,
-        "note": "At the Sisters of the Resurrection"
+        "note": "Sisters of the Resurrection chapel"
       },
       "page": 3,
       "sources": [
@@ -954,31 +975,23 @@
           "bulletin": "28528be1cc74",
           "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
           "page": 3
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartcastleton.org/",
+          "said": "Weekday Mass Tuesday, Wednesday, Friday at 8:00AM at: The Sisters of the Resurrection 35 Boltwood Avenue Castleton, NY 12033"
         }
       ],
-      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "rationale": "R1: the Sacred Heart schedule in all five bulletins prints 'Weekly Mass M - F 8am Mass at the Sisters of the Resurrection', and Sacred Heart's own website independently gives Tue, Wed, Fri 8:00 AM at the same address, so Tuesday, Wednesday and Friday are not in dispute. The chapel is now on the church list (sisters-of-the-resurrection-castleton-on-hudson, 35 Boltwood Ave.), so the earlier R23 exclusion no longer applies. Monday and Thursday are asked separately.",
       "question": null,
       "options": null,
       "answer": null
     },
     {
       "id": "s13",
-      "decision": "exclude",
-      "status": "settled",
-      "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
-        "event_type": "mass",
-        "event_kind": "weekly",
-        "day_of_week": "Thursday",
-        "date": null,
-        "start_time": "08:00",
-        "end_time": null,
-        "cancelled": false,
-        "weeks_of_month": [],
-        "exclude_weeks": false,
-        "season": null,
-        "note": "At the Sisters of the Resurrection"
-      },
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
       "page": 3,
       "sources": [
         {
@@ -1028,19 +1041,48 @@
           "bulletin": "28528be1cc74",
           "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
           "page": 3
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartcastleton.org/",
+          "said": "Weekday Mass Tuesday, Wednesday, Friday at 8:00AM at: The Sisters of the Resurrection 35 Boltwood Avenue Castleton, NY 12033"
         }
       ],
-      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
-      "question": null,
-      "options": null,
-      "answer": null
+      "rationale": "R28/R6: a real conflict between current sources. All five bulletins print 'Weekly Mass M - F 8am Mass at the Sisters of the Resurrection' (a one-line template, no Monday or Thursday intention listed), while Sacred Heart's own website (and Discover Mass, per the diocese record) say Tuesday, Wednesday, Friday only. Neither explains the difference (R40) and the website is undated. Leaning to include per the bulletin, which is the newest and recurs unchanged for five weeks; the church record also says the bulletin is followed for whether Mass is held.",
+      "question": "Is there a weekly 8:00 AM Mass on Monday and Thursday at the Sisters of the Resurrection, as the bulletin says (Mon-Fri), or only Tue, Wed, Fri, as the parish website says?",
+      "options": [
+        {
+          "label": "Leave out Monday and Thursday",
+          "entry": null
+        },
+        {
+          "label": "Include Monday and Thursday 8:00 AM",
+          "entry": {
+            "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Sisters of the Resurrection chapel"
+          },
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "sisters-mon-thu"
     },
     {
       "id": "s14",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
       "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
         "event_type": "mass",
         "event_kind": "weekly",
         "day_of_week": "Friday",
@@ -1051,7 +1093,7 @@
         "weeks_of_month": [],
         "exclude_weeks": false,
         "season": null,
-        "note": "At the Sisters of the Resurrection"
+        "note": "Sisters of the Resurrection chapel"
       },
       "page": 3,
       "sources": [
@@ -1102,19 +1144,24 @@
           "bulletin": "28528be1cc74",
           "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
           "page": 3
+        },
+        {
+          "source": "website",
+          "url": "https://www.sacredheartcastleton.org/",
+          "said": "Weekday Mass Tuesday, Wednesday, Friday at 8:00AM at: The Sisters of the Resurrection 35 Boltwood Avenue Castleton, NY 12033"
         }
       ],
-      "rationale": "R23: the Sisters of the Resurrection are a separate chapel that is not in data/churches.csv and no address is printed; POLICY leaves out a separate chapel at another address. Listed once in church_list_issues.",
+      "rationale": "R1: the Sacred Heart schedule in all five bulletins prints 'Weekly Mass M - F 8am Mass at the Sisters of the Resurrection', and Sacred Heart's own website independently gives Tue, Wed, Fri 8:00 AM at the same address, so Tuesday, Wednesday and Friday are not in dispute. The chapel is now on the church list (sisters-of-the-resurrection-castleton-on-hudson, 35 Boltwood Ave.), so the earlier R23 exclusion no longer applies. Monday and Thursday are asked separately.",
       "question": null,
       "options": null,
       "answer": null
     },
     {
       "id": "s15",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
       "entry": {
-        "church_slug": "sacred-heart-castleton-on-hudson",
+        "church_slug": "sisters-of-the-resurrection-castleton-on-hudson",
         "event_type": "mass",
         "event_kind": "specific_date",
         "day_of_week": null,
@@ -1125,7 +1172,7 @@
         "weeks_of_month": [],
         "exclude_weeks": false,
         "season": null,
-        "note": "At the Sisters of the Resurrection"
+        "note": "All Souls Day"
       },
       "page": 5,
       "sources": [
@@ -1136,7 +1183,7 @@
           "said": "All Soul's Day - Monday, November 2nd 8:00am - Sisters of the Resurrection"
         }
       ],
-      "rationale": "R23: the same Sisters of the Resurrection chapel, which is not on the church list.",
+      "rationale": "R1, R41, POLICY Weekly or dated rule 7: the newest bulletin's All Souls' Day list prints a specific dated Mass, Monday, November 2 at 8:00am at the Sisters of the Resurrection, a feast-day Mass at a time and place that is clear. It stands on its own even though Monday is disputed for the weekly pattern (see the Monday/Thursday question). The chapel is now on the church list, so the earlier R23 exclusion no longer applies.",
       "question": null,
       "options": null,
       "answer": null
@@ -1338,14 +1385,277 @@
         }
       ],
       "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held at the Sisters of the Resurrection chapel, not at Sacred Heart Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Mon-Fri 08:00 sacred-heart-castleton-on-hudson 'At the Sisters of the Resurrection'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Monday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: extract mode's history put the weekday 8 AM Mass at sacred-heart-castleton-on-hudson because the chapel was not on the church list then. The bulletin says it is at the Sisters of the Resurrection (35 Boltwood Ave.), now its own church, where the included slots record it. The Mass is not held at Sacred Heart Church (Sacred Heart's website: Mass there on Sunday only), so these Sacred Heart entries are excluded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held at the Sisters of the Resurrection chapel, not at Sacred Heart Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Mon-Fri 08:00 sacred-heart-castleton-on-hudson 'At the Sisters of the Resurrection'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Tuesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: extract mode's history put the weekday 8 AM Mass at sacred-heart-castleton-on-hudson because the chapel was not on the church list then. The bulletin says it is at the Sisters of the Resurrection (35 Boltwood Ave.), now its own church, where the included slots record it. The Mass is not held at Sacred Heart Church (Sacred Heart's website: Mass there on Sunday only), so these Sacred Heart entries are excluded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held at the Sisters of the Resurrection chapel, not at Sacred Heart Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Mon-Fri 08:00 sacred-heart-castleton-on-hudson 'At the Sisters of the Resurrection'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: extract mode's history put the weekday 8 AM Mass at sacred-heart-castleton-on-hudson because the chapel was not on the church list then. The bulletin says it is at the Sisters of the Resurrection (35 Boltwood Ave.), now its own church, where the included slots record it. The Mass is not held at Sacred Heart Church (Sacred Heart's website: Mass there on Sunday only), so these Sacred Heart entries are excluded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held at the Sisters of the Resurrection chapel, not at Sacred Heart Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Mon-Fri 08:00 sacred-heart-castleton-on-hudson 'At the Sisters of the Resurrection'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Thursday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: extract mode's history put the weekday 8 AM Mass at sacred-heart-castleton-on-hudson because the chapel was not on the church list then. The bulletin says it is at the Sisters of the Resurrection (35 Boltwood Ave.), now its own church, where the included slots record it. The Mass is not held at Sacred Heart Church (Sacred Heart's website: Mass there on Sunday only), so these Sacred Heart entries are excluded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-castleton-on-hudson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Held at the Sisters of the Resurrection chapel, not at Sacred Heart Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ceac59da",
+          "page": 3,
+          "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Mon-Fri 08:00 sacred-heart-castleton-on-hudson 'At the Sisters of the Resurrection'"
+        },
+        {
+          "source": "history",
+          "bulletin": "ceac59dae2cc",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "617e4c5dc0ac",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "28528be1cc74",
+          "said": "weekly mass Friday 08:00 sacred-heart-castleton-on-hudson  “At the Sisters of the Resurrection”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R9: extract mode's history put the weekday 8 AM Mass at sacred-heart-castleton-on-hudson because the chapel was not on the church list then. The bulletin says it is at the Sisters of the Resurrection (35 Boltwood Ave.), now its own church, where the included slots record it. The Mass is not held at Sacred Heart Church (Sacred Heart's website: Mass there on Sunday only), so these Sacred Heart entries are excluded.",
+      "question": null,
+      "options": null,
+      "answer": null
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "Sisters of the Resurrection (weekday Mass chapel)",
-      "said": "Weekly Mass M - F 8am Mass at the Sisters of the Resurrection; All Soul's Day Nov 2 8:00am",
-      "bulletin": "ceac59da",
-      "page": 3
-    }
-  ]
+  "church_list_issues": []
 }

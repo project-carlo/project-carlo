@@ -7,7 +7,7 @@
   "drafted_at": "2026-10-26T01:53:36Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Four churches, one parish: weekend, weekday, Confession and Wednesday Adoration times are printed in the page 1 box and agree in the six bulletins read. First Friday and first Sunday St. Jude Masses are weeks-of-month slots (First Friday kept under R12 from the Sep 27 issue). Dated: Nov 17 Mass of Remembrance at St. Amelia; the Nov 2 All Souls Mass is at a St. Francis chapel not on the church list. No open questions.",
+  "summary": "Five churches, one parish: weekend, weekday, Confession and Wednesday Adoration times are printed in the page 1 box and agree in the six bulletins read. First Friday and first Sunday St. Jude Masses are weeks-of-month slots (First Friday kept under R12 from the Sep 27 issue). Dated: Nov 2 12 PM All Souls Mass at St. Francis of Assisi Chapel (71 Adam St.) and the Nov 17 Mass of Remembrance at St. Amelia. No open questions.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -3319,9 +3319,22 @@
     },
     {
       "id": "s37",
-      "decision": "exclude",
+      "decision": "include",
       "status": "settled",
-      "entry": null,
+      "entry": {
+        "church_slug": "st-francis-of-assisi-chapel-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
       "page": 9,
       "sources": [
         {
@@ -3331,7 +3344,7 @@
           "said": "Monday, November 2nd Mass at 12:00 PM St. Francis of Assisi Chapel ALL SOULS"
         }
       ],
-      "rationale": "R23: St. Francis of Assisi Chapel is not on the church list (page 10 places the former St. Francis Church at 150 Broad Street as the Matthew 25 Center); no listed church to attach it to.",
+      "rationale": "R1, POLICY Weekly or dated rule 7: the newest bulletin's page 9 announces a parish-wide All Souls' Mass on Monday, November 2 at 12:00 PM at St. Francis of Assisi Chapel. Date, time and church are clear and it is open to all. The chapel is now on the church list at 71 Adam St. (the separate chapel, not the former church at 150 Broad St.), so the earlier R23 exclusion no longer applies.",
       "question": null,
       "options": null,
       "answer": null
@@ -3465,12 +3478,5 @@
       "answer": null
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "St. Francis of Assisi Chapel (former St. Francis Church, 150 Broad Street)",
-      "said": "Monday, November 2nd Mass at 12:00 PM St. Francis of Assisi Chapel",
-      "bulletin": "fc92df4c",
-      "page": 9
-    }
-  ]
+  "church_list_issues": []
 }

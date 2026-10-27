@@ -7,7 +7,7 @@
   "drafted_at": "2026-10-26T12:18:16Z",
   "reviewer": null,
   "approved_at": null,
-  "summary": "Three Endicott churches (St. Ambrose, St. Anthony, St. Joseph). Weekly Mass, Confession and Adoration times are the same in every bulletin read and match the parish website, which also adds a First Friday 10:30 AM Adoration at St. Ambrose (included under R6). Dated: All Souls Remembrance Mass Nov 3 and Thanksgiving Day Mass Nov 26. Left out: the ELEVATE evening (no Adoration time of its own), an Adoration chapel marked only 'CHF', and other parishes' Adoration. No open questions.",
+  "summary": "Three Endicott churches (St. Ambrose, St. Anthony, St. Joseph). Weekly Mass, Confession and Adoration times are the same in every bulletin read and match the parish website, which also adds a First Friday 10:30 AM Adoration at St. Ambrose (included under R6). Dated: All Souls Remembrance Mass Nov 3 and Thanksgiving Day Mass Nov 26. Left out: the ELEVATE evening (no Adoration time of its own), the 'CHF' Adoration (Church of the Holy Family, Endwell, another parish) and other parishes' Adoration. No open questions.",
   "blocked_reason": null,
   "bulletins": [
     {
@@ -1280,7 +1280,7 @@
           "said": "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm CHF"
         }
       ],
-      "rationale": "R22, R23: 'CHF' is not defined in the bulletin and matches no church in the church list; the place is unclear, so it cannot be attached to a listed church.",
+      "rationale": "R22: 'CHF' is the Church of the Holy Family, Endwell (holy-family-endwell), which belongs to another parish; its Adoration (Monday-Sunday 6:00am-9:00pm, as listed in this parish's 'Join us in Prayer' box with other parishes' devotions) is that parish's event, not a missing church of this one. Not a church-list issue. Left without an entry because it is seven daily slots at a church outside this parish.",
       "question": null,
       "options": null,
       "answer": null
@@ -1336,12 +1336,5 @@
       "answer": null
     }
   ],
-  "church_list_issues": [
-    {
-      "church": "CHF Adoration chapel (abbreviation not defined)",
-      "said": "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm CHF",
-      "bulletin": "efff2ae5",
-      "page": 3
-    }
-  ]
+  "church_list_issues": []
 }
