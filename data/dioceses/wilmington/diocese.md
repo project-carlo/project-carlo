@@ -164,6 +164,17 @@ batch settles its own rows.
   stpatschapel.org (Conowingo) and iccparish.org (old Elkton domain). Try again later, then
   look for the bulletin on a publisher (see the parish-site-access skill).
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- A shared pastor does not mean a shared bulletin: Holy Child (LPi 03/1109) and St. Helena (church-bulletin.org) both list Rev. Michael Carrier as pastor but publish separately.
+- IHM's LPi cover prints a Mass-time box for six deanery parishes; it is a deanery schedule, not a shared masthead, so read page 2 or later for the staff list.
+- OSV/Duda parish sites (hrparish.com) hide the bulletin link from probe url; visit.py --links shows 'Bulletin' going to sponsors.bonventure.net/?page=<n>. Bonventure PDFs are at /pdfs/<n>/<date>.pdf.
+- sponsors.bonventure.net fails TLS verification from Python (probe pdf, recheck) but loads in Chrome; use the http:// form in recipes and evidence urls, and tools/browser_download.py to read a PDF.
+- church-bulletin.org 406s a bare 'Mozilla/5.0' agent; a full Chrome-style user agent works with curl.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
