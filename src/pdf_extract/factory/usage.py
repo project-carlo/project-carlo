@@ -10,12 +10,13 @@ from __future__ import annotations
 import json
 import math
 import os
+import re
 import subprocess
 import time
 import urllib.error
 import urllib.request
 from collections.abc import Callable
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -37,6 +38,8 @@ class Usage:
     five_hour_resets: datetime
     seven_day: float
     seven_day_resets: datetime
+    # The whole response, scrubbed: model-specific and extra windows the fields above drop.
+    raw: dict[str, Any] | None = field(default=None, compare=False)
 
 
 @dataclass(frozen=True)
@@ -58,15 +61,43 @@ def _parse_time(value: Any, unused: timedelta, at: datetime) -> datetime:
     return when if when.tzinfo else when.replace(tzinfo=UTC)
 
 
+# Keys never stored from a response, should one ever carry them.
+_SECRET_KEY = re.compile(r"token$|^token|authori[sz]ation|credential|secret|password|cookie|"
+                         r"api_?key|bearer", re.I)
+
+
+def scrub(value: Any) -> Any:
+    """A response without anything that looks like a credential."""
+    if isinstance(value, dict):
+        return {k: scrub(v) for k, v in value.items() if not _SECRET_KEY.search(str(k))}
+    if isinstance(value, list):
+        return [scrub(v) for v in value]
+    if isinstance(value, str) and re.match(r"(Bearer |sk-ant-)", value):
+        return "[removed]"
+    return value
+
+
 def parse_usage(body: Any, at: datetime | None = None) -> Usage:
     at = at or datetime.now(UTC)
     try:
         five, week = body["five_hour"], body["seven_day"]
         return Usage(float(five["utilization"] or 0),
                      _parse_time(five["resets_at"], FIVE_HOURS, at),
-                     float(week["utilization"] or 0), _parse_time(week["resets_at"], WEEK, at))
+                     float(week["utilization"] or 0), _parse_time(week["resets_at"], WEEK, at),
+                     raw=scrub(body))
     except (KeyError, TypeError, ValueError) as exc:
         raise UsageError(f"unexpected usage response: {exc!r}") from None
+
+
+def account_plan(account: Account) -> str | None:
+    """The account's plan: its login's subscription and rate-limit tier, else local.yaml's."""
+    try:
+        oauth = json.loads((account.config_dir / ".credentials.json").read_text(
+            encoding="utf-8"))["claudeAiOauth"]
+        parts = [str(oauth[k]) for k in ("subscriptionType", "rateLimitTier") if oauth.get(k)]
+    except (OSError, ValueError, KeyError, TypeError):
+        parts = []
+    return "/".join(parts) or account.plan
 
 
 def _token(account: Account) -> str:

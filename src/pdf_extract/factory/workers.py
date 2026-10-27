@@ -8,6 +8,7 @@ everything else about the attempt (steps, cost, how it ended) comes back here.
 from __future__ import annotations
 
 import asyncio
+import importlib.metadata
 import json
 import os
 import shutil
@@ -33,6 +34,7 @@ DENIED = [
 ]
 
 OnStep = Callable[[str, str | None, str | None], None]
+OnRateLimit = Callable[[dict[str, Any]], None]
 
 
 @dataclass
@@ -49,6 +51,8 @@ class WorkerRequest:
     values: dict[str, str]
     session_id: str | None = None  # resume this session
     on_step: OnStep = field(default=lambda kind, name, detail: None)
+    # Every SDK rate-limit event in full: type, status, utilization, resets_at, overage, raw.
+    on_rate_limit: OnRateLimit = field(default=lambda info: None)
 
 
 @dataclass
@@ -60,6 +64,32 @@ class WorkerResult:
     error: str | None = None
     resets_at: datetime | None = None
     transcript: Path | None = None
+    # From the ResultMessage, when there was one: totals and per-model usage.
+    usage: dict[str, Any] | None = None
+    model_usage: dict[str, Any] | None = None
+    # From the session: cli_version, model (init), models (each message's), messages and
+    # duplicates (records repeating a message id), entrypoint.
+    info: dict[str, Any] = field(default_factory=dict)
+
+
+def sdk_version() -> str | None:
+    try:
+        return importlib.metadata.version("claude-agent-sdk")
+    except importlib.metadata.PackageNotFoundError:
+        return None
+
+
+def rate_limit_info(info: Any) -> dict[str, Any]:
+    """An SDK RateLimitInfo as a dict, reset times as ISO strings."""
+    def when(ts: Any) -> str | None:
+        return datetime.fromtimestamp(ts, UTC).isoformat() if ts else None
+
+    return {"type": info.rate_limit_type, "status": info.status,
+            "utilization": info.utilization, "resets_at": when(info.resets_at),
+            "overage_status": getattr(info, "overage_status", None),
+            "overage_resets_at": when(getattr(info, "overage_resets_at", None)),
+            "overage_disabled_reason": getattr(info, "overage_disabled_reason", None),
+            "raw": dict(getattr(info, "raw", None) or {})}
 
 
 class Worker(Protocol):
@@ -104,16 +134,35 @@ def find_transcript(account: Account | None, session_id: str | None) -> Path | N
 class SdkWorker:
     """A Claude Agent SDK session (`claude_agent_sdk.query`) running the stage spec."""
 
+    def __init__(self) -> None:
+        self._start(None)
+
+    def _start(self, session: str | None) -> None:
+        self._session, self._cost, self._turns = session, 0.0, 0
+        self._info: dict[str, Any] = {}
+        self._models: set[str] = set()
+        self._ids: set[str] = set()
+        self._records = 0
+
     def run(self, request: WorkerRequest) -> WorkerResult:
+        self._start(request.session_id)
         try:
-            return asyncio.run(asyncio.wait_for(
+            result = asyncio.run(asyncio.wait_for(
                 self._run(request), timeout=request.spec.max_minutes * 60))
         except TimeoutError:
-            return WorkerResult(TIMEOUT, session_id=self._session, error="over max_minutes",
-                                cost_usd=self._cost, turns=self._turns)
+            result = WorkerResult(TIMEOUT, session_id=self._session, error="over max_minutes",
+                                  cost_usd=self._cost, turns=self._turns)
         except Exception as exc:  # the SDK or the CLI died: resume the session
-            return WorkerResult(CRASH, session_id=self._session, error=repr(exc)[:2000],
-                                cost_usd=self._cost, turns=self._turns)
+            result = WorkerResult(CRASH, session_id=self._session, error=repr(exc)[:2000],
+                                  cost_usd=self._cost, turns=self._turns)
+        result.info = self._summary()
+        result.transcript = find_transcript(request.account, self._session)
+        return result
+
+    def _summary(self) -> dict[str, Any]:
+        return {**self._info, "models": sorted(self._models), "messages": len(self._ids),
+                "duplicates": self._records - len(self._ids), "entrypoint": "sdk-py",
+                "sdk_version": sdk_version()}
 
     async def _run(self, request: WorkerRequest) -> WorkerResult:
         from claude_agent_sdk import (
@@ -128,7 +177,6 @@ class SdkWorker:
         )
 
         spec = request.spec
-        self._session, self._cost, self._turns = request.session_id, 0.0, 0
         tools = list(spec.tools) + (["Skill"] if spec.skills else [])
         options = ClaudeAgentOptions(
             cwd=str(request.worktree),
@@ -146,13 +194,21 @@ class SdkWorker:
             env=worker_env(request.account),
         )
         result = WorkerResult(CRASH, session_id=request.session_id, error="no result")
+        usage: dict[str, Any] | None = None
+        model_usage: dict[str, Any] | None = None
         async for message in query(prompt=request.prompt, options=options):
             if isinstance(message, SystemMessage) and message.subtype == "init":
                 self._session = message.data.get("session_id") or self._session
+                self._info |= {"cli_version": message.data.get("claude_code_version"),
+                               "model": message.data.get("model"),
+                               "permission_mode": message.data.get("permissionMode")}
             elif isinstance(message, AssistantMessage):
                 # Counted as they come, so a crash or timeout still reports its turns (the
                 # ResultMessage, when there is one, gives the exact count).
                 self._turns += 1
+                self._models.add(message.model)
+                self._records += 1
+                self._ids.add(message.message_id or str(self._records))
                 if message.error == "rate_limit":  # keep a RateLimitEvent's reset time
                     result = WorkerResult(USAGE, error="rate limit", resets_at=result.resets_at)
                 for block in message.content:
@@ -163,6 +219,7 @@ class SdkWorker:
             elif isinstance(message, RateLimitEvent):
                 info = message.rate_limit_info
                 request.on_step("rate_limit", info.rate_limit_type, info.status)
+                request.on_rate_limit(rate_limit_info(info))
                 if info.status == "rejected":
                     resets = (datetime.fromtimestamp(info.resets_at, UTC)
                               if info.resets_at else None)
@@ -170,6 +227,7 @@ class SdkWorker:
             elif isinstance(message, ResultMessage):
                 self._session = message.session_id
                 self._cost, self._turns = message.total_cost_usd or 0.0, message.num_turns
+                usage, model_usage = message.usage, message.model_usage
                 if result.outcome == USAGE or message.api_error_status == 429:
                     result = WorkerResult(USAGE, error="rate limit", resets_at=result.resets_at)
                 elif message.subtype == "error_max_turns":
@@ -181,12 +239,8 @@ class SdkWorker:
                     result = WorkerResult(OK)
                 request.on_step("result", message.subtype, (message.result or "")[:500])
         result.session_id, result.cost_usd, result.turns = self._session, self._cost, self._turns
-        result.transcript = find_transcript(request.account, self._session)
+        result.usage, result.model_usage = usage, model_usage
         return result
-
-    _session: str | None = None
-    _cost: float = 0.0
-    _turns: int = 0
 
 
 # ── Stub workers: send-backs, parking and resuming without spending usage ────
@@ -199,6 +253,10 @@ class StubAction:
     files: dict[str, str | None] = field(default_factory=dict)
     outcome: str = OK
     resets_at: datetime | None = None
+    # What the SDK would have reported: rate-limit events, the ResultMessage's usage.
+    rate_limits: list[dict[str, Any]] = field(default_factory=list)
+    usage: dict[str, Any] | None = None
+    model_usage: dict[str, Any] | None = None
 
 
 Script = Callable[[WorkerRequest, int], StubAction]
@@ -220,6 +278,8 @@ class StubWorker:
         attempt = sum(1 for r in self.calls if r.job_id == request.job_id)
         action = self.script(request, attempt)
         request.on_step("text", None, f"stub attempt {attempt}")
+        for info in action.rate_limits:
+            request.on_rate_limit(info)
         for rel, content in action.files.items():
             path = request.worktree / fill(rel, request.values)
             if content is None:
@@ -233,7 +293,8 @@ class StubWorker:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(action.handoff), encoding="utf-8")
         return WorkerResult(action.outcome, session_id=f"stub-{request.job_id}",
-                            resets_at=action.resets_at)
+                            resets_at=action.resets_at, usage=action.usage,
+                            model_usage=action.model_usage)
 
 
 def scenario_script(path: Path) -> Script:

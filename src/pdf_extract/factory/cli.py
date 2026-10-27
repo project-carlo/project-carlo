@@ -9,8 +9,12 @@
   resume [--override-caps]     start again; --override-caps ignores the usage caps
   retry <job>                  run a blocked or failed job again from where it stopped
   inspect <job> [--prompt]     everything about a job, for a foreman review
-  inspect --stage S [--last N] a stage's recent jobs
-  cost [--stage]               cost by Run, or by stage
+  inspect --stage S [--last N] a stage's recent jobs, with their quota
+  quota [--by K] [--tz ZONE]   quota points per unit of work, by stage, or within stages by
+                               model, effort, mode, account, plan, date or hour
+  quota --windows              each account's five-hour and weekly windows over time
+  quota backfill               tokens and metadata for attempts from before quota tracking
+  cost [--stage]               cost by Run, or by stage (API-price dollars: a diagnostic)
   backup                       back the ledger up to R2 now
 
 A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). `--stub` on the
@@ -106,9 +110,10 @@ def _retry(args: argparse.Namespace) -> Result:
 
 def _inspect(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
+    settle = load_config().quota_settle_seconds
     if args.stage:
         args.render = report.text_recent
-        return report.recent(ledger, args.stage, args.last)
+        return report.recent(ledger, args.stage, args.last, settle)
     if not args.job:
         raise FactoryError("name a job, or --stage")
     try:
@@ -120,7 +125,21 @@ def _inspect(args: argparse.Namespace) -> Result:
                            job["id"])
         args.render = lambda r: r["prompt"]
         return {"prompt": first["prompt"] if first else None}
-    return report.inspect(ledger, job, STUB_DATA / RUNS_DIR.name if args.stub else RUNS_DIR)
+    return report.inspect(ledger, job, STUB_DATA / RUNS_DIR.name if args.stub else RUNS_DIR,
+                          settle)
+
+
+def _quota(args: argparse.Namespace) -> Result:
+    ledger, config = _ledger(args), load_config()
+    if args.action == "backfill":
+        from pdf_extract.factory.backfill import backfill, git_show
+
+        args.render = _text
+        return backfill(ledger, config, git_show(_repo()))
+    if args.windows:
+        args.render = report.text_windows
+        return report.windows(ledger, config.quota_settle_seconds)
+    return report.quota(ledger, args.by, args.tz, config.quota_settle_seconds)
 
 
 def _cost(args: argparse.Namespace) -> Result:
@@ -229,6 +248,12 @@ def add_factory_parser(
     p.add_argument("--prompt", action="store_true", help="Print the job input it started from")
     p.add_argument("--stage", help="List a stage's recent jobs instead")
     p.add_argument("--last", type=int, default=10)
+    p = leaf("quota", _quota, report.text_quota)
+    p.add_argument("action", nargs="?", choices=["backfill"],
+                   help="backfill: tokens and metadata for older attempts, from transcripts")
+    p.add_argument("--by", choices=report.BY, default="stage")
+    p.add_argument("--tz", help="Time zone for --by date or hour (default: this machine's)")
+    p.add_argument("--windows", action="store_true", help="Account and window totals instead")
     p = leaf("cost", _cost, report.text_cost)
     p.add_argument("--stage", action="store_true", help="By stage instead of by Run")
     leaf("backup", _backup)
