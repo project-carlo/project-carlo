@@ -192,6 +192,12 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - LPi covers can be image-only (probe pdf finds text only on the ad pages at the end, e.g. St. John the Beloved 03/1288 and St. Catherine 03/1410): render page 1 with render.py to read the masthead; the LPi footer 'Parish, City, DE 03-NNNN' is the text quote that names the container.
 - LPi posts the next weekend's issue early, so fetch:check can report freshness 'future' (-5 days) for a ParishesOnline row (St. Catherine of Siena, 20261101 on 2026-10-27); that's not a wrong pick.
 - A ParishesOnline org's own address pin can be wrong (St. Catherine's org pin is ~3 km from the church); don't use it for coordinates.
+- A parish site's 'Bulletin' button can go to sponsors.bonventure.net/?page=<n> (St. John-Holy Angels, 2103) even when probe url sees nothing and the site returns 403 to curl: read it in the browser with visit.py --text --links.
+- A directory or GCatholic entry for a two-church parish can carry only one building's address; the bulletin's Mass schedule headings name each church, so read them before trusting a one-entry roster.
+- Two parishes sharing an associate (Holy Family and Resurrection, Rev. Francis Okorie) still print separate John Patrick bulletins (308, 310): a shared priest on both covers is not a shared bulletin.
+- eCatholic parish sites can link their bulletin to the John Patrick church-bulletin.org listing and host no files.ecatholic.com/bulletins at all (Resurrection 5398 gives 403 for every Sunday); pin the listing with page-pdfs and leave the eCatholic id out of publication.
+- John Patrick covers can be scanned images with no text (St. Margaret, Holy Family, Resurrection page 1): render page 1 with render.py to read the masthead; fetch:check still passes.
+- eCatholic posts the next Sunday's issue early here too (St. Mary of the Assumption, 20261101 on 2026-10-27): fetch:check freshness 'future' is not a wrong pick.
 
 ## Rules settled for this diocese
 
