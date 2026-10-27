@@ -11,6 +11,8 @@ import json
 import shutil
 import sqlite3
 import subprocess
+import threading
+import time
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -19,9 +21,11 @@ from typing import Any
 import pytest
 
 from pdf_extract.blobstore import BlobStoreError
+from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import playbook, readiness, report
-from pdf_extract.factory.config import Account, Config, FactoryError
+from pdf_extract.factory.backfill import backfill
+from pdf_extract.factory.config import Account, Config, FactoryError, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
 from pdf_extract.factory.forge import LocalForge
 from pdf_extract.factory.handoff import read_handoff
@@ -38,8 +42,29 @@ from pdf_extract.factory.ledger import (
     WAITING_USAGE,
     Ledger,
 )
+from pdf_extract.factory.quota import (
+    IMMEDIATE,
+    INCONSISTENT,
+    MISSING,
+    RESET,
+    SETTLED,
+    SHARED,
+    Analysis,
+    Measure,
+    Reading,
+    Span,
+    combine,
+)
 from pdf_extract.factory.stages import in_scope
-from pdf_extract.factory.usage import Usage, choose, parse_usage, standing
+from pdf_extract.factory.tokens import from_result, parse_transcript
+from pdf_extract.factory.usage import (
+    Usage,
+    UsageError,
+    account_plan,
+    choose,
+    parse_usage,
+    standing,
+)
 from pdf_extract.factory.workers import (
     OK,
     USAGE,
@@ -1220,3 +1245,447 @@ def test_inspect_shows_attempts_gates_and_reviews(env: Env) -> None:
 
 def test_stub_worker_ok_constant() -> None:
     assert OK == "ok"
+
+
+# ── Quota: attribution, tokens, readings, backfill ───────────────────────────
+T0 = datetime(2026, 11, 2, 12, tzinfo=UTC)
+FIVE_RESETS = T0 + timedelta(hours=4)
+WEEK_RESETS = T0 + timedelta(days=3)
+SETTLE = timedelta(seconds=150)
+
+
+def reading(rid: int, minutes: float, five: float, week: float = 20, *,
+            five_resets: datetime = FIVE_RESETS, account: str = "a") -> Reading:
+    return Reading(rid, account, T0 + timedelta(minutes=minutes),
+                   {"five_hour": five, "seven_day": week},
+                   {"five_hour": five_resets, "seven_day": WEEK_RESETS})
+
+
+def span(sid: int, start: float, end: float | None, account: str = "a") -> Span:
+    return Span(sid, sid, account, T0 + timedelta(minutes=start),
+                None if end is None else T0 + timedelta(minutes=end))
+
+
+def test_back_to_back_attempts_share_their_measurement() -> None:
+    # B starts 5 s after A ends, and the meter rises during B: no exact share for either.
+    spans = [span(1, 0, 10), span(2, 10.1, 20)]
+    reads = [reading(1, -0.01, 10), reading(2, 10.05, 12), reading(3, 24, 21)]
+    an = Analysis(spans, reads, SETTLE)
+    a, b = an.measure(spans[0], "five_hour"), an.measure(spans[1], "five_hour")
+    assert a.label == b.label == SHARED and a.group == b.group == [1, 2]
+    assert (a.group_low, a.group_high) == (10, 12)  # 21 - 10 ± 1, settled
+    assert a.low == 1 and a.high == 12  # A's early reading: at least 12 - 10 - 1
+    assert b.low == 0 and b.high == 12
+    # One job running both: the group's upper bound counts once, not once per attempt.
+    job = combine([a, b])
+    assert (job["label"], job["low"], job["high"]) == (SHARED, 1, 12)
+    totals = {(w["window"]): w for w in an.window_totals()}
+    assert totals["five_hour"]["shared"] == 11 and totals["five_hour"]["unexplained"] == 10
+
+
+def test_an_idle_gap_gives_a_settled_range_and_zero_is_below_one() -> None:
+    spans = [span(1, 0, 10)]
+    an = Analysis(spans, [reading(1, 0, 10, 20), reading(2, 13, 15, 20)], SETTLE)
+    five, week = an.measure(spans[0], "five_hour"), an.measure(spans[0], "seven_day")
+    assert (five.label, five.low, five.high) == (SETTLED, 4, 6)
+    assert (week.label, week.low, week.high) == (SETTLED, 0, 1) and week.as_dict()["text"] == "<1"
+    # Read sooner than the meter settles: a minimum only.
+    early = Analysis(spans, [reading(1, 0, 10), reading(2, 10.5, 15)], SETTLE)
+    m = early.measure(spans[0], "five_hour")
+    assert (m.label, m.low, m.high) == (IMMEDIATE, 4, None)
+    assert combine([m])["text"] == "≥4"
+
+
+def test_a_reset_during_a_job_is_a_minimum_and_jitter_is_not_a_reset() -> None:
+    spans = [span(1, 0, 10)]
+    before = reading(1, 0, 70, five_resets=T0 + timedelta(minutes=5))
+    after = reading(2, 13, 4, five_resets=T0 + timedelta(hours=5, minutes=5))
+    m = Analysis(spans, [before, after], SETTLE).measure(spans[0], "five_hour")
+    assert (m.label, m.low, m.high) == (RESET, 3, None)
+    jitter = reading(2, 13, 72, five_resets=FIVE_RESETS + timedelta(seconds=0.6))
+    m = Analysis(spans, [reading(1, 0, 70), jitter], SETTLE).measure(spans[0], "five_hour")
+    assert (m.label, m.low, m.high) == (SETTLED, 1, 3)
+
+
+def test_missing_or_inconsistent_readings_give_no_number() -> None:
+    spans = [span(1, 0, 10)]
+    for reads in ([reading(2, 13, 15)], [reading(1, 0, 10)]):
+        m = Analysis(spans, reads, SETTLE).measure(spans[0], "five_hour")
+        assert m.label == MISSING and m.low is None and m.high is None
+    fell = Analysis(spans, [reading(1, 0, 10), reading(2, 13, 8)], SETTLE)
+    m = fell.measure(spans[0], "five_hour")
+    assert m.label == INCONSISTENT and m.low is None
+    assert combine([m])["low"] is None
+
+
+def test_a_meter_rising_while_idle_flags_nearby_attempts() -> None:
+    spans = [span(1, 0, 10)]
+    reads = [reading(1, -60, 5), reading(2, -30, 9), reading(3, 0, 9), reading(4, 13, 12)]
+    an = Analysis(spans, reads, SETTLE)
+    assert an.measure(spans[0], "five_hour").outside_use
+    assert an.rises[0]["points"] == 4
+    quiet = Analysis(spans, [reading(1, -60, 9), reading(3, 0, 9), reading(4, 13, 12)], SETTLE)
+    assert not quiet.measure(spans[0], "five_hour").outside_use
+
+
+def test_historical_readings_are_a_minimum_at_best() -> None:
+    spans = [span(1, 0, 10)]
+    reads = [reading(1, 0, 10), reading(2, 13, 15)]
+    m = Analysis(spans, reads, SETTLE, approximate={1}).measure(spans[0], "five_hour")
+    assert (m.label, m.low, m.high, m.approximate) == (IMMEDIATE, 4, None, True)
+
+
+def assistant(mid: str, at: str, model: str = "claude-opus-5-5", out: int = 100,
+              thinking: int = 40, five: int = 0, hour: int = 50) -> str:
+    return json.dumps({"type": "assistant", "timestamp": at, "version": "2.1.310",
+                       "entrypoint": "sdk-py", "sessionId": "s1", "message": {
+                           "id": mid, "model": model, "usage": {
+                               "input_tokens": 3, "output_tokens": out,
+                               "output_tokens_details": {"thinking_tokens": thinking},
+                               "cache_read_input_tokens": 1000,
+                               "cache_creation_input_tokens": five + hour,
+                               "cache_creation": {"ephemeral_5m_input_tokens": five,
+                                                  "ephemeral_1h_input_tokens": hour}}}})
+
+
+def cost_state(start: datetime) -> str:
+    return json.dumps({"type": "cost-state", "startTime": start.timestamp() * 1000,
+                       "modelUsage": {"claude-haiku-5-5": {
+                           "inputTokens": 2000, "outputTokens": 20, "thinkingTokens": 0,
+                           "cacheReadInputTokens": 0, "cacheCreationInputTokens": 0}}})
+
+
+TRANSCRIPT = [
+    # Attempt 1 (12:00): m1 recorded three times, m2 once, and its cost-state.
+    assistant("m1", "2026-11-02T12:00:05Z"), assistant("m1", "2026-11-02T12:00:05Z"),
+    assistant("m1", "2026-11-02T12:00:06Z"), assistant("m2", "2026-11-02T12:01:00Z", five=7),
+    cost_state(T0), "not json",
+    # Attempt 2 (13:00), resuming the session in the same file.
+    assistant("m3", "2026-11-02T13:00:05Z", out=10, thinking=0, hour=0),
+    assistant("m3", "2026-11-02T13:00:05Z", out=10, thinking=0, hour=0),
+]
+
+
+def test_transcript_tokens_count_each_message_once() -> None:
+    first = parse_transcript(TRANSCRIPT, since=T0)
+    assert first.messages == 3 and first.duplicates == 3  # m1, m2, m3
+    one = parse_transcript(TRANSCRIPT[:6], since=T0)
+    assert (one.messages, one.duplicates) == (2, 2)
+    assert one.output == 200 + 20 and one.thinking == 80  # thinking not added to output
+    assert (one.cache_write_5m, one.cache_write_1h) == (7, 100)
+    assert one.per_model["claude-haiku-5-5"]["input"] == 2000  # the side call
+    assert one.input == 6 + 2000 and one.model == "claude-opus-5-5"
+    assert one.cli_version == "2.1.310" and one.entrypoint == "sdk-py"
+    # The resumed attempt counts only its own messages, by time or by ids already counted.
+    later = parse_transcript(TRANSCRIPT, since=T0 + timedelta(hours=1))
+    assert (later.messages, later.output, later.cache_write_1h) == (1, 10, 0)
+    assert "claude-haiku-5-5" not in later.per_model  # attempt 1's cost-state
+    again = parse_transcript(TRANSCRIPT, seen=one.message_ids)
+    assert again.messages == 1 and again.per_model["claude-opus-5-5"]["output"] == 10
+
+
+def test_result_tokens_keep_the_cache_ttl_and_side_models() -> None:
+    t = from_result(
+        {"input_tokens": 5, "output_tokens": 90, "cache_creation_input_tokens": 30,
+         "cache_creation": {"ephemeral_5m_input_tokens": 10, "ephemeral_1h_input_tokens": 20},
+         "output_tokens_details": {"thinking_tokens": 40}},
+        {"claude-opus-5-5": {"inputTokens": 5, "outputTokens": 90,
+                             "cacheCreationInputTokens": 30, "cacheReadInputTokens": 9},
+         "claude-haiku-5-5": {"inputTokens": 100, "outputTokens": 2}})
+    assert (t.output, t.thinking, t.cache_write_5m, t.cache_write_1h) == (92, 40, 10, 20)
+    assert t.input == 105 and t.model == "claude-opus-5-5" and not t.gaps
+
+
+def test_raw_usage_is_kept_without_credentials(tmp_path: Path) -> None:
+    body = {"five_hour": {"utilization": 22, "resets_at": "2026-11-02T16:00:00Z"},
+            "seven_day": {"utilization": 28, "resets_at": "2026-11-05T16:00:00Z"},
+            "seven_day_opus": {"utilization": 3, "resets_at": None},
+            "extra_usage": {"is_enabled": False, "access_token": "tok-123"},
+            "Authorization": "Bearer abc", "note": "Bearer xyz"}
+    usage = parse_usage(body)
+    ledger = Ledger(tmp_path / "l.db")
+    ledger.add_usage("a", T0.isoformat(), usage, "periodic")
+    raw = ledger.one("SELECT raw FROM usage")["raw"]
+    assert "seven_day_opus" in raw and "is_enabled" in raw
+    assert "tok-123" not in raw and "abc" not in raw and "xyz" not in raw
+    # The plan: the login's, else local.yaml's.
+    login = tmp_path / "acct"
+    login.mkdir()
+    (login / ".credentials.json").write_text(json.dumps({"claudeAiOauth": {
+        "accessToken": "secret", "subscriptionType": "pro", "rateLimitTier": "default_pro"}}))
+    assert account_plan(Account("a", login)) == "pro/default_pro"
+    assert account_plan(Account("b", tmp_path / "none", "max")) == "max"
+    local = tmp_path / "local.yaml"
+    local.write_text("accounts: [{name: a, config_dir: /x, plan: pro}]\n"
+                     "calibration_gap_seconds: 200\n")
+    config = load_config(tmp_path / "missing.yaml", local)
+    assert config.accounts[0].plan == "pro" and config.calibration_gap_seconds == 200
+    assert config.quota_settle_seconds == 150
+
+
+def test_an_old_ledger_gains_the_quota_columns(tmp_path: Path) -> None:
+    path = tmp_path / "old.db"
+    conn = sqlite3.connect(path)
+    conn.execute("CREATE TABLE usage (id INTEGER PRIMARY KEY, account TEXT NOT NULL, at TEXT "
+                 "NOT NULL, five_hour REAL, five_hour_resets TEXT, seven_day REAL, "
+                 "seven_day_resets TEXT)")
+    conn.execute("INSERT INTO usage (account, at, five_hour) VALUES ('a', 'x', 1)")
+    conn.commit()
+    conn.close()
+    ledger = Ledger(path)
+    row = ledger.one("SELECT * FROM usage")
+    assert row["source"] == "select" and row["attempt_id"] is None and row["raw"] is None
+    Ledger(path)  # opening it again changes nothing
+    assert ledger.one("SELECT COUNT(*) AS n FROM attempt_meta")["n"] == 0
+
+
+class Meter:
+    """A fake usage endpoint whose meter the stub workers move."""
+
+    def __init__(self) -> None:
+        self.five, self.week, self.fail = 10.0, 20.0, 0
+
+    def __call__(self, account: Account) -> Usage:
+        if self.fail:
+            self.fail -= 1
+            raise UsageError("endpoint down")
+        return Usage(self.five, FIVE_RESETS, self.week, WEEK_RESETS,
+                     raw={"five_hour": {"utilization": self.five}})
+
+
+def metered(env: Env, gap: int = 0) -> tuple[Meter, Callable[..., Any]]:
+    env.config.accounts = [Account("a", env.tmp / "acct", "pro")]
+    env.config.calibration_gap_seconds = gap
+    meter = Meter()
+
+    def spend(points: float, minutes: float, then: StubAction, fail: int = 0):
+        def stage(req: WorkerRequest, attempt: int) -> StubAction:
+            meter.five += points
+            env.now += timedelta(minutes=minutes)
+            meter.fail = fail
+            return then
+        return stage
+    return meter, spend
+
+
+def quota_of(env: Env, attempt_id: int, window: str = "five_hour") -> Measure:
+    an, spans = report.analysis(env.ledger)
+    return an.measure(spans[attempt_id], window)
+
+
+def test_readings_before_after_and_settled_are_linked_to_attempts(env: Env) -> None:
+    meter, spend = metered(env)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"), rate_limits=[{
+        "type": "five_hour", "status": "allowed_warning", "utilization": 0.81,
+        "resets_at": FIVE_RESETS.isoformat(), "raw": {"surpassedThreshold": 0.8}}],
+        usage={"output_tokens": 50, "output_tokens_details": {"thinking_tokens": 20}},
+        model_usage={"claude-opus-5-5": {"inputTokens": 3, "outputTokens": 50}})
+    review = StubAction(handoff=done(verdict="approve"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey),
+                                  **{"survey-review": spend(3, 2, review)}), fetch_usage=meter)
+    seen = drive(d)
+    assert not any(s.startswith("waiting") for s in seen)  # no gap: nothing waits
+    rows = env.ledger.all("SELECT * FROM usage WHERE attempt_id IS NOT NULL ORDER BY id")
+    assert [(r["attempt_id"], r["source"]) for r in rows][:3] == [
+        (1, "before"), (1, "after"), (2, "before")]
+    assert rows[0]["five_hour"] == 10 and rows[1]["five_hour"] == 15
+    assert rows[2]["at"] == rows[1]["at"]  # the next job started at once
+    first, second = quota_of(env, 1), quota_of(env, 2)
+    assert first.label == second.label == SHARED and 1 in first.group and 2 in first.group
+    env.now += timedelta(seconds=200)
+    d.tick()
+    last = env.ledger.one("SELECT MAX(id) AS id FROM attempt")["id"]
+    settled = env.ledger.all("SELECT * FROM usage WHERE source = 'settled'")
+    assert [r["attempt_id"] for r in settled] == [last]
+    d.tick()
+    assert len(env.ledger.all("SELECT * FROM usage WHERE source = 'settled'")) == 1
+    first = quota_of(env, 1)
+    assert (first.group_low, first.group_high) == (7, 9) and first.low == 4
+    meta = report.attempt_meta(env.ledger, 1)
+    assert meta["requested_model"] and meta["effort"] and meta["config_hash"]
+    assert (meta["output_tokens"], meta["thinking_tokens"], meta["plan"]) == (50, 20, "pro")
+    assert meta["work_units"] == 1 and meta["source"] == "live"
+    r = report.inspect(env.ledger, report.find_job(env.ledger, f"{D}-map-1/001-survey"),
+                       env.tmp / "runs")
+    a = r["attempts"][0]
+    assert a["rate_limits"]["events"] == 1 and a["rate_limits"]["last_utilization"] == 0.81
+    assert a["quota"]["five_hour"]["label"] == SHARED
+    text = report.text_inspect(r)
+    assert "shared" in text and "utilization 0.81" in text and "before #" in text
+    maps = [m for m in env.ledger.jobs(map_run(env)["id"], "map")]
+    units = [report.attempt_meta(env.ledger, env.ledger.one(
+        "SELECT id FROM attempt WHERE job_id = ?", m["id"])["id"])["work_units"] for m in maps]
+    assert units == [1, 2]  # b2 (first_batch) has one entry, b1 two
+    q = report.quota(env.ledger)
+    row = next(x for x in q["rows"] if x["key"] == "survey")
+    assert row["five_hour"]["samples"] == 0 and row["five_hour"]["uncertain"]["jobs"] == 1
+    assert "diagnostic" in report.text_quota(q)
+    assert report.quota(env.ledger, by="model", tz="America/New_York")["rows"]
+    assert "5h shared" in report.text_recent(report.recent(env.ledger, "survey", 5))
+    w = report.windows(env.ledger)
+    assert any(x["window"] == "five_hour" and x["shared"] == 8 for x in w["windows"])
+
+
+def test_a_calibration_gap_holds_the_next_job_for_a_settled_reading(env: Env) -> None:
+    meter, spend = metered(env, gap=200)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=meter)
+    out = drive(d)
+    assert out[-1].startswith("waiting: calibration gap")
+    assert len(env.ledger.all("SELECT * FROM attempt")) == 1
+    env.now += timedelta(seconds=100)
+    assert d.tick().action == "waiting"
+    env.now += timedelta(seconds=100)
+    assert d.tick().action == "ran"  # the settled reading first, then the next job
+    settled = env.ledger.one("SELECT * FROM usage WHERE source = 'settled'")
+    assert settled["attempt_id"] == 1 and settled["five_hour"] == 15
+    m = quota_of(env, 1)
+    assert (m.label, m.low, m.high) == (SETTLED, 4, 6)
+    q = report.quota(env.ledger)
+    row = next(x for x in q["rows"] if x["key"] == "survey")
+    assert row["five_hour"]["samples"] == 1 and row["five_hour"]["per_unit"]["median"] == 5
+
+
+def test_a_failed_after_reading_does_not_stop_the_job(env: Env) -> None:
+    meter, spend = metered(env)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey, fail=1)), fetch_usage=meter)
+    assert d.tick().action == "ran"
+    assert env.ledger.get("paused") is None
+    assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
+    assert not env.ledger.all("SELECT * FROM usage WHERE source = 'after'")
+    assert quota_of(env, 1).label in (SHARED, MISSING)
+
+
+def test_backfill_recovers_tokens_and_lists_gaps(tmp_path: Path) -> None:
+    ledger = Ledger(tmp_path / "factory.db")
+    run_id = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path)
+    job = ledger.add_job(run_id, "map", {"batch": "b1"})
+    ledger.set_job(job, status=DONE, account="a")
+    rel = "data/factory/runs/x/003-map/s1.jsonl"
+    (tmp_path / rel).parent.mkdir(parents=True)
+    (tmp_path / rel).write_text("\n".join(TRANSCRIPT[:6]) + "\n")
+    attempt = ledger.add_attempt(job, "start", "p", "a", "abc", at=T0.isoformat())
+    ledger.finish_attempt(attempt, outcome="ok", session_id="s1", transcript=rel,
+                          finished_at=(T0 + timedelta(minutes=10)).isoformat())
+    ledger.add_step(attempt, 1, "rate_limit", "five_hour", "allowed")
+    for minutes, five in ((-0.01, 10), (10.2, 14), (20, 16)):
+        ledger.add_usage("a", (T0 + timedelta(minutes=minutes)).isoformat(),
+                         Usage(five, FIVE_RESETS, 20, WEEK_RESETS), "select")
+    files = {"abc:factory/stages/map.yaml": "stage: map\nmodel: claude-sonnet-5-5\neffort: "
+             "high\nprompt: factory/prompts/map.md\nskills: [explore-diocese]\n",
+             "abc:factory/prompts/map.md": "Map.",
+             f"abc:data/dioceses/{D}/batches.json": json.dumps(BATCHES)}
+    config = Config(accounts=[Account("a", tmp_path / "acct", "pro")])
+    r = backfill(ledger, config, files.get, root=tmp_path)
+    assert len(r["attempts"]) == 1 and r["linked"] == 2
+    meta = report.attempt_meta(ledger, attempt)
+    assert meta["source"] == "backfill" and meta["approximate"] == 1
+    assert (meta["requested_model"], meta["effort"]) == ("claude-sonnet-5-5", "high")
+    assert meta["output_tokens"] == 220 and meta["messages"] == 2
+    assert meta["duplicate_records"] == 2 and meta["work_units"] == 2
+    assert meta["cli_version"] == "2.1.310" and meta["config_hash"]
+    gaps = " ".join(meta["gaps"])
+    assert "SDK version" in gaps and "rate-limit events" in gaps and "plan read" in gaps
+    assert "no settled reading" not in gaps  # the reading at 20 min came after idling
+    sources = [r["source"] for r in ledger.all("SELECT source FROM usage ORDER BY id")]
+    assert sources == ["before", "after", "select"]
+    # Never settled from historical readings: a minimum, marked approximate.
+    m = Analysis([Span.from_row(ledger.one("SELECT * FROM attempt"))],
+                 [Reading.from_row(x) for x in ledger.all("SELECT * FROM usage")], SETTLE,
+                 approximate={attempt}).measure(span(attempt, 0, 10), "five_hour")
+    assert (m.label, m.low, m.high) == (IMMEDIATE, 5, None)
+    again = backfill(ledger, config, files.get, root=tmp_path)
+    assert again == {"attempts": [], "linked": 0}
+    # Without its spec or transcript, it says so.
+    other = ledger.add_attempt(job, "resume", "p", "a", "zzz", at=T0.isoformat())
+    ledger.finish_attempt(other, outcome="crash", finished_at=T0.isoformat())
+    backfill(ledger, config, files.get, root=tmp_path)
+    gaps = " ".join(report.attempt_meta(ledger, other)["gaps"])
+    assert "no transcript" in gaps and "stage spec" in gaps
+
+
+def test_backfill_gives_a_resumed_session_each_attempt_its_own_tokens(tmp_path: Path) -> None:
+    ledger = Ledger(tmp_path / "factory.db")
+    run_id = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path)
+    job = ledger.add_job(run_id, "survey", {})
+    rel = "s1.jsonl"
+    (tmp_path / rel).write_text("\n".join(TRANSCRIPT) + "\n")
+    ids = []
+    for kind, start in (("start", T0), ("resume", T0 + timedelta(hours=1))):
+        a = ledger.add_attempt(job, kind, "p", "a", None, at=start.isoformat())
+        ledger.finish_attempt(a, outcome="ok", session_id="s1", transcript=rel,
+                              finished_at=(start + timedelta(minutes=10)).isoformat())
+        ids.append(a)
+    backfill(ledger, Config(accounts=[Account("a", tmp_path / "acct")]), {}.get, root=tmp_path)
+    first, second = (report.attempt_meta(ledger, a) for a in ids)
+    assert (first["messages"], first["output_tokens"]) == (2, 220)  # m1, m2 only
+    assert (second["messages"], second["output_tokens"]) == (1, 10)  # m3
+    assert second["resumed_from"] == ids[0]
+
+
+def test_a_calibration_gap_ends_the_wait_when_the_other_account_is_over_its_caps(
+        env: Env) -> None:
+    meter, spend = metered(env, gap=200)
+    env.config.accounts.append(Account("b", env.tmp / "acct-b"))
+
+    def fetch(account: Account) -> Usage:
+        return meter(account) if account.name == "a" else Usage(
+            99, FIVE_RESETS, 20, WEEK_RESETS)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=fetch)
+    assert drive(d)[-1].startswith("waiting")
+    waiting = env.ledger.one("SELECT wait_until FROM job WHERE status = ?", WAITING_USAGE)
+    finished = env.ledger.one("SELECT finished_at FROM attempt WHERE id = 1")["finished_at"]
+    # Account a is free once its gap ends, long before b's five-hour window resets.
+    assert datetime.fromisoformat(waiting["wait_until"]) == \
+        datetime.fromisoformat(finished) + timedelta(seconds=200)
+
+
+def test_rate_limit_events_are_scrubbed_and_never_stop_the_attempt(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    meter, spend = metered(env)
+    event = {"type": "five_hour", "status": "allowed_warning", "utilization": 0.9,
+             "raw": {"access_token": "tok-123", "surpassedThreshold": 0.8}}
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"),
+                        rate_limits=[event, event])
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=meter)
+    real = env.ledger.add_rate_limit_event
+    calls = []
+
+    def flaky(*args: Any, **kwargs: Any) -> None:
+        calls.append(1)
+        if len(calls) == 1:
+            raise sqlite3.OperationalError("database is locked")
+        real(*args, **kwargs)
+    monkeypatch.setattr(env.ledger, "add_rate_limit_event", flaky)
+    assert d.tick().action == "ran"
+    assert env.ledger.one("SELECT outcome FROM attempt WHERE id = 1")["outcome"] == OK
+    rows = env.ledger.all("SELECT raw FROM rate_limit_event")
+    assert len(rows) == 1 and "tok-123" not in rows[0]["raw"]
+    assert "surpassedThreshold" in rows[0]["raw"]
+
+
+def test_a_slow_after_reading_does_not_hold_up_the_gates(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(dispatcher_mod, "AFTER_READING_WAIT", 0.2)
+    meter, spend = metered(env)
+    release = threading.Event()
+
+    def slow(account: Account) -> Usage:
+        if threading.current_thread() is not threading.main_thread():  # the after reading
+            release.wait(5)
+        return meter(account)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=slow)
+    started = time.monotonic()
+    assert d.tick().action == "ran"
+    assert time.monotonic() - started < 3
+    release.set()
+    assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
+    assert not env.ledger.all("SELECT * FROM usage WHERE source = 'after'")
+
+
+def test_an_unknown_time_zone_is_a_clear_error(tmp_path: Path) -> None:
+    with pytest.raises(FactoryError, match="unknown time zone 'US/Eastrn'"):
+        report.quota(Ledger(tmp_path / "l.db"), by="hour", tz="US/Eastrn")

@@ -14,6 +14,12 @@ seed_ready_bulletins: 2
 seed_first_run_share: 0.8
 seed_follow_up_weeks: 6
 
+# Quota readings (docs/factory-spec.md, Usage). calibration_gap_seconds > 0 holds the
+# next job on an account that long after its last attempt, for calibration runs only.
+quota_settle_seconds: 150
+quota_sample_minutes: 15
+calibration_gap_seconds: 0
+
 # How often the dispatcher does each thing.
 tick_seconds: 60
 issue_poll_minutes: 10

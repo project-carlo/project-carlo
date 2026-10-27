@@ -15,10 +15,17 @@ You change nothing unless the owner asks.
 - **One job:** `pnpm factory inspect <job>`. It prints the job's stage and the commit it
   ran at, its input and handoff, the gate results, every attempt and send-back, what later
   stages said about its output (reviewer verdicts, the owner's issue answers), its cost,
-  and the path to its transcript.
-- **A stage:** `pnpm factory inspect --stage <stage> --last N` lists its recent jobs, and
-  `pnpm factory cost --stage` shows where usage goes. Pick the jobs worth reading: sent
-  back, blocked, flagged, or far over the stage's usual cost or turns.
+  and the path to its transcript. Each attempt also shows how it ran (model asked for and
+  used, effort, CLI and SDK versions, plan, config hash), its tokens, its rate-limit
+  events, and its five-hour and weekly quota points: a range with a label (`settled`,
+  `immediate` a minimum, `shared` with other attempts, `reset`, `missing`) and the
+  readings used. Only `settled` is a measurement of that attempt alone.
+- **A stage:** `pnpm factory inspect --stage <stage> --last N` lists its recent jobs with
+  their quota, and `pnpm factory quota` shows points per unit of completed work (batch
+  entries, parishes) by stage; `--by model|effort|mode|account|plan|date|hour` compares
+  within stages, with sample counts and coverage. Quota, not dollars, is what limits the
+  factory: `cost` dollars are API prices, a diagnostic. Pick the jobs worth reading: sent
+  back, blocked, flagged, or far over the stage's usual quota or turns.
 - **A Run:** `pnpm factory status`, then inspect the jobs that were sent back or raised
   flags, and the PR's list of seed-review's decisions.
 
@@ -84,9 +91,10 @@ themselves evidence for a candidate.
    the exact edit or a precise description of it, and the reason. Say which jobs it would
    have helped.
 
-Give reasons, not scores. There is no trusted way yet to show a spec change helped; the
-commit each later job ran at shows which version of the spec it used, so the next review
-can compare.
+When you compare quota, say how many settled samples there are; a few uncertain ranges
+are not evidence that one model or setting uses less. Give reasons, not scores. There is
+no trusted way yet to show a spec change helped; the commit each later job ran at shows
+which version of the spec it used, so the next review can compare.
 
 ## Making changes
 
