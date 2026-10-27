@@ -242,6 +242,11 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Two parishes under one pastor can share a cover headed by both names with a Mass box each (Holy Cross/Immaculate Conception, Marydel, 25 Oct 2026): the staff page and the pastor's column say so. Both parishes' sites and the Discover Mass listing can carry that same issue; pick the copy plain curl can read.
+- A ParishesOnline parish can have an organization account for each church that both serve one container (St. John, Milford 19963 and St. Bernadette, Harrington 19952, container 04/0120); record both po-org ids on the one row.
+- A Wix home page's only PDF link can be a one-page insert (stjohnsmilford.com 'Scholarship Tax Credit', 'BULLETIN BOX'), not the bulletin; follow the Bulletin button instead (it goes to parishesonline.com/find/<slug>).
+- A parish's real site can hide behind a spam directory link: holycrossdover.org (found via the Milford site's Central Deanery links) answers 403 to curl but loads in the browser and lists dated bulletin files.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
