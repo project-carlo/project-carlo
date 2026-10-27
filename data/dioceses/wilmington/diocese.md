@@ -133,9 +133,13 @@ batch settles its own rows.
   parish sites link `jppc.net/onlinebulletins/<id>template.pdf`, which redirects to a
   `church-bulletin.org/<slug>` listing of dated PDFs (Downtown Catholic 309, St. Joseph,
   Middletown 319, St. Polycarp 301, St. Margaret of Scotland 306; listings for St. Helena,
-  Our Lady of Fatima 304 and St. Dennis 732). Harrisburg and Allentown read these with a
-  pinned `page-pdfs` recipe; church-bulletin.org answers 406 to a bare "Mozilla/5.0" user
-  agent, and plain curl works.
+  Our Lady of Fatima 304 and St. Dennis 732; St. Mary Magdalen's too). Record it as
+  `page-pdfs https://www.church-bulletin.org/<slug>`, as Harrisburg and Allentown do.
+  church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent; plain curl (the
+  survey) and a full Chrome-style agent (map 003) worked, but in map 004 the sandbox refused
+  a curl with a spoofed agent, so reach it through `probe pdf` or `visit.py` first. Some
+  listings are scanned images (St. Mary Magdalen): `probe pdf` finds no text, so render page
+  1 with parish-site-access `render.py` to read the masthead.
 - **LPi / ParishesOnline** prints most of the Ocean Deanery (containers `04/xxxx`: St.
   Edmond 04/0887, St. Luke 04/0763, St. Mary & Holy Savior 04/0790, St. Mary, Cambridge
   04/0661, St. Michael/Mary Mother of Peace 04/0868, St. Jude, Lewes) and several in the
@@ -144,15 +148,29 @@ batch settles its own rows.
   Brandywine). ParishesOnline org names that join two parishes
   (`holy-spirit-st-peter-the-apostle`, `st-matthew-parish-and-corpus-christi`,
   `our-mother-of-sorrows-st-peter-the-apostle`) are leads, not proof: read the masthead.
+  A cover can print a "United in Christ" deanery Mass-time box naming several parishes
+  (Immaculate Heart of Mary's lists six): that is a deanery schedule, not a shared masthead,
+  so take the parish and staff from page 2 or later.
 - **eCatholic:** about 14 sites (Resurrection, St. Margaret, Seton, St. Mary of the
   Assumption, St. Mary Magdalen, St. Ann, St. Elizabeth, St. Paul, St. Joseph on the
   Brandywine, Good Shepherd, Sacred Heart, St. Christopher, beparish.com, Our Mother of
   Sorrows). Unlike Harrisburg's, most answered plain `probe url` here; resurrectionde.org
   gave HTTP 4xx and needed the browser. `issues.py ecatholic` reads the files without one.
+  A parish in both this list and LPi's can serve one issue on both (St. Joseph on the
+  Brandywine: eCatholic 30639 and container 03/4127): compare the issues and record both
+  ids on one row. A file can also carry a sister parish's pages (St. Ann's 38453 holds St.
+  Thomas's): read page 1.
 - **J.S. Paluch on Discover Mass:** St. Ann, Bethany Beach (`discovermass:st-ann-bethany-beach-de`)
   and a lead for Holy Cross, Dover (`holy-cross-dover-de`). Discover Mass caps downloads per
   IP per day (a 134-byte "Maximum number of files downloaded today" reply, which
   `fetch:check` reports as `not_pdf`): that is the cap, not the row.
+- **Bonventure** (OSV/Duda parish sites, e.g. hrparish.com, Holy Rosary, Claymont): `probe
+  url` misses the bulletin link; `visit.py --links` shows "Bulletin" going to
+  `sponsors.bonventure.net/?page=<n>`, and issues are at `/pdfs/<n>/<YYYY-MM-DD>.pdf`. The
+  https host fails TLS verification from Python (`probe pdf`, `recheck`) but loads in
+  Chrome: use the `http://` form in recipes and evidence (`page-pdfs
+  http://sponsors.bonventure.net/?page=<n>`), and `tools/browser_download.py` if you need
+  the https file.
 - **FATA Online** (`fataonline.com/bulletins/<code>`): Good Shepherd, Perryville links
   `GoodShepherdPerryville`. Plain curl works (Harrisburg).
 - **Self-hosted:** Holy Family, Newark (`bulletin.php`), Immaculate Conception, Elkton and
@@ -168,23 +186,12 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- A shared pastor does not mean a shared bulletin: Holy Child (LPi 03/1109) and St. Helena (church-bulletin.org) both list Rev. Michael Carrier as pastor but publish separately.
-- IHM's LPi cover prints a Mass-time box for six deanery parishes; it is a deanery schedule, not a shared masthead, so read page 2 or later for the staff list.
-- OSV/Duda parish sites (hrparish.com) hide the bulletin link from probe url; visit.py --links shows 'Bulletin' going to sponsors.bonventure.net/?page=<n>. Bonventure PDFs are at /pdfs/<n>/<date>.pdf.
-- sponsors.bonventure.net fails TLS verification from Python (probe pdf, recheck) but loads in Chrome; use the http:// form in recipes and evidence urls, and tools/browser_download.py to read a PDF.
-- church-bulletin.org 406s a bare 'Mozilla/5.0' agent; a full Chrome-style user agent works with curl.
-- A shared pastor can mean a shared bulletin: St. Ann's eCatholic file (38453) has carried both St. Ann and St. Thomas pages since at least 26 July 2026, while sainttom.org's own bulletins page went stale in June; check the sister parish's homepage 'bulletins' link and read page 1 of the file.
-- St. Mary Magdalen's church-bulletin.org issues are scanned images (probe pdf reports no text); render page 1 with parish-site-access render.py to read the masthead.
-- St. Joseph on the Brandywine's eCatholic site (30639) and its LPi container 03/4127 carry the same issue; record both ids on one row.
-- A curl with a spoofed browser user agent was refused by the sandbox; use probe pdf or visit.py instead.
-
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - **Eastern Catholic churches** (St. Nicholas, Wilmington and St. Basil the Great, Chesapeake City, both Ukrainian) are excluded as `other-jurisdiction`, as in every other diocese here. (accepted by survey-review, 002-survey-review, 2026-10-27)
-- **Shared pastors don't make shared bulletins.** A pair under one pastor (St. Ann and St. Thomas the Apostle; Holy Child and St. Helena; St. John the Beloved and St. Catherine of Siena; St. Polycarp and St. Dennis; Immaculate Conception, Elkton and St. Thomas More Oratory) is one row only when one current bulletin covers both. (accepted by survey-review, 002-survey-review, 2026-10-27)
+- **Shared pastors don't make shared bulletins.** A pair under one pastor (St. Ann and St. Thomas the Apostle; Holy Child and St. Helena; St. John the Beloved and St. Catherine of Siena; St. Polycarp and St. Dennis; Immaculate Conception, Elkton and St. Thomas More Oratory) is one row only when one current bulletin covers both. (accepted by survey-review, 002-survey-review, 2026-10-27) Both outcomes occur: Holy Child and St. Helena print two bulletins under Fr. Carrier (map 003, 2026-10-27); St. Ann's eCatholic file has carried St. Thomas's pages since at least 26 July 2026 while sainttom.org's own bulletins page went stale in June (map 004, 2026-10-27). Check the sister parish's homepage "bulletins" link, not only its own bulletins page, and read page 1 of the file.
 - **A seasonal worship site keeps its church row** with a dated `revisit` for its next season: St. Andrew, Ocean City ('seasonal mission of St. Luke – open May 23 – Sept. 6'), St. Mary Star of the Sea, Church Creek ('Memorial Day weekend through late September'), and St. Mary Star of the Sea, Ocean City if its Sunday Mass is summer-only. (accepted by survey-review, 002-survey-review, 2026-10-27)
 
 ## Log
