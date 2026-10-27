@@ -1,0 +1,2013 @@
+{
+  "schema_version": 1,
+  "parish_slug": "niagara-falls-rc-family",
+  "status": "ready",
+  "as_of": "2026-10-25T13:16:20Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:16:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches in one family (St. Joseph, St. Mary of the Cataract, St. John de LaSalle, Prince of Peace, St. Leo). All pages are images; the p1 schedule box gives weekend and weekday Masses and p2/p5/p6/p7 give Confessions and Adoration (SJDL every Thursday, POP Chapel first Friday, St. Mary first Monday). St. Mary's Saturday 5:30 PM Mass ended Oct 10 and is excluded; an All Souls Mass at St. Leo on Nov 2 at 6 PM is recorded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "390d2f2e0f165ccb3f89199d27db8bf81e221eb7728869f5f4258527af6b011c",
+      "fetched_at": "2026-10-25T13:16:20Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "64b96a397fd8b5f7c6feffbc2017bcc05ff0112e19121253af7310aa13d5b5d0",
+      "fetched_at": "2026-10-18T12:43:17Z",
+      "published_date": "2026-10-18",
+      "read": false
+    },
+    {
+      "content_hash": "64a7b59d5116c211a56247ba1705d732a29375f19ea6101f4bfac77bde789104",
+      "fetched_at": "2026-10-11T16:33:39Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "4b1bd217f67d12e9258a100c0fc27f6df3c447f35e5f498690ec6ee8adc15840",
+      "fetched_at": "2026-10-04T14:25:58Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "f4b8b997c0fb0605834d58a5f80a1b7678019456491a577b8ad3dd8625a68b0c",
+      "fetched_at": "2026-09-26T18:54:12Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 4:00pm St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 4:00pm St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Saturday 16:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Saturday 16:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Saturday 16:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Saturday 16:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Saturday 16:00 st-joseph-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on p1 (and the intentions table p3) of the newest bulletin; same in the Oct 11 issue read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 4:00pm POP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 4:00pm POP"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Saturday 16:00 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Saturday 16:00 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Saturday 16:00 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Saturday 16:00 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Saturday 16:00 prince-of-peace-niagara-falls  “Pro-life rosary before Mass during October”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1 (POP = Prince of Peace); same in the Oct 11 issue; p5 also lists 'Saturday Vigil | 4pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 5:30pm SJDL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekend Mass, Saturday 5:30pm SJDL"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Saturday 17:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Saturday 17:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Saturday 17:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Saturday 17:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Saturday 17:30 st-john-de-lasalle",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1 (SJDL = St. John de LaSalle); p6 also lists 'Saturday Vigil | 5:30pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 7:15am St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 7:15am St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 07:15 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 07:15 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 07:15 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 07:15 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 07:15 st-mary-of-the-cataract",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats it for St. Mary of the Cataract.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 10:30am St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 10:30am St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 10:30 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 10:30 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 10:30 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 10:30 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 10:30 st-mary-of-the-cataract",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 9:00am St. Leo"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 9:00am St. Leo"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 09:00 st-leo-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 09:00 st-leo-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 09:00 st-leo-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 09:00 st-leo-niagara-falls  “Children's Mass held on select Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 09:00 st-leo-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p5 repeats 'Sunday | 9am' for the St. Leo site.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 9:00am St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 9:00am St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 09:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 09:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 09:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 09:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 09:00 st-joseph-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats it for the St. Joseph site.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 10:30am SJDL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 10:30am SJDL"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 10:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 10:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 10:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 10:30 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 10:30 st-john-de-lasalle",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p6 repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Sunday 11:30am POP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Sunday 11:30am POP"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Sunday 11:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Sunday 11:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Sunday 11:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Sunday 11:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Sunday 11:30 prince-of-peace-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p5 repeats 'Sunday Masses | 11:30am' for the POP site.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Monday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Monday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Monday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Monday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Monday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p5 repeats 'Weekday | 8:30am Monday/Wednesday/Friday'; intentions table p3 lists each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Wednesday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Wednesday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Wednesday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Wednesday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Wednesday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p5 repeats 'Weekday | 8:30am Monday/Wednesday/Friday'; intentions table p3 lists each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Weekday Mass, Prince of Peace 8:30am M/W/F"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Friday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Friday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Friday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Friday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Friday 08:30 prince-of-peace-niagara-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p5 repeats 'Weekday | 8:30am Monday/Wednesday/Friday'; intentions table p3 lists each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "SJDL 7:45am Thursday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "SJDL 7:45am Thursday & Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Thursday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Thursday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Thursday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Thursday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Thursday 07:45 st-john-de-lasalle",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p6 repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "SJDL 7:45am Thursday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "SJDL 7:45am Thursday & Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Friday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Friday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Friday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Friday 07:45 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Friday 07:45 st-john-de-lasalle",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p6 repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "SJDL 7pm Tuesday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "SJDL 7pm Tuesday"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Tuesday 19:00 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Tuesday 19:00 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Tuesday 19:00 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Tuesday 19:00 st-john-de-lasalle",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Tuesday 19:00 st-john-de-lasalle  “Includes St. Jude Novena at 6:30 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p6 repeats 'Tuesdays | 7pm Mass (6:30pm St. Jude Novena)'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Wednesday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Wednesday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Wednesday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Wednesday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Wednesday 08:00 st-joseph-niagara-falls  “Includes St. Peregrine Novena”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Weekday | 8AM Wednesday/Thurs./Friday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Thursday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Thursday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Thursday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Thursday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Thursday 08:00 st-joseph-niagara-falls  “Includes Our Lady of Mt. Carmel & St. Joseph Novena”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Weekday | 8AM Wednesday/Thurs./Friday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Joseph 8am W/Thur/Fri"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Friday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Friday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Friday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Friday 08:00 st-joseph-niagara-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Friday 08:00 st-joseph-niagara-falls  “Includes St. Padre Pio Novena”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Weekday | 8AM Wednesday/Thurs./Friday'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Monday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Monday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Monday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Monday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Monday 12:10 st-mary-of-the-cataract  “Novena to Our Lady of the Miraculous Medal at 12:00 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Monday/Tues/Thurs: 12:10pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-cataract  “Includes Divine Mercy Chaplet”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Monday/Tues/Thurs: 12:10pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "St. Mary 12:10pm M/Tues/Thur"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-cataract",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-cataract  “Includes Novena to St. John Neumann”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Schedule box p1; p7 repeats 'Monday/Tues/Thurs: 12:10pm'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "POP Site"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 5,
+          "said": "Confessions: POP Site | Saturday 3pm-3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly confession Saturday 15:00–15:45 prince-of-peace-niagara-falls  “At POP Site”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly confession Saturday 15:00–15:45 prince-of-peace-niagara-falls",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly confession Saturday 15:00–15:45 prince-of-peace-niagara-falls",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly confession Saturday 15:00–15:45 prince-of-peace-niagara-falls",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly confession Saturday 15:00–15:45 prince-of-peace-niagara-falls",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed on p5 in the Prince of Peace site block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-niagara-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 7,
+          "said": "St. Joseph Church Site ... Confessions | Saturday 3pm-3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-niagara-falls",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-niagara-falls",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-niagara-falls",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-niagara-falls",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-niagara-falls",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: printed on p7 in the St. Joseph site block.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 6,
+          "said": "Confessions Saturday | 4:30-5:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly confession Saturday 16:30–17:15 st-john-de-lasalle",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly confession Saturday 16:30–17:15 st-john-de-lasalle",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly confession Saturday 16:30–17:15 st-john-de-lasalle",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly confession Saturday 16:30–17:15 st-john-de-lasalle",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly confession Saturday 16:30–17:15 st-john-de-lasalle",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: printed on p6 in the St. John de LaSalle header.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 7,
+          "said": "St. Mary of the Cataract ... Confessions | Sat. 4:30pm-5:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 1,
+          "said": "Saturday 5:30pm St. Mary (box before the Mass was eliminated)"
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-cataract",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-cataract",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-cataract",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly confession Saturday 16:30–17:15 st-mary-of-the-cataract",
+          "page": 7
+        }
+      ],
+      "rationale": "R1: printed on p7 in the St. Mary block of the newest bulletin. The Saturday 5:30 PM Mass here ended Oct 10 and the newest p7 header dropped the Saturday Vigil line while keeping this Confessions line, so the editor changed this block on purpose; the confession time is not tied to the Mass by any wording, so it stays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-de-lasalle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "00:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 6,
+          "said": "Eucharistic Adoration: Every Thursday 8:45am / Midnight"
+        },
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 2,
+          "said": "St. John de LaSalle | Adoration every Thursday 8:45am to Midnight"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "weekly adoration Thursday 08:45–23:59 st-john-de-lasalle  “Every Thursday until Midnight”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly adoration Thursday 08:45–00:00 st-john-de-lasalle",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly adoration Thursday 08:45–00:00 st-john-de-lasalle  “Through Midnight”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly adoration Thursday 08:45–00:00 st-john-de-lasalle  “Ends at Midnight”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly adoration Thursday 08:45–00:00 st-john-de-lasalle",
+          "page": 6
+        }
+      ],
+      "rationale": "R1: printed on p2 and p6 of the newest bulletin; 'Midnight' is 12:00 AM (end 00:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "prince-of-peace-niagara-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "POP Chapel"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 5,
+          "said": "Adoration | POP Chapel First Friday 9am-12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 2,
+          "said": "St. Vincent de Paul Parish | 1st Friday from 9am-12 Noon-- POP Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "specific_date adoration 2026-11-06 09:00–12:00 prince-of-peace-niagara-falls  “First Friday; POP Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly adoration Friday 09:00–12:00 prince-of-peace-niagara-falls  “First Friday of the month, POP Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly adoration Friday 09:00–12:00 prince-of-peace-niagara-falls  “First Friday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly adoration Friday 09:00–12:00 prince-of-peace-niagara-falls  “First Friday of the month; held in POP Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly adoration Friday 09:00–12:00 prince-of-peace-niagara-falls  “First Friday of the month; held in POP Chapel”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R38: named monthly service printed on p2 and p5. The chapel is listed in the Prince of Peace Church Site block on p5, alongside a 'POP Chapel Candle', so it is on site at the listed church. The newest week holds no first Friday, but the issue prints the standing line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 2,
+          "said": "St. Mary of the Cataract | First Monday of the month 7-8pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "specific_date adoration 2026-11-02 19:00–20:00 st-mary-of-the-cataract  “First Monday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "64b96a397fd8",
+          "said": "weekly adoration Monday 19:00–20:00 st-mary-of-the-cataract  “First Monday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "64a7b59d5116",
+          "said": "weekly adoration Monday 19:00–20:00 st-mary-of-the-cataract  “First Monday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly adoration Monday 19:00–20:00 st-mary-of-the-cataract  “First Monday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly adoration Monday 19:00–20:00 st-mary-of-the-cataract  “First Monday of the month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: named monthly service printed on p2 of the newest bulletin (Nov 2 is the next first Monday).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-niagara-falls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Soul's Day Special Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 5,
+          "said": "All Soul's Day Special Mass: Celebrate the Eucharist with us on Monday, November 2nd, at 6pm at the St. Leo Church Site."
+        },
+        {
+          "source": "history",
+          "bulletin": "390d2f2e0f16",
+          "said": "specific_date mass 2026-11-02 18:00 st-leo-niagara-falls  “All Soul's Day Special Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass in the newest bulletin, open to the faithful departed of the parish family.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-cataract",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eliminated after Oct 10"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64a7b59d",
+          "page": 4,
+          "said": "St. Mary of the Cataract will be eliminating the Saturday, 5:30pm Mass. The last occurrence of this Mass will be on Saturday, October 10, 2026."
+        },
+        {
+          "source": "agent",
+          "bulletin": "390d2f2e",
+          "page": 1,
+          "said": "Weekend Mass Saturday lists only St. Joseph 4pm, POP 4pm, SJDL 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b1bd217f67d",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-cataract  “Last occurrence will be October 10, 2026”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f4b8b997c0fb",
+          "said": "weekly mass Saturday 17:30 st-mary-of-the-cataract",
+          "page": 1
+        }
+      ],
+      "rationale": "R9, R20: History still carries a weekly Saturday 5:30 PM St. Mary Mass from older issues. The Oct 11 issue announced its last occurrence as Oct 10, and the newest schedule box no longer lists it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

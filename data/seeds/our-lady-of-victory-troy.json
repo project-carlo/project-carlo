@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victory-troy",
+  "status": "ready",
+  "as_of": "2026-10-25T13:23:21Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:18:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, Our Lady of Victory in Troy and Our Lady of the Snow Mission in Grafton. The schedule box on page 1 of the last three bulletins agrees, and the older two issues show the same weekday and weekend Mass intentions. Nothing open.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4b912a515f44c49c48f9367e6c4dfc01d27daa3533929686194e6ac24fbffff5",
+      "fetched_at": "2026-10-25T13:23:21Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3a00f763c30ba819633c4589d5078c8550d1b414e8324899ec02ca74d3a67a5f",
+      "fetched_at": "2026-10-18T12:51:34Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "98cbb7ba814b18d59de1a568924f434ce403a546b5721d4501ce393344561de4",
+      "fetched_at": "2026-10-11T16:37:57Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "f914a6b92e7e47c5f371b99918b7640a05b77517d2cb25a187afb6e842ed1fbb",
+      "fetched_at": "2026-10-04T14:50:44Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "39152223c4a809a0707e36a22b62f6e817922f41dbb0442213c070a8f1e8993e",
+      "fetched_at": "2026-09-28T22:00:53Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f914a6b9",
+          "page": 5,
+          "said": "Saturday October 3 | Vigil of 27th (Mass intentions list the vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "39152223",
+          "page": 5,
+          "said": "Saturday October 3 | Vigil of 27th (Mass intentions list the vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Saturday 16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Saturday 16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Saturday 16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Saturday 16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Saturday 16:00 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin and the two before it; weekend intentions in the older two.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Saturday Vigil - 4:00PM | Sunday - 9:00AM WEEKEND MASS - OLV"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Sunday 09:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Sunday 09:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Sunday 09:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Sunday 09:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Sunday 09:00 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin and the two before it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-snow-grafton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "OUR LADY OF THE SNOW MISSION - WEEKEND MASS - OLS Sunday | 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "OUR LADY OF THE SNOW MISSION - WEEKEND MASS - OLS Sunday | 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "OUR LADY OF THE SNOW MISSION - WEEKEND MASS - OLS Sunday | 11:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 5,
+          "said": "Our Lady of the Snow Mission, Sunday, October 18 - 11:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Sunday 11:00 our-lady-of-the-snow-grafton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Sunday 11:00 our-lady-of-the-snow-grafton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Sunday 11:00 our-lady-of-the-snow-grafton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Sunday 11:00 our-lady-of-the-snow-grafton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Sunday 11:00 our-lady-of-the-snow-grafton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Our Lady of the Snow Mission is on the church list; its own heading gives Sunday 11:00AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 5,
+          "said": "Tuesday, October 27 | 12:15PM, Weekday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Tuesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Tuesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Tuesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Tuesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Tuesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and in the weekly intentions. R18: Monday and Friday show 'No Mass' every week, so no slot for those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 5,
+          "said": "Tuesday, October 27 | 12:15PM, Weekday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Wednesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Wednesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Wednesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Wednesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Wednesday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and in the weekly intentions. R18: Monday and Friday show 'No Mass' every week, so no slot for those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Tuesday, Wednesday & Thursday - 12:15PM WEEKDAY MASS - OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 5,
+          "said": "Tuesday, October 27 | 12:15PM, Weekday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly mass Thursday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly mass Thursday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly mass Thursday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly mass Thursday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly mass Thursday 12:15 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and in the weekly intentions. R18: Monday and Friday show 'No Mass' every week, so no slot for those days.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Saturday - 3:00PM to 4:00PM SACRAMENT OF RECONCILIATION (CONFESSION) IN OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Saturday - 3:00PM to 4:00PM SACRAMENT OF RECONCILIATION (CONFESSION) IN OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Saturday - 3:00PM to 4:00PM SACRAMENT OF RECONCILIATION (CONFESSION) IN OLV"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of the newest bulletin and the two before it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Begins after the 12:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "Wednesday - after 12:15PM Mass until 5PM ADORATION OF THE BLESSED SACRAMENT IN OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "Wednesday - after 12:15PM Mass until 5PM ADORATION OF THE BLESSED SACRAMENT IN OLV"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "Wednesday - after 12:15PM Mass until 5PM ADORATION OF THE BLESSED SACRAMENT IN OLV"
+        },
+        {
+          "source": "history",
+          "bulletin": "3a00f763c30b",
+          "said": "weekly adoration Wednesday 12:45–17:00 our-lady-of-victory-troy  “Starts after 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f914a6b92e7e",
+          "said": "weekly adoration Wednesday 12:45–17:00 our-lady-of-victory-troy  “Following 12:15 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b912a515f44",
+          "said": "weekly adoration Wednesday 12:15–17:00 our-lady-of-victory-troy  “Begins after 12:15 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "98cbb7ba814b",
+          "said": "weekly adoration Wednesday 13:00–17:00 our-lady-of-victory-troy  “Starts after 12:15 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "39152223c4a8",
+          "said": "weekly adoration Wednesday 12:15–17:00 our-lady-of-victory-troy  “Starts after 12:15 PM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: no clock start is printed, only 'after 12:15PM Mass'; POLICY works a weekday Mass out at 30 minutes after its start, 12:45 PM, ending 5 PM. History reads 12:15, 12:45 or 13:00 (R8); 12:45 is the POLICY time. The Wednesday 4:15 PM Rosary for Vocations 'join us for Eucharistic Adoration' is inside this period (R37).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "ROSARY FOR VOCATIONS IN OLV Wednesday - 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a00f763",
+          "page": 1,
+          "said": "ROSARY FOR VOCATIONS IN OLV Wednesday - 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "98cbb7ba",
+          "page": 1,
+          "said": "ROSARY FOR VOCATIONS IN OLV Wednesday - 4:15PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 3,
+          "said": "4:15PM on Wednesdays in OLV. Join us for Eucharistic Adoration. We will pray the Rosary for priests, religious"
+        }
+      ],
+      "rationale": "R24, R37: the Wednesday 4:15 PM Rosary for Vocations is a devotion held inside the Wednesday Adoration already recorded 12:45 to 5 PM; no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "OUR LADY OF THE MIRACULOUS MEDAL NOVENA IN OLV Thursday - after 12:15PM Mass"
+        }
+      ],
+      "rationale": "R24: a novena is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4b912a51",
+          "page": 1,
+          "said": "FIRST SATURDAY ROSARY IN OLV Saturday - 10:00AM-11:00AM (First Saturday of every month)"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -68,14 +68,17 @@ Four, from the September 2026 masthead:
 - St. Mary of the Lake, Verona Beach (`churches/st-mary-of-the-lake-verona-beach.md`): Sat 5:30 pm,
   Memorial Day to Columbus Day only.
 
-The diocese and the parish site still list four more churches of the merged parish. None of them
+Plus one site with a single yearly Mass: St. Mary, Irish Ridge (`churches/st-mary-irish-ridge.md`),
+where the parish holds its All Souls' Day Mass (6 pm on 3 November 2025 and 2 November 2026, per
+the 19 October 2025 and 25 October 2026 bulletins). It was excluded as closed until 2026-10-26.
+
+The diocese and the parish site still list three more churches of the merged parish. None of them
 has Mass now, and each has its own `excluded/` record:
 
 - St. Patrick, Oneida (the canonical principal church): Masses moved to St. Joseph's at the end
   of 2024 because the ceiling is unsafe (`excluded/st-patrick-oneida.md`).
 - St. Helena, Sherrill: final Mass 29 June 2025 (`excluded/st-helena-sherrill.md`).
 - St. John, North Bay: relegated to profane use by decree, 26 June 2025 (`excluded/st-john-north-bay.md`).
-- St. Mary, Irish Ridge: closed in 2000, now a devotional chapel and cemetery (`excluded/st-mary-irish-ridge.md`).
 
 The diocese's list also sends three closed parishes here, recorded as exclusions: St. Francis
 of Assisi (Durhamville), St. Therese of the Infant Jesus (Munnsville) and Holy Cross (New London).

@@ -1,0 +1,771 @@
+{
+  "schema_version": 1,
+  "parish_slug": "northern-points-cluster-st-cecilia-chestertown",
+  "status": "ready",
+  "as_of": "2026-10-25T13:25:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:22:54Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches; weekend Masses are in the schedule boxes of all four bulletins, with St. Isaac Jogues's Saturday Mass now 4:00 PM (moved from 5:30 PM on Oct 17). Weekly Wednesday 9:30 AM (St. Isaac Jogues) and Thursday 9:30 AM (Blessed Sacrament) Daily Masses are inferred from four weekly announcements. Dated: All Souls Mass Nov 2 6 PM and Thanksgiving Mass Nov 26 9 AM. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5b2be4b99242a5526f5980419f91955dbd004b88fe7737e1e50667fc379db460",
+      "fetched_at": "2026-10-25T13:25:57Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "c2cd5762aa85bcbe89dc96bfcaeac8c441f1c98cf8a1ae33a56c9315b1aca894",
+      "fetched_at": "2026-10-18T12:56:38Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "3b9b0dd062655552567504b99cae43ecefec1ab35d79e8fe48e44e26ad24f8b0",
+      "fetched_at": "2026-10-11T16:31:41Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "1475c3f574fc3841ab868f63aaa0179f74c5179eebd6b648c41394d159d2022e",
+      "fetched_at": "2026-09-28T21:59:15Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-chestertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 1,
+          "said": "Mass Schedule 4:00 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 3,
+          "said": "Mass Time Change: We will change the 5:30 pm Mass time at St. Isaac Jogues to 4:00 pm beginning Saturday, October 17, 2026."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 3,
+          "said": "Mass Time Change: We will change the 5:30 pm Mass time at St. Isaac Jogues to 4:00 pm beginning Saturday, October 17, 2026."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 3,
+          "said": "Mass Time Change: We will change the 5:30 pm Mass time at St. Isaac Jogues to 4:00 pm beginning Saturday, October 17, 2026."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Saturday 16:00 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "specific_date mass 2026-10-17 16:00 st-isaac-jogues-chestertown  “Mass time change for this date only”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "specific_date mass 2026-10-17 16:00 st-isaac-jogues-chestertown  “New permanent Saturday Mass time”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "weekly mass Saturday 17:30 st-isaac-jogues-chestertown  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R40: the newest schedule box prints 4:00 pm; the three older issues announce the permanent change from 5:30 pm starting Oct 17 and the newest bulletin shows it in effect. Older 5:30 pm is superseded (history still read 5:30 in three issues, R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-chestertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 1,
+          "said": "9:00 am, Sunday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 1,
+          "said": "9:00 am, Sunday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 1,
+          "said": "9:00 am, Sunday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 1,
+          "said": "9:00 am, Sunday, St. Isaac Jogues"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Sunday 09:00 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Sunday 09:00 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "weekly mass Sunday 09:00 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "weekly mass Sunday 09:00 st-isaac-jogues-chestertown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: schedule box in all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-bolton-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 1,
+          "said": "10:30 am, Sunday, Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 1,
+          "said": "10:30 am, Sunday, Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 1,
+          "said": "10:30 am, Sunday, Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 1,
+          "said": "10:30 am, Sunday, Blessed Sacrament"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-bolton-landing",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-bolton-landing",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-bolton-landing",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-bolton-landing",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: schedule box in all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-warrensburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 1,
+          "said": "Sunday Mass Schedule ...10:00 am (The Catholic Community of Saint Cecilia)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 1,
+          "said": "Sunday Mass Schedule ...10:00 am (The Catholic Community of Saint Cecilia)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 1,
+          "said": "Sunday Mass Schedule ...10:00 am (The Catholic Community of Saint Cecilia)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 1,
+          "said": "Sunday Mass Schedule ...10:00 am (The Catholic Community of Saint Cecilia)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Sunday 10:00 st-cecilia-warrensburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Sunday 10:00 st-cecilia-warrensburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "weekly mass Sunday 10:00 st-cecilia-warrensburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "weekly mass Sunday 10:00 st-cecilia-warrensburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: St. Cecilia's masthead schedule in all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-chestertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the Parish Center"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 2,
+          "said": "St. Isaac Jogues - Daily Mass: Wednesday, October 21st at 9:30 am in the Parish Center."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 2,
+          "said": "Daily Mass: Wednesday, October 14th at 9:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 2,
+          "said": "Daily Mass: Wednesday, October 7th at 9:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 2,
+          "said": "Daily Mass: Wednesday, September 30th at 9:30 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Wednesday 09:30 st-isaac-jogues-chestertown  “In the Parish Center”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Wednesday 09:30 st-isaac-jogues-chestertown  “Daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "specific_date mass 2026-10-07 09:30 st-isaac-jogues-chestertown  “Daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "specific_date mass 2026-09-30 09:30 st-isaac-jogues-chestertown",
+          "page": 2
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same Wednesday 9:30 am Daily Mass under the St. Isaac Jogues column is announced in four consecutive weeks, so it is weekly. Only the newest says 'in the Parish Center'. Under POLICY, a room of the listed church belongs to the church, with a note. The bulletin's address for the church (6 Church St) differs from the church list's (86 Riverside Dr), and the Parish Center's own address is not given, so the note is kept for the reviewer to see.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-bolton-landing",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 2,
+          "said": "Blessed Sacrament - Daily Mass: Thursday, October 22nd, at 9:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 2,
+          "said": "Daily Mass: Thursday, October 15th, at 9:30 am followed by Adoration."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 2,
+          "said": "Daily Mass: Thursday, October 8th, at 9:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 2,
+          "said": "Daily Mass: Thursday, October 1st at 9:30 am, followed by Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "weekly mass Thursday 09:30 blessed-sacrament-bolton-landing  “Daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Thursday 09:30 blessed-sacrament-bolton-landing  “Daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "specific_date mass 2026-10-08 09:30 blessed-sacrament-bolton-landing  “Daily Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "specific_date mass 2026-10-01 09:30 blessed-sacrament-bolton-landing",
+          "page": 2
+        }
+      ],
+      "rationale": "R35, POLICY Weekly or dated rule 4: the same Thursday 9:30 am Daily Mass at Blessed Sacrament is announced in four consecutive weeks, so it is weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-chestertown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day cluster Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 3,
+          "said": "All Souls Day Mass, St. Isaac Jogues, Monday, November 2, 2026 @ 6 pm. Cluster Mass for all souls in our Book of Life"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "specific_date mass 2026-11-02 18:00 st-isaac-jogues-chestertown  “All Souls Day Cluster Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "specific_date mass 2026-11-02 18:00 st-isaac-jogues-chestertown  “All Souls Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "specific_date mass 2026-11-02 18:00 st-isaac-jogues-chestertown  “All Souls Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "specific_date mass 2026-11-02 18:00 st-isaac-jogues-chestertown  “All Souls Day”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, open to the cluster, on a date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-bolton-landing",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Cluster Thanksgiving Day Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 3,
+          "said": "Cluster Thanksgiving Day Mass, Blessed Sacrament, Thursday, November 26, 2026 @ 9 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "5b2be4b99242",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-bolton-landing  “Cluster Thanksgiving Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-bolton-landing  “Thanksgiving Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-bolton-landing  “Cluster Thanksgiving Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-bolton-landing  “Thanksgiving Day Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on a date after as_of. It is on a Thursday when the weekly 9:30 Daily Mass runs; R17 leaves that weekly slot alone.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-bolton-landing",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 9:30 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 2,
+          "said": "Daily Mass: Thursday, October 15th, at 9:30 am followed by Adoration."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 2,
+          "said": "Daily Mass: Thursday, October 1st at 9:30 am, followed by Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "specific_date adoration 2026-10-15 10:00 blessed-sacrament-bolton-landing  “Following 9:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R16, R33: both dated occurrences (Oct 1, Oct 15) are before as_of; the Oct 8 and Oct 22 listings have no Adoration and no week of the month or recurrence is stated, so no weekly pattern can be written.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 2,
+          "said": "Rosary: Tuesdays at 9:00 am. (Blessed Sacrament)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 2,
+          "said": "Each Sunday in October ... Litany to Mary ... followed by the Rosary, immediately after Mass (St. Cecilia's)"
+        }
+      ],
+      "rationale": "R24: a Rosary or Litany is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5b2be4b9",
+          "page": 1,
+          "said": "Reconciliation By Appointment Only; call Fr. John at 518-494-2617"
+        }
+      ],
+      "rationale": "R26: confession by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-chestertown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b9b0dd0",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1475c3f5",
+          "page": 1,
+          "said": "5:30 pm, Saturday, St. Isaac Jogues"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2cd5762",
+          "page": 3,
+          "said": "We will change the 5:30 pm Mass time at St. Isaac Jogues to 4:00 pm next Saturday, October 17, 2026."
+        },
+        {
+          "source": "history",
+          "bulletin": "c2cd5762aa85",
+          "said": "weekly mass Saturday 17:30 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b9b0dd06265",
+          "said": "weekly mass Saturday 17:30 st-isaac-jogues-chestertown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1475c3f574fc",
+          "said": "weekly mass Saturday 17:30 st-isaac-jogues-chestertown",
+          "page": 1
+        }
+      ],
+      "rationale": "R9, R40: the former Saturday time, replaced by 4:00 PM from Oct 17; the newest bulletin prints 4:00 pm. History's 5:30 readings are from the old schedule box (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

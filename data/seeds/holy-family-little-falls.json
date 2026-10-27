@@ -1,0 +1,1012 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-little-falls",
+  "status": "ready",
+  "as_of": "2026-10-25T13:25:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:18:24Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: Holy Family (Little Falls) and St. Joseph (Dolgeville). Weekend, weekday, Reconciliation and Thursday Adoration times are the same in both bulletins, with Sunday 12 p.m. and most Wednesday 8 a.m. Masses in the Traditional Latin form. First Friday and First Saturday Reconciliation and a First Saturday 9 a.m. Mass (from the Oct 4 issue, R12) are recorded as monthly slots; All Souls' Day Mass on Nov 2 at 8 a.m. is dated. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5a5e15cfbb8357a4337c37623daacb5b956239670e063caf3b4c2682d648a9d8",
+      "fetched_at": "2026-10-25T13:25:57Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "a90ca55522e8e11e4952b10eee39ece0fb9203d02a6d6b41348b203662578625",
+      "fetched_at": "2026-09-28T21:57:40Z",
+      "published_date": "2026-10-04",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "MASS TIMES Saturday 4 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "MASS TIMES Saturday 4 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Saturday 16:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Saturday 16:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Family Mass Times box p1 of both bulletins; the intentions list a 4 p.m. Saturday Mass every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Sunday 10 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Sunday 10 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Sunday 10:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Sunday 10:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Family Mass Times box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Traditional Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Sunday 12 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Sunday 12 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 2,
+          "said": "Sunday, October 25 - 12 p.m. **TLM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Sunday 12:00 holy-family-little-falls  “Traditional Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Sunday 12:00 holy-family-little-falls  “Traditional Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box p1 of both bulletins; the intentions mark it **TLM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Tuesday 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Tuesday 5:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Tuesday 17:30 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Tuesday 17:30 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Family Mass Times box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Usually the Traditional Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Wednesday 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Wednesday 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 2,
+          "said": "Wednesday, October 28 - 8 a.m. **TLM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 2,
+          "said": "Wednesday, October 7 - 8 a.m. NO TLM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Wednesday 08:00 holy-family-little-falls  “Traditional Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Wednesday 08:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass Times box p1 of both bulletins. The Oct 7 week is marked NO TLM but still lists the 8 a.m. Mass, so only the form varies and the Mass is weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Thursday 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Thursday 8 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Thursday 08:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Thursday 08:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Family Mass Times box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Friday 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Friday 8 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Friday 08:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Friday 08:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Family Mass Times box p1 of both bulletins; p3 confirms 'the 8 a.m. Mass on First Friday, November 6th'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-dolgeville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "ST. JOSEPH CHURCH MASS TIMES Sunday 8 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "ST. JOSEPH CHURCH MASS TIMES Sunday 8 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly mass Sunday 08:00 st-joseph-dolgeville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly mass Sunday 08:00 st-joseph-dolgeville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: St. Joseph Mass Times box p1 of both bulletins; the intentions list it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 2,
+          "said": "HOLY FAMILY First Saturday, October 3 - 9 a.m. Lucia Gaetani / Paul Esposito - Mindy Ronson"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "RECONCILIATION First Saturday 8 - 8:50 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "specific_date mass 2026-10-03 09:00 holy-family-little-falls  “First Saturday”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12: a named monthly Mass. The newest bulletin's week (Oct 25 - Nov 1) holds no first Saturday, but the Oct 4 issue's week lists it at 9 a.m. alongside the regular 4 p.m. Saturday Mass, and the newest box still prints First Saturday Reconciliation 8 - 8:50 a.m., the hour before it. The parish website also has a 'First Saturday Mass' event page, though the page text carries no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "RECONCILIATION Saturday 3 - 3:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "RECONCILIATION Saturday 3 - 3:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Saturday 15:00–15:30 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly confession Saturday 15:00–15:30 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Reconciliation box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": "14:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Sunday 1:30 - 2:15 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Sunday 1:30 - 2:15 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Sunday 13:30–14:15 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly confession Sunday 13:30–14:15 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Reconciliation box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Tuesday 4:45 - 5:20 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Tuesday 4:45 - 5:20 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Tuesday 16:45–17:20 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly confession Tuesday 16:45–17:20 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Reconciliation box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "Thursday 6 - 7 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "Thursday 6 - 7 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Thursday 18:00–19:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly confession Thursday 18:00–19:00 holy-family-little-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Reconciliation box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "First Friday 7 - 7:50 a.m. and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "First Friday 7 - 7:50 a.m. and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 3,
+          "said": "Confessions start at 7 a.m. on First Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Friday 07:00–07:50 holy-family-little-falls  “First Friday; also available after Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "specific_date confession 2026-10-02 07:00–07:50 holy-family-little-falls  “First Friday; also available after 8:00 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: monthly line in the Reconciliation box p1; named by its week. History has it in only one of two bulletins, but both print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "First Friday 7 - 7:50 a.m. and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "First Friday 7 - 7:50 a.m. and after Mass"
+        }
+      ],
+      "rationale": "R1, R10: 'and after Mass' has no clock time, so POLICY's weekday rule puts it 30 minutes after the 8 a.m. Mass starts; no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "First Saturday 8 - 8:50 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "First Saturday 8 - 8:50 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Saturday 08:00–08:50 holy-family-little-falls  “First Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "specific_date confession 2026-10-03 08:00–08:50 holy-family-little-falls  “First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: monthly line in the Reconciliation box p1 of both bulletins. History has it in only one of two.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-dolgeville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "ST. JOSEPH CHURCH RECONCILIATION Sunday 7:30 - 7:45 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "ST. JOSEPH CHURCH RECONCILIATION Sunday 7:30 - 7:45 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly confession Sunday 07:30–07:45 st-joseph-dolgeville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly confession Sunday 07:30–07:45 st-joseph-dolgeville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: St. Joseph Reconciliation box p1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "ADORATION Thursday 9 a.m. - 7 p.m. - Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 1,
+          "said": "ADORATION Thursday 9 a.m. - 7 p.m. - Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 3,
+          "said": "Holy Family Parish hosts Adoration from 9 a.m. until 7 p.m. every Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a90ca555",
+          "page": 3,
+          "said": "Holy Family Parish hosts Adoration from 9 a.m. until 7 p.m. every Thursday"
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "weekly adoration Thursday 09:00–19:00 holy-family-little-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a90ca55522e8",
+          "said": "weekly adoration Thursday 09:00–19:00 holy-family-little-falls",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed on p1 (listed under the St. Joseph box but marked Holy Family) and p3 of both bulletins; p3 says Holy Family Parish hosts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-little-falls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 2,
+          "said": "ALL SOULS' DAY HOLY FAMILY Monday, November 2 - 8a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "5a5e15cfbb83",
+          "said": "specific_date mass 2026-11-02 08:00 holy-family-little-falls  “All Souls' Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls' Day Mass in the newest bulletin's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5a5e15cf",
+          "page": 1,
+          "said": "HOLY DAYS 12 p.m. & 5:30 p.m. (Holy Family); HOLY DAYS Vigil 5:30 p.m. (St. Joseph)"
+        }
+      ],
+      "rationale": "R24, R26: the Holy Days lines name no date, and neither bulletin lists a holy day in its week, so no dated Mass can be recorded; they are not a weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

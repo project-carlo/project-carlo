@@ -1,0 +1,2224 @@
+{
+  "schema_version": 1,
+  "parish_slug": "enchanted-mountains-catholic",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:11:44Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:57:02Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches in Olean and Allegany. The newest bulletin prints no Mass-time box, so the weekly Masses come from the dated Mass intentions repeated across five weekly issues, plus the Sacraments box and the Week at a Glance for Confession and Adoration. Open: the November 1 family Holy Hour.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "efb9749241d407bc575709667ce7a4a5cf38733a2f1308d866ecaf12d71fb38c",
+      "fetched_at": "2026-10-25T13:11:44Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "6fd8e6c291a8bf1d4b4e7ebc0d2360177c972985de4baacc34d8599476831fcd",
+      "fetched_at": "2026-10-18T12:36:56Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "653cdd41e5a881e28a50ae92d013ac7fee76c9ce5f4434c4203ca609cd0cdfa8",
+      "fetched_at": "2026-10-11T16:27:09Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7ad25ef3b7419358c56c7ea2cdf3644643e6cec6b662a886ee03f7e43349e818",
+      "fetched_at": "2026-10-04T14:24:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "cd1b60dea594cb794e5644690ae261403636e52922095dace35542f087fafb90",
+      "fetched_at": "2026-09-27T14:04:05Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Monday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Monday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Monday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Monday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Monday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's Mass intentions list Basilica 8:00 am on Mon Oct 26, Tue Oct 27 and Fri Oct 30; the same weekdays and time print in all four older bulletins read. The newest bulletin prints no Mass schedule box, so the weekly pattern comes from these repeated weeks (POLICY, Weekly or dated rule 4). The website pages were navigation only, no schedule text.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Tuesday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Tuesday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Tuesday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Tuesday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Tuesday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's Mass intentions list Basilica 8:00 am on Mon Oct 26, Tue Oct 27 and Fri Oct 30; the same weekdays and time print in all four older bulletins read. The newest bulletin prints no Mass schedule box, so the weekly pattern comes from these repeated weeks (POLICY, Weekly or dated rule 4). The website pages were navigation only, no schedule text.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 8:00 am (Mass intentions, Mon/Tue/Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Friday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Friday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Friday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Friday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Friday 08:00 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's Mass intentions list Basilica 8:00 am on Mon Oct 26, Tue Oct 27 and Fri Oct 30; the same weekdays and time print in all four older bulletins read. The newest bulletin prints no Mass schedule box, so the weekly pattern comes from these repeated weeks (POLICY, Weekly or dated rule 4). The website pages were navigation only, no schedule text.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Monday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Monday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Monday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Monday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Monday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Basilica 12:15 pm Mass is listed every weekday of the newest bulletin and of all four older bulletins. Thu Oct 8 was 'Mass Cancelled' in the Oct 4 issue (a past date, out of scope under R16); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Tuesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Tuesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Tuesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Tuesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Tuesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Basilica 12:15 pm Mass is listed every weekday of the newest bulletin and of all four older bulletins. Thu Oct 8 was 'Mass Cancelled' in the Oct 4 issue (a past date, out of scope under R16); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Wednesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Wednesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Wednesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Wednesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Wednesday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Basilica 12:15 pm Mass is listed every weekday of the newest bulletin and of all four older bulletins. Thu Oct 8 was 'Mass Cancelled' in the Oct 4 issue (a past date, out of scope under R16); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Thursday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Thursday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Thursday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Thursday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Thursday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Basilica 12:15 pm Mass is listed every weekday of the newest bulletin and of all four older bulletins. Thu Oct 8 was 'Mass Cancelled' in the Oct 4 issue (a past date, out of scope under R16); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 12:15 pm (Mass intentions, Mon-Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Friday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Friday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Friday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Friday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Friday 12:15 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Basilica 12:15 pm Mass is listed every weekday of the newest bulletin and of all four older bulletins. Thu Oct 8 was 'Mass Cancelled' in the Oct 4 issue (a past date, out of scope under R16); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 7:30 am Mass Change Effective October 4th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 6,
+          "said": "Hospitality after the 7:30 AM and 11:00 AM Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Sunday 07:30 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "specific_date mass 2026-10-04 07:30 st-mary-of-the-angels-olean  “Effective today, Sunday morning Mass moved from 8:00 AM”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: the Sunday 7:30 AM Basilica Mass prints in every bulletin since the change took effect on Oct 4 (announced in the Sept 27 issue, replacing 8:00 AM). History's 8:00 AM Sunday Basilica Mass in the Sept 27 issue is the old time (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "Basilica 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "Basilica 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "Basilica 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "Basilica 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-angels-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-angels-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: printed for Sunday in every bulletin read, in two weekends within the newest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.John 8:00 am (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.John 8:00 am (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.John 8:00 am (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.John 8:00 am (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.John 8:00 am (Wed)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Wednesday 08:00 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Wednesday 08:00 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Wednesday 08:00 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Wednesday 08:00 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Wednesday 08:00 st-john-evangelist-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: St. John 8:00 am Wednesday Mass in the newest and all four older bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.John 5:30 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.John 5:30 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.John 5:30 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.John 5:30 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.John 5:30 pm (Saturday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Saturday 17:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Saturday 17:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Saturday 17:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Saturday 17:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Saturday 17:30 st-john-evangelist-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Saturday 5:30 pm at St. John in every bulletin read, two Saturdays in the newest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.John 9:30 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.John 9:30 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.John 9:30 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.John 9:30 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.John 9:30 am (Sunday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Sunday 09:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Sunday 09:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Sunday 09:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Sunday 09:30 st-john-evangelist-olean",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Sunday 09:30 st-john-evangelist-olean",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 9:30 am at St. John in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-allegany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Thursday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Thursday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Thursday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Thursday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Thursday 08:00 st-bonaventure-allegany",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Thursday 8:00 am at St. Bonaventure in the newest and all four older bulletins ('St.Bonas' is the bulletin's abbreviation for St. Bonaventure, Allegany).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-allegany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.Bonas 4:00 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.Bonas 4:00 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.Bonas 4:00 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.Bonas 4:00 pm (Saturday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.Bonas 4:00 pm (Saturday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Saturday 16:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Saturday 16:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Saturday 16:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Saturday 16:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Saturday 16:00 st-bonaventure-allegany",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Saturday 4:00 pm at St. Bonaventure in every bulletin read, two Saturdays in the newest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-allegany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "St.Bonas 8:00 am (Sunday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly mass Sunday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly mass Sunday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly mass Sunday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly mass Sunday 08:00 st-bonaventure-allegany",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Sunday 08:00 st-bonaventure-allegany",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:00 am at St. Bonaventure in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bonaventure-allegany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "SAT., OCT 31 3:00-3:45 pm Confessions - BONAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 5,
+          "said": "Sacrament of Reconciliation ... Saturdays 3:00-3:45 | BONAS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 4,
+          "said": "Confessions - BONAS 3:00-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "Confessions - BONAS 3:00-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 4,
+          "said": "Confessions - BONAS 3:00-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "Confessions - BONAS 3:00-3:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly confession Saturday 15:00–15:45 st-bonaventure-allegany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly confession Saturday 15:00–15:45 st-bonaventure-allegany",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly confession Saturday 15:00–15:45 st-bonaventure-allegany",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly confession Saturday 15:00–15:45 st-bonaventure-allegany",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly confession Saturday 15:00–15:45 st-bonaventure-allegany",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the Sacraments page and the weekly calendar give Saturday 3:00-3:45 at St. Bonaventure.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 5,
+          "said": "Sacrament of Reconciliation Wednesdays 4:00-5:00 pm | BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "WED., OCT 28 4:00-5:00 pm Confession & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly confession Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the Sacraments page gives Wednesday 4:00-5:00 at the Basilica (BSMA).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "WED., OCT 28 4:00-5:00 pm Confession & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "Confession & Adoration - BSMA 4:00-5:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-of-the-angels-olean  “Includes Confession”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly adoration Wednesday 16:00–17:00 st-mary-of-the-angels-olean",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the weekly calendar lists Adoration with Confession, Wednesday 4:00-5:00 at the Basilica, every week read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-evangelist-olean",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 5,
+          "said": "Sacrament of Reconciliation ... and 5:00-6:00 pm | SJTE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "WED., OCT 28 5:00-6:00 pm Confession - SJTE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 4,
+          "said": "Confession - SJTE 5:00-6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "Confession - SJTE 5:00-6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 4,
+          "said": "Confession - SJTE 5:00-6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "Confession - SJTE 5:00-6:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly confession Wednesday 17:00–18:00 st-john-evangelist-olean",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly confession Wednesday 17:00–18:00 st-john-evangelist-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly confession Wednesday 17:00–18:00 st-john-evangelist-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "weekly confession Wednesday 17:00–18:00 st-john-evangelist-olean",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly confession Wednesday 17:00–18:00 st-john-evangelist-olean",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: Wednesday 5:00-6:00 pm at St. John (SJTE) in the Sacraments box and the weekly calendar of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Includes Evening Liturgy of the Hours"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "THURS., OCT 29 4:45-7:00 pm Evening LOH & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fd8e6c2",
+          "page": 4,
+          "said": "4:45-7:00 pm Evening LOH & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "4:45-7:00 pm Evening LOH & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 4,
+          "said": "4:45-7:00 pm Evening LOH & Adoration - BSMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "4:45-7:00 pm Evening LOH & Adoration - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "weekly adoration Thursday 16:45–19:00 st-mary-of-the-angels-olean  “Evening Liturgy of the Hours & Adoration”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6fd8e6c291a8",
+          "said": "weekly adoration Thursday 16:45–19:00 st-mary-of-the-angels-olean  “Includes Evening Liturgy of the Hours”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "weekly adoration Thursday 16:45–19:00 st-mary-of-the-angels-olean  “Includes Evening Liturgy of the Hours”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "specific_date adoration 2026-10-08 16:45–19:00 st-mary-of-the-angels-olean  “Evening Liturgy of the Hours & Adoration”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly adoration Thursday 16:45–19:00 st-mary-of-the-angels-olean",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: weekly in the calendar of every bulletin read; POLICY counts the Adoration. The Liturgy of the Hours is named in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 4,
+          "said": "FRI., OCT 2 1st FRIDAY ... 1:00 pm 1st Friday Adoration - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "specific_date adoration 2026-10-02 13:00 st-mary-of-the-angels-olean  “First Friday Adoration”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "specific_date adoration 2026-10-16 09:00–23:59 st-mary-of-the-angels-olean  “40 Hour Adoration at CHA”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R12: a named First Friday service; no read bulletin after Sept 27 has a first Friday (the newest week holds only Friday Oct 30, the fifth/last). No end time printed. Cited from the Sept 27 issue, the newest read bulletin whose week holds the first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Mass and devotions (Our Lady's Intentions, Morning Star)"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "SAT OCT 3 1st Saturday Basilica 8:00 am Our Lady's Intentions (Morning Star)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ad25ef3",
+          "page": 3,
+          "said": "SAT OCT 3 1st Saturday Basilica 8:00 am Our Lady's Intentions (Morning Star)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 3,
+          "said": "SAT OCT 10 Basilica 8:00 am Our Lady's Intentions (Morning Star) (1st Saturday postponed to 10/10)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "653cdd41",
+          "page": 4,
+          "said": "SAT., OCT 10 8:00 am '1ST SATURDAY' Celebrated Mass & Devotions - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "653cdd41e5a8",
+          "said": "specific_date mass 2026-10-10 08:00 st-mary-of-the-angels-olean  “1st Saturday Devotions; Morning Star”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7ad25ef3b741",
+          "said": "specific_date mass 2026-10-03 08:00 st-mary-of-the-angels-olean  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "specific_date mass 2026-10-03 08:00 st-mary-of-the-angels-olean  “First Saturday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: a named First Saturday Mass at the Basilica. The newest bulletin's week holds no first Saturday (Oct 31 is the fifth/last). Cited from the Sept 27 issue (its week holds Oct 3); the Oct 11 issue shows the October one postponed to Oct 10, which is a one-date change under R40 and does not alter the standing first-Saturday pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "150th Anniversary Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "11/24 150th Anniv. Mass - 7pm - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "specific_date mass 2026-11-24 19:00 st-mary-of-the-angels-olean  “150th Anniversary Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated, on or after as_of, at the Basilica; an anniversary of the community, not a Mass for one person, so POLICY does not close it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "11/26 Thanksgiving Mass - 9 am - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "specific_date mass 2026-11-26 09:00 st-mary-of-the-angels-olean  “Thanksgiving Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated Thanksgiving Day Mass at the Basilica, on or after as_of; outside the weekly times (the weekly Basilica Thursday Mass is 12:15).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At Eden Heights"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "TUES., OCT 27 2:00 pm Mass @ Eden Heights"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "specific_date mass 2026-10-27 14:00 st-mary-of-the-angels-olean  “at Eden Heights”",
+          "page": 4
+        }
+      ],
+      "rationale": "R22: Eden Heights is a care facility at another address, not a listed church, and such Masses are for residents. The Tuesday 2:00 pm care-home Masses rotate (Eden Heights, the Pines, Field of Dreams, AbsolutCare) and are excluded for the same reason.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "11/20-21 40 Hour Adoration"
+        }
+      ],
+      "rationale": "R26: Nov 20-21 40 Hour Adoration is listed with no time and no place (the October one was at 'CHA', an unexplained abbreviation; no church of that name is listed), so there is nothing definite to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 7,
+          "said": "All Saints Day, EMCC Family Faith Formation, Sunday, November 1st 4:00 PM - 6:00 PM (all grades, siblings and parents) ... Holy Hour followed by a Potluck Dinner in the Bradley Centennial Hall"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 4,
+          "said": "SUN., NOV 1 4:00 pm EMCC Faith Formation Event - BSMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efb9749241d4",
+          "said": "specific_date adoration 2026-11-01 16:00–18:00 st-mary-of-the-angels-olean  “Holy Hour”",
+          "page": 7
+        }
+      ],
+      "rationale": "R30: a Holy Hour is Adoration under POLICY, at the Basilica, with a definite start. It is aimed at faith-formation families ('all grades, siblings and parents') but nothing says others may not come, so I lean toward including it. The 4:00-6:00 PM span covers the potluck too, so no end time is given (POLICY, Final source checks). Only a dated entry is offered: the Oct 4 'Morning Star Family Holy Hour' (4:00 PM, BSMA) was also on a first Sunday, but no bulletin calls it monthly (R33).",
+      "question": "Add the Nov 1 Holy Hour (4:00 PM) at the Basilica?",
+      "options": [
+        {
+          "label": "Nov 1, 4:00 PM Adoration (Holy Hour)",
+          "entry": {
+            "church_slug": "st-mary-of-the-angels-olean",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour, followed by potluck (family faith formation event)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-angels-olean",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Replaced by 7:30 AM Mass effective October 4"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cd1b60de",
+          "page": 3,
+          "said": "Basilica 7:30 am Mass Change Effective October 4th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efb97492",
+          "page": 3,
+          "said": "SUN NOV 1 Basilica 7:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "cd1b60dea594",
+          "said": "weekly mass Sunday 08:00 st-mary-of-the-angels-olean  “Replaced by 7:30 AM Mass effective October 4th”",
+          "page": 3
+        }
+      ],
+      "rationale": "R9, R20: the Sept 27 issue announced that the Basilica's Sunday 8:00 AM Mass becomes 7:30 AM from Oct 4; the newest bulletin prints only 7:30 and 11:00. The 8:00 AM time is superseded (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,2241 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-neighbors-in-faith",
+  "status": "ready",
+  "as_of": "2026-10-25T13:21:16Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:51:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches, one parish. Weekend Masses, Saturday and Wednesday Reconciliation and Wednesday Adoration are in the page 1 and 2 boxes of all five bulletins read; weekday Masses come from the weekly intentions list (R35). No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "da092867246ac9cca1f2dbc0fc32a34f2b3dcee7f4d14d61bb9cc2d9e9d84578",
+      "fetched_at": "2026-10-25T13:21:16Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "1a41fb671623fcdab7f5093710a5dce65d10a7201fba86a1a9620347b0e4471b",
+      "fetched_at": "2026-10-18T12:52:59Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "cc4e24ceb67a6f28bf2c7ce2d370b70e7c8a73aa3762ca16bb181751d6200726",
+      "fetched_at": "2026-10-11T16:28:43Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "26381128c1ace10cfe5feb7295e671f5eefd5211bc7bfbf4a9f7fba159d0cca7",
+      "fetched_at": "2026-10-04T14:23:01Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "40e5b613e4e053f1eda5ed4fa05a5396c8b222f6cbec77fba13740c79376b3d4",
+      "fetched_at": "2026-09-27T14:03:46Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "fd0eba9a7c3cf8899dce36657e63c8af1f270260838aa1c5f79b452a61f10338",
+      "fetched_at": "2026-09-26T18:53:22Z",
+      "published_date": null,
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "4PM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "4PM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "4PM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "4PM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "4PM - St. James Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Saturday 16:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Saturday 16:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Saturday 16:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Saturday 16:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Saturday 16:00 st-james-jamestown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read; intentions list JMS Saturday 4:00PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "4PM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "4PM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "4PM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "4PM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "4PM - Sacred Heart Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Saturday 16:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Saturday 16:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Saturday 16:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Saturday 16:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Saturday 16:00 sacred-heart-lakewood",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read; intentions list SHR Saturday 4:00PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "5:30PM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "5:30PM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "5:30PM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "5:30PM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "5:30PM - St. Patrick Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Saturday 17:30 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Saturday 17:30 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Saturday 17:30 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Saturday 17:30 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Saturday 17:30 st-patrick-randolph",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read; intentions list PAT Saturday 5:30PM each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "Sunday 8AM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "Sunday 8AM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "Sunday 8AM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "Sunday 8AM - St. James Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "Sunday 8AM - St. James Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Sunday 08:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Sunday 08:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Sunday 08:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Sunday 08:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Sunday 08:00 st-james-jamestown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "9AM - St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "9AM - St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "9AM - St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "9AM - St. John Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "9AM - St. John Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Sunday 09:00 st-john-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Sunday 09:00 st-john-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Sunday 09:00 st-john-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Sunday 09:00 st-john-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Sunday 09:00 st-john-jamestown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "9AM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "9AM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "9AM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "9AM - Sacred Heart Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "9AM - Sacred Heart Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Sunday 09:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Sunday 09:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Sunday 09:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Sunday 09:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Sunday 09:00 sacred-heart-lakewood",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "11AM - Ss. Peter & Paul Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "11AM - Ss. Peter & Paul Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "11AM - Ss. Peter & Paul Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "11AM - Ss. Peter & Paul Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "11AM - Ss. Peter & Paul Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Sunday 11:00 ss-peter-and-paul-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Sunday 11:00 ss-peter-and-paul-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Sunday 11:00 ss-peter-and-paul-jamestown  “In the chapel”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Sunday 11:00 ss-peter-and-paul-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Sunday 11:00 ss-peter-and-paul-jamestown  “In the chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read. The Rosary list's 'Sunday: 10:30 am Mass, in the chapel' is the Rosary before this Mass (30 minutes before each Mass), not a separate Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "11AM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "11AM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "11AM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "11AM - St. Patrick Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "11AM - St. Patrick Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Sunday 11:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Sunday 11:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Sunday 11:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Sunday 11:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Sunday 11:00 st-patrick-randolph",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "3PM - St. James Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "3PM - St. James Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "3PM - St. James Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "3PM - St. James Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "3PM - St. James Reconciliation"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly confession Saturday 15:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly confession Saturday 15:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly confession Saturday 15:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly confession Saturday 15:00 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly confession Saturday 15:00–16:00 st-james-jamestown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box lists a 3PM Reconciliation time before the 4PM Mass at St. James, in all five bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "3PM - Sacred Heart Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "3PM - Sacred Heart Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "3PM - Sacred Heart Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "3PM - Sacred Heart Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "3PM - Sacred Heart Reconciliation"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly confession Saturday 15:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly confession Saturday 15:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly confession Saturday 15:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly confession Saturday 15:00 sacred-heart-lakewood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly confession Saturday 15:00–16:00 sacred-heart-lakewood",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box lists a 3PM Reconciliation time at Sacred Heart in all five bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-randolph",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "5PM - St. Patrick Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "5PM - St. Patrick Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "5PM - St. Patrick Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "5PM - St. Patrick Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "5PM - St. Patrick Reconciliation"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly confession Saturday 17:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly confession Saturday 17:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly confession Saturday 17:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly confession Saturday 17:00 st-patrick-randolph",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly confession Saturday 17:00–17:30 st-patrick-randolph",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box lists a 5PM Reconciliation time at St. Patrick in all five bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 1,
+          "said": "Reconciliation is also available Wednesday evenings from 6 - 6:30PM before 7PM Mass at St. James."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 1,
+          "said": "Reconciliation is also available Wednesday evenings from 6 - 6:30PM before 7PM Mass at St. James."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 1,
+          "said": "Reconciliation is also available Wednesday evenings from 6 - 6:30PM before 7PM Mass at St. James."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 1,
+          "said": "Reconciliation is also available Wednesday evenings from 6 - 6:30PM before 7PM Mass at St. James."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 1,
+          "said": "Reconciliation is also available Wednesday evenings from 6 - 6:30PM before 7PM Mass at St. James."
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly confession Wednesday 18:00–18:30 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly confession Wednesday 18:00–18:30 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly confession Wednesday 18:00–18:30 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly confession Wednesday 18:00–18:30 st-james-jamestown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly confession Wednesday 18:00–18:30 st-james-jamestown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on page 1 of all five bulletins with a clock time; POLICY, Times: the clock time wins over the relative placement.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Victory Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Adoration is open every Wednesday from 9AM to 7PM in Our Lady of Victory Chapel at St. James Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Adoration is open every Wednesday from 9AM to 7PM in Our Lady of Victory Chapel at St. James Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Adoration is open every Wednesday from 9AM to 7PM in Our Lady of Victory Chapel at St. James Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Adoration is open every Wednesday from 9AM to 7PM in Our Lady of Victory Chapel at St. James Church."
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Adoration is open every Wednesday from 9AM to 7PM in Our Lady of Victory Chapel at St. James Church."
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly adoration Wednesday 09:00–19:00 st-james-jamestown  “In Our Lady of Victory Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly adoration Wednesday 09:00–19:00 st-james-jamestown  “Our Lady of Victory Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly adoration Wednesday 09:00–19:00 st-james-jamestown  “Our Lady of Victory Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly adoration Wednesday 09:00–19:00 st-james-jamestown  “In Our Lady of Victory Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly adoration Wednesday 09:00–19:00 st-james-jamestown  “Our Lady of Victory Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names the chapel at St. James Church as Adoration with hours; same text in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Monday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Monday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Monday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Monday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Monday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Monday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Monday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Monday 08:00 st-james-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Monday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Monday 08:00 st-james-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the weekday intentions list JMS Monday 8:00AM in every bulletin read (Oct 26, 19, 12, 5, Sep 28); the Rosary schedule also puts the Monday Rosary at 7:30 am, 30 minutes before Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Thursday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Thursday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Thursday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Thursday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Thursday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Thursday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Thursday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Thursday 08:00 st-james-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Thursday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Thursday 08:00 st-james-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: JMS Thursday 8:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Friday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Friday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Friday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Friday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Friday - JMS - 8:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Friday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Friday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Friday 08:00 st-james-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Friday 08:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Friday 08:00 st-james-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: JMS Friday 8:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Wednesday - JMS - 7:00PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Wednesday - JMS - 7:00PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Wednesday - JMS - 7:00PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Wednesday - JMS - 7:00PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Wednesday - JMS - 7:00PM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Wednesday 19:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Wednesday 19:00 st-james-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Wednesday 19:00 st-james-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Wednesday 19:00 st-james-jamestown  “Followed by Anointing of the Sick”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Wednesday 19:00 st-james-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: JMS Wednesday 7:00PM is in the intentions of all five bulletins read and page 1 says Reconciliation 6 - 6:30PM 'before 7PM Mass at St. James'.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Wednesday - JHN - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Wednesday - JHN - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Wednesday - JHN - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Wednesday - JHN - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Wednesday - JHN - 8:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Wednesday 08:00 st-john-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Wednesday 08:00 st-john-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Wednesday 08:00 st-john-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Wednesday 08:00 st-john-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Wednesday 08:00 st-john-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: JHN Wednesday 8:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Monday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Monday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Monday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Monday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Monday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Monday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Monday 09:00 sacred-heart-lakewood",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Monday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Monday 09:00 sacred-heart-lakewood",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: SHR Monday 9:00AM is in the intentions of four bulletins; the Oct 11 issue (cc4e24ce) lists only JMS 8:00AM for Monday October 12 with no stated cancellation (R17), a holiday-week omission.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Tuesday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Tuesday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Tuesday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Tuesday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Tuesday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Tuesday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Tuesday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Tuesday 09:00 sacred-heart-lakewood",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Tuesday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Tuesday 09:00 sacred-heart-lakewood",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: SHR Tuesday 9:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-lakewood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Friday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Friday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Friday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Friday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Friday - SHR - 9:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Friday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Friday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Friday 09:00 sacred-heart-lakewood",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Friday 09:00 sacred-heart-lakewood",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Friday 09:00 sacred-heart-lakewood",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: SHR Friday 9:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Monday - SSP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Monday - SSP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Monday - SSP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Monday - SSP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 6,
+          "said": "Monday & Friday: 11:30 am, (before 12:10 pm Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Monday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Monday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Monday 12:10 ss-peter-and-paul-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Monday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Monday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: SPP Monday 12:10PM is in the intentions of four bulletins and in the Rosary schedule; the Oct 11 issue (cc4e24ce) omits it for Monday October 12 with no cancellation stated (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-jamestown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Friday - SPP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Friday - SPP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Friday - SPP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Friday - SPP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Friday - SPP - 12:10PM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 6,
+          "said": "Monday & Friday: 11:30 am, (before 12:10 pm Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Friday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Friday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Friday 12:10 ss-peter-and-paul-jamestown",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Friday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Friday 12:10 ss-peter-and-paul-jamestown",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: SPP Friday 12:10PM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Tuesday - PAT - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Tuesday - PAT - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Tuesday - PAT - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Tuesday - PAT - 8:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Tuesday - PAT - 8:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Tuesday 08:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Tuesday 08:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Tuesday 08:00 st-patrick-randolph",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Tuesday 08:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Tuesday 08:00 st-patrick-randolph",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: PAT Tuesday 8:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-randolph",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 2,
+          "said": "Thursday - PAT - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1a41fb67",
+          "page": 2,
+          "said": "Thursday - PAT - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cc4e24ce",
+          "page": 2,
+          "said": "Thursday - PAT - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "26381128",
+          "page": 2,
+          "said": "Thursday - PAT - 9:00AM intention"
+        },
+        {
+          "source": "agent",
+          "bulletin": "40e5b613",
+          "page": 2,
+          "said": "Thursday - PAT - 9:00AM intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "da092867246a",
+          "said": "weekly mass Thursday 09:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1a41fb671623",
+          "said": "weekly mass Thursday 09:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cc4e24ceb67a",
+          "said": "weekly mass Thursday 09:00 st-patrick-randolph",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "26381128c1ac",
+          "said": "weekly mass Thursday 09:00 st-patrick-randolph",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "40e5b613e4e0",
+          "said": "weekly mass Thursday 09:00 st-patrick-randolph",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: PAT Thursday 9:00AM is in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 4,
+          "said": "Anointing of the Sick will be offered on the last Wednesday of the month after the 7PM Mass at St. James."
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration; the 7PM Mass itself is already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "da092867",
+          "page": 6,
+          "said": "Rosary Schedule ... 30 minutes before each Mass"
+        }
+      ],
+      "rationale": "R24: the October Rosary schedule is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

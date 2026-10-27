@@ -1,0 +1,2158 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cathedral-st-mary-albany",
+  "status": "ready",
+  "as_of": "2026-10-25T13:21:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:21:35Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (Cathedral of the Immaculate Conception and Historic St. Mary's), with weekend and weekday Masses and confession identical in all five bulletins, St. Mary's Thursday evening Adoration, first-Friday Adoration at both, and three dated All Souls Masses on November 2. The Cathedral's new Adoration hours begin November 1 and are left out under R20 for update mode to pick up. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "cb385aa96ce9ee0be28cd953ad353c87d35c0f1b0f55f6a709651c74854acd48",
+      "fetched_at": "2026-10-25T13:21:57Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "092dc70be8bc57f46c5b633901ea3ac713d4f4fb141ac890344ac700562af6fd",
+      "fetched_at": "2026-10-18T12:49:44Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "b8d2e541023c069c07ee12c3e7e38cf50191db21690a01598578d98cd41725ca",
+      "fetched_at": "2026-10-11T16:37:07Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "cbcdd96adf75f0396e52a459dcb99f4bfe381996556d75aad04df016c7c7220b",
+      "fetched_at": "2026-10-04T14:46:05Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "f73b4ac5944c15cc7db8ee0819652810a88db8ed708e0119c58795bb2dfa2ba9",
+      "fetched_at": "2026-09-28T21:56:11Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's; Mass 4:00 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's; Mass 4:00 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's; Mass 4:00 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's; Mass 4:00 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's; Mass 4:00 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Saturday 16:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Saturday 16:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Saturday 16:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Saturday 16:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Saturday 16:00 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confession Schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Sunday 08:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Sunday 08:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Sunday 08:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Sunday 08:00 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Sunday 08:00 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confession Schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Sunday: Mass 8:00 am St. Mary's; Mass 10:30 am St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Sunday 10:30 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Sunday 10:30 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Sunday 10:30 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Sunday 10:30 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Sunday 10:30 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confession Schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Sunday 11:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Sunday 11:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Sunday 11:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Sunday 11:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Sunday 11:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confession Schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Mass 11:00 am Cathedral; Mass 5:00 pm Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Sunday 17:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Sunday 17:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Sunday 17:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Sunday 17:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Sunday 17:00 cathedral-immaculate-conception-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confession Schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Monday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Monday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "specific_date mass 2026-11-02 12:05 st-mary-albany  “All Souls Special Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Monday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Monday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Monday 12:05 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Confession and Mass Schedule of all five bulletins read. The November 2 12:05 PM All Souls Mass at St. Mary's falls on a Monday, so this weekly Mass covers it (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Tuesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Tuesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Tuesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Tuesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Tuesday 12:05 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Confession and Mass Schedule of all five bulletins read. The November 2 12:05 PM All Souls Mass at St. Mary's falls on a Monday, so this weekly Mass covers it (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Wednesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Wednesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Wednesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Wednesday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Wednesday 12:05 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Confession and Mass Schedule of all five bulletins read. The November 2 12:05 PM All Souls Mass at St. Mary's falls on a Monday, so this weekly Mass covers it (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Thursday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Thursday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Thursday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Thursday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Thursday 12:05 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Confession and Mass Schedule of all five bulletins read. The November 2 12:05 PM All Souls Mass at St. Mary's falls on a Monday, so this weekly Mass covers it (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Mass 12:05 pm St. Mary's; T, Th: Mass 12:05 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly mass Friday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly mass Friday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly mass Friday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly mass Friday 12:05 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly mass Friday 12:05 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Confession and Mass Schedule of all five bulletins read. The November 2 12:05 PM All Souls Mass at St. Mary's falls on a Monday, so this weekly Mass covers it (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Saturday: Confession 3:15-3:50 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Saturday 15:15–15:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Saturday 15:15–15:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Saturday 15:15–15:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Saturday 15:15–15:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Saturday 15:15–15:50 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "10:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Confession 10:30-10:50 am Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Confession 10:30-10:50 am Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Confession 10:30-10:50 am Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Confession 10:30-10:50 am Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Confession 10:30-10:50 am Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Sunday 10:30–10:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Sunday 10:30–10:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Sunday 10:30–10:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Sunday 10:30–10:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Sunday 10:30–10:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Confession 4:00-4:50 Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "Confession 4:00-4:50 Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "Confession 4:00-4:50 Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "Confession 4:00-4:50 Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "Confession 4:00-4:50 Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Sunday 16:00–16:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Sunday 16:00–16:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Sunday 16:00–16:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Sunday 16:00–16:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Sunday 16:00–16:50 cathedral-immaculate-conception-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read; with no am/pm, it falls before the 5:00 pm Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Monday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Monday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Monday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Monday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Monday 11:30–11:50 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Wednesday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Wednesday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Wednesday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Wednesday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Wednesday 11:30–11:50 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "11:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "M, W, F: Confession 11:30-11:50 am St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Friday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Friday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Friday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly confession Friday 11:30–11:50 st-mary-albany",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Friday 11:30–11:50 st-mary-albany",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Tuesday 12:35 st-mary-albany  “Following the 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Tuesday 12:35 st-mary-albany  “After 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Tuesday 12:35 st-mary-albany  “Following 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Tuesday 12:35 st-mary-albany  “Following the 12:05 PM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: no clock time is given, so POLICY works it out as 30 minutes after the weekday 12:05 PM Mass (12:35); no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:35",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:05 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "T, Th: Mass 12:05 pm St. Mary's; Confession after Mass St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly confession Thursday 12:35 st-mary-albany  “Following the 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly confession Thursday 12:35 st-mary-albany  “After 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly confession Thursday 12:35 st-mary-albany  “Following 12:05 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly confession Thursday 12:35 st-mary-albany  “Following the 12:05 PM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: no clock time is given, so POLICY works it out as 30 minutes after the weekday 12:05 PM Mass (12:35); no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With the Most Holy Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "At St. Mary's: Thursday 6:30 pm-7:30 pm with The Most Holy Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "At St. Mary's: Thursday 6:30 pm-7:30 pm with The Most Holy Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "At St. Mary's: Thursday 6:30 pm-7:30 pm with The Most Holy Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "At St. Mary's: Thursday 6:30 pm-7:30 pm with The Most Holy Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "At St. Mary's: Thursday 6:30 pm-7:30 pm with The Most Holy Rosary"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Thursday 18:30–19:30 st-mary-albany  “Starts Nov 1; with Holy Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "weekly adoration Thursday 18:30–19:30 st-mary-albany  “with The Most Holy Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "weekly adoration Thursday 18:30–19:30 st-mary-albany  “with The Most Holy Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "weekly adoration Thursday 18:30–19:30 st-mary-albany  “Includes The Most Holy Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "f73b4ac5944c",
+          "said": "weekly adoration Thursday 18:30–19:30 st-mary-albany  “With The Most Holy Rosary”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Holy Hour/Adoration): the older bulletins already print this Thursday time as current, so the newest issue's 'new hours start Nov. 1' heading changes only the Cathedral's hours (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 3,
+          "said": "FIRST FRIDAYS SCHEDULE ... Friday: 8:00 am-12 pm at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 3,
+          "said": "FIRST FRIDAY ADORATION AND MASS SCHEDULE ... Friday: 8:00 am-12 pm at St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "specific_date adoration 2026-11-06 08:00–12:00 st-mary-albany  “First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 2): a named first-Friday service is weekly with weeks_of_month first even though the bulletin leads to the November 6 date. The September 27 issue (week of October 2) does not print it, but one silent issue does not disprove a first-Friday schedule printed in the two issues before November 6.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 3,
+          "said": "FIRST FRIDAYS SCHEDULE ... Friday: 11:30 am-3:30 pm at Cathedral"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 3,
+          "said": "FIRST FRIDAY ADORATION AND MASS SCHEDULE ... Friday: 11:30 am-3:30 pm at Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "specific_date adoration 2026-11-06 11:30–15:30 cathedral-immaculate-conception-albany  “First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 2): a named first-Friday service is weekly with weeks_of_month first. The September 27 issue (week of October 2) does not print it, but one silent issue does not disprove a first-Friday schedule printed in the two issues before November 6.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "07:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 1,
+          "said": "ALL SOULS SPECIAL MASSES Monday, November 2nd 7:15 am Mass at Cathedral"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "specific_date mass 2026-11-02 07:15 cathedral-immaculate-conception-albany  “All Souls Special Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "specific_date mass 2026-11-02 07:15 cathedral-immaculate-conception-albany  “All Souls Special Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule (the Cathedral has no Monday 7:15 Mass), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day; commemoration of those of the Cathedral who died this year"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 1,
+          "said": "5:00 pm at Cathedral - including a commemoration of those of the Cathedral who have died over the past year"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "specific_date mass 2026-11-02 17:00 cathedral-immaculate-conception-albany  “All Souls Special Mass; commemoration of the dead”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "092dc70be8bc",
+          "said": "specific_date mass 2026-11-02 17:00 cathedral-immaculate-conception-albany  “Includes a commemoration of those of the Cathedral who have died over the past year”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule (the Cathedral's 5:00 PM Mass is Sunday only), on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament exposed; starts Nov. 1"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Mondays and Thursdays 3pm to 6pm ... New Hours Listed Below Will Start Nov. 1st"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Monday 15:00–18:00 cathedral-immaculate-conception-albany  “Starts Nov 1”",
+          "page": 2
+        }
+      ],
+      "rationale": "R20: the new Cathedral hours start November 1, after as_of; the current schedule ('Thursdays through Sundays') has no times (R26), so nothing is seeded now. Update mode will read the bulletins that show the new hours. The cathedralic.com page lists 'initial' hours (Thu 7-7, Fri 7-9, Sat 7-noon, Sun) that the new hours replace, so it was not used (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament exposed; starts Nov. 1"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Mondays and Thursdays 3pm to 6pm ... New Hours Listed Below Will Start Nov. 1st"
+        },
+        {
+          "source": "agent",
+          "bulletin": "092dc70b",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b8d2e541",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cbcdd96a",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f73b4ac5",
+          "page": 2,
+          "said": "At the Cathedral: The Blessed Sacrament is exposed Thursdays through Sundays."
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Thursday 15:00–18:00 cathedral-immaculate-conception-albany  “Starts Nov 1”",
+          "page": 2
+        }
+      ],
+      "rationale": "R20: the new Cathedral hours start November 1, after as_of; the current schedule ('Thursdays through Sundays') has no times (R26), so nothing is seeded now. Update mode will read the bulletins that show the new hours. The cathedralic.com page lists 'initial' hours (Thu 7-7, Fri 7-9, Sat 7-noon, Sun) that the new hours replace, so it was not used (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament exposed; starts Nov. 1"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "Saturdays 9am to 11 am ... New Hours Listed Below Will Start Nov. 1st"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Saturday 09:00–11:00 cathedral-immaculate-conception-albany  “Starts Nov 1”",
+          "page": 2
+        }
+      ],
+      "rationale": "R20: starts November 1, after as_of; see the Monday and Thursday Cathedral slot. Update mode will read the bulletins that show the new hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "One hour before Mass; starts Nov. 1"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "and One hour before Mass on Sundays at the Blessed Sacrament Altar ... New Hours Listed Below Will Start Nov. 1st"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Sunday 10:00–11:00 cathedral-immaculate-conception-albany  “Starts Nov 1; one hour before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b8d2e541023c",
+          "said": "specific_date adoration 2026-10-18 10:00 cathedral-immaculate-conception-albany  “Flame of Love Thanksgiving”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "cbcdd96adf75",
+          "said": "specific_date adoration 2026-10-18 10:00–11:00 cathedral-immaculate-conception-albany  “Flame of Love Movement”",
+          "page": 3
+        }
+      ],
+      "rationale": "R20: starts November 1, after as_of; see the Monday and Thursday Cathedral slot. Which Sunday Masses it precedes is also not stated (the Cathedral has 11:00 AM and 5:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "One hour before Mass; starts Nov. 1"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 2,
+          "said": "and One hour before Mass on Sundays at the Blessed Sacrament Altar ... New Hours Listed Below Will Start Nov. 1st"
+        },
+        {
+          "source": "history",
+          "bulletin": "cb385aa96ce9",
+          "said": "weekly adoration Sunday 16:00–17:00 cathedral-immaculate-conception-albany  “Starts Nov 1; one hour before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R20: starts November 1, after as_of; see the Monday and Thursday Cathedral slot. Which Sunday Masses it precedes is also not stated (the Cathedral has 11:00 AM and 5:00 PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 3,
+          "said": "FIRST FRIDAYS SCHEDULE ... Friday: 7:30 pm-8:30 pm at St. Francis--Delaware"
+        }
+      ],
+      "rationale": "R22: St. Francis of Assisi (Delaware Avenue) belongs to another parish, so its first-Friday Adoration is not this parish's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cb385aa9",
+          "page": 3,
+          "said": "FIRST SATURDAY RETREAT BLESSED SACRAMENT CHURCH in Albany on November 7th, 7:30am-2pm. Included: Adoration, Confession, Mass, Lunch"
+        }
+      ],
+      "rationale": "R22: a retreat at Blessed Sacrament Church, another parish's church, with no separate times for its Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

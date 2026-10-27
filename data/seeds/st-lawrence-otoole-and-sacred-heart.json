@@ -1,0 +1,1567 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-lawrence-otoole-and-sacred-heart",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:22:31Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:01:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two listed churches. St. Lawrence O'Toole has the weekend, weekday and Monday/Friday confession times in the box on page 1 of every bulletin read; Sacred Heart has only a Sunday 10:30 Mass. The newest issue adds a noon All Souls Mass and no confessions on Nov 2. History's Saturday 8:30 Mass is a Rosary. Open: website-only First Friday 7 PM Mass, a once-printed Fourth Friday Healing Mass, and perpetual adoration with no stated hours.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a507053e036dc493cf8001c4d679ae8af634075935407cd585f54e2d407142d5",
+      "fetched_at": "2026-10-25T13:22:31Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3c3e9bb88da8b7663d0c11c6fb4e4ed4c6d40846080918d4ebbdc67c8ef2902c",
+      "fetched_at": "2026-10-18T12:54:05Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "c66493c92b26dcc6cfa1a0a20abca39ad7736eba37cc8c3ef906d30bdd839dd7",
+      "fetched_at": "2026-09-27T14:06:55Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Saturday 17:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Saturday 17:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Saturday 17:00 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Saturday Vigil 5:00, 7:30 pm (Spanish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Saturday 19:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Saturday 19:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Saturday 19:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 08:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 08:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 08:00 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 09:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 09:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 09:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 11:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 11:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 11:00 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 12:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 12:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 12:30 st-lawrence-otoole-brewster  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sunday 8:00, 9:30, 11:00 am, 12:30 pm (Spanish); 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 17:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 17:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 17:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Monday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Monday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Monday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read; the website schedule agrees. Monday Nov 2 8:30 AM (All Souls Day) is this weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Tuesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Tuesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Tuesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read; the website schedule agrees. Monday Nov 2 8:30 AM (All Souls Day) is this weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Wednesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Wednesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Wednesday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read; the website schedule agrees. Monday Nov 2 8:30 AM (All Souls Day) is this weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Thursday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Thursday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Thursday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read; the website schedule agrees. Monday Nov 2 8:30 AM (All Souls Day) is this weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Monday-Friday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Friday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Friday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Friday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read; the website schedule agrees. Monday Nov 2 8:30 AM (All Souls Day) is this weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-patterson",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Sacred Heart, 414 Haviland Drive, Patterson: Sunday 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Sacred Heart, 414 Haviland Drive, Patterson: Sunday 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Sacred Heart, 414 Haviland Drive, Patterson: Sunday 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Sunday 10:30 sacred-heart-patterson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Sunday 10:30 sacred-heart-patterson",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Sunday 10:30 sacred-heart-patterson",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly confession Monday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly confession Monday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly confession Monday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of every bulletin read, under the St. Lawrence O'Toole listing; the parish website's Confession and Sacraments pages say the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Confessions 4:00 pm-7:00 pm Monday & Friday"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly confession Friday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly confession Friday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly confession Friday 16:00–19:00 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the schedule box of every bulletin read, under the St. Lawrence O'Toole listing; the parish website's Confession and Sacraments pages say the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 2,
+          "said": "ALL SOULS DAY, MONDAY NOVEMBER 2, MASS SCHEDULE ST. LAWRENCE O'TOOLE 8:30 AM 12:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "specific_date mass 2026-11-02 12:00 st-lawrence-otoole-brewster  “All Souls Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin prints a noon All Souls Day Mass at a time outside the weekly schedule, so it is dated (POLICY, Weekly or dated rule 7). The 8:30 AM Mass is the regular Monday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "16:00",
+        "end_time": "19:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 2,
+          "said": "No Confessions Nov. 2"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "specific_date confession 2026-11-02 16:00–19:00 st-lawrence-otoole-brewster  CANCELLED; “No Confessions Nov. 2”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says no confessions on All Souls Day, cancelling that Monday's regular 4:00-7:00 pm window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-otoole-brewster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary, not Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Rosary: 7:45 am Monday - Friday; 6:30 pm Monday; ... 8:30 am Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3c3e9bb8",
+          "page": 1,
+          "said": "Rosary: 7:45 am Monday - Friday; 6:30 pm Monday; ... 8:30 am Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 1,
+          "said": "Rosary: 7:45 am Monday - Friday; 6:30 pm Monday; ... 8:30 am Saturday"
+        },
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/schedule-directions/",
+          "said": "Saturday 8:30 am Rosary"
+        },
+        {
+          "source": "history",
+          "said": "weekly mass Saturday 08:30 st-lawrence-otoole-brewster"
+        },
+        {
+          "source": "history",
+          "bulletin": "a507053e036d",
+          "said": "weekly mass Saturday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3c3e9bb88da8",
+          "said": "weekly mass Saturday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Saturday 08:30 st-lawrence-otoole-brewster",
+          "page": 1
+        }
+      ],
+      "rationale": "R7, R9: the 8:30 am Saturday line is the last item under the Rosary heading in the schedule box, and the parish website lists it as 'Saturday 8:30 am Rosary'. History read it as a Mass; a Rosary is not a Mass (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 1,
+          "said": "Rosary 7:45 am Monday-Friday; 6:30 pm Monday (Zoom); 8:30 am Saturday; Sacred Heart Daily Rosary 9:00 am"
+        }
+      ],
+      "rationale": "R24: Rosaries are not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a507053e",
+          "page": 2,
+          "said": "ALL SAINTS DAY, SUNDAY NOVEMBER 1, BLESSING OF GRAVES, St. Lawrence Cemetery 2:00-3:30 pm"
+        }
+      ],
+      "rationale": "R24: a blessing of graves at the cemetery (another address) is not a Mass, Confession or Adoration. All Saints Day is a Sunday, so the regular Sunday Masses apply.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/schedule-directions/",
+          "said": "First Friday 7 pm Mass, Adoration, Divine Mercy Chaplet, Exposition"
+        }
+      ],
+      "rationale": "POLICY, Final source checks: the Adoration and Exposition on first Fridays has no start or end time of its own, only the Mass's 7 pm; the Mass itself is asked separately. Not copying the larger event's hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/schedule-directions/",
+          "said": "Regular Schedule ... First Friday 7 pm Mass, Adoration, Divine Mercy Chaplet, Exposition"
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "weekly mass Friday 19:00 st-lawrence-otoole-brewster  “Fourth Friday of the month; Healing Mass; Location: Parish Center Cafeteria”",
+          "page": 7
+        }
+      ],
+      "rationale": "R29/R6 doubt: only the parish website's Schedule & Directions page prints it, in a Regular Schedule list whose every other line (Mass times, Rosary times, Monday/Friday confession) matches the bulletin exactly, so the page looks maintained. None of the three bulletins read prints a First Friday Mass, including the Sep 27 issue whose week holds Friday Oct 2; a missing mention is not a conflict (R6), but whether the service continues is not confirmed. Leaning include because the page is the parish's own current-looking schedule.",
+      "question": "Add a First Friday 7 PM Mass at St. Lawrence O'Toole (website only)?",
+      "options": [
+        {
+          "label": "Add: first Fridays 7:00 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c66493c9",
+          "page": 7,
+          "said": "el cuarto viernes de cada mes tendremos la Misa de Sanacion de los enfermos (the Friday prayer group meets from 7:00 pm in the parish center cafeteria)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c9",
+          "page": 7,
+          "said": "weekly mass Friday 19:00 'Fourth Friday of the month; Healing Mass; Location: Parish Center Cafeteria'"
+        }
+      ],
+      "rationale": "R29, R30: printed once, in a Spanish article in the Sep 27 issue only, with no time or place of its own; the 7 PM and the cafeteria belong to the weekly Friday prayer group, so history's time is inferred. No later bulletin (Oct 18, Oct 25) and not the website repeats it. A wrong time is worse than a missing one, so leaning to leave it out.",
+      "question": "Add the Fourth Friday 'Healing Mass' (Misa de Sanacion) at 7 PM?",
+      "options": [
+        {
+          "label": "Add: fourth Fridays 7:00 PM at St. Lawrence",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "fourth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Healing Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        },
+        {
+          "source": "history",
+          "bulletin": "c66493c92b26",
+          "said": "specific_date adoration 2026-10-16 19:00–21:00 st-lawrence-otoole-brewster  “Following Spiritual Warfare presentation; includes Benediction”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stlawrence-sacredheart.org/adoration/",
+          "said": "Divine Mercy Adoration Chapel, Perpetual Adoration, St Lawrence O'Toole Church, 31 Prospect St, Brewster, NY. Weekend and overnight adoration is available"
+        }
+      ],
+      "rationale": "R30, R38: the parish website describes perpetual adoration in a chapel at the church (R6: the parish's own page), with a Blessed Sacrament exposed in a monstrance and adorers signed up for every day. No bulletin read prints Adoration hours (the Sep 27 and Oct 18 issues mention Adoration only in a one-off talk and in general text), and the site gives no clock times, so 24 hours a day is inferred from 'perpetual'. Leaning include because the parish calls it perpetual.",
+      "question": "Add Perpetual Adoration in the Divine Mercy Chapel at St. Lawrence O'Toole, every day, all day?",
+      "options": [
+        {
+          "label": "Every day, 12:00 AM-11:59 PM",
+          "entry": {
+            "church_slug": "st-lawrence-otoole-brewster",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Divine Mercy Chapel, perpetual adoration"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "perpetual"
+    }
+  ]
+}

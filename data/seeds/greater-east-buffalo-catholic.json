@@ -1,0 +1,1817 @@
+{
+  "schema_version": 1,
+  "parish_slug": "greater-east-buffalo-catholic",
+  "status": "ready",
+  "as_of": "2026-10-11T16:30:46Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:55:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches in one family; one shared Mass schedule box on page 1 gives weekend, weekday and Confession times, and it is identical in all three bulletins read. Corpus Christi has a First Saturday 8:45 AM Mass and a dated Dozynki Harvest Mass on Oct 11. St. Adalbert has no regular schedule in these bulletins. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e38a3ade3ab832c7c64fd45d3ad2294d470ead58f9b7963c8e96fc4fd40e30a0",
+      "fetched_at": "2026-10-11T16:30:46Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "32b7c22d587f6d3016f3e54917137970e3b71682e427a903017957fead1b1513",
+      "fetched_at": "2026-10-04T14:25:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "eef5c26bd5c07c93efacd48934d8d948b68990e0146150c1906069032c5e31b8",
+      "fetched_at": "2026-09-26T18:54:03Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Monday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Monday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Monday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins read; page 6 intentions list the Corpus Christi 8:45 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Tuesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Tuesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Tuesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins read; page 6 intentions list the Corpus Christi 8:45 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Wednesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Wednesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Wednesday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins read; page 6 intentions list the Corpus Christi 8:45 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Thursday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Thursday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Thursday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins read; page 6 intentions list the Corpus Christi 8:45 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Corpus Christi 8:45am...M, T, W, Th, F"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Friday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Friday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Friday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins read; page 6 intentions list the Corpus Christi 8:45 Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "8:45am ... First Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "8:45am ... First Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "8:45am ... First Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 6,
+          "said": "10/3 Sat 8:45 AM Corpus Scott & Lisa Brady & Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Saturday 08:45 corpus-christi-buffalo  “First Saturday only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Saturday 08:45 corpus-christi-buffalo  “First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: page 1 names First Saturday Mass at Corpus Christi; the 9/27 issue's week held first Saturday 10/3 and lists the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "8:45am (Sunday)...Corpus Christi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "8:45am (Sunday)...Corpus Christi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "8:45am (Sunday)...Corpus Christi"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly confession Sunday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly confession Sunday 08:45 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly confession Sunday 08:45 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on page 1 gives a start time only; no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "9:15am Corpus Christi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "9:15am Corpus Christi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "9:15am Corpus Christi"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 09:15 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 09:15 corpus-christi-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 09:15 corpus-christi-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-11",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Dozynki Polish Harvest Festival Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 4,
+          "said": "Dozynki Harvest Mass - Sunday - 10:00am, Corpus Christi Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 6,
+          "said": "10/11 Sun 10:00 AM Corpus +Zdzislawa Seternus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 6,
+          "said": "10/11 Sun 10:00 AM Corpus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "specific_date mass 2026-10-11 10:00 corpus-christi-buffalo  “Dozynki Polish Harvest Festival Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "specific_date mass 2026-10-11 10:00 corpus-christi-buffalo  “Dożynki Harvest Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "specific_date mass 2026-10-11 10:00 corpus-christi-buffalo  “Dozynki Polish Harvest Festival Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated festival Mass outside the weekly schedule, open to all, on the as_of date (2026-10-11). Not recorded as a cancellation of the 9:15 AM Mass because the bulletin does not say it is cancelled (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 6,
+          "said": "10/17 Sat 8:45 AM Corpus NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "8:45am ... First Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "specific_date mass 2026-10-17 08:45 corpus-christi-buffalo  CANCELLED",
+          "page": 6
+        }
+      ],
+      "rationale": "R9, R17: history read this NO MASS line as a cancellation. The Saturday 8:45 Mass is First Saturday only and 10/17 is a third Saturday, so there is no scheduled Mass to cancel; the line is a blank template row (R39).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Tuesday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Tuesday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Tuesday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Tuesday/Thursday 8:00am...St. John Gualbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Thursday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Thursday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Thursday 08:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "3:30pm (Saturday)...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "3:30pm (Saturday)...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "3:30pm (Saturday)...St. John Gualbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly confession Saturday 15:30 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly confession Saturday 15:30 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly confession Saturday 15:30 st-john-gualbert-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on page 1; start time only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. John Gualbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Saturday 16:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Saturday 16:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Saturday 16:00 st-john-gualbert-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Saturday vigil listed on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "9:00am...St. John Gualbert (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "9:00am...St. John Gualbert (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "9:00am...St. John Gualbert (Polish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 09:00 st-john-gualbert-cheektowaga  “Polish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 09:00 st-john-gualbert-cheektowaga  “Polish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 09:00 st-john-gualbert-cheektowaga  “Polish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1; POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-gualbert-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "11:45am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "11:45am...St. John Gualbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "11:45am...St. John Gualbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 11:45 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 11:45 st-john-gualbert-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 11:45 st-john-gualbert-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Monday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Monday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Monday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Wednesday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Wednesday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Wednesday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Friday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Friday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Friday 08:30 st-katharine-drexel-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-katharine-drexel-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "10:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "10:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "10:30am...St. Katharine Drexel"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 10:30 st-katharine-drexel-buffalo  “Children's Liturgy of the Word on first and third Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 10:30 st-katharine-drexel-buffalo  “Children's Liturgy on 1st & 3rd Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 10:30 st-katharine-drexel-buffalo  “Children's Liturgy on 1st & 3rd Sundays”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1. The Children's Liturgy of the Word on 1st and 3rd Sundays is part of this Mass, so no separate slot (POLICY, Weekly or dated 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Monday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Monday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Monday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Wednesday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Wednesday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Wednesday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "Monday/Wednesday/Friday 8:00am...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Friday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Friday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Friday 08:00 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "3:15pm (Saturday)...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "3:15pm (Saturday)...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "3:15pm (Saturday)...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly confession Saturday 15:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly confession Saturday 15:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly confession Saturday 15:15 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on page 1; start time only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "SATURDAY VIGIL: 4:00pm...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Saturday 16:00 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Saturday vigil listed on page 1 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "10:15am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "10:15am...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "10:15am...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 10:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 10:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 10:15 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "12:00pm...St. Stanislaus (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "12:00pm...St. Stanislaus (Polish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "12:00pm...St. Stanislaus (Polish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 12:00 st-stanislaus-buffalo  “Polish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 12:00 st-stanislaus-buffalo  “Polish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 12:00 st-stanislaus-buffalo  “Polish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1; POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "4:15pm (Sunday)...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "4:15pm (Sunday)...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "4:15pm (Sunday)...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly confession Sunday 16:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly confession Sunday 16:15 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly confession Sunday 16:15 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on page 1; start time only.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stanislaus-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e38a3ade",
+          "page": 1,
+          "said": "5:00pm...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "32b7c22d",
+          "page": 1,
+          "said": "5:00pm...St. Stanislaus"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eef5c26b",
+          "page": 1,
+          "said": "5:00pm...St. Stanislaus"
+        },
+        {
+          "source": "history",
+          "bulletin": "e38a3ade3ab8",
+          "said": "weekly mass Sunday 17:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "32b7c22d587f",
+          "said": "weekly mass Sunday 17:00 st-stanislaus-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eef5c26bd5c0",
+          "said": "weekly mass Sunday 17:00 st-stanislaus-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday schedule on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

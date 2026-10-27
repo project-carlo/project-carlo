@@ -1,0 +1,2148 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-victory-basilica",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:16:46Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:15:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two listed churches. Weekend and weekday Mass times and Saturday confessions are the same in every issue read, and the Friday afternoon Adoration takes its 1:30 PM start from the parish's events page. Bistrica Masses are dated (Nov 3, Nov 17, Dec 1, Dec 8). Open: whether to keep the Friday 8:15 AM Mass 'when school is in session'. Left out: eve-of-first-Friday and eve-of-holy-day confessions (cannot be written as weekly), weddings and the Nov 21 family event.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "8bf3f005e8d377eaae900214f00281f97762950a4bc7bd9821da14f52ae813fc",
+      "fetched_at": "2026-10-25T13:16:46Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3b6f4f905f3717333576f3acb26847af8ec1f35f2af1ae517e0a9b0dcd128abc",
+      "fetched_at": "2026-10-18T12:43:42Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "2b414c0c3f774f552550dfa5776fca36265615473443a4200edf604f40e13c1e",
+      "fetched_at": "2026-10-11T16:33:59Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "3b0e602b537c02a2b2ce652fcbc187cd6d33730b82cc0024c49a58b367959b23",
+      "fetched_at": "2026-10-04T14:27:03Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "027bc9ba0bcb8aef639851435812c07097f7c13db6e39923714f1c75fd0734f3",
+      "fetched_at": "2026-09-26T18:54:23Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil: 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil: 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday Vigil: 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Saturday, October 31: 4:30 pm Colette Cavallaro"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Saturday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Saturday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Saturday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Saturday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Saturday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of the three bulletins read and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Sunday, October 25: 8:00 am, 10:00 am, 12:00 pm, 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Sunday 08:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Sunday 08:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Sunday 08:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Sunday 08:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Sunday 08:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of the three bulletins read and in the intentions. The All Saints Day children's procession at the 10:00 Mass is not a separate Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Sunday, October 25: 8:00 am, 10:00 am, 12:00 pm, 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Sunday 10:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Sunday 10:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Sunday 10:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Sunday 10:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-10-11 10:30 our-lady-of-victory-lackawanna  “Children's Liturgy Mass”  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "agent",
+          "bulletin": "027bc9ba",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba",
+          "said": "weekly mass with day_of_week stored as '10:00 AM' at 10:00, p1: a malformed day field for this Sunday 10 a.m. Mass"
+        }
+      ],
+      "rationale": "R1, R7: printed in the Weekend Masses box of all four bulletins read and in the intentions. History's one event with the day stored as '10:00 AM' is this Sunday 10:00 Mass read badly (the Sep 27 box prints 'Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m.'). The All Saints Day children's procession at the 10:00 Mass is not a separate Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Sunday, October 25: 8:00 am, 10:00 am, 12:00 pm, 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Sunday 12:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Sunday 12:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Sunday 12:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Sunday 12:00 our-lady-of-victory-lackawanna  “Noon”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Sunday 12:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of the three bulletins read and in the intentions. The All Saints Day children's procession at the 10:00 Mass is not a separate Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Sunday: 8 a.m., 10 a.m., Noon, 4:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Sunday, October 25: 8:00 am, 10:00 am, 12:00 pm, 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Sunday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Sunday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Sunday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Sunday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Sunday 16:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of the three bulletins read and in the intentions. The All Saints Day children's procession at the 10:00 Mass is not a separate Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Monday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Monday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Monday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Monday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Monday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Monday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Monday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Monday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Monday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Monday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Tuesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Tuesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Tuesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Tuesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Tuesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Wednesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Wednesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Wednesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Wednesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Wednesday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Thursday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Thursday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Thursday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Thursday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Thursday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Thursday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Thursday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Thursday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Thursday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Thursday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Friday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Friday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Friday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Friday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Friday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Friday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Friday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Friday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Friday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Friday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Saturday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Saturday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Saturday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Saturday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Saturday 07:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday-Saturday: 7:30 a.m. and 12:10 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Monday, October 26: 7:30 am, 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Saturday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Saturday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Saturday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Saturday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Saturday 12:10 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Masses box of the three bulletins read and in the intentions. Nov 2 (All Souls) keeps the 7:30 and 12:10 times, so nothing separate is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "There is an additional Mass at 8:15 a.m. on Fridays when school is in session."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "There is an additional Mass at 8:15 a.m. on Fridays when school is in session."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "There is an additional Mass at 8:15 a.m. on Fridays when school is in session."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Friday, October 30: 8:15 am Richard Wilkie by Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly mass Friday 08:15 our-lady-of-victory-lackawanna  “When school is in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Friday 08:15 our-lady-of-victory-lackawanna  “When school is in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Friday 08:15 our-lady-of-victory-lackawanna  “When school is in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly mass Friday 08:15 our-lady-of-victory-lackawanna  “When school is in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly mass Friday 08:15 our-lady-of-victory-lackawanna  “When school is in session”",
+          "page": 1
+        }
+      ],
+      "rationale": "R30: hedged availability. The Mass is printed in the schedule box and in the intentions of every Friday read, and school is in session now, but the file cannot say 'when school is in session'. Leaning include with that note.",
+      "question": "Friday 8:15 AM Mass 'when school is in session': include it weekly?",
+      "options": [
+        {
+          "label": "Fridays 8:15 AM",
+          "entry": {
+            "church_slug": "our-lady-of-victory-lackawanna",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "When school is in session"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 12:10 PM Mass; Benediction at 5:00 PM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "EUCHARISTIC ADORATION Friday Afternoons. Join us each Friday afternoon, following the 12:10 p.m. Mass, until Benediction at 5:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://www.olvbasilica.org/event/100809/eucharistic-adoration?session_id=101319",
+          "said": "Eucharistic Adoration, Fri Oct 30th, 2026 1:30 pm - Fri Oct 30th, 2026 5:00 pm. Join us each Friday for Eucharistic Adoration after 12:10 Mass until 5 p.m.",
+          "schedule_check": {
+            "checked_at": "2026-10-26T12:17:16Z",
+            "current_because": "The parish's own event page lists weekly Friday sessions from Aug 21 through Oct 30, 2026, each 1:30-5:00 pm, so it is being kept up to date through the current month.",
+            "bulletin": "8bf3f005",
+            "fits_because": "The bulletin says Friday afternoons following the 12:10 p.m. Mass until Benediction at 5:00 p.m. with no clock start; the site's 1:30 pm start and 5:00 pm end fit that and the same wording."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly adoration Friday 12:10–17:00 our-lady-of-victory-lackawanna  “Following the 12:10 p.m. Mass until Benediction”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly adoration Friday 12:40–17:00 our-lady-of-victory-lackawanna  “Following 12:10 PM Mass; includes Benediction”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly adoration Friday 12:45–17:00 our-lady-of-victory-lackawanna  “Following the 12:10 PM Mass; until Benediction at 5:00 PM”  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly adoration Friday 13:00–17:00 our-lady-of-victory-lackawanna  “Following the 12:10 p.m. Mass; Benediction at 5:00 p.m.”  (a different time)",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly adoration Friday 12:10–17:00 our-lady-of-victory-lackawanna  “Following 12:10 PM Mass; includes Benediction at 5:00 PM”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R6: the bulletin gives only 'following the 12:10 p.m. Mass' with no start time; the parish's own events page gives 1:30 pm each Friday and ends at 5:00 pm like the bulletin's Benediction. Used instead of R10's 12:40 because a clock time is available. History's 12:10, 12:40, 12:45 and 1:00 starts were guesses at the same line (R7, R8). Benediction is the end, not a second event (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-lackawanna  “Except Holy Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of the three bulletins read. The Holy Saturday exception is outside the weekly pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "SACRAMENT OF RECONCILIATION Saturdays: (except Holy Saturday) 3:00-4:00 p.m. and 7:00-7:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "weekly confession Saturday 19:00–19:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly confession Saturday 19:00–19:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly confession Saturday 19:00–19:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly confession Saturday 19:00–19:30 our-lady-of-victory-lackawanna  “Except Holy Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "weekly confession Saturday 19:00–19:30 our-lady-of-victory-lackawanna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box of the three bulletins read. The Holy Saturday exception is outside the weekly pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eve of First Fridays"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Eve of First Fridays: 3:00-4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Eve of First Fridays: 3:00-4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Eve of First Fridays: 3:00-4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "weekly confession Thursday 15:00–16:00 our-lady-of-victory-lackawanna  “Eve of First Fridays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date confession 2026-10-01 15:00–16:00 our-lady-of-victory-lackawanna  “Eve of First Friday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R33: the day is the evening before a first Friday, which is the first Thursday only some months (the Thursday before Friday Nov 6 is Nov 5, but before Friday Jan 1 it is Dec 31). The file cannot write it, and no bulletin prints a date for the next one, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 1,
+          "said": "Eve of Holy Days: 3:00-4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b6f4f90",
+          "page": 1,
+          "said": "Eve of Holy Days: 3:00-4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2b414c0c",
+          "page": 1,
+          "said": "Eve of Holy Days: 3:00-4:00 p.m."
+        }
+      ],
+      "rationale": "R33, R26: the eve of a holy day has no weekday of its own and the bulletins print no dates for the coming ones, so no entry can be written. The coming eves (Dec 7 for the Immaculate Conception) are not printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-bistrica-lackawanna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Bistrica"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "OUR LADY OF BISTRICA ... two Masses per month are celebrated there. The next date and intention is: Tuesday, November 3 at 6:30 p.m. Cheryl A. Levulis (Anniv. of Death)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b0e602b",
+          "page": 3,
+          "said": "OUR LADY OF BISTRICA ... two Masses per month are celebrated there. The next date and intention is: Tuesday, November 3 at 6:30 p.m. Cheryl A. Levulis (Anniv. of Death)"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "specific_date mass 2026-11-03 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-11-03 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date mass 2026-11-03 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated Mass at a listed church on or after as_of. Our Lady of Bistrica no longer has weekend Masses; the Masses are announced by date. History's 6:30 PM matches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-bistrica-lackawanna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Bistrica"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b0e602b",
+          "page": 3,
+          "said": "Tuesday, November 17 at 6:30 pm Helen Ginal by Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-11-17 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date mass 2026-11-17 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        }
+      ],
+      "rationale": "R19: announced in the October 4 bulletin's list of Bistrica Masses; nothing newer contradicts it (the newest only names the next one).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-bistrica-lackawanna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-01",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Bistrica"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b0e602b",
+          "page": 3,
+          "said": "Tuesday, December 1 at 6:30 pm Living & Deceased Members of the Joseph & Charlotte Gentile Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-12-01 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date mass 2026-12-01 18:30 our-lady-of-bistrica-lackawanna",
+          "page": 3
+        }
+      ],
+      "rationale": "R19: announced in the October 4 bulletin's list of Bistrica Masses; nothing newer contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-bistrica-lackawanna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Bistrica; Solemnity of the Immaculate Conception"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b0e602b",
+          "page": 3,
+          "said": "Tuesday, December 8 at 6:30 pm (Solemnity of the Immaculate Conception) Lois Hooper by husband Jim Hooper"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-12-08 18:30 our-lady-of-bistrica-lackawanna  “Solemnity of the Immaculate Conception”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date mass 2026-12-08 18:30 our-lady-of-bistrica-lackawanna  “Solemnity of the Immaculate Conception”",
+          "page": 3
+        }
+      ],
+      "rationale": "R19: announced in the October 4 bulletin's list of Bistrica Masses; nothing newer contradicts it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Wedding Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Saturday, October 24: 1:30 pm Wedding: Abigail Barron & Jorg Mruk"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "weekly mass Saturday 13:30 our-lady-of-victory-lackawanna  “Wedding Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "specific_date mass 2026-10-24 13:30 our-lady-of-victory-lackawanna  “Wedding Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "2b414c0c3f77",
+          "said": "weekly mass Saturday 13:30 our-lady-of-victory-lackawanna  “Wedding Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-10-03 13:30 our-lady-of-victory-lackawanna  “Wedding Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3b0e602b537c",
+          "said": "specific_date mass 2026-10-10 13:30 our-lady-of-victory-lackawanna  “Wedding Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "027bc9ba0bcb",
+          "said": "specific_date mass 2026-09-26 10:30 our-lady-of-victory-lackawanna  “Funeral for Judith Chandler”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R24: a wedding is closed to the public (POLICY). Weddings recur on Saturday afternoons but are different couples each week, so history's weekly 'Wedding Mass' is not a parish schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Wedding"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 3,
+          "said": "Friday, October 30: 5:30 pm Wedding: Miah Gnagnarelli & Anthony Szefler"
+        }
+      ],
+      "rationale": "R24: a wedding is closed to the public (POLICY).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-victory-lackawanna",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-21",
+        "start_time": "17:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Drawing God family event"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8bf3f005",
+          "page": 4,
+          "said": "Saturday, November 21, 5:30 p.m. ... event on Saturday 11/21 from 5:30-7:00 p.m. Following Mass at 4:30 p.m. in the Basilica, our event will offer Eucharistic Adoration for families, a FREE pizza dinner, and fun crafts"
+        },
+        {
+          "source": "history",
+          "bulletin": "8bf3f005e8d3",
+          "said": "specific_date adoration 2026-11-21 17:30–19:00 our-lady-of-victory-lackawanna  “Drawing God event for families”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "3b6f4f905f37",
+          "said": "specific_date adoration 2026-11-21 17:30–19:00 our-lady-of-victory-lackawanna  “Eucharistic Adoration for families”",
+          "page": 4
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: Adoration is one part of a 5:30-7:00 PM family event and has no start or end time of its own; the event's hours are not the Adoration's. The regular 4:30 PM Mass that day is already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

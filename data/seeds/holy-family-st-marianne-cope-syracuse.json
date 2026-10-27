@@ -1,0 +1,1961 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-st-marianne-cope-syracuse",
+  "status": "ready",
+  "as_of": "2026-10-25T13:23:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:01:32Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches: Holy Family (Syracuse), Our Lady of Peace (Lakeland) and St. Cecilia's (Solvay). The newest bulletin prints Mass times only as dated intentions, so weekly Masses rest on the same days and times repeating in five issues (and on the Holy Family website). Included: Monday Confession and Adoration, 2nd and 4th Tuesday Holy Hour, Thursday Women's Adoration, the Oct 26 Confession cancellation and the Dec 3 Mass of Thanksgiving. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b82b897e82721cc2888ee1466722ef4ae71aa0cbee2ec7d0507b021eba066593",
+      "fetched_at": "2026-10-25T13:23:14Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "bf70096beb4f5372eb85f9e123d602e9c0576bf020d54743272098d84a9d38aa",
+      "fetched_at": "2026-10-18T12:54:03Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "d38f011edfd7ef51a06160ae881da4f392f5b527e15140676b992026dca45e4e",
+      "fetched_at": "2026-10-11T16:29:51Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "fe6065f4decddcaaf5d5c3ce251f4c92c42999037c7124ac5457108bc0d6f997",
+      "fetched_at": "2026-10-04T14:34:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "20e5a2aacb41bb36c518e67a170381d7ad44df56ed8075b008bd92875aa9c216",
+      "fetched_at": "2026-09-28T00:05:57Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Monday : 6:45 AM; Wednesday : 6:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Monday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Monday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Monday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Monday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Monday 06:45 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's Mass schedule and intentions list HF 6:45 AM on Mon Oct 26 and Wed Oct 28; the same days and time print in all four older issues. The parish website lists the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Monday / Wednesday 6:45 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Monday : 6:45 AM; Wednesday : 6:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Wednesday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Wednesday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Wednesday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Wednesday 06:45 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Wednesday 06:45 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin's Mass schedule and intentions list HF 6:45 AM on Mon Oct 26 and Wed Oct 28; the same days and time print in all four older issues. The parish website lists the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Tuesday : 9:00 AM; Thursday : 9:00 AM; Friday : 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Tuesday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Tuesday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Tuesday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Tuesday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Tuesday 09:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: HF 9 AM on Tue Oct 27, Thu Oct 29 and Fri Oct 30 in the newest bulletin, and on the same days in all four older issues. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Tuesday : 9:00 AM; Thursday : 9:00 AM; Friday : 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Thursday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Thursday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Thursday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Thursday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Thursday 09:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: HF 9 AM on Tue Oct 27, Thu Oct 29 and Fri Oct 30 in the newest bulletin, and on the same days in all four older issues. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Tuesday / Thursday / Friday 9 AM ... HF (Mass intentions)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Tuesday : 9:00 AM; Thursday : 9:00 AM; Friday : 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Friday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Friday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Friday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Friday 09:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Friday 09:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: HF 9 AM on Tue Oct 27, Thu Oct 29 and Fri Oct 30 in the newest bulletin, and on the same days in all four older issues. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Saturday 8 AM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Saturday 8 AM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Saturday 8 AM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Saturday 8 AM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Saturday 8 AM ... HF"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Saturday : 8:00 AM / 4:00 PM (Vigil Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Saturday 08:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Saturday 08:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Saturday 08:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Saturday 08:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "specific_date mass 2026-10-03 08:00 holy-family-syracuse  “First Saturday Mass League”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: Saturday 8 AM at Holy Family in every issue read (Oct 3 was called First Saturday Mass League; the same slot). The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 10,
+          "said": "Saturday 4 PM (music ministry, Oct 24 and Oct 31)"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Saturday : 8:00 AM / 4:00 PM (Vigil Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Saturday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Saturday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Saturday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Saturday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Saturday 16:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: Saturday 4 PM at Holy Family in the newest bulletin and all four older ones. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 10,
+          "said": "Sunday 11 AM Trinity Choir; 4 PM HF Praise & Worship Band"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Sunday : 7:30 AM / 11:00 AM / 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Sunday 07:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Sunday 07:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Sunday 07:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Sunday 07:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Sunday 07:30 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Sunday 7:30 AM, 11 AM and 4 PM Masses at Holy Family print in every issue read, are in the livestream box, the music schedule (11 AM, 4 PM) and on the parish website. The Nov 1 11 AM 'Bereavement Mass' is the regular 11 AM Sunday Mass (POLICY, Weekly or dated rule 7), so it gets no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 10,
+          "said": "Sunday 11 AM Trinity Choir; 4 PM HF Praise & Worship Band"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Sunday : 7:30 AM / 11:00 AM / 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Sunday 11:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Sunday 11:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Sunday 11:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Sunday 11:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Sunday 11:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Sunday 7:30 AM, 11 AM and 4 PM Masses at Holy Family print in every issue read, are in the livestream box, the music schedule (11 AM, 4 PM) and on the parish website. The Nov 1 11 AM 'Bereavement Mass' is the regular 11 AM Sunday Mass (POLICY, Weekly or dated rule 7), so it gets no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Sunday 7:30 AM, 11 AM, 4 PM ... HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 10,
+          "said": "Sunday 11 AM Trinity Choir; 4 PM HF Praise & Worship Band"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Sunday : 7:30 AM / 11:00 AM / 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Sunday 16:00 holy-family-syracuse  “Praise & Worship Band”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Sunday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Sunday 16:00 holy-family-syracuse  “Praise & Worship Mass”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Sunday 16:00 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Sunday 16:00 holy-family-syracuse",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Sunday 7:30 AM, 11 AM and 4 PM Masses at Holy Family print in every issue read, are in the livestream box, the music schedule (11 AM, 4 PM) and on the parish website. The Nov 1 11 AM 'Bereavement Mass' is the regular 11 AM Sunday Mass (POLICY, Weekly or dated rule 7), so it gets no separate entry.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-lakeland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Tuesday 8 AM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Tuesday 8 AM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Tuesday 8 AM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Tuesday 8 AM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Tuesday, October 13 8 AM No Mass Today OLOP"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Tuesday 08:00 our-lady-of-peace-lakeland",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: OLOP Tuesday 8 AM in the newest bulletin (Oct 27) and three older ones; Oct 13 was 'No Mass Today', a past one-off (R16) that does not remove the weekly Mass. The website does not list OLOP.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-lakeland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "NEXT WEEKEND 4 PM ... OLOP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "SMC October Rosary will take place every Saturday in October at 3:45 PM at Our Lady of Peace Church before 4 PM Mass!"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-lakeland",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-lakeland  “Rosary at 3:45 PM in October”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: OLOP Saturday 4 PM in every issue read; the newest bulletin's rosary note also says '4 PM Mass' at Our Lady of Peace.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-solvay",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Friday 8 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Friday 8 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Friday 8 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Friday 8 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Friday, October 23 8 AM No Mass Today SC"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Friday 08:00 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Friday 08:00 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Friday 08:00 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Friday 08:00 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Friday 08:00 st-cecilia-solvay  “Decade of the Rosary after Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: St. Cecilia's Friday 8 AM in the newest bulletin (Oct 30) and three older ones; Oct 23 was 'No Mass Today', a past one-off (R16) that does not remove the weekly Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-solvay",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "Sunday 9:30 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "Sunday 9:30 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "Sunday 9:30 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "Sunday 9:30 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "Sunday 9:30 AM ... SC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "St. Cecilia's Sunday | 9:30 AM (livestream)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly mass Sunday 09:30 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly mass Sunday 09:30 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly mass Sunday 09:30 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly mass Sunday 09:30 st-cecilia-solvay",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly mass Sunday 09:30 st-cecilia-solvay  “Decade of the Rosary after Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: St. Cecilia's Sunday 9:30 AM in every issue read, and in the livestream box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "CONFESSIONS & ADORATION Mondays 5 PM-6:30 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 6,
+          "said": "MONDAY 5 PM-6:30 PM Confessions & Adoration | HF Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 6,
+          "said": "MONDAY 5 PM-6:30 PM Confessions & Adoration | HF Church"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Confessions & Adoration: Mondays, 5:00 PM-6:30 PM (except for Monday holidays)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly confession Monday 17:00–18:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly confession Monday 17:00–18:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly confession Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly confession Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly confession Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: weekly in the Sacrament and Prayer box of every issue. The dated Oct 26 cancellation is a separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "CONFESSIONS & ADORATION Mondays 5 PM-6:30 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 6,
+          "said": "MONDAY 5 PM-6:30 PM Confessions & Adoration | HF Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 6,
+          "said": "MONDAY 5 PM-6:30 PM Confessions & Adoration | HF Church"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Confessions & Adoration: Mondays, 5:00 PM-6:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly adoration Monday 17:00–18:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly adoration Monday 17:00–18:30 holy-family-syracuse",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly adoration Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "weekly adoration Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly adoration Monday 17:00–18:30 holy-family-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: weekly in the box of every issue. Only 'No Confessions 10/26' is announced; Adoration is not said to be cancelled, so it stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "17:00",
+        "end_time": "18:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "No Confessions (St. Bernadette relic visit)"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "No Confessions 10/26!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "MONDAY, OCTOBER 26 NO CONFESSIONS"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "specific_date confession 2026-10-26 17:00–18:30 holy-family-syracuse  CANCELLED",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin cancels the Oct 26 Confession window, a date on or after as_of. Adoration the same evening is not mentioned, so it is not cancelled (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "HOLY HOUR & ADORATION 2nd & 4th Tuesday of each month 7 PM-8 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "TUESDAY, OCTOBER 27 7 PM-8 PM Adoration Holy Hour | HF Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 9,
+          "said": "2nd & 4th Tuesday of each month 7 PM-8 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 9,
+          "said": "2nd & 4th Tuesday of each month 7 PM-8 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 9,
+          "said": "2nd & 4th Tuesday of each month 7 PM-8 PM | HF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 9,
+          "said": "2nd & 4th Tuesday of each month 7 PM-8 PM | HF"
+        },
+        {
+          "source": "website",
+          "url": "https://holyfamilysyr.org/mass-times-office-hours",
+          "said": "Holy Hour & Adoration: 2nd & 4th Tuesday of each month, 7:00 PM-8:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly adoration Tuesday 19:00–20:00 holy-family-syracuse  “2nd & 4th Tuesday of each month”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly adoration Tuesday 19:00–20:00 holy-family-syracuse  “2nd and 4th Tuesday of the month”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly adoration Tuesday 19:00–20:00 holy-family-syracuse  “2nd and 4th Tuesday of the month; Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "specific_date adoration 2026-10-13 19:00–20:00 holy-family-syracuse  “Holy Hour & Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "specific_date adoration 2026-10-27 19:00–20:00 holy-family-syracuse  “Holy Hour & Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "weekly adoration Tuesday 19:00–20:00 holy-family-syracuse  “2nd and 4th Tuesday of each month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly qualifiers): a named 2nd and 4th Tuesday service; the newest week holds the 4th Tuesday, Oct 27, and prints it in the calendar. A Holy Hour is Adoration under POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Women's Adoration, in the Chapel"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "THURSDAY 5:30 PM-6:30 PM Women's Adoration | HF Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 6,
+          "said": "THURSDAY 5:30 PM-6:30 PM Women's Adoration | HF Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d38f011e",
+          "page": 6,
+          "said": "THURSDAY 5:30 PM-6:30 PM Women's Adoration | HF Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fe6065f4",
+          "page": 6,
+          "said": "THURSDAY 5:30 PM-6:30 PM Women's Adoration | HF Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "20e5a2aa",
+          "page": 6,
+          "said": "THURSDAY 5:30 PM-6:30 PM Women's Adoration | HF Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly adoration Thursday 17:30–18:30 holy-family-syracuse  “Women's Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly adoration Thursday 17:30–18:30 holy-family-syracuse  “Women's Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly adoration Thursday 17:30–18:30 holy-family-syracuse  “Women's Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "fe6065f4decd",
+          "said": "specific_date adoration 2026-10-08 17:30–18:30 holy-family-syracuse  “Women's Adoration”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "20e5a2aacb41",
+          "said": "specific_date adoration 2026-10-01 17:30–18:30 holy-family-syracuse  “Women's Adoration”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R35, R38: listed in the weekly calendar of all five issues read, in the Chapel at Holy Family. The name says who it is for, but no issue restricts attendance, so POLICY's closed-event rule (written for Masses) is not applied.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-03",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Thanksgiving, Fr. Manno's 25th anniversary of ordination"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bf70096b",
+          "page": 2,
+          "said": "I will be offering a Mass of Thanksgiving on Thursday, December 3, 2026, at Holy Family Church at 6 PM ... I would love it if you could join me for the celebration"
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "specific_date mass 2026-12-03 18:00 holy-family-syracuse  “Mass of Thanksgiving”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "specific_date mass 2026-12-03 18:00 holy-family-syracuse  “25th Anniversary of Priestly Ordination”",
+          "page": 4
+        }
+      ],
+      "rationale": "R19: announced in the Oct 18 issue for a date after as_of, and nothing newer contradicts it. The pastor invites everyone, so POLICY does not treat it as a closed anniversary Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-solvay",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chaplet & Adoration at the SMC Parish Office, 105 Stanton Avenue; call to sign up"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "DIVINE MERCY CHAPLET & ADORATION 1st Wednesday of each month 3 PM-7 PM | SC & OLOP Parish Office (Must call 315-488-3221 to sign up)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 10,
+          "said": "ST. MARIANNE COPE OFFICE 105 Stanton Avenue, Solvay, NY 13209"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly adoration Wednesday 15:00–19:00 st-cecilia-solvay  “1st Wednesday of each month; at Parish Office”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly adoration Wednesday 15:00–19:00 st-cecilia-solvay  “1st Wednesday of the month; held at St. Marianne Cope Parish Office”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d38f011edfd7",
+          "said": "weekly adoration Wednesday 15:00–19:00 st-cecilia-solvay  “1st Wednesday of the month; Divine Mercy Chaplet & Adoration; at Parish Office; must call to sign up”",
+          "page": 2
+        }
+      ],
+      "rationale": "R22: the parish office at 105 Stanton Avenue (the old convent, being sold) is not St. Cecilia's Church (1001 Woods Road) or Our Lady of Peace, and the hours are by sign-up. Elsewhere, so left out. History put it at both churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-lakeland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Chaplet & Adoration at the SMC Parish Office, 105 Stanton Avenue; call to sign up"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 9,
+          "said": "DIVINE MERCY CHAPLET & ADORATION 1st Wednesday of each month 3 PM-7 PM | SC & OLOP Parish Office (Must call 315-488-3221 to sign up)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "weekly adoration Wednesday 15:00–19:00 our-lady-of-peace-lakeland  “1st Wednesday of each month; at Parish Office”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "bf70096beb4f",
+          "said": "weekly adoration Wednesday 15:00–19:00 our-lady-of-peace-lakeland  “1st Wednesday of the month; held at St. Marianne Cope Parish Office”",
+          "page": 9
+        }
+      ],
+      "rationale": "R22: same service as the St. Cecilia's entry, at the parish office rather than at Our Lady of Peace Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Opus Dei Evening of Recollection for Men"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "On October 28th at 5 PM, Fr. Manno will preside and offer a meditation ... Exposition, Benediction, Adoration, with Confession."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "WEDNESDAY, OCTOBER 28 5 PM Opus Dei Evening for Men | HF Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "specific_date adoration 2026-10-28 17:00 holy-family-syracuse  “Opus Dei Evening of Recollection”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: 5 PM starts the whole evening (meditation and talk come first); Exposition, Adoration and Confession are listed with no times of their own, so the evening's start is not copied onto them. History read both at 5 PM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Opus Dei Evening of Recollection for Men"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b82b897e",
+          "page": 6,
+          "said": "Exposition, Benediction, Adoration, with Confession."
+        },
+        {
+          "source": "history",
+          "bulletin": "b82b897e8272",
+          "said": "specific_date confession 2026-10-28 17:00 holy-family-syracuse  “Opus Dei Evening of Recollection”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: Confession is named with no time of its own; see the Adoration entry for the same evening.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

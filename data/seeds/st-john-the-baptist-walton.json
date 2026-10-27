@@ -1,0 +1,1075 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-walton",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:26:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:23:25Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches: St. John the Baptist (Walton), St. Peter's (Delhi) and Holy Family (Downsville). The Mass Schedule box and Mass intentions agree in all three bulletins. First-Friday Masses and Holy Hour, first-Saturday Reconciliation and Tuesday Adoration are in the calendar. Open: the hours of Thursday Adoration in the St. John the Baptist chapel, which the bulletins and the website print differently.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "70f896caa8f18b773b15862e964a6e2e2f64de5e7535c2c815a979719d6cf0c3",
+      "fetched_at": "2026-10-25T13:26:54Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3f72084a8d75730b83399b854b9e139f3dc8b0e302d363453b506b9eeef811b9",
+      "fetched_at": "2026-10-18T12:57:49Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "ca7faf16b820fdab4428d44140a06e9cb0d9e199424812d7a59856404281f0fb",
+      "fetched_at": "2026-10-11T16:32:14Z",
+      "published_date": "2026-10-11",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 pm at St. John's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-walton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Saturday Vigil 5:30 pm at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Saturday 17:30 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Saturday 17:30 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Saturday 17:30 st-peter-delhi",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-downsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Sunday 8:00 am Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Sunday 8:00 am Holy Family"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Sunday 8:00 am Holy Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Sunday 08:00 holy-family-downsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Sunday 08:00 holy-family-downsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Sunday 08:00 holy-family-downsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Sunday 9:30 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Sunday 9:30 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Sunday 9:30 am at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Sunday 09:30 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Sunday 09:30 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Sunday 09:30 st-peter-delhi",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Sunday 11:15 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Sunday 11:15 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Sunday 11:15 am at St. John's"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnthebaptistwalton.com/eucharistic-adoration/",
+          "said": "Sunday: 11:15 at St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Sunday 11:15 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Sunday 11:15 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Sunday 11:15 st-john-the-baptist-walton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box and the Mass intentions of all three bulletins. The website's Schedule of Services page says 11:00AM, but the same site's Adoration page says 11:15, so that line looks like a stale typo and the bulletins win (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Tuesday 08:00 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Tuesday 08:00 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Tuesday 08:00 st-peter-delhi",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Daily Masses box of all three bulletins and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Wednesday 08:00 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Wednesday 08:00 st-peter-delhi",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Wednesday 08:00 st-peter-delhi",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Daily Masses box of all three bulletins and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Tuesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Tuesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Tuesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Daily Masses box of all three bulletins and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Wednesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Wednesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly mass Wednesday 09:30 st-john-the-baptist-walton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Daily Masses box of all three bulletins and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday 8:00 am at St. Peter's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Friday 08:00 st-peter-delhi  “First Friday only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Friday 08:00 st-peter-delhi  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY, Weekly qualifiers: the Daily Masses box names First Friday, so it is weekly with weeks_of_month first. The newest bulletin's week holds no first Friday (R11/R12), but the box prints the slot in it. The website lists '1st Fridays 8:00AM at St. Peter's' too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Daily Masses Tuesday, Wednesday & First Friday ... 9:30 am at St. John's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly mass Friday 09:30 st-john-the-baptist-walton  “First Friday only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly mass Friday 09:30 st-john-the-baptist-walton  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY, Weekly qualifiers: the Daily Masses box names First Friday, so it is weekly with weeks_of_month first. The newest bulletin's week holds no first Friday (R11/R12), but the box prints the slot in it. The website lists '1st Fridays 9:30AM at St. John the Baptist' too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Every Tuesday at St. Peter's - Eucharistic Adoration after 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Every Tuesday at St. Peter's - Eucharistic Adoration after 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Every Tuesday at St. Peter's - Eucharistic Adoration after 8:00 am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnthebaptistwalton.com/",
+          "said": "We have Eucharistic Adoration every Tuesday immediately following the 8:00 am Mass."
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly adoration Tuesday 08:30 st-peter-delhi  “After 8:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly adoration Tuesday 08:00 st-peter-delhi  “After 8:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly adoration Tuesday 08:00 st-peter-delhi  “Following 8:00 AM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the October calendar gives only 'after 8:00 am Mass', so POLICY, Times works it out as 30 minutes after the weekday Mass starts (8:30 AM), with no end time. History's 8:00 reading is R8. The website's Adoration page says 9:00 AM-5:00 PM, which differs from its own home page and the bulletins, so the bulletins' relative timing stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-delhi",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Life, after the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "First Friday at St. Peter's - Holy Hour for Life after 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "First Friday at St. Peter's - Holy Hour for Life after 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "First Friday at St. Peter's - Holy Hour for Life after 8:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly adoration Friday 08:30 st-peter-delhi  “First Friday of the month; Holy Hour for Life after 8:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly adoration Friday 08:00 st-peter-delhi  “First Friday; Holy Hour for Life after 8:00 AM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: POLICY counts a Holy Hour as Adoration. It has no clock time, so it starts 30 minutes after the weekday Mass starts (8:30 AM), with no end time. Weekly with weeks_of_month first; the newest week holds no first Friday (R11), but the calendar prints it. History's 8:00 reading is R8.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-walton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Reconciliation: The first Saturday of each month from 3:00 to 3:30 at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Reconciliation: The first Saturday of each month from 3:00 to 3:30 at St. John's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Reconciliation: The first Saturday of each month from 3:00 to 3:30 at St. John's"
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly confession Saturday 15:00–15:30 st-john-the-baptist-walton  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly confession Saturday 15:00–15:30 st-john-the-baptist-walton  “First Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY, Weekly qualifiers: a named first-Saturday service, so weekly with weeks_of_month first. The newest bulletin's week holds no first Saturday (R11), but the box prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "First Saturday at St. Peter's - 9:00 am - Devotion requested by Our Lady of Fatima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "First Saturday at St. Peter's - 9:00 am - Devotion requested by Our Lady of Fatima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "First Saturday at St. Peter's - 9:00 am - Devotion requested by Our Lady of Fatima"
+        }
+      ],
+      "rationale": "R24: a devotion that the bulletin does not call Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Every Sunday at St. Peter's - Rosary at 8:50 am; Every Friday - Healing Rosary on Zoom at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Every Sunday at St. Peter's - Rosary at 8:50 am; Every Friday - Healing Rosary on Zoom at 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Every Sunday at St. Peter's - Rosary at 8:50 am; Every Friday - Healing Rosary on Zoom at 7:00 PM"
+        }
+      ],
+      "rationale": "R24: Rosaries are devotions, not Mass, Confession or Adoration (POLICY, What to extract). The Zoom Rosary is not at a church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "70f896ca",
+          "page": 1,
+          "said": "Every Thursday at St. John's Chapel - Eucharistic Adoration from 7:00 am - 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f72084a",
+          "page": 1,
+          "said": "Every Thursday at St. John's Chapel - Eucharistic Adoration from 7:00 am - 6:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ca7faf16",
+          "page": 1,
+          "said": "Every Thursday at St. John's Chapel - Eucharistic Adoration from 7:00 am - 6:00 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnthebaptistwalton.com/",
+          "said": "Every Thursday, from 6:00 am until 6:00 pm, Our Lord is exposed for Adoration in the Eucharistic Chapel at St. John's in Walton."
+        },
+        {
+          "source": "website",
+          "url": "https://stjohnthebaptistwalton.com/eucharistic-adoration/",
+          "said": "We have Eucharistic Adoration in the Chapel beginning every Thursday at 7:00 AM continuously through 7:00 PM. Holy Hour begins at 7:00 PM on Thursday evenings."
+        },
+        {
+          "source": "history",
+          "bulletin": "70f896caa8f1",
+          "said": "weekly adoration Thursday 07:00–18:00 st-john-the-baptist-walton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3f72084a8d75",
+          "said": "weekly adoration Thursday 07:00–18:00 st-john-the-baptist-walton  “In St. John's Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ca7faf16b820",
+          "said": "weekly adoration Thursday 07:00–18:00 st-john-the-baptist-walton  “St. John's Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R28, R6: the place is settled (R38): the website calls it the Eucharistic Chapel at St. John the Baptist Church in Walton, a listed church. The hours are not: all three bulletins say 7:00 AM-6:00 PM, but the website says 6:00 AM-6:00 PM on one page and 7:00 AM-7:00 PM on another. Leaning to the bulletins, which agree three weeks running. The website's Thursday 7:00 PM Holy Hour is left out because it is not in the bulletins.",
+      "question": "When does Thursday Eucharistic Adoration run at the St. John the Baptist chapel?",
+      "options": [
+        {
+          "label": "7:00 AM-6:00 PM (bulletins)",
+          "entry": {
+            "church_slug": "st-john-the-baptist-walton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          },
+          "leaning": true
+        },
+        {
+          "label": "7:00 AM-7:00 PM (website Adoration page)",
+          "entry": {
+            "church_slug": "st-john-the-baptist-walton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "6:00 AM-6:00 PM (website home page)",
+          "entry": {
+            "church_slug": "st-john-the-baptist-walton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Eucharistic Chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

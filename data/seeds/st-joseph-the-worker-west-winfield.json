@@ -1,0 +1,2109 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-the-worker-west-winfield",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:19:45Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:16:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches (Richfield Springs and West Winfield) share one weekly Mass table that is stable across all five bulletins. Weekday-after-Mass Confessions use R10 times, and First Friday/First Saturday services come from the Sept 27 bulletin plus the parish website. Open: whether the 30-minute pre-Mass Adoration applies at Richfield Springs and at West Winfield.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aac3ebc9ba8d932a32223bbd00c839a80c447f08d221df712733d14b4a3bc73e",
+      "fetched_at": "2026-10-25T13:19:45Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "e784284e1bcfd122490fa64ecd425b9954685bf9650a4ded788216d32a541b4d",
+      "fetched_at": "2026-10-18T12:47:52Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "b5cd6f4785034670a939ec2297461437ae0326230662716cbf37a472d1df8e11",
+      "fetched_at": "2026-10-11T16:34:29Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "252971077934ba0be6c6726580f424fd8be3590f8cc7d8105df17fcbd4605e2d",
+      "fetched_at": "2026-10-04T14:54:44Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "9bb8d1cf141c850edd8f5f6eaab1e4d8790a543fa522e75ae7613bc2924d236a",
+      "fetched_at": "2026-09-28T22:04:14Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Sat 4:00 pm RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Sat 4:00 pm RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Sat 4:00 pm RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Sat 4:00 pm RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Sat 4:00 pm RS"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Saturday 16:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Saturday 16:00 st-joseph-the-worker-richfield-springs  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Saturday 16:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Saturday 16:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Saturday 16:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Masses and Mass Intentions table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Sat 6:00 pm WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Sat 6:00 pm WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Sat 6:00 pm WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Sat 6:00 pm WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Sat 6:00 pm WW"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Saturday 18:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Saturday 18:00 st-joseph-the-worker-west-winfield  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Saturday 18:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Saturday 18:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Saturday 18:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Masses and Mass Intentions table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Sun 8:30 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Sun 8:30 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Sun 8:30 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Sun 8:30 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Sun 8:30 am WW"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Sunday 08:30 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Sunday 08:30 st-joseph-the-worker-west-winfield  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Sunday 08:30 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Sunday 08:30 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Sunday 08:30 st-joseph-the-worker-west-winfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Sun 10:30 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Sun 10:30 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Sun 10:30 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Sun 10:30 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Sun 10:30 am RS"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Sunday 10:30 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Sunday 10:30 st-joseph-the-worker-richfield-springs  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Sunday 10:30 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Sunday 10:30 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Sunday 10:30 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Mon 12 Noon WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Mon 12 Noon WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Mon 12 Noon WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Mon 12 Noon WW"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Monday 12:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Monday 12:00 st-joseph-the-worker-west-winfield  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Monday 12:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Monday 12:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table. The Oct 12 bulletin's Monday 9:00 am WW was the Columbus Day morning Mass (website: federal holidays Mass at 9 AM), so noon is the regular time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Wed 12 Noon RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Wed 12 Noon RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Wed 12 Noon RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Wed 12 Noon RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Wed 12 Noon RS"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Wednesday 12:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Wednesday 12:00 st-joseph-the-worker-richfield-springs  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Wednesday 12:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Wednesday 12:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Wednesday 12:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Thu 9:00 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Thu 9:00 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Thu 9:00 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Thu 9:00 am RS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Thu 9:00 am RS"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Thursday 09:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Thursday 09:00 st-joseph-the-worker-richfield-springs  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Thursday 09:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Thursday 09:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Thursday 09:00 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Fri 9:00 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 2,
+          "said": "Fri 9:00 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Fri 9:00 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 2,
+          "said": "Fri 9:00 am WW"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Fri 9:00 am WW"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly mass Friday 09:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly mass Friday 09:00 st-joseph-the-worker-west-winfield  “Adoration before Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Friday 09:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly mass Friday 09:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Friday 09:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass table of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 2,
+          "said": "Mon, Oct 12 9:00 am WW (Columbus Day - Morning Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly mass Monday 09:00 st-joseph-the-worker-west-winfield",
+          "page": 2
+        }
+      ],
+      "rationale": "R7: history read this one-off federal-holiday Mass as weekly; the Oct 12 date is before as_of and the regular Monday Mass is 12 Noon (R16, R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Confession: Saturdays 3:15-3:45 (RS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 1,
+          "said": "Confession: Saturdays 3:15-3:45 (RS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 1,
+          "said": "Confession: Saturdays 3:15-3:45 (RS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 1,
+          "said": "Confession: Saturdays 3:15-3:45 (RS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 1,
+          "said": "Confession: Saturdays 3:15-3:45 (RS)"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-the-worker-richfield-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-the-worker-richfield-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-the-worker-richfield-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-the-worker-richfield-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-the-worker-richfield-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession list on page 1 of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Saturdays ... after 6:00 pm Mass (WW)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/confession-times",
+          "said": "Saturday 7:00 PM West Winfield (after 6 PM Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Saturday 19:00 st-joseph-the-worker-west-winfield  “After 6:00 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Saturday 19:00 st-joseph-the-worker-west-winfield  “Following the 6:00 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Saturday 19:00 st-joseph-the-worker-west-winfield  “After 6:00 pm Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: no clock time in the bulletin; after the 6:00 PM weekend Mass is 7:00 PM (POLICY, Times). The parish website's Confession page says 7:00 PM too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Sundays 8:00-8:20 am (WW)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 1,
+          "said": "Sundays 8:00-8:20 am (WW)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 1,
+          "said": "Sundays 8:00-8:20 am (WW)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 1,
+          "said": "Sundays 8:00-8:20 am (WW)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 1,
+          "said": "Sundays 8:00-8:20 am (WW)"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Sunday 08:00–08:20 st-joseph-the-worker-west-winfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Sunday 08:00–08:20 st-joseph-the-worker-west-winfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Sunday 08:00–08:20 st-joseph-the-worker-west-winfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Sunday 08:00–08:20 st-joseph-the-worker-west-winfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Sunday 08:00–08:20 st-joseph-the-worker-west-winfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confession list on page 1 of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 10:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Sundays ... after 10:30 am Mass (RS)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/confession-times",
+          "said": "Sunday 11:30 AM Richfield Springs (after 10:30 AM Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Sunday 11:30 st-joseph-the-worker-richfield-springs  “After 10:30 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Sunday 11:30 st-joseph-the-worker-richfield-springs  “Following the 10:30 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Sunday 11:30 st-joseph-the-worker-richfield-springs  “After 10:30 am Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Sunday 10:30 st-joseph-the-worker-richfield-springs  “Following 10:30 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Sunday 10:30 st-joseph-the-worker-richfield-springs  “After 10:30 AM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: no clock time in the bulletin; after the 10:30 AM weekend Mass is 11:30 AM. The website says 11:30 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Weekdays after Masses and by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Monday 12:00 st-joseph-the-worker-west-winfield  “Following 12:00 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Monday 12:00 st-joseph-the-worker-west-winfield  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Monday 09:45 st-joseph-the-worker-west-winfield  “After 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Monday 12:45 st-joseph-the-worker-west-winfield  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Monday 13:00 st-joseph-the-worker-west-winfield  “After 12:00 pm Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: 'Weekdays after Masses'; 30 minutes after the 12:00 Monday Mass starts. The 'by appointment' part has no time and is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Weekdays after Masses and by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Wednesday 12:00 st-joseph-the-worker-richfield-springs  “Following 12:00 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Wednesday 12:00 st-joseph-the-worker-richfield-springs  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Wednesday 12:45 st-joseph-the-worker-richfield-springs  “After 12:00 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Wednesday 12:45 st-joseph-the-worker-richfield-springs  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Wednesday 13:00 st-joseph-the-worker-richfield-springs  “After 12:00 pm Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: 'Weekdays after Masses'; 30 minutes after the 12:00 Wednesday Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Weekdays after Masses and by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Thursday 09:00 st-joseph-the-worker-richfield-springs  “Following 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Thursday 09:00 st-joseph-the-worker-richfield-springs  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Thursday 09:45 st-joseph-the-worker-richfield-springs  “After 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Thursday 09:45 st-joseph-the-worker-richfield-springs  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Thursday 10:00 st-joseph-the-worker-richfield-springs  “After 9:00 am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: 'Weekdays after Masses'; 30 minutes after the 9:00 Thursday Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Weekdays after Masses and by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Friday 09:00 st-joseph-the-worker-west-winfield  “Following 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Friday 09:00 st-joseph-the-worker-west-winfield  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly confession Friday 09:45 st-joseph-the-worker-west-winfield  “After 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly confession Friday 09:45 st-joseph-the-worker-west-winfield  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Friday 10:00 st-joseph-the-worker-west-winfield  “After 9:00 am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: 'Weekdays after Masses'; 30 minutes after the 9:00 Friday Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "13:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the Noon Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "West Winfield: During the last 2 Mondays of October, Mon. 1 p.m. - 8 p.m. After the Noon Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "specific_date adoration 2026-10-26 13:00–20:00 st-joseph-the-worker-west-winfield  “Following 12:00 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "specific_date adoration 2026-10-26 13:00–20:00 st-joseph-the-worker-west-winfield  “After the Noon Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R14, R16: the last two Mondays of October are Oct 19 and Oct 26; only Oct 26 is on or after as_of. Dated because the pattern is a one-month series that the format cannot express as weekly (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Our Lady of Fatima Rosary at West Winfield: Join us in West Winfield for our First Saturday mass ... 8:30am - Quiet Adoration; 9:00am - First Saturday Mass; 9:45am - Rosary at the grotto"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Sat., Oct 3 9:00 am WW For the People of Our Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/mass-times",
+          "said": "1st Saturday : 9:00 AM English West Winfield",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:19:47Z",
+            "current_because": "The eCatholic Mass Times page was fetched 2026-10-26, shows the current weekday/weekend times (Mon noon WW, Wed noon RS, Thu 9 RS, Fri 9 WW, Sat 4 RS/6 WW, Sun 8:30 WW/10:30 RS) that match the Oct 25 bulletin exactly, and lists the First Saturday and First Friday Masses.",
+            "bulletin": "aac3ebc9",
+            "fits_because": "The site's regular times all match the newest bulletin's table; its 1st Saturday 9:00 AM West Winfield matches the Sept 27 bulletin's First Saturday Mass at 9:00 am WW."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "specific_date mass 2026-10-03 09:00 st-joseph-the-worker-west-winfield  “First Saturday Mass; in front of Our Lady's Grotto”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12: a named First Saturday service; the newest bulletin's week (Oct 25 to Nov 1) holds no first Saturday, so it is retained from the Sept 27 issue, whose week holds Oct 3. R6: the website's 1st Saturday 9:00 AM West Winfield agrees. The Oct 4 issue's table still lists Sat Oct 3 only at 4:00 and 6:00 and omits the 9:00 am, but that issue was fetched the day after and its table starts with the past Saturday; I read this as an omission, not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Quiet Adoration before First Saturday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "First Saturday mass and rosary ... 8:30am - Quiet Adoration; 9:00am - First Saturday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "specific_date adoration 2026-10-03 08:30–09:00 st-joseph-the-worker-west-winfield  “First Saturday Quiet Adoration”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12: part of the same named First Saturday program printed in the Sept 27 issue (the only issue whose week holds a first Saturday and prints the notice). It has a definite start time and no end time, so end_time is null. The website does not mention it (not a conflict, R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before First Saturday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/confession-times",
+          "said": "1st Saturday : 8:30 AM to 9:00 AM Before Mass, West Winfield",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:19:47Z",
+            "current_because": "The Confession Times page was fetched 2026-10-26 and its weekly entries (Sun 8:00-8:20 WW, Sat 3:15 RS, Sat 7:00 PM WW after 6 PM Mass, Sun 11:30 RS) match the Confession list in the Oct 25 bulletin.",
+            "bulletin": "aac3ebc9",
+            "fits_because": "The window 8:30-9:00 AM ends at the 9:00 AM First Saturday Mass at West Winfield, which the Sept 27 bulletin prints at 9:00 am with Quiet Adoration from 8:30."
+          }
+        }
+      ],
+      "rationale": "R6, R12: website-only monthly Confession for the First Saturday; no bulletin since Sept 27 has a first Saturday to print it. It fits the 8:30 start the Sept 27 bulletin gives for that morning's Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 2,
+          "said": "Fri., Oct 2 9:00 am WW; 6:30 pm RS +Esther & Emerson Lamphere (by David Buddle)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/mass-times",
+          "said": "1st Friday : 9:00 AM West Winfield; 6:30 PM Richfield Springs",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:19:47Z",
+            "current_because": "The Mass Times page was fetched 2026-10-26 and its regular times match the Oct 25 bulletin exactly.",
+            "bulletin": "aac3ebc9",
+            "fits_because": "The Sept 27 bulletin, whose week holds first Friday Oct 2, prints a 6:30 pm RS Mass that day beside the regular 9:00 am WW Mass, as the site's 1st Friday entries say."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly mass Friday 18:30 st-joseph-the-worker-richfield-springs",
+          "page": 2
+        }
+      ],
+      "rationale": "R12, R6: a named First Friday Mass; the newest week (Oct 25 to Nov 1) holds no first Friday. The Sept 27 issue prints it for Oct 2 and the website names it as 1st Friday, so it is weekly with weeks_of_month first (POLICY rule 2). The 9:00 AM WW Friday Mass is the regular Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before First Friday Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/confession-times",
+          "said": "1st Friday : 6:00 PM to 6:30 PM Before Mass, Richfield Springs",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:19:47Z",
+            "current_because": "The Confession Times page was fetched 2026-10-26; its other entries match the Oct 25 bulletin's Confession list.",
+            "bulletin": "aac3ebc9",
+            "fits_because": "It ends at the 6:30 PM First Friday Mass at Richfield Springs, which the Sept 27 bulletin prints for Oct 2 and which the site's Mass Times page lists as 1st Friday 6:30 PM Richfield Springs."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly confession Friday 19:30 st-joseph-the-worker-richfield-springs  “After 6:30 pm Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, R12: website-only monthly Confession; it fits the First Friday 6:30 PM Mass at Richfield Springs. The newest bulletin's week holds no first Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-richfield-springs",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Continues until Thursday 9 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: RS Wed. 12:45 pm - Thu. 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Richfield Springs: Wed. 12:45 p.m. - Thu. 9 a.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e784284e",
+          "page": 1,
+          "said": "RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5cd6f47",
+          "page": 1,
+          "said": "RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "25297107",
+          "page": 1,
+          "said": "RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9bb8d1cf",
+          "page": 1,
+          "said": "RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly adoration Wednesday 12:45–09:00 st-joseph-the-worker-richfield-springs  “Ends Thursday morning”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly adoration Wednesday 12:45–09:00 st-joseph-the-worker-richfield-springs  “Continues through Thursday morning”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b5cd6f478503",
+          "said": "weekly adoration Wednesday 12:45–09:00 st-joseph-the-worker-richfield-springs  “Continuous through Thursday morning before 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly adoration Wednesday 12:45–09:00 st-joseph-the-worker-richfield-springs  “Continuous through Thursday morning at 9:00 AM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "9bb8d1cf141c",
+          "said": "weekly adoration Wednesday 12:45–09:00 st-joseph-the-worker-richfield-springs  “Ends Thursday 9:00 am”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on both pages of every bulletin read; the website agrees (Wednesday after noon Mass until 9 a.m. Thursday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: RS Wed. 12:45 pm - Thu. 9 am; and before All Masses; The Holy Rosary: 30 minutes before Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "Richfield Springs: Wed. 12:45 p.m. - Thu. 9 a.m. Mass, & before Masses (St. Joseph the Worker, 37 Canadarago St., Richfield Springs)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/adoration-times",
+          "said": "Adoration is also 30 minutes before Masses during the Rosary."
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly adoration Saturday 15:30–16:00 st-joseph-the-worker-richfield-springs  “Before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly adoration Saturday 16:00 st-joseph-the-worker-richfield-springs  “Before Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: POLICY, Times works 'before Mass' out from a length, and the bulletin gives none; the length comes only from the website and the bulletin's Rosary line, and it is not clear the Sacrament is exposed. The bulletin states it as part of the Richfield Springs entry, so I lean toward including it there. History read it at several different times.",
+      "question": "Add Adoration for 30 minutes before each Richfield Springs Mass (Sat, Sun, Wed)?",
+      "options": [
+        {
+          "label": "30 minutes before each RS Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-richfield-springs",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rs-before-mass"
+    },
+    {
+      "id": "s26",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/adoration-times",
+          "said": "Adoration is also 30 minutes before Masses during the Rosary."
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly adoration Sunday 10:00–10:30 st-joseph-the-worker-richfield-springs  “Before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly adoration Sunday 10:30 st-joseph-the-worker-richfield-springs  “Before Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: same decision as the Saturday slot (group rs-before-mass).",
+      "question": "Add Adoration for 30 minutes before each Richfield Springs Mass (Sat, Sun, Wed)?",
+      "options": [
+        {
+          "label": "30 minutes before each RS Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-richfield-springs",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rs-before-mass"
+    },
+    {
+      "id": "s27",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/adoration-times",
+          "said": "Adoration is also 30 minutes before Masses during the Rosary."
+        },
+        {
+          "source": "history",
+          "bulletin": "252971077934",
+          "said": "weekly adoration Wednesday 11:30–12:00 st-joseph-the-worker-richfield-springs  “Before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly adoration Wednesday 12:00 st-joseph-the-worker-richfield-springs  “Before Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: same decision as the Saturday slot (group rs-before-mass). The Thursday 9:00 AM Mass is covered by the overnight Adoration (R37).",
+      "question": "Add Adoration for 30 minutes before each Richfield Springs Mass (Sat, Sun, Wed)?",
+      "options": [
+        {
+          "label": "30 minutes before each RS Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-richfield-springs",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "rs-before-mass"
+    },
+    {
+      "id": "s28",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Adoration of the Blessed Sacrament: RS Wed. 12:45 pm - Thu. 9 am; and before All Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 2,
+          "said": "West Winfield: During the last 2 Mondays of October, Mon. 1 p.m. - 8 p.m. After the Noon Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjoseph.work/adoration-times",
+          "said": "Adoration is also 30 minutes before Masses during the Rosary."
+        }
+      ],
+      "rationale": "R32/R30: 'before All Masses' could cover West Winfield, but the page 2 Adoration box lists only Richfield Springs for the weekly times and, for West Winfield, only the October Mondays. A wrong time is worse than a missing one, so I lean toward leaving West Winfield out.",
+      "question": "Add Adoration for 30 minutes before each West Winfield Mass (Sat, Sun, Mon, Fri)?",
+      "options": [
+        {
+          "label": "30 minutes before each WW Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-west-winfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ww-before-mass"
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "... and before All Masses"
+        }
+      ],
+      "rationale": "R32/R30: same decision as the Saturday West Winfield slot (group ww-before-mass).",
+      "question": "Add Adoration for 30 minutes before each West Winfield Mass (Sat, Sun, Mon, Fri)?",
+      "options": [
+        {
+          "label": "30 minutes before each WW Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-west-winfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "08:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ww-before-mass"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "... and before All Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "specific_date adoration 2026-10-19 13:00–20:00 st-joseph-the-worker-west-winfield  “After the Noon Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R32/R30: same decision as the Saturday West Winfield slot (group ww-before-mass).",
+      "question": "Add Adoration for 30 minutes before each West Winfield Mass (Sat, Sun, Mon, Fri)?",
+      "options": [
+        {
+          "label": "30 minutes before each WW Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-west-winfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "12:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ww-before-mass"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "... and before All Masses"
+        }
+      ],
+      "rationale": "R32/R30: same decision as the Saturday West Winfield slot (group ww-before-mass).",
+      "question": "Add Adoration for 30 minutes before each West Winfield Mass (Sat, Sun, Mon, Fri)?",
+      "options": [
+        {
+          "label": "30 minutes before each WW Mass",
+          "entry": {
+            "church_slug": "st-joseph-the-worker-west-winfield",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "ww-before-mass"
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Memorial Service: St. Joseph the Worker in West Winfield - Monday November 2, 2026 7:00pm"
+        }
+      ],
+      "rationale": "R24: a candle-lighting memorial service, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-the-worker-west-winfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aac3ebc9",
+          "page": 1,
+          "said": "Saturdays 3:15-3:45 (RS), after 6:00 pm Mass (WW)"
+        },
+        {
+          "source": "history",
+          "bulletin": "aac3ebc9ba8d",
+          "said": "weekly confession Saturday 18:00 st-joseph-the-worker-west-winfield  “Following 6:00 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e784284e1bcf",
+          "said": "weekly confession Saturday 18:00 st-joseph-the-worker-west-winfield  “After 6:00 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R7: history read 'after 6:00 pm Mass' as a 6:00 PM start, which is the Mass time itself; POLICY, Times puts it an hour after the weekend Mass starts, 7:00 PM (slot for 19:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

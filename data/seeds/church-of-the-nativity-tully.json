@@ -1,0 +1,1116 @@
+{
+  "schema_version": 1,
+  "parish_slug": "church-of-the-nativity-tully",
+  "status": "ready",
+  "as_of": "2026-10-25T13:18:49Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:52:30Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches. Weekend Masses and Reconciliation (Sat St. Leo's, Mon St. Joseph's) are in the page-1 box of all five bulletins read (Sep 27 to Oct 25). Weekday Mon-Thu 8:30 AM St. Leo's Mass, a Thursday 9 AM Holy Hour at St. Leo's and a Monday 6-7 PM Holy Hour and Adoration at St. Joseph's appear only in the page-2 Mass intentions, but identically every week, so they are weekly (R35). Fridays say NO MASS. One-off changes (Oct 10 Saturday Mass at St. Joseph's, Sep 28 no Holy Hour) are before as_of. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "95c99a583ca9f9c6e19c831f191977599b61f1731f18732fe7baebe729898891",
+      "fetched_at": "2026-10-25T13:18:49Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "2a4d7c2965548727841d324245508abf2b6a5009b4ef045369f9be5aec55483a",
+      "fetched_at": "2026-10-18T12:46:09Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "7ae0cb00b7973a2c0d38ecbaeedb59e2e31f87d2b169e78544fc4d9548c56419",
+      "fetched_at": "2026-10-11T16:35:11Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "03290ccded0d2805ea341672f01de5e6c3bc0078a450e13e27adec541e067d02",
+      "fetched_at": "2026-10-04T14:33:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "75763ba51f1b41ae449743bf9490a3f457b44e4818bb120715811b0227490b31",
+      "fetched_at": "2026-09-28T00:05:18Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "Saturday Masses: 4:30 p.m. St. Leo's, Tully"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "Saturday Masses: 4:30 p.m. St. Leo's, Tully"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "Saturday Masses: 4:30 p.m. St. Leo's, Tully"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "Saturday Masses: 4:30 p.m. St. Leo's, Tully"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "Saturday Masses: 4:30 p.m. St. Leo's, Tully"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Saturday 16:30 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Saturday 16:30 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Saturday 16:30 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Saturday 16:30 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Saturday 16:30 st-leo-tully",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-pompey",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "Sunday Masses: 8 a.m. Immaculate Conception, Pompey"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "Sunday Masses: 8 a.m. Immaculate Conception, Pompey"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "Sunday Masses: 8 a.m. Immaculate Conception, Pompey"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "Sunday Masses: 8 a.m. Immaculate Conception, Pompey"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "Sunday Masses: 8 a.m. Immaculate Conception, Pompey"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-pompey",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-pompey",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-pompey",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-pompey",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-pompey",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lafayette",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "9:30 a.m. St. Joseph's, LaFayette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "9:30 a.m. St. Joseph's, LaFayette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "9:30 a.m. St. Joseph's, LaFayette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "9:30 a.m. St. Joseph's, LaFayette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "9:30 a.m. St. Joseph's, LaFayette"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Sunday 09:30 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Sunday 09:30 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Sunday 09:30 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Sunday 09:30 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Sunday 09:30 st-joseph-lafayette",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-otisco",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "11:30 a.m. St. Patrick's, Otisco"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "11:30 a.m. St. Patrick's, Otisco"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "11:30 a.m. St. Patrick's, Otisco"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "11:30 a.m. St. Patrick's, Otisco"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "11:30 a.m. St. Patrick's, Otisco"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Sunday 11:30 st-patrick-otisco",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Sunday 11:30 st-patrick-otisco",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Sunday 11:30 st-patrick-otisco",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Sunday 11:30 st-patrick-otisco",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Sunday 11:30 st-patrick-otisco",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Schedule of Masses on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Monday, October 26th--Weekday 8:30 a.m. St. Leo's--Ann Charlebois (also Tue 27, Wed 28, Thu 29 at 8:30 a.m. St. Leo's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "we pray the rosary as a community every day before our morning 8:30am mass ... Monday through Thursday ... at St. Leo's"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Monday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Monday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Monday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Monday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Monday 08:30 st-leo-tully",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the page-2 Mass intentions list a Mon-Thu 8:30 AM St. Leo's Mass in all five bulletins, and the pastor's Oct 11 letter confirms a daily 8:30 Mass Monday through Thursday at St. Leo's. The page-1 box lists only weekend Masses, which does not disprove weekday Masses (R35). Friday lines read NO MASS every week, so there is no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Monday, October 26th--Weekday 8:30 a.m. St. Leo's--Ann Charlebois (also Tue 27, Wed 28, Thu 29 at 8:30 a.m. St. Leo's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "we pray the rosary as a community every day before our morning 8:30am mass ... Monday through Thursday ... at St. Leo's"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Tuesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Tuesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Tuesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Tuesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Tuesday 08:30 st-leo-tully",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the page-2 Mass intentions list a Mon-Thu 8:30 AM St. Leo's Mass in all five bulletins, and the pastor's Oct 11 letter confirms a daily 8:30 Mass Monday through Thursday at St. Leo's. The page-1 box lists only weekend Masses, which does not disprove weekday Masses (R35). Friday lines read NO MASS every week, so there is no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Monday, October 26th--Weekday 8:30 a.m. St. Leo's--Ann Charlebois (also Tue 27, Wed 28, Thu 29 at 8:30 a.m. St. Leo's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "we pray the rosary as a community every day before our morning 8:30am mass ... Monday through Thursday ... at St. Leo's"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Wednesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Wednesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Wednesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Wednesday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Wednesday 08:30 st-leo-tully",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the page-2 Mass intentions list a Mon-Thu 8:30 AM St. Leo's Mass in all five bulletins, and the pastor's Oct 11 letter confirms a daily 8:30 Mass Monday through Thursday at St. Leo's. The page-1 box lists only weekend Masses, which does not disprove weekday Masses (R35). Friday lines read NO MASS every week, so there is no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Monday, October 26th--Weekday 8:30 a.m. St. Leo's--Ann Charlebois (also Tue 27, Wed 28, Thu 29 at 8:30 a.m. St. Leo's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "8:30 a.m. St. Leo's (Mass intentions every Monday to Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "we pray the rosary as a community every day before our morning 8:30am mass ... Monday through Thursday ... at St. Leo's"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly mass Thursday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly mass Thursday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly mass Thursday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly mass Thursday 08:30 st-leo-tully",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly mass Thursday 08:30 st-leo-tully",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the page-2 Mass intentions list a Mon-Thu 8:30 AM St. Leo's Mass in all five bulletins, and the pastor's Oct 11 letter confirms a daily 8:30 Mass Monday through Thursday at St. Leo's. The page-1 box lists only weekend Masses, which does not disprove weekday Masses (R35). Friday lines read NO MASS every week, so there is no Friday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Friday, October 30th--Weekday NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "Friday ... NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "Friday ... NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "Friday ... NO MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "Friday ... NO MASS"
+        }
+      ],
+      "rationale": "R24/R17: every Friday in all five bulletins reads NO MASS; there is no Friday Mass to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "RECONCILIATION: Saturdays 3:30 - 4:15 p.m. at St. Leo's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "RECONCILIATION: Saturdays 3:30 - 4:15 p.m. at St. Leo's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "RECONCILIATION: Saturdays 3:30 - 4:15 p.m. at St. Leo's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "RECONCILIATION: Saturdays 3:30 - 4:15 p.m. at St. Leo's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "RECONCILIATION: Saturdays 3:30 - 4:15 p.m. at St. Leo's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly confession Saturday 15:30–16:15 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly confession Saturday 15:30–16:15 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly confession Saturday 15:30–16:15 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly confession Saturday 15:30–16:15 st-leo-tully",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly confession Saturday 15:30–16:15 st-leo-tully",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box on page 1 of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lafayette",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 1,
+          "said": "Mondays 6:00 - 7:00 p.m. at St Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 1,
+          "said": "Mondays 6:00 - 7:00 p.m. at St Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 1,
+          "said": "Mondays 6:00 - 7:00 p.m. at St Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 1,
+          "said": "Mondays 6:00 - 7:00 p.m. at St Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 1,
+          "said": "Mondays 6:00 - 7:00 p.m. at St Joseph's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly confession Monday 18:00–19:00 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly confession Monday 18:00–19:00 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly confession Monday 18:00–19:00 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly confession Monday 18:00–19:00 st-joseph-lafayette",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly confession Monday 18:00–19:00 st-joseph-lafayette",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box on page 1 of all five bulletins read. The Sep 28 intentions line 'NO HOLY HOUR AND CONFESSION' is a one-off before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-lafayette",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "6-7 p.m. St. Joseph's--Holy Hour and Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "6-7 p.m. St. Joseph's--Holy Hour and Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "6-7 p.m. St. Joseph's--Holy Hour and Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "6-7 p.m. St. Joseph's--Holy Hour and Confessions"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "NO HOLY HOUR AND CONFESSION (Monday, September 28)"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly adoration Monday 18:00–19:00 st-joseph-lafayette  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly adoration Monday 18:00–19:00 st-joseph-lafayette  “Holy Hour and Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "specific_date adoration 2026-10-12 18:00–19:00 st-joseph-lafayette  “Holy Hour and Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly adoration Monday 18:00–19:00 st-joseph-lafayette  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a Holy Hour is Adoration. The Monday 6-7 PM St. Joseph's Holy Hour and Adoration is printed in the page-2 intentions of the newest and the two issues before it, and the Oct 5 issue lists the same Holy Hour. The Sep 28 'NO HOLY HOUR' is a one-off before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-leo-tully",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "95c99a58",
+          "page": 2,
+          "said": "Thursday: 9 a.m. St. Leo's--Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2a4d7c29",
+          "page": 2,
+          "said": "Thursday: 9 a.m. St. Leo's--Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ae0cb00",
+          "page": 2,
+          "said": "Thursday: 9 a.m. St. Leo's--Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "03290ccd",
+          "page": 2,
+          "said": "Thursday: 9 a.m. St. Leo's--Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "75763ba5",
+          "page": 2,
+          "said": "Thursday: 9 a.m. St. Leo's--Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "95c99a583ca9",
+          "said": "weekly adoration Thursday 09:00 st-leo-tully  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2a4d7c296554",
+          "said": "weekly adoration Thursday 09:00 st-leo-tully  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ae0cb00b797",
+          "said": "weekly adoration Thursday 09:00 st-leo-tully  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "03290ccded0d",
+          "said": "weekly adoration Thursday 09:00 st-leo-tully  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "75763ba51f1b",
+          "said": "weekly adoration Thursday 09:00 st-leo-tully  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a Holy Hour is Adoration. Printed after the 8:30 Mass in the page-2 intentions of every bulletin read; no end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

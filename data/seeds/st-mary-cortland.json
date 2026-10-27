@@ -1,0 +1,1633 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-cortland",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:12:26Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:15:48Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Mary's, St. Anthony's and St. Margaret's (the NCSM cluster). The bulletin has no schedule box, only dated intentions: weekend and weekday Masses, Saturday and Tuesday-Friday Confession and a Friday Adoration hour repeat in all five bulletins, and the joint website ncsmcatholic.org (named in the newest bulletin) matches them. St. Lawrence's Saturday Mass and the Newman Center's Sunday Mass come from that website only. Open: a website-only First Saturday 9:30 AM Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4308f1af50df35ba7732d20046f02b7ce4eee8575c6ddae158ba6fd0bc8ae127",
+      "fetched_at": "2026-10-25T13:12:26Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "b61538713ddb9238fc6033e8dfc4bb4ce49b1ddb6c6680e21ab0c1477ed8640e",
+      "fetched_at": "2026-10-18T12:38:26Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "857d57cd5c663fc19342fababe709c199761c9fb51b5ea84ee2a269e2e45d083",
+      "fetched_at": "2026-10-11T16:27:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "865b6d19fdde6fcd84ac84d90b1de76907a4effe4dbe7222a8f30fbd960adfe0",
+      "fetched_at": "2026-10-04T14:42:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "129f04994412029a26da1510cc3e3f4eb8ae5d00b8f439be20ee2a106af3ae1b",
+      "fetched_at": "2026-09-28T00:14:26Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Saturday St. Mary's 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Saturday St. Mary's 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Saturday St. Mary's 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Saturday St. Mary's 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Saturday St. Mary's 4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Saturday: 4:00 PM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Saturday 16:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Saturday 16:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Saturday 16:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Saturday 16:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Saturday 16:00 st-mary-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 4:00 PM St. Mary's Mass is listed in the intentions of all five bulletins; the joint parish website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Sunday: 8:00 AM, 11:45 AM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Sunday 08:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Sunday 08:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Sunday 08:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Sunday 08:00 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Sunday 08:00 st-mary-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed in the Sunday intentions of all five bulletins; the joint website agrees. (The old stmaryscortland.org page shows 11:30 and is stale: it also lists daily 7 AM Masses and 10 AM Tuesday that no bulletin shows.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Sunday St. Mary's 8:00 AM, 11:45 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Sunday: 8:00 AM, 11:45 AM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Sunday 11:45 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Sunday 11:45 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Sunday 11:45 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Sunday 11:45 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Sunday 11:45 st-mary-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed in the Sunday intentions of all five bulletins; the joint website agrees. (The old stmaryscortland.org page shows 11:30 and is stale: it also lists daily 7 AM Masses and 10 AM Tuesday that no bulletin shows.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Sunday St. Anthony's 9:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Sunday St. Anthony's 9:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Sunday St. Anthony's 9:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Sunday St. Anthony's 9:15 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Sunday St. Anthony's 9:15 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Sunday: 9:15 AM St. Anthony's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Sunday 09:15 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Sunday 09:15 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Sunday 09:15 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Sunday 09:15 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Sunday 09:15 st-anthony-of-padua-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed in the Sunday intentions of all five bulletins; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-homer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Sunday St. Margaret's 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Sunday St. Margaret's 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Sunday St. Margaret's 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Sunday St. Margaret's 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Sunday St. Margaret's 10:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Sunday: 10:30 AM St. Margaret's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Sunday 10:30 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Sunday 10:30 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Sunday 10:30 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Sunday 10:30 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Sunday 10:30 st-margaret-homer",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed in the Sunday intentions of all five bulletins; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Monday St. Anthony's 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Monday St. Anthony's 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Monday St. Anthony's 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Monday St. Anthony's 5:30 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Monday: 5:30 PM St. Anthony's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Monday 17:30 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Monday 17:30 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Monday 17:30 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Monday 17:30 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Monday 12:10 st-anthony-of-padua-cortland  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed on Monday at 5:30 PM in the intentions of the newest four bulletins (the Sep 28 listing has no time line); the joint website agrees. R8: one history reading of Monday 12:10 at St. Anthony's is the Tue-Fri noon pattern misapplied; no bulletin or the website shows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Tuesday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Tuesday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Tuesday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Tuesday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Tuesday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Tuesday: 12:10 PM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Tuesday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Tuesday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Tuesday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Tuesday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Tuesday 12:10 st-mary-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed on Tuesday in the intentions of the bulletins read; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-homer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Wednesday St. Margaret's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Wednesday St. Margaret's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Wednesday St. Margaret's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Wednesday St. Margaret's 12:10 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Wednesday: 12:10 PM St. Margaret's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Wednesday 12:10 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Wednesday 12:10 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Wednesday 12:10 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Wednesday 12:10 st-margaret-homer",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Wednesday 12:10 st-margaret-homer",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed on Wednesday in the intentions of the newest four bulletins; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Thursday St. Anthony's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Thursday St. Anthony's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Thursday St. Anthony's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Thursday St. Anthony's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Thursday St. Anthony's 12:10 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Thursday: 12:10 PM St. Anthony's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Thursday 12:10 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Thursday 12:10 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Thursday 12:10 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Thursday 12:10 st-anthony-of-padua-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Thursday 12:10 st-anthony-of-padua-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed on Thursday in the intentions of the bulletins read; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 2,
+          "said": "Friday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 2,
+          "said": "Friday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 2,
+          "said": "Friday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 2,
+          "said": "Friday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Friday St. Mary's 12:10 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Friday: 12:10 PM St. Mary's, weekly Adoration to follow"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly mass Friday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly mass Friday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly mass Friday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly mass Friday 12:10 st-mary-cortland",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly mass Friday 12:10 st-mary-cortland",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: listed on Friday in the intentions of the bulletins read; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 5,
+          "said": "The Sacrament of Reconciliation will now be available before the 4 PM Saturday Mass at St. Mary's from 3:00 to 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 5,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Saturday: 3:00 PM to 3:45 PM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-cortland",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-cortland",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: clock time printed in the Confession Schedule notice of all five bulletins; the joint website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:10 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 5,
+          "said": "Confessions will also be heard before the 12:10 PM Mass Tuesday through Friday from 11:45 AM to noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 5,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Tuesday: 11:45 AM to 12:00 PM St. Mary's; Friday: 11:45 AM to 12:00 PM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly confession Tuesday 11:45–12:00 st-mary-cortland  “Before the 12:10 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly confession Tuesday 11:45–12:00 st-mary-cortland  “Before Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly confession Tuesday 11:45–12:00 st-mary-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly confession Tuesday 11:45–12:00 st-mary-cortland  “Before the 12:10 PM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly confession Tuesday 11:45–12:00 st-mary-cortland",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the notice gives a clock window before the 12:10 PM Mass Tuesday to Friday; the Tuesday and Friday 12:10 Masses are at St. Mary's, which the website's per-day Confession Times confirm (POLICY: a general 'before every Mass' line covers each regular Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:10 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 5,
+          "said": "Confessions will also be heard before the 12:10 PM Mass Tuesday through Friday from 11:45 AM to noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 5,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Tuesday: 11:45 AM to 12:00 PM St. Mary's; Friday: 11:45 AM to 12:00 PM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly confession Friday 11:45–12:00 st-mary-cortland  “Before the 12:10 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly confession Friday 11:45–12:00 st-mary-cortland  “Before Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly confession Friday 11:45–12:00 st-mary-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly confession Friday 11:45–12:00 st-mary-cortland  “Before the 12:10 PM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly confession Friday 11:45–12:00 st-mary-cortland",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the notice gives a clock window before the 12:10 PM Mass Tuesday to Friday; the Tuesday and Friday 12:10 Masses are at St. Mary's, which the website's per-day Confession Times confirm (POLICY: a general 'before every Mass' line covers each regular Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-homer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:10 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 5,
+          "said": "Confessions will also be heard before the 12:10 PM Mass Tuesday through Friday from 11:45 AM to noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 5,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Wednesday: 11:45 AM to 12:00 PM St. Margaret's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly confession Wednesday 11:45–12:00 st-margaret-homer  “Before the 12:10 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly confession Wednesday 11:45–12:00 st-margaret-homer  “Before Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly confession Wednesday 11:45–12:00 st-margaret-homer",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly confession Wednesday 11:45–12:00 st-margaret-homer  “Before the 12:10 PM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly confession Wednesday 11:45–12:00 st-margaret-homer",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the Wednesday 12:10 Mass is at St. Margaret's; the website's per-day Confession Times confirm it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-cortland",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:10 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 5,
+          "said": "Confessions will also be heard before the 12:10 PM Mass Tuesday through Friday from 11:45 AM to noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 5,
+          "said": "same Confession Schedule notice"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Thursday: 11:45 AM to 12:00 PM St. Anthony's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly confession Thursday 11:45–12:00 st-anthony-of-padua-cortland  “Before the 12:10 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly confession Thursday 11:45–12:00 st-anthony-of-padua-cortland  “Before Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly confession Thursday 11:45–12:00 st-anthony-of-padua-cortland",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly confession Thursday 11:45–12:00 st-anthony-of-padua-cortland  “Before the 12:10 PM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly confession Thursday 11:45–12:00 st-anthony-of-padua-cortland",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: the Thursday 12:10 Mass is at St. Anthony's; the website's per-day Confession Times confirm it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-cortland",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:40",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following the 12:10 PM Mass, concluding with Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 3,
+          "said": "Weekly Hour of Adoration Fridays Following The 12:10 PM Mass At St Mary's ... Adoration until 1:30 PM concluding with Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b6153871",
+          "page": 3,
+          "said": "Weekly Hour of Adoration Fridays Following The 12:10 PM Mass At St Mary's ... Adoration until 1:30 PM concluding with Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "857d57cd",
+          "page": 3,
+          "said": "Weekly Hour of Adoration Fridays Following The 12:10 PM Mass At St Mary's ... Adoration until 1:30 PM concluding with Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "865b6d19",
+          "page": 3,
+          "said": "Weekly Hour of Adoration Fridays Following The 12:10 PM Mass At St Mary's ... Adoration until 1:30 PM concluding with Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 3,
+          "said": "Weekly Hour of Adoration Fridays Following The 12:10 PM Mass At St Mary's ... Adoration until 1:30 PM concluding with Benediction"
+        },
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Friday: 12:10 PM St. Mary's, weekly Adoration to follow (12:30-1:30 pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b61538713ddb",
+          "said": "weekly adoration Friday 12:40–13:30 st-mary-cortland  “Following 12:10 PM Mass; concludes with Benediction”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "857d57cd5c66",
+          "said": "weekly adoration Friday 12:40–13:30 st-mary-cortland  “Following the 12:10 PM Mass; concluding with Benediction”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "865b6d19fdde",
+          "said": "weekly adoration Friday 12:40–13:30 st-mary-cortland  “Following the 12:10 PM Mass; concluding with Benediction”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4308f1af50df",
+          "said": "weekly adoration Friday 12:10–13:30 st-mary-cortland  “Following the 12:10 PM Mass; concluding with Benediction”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "129f04994412",
+          "said": "weekly adoration Friday 12:10–13:30 st-mary-cortland  “Follows 12:10 PM Mass; concludes with Benediction”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R10, R35: the bulletin gives the end time 1:30 PM and 'following the 12:10 PM Mass' with no start clock time, so POLICY, Times works the start out as 30 minutes after the weekday Mass starts (12:40). The website's 12:30 start is only 10 minutes earlier and is not a bulletin clock time; the end matches. History's 12:10 start differs in time only (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4308f1af",
+          "page": 3,
+          "said": "St Mary's Marian Chapel is open for quiet prayer daily from 8 AM to 6 PM"
+        }
+      ],
+      "rationale": "R38, R26: a chapel open for quiet prayer is building access, not an Adoration schedule. Rosary and Chaplet of Divine Mercy times in the bulletin (Tue 9:30 AM St. Anthony's, Tue 2 PM and Wed 6:30 PM St. Mary's Marian Chapel, Sat 3:15 PM and Sun after 8 AM, St. Anthony's Sunday 8:40 AM) are devotions that POLICY leaves out (R24); St. Patrick's Oratory, Truxton is not on the church list and has only prayer times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-lawrence-deruyter",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Saturday: 5:15 PM St. Lawrence's",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:18:20Z",
+            "current_because": "The joint NCSM parish website (named as the new joint parish website in the newest bulletin, p2) is current: its Mass times for St. Mary's, St. Anthony's and St. Margaret's, and its Confession Times, all match the newest bulletin exactly, unlike the old stmaryscortland.org page.",
+            "bulletin": "4308f1af",
+            "fits_because": "The bulletin's intentions only cover St. Mary's, St. Anthony's and St. Margaret's, so its silence on St. Lawrence's Mission (on this parish's church list) is not a conflict; the site's other Saturday and Sunday times fit the bulletin."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's own current website lists a Saturday 5:15 PM Mass at St. Lawrence's (DeRuyter), a known church; no bulletin read mentions that church, which is not a contradiction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "oheron-newman-hall-cortland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Newman Center, SUNY Cortland"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "Sunday: 4:00 PM Newman Center",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:18:22Z",
+            "current_because": "The joint NCSM parish website (named as the new joint parish website in the newest bulletin, p2) is current: its Mass times for St. Mary's, St. Anthony's and St. Margaret's, and its Confession Times, all match the newest bulletin exactly; it also lists the Newman Center under Other Locations.",
+            "bulletin": "4308f1af",
+            "fits_because": "The bulletin's intentions only cover St. Mary's, St. Anthony's and St. Margaret's, so its silence on the Newman Center chapel (on this parish's church list) is not a conflict; the site's other Sunday times fit the bulletin."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's own current website lists a Sunday 4:00 PM Mass at the Newman Center (O'Heron Newman Hall, SUNY Cortland), a known church; no bulletin read mentions it, which is not a contradiction.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://ncsmcatholic.org/mass-schedule",
+          "said": "1st Saturday: 9:30 AM St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "129f0499",
+          "page": 2,
+          "said": "Saturday, Oct. 3 St. Mary's 4:00 PM +Lucille Lowie (3rd Anniv)"
+        }
+      ],
+      "rationale": "R28, R30: only the joint website lists it. The Sep 27 issue's week holds Saturday Oct 3, a first Saturday, and its intentions show only the 4:00 PM Mass that day (R11), though an empty intention proves nothing either way (R39). No other bulletin's week holds a first Saturday. Leaning include, since the website is current and matches the bulletin elsewhere.",
+      "question": "Add a first-Saturday 9:30 AM Mass at St. Mary's, Cortland?",
+      "options": [
+        {
+          "label": "First Saturdays 9:30 AM",
+          "entry": {
+            "church_slug": "st-mary-cortland",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

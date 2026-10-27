@@ -22,3 +22,10 @@ The September 2024 summary lists St. Francis of Assisi, Tonawanda under "merging
 ## Why it is not decided
 
 No source seen states whether it closed or became a chapel without public Mass.
+
+2026-10-26: the Roman Catholic Community of the Tonawandas' home page lists "St. Francis of
+Assisi Chapel 71 Adam St" among its sites, and its 25 October 2026 bulletin announces an All
+Souls' Mass at "St. Francis of Assisi Chapel". OSM tags 71 Adam Street as a separate chapel
+building about 50 m north of this church, so that Mass is not evidence of Mass here; the chapel
+has its own row (`churches/st-francis-of-assisi-chapel-tonawanda.md`). The family's naming the
+chapel and not this church is consistent with the church being out of use, but no source says so.

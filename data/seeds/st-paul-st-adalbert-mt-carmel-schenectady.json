@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-st-adalbert-mt-carmel-schenectady",
+  "status": "ready",
+  "as_of": "2026-10-25T13:25:03Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:08:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches in Schenectady: Mt. Carmel, St. Adalbert and St. Paul. Weekend Masses and the Saturday 3:00 PM confession are on the cover and page 2 and agree in the intentions. Dated entries are the Oct 26 Charismatic Renewal Mass, the Nov 2 All Souls Mass and the Nov 10 Adoration at St. Paul. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "23ccb885c141328b26a19462bb322025d357fea4eab511ee8a07aeb7a13d88be",
+      "fetched_at": "2026-10-25T13:25:03Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "55f119d24f8695e0ad5ab30c3818e798d4aebe886a9bf81416050278924adc37",
+      "fetched_at": "2026-10-18T12:53:41Z",
+      "published_date": "2026-10-18",
+      "read": false
+    },
+    {
+      "content_hash": "123723bbcc082e848803ee31181cdbede81ac7dfe5e364e09b81da5a4f7b0852",
+      "fetched_at": "2026-10-11T16:39:03Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "6333c42156ba9068896c4cd753ee2b151cb8ac144129d250efee54df209f0461",
+      "fetched_at": "2026-10-04T14:57:49Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "cf588db9c40d8ea80776d776792085b8122a0347062860ab18585348e0dc70c7",
+      "fetched_at": "2026-09-28T22:08:40Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 1,
+          "said": "Saturday Vigil Mass 4:00 PM (St. Paul the Apostle Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "Saturday, October 24 4:00PM | St. Paul the Apostle Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "weekly mass Saturday 16:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "weekly mass Saturday 16:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "weekly mass Saturday 16:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6333c42156ba",
+          "said": "weekly mass Saturday 16:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf588db9c40d",
+          "said": "weekly mass Saturday 16:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover page lists the Saturday vigil under St. Paul; the intentions page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 1,
+          "said": "Sunday Mass 8:00 AM (St. Paul the Apostle Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "Sunday, October 25 8:00AM | St. Paul the Apostle Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6333c42156ba",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf588db9c40d",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover page and intentions page agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mount-carmel-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 1,
+          "said": "Our Lady of Mt. Carmel Church, Sunday Mass 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "9:30AM | Our Lady of Mt. Carmel Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mount-carmel-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mount-carmel-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mount-carmel-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6333c42156ba",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mount-carmel-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf588db9c40d",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mount-carmel-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover page and intentions page agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 1,
+          "said": "Church of St. Adalbert, Sunday Mass 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "11:00AM | Church of St. Adalbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "weekly mass Sunday 11:00 st-adalbert-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "weekly mass Sunday 11:00 st-adalbert-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "weekly mass Sunday 11:00 st-adalbert-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6333c42156ba",
+          "said": "weekly mass Sunday 11:00 st-adalbert-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf588db9c40d",
+          "said": "weekly mass Sunday 11:00 st-adalbert-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: cover page and intentions page agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 2,
+          "said": "Confessions are heard at St. Paul the Apostle Church every Saturday from 3:00 to 3:30PM, or anytime by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 6,
+          "said": "Saturday 3:00 PM Confessions, St. Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "weekly confession Saturday 15:00–15:30 st-paul-the-apostle-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "weekly confession Saturday 15:00–15:30 st-paul-the-apostle-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "weekly confession Saturday 15:00–15:30 st-paul-the-apostle-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6333c42156ba",
+          "said": "weekly confession Saturday 15:00–15:30 st-paul-the-apostle-schenectady",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf588db9c40d",
+          "said": "weekly confession Saturday 15:00–15:30 st-paul-the-apostle-schenectady",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation paragraph gives the weekly window; 'or by appointment' has no time and is not recorded (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-schenectady",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Charismatic Renewal Mass; prayer and praise at 6:45 PM, healing prayer after Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 3,
+          "said": "St. Paul the Apostle Church Charismatic Renewal Mass Monday, October 26 at 7:00 PM ... All are welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "Monday, October 26 7:00PM | St. Paul the Apostle Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "specific_date mass 2026-10-26 19:00 st-paul-the-apostle-schenectady  “Charismatic Renewal Mass; includes healing prayer”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "specific_date mass 2026-10-26 19:00 st-paul-the-apostle-schenectady  “Charismatic Renewal Mass”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "specific_date mass 2026-10-26 19:00 st-paul-the-apostle-schenectady  “Charismatic Renewal Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: dated Mass open to all, on or after as_of; not a weekly slot (printed with a date; the 9-28 calendar had one too but no week of the month is named, POLICY rule 5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-adalbert-schenectady",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Commemoration of All the Faithful Departed (All Souls)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 3,
+          "said": "The Commemoration of All the Faithful Departed, Monday, November 2 - Mass 6:30 PM, Church of St. Adalbert"
+        },
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 7,
+          "said": "Monday, November 2 6:30PM | Church of St. Adalbert"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "specific_date mass 2026-11-02 18:30 st-adalbert-schenectady  “All Souls Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "55f119d24f86",
+          "said": "specific_date mass 2026-11-02 18:30 st-adalbert-schenectady  “All Souls' Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "123723bbcc08",
+          "said": "specific_date mass 2026-11-02 18:30 st-adalbert-schenectady  “All Souls Day”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass at a listed church, after as_of; open to all three parishes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-schenectady",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-10",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharistic Adoration"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 6,
+          "said": "Tuesday 10 St. Paul Eucharistic Adoration 6:00 PM to 7:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "23ccb885c141",
+          "said": "specific_date adoration 2026-11-10 18:00–19:00 st-paul-the-apostle-schenectady",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: printed in the calendar only with a date; no week of the month is named, so it stays dated (POLICY rule 5, R13). The 10-13 occurrence (10-4 and 9-27 calendars) is before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "23ccb885",
+          "page": 4,
+          "said": "Sunday, November 1st, 12:00 PM following 11:00 AM Mass, The Knights Chapel, Christ the King Church: Lunch | Gelato | Adoration"
+        }
+      ],
+      "rationale": "R22, R26: Adoration at Christ the King Church (not one of this parish's churches), no adoration time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

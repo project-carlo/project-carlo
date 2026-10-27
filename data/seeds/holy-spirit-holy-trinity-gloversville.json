@@ -1,0 +1,1617 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-spirit-holy-trinity-gloversville",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:11:34Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:59:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two linked churches, Holy Spirit (Gloversville) and Holy Trinity (Johnstown). The weekly Mass schedule is clear. Holy Trinity's Sunday 9:00 AM Mass is at Holy Spirit during painting, and its Tuesday and Wednesday Masses are in the parish hall. The first-Thursday Confession and first-Saturday Mass alternate by month and are left out (R33). Open: whether to keep the Holy Trinity Sunday slot while it is moved.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "90db4a560cf782516e7b830ea6ec29c58b3c092ddf89410cff8eb5be78f8efe5",
+      "fetched_at": "2026-10-25T13:11:34Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "7a9401c2fe085da3c58b1e10982de18a684131a64c3a2bfe6d06690b3592c1eb",
+      "fetched_at": "2026-10-11T16:26:56Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "e31539612debc66c3af06c7931e9833d1898edf8af93449c38e83116f7d88d6f",
+      "fetched_at": "2026-10-04T14:47:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d3606706f4cf19845ab8052dc5b5f8cc12f527de249230824cb41c62e3e9053e",
+      "fetched_at": "2026-09-28T21:57:58Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Church of the Holy Spirit, Celebration of the Eucharist: Saturday Vigil - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Church of the Holy Spirit, Celebration of the Eucharist: Saturday Vigil - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Church of the Holy Spirit, Celebration of the Eucharist: Saturday Vigil - 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Church of the Holy Spirit, Celebration of the Eucharist: Saturday Vigil - 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Saturday 16:00 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Saturday 16:00 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Saturday 16:00 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Saturday 16:00 holy-spirit-gloversville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Sunday - 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Sunday - 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Sunday - 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Sunday - 11:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Sunday 11:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Sunday 11:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Sunday 11:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Sunday 11:30 holy-spirit-gloversville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Thursday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Thursday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Thursday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Thursday 08:30 holy-spirit-gloversville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover and in the information column of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Daily Mass - Thursday & Friday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 2,
+          "said": "WEEKDAY MASSES: 8:30 A.M. Tuesday & Wednesday at Holy Trinity, Johnstown Thursday & Friday at Holy Spirit, Gloversville."
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Friday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Friday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Friday 08:30 holy-spirit-gloversville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Friday 08:30 holy-spirit-gloversville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover and in the information column of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "RECONCILIATION: 2:15 P.M. Saturday at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 2,
+          "said": "RECONCILIATION: 2:15 P.M. Saturday at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 2,
+          "said": "RECONCILIATION: 2:15 P.M. Saturday at Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 2,
+          "said": "RECONCILIATION: 2:15 P.M. Saturday at Holy Spirit"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly confession Saturday 14:15 holy-spirit-gloversville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly confession Saturday 14:15 holy-spirit-gloversville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly confession Saturday 14:15 holy-spirit-gloversville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly confession Saturday 14:15 holy-spirit-gloversville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the information column of all four bulletins. The parish website gives 2:15 - 3:45 p.m. (web https://www.holyspirit12078.org/office-hours-and-mass-times); the bulletin gives no end, so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Monday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Monday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Monday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Tuesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Tuesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Tuesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Wednesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Wednesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Wednesday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Thursday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Thursday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Thursday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Friday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Friday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Friday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Saturday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Saturday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Saturday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel, 24 hours except during Mass, funerals and weddings"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 3,
+          "said": "Welcome to Adoration of Our Lord. Everyone is invited to come and visit Jesus in the Adoration Chapel at anytime. Perpetual Adoration Chapel at Holy Spirit."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "PERPETUAL ADORATION CHAPEL: At The Church of the Holy Spirit."
+        },
+        {
+          "source": "website",
+          "url": "https://www.holyspirit12078.org/office-hours-and-mass-times",
+          "said": "Perpetual Adoration 24 hours a day 7 days a week except during Mass, Funerals, Weddings"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Sunday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Sunday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly adoration Sunday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel; available anytime”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly adoration Sunday 00:00 holy-spirit-gloversville  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R38, R1: the parish identifies the on-site Perpetual Adoration Chapel as Adoration open at any time, and its own website says 24 hours a day, 7 days a week. The 24-hour span is recorded as 12:00 AM to 11:59 PM each day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved from Holy Trinity during painting"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Holy Trinity Church Painting ... Beginning this weekend, October 25th the 9am Sunday Mass will be celebrated at Church of the Holy Spirit"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 5,
+          "said": "SUN. 9:00AM MASS AT HOLY SPIRIT"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "specific_date mass 2026-10-25 09:00 holy-spirit-gloversville  “Relocated from Holy Trinity due to painting”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16, R40: a dated Sunday Mass at a listed church; the bulletin says the usual Holy Trinity 9:00 AM Mass is celebrated at Holy Spirit this weekend.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved from Holy Trinity during painting"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "... and will continue to be at Holy Spirit until the painting and carpeting is completed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 5,
+          "said": "SUN. 9:00AM MASS AT HOLY SPIRIT (second listing, after Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Liturgical ministers for the weekend of November 1: 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "specific_date mass 2026-11-01 09:00 holy-spirit-gloversville  “Relocated from Holy Trinity due to painting”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16, R40: the week's Mass intentions list a second Sunday 9:00 AM Mass at Holy Spirit, which is Nov 1; the bulletin says the move continues until the painting is done.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to Holy Spirit during painting"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "Beginning this weekend, October 25th the 9am Sunday Mass will be celebrated at Church of the Holy Spirit"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "specific_date mass 2026-10-25 09:00 holy-trinity-johnstown  CANCELLED; “Relocated to Holy Spirit due to painting”",
+          "page": 3
+        }
+      ],
+      "rationale": "R16, R17, R40: the bulletin says the Holy Trinity 9:00 AM Mass is moved to Holy Spirit this weekend, so that occurrence at Holy Trinity does not take place.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to Holy Spirit during painting"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "... will continue to be at Holy Spirit until the painting and carpeting is completed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 5,
+          "said": "SUN. 9:00AM MASS AT HOLY SPIRIT (second listing)"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "specific_date mass 2026-11-01 09:00 holy-trinity-johnstown  CANCELLED; “Relocated to Holy Spirit due to painting”",
+          "page": 5
+        }
+      ],
+      "rationale": "R16, R17, R40: the Nov 1 9:00 AM Mass is listed at Holy Spirit, so the Holy Trinity occurrence does not take place.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-spirit-gloversville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass for all the deceased (All Souls)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 4,
+          "said": "MEMORIAL MASS ... This years Memorial Mass will be held on Saturday, November 14th at 11:00 A.M. at Holy Spirit Parish."
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "specific_date mass 2026-11-14 11:00 holy-spirit-gloversville  “Memorial Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "specific_date mass 2026-11-14 11:00 holy-spirit-gloversville  “Memorial Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated parish Memorial Mass for all the deceased, on or after as_of; it is not a Mass for one person, and families are invited to attend (they are asked to tell the office for the luncheon).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Currently in the parish hall during painting"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 5,
+          "said": "TUES. 8:30AM IN PARISH HALL; WED. 8:30AM IN PARISH HALL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "The Tuesday and Wednesday Daily Mass will be celebrated in the Parish Hall at Holy Trinity."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Tuesday 08:30 holy-trinity-johnstown  “Held in Parish Hall”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Tuesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Tuesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Tuesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Churches: the weekday Masses stay at Holy Trinity, in its parish hall while the church is painted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Currently in the parish hall during painting"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 5,
+          "said": "TUES. 8:30AM IN PARISH HALL; WED. 8:30AM IN PARISH HALL"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "The Tuesday and Wednesday Daily Mass will be celebrated in the Parish Hall at Holy Trinity."
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 1,
+          "said": "Holy Trinity Church: Daily Mass - Tuesday & Wednesday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Wednesday 08:30 holy-trinity-johnstown  “Held in Parish Hall”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Wednesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Wednesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Wednesday 08:30 holy-trinity-johnstown",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Churches: the weekday Masses stay at Holy Trinity, in its parish hall while the church is painted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-johnstown",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 10,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": "Thursday Devotions with Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "THURSDAY DEVOTIONS: 3:00 P.M. - 3:30 P.M. In October the Thursday Devotions will be at Holy Trinity Church, Johnstown with the Divine Mercy Chaplet in the presence of the exposed Blessed Sacrament ... Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a9401c2",
+          "page": 2,
+          "said": "THURSDAY DEVOTIONS: 3:00 P.M. - 3:30 P.M. In October the Thursday Devotions will be at Holy Trinity Church, Johnstown with the Divine Mercy Chaplet in the presence of the exposed Blessed Sacrament ... Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e3153961",
+          "page": 2,
+          "said": "THURSDAY DEVOTIONS: 3:00 P.M. - 3:30 P.M. In October the Thursday Devotions will be at Holy Trinity Church, Johnstown with the Divine Mercy Chaplet in the presence of the exposed Blessed Sacrament ... Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d3606706",
+          "page": 2,
+          "said": "THURSDAY DEVOTIONS: 3:00 P.M. - 3:30 P.M. In October the Thursday Devotions will be at Holy Trinity Church, Johnstown with the Divine Mercy Chaplet in the presence of the exposed Blessed Sacrament ... Benediction"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly adoration Thursday 15:00–15:30 holy-trinity-johnstown  “Thursday Devotions with Exposition”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly adoration Thursday 15:00–15:30 holy-trinity-johnstown  “October only”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "specific_date adoration 2026-10-08 15:00–15:30 holy-trinity-johnstown  “Thursday Devotions with Divine Mercy Chaplet and Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "specific_date adoration 2026-10-15 15:00–15:30 holy-trinity-johnstown  “Thursday Devotions with Divine Mercy Chaplet and Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "specific_date adoration 2026-10-22 15:00–15:30 holy-trinity-johnstown  “Thursday Devotions with Divine Mercy Chaplet and Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "specific_date adoration 2026-10-29 15:00–15:30 holy-trinity-johnstown  “Thursday Devotions with Divine Mercy Chaplet and Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "specific_date adoration 2026-10-01 15:00–15:30 holy-trinity-johnstown  “Divine Mercy Chaplet and Benediction”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Weekly qualifiers: devotions before the exposed Blessed Sacrament with Benediction are Adoration, and the bulletin limits this site to October, so the season is October. The sites alternate by month, but the source prints only October's place (R33), so no other month is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 1,
+          "said": "Holy Trinity Church: Sunday - 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 3,
+          "said": "the 9am Sunday Mass will be celebrated at Church of the Holy Spirit and will continue to be at Holy Spirit until the painting and carpeting is completed"
+        },
+        {
+          "source": "history",
+          "bulletin": "90db4a560cf7",
+          "said": "weekly mass Sunday 09:00 holy-trinity-johnstown  “Normally at Holy Trinity; currently relocated to Holy Spirit due to painting”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a9401c2fe08",
+          "said": "weekly mass Sunday 09:00 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e31539612deb",
+          "said": "weekly mass Sunday 09:00 holy-trinity-johnstown",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d3606706f4cf",
+          "said": "weekly mass Sunday 09:00 holy-trinity-johnstown",
+          "page": 1
+        }
+      ],
+      "rationale": "C2 (leaning): the Holy Trinity Sunday Mass is moved with no return date, so the standing slot may be wrong now; R40 would keep it with dated exceptions. The Oct 25 and Nov 1 moves are recorded separately.",
+      "question": "Keep the Sunday 9:00 AM Mass at Holy Trinity as a weekly slot while it is moved to Holy Spirit?",
+      "options": [
+        {
+          "label": "Leave out until it returns",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Keep Sundays 9:00 AM at Holy Trinity",
+          "entry": {
+            "church_slug": "holy-trinity-johnstown",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "RECONCILIATION: ... AND First Thursday of the Month following devotions, alternating monthly between parishes."
+        }
+      ],
+      "rationale": "R33: a first-Thursday Confession whose church alternates by month cannot be written as a weekly slot, and the bulletin prints no date or place on or after as_of. Update mode will read the bulletins that give them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90db4a56",
+          "page": 2,
+          "said": "FIRST SATURDAY MASS: 8:30 A.M. Sites will alternate to coincide with the Thursday Devotions."
+        }
+      ],
+      "rationale": "R33: the first-Saturday 8:30 AM Mass alternates between the two churches by month, which a weekly slot cannot express, and the bulletin prints no church or date on or after as_of (R12: the Sept 27 issue holds Oct 3 but prints no church either).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

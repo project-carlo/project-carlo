@@ -1,0 +1,1017 @@
+{
+  "schema_version": 1,
+  "parish_slug": "all-saints-on-the-hudson-mechanicville",
+  "status": "ready",
+  "as_of": "2026-10-25T13:18:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:07:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches: St. Peter's (weekday and Sunday 8:30), St. Paul's (Saturday vigil, Sunday 10:30, Saturday Confession), the Parish Center Chapel (Thursday 9:00) and St. Isaac Jogues (Sunday 10:00, May to October). All schedule-box times agree in all four bulletins read; the dated All Souls Day Masses on Nov 2 are included. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c24b94c15770f942c473ec50e5c697fd0be7b32cf5af6c2127af9f21843daf6a",
+      "fetched_at": "2026-10-25T13:18:57Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "42fcdd4550514a7739c248d7f4610b52318e101fe0e3f5ba7738cfee55a27db8",
+      "fetched_at": "2026-10-18T12:45:14Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "751cdd68169f2ca670755b2995be179e3e5c2506484caf737b6dfa78a5d70762",
+      "fetched_at": "2026-10-11T16:33:08Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d6222eec478acb6de2653511842a55c0293609864401fdf0e1774935d6173079",
+      "fetched_at": "2026-10-04T14:45:56Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "bd99469d94f4395cdda4dcad6d6162c5b2f76cc473e60d5ac00a14dc4d3a5bd6",
+      "fetched_at": "2026-09-28T21:55:34Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Monday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Monday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Monday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Monday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Monday 08:45 st-peter-stillwater",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Tuesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Tuesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Tuesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Tuesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Tuesday 08:45 st-peter-stillwater",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Wednesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Wednesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Wednesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Wednesday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Wednesday 08:45 st-peter-stillwater",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Weekday Mass Mon., Tues. Wed, and Fri. 8:45 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Friday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Friday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Friday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Friday 08:45 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Friday 08:45 st-peter-stillwater",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "parish-center-chapel-mechanicville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Thursday: 9:00 AM, Parish Center Chapel, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Thursday: 9:00 AM, Parish Center Chapel, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Thursday: 9:00 AM, Parish Center Chapel, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Thursday: 9:00 AM, Parish Center Chapel, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Thursday 09:00 parish-center-chapel-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Thursday 09:00 parish-center-chapel-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Thursday 09:00 parish-center-chapel-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Thursday 09:00 parish-center-chapel-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Thursday 09:00 parish-center-chapel-mechanicville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read. The Parish Center Chapel is a listed church of this parish (POLICY, Churches and chapels).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-mechanicville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Saturday: 4:00 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Saturday: 4:00 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Saturday: 4:00 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Saturday: 4:00 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Saturday 16:00 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Saturday 16:00 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Saturday 16:00 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Saturday 16:00 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Saturday 16:00 st-paul-mechanicville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Sunday: 8:30 AM, St. Peter's Church, Stillwater"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Sunday 08:30 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Sunday 08:30 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Sunday 08:30 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Sunday 08:30 st-peter-stillwater",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Sunday 08:30 st-peter-stillwater",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-mechanicville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Sunday, 10:30 AM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Sunday, 10:30 AM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Sunday, 10:30 AM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Sunday, 10:30 AM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Sunday 10:30 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Sunday 10:30 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Sunday 10:30 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Sunday 10:30 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Sunday 10:30 st-paul-mechanicville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-isaac-jogues-saratoga-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Sunday, 10:00 AM, St. Isaac Jogues, Saratoga Springs (May thru October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Sunday, 10:00 AM, St. Isaac Jogues, Saratoga Springs (May thru October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Sunday, 10:00 AM, St. Isaac Jogues, Saratoga Springs (May thru October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Sunday, 10:00 AM, St. Isaac Jogues, Saratoga Springs (May thru October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 4,
+          "said": "St. Isaac Jogues Chapel on the Lake ... every Sunday ... 10:00 AM From Memorial Day Weekend Until the snow flies"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly mass Sunday 10:00 st-isaac-jogues-saratoga-lake  “May through October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly mass Sunday 10:00 st-isaac-jogues-saratoga-lake  “May through October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly mass Sunday 10:00 st-isaac-jogues-saratoga-lake  “May thru October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly mass Sunday 10:00 st-isaac-jogues-saratoga-lake  “Seasonal: May through October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly mass Sunday 10:00 st-isaac-jogues-saratoga-lake  “May thru October”",
+          "page": 1
+        }
+      ],
+      "rationale": "POLICY, Weekly qualifiers: the schedule box gives May thru October, which is kept as the season. The bulletin says Saratoga Springs; the listed St. Isaac Jogues Chapel is on Route 9P at Saratoga Lake, and the page-4 ad shows the same Sunday 10:00 AM chapel Mass. Nov 1 intentions list no 10:00 Mass, consistent with the season end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-mechanicville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "Confessions Saturday, 3:15 PM to 3:45 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42fcdd45",
+          "page": 1,
+          "said": "Confessions Saturday, 3:15 PM to 3:45 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "751cdd68",
+          "page": 1,
+          "said": "Confessions Saturday, 3:15 PM to 3:45 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6222eec",
+          "page": 1,
+          "said": "Confessions Saturday, 3:15 PM to 3:45 PM, St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42fcdd455051",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "751cdd68169f",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6222eec478a",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-mechanicville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bd99469d94f4",
+          "said": "weekly confession Saturday 15:15–15:45 st-paul-mechanicville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-stillwater",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 2,
+          "said": "Masses will be celebrated at 9:00AM at St. Peter's Church, Stillwater and 12:00PM at St Paul's, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "specific_date mass 2026-11-02 09:00 st-peter-stillwater  “All Souls Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Day Mass on a date after as_of, open to all parishioners; the weekly Monday 8:45 slot is left alone (R17, no cancellation stated).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-mechanicville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 2,
+          "said": "All Soul's Day Mass Times November 2nd ... 12:00PM - St. Paul's Church, Mechanicville"
+        },
+        {
+          "source": "history",
+          "bulletin": "c24b94c15770",
+          "said": "specific_date mass 2026-11-02 12:00 st-paul-mechanicville  “All Souls Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Day Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "corpus-christi-round-lake",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 2,
+          "said": "Corpus Christi Church, Round Lake 6:00PM mass"
+        }
+      ],
+      "rationale": "R22: Corpus Christi, Round Lake is another parish's church (listed under its own parish); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-our-light-loudonville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-11",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Charismatic Mass and Healing Service"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 2,
+          "said": "Charismatic Mass & Healing Service, Wednesday, November 11th, Christ Our Light Church, 1 Maria Dr., Loudonville, 7:00PM"
+        }
+      ],
+      "rationale": "R22: held at Christ Our Light, Loudonville, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c24b94c1",
+          "page": 1,
+          "said": "The Rosary led by Sharon TenEyck every 2nd & 4th Friday 3:00PM at the Scerbo Ministry Center; Rosary every Thursday following the 9:00AM mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

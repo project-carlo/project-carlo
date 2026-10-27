@@ -1,0 +1,4488 @@
+{
+  "schema_version": 1,
+  "parish_slug": "eternal-flame-catholic-community",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:53:28Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches in one family of parishes. Weekend and daily Masses agree in all five bulletins; both 24-hour Adoration chapels are recorded daily, plus first-Friday Adoration at Ss. Peter and Paul and the three Nov 2 All Souls Masses. Open: the Nativity first-Friday church Adoration and a website-only Saturday Confession at St. Bernadette.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "310bbfbaa4e05d82811a2c0fc18989e1dfd4728385c2c2e460cbf5bb1b8361ee",
+      "fetched_at": "2026-10-25T13:15:50Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "97e4e232e526830504241035640d828df0c034333a5a3ee1a8e5628866e47d34",
+      "fetched_at": "2026-10-18T12:42:34Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "ce20c1fe82a33803a6bea5ec6a7fe700391468ae0114553ca3fa4ad1214324f3",
+      "fetched_at": "2026-10-11T16:33:19Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "95c0327f1127dfd9ab75806a6da81c0ec85b3b4b247cdc2cd501038dec6aa46b",
+      "fetched_at": "2026-10-04T14:24:48Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ec1813b703aae66b599f63ada9c3351ac94dc82e1234b695b7656f89f2b8177c",
+      "fetched_at": "2026-09-26T18:53:41Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:30pm Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:30pm Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:30pm Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:30pm Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:30pm Nativity of Our Lord"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 16:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 16:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 16:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 16:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 16:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 16:00 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 16:00 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 16:00 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 16:00 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 16:00 ss-peter-and-paul-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 4:00pm Saints Peter & Paul and St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 16:00 st-john-the-baptist-boston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 5:00pm St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 5:00pm St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 5:00pm St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 5:00pm St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 5:00pm St. Bernadette"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 17:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 17:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 17:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 17:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 17:00 st-bernadette-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-oratory-east-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 6:00pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 6:00pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 6:00pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 6:00pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Saturday (Vigil) Mass 6:00pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 18:00 st-mary-oratory-east-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 18:00 st-mary-oratory-east-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 18:00 st-mary-oratory-east-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 18:00 st-mary-oratory-east-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 18:00 st-mary-oratory-east-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 7:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 7:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 7:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 7:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 7:30am Saints Peter & Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 07:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 07:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 07:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 07:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 07:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 8:00am Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 8:00am Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 8:00am Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 8:00am Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 8:00am Nativity of Our Lord"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 8:30am St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 8:30am St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 8:30am St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 8:30am St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 8:30am St. Bernadette"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 08:30 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 08:30 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 08:30 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 08:30 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 08:30 st-bernadette-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 9:00am St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 9:00am St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 9:00am St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 9:00am St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 9:00am St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-boston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-boston",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 09:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 09:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 09:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 09:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 09:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 9:30am Saints Peter & Paul and Nativity of Our Lord"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 09:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 09:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 09:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 09:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 09:30 nativity-of-our-lord-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 11:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 11:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 11:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 11:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 11:00 nativity-of-our-lord-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 11:00am Nativity of Our Lord and St. Bernadette"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 11:00 st-bernadette-orchard-park  “Children's Liturgy of the Word”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 11:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 11:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 11:00 st-bernadette-orchard-park",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 11:00 st-bernadette-orchard-park",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 1,
+          "said": "Sunday Mass 11:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 1,
+          "said": "Sunday Mass 11:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 1,
+          "said": "Sunday Mass 11:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 1,
+          "said": "Sunday Mass 11:30am Saints Peter & Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 1,
+          "said": "Sunday Mass 11:30am Saints Peter & Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Sunday 11:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Sunday 11:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Sunday 11:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Sunday 11:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Sunday 11:30 ss-peter-and-paul-hamburg",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the weekend schedule box on page 1 lists it in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Monday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Monday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Monday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Monday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Monday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Wednesday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Wednesday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Wednesday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Wednesday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Wednesday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "7:00am | NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Friday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Friday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Friday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Friday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Friday 07:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Tuesday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Tuesday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Tuesday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Tuesday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Tuesday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB & NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Thursday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Thursday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Thursday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Thursday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Thursday 08:30 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "Saturday 8:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "Saturday 8:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "Saturday 8:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "Saturday 8:00am | NAT"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "Saturday 8:00am | NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 08:00 nativity-of-our-lord-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Monday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Monday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Monday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Monday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Monday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Monday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Monday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Monday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Monday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Monday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Tuesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Tuesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Tuesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Tuesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Tuesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Tuesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Wednesday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Wednesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Wednesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Wednesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Wednesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Wednesday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Thursday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Thursday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Thursday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Thursday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Thursday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Thursday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-boston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "8:30am | SJB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Friday 08:30 st-john-the-baptist-boston",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Friday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Friday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Friday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Friday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Friday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "Saturday 9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "Saturday 9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "Saturday 9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "Saturday 9:00am | SSPP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "Saturday 9:00am | SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Saturday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Saturday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Saturday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Saturday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Saturday 09:00 ss-peter-and-paul-hamburg",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Monday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Monday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Monday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Monday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Monday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Wednesday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Wednesday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Wednesday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Wednesday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Wednesday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "11:30am | SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Friday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Friday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Friday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Friday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Friday 11:30 st-bernadette-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Tuesday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Tuesday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Tuesday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Tuesday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Tuesday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "95c0327f",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 5,
+          "said": "7:00am | SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly mass Thursday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly mass Thursday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly mass Thursday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "weekly mass Thursday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly mass Thursday 07:00 st-bernadette-orchard-park",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the Daily Mass Schedule box on page 5 lists it in all five bulletins read; the weekly intentions on page 4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Monday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Monday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Monday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly adoration Monday 00:00 nativity-of-our-lord-orchard-park  “24-hour adoration chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Tuesday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Tuesday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Tuesday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Wednesday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Wednesday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Wednesday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Thursday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Thursday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Thursday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Friday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Friday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Friday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Saturday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Saturday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Saturday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "specific_date adoration 2026-10-03 18:30 nativity-of-our-lord-orchard-park  “GLORIFY”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Sunday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Sunday 00:00–23:59 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Sunday 00:00 nativity-of-our-lord-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "95c0327f1127",
+          "said": "specific_date adoration 2026-10-04 13:30–15:30 nativity-of-our-lord-orchard-park  “National Life Chain; Benediction at 3:00 PM”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Monday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Monday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Monday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "weekly adoration Monday 00:00 st-bernadette-orchard-park  “24-hour adoration chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Tuesday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Wednesday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Thursday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Thursday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Thursday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Friday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Friday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Friday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Saturday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Saturday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Saturday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s50",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration Chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ce20c1fe",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 9,
+          "said": "24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE; Looking for adorers to fill the hours listed below... Come spend quiet time with Jesus in the Adoration Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly adoration Sunday 00:00–23:59 st-bernadette-orchard-park  “24-Hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly adoration Sunday 00:00–23:59 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "ce20c1fe82a3",
+          "said": "weekly adoration Sunday 00:00 st-bernadette-orchard-park  “24-hour Adoration Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the page 9 heading '24-HOUR ADORATION CHAPELS: NATIVITY & ST. BERNADETTE' names the chapel at each church with the hours; the parish websites confirm an on-site chapel (Nativity at 43 Argyle Place; St. Bernadette's chapel next to the church). Recorded as the whole day; exposition is not claimed from the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s51",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 3,
+          "said": "Wednesday, October 28: 6:00pm Penance SB"
+        },
+        {
+          "source": "agent",
+          "bulletin": "97e4e232",
+          "page": 3,
+          "said": "Wednesday, October 21: 6:00pm Penance SB"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "weekly confession Wednesday 18:00 st-bernadette-orchard-park",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "weekly confession Wednesday 18:00 st-bernadette-orchard-park",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the page 3 calendars of two bulletins covering different weeks (Oct 21 and Oct 28) both list Wednesday 6:00pm Penance at SB, not marked special. The two earlier calendars (Oct 7, Oct 14) do not list it, which is an omission, not a contradiction. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s52",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; in the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 3,
+          "said": "Friday, October 2nd: 9:30am First Friday Adoration & Benediction, Chapel, SSPP"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "specific_date adoration 2026-10-02 09:30 ss-peter-and-paul-hamburg  “First Friday Adoration & Benediction”",
+          "page": 3
+        }
+      ],
+      "rationale": "R12: a named first-Friday service (POLICY, Weekly or dated, rule 2). The newest bulletin's week (Oct 26 - Nov 1) holds no first Friday; the Sep 27 issue's week (Sep 28 - Oct 4) holds Friday Oct 2, so that issue is the one that would print it. The chapel is SSPP's own. Later issues (weeks of Oct 5, 12, 19) hold no first Friday (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s53",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 7,
+          "said": "2026 ALL SOULS' DAY MASSES ... November 2nd at 7pm Nativity of Our Lord"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "specific_date mass 2026-11-02 19:00 nativity-of-our-lord-orchard-park  “All Souls' Day Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "specific_date mass 2026-11-02 19:00 nativity-of-our-lord-orchard-park  “All Souls' Day Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R16: a dated special Mass on or after as_of, outside the weekly schedule (POLICY, Weekly or dated, rule 7). The ad asks parishioners to contact the parish office for details; it does not limit the Mass to a group, so it is treated as open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s54",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ss-peter-and-paul-hamburg",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 7,
+          "said": "2026 ALL SOULS' DAY MASSES ... November 2nd at 7pm Saints Peter & Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "specific_date mass 2026-11-02 19:00 ss-peter-and-paul-hamburg  “All Souls' Day Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "specific_date mass 2026-11-02 19:00 ss-peter-and-paul-hamburg  “All Souls' Day Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R16: a dated special Mass on or after as_of, outside the weekly schedule (POLICY, Weekly or dated, rule 7). The ad asks parishioners to contact the parish office for details; it does not limit the Mass to a group, so it is treated as open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s55",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernadette-orchard-park",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 7,
+          "said": "2026 ALL SOULS' DAY MASSES ... November 2nd at 7pm Saint Bernadette"
+        },
+        {
+          "source": "history",
+          "bulletin": "310bbfbaa4e0",
+          "said": "specific_date mass 2026-11-02 19:00 st-bernadette-orchard-park  “All Souls' Day Mass”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "97e4e232e526",
+          "said": "specific_date mass 2026-11-02 19:00 st-bernadette-orchard-park  “All Souls' Day Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R16: a dated special Mass on or after as_of, outside the weekly schedule (POLICY, Weekly or dated, rule 7). The ad asks parishioners to contact the parish office for details; it does not limit the Mass to a group, so it is treated as open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s56",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "310bbfba",
+          "page": 3,
+          "said": "10am Rosary, Chapel, NAT; 6pm Rosary, Church, NAT; 7:00pm Rosary of Peace, Chapel, SB"
+        }
+      ],
+      "rationale": "R24: Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s57",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ec1813b7",
+          "page": 3,
+          "said": "Friday, October 2nd: 6:00pm First Friday Adoration & Benediction, Church, NAT"
+        },
+        {
+          "source": "history",
+          "bulletin": "ec1813b703aa",
+          "said": "specific_date adoration 2026-10-02 18:00 nativity-of-our-lord-orchard-park  “First Friday Adoration & Benediction”",
+          "page": 3
+        }
+      ],
+      "rationale": "R37 may apply: Nativity's 24-hour chapel is already recorded every day, and a first-Friday service inside that availability would be a duplicate. But this one is in the church, not the chapel, has Benediction, and no end time. R12/R11: the Sep 27 issue's week holds the first Friday Oct 2; the newest week holds none. Leaning include because it is a separate named service.",
+      "question": "Add the first-Friday 6:00 PM Adoration & Benediction in the church at Nativity?",
+      "options": [
+        {
+          "label": "First Fridays 6:00 PM, Benediction",
+          "entry": {
+            "church_slug": "nativity-of-our-lord-orchard-park",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction; in the church"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s58",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.saintbopny.org/reconciliation",
+          "said": "Saturdays at 4:00 pm in the church"
+        }
+      ],
+      "rationale": "R6 doubt: only the parish website's Reconciliation page gives it (page footer says 2023, no end time), the bulletins never mention it. The same site's Mass Times page matches the bulletin exactly. Leaning include since a 4:00 PM confession before the 5:00 PM vigil is plausible.",
+      "question": "Add Saturday 4:00 PM Confession at St. Bernadette (website only)?",
+      "options": [
+        {
+          "label": "Saturdays 4:00 PM",
+          "entry": {
+            "church_slug": "st-bernadette-orchard-park",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s59",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "nativity-of-our-lord-orchard-park",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.nativityofourlordop.com/",
+          "said": "Mass Times: Saturday Vigil 4:30pm; Sunday 8am, 9:30am, 11am; Weekday Masses ... Confessions from 3 to 4pm Saturdays.",
+          "schedule_check": {
+            "checked_at": "2026-10-26T01:58:53Z",
+            "current_because": "Nativity's own homepage Mass Times block lists the same Saturday vigil, Sunday and weekday Masses as the current bulletin, so the block is maintained and current. A separate older footer widget on the same page shows an outdated Mass list (7 PM vigil), but it is not the block quoted and does not mention Confession.",
+            "bulletin": "310bbfba",
+            "fits_because": "The bulletin's Mass schedule has Nativity's Saturday vigil at 4:30 PM, so a Saturday 3-4 PM Confession ending before the vigil fits; the bulletin prints no Nativity Confession time itself."
+          }
+        }
+      ],
+      "rationale": "R6: the parish's own website gives a Saturday 3-4 PM Confession at the known church, in a block whose Masses match the newest bulletin; page null.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

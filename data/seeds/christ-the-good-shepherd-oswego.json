@@ -1,0 +1,1429 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-good-shepherd-oswego",
+  "status": "ready",
+  "as_of": "2026-10-25T13:22:59Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:50:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches plus the Hall Newman Center at SUNY Oswego. The page-1 schedule box (weekend and weekday Masses, Reconciliation, Monday Adoration) is the same in all five bulletins read (Sep 27 to Oct 25); Monday Adoration/Benediction/Rosary at 10:30 AM is also in each weekly calendar. A new Mass schedule begins November 28 (Sat 4:00 PM CTGS only; Sun 8:00 OLPH and CTGS, 10:00 OLR, 10:30 CTGS, 6:30 HNC); per R20 it is left out and the current schedule kept. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "132d4e2ee6023716c2a8022a99e6300c212f371b0bb294de9a7f7682d3902fe8",
+      "fetched_at": "2026-10-25T13:22:59Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "7cb16930eb9e7558143a067ecec87a4b2d27fab1d7918c4c129499fc557d11e5",
+      "fetched_at": "2026-10-18T12:53:42Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "088c4652e686daa083185eaa6ad1d5b95f2263494f3ae9fa5b07b7f932be9e3a",
+      "fetched_at": "2026-10-11T16:29:33Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "6af6c3de13b935ada960556597e4c7046f0755df3ecc5f45c6830b7139871980",
+      "fetched_at": "2026-10-04T14:33:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3b13809ab684f9e90360a87a710c85791879b46479d77e09481f96ffb5451d33",
+      "fetched_at": "2026-09-28T00:05:11Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-minetto",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Saturday 16:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Saturday 16:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Saturday 16:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Saturday 16:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Saturday 16:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "4:30 pm - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "4:30 pm - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "4:30 pm - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "4:30 pm - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "4:30 pm - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Saturday 16:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Saturday 16:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Saturday 16:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Saturday 16:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Saturday 16:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Sunday 08:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Sunday 08:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Sunday 08:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Sunday 08:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Sunday 08:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Sunday: 8:00 am - Christ the Good Shepherd ... 10:30 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Sunday 10:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Sunday 10:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Sunday 10:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Sunday 10:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Sunday 10:30 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-minetto",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "9:00 am - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "9:00 am - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "9:00 am - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "9:00 am - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "9:00 am - Our Lady of Perpetual Help"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Sunday 09:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Sunday 09:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Sunday 09:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Sunday 09:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Sunday 09:00 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-hannibal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "10:15 am - Our Lady of the Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "10:15 am - Our Lady of the Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "10:15 am - Our Lady of the Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "10:15 am - Our Lady of the Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "10:15 am - Our Lady of the Rosary"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Sunday 10:15 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Sunday 10:15 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Sunday 10:15 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Sunday 10:15 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Sunday 10:15 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "hall-newman-center-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "6:30 pm - Hall Newman Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "6:30 pm - Hall Newman Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "6:30 pm - Hall Newman Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "6:30 pm - Hall Newman Center"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "6:30 pm - Hall Newman Center"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Sunday 18:30 hall-newman-center-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Sunday 18:30 hall-newman-center-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Sunday 18:30 hall-newman-center-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Sunday 18:30 hall-newman-center-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Sunday 18:30 hall-newman-center-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Masses box of all five bulletins read. Hall Newman Center (SUNY Oswego) is on the church list; no restriction to students is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Monday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Monday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Monday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Monday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Monday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Tuesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Tuesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Tuesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Tuesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Tuesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Wednesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Wednesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Wednesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Wednesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Wednesday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Thursday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Thursday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Thursday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Thursday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Thursday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Weekday Mass Monday thru Friday 10:00 am - Christ the Good Shepherd"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly mass Friday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly mass Friday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly mass Friday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly mass Friday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly mass Friday 10:00 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-perpetual-help-minetto",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:10",
+        "end_time": "15:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Saturday Our Lady of Perpetual Help: 3:10 - 3:40 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Saturday Our Lady of Perpetual Help: 3:10 - 3:40 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Saturday Our Lady of Perpetual Help: 3:10 - 3:40 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Saturday Our Lady of Perpetual Help: 3:10 - 3:40 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Saturday Our Lady of Perpetual Help: 3:10 - 3:40 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly confession Saturday 15:10–15:40 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly confession Saturday 15:10–15:40 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly confession Saturday 15:10–15:40 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly confession Saturday 15:10–15:40 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly confession Saturday 15:10–15:40 our-lady-of-perpetual-help-minetto",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacrament of Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Christ the Good Shepherd: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Christ the Good Shepherd: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Christ the Good Shepherd: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Christ the Good Shepherd: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Christ the Good Shepherd: 3:30 - 4:15 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly confession Saturday 15:30–16:15 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly confession Saturday 15:30–16:15 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly confession Saturday 15:30–16:15 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly confession Saturday 15:30–16:15 christ-the-good-shepherd-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly confession Saturday 15:30–16:15 christ-the-good-shepherd-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacrament of Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-rosary-hannibal",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:05",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Sunday Our Lady of the Rosary: 9:45 - 10:05 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 1,
+          "said": "Sunday Our Lady of the Rosary: 9:45 - 10:05 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Sunday Our Lady of the Rosary: 9:45 - 10:05 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Sunday Our Lady of the Rosary: 9:45 - 10:05 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Sunday Our Lady of the Rosary: 9:45 - 10:05 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly confession Sunday 09:45–10:05 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly confession Sunday 09:45–10:05 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly confession Sunday 09:45–10:05 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly confession Sunday 09:45–10:05 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly confession Sunday 09:45–10:05 our-lady-of-the-rosary-hannibal",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacrament of Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-good-shepherd-oswego",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 1,
+          "said": "Adoration: Monday after the 10:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "132d4e2e",
+          "page": 5,
+          "said": "Mon 10/26 10:30am Adoration/Benediction/Rosary CTGS; Mon 11/2 10:30am Adoration/Benediction/Rosary CTGS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7cb16930",
+          "page": 5,
+          "said": "Mon 10/19 and 10/26 10:30am Adoration/Benediction/Rosary CTGS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "088c4652",
+          "page": 1,
+          "said": "Adoration: Monday after the 10:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6af6c3de",
+          "page": 1,
+          "said": "Adoration: Monday after the 10:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3b13809a",
+          "page": 1,
+          "said": "Adoration: Monday after the 10:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "132d4e2ee602",
+          "said": "weekly adoration Monday 10:30 christ-the-good-shepherd-oswego  “Adoration/Benediction/Rosary”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7cb16930eb9e",
+          "said": "weekly adoration Monday 10:30 christ-the-good-shepherd-oswego  “Includes Benediction and Rosary”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "088c4652e686",
+          "said": "weekly adoration Monday 10:30 christ-the-good-shepherd-oswego  “Includes Benediction and Rosary”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "6af6c3de13b9",
+          "said": "weekly adoration Monday 10:30 christ-the-good-shepherd-oswego  “Includes benediction and rosary”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3b13809ab684",
+          "said": "weekly adoration Monday 10:30 christ-the-good-shepherd-oswego  “Includes Benediction and Rosary”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, POLICY Times and Weekly or dated rule 4: the box says Monday after the 10:00 am Mass and the calendar gives the clock time 10:30 am for every Monday in all weeks read, so the clock time wins; weekly. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

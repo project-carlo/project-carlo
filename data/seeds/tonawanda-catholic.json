@@ -1,0 +1,3482 @@
+{
+  "schema_version": 1,
+  "parish_slug": "tonawanda-catholic",
+  "status": "ready",
+  "as_of": "2026-10-25T13:17:35Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:53:36Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches, one parish: weekend, weekday, Confession and Wednesday Adoration times are printed in the page 1 box and agree in the six bulletins read. First Friday and first Sunday St. Jude Masses are weeks-of-month slots (First Friday kept under R12 from the Sep 27 issue). Dated: Nov 2 12 PM All Souls Mass at St. Francis of Assisi Chapel (71 Adam St.) and the Nov 17 Mass of Remembrance at St. Amelia. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "fc92df4c2a8e3152e506c3d46b42e48e8b940aedf3064b500a075f9b7dda9441",
+      "fetched_at": "2026-10-25T13:17:35Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "42c43a423336129011a69acb18be7f0d69799f8a91533a6419763eaf5f502d25",
+      "fetched_at": "2026-10-18T12:44:47Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "3eef80b3d272e712fa9071ab0d4e83890366c6cdd66ca430366624330520712f",
+      "fetched_at": "2026-10-11T16:34:35Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "2fe711586548b6f43a638d4c2b5acab71d980d845acaabbdf8fc645f8575f974",
+      "fetched_at": "2026-10-04T14:30:01Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "906e77ef3c5587f0a58e6f1a0bdc9407a5c52986c51b6e5478a65ff58be27d85",
+      "fetched_at": "2026-09-27T14:06:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "c7e51dbbcb7bdc97accf152682fc7110e2796c278a4c5f42c8da8fbd8ab4f876",
+      "fetched_at": "2026-09-26T18:55:07Z",
+      "published_date": "2026-09-20",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "5:00 pm Our Lady of Czestochowa (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "5:00 pm Our Lady of Czestochowa (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "5:00 pm Our Lady of Czestochowa (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "5:00 pm Our Lady of Czestochowa (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "5:00 pm Our Lady of Czestochowa (Saturday evening vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Saturday 17:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 09:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "9:00 am Our Lady of Czestochowa and St. Christopher; 11:00 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 11:00 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in the Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Monday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:30 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:30 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:30 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Thursday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:30 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:30 am Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Friday 08:30 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:30 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-czestochowa-north-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Saturday 4:00-4:45 pm Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Saturday 4:00-4:45 pm Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Saturday 4:00-4:45 pm Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Saturday 4:00-4:45 pm Our Lady of Czestochowa"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Saturday 4:00-4:45 pm Our Lady of Czestochowa"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly confession Saturday 16:00–16:45 our-lady-of-czestochowa-north-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "4:30 pm St. Amelia (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "4:30 pm St. Amelia (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "4:30 pm St. Amelia (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "4:30 pm St. Amelia (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "4:30 pm St. Amelia (Saturday evening vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Saturday 16:30 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "8:00 am St. Amelia; 10:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 10:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Monday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Tuesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Wednesday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Thursday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Friday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 8:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Saturday Morning 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Saturday Morning 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Saturday Morning 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Saturday Morning 8:00 am St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Saturday Morning 8:00 am St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Saturday 08:00 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Saturday 3:30-4:15 pm St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Saturday 3:30-4:15 pm St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Saturday 3:30-4:15 pm St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Saturday 3:30-4:15 pm St. Amelia"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Saturday 3:30-4:15 pm St. Amelia"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly confession Saturday 15:30–16:15 st-amelia-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "4:00 pm St. Christopher (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "4:00 pm St. Christopher (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "4:00 pm St. Christopher (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "4:00 pm St. Christopher (Saturday evening vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "4:00 pm St. Christopher (Saturday evening vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Saturday 16:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 07:30 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 09:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "7:30 am St. Christopher; 9:00 am Our Lady of Czestochowa and St. Christopher; 10:30 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 10:30 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Sunday morning list in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Monday 07:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 7:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Tuesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 7:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Wednesday 07:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 7:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Thursday 07:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 7:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Monday through Friday Mornings 7:00 am St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Friday 07:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; intentions page 7 lists 7:00 am Masses Mon-Fri.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Wednesday Evening 6:30 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Wednesday Evening 6:30 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Wednesday Evening 6:30 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Wednesday Evening 6:30 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Wednesday Evening 6:30 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 7,
+          "said": "Wednesday, October 28 6:30 pm Birthday Blessing for Christopher Martin by Mom & Dad"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda  “First Wednesday: Anointing of the Sick”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda  “Anointing of the Sick after Mass on the first Wednesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda  “Includes Anointing of the Sick on the First Wednesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Wednesday 18:30 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday box in every bulletin; page 10 also refers to the 6:30 p.m. Mass at St. Christopher.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Saturday 3:00-3:45 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Saturday 3:00-3:45 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Saturday 3:00-3:45 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Saturday 3:00-3:45 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Saturday 3:00-3:45 pm St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly confession Saturday 15:00–15:45 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Wednesday 5:30-6:00 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Wednesday 5:30-6:00 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Wednesday 5:30-6:00 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Wednesday 5:30-6:00 pm St. Christopher"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Wednesday 5:30-6:00 pm St. Christopher"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly confession Wednesday 17:30–18:00 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confession box in every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 9,
+          "said": "Wed Oct 28 and Nov 4, 12:00 pm Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly adoration Wednesday 12:00–18:15 st-christopher-tonawanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Adoration box in every bulletin; the page 9 calendar shows noon Adoration on both Wednesdays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-christopher-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "Adoration Wednesday: St. Christopher Church 12:00 noon-6:15 pm and 7:00-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 10,
+          "said": "On the LAST Wednesday of the month, there will be Praise & Worship from 7:00-8:00 p.m. as part of Eucharistic Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “Last Wednesday: Praise & Worship”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “Praise & Worship on last Wednesday; Anointing of Sick on first Wednesday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “Includes Praise & Worship on the last Wednesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “Includes Anointing of the Sick on the First Wednesday and Praise & Worship on the Last Wednesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “Praise & Worship on Last Wednesdays; Anointing on First Wednesdays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly adoration Wednesday 19:00–20:00 st-christopher-tonawanda  “First Wednesday: Anointing of the Sick; Last Wednesday: Praise & Worship”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Adoration box prints 7:00-8:00 pm every Wednesday with no week qualifier. Page 10 says first-Wednesday Anointing and last-Wednesday Praise & Worship happen as part of Eucharistic Adoration, which fits an every-Wednesday evening hour. History reads it the same way (4/4). Not a weeks-of-month slot, so no weeks_of_month.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "*5:00 pm First Sunday St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "*5:00 pm First Sunday St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3eef80b3",
+          "page": 1,
+          "said": "*5:00 pm First Sunday St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2fe71158",
+          "page": 1,
+          "said": "*5:00 pm First Sunday St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "*5:00 pm First Sunday St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 7,
+          "said": "St. Jude the Apostle Sunday, Nov 1 at 5:00 pm: All Souls Intentions by Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Sunday 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Sunday 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Sunday 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2fe711586548",
+          "said": "specific_date mass 2026-10-04 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "specific_date mass 2026-10-04 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Sunday 17:00 st-jude-the-apostle-north-tonawanda  “First Sunday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: named First Sunday Mass; the newest bulletin's week holds Sunday Nov 1 (first) and prints it. The Nov 1 All Souls listing is this weekly Mass, not a separate entry (POLICY, Weekly or dated rule 6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-the-apostle-north-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "906e77ef",
+          "page": 1,
+          "said": "**First Friday (beginning August) 12:00 pm St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "42c43a42",
+          "page": 1,
+          "said": "**First Friday 12:00 pm St. Jude the Apostle"
+        },
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 1,
+          "said": "**First Friday 12:00 pm St. Jude the Apostle"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly mass Friday 12:00 st-jude-the-apostle-north-tonawanda  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "42c43a423336",
+          "said": "weekly mass Friday 12:00 st-jude-the-apostle-north-tonawanda  “First Friday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3eef80b3d272",
+          "said": "weekly mass Friday 12:00 st-jude-the-apostle-north-tonawanda  “First Friday of the month only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "specific_date mass 2026-10-02 12:00 st-jude-the-apostle-north-tonawanda  “First Friday”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "weekly mass Friday 12:00 st-jude-the-apostle-north-tonawanda  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12: named first-Friday Mass. The newest bulletin's week (Oct 25 to Nov 1) holds no first Friday; the newest read bulletin whose week holds one is Sep 27 (Fri Oct 2), which prints it. The newest also lists it in its box and page 7 lists Friday Nov 6 12:00 All Souls Intentions at St. Jude.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-17",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 9,
+          "said": "Tuesday, November 17th, our Family of Parishes will be having its annual Mass of Remembrance at 6:30 at St. Amelia Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "specific_date mass 2026-11-17 18:30 st-amelia-tonawanda  “Mass of Remembrance”",
+          "page": 9
+        }
+      ],
+      "rationale": "R16: dated special Mass on or after as_of. It remembers all who died in the last year, not one person, and the Family invites everyone to bring photos, so it is open (POLICY, closed-Mass bullet).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-chapel-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 9,
+          "said": "Monday, November 2nd Mass at 12:00 PM St. Francis of Assisi Chapel ALL SOULS"
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 7: the newest bulletin's page 9 announces a parish-wide All Souls' Mass on Monday, November 2 at 12:00 PM at St. Francis of Assisi Chapel. Date, time and church are clear and it is open to all. The chapel is now on the church list at 71 Adam St. (the separate chapel, not the former church at 150 Broad St.), so the earlier R23 exclusion no longer applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 8,
+          "said": "Mass for the Loss of a Child, Saturday, November 14, 2026 at Noon, St. Timothy RC Church, 565 E Park Drive, Tonawanda"
+        }
+      ],
+      "rationale": "R22: St. Timothy belongs to another parish (light-of-christ-kenmore); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 8,
+          "said": "Saturday, November 7th at 9:00 am at the Mt. Olivet Cemetery in Kenmore for the monthly Mass of Remembrance"
+        }
+      ],
+      "rationale": "R22/POLICY: held at a cemetery, not a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-amelia-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Worship"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 5,
+          "said": "FIRST FRIDAY WORSHIP Please join us at 7:30 pm on Friday, November 6th in St. Amelia Church as we worship God through song and listen to scripture readings."
+        },
+        {
+          "source": "history",
+          "bulletin": "fc92df4c2a8e",
+          "said": "weekly adoration Friday 19:30 st-amelia-tonawanda  “First Friday Worship”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "906e77ef3c55",
+          "said": "specific_date adoration 2026-10-02 19:30 st-amelia-tonawanda  “First Friday Praise & Worship”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "c7e51dbbcb7b",
+          "said": "specific_date adoration 2026-10-02 19:30 st-amelia-tonawanda  “First Friday Worship”",
+          "page": 5
+        }
+      ],
+      "rationale": "R24: song and scripture readings is a devotion; the bulletin never calls it Adoration, Exposition or a Holy Hour. History read it as Adoration (R9: history hint rejected).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 5,
+          "said": "Anointing of the Sick Wednesday, November 4th Following 6:30 PM Mass St. Christopher Church"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration. It follows the weekly Wednesday 6:30 PM Mass, which is already a slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "fc92df4c",
+          "page": 5,
+          "said": "Praise and Worship Wednesday, October 28th Following 6:30 Mass St. Christopher Church"
+        }
+      ],
+      "rationale": "R24: Praise & Worship is a devotion; its 7:00-8:00 pm hour is part of the Wednesday Adoration slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": []
+}

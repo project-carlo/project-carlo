@@ -1,0 +1,1806 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-family-holy-rosary",
+  "status": "ready",
+  "as_of": "2026-10-25T13:15:07Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:11:15Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (Epiphany of Our Lord, Immaculate Conception, St. Joseph) with one schedule box in the bulletin that agrees across all five issues read. Weekend and weekday Masses, a Confession box, First Saturday Mass at Epiphany, weekly Monday Adoration at Immaculate Conception and First Friday Adoration at Immaculate Conception and St. Joseph are all settled. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "62933e4b653006703e71da27b534fb1ce5c7b9475a1c347ecf26b7e53ccad8a5",
+      "fetched_at": "2026-10-25T13:15:07Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3caf41d7cc5e38240bafd3f2d0bb08dbf933d321f81caf16eac59e97d052afd1",
+      "fetched_at": "2026-10-18T12:40:40Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "45187c3a1b2e8af1c06886ceb8f5a6cde85783d9a20ec33ab32f7d25aa0e11fa",
+      "fetched_at": "2026-10-11T16:30:21Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "da176a5df8fe3a4a104c7a2e957e5136103725554a2144739dfc1bc3ade9d1f5",
+      "fetched_at": "2026-10-04T14:20:25Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "661cd1c47607abcf9037957dfc8412b0730232b5126a0c620d3f7baeae252b1e",
+      "fetched_at": "2026-09-26T18:53:12Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Tuesday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Tuesday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Tuesday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Tuesday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Tuesday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Tuesday | 9:15 am EPH; Thursday | 9:15 am EPH"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Thursday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Thursday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Thursday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Thursday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Thursday 09:15 epiphany-of-our-lord-langford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Sunday 08:00 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Sunday 08:00 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Sunday 08:00 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Sunday 08:00 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Sunday 08:00 epiphany-of-our-lord-langford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on the front page of all five bulletins read; Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH ... 11:30 am EPH"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Sunday 11:30 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Sunday 11:30 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Sunday 11:30 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Sunday 11:30 epiphany-of-our-lord-langford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Sunday 11:30 epiphany-of-our-lord-langford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass schedule box on the front page of all five bulletins read; Mass intentions list the same times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "First Saturday | 8:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "First Saturday | 8:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "First Saturday | 8:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "First Saturday | 8:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "First Saturday | 8:30 am EPH"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 2,
+          "said": "Saturday, October 3, 2026 8:30 am EPH (First Saturday Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "specific_date mass 2026-11-07 08:30 epiphany-of-our-lord-langford  “First Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Saturday 08:30 epiphany-of-our-lord-langford  “First Saturday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Saturday 08:30 epiphany-of-our-lord-langford  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Saturday 08:30 epiphany-of-our-lord-langford  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "specific_date mass 2026-10-03 08:30 epiphany-of-our-lord-langford  “First Saturday Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: First Saturday Mass is in the weekday schedule box; weeks_of_month first (POLICY, Weekly or dated rule 2). Newest week holds no first Saturday, but the box prints it. The Oct 3 Mass intention is labeled First Saturday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Monday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Monday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Monday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Monday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Monday 08:00 immaculate-conception-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Wednesday 08:00 immaculate-conception-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday |8:00 am ICC/ 9:15 am STJ; Wednesday|8:00 am ICC; Friday | 8:00 am ICC"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Friday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Friday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Friday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Friday 08:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Friday 08:00 immaculate-conception-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend Mass schedule box, all five bulletins. The Oct 31 4:00 pm Mass of Remembrance is this regular Mass (POLICY, Weekly or dated rule 7), so not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "11:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "11:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "11:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "11:00 am ICC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "11:00 am ICC"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-eden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-eden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend Mass schedule box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Monday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Monday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Monday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Monday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Monday 09:15 st-joseph-gowanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Wednesday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Wednesday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Wednesday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Wednesday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Wednesday 09:15 st-joseph-gowanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Monday ... 9:15 am STJ; Wednesday ... 9:15 am STJ; Friday ... 9:15 am STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Friday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Friday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Friday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Friday 09:15 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Friday 09:15 st-joseph-gowanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass schedule box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Saturday |4:00 pm ICC 4:30 pm STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Saturday 16:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Saturday 16:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Saturday 16:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Saturday 16:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Saturday 16:30 st-joseph-gowanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend Mass schedule box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH 8:30 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH 8:30 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH 8:30 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH 8:30 am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 1,
+          "said": "Sunday |8:00 am EPH 8:30 am STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly mass Sunday 08:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly mass Sunday 08:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly mass Sunday 08:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly mass Sunday 08:30 st-joseph-gowanda",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly mass Sunday 08:30 st-joseph-gowanda",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend Mass schedule box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 2,
+          "said": "Confession Times: St. Joseph: Saturday at 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 2,
+          "said": "Confession Times: St. Joseph: Saturday at 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 2,
+          "said": "Confession Times: St. Joseph: Saturday at 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 2,
+          "said": "Confession Times: St. Joseph: Saturday at 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 2,
+          "said": "Confession Times: St. Joseph: Saturday at 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly confession Saturday 16:00 st-joseph-gowanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly confession Saturday 16:00–16:30 st-joseph-gowanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly confession Saturday 16:00 st-joseph-gowanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly confession Saturday 16:00 st-joseph-gowanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly confession Saturday 16:00 st-joseph-gowanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession Times box, all five bulletins; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "epiphany-of-our-lord-langford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 2,
+          "said": "Epiphany: Sunday at 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 2,
+          "said": "Epiphany: Sunday at 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 2,
+          "said": "Epiphany: Sunday at 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 2,
+          "said": "Epiphany: Sunday at 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 2,
+          "said": "Epiphany: Sunday at 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly confession Sunday 11:00 epiphany-of-our-lord-langford",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly confession Sunday 11:00–11:30 epiphany-of-our-lord-langford",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly confession Sunday 11:00 epiphany-of-our-lord-langford",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly confession Sunday 11:00 epiphany-of-our-lord-langford",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly confession Sunday 11:00 epiphany-of-our-lord-langford",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession Times box, all five bulletins; no end time printed (history's 11:00-11:30 in one issue is not printed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday at 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday at 3:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-eden",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly confession Saturday 15:30–16:00 immaculate-conception-eden",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-eden",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-eden",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "weekly confession Saturday 15:30 immaculate-conception-eden",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession Times box, all five bulletins; no end time printed (history's 15:30-16:00 in one issue is not printed).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 2,
+          "said": "There will be Eucharistic Adoration on Monday, October 26th, at Immaculate Conception after the 8:00 am Mass until noon."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3caf41d7",
+          "page": 2,
+          "said": "Eucharistic Adoration on Monday, October 19th, at Immaculate Conception after the 8:00 am Mass until noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "45187c3a",
+          "page": 2,
+          "said": "There will be NO Eucharistic Adoration on Monday, October 12th, due to the Columbus Day Holiday, at Immaculate Conception."
+        },
+        {
+          "source": "agent",
+          "bulletin": "da176a5d",
+          "page": 2,
+          "said": "Eucharistic Adoration on Monday, October 5th, at Immaculate Conception after the 8:00 am Mass until noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "3caf41d7cc5e",
+          "said": "weekly adoration Monday 08:30–12:00 immaculate-conception-eden  “Starts after 8:00 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "45187c3a1b2e",
+          "said": "weekly adoration Monday 08:30–12:00 immaculate-conception-eden  “After 8:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "da176a5df8fe",
+          "said": "specific_date adoration 2026-10-05 08:30–12:00 immaculate-conception-eden  “Follows 8:00 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "specific_date adoration 2026-10-26 08:00–12:00 immaculate-conception-eden  “Following 8:00 am Mass”  (a different time)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "specific_date adoration 2026-10-05 08:00–12:00 immaculate-conception-eden  “Starts after 8:00 AM Mass”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R35 and POLICY, Weekly or dated rule 4: the same Monday slot printed in bulletins for Oct 5, 19 and 26, and the Oct 11 issue cancels Oct 12 for the Columbus Day holiday, which shows it is a regular Monday service. Start is 8:30 AM: after a weekday Mass, 30 minutes after it starts (POLICY, Times / R10). The Oct 12 cancellation is before as_of (R16). The Sep 27 issue lists the Oct 5 date only, so it began no later than Oct 5.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-eden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 3,
+          "said": "November 6th First Friday Eucharistic Adoration ICC after 8:00 am Mass until noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 2,
+          "said": "Eucharistic Adoration on First Friday, October 2nd, at Immaculate Conception after the 8:00 am Mass until noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "specific_date adoration 2026-11-06 08:00–12:00 immaculate-conception-eden  “First Friday”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "specific_date adoration 2026-10-02 08:00–12:00 immaculate-conception-eden  “First Friday; starts after 8:00 AM Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 2: named First Friday, so weekly with weeks_of_month first. Newest bulletin prints it for Nov 6 on page 3. 8:30 start is 30 minutes after the 8:00 weekday Mass (R10).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-gowanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:15 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 3,
+          "said": "November 6th First Friday Eucharistic Adoration ... STJ after 9:15 Mass until noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "661cd1c4",
+          "page": 2,
+          "said": "and at St. Joseph after the 9:15 am Mass until noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "62933e4b6530",
+          "said": "specific_date adoration 2026-11-06 09:15–12:00 st-joseph-gowanda  “First Friday”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "661cd1c47607",
+          "said": "specific_date adoration 2026-10-02 09:15–12:00 st-joseph-gowanda  “First Friday; starts after 9:15 AM Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 2: named First Friday, so weekly with weeks_of_month first. 9:45 start is 30 minutes after the 9:15 weekday Mass (R10).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62933e4b",
+          "page": 3,
+          "said": "Fr. John Kwiecien will be celebrating the 50th Jubilee of his Ordination with a Mass at St. Aloysius Church in Springville at 4:00 pm on Saturday, November 7th."
+        }
+      ],
+      "rationale": "R22: held at St. Aloysius, Springville, a church of another parish (cattaraugus-creek-catholic), not one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

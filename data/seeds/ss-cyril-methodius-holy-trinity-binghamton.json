@@ -1,0 +1,1197 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ss-cyril-methodius-holy-trinity-binghamton",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:20:16Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:53:42Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two linked parishes with two listed churches. Weekend and weekday Mass times and the Saturday confession are identical in the three bulletins read (schedule box on page 1). Open: whether to record the weekday 'after Mass by request' confessions (five slots, one question). The First Friday Devotion is excluded as a devotion.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "f5280f1cb07552c651cbc1e86849c57812807eb1f13354f388633c92f802f910",
+      "fetched_at": "2026-10-25T13:20:16Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "b48ac2aaf3fcb8acbb39f82eea107d4c39844d34abb6fd471ec2927906b4d124",
+      "fetched_at": "2026-10-18T12:47:50Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "dc41f033bc4d54ac165597e321a13aa977f3ce77ab5dd430759f8692beba944d",
+      "fetched_at": "2026-10-11T16:36:08Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "d72e90f7d3b9d0f0e59a156d642fbc390e60268c60561fdf2e27f172e65b9227",
+      "fetched_at": "2026-10-04T14:39:13Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "bb225429803d17c2f9cfd90cb3bda0860394779f57860f8066901024ad9db87a",
+      "fetched_at": "2026-09-28T00:10:04Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 pm SS. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 pm SS. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Saturday Vigil: 4:30 pm SS. Cyril & Methodius"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Saturday 16:30 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Saturday 16:30 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Saturday 16:30 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Saturday 16:30 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Saturday 16:30 sts-cyril-methodius-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read; church named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Sunday: 8:45 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Sunday: 8:45 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Sunday: 8:45 am Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Sunday 08:45 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Sunday 08:45 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Sunday 08:45 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Sunday 08:45 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Sunday 08:45 holy-trinity-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "10:15 am Ss Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "10:15 am Ss Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "10:15 am Ss Cyril & Methodius"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Sunday 10:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Sunday 10:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Sunday 10:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Sunday 10:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Sunday 10:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Monday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Monday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Monday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Monday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Monday 08:00 holy-trinity-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Wednesday 08:00 holy-trinity-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Weekday Mass: 8:00 am M, W, & F - Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Friday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Friday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Friday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Friday 08:00 holy-trinity-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Friday 08:00 holy-trinity-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Tuesday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Tuesday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Tuesday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Tuesday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Tuesday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "12:05 pm Tues. & Thrs. Ss. Cyril & Methodius"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly mass Thursday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly mass Thursday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly mass Thursday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly mass Thursday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly mass Thursday 12:05 sts-cyril-methodius-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sts-cyril-methodius-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: 3:45-4:15 pm Saturday Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: 3:45-4:15 pm Saturday Ss. Cyril & Methodius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: 3:45-4:15 pm Saturday Ss. Cyril & Methodius"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Saturday 15:45–16:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly confession Saturday 15:45–16:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Saturday 15:45–16:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Saturday 15:45–16:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Saturday 15:45–16:15 sts-cyril-methodius-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Monday 08:00 holy-trinity-binghamton  “After weekday Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Monday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Monday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Monday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: no clock time is given; 'by request' is not 'by appointment'. Time worked out under R10 as 30 minutes after the weekday Mass (8:00 -> 8:30). The line does not name a church; it follows each weekday Mass, so each Mass's own church.",
+      "question": "Add weekday confession after Mass 'by request' (30 minutes after the Mass starts)?",
+      "options": [
+        {
+          "label": "Include at 30 minutes after the Mass starts",
+          "entry": {
+            "church_slug": "holy-trinity-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass, by request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession-by-request"
+    },
+    {
+      "id": "s11",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Wednesday 08:00 holy-trinity-binghamton  “After weekday Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Wednesday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Wednesday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Wednesday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: no clock time is given; 'by request' is not 'by appointment'. Time worked out under R10 as 30 minutes after the weekday Mass (8:00 -> 8:30).",
+      "question": "Add weekday confession after Mass 'by request' (30 minutes after the Mass starts)?",
+      "options": [
+        {
+          "label": "Include at 30 minutes after the Mass starts",
+          "entry": {
+            "church_slug": "holy-trinity-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass, by request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession-by-request"
+    },
+    {
+      "id": "s12",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Friday 08:00 holy-trinity-binghamton  “After weekday Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Friday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Friday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Friday 08:00 holy-trinity-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: no clock time is given; 'by request' is not 'by appointment'. Time worked out under R10 as 30 minutes after the weekday Mass (8:00 -> 8:30).",
+      "question": "Add weekday confession after Mass 'by request' (30 minutes after the Mass starts)?",
+      "options": [
+        {
+          "label": "Include at 30 minutes after the Mass starts",
+          "entry": {
+            "church_slug": "holy-trinity-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:00 AM Mass, by request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession-by-request"
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Tuesday 12:05 sts-cyril-methodius-binghamton  “After weekday Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Tuesday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Tuesday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Tuesday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: no clock time is given; 'by request' is not 'by appointment'. Time worked out under R10 as 30 minutes after the weekday Mass (12:05 -> 12:35).",
+      "question": "Add weekday confession after Mass 'by request' (30 minutes after the Mass starts)?",
+      "options": [
+        {
+          "label": "Include at 30 minutes after the Mass starts",
+          "entry": {
+            "church_slug": "sts-cyril-methodius-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass, by request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession-by-request"
+    },
+    {
+      "id": "s14",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "Confessions: ... Weekday after Mass by request"
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly confession Thursday 12:05 sts-cyril-methodius-binghamton  “After weekday Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly confession Thursday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d72e90f7d3b9",
+          "said": "weekly confession Thursday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "weekly confession Thursday 12:05 sts-cyril-methodius-binghamton  “After Mass by request”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: no clock time is given; 'by request' is not 'by appointment'. Time worked out under R10 as 30 minutes after the weekday Mass (12:05 -> 12:35).",
+      "question": "Add weekday confession after Mass 'by request' (30 minutes after the Mass starts)?",
+      "options": [
+        {
+          "label": "Include at 30 minutes after the Mass starts",
+          "entry": {
+            "church_slug": "sts-cyril-methodius-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 12:05 PM Mass, by request"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "weekday-confession-by-request"
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Friday Devotion"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 1,
+          "said": "First Friday Devotion: Offered after the 8:00 am daily Mass at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b48ac2aa",
+          "page": 1,
+          "said": "First Friday Devotion: Offered after the 8:00 am daily Mass at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb225429",
+          "page": 1,
+          "said": "First Friday Devotion: Offered after the 8:00 am daily Mass at Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "b48ac2aaf3fc",
+          "said": "weekly adoration Friday 08:30 holy-trinity-binghamton  “First Friday Devotion following 8:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5280f1cb075",
+          "said": "weekly adoration Friday 08:00 holy-trinity-binghamton  “First Friday Devotion offered after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc41f033bc4d",
+          "said": "weekly adoration Friday 08:00 holy-trinity-binghamton  “First Friday Devotion offered after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb225429803d",
+          "said": "specific_date adoration 2026-10-02 08:00 holy-trinity-binghamton  “First Friday Devotion after Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R24: the bulletin calls it only a 'devotion', not Adoration, Holy Hour or Benediction, and gives no clock time; history read it as Friday Adoration at 8:00/8:30, which POLICY does not support.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "f5280f1c",
+          "page": 4,
+          "said": "Parish Remembrance Services: Sunday, November 1, 2026 @ 2:00 PM at Holy Trinity; Sunday, November 8 @ 2:00 PM at Ss. Cyril & Methodius"
+        }
+      ],
+      "rationale": "R24: a remembrance service, not called a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

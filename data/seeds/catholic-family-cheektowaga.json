@@ -1,0 +1,3134 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-family-cheektowaga",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:14:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:49:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches (OLHC with its chapel, Queen of Martyrs, Resurrection, St. Josaphat). Weekend and daily Masses, Confession times and Monday Adoration agree across the bulletins read and the parish website; first-Saturday Mass, first-Tuesday Adoration, Thanksgiving, and the Dec 7-8 holy-day Masses are dated or monthly. The OLHC 4:00 PM Saturday Mass ends Jan 1, 2027 and is still included. Open: weekend chapel adoration hours, and a website-only St. Josaphat Saturday Confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "55e5468495be5466dee8ae1c0c8b087f0ee437f06a1b6ad61fda2420d54177a5",
+      "fetched_at": "2026-10-25T13:14:30Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "580cbaa128465cb7431c62f156792ff0edd2ecce9c685dd16868b1eb909b7124",
+      "fetched_at": "2026-10-18T12:41:15Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "bb861413cc23d211bbda3058907ef816e5744f14d7036e7e8bf6456d76843b7e",
+      "fetched_at": "2026-10-11T16:31:59Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "4b2a397ed330e925069edbae6b62b19c67333fb7009ac9c0f274e6620a3163f9",
+      "fetched_at": "2026-10-04T14:20:12Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "341dee8f514894aaba936df2d7b12a7fc0d1c9ffb810a465d8c2fd4f185d260c",
+      "fetched_at": "2026-09-26T18:52:52Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Saturday (Vigil) 4:00 p.m. - OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "4:00 pm OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "4:00 pm OLHC Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Saturday 16:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Saturday 16:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Saturday 16:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Saturday 16:00 our-lady-help-of-christians-cheektowaga  “OLHC Church”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Saturday 16:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box on page 1 of the newest bulletin, and the intentions list of older issues. The OLHC 4:00 PM Mass ends January 1, 2027 (page 2); that later change is left out (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Saturday (Vigil) 4:00 p.m. - Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "4:00 pm Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "4:00 pm Queen of Martyrs"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Saturday 16:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Saturday 16:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Saturday 16:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Saturday 16:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Saturday 16:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Saturday (Vigil) 4:00 p.m. - Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "4:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "4:00 pm Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Saturday 16:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Saturday 16:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Saturday 16:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Saturday 16:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Saturday 16:00 resurrection-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "5:30 p.m. - St. Josaphat (1st, 3rd, & 5th Saturday of the Month)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "5:30 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "5:30 pm St. Josaphat"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Saturday 17:30 st-josaphat-cheektowaga  “1st, 3rd, & 5th Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Saturday 17:30 st-josaphat-cheektowaga  “1st, 3rd, & 5th Saturday of the Month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Saturday 17:30 st-josaphat-cheektowaga  “1st, 3rd, & 5th Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Saturday 17:30 st-josaphat-cheektowaga  “1st, 3rd, & 5th Saturday of the Month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Saturday 17:30 st-josaphat-cheektowaga  “1st, 3rd, & 5th Saturday of the Month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1/POLICY, Weekly qualifiers: the box names the 1st, 3rd and 5th Saturdays. Oct 3 (first) is listed and Oct 10 (second) is not, matching the pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 7:00 a.m. - OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "7:00 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "7:00 am OLHC Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 07:00 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 07:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 07:00 our-lady-help-of-christians-cheektowaga  “Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 07:00 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 07:00 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 8:00 a.m. - Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "8:00 am Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "8:00 am Queen of Martyrs"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 08:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 08:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 08:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 08:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 08:00 queen-of-martyrs-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 9:00 a.m. - Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "9:00 am Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "9:00 am Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 09:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 09:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 09:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 09:00 resurrection-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 09:00 resurrection-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 10:00 a.m. - OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "10:00 am OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "10:00 am OLHC Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 10:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 10:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 10:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 10:00 our-lady-help-of-christians-cheektowaga  “OLHC Church”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 10:00 our-lady-help-of-christians-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree. The Nov 8 Veterans Mass is this regular 10:00 Mass (POLICY, Weekly or dated rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 11:00 a.m. - St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "11:00 am St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "11:00 am St. Josaphat"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 11:00 st-josaphat-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 11:00 st-josaphat-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 11:00 st-josaphat-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 11:00 st-josaphat-cheektowaga",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 11:00 st-josaphat-cheektowaga",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Vietnamese"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 11:30 a.m. - OLHC Church (Vietnamese)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 11:30 our-lady-help-of-christians-cheektowaga  “Vietnamese”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 11:30 our-lady-help-of-christians-cheektowaga  “Vietnamese”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 11:30 our-lady-help-of-christians-cheektowaga  “Vietnamese”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 11:30 our-lady-help-of-christians-cheektowaga  “Vietnamese; OLHC Church”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 11:30 our-lady-help-of-christians-cheektowaga  “Vietnamese”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend schedule box of the newest bulletin; the website lists it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin; OLHC Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "Sunday 12:30 p.m. - OLHC Chapel (Latin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "12:30 pm OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "12:30 pm OLHC Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Sunday 12:30 our-lady-help-of-christians-cheektowaga  “Latin; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Sunday 12:30 our-lady-help-of-christians-cheektowaga  “Latin”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Sunday 12:30 our-lady-help-of-christians-cheektowaga  “Latin, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Sunday 12:30 our-lady-help-of-christians-cheektowaga  “Latin; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Sunday 12:30 our-lady-help-of-christians-cheektowaga  “Latin; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekend schedule box and intentions lists agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "MONDAY, October 26 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "MONDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "MONDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "MONDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Monday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Monday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Monday 08:30 our-lady-help-of-christians-cheektowaga  “Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Monday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Monday 08:30 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Mass is in the intentions list of every bulletin read at the same time and place (page 2: 'Daily Eucharist (see bulletin)').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "TUESDAY, October 27 8:30 am Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "TUESDAY 8:30 am Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "TUESDAY 8:30 am Queen of Martyrs"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "TUESDAY 8:30 am Queen of Martyrs"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Tuesday 08:30 queen-of-martyrs-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Tuesday 08:30 queen-of-martyrs-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 08:30 queen-of-martyrs-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Tuesday 08:30 queen-of-martyrs-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Tuesday 08:30 queen-of-martyrs-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Tuesday 08:30 queen-of-martyrs-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Mass is in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm Resurrection; THURSDAY 12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Tuesday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Tuesday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 12:00 resurrection-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Tuesday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Tuesday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Tuesday 12:00 resurrection-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Masses are in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm Resurrection; THURSDAY 12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "12:00 pm Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Thursday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Thursday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Thursday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Thursday 12:00 resurrection-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Thursday 12:00 resurrection-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Masses are in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "WEDNESDAY, October 28 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Wednesday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Wednesday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Wednesday 08:30 our-lady-help-of-christians-cheektowaga  “Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Wednesday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Wednesday 08:30 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Mass is in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "WEDNESDAY 12:00 pm St. Josaphat; FRIDAY 12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Wednesday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Wednesday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Wednesday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Wednesday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Wednesday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Masses are in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "WEDNESDAY 12:00 pm St. Josaphat; FRIDAY 12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "12:00 pm St. Josaphat"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga  “Sacred Heart devotion on First Fridays”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga  “First Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Friday 12:00 st-josaphat-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Masses are in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "THURSDAY, October 29 8:30 am OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLHC Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLHC Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Thursday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Church”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Thursday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Thursday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Thursday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Church”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Thursday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Mass is in the intentions list of every bulletin read (church, not chapel).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "FRIDAY, October 30 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "FRIDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "FRIDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "FRIDAY 8:30 am OLHC Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel; Sacred Heart devotion on First Fridays”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga  “First Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga  “Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Friday 08:30 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1/R35: the daily Mass is in the intentions list of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fatima devotion after Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "First Saturdays - Mass and Fatima devotion at 8:30 am at Resurrection."
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "SATURDAY, October 3 First Saturday 8:30 am Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly mass Saturday 08:30 resurrection-cheektowaga  “First Saturdays; Fatima devotion”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly mass Saturday 08:30 resurrection-cheektowaga  “First Saturday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly mass Saturday 08:30 resurrection-cheektowaga  “First Saturday of the Month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12/POLICY rule 2: a named First Saturday Mass is weekly with weeks_of_month first. The newest week holds no first Saturday; the Sep 27 issue (week of Oct 3) prints it. The website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Mondays: 4:30-5:30 pm (OLHC Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Monday 16:30–17:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Monday 16:30–17:30 our-lady-help-of-christians-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Monday 16:30–17:30 our-lady-help-of-christians-cheektowaga  “Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Monday 16:30–17:30 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Monday 16:30–17:30 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2; history agrees in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:50",
+        "end_time": "08:10",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Tuesdays: 7:50 - 8:10 am (Queen of Martyrs)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Tuesday 07:50–08:10 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Tuesday 07:50–08:10 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Tuesday 07:50–08:10 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Tuesday 07:50–08:10 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Tuesday 07:50–08:10 queen-of-martyrs-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2; history agrees in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Wednesdays: 6:30-7:30 pm (Resurrection)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Wednesday 18:30–19:30 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Wednesday 18:30–19:30 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Wednesday 18:30–19:30 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Wednesday 18:30–19:30 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Wednesday 18:30–19:30 resurrection-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2; history agrees in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:20",
+        "end_time": "11:40",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Fridays: 11:20-11:40 am (St. Josaphat)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Friday 11:20–11:40 st-josaphat-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Friday 11:20–11:40 st-josaphat-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Friday 11:20–11:40 st-josaphat-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Friday 11:20–11:40 st-josaphat-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Friday 11:20–11:40 st-josaphat-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2; history agrees in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:00 PM Vigil"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Saturdays before 4 pm Vigil Masses: 3:15-3:45pm (OLCH; Queen of Martyrs; Resurrection)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-help-of-christians-cheektowaga  “Before 4:00 PM Vigil”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-help-of-christians-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-help-of-christians-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-help-of-christians-cheektowaga  “OLHC Church”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-help-of-christians-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2 (OLCH is OLHC). The website's older 3:00 start is not used.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:00 PM Vigil"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Saturdays before 4 pm Vigil Masses: 3:15-3:45pm (OLCH; Queen of Martyrs; Resurrection)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Saturday 15:15–15:45 queen-of-martyrs-cheektowaga  “Before 4:00 PM Vigil”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Saturday 15:15–15:45 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Saturday 15:15–15:45 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Saturday 15:15–15:45 queen-of-martyrs-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Saturday 15:15–15:45 queen-of-martyrs-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 4:00 PM Vigil"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Saturdays before 4 pm Vigil Masses: 3:15-3:45pm (OLCH; Queen of Martyrs; Resurrection)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly confession Saturday 15:15–15:45 resurrection-cheektowaga  “Before 4:00 PM Vigil”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly confession Saturday 15:15–15:45 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly confession Saturday 15:15–15:45 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly confession Saturday 15:15–15:45 resurrection-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly confession Saturday 15:15–15:45 resurrection-cheektowaga",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Confession list on page 2.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Eucharistic Adoration - Every Monday from 9:00am - 6:00pm in the OLHC Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 3,
+          "said": "MONDAY 9:00 am-6:00 pm OLHC Chapel - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "9:00 am-6:00 pm OLHC Chapel - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "9:00 am-6:00 pm OLHC Chapel - Eucharistic Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "580cbaa1",
+          "page": 3,
+          "said": "9:00 am-6:00 pm OLHC Chapel - Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Monday 09:00–18:00 our-lady-help-of-christians-cheektowaga  “OLHC Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Monday 09:00–18:00 our-lady-help-of-christians-cheektowaga",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Monday 09:00–18:00 our-lady-help-of-christians-cheektowaga  “Eucharistic Adoration, Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "specific_date adoration 2026-10-05 09:00–18:00 our-lady-help-of-christians-cheektowaga  “Eucharistic Adoration; OLHC Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Monday 09:00–18:00 our-lady-help-of-christians-cheektowaga  “Maria Hilf Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1/R37: the chapel is on OLHC's grounds (4125 Union Road; website: 'The Chapel of Our Lady Help of Christians'). Monday's 8-2 private adoration lies mostly inside this longer period, so only the longer period is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "website",
+          "url": "https://www.cheektowagacatholicfamily.org/spiritual-life.html",
+          "said": "The OLHC Chapel is Monday through Friday from 8 am to 2 pm for private Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Tuesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Tuesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Tuesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly adoration Tuesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Tuesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private adoration; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R38: the parish itself calls the chapel hours Adoration and gives them (page 1 and the website agree on Monday-Friday); no exposition is claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "website",
+          "url": "https://www.cheektowagacatholicfamily.org/spiritual-life.html",
+          "said": "The OLHC Chapel is Monday through Friday from 8 am to 2 pm for private Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Wednesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Wednesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Wednesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly adoration Wednesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Wednesday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private adoration; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R38: the parish itself calls the chapel hours Adoration and gives them (page 1 and the website agree on Monday-Friday); no exposition is claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "website",
+          "url": "https://www.cheektowagacatholicfamily.org/spiritual-life.html",
+          "said": "The OLHC Chapel is Monday through Friday from 8 am to 2 pm for private Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Thursday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Thursday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Thursday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly adoration Thursday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Thursday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private adoration; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R38: the parish itself calls the chapel hours Adoration and gives them (page 1 and the website agree on Monday-Friday); no exposition is claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "website",
+          "url": "https://www.cheektowagacatholicfamily.org/spiritual-life.html",
+          "said": "The OLHC Chapel is Monday through Friday from 8 am to 2 pm for private Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Friday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Friday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Friday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly adoration Friday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Friday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private adoration; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R38: the parish itself calls the chapel hours Adoration and gives them (page 1 and the website agree on Monday-Friday); no exposition is claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Marie Hilf Chapel open daily from 8 am - 2 pm for private adoration."
+        },
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "specific_date adoration 2026-10-03 18:00–19:00 our-lady-help-of-christians-cheektowaga  “Transitus of St. Francis; Maria Hilf Chapel”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R28: page 2 says daily, but page 1 and the website say Monday-Friday only. Leaning on the specific Monday-Friday wording; one answer settles both days.",
+      "question": "Add chapel adoration on Saturday and Sunday, 8 AM-2 PM?",
+      "options": [
+        {
+          "label": "Saturdays and Sundays 8-2",
+          "entry": {
+            "church_slug": "our-lady-help-of-christians-cheektowaga",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "OLHC Chapel, private adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel-weekend"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Marie Hilf Chapel open daily from 8 am - 2 pm for private adoration."
+        },
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        }
+      ],
+      "rationale": "R28: page 2 says daily, but page 1 and the website say Monday-Friday only. Leaning on the specific Monday-Friday wording; one answer settles both days.",
+      "question": "Add chapel adoration on Saturday and Sunday, 8 AM-2 PM?",
+      "options": [
+        {
+          "label": "Saturdays and Sundays 8-2",
+          "entry": {
+            "church_slug": "our-lady-help-of-christians-cheektowaga",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": "14:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "OLHC Chapel, private adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "chapel-weekend"
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "the First Tuesday of the Month at St. Josaphat from 1:00pm - 3:00 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b2a397e",
+          "page": 3,
+          "said": "TUESDAY, October 6 1:00 pm-3:00 pm St. Josaphat - Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Tuesday 13:00–15:00 st-josaphat-cheektowaga  “First Tuesday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Tuesday 13:00–15:00 st-josaphat-cheektowaga  “First Tuesday of the Month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "specific_date adoration 2026-10-06 13:00–15:00 st-josaphat-cheektowaga  “Eucharistic Adoration”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Tuesday 13:00–15:00 st-josaphat-cheektowaga  “First Tuesday of the Month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12/POLICY rule 2: a named First Tuesday service is weekly with weeks_of_month first. The newest week holds no first Tuesday; the Oct 4 issue (week of Oct 6) prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "November 26 Thanksgiving. The only Mass for our Family of Parishes is at Resurrection at 8:30am."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-11-26 08:30 resurrection-cheektowaga  “Thanksgiving”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-11-26 08:30 resurrection-cheektowaga  “Thanksgiving”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "specific_date mass 2026-11-26 08:30 resurrection-cheektowaga  “Thanksgiving Day”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "specific_date mass 2026-11-26 08:30 resurrection-cheektowaga  “Thanksgiving Day Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated Mass after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "November 26 Thanksgiving. The only Mass for our Family of Parishes is at Resurrection at 8:30am."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-11-26 08:30 our-lady-help-of-christians-cheektowaga  CANCELLED; “Cancelled for Thanksgiving”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: the bulletin says the only Mass is at Resurrection, so the regular Thursday 8:30 AM OLHC Mass does not take place that day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "November 26 Thanksgiving. The only Mass for our Family of Parishes is at Resurrection at 8:30am."
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-11-26 12:00 resurrection-cheektowaga  CANCELLED; “Cancelled for Thanksgiving”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: the only Mass is the 8:30 AM one, so the regular Thursday noon Resurrection Mass does not take place that day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-07",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception vigil"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "December 8 The Immaculate Conception... holy day of obligation... December 7 (Vigil) 4 pm OLHC Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-12-07 16:00 our-lady-help-of-christians-cheektowaga  “Immaculate Conception Vigil”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-07 16:00 our-lady-help-of-christians-cheektowaga  “Immaculate Conception Vigil”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16/R19: dated holy-day vigil after as_of, outside the regular Monday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception; Latin; OLHC Chapel"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "December 8 ... 12 pm OLHC Chapel (Latin)"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-12-08 12:00 our-lady-help-of-christians-cheektowaga  “Latin; Immaculate Conception; OLHC Chapel”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 12:00 our-lady-help-of-christians-cheektowaga  “Latin; Immaculate Conception”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass after as_of, in the chapel at a time outside the regular Tuesday schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-josaphat-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "December 8 ... 7 pm St. Josaphat"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "specific_date mass 2026-12-08 19:00 st-josaphat-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 19:00 st-josaphat-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated holy-day Mass after as_of, outside the regular schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "queen-of-martyrs-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "December 8 8:30 am Queen of Martyrs"
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 08:30 queen-of-martyrs-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 6/7: the same church, day and time as the regular Tuesday 8:30 AM Mass, already a weekly slot; a holy day at the usual time is not recorded again.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "resurrection-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-08",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immaculate Conception"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 4,
+          "said": "December 8 ... 12 pm Resurrection"
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "specific_date mass 2026-12-08 12:00 resurrection-cheektowaga  “Immaculate Conception”",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 6/7: the same church, day and time as the regular Tuesday noon Mass, already a weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass for the Loss of a Child"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 5,
+          "said": "The Mass will be held on Saturday, November 14 at noon at St. Timothy Church, 565 East Park Dr., Tonawanda 14150."
+        }
+      ],
+      "rationale": "R22: held at St. Timothy, Tonawanda, another parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "341dee8f",
+          "page": 3,
+          "said": "(Divine Mercy Chaplet before both Masses. Adoration with Prayer to Sacred Heart following both Masses)"
+        }
+      ],
+      "rationale": "POLICY, Final source checks / R26: First Friday Adoration after the 8:30 and noon Masses has no start or end time of its own. The First Friday Masses are the regular Friday slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Rosary - After morning Mass & 25 minutes before 12 pm daily; Novena to St. Joseph every Wednesday after 12 pm Mass; Chaplet to the Divine Mercy every Friday; Anointing of the Sick every Tuesday after 12 pm Mass; Vespers Candlelight Service Monday, November 2 8:00 pm"
+        }
+      ],
+      "rationale": "R24: Rosary, Novena, Chaplet, Anointing and Vespers are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.cheektowagacatholicfamily.org/spiritual-life.html",
+          "said": "Saturday before 5:30 pm Vigil Mass: 5-5:20 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 2,
+          "said": "Saturdays before 4 pm Vigil Masses: 3:15- 3:45pm (OLCH; Queen of Martyrs; Resurrection)"
+        }
+      ],
+      "rationale": "R6: only the website prints it, and the same page gives the other Saturday window as 3:00-3:45 while the bulletin says 3:15-3:45, so the page may be stale. The bulletin's Confession list does not mention St. Josaphat on Saturday.",
+      "question": "Add a Saturday 5:00-5:20 PM Confession at St. Josaphat before the 5:30 PM Mass? (website only)",
+      "options": [
+        {
+          "label": "Add (1st, 3rd, 5th Saturdays)",
+          "entry": {
+            "church_slug": "st-josaphat-cheektowaga",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "17:20",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first",
+              "third",
+              "fifth"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 5:30 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-help-of-christians-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "OLHC Chapel, private adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "55e54684",
+          "page": 1,
+          "said": "OLHC CHAPEL IS OPEN MONDAY - FRIDAY 8 AM - 2 PM FOR PRIVATE ADORATION"
+        },
+        {
+          "source": "history",
+          "bulletin": "55e5468495be",
+          "said": "weekly adoration Monday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "580cbaa12846",
+          "said": "weekly adoration Monday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb861413cc23",
+          "said": "weekly adoration Monday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration, Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b2a397ed330",
+          "said": "weekly adoration Monday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private Adoration; OLHC Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "341dee8f5148",
+          "said": "weekly adoration Monday 08:00–14:00 our-lady-help-of-christians-cheektowaga  “Private adoration; Maria Hilf Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R37: Monday's private adoration hours overlap the longer Monday 9:00 AM-6:00 PM Eucharistic Adoration at the same chapel; only the longer period is kept so availability is not duplicated (the 8-9 AM hour is not recorded).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

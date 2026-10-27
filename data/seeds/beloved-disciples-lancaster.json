@@ -1,0 +1,4019 @@
+{
+  "schema_version": 1,
+  "parish_slug": "beloved-disciples-lancaster",
+  "status": "ready",
+  "as_of": "2026-10-25T13:14:07Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:11:18Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four campuses of one parish (Hill/St. Mary of the Assumption, Our Lady of Pompeii, St. Martha, St. Philip) with one shared schedule box; weekend and weekday Masses, Saturday confessions and the Devotions adoration times agree in all five bulletins. Three dated Remembrance Masses added for Nov 2 and Nov 5. Left out: St. Martha's 'before 5pm Mass' confession (no clock time) and a Friday SPA intention line with no time. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "1534206869acb34faf4e39d0c85d0972206b7c6fb75e1e594fbc64b761161d38",
+      "fetched_at": "2026-10-25T13:14:07Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3957da8024a46c7e028314f3ff8690c9192dfbdb57c8587ecd983315270f5299",
+      "fetched_at": "2026-10-18T12:40:38Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "d7c91ae3707f7d5d3609226bbb23bf88e2fcde897bcb472807aa06828bf7d97e",
+      "fetched_at": "2026-10-11T16:31:25Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "47b3ad44f794c5d242a823ee13dab169bb6822a06885779cfa4bca67da8e7ce7",
+      "fetched_at": "2026-10-04T14:19:02Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "06de9de8a2a023f5cc7640062775fb687f5dee02a1e79df27e5c9738a9dee7b6",
+      "fetched_at": "2026-09-26T18:52:34Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "4:00 pm OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "4:00 pm OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "4:00 pm OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "4:00 pm OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "4:00 pm OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Saturday 16:00 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 4:00 pm OLP line is printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "4:30 pm SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "4:30 pm SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "4:30 pm SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "4:30 pm SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "4:30 pm SPA"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Saturday 16:30 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Saturday 16:30 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Saturday 16:30 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Saturday 16:30 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Saturday 16:30 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 4:30 pm SPA line is printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "5:00 pm SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "5:00 pm SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "5:00 pm SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "5:00 pm SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "5:00 pm SMC"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Saturday 17:00 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Saturday 17:00 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Saturday 17:00 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Saturday 17:00 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Saturday 17:00 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 5:00 pm SMC line is printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "7:00 pm SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "7:00 pm SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "7:00 pm SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "7:00 pm SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "7:00 pm SMA"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Saturday 19:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Saturday 19:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Saturday 19:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Saturday 19:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Saturday 19:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the Saturday 7:00 pm SMA line is printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus Live Stream: Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 08:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 08:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 08:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 08:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 08:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:00 and 10:00 SMA lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 8:00 am SMA, 10:00 am SMA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus Live Stream: Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 10:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 10:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 10:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 10:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 10:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:00 and 10:00 SMA lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 08:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 08:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 08:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 08:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 08:30 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:30 and 10:30 SMC lines are printed in the intentions of all five bulletins read. The Oct 25 Family Unity Mass is at the regular 10:30 Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 8:30 am SMC, 10:30 am SMC"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 10:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 10:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 10:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "specific_date mass 2026-10-25 10:30 st-martha-depew  “Family Unity Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 10:30 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 10:30 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 8:30 and 10:30 SMC lines are printed in the intentions of all five bulletins read. The Oct 25 Family Unity Mass is at the regular 10:30 Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 9:00 and 11:00 SPA lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 9:00 am SPA, 11:00 am SPA"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 11:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 11:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 11:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 11:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 11:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 9:00 and 11:00 SPA lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 09:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 09:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 09:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 09:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 09:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 9:30 and 11:30 OLP lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "Sunday 9:30 am OLP, 11:30 am OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Sunday 11:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Sunday 9:30 and 11:30 OLP lines are printed in the intentions of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Monday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Monday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Monday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Monday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Monday 08:15 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: every weekday in the intentions of all five bulletins has an 8:15 am SMC line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Tuesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Tuesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Tuesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Tuesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Tuesday 08:15 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: every weekday in the intentions of all five bulletins has an 8:15 am SMC line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Wednesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Wednesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Wednesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Wednesday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Wednesday 08:15 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: every weekday in the intentions of all five bulletins has an 8:15 am SMC line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Thursday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Thursday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Thursday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Thursday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Thursday 08:15 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: every weekday in the intentions of all five bulletins has an 8:15 am SMC line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:15 am SMC (Monday-Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Friday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Friday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Friday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Friday 08:15 st-martha-depew",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Friday 08:15 st-martha-depew",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: every weekday in the intentions of all five bulletins has an 8:15 am SMC line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Monday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Monday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Monday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Monday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Monday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 8:30 am OLP is listed on Monday, Tuesday, Thursday and Friday in all five bulletins (the blank intention line 'OLP -' in the newest means no intention requested, R39); Wednesday has no OLP line in any of them, so no Wednesday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 8:30 am OLP is listed on Monday, Tuesday, Thursday and Friday in all five bulletins (the blank intention line 'OLP -' in the newest means no intention requested, R39); Wednesday has no OLP line in any of them, so no Wednesday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Thursday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Thursday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Thursday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Thursday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Thursday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 8:30 am OLP is listed on Monday, Tuesday, Thursday and Friday in all five bulletins (the blank intention line 'OLP -' in the newest means no intention requested, R39); Wednesday has no OLP line in any of them, so no Wednesday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "8:30 am OLP (Mon, Tue, Thu, Fri)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Friday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Friday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Friday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Friday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Friday 08:30 our-lady-of-pompeii-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 8:30 am OLP is listed on Monday, Tuesday, Thursday and Friday in all five bulletins (the blank intention line 'OLP -' in the newest means no intention requested, R39); Wednesday has no OLP line in any of them, so no Wednesday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Monday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Monday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Monday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Monday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Monday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 9:00 am SPA is listed Monday to Thursday in all five bulletins. Friday's SPA line has no time (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Tuesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Tuesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Tuesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Tuesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Tuesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 9:00 am SPA is listed Monday to Thursday in all five bulletins. Friday's SPA line has no time (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Wednesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Wednesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Wednesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Wednesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Wednesday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 9:00 am SPA is listed Monday to Thursday in all five bulletins. Friday's SPA line has no time (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "9:00 am SPA (Mon-Thu)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Thursday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Thursday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Thursday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Thursday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Thursday 09:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: 9:00 am SPA is listed Monday to Thursday in all five bulletins. Friday's SPA line has no time (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus ... Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Monday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Monday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Monday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Monday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Monday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday noon SMA line in every bulletin and the campus box says daily at 12 noon. The Nov 2 SMA Remembrance Mass at noon falls on this regular Monday Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus ... Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Tuesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Tuesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Tuesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Tuesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Tuesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday noon SMA line in every bulletin and the campus box says daily at 12 noon. The Nov 2 SMA Remembrance Mass at noon falls on this regular Monday Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus ... Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Wednesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Wednesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Wednesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Wednesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Wednesday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday noon SMA line in every bulletin and the campus box says daily at 12 noon. The Nov 2 SMA Remembrance Mass at noon falls on this regular Monday Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus ... Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Thursday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Thursday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Thursday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Thursday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Thursday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday noon SMA line in every bulletin and the campus box says daily at 12 noon. The Nov 2 SMA Remembrance Mass at noon falls on this regular Monday Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 3,
+          "said": "12 Noon SMA (Monday-Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus ... Daily at 12 noon and Sunday at 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly mass Friday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly mass Friday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Friday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly mass Friday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly mass Friday 12:00 st-mary-assumption-lancaster",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday noon SMA line in every bulletin and the campus box says daily at 12 noon. The Nov 2 SMA Remembrance Mass at noon falls on this regular Monday Mass, so POLICY Weekly or dated rule 7 records nothing extra.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus Sat. 6 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "Hill Campus Sat. 6 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "Hill Campus Sat. 6 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "Hill Campus Sat. 6 - 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "Hill Campus Sat. 6 - 6:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly confession Saturday 18:00–18:30 st-mary-assumption-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly confession Saturday 18:00–18:30 st-mary-assumption-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly confession Saturday 18:00–18:30 st-mary-assumption-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly confession Saturday 18:00–18:30 st-mary-assumption-lancaster  “Hill Campus”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly confession Saturday 18:00–18:30 st-mary-assumption-lancaster",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Devotions box prints it in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus Sat. 3 - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus Sat. 3 - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus Sat. 3 - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus Sat. 3 - 3:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus Sat. 3 - 3:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-pompeii-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-pompeii-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-pompeii-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-pompeii-lancaster",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-pompeii-lancaster",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Devotions box prints it in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Philip the Apostle Sat. 3:30 - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Philip the Apostle Sat. 3:30 - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Philip the Apostle Sat. 3:30 - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Philip the Apostle Sat. 3:30 - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Philip the Apostle Sat. 3:30 - 4pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly confession Saturday 15:30–16:00 st-philip-the-apostle-cheektowaga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly confession Saturday 15:30–16:00 st-philip-the-apostle-cheektowaga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly confession Saturday 15:30–16:00 st-philip-the-apostle-cheektowaga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly confession Saturday 15:30–16:00 st-philip-the-apostle-cheektowaga",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly confession Saturday 15:30–16:00 st-philip-the-apostle-cheektowaga",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R35: the Devotions box prints it in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-assumption-lancaster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "14:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Hill Campus First Fridays 12:30 - 2:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "Hill Campus First Fridays 12:30 - 2:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "Hill Campus First Fridays 12:30 - 2:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "Hill Campus First Fridays 12:30 - 2:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "Hill Campus First Fridays 12:30 - 2:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Friday 12:30–14:30 st-mary-assumption-lancaster  “First Friday”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Friday 12:30–14:30 st-mary-assumption-lancaster  “First Friday of the month”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Friday 12:30–14:30 st-mary-assumption-lancaster  “First Fridays; Hill Campus”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Friday 12:30–14:30 st-mary-assumption-lancaster  “First Friday of the month”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1: the Devotions box in the newest bulletin names First Fridays at the Hill Campus (St. Mary of the Assumption); the same box is in all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus First Fridays Noon - 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus First Fridays Noon - 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus First Fridays Noon - 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus First Fridays Noon - 5 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "Our Lady of Pompeii Campus First Fridays Noon - 5 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Friday 12:00–17:00 our-lady-of-pompeii-lancaster  “First Friday”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Friday 12:00–17:00 our-lady-of-pompeii-lancaster  “First Friday of the month”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Friday 12:00–17:00 our-lady-of-pompeii-lancaster  “First Fridays”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Friday 12:00–17:00 our-lady-of-pompeii-lancaster  “First Friday of the month”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1: the Devotions box in the newest bulletin names First Fridays at Our Lady of Pompeii; the same box is in all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Monday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly adoration Monday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Monday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Monday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Monday 09:00–15:00 st-martha-depew  “In the Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the parish lists the St. Martha Campus chapel hours as Adoration in its Devotions box (all five bulletins). The chapel is at the campus; exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Tuesday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly adoration Tuesday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Tuesday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Tuesday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Tuesday 09:00–15:00 st-martha-depew  “In the Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the parish lists the St. Martha Campus chapel hours as Adoration in its Devotions box (all five bulletins). The chapel is at the campus; exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Wednesday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly adoration Wednesday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Wednesday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Wednesday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Wednesday 09:00–15:00 st-martha-depew  “In the Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the parish lists the St. Martha Campus chapel hours as Adoration in its Devotions box (all five bulletins). The chapel is at the campus; exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Thursday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly adoration Thursday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Thursday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Thursday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Thursday 09:00–15:00 st-martha-depew  “In the Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the parish lists the St. Martha Campus chapel hours as Adoration in its Devotions box (all five bulletins). The chapel is at the campus; exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Martha Campus Mon.-Fri. 9 am - 3pm (Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Friday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "3957da8024a4",
+          "said": "weekly adoration Friday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Friday 09:00–15:00 st-martha-depew  “In the chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Friday 09:00–15:00 st-martha-depew  “Chapel”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Friday 09:00–15:00 st-martha-depew  “In the Chapel”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R38: the parish lists the St. Martha Campus chapel hours as Adoration in its Devotions box (all five bulletins). The chapel is at the campus; exposition is not claimed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "21:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the church"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "First Fridays 9 pm - 10pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "First Fridays 9 pm - 10pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "First Fridays 9 pm - 10pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "First Fridays 9 pm - 10pm (Church)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "First Fridays 9 pm - 10pm (Church)"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Friday 21:00–22:00 st-martha-depew  “First Friday in Church”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Friday 21:00–22:00 st-martha-depew  “First Friday of the month; In the church”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Friday 21:00–22:00 st-martha-depew  “First Fridays; Church”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Friday 21:00–22:00 st-martha-depew  “First Friday of the month; in the Church”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1: the Devotions box names First Fridays 9-10 pm in the church at St. Martha Campus, printed in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Philip the Apostle Last Tues. (May-Oct) 6:30 - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3957da80",
+          "page": 9,
+          "said": "St. Philip the Apostle Last Tues. (May-Oct) 6:30 - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7c91ae3",
+          "page": 9,
+          "said": "St. Philip the Apostle Last Tues. (May-Oct) 6:30 - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "47b3ad44",
+          "page": 9,
+          "said": "St. Philip the Apostle Last Tues. (May-Oct) 6:30 - 7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "06de9de8",
+          "page": 9,
+          "said": "St. Philip the Apostle Last Tues. (May-Oct) 6:30 - 7:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-philip-the-apostle-cheektowaga  “Last Tuesday of the month (May-Oct)”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-philip-the-apostle-cheektowaga  “Last Tuesday of the month (May-October)”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-philip-the-apostle-cheektowaga  “Last Tuesday of the month (May-October)”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "06de9de8a2a0",
+          "said": "weekly adoration Tuesday 18:30–19:30 st-philip-the-apostle-cheektowaga  “Last Tuesday of the month (May-October)”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1: the Devotions box gives last Tuesdays, May through October, in all five bulletins; the season has both ends (R15 not triggered). The newest bulletin's week holds Tuesday Oct 27, the last Tuesday of October.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 4,
+          "said": "REMEMBRANCE MASS For those we have lost, especially this past year ... SMC - 11/2 | 6pm in Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "specific_date mass 2026-11-02 18:00 st-martha-depew  “Remembrance Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, open to all, on or after as_of (POLICY, Weekly or dated rules 3 and 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 4,
+          "said": "REMEMBRANCE MASS For those we have lost, especially this past year ... SPA - 11/2 | 7 pm in Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "specific_date mass 2026-11-02 19:00 st-philip-the-apostle-cheektowaga  “Remembrance Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, open to all, on or after as_of (POLICY, Weekly or dated rules 3 and 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompeii-lancaster",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-05",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Remembrance Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 4,
+          "said": "REMEMBRANCE MASS For those we have lost, especially this past year ... OLP - 11/5 | 6:30 pm in Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "specific_date mass 2026-11-05 18:30 our-lady-of-pompeii-lancaster  “Remembrance Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule, open to all, on or after as_of (POLICY, Weekly or dated rules 3 and 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Sat. before 5pm Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly confession Saturday 16:00–16:45 st-martha-depew  “Before 5:00 PM Mass”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly confession Saturday 16:00 st-martha-depew  “Before 5:00 PM Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R24, R9: the Devotions box gives St. Martha Confession only as 'before 5pm Mass' with no clock time or length, and POLICY works out a time only for 'N minutes before'. This entry only records history's guess (4:00-4:45); history's other guesses 4:00 and 4:15-5:00 disagree with it. No definite start time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Sat. before 5pm Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "weekly confession Saturday 16:00–16:45 st-martha-depew  “Before 5:00 PM Mass”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly confession Saturday 16:00 st-martha-depew  “Before 5:00 PM Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R24, R9: same line as the 4:00-4:45 guess; no clock time is printed, so history's 4:00 start is a guess.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martha-depew",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 5:00 PM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 9,
+          "said": "St. Martha Campus Sat. before 5pm Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "47b3ad44f794",
+          "said": "weekly confession Saturday 16:15–17:00 st-martha-depew  “Before 5:00 PM Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R24, R9: same line as the 4:00-4:45 guess; no clock time is printed, so history's 4:15-5:00 window is a guess.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "Friday, October 30 ... 12 Noon SMA - Frank Dexter | Mary Lou; SPA - All Souls; Parishioners of the BDCL Family of Parishes"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "specific_date mass 2026-10-30 12:00 st-philip-the-apostle-cheektowaga  “All Souls Intention”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d7c91ae3707f",
+          "said": "weekly mass Friday 12:00 st-philip-the-apostle-cheektowaga",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R26, R39: the Friday SPA intention line has no time in any of the five bulletins (each week reads 'All Souls/Fathers/Mothers; Parishioners'). History's Friday 12:00 SPA event took the SMA noon line, which is the 12 Noon directly above it. Mon-Thu SPA is 9:00 am; no definite Friday SPA time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s50",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philip-the-apostle-cheektowaga",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls intention"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "15342068",
+          "page": 3,
+          "said": "SPA - All Souls; Parishioners of the BDCL Family of Parishes"
+        },
+        {
+          "source": "history",
+          "bulletin": "1534206869ac",
+          "said": "specific_date mass 2026-10-30 12:00 st-philip-the-apostle-cheektowaga  “All Souls Intention”",
+          "page": 3
+        }
+      ],
+      "rationale": "R7, R26, R39: the same Friday SPA line, with no time; the 12 Noon above it is SMA's (Frank Dexter). History assigned it to SPA wrongly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": []
+}

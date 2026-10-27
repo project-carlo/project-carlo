@@ -39,6 +39,10 @@ Peace of Christ is a multi-site parish (St. Ambrose, St. James, St. John the Eva
 
 Three: `st-ambrose` (25 Empire Boulevard), `st-james-rochester` (130 Brett Road), `st-john-evangelist-humboldt` (553 Humboldt Street). The locator's parish-level entry "Peace of Christ Parish" (`directory:348-peace-of-christ-parish`) is linked to St. Ambrose. St. Ambrose Academy (31 Empire Blvd) is a school.
 
+The parish's Perpetual Adoration Chapel, in the former St. James Convent at 123 Whittington Road,
+has adoration and holy hours but no Mass; it is `excluded/perpetual-adoration-chapel-rochester`
+(no-public-mass), added 2026-10-27.
+
 ## Website and bulletin provider
 
 `peaceofchristparish.org` redirects to `www.` and embeds both Discover Mass slugs. `provider_id` is the St. Ambrose slug (kept as in the live row); the St. James slug is the same bulletin and is recorded in `publication` so no other row can claim it. Fetch reads Discover Mass by `provider_id`, so either works.

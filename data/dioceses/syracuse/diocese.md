@@ -6,7 +6,7 @@ status: promoted
 gcatholic: syra0
 city_aliases:
   Port Crane: Sanitaria Springs
-promoted: 2026-10-07
+promoted: 2026-10-27
 ---
 
 Seven counties of central New York: Onondaga (Syracuse), Oneida (Utica, Rome), Madison,
@@ -138,3 +138,8 @@ Weebly, Designrr flipbooks). Things worth knowing:
   Lawrence, DeRuyter (weekly Masses that the 4 October Cortland bulletin did not print; the site
   reads only each parish's latest bulletin). Holy Cross, DeWitt has posted nothing since its 6
   September issue. Promoted.
+- 2026-10-27: St. Mary, Irish Ridge turned from `excluded/` (closed) into a church row: the
+  parish's All Souls' Day Mass is held there (3 November 2025, 2 November 2026), the trigger its
+  exclusion named. Noted on Prince of Peace (North Endicott) that its bulletin's "CHF" adoration
+  is at Church of the Holy Family, Endwell, another parish. Promoted. Coverage: directory 202/202;
+  GCatholic 151/151.

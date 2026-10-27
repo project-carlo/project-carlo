@@ -1,0 +1,1340 @@
+{
+  "schema_version": 1,
+  "parish_slug": "prince-of-peace-north-endicott",
+  "status": "ready",
+  "as_of": "2026-10-25T13:12:01Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:18:16Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three Endicott churches (St. Ambrose, St. Anthony, St. Joseph). Weekly Mass, Confession and Adoration times are the same in every bulletin read and match the parish website, which also adds a First Friday 10:30 AM Adoration at St. Ambrose (included under R6). Dated: All Souls Remembrance Mass Nov 3 and Thanksgiving Day Mass Nov 26. Left out: the ELEVATE evening (no Adoration time of its own), the 'CHF' Adoration (Church of the Holy Family, Endwell, another parish) and other parishes' Adoration. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "efff2ae5b8b5d74eeddccc01c3c6411ca9d62512e3c506c8b0a822ac147393ec",
+      "fetched_at": "2026-10-25T13:12:01Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "02e3fdf550956abcfc9281d6dcd80fa94c9a4fe5eb62bd7d29a479d337e6bc9c",
+      "fetched_at": "2026-10-18T12:37:26Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "5f2e30e888854701a571ff648220dc10d43f506602c9b7aa912a2123a342a173",
+      "fetched_at": "2026-10-11T16:27:36Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "6520b66d8a50988ea931cc2d1f5c2c14815e76b7d5c0c3896f5f9ab60bc41bc1",
+      "fetched_at": "2026-10-04T14:37:53Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "d34eb15eb3f4a566fe38f696004d473f1db60535c3448d802cfe59756987e2e9",
+      "fetched_at": "2026-09-28T00:08:44Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Saturday, October 31 4:00pm Mass STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Saturday, October 24 4:00pm Mass STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Saturday, October 17 4:00pm Mass STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 4,
+          "said": "Saturday 10/31/26 4:00pm +David Esposito"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Saturday 16:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Saturday 16:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Saturday 16:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Saturday 16:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Saturday 16:00 st-ambrose-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: the weekly Mass and Confession list shows the same time in three bulletins covering different weeks, and the website agrees (St. Ambrose Saturday 4:00PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Tuesday, October 27 12:05pm Mass STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Tuesday, October 20 12:05pm Mass STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Tuesday, October 13 12:05pm Mass STAM"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Tuesday 12:05 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Tuesday 12:05 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Tuesday 12:05 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Tuesday 12:05 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Tuesday 12:05 st-ambrose-endicott",
+          "page": 4
+        }
+      ],
+      "rationale": "R35: same time in three bulletins covering different weeks; the website agrees (Tuesday 12:05PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Saturday, October 31 5:30pm Mass STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Saturday, October 24 5:30pm Mass STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Saturday, October 17 5:30pm Mass STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Saturday 17:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Saturday 17:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Saturday 17:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Saturday 17:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Saturday 17:30 st-anthony-of-padua-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same time in three bulletins covering different weeks; the website agrees (St. Anthony's Saturday 5:30PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Monday, October 26 8:30am Mass STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Monday, October 19 8:30am Mass STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Monday, October 12 8:30am Mass STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Monday 08:30 st-anthony-of-padua-endicott  “Includes Miraculous Medal Novena”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Monday 08:30 st-anthony-of-padua-endicott  “Includes Miraculous Medal Novena”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Monday 08:30 st-anthony-of-padua-endicott  “Includes Miraculous Medal Novena”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Monday 08:30 st-anthony-of-padua-endicott  “Includes Miraculous Medal Novena”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Monday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same time in three bulletins covering different weeks; the website agrees (Monday 8:30AM). The Miraculous Medal Novena during this Mass is a devotion within the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Sunday, November 1 Solemnity of All Saints 8:30am Mass STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Sunday Mass 8:30am STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Sunday Mass 8:30am STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Sunday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Sunday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Sunday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Sunday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Sunday 08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same time in three bulletins; the website agrees (Sunday 8:30AM). All Saints (Nov 1) is a Sunday and keeps the regular times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Thursday, October 29 8:30am Mass STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Thursday, October 22 8:30am Mass STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Thursday, October 15 8:30am Mass STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Thursday 08:30 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Thursday 08:30 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Thursday 08:30 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Thursday 08:30 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Thursday 08:30 st-joseph-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same time in three bulletins covering different weeks; the website agrees (Thursday 8:30AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-endicott",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Sunday, November 1 Solemnity of All Saints 11:00am Mass STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Sunday Mass 11:00am STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Sunday Mass 11:00am STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly mass Sunday 11:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly mass Sunday 11:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly mass Sunday 11:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly mass Sunday 11:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly mass Sunday 11:00 st-joseph-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same time in three bulletins; the website agrees (Sunday 11:00AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Monday, October 26 8:00am Confession STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Monday, October 19 8:00am Confession STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Monday, October 12 8:00am Confession STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly confession Monday 08:00–08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly confession Monday 08:00 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly confession Monday 08:00 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly confession Monday 08:00 st-anthony-of-padua-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly confession Monday 08:00–08:30 st-anthony-of-padua-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same start time in three bulletins; no end time is printed, so none is recorded (history's 8:30 end in one bulletin was a guess). The website agrees (Monday 8AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Tuesday, October 27 11:30am Confession STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Tuesday, October 20 11:30am Confession STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Tuesday, October 13 11:30am Confession STAM"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly confession Tuesday 11:30–12:05 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly confession Tuesday 11:30 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly confession Tuesday 11:30 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly confession Tuesday 11:30 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly confession Tuesday 11:30–12:05 st-ambrose-endicott",
+          "page": 4
+        }
+      ],
+      "rationale": "R35: same start time in three bulletins; no end time is printed (history's 12:05 end was inferred from the Mass). The website agrees (Tuesday 11:30AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-endicott",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Thursday, October 29 8:00am Confession STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Thursday, October 22 8:00am Confession STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Thursday, October 15 8:00am Confession STJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly confession Thursday 08:00–08:30 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly confession Thursday 08:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly confession Thursday 08:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly confession Thursday 08:00 st-joseph-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly confession Thursday 08:00–08:30 st-joseph-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same start time in three bulletins; no end time is printed. The website agrees (Thursday 8 AM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 2,
+          "said": "Saturday, October 31 3:00pm Confession STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 2,
+          "said": "Saturday, October 24 3:00pm Confession STAM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 2,
+          "said": "Saturday, October 17 3:00pm Confession STAM"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly confession Saturday 15:00–16:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly confession Saturday 15:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly confession Saturday 15:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly confession Saturday 15:00 st-ambrose-endicott",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly confession Saturday 15:00–16:00 st-ambrose-endicott",
+          "page": 2
+        }
+      ],
+      "rationale": "R35: same start time in three bulletins; no end time is printed (history's 4:00 end was inferred from the Mass). The website agrees (Saturday 3PM).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament ... Monday 9:00am-10:00am STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament ... Monday 9:00am-10:00am STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament ... Monday 9:00am-10:00am STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly adoration Monday 09:00–10:00 st-anthony-of-padua-endicott",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "weekly adoration Monday 09:00–10:00 st-anthony-of-padua-endicott",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "weekly adoration Monday 09:00–10:00 st-anthony-of-padua-endicott",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "weekly adoration Monday 09:00–10:00 st-anthony-of-padua-endicott",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly adoration Monday 09:00–10:00 st-anthony-of-padua-endicott",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: printed in the Devotions list of every bulletin read; the website agrees (9:00AM-10:00AM every Monday at St. Anthony).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Eucharistic Adoration: Second Wednesday of each Month 6:30pm STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 3,
+          "said": "Eucharistic Adoration: Second Wednesday of each Month 6:30pm STA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 3,
+          "said": "Eucharistic Adoration: Second Wednesday of each Month 6:30pm STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly adoration Wednesday 18:30 st-anthony-of-padua-endicott  “Second Wednesday of each month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "specific_date adoration 2026-10-14 18:30 st-anthony-of-padua-endicott  “Second Wednesday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "specific_date adoration 2026-10-14 18:30 st-anthony-of-padua-endicott  “Second Wednesday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly adoration Wednesday 18:30 st-anthony-of-padua-endicott  “Second Wednesday of each month”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R11: a named monthly service, printed in the Devotions list of every bulletin read (the Oct 11 issue's week holds Oct 14, a second Wednesday); the website agrees. No end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-endicott",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Eucharistic Adoration: Third Wednesday of each Month 6:30pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 3,
+          "said": "Eucharistic Adoration: Third Wednesday of each Month 6:30pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 3,
+          "said": "Eucharistic Adoration: Third Wednesday of each Month 6:30pm STJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 9,
+          "said": "Young Adult Bible Study ... The third Wednesday of the month we will meet at St. Joseph's for Adoration in the Church at 6:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "weekly adoration Wednesday 18:30 st-joseph-endicott  “Third Wednesday of each month; Young Adult Bible Study”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "specific_date adoration 2026-10-21 18:30 st-joseph-endicott  “Third Wednesday of each month; Young Adult Bible Study”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "specific_date adoration 2026-10-21 18:30 st-joseph-endicott  “Third Wednesday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "6520b66d8a50",
+          "said": "specific_date adoration 2026-10-21 18:30 st-joseph-endicott  “Third Wednesday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d34eb15eb3f4",
+          "said": "weekly adoration Wednesday 18:30 st-joseph-endicott  “Third Wednesday of each month”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R11: a named monthly service, printed in the Devotions list of every bulletin read (the Oct 18 issue's week holds Oct 21, a third Wednesday) and on p9; the website agrees. No end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://northendicottcatholic.org/",
+          "said": "Eucharistic Adoration 9:00AM-10:00AM Every Monday at St. Anthony of Padua; 6:30PM - Second Wednesday of each Month at St. Anthony of Padua; 6:30PM - Third Wednesday of each Month at St. Joseph; 10:30AM - First Fridays at St. Ambrose",
+          "schedule_check": {
+            "checked_at": "2026-10-26T17:18:30Z",
+            "current_because": "The home page of the parish's own site lists the same Adoration schedule block, with its Monday, second-Wednesday and third-Wednesday lines matching the bulletin's Devotions list exactly; the site also carries posts from September 2026 and the current pastor and vicars.",
+            "bulletin": "efff2ae5",
+            "fits_because": "The newest bulletin's Devotions list (p3) prints the Monday, second-Wednesday and third-Wednesday Adoration at the same churches and times; it prints no First Friday line, but it also prints no conflicting St. Ambrose Friday time. The week it covers holds no first Friday."
+          }
+        }
+      ],
+      "rationale": "R6, R12: a named monthly service at a listed church that only the website gives; a missing mention in the bulletin is not a conflict. The newest week (Oct 25-Nov 1) holds no first Friday. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Remembrance Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "We invite family members & friends of loved ones ... to attend our Remembrance Mass for All Souls on Tuesday, November 3rd, 2026, 6:30pm at St. Anthony of Padua church."
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "specific_date mass 2026-11-03 18:30 st-anthony-of-padua-endicott  “All Souls Remembrance Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated special Mass at a listed church on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-ambrose-endicott",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 9,
+          "said": "Prince of Peace Parish at St. Ambrose, Thanksgiving Day Mass ... Thursday, November 26 at 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "specific_date mass 2026-11-26 09:00 st-ambrose-endicott  “Thanksgiving Day Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass at a listed church on or after as_of; St. Ambrose has no regular Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-endicott",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-13",
+        "start_time": "17:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "ELEVATE: Praise, Worship, Adoration"
+      },
+      "page": 10,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 10,
+          "said": "ELEVATE Praise | Worship | Adoration, Friday November 13, 5:30pm - 8:00pm; Dinner @5:30pm, Music @6:15pm, Desserts @7:30pm; Prince of Peace Parish at St. Anthony of Padua"
+        },
+        {
+          "source": "history",
+          "bulletin": "efff2ae5b8b5",
+          "said": "specific_date adoration 2026-11-13 17:30–20:00 st-anthony-of-padua-endicott  “ELEVATE: Praise, Worship, and Adoration”",
+          "page": 10
+        },
+        {
+          "source": "history",
+          "bulletin": "5f2e30e88885",
+          "said": "specific_date adoration 2026-11-13 17:30–20:00 st-anthony-of-padua-endicott  “ELEVATE - Praise, Worship, Adoration”",
+          "page": 10
+        },
+        {
+          "source": "history",
+          "bulletin": "02e3fdf55095",
+          "said": "specific_date adoration 2026-11-13 18:15 st-anthony-of-padua-endicott  “ELEVATE Praise, Worship & Adoration”  (a different time)",
+          "page": 10
+        }
+      ],
+      "rationale": "R24, POLICY Final source checks: Adoration is one part of a 5:30-8:00 PM evening of dinner, music and fellowship, and the flyer gives it no start or end time of its own; the event's hours are not the Adoration's (history's 5:30-8:00 and 6:15 starts are guesses).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm CHF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm CHF"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 3,
+          "said": "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm CHF"
+        }
+      ],
+      "rationale": "R22: 'CHF' is the Church of the Holy Family, Endwell (holy-family-endwell), which belongs to another parish; its Adoration (Monday-Sunday 6:00am-9:00pm, as listed in this parish's 'Join us in Prayer' box with other parishes' devotions) is that parish's event, not a missing church of this one. Not a church-list issue. Left without an entry because it is seven daily slots at a church outside this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Wednesdays 8:30am-9:30am OLS; Fridays 8:30am-9:30am OLGC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "02e3fdf5",
+          "page": 3,
+          "said": "Wednesdays 8:30am-9:30am OLS; Fridays 8:30am-9:30am OLGC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5f2e30e8",
+          "page": 3,
+          "said": "Wednesdays 8:30am-9:30am OLS; Fridays 8:30am-9:30am OLGC"
+        }
+      ],
+      "rationale": "R22: Wednesday Adoration at Our Lady of Sorrows (Vestal) and Friday Adoration at Our Lady of Good Counsel (Endicott) are other parishes' churches; their events belong to those parishes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "efff2ae5",
+          "page": 3,
+          "said": "Mass of Thanksgiving at the Cathedral in Syracuse celebrating the diocese's 140th Anniversary. The Mass will be at 2:00pm."
+        }
+      ],
+      "rationale": "R22: held at the Cathedral in Syracuse, not one of this parish's churches, and no date is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": []
+}
