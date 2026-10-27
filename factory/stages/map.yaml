@@ -1,0 +1,13 @@
+stage: map
+kind: agent
+model: claude-sonnet-5-5
+effort: high
+prompt: .claude/agents/parish-scout.md
+skills: [explore-diocese, parish-site-access]
+tools: [Bash, Read, Edit, Write]
+writes:
+  - data/dioceses/{diocese}/**
+  - scratch/{run}/**
+gates:
+  - pnpm --silent diocese validate {diocese}
+limits: { max_turns: 300, max_minutes: 90 }

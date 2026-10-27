@@ -47,7 +47,8 @@ rest of these still hold.
 - Merge only rows inside your batch. Don't edit records outside it, `diocese.md`, rosters,
   CSVs, policy or code. When something outside your batch needs changing (a church that
   belongs to another row, a possible shared bulletin, a wrong roster entry), report it as
-  a lead.
+  a lead. When the factory starts you, a lead is something a later batch should check; a
+  fix across batches (a merge, a church that belongs to another row) is an advisory flag.
 - Don't commit or promote. The orchestrator does both.
 - A script the next scout could use goes in the tools folder, with one line in its
   `README.md`: what it does and how to run it.

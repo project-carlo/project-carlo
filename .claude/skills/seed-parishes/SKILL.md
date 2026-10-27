@@ -5,8 +5,9 @@ description: Orchestrate batches of parish believed-schedule seeds, including hi
 
 # Seeding parish batches
 
-A person reviews and approves every seed before the pipeline loads it. The design is in
-`docs/seeding-plan.md`. Drafters follow `.claude/skills/draft-parish-seed/`, whose
+In a manual session like this one, a person reviews and approves every seed before the
+pipeline loads it (the onboarding factory's `seed-review` agent approves its own seed
+Runs). The design is in `docs/seeding-plan.md`. Drafters follow `.claude/skills/draft-parish-seed/`, whose
 [rules.md](../draft-parish-seed/rules.md) holds every slot decision. Your job is to
 prepare, assign, verify and report the batch, and to propose new rules from the reviews.
 Don't make slot decisions yourself.
@@ -82,6 +83,10 @@ for answers that repeat a situation, and above all answers that go against the l
 In your report, propose each as a candidate for rules.md, in the same form as its
 Candidates section: a When, a Lean, and the parishes and slots as evidence. Don't edit
 rules.md yourself: the owner adds the candidates and promotes them.
+
+Answers by an agent reviewer (`by` starting `agent:`, from the factory's `seed-review`) are
+listed separately, under "Answered by agents" (`--by person` leaves them out). They aren't
+by themselves evidence for a candidate: base one on people's answers.
 
 ## Eval and handoff
 

@@ -748,6 +748,25 @@ runs the usual approval checks; failures stay unapproved and appear with their p
 Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
 in update mode (a deploy never loads them).
 
+## Onboarding factory
+
+The factory takes a diocese from nothing to seeded parishes without a person in the loop,
+apart from merging its PRs and answering its GitHub issues
+([docs/factory-spec.md](docs/factory-spec.md)). A dispatcher runs small agent jobs one at a
+time: a map Run (survey, batches of parishes, reconcile, promote, PR) for each diocese in
+`factory/queue.json`, then seed Runs once the mapped parishes have bulletins. Stage specs
+and prompts are in `factory/`; the ledger, transcripts and Run worktrees are in
+`data/factory/` of the dispatcher's own checkout.
+
+```bash
+uv sync --group dev --group factory            # the Agent SDK
+pnpm factory run --stub scenario.json          # canned workers: no usage, no GitHub
+pnpm factory run                               # the dispatcher (or factory/carlo-factory.service)
+pnpm factory status                            # Runs, the running job, usage, open issues
+pnpm factory inspect wilmington-map-1/004-map  # one job in full; the `foreman` skill starts here
+pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answers.json
+```
+
 ## Project layout
 
 - `pyproject.toml` - project metadata and dependencies

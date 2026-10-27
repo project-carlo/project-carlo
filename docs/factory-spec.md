@@ -1,7 +1,10 @@
-# Onboarding factory: specification (draft)
+# Onboarding factory: specification
 
-Status: draft. The [MVP](#13-mvp) is what gets the first diocese through end to end;
-everything else is in [Future enhancements](#future-enhancements).
+Status: the [MVP](#13-mvp) is implemented (`src/pdf_extract/factory/`, `factory/`) and
+tested with stub workers; it has not yet run a real diocese. Everything else is in
+[Future enhancements](#future-enhancements). How to run it, and what the implementation
+decided where this spec was silent, are in [Running it](#running-it) and
+[Implementation decisions](#implementation-decisions).
 
 ## 1. Goal
 
@@ -402,6 +405,94 @@ Get one diocese through end to end, then improve it.
 **First Run: Diocese of Wilmington** (Delaware and Maryland's Eastern Shore, roughly 56
 parishes; the survey will confirm the number). It's small, settled and next to territory
 you've already mapped. You review its PRs closely; they are the test of the factory.
+
+## Running it
+
+1. Make the dispatcher its own checkout of `main`, apart from yours:
+   `git worktree add ~/carlo-factory origin/main --detach`. Run `pnpm factory` from there;
+   its ledger, transcripts and Run worktrees live in its `data/factory/`.
+2. `uv sync --group dev --group factory` (the `factory` group holds the Agent SDK),
+   `pnpm data:pull`, and R2 keys that can write in `.env` for the nightly backup.
+3. Sign each account in once: `CLAUDE_CONFIG_DIR=~/.claude claude /login`, and the
+   same for the second. List them, your GitHub login and any paths in
+   `data/factory/local.yaml` (`factory/local.example.yaml`). `gh` must be signed in.
+4. Try it without spending usage: `pnpm factory run --stub scenario.json` plays canned
+   workers (`workers.scenario_script`), with issues and PRs as files under
+   `data/factory/stub/` and nothing pushed.
+5. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
+   `pnpm factory status` shows what it is doing and what waits on you.
+
+## Implementation decisions
+
+Where the implementation had to decide something this spec left open.
+
+### Runs and jobs
+
+- **A worktree per Run**, under `data/factory/worktrees/<run>` (`worktrees_dir` in
+  `local.yaml`), created from `origin/main` with the Run's branch, a copy of the
+  dispatcher's database and `uv sync --group dev` (`setup`). Workers resume a session
+  only in the worktree that made it, so a follow-up Run's jobs start fresh workers with
+  your answer in their input.
+- **The next job is computed, not queued ahead** (`plan.py`): a queued job (a send-back,
+  an answer) first, then the stage order. A seed Run's batches are the map Run's
+  `batches.json`, each parish placed by the roster refs in its record; parishes in no
+  batch come last.
+- **Jobs are named `<seq>-<stage>`** within their Run (`wilmington-map-1/004-map`); their
+  scratch folder is `scratch/<run>/<job>/`, and the Run's shared tools folder
+  `scratch/<run>/tools/`.
+- **Job input.** The stage's prompt file, frontmatter stripped, is appended to Claude
+  Code's system prompt. The first message is built in code (`inputs.py`): a header with the
+  write boundaries, the gates, the handoff path and schema, then the stage's input.
+  Resumed attempts get only the problems, your answer, or "continue".
+- **New stage prompts** are `factory/prompts/<stage>.md` (survey-review, integrate,
+  reconcile, seed-review). The surveyor and scout agent files gained a sentence each for
+  running under the factory.
+- **Crashes.** A crashed attempt resumes its session; one that couldn't resume (no turns)
+  gets a fresh worker; the third crash blocks the Run. `max_turns` and `max_minutes` end an
+  attempt as `partial`.
+- **Workers can't move HEAD.** Besides `git commit`, `git push` and `gh`, the deny rules
+  cover `git reset`, `checkout`, `switch`, `rebase`, `merge` and `stash`. If HEAD moved
+  anyway, the gate resets it softly and sends the job back.
+- **A handoff with status `blocked`** must carry a blocking flag. A blocking flag with
+  `scope: run` blocks the Run without running the stage gates; parish flags don't stop
+  the job finishing.
+- **seed-review must cover its batch**: a verdict or a blocking flag for every parish,
+  or it is sent back. Its `basis` is `precedent` or `judgment` only; a question a rule
+  covers is a send-back.
+- **`seed approve` failing** on a reviewer's answers sends the seed back to its drafter
+  with the error, like any send-back. The stage gate `pnpm seed check {approved}` runs
+  after the approvals.
+- **Promote and pr are code.** A failing promote command blocks the Run with its output.
+  The PR is opened with `gh pr create`; an open PR for the branch is reused.
+
+### Usage
+
+- The endpoint is read with each account's `.credentials.json` token and
+  `anthropic-beta: oauth-2025-04-20`. An expired login is refreshed by running
+  `claude auth status` under that account; if it is still expired, the dispatcher pauses.
+- **Days into the week** are counted from `seven_day.resets_at` minus 7 days. An account
+  over the paced weekly cap waits for the next day's cap, or for the reset once it is past
+  the full cap or on the last day.
+- `pnpm factory resume --override-caps` starts jobs whatever the caps say until the next
+  `pause` or `resume`. A worker's rate-limit error still makes its job wait.
+
+### Issues and answers
+
+- The dispatcher's own comments carry `<!-- factory -->` and are never read as answers,
+  since it comments with your `gh` login. `/accept` may be followed by more text, which is
+  added to the suggestion.
+- Labels `factory`, `run:<diocese>` and `stage:<stage>` are created when first needed.
+- A parish still not ready 6 weeks after its map Run merged gets one issue
+  (`stage:seed`), not a flag; it is seeded when it becomes ready.
+
+### Ledger
+
+- `data/factory/factory.db` holds Runs, jobs, attempts, steps (every tool call and text
+  block, truncated), gate results, actions done after the gates, flags, leads, lessons,
+  reviewer verdicts, seed-review's decisions and usage readings. Transcripts are copied to
+  `data/factory/runs/<run>/<job>/<session>.jsonl` after each attempt.
+- The nightly backup goes to R2 under `factory/backups/` when the local hour passes
+  `backup_hour`; without keys that can write it stays in `data/factory/backups/`.
 
 ## Future enhancements
 

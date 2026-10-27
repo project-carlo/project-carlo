@@ -54,6 +54,8 @@ from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
+from pdf_extract.factory.cli import add_factory_parser
+from pdf_extract.factory.config import FactoryError
 from pdf_extract.fetch import FETCH_WORKERS, fetch_bulletins
 from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
@@ -733,6 +735,9 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- seed (the seeding agent's tools; quiet by default, text output) --
     add_seed_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
 
+    # -- factory (the onboarding factory's dispatcher; quiet by default, text output) --
+    add_factory_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -815,6 +820,7 @@ def main(argv: list[str] | None = None) -> int:
             result = handler(args)
     except (
         DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError, SeedError,
+        FactoryError,
     ) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)

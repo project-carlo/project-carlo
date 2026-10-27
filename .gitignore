@@ -76,6 +76,9 @@ scratch/
 # `pnpm label --demo` builds its generated dataset here. Real labels
 # (data/labels/) are committed.
 data/labeler-demo/
+# The onboarding factory's ledger, transcripts, local settings and Run worktrees
+# (docs/factory-spec.md). Its stage specs and queue (factory/) are committed.
+data/factory/
 
 # Generated frontend assets (the snapshot is published data: `pnpm data:pull`)
 apps/web/public/frontend.json.gz

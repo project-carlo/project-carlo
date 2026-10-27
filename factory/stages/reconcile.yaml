@@ -1,0 +1,14 @@
+stage: reconcile
+kind: agent
+model: claude-opus-5-5
+effort: high
+prompt: factory/prompts/reconcile.md
+skills: [explore-diocese, parish-site-access]
+tools: [Bash, Read, Edit, Write]
+writes:
+  - data/dioceses/{diocese}/**
+  - scratch/{run}/**
+gates:
+  - pnpm --silent diocese batches validate {diocese}
+  - pnpm --silent diocese validate {diocese}
+limits: { max_turns: 300, max_minutes: 120 }

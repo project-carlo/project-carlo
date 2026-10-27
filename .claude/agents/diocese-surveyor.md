@@ -15,6 +15,10 @@ anything it already knows about it. Every later batch is planned from what you l
 behind: a missed roster or family list, or two parishes that share a bulletin split across
 batches, costs a scout run each. So be thorough here; it is the step to get right.
 
+When the factory starts you, its job input gives your folders instead: use `scratch/<run>/`
+wherever this page says `scratch/map-<d>/` (`survey.json`, `batches.md`, `tools/`), and
+end with the handoff it describes rather than the reply under *Report*.
+
 Read `data/dioceses/README.md` first, then the `diocese.md` of the mapped dioceses that
 border this one, for their *Sources*, *Bulletin publishers here* and *Rules settled*.
 

@@ -31,6 +31,10 @@ dev = [
     "pytest>=9.0.3",
     "ruff>=0.15.2",
 ]
+# The onboarding factory's dispatcher (`pnpm factory`), which starts Agent SDK workers.
+factory = [
+    "claude-agent-sdk>=0.2.174",
+]
 
 [tool.ruff]
 target-version = "py313"

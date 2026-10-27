@@ -6,7 +6,10 @@ Batch: choosing parishes, verifying drafts, learning from reviews (the orchestra
   status                                            every file's status, questions, loaded
   check     <parish>... | --all                     check files against the database
   score     <run>                                   a test run's drafts against the labels
-  questions [--open | --answered]                   every question, its leaning and answer
+  questions [--open | --answered] [--by agent|person]
+                                                    every question, its leaning and answer
+  approve   <parish> --reviewer agent:NAME@COMMIT [--answers FILE]
+                                                    an agent reviewer's answers and approval
 
 Draft: one parish's file (the drafter)
   start     <parish>                    start a draft, or resume one; prints the brief
@@ -47,11 +50,12 @@ Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per pa
   extract   <parish> <bulletin> --model M              a full extraction with POLICY
 
 A bulletin is `latest` or a prefix of its content hash; M is gpt-6.1-sol or
-gemini-3-flash-preview. Every command but `score` takes `--eval RUN` to work on
-a test run's drafts (data/seed-evals/RUN/seeds/); one that needs a file and
-finds only a test run's draft asks whether you meant `--eval RUN`. Output is
+gemini-3-flash-preview. Every command but `score` and `approve` takes `--eval RUN`
+to work on a test run's drafts (data/seed-evals/RUN/seeds/); one that needs a file
+and finds only a test run's draft asks whether you meant `--eval RUN`. Output is
 compact text, or the JSON result with `--json`. Drafters run `finalize`,
-which checks; orchestrators run `check`.
+which checks; orchestrators run `check`. `approve` is the factory's seed-review
+agent's (docs/factory-spec.md); people approve in the labeler.
 Workflow: .claude/skills/seed-parishes/ (batches) and
 .claude/skills/draft-parish-seed/ (drafting; rules.md holds the decision rules).
 """
@@ -59,6 +63,7 @@ Workflow: .claude/skills/seed-parishes/ (batches) and
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import sys
 from collections.abc import Callable
@@ -89,6 +94,7 @@ from pdf_extract.seeding.files import (
 from pdf_extract.seeding.finalize import finalize_seed
 from pdf_extract.seeding.loader import is_loaded
 from pdf_extract.seeding.queries import SeedContext, SeedError
+from pdf_extract.seeding.review import SeedReviewError, approve_seed, is_agent
 from pdf_extract.seeding.score import score_run
 from pdf_extract.seeding.site import read_site, resolve_url
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db
@@ -341,6 +347,8 @@ def _status(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
 
 def _questions(args: argparse.Namespace) -> Result:
     ctx = _ctx(args)
+    if args.open and args.by:
+        raise SeedError("--by picks answered questions; an open one has no answer yet")
     questions, problems = [], []
     for slug in seed_slugs(ctx.seeds_dir):
         try:
@@ -349,15 +357,49 @@ def _questions(args: argparse.Namespace) -> Result:
             problems.append({"parish": slug, "problem": str(exc)})
             continue
         for q in asked_questions(seed or {}):
-            if args.open and q["status"] != NEEDS_HUMAN or args.answered and not q["answer"]:
+            # An agent's answers (the factory's seed-review) are kept apart from people's:
+            # candidate rules come from people's decisions.
+            by = None
+            if q["answer"]:
+                by = "agent" if is_agent(q["answer"].get("by")) else "person"
+            if (args.open and q["status"] != NEEDS_HUMAN or args.answered and not q["answer"]
+                    or args.by and by != args.by):
                 continue
-            questions.append({"parish": slug, **q})
+            questions.append({"parish": slug, **q, "answered_by": by})
     answered = [q for q in questions if q["answer"]]
     return {
         "eval_run": ctx.eval_run, "questions": questions, "problems": problems,
         "totals": {"questions": len(questions), "answered": len(answered),
-                   "matched_leaning": sum(1 for q in answered if q["matched"])},
+                   "matched_leaning": sum(1 for q in answered if q["matched"]),
+                   "answered_by_person": sum(1 for q in answered
+                                             if q["answered_by"] == "person"),
+                   "answered_by_agent": sum(1 for q in answered
+                                            if q["answered_by"] == "agent")},
     }
+
+
+def _approve(conn, ctx: SeedContext, args: argparse.Namespace) -> Result:
+    if read_seed(args.parish, ctx.seeds_dir) is None:
+        raise SeedError(f"{args.parish} has no seed file to approve")
+    answers: Any = []
+    if args.answers is not None:
+        if args.answers == "-":
+            text = sys.stdin.read()
+        else:
+            try:
+                text = Path(args.answers).read_text(encoding="utf-8")
+            except OSError as exc:
+                raise SeedError(f"can't read the answers {args.answers}: {exc}") from exc
+        try:
+            answers = json.loads(text)
+        except json.JSONDecodeError as exc:
+            raise SeedError(f"the answers {args.answers} are not JSON: {exc}") from exc
+    try:
+        result = approve_seed(conn, args.parish, args.reviewer, answers, ctx.seeds_dir)
+    except SeedReviewError as exc:
+        raise SeedError(f"can't approve {args.parish}: {exc}") from exc
+    path = seed_path(args.parish, ctx.seeds_dir)
+    return {**result, "path": Path(os.path.relpath(path)).as_posix()}
 
 
 def _score(args: argparse.Namespace) -> Result:
@@ -647,7 +689,12 @@ def _text_start(r: Result) -> str:
 
 def _text_questions(r: Result) -> str:
     lines = []
-    for q in r["questions"]:
+    # People's answers (and open questions) first, then the agents' apart.
+    people = [q for q in r["questions"] if q["answered_by"] != "agent"]
+    agents = [q for q in r["questions"] if q["answered_by"] == "agent"]
+    for q in people + agents:
+        if agents and q is agents[0]:
+            lines.append("Answered by agents:")
         where = q["group"] + f" ({', '.join(q['slots'])})" if q["group"] else q["slots"][0]
         lines.append(f"{q['parish']} {where}: {q['question']}")
         for i, o in enumerate(q["options"]):
@@ -663,8 +710,17 @@ def _text_questions(r: Result) -> str:
         lines.append(f"  {got}" + (f"  cites {', '.join(q['cites'])}" if q["cites"] else ""))
     lines += [f"{p['parish']}: {p['problem']}" for p in r["problems"]]
     t = r["totals"]
-    lines.append(f"{t['questions']} questions, {t['answered']} answered, "
+    by = (f" ({t['answered_by_person']} by people, {t['answered_by_agent']} by agents)"
+          if t["answered_by_agent"] else "")
+    lines.append(f"{t['questions']} questions, {t['answered']} answered{by}, "
                  f"{t['matched_leaning']} matched the leaning (* marks it)")
+    return "\n".join(lines)
+
+
+def _text_approve(r: Result) -> str:
+    lines = [f"{r['path']}: {r['status']} by {r['reviewer']} at {_when(r['approved_at'])}"]
+    lines += [f"  {', '.join(a['slots'])}: {a['choice']} ({a['decision']})"
+              for a in r["answered"]]
     return "\n".join(lines)
 
 
@@ -818,6 +874,18 @@ def add_seed_parser(
     only = p.add_mutually_exclusive_group()
     only.add_argument("--open", action="store_true", help="Only questions still open")
     only.add_argument("--answered", action="store_true", help="Only answered questions")
+    p.add_argument("--by", choices=("agent", "person"),
+                   help="Only questions answered by an agent reviewer, or by a person")
+
+    p = leaf("approve", "Answer a seed's open questions and approve it, for an agent reviewer "
+             "(people approve in the labeler)", _with_conn(_approve), _text_approve,
+             eval_run=False)
+    parish(p)
+    p.add_argument("--reviewer", required=True, metavar="agent:NAME@COMMIT",
+                   help="The agent reviewer, recorded as each answer's `by` and as `reviewer`")
+    p.add_argument("--answers", metavar="FILE",
+                   help='A JSON list of {"slot", "choice", "entry", "page"} (-: stdin; '
+                        "default: none, for a file with no open question)")
 
     # Draft
     for name in ("start", "init"):  # `init` is the old name, kept for old instructions

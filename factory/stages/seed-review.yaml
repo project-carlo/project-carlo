@@ -1,0 +1,13 @@
+stage: seed-review
+kind: reviewer
+model: claude-opus-5-5
+effort: high
+prompt: factory/prompts/seed-review.md
+skills: [draft-parish-seed]
+tools: [Bash, Read, Write]
+writes:
+  - scratch/{run}/{job}/**
+# Run after the dispatcher approves the seeds the reviewer approved.
+gates:
+  - pnpm seed check {approved}
+limits: { max_turns: 120, max_minutes: 60 }

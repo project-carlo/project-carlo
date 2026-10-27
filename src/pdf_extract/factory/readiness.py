@@ -1,0 +1,77 @@
+"""Which mapped parishes are ready to seed, and when a seed Run starts (§11).
+
+A parish from a merged map Run is ready once the database has at least 2 of its
+bulletins. Only parishes promoted with a bulletin source count. The first seed Run
+starts once 80% are ready; a follow-up seeds the rest once they are all ready, or
+6 weeks after the map Run merged, when each one still not ready gets an issue.
+"""
+
+from __future__ import annotations
+
+import json
+import sqlite3
+from dataclasses import dataclass, field
+from datetime import UTC, datetime, timedelta
+from pathlib import Path
+
+from pdf_extract.factory.config import Config
+from pdf_extract.factory.ledger import ACTIVE, BLOCKED, MAP, MERGED, PENDING, SEED, Ledger
+from pdf_extract.factory.plan import seedable_parishes
+
+
+def bulletin_counts(db_path: Path, parishes: list[str]) -> dict[str, int]:
+    if not parishes or not db_path.exists():
+        return {}
+    conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+    try:
+        marks = ",".join("?" * len(parishes))
+        rows = conn.execute(
+            f"SELECT p.slug, COUNT(DISTINCT b.content_hash) FROM parish p "
+            f"JOIN bulletin b ON b.parish_id = p.id WHERE p.slug IN ({marks}) GROUP BY p.slug",
+            parishes).fetchall()
+    finally:
+        conn.close()
+    return {slug: n for slug, n in rows}
+
+
+@dataclass
+class Readiness:
+    diocese: str
+    seedable: list[str]
+    seeding: list[str]  # already in a seed Run
+    ready: list[str]
+    not_ready: list[str]
+    start: list[str] = field(default_factory=list)  # parishes for a new seed Run
+    overdue: list[str] = field(default_factory=list)  # still not ready after the wait
+
+
+def assess(ledger: Ledger, config: Config, diocese: str, db_path: Path,
+           at: datetime | None = None) -> Readiness | None:
+    at = at or datetime.now(UTC)
+    maps = [r for r in ledger.runs(MERGED) if r["diocese"] == diocese and r["kind"] == MAP]
+    if not maps:
+        return None
+    seedable = sorted({p for r in maps for p in seedable_parishes(Path(r["worktree"]), diocese)})
+    seed_runs = [r for r in ledger.runs() if r["diocese"] == diocese and r["kind"] == SEED]
+    seeding = sorted({p for r in seed_runs for p in json.loads(r["parishes"] or "[]")})
+    remaining = [p for p in seedable if p not in seeding]
+    counts = bulletin_counts(db_path, remaining)
+    ready = [p for p in remaining if counts.get(p, 0) >= config.seed_ready_bulletins]
+    not_ready = [p for p in remaining if p not in ready]
+    result = Readiness(diocese, seedable, seeding, ready, not_ready)
+    if not remaining or any(r["status"] in (ACTIVE, BLOCKED, PENDING) for r in seed_runs):
+        return result
+    if not seed_runs:
+        if seedable and len(ready) >= config.seed_first_run_share * len(seedable):
+            result.start = ready
+        return result
+    merged_at = min(datetime.fromisoformat(r["merged_at"]) for r in maps if r["merged_at"])
+    waited = at >= merged_at + timedelta(weeks=config.seed_follow_up_weeks)
+    if not not_ready or waited:
+        result.start = ready
+        result.overdue = not_ready if waited else []
+    return result
+
+
+def dioceses_to_check(ledger: Ledger) -> list[str]:
+    return sorted({r["diocese"] for r in ledger.runs(MERGED) if r["kind"] == MAP})

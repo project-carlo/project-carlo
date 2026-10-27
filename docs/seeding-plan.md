@@ -19,7 +19,9 @@ itself against the extraction policy (`classifiers/schedule_policy.POLICY`).
 It writes down, for every slot, what each source said, what it decided and
 why. Where it can't decide, it writes a question for a person. A person
 settles those questions in the labeler and approves the parish. The approved
-seed file is committed, and the pipeline loads it.
+seed file is committed, and the pipeline loads it. In the onboarding factory
+([factory-spec.md](factory-spec.md)), an agent reviewer may answer and approve
+instead (see [Approval by an agent](#approval-by-an-agent)).
 
 ## Decisions
 
@@ -141,6 +143,25 @@ already has (`/api/bulletins/<parish>/<hash>/pdf`) serves the bulletins. The
 server validates every write and confines paths to `data/seeds`, as for the
 labels.
 
+## Approval by an agent
+
+The onboarding factory ([factory-spec.md](factory-spec.md), §8 and §11) has a
+`seed-review` agent review the seeds of a seed Run. When it approves one, the
+factory runs `pnpm seed approve <parish> --reviewer agent:seed-review@<commit>
+--answers <file>`. That does what Seeds mode does for a person: each answer
+changes its slot as the labeler would, with `by: agent:seed-review@<commit>`,
+and the file is approved with that `reviewer`. The checks and `approved_at`
+are a person's approval's.
+
+- **Agent answers are kept apart.** `seed questions --answered` lists them
+  after people's, by their `by`. Candidate rules come from people's decisions,
+  or from a borderline case the owner agrees with.
+- **Rules stay the owner's.** The factory never edits rules.md; the owner adds
+  a rule in a separate PR.
+- **People still approve in the labeler.** `seed approve` refuses a reviewer
+  not starting `agent:`. The factory's PR lists every question `seed-review`
+  settled by judgment, for the owner to read.
+
 ## Loading seeds
 
 The published database is only written by the pipeline, so seeds reach it the
@@ -203,15 +224,17 @@ size costs accuracy.
 - Using websites as the primary seed source, or consulting live websites in
   historical evals (rules.md says how far a website counts in production).
   Phone calls and the diocesan directory remain out of scope.
-- Running the agent unattended (in CI or on a schedule).
+- Running the agent unattended (in CI or on a schedule), except as the
+  onboarding factory's seed Runs ([factory-spec.md](factory-spec.md)).
 - Using approved seeds as labels. Their weekly slots are close to a label for
   the newest bulletin, so this could come later.
 
 ## Open questions
 
-- **Approving parishes with no open questions.** Every parish is approved by a
-  person in this plan. If the test run shows `settled` slots are reliable
-  enough, `ready` parishes could be approved in bulk.
+- **Approving parishes with no open questions.** People approve `ready`
+  parishes in bulk (**Approve all ready**). In the factory, `seed-review`
+  approves them with `seed approve` and no answers. Whether an agent's approval
+  is reliable enough is for the factory's PRs to show.
 - **Subagent batch size**, settled by the test run.
 
 ## Implementation decisions
@@ -281,7 +304,22 @@ the drafting skill `.claude/skills/draft-parish-seed/` (with its `rules.md` and
   with its options, the leaning, the answer and how it relates to the leaning
   (`leaning`, `other`, `dropped`, `edited`; a drop counts as matching a
   leave-out leaning), and the rule and candidate IDs (`R12`, `C3`) its
-  rationale cites.
+  rationale cites. Each answered question says whether a person or an agent
+  answered it (`answered_by`, from a `by` starting `agent:`); the text lists
+  agents' answers last, under their own heading, and `--by agent|person`
+  picks one kind.
+- **`seed approve <parish> --reviewer agent:NAME@COMMIT [--answers FILE]`**
+  is an agent reviewer's approval (`review.approve_seed`). The answers are a
+  JSON list of `{"slot", "choice", "entry", "page"}`, `-` for stdin; other
+  keys are ignored, so the factory passes `seed-review`'s answers on as they
+  are. An option's index or `dropped` answers the slot's whole open group, as
+  in the labeler; `edited` (with `entry`, and `page` if it changes) answers
+  the slot alone. It then saves through the labeler's save, under its lock.
+  It refuses a reviewer not starting `agent:`, a file missing, `drafting`,
+  `approved` or `blocked`, an answer to a slot that isn't an open question,
+  an option that can't settle every slot of its group, and questions still
+  open after the answers (naming their slots). It has no `--eval`: test runs
+  are scored, not approved.
 
 ### The file
 

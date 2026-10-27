@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import copy
 import http.client
+import io
 import json
 import threading
 from pathlib import Path
@@ -64,6 +65,7 @@ from pdf_extract.seeding.queries import (
 )
 from pdf_extract.seeding.review import (
     SeedReviewError,
+    approve_seed,
     save_reviewed_seed,
     seed_detail,
     seed_queue,
@@ -704,6 +706,139 @@ def test_review_refuses_a_draft_still_being_written(conn, demo, seed):
         save_reviewed_seed(conn, PARISH, {**seed, "status": NEEDS_REVIEW}, demo["seeds_dir"])
 
 
+AGENT = "agent:seed-review@abc1234"
+
+
+def _weekday_group(seed: dict[str, Any]) -> list[str]:
+    """Make the Monday to Friday 8:00 AM Masses one grouped question, each its own day."""
+    s16 = _slot(seed, "s16")
+    ids = ["s12", "s13", "s14", "s15", "s16"]
+    for slot_id in ids:
+        slot = _slot(seed, slot_id)
+        entry = slot["entry"] or s16["options"][0]["entry"]
+        slot.update(status="needs_human", decision=None, entry=None, group="weekday",
+                    question="Are the weekday 8:00 AM Masses weekly?", options=[
+                        {"label": "Weekly, 8:00 AM", "entry": entry, "leaning": True},
+                        {"label": "Leave out", "entry": None}])
+    return ids
+
+
+def test_agent_approval_answers_as_seeds_mode_does_and_changes_nothing_else(conn, demo, seed):
+    before = copy.deepcopy(seed)
+    result = approve_seed(conn, PARISH, AGENT, [
+        {"slot": "s16", "choice": 0, "question": "…", "basis": "rule", "why": "R35"},
+        {"slot": "s17", "choice": "dropped"},
+    ], demo["seeds_dir"])
+    assert result["status"] == APPROVED and result["reviewer"] == AGENT
+    assert result["answered"] == [{"slots": ["s16"], "choice": 0, "decision": "include"},
+                                  {"slots": ["s17"], "choice": "dropped", "decision": "exclude"}]
+    saved = read_seed(PARISH, demo["seeds_dir"])
+    assert saved["approved_at"] == result["approved_at"] and saved["reviewer"] == AGENT
+    s16, s17 = _slot(saved, "s16"), _slot(saved, "s17")
+    assert (s16["status"], s16["decision"]) == ("settled", "include")
+    assert s16["entry"] == _slot(before, "s16")["options"][0]["entry"]
+    # Dropped keeps the leaning option's entry for review, as the labeler does.
+    assert (s17["status"], s17["decision"]) == ("settled", "exclude")
+    assert s17["entry"] == _slot(before, "s17")["options"][0]["entry"]
+    for slot in (s16, s17):
+        assert slot["answer"]["by"] == AGENT and slot["answer"]["at"].endswith("Z")
+        assert slot["question"] and slot["options"]  # kept, as in the labeler
+    unchanged = {"status", "reviewer", "approved_at", "slots"}
+    assert {k: v for k, v in saved.items() if k not in unchanged} == \
+        {k: v for k, v in before.items() if k not in unchanged}
+    assert [s for s in saved["slots"] if s["id"] not in ("s16", "s17")] == \
+        [s for s in before["slots"] if s["id"] not in ("s16", "s17")]
+    assert check_seed(conn, saved, parish_slug=PARISH) == []
+
+
+def test_agent_approval_settles_an_edited_slot_with_its_entry_and_page(conn, demo, seed):
+    entry = {**_slot(seed, "s17")["options"][1]["entry"], "start_time": "18:30"}
+    approve_seed(conn, PARISH, AGENT, [
+        {"slot": "s16", "choice": 1},
+        {"slot": "s17", "choice": "edited", "entry": entry, "page": 2},
+    ], demo["seeds_dir"])
+    saved = read_seed(PARISH, demo["seeds_dir"])
+    s16, s17 = _slot(saved, "s16"), _slot(saved, "s17")
+    assert (s16["decision"], s16["answer"]["choice"]) == ("exclude", 1)
+    assert s16["entry"] == _slot(seed, "s16")["options"][0]["entry"]
+    assert (s17["status"], s17["decision"], s17["entry"], s17["page"]) == (
+        "settled", "include", entry, 2)
+    assert s17["answer"]["choice"] == "edited"
+
+
+def test_agent_approval_answers_a_whole_group_with_one_answer(conn, demo, seed):
+    ids = _weekday_group(seed)
+    write_seed_file(seed, demo["seeds_dir"])
+    with pytest.raises(SeedReviewError, match="option 2 can't settle s12, s13, s14, s15, s16"):
+        approve_seed(conn, PARISH, AGENT, [{"slot": "s16", "choice": 2}], demo["seeds_dir"])
+    with pytest.raises(SeedReviewError, match="s12 is already answered"):
+        approve_seed(conn, PARISH, AGENT, [{"slot": "s16", "choice": 0},
+                                           {"slot": "s12", "choice": 1}], demo["seeds_dir"])
+    # Listing each slot of the group with the group's answer is the same as listing one.
+    result = approve_seed(conn, PARISH, AGENT, [
+        {"slot": "s14", "choice": 0}, {"slot": "s16", "choice": 0},
+        {"slot": "s17", "choice": 0},
+    ], demo["seeds_dir"])
+    assert result["answered"][0] == {"slots": ids, "choice": 0, "decision": "include"}
+    saved = read_seed(PARISH, demo["seeds_dir"])
+    assert all(_slot(saved, i)["decision"] == "include" and _slot(saved, i)["answer"]["by"]
+               == AGENT for i in ids)
+    assert [_slot(saved, i)["entry"]["day_of_week"] for i in ids] == [
+        "Tuesday", "Wednesday", "Thursday", "Friday", "Monday"]
+
+
+@pytest.mark.parametrize("answers, message", [
+    ([{"slot": "s16", "choice": 0}], "1 slots are still open: s17"),
+    ([], "2 slots are still open: s16, s17"),
+    ([{"slot": "s99", "choice": 0}], "no slot s99"),
+    ([{"slot": "s1", "choice": 0}], "s1 is not an open question"),
+    ([{"slot": "s16", "choice": "maybe"}], "choice must be an option's index"),
+    ([{"slot": "s16", "choice": True}], "choice must be an option's index"),
+    ([{"slot": "s16", "choice": "edited"}], "an edited answer gives its entry"),
+    ([{"slot": "s16", "choice": 0, "page": 2}], "only an edited answer"),
+    ([{"choice": 0}], "Answer 1 must be an object with a slot and a choice"),
+    ({"slot": "s16", "choice": 0}, "a list of"),
+])
+def test_agent_approval_refuses_answers_that_leave_it_unsettled(conn, demo, seed, answers,
+                                                                 message):
+    before = seed_path(PARISH, demo["seeds_dir"]).read_bytes()
+    with pytest.raises(SeedReviewError, match=message):
+        approve_seed(conn, PARISH, AGENT, answers, demo["seeds_dir"])
+    assert seed_path(PARISH, demo["seeds_dir"]).read_bytes() == before
+
+
+@pytest.mark.parametrize("reviewer", ["Reviewer", "agent:", "agent:  ", " agent:x", "", None])
+def test_agent_approval_needs_an_agent_reviewer(conn, demo, seed, reviewer):
+    with pytest.raises(SeedReviewError, match="people approve in the labeler"):
+        approve_seed(conn, PARISH, reviewer, [], demo["seeds_dir"])
+
+
+@pytest.mark.parametrize("status, message", [
+    ("drafting", "still drafting"), ("approved", "Already approved by Reviewer"),
+    ("blocked", "a person decides on a blocked parish"), (None, "No seed file"),
+])
+def test_agent_approval_refuses_drafts_approved_blocked_and_missing_files(
+    conn, demo, seed, status, message,
+):
+    if status is None:
+        seed_path(PARISH, demo["seeds_dir"]).unlink()
+    else:
+        changed = _approved(seed) if status == APPROVED else {**seed, "status": status}
+        if status == "blocked":
+            changed["blocked_reason"] = "no bulletin since June"
+        write_seed_file(changed, demo["seeds_dir"])
+    with pytest.raises(SeedReviewError, match=message):
+        approve_seed(conn, PARISH, AGENT, [], demo["seeds_dir"])
+
+
+def test_agent_approval_of_a_ready_file_needs_no_answers(conn, demo, seed):
+    write_seed_file(_settle_all(seed), demo["seeds_dir"])
+    result = approve_seed(conn, PARISH, AGENT, [], demo["seeds_dir"])
+    assert result["answered"] == [] and result["status"] == APPROVED
+    # The person's earlier answers stay theirs.
+    assert _slot(read_seed(PARISH, demo["seeds_dir"]), "s16")["answer"]["by"] == "Reviewer"
+
+
 # ── Loading ─────────────────────────────────────────────────────────────────
 def test_approved_disjoint_patterns_load_without_changing_reviewer_decisions(conn, demo, seed):
     approved = _approved(seed)
@@ -1076,7 +1211,77 @@ def test_questions_lists_each_question_its_leaning_and_answer(demo_cli, seed, ca
     result = json.loads(capsys.readouterr().out)
     assert [(q["match"], q["matched"]) for q in result["questions"]] == [
         ("dropped", True), ("leaning", True)]
-    assert result["totals"] == {"questions": 2, "answered": 2, "matched_leaning": 2}
+    assert result["totals"] == {"questions": 2, "answered": 2, "matched_leaning": 2,
+                                "answered_by_person": 2, "answered_by_agent": 0}
+    assert {q["answered_by"] for q in result["questions"]} == {"person"}
+
+
+def test_approve_command_reads_answers_and_prints_text_or_json(demo_cli, seed, capsys,
+                                                               monkeypatch, tmp_path):
+    answers = tmp_path / "answers.json"
+    answers.write_text(json.dumps([{"slot": "s16", "choice": 0}]))
+    assert main(["seed", "approve", PARISH, "--reviewer", "Reviewer",
+                 "--answers", str(answers)]) == 1
+    assert "can't approve holy-family-demo: An agent reviewer is agent:<name>@<commit>" \
+        in capsys.readouterr().err
+    assert main(["seed", "approve", PARISH, "--reviewer", AGENT,
+                 "--answers", str(answers)]) == 1
+    assert "1 slots are still open: s17" in capsys.readouterr().err
+    answers.write_text("not json")
+    assert main(["seed", "approve", PARISH, "--reviewer", AGENT,
+                 "--answers", str(answers)]) == 1
+    assert "are not JSON" in capsys.readouterr().err
+    assert main(["seed", "approve", "st-anne-demo", "--reviewer", AGENT]) == 1
+    assert "st-anne-demo has no seed file to approve" in capsys.readouterr().err
+
+    monkeypatch.setattr("sys.stdin", io.StringIO(json.dumps([
+        {"slot": "s16", "choice": 0}, {"slot": "s17", "choice": "dropped"}])))
+    assert main(["seed", "approve", PARISH, "--reviewer", AGENT, "--answers", "-"]) == 0
+    out = capsys.readouterr().out.splitlines()
+    approved_at = read_seed(PARISH, demo_cli["seeds_dir"])["approved_at"]
+    assert out[0] == f"{seed_path(PARISH, demo_cli['seeds_dir']).relative_to(Path.cwd())}: " \
+        f"approved by {AGENT} at {approved_at[:16].replace('T', ' ')}"
+    assert out[1:] == ["  s16: 0 (include)", "  s17: dropped (exclude)"]
+    assert main(["seed", "approve", PARISH, "--reviewer", AGENT, "--json"]) == 1
+    assert "Already approved by agent:seed-review@abc1234" in capsys.readouterr().err
+
+
+def test_questions_keeps_agent_answers_apart_from_peoples(demo_cli, seed, capsys):
+    _slot(seed, "s17").update(status="settled", decision="exclude", answer={
+        "choice": 2, "by": "Reviewer", "at": "2026-10-10T12:00:00Z"})
+    _slot(seed, "s16").update(status="settled", decision="include",
+                              entry=_slot(seed, "s16")["options"][0]["entry"], answer={
+                                  "choice": 0, "by": AGENT, "at": "2026-10-11T12:00:00Z"})
+    seed["slots"].append({**copy.deepcopy(_slot(seed, "s17")), "id": "s18", "answer": None,
+                          "status": "needs_human", "decision": None})
+    write_seed_file(seed, demo_cli["seeds_dir"])
+
+    assert main(["seed", "questions", "--answered", "--json"]) == 0
+    result = json.loads(capsys.readouterr().out)
+    assert [(q["slots"], q["answered_by"]) for q in result["questions"]] == [
+        (["s16"], "agent"), (["s17"], "person")]
+    assert result["totals"] == {"questions": 2, "answered": 2, "matched_leaning": 1,
+                                "answered_by_person": 1, "answered_by_agent": 1}
+
+    assert main(["seed", "questions", "--answered"]) == 0
+    out = capsys.readouterr().out.splitlines()
+    heads = [line.split(":")[0] for line in out if line.startswith(PARISH)]
+    assert heads == [f"{PARISH} s17", f"{PARISH} s16"]
+    assert out.index("Answered by agents:") == out.index(
+        next(line for line in out if line.startswith(f"{PARISH} s16"))) - 1
+    assert f"  answer: 0, the leaning; {AGENT} 2026-10-11" in out
+    assert out[-1] == "2 questions, 2 answered (1 by people, 1 by agents), " \
+        "1 matched the leaning (* marks it)"
+
+    for by, slots in (("agent", [["s16"]]), ("person", [["s17"]])):
+        assert main(["seed", "questions", "--by", by, "--json"]) == 0
+        assert [q["slots"] for q in json.loads(capsys.readouterr().out)["questions"]] == slots
+    # Without --answered, the open question is listed with people's, before the agents'.
+    assert main(["seed", "questions"]) == 0
+    out = capsys.readouterr().out
+    assert out.index(f"{PARISH} s18") < out.index("Answered by agents:")
+    assert main(["seed", "questions", "--open", "--by", "agent"]) == 1
+    assert "--by picks answered questions" in capsys.readouterr().err
 
 
 def test_finalize_warns_of_history_no_slot_covers_and_still_passes(demo_cli, seed, capsys):
