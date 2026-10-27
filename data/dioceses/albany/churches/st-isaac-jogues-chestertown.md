@@ -35,6 +35,12 @@ evidence:
 - url: https://www.blessedsacramentbolton.org/st-isaac-jogues.html
   seen: 2026-09-28
   quote: St Isaac Jogues (formally St. John the Baptist), 6 Church St, Chestertown, NY
+- url: https://gisservices.its.ny.gov/arcgis/rest/services/NYS_Tax_Parcels_Public/MapServer/1/query?where=SWIS_PRINT_KEY_ID+IN+('522400104.10-7-1','522400104.10-6-17')&outFields=PARCEL_ADDR,PRIMARY_OWNER,ADD_OWNER,USED_AS_DESC,YR_BLT,GFA&returnGeometry=false&f=json
+  seen: 2026-10-26
+  note: 'NYS public tax parcels (2025 roll). Both addresses are separate parcels of the parish, both coded
+    ''Church'' (Z32): 6 Church St (104.10-7-1; ''Parish of St.Isaac Jogues'' / ''St John The Baptist Church'';
+    0.5 acres; built 1965; 3,440 sq ft) and 86 Riverside Dr (104.10-6-17; same owners; 0.31 acres; built
+    1900; 3,588 sq ft). The roll does not say which building is the church and which the parish center.'
 promoted: 2026-09-28
 ---
 
@@ -55,4 +61,14 @@ church building at 86 Riverside Drive and a separate building at 6 Church Street
 away, so the church is probably on the corner with two frontages, or 6 Church St. is the
 parish center. 86 Riverside Dr. is kept (three independent sources and the building's own
 OSM tag); the name flag is true, the address flag false until the parish confirms which
-frontage is the church's. Coordinates: GCatholic Plus Code, on the OSM church building.
+frontage is the church's. Coordinates: GCatholic Plus Code (which, per the 2026-10-26 check
+below, falls on the 6 Church Street building, not OSM's tagged church).
+
+Checked again on 2026-10-26 (a seed draft flagged the bulletin's 6 Church St.), and still not
+settled. The NYS tax roll has two neighbouring parcels owned by the parish, both coded as church
+use: 6 Church St (built 1965) and 86 Riverside Dr (built 1900). One is presumably the church and
+the other the Parish Center that the bulletin's weekday Mass uses, but nothing read says which.
+GCatholic's Plus Code (the stored coordinates) falls on the building OSM tags as 6 Church Street,
+about 40 m north of OSM's tagged church. The record is left at 86 Riverside Dr. with the address
+flag false. A photo of the church's frontage or the parish naming the Parish Center's address
+would settle it.

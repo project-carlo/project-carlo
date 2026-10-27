@@ -4,7 +4,7 @@ state: NY
 website: https://www.buffalodiocese.org
 status: promoted
 gcatholic: buff0
-promoted: 2026-10-07
+promoted: 2026-10-27
 ---
 
 ## Sources
@@ -96,3 +96,10 @@ promoted: 2026-10-07
   Bread of Life's page limit is 12 (`data/bulletin_page_limits.csv`): Ss. Peter & Paul's page is
   11. St. Charles Borromeo (Olcott, summer), St. Adalbert (about four Masses a year) and St.
   Pacificus (occasional) stay church rows with no Mass this week. Promoted.
+- 2026-10-27: Church-list fixes from seed drafts. Added St. Francis of Assisi Chapel, 71 Adam St.,
+  Tonawanda (`st-francis-of-assisi-chapel-tonawanda`; the family's site lists it and the
+  25 October bulletin has its All Souls' Mass); the former church at 150 Broad St. stays in open/.
+  No rows for the Mercy Hospital chapel (South Buffalo; chaplaincy Masses in the intentions only)
+  or the CCBN Central Office Chapel (16 Peter St., on Assumption's parcel; its weekday Mass moved
+  to St. Margaret on 12 October); both explained in their parish records. Promoted. Coverage:
+  directory 167/167; families 146/151; mass-times 141/145; GCatholic 174/216.

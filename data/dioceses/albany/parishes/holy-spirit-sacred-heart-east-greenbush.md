@@ -48,11 +48,14 @@ parishes"); the directory already lists Rev. Thomas Krupa for Sacred Heart.
 
 ## Worship sites
 
-Two: Church of the Holy Spirit, 667 Columbia Turnpike (`holy-spirit-east-greenbush`) and Sacred
-Heart Church, 3 Catholic Way, Castleton-on-Hudson (`sacred-heart-castleton-on-hudson`). The
-bulletin also lists a weekday "8am Mass at the Sisters of the Resurrection" (their convent in
-Castleton); it is in no roster and was not given a row: a convent chapel Mass, not a parish
-worship site.
+Three: Church of the Holy Spirit, 667 Columbia Turnpike (`holy-spirit-east-greenbush`), Sacred
+Heart Church, 3 Catholic Way, Castleton-on-Hudson (`sacred-heart-castleton-on-hudson`), and the
+Sisters of the Resurrection's convent chapel, 35 Boltwood Avenue, Castleton
+(`sisters-of-the-resurrection-castleton-on-hudson`). The bulletin lists Sacred Heart's weekday
+Mass as "8am Mass at the Sisters of the Resurrection", and Sacred Heart's own Mass Schedule
+gives it as its weekday Mass at that address. It was first left without a row as a convent
+chapel Mass; on 2026-10-26 it was given one because the parish publishes it as its public
+weekday Mass (see the church record). It is in no roster.
 
 ## Website and bulletin provider
 

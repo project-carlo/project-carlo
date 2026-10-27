@@ -45,6 +45,16 @@ The staff list names a trustee "(St. Casimirs)", and the diocese keeps St. Casim
 here, but no Mass at St. Casimir appears in the schedule; it is excluded as closed
 (`excluded/st-casimir-endicott.md`).
 
+The bulletin's "Join us in Prayer" box (page 3) also lists devotions at neighbouring parishes
+under codes it does not define: "Adoration of the Blessed Sacrament Monday-Sunday 6:00am-9:00pm
+CHF", a Sunday rosary at "MHR", and adoration at "OLS" and "OLGC" (25 October 2026 issue).
+CHF is the Church of the Holy Family, Endwell, a separate parish row (`holy-family-endwell`):
+its site, holyfamilyholyrosary.org (read in a browser on 2026-10-26), uses "CHF Bulletin" and
+"MHR Bulletin" for Church of the Holy Family and Most Holy Rosary (Maine), and Holy Family's own
+bulletin has an "Adoration Chapel" whose access code comes from a parish volunteer. These are
+other parishes' sites, not missing churches of this row. The 6:00am-9:00pm hours are this
+bulletin's alone; Holy Family's bulletin gives none.
+
 ## Website and bulletin provider
 
 northendicottcatholic.org is an eCatholic-hosted site (`probe url` finds `ecatholic:34417`), but

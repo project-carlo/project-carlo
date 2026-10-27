@@ -50,6 +50,17 @@ evidence:
   note: 'Old St. Joseph the Worker site: "St. Joseph the Worker Parish has moved! We have moved the website
     to the combined site of the Catholic Parishes of Eastern Wayne County." The old St. Michael''s Newark
     site (stmichaelsnewark.org) says the same.'
+- url: https://www.cpewc.org/mass/
+  seen: 2026-10-26
+  quote: 10:00 am - at Senior Living Centers via St. Michael's, Newark
+  note: Under 'Monday', followed by 'see bulletin for locations'. The page's other Masses are all at the
+    seven churches.
+- url: https://container.parishesonline.com/bulletins/06/0326/20261025B.pdf
+  seen: 2026-10-26
+  quote: (Demay Living Center)
+  note: 'Page 5, St. Michael (Newark) Mass intentions: ''Monday, October 26 10:00am For the Parishes (Demay
+    Living Center)''. The 18 October issue has ''October 19 10:00am For the Parishes (Terrace)'', and
+    the 27 September issue ''(Demay Living Center)'' on 28 September.'
 promoted: 2026-10-02
 ---
 
@@ -60,6 +71,15 @@ The Catholic Parishes of Eastern Wayne County publish one weekly bulletin throug
 ## Worship sites
 
 Seven churches, the parish's own count: Newark (`st-michael-newark`), Clyde (`st-john-evangelist-clyde`), Lyons (`st-michael-lyons`), Savannah (`open/st-patrick-savannah`), Wolcott (`st-mary-magdalene`), Red Creek (`st-thomas`) and Fair Haven (`st-jude`). St. Jude is a summer satellite: the parish says it "opens on Father's Day and usually closes the second or third Sunday in September", and the 4 October issue shows attendance for it on the weekend of 13 September. St. Thomas, Red Creek, runs the rest of the year. **St. Patrick, Savannah has no Mass in any source I could read**: not in the 4 October issue, three earlier issues (27 Sep, 20 Sep, 6 Sep), or the parish's Mass page. The Locator calls it "Sacraments Only", and the diocesan directory (updated Jan 2025) shows a Sunday 4:00 PM Mass there. Its record was moved to `open/` on 2026-10-07, off the site until a Mass there is found. Nothing else the diocese or GCatholic lists in the area is missing: GCatholic's St. Thomas the Apostle (Route 104A, Red Creek) is the same church as `st-thomas`.
+
+Not worship sites: the senior-living centers in Newark where St. Michael's holds a Monday
+10:00 am Mass. The parish's Mass page lists "10:00 am - at Senior Living Centers via St.
+Michael's, Newark ... see bulletin for locations", and the bulletin's Newark intentions name the
+place each week, alternating between the DeMay Living Center (28 September, 26 October 2026) and
+"The Terrace" (19 October). These are residential care facilities, nothing read says the public
+may attend, and the place changes week to week, so neither gets a row. Other dioceses here treat
+care-home Masses the same way (Ogdensburg's and Harrisburg's settled rules; Allentown's Holy
+Family, Nazareth).
 
 ## Website and bulletin provider
 

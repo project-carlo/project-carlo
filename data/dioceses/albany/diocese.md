@@ -4,7 +4,7 @@ state: NY
 website: https://www.rcda.org
 status: promoted
 gcatholic: alba4
-promoted: 2026-10-07
+promoted: 2026-10-27
 ---
 
 Fourteen counties of eastern New York: Albany, Schenectady, Rensselaer, Saratoga, Warren,
@@ -194,3 +194,10 @@ self-hosted pages, the diocese's parish mini-sites, Wix, Weebly, WordPress and G
   the browser from a Drive folder, so the row now reads that folder (`google_drive`,
   `drive-folder` recipe; resolves to the 11 October issue). Christ the King, Albany had been read
   from a ParishesOnline "Special" issue; `fetch` now prefers the regular bulletin. Promoted.
+- 2026-10-27: Church-list fixes from seed drafts. Added the Sisters of the Resurrection's
+  convent chapel, 35 Boltwood Ave., Castleton (`sisters-of-the-resurrection-castleton-on-hudson`):
+  Sacred Heart's published weekday Mass, so a public worship site, not a private convent Mass.
+  St. Patrick, Catskill moved from 157 Bridge St. (the rectory's parcel) to 66 William St. (the
+  church's parcel, the parish's "Worship Locations" and the bulletin). St. Isaac Jogues, Chestertown
+  left at 86 Riverside Dr.: the tax roll has both it and 6 Church St. as parish church-use parcels,
+  still unsettled. Promoted. Coverage: directory 148/148 (modelled 139/143); GCatholic 163/163.

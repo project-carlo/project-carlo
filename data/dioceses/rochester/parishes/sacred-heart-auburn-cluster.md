@@ -46,6 +46,15 @@ The Sacred Heart cluster of Auburn publishes one self-hosted PDF bulletin on sac
 
 Sacred Heart (90 Melrose Rd), St. Alphonsus (85 E. Genesee St) and St. Ann (4890 Twelve Corners Rd, Owasco; "a mission of Sacred Heart" in the directory). Holy Family, 85 North St, closed on 16 June 2024 and is `excluded/holy-family-auburn`, even though the masthead and church list still print its name. The Locator lists St. Ann (`directory:290-st-ann`), and GCatholic (`17859`) the same church, both previously unlinked.
 
+Not a worship site: "FLCL". The calendar of events in the 18 and 25 October 2026 bulletins
+(pipeline bulletins d33bbc85 and fcc8dcaf, page 2) has "10:00am Mass at FLCL" on Tuesdays
+20 and 27 October. The bulletin never spells it out; it is most likely the Finger Lakes Center
+for Living, Auburn Community Hospital's skilled-nursing home at 20 Park Avenue (an inference from
+the initials; no parish source names it). The parish's Mass Times page (read 2026-10-26) lists
+only Sacred Heart, St. Alphonsus and St. Ann. A nursing-home Mass with no statement that the
+public may attend gets no row, as in the other dioceses here (Ogdensburg's and Harrisburg's
+settled rules).
+
 ## Website and bulletin provider
 
 `website` https://sacredheartauburn.org (redirects to www) links the bulletin page. Provider `other`; the publication is the bulletin page `/bulletin__trashed/`. The Locator's old addresses are dead or unusable: shsarc.com (self-signed certificate), auburnholyfamily.org (403), stalphonsusauburn.org (no DNS).
