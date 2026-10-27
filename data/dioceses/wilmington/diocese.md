@@ -229,6 +229,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - FATA Online covers can put the church names for each Mass box in an image layer (text layer has the times only): render page 1 to see which churches the parish lists, then quote trustee/calendar lines from the text.
 - A directory's single Mass time for a chapel can be one annual Mass (St. Patrick Chapel, Conowingo 'Sat 10:00' = the 12 Sep annual Mass); check the bulletin before recording it as weekly.
 - eCatholic sites behind Cloudflare answer plain curl 403 on inner pages but visit.py reads /mass-times and /church-addresses; their Bulletins button can go to FATA with no files on eCatholic.
+- A parish site can answer 403 to curl and probe url yet load in the browser (stjosephmiddletown.com, setonparish.net); its own bulletin page can lag the John Patrick listing by a week, so pin the church-bulletin.org listing.
+- When a JPPC cover is image-only, render page 1: it can list each church with times and a status line (St. Joseph, Middletown: 'The Church is currently closed for repairs'), which is the current-Mass evidence for a mission or shrine.
+- A parish's own history page can settle a former church's closure (St. Joseph, Middletown: original building sold November 2006); GCatholic 'Former Church' entries have no last Mass date, so the exclusion keeps last_mass empty and validate warns.
 
 ## Rules settled for this diocese
 
