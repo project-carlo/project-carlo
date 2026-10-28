@@ -238,6 +238,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - SS. Philip and James, Exton: eCatholic 24683 and JP 144 issues are byte-identical (md5 compare); St. Elizabeth's eCatholic archive (36719) lagged a week behind JP 133, so it is an `other` row on the listing.
 - `probe get --out FILE` writes relative to the repo root, not the shell's cwd: pass a scratch path (scratch/<run>/<job>/file) or the file lands at the worktree root. `probe pdf` takes URLs only; for a downloaded file use render.py or pdf text tools.
 - A bulletin footer 'View this bulletin online at www.DiscoverMass.com' (St. Joseph, Downingtown) does not mean the parish publishes through Discover Mass; the eCatholic archive was current.
+- A parish hall can hold a weekly Sunday Mass listed in the bulletin masthead (Schneider Parish Center, Parkesburg, 11:15 am): read every location in the Mass schedule box, not only the churches the directory names.
+- Relegation decrees on archphila.org are scanned images (probe pdf reads no text): render them; page 2 gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka: none since 2016-07-02).
+- A parish eCatholic archive can post the next Sunday's file days early (Our Lady of the Rosary, Coatesville: 20261101 on 2026-10-28), so fetch:check reports freshness 'future'; the JP listing stays a fallback `other` row.
+- JP and eCatholic copies of one issue can differ in bytes (size, text layer) yet share page 1; record the listing as a second `url:` publication id after comparing the rendered cover and Mass box.
 
 ## Rules settled for this diocese
 
