@@ -63,9 +63,12 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
   is still a "Worship site of …" or holds "Mass at …". Those 29 are the **`worship-sites`
   roster**, each with its host parish in `group`. These pages are 2–10 years old and lag
   relegations: St. Hedwig's still gives "Mass at St. Hedwig Chapel, Sundays, 9:15 AM" though the
-  church was relegated effective 2026-01-01, and four say "Formerly located at" (St. Alice,
-  St. Augustine and Our Lady of Mount Carmel, Bridgeport; Holy Spirit, Sharon Hill: the building
-  is gone). They are leads to check, not current worship sites. The other 99 closed entries are
+  church was relegated effective 2026-01-01. Four give their address as "Formerly located at
+  …" (St. Alice; St. Augustine and Our Lady of Mount Carmel, Bridgeport; Holy Spirit, Sharon
+  Hill): that is the page's address line, not a closure statement. St. Laurence's own page
+  (updated about four months before 2026-10-28) still lists "Worship Site: St. Alice Church
+  (Vietnamese only)" with a Sunday "Vietnamese: 10:00 AM [at St. Alice Church]". Read the host
+  parish's own page and bulletin as well. They are leads to check, not current worship sites. The other 99 closed entries are
   not in a roster; GCatholic lists the churches that matter (below).
 - **GCatholic:** `rosters/gcatholic.json` (key `phil0`), 293 entries, 263 with Plus Codes, **28
   Eastern Catholic** (`rite`: 15 Ukrainian incl. the Basilian monastery at Fox Chase Manor, 6
@@ -144,8 +147,13 @@ listings (2026-10-28). Each batch settles its own rows.
   to a `church-bulletin.org/<slug>` listing of dated PDFs with "Latest Edition" and the parish's
   name, town and ZIP. `tools/jppc_scan.py` read ids 1–1300 on 2026-10-28: 269 listings have a
   PA 18xxx–19xxx ZIP, 193 of them with a current issue (25 October 2026), 165 in 19xxx.
-  `raw/jppc-directory.json` (`tools/jppc_match.py`) pairs 182 of the 218 directory parishes with
-  a listing by town and name, **170 with a current issue**: look the parish up there first. It is
+  `raw/jppc-directory.json` (`tools/jppc_match.py`) pairs 184 of the 218 directory parishes with
+  a listing by name and town (or a ZIP on the directory page), **172 with a current issue**: look
+  the parish up there first. A listing's town can be the township or post town, not the
+  directory's (St. Titus, Norristown is 95 under East Norriton; St. Thomas of Villanova is 180
+  under Rosemont), so also search `raw/jppc-pa.json` by name. Three current listings match no
+  directory parish: 167 (Old St. Mary's, below), 286 "Saint Miriam Parish & School", Flourtown,
+  and 241 "The National Shrine of Saint Rita of Cascia" (19146), which publishes its own issue. It is
   a lead, not a match: confirm the listing's name and the cover. Listings outlive their parish's
   move to another publisher (76 of the 269 have no edition at all; 12 directory parishes match
   only such a listing, e.g. St. Bartholomew 73, St. Charles Borromeo 130 and 287, St. John
