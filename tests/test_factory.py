@@ -1104,6 +1104,35 @@ def test_usage_caps_and_weekly_pacing() -> None:
     assert choose(rows, only="a").account.name == "a"
 
 
+@pytest.mark.parametrize("source", ["defaults", "repository"])
+@pytest.mark.parametrize("day", range(1, 8))
+def test_full_weekly_budget_is_paced_across_all_seven_days(
+    source: str, day: int, tmp_path: Path,
+) -> None:
+    config = Config() if source == "defaults" else load_config(local_path=tmp_path / "absent.yaml")
+    account = Account("a", Path("/x"))
+    resets = datetime(2026, 11, 7, 3, 30, tzinfo=UTC)
+    start = resets - timedelta(days=7)
+    at = start + timedelta(days=day - 1)
+    allowed = 100 * day / 7
+
+    s = standing(account, Usage(0, at + timedelta(hours=5), allowed - 0.01, resets), config, at)
+    assert s.weekly_allowed == pytest.approx(allowed)
+    assert s.eligible
+
+    s = standing(account, Usage(0, at + timedelta(hours=5), allowed, resets), config, at)
+    assert not s.eligible
+    assert s.eligible_at == start + timedelta(days=day)
+
+    if day > 1:
+        # The new allowance becomes available exactly at the account's day boundary.
+        before = at - timedelta(microseconds=1)
+        s = standing(account, Usage(0, at + timedelta(hours=5), allowed - 0.01, resets),
+                     config, before)
+        assert not s.eligible
+        assert s.eligible_at == at
+
+
 def test_an_unused_usage_window_has_no_reset_time() -> None:
     at = datetime(2026, 11, 2, tzinfo=UTC)
     usage = parse_usage({"five_hour": {"utilization": 0, "resets_at": None},
