@@ -188,7 +188,9 @@ Each tick:
    of its limits:
    - **5-hour:** below `five_hour_cap` (default 75%);
    - **weekly, paced:** below `weekly_cap × (days into the week + 1) ÷ 7` (default cap
-     70%), so the factory can't use up the week early but can still work on its first day.
+     100%): 1/7 of the weekly allowance on day 1, 2/7 on day 2, up to 7/7 on day 7.
+     Days start at the account's weekly reset time, so the factory can use the full weekly
+     allowance without using it all early.
 
    A rate-limit error from the SDK is the backstop: that job becomes `waiting_usage`
    whatever the endpoint said. If no account is eligible, it waits for the earliest reset.

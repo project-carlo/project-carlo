@@ -3,7 +3,7 @@
 
 # Usage caps, in percent of each account's limit.
 five_hour_cap: 75
-weekly_cap: 70   # paced: below weekly_cap × (days into the week + 1) ÷ 7
+weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
 
 max_workers: 1
 max_send_backs: 2
