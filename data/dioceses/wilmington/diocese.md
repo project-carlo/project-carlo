@@ -264,6 +264,11 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A ParishesOnline cover can be images only (St. Edmond 04/0887 pages 1-6): render page 1 for the masthead and quote the LPi footer; summer issues show seasonal sites in the Mass-schedule box.
+- A Duda parish site's bulletin page can embed the LPi publicationWidget only in the page source (stedmond.org/bulletins, stjudelewes.org/bulletin<hash>): `probe url` reports no id, so grep the HTML for publicationWidget?id= and resolve it with `probe po`. Don't quote the href; recheck can't find it.
+- A mission's own pin can be wrong in both the directory and GCatholic (Our Lady of Guadalupe, Frankford: 21 km and 3 km off OSM's building); check OSM for the named building before choosing.
+- A parish's bulletin devotions list can show a Spanish prayer service at a mission (Guadalupe Fridays 6:30 PM): it is not Mass, so read the heading before treating a time as Mass.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
