@@ -242,6 +242,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - Relegation decrees on archphila.org are scanned images (probe pdf reads no text): render them; page 2 gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka: none since 2016-07-02).
 - A parish eCatholic archive can post the next Sunday's file days early (Our Lady of the Rosary, Coatesville: 20261101 on 2026-10-28), so fetch:check reports freshness 'future'; the JP listing stays a fallback `other` row.
 - JP and eCatholic copies of one issue can differ in bytes (size, text layer) yet share page 1; record the listing as a second `url:` publication id after comparing the rendered cover and Mass box.
+- St. Rocco, Avondale self-hosts Spanish bulletins as /src/en/pdfs/bYYYYMMDD.pdf on stroccochurch.org/schedule.jsp (home page has no links in its source; open Schedules and Bulletins in the browser); it has no John Patrick listing, and its 25 Oct issue was not posted by 28 Oct.
+- A parish's 'donation center' or mission listed as its own directory parish (Mision Santa Maria, Avondale) can be the parish's own center: check the bulletin masthead and weekly calendar for where Mass is actually said before making it a church row.
+- A Mass staffed by one parish at another parish's church (St. Rocco's Sunday 2 PM Spanish Mass at Sacred Heart, Oxford) appears in both bulletins; it is one church row under the church's own parish, not a worship site of the staffing parish.
+- Sacred Heart, Oxford's Wix /bulletins page lagged the John Patrick listing 132 by a week (10/18 vs 10/25); Assumption BVM West Grove's eCatholic 3092 archive matched JP 229 (25 Oct).
 
 ## Rules settled for this diocese
 
