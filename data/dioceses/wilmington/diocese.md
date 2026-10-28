@@ -250,6 +250,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic home page's first PDF link can be a Mass insert (files.ecatholic.com/<id>/documents/...), not the bulletin; the weekly issues are at /<id>/bulletins/YYYYMMDD.pdf on the /bulletins page.
 - A parish whose website is an eCatholic site may host no bulletins there and link to ParishesOnline (sorrowsparish.org, eCatholic 11311): record the po ids, not the eCatholic site id, in publication.
 - The directory's Mass times for a two-church parish merge both churches' slots into one entry (St. Benedict lists St. Elizabeth's Friday and Saturday times), and a reopened mission can still show none (St. Peter): take Mass times per church from the bulletin.
+- The directory's website for a parish can be a sister institution's site (Easton: ssppeaston.org is the parish-and-schools site with no bulletin link); the parish's own site is ssppeastonmd.org, found via the parish's other directory entries (ssppparisheaston.org redirects there), and its Bulletins link goes to ParishesOnline.
+- A mission's directory ZIP can be copied from the parent parish (St. Michaels 21601, Cordova in GCatholic 21601, Church Creek 21613 in GCatholic): take the ZIP from the parish bulletin's schedule block, which prints each church's address.
+- A seasonal mission's season is stated differently by the bulletin (Memorial Day through Labor Day weekend), the parish site (to the last Sunday in September) and the summer guide; record all three and don't pick.
+- A Duda parish site's /bulletin page can embed the ParishesOnline widget (publicationWidget?id=<lpi id>), which probe url reports as lpi:<id> and probe po resolves to the container.
+- A self-hosted /images/Bulletin_<M.D.YY>.pdf list on a Duda-style page is oldest-first; a page-pdfs recipe filtered to Bulletin_*.pdf still picked the newest file.
 
 ## Rules settled for this diocese
 
