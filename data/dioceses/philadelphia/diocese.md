@@ -217,6 +217,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A shared pastor does not mean a shared bulletin: St. Gabriel, Stowe (Parochial Administrator) and St. Thomas More have separate John Patrick listings (85, 5), files and mastheads; the cover only says '(Pastor - St. Thomas More Parish)'.
+- A directory page updated months ago can still list an alternative worship site closed for years (St. Aloysius lists Holy Trinity, Pottstown, closed 2014-05 per CatholicPhilly); date the closure from CatholicPhilly's REST search and the host parish's current bulletin and site.
+- A parish's own archive can lag the John Patrick listing by a week (St. Gabriel's site stopped at Oct. 18 while the listing had Oct. 25): check which channel has the latest issue; the files differ byte for byte.
+- A site hosted by John Patrick (footer 'Designed and Hosted by John Patrick Publishing') hosts no PDFs of its own; read the church-bulletin.org listing.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
