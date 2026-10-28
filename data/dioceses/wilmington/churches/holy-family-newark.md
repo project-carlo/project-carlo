@@ -21,7 +21,7 @@ evidence:
   seen: 2026-10-27
   quote: E Chestnut Hill Rd. & Gender Rd., Newark, Delaware 19713
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''Holy Family'',
-    E Chestnut Hill Rd. & Gender Rd., Newark, DE, 19713; kind: Church; group: ,'
+    E Chestnut Hill Rd. & Gender Rd., Newark, DE, 19713; kind: Church'
 - url: https://www.church-bulletin.org/bulletin/holy-family-catholic-church-newark-de-19713/2026-10-25.pdf
   seen: 2026-10-27
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Holy Family Catholic Church, 15 Gender

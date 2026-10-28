@@ -21,7 +21,7 @@ evidence:
   seen: 2026-10-27
   quote: 2431 Frazer Rd., Newark, Delaware 19702
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Margaret of
-    Scotland'', 2431 Frazer Rd., Newark, DE, 19702; kind: Church; group: ,'
+    Scotland'', 2431 Frazer Rd., Newark, DE, 19702; kind: Church'
 - url: https://www.church-bulletin.org/bulletin/saint-margaret-of-scotland-roman-catholic-church-newark-de-19702/2026-10-25.pdf
   seen: 2026-10-27
   note: 'Pages 1 and 3 of the 25 October 2026 issue (scanned images, rendered): ''2431 Frazer Road, Newark,

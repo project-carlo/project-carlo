@@ -21,7 +21,7 @@ evidence:
   seen: 2026-10-27
   quote: 3000 Videre Dr., Wilmington, Delaware 19808
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''Resurrection'',
-    3000 Videre Dr., Wilmington, DE, 19808; kind: Church; group: ,'
+    3000 Videre Dr., Wilmington, DE, 19808; kind: Church'
 - url: https://www.church-bulletin.org/bulletin/resurrection-parish-wilmington-de-19808/2026-10-25.pdf
   seen: 2026-10-27
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Resurrection Parish ... 3000 Videre Dr.

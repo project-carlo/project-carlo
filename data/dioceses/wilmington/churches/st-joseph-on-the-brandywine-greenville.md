@@ -17,7 +17,7 @@ evidence:
   seen: 2026-10-27
   quote: 10 Old Church Rd., Greenville, Delaware 19807
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Joseph on
-    the Brandywine'', 10 Old Church Rd., Greenville, DE, 19807; kind: Church; group: ,'
+    the Brandywine'', 10 Old Church Rd., Greenville, DE, 19807; kind: Church'
 - url: https://cdow.org/find-a-parish/
   seen: 2026-10-27
   note: 'Listed in Diocese of Wilmington: Find A Parish map as ''St. Joseph on the Brandywine'', 10 Old

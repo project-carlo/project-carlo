@@ -17,7 +17,7 @@ evidence:
   seen: 2026-10-27
   quote: Concord Pike & Sharpley Rd., Wilmington, Delaware 19803
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Mary Magdalen'',
-    Concord Pike & Sharpley Rd., Wilmington, DE, 19803; kind: Church; group: ,'
+    Concord Pike & Sharpley Rd., Wilmington, DE, 19803; kind: Church'
 - url: https://cdow.org/find-a-parish/
   seen: 2026-10-27
   note: 'Listed in Diocese of Wilmington: Find A Parish map as ''St. Mary Magdalen'', 7 Sharpley Road,

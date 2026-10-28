@@ -21,7 +21,7 @@ evidence:
   seen: 2026-10-27
   quote: 7200 Lancaster Pike, Hockessin, Delaware 19707-1240
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Mary of the
-    Assumption'', 7200 Lancaster Pike, Hockessin, DE, 19707; kind: Church; group: ,'
+    Assumption'', 7200 Lancaster Pike, Hockessin, DE, 19707; kind: Church'
 - url: https://files.ecatholic.com/26996/bulletins/20261025.pdf
   seen: 2026-10-27
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Celebration of Mass Sunday 7:30 AM 9:30

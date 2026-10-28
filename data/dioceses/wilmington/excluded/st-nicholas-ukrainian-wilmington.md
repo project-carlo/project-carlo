@@ -16,7 +16,7 @@ evidence:
   seen: 2026-10-27
   quote: 801 Lea Blvd., Wilmington, Delaware 19802
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Nicholas'',
-    801 Lea Blvd., Wilmington, DE, 19802; kind: Church; group: ,; rite: Ukrainian'
+    801 Lea Blvd., Wilmington, DE, 19802; kind: Church; rite: Ukrainian'
 - url: https://stnicholaschurchde.org/
   seen: 2026-10-27
   quote: The parish belongs to the Ukrainian Catholic Archeparchy of Philadelphia.

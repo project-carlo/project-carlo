@@ -16,7 +16,7 @@ evidence:
   seen: 2026-10-27
   quote: 436 AW/HC 419 12th St., Dover AFB, Delaware 19902
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''Our Lady of Perpetual
-    Help'', 436 AW/HC 419 12th St., Dover AFB, DE, 19902; kind: Community; group: ,'
+    Help'', 436 AW/HC 419 12th St., Dover AFB, DE, 19902; kind: Community'
 - url: https://gcatholic.org/churches/usa-04/19353
   seen: 2026-10-27
   quote: 'Jurisdiction: Military Ordinariate of Archdiocese for the Military Services of the United States'

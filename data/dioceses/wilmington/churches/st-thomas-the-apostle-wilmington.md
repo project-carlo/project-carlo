@@ -17,7 +17,7 @@ evidence:
   seen: 2026-10-27
   quote: 4th St. & Bancroft Pkwy., Wilmington, Delaware 19805
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Thomas the
-    Apostle'', 4th St. & Bancroft Pkwy., Wilmington, DE, 19805; kind: Church; group: ,'
+    Apostle'', 4th St. & Bancroft Pkwy., Wilmington, DE, 19805; kind: Church'
 - url: https://cdow.org/find-a-parish/
   seen: 2026-10-27
   note: 'Listed in Diocese of Wilmington: Find A Parish map as ''St. Thomas the Apostle'', 301 N. Bancroft

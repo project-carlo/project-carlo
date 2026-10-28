@@ -21,7 +21,7 @@ evidence:
   seen: 2026-10-27
   quote: 82 Possum Park Rd., Newark, Delaware 19711
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. John the Baptist–Holy
-    Angels'', 82 Possum Park Rd., Newark, DE, 19711; kind: Church; group: ,'
+    Angels'', 82 Possum Park Rd., Newark, DE, 19711; kind: Church'
 - url: http://sponsors.bonventure.net/pdfs/2103/2026-10-25.pdf
   seen: 2026-10-27
   quote: Holy Angels Church

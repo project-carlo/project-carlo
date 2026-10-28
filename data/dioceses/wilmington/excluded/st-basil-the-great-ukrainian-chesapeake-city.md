@@ -16,7 +16,7 @@ evidence:
   seen: 2026-10-27
   quote: 231 Basil Ave., Chesapeake City, Maryland 21915
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Basil the
-    Great'', 231 Basil Ave., Chesapeake City, MD, 21915; kind: Church; group: ,; rite: Ukrainian'
+    Great'', 231 Basil Ave., Chesapeake City, MD, 21915; kind: Church; rite: Ukrainian'
 - url: https://ukrcatholic.org/parishes
   seen: 2026-10-27
   quote: St. Basil Ukrainian Catholic Church, Chesapeake City 231 Basil Avenue Chesapeake City, MD 21915

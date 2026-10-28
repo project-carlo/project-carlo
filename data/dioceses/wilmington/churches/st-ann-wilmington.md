@@ -17,7 +17,7 @@ evidence:
   seen: 2026-10-27
   quote: Gilpin Ave. & Union St., Wilmington, Delaware 19806
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Wilmington as ''St. Ann'', Gilpin
-    Ave. & Union St., Wilmington, DE, 19806; kind: Church; group: ,'
+    Ave. & Union St., Wilmington, DE, 19806; kind: Church'
 - url: https://cdow.org/find-a-parish/
   seen: 2026-10-27
   note: 'Listed in Diocese of Wilmington: Find A Parish map as ''St. Ann'', 2013 Gilpin Ave., Wilmington,
