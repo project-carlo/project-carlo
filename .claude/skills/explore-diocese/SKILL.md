@@ -97,8 +97,15 @@ fixed request budget that sacrifices evidence or turn a blocked search into cert
 - Don't close, merge or delete anything on the strength of a plan, a decree, an old
   directory, an account name or an absence from a list. Read the current bulletin.
 - Don't set `name_verified` / `address_verified` true without two independent sources.
-- Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `curl`); the
-  quote has to be findable by `pnpm diocese recheck`.
+- Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `probe get`);
+  the quote has to be findable by `pnpm diocese recheck`.
+- Don't fetch with curl and a browser user agent (`-A "Mozilla/5.0 ..."`) or `-k`. The
+  sandbox's safety check refuses them, as bot-check circumvention and TLS weakening, though
+  not every time: in Wilmington it let about 70 through and stopped 4. Use `pnpm diocese
+  probe get <url>` (`--out <file>` to save a PDF or page): the probes' own client, which
+  verifies TLS. It handles pages, PDFs and JSON APIs such as WordPress's `/wp-json/`. When it
+  reports a bot check or a 403, open the page with parish-site-access's `visit.py`; when the
+  certificate doesn't verify, try `http://`. Don't retry with other headers.
 - Don't delete a promoted record: exclude or merge it, so `promote` removes its live row.
 - Don't infer shared-pastor associations from adjacent names or text. Preserve explicit
   parish/pastor links from the source; leave ambiguous associations unresolved.

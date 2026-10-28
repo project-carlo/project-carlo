@@ -36,7 +36,12 @@ import yaml
 
 from pdf_extract import storage
 from pdf_extract.dioceses import research
-from pdf_extract.dioceses.publications import separate_recipes, supported_review
+from pdf_extract.dioceses.publications import (
+    REVIEW_WORDING,
+    review_gap,
+    separate_recipes,
+    supported_review,
+)
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
 
@@ -666,6 +671,9 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
                                               for k in ("quote", "note")) for e in evidence
             ):
                 p.errors.append(f"{where}: dated masthead/member evidence is required")
+            elif (gap := review_gap(review)) is not None:
+                p.warnings.append(f"{where}: audit won't count this review ({gap}); one "
+                                  f"evidence item needs {REVIEW_WORDING}")
             if set(review) - {"parish", "decision", "evidence"}:
                 p.errors.append(f"{where}: unknown fields")
     website = str(r.get("website") or "")

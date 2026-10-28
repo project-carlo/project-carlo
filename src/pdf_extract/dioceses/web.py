@@ -28,6 +28,7 @@ import unicodedata
 from collections.abc import Iterable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
@@ -142,6 +143,69 @@ def page_text(resp: Response) -> str:
     return html_text(resp.text())
 
 
+# Content types `get` prints as text; anything else is a file to save with --out.
+_TEXT_TYPES = re.compile(r"^text/|json|xml|javascript|html", re.I)
+
+
+def get(url: str, *, out: Path | None = None, chars: int = 20000) -> dict[str, Any]:
+    """Fetch one URL with the pipeline's own client: a page, a PDF or a JSON API.
+
+    Use it where you'd reach for curl. Its headers are the ones every probe
+    sends, and it verifies TLS; curl with a browser user agent or `-k` is
+    refused, inconsistently, by the sandbox's safety check. `out` saves the body
+    as fetched; otherwise the text of a page (JSON or plain text as is) is
+    returned, up to `chars`, and a PDF's first pages as `probe pdf` reads them.
+    A bot check is retried once (GCatholic's passes in a moment); a block is
+    reported, and nothing but the content itself is saved.
+    """
+    resp = fetch(url)
+    if resp.ok and is_bot_check(resp):
+        time.sleep(BOT_CHECK_RETRY_SECONDS)
+        resp = fetch(url)
+    result: dict[str, Any] = {"url": url, "status": resp.status, "final_url": resp.final_url,
+                              "content_type": resp.content_type, "bytes": len(resp.body)}
+    if resp.error:
+        result["error"] = resp.error
+    if resp.truncated:
+        result["truncated"] = True
+    blocked = is_bot_check(resp) or resp.status in (403, 503)
+    if resp.status == 429:
+        result["note"] = ("rate limited: wait a minute and try again; a browser won't help")
+    elif blocked:
+        result["note"] = ("a bot check or block: open it in a real browser with "
+                          "parish-site-access's visit.py, not with other headers")
+    elif "CERTIFICATE_VERIFY_FAILED" in resp.error and url.startswith("https://"):
+        # Bonventure sends no intermediate certificate; the pipeline fetches it over http.
+        result["note"] = ("the site's certificate doesn't verify: try the http:// URL (the "
+                          "pipeline fetches Bonventure that way) or visit.py; don't turn "
+                          "verification off")
+    if not resp.ok or blocked or not resp.body:
+        return result
+    if resp.truncated:
+        result["note"] = (f"larger than {MAX_BYTES // 1_000_000} MB and cut off there: "
+                          "not saved or read")
+        return result
+    if out is not None:
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_bytes(resp.body)
+        result["saved"] = str(out)
+    elif _is_pdf(resp):
+        result.update({k: v for k, v in _pdf_result(url, resp.body).items() if k != "url"})
+        result.setdefault("note", "the first 3 pages: probe pdf reads more (--pages, --grep)")
+    elif _TEXT_TYPES.search(resp.content_type) or (
+            not resp.content_type and b"\x00" not in resp.body[:4096]):
+        ctype = resp.content_type.lower()
+        raw = resp.text()
+        text = raw if "json" in ctype or ctype.startswith("text/plain") else html_text(raw)
+        result["text"] = text[:chars]
+        if len(text) > chars:
+            result["chars"] = len(text)
+    else:
+        result["note"] = (f"a {resp.content_type or 'binary'} file, not text: save it with "
+                          "--out to look at it")
+    return result
+
+
 def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
              grep: Iterable[str] = ()) -> dict[str, Any]:
     """The first readable pages of a bulletin PDF, and where given words occur in it.
@@ -159,8 +223,14 @@ def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
         return {"url": url, "error": f"not a PDF ({resp.content_type or 'unknown type'})"}
     if resp.truncated:
         return {"url": url, "error": f"larger than {MAX_BYTES // 1_000_000} MB: not read"}
+    return _pdf_result(url, resp.body, pages=pages, chars=chars, grep=grep)
+
+
+def _pdf_result(url: str, body: bytes, *, pages: int = 3, chars: int = 3000,
+                grep: Iterable[str] = ()) -> dict[str, Any]:
+    """`pdf_text`'s answer for a PDF already fetched."""
     try:
-        texts = pdf_pages(resp.body)
+        texts = pdf_pages(body)
     except Exception as exc:  # noqa: BLE001 - a broken issue should not stop a container walk
         return {"url": url, "error": f"could not read the PDF: {exc}"}
     readable = [(n, t) for n, t in enumerate(texts, 1) if t]

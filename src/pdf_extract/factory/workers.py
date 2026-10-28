@@ -33,6 +33,11 @@ DENIED = [
     "Bash(git stash:*)",
 ]
 
+# The SDK refuses any one message over 1 MB by default. A scanned bulletin page that a
+# worker renders and reads is often more (1.4 MB as base64 in Wilmington), and crashed
+# 6 map attempts there.
+MAX_MESSAGE_BYTES = 32 * 1024 * 1024
+
 OnStep = Callable[[str, str | None, str | None], None]
 OnRateLimit = Callable[[dict[str, Any]], None]
 
@@ -192,6 +197,7 @@ class SdkWorker:
             max_turns=spec.max_turns,
             resume=request.session_id,
             env=worker_env(request.account),
+            max_buffer_size=MAX_MESSAGE_BYTES,
         )
         result = WorkerResult(CRASH, session_id=request.session_id, error="no result")
         usage: dict[str, Any] | None = None
