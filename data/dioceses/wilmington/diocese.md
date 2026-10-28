@@ -268,6 +268,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Duda parish site's bulletin page can embed the LPi publicationWidget only in the page source (stedmond.org/bulletins, stjudelewes.org/bulletin<hash>): `probe url` reports no id, so grep the HTML for publicationWidget?id= and resolve it with `probe po`. Don't quote the href; recheck can't find it.
 - A mission's own pin can be wrong in both the directory and GCatholic (Our Lady of Guadalupe, Frankford: 21 km and 3 km off OSM's building); check OSM for the named building before choosing.
 - A parish's bulletin devotions list can show a Spanish prayer service at a mission (Guadalupe Fridays 6:30 PM): it is not Mass, so read the heading before treating a time as Mass.
+- A WeConnect (LPi) parish site's /bulletins page can embed the ParishesOnline widget (smammop.com: `probe url` reports lpi:<id>); `probe po` gives the container, and a two-church name like 'St. Michael/Mary Mother of Peace Parish' on the org confirms one row.
+- A GoDaddy site's bulletin page can be a stub whose only link is a 'CLICK HERE' button to sponsors.bonventure.net/?page=<n>: read the href in the browser (visit.py --links) and record page-pdfs with the http form; the PDF gives the identity (masthead page 1 has text).
+- A ParishesOnline cover can be image-only while the Mass-intentions page (page 3 here) lists each church's times in two columns: render that page as current-Mass evidence for each church, and `probe pdf --grep` returns pages 1-3 regardless of match, so find a notice's page with --pages N.
+- A parish site's menu link can carry a hash suffix (smammop.com/mass-schedulef0423bfb): use `visit.py --follow` and read final_url rather than guessing the path.
 
 ## Rules settled for this diocese
 
