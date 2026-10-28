@@ -252,6 +252,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 
 - St. Patrick, Kennett Square's own WordPress /bulletins/ page carries a 2026-10-25.pdf byte-identical (md5) to John Patrick listing 236's issue, with irregular file names across months; keep the listing as the page-pdfs channel and note the parish copy as equal.
 - GCatholic can give a different ZIP than the bulletin (St. Gabriel, Avondale: 19350 vs 19311); follow the parish's own ZIP and leave address_verified false.
+- Two parishes under one pastor can print separate John Patrick issues that share the printer's cover art (Annunciation BVM and St. Denis, Havertown, 25 Oct 2026): compare the masthead and page-2 Mass box, not the cover; the 'Mission of' line on a GCatholic page names the real owner of an ambiguous chapel.
+- A parish's own WordPress archive can be two years stale while its John Patrick listing is current (Sacred Heart, Havertown: archive ends 2024-10-27); eCatholic sites with an empty /bulletins page (St. Colman, Ardmore) link the listing: use the listing as the page-pdfs channel.
 
 ## Rules settled for this diocese
 
