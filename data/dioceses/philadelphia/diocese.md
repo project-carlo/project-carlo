@@ -166,8 +166,16 @@ listings (2026-10-28). Each batch settles its own rows.
   issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124)
   means the parish publishes elsewhere, usually its eCatholic archive; a parish archive that
   stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Basil, Kimberton's own site, a
-  year behind) leaves the listing as the channel, and a site's "Current Bulletin" image linking
-  `jppc.net/onlinebulletins/<id>template.pdf` names it. Never guess a slug: a wrong one returns the generic
+  year behind; St. Isaac Jogues's Squarespace `/bulletins`, July 2022) or lags by even a week
+  (St. Gabriel, Stowe's site at 18 October with 25 October on the listing, files differing
+  byte for byte) leaves the listing as the channel, so open the newest dated entry on both.
+  A site's "Current Bulletin" image linking `jppc.net/onlinebulletins/<id>template.pdf` names
+  the listing, and a site whose footer reads "Designed and Hosted by John Patrick Publishing"
+  hosts no PDFs of its own. A parish absent from the scan can still self-host (St. Patrick,
+  Malvern, below). A cover can print a neighbouring parish's Mass schedule box (St. Thomas of
+  Villanova 180 and Our Mother of Good Counsel carry each other's): that is not a worship site
+  of the row. A campus listing can have no editions (Villanova University 233), its Masses
+  appearing only in a parish's bulletin. Never guess a slug: a wrong one returns the generic
   home page with HTTP 200. church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent;
   plain curl works. **John Patrick PDFs have no text layer** (`probe pdf` shows 0 readable
   pages): render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
@@ -189,7 +197,11 @@ listings (2026-10-28). Each batch settles its own rows.
   `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`: St. Dorothy, St. Francis
   of Assisi, Norristown, Epiphany, Plymouth Meeting, which also links John Patrick 091), WordPress
   bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Hilary, St. Andrew, Drexel Hill,
-  Holy Innocents, St. Dominic). St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
+  Holy Innocents, St. Dominic; St. Patrick, Malvern `/bulletin/`, text-layer files
+  `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
+  listing carries). A WordPress site posting one page per issue (St. Katharine of Siena) gives
+  `page-pdfs` on its post index nothing, though each post links a byte-identical copy of the
+  John Patrick PDF: use the listing. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
   A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
   nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
   `probe get` and is readable with `visit.py`): use the parish's John Patrick listing.
@@ -198,8 +210,10 @@ listings (2026-10-28). Each batch settles its own rows.
   resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. Try
   again later; meanwhile find their John Patrick listings (St. Charles Borromeo, Drexel Hill is
   220, Annunciation BVM 127).
-- **TLS:** holynameofjesus-fishtown.org failed certificate verification on 2026-10-28 (try
-  `http://`, or its John Patrick listing).
+- **Sites `probe url` can't reach:** retry in the browser (`visit.py`) before concluding
+  anything; parish.stnorbert.org answered "RemoteDisconnected" to `probe url` and loaded in
+  Chrome (2026-10-28). holynameofjesus-fishtown.org failed certificate verification on
+  2026-10-28 (try `http://`, or its John Patrick listing).
 - **ParishesOnline / LPi:** not seen on the sampled sites, but LPi has organizations here
   (st-john-the-evangelist-church-19107, st-patrick-church-19401). Its search API lists
   organizations near a point:
@@ -211,24 +225,14 @@ listings (2026-10-28). Each batch settles its own rows.
 - **archphila.org** answers 503 when read quickly: pause between requests and retry.
 - **Coordinates:** Nominatim through `probe get` (`format=jsonv2`, `q=<church name> <town>`)
   returns named OSM place_of_worship nodes; a bare street address returns only the street.
+  The directory's and the masthead's street can be the parish office, and GCatholic's can be
+  off too (St. Patrick, Malvern: office 131 Channing Ave., church 104 Channing Ave. per its
+  site footer and OSM, GCatholic 126 Woodland Ave.): read the site's contact page or footer.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A shared pastor does not mean a shared bulletin: St. Gabriel, Stowe (Parochial Administrator) and St. Thomas More have separate John Patrick listings (85, 5), files and mastheads; the cover only says '(Pastor - St. Thomas More Parish)'.
-- A directory page updated months ago can still list an alternative worship site closed for years (St. Aloysius lists Holy Trinity, Pottstown, closed 2014-05 per CatholicPhilly); date the closure from CatholicPhilly's REST search and the host parish's current bulletin and site.
-- A parish's own archive can lag the John Patrick listing by a week (St. Gabriel's site stopped at Oct. 18 while the listing had Oct. 25): check which channel has the latest issue; the files differ byte for byte.
-- A site hosted by John Patrick (footer 'Designed and Hosted by John Patrick Publishing') hosts no PDFs of its own; read the church-bulletin.org listing.
-- St. Patrick, Malvern hosts its own text-layer bulletin PDFs (wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf on /bulletin/) with no John Patrick listing; `page-pdfs https://www.stpatrickmalvern.org/bulletin/` works. A parish can be absent from the listing scan and still self-host.
-- parish.stnorbert.org answers 'RemoteDisconnected' to probe url but loads in Chrome via visit.py; a probe-url UNREACHABLE on a PA parish site is worth a browser retry before concluding anything.
-- Daylesford Abbey posts Sunday bulletins as WordPress posts of page JPGs (CPT 'bulletins', front-end URLs 404); the REST list /wp-json/wp/v2/bulletins gives dates and image URLs, and its newest was 15 March 2026, so it is not a current channel.
-- A parish's directory address can be its office, not the church: St. Patrick Malvern's directory/masthead 131 Channing Ave is the Parish Office, its site footer and OSM give the church at 104 Channing Ave, GCatholic 126 Woodland Ave. Read the site's contact page before trusting the directory street.
-- A parish bulletin can print a neighbouring parish's Mass schedule box (Villanova and Our Mother of Good Counsel carry each other's): that is not a worship site of the row; compare files and mastheads.
-- A campus's John Patrick listing (Villanova University 233) can exist with no editions; campus Masses may only appear in a neighbouring parish's bulletin.
-- A parish's own Squarespace /bulletins archive can be years stale (St. Isaac Jogues stops July 2022) while the home page still links the John Patrick id: check the newest dated entry before choosing the channel.
-- A WordPress parish site posting one page per issue (St. Katharine of Siena) can host a byte-identical copy of the John Patrick PDF at wp-content/uploads/<yyyy>/<mm>/<yyyy-mm-dd>.pdf, but page-pdfs on the post index finds no PDFs: use the listing.
 
 ## Rules settled for this diocese
 
