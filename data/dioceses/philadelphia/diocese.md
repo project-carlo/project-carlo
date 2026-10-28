@@ -225,6 +225,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - parish.stnorbert.org answers 'RemoteDisconnected' to probe url but loads in Chrome via visit.py; a probe-url UNREACHABLE on a PA parish site is worth a browser retry before concluding anything.
 - Daylesford Abbey posts Sunday bulletins as WordPress posts of page JPGs (CPT 'bulletins', front-end URLs 404); the REST list /wp-json/wp/v2/bulletins gives dates and image URLs, and its newest was 15 March 2026, so it is not a current channel.
 - A parish's directory address can be its office, not the church: St. Patrick Malvern's directory/masthead 131 Channing Ave is the Parish Office, its site footer and OSM give the church at 104 Channing Ave, GCatholic 126 Woodland Ave. Read the site's contact page before trusting the directory street.
+- A parish bulletin can print a neighbouring parish's Mass schedule box (Villanova and Our Mother of Good Counsel carry each other's): that is not a worship site of the row; compare files and mastheads.
+- A campus's John Patrick listing (Villanova University 233) can exist with no editions; campus Masses may only appear in a neighbouring parish's bulletin.
+- A parish's own Squarespace /bulletins archive can be years stale (St. Isaac Jogues stops July 2022) while the home page still links the John Patrick id: check the newest dated entry before choosing the channel.
+- A WordPress parish site posting one page per issue (St. Katharine of Siena) can host a byte-identical copy of the John Patrick PDF at wp-content/uploads/<yyyy>/<mm>/<yyyy-mm-dd>.pdf, but page-pdfs on the post index finds no PDFs: use the listing.
 
 ## Rules settled for this diocese
 
