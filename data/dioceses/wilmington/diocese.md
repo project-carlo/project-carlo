@@ -158,18 +158,31 @@ batch settles its own rows.
   host no eCatholic files: see that bullet.
 - **LPi / ParishesOnline** prints most of the Ocean Deanery (containers `04/xxxx`: St.
   Edmond 04/0887, St. Luke 04/0763, St. Mary & Holy Savior 04/0790, St. Mary, Cambridge
-  04/0661, St. Michael/Mary Mother of Peace 04/0868, St. Jude, Lewes) and several in the
-  north (Holy Child, IHM, St. John the Beloved, St. Catherine of Siena, Holy Spirit/St.
-  Peter, St. Matthew/Corpus Christi, Our Mother of Sorrows/St. Peter, St. Joseph on the
-  Brandywine). ParishesOnline org names that join two parishes
+  04/0661, St. Michael/Mary Mother of Peace 04/0868, St. Jude, Lewes), the mid-shore and
+  Kent (Our Mother of Sorrows/St. Peter 04/0487, Sts. Peter and Paul, Easton 04/0450, St.
+  John/St. Bernadette, Milford 04/0120) and several in the north (Holy Child, IHM, St. John
+  the Beloved, St. Catherine of Siena, Holy Spirit/St. Peter, St. Matthew/Corpus Christi,
+  St. Joseph on the Brandywine). Parish sites on other platforms hide the link: a Wix
+  site's Bulletin button goes to `parishesonline.com/find/<slug>` while the home page's only
+  PDF links are one-page inserts (stjohnsmilford.com); an eCatholic site can host no
+  bulletins and link ParishesOnline (sorrowsparish.org, 11311: record the po ids, not the
+  eCatholic id); a Duda /bulletin page can embed `publicationWidget?id=<lpi id>`, which
+  `probe url` reports as `lpi:<id>` and `probe po` resolves to the container (St. Mary,
+  Cambridge). The directory's website can be a sister institution's with no bulletin link
+  (Easton's ssppeaston.org is the parish-and-schools site): look at the parish's other
+  directory entries for its own site (ssppeastonmd.org). One container can have an
+  organization account for each church (St. John, Milford 19963 and St. Bernadette,
+  Harrington 19952 both serve 04/0120): record every po-org id on the one row.
+  ParishesOnline org names that join two parishes
   (`holy-spirit-st-peter-the-apostle`, `st-matthew-parish-and-corpus-christi`,
   `our-mother-of-sorrows-st-peter-the-apostle`) are leads, not proof: read the masthead.
   A cover can print a "United in Christ" deanery Mass-time box naming several parishes
   (Immaculate Heart of Mary's lists six): that is a deanery schedule, not a shared masthead,
   so take the parish and staff from page 2 or later. Covers can be image-only, with text
-  only on the ad pages at the end (St. John the Beloved 03/1288, St. Catherine 03/1410):
-  render page 1 with `render.py` for the masthead, and quote the LPi footer ('Parish, City,
-  DE 03-NNNN') as the text that names the container. Issues go up before their weekend, so
+  only on the ad pages at the end (St. John the Beloved 03/1288, St. Catherine 03/1410; Our
+  Mother of Sorrows 04/0487 has no text on pages 1-5): render page 1 with `render.py` for
+  the masthead, and quote the LPi footer ('Parish, City, DE 03-NNNN' or 'Parish | 04-NNNN')
+  as the text that names the container. Issues go up before their weekend, so
   `fetch:check` freshness `future` (St. Catherine's 20261101 on 2026-10-27) is not a wrong
   pick. Don't take coordinates from a ParishesOnline org's own pin (St. Catherine's is about
   3 km off).
@@ -180,9 +193,11 @@ batch settles its own rows.
   Cloudflare answer 403 to curl and `probe url` (resurrectionde.org, setonparish.net,
   stjosephmiddletown.com, goodshepherdcecilmd.org's inner pages) and load in the browser,
   where `visit.py` reads /mass-times and /church-addresses. `issues.py ecatholic` reads the files without one.
-  Some of these sites host no bulletins on eCatholic and link another publisher instead:
+  A home page's first PDF link can be a Mass insert (`files.ecatholic.com/<id>/documents/...`,
+  beparish.com's Holy Week schedule), not the bulletin: the weekly issues are
+  `/<id>/bulletins/YYYYMMDD.pdf` on the /bulletins page. Some of these sites host no bulletins on eCatholic and link another publisher instead:
   the John Patrick listing (Resurrection: site 5398's files answer 403 for every Sunday) or
-  FATA Online (Good Shepherd, 17337). Pin that listing with `page-pdfs` and leave the
+  FATA Online (Good Shepherd, 17337), or ParishesOnline (see that bullet). Pin that listing with `page-pdfs` and leave the
   eCatholic id out of `publication`. Issues go up before their Sunday, so `fetch:check` freshness `future` (St.
   Mary of the Assumption, 20261101 on 2026-10-27) is not a wrong pick.
   A parish in both this list and LPi's can serve one issue on both (St. Joseph on the
@@ -196,7 +211,10 @@ batch settles its own rows.
   still shows the eCatholic id, and the bulletin's letterhead can name the working domain
   (St. Joseph, Wilmington: stjosephfrenchst.org fails, sjfschurch.org is the same site 14048).
 - **J.S. Paluch on Discover Mass:** St. Ann, Bethany Beach (`discovermass:st-ann-bethany-beach-de`)
-  and a lead for Holy Cross, Dover (`holy-cross-dover-de`). Discover Mass caps downloads per
+  and Holy Cross, Dover (`holy-cross-dover-de`), whose listing serves the same issue as
+  the parish's own copy (12 pages against 10, the text oddly spaced): when the parish site
+  carries the issue, pin the copy plain curl reads and keep the listing in `publication`
+  only. Discover Mass caps downloads per
   IP per day (a 134-byte "Maximum number of files downloaded today" reply, which
   `fetch:check` reports as `not_pdf`): that is the cap, not the row.
 - **Bonventure** (OSV/Duda parish sites, e.g. hrparish.com, Holy Rosary, Claymont; St.
@@ -217,14 +235,18 @@ batch settles its own rows.
   put the church names of its Mass boxes in an image layer, leaving only the times in the
   text: render page 1 to see which churches it lists, and quote trustee or calendar lines
   from the text.
-- **Self-hosted:** Holy Family, Newark (`bulletin.php`), Immaculate Conception, Elkton and
-  Marydel, St. Anthony of Padua (`/bulletin-archive/`), St. Edmond (Duda), Our Lady of
-  Lourdes, Seaford (GoDaddy), St. John, Milford (Wix), St. John Neumann (weconnect), Our Lady
-  of Good Counsel, St. Paul, Delaware City. Duda sites list weekly PDFs on /bulletins as
+- **Self-hosted:** Holy Family, Newark (`bulletin.php`), Immaculate Conception, Elkton,
+  Holy Cross/Immaculate Conception, Marydel (Weebly, iccmarydel.org/bulletin.html; Holy
+  Cross's own holycrossdover.org, which the directory doesn't give, answers 403 to curl but
+  lists the same dated files in the browser), St. Anthony of Padua (`/bulletin-archive/`), St. Edmond (Duda), Our Lady of
+  Lourdes, Seaford (GoDaddy), St. John Neumann (weconnect), Our Lady of Good Counsel,
+  Secretary, St. Paul, Delaware City. Duda sites list weekly PDFs on /bulletins as
   `irp.cdn-website.com/<site>/files/uploaded/<date>.pdf`, newest first, so `page-pdfs
   <bulletins page>` needs no filter (iccelkton.org); but a Duda bulletins page can be
   abandoned while the home page links the live bulletin elsewhere (St. Hedwig's stops in
-  December 2024; it is John Patrick 317). A WordPress archive page that also lists forms and
+  December 2024; it is John Patrick 317). A Duda-style page linking
+  `/images/Bulletin_<M.D.YY>.pdf` lists them oldest first; `page-pdfs` filtered to
+  `filename=Bulletin_*.pdf` still picks the newest (Our Lady of Good Counsel, Secretary). A WordPress archive page that also lists forms and
   calendars needs a filename filter (St. Anthony of Padua: `page-pdfs
   https://sapde.org/bulletin-archive/ filename=Bulletin-*.pdf`). A WordPress bulletins
   page can list dated posts (category "bulletin") that each wrap a PDF, with no PDF link on
@@ -242,28 +264,14 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- Two parishes under one pastor can share a cover headed by both names with a Mass box each (Holy Cross/Immaculate Conception, Marydel, 25 Oct 2026): the staff page and the pastor's column say so. Both parishes' sites and the Discover Mass listing can carry that same issue; pick the copy plain curl can read.
-- A ParishesOnline parish can have an organization account for each church that both serve one container (St. John, Milford 19963 and St. Bernadette, Harrington 19952, container 04/0120); record both po-org ids on the one row.
-- A Wix home page's only PDF link can be a one-page insert (stjohnsmilford.com 'Scholarship Tax Credit', 'BULLETIN BOX'), not the bulletin; follow the Bulletin button instead (it goes to parishesonline.com/find/<slug>).
-- A parish's real site can hide behind a spam directory link: holycrossdover.org (found via the Milford site's Central Deanery links) answers 403 to curl but loads in the browser and lists dated bulletin files.
-- An image-only ParishesOnline cover (Our Mother of Sorrows 04/0487, pages 1-5) can still be read: render page 1 with render.py and quote the LPi footer 'Parish | 04-NNNN' from the one text page as the identity evidence.
-- An eCatholic home page's first PDF link can be a Mass insert (files.ecatholic.com/<id>/documents/...), not the bulletin; the weekly issues are at /<id>/bulletins/YYYYMMDD.pdf on the /bulletins page.
-- A parish whose website is an eCatholic site may host no bulletins there and link to ParishesOnline (sorrowsparish.org, eCatholic 11311): record the po ids, not the eCatholic site id, in publication.
-- The directory's Mass times for a two-church parish merge both churches' slots into one entry (St. Benedict lists St. Elizabeth's Friday and Saturday times), and a reopened mission can still show none (St. Peter): take Mass times per church from the bulletin.
-- The directory's website for a parish can be a sister institution's site (Easton: ssppeaston.org is the parish-and-schools site with no bulletin link); the parish's own site is ssppeastonmd.org, found via the parish's other directory entries (ssppparisheaston.org redirects there), and its Bulletins link goes to ParishesOnline.
-- A mission's directory ZIP can be copied from the parent parish (St. Michaels 21601, Cordova in GCatholic 21601, Church Creek 21613 in GCatholic): take the ZIP from the parish bulletin's schedule block, which prints each church's address.
-- A seasonal mission's season is stated differently by the bulletin (Memorial Day through Labor Day weekend), the parish site (to the last Sunday in September) and the summer guide; record all three and don't pick.
-- A Duda parish site's /bulletin page can embed the ParishesOnline widget (publicationWidget?id=<lpi id>), which probe url reports as lpi:<id> and probe po resolves to the container.
-- A self-hosted /images/Bulletin_<M.D.YY>.pdf list on a Duda-style page is oldest-first; a page-pdfs recipe filtered to Bulletin_*.pdf still picked the newest file.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - **Eastern Catholic churches** (St. Nicholas, Wilmington and St. Basil the Great, Chesapeake City, both Ukrainian) are excluded as `other-jurisdiction`, as in every other diocese here. (accepted by survey-review, 002-survey-review, 2026-10-27)
-- **Shared pastors don't make shared bulletins.** A pair under one pastor (St. Ann and St. Thomas the Apostle; Holy Child and St. Helena; St. John the Beloved and St. Catherine of Siena; St. Polycarp and St. Dennis; Immaculate Conception, Elkton and St. Thomas More Oratory) is one row only when one current bulletin covers both. (accepted by survey-review, 002-survey-review, 2026-10-27) Both outcomes occur: Holy Child and St. Helena print two bulletins under Fr. Carrier (map 003, 2026-10-27); St. Ann's eCatholic file has carried St. Thomas's pages since at least 26 July 2026 while sainttom.org's own bulletins page went stale in June (map 004, 2026-10-27). Check the sister parish's homepage "bulletins" link, not only its own bulletins page, and read page 1 of the file. A shared associate printed on both covers is no different: Holy Family and Resurrection (Rev. Francis Okorie) print separate John Patrick bulletins, 308 and 310 (map 008, batch `newark-hockessin`, 2026-10-27). Immaculate Conception, Elkton and St. Thomas More Oratory (Fr. Jasper) are separate too: the Newman Center publishes only a semester newsletter and limits Mass to the university community, and Immaculate Conception's bulletin never mentions it (map 012, batch `elkton-newark-oratory`, 2026-10-27; whether its Mass counts as public is the owner's call, flagged by that batch). St. Polycarp and St. Dennis print separate John Patrick bulletins (301 and 732) although St. Dennis's cover gives St. Polycarp's office and livestream as contacts: compare mastheads and Mass schedules, not contact lines (map 016, batch `smyrna-galena-chestertown`, 2026-10-27).
-- **A seasonal worship site keeps its church row** with a dated `revisit` for its next season: St. Andrew, Ocean City ('seasonal mission of St. Luke – open May 23 – Sept. 6'), St. Mary Star of the Sea, Church Creek ('Memorial Day weekend through late September'), and St. Mary Star of the Sea, Ocean City if its Sunday Mass is summer-only. (accepted by survey-review, 002-survey-review, 2026-10-27)
-- **A directory Mass time is not proof of a weekly Mass.** A chapel's single time in the `directory` roster can be one annual Mass (St. Patrick Chapel, Conowingo: 'Sat 10:00' is the 12 September annual Mass; the bulletin says 'As Announced'), so check the bulletin before recording a time as weekly. (map 014, batch `cecil-good-shepherd`, 2026-10-27; whether such a chapel stays a church with no weekly times is flagged to the owner by that batch)
+- **Shared pastors don't make shared bulletins.** A pair under one pastor (St. Ann and St. Thomas the Apostle; Holy Child and St. Helena; St. John the Beloved and St. Catherine of Siena; St. Polycarp and St. Dennis; Immaculate Conception, Elkton and St. Thomas More Oratory) is one row only when one current bulletin covers both. (accepted by survey-review, 002-survey-review, 2026-10-27) Both outcomes occur: Holy Child and St. Helena print two bulletins under Fr. Carrier (map 003, 2026-10-27); St. Ann's eCatholic file has carried St. Thomas's pages since at least 26 July 2026 while sainttom.org's own bulletins page went stale in June (map 004, 2026-10-27). Check the sister parish's homepage "bulletins" link, not only its own bulletins page, and read page 1 of the file. A shared associate printed on both covers is no different: Holy Family and Resurrection (Rev. Francis Okorie) print separate John Patrick bulletins, 308 and 310 (map 008, batch `newark-hockessin`, 2026-10-27). Immaculate Conception, Elkton and St. Thomas More Oratory (Fr. Jasper) are separate too: the Newman Center publishes only a semester newsletter and limits Mass to the university community, and Immaculate Conception's bulletin never mentions it (map 012, batch `elkton-newark-oratory`, 2026-10-27; whether its Mass counts as public is the owner's call, flagged by that batch). St. Polycarp and St. Dennis print separate John Patrick bulletins (301 and 732) although St. Dennis's cover gives St. Polycarp's office and livestream as contacts: compare mastheads and Mass schedules, not contact lines (map 016, batch `smyrna-galena-chestertown`, 2026-10-27). Holy Cross, Dover and Immaculate Conception, Marydel are one row: one cover headed by both names with a Mass box each, one staff list, and a pastor's column to one "collaborative Parish community" (map 018, batch `dover-milford`, 2026-10-27). St. Mary Refuge of Sinners, Cambridge and Our Lady of Good Counsel, Secretary share a pastor but print separately (map 020, batch `talbot-dorchester`, 2026-10-27).
+- **A seasonal worship site keeps its church row** with a dated `revisit` for its next season: St. Andrew, Ocean City ('seasonal mission of St. Luke – open May 23 – Sept. 6'), St. Mary Star of the Sea, Church Creek ('Memorial Day weekend through late September'), and St. Mary Star of the Sea, Ocean City if its Sunday Mass is summer-only. (accepted by survey-review, 002-survey-review, 2026-10-27) Sources can disagree on the season: for Church Creek the bulletin says Memorial Day through Labor Day weekend, the parish site to the last Sunday in September; record each source's dates and don't pick (map 020, batch `talbot-dorchester`, 2026-10-27).
+- **A directory Mass time is not proof of a weekly Mass.** A chapel's single time in the `directory` roster can be one annual Mass (St. Patrick Chapel, Conowingo: 'Sat 10:00' is the 12 September annual Mass; the bulletin says 'As Announced'), so check the bulletin before recording a time as weekly. (map 014, batch `cecil-good-shepherd`, 2026-10-27; whether such a chapel stays a church with no weekly times is flagged to the owner by that batch) The roster's other per-church details are no better: a two-church parish's entry can merge both churches' Mass slots (St. Benedict, Ridgely lists St. Elizabeth's Friday and Saturday times), a reopened mission can show none (St. Peter, Queenstown; map 019, batch `mid-shore-north`, 2026-10-27), and a mission's ZIP can be the parent's, in the directory and in GCatholic (St. Michaels given Easton's 21601 by both, Cordova by GCatholic; map 020, batch `talbot-dorchester`, 2026-10-27). Take each church's Mass times and ZIP from the bulletin's schedule block, which prints each church's address.
 
 ## Log
 
