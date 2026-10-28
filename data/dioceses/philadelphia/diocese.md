@@ -161,20 +161,38 @@ listings (2026-10-28). Each batch settles its own rows.
   name can join two parishes (116, "The Roman Catholic Church of Saint Timothy and Saint
   Bartholomew") or keep a relegated church (167, "Old Saint Mary Church & Holy Trinity Church").
   Record the row as `other` with `page-pdfs https://www.church-bulletin.org/<slug>`, as
-  Allentown, Harrisburg and Wilmington do. Never guess a slug: a wrong one returns the generic
+  Allentown, Harrisburg and Wilmington do, unless the parish's own eCatholic `/bulletins/`
+  archive carries the same file (below). **The current channel is whichever has the latest
+  issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124)
+  means the parish publishes elsewhere, usually its eCatholic archive; a parish archive that
+  stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Basil, Kimberton's own site, a
+  year behind) leaves the listing as the channel, and a site's "Current Bulletin" image linking
+  `jppc.net/onlinebulletins/<id>template.pdf` names it. Never guess a slug: a wrong one returns the generic
   home page with HTTP 200. church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent;
-  plain curl works. In Wilmington many covers were scanned images: render page 1 with
-  parish-site-access `render.py` to read the masthead.
+  plain curl works. **John Patrick PDFs have no text layer** (`probe pdf` shows 0 readable
+  pages): render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
+  to read the masthead; `fetch:check` then reports `publication_identity` `unverified`, by
+  design.
 - **eCatholic:** several sites (St. Anselm 24649, St. Genevieve 38659, St. Christopher 16547,
   St. Anne 34036, St. Anastasia 12297, St. Barbara 21577, St. Francis de Sales, Lenni 2405)
-  answered plain `probe url` on 2026-10-28, but most link a John Patrick listing rather than
-  hosting the bulletin: an eCatholic id alone is not the publication. A home page's first PDF can
-  be a flyer (St. Anselm's "St. Lukes Open Flyer").
+  answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
+  hosting the bulletin, so an eCatholic id alone is not the publication; a `/bulletins` page
+  linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
+  file is byte-identical to the John Patrick issue (St. Agnes and SS. Peter and Paul, West
+  Chester), use an `ecatholic` row and add the listing as a second `url:` publication id.
+  Files under `/documents/` instead of `/bulletins/` (St. Ann, Phoenixville) make the
+  `ecatholic` resolver pick a stale issue (2016): use the `other` row on the John Patrick
+  listing and keep `ecatholic:<id>` in `publication`. Plain curl of a `/bulletins` page gets a
+  Cloudflare "Just a moment" stub; `probe get <url> --out <file>` returns the page with its PDF
+  links. A home page's first PDF can be a flyer (St. Anselm's "St. Lukes Open Flyer").
 - **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, files
   `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`: St. Dorothy, St. Francis
   of Assisi, Norristown, Epiphany, Plymouth Meeting, which also links John Patrick 091), WordPress
   bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Hilary, St. Andrew, Drexel Hill,
   Holy Innocents, St. Dominic). St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
+  A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
+  nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
+  `probe get` and is readable with `visit.py`): use the parish's John Patrick listing.
 - **A shared WordPress host that answered HTTP 500 to everyone:** saintfrancescabrini.net,
   annunciationbvmchurch.org, sainthelenaparish.net, scbdh.org and epiphanychurch.church all
   resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. Try
@@ -191,21 +209,13 @@ listings (2026-10-28). Each batch settles its own rows.
   caps downloads per IP per day (a 134-byte "Maximum number of files downloaded today" reply,
   which `fetch:check` reports as `not_pdf`): that is the cap, not the row.
 - **archphila.org** answers 503 when read quickly: pause between requests and retry.
+- **Coordinates:** Nominatim through `probe get` (`format=jsonv2`, `q=<church name> <town>`)
+  returns named OSM place_of_worship nodes; a bare street address returns only the street.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A parish's own eCatholic /bulletins page links files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf; where the parish also has a John Patrick listing the two PDFs are byte-identical (St. Agnes, SS. Peter and Paul), so use the `ecatholic` row and record the JPPC listing as a second publication id.
-- A John Patrick listing with no editions (a daily-readings page only, e.g. St. Maximilian Kolbe 124) means the parish publishes elsewhere: check its own eCatholic /bulletins archive. Conversely an eCatholic archive that stops (SS. Simon and Jude, last 2025-02-16) means the JPPC listing is the current channel.
-- John Patrick PDFs here have no text layer (probe pdf shows 0 readable pages): render page 1 (and page 2 for the Mass schedule) with parish-site-access render.py to read the masthead; fetch:check then reports publication_identity 'unverified' by design.
-- Plain curl of an eCatholic /bulletins page gets a Cloudflare 'Just a moment' stub; `probe get <url> --out file` returns the full page with the PDF links.
-- The directory's `group` ('Chester County West') is the deanery, not a family; `audit` flags every row sharing it, so record separate peer reviews from the mastheads and leave `group` empty. `diocese write` rejects `roster` on a parish record; roster links live on church records.
-- A parish whose eCatholic files sit under /documents/ rather than /bulletins/ (St. Ann, Phoenixville) makes the `ecatholic` resolver pick a stale issue (2016); use an `other` row with `page-pdfs` on its byte-identical John Patrick listing and keep the ecatholic id in `publication`.
-- A Squarespace bulletin page whose issue links end in `/file` (St. Mary of the Assumption, Phoenixville; HTTP 403 to probe url/get, readable with visit.py) gives `page-pdfs` no .pdf links; read the parish's John Patrick listing instead.
-- A parish site's 'Current Bulletin' image can link jppc.net/onlinebulletins/<id>template.pdf (St. Basil, Kimberton): the listing id is the current channel even when the site's own archive stopped a year earlier.
-- Nominatim via `probe get` (format=jsonv2, q=<church name> <town>) returns OSM place_of_worship nodes with names for coordinates; a bare street address returns only a street.
 
 ## Rules settled for this diocese
 
@@ -217,6 +227,11 @@ Decisions that apply to more than one record, and who made them.
 - **Seminary, monastery, abbey, retreat-house and adoration chapels** (St. Charles Borromeo Seminary and its chapels, the Visitation Monastery, Daylesford Abbey, the St. Carlo Acutis shrine at Malvern Retreat House, the Sacre Coeur adoration chapel) get a church row under a parish when that parish's bulletin lists their public Mass; a parish row of their own if the house publishes a readable bulletin; otherwise they are excluded `no-public-mass` (private or community-only Mass) or `no-bulletin` (public Mass, but no bulletin lists it), following README Settled policy 4. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A campus Mass the parish bulletin lists every week gets a church row** (Villanova's St. Thomas of Villanova church, the Penn Newman Center's St. Bede chapel under St. Agatha-St. James, Temple's Newman chaplaincy), as in Harrisburg; a campus ministry that publishes only by email or semester newsletter is excluded `no-bulletin`. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A shrine in a parish church is that church's row** (the Cathedral and Shrine of St. Katharine Drexel; St. Peter the Apostle and the Neumann Shrine; St. Jude, Chalfont; St. Anne). A shrine in a former parish church is decided like a worship site: a church row under the parish whose bulletin lists its Masses, a parish row of its own when it publishes its own bulletin, or excluded `no-bulletin` when it has public Mass and no bulletin lists it. (accepted by survey-review, 003-survey-review, 2026-10-28)
+- **The directory's `group` is the deanery** ('Chester County West'), not a family or cluster:
+  leave `group` empty on parish records, since `audit` flags every row sharing a value as a
+  possible shared bulletin, and record each parish's `publication_reviews` from the mastheads.
+  Roster links go on church records (`diocese write` rejects `roster` on a parish). (map batch
+  `west-chester`, 2026-10-28)
 
 ## Log
 
