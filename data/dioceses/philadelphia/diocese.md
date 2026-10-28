@@ -202,6 +202,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - John Patrick PDFs here have no text layer (probe pdf shows 0 readable pages): render page 1 (and page 2 for the Mass schedule) with parish-site-access render.py to read the masthead; fetch:check then reports publication_identity 'unverified' by design.
 - Plain curl of an eCatholic /bulletins page gets a Cloudflare 'Just a moment' stub; `probe get <url> --out file` returns the full page with the PDF links.
 - The directory's `group` ('Chester County West') is the deanery, not a family; `audit` flags every row sharing it, so record separate peer reviews from the mastheads and leave `group` empty. `diocese write` rejects `roster` on a parish record; roster links live on church records.
+- A parish whose eCatholic files sit under /documents/ rather than /bulletins/ (St. Ann, Phoenixville) makes the `ecatholic` resolver pick a stale issue (2016); use an `other` row with `page-pdfs` on its byte-identical John Patrick listing and keep the ecatholic id in `publication`.
+- A Squarespace bulletin page whose issue links end in `/file` (St. Mary of the Assumption, Phoenixville; HTTP 403 to probe url/get, readable with visit.py) gives `page-pdfs` no .pdf links; read the parish's John Patrick listing instead.
+- A parish site's 'Current Bulletin' image can link jppc.net/onlinebulletins/<id>template.pdf (St. Basil, Kimberton): the listing id is the current channel even when the site's own archive stopped a year earlier.
+- Nominatim via `probe get` (format=jsonv2, q=<church name> <town>) returns OSM place_of_worship nodes with names for coordinates; a bare street address returns only a street.
 
 ## Rules settled for this diocese
 
