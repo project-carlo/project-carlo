@@ -234,6 +234,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- St. Joseph, Downingtown's John Patrick listing (138) never had an issue; its current publisher is the parish's own eCatholic /bulletins archive (site 30692, text-layer PDFs, newest 25 Oct 2026). A JP listing with no editions means look at the parish's eCatholic archive first.
+- SS. Philip and James, Exton: eCatholic 24683 and JP 144 issues are byte-identical (md5 compare); St. Elizabeth's eCatholic archive (36719) lagged a week behind JP 133, so it is an `other` row on the listing.
+- `probe get --out FILE` writes relative to the repo root, not the shell's cwd: pass a scratch path (scratch/<run>/<job>/file) or the file lands at the worktree root. `probe pdf` takes URLs only; for a downloaded file use render.py or pdf text tools.
+- A bulletin footer 'View this bulletin online at www.DiscoverMass.com' (St. Joseph, Downingtown) does not mean the parish publishes through Discover Mass; the eCatholic archive was current.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
