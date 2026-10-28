@@ -27,7 +27,8 @@ publication_reviews:
     seen: 2026-10-27
     note: 'Holy Family''s 25 October 2026 cover (rendered image): own banner and address (15 Gender Road),
       Msgr. Kelley pastor, Rev. Francis Okorie associate pastor, Mass Saturday 5:00pm, Sunday 8:00, 10:00,
-      noon.'
+      noon. Checked 2026-10-27: each cover masthead names one parish with its own address and Mass schedule;
+      Resurrection''s text names Holy Family only for a ''Holy Family Raise Right program'' (p.4).'
   - url: https://www.church-bulletin.org/bulletin/resurrection-parish-wilmington-de-19808/2026-10-25.pdf
     seen: 2026-10-27
     note: 'Resurrection''s 25 October 2026 cover (rendered image): own title and address (3000 Videre

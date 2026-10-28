@@ -30,6 +30,46 @@ evidence:
   quote: 532 E. Stein Hwy • Seaford, DE 19973
   note: Bon Venture listing headed 'Our Lady of Lourdes', 'Click to View Current Bulletin', newest 'October
     25, 2026', then weekly back to 2018; links `pdfs/2167/2026-10-25.pdf`.
+publication_reviews:
+- parish: holy-rosary-claymont
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2167/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Our Lady of Lourdes
+    note: 'Our Lady of Lourdes, Seaford''s 25 October 2026 issue (Bonventure page 2167): page 1''s masthead
+      names Our Lady of Lourdes Roman Catholic Church with its own weekend Masses.'
+  - url: http://sponsors.bonventure.net/pdfs/2100/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Holy Rosary Church
+    note: 'Holy Rosary, Claymont''s 25 October 2026 issue (Bonventure page 2100): the masthead names Holy
+      Rosary Church, 3200 Philadelphia Pike, Claymont, and the issue names no other parish''s Mass schedule.'
+- parish: sacred-heart-chestertown
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2167/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Our Lady of Lourdes
+    note: 'Our Lady of Lourdes, Seaford''s 25 October 2026 issue (Bonventure page 2167): page 1''s masthead
+      names Our Lady of Lourdes Roman Catholic Church with its own weekend Masses.'
+  - url: http://sponsors.bonventure.net/pdfs/2169/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Sacred Heart
+    note: 'Sacred Heart, Chestertown''s 25 October 2026 issue (Bonventure page 2169): its masthead names
+      Sacred Heart, and its weekend Mass counts (p.4) list Sacred Heart and St. John only.'
+- parish: st-john-the-baptist-holy-angels-newark
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2167/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Our Lady of Lourdes
+    note: 'Our Lady of Lourdes, Seaford''s 25 October 2026 issue (Bonventure page 2167): page 1''s masthead
+      names Our Lady of Lourdes Roman Catholic Church with its own weekend Masses.'
+  - url: http://sponsors.bonventure.net/pdfs/2103/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: ST. JOHN - HOLY ANGELS PARISH
+    note: 'St. John - Holy Angels, Newark''s 25 October 2026 issue (Bonventure page 2103): the page 1
+      masthead names St. John - Holy Angels Parish, 82 Possum Park Road, Newark.'
 ---
 
 ## Publisher

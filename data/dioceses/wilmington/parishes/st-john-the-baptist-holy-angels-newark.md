@@ -19,6 +19,46 @@ evidence:
   quote: Bulletin
   note: 'Browser read (plain probe url got HTTP 403): the home page''s ''Bulletin Here'' button links
     http://sponsors.bonventure.net/?page=2103, whose bulletin link is /pdfs/2103/2026-10-25.pdf.'
+publication_reviews:
+- parish: holy-rosary-claymont
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2103/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: ST. JOHN - HOLY ANGELS PARISH
+    note: 'St. John - Holy Angels, Newark''s 25 October 2026 issue (Bonventure page 2103): the page 1
+      masthead names St. John - Holy Angels Parish, 82 Possum Park Road, Newark.'
+  - url: http://sponsors.bonventure.net/pdfs/2100/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Holy Rosary Church
+    note: 'Holy Rosary, Claymont''s 25 October 2026 issue (Bonventure page 2100): the masthead names Holy
+      Rosary Church, 3200 Philadelphia Pike, Claymont, and the issue names no other parish''s Mass schedule.'
+- parish: our-lady-of-lourdes-seaford
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2103/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: ST. JOHN - HOLY ANGELS PARISH
+    note: 'St. John - Holy Angels, Newark''s 25 October 2026 issue (Bonventure page 2103): the page 1
+      masthead names St. John - Holy Angels Parish, 82 Possum Park Road, Newark.'
+  - url: http://sponsors.bonventure.net/pdfs/2167/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Our Lady of Lourdes
+    note: 'Our Lady of Lourdes, Seaford''s 25 October 2026 issue (Bonventure page 2167): page 1''s masthead
+      names Our Lady of Lourdes Roman Catholic Church with its own weekend Masses.'
+- parish: sacred-heart-chestertown
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2103/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: ST. JOHN - HOLY ANGELS PARISH
+    note: 'St. John - Holy Angels, Newark''s 25 October 2026 issue (Bonventure page 2103): the page 1
+      masthead names St. John - Holy Angels Parish, 82 Possum Park Road, Newark.'
+  - url: http://sponsors.bonventure.net/pdfs/2169/2026-10-25.pdf
+    seen: 2026-10-27
+    quote: Sacred Heart
+    note: 'Sacred Heart, Chestertown''s 25 October 2026 issue (Bonventure page 2169): its masthead names
+      Sacred Heart, and its weekend Mass counts (p.4) list Sacred Heart and St. John only.'
 ---
 
 ## Publisher

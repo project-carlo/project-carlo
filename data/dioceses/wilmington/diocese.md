@@ -171,8 +171,12 @@ batch settles its own rows.
   `publicationWidget?id=<lpi id>`, and `probe po` resolves the id to the container.
   `probe url` reports it as `lpi:<id>` on some sites (St. Mary, Cambridge; smammop.com;
   visitstfrancis.org) but not others, where the widget is only in the page source
-  (stedmond.org/bulletins, stjudelewes.org): grep the HTML for `publicationWidget?id=`, and
-  quote the bulletin rather than the href, which recheck can't find. Such sites' menu links
+  (stedmond.org/bulletins, stjudelewes.org): grep the HTML for `id=0018` (the widget can
+  be written `publicationWidget?type=bulletin&color=gray&id=<lpi id>`, id not first, as
+  on St. Luke's and St. Mary & Holy Savior's), and
+  quote the bulletin rather than the href, which recheck can't find. A WeConnect
+  `/publications` page (stjohnneumannrcc.com) links each issue as
+  `parishesonline.com/publication-page/<org>?selectedPublication=<container url>`. Such sites' menu links
   can carry a hash suffix (smammop.com/mass-schedulef0423bfb,
   stjudelewes.org/bulletin<hash>): use `visit.py --follow` and read `final_url` rather than
   guessing the path. The directory's website can be a sister institution's with no bulletin link
@@ -197,7 +201,8 @@ batch settles its own rows.
   `probe pdf --grep` returns pages 1-3 whether or not they match, so find a notice's page
   with `--pages N`. Issues go up before their weekend, so
   `fetch:check` freshness `future` (St. Catherine's 20261101 on 2026-10-27) is not a wrong
-  pick. Don't take coordinates from a ParishesOnline org's own pin (St. Catherine's is about
+  pick, and a cover printing two dates ('October 25, 2026 / November 1, 2026') makes it
+  report issue_date `conflict` for a correct current pick. Don't take coordinates from a ParishesOnline org's own pin (St. Catherine's is about
   3 km off).
 - **eCatholic:** about 14 sites (Resurrection, St. Margaret, Seton, St. Mary of the
   Assumption, St. Mary Magdalen, St. Ann, St. Elizabeth, St. Paul, St. Joseph on the
@@ -286,25 +291,33 @@ batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- A summer-guide season note can be wrong: St. Mary Star of the Sea, Ocean City's Sunday 7 AM is marked '(Memorial Day – Labor Day)' but the November bulletin and the parish Mass-times page (which lists it in both seasons) show it year-round, so read the off-season bulletin before making a church seasonal.
-- A Duda/WeConnect bulletins page's LPi widget can be written `publicationWidget?type=bulletin&color=gray&id=<lpi id>` (id not first): grep `id=0018` and run `probe po <lpi id>` (St. Luke 0018000000Qc275AAB, St. Mary & Holy Savior 0018000000Qx8zFAAR). A WeConnect site (stjohnneumannrcc.com /publications) links parishesonline.com/publication-page/<org>?selectedPublication=<container url> per issue.
-- An LPi cover can print two dates ('October 25, 2026 / November 1, 2026'), which makes fetch:check report issue_date `conflict` for a correct current pick.
-- Eastern Catholic parishes: confirm the jurisdiction on the eparchy's own parish list (Archeparchy of Philadelphia: ukrcatholic.org/parishes, formerly ukrarcheparchy.us) and on GCatholic's 'Jurisdiction:' line.
-- GCatholic's 'Jurisdiction:' line names the Archdiocese for the Military Services for a base chapel; dover.af.mil answers 403 to curl/probe url but loads with visit.py.
-- Note: archmil.org is the Archdiocese of Milwaukee; the Military Services archdiocese is milarch.org.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
-- **Eastern Catholic churches** (St. Nicholas, Wilmington and St. Basil the Great, Chesapeake City, both Ukrainian) are excluded as `other-jurisdiction`, as in every other diocese here. (accepted by survey-review, 002-survey-review, 2026-10-27)
+- **Eastern Catholic churches** (St. Nicholas, Wilmington and St. Basil the Great, Chesapeake City, both Ukrainian) are excluded as `other-jurisdiction`, as in every other diocese here. (accepted by survey-review, 002-survey-review, 2026-10-27) Confirm the jurisdiction on the eparchy's or ordinariate's own list (Archeparchy of Philadelphia: ukrcatholic.org/parishes, formerly ukrarcheparchy.us; the Archdiocese for the Military Services is milarch.org, not archmil.org, which is Milwaukee) and on GCatholic's 'Jurisdiction:' line, which names the Military Services archdiocese for the Dover AFB chapel; dover.af.mil answers 403 to curl but loads with `visit.py` (map 027, batch `other-jurisdiction`, 2026-10-27; whether a base chapel is better `no-public-mass` is flagged to the owner).
 - **Shared pastors don't make shared bulletins.** A pair under one pastor (St. Ann and St. Thomas the Apostle; Holy Child and St. Helena; St. John the Beloved and St. Catherine of Siena; St. Polycarp and St. Dennis; Immaculate Conception, Elkton and St. Thomas More Oratory) is one row only when one current bulletin covers both. (accepted by survey-review, 002-survey-review, 2026-10-27) Both outcomes occur: Holy Child and St. Helena print two bulletins under Fr. Carrier (map 003, 2026-10-27); St. Ann's eCatholic file has carried St. Thomas's pages since at least 26 July 2026 while sainttom.org's own bulletins page went stale in June (map 004, 2026-10-27). Check the sister parish's homepage "bulletins" link, not only its own bulletins page, and read page 1 of the file. A shared associate printed on both covers is no different: Holy Family and Resurrection (Rev. Francis Okorie) print separate John Patrick bulletins, 308 and 310 (map 008, batch `newark-hockessin`, 2026-10-27). Immaculate Conception, Elkton and St. Thomas More Oratory (Fr. Jasper) are separate too: the Newman Center publishes only a semester newsletter and limits Mass to the university community, and Immaculate Conception's bulletin never mentions it (map 012, batch `elkton-newark-oratory`, 2026-10-27; whether its Mass counts as public is the owner's call, flagged by that batch). St. Polycarp and St. Dennis print separate John Patrick bulletins (301 and 732) although St. Dennis's cover gives St. Polycarp's office and livestream as contacts: compare mastheads and Mass schedules, not contact lines (map 016, batch `smyrna-galena-chestertown`, 2026-10-27). Holy Cross, Dover and Immaculate Conception, Marydel are one row: one cover headed by both names with a Mass box each, one staff list, and a pastor's column to one "collaborative Parish community" (map 018, batch `dover-milford`, 2026-10-27). St. Mary Refuge of Sinners, Cambridge and Our Lady of Good Counsel, Secretary share a pastor but print separately (map 020, batch `talbot-dorchester`, 2026-10-27).
-- **A seasonal worship site keeps its church row** with a dated `revisit` for its next season: St. Andrew, Ocean City ('seasonal mission of St. Luke – open May 23 – Sept. 6'), St. Mary Star of the Sea, Church Creek ('Memorial Day weekend through late September'), and St. Mary Star of the Sea, Ocean City if its Sunday Mass is summer-only. (accepted by survey-review, 002-survey-review, 2026-10-27) Sources can disagree on the season: for Church Creek the bulletin says Memorial Day through Labor Day weekend, the parish site to the last Sunday in September; record each source's dates and don't pick (map 020, batch `talbot-dorchester`, 2026-10-27).
+- **A seasonal worship site keeps its church row** with a dated `revisit` for its next season: St. Andrew, Ocean City ('seasonal mission of St. Luke – open May 23 – Sept. 6'), St. Mary Star of the Sea, Church Creek ('Memorial Day weekend through late September'), and St. Mary Star of the Sea, Ocean City if its Sunday Mass is summer-only. (accepted by survey-review, 002-survey-review, 2026-10-27) Sources can disagree on the season: for Church Creek the bulletin says Memorial Day through Labor Day weekend, the parish site to the last Sunday in September; record each source's dates and don't pick (map 020, batch `talbot-dorchester`, 2026-10-27). A summer-guide season note can be wrong: it marks St. Mary Star of the Sea, Ocean City's Sunday 7 AM '(Memorial Day – Labor Day)', but the November bulletin and the parish's Mass-times page show it year-round, so that church is not seasonal. Read an off-season bulletin before making a church seasonal (map 026, batch `ocean-city`, 2026-10-27).
 - **A directory Mass time is not proof of a weekly Mass.** A chapel's single time in the `directory` roster can be one annual Mass (St. Patrick Chapel, Conowingo: 'Sat 10:00' is the 12 September annual Mass; the bulletin says 'As Announced'), so check the bulletin before recording a time as weekly. (map 014, batch `cecil-good-shepherd`, 2026-10-27; whether such a chapel stays a church with no weekly times is flagged to the owner by that batch) The roster's other per-church details are no better: a two-church parish's entry can merge both churches' Mass slots (St. Benedict, Ridgely lists St. Elizabeth's Friday and Saturday times), a reopened mission can show none (St. Peter, Queenstown; map 019, batch `mid-shore-north`, 2026-10-27), and a mission's ZIP can be the parent's, in the directory and in GCatholic (St. Michaels given Easton's 21601 by both, Cordova by GCatholic; map 020, batch `talbot-dorchester`, 2026-10-27). Take each church's Mass times and ZIP from the bulletin's schedule block, which prints each church's address. Read the heading over each time there: a bulletin's devotions list can give a mission a weekly service that is not Mass (Our Lady of Guadalupe, Frankford: a Friday 6:30 PM Spanish prayer service and rosary; map 022, batch `sussex-beaches`, 2026-10-27).
 
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-10-27: Reconciled (job 028, Run wilmington-map-1) after 19 map batches (6 to 18
+  roster entries each, usually 8 to 10). Records: 50 parish rows (48 with a bulletin; St.
+  Thomas More Oratory and Holy Name of Jesus, Pocomoke `no_bulletin`), 77 churches, 5
+  excluded, 2 open. Coverage: directory 79/79 accounted for (72/76 modelled), GCatholic
+  80/80 (70/75), summer guide 34/34 (34/34); one church in no roster (St. John the Baptist,
+  Newark, explained in its record). No merges or moves: every batch flag was an owner
+  question or already recorded. The audit's real candidates (shared-pastor pairs and the
+  four Bonventure-hosted parishes) are now 16 content-supported `separate` reviews; its
+  other 1,112 pairs come only from the deanery `group`s and GCatholic's empty group (`,` on
+  all 80 entries). `fetch:check` on all 48 rows: 48 distinct files; 38 this week's issue,
+  five next week's (`future`), St. Luke's two-date cover (`conflict`), Good Shepherd
+  undated (24-25 October on the cover); not current: St. Paul, Wilmington (2 August, 86
+  days), St. Joseph, Wilmington (11 October, 16 days), and St. Ann, Bethany Beach (Discover
+  Mass daily cap; retry from 2026-10-28).
 
 - 2026-10-27: Initialised (factory survey, Run wilmington-map-1). Rosters: GCatholic (80
   entries), the cdow.org parish map as `directory` (79), the Summer Vacation Mass Guide as

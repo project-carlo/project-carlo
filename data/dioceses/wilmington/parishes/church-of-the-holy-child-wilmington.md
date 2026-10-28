@@ -32,7 +32,10 @@ publication_reviews:
     seen: 2026-10-27
     quote: Church of the Holy Child
     note: 'Holy Child''s 18 October 2026 issue: its own cover, Mass intentions (e.g. ''9:00 a.m.   Brenda
-      Howard ~ Rosemary Lynch'') and a second collection ''for Parish Deficit Reduction''.'
+      Howard ~ Rosemary Lynch'') and a second collection ''for Parish Deficit Reduction''. Checked 2026-10-27:
+      each masthead names its own parish only (Church of the Holy Child; St. Helena Church). Holy Child''s
+      issue names St. Helena only in a deanery parish list (p.3) and a staff line (p.7); St. Helena''s
+      names Holy Child only in a deanery list (p.3).'
   - url: https://www.church-bulletin.org/bulletin/saint-helena-s-church-wilmington-de-19809/2026-10-25.pdf
     seen: 2026-10-27
     quote: ST. HELENA CHURCH

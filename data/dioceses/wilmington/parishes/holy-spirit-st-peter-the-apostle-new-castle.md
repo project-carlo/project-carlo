@@ -35,7 +35,9 @@ publication_reviews:
     quote: Rev. Timothy M. Nolan, Pastor
     note: '25 October 2026 joint Holy Spirit / St. Peter issue: its own cover, Mass schedules for those
       two churches and pastor; its food-pantry strip names Our Lady of Fatima and St. Paul only as ministry
-      partners.'
+      partners. Checked 2026-10-27: the Holy Spirit / St. Peter masthead lists those two churches only;
+      Our Lady of Fatima''s names Fatima alone and its text has no Holy Spirit or St. Paul content. The
+      only cross-mention is the food-pantry strip (p.4) naming all four parishes as partners.'
   - url: https://www.church-bulletin.org/bulletin/our-lady-of-fatima-church-new-castle-de-19720/2026-10-25.pdf
     seen: 2026-10-27
     quote: Rev. David F. Murphy, Pastor
@@ -49,7 +51,9 @@ publication_reviews:
     quote: Rev. Timothy M. Nolan, Pastor
     note: '25 October 2026 joint Holy Spirit / St. Peter issue: its own cover, Mass schedules for those
       two churches and pastor; its food-pantry strip names Our Lady of Fatima and St. Paul only as ministry
-      partners.'
+      partners. Checked 2026-10-27: the Holy Spirit / St. Peter masthead lists those two churches only;
+      St. Paul''s one-page issue names St. Paul alone and mentions neither Holy Spirit nor St. Peter.
+      The only cross-mention is the food-pantry strip (p.4) naming all four parishes as partners.'
   - url: https://stpauldc.org/wp-content/uploads/2026/10/B102526.pdf
     seen: 2026-10-27
     quote: Saturday Oct. 24 - 5:00pm

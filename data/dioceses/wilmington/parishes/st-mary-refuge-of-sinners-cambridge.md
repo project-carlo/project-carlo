@@ -42,8 +42,11 @@ publication_reviews:
   - url: https://container.parishesonline.com/bulletins/04/0661/20261101B.pdf
     seen: 2026-10-27
     quote: 'Phone: 410-943-4300'
-    note: Cambridge's issue of 1 November 2026 prints the pastor's Secretary phone and email but its Mass
-      boxes cover only the two St. Mary churches.
+    note: 'Cambridge''s issue of 1 November 2026 prints the pastor''s Secretary phone and email but its
+      Mass boxes cover only the two St. Mary churches. Checked 2026-10-27: Cambridge''s masthead and Mass
+      boxes list the two St. Mary churches only; Secretary''s bulletin names Our Lady of Good Counsel
+      alone. Each names the other only in a news item (Cambridge p.2, a Veterans event at Good Counsel;
+      Secretary p.2, an All Souls Mass at Refuge of Sinners).'
   - url: https://www.ourladyofgoodcounselchurch.com/images/Bulletin_11.1.26.pdf
     seen: 2026-10-27
     quote: Sunday morning Mass @ 11:00am

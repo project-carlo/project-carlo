@@ -30,7 +30,9 @@ publication_reviews:
     seen: 2026-10-27
     quote: Msgr. John P. Hopkins
     note: 'St. Joseph''s 25 October 2026 issue: its own pastor, schedule (Saturday 5:00 p.m., Sunday 7:30
-      and 10:00) and Knights council (15436).'
+      and 10:00) and Knights council (15436). Checked 2026-10-27: St. Joseph''s masthead names St. Joseph
+      on the Brandywine alone and its text never names St. Ann, St. Thomas or Fr. Lentini; the St. Ann
+      file names St. Joseph on the Brandywine only in a list of nearby parishes (p.6).'
   - url: https://files.ecatholic.com/38453/bulletins/20261025.pdf
     seen: 2026-10-27
     quote: Rev. James Lentini

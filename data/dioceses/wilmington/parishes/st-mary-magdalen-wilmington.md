@@ -31,7 +31,8 @@ publication_reviews:
     seen: 2026-10-27
     note: 'St. Mary Magdalen''s 25 October 2026 issue (page 1, rendered): masthead for this parish alone,
       pastor Msgr. Steven P. Hurley, Saturday vigil 4:30pm; no St. Ann or St. Thomas content seen on pages
-      1-2.'
+      1-2. Checked 2026-10-27: St. Mary Magdalen''s rendered masthead names that parish alone; the St.
+      Ann / St. Thomas file never names St. Mary Magdalen or Msgr. Hurley.'
   - url: https://files.ecatholic.com/38453/bulletins/20261025.pdf
     seen: 2026-10-27
     quote: Rev. James Lentini

@@ -32,7 +32,9 @@ publication_reviews:
     seen: 2026-10-27
     note: 'Resurrection''s 25 October 2026 cover (rendered image): own title and address (3000 Videre
       Dr.), same pastor and associate (Okorie), Mass Saturday 5:00pm, Sunday 9:30am, Monday and Thursday
-      8:30am; running head ''310'', not Holy Family''s 308.'
+      8:30am; running head ''310'', not Holy Family''s 308. On 2026-10-27 each cover masthead names one
+      parish with its own address and Mass schedule; Resurrection''s text names Holy Family only for a
+      ''Holy Family Raise Right program'' (p.4).'
   - url: https://www.church-bulletin.org/bulletin/holy-family-catholic-church-newark-de-19713/2026-10-25.pdf
     seen: 2026-10-27
     note: 'Holy Family''s 25 October 2026 cover (rendered image): own banner and address (15 Gender Road),

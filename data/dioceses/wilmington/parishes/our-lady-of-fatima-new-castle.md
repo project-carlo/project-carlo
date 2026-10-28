@@ -24,7 +24,9 @@ publication_reviews:
     seen: 2026-10-27
     quote: Rev. David F. Murphy, Pastor
     note: '25 October 2026 Our Lady of Fatima issue: own masthead, Mass schedule (Sat 5PM and 7:30PM Spanish;
-      Sun 9:30AM, Noon) and content.'
+      Sun 9:30AM, Noon) and content. Checked 2026-10-27: Our Lady of Fatima''s masthead names Fatima alone;
+      the Holy Spirit / St. Peter masthead lists those two churches only. The only cross-mention is Holy
+      Spirit''s food-pantry strip (p.4) naming all four parishes as partners.'
   - url: https://container.parishesonline.com/bulletins/03/1089/20261025B.pdf
     seen: 2026-10-27
     quote: Rev. Timothy M. Nolan, Pastor
@@ -38,7 +40,9 @@ publication_reviews:
     seen: 2026-10-27
     quote: Rev. David F. Murphy, Pastor
     note: '25 October 2026 Our Lady of Fatima issue: own masthead, Mass schedule (Sat 5PM and 7:30PM Spanish;
-      Sun 9:30AM, Noon) and content.'
+      Sun 9:30AM, Noon) and content. Checked 2026-10-27: Our Lady of Fatima''s masthead names Fatima alone
+      and its text never names St. Paul; St. Paul''s one-page issue names St. Paul alone and never names
+      Fatima.'
   - url: https://stpauldc.org/wp-content/uploads/2026/10/B102526.pdf
     seen: 2026-10-27
     quote: Saturday Oct. 24 - 5:00pm

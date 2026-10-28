@@ -33,6 +33,17 @@ evidence:
     parish site links as its Current Bulletin (identical bytes, 25 October 2026 on page 1), so the listing
     and the parish copy are one bulletin. Identity and date report unverified/unknown by the tool (no
     masthead date it can read); I read both from page 1.
+research:
+- method: 'reconcile fetch:check (PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese
+    wilmington); the Discover Mass download answered 134 bytes: ''Maximum number of files downloaded today.'''
+  url: https://discovermass.com/church/st-ann-bethany-beach-de/
+  checked: '2026-10-27'
+  outcome: access-blocked
+  next_action: Rerun pnpm fetch:check --diocese wilmington --parish st-ann-our-lady-of-guadalupe-bethany-beach
+    and confirm it picks the newest St. Ann issue (the map job's check the same day picked the 3,459,373-byte
+    25 October 2026 issue)
+  retry_when: Discover Mass's per-IP daily download cap resets (from 2026-10-28)
+  revisit_after: 2026-10-28
 ---
 
 ## Publisher

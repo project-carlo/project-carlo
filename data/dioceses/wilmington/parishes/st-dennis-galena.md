@@ -39,10 +39,12 @@ publication_reviews:
   evidence:
   - url: https://www.church-bulletin.org/bulletin/saint-dennis-catholic-church-galena-md-21635/2026-10-25.pdf
     seen: 2026-10-27
-    note: St. Dennis's 25 October 2026 cover is headed 'St. Dennis Catholic Church' with its own Mass
-      schedule (Sunday 8 am and 11 am Spanish, Thursday & Friday 8:30 am); St. Polycarp's cover of the
+    note: 'St. Dennis''s 25 October 2026 cover is headed ''St. Dennis Catholic Church'' with its own Mass
+      schedule (Sunday 8 am and 11 am Spanish, Thursday & Friday 8:30 am); St. Polycarp''s cover of the
       same date is a different John Patrick file (listing 301) headed by its own schedule (Saturday 4
-      pm, Sunday 10:30 am, Tuesday & Wednesday 8:30 am). Same pastor, different bulletins.
+      pm, Sunday 10:30 am, Tuesday & Wednesday 8:30 am). Same pastor, different bulletins. Checked 2026-10-27:
+      St. Dennis''s rendered cover masthead names St. Dennis Catholic Church alone with its own Mass schedule;
+      St. Polycarp''s cover of the same date names St. Polycarp with a different schedule.'
 ---
 
 ## Publisher

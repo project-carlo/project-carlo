@@ -27,7 +27,9 @@ publication_reviews:
     seen: 2026-10-27
     quote: Saturday Oct. 24 - 5:00pm
     note: '25 October 2026 St. Paul issue: one page, own Mass intentions (Sat 5:00pm, Sun 9:00am) and
-      Christmas bazaar notice, different publisher.'
+      Christmas bazaar notice, different publisher. Checked 2026-10-27: St. Paul''s one-page issue names
+      St. Paul alone; the Holy Spirit / St. Peter masthead lists those two churches only, naming St. Paul
+      only in a food-pantry partner strip (p.4).'
   - url: https://container.parishesonline.com/bulletins/03/1089/20261025B.pdf
     seen: 2026-10-27
     quote: Rev. Timothy M. Nolan, Pastor
@@ -41,7 +43,9 @@ publication_reviews:
     seen: 2026-10-27
     quote: Saturday Oct. 24 - 5:00pm
     note: '25 October 2026 St. Paul issue: one page, own Mass intentions (Sat 5:00pm, Sun 9:00am) and
-      Christmas bazaar notice, different publisher.'
+      Christmas bazaar notice, different publisher. Checked 2026-10-27: St. Paul''s one-page issue names
+      St. Paul alone and never names Fatima; Our Lady of Fatima''s masthead names Fatima alone and its
+      text never names St. Paul.'
   - url: https://www.church-bulletin.org/bulletin/our-lady-of-fatima-church-new-castle-de-19720/2026-10-25.pdf
     seen: 2026-10-27
     quote: Rev. David F. Murphy, Pastor

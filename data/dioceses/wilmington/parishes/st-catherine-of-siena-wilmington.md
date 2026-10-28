@@ -30,7 +30,9 @@ publication_reviews:
   - url: https://container.parishesonline.com/bulletins/03/1410/20261025B.pdf
     seen: 2026-10-27
     quote: St. Catherine of Siena Church, Wilmington, DE 03-1410
-    note: St. Catherine's own container 03/1410, bilingual masthead and Mass schedule on page 1 (image).
+    note: 'St. Catherine''s own container 03/1410, bilingual masthead and Mass schedule on page 1 (image).
+      Checked 2026-10-27: each masthead names one parish only (St. Catherine of Siena; St. John the Beloved),
+      with its own Mass schedule.'
   - url: https://container.parishesonline.com/bulletins/03/1288/20261025B.pdf
     seen: 2026-10-27
     quote: St. John the Beloved Parish, Wilminton, DE 03-1288
