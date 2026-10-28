@@ -164,9 +164,13 @@ def standings(config: Config, fetch: Fetch = fetch_usage,
 
 
 def choose(rows: list[Standing], *, only: str | None = None) -> Standing | None:
-    """The eligible account with the most headroom (or the job's own account)."""
+    """The eligible account whose weekly window resets soonest (or the job's own account).
+
+    Whatever an account hasn't used by its weekly reset is lost, so the one resetting first
+    is drained first. Between accounts resetting at the same time, the most headroom wins.
+    """
     eligible = [s for s in rows if s.eligible and (only is None or s.account.name == only)]
-    return max(eligible, key=lambda s: s.headroom, default=None)
+    return min(eligible, key=lambda s: (s.usage.seven_day_resets, -s.headroom), default=None)
 
 
 def next_eligible(rows: list[Standing], *, only: str | None = None) -> datetime | None:

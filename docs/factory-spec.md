@@ -199,9 +199,11 @@ Each tick:
    override the caps.
 
    **Accounts.** Each account has its own config directory (`CLAUDE_CONFIG_DIR`), which
-   holds its login and session transcripts. A new job goes to the eligible account with the
-   most headroom, and **stays on that account** for its whole life, because it can only be
-   resumed from where its transcript is stored.
+   holds its login and session transcripts. A new job goes to the eligible account whose
+   weekly window resets soonest, so an account's allowance is used before its reset rather
+   than lost (between accounts resetting together, the one with the most headroom). It
+   **stays on that account** for its whole life, because it can only be resumed from where
+   its transcript is stored.
 
    Each account is signed in once with `claude /login` under its config directory. The
    Agent SDK runs the Claude Code binary, so jobs use that subscription login, not an API

@@ -58,6 +58,7 @@ from pdf_extract.factory.quota import (
 from pdf_extract.factory.stages import in_scope
 from pdf_extract.factory.tokens import from_result, parse_transcript
 from pdf_extract.factory.usage import (
+    Standing,
     Usage,
     UsageError,
     account_plan,
@@ -1102,6 +1103,23 @@ def test_usage_caps_and_weekly_pacing() -> None:
             for n, u in (("a", 50), ("b", 20))]
     assert choose(rows).account.name == "b"
     assert choose(rows, only="a").account.name == "a"
+
+
+def test_choose_prefers_the_account_resetting_soonest() -> None:
+    config = Config(five_hour_cap=75, weekly_cap=100)
+    at = datetime(2026, 11, 5, tzinfo=UTC)
+
+    def row(name: str, five: float, week: float, resets_in: timedelta) -> Standing:
+        return standing(Account(name, Path("/x")), Usage(five, at + timedelta(hours=2), week,
+                                                         at + resets_in), config, at)
+
+    # "b" has less headroom but resets first: its unused allowance would be lost.
+    rows = [row("a", 0, 10, timedelta(days=3)), row("b", 60, 50, timedelta(hours=6))]
+    assert choose(rows).account.name == "b"
+    # An account over its caps is skipped however soon it resets.
+    rows = [row("a", 0, 10, timedelta(days=3)), row("b", 80, 50, timedelta(hours=6))]
+    assert choose(rows).account.name == "a"
+    assert choose(rows, only="b") is None
 
 
 @pytest.mark.parametrize("source", ["defaults", "repository"])
