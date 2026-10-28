@@ -250,6 +250,9 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- St. Patrick, Kennett Square's own WordPress /bulletins/ page carries a 2026-10-25.pdf byte-identical (md5) to John Patrick listing 236's issue, with irregular file names across months; keep the listing as the page-pdfs channel and note the parish copy as equal.
+- GCatholic can give a different ZIP than the bulletin (St. Gabriel, Avondale: 19350 vs 19311); follow the parish's own ZIP and leave address_verified false.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
