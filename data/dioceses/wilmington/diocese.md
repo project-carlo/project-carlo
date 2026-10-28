@@ -289,6 +289,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A summer-guide season note can be wrong: St. Mary Star of the Sea, Ocean City's Sunday 7 AM is marked '(Memorial Day – Labor Day)' but the November bulletin and the parish Mass-times page (which lists it in both seasons) show it year-round, so read the off-season bulletin before making a church seasonal.
 - A Duda/WeConnect bulletins page's LPi widget can be written `publicationWidget?type=bulletin&color=gray&id=<lpi id>` (id not first): grep `id=0018` and run `probe po <lpi id>` (St. Luke 0018000000Qc275AAB, St. Mary & Holy Savior 0018000000Qx8zFAAR). A WeConnect site (stjohnneumannrcc.com /publications) links parishesonline.com/publication-page/<org>?selectedPublication=<container url> per issue.
 - An LPi cover can print two dates ('October 25, 2026 / November 1, 2026'), which makes fetch:check report issue_date `conflict` for a correct current pick.
+- Eastern Catholic parishes: confirm the jurisdiction on the eparchy's own parish list (Archeparchy of Philadelphia: ukrcatholic.org/parishes, formerly ukrarcheparchy.us) and on GCatholic's 'Jurisdiction:' line.
+- GCatholic's 'Jurisdiction:' line names the Archdiocese for the Military Services for a base chapel; dover.af.mil answers 403 to curl/probe url but loads with visit.py.
+- Note: archmil.org is the Archdiocese of Milwaukee; the Military Services archdiocese is milarch.org.
 
 ## Rules settled for this diocese
 
