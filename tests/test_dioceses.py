@@ -472,6 +472,13 @@ def test_gcatholic_pages_parse() -> None:
                             "index_city": "Forestport", "group": "Christ our Hope Parish",
                             "kind": "Mission"}
     assert rows[1]["rite"] == "Greek-Melkite"
+    # A diocese across two states (Wilmington: DE and MD) adds ", DE" after the town.
+    two_states = rosters.parse_gcatholic_index(
+        '<tr id="L1"><td><span class="znote">Bear</span><span class="znote">, </span>'
+        '<span class="zregion">DE</span></td><td>'
+        '<a href="../usa-04/19333" title="Church of St. Elizabeth Ann Seton"><img></a> '
+        '<a href="../usa-04/19333" class="chw">St. Elizabeth Ann Seton</a></td></tr>')
+    assert two_states[0]["index_city"] == "Bear" and two_states[0]["group"] == ""
     detail = rosters.parse_gcatholic_detail(
         "<div>Type: Church Rite: Roman (Latin) History: 1914 Location: 87J67GR9+RC "
         "Address: 34 S Main St., Bainbridge, New York 13733-1215 Country: USA "
@@ -525,6 +532,27 @@ def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     broken = web.Response("u", 200, "u", "application/pdf", b"%PDF-1.7\n1 0 obj")
     monkeypatch.setattr(web, "fetch", lambda url, **kw: broken)
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
+
+
+def test_probe_get_prints_text_saves_files_and_names_blocks(monkeypatch, tmp_path) -> None:
+    bodies = {
+        "https://a.org/": web.Response("https://a.org/", 200, "https://a.org/", "text/html",
+                                       b"<title>St. Ann</title><p>Mass 9 am</p>"),
+        "https://a.org/b.pdf": web.Response("https://a.org/b.pdf", 200, "https://a.org/b.pdf",
+                                            "application/pdf", b"%PDF-1.7 bulletin"),
+        "https://cf.org/": web.Response("https://cf.org/", 403, "https://cf.org/",
+                                        error="HTTP 403"),
+        "https://bv.net/x.pdf": web.Response(
+            "https://bv.net/x.pdf", error="SSLCertVerificationError: [SSL: "
+            "CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate"),
+    }
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: bodies[url])
+    assert "Mass 9 am" in web.get("https://a.org/")["text"]
+    assert "probe pdf" in web.get("https://a.org/b.pdf")["note"]
+    saved = web.get("https://a.org/b.pdf", out=tmp_path / "b.pdf")
+    assert (tmp_path / "b.pdf").read_bytes() == b"%PDF-1.7 bulletin" and saved["bytes"] == 17
+    assert "visit.py" in web.get("https://cf.org/")["note"]
+    assert "http://" in web.get("https://bv.net/x.pdf")["note"]
 
 
 def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -717,6 +745,16 @@ def test_reviewed_shared_site_survives_promotion_import_and_fetch(root, tmp_path
             )
             expected = "Anne" if row["slug"] == "st-ann" else "Bede"
             assert link.source_url == f"https://family.example/{expected}-Bulletin-20260927.pdf"
+
+
+def test_write_warns_about_a_review_audit_will_not_count(root):
+    _parish("st-ann")
+    weak = _separate_review(evidence=[{**EVIDENCE[0], "note": "Own masthead and Mass times."}])
+    result = _parish("st-bede", publication_reviews=[weak])
+    assert any("audit won't count this review (it doesn't say whose bulletin it is)" in w
+               for w in result["warnings"])
+    assert not any("audit won't count" in w for w in _parish(
+        "st-cecilia", publication_reviews=[_separate_review()])["warnings"])
 
 
 @pytest.mark.parametrize("filename,reviews", [

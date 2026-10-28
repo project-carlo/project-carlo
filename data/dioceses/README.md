@@ -177,6 +177,13 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   `[{parish: peer-slug, decision: separate|shared, evidence: [{url, seen, quote?, note?}]}]`.
   Use dated content evidence; different URLs alone don't support `separate`. A `shared`
   review records the finding; use `merge` to change structure after reviewing its effects.
+  `audit` counts a review only if one evidence item has an http(s) `url`, a `seen` date and
+  a note saying whose bulletin it is, in these words: "serves …", "published by …",
+  "bulletin for …", or "masthead" with "names", "lists", "includes" or "shows". For
+  example: `note: The 25 October 2026 masthead names St. Ann alone, with its own Mass
+  times.` "Own masthead" or "different cover" alone don't count, nor does "not … read" or
+  "need to check" in the same sentence. `write` and `validate` warn about a review audit
+  won't count, and say why.
 - `group`: the diocese's grouping, e.g. `Family #31`.
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
   `rename`; `promote` deletes those live rows. A promoted successor retains ownership of
@@ -471,7 +478,7 @@ Each of these produced a confident wrong answer in Buffalo at least once.
 - **Directory street numbers are sometimes PO boxes** ("1154 Lower College Dr" was
   "PO Box 1154"), and one building can have an address on two streets.
 - **A summarizing fetch tool is not a source.** For a quote, read the page itself (`probe
-  pdf`, `curl`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
+  pdf`, `probe get`, the recheck tool). One summary moved a 2020 merger to 2026. The article's
   weekdays gave the real year.
 - **A hand-written `quote:` or `note:` containing ": " breaks the YAML.** Quote the value
   (`note: 'Page 1: the masthead'`). `validate` catches it, but only after the whole file is
@@ -512,6 +519,7 @@ pnpm diocese probe sites <d> [--all]
 pnpm diocese probe po <org slug | LPi id>... [--issues N]
 pnpm diocese probe container <a/b> [--weeks N --from date --step N --all --pages N]
 pnpm diocese probe pdf <url> [--pages N] [--chars N] [--grep text] [--grep text2 ...]
+pnpm diocese probe get <url> [--out file] [--chars N]   # instead of curl: page, PDF or JSON
 pnpm diocese recheck <d> [slug ...] [--kind k] [--all]
 
 pnpm diocese export  <d> --out-dir DIR

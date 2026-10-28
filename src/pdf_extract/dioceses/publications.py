@@ -17,8 +17,11 @@ _MEMBER_DETAIL = re.compile(
     r"\b(names?|lists?|includes?|identifies|shows?)\b",
     re.I,
 )
+# Within one sentence: "running head 310, not Holy Family's 308. Checked 2026-10-27"
+# observed both. Abbreviations ("St.", "Msgr.") don't end a sentence.
+_IN_SENTENCE = r"(?:[^.;!?]|\b(?:St|Sts|Ste|Mt|Rev|Msgr|Fr|Sr|Dr|No|Nos|p|pp)\.)"
 _NOT_OBSERVED = re.compile(
-    r"\b(?:not|never|haven't|hasn't|didn't|without)\b.{0,60}"
+    rf"\b(?:not|never|haven't|hasn't|didn't|without)\b{_IN_SENTENCE}{{0,60}}"
     r"\b(?:read|inspect\w*|check\w*|observ\w*|compar\w*)\b|"
     r"\b(?:unread|uninspected|unchecked|unverified)\b|"
     r"\b(?:need(?:s)? to|must|will|should|plan to)\b.{0,40}"
@@ -35,20 +38,32 @@ def _http_url(value: str) -> bool:
         return False
 
 
-def supported_review(review: Mapping[str, Any]) -> bool:
-    """Require a content explanation, not just URL/account differences.
+REVIEW_WORDING = ("a dated http(s) url and a note of 5+ words on whose bulletin it is: "
+                  "'serves …', 'published by …', 'bulletin for …', or 'masthead' with "
+                  "'names/lists/includes/shows …'")
 
-    This is a conservative evidence gate, not automatic masthead analysis.
-    Keep unsupported reviews in the output so a person can improve them.
+
+def review_gap(review: Mapping[str, Any]) -> str | None:
+    """Why `supported_review` turns this review down, or None when it doesn't.
+
+    The gap is the first evidence item's, since every item fails.
     """
     evidence_items = review.get("evidence")
     if not isinstance(evidence_items, list):
-        return False
+        return "no evidence list"
+    gaps = []
     for evidence in evidence_items:
         if not isinstance(evidence, Mapping):
             continue
         text = " ".join(str(evidence.get(k) or "") for k in ("quote", "note"))
+        if not (_http_url(str(evidence.get("url") or "")) and evidence.get("seen")):
+            gaps.append("no http(s) url with a seen date")
+            continue
+        if len(text.split()) < 5:
+            gaps.append("quote and note under 5 words")
+            continue
         if _NOT_OBSERVED.search(text):
+            gaps.append("it reads as not yet observed ('not … checked', 'need to read')")
             continue
         content = _CONTENT.search(text) or (
             re.search(r"\b(mastheads?|members?|membership)\b", text, re.I)
@@ -58,11 +73,22 @@ def supported_review(review: Mapping[str, Any]) -> bool:
         if (re.search(r"\b(ids?|identifiers?|urls?|accounts?|containers?)\b", text, re.I)
                 and not re.search(r"\b(mastheads?|members?|membership|serves|serving|"
                                   r"published|publishes|coverage)\b", text, re.I)):
-            content = False
-        if (_http_url(str(evidence.get("url") or "")) and evidence.get("seen")
-                and len(text.split()) >= 5 and content):
-            return True
-    return False
+            gaps.append("only ids, urls or accounts differ")
+            continue
+        if not content:
+            gaps.append("it doesn't say whose bulletin it is")
+            continue
+        return None
+    return gaps[0] if gaps else "no evidence items"
+
+
+def supported_review(review: Mapping[str, Any]) -> bool:
+    """Require a content explanation, not just URL/account differences.
+
+    This is a conservative evidence gate, not automatic masthead analysis.
+    Keep unsupported reviews in the output so a person can improve them.
+    """
+    return review_gap(review) is None
 
 
 def separate_recipes(left: Mapping[str, Any], right: Mapping[str, Any]) -> bool:

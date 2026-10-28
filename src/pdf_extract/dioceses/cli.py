@@ -221,6 +221,7 @@ HANDLERS: dict[str, Handler] = {
         pages=a.pages, chars=a.chars),
     "probe-po": lambda a: {"results": [web.parishes_online_org(k, issues=a.issues)
                                        for k in a.keys]},
+    "probe-get": lambda a: web.get(a.url, out=Path(a.out) if a.out else None, chars=a.chars),
     "probe-pdf": lambda a: web.pdf_text(a.url, pages=a.pages, chars=a.chars, grep=a.grep or ()),
     "recheck": _recheck,
     "export": lambda a: records.export_csv(a.diocese, Path(a.out_dir)),
@@ -377,7 +378,7 @@ def add_diocese_parser(
     p.add_argument("--fetch", action="store_true",
                    help="also read each undecided row's website for the publication ids it embeds")
 
-    probe = group("probe", "Look things up on the web (nothing is written)")
+    probe = group("probe", "Look things up on the web (no records are written)")
     p = leaf("url", "probe-url",
              "Is a website alive, whose is it now, which bulletin does it embed?", probe)
     p.add_argument("urls", nargs="+")
@@ -399,6 +400,12 @@ def add_diocese_parser(
              "publication ids and latest bulletins", probe)
     p.add_argument("keys", nargs="+", help="org slug, LPi publicationWidget id, or org URL")
     p.add_argument("--issues", type=int, default=6, help="how many recent issues to list")
+    p = leaf("get", "probe-get",
+             "Fetch one URL (a page, PDF or JSON API) with the probes' own client; use it "
+             "instead of curl", probe)
+    p.add_argument("url")
+    p.add_argument("--out", help="save the body here as fetched, instead of printing its text")
+    p.add_argument("--chars", type=int, default=20000, help="text to print (without --out)")
     p = leaf("pdf", "probe-pdf", "Text of a bulletin PDF, and where given words occur", probe)
     p.add_argument("url")
     p.add_argument("--pages", type=int, default=3, help="readable pages to include")

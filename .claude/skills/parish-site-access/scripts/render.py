@@ -1,18 +1,20 @@
-"""Render bulletin PDF pages to PNG, to read the ones with no text layer.
+"""Render bulletin PDF pages to images, to read the ones with no text layer.
 
 Many bulletins are scanned images: `probe pdf` lists them under
 `pages_without_text`, and a masthead or Mass schedule on such a page is
 invisible to it. The sandbox has no pdftoppm, PIL or tesseract, so this renders
 the pages with pdf.js (from cdn.jsdelivr.net) in the installed Chrome. Look at
-the PNGs with the Read tool. What you read off an image is evidence like any
+the images with the Read tool. What you read off an image is evidence like any
 quote: cite the PDF's URL and say in the `note` that the page is an image.
 
 Usage (from the repo root; run setup_browser.sh once first):
   uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
-      [--pages 1,3-5] [--scale 1.6]
+      [--pages 1,3-5] [--scale 1.6] [--png]
 
-Writes OUT_PREFIX-p<N>.png for each page (every page without --pages) and
-prints JSON: {"pdf", "page_count", "images": [...]}.
+Writes OUT_PREFIX-p<N>.jpg for each page (every page without --pages) and
+prints JSON: {"pdf", "page_count", "images": [...], "bytes": [...]}. JPEG keeps a
+scanned page to a few hundred KB; as PNG one can pass 1 MB, which is slow to read
+and once crashed the factory's workers. --png for line art that JPEG blurs.
 """
 
 from __future__ import annotations
@@ -26,6 +28,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[4]
+JPEG_QUALITY = 80
 PDFJS = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build"
 PAGE = f"""<html><body style="margin:0;background:#fff"><script type="module">
 import * as pdfjs from '{PDFJS}/pdf.min.mjs';
@@ -78,6 +81,7 @@ def main() -> int:
     parser.add_argument("out", type=Path, help="output prefix, e.g. /tmp/bulletin")
     parser.add_argument("--pages", help="page numbers and ranges, e.g. 1,3-5 (default: all)")
     parser.add_argument("--scale", type=float, default=1.6)
+    parser.add_argument("--png", action="store_true", help="PNG instead of JPEG")
     args = parser.parse_args()
 
     data = base64.b64encode(_pdf_bytes(args.pdf)).decode()
@@ -100,12 +104,16 @@ def main() -> int:
                     continue
                 width, height = page.evaluate("([s, n]) => window.render(s, n)", [args.scale, n])
                 page.set_viewport_size({"width": width, "height": height})
-                path = f"{args.out}-p{n}.png"
-                page.locator("#c").screenshot(path=path)
+                path = f"{args.out}-p{n}.{'png' if args.png else 'jpg'}"
+                if args.png:
+                    page.locator("#c").screenshot(path=path, type="png")
+                else:
+                    page.locator("#c").screenshot(path=path, type="jpeg", quality=JPEG_QUALITY)
                 images.append(path)
         finally:
             browser.close()
-    print(json.dumps({"pdf": args.pdf, "page_count": count, "images": images}, indent=2))
+    print(json.dumps({"pdf": args.pdf, "page_count": count, "images": images,
+                      "bytes": [os.path.getsize(i) for i in images]}, indent=2))
     return 0
 
 

@@ -138,6 +138,31 @@ def test_url_and_native_id_differences_do_not_support_a_separate_review(dataset,
     assert not candidate["reviews"][0]["content_supported"]
 
 
+@pytest.mark.parametrize("text", [
+    # Wilmington: a "not" in one sentence and "Checked" in the next were read as unobserved.
+    "Running head '310', not Holy Family's 308. Checked 2026-10-27: each masthead names its "
+    "own parish only.",
+    "Ann's masthead names St. Ann alone, not St. Bede; St. Bede's lists Bede alone.",
+])
+def test_negation_in_another_sentence_does_not_unsay_an_observed_review(dataset, text):
+    dataset({"a": {"publication_reviews": [review(text=text)]}, "b": {}})
+    assert pair(report.audit("test"))["reviews"][0]["content_supported"]
+
+
+@pytest.mark.parametrize("text,gap", [
+    ("Different native publication IDs establish separate bulletins.", "only ids"),
+    ("Own masthead, Mass schedule and intentions.", "whose bulletin"),
+    ("The masthead names St. Ann but was not yet checked against St. Bede's.",
+     "not yet observed"),
+    ("Masthead names Ann.", "under 5 words"),
+])
+def test_review_gap_says_why_a_review_is_turned_down(text, gap):
+    from pdf_extract.dioceses.publications import review_gap
+
+    assert gap in review_gap(review(text=text))
+    assert review_gap(review()) is None
+
+
 def test_conflicting_reviews_remain_unresolved(dataset):
     dataset({"a": {"publication_reviews": [review()]},
              "b": {"publication_reviews": [review("a", "shared", text=(

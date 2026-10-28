@@ -246,8 +246,11 @@ def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
                          row, flags=re.S)
         if not link:
             continue
-        notes = [web.html_text(n).strip() for n in
-                 re.findall(r'class="znote"[^>]*>(.*?)</span>', row, flags=re.S)]
+        # Dioceses spanning two states list "Bear, DE": the ", " is a znote of its own,
+        # and would otherwise become every church's group.
+        notes = [n for n in (web.html_text(m).strip() for m in
+                             re.findall(r'class="znote"[^>]*>(.*?)</span>', row, flags=re.S))
+                 if re.search(r"\w", n)]
         title = re.search(r'title="([^"]+)"', row)
         rite = re.search(r'class="zrite">([^<]+)</a>', row)
         entry = {

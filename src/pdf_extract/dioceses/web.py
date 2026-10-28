@@ -28,6 +28,7 @@ import unicodedata
 from collections.abc import Iterable
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
@@ -140,6 +141,47 @@ def page_text(resp: Response) -> str:
     if _is_pdf(resp):
         return "\n\n".join(pdf_pages(resp.body))
     return html_text(resp.text())
+
+
+def get(url: str, *, out: Path | None = None, chars: int = 20000) -> dict[str, Any]:
+    """Fetch one URL with the pipeline's own client: a page, a PDF or a JSON API.
+
+    Use it where you'd reach for curl. Its headers are the ones every probe
+    sends, and it verifies TLS; curl with a browser user agent or `-k` is
+    refused, inconsistently, by the sandbox's safety check. `out` saves the body
+    as fetched; otherwise the text of a page (JSON or plain text as is) is
+    returned, up to `chars`. A bot check or block is reported, not retried.
+    """
+    resp = fetch(url)
+    result: dict[str, Any] = {"url": url, "status": resp.status, "final_url": resp.final_url,
+                              "content_type": resp.content_type, "bytes": len(resp.body)}
+    if resp.error:
+        result["error"] = resp.error
+    if resp.truncated:
+        result["truncated"] = True
+    if is_bot_check(resp) or resp.status in (403, 429, 503):
+        result["note"] = ("a bot check or block: open it in a real browser with "
+                          "parish-site-access's visit.py, not with other headers")
+    elif "CERTIFICATE_VERIFY_FAILED" in resp.error and url.startswith("https://"):
+        # Bonventure sends no intermediate certificate; the pipeline fetches it over http.
+        result["note"] = ("the site's certificate doesn't verify: try the http:// URL (the "
+                          "pipeline fetches Bonventure that way) or visit.py; don't turn "
+                          "verification off")
+    if out is not None:
+        if resp.body:
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_bytes(resp.body)
+            result["saved"] = str(out)
+    elif _is_pdf(resp):
+        result.setdefault("note", "a PDF: read it with probe pdf, or save it with --out")
+    elif resp.body:
+        ctype = resp.content_type.lower()
+        raw = resp.text()
+        text = raw if "json" in ctype or ctype.startswith("text/plain") else html_text(raw)
+        result["text"] = text[:chars]
+        if len(text) > chars:
+            result["chars"] = len(text)
+    return result
 
 
 def pdf_text(url: str, *, pages: int = 3, chars: int = 3000,
