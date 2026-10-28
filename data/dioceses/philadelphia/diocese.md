@@ -197,6 +197,12 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish's own eCatholic /bulletins page links files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf; where the parish also has a John Patrick listing the two PDFs are byte-identical (St. Agnes, SS. Peter and Paul), so use the `ecatholic` row and record the JPPC listing as a second publication id.
+- A John Patrick listing with no editions (a daily-readings page only, e.g. St. Maximilian Kolbe 124) means the parish publishes elsewhere: check its own eCatholic /bulletins archive. Conversely an eCatholic archive that stops (SS. Simon and Jude, last 2025-02-16) means the JPPC listing is the current channel.
+- John Patrick PDFs here have no text layer (probe pdf shows 0 readable pages): render page 1 (and page 2 for the Mass schedule) with parish-site-access render.py to read the masthead; fetch:check then reports publication_identity 'unverified' by design.
+- Plain curl of an eCatholic /bulletins page gets a Cloudflare 'Just a moment' stub; `probe get <url> --out file` returns the full page with the PDF links.
+- The directory's `group` ('Chester County West') is the deanery, not a family; `audit` flags every row sharing it, so record separate peer reviews from the mastheads and leave `group` empty. `diocese write` rejects `roster` on a parish record; roster links live on church records.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
