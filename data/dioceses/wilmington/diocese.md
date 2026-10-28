@@ -272,6 +272,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A GoDaddy site's bulletin page can be a stub whose only link is a 'CLICK HERE' button to sponsors.bonventure.net/?page=<n>: read the href in the browser (visit.py --links) and record page-pdfs with the http form; the PDF gives the identity (masthead page 1 has text).
 - A ParishesOnline cover can be image-only while the Mass-intentions page (page 3 here) lists each church's times in two columns: render that page as current-Mass evidence for each church, and `probe pdf --grep` returns pages 1-3 regardless of match, so find a notice's page with --pages N.
 - A parish site's menu link can carry a hash suffix (smammop.com/mass-schedulef0423bfb): use `visit.py --follow` and read final_url rather than guessing the path.
+- A Wix parish site's 'Bulletin' menu item can link to a page whose slug has no 'bulletin' in it (hnjpocomoke.org/fr-dan-s-corner): read the menu labels and hrefs in the page source, not just links named for bulletins; the page may be HTML text with no PDF (unsupported-format, no_bulletin).
+- visitstfrancis.org, which failed in the survey, loaded on a later try (WeConnect/LPi site, bulletin page embeds the ParishesOnline widget, container 03/1207); retry an unreachable site before recording it as blocked.
+- A directory's duplicate entry for one church can be a house address a few dozen metres away (directory:184, 413 Wicomico St, no Masses): check OSM's building type for the address and the bulletin's church address before treating it as a second site.
+- A ParishesOnline cover with no text layer on pages 1-9 can still be read: render pages 1 and 3 with render.py; the LPi footer on the last pages ('Parish | 03-NNNN') is the quotable identity text.
 
 ## Rules settled for this diocese
 
