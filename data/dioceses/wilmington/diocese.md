@@ -246,6 +246,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A ParishesOnline parish can have an organization account for each church that both serve one container (St. John, Milford 19963 and St. Bernadette, Harrington 19952, container 04/0120); record both po-org ids on the one row.
 - A Wix home page's only PDF link can be a one-page insert (stjohnsmilford.com 'Scholarship Tax Credit', 'BULLETIN BOX'), not the bulletin; follow the Bulletin button instead (it goes to parishesonline.com/find/<slug>).
 - A parish's real site can hide behind a spam directory link: holycrossdover.org (found via the Milford site's Central Deanery links) answers 403 to curl but loads in the browser and lists dated bulletin files.
+- An image-only ParishesOnline cover (Our Mother of Sorrows 04/0487, pages 1-5) can still be read: render page 1 with render.py and quote the LPi footer 'Parish | 04-NNNN' from the one text page as the identity evidence.
+- An eCatholic home page's first PDF link can be a Mass insert (files.ecatholic.com/<id>/documents/...), not the bulletin; the weekly issues are at /<id>/bulletins/YYYYMMDD.pdf on the /bulletins page.
+- A parish whose website is an eCatholic site may host no bulletins there and link to ParishesOnline (sorrowsparish.org, eCatholic 11311): record the po ids, not the eCatholic site id, in publication.
+- The directory's Mass times for a two-church parish merge both churches' slots into one entry (St. Benedict lists St. Elizabeth's Friday and Saturday times), and a reopened mission can still show none (St. Peter): take Mass times per church from the bulletin.
 
 ## Rules settled for this diocese
 
