@@ -130,6 +130,10 @@ def test_content_supported_review_settles_offline_and_keeps_evidence(dataset, de
     "Different URL identifiers for each parish's bulletin; mastheads were not inspected.",
     "Both mastheads are unread, but each parish has its own bulletin URL.",
     "We need to inspect the mastheads to see which members each one lists.",
+    # A "." in a date, domain or "e.g." doesn't end the sentence the "not" is in.
+    "Did not, as of 25.10.2026, read St. Bede's bulletin; the masthead names St. Ann.",
+    "Not yet (see stbede.org) checked against Bede; masthead names St. Ann.",
+    "Have not, e.g. on the 25th, compared the mastheads that name St. Ann.",
 ])
 def test_url_and_native_id_differences_do_not_support_a_separate_review(dataset, text):
     dataset({"a": {"publication_reviews": [review(text=text)]}, "b": {}})
@@ -143,6 +147,9 @@ def test_url_and_native_id_differences_do_not_support_a_separate_review(dataset,
     "Running head '310', not Holy Family's 308. Checked 2026-10-27: each masthead names its "
     "own parish only.",
     "Ann's masthead names St. Ann alone, not St. Bede; St. Bede's lists Bede alone.",
+    "We will publish this as Ann's. Checked 2026-10-27: the masthead names St. Ann alone.",
+    # The README's own wording, mentioning a url too.
+    "Bulletin for St. Ann only; its container URL differs from Bede's.",
 ])
 def test_negation_in_another_sentence_does_not_unsay_an_observed_review(dataset, text):
     dataset({"a": {"publication_reviews": [review(text=text)]}, "b": {}})
@@ -161,6 +168,14 @@ def test_review_gap_says_why_a_review_is_turned_down(text, gap):
 
     assert gap in review_gap(review(text=text))
     assert review_gap(review()) is None
+
+
+def test_review_gap_names_the_item_that_came_closest():
+    from pdf_extract.dioceses.publications import review_gap
+
+    reviewed = review(text="Own masthead, Mass schedule and intentions.")
+    reviewed["evidence"].insert(0, {"url": "https://ann.org/bulletin", "quote": "St. Ann"})
+    assert "whose bulletin" in review_gap(reviewed)
 
 
 def test_conflicting_reviews_remain_unresolved(dataset):

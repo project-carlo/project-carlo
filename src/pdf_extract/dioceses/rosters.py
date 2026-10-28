@@ -236,6 +236,8 @@ GCATHOLIC = "https://gcatholic.org"
 def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
     """Rows of a gcatholic.org/churches/local/<key> page: id, city, name, type, parish.
 
+    In a diocese spanning two states, each row also has `index_state` ("DE").
+
     GCatholic lists Eastern Catholic churches in the territory too (class
     `che`, with their rite); those belong to an eparchy, not this diocese, and
     come back with `rite` set so they are easy to exclude as other-jurisdiction.
@@ -247,10 +249,12 @@ def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
         if not link:
             continue
         # Dioceses spanning two states list "Bear, DE": the ", " is a znote of its own,
-        # and would otherwise become every church's group.
+        # and would otherwise become every church's group. The state (zregion) is
+        # kept, since a town name can be in both.
         notes = [n for n in (web.html_text(m).strip() for m in
                              re.findall(r'class="znote"[^>]*>(.*?)</span>', row, flags=re.S))
                  if re.search(r"\w", n)]
+        region = re.search(r'class="zregion"[^>]*>(.*?)</span>', row, flags=re.S)
         title = re.search(r'title="([^"]+)"', row)
         rite = re.search(r'class="zrite">([^<]+)</a>', row)
         entry = {
@@ -262,6 +266,8 @@ def parse_gcatholic_index(page: str) -> list[dict[str, str]]:
         qualifier = next((n.strip("() ") for n in notes[1:] if n.startswith("(")), "")
         if qualifier:
             entry["qualifier"] = qualifier
+        if region and (state := web.html_text(region.group(1)).strip()):
+            entry["index_state"] = state
         if link.group(3) == "che" or rite:
             entry["rite"] = rite.group(1) if rite else "Eastern"
         out.append(entry)
@@ -346,6 +352,7 @@ def fetch_gcatholic(key: str, *, limit: int | None = None, workers: int = 6
         entry: dict[str, Any] = {
             "id": row["id"], "name": row["name"], "group": row["group"], "kind": row["kind"],
             "city": row["index_city"], "url": url,
+            **({"state": row["index_state"]} if row.get("index_state") else {}),
             **{k: row[k] for k in ("qualifier", "rite") if row.get(k)},
         }
         if detail.ok:

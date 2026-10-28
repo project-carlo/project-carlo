@@ -479,6 +479,7 @@ def test_gcatholic_pages_parse() -> None:
         '<a href="../usa-04/19333" title="Church of St. Elizabeth Ann Seton"><img></a> '
         '<a href="../usa-04/19333" class="chw">St. Elizabeth Ann Seton</a></td></tr>')
     assert two_states[0]["index_city"] == "Bear" and two_states[0]["group"] == ""
+    assert two_states[0]["index_state"] == "DE"
     detail = rosters.parse_gcatholic_detail(
         "<div>Type: Church Rite: Roman (Latin) History: 1914 Location: 87J67GR9+RC "
         "Address: 34 S Main St., Bainbridge, New York 13733-1215 Country: USA "
@@ -548,11 +549,37 @@ def test_probe_get_prints_text_saves_files_and_names_blocks(monkeypatch, tmp_pat
     }
     monkeypatch.setattr(web, "fetch", lambda url, **kw: bodies[url])
     assert "Mass 9 am" in web.get("https://a.org/")["text"]
-    assert "probe pdf" in web.get("https://a.org/b.pdf")["note"]
+    # A PDF is read from the body already fetched, not fetched again by probe pdf.
+    assert web.get("https://a.org/b.pdf")["error"].startswith("could not read")
     saved = web.get("https://a.org/b.pdf", out=tmp_path / "b.pdf")
     assert (tmp_path / "b.pdf").read_bytes() == b"%PDF-1.7 bulletin" and saved["bytes"] == 17
     assert "visit.py" in web.get("https://cf.org/")["note"]
     assert "http://" in web.get("https://bv.net/x.pdf")["note"]
+
+
+def test_probe_get_saves_only_the_content_itself(monkeypatch, tmp_path) -> None:
+    challenge = b"<html><head><title>Just a moment...</title></head></html>"
+    bodies = {
+        "https://cf.org/b.pdf": web.Response("https://cf.org/b.pdf", 200, "https://cf.org/b.pdf",
+                                             "text/html", challenge),
+        "https://big.org/b.pdf": web.Response("https://big.org/b.pdf", 200, "", "application/pdf",
+                                              b"%PDF-1.7 part", truncated=True),
+        "https://a.org/x.jpg": web.Response("https://a.org/x.jpg", 200, "", "image/jpeg",
+                                            b"\xff\xd8\xff\xe0\x00JFIF"),
+        "https://busy.org/": web.Response("https://busy.org/", 429, error="HTTP 429"),
+    }
+    calls = []
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: calls.append(url) or bodies[url])
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    challenged = web.get("https://cf.org/b.pdf", out=tmp_path / "c.pdf")
+    assert "visit.py" in challenged["note"] and "saved" not in challenged
+    assert calls.count("https://cf.org/b.pdf") == 2  # retried once, as recheck does
+    cut = web.get("https://big.org/b.pdf", out=tmp_path / "big.pdf")
+    assert cut["truncated"] and "saved" not in cut and "cut off" in cut["note"]
+    assert not (tmp_path / "c.pdf").exists() and not (tmp_path / "big.pdf").exists()
+    image = web.get("https://a.org/x.jpg")
+    assert "text" not in image and "--out" in image["note"]
+    assert "browser won't help" in web.get("https://busy.org/")["note"]
 
 
 def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
