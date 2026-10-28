@@ -221,6 +221,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A directory page updated months ago can still list an alternative worship site closed for years (St. Aloysius lists Holy Trinity, Pottstown, closed 2014-05 per CatholicPhilly); date the closure from CatholicPhilly's REST search and the host parish's current bulletin and site.
 - A parish's own archive can lag the John Patrick listing by a week (St. Gabriel's site stopped at Oct. 18 while the listing had Oct. 25): check which channel has the latest issue; the files differ byte for byte.
 - A site hosted by John Patrick (footer 'Designed and Hosted by John Patrick Publishing') hosts no PDFs of its own; read the church-bulletin.org listing.
+- St. Patrick, Malvern hosts its own text-layer bulletin PDFs (wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf on /bulletin/) with no John Patrick listing; `page-pdfs https://www.stpatrickmalvern.org/bulletin/` works. A parish can be absent from the listing scan and still self-host.
+- parish.stnorbert.org answers 'RemoteDisconnected' to probe url but loads in Chrome via visit.py; a probe-url UNREACHABLE on a PA parish site is worth a browser retry before concluding anything.
+- Daylesford Abbey posts Sunday bulletins as WordPress posts of page JPGs (CPT 'bulletins', front-end URLs 404); the REST list /wp-json/wp/v2/bulletins gives dates and image URLs, and its newest was 15 March 2026, so it is not a current channel.
+- A parish's directory address can be its office, not the church: St. Patrick Malvern's directory/masthead 131 Channing Ave is the Parish Office, its site footer and OSM give the church at 104 Channing Ave, GCatholic 126 Woodland Ave. Read the site's contact page before trusting the directory street.
 
 ## Rules settled for this diocese
 
