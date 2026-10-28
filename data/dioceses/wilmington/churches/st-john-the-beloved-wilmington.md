@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'St. John the Beloved', 907 Milltown Road; Mass Sun 7:30, 9:30, 11:30, 17:00,
     Sat 17:00, Mon-Sat 8:00; matches the bulletin.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

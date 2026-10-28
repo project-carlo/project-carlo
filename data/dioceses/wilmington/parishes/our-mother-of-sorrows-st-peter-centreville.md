@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-27
   quote: Rev. William Trader
   note: Staff page lists him as PASTOR of the one parish; no second pastor or separate St. Peter staff.
+promoted: 2026-10-27
 bulletin_status: available
 ---
 

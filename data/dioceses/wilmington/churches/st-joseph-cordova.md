@@ -29,6 +29,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19391
   seen: 2026-10-27
   note: 'GCatholic: ''13209 Church Ln., Cordova, Maryland 21601'', Plus Code 87C5WX6P+2H. ZIP 21601 (Easton''s).'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

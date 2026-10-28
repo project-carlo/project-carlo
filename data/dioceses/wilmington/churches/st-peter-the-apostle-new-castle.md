@@ -28,6 +28,7 @@ evidence:
   note: Diocese map entry 'St. Peter the Apostle', 521 Harmony Street, pin 39.661941, -75.564537 (about
     15 m from GCatholic's Plus Code); Mass Sun 8:00 and 11:00, Sat 17:30, Mon/Wed/Fri 8:00 matching the
     bulletin.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: 'Find A Parish map: ''St. Elizabeth Ann Seton'', 345 Bear- Christiana Road, Bear, DE 19701, Iron
     Hill Deanery.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

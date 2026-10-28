@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-27
   note: The parish's Duda bulletins page embeds the ParishesOnline publication widget for lpi 0018000000Qx8z1AAB
     (read from the page source, not visible text); it hosts no PDFs of its own.
+promoted: 2026-10-27
 ---
 
 ## Publisher

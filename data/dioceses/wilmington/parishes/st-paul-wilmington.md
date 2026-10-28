@@ -21,6 +21,7 @@ evidence:
     file is files.ecatholic.com/5218/bulletins/20260802.pdf, then 20260726, 20260719 ... back to 20260426.
     Nothing after 2 August 2026 is listed. `issues.py ecatholic ecatholic:5218` got 403 for 25 October,
     18 October, 11 October and 1 November.'
+promoted: 2026-10-27
 research:
 - method: Browser read of stpaulchurchde.org/bulletins and home page; issues.py ecatholic for the 2026-10-11
     to 2026-11-01 Sundays

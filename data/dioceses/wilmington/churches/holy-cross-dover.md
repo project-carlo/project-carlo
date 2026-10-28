@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Holy Cross', 631 S State St., Dover 19901, pin 39.150527, -75.521276; Sun 7:30,
     9:30, 11:30 (Spanish); Mon-Sat 8:00; Sat 17:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
   note: 'probe url: redirects to https://www.church-bulletin.org/the-cathedral-parish-of-downtown-catholic-wilmington-de-19801
     (''The Cathedral Parish of Downtown Catholic Bulletin'', 500 North West Street, Wilmington, DE 19801),
     which lists dated PDFs newest first (2026-10-25, 10-18, 10-11, 10-04, 09-27 ...).'
+promoted: 2026-10-27
 research:
 - method: 'Compared The Dialog''s 2026-03-26 ''United in Christ'' deanery realignment (City Deanery listed
     as Cathedral of Saint Peter, Saint Ann, Saint Anthony of Padua, Saint Elizabeth, Saint Hedwig, Saint

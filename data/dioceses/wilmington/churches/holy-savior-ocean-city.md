@@ -38,6 +38,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''17th St. & N Philadelphia Ave., Ocean City, Maryland 21842'', Plus Code 87C68WXC+56.
     The same address as the directory''s; the Plus Code is within 5 m of the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

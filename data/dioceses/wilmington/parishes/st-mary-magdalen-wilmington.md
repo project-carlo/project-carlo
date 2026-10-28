@@ -23,6 +23,7 @@ evidence:
   note: 'Parish page (eCatholic site 6923): holds seasonal worship aids (Corpus Christi, Holy Trinity,
     Pentecost, Ascension 2026 PDFs) and links the John Patrick listing for the weekly bulletin; no weekly
     bulletins are hosted in eCatholic.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: st-ann-st-thomas-wilmington
   decision: separate

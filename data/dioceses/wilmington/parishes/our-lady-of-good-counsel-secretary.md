@@ -28,6 +28,7 @@ evidence:
   quote: 'Phone: 410-943-4300'
   note: 'The Cambridge bulletin prints this rectory number and ''Olgc25@yahoo.com'' for its pastor, Rev.
     Stephen C. Lonek: the two parishes share a pastor but publish separate bulletins.'
+promoted: 2026-10-27
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-refuge-of-sinners-cambridge

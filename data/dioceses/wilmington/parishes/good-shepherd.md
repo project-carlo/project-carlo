@@ -29,6 +29,7 @@ evidence:
     pages). Continues 'Good Shepherd in Perryville, St. Agnes in Rising Sun, St. Teresa in Port Deposit,
     and our mission church, St. Patrick in Pilottown.' eCatholic site 17337; its Bulletins button goes
     to fataonline.com/bulletins/GoodShepherdPerryville, so the eCatholic site hosts no bulletin files.
+promoted: 2026-10-27
 ---
 
 ## Publisher

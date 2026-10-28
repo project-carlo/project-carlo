@@ -24,6 +24,7 @@ evidence:
   quote: The Reverend Richard J. Jasper is appointed Pastor of both Immaculate Conception, Elkton, and
     Saint Thomas More Oratory, Newark.
   note: Why a shared bulletin with the Newman Center was checked; it does not exist (see body).
+promoted: 2026-10-27
 ---
 
 ## Publisher

@@ -36,6 +36,7 @@ evidence:
   note: '24-25 October 2026 bulletin: page 1 St. Agnes, Rising Sun panel reads ''MASS: Sunday 10 a.m.''
     (read from a render); page 3 calendar ''Sunday, 10/25/2026 ... 10:00 am Mass St. A''; page 6 ''the
     St. Agnes Meeting Room''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

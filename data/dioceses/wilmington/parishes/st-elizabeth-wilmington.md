@@ -23,6 +23,7 @@ evidence:
   note: 'probe url: HTTP 200 ''Bulletin'', ecatholic:10624; links files.ecatholic.com/10624/bulletins/20261025.pdf,
     20261018, 20261011, 20261004, 20260927, then 20260705 back to 20260517 (no July 12-September 20 files
     listed).'
+promoted: 2026-10-27
 ---
 
 ## Publisher

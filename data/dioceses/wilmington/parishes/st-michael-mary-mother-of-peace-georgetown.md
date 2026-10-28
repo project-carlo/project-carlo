@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-27
   quote: Saint Michael the Archangel/Mary Mother of Peace, Georgetown, DE
   note: The diocese's deaneries page names the two churches as one parish (Ocean Deanery).
+promoted: 2026-10-27
 ---
 
 ## Publisher

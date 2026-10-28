@@ -17,6 +17,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe url: the bulletins page embeds ecatholic:26996 and lists files.ecatholic.com/26996/bulletins/
     issues weekly, newest 20261101 (posted early), then 20261025, 20261018.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

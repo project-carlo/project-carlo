@@ -26,6 +26,7 @@ evidence:
   note: The parish's WordPress bulletins page embeds the ParishesOnline widget for lpi 0018000000Qx8zFAAR
     (page source). stmaryholysavior.com is the site the old stmarystaroftheseaocmd.com (the directory's
     website) redirects to.
+promoted: 2026-10-27
 ---
 
 ## Publisher

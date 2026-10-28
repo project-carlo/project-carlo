@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 (image, rendered) of the 25 October 2026 issue: ''7 SHARPLEY ROAD | WILMINGTON, DE 19803''
     and the Mass schedule ''Saturday - 4:30pm Vigil Mass; Sunday - 8:30am & 10:30am; Weekday Mass Tuesday,
     Wednesday, Thursday, Saturday - 8:30am; First Friday - 8:30am''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

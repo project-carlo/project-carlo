@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-27
   note: 'Summer guide: ''Centreville – Our Mother of Sorrows'', ''303 Chesterfield Ave.'', ''Sunday –
     9 AM, 11 AM''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

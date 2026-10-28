@@ -24,6 +24,7 @@ evidence:
     The Wayback Machine copy of 2026-06-05 (web.archive.org/web/20260605215919/https://stjosephfrenchst.org/)
     shows the same eCatholic site, files.ecatholic.com/14048. The live site is www.sjfschurch.org, the
     address the bulletin prints.'
+promoted: 2026-10-27
 research:
 - method: probe url and the Chrome browser on stjosephfrenchst.org and www.stjosephfrenchst.org (http
     and https)

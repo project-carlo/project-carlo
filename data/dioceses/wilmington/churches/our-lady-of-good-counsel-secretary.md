@@ -30,6 +30,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19378
   seen: 2026-10-27
   note: 'GCatholic: ''Main St., Secretary, Maryland 21664'', Plus Code 87C6J25X+XM. No street number.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

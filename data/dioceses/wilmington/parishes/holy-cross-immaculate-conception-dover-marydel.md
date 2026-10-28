@@ -37,6 +37,7 @@ evidence:
   note: 'Holy Cross''s real site, read in the browser (curl gets 403). Its Bulletin page lists dated files
     (newest ''October 25, 2026'', links /about-us/bulletin/2078-october-25-2026/file), so a third copy
     exists. Footer: 631 S State St, Dover, DE 19901 | 302-674-5787.'
+promoted: 2026-10-27
 research:
 - method: curl and probe pdf against holycrossdover.org bulletin files
   url: https://holycrossdover.org/about-us/bulletin/2078-october-25-2026/file

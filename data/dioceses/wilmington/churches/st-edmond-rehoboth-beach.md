@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''King Charles Ave. & Laurel St., Rehoboth Beach, Delaware 19971'', Plus Code 87C6PW7C+6H
     (38.7130625, -75.0785625), about 15 m from the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

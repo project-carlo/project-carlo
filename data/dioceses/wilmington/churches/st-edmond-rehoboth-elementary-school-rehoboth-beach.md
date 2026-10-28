@@ -29,6 +29,7 @@ revisit: 'Seasonal: Sunday 9:00 and 10:30 a.m., 2026 dates July 5-September 6 (s
   May 24). No Mass here at 27 October 2026. Check the parish''s May 2027 bulletin or summer guide that
   the school Masses have resumed, with their dates and the school building address.'
 revisit_after: 2027-05-15
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

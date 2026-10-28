@@ -29,6 +29,7 @@ evidence:
   note: 'Browser (visit.py --bulletin): the site''s ''Bulletin'' link goes to this page, which embeds
     po-org:st-matthew-parish-and-corpus-christi. Site title ''Home | St.M/CC Parishes''. The diocese map
     (directory:129 and :106) gives both parishes this website.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

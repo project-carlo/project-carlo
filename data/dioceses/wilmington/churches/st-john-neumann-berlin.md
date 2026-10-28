@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''11211 Beauchamp Ave., Berlin, Maryland 21811'', Plus Code 87C69RQ8+93. ''Avenue''
     where the bulletin and directory say Road; about 25 m from the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

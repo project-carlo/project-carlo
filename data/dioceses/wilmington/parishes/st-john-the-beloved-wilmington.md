@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe url: HTTP 200, title ''Home'', embeds lpi:0018000000Qx8ywAAB and po-org:st-john-the-beloved-parish;
     browser links point to parishesonline.com/publication-page/st-john-the-beloved-parish.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: st-catherine-of-siena-wilmington
   decision: separate

@@ -22,6 +22,7 @@ evidence:
   quote: '1ST FRIDAY:'
   note: 'Mass Times page (browser): Saturday 4:00 PM; Sunday 8:00 AM, 10:30 AM; Monday 8:30 AM; Tuesday
     6:30 PM; Wednesday 8:30 AM; Thursday 8:30 AM; first Friday 9:00 AM.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

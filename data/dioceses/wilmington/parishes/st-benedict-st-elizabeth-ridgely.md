@@ -29,6 +29,7 @@ evidence:
   note: 'probe url: files.ecatholic.com/16009/bulletins/YYYYMMDD.pdf, newest 20261025, then 20261011,
     20261004, 20260927 ... The list skips some weeks (no 20261018), so absence of a week there is not
     a missing issue on the parish''s side.'
+promoted: 2026-10-27
 bulletin_status: available
 ---
 

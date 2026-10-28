@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap way 368340133 'Saint Mary of the Immaculate Conception Church', 600 East 6th Street,
     centre 39.7391049, -75.5439932.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

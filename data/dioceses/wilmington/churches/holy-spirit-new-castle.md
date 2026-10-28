@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Holy Spirit', 12 Winder Road, New Castle 19720, pin 39.698301, -75.554854 (about
     100 m from GCatholic's Plus Code); Mass Sun 9:30, Sat 16:00, Tue and Thu 8:00 matching the bulletin.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

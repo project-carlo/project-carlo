@@ -16,6 +16,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe url: HTTP 200; links https://church-bulletin.org/?id=304, which redirects to the church-bulletin.org
     listing of dated PDFs (latest 2026-10-25, then 10-18, 10-11, 10-04, 09-27).'
+promoted: 2026-10-27
 publication_reviews:
 - parish: holy-spirit-st-peter-the-apostle-new-castle
   decision: separate

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: 691 Garfield Parkway, Bethany Beach 19930, Plus Code 87C6GWQJ+WX (38.5398125, -75.0675625);
     the directory pin 38.539624, -75.069012 is about 120 m west.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

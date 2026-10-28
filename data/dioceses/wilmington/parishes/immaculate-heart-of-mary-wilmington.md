@@ -10,9 +10,9 @@ evidence:
   seen: 2026-10-27
   quote: 4701 Weldin Road, Wilmington, DE 19803
   note: 'Page 1 of the 25 October 2026 issue, headed ''Immaculate Heart of Mary'' with its Mass schedule,
-    office hours and Mass counts. Also on the cover: a box giving the Mass times of six Brandywine
-    Hundred Deanery parishes (Holy Child, St. Helena''s, Holy Rosary, St. Joseph on the Brandywine, IHM,
-    St. Mary Magdalen) next to the deanery website; it is a deanery schedule, not a shared masthead.'
+    office hours and Mass counts. Also on the cover: a box giving the Mass times of six Brandywine Hundred
+    Deanery parishes (Holy Child, St. Helena''s, Holy Rosary, St. Joseph on the Brandywine, IHM, St. Mary
+    Magdalen) next to the deanery website; it is a deanery schedule, not a shared masthead.'
 - url: https://www.ihm.org/
   seen: 2026-10-27
   note: 'probe url: HTTP 200, embeds lpi:0018000000Qbz4pAAB.'
@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe po: org ''Immaculate Heart of Mary Church'', 4701 Weldin Rd, latest issue 2026-10-25 (container
     03/0205), weekly.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

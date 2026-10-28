@@ -25,6 +25,7 @@ evidence:
 - url: https://www.hrparish.com/
   seen: 2026-10-27
   note: Static fetch shows no bulletin link; the rendered page (visit.py) has a 'Bulletin' link to http://sponsors.bonventure.net/?page=2100.
+promoted: 2026-10-27
 publication_reviews:
 - parish: our-lady-of-lourdes-seaford
   decision: separate

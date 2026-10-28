@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap way 729189333 'Saint Elizabeth Roman Catholic Church', 1500 Cedar Street, centre
     39.7387, -75.5728 (about 30 m from GCatholic's).
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

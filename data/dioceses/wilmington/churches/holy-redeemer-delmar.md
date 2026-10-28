@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-27
   note: '''Bi-State Blvd. & E Chestnut St., Delmar, Maryland 21801''; Plus Code 87C6FC3G+9V gives the
     coordinates used, about 20 m from the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   quote: Harrington – St. Bernadette
   note: 'Summer guide (as of 12 May 2026): Saturday 4 PM; Sunday 10 AM.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

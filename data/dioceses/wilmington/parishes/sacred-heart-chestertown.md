@@ -30,6 +30,7 @@ evidence:
   note: 'Page 1 of the 27 September 2026 issue: ''SACRED HEART PARISH / MASS SCHEDULE / SACRED HEART Saturday
     ... Mass 4:00 pm, Sunday Mass 10:00 am, Mon., Tues., Wed., Fri. and Sat. Mass at 8:30 am / ST. JOHN
     Sunday Mass 8:00 am, Thursday Mass 8:30 am''. One pastor, one cover for both churches.'
+promoted: 2026-10-27
 research:
 - method: Bonventure listing sponsors.bonventure.net/?page=2169 read with curl over http; archive links
     pdfs/2169/<date>.pdf

@@ -28,6 +28,7 @@ evidence:
   quote: Rev. Clement J. Vadakkedath, C.Ss.R. is appointed Pastor of St. Christopher, Chester, Md.
   note: 'The Dialog, 27 April 2026: St. Christopher has its own pastor again; the same post appoints Fr.
     Markellos ''Pastor of St. Benedict, Ridgely'' alone. The 25 October 2026 bulletin''s staff list matches.'
+promoted: 2026-10-27
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Celebration of Mass Sunday 7:30 AM 9:30
     AM 11:30 AM; Mon-Fri 8:30 AM; Saturday 8:30 AM 5:00 PM''; ''7200 Lancaster Pike, Hockessin, DE 19707''.
     Page 3 text repeats the daily and weekend times.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

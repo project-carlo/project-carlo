@@ -31,6 +31,7 @@ evidence:
     website stmatthewsde.com, phone (302) 994-2922; Mass Sun 8:00 and 10:30, Mon/Wed/Fri 8:30, Sat 16:00.
     The deaneries page lists ''Corpus Christi, Elsmere''. The pin is used for the coordinates: it is in
     Elsmere on New Road, consistent with the bulletin''s address.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

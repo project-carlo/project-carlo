@@ -37,6 +37,7 @@ evidence:
   note: 'Summer guide: ''Denton – St. Elizabeth of Hungary'', ''108 First Street''; ''Saturday – 4 PM
     | Sunday – 11:15 AM (until May 31st) | Sunday – 10:15 AM (May 31-Sept 6)''. The bulletin of 25 October
     shows 11:15 am again.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

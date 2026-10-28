@@ -35,6 +35,7 @@ evidence:
   quote: Georgetown – St. Michael the Archangel
   note: 'Summer guide: Saturday 4:30 PM (Spanish), 7 PM; Sunday 7 AM (Spanish), 9 AM, Noon (Spanish);
     same as the bulletin, so no summer change.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

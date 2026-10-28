@@ -23,6 +23,7 @@ evidence:
 - url: https://www.scswilmde.org/
   seen: 2026-10-27
   note: 'probe url: HTTP 200, title ''Home | StCathWilm'', embeds po-org:st-catherine-of-siena-church-19808.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: st-john-the-beloved-wilmington
   decision: separate

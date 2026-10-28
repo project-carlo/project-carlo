@@ -37,6 +37,7 @@ evidence:
     J. Brady, one Mass schedule block for each church. It is the directory''s website for both St. John
     and St. Bernadette. The home page''s ''Scholarship Tax Credit'' PDF is a one-page insert (''BULLETIN
     BOX''), not the bulletin.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

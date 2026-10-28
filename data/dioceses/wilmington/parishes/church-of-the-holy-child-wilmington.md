@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe po: org ''Church of the Holy Child'', 2500 Naamans Rd, latest issue 2026-10-18 (container
     03/1109), weekly issues back to at least 20 Sept.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: st-helena-wilmington
   decision: separate

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-27
   note: The parish's own Duda 'Bulletin' page lists only 2024 files (317.12292024w.pdf back to 317.10062024w-bd0dd345.pdf);
     its newest was 29 December 2024, so it is stale and is not the pick.
+promoted: 2026-10-27
 ---
 
 ## Publisher

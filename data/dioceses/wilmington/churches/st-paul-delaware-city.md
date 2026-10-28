@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'St. Paul', 209 Washington Street, Delaware City 19706, pin 39.576124, -75.592248;
     Mass Sun 9:00, Sat 17:00, Mon/Tue/Fri 8:30.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

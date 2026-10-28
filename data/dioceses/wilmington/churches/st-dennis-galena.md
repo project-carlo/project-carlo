@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19373
   seen: 2026-10-27
   note: 'GCatholic: ''153 N Main St., Galena, Maryland 21635'', Plus Code 87F684WC+F9.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

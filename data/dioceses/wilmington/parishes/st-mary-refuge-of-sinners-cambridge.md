@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-27
   note: 'Summer guide (as of 12 May 2026): ''Church Creek (Golden Hill) – St. Mary Star of the Sea (the
     Tubman Chapel) (mission of St. Mary Refuge of Sinners, Cambridge)''.'
+promoted: 2026-10-27
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-good-counsel-secretary

@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''1515 Glasgow St., Cambridge, Maryland 21613'', Plus Code 87C5HWJ5+Q7. Website stmaryscambridge.org
     has no DNS.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

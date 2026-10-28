@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Immaculate Conception', 522 Main St., Marydel 21649, pin 39.114357, -75.749222;
     Sun 8:30, 11:00, 13:00; Thu 18:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

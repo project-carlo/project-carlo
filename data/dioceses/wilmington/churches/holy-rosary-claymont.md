@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Holy Rosary', 3200 Philadelphia Pike, Claymont, pin 39.797722, -75.462762;
     Mass Sat 16:30, Sun 8:00, 10:00, 12:30 (Spanish), Tue–Sat 8:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

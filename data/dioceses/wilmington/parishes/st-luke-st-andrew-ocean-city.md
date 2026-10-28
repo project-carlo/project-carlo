@@ -25,6 +25,7 @@ evidence:
   quote: Closed for the season.
   note: 'Home page under ''St. Andrew Mission Center: Parish Office, Mass Times:'': ''Closed for the season.
     All Masses and Services at St. Luke.'''
+promoted: 2026-10-27
 ---
 
 ## Publisher

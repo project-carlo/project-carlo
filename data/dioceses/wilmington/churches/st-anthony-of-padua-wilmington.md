@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap way 277154700 'Saint Anthony of Padua Roman Catholic Church', 901 North Dupont Street,
     centre 39.7527, -75.5668.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

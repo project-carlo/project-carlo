@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''109 Lincoln Ave., St. Michaels, Maryland 21601'', Plus Code 87C5QQFQ+WJ. ZIP 21601
     again.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

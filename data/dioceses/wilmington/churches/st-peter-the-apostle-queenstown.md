@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''5319 Ocean Gateway, Queenstown, Maryland 21658'', Plus Code 87C5XVH8+3G; website
     mosstp.org has no DNS.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

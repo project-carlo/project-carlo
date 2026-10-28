@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 928 Turkey Pt Rd., North East 21901, pin 39.588118, -75.941354, Sun 9:00. Its
     website is a county churches page (churches.cecilcounty.net), not the parish's.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-27
   note: '`probe po st-francis-de-sales-parish`: lpi 0018000000Qx8zEAAR, container 03/1207, address 514
     Camden Ave, Salisbury; latest issue 2026-11-01, then 2026-10-25, 10-18, 10-11, 10-04 (weekly).'
+promoted: 2026-10-27
 ---
 
 ## Publisher

@@ -38,6 +38,7 @@ evidence:
   quote: Millsboro (Oak Orchard) – Mary, Mother of Peace
   note: 'Summer guide: Saturday 4 PM; Sunday 7:30 AM, 11 AM; the same as the bulletin. The guide gives
     the street as 30839 Mount Joy Road.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

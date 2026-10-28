@@ -46,6 +46,7 @@ revisit: 'Seasonal mission, closed for the season at 27 October 2026. Check the 
   has resumed, and which dates the season runs (summer guide: May 23 – Sept. 6, 2026; parish page: July
   and August).'
 revisit_after: 2027-06-01
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
     parish site links as its Current Bulletin (identical bytes, 25 October 2026 on page 1), so the listing
     and the parish copy are one bulletin. Identity and date report unverified/unknown by the tool (no
     masthead date it can read); I read both from page 1.
+promoted: 2026-10-27
 research:
 - method: 'reconcile fetch:check (PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese
     wilmington); the Discover Mass download answered 134 bytes: ''Maximum number of files downloaded today.'''

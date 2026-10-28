@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'St. Paul', 1010 W 4th St., 19805, pin 39.744231, -75.561285 (about 20 m from
     GCatholic's); Sun 9:00, 11:00 / 13:00 / 15:00 (Spanish); Wed and Fri 17:00 (Spanish).
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

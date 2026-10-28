@@ -18,6 +18,7 @@ evidence:
   quote: Sun, Oct 25th
   note: 'The parish''s WeConnect (LPi) Bulletin page lists the four October issues as links to parishesonline.com/publication-page/st-john-neumann?selectedPublication=container.parishesonline.com/bulletins/04/0457/<date>B.pdf.
     `probe po st-john-neumann`: lpi 0018000000Qc1PZAAZ, org st-john-neumann, container 04/0457.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19390
   seen: 2026-10-27
   note: 'GCatholic: ''1210 S Washington St., Easton, Maryland 21601'', Plus Code 87C5PWVJ+RC.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

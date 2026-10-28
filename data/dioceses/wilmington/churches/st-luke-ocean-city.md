@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''100 St. & Coastal Hwy., Ocean City, Maryland 21842'', Plus Code 87C6CW6R+X9. The
     same corner as the directory''s ''100th & Coastal Hwy.''; about 50 m from the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

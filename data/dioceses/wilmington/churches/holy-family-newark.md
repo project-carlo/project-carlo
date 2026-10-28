@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Holy Family Catholic Church, 15 Gender
     Road, Newark, DE 19713''; ''Saturday Evenings: 5:00pm. Sundays: 8:00am, 10:00am & 12:00pm (noon).
     Daily Mass: Monday - Friday 8:30am''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

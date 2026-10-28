@@ -30,6 +30,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19372
   seen: 2026-10-27
   note: 'GCatholic: ''508 High St., Chestertown, Maryland 21620'', Plus Code 87F56W6H+QP.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

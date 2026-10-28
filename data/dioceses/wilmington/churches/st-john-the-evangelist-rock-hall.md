@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: ''Catholic St. & Main St., Rock Hall, Maryland 21260'' (zip looks mistyped for 21661),
     Plus Code 87F54QM8+GR.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

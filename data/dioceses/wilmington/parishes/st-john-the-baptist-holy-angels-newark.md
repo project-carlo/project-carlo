@@ -19,6 +19,7 @@ evidence:
   quote: Bulletin
   note: 'Browser read (plain probe url got HTTP 403): the home page''s ''Bulletin Here'' button links
     http://sponsors.bonventure.net/?page=2103, whose bulletin link is /pdfs/2103/2026-10-25.pdf.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: holy-rosary-claymont
   decision: separate

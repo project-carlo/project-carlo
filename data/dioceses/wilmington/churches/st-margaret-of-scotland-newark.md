@@ -27,6 +27,7 @@ evidence:
   note: 'Pages 1 and 3 of the 25 October 2026 issue (scanned images, rendered): ''2431 Frazer Road, Newark,
     Delaware 19702''; ''Mass Schedule Saturday: 5:00 pm Sunday: 8:30 am & 10:30 am Weekday: Mon., Wed.,
     & Fri. 8:30 am''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap way 368304505 'Saint Joseph Catholic Church', 1012 North French Street, centre 39.7451283,
     -75.5453388.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

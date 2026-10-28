@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe url: HTTP 200, title ''St Peter & Holy Spirit Parish'', embeds po-org:holy-spirit-st-peter-the-apostle.
     The diocese map (directory:109 and :134) and the roster give both parishes this website.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: our-lady-of-fatima-new-castle
   decision: separate

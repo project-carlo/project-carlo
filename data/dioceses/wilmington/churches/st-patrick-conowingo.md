@@ -40,6 +40,7 @@ evidence:
     the issue of 27 August 2026 (bulletin-591787788954.pdf) has an ad ''St. Patrick’s Chapel, 237 Pleasant
     Grove Road, Conowingo, MD 21918 ... Come join us on Sept. 12th at 10AM for Mass in this loving restored
     church!''.'
+promoted: 2026-10-27
 research:
 - method: Read the 24-25 October 2026 bulletin cover, the parish Mass Times and Church Addresses pages
     (browser), and the 13 August to 3 September 2026 bulletins for St. Patrick Chapel

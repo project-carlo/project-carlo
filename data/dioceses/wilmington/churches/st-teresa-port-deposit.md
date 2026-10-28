@@ -36,6 +36,7 @@ evidence:
   note: '24-25 October 2026 bulletin: page 1 ''St. Teresa of Avila, Port Deposit, MD'' panel reads ''MASS:
     Sunday - 8:00 a.m.'' (read from a render); page 2 intentions ''10/25/26 08:00:00 AM Joy & Rick Cox'';
     page 3 calendar ''8:00 am Mass St. T''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

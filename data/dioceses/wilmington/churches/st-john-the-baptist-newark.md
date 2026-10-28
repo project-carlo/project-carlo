@@ -25,6 +25,7 @@ evidence:
     ''St. John the Baptist Roman Catholic Church, 200, East Main Street, Lumbrook, Newark ... 19717''.
     North Chapel Street is at 39.6859, -75.7461, so the building is at the East Main and North Chapel
     corner the bulletin names.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

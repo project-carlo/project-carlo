@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-27
   note: OSM node 358241290 'Immaculate Conception Church', Bow Street, Elkton 21921, 39.61486, -75.83153
     (about 50 m from the Plus Code).
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

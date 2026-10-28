@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-27
   note: 'Page 1 of the 25 October 2026 issue (rendered image): ''Resurrection Parish ... 3000 Videre Dr.
     Wilmington, DE 19808''; ''Mass Times Saturday 5:00 p.m. Sunday 9:30 a.m. Monday & Thursday 8:30 a.m.''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

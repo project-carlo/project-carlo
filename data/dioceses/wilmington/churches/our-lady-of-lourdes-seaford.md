@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: 532 E Stein Hwy., Seaford 19973, Plus Code 87C6J9XQ+7R (38.6481875, -75.6104375);
     the directory pin is about 10 m away.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

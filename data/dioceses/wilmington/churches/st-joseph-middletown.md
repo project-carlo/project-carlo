@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: Find A Parish map lists 'St. Joseph' at 319 E. Main Street, Middletown, DE 19709; Mass times Sun
     8:30, 10:30, 13:00 (Spanish); Mon-Fri 8:30; Sat 17:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

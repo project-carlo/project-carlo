@@ -33,6 +33,7 @@ evidence:
   note: 'Page 1 of the 24-25 October 2026 bulletin, Good Shepherd Church panel: Saturday Evening Mass
     4 p.m.; Sunday 12 Noon; Daily Tuesday-Thursday 9 a.m. Page 2 lists Mass intentions for Saturday 10/24
     4:00 PM and Sunday 10/25 12:00 PM, and weekday 9:00 AM Masses on 10/27-10/29.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

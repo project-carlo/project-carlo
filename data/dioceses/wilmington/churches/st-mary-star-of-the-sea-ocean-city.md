@@ -44,6 +44,7 @@ evidence:
   note: The parish site's contact map links 'St. Mary Star of the Sea Church' to Google Maps '200 Baltimore
     Ave, Ocean City, MD 21842' at 38.333602, -75.0848178, about 350 m north-east of the directory and
     GCatholic pins.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

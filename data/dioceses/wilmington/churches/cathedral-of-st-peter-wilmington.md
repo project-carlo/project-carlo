@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap way 618683594 'Cathedral of Saint Peter', 500 North West Street, centre 39.7428225,
     -75.5532636; used for the coordinates (the diocese pin is about 30 m away).
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

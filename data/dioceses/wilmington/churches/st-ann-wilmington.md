@@ -28,6 +28,7 @@ evidence:
   note: 'Page 4 of the 25 October 2026 issue: St. Ann Mass intentions for Saturday 24 October 4:00 p.m.,
     Sunday 7:30 and 10:30 a.m. and weekdays 8:00 a.m.; page 1 gives ''2013 Gilpin Avenue Wilmington, DE
     19806'' and the Mass schedule ''Saturday 4:00 p.m. Sunday 7:30 a.m., 10:30 a.m. Mon.-Fri. 8:00 a.m.''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

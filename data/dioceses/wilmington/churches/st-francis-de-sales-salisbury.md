@@ -39,6 +39,7 @@ evidence:
     m from GCatholic's Plus Code point (87C6996V+74) used here. The same query for '413 Wicomico St' returns
     OSM way 17710101, a 'house' in Riverside Homes at 38.36024, -75.60596 (about 90 m east), the point
     of directory:184.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
     4:00 pm (English); Last Saturday of the month Children''''s Mass 6:00 pm (Bilingual); Sunday 9:00
     am (English); Domingo 7:00 & 11:00 am, 1:00 & 7:00 pm (Español)''. Confessions Saturday 2:30-3:30
     pm.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

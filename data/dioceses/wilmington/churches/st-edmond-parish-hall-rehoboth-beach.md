@@ -36,6 +36,7 @@ evidence:
 revisit: 'Seasonal: Sunday 9:00 a.m., 2026 dates May 24-September 13. No Mass here at 27 October 2026.
   Check the parish''s May 2027 bulletin or summer guide that the Hall Mass has resumed, with its dates.'
 revisit_after: 2027-05-15
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

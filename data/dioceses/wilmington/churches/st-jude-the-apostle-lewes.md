@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic: 152 Tulip Dr., Lewes, Delaware 19958, Plus Code; coordinates 38.7499375, -75.1809375,
     about 10 m from the directory pin.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'St. Catherine of Siena', 2503 Centerville Road; Mass Sun 8:00 and 10:30, Mon-Fri
     9:00, Sat 19:00 (Spanish). The map doesn't list the Tuesday 7 pm Spanish Mass the bulletin shows.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

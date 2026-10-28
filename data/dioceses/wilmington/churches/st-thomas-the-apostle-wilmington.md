@@ -32,6 +32,7 @@ evidence:
 revisit: 'Read the 8 and 15 November 2026 issues of the shared St. Ann / St. Thomas bulletin: does the
   Saturday 5:00 p.m. Mass stop on 1 November, and do Sunday and weekday Masses remain?'
 revisit_after: 2026-11-09
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

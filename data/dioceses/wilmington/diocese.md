@@ -2,7 +2,7 @@
 name: Roman Catholic Diocese of Wilmington
 state: DE
 website: https://cdow.org
-status: exploring
+status: promoted
 gcatholic: wilm0
 city_aliases:
   St Michaels: St. Michaels
@@ -10,6 +10,7 @@ city_aliases:
   Ocean Pines: Berlin
   Oak Orchard: Millsboro
   Golden Hill: Church Creek
+promoted: 2026-10-27
 ---
 
 All of Delaware (New Castle, Kent and Sussex counties: Wilmington, Newark, New Castle,

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-27
   note: OpenStreetMap relation 6323463 'Saint Hedwig's Roman Catholic Church', 408 South Harrison Street,
     centre 39.7402, -75.5659.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

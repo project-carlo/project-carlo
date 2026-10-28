@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-27
   note: 'GCatholic Plus Code 87C6GV6J+JW decodes to 38.5115625, -75.1176875: the right latitude but about
     3 km east of OSM''s building.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

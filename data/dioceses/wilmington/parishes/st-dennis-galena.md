@@ -24,6 +24,7 @@ evidence:
   quote: The Reverend James D. Hreha is reappointed Pastor of Saint Dennis, Galena. This is in addition
     to his appointment as Pastor of Saint Polycarp, Smyrna.
   note: Clergy appointments of 19 May 2024.
+promoted: 2026-10-27
 research:
 - method: probe url and the browser (visit.py --bulletin) on https://www.stdennischurch.org/ and curl
     on http/https and bare-domain variants

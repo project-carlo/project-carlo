@@ -25,10 +25,12 @@ evidence:
     -75.5194.
 - url: https://parishesonline.com/organization/immaculate-heart-of-mary-church-19803
   seen: 2026-10-27
-  note: ParishesOnline org page (JavaScript-rendered, so no quotable text) gives the address '4701 Weldin Rd, Wilmington, Delaware, 19803-4899' and coordinates 39.782683, -75.519897.
+  note: ParishesOnline org page (JavaScript-rendered, so no quotable text) gives the address '4701 Weldin
+    Rd, Wilmington, Delaware, 19803-4899' and coordinates 39.782683, -75.519897.
 - url: https://cdow.org/find-a-parish/
   seen: 2026-10-27
   note: Diocese map entry 'Immaculate Heart of Mary', 4701 Weldin Road, pin 39.783078, -75.519534.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

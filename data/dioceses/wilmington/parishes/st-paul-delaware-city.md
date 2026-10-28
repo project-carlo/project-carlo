@@ -19,6 +19,7 @@ evidence:
     category ''bulletin''), each wrapping a PDF (https://stpauldc.org/wp-content/uploads/2026/10/B102526.pdf).
     The heading says ''Please click on a date below to see a past bulletin:''. No PDF link is on the listing
     page itself.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: holy-spirit-st-peter-the-apostle-new-castle
   decision: separate

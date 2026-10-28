@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   quote: Milford – St. John the Apostle
   note: 'Summer guide (as of 12 May 2026): Saturday 5 PM; Sunday 9 AM, 11 AM, 1 PM (Spanish).'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

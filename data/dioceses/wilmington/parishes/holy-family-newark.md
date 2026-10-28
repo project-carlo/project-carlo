@@ -19,6 +19,7 @@ evidence:
     Holy Family <Month day, 2026>.pdf'' (newest 18 October on 27 October) and links https://church-bulletin.org/?id=308,
     which redirects to the church-bulletin.org listing of the same issues (newest 2026-10-25). 308 is
     the John Patrick Publishing number.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: resurrection-wilmington
   decision: separate

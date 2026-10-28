@@ -29,6 +29,7 @@ evidence:
   note: Diocese map entry 'St. Matthew', 901 E. Newport Pike; Mass Sun 7:00 and 9:00, Tue/Thu/Sat 8:30,
     Fri 18:00, Sat 17:15. The Friday 6:00 pm Mass and the Saturday 8:30 weekday Mass are not in the bulletin
     box (Saturday 8:30 is the 1st-Saturday Mass).
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

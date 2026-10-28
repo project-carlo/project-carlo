@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-27
   note: 'probe url: HTTP 200, links https://church-bulletin.org/?id=311, which redirects to the church-bulletin.org
     listing of dated weekly PDFs (latest 2026-10-25).'
+promoted: 2026-10-27
 publication_reviews:
 - parish: church-of-the-holy-child-wilmington
   decision: separate

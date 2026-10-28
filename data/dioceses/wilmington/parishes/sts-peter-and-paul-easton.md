@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-27
   note: 'Summer guide (as of 12 May 2026): ''St. Michaels – St. Michael (mission of Saints Peter & Paul)''
     and ''Cordova – St. Joseph (mission of Saints Peter & Paul)''.'
+promoted: 2026-10-27
 bulletin_status: available
 ---
 

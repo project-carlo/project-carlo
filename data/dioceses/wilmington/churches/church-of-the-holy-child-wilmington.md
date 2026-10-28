@@ -20,7 +20,9 @@ evidence:
     8:30 a.m. & 11:00 a.m., weekdays Monday–Thursday 9:00 a.m.'
 - url: https://parishesonline.com/organization/church-of-the-holy-child
   seen: 2026-10-27
-  note: ParishesOnline org page (JavaScript-rendered, so no quotable text) gives the address '2500 Naamans Rd, Wilmington, Delaware, 19810' and coordinates 39.825722, -75.515436 (about 40 m from the diocese pin).
+  note: ParishesOnline org page (JavaScript-rendered, so no quotable text) gives the address '2500 Naamans
+    Rd, Wilmington, Delaware, 19810' and coordinates 39.825722, -75.515436 (about 40 m from the diocese
+    pin).
 - url: https://gcatholic.org/churches/usa-04/19321
   seen: 2026-10-27
   quote: 2500 Naamans Rd., Wilmington, Delaware 19810
@@ -30,6 +32,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Holy Child', 2500 Naamans Road, Wilmington 19810, pin 39.825419, -75.515745;
     Mass times Sat 16:00, Sun 8:30 and 11:00, Mon–Thu 9:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

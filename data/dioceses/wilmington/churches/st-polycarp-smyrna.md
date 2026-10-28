@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-04/19355
   seen: 2026-10-27
   note: 'GCatholic: ''135 Ransom Ln., Smyrna, Delaware 19977'', Plus Code 87F679VQ+RV.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

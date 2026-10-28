@@ -20,6 +20,7 @@ evidence:
     which redirects to the church-bulletin.org listing above (306, John Patrick). The eCatholic site (id
     28410) also posts the issues as documents on https://www.margaretofscotland.org/bulletins-archived
     (for example 2026-10-18-1.pdf, 8 pages, also image-only), which look like the same bulletin.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

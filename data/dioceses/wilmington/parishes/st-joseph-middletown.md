@@ -27,6 +27,7 @@ evidence:
   note: Read in the browser (curl and probe url get HTTP 403). The parish site's own Bulletin page, a
     page of its own uploaded files (file URLs like /news-events/bulletin/563-october-18-2026/file), is
     a week behind the John Patrick listing (newest 18 October).
+promoted: 2026-10-27
 ---
 
 ## Publisher

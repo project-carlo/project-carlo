@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'Our Lady of Fatima', 801 North duPont Boulevard, pin 39.686928, -75.585661;
     Mass Sun 9:30 and 12:00, Sat 17:00 and 19:30 (Spanish), weekdays 8:30 Mon/Tue/Thu/Fri.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

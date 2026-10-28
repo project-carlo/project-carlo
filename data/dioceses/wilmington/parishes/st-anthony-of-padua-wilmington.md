@@ -22,6 +22,7 @@ evidence:
     first (November 01 2026, October 25, 18, 11, 04, September 27, 20), along with unrelated forms and
     calendars that do not match the Bulletin- name. stanthonynet.org (GCatholic''s old domain, and the
     e-mail domain in the bulletin) is the same parish.'
+promoted: 2026-10-27
 ---
 
 ## Publisher

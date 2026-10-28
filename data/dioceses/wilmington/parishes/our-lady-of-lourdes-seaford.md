@@ -30,6 +30,7 @@ evidence:
   quote: 532 E. Stein Hwy • Seaford, DE 19973
   note: Bon Venture listing headed 'Our Lady of Lourdes', 'Click to View Current Bulletin', newest 'October
     25, 2026', then weekly back to 2018; links `pdfs/2167/2026-10-25.pdf`.
+promoted: 2026-10-27
 publication_reviews:
 - parish: holy-rosary-claymont
   decision: separate

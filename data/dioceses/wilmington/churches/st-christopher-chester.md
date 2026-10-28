@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-27
   note: 'Summer guide: ''Kent Island (Chester) – St. Christopher'', ''Saturday – 5 PM | Sunday – 8 AM,
     10:30 AM''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

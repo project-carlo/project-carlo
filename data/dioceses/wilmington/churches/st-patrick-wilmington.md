@@ -29,6 +29,7 @@ evidence:
   note: Diocese map entry 'St. Patrick', 15th and King Streets, 19801, pin 39.749097, -75.543928; Sun
     8:00 (Latin), 9:30, 11:00 (Latin), 17:00; Mon 17:30 (Latin); Tue 17:30; Wed 17:30 (Latin); Thu 17:30;
     Sat 9:00. Website downtowncatholic.com/saint-patrick-church.html.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

@@ -41,6 +41,7 @@ evidence:
   note: Newest dated link on St. Thomas's own bulletins page. Its 28 June issue is a St. Thomas-only bulletin
     ('Saint Thomas the Apostle June 28, 2026', Rev. James S. Lentini, Pastor), so St. Thomas published
     separately until June and joined St. Ann's bulletin by 26 July 2026.
+promoted: 2026-10-27
 research:
 - method: Read sainttom.org home and /bulletins with the browser; probe url; searched for any St. Thomas-only
     issue after 28 June 2026 on that page

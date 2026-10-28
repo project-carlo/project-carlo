@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-27
   note: 'Summer guide: ''Ridgely – St. Benedict'', ''Sunday – 7:15 AM (until May 31st) | Sunday – 8 AM
     (May 31-Sept 6)''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

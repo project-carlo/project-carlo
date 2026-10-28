@@ -22,6 +22,7 @@ evidence:
 - url: https://www.stjosephonthebrandywine.org/bulletins
   seen: 2026-10-27
   note: 'probe url: parish bulletins page lists eCatholic files 30639 (newest 20261025) and embeds po-org:st-joseph-on-the-brandywine-parish.'
+promoted: 2026-10-27
 publication_reviews:
 - parish: st-ann-st-thomas-wilmington
   decision: separate

@@ -24,6 +24,7 @@ evidence:
     links go to https://church-bulletin.org/?id=310 and https://church-bulletin.org/310, which redirect
     to the listing above. `issues.py ecatholic ecatholic:5398` found no files.ecatholic.com bulletins
     (403 for 11, 18 and 25 October).'
+promoted: 2026-10-27
 publication_reviews:
 - parish: holy-family-newark
   decision: separate

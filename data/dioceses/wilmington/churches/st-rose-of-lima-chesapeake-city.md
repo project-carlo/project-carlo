@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-27
   quote: Lock St. & Cecil St., Chesapeake City, Maryland 21915
   note: GCatholic, Church, Plus Code 87F6G5JQ+JR.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

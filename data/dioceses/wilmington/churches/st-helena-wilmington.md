@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-27
   note: Diocese map entry 'St. Helena', 602 Philadelphia Pike, pin 39.768821, -75.502782; Mass Sun 8:00
     and 10:00, Sat 17:00 and 9:00, weekdays 9:00.
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

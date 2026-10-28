@@ -42,6 +42,7 @@ revisit: 'Seasonal: Sunday 9:00am Memorial Day weekend to late September; off-se
   Check the parish bulletin or mass-schedule page in late May 2027 that Mass has resumed, and whether
   the end is Labor Day or the last Sunday in September.'
 revisit_after: 2027-05-25
+promoted: 2026-10-27
 ---
 
 ## Holds Mass

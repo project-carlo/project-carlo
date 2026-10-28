@@ -18,6 +18,7 @@ evidence:
   note: The parish's Duda bulletin page (linked from its nav) embeds the ParishesOnline widget for lpi
     0018000000Qx8z0AAB (page source). `probe po` resolves it to org st-jude-the-apostle-church-19958 and
     container 03/1013, latest issue 2026-10-25.
+promoted: 2026-10-27
 ---
 
 ## Publisher

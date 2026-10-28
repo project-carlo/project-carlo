@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 issue: ''Saturday Vigil – 5:00 p.m. Sunday – 7:30 a.m. & 10:00
     a.m. Monday & Wednesday – 7:00 a.m. Tuesday & Thursday – 12:05 p.m. Friday – No Mass First Saturday
     – 8:00 a.m.''; address ''10 Old Church Road Greenville, DE 19807''.'
+promoted: 2026-10-27
 ---
 
 ## Holds Mass
