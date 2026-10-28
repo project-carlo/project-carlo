@@ -163,12 +163,14 @@ listings (2026-10-28). Each batch settles its own rows.
   Record the row as `other` with `page-pdfs https://www.church-bulletin.org/<slug>`, as
   Allentown, Harrisburg and Wilmington do, unless the parish's own eCatholic `/bulletins/`
   archive carries the same file (below). **The current channel is whichever has the latest
-  issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124)
-  means the parish publishes elsewhere, usually its eCatholic archive; a parish archive that
+  issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124;
+  St. Joseph, Downingtown 138, which never had one) means the parish publishes elsewhere, so
+  look at its eCatholic `/bulletins` archive first; a parish archive that
   stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Basil, Kimberton's own site, a
   year behind; St. Isaac Jogues's Squarespace `/bulletins`, July 2022) or lags by even a week
   (St. Gabriel, Stowe's site at 18 October with 25 October on the listing, files differing
-  byte for byte) leaves the listing as the channel, so open the newest dated entry on both.
+  byte for byte; St. Elizabeth, Upper Uwchlan's eCatholic; Sacred Heart, Oxford's Wix
+  `/bulletins`) leaves the listing as the channel, so open the newest dated entry on both.
   A site's "Current Bulletin" image linking `jppc.net/onlinebulletins/<id>template.pdf` names
   the listing, and a site whose footer reads "Designed and Hosted by John Patrick Publishing"
   hosts no PDFs of its own. A parish absent from the scan can still self-host (St. Patrick,
@@ -186,13 +188,22 @@ listings (2026-10-28). Each batch settles its own rows.
   answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
   hosting the bulletin, so an eCatholic id alone is not the publication; a `/bulletins` page
   linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
-  file is byte-identical to the John Patrick issue (St. Agnes and SS. Peter and Paul, West
-  Chester), use an `ecatholic` row and add the listing as a second `url:` publication id.
+  file is the John Patrick issue, use an `ecatholic` row and add the listing as a second
+  `url:` publication id: byte-identical (md5) for St. Agnes and SS. Peter and Paul, West
+  Chester and SS. Philip and James, Exton; but the two copies of one issue can also differ in
+  size and text layer, so when the bytes differ compare the rendered cover and Mass box before
+  calling them separate. An archive can post next Sunday's file days early (Our Lady of the
+  Rosary, Coatesville had 20261101 on 2026-10-28), which `fetch:check` reports as freshness
+  `future`; keep the `ecatholic` row and both ids in `publication`, with the listing as the
+  fallback `other` row if future issues are rejected.
   Files under `/documents/` instead of `/bulletins/` (St. Ann, Phoenixville) make the
   `ecatholic` resolver pick a stale issue (2016): use the `other` row on the John Patrick
   listing and keep `ecatholic:<id>` in `publication`. Plain curl of a `/bulletins` page gets a
   Cloudflare "Just a moment" stub; `probe get <url> --out <file>` returns the page with its PDF
-  links. A home page's first PDF can be a flyer (St. Anselm's "St. Lukes Open Flyer").
+  links (`--out` is relative to the repo root, not the shell's directory: give
+  `scratch/<run>/<job>/<file>`). `probe pdf` takes URLs only; for a downloaded file use
+  `render.py` or a PDF text tool. A home page's first PDF can be a flyer (St. Anselm's "St.
+  Lukes Open Flyer").
 - **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, files
   `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`: St. Dorothy, St. Francis
   of Assisi, Norristown, Epiphany, Plymouth Meeting, which also links John Patrick 091), WordPress
@@ -219,10 +230,15 @@ listings (2026-10-28). Each batch settles its own rows.
   organizations near a point:
   `https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/search?searchType=organization&latitude=<lat>&longitude=<lon>&distance=6`.
   As elsewhere, empty organizations are not fold-ins: read the masthead.
-- **J.S. Paluch / Discover Mass:** not seen on the sampled sites. If a row uses it, Discover Mass
+- **J.S. Paluch / Discover Mass:** not seen as a publisher here. A footer "View this bulletin
+  online at www.DiscoverMass.com" (St. Joseph, Downingtown's eCatholic issues) does not make it
+  one: the parish's own archive was current. If a row uses it, Discover Mass
   caps downloads per IP per day (a 134-byte "Maximum number of files downloaded today" reply,
   which `fetch:check` reports as `not_pdf`): that is the cap, not the row.
-- **archphila.org** answers 503 when read quickly: pause between requests and retry.
+- **archphila.org** answers 503 when read quickly: pause between requests and retry. Its
+  relegation decree PDFs are scanned images (`probe pdf` reads no text): render them. Page 2
+  gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka,
+  Chester County: none since 2016-07-02).
 - **Coordinates:** Nominatim through `probe get` (`format=jsonv2`, `q=<church name> <town>`)
   returns named OSM place_of_worship nodes; a bare street address returns only the street.
   The directory's and the masthead's street can be the parish office, and GCatholic's can be
@@ -233,19 +249,6 @@ listings (2026-10-28). Each batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- St. Joseph, Downingtown's John Patrick listing (138) never had an issue; its current publisher is the parish's own eCatholic /bulletins archive (site 30692, text-layer PDFs, newest 25 Oct 2026). A JP listing with no editions means look at the parish's eCatholic archive first.
-- SS. Philip and James, Exton: eCatholic 24683 and JP 144 issues are byte-identical (md5 compare); St. Elizabeth's eCatholic archive (36719) lagged a week behind JP 133, so it is an `other` row on the listing.
-- `probe get --out FILE` writes relative to the repo root, not the shell's cwd: pass a scratch path (scratch/<run>/<job>/file) or the file lands at the worktree root. `probe pdf` takes URLs only; for a downloaded file use render.py or pdf text tools.
-- A bulletin footer 'View this bulletin online at www.DiscoverMass.com' (St. Joseph, Downingtown) does not mean the parish publishes through Discover Mass; the eCatholic archive was current.
-- A parish hall can hold a weekly Sunday Mass listed in the bulletin masthead (Schneider Parish Center, Parkesburg, 11:15 am): read every location in the Mass schedule box, not only the churches the directory names.
-- Relegation decrees on archphila.org are scanned images (probe pdf reads no text): render them; page 2 gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka: none since 2016-07-02).
-- A parish eCatholic archive can post the next Sunday's file days early (Our Lady of the Rosary, Coatesville: 20261101 on 2026-10-28), so fetch:check reports freshness 'future'; the JP listing stays a fallback `other` row.
-- JP and eCatholic copies of one issue can differ in bytes (size, text layer) yet share page 1; record the listing as a second `url:` publication id after comparing the rendered cover and Mass box.
-- St. Rocco, Avondale self-hosts Spanish bulletins as /src/en/pdfs/bYYYYMMDD.pdf on stroccochurch.org/schedule.jsp (home page has no links in its source; open Schedules and Bulletins in the browser); it has no John Patrick listing, and its 25 Oct issue was not posted by 28 Oct.
-- A parish's 'donation center' or mission listed as its own directory parish (Mision Santa Maria, Avondale) can be the parish's own center: check the bulletin masthead and weekly calendar for where Mass is actually said before making it a church row.
-- A Mass staffed by one parish at another parish's church (St. Rocco's Sunday 2 PM Spanish Mass at Sacred Heart, Oxford) appears in both bulletins; it is one church row under the church's own parish, not a worship site of the staffing parish.
-- Sacred Heart, Oxford's Wix /bulletins page lagged the John Patrick listing 132 by a week (10/18 vs 10/25); Assumption BVM West Grove's eCatholic 3092 archive matched JP 229 (25 Oct).
 
 ## Rules settled for this diocese
 
@@ -262,6 +265,18 @@ Decisions that apply to more than one record, and who made them.
   possible shared bulletin, and record each parish's `publication_reviews` from the mastheads.
   Roster links go on church records (`diocese write` rejects `roster` on a parish). (map batch
   `west-chester`, 2026-10-28)
+
+- **Church rows follow the Mass schedule box, not the directory.** Read every location the
+  parish bulletin's Mass schedule lists: a parish hall or center with a weekly Sunday Mass gets a
+  church row (Schneider Parish Center, Parkesburg, 11:15 AM, under Our Lady of Consolation). A
+  directory "parish" that is really a parish's own center or mission name, where the bulletin
+  puts classes and meetings but no Mass, is excluded `no-public-mass` under that parish
+  (Mision Santa Maria, Madre de Dios, Avondale, St. Rocco's "donation center"). (map batches
+  `coatesville-parkesburg` and `southern-chester`, 2026-10-28)
+- **A Mass one parish staffs at another parish's church is that church's row only.** It
+  appears in both bulletins, but it is not a worship site of the staffing parish (St. Rocco's
+  Sunday 2:00 PM Spanish Mass at Sacred Heart, Oxford is on Sacred Heart's church row). (map
+  batch `southern-chester`, 2026-10-28)
 
 ## Log
 
