@@ -42,7 +42,7 @@ class Account:
 @dataclass
 class Config:
     five_hour_cap: float = 75
-    weekly_cap: float = 70
+    weekly_cap: float = 100
     max_workers: int = 1
     max_send_backs: int = 2
     lessons_before_integrate: int = 8
