@@ -286,6 +286,10 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Bon Venture sponsors pages can be found with a DuckDuckGo query on the parish's school or town plus sponsors.bonventure.net; check the page header's street address, because same-named parishes (OLPH Maple Shade is account 2214) have their own accounts.
+- A Wix parish page can link one PDF under /_files/ugd/ that is replaced weekly and may lag a Sunday or more (OLPH's showed 18 October on 29 October); fetch:check reports date and freshness unknown for it, so read page 3's Mass intentions to date it.
+- A GCatholic roadside shrine listed as a 'mission of' a parish with no Mass line in that parish's bulletin is excluded no-public-mass, with the absence and the search described in research.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
