@@ -549,6 +549,9 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- The Ukrainian Archeparchy's parish list is https://ukrcatholic.org/parishes (ukrarcheparchy.us redirects there); `probe get` reads it and each /parish/<slug> page gives address, pastor and liturgy times. It omits some GCatholic Ukrainian entries, so a Ukrainian GCatholic entry not on it is unconfirmed, still other-jurisdiction.
+- GCatholic Ukrainian entries sharing a Latin church's name or street (Christ the King, St. Josaphat) are picked up by coverage --link onto the Latin record: check the roster field of any Latin record linking a rite: Ukrainian id.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
