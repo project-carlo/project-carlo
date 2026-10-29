@@ -270,6 +270,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A merged parish's bulletin masthead address block can list more churches than GCatholic and the directory (OLBS: four churches, rosters have the seat only); read the whole address block and Mass Schedule on page 1.
 - A parish's new daily-Mass chapel on its campus (Saint John Bosco Chapel, Millville) is a church row of its own with no roster entry; the bulletin may say only 'in the chapel', so the parish home page names it.
 - A WeConnect/LPi bulletin with image-only pages 1-5 (All Saints, Millville) still reads on page 1 through render.py; fetch:check reports date inferred and identity unverified.
+- A parish's own eCatholic site can lag its printer's page by weeks (Hammonton: /bulletins to 6 Sept, 'this week' 4 Oct, while sponsors.bonventure.net/?page=4219 had 1 Nov): compare the newest eCatholic issue with the Bon Venture/JP listing before taking ecatholic:<id>; a search 'bonventure <parish name>' finds the sponsors page when the parish site doesn't link it.
+- A church the summer guide marks 'Currently not open' can still have a few public Masses a year (St. Bernard, Dorothy: dated list in SVdP's bulletins 'Upcoming St. Bernards Mass Schedule', schedule image on the parish home page); grep the parent bulletin for the church name before filing open/ or closed.
+- A bulletin's 'Sanctuary Lights' or intentions lists can keep a closed church's name (St Martin de Porres Chapel, Hammonton); read the parish's own page for the church before counting it as a place of Mass.
+- A blocked parish site (lakescatholic.com, 403 to probe and browser) can have its John Patrick listing found by a duckduckgo.com/html search through probe get; church-bulletin.org/<printer code> (6045 here) confirms it and the PDF's title shows the code.
 
 ## Rules settled for this diocese
 
