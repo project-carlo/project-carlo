@@ -278,6 +278,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish site footer 'Designed and Hosted by John Patrick Publishing' whose 'most recent bulletin' link is jppc.net/onlinebulletins/<id>template.pdf hosts no PDFs of its own, even when an old self-upload archive remains (Holy Cross, Springfield: 2025 uploads only); a new Parish Life Director did not change the publisher.
 - Some John Patrick issues have a text layer (St. Francis of Assisi 175, St. Kevin 66, Fatima 83) and some are image-only (Holy Cross 24): check `pdftotext -l 2` before rendering.
 - A parish's eCatholic site can exist only as a link page (stkevin.com, ecatholic:34467, /bulletins links just the jppc template): don't put the eCatholic id in `publication`.
+- Delaware County parish sites built on WeConnect/Duda (bvm-darby.com, olphmorton.org) embed a ParishesOnline publicationWidget whose id= is the 18-character LPi id; `probe po <id>` then gives the container, and `probe url` finds no publication on them.
+- A ParishesOnline container can have its first pages as images (BVM Darby 04/0756 pages 1-3): read the Mass box by rendering page 1, and use the page-4 footer line 'Name | 04-0756' as the text-layer tie to the container.
+- A John Patrick listing with no editions (Notre Dame de Lourdes, Swarthmore, 12) can belong to a worship site whose Masses are in its host parish's bulletin (Our Lady of Peace 109).
+- In bash, backticks inside a double-quoted body argument run as commands; write record bodies from a quoted heredoc to keep `code` spans.
 
 ## Rules settled for this diocese
 
