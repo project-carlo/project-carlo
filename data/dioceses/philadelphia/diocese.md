@@ -447,6 +447,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - `pnpm diocese coverage --link` rewrites roster lists on records in other batches (attaching Ukrainian GCatholic entries that share a Latin church's address); run plain `coverage`, or check `git status` and revert afterwards.
 - A John Patrick listing with no editions (St. William 28) can sit beside a current parish eCatholic /bulletins archive that is behind Cloudflare: visit.py on /bulletins lists the files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf links, which plain curl downloads.
 - A relegation decree can record that the church had only a monthly Sunday Mass in its last year (Incarnation of Our Lord, effective 2015-07-15, given 2015-06-08): use the effective month as an upper bound for last_mass and say so.
+- A Weebly bulletin page with hundreds of old links can make page-pdfs pick a misnamed file whose name reads as a future date (Holy Angels: 2017_11-02.pdf read as 2026-11-02): add filename=*26* (or the year's digits) to the recipe and rerun fetch:check.
+- A Squarespace bulletin page (Holy Innocents) posts next Sunday's file early with underscore names (2026_11_01.pdf): fetch:check picks it with freshness unknown, which is not a stale pick.
+- A directory parish with no website but a John Patrick listing needs a `website` value to write: use the listing URL.
+- A merged parish's undecided church (St. Joachim) can show only a one-off event Mass in CatholicPhilly's REST search (search=<name>, per_page, _fields); one healing Mass is not a worship site.
 
 ## Rules settled for this diocese
 
