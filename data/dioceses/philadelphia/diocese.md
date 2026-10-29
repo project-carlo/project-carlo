@@ -536,6 +536,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A pastor shared by three West Philadelphia parishes (Msgr. Britto) still gave three separate bulletins: compare the same-Sunday mastheads and hosts before sharing a row.
 - A WordPress.com site whose 'Weekly Bulletin' menu item links the PDF directly (St. Cyprian) resolves with bare page-pdfs to the wordpress.com mirror; pin 'page-pdfs <site> filename=bulletin_*.pdf'.
 - `coverage --link` rewrites roster lines on records outside your batch; run `git status` after it and report the strays.
+- A web-search PDF titled 'St Barnabas Bulletin' can be another state's parish (West Allis, Wisconsin): render page 1 and read the office address before attributing it.
+- A parish's Facebook page read in visit.py gives its address, pastor and event venues (Divine Mercy's 72nd and Grover Avenue event) even when no bulletin is posted; html.duckduckgo.com via probe get finds sites and Discover Mass pages when no search tool exists.
+- ParishesOnline organizations for a parish with no publications can still carry a dead website: Divine Mercy's divinemercyrc.com is a casino-spam squat, so don't take a directory or aggregator website without probe url.
 
 ## Rules settled for this diocese
 
