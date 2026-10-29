@@ -551,6 +551,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 
 - The Ukrainian Archeparchy's parish list is https://ukrcatholic.org/parishes (ukrarcheparchy.us redirects there); `probe get` reads it and each /parish/<slug> page gives address, pastor and liturgy times. It omits some GCatholic Ukrainian entries, so a Ukrainian GCatholic entry not on it is unconfirmed, still other-jurisdiction.
 - GCatholic Ukrainian entries sharing a Latin church's name or street (Christ the King, St. Josaphat) are picked up by coverage --link onto the Latin record: check the roster field of any Latin record linking a rite: Ukrainian id.
+- Eastern jurisdiction sources that `probe get` reads: Passaic eparchy list https://www.eparchyofpassaic.com/parishes (Ruthenian, with addresses), Maronite Brooklyn directory PDF linked from stmaron.org/directory (page 12 for Pennsylvania), Syro-Malabar Chicago https://stthomasdiocese.org/parishes/. No Syro-Malankara or Armenian Catholic parish list was found; GCatholic's Jurisdiction line is the source for those.
+- GCatholic names Ruthenian churches differently from the eparchy (St. Mary, Coatesville is Blessed Virgin Mary) and its websites can be dead (stmichaelbyz.net, stmarksarmenianchurch.org): match by address and phone against the eparchy list.
+- coverage --link attaches same-named Eastern GCatholic ids to Latin records (Holy Trinity, Old City); when writing the Eastern exclusion, expect the 'linked from both' validate warning.
 
 ## Rules settled for this diocese
 
