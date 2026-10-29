@@ -152,9 +152,12 @@ listings (2026-10-28). Each batch settles its own rows.
   the parish up there first. A listing's town can be the township or post town, not the
   directory's (St. Titus, Norristown is 95 under East Norriton; St. Thomas of Villanova is 180
   under Rosemont), so also search `raw/jppc-pa.json` by name. Three current listings match no
-  directory parish: 167 (Old St. Mary's, below), 286 "Saint Miriam Parish & School", Flourtown,
-  and 241 "The National Shrine of Saint Rita of Cascia" (19146), which publishes its own issue. It is
-  a lead, not a match: confirm the listing's name and the cover. Listings outlive their parish's
+  directory parish: 167 (Old St. Mary's, below), 286 "Saint Miriam Parish & School", Flourtown
+  (an Old Catholic community claiming the Union of Utrecht, with a "Bishop in Residence":
+  excluded `not-catholic`, so read the cover and the community's own "Who We Are" page before
+  taking an unmatched listing as Roman Catholic), and 241 "The National Shrine of Saint Rita of Cascia" (19146), which publishes its own issue. It is
+  a lead, not a match: confirm the listing's name, town and cover (151 "St. Rose of Lima" is the
+  Philadelphia parish; St. Rose of Lima, North Wales has no listing). Listings outlive their parish's
   move to another publisher (76 of the 269 have no edition at all; 12 directory parishes match
   only such a listing, e.g. St. Bartholomew 73, St. Charles Borromeo 130 and 287, St. John
   Fisher, St. Barbara, St. Cyprian, St. William), and a listing's
@@ -164,7 +167,9 @@ listings (2026-10-28). Each batch settles its own rows.
   Allentown, Harrisburg and Wilmington do, unless the parish's own eCatholic `/bulletins/`
   archive carries the same file (below). **The current channel is whichever has the latest
   issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124;
-  St. Joseph, Downingtown 138, which never had one) means the parish publishes elsewhere, so
+  Mary, Mother of the Redeemer, North Wales 265, whose current issues are
+  `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf`; St. Joseph, Downingtown 138, which never
+  had one) means the parish publishes elsewhere, so
   look at its eCatholic `/bulletins` archive first, then ParishesOnline (St. John Fisher,
   Boothwyn, below); a parish archive that
   stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Francis de Sales, Lenni's and
@@ -182,14 +187,19 @@ listings (2026-10-28). Each batch settles its own rows.
   A site's "Current Bulletin" image linking `jppc.net/onlinebulletins/<id>template.pdf` names
   the listing, and a site whose footer reads "Designed and Hosted by John Patrick Publishing"
   hosts no PDFs of its own, even when an old self-upload archive remains (Holy Cross,
-  Springfield: 2025 uploads only; its new Parish Life Director did not change the publisher). A parish absent from the scan can still self-host (St. Patrick,
+  Springfield: 2025 uploads only; its new Parish Life Director did not change the publisher),
+  but it need not have a John Patrick listing either (Corpus Christi, Lansdale prints with Bon
+  Venture, below). A parish absent from the scan can still self-host (St. Patrick,
   Malvern, below). **Covers mislead; compare the masthead and the page-2 Mass box.** Two
   parishes under one pastor can share the printer's cover art (Annunciation BVM and St. Denis,
   Havertown), print the same combined Mass schedule box (St. Charles Borromeo, Drexel Hill 220
   and Sacred Heart, Clifton Heights 92), or print each other's schedule and one joint
   Mass-intentions list (St. Helena 43 and St. Titus 95) and still publish separate issues, with
   different md5 and page counts, their own mastheads and page 2: shared content is not a shared
-  bulletin, and each church stays a row under its own parish. A neighbour's box
+  bulletin, and each church stays a row under its own parish. A **joint masthead** is: one issue
+  headed "St. Anthony & St. Joseph Parishes" with both addresses, one combined Mass schedule and
+  one intentions list tagged SA or SJ is one row with two churches, under whichever parish has
+  the listing (240, St. Anthony of Padua, Ambler; St. Joseph, Ambler has none). A neighbour's box
   on the cover (St. Thomas of Villanova 180 and Our Mother of Good Counsel carry each other's) is
   not a worship site of the row. A listing with no editions can belong to a campus (Villanova
   University 233) or a worship site (Notre Dame de Lourdes, Swarthmore 12, under Our Lady of
@@ -201,8 +211,10 @@ listings (2026-10-28). Each batch settles its own rows.
   Francis of Assisi 175, St. Kevin 66, Fatima 83, St. Dorothy 209; image-only, `probe pdf`
   showing 0 readable pages: Holy Cross 24, Sacred Heart, Swedesburg 143, Mother of Divine
   Providence 27; a text layer garbled by font substitution, where `pdftotext` gives gibberish,
-  counts as none: St. Patrick, Norristown 89): check `pdftotext -l 2` first, and for image-only
-  issues render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
+  counts as none: St. Patrick, Norristown 89): check `pdftotext -l 2` first. An image-only listing often has
+  older issues with a text layer: `pdftotext` on one a few months back reads the masthead
+  cheaply and dates a joint masthead or a change of name. For the current image-only
+  issue render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
   (or `pdftoppm -r 70 -png`, which the Read tool reads) to read the masthead; `fetch:check` then
   reports `publication_identity` `unverified`, by design. Mass times sit on the cover or in a
   page-2 sidebar (St. Eleanor 10, Sacred Heart, Royersford 13, St. Mary, Schwenksville 4), and
@@ -211,7 +223,9 @@ listings (2026-10-28). Each batch settles its own rows.
   St. Anne 34036, St. Anastasia 12297, St. Barbara 21577, St. Francis de Sales, Lenni 2405)
   answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
   hosting the bulletin (St. Colman, Ardmore's `/bulletins` page is empty; stkevin.com,
-  ecatholic:34467, is only a link page whose `/bulletins` links the jppc template), so an
+  ecatholic:34467, is only a link page whose `/bulletins` links the jppc template; Our Lady of
+  the Sacred Heart, Hilltown 38359 and St. Genevieve 38659 link only `church-bulletin.org/?id=<n>`
+  and no `files.ecatholic.com` PDF: an `other` row on the listing), so an
   eCatholic id alone is not the publication and stays out of `publication`; a `/bulletins` page
   linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
   file is the John Patrick issue, use an `ecatholic` row and add the listing as a second
@@ -226,7 +240,8 @@ listings (2026-10-28). Each batch settles its own rows.
   `ecatholic` resolver pick a stale issue (2016): use the `other` row on the John Patrick
   listing and keep `ecatholic:<id>` in `publication`. Plain curl of a `/bulletins` page gets a
   Cloudflare "Just a moment" stub, and `probe url` can answer 403 (sfdslenni.org and
-  churchofstjosephaston.org on `/bulletins`, staparishgm.org); `probe get <url> --out <file>`
+  churchofstjosephaston.org on `/bulletins`, staparishgm.org; stgensparish.com answered in the
+  survey and 403 to a map job the same day); `probe get <url> --out <file>`
   returns the page with its PDF links (`--out` is relative to the repo root, not the shell's
   directory: give `scratch/<run>/<job>/<file>`), and `visit.py` loads it otherwise (staparishgm.org
   showed its `church-bulletin.org/?id=097` link). A file found only in the page source (the
@@ -250,15 +265,31 @@ listings (2026-10-28). Each batch settles its own rows.
   John Patrick PDF: use the listing. Likewise when a WordPress `/bulletins/` page or a Wix
   `/events/bulletins` page carries a current, byte-identical (md5) copy under irregular or hashed
   `/_files/ugd/` file names (St. Patrick, Kennett Square and listing 236; St. Mary Magdalen,
-  Media; Mother of Divine Providence's WordPress `/bulletins/` and listing 27): keep the listing as the `page-pdfs` channel and note the copy as equal in
+  Media; Mother of Divine Providence's WordPress `/bulletins/` and listing 27; St. Philip Neri,
+  Lafayette Hill's `/bulletins/`, `shared/bulletins/<yyyy>/<mm>-<dd>-<yyyy>.pdf`, and listing 14): keep the listing as the `page-pdfs` channel and note the copy as equal in
   `publication_reviews`. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
   A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
   nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
-  `probe get` and is readable with `visit.py`): use the parish's John Patrick listing. Numbered
+  `probe get` and is readable with `visit.py`): use the parish's John Patrick listing. Such `/file` links can also answer 403 to every recipe
+  (`page-pdfs`, `dated-post`, `linked-issue-page`, `redirected-pdf`) while an in-page `fetch()`
+  in Chrome (`tools/browser_download.py`) downloads the PDF to read; with no John Patrick
+  edition to fall back on, the row is `no_bulletin` with `bulletin_status: access-blocked` and a
+  `revisit` (St. Catherine of Siena, Horsham, whose listing 117 is empty). Numbered
   Squarespace files with no date in the name, listed newest first (St. Mary's Quasi-Parish,
   FSSP: `/bulletin`, `/s/48-Christ-the-King-jm5e.pdf`), are read correctly by `page-pdfs`, but
   `fetch:check` freshness stays `unknown`. Don't print a Wix page's `href` list whole: it
   carries thousands of characters of parastorage URLs (`grep -v parastorage`).
+- **Bon Venture Services:** a minority printer here (Corpus Christi, Lansdale; St. Rose of
+  Lima, North Wales). Its sponsor page `sponsors.bonventure.net/?page=<id>` lists dated
+  `pdfs/<id>/<yyyy-mm-dd>.pdf`: record `other` with `page-pdfs
+  http://sponsors.bonventure.net/?page=<id>`, as Allentown does, over `http://` (the server
+  sends no intermediate certificate). It lists next Sunday's PDF early, so `fetch:check`
+  freshness reads `future`. The link can hide on a site John Patrick hosts: Corpus Christi's
+  Bulletins page is empty and only the menu's BULLETIN link, seen in `visit.py`'s link list,
+  goes to the sponsor page. A parish can instead post the issue on its own site (srol.org:
+  `/assets/Uploads` files with irregular names, newest first, next Sunday early), where
+  `page-pdfs` takes the first link and freshness stays `unknown`; the last page's printer
+  footer names Bon Venture.
 - **A shared WordPress host that answered HTTP 500 to everyone:** saintfrancescabrini.net,
   annunciationbvmchurch.org, sainthelenaparish.net, scbdh.org and epiphanychurch.church all
   resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. The
@@ -330,18 +361,6 @@ listings (2026-10-28). Each batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A parish site hosted by John Patrick Publishing can still have no John Patrick listing: Corpus Christi, Lansdale's Bulletins page is empty, and the menu's BULLETIN link (only visible in visit.py's link list) goes to sponsors.bonventure.net/?page=1906; record it as `other` with `page-pdfs http://sponsors.bonventure.net/?page=<id>`, as Allentown does. Bonventure lists next Sunday's PDF early, so fetch:check freshness reads `future`.
-- An eCatholic site whose /bulletins page links only church-bulletin.org/?id=<n> and no files.ecatholic.com PDFs (Our Lady of the Sacred Heart, Hilltown, ecatholic 38359) is an `other` row on the listing, with the eCatholic id left out of `publication`.
-- Squarespace /file bulletin links that answer 403 to probe get and to page-pdfs/dated-post/linked-issue-page/redirected-pdf recipes can still be downloaded by an in-page fetch() in Chrome (tools/browser_download.py); with no John Patrick edition to fall back on, the row is no_bulletin/access-blocked (St. Catherine of Siena, Horsham).
-- A John Patrick listing with no editions can belong to a parish that publishes elsewhere: Mary, Mother of the Redeemer (265) uses its own eCatholic /bulletins archive (current files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf), and St. Rose of Lima, North Wales has no listing at all (151 is the Philadelphia parish of that name).
-- St. Rose of Lima, North Wales's Bon Venture-printed bulletin sits on srol.org with irregular /assets/Uploads names listed newest first, the next Sunday posted early; page-pdfs picks the first link and freshness stays unknown.
-- Two parishes under one pastor can print a single John Patrick issue under a joint masthead ('St. Anthony & St. Joseph Parishes') with one combined Mass schedule tagged by church: that is one row, two churches, listed under whichever parish has the listing (St. Joseph, Ambler has none). Open an older text-layer issue to date it.
-- A John Patrick image-only issue can have an older issue with a text layer: pdftotext on a months-old issue reads the masthead cheaply.
-- A John Patrick listing that matches no roster can be a non-Roman community: Saint Miriam, Flourtown (286) is Old Catholic (Union of Utrecht claim, 'Bishop in Residence'); read the cover and the parish's own Who We Are page, and exclude not-catholic.
-- Holy Martyrs, Oreland's directory website holymartyrschurch.org redirects to holymartyrsparish.org (probe url REDIRECT-OFFSITE, same parish); its Bulletin link is the JP template.
-- A parish's own /bulletins archive (St. Philip Neri, Lafayette Hill: shared/bulletins/2026/<mm>-<dd>-2026.pdf) can carry the md5-identical John Patrick issue; either channel is current, the listing stays the recipe.
-- stgensparish.com (St. Genevieve, Flourtown) answers 403 to probe url and loads in visit.py; it is an eCatholic site whose Bulletins link goes only to JP listing 119.
 
 ## Rules settled for this diocese
 
