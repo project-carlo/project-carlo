@@ -368,6 +368,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - St. Hilary of Poitiers' Wix /bulletins page lists issues oldest first (first `_files/ugd` link is 4 January 2026), so `page-pdfs` on the site would pick a stale file; the John Patrick listing is the newest-first channel, and the Wix copy of the current issue is byte-identical.
 - GCatholic's street number can belong to the parish school on the same campus (St. Hilary, Rydal: GCatholic 920 Susquehanna Rd. is the school; the church is 820 per bulletin, directory rectory and OSM): query Nominatim for both numbers.
 - A Wix site's bulletin link can be a non-bulletin file (Immaculate Conception, Jenkintown's `_files/ugd` PDF is a fiscal report): read the PDF's first page before treating a site as a channel.
+- A parish site that answers 403 to probe url and curl (stlukeglenside.org) can still have a current eCatholic /bulletins archive: visit.py on /bulletins lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf, and curl downloads the file itself; compare md5 with the John Patrick listing before choosing the ecatholic row.
+- A John Patrick cover can carry the Hatboro name but a Warminster address (St. John Bosco: 215 East County Line Road, ZIP 18974, with GCatholic giving 235): follow the bulletin, directory and OSM, which agree on 215.
 
 ## Rules settled for this diocese
 
