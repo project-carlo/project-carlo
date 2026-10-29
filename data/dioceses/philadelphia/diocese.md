@@ -389,6 +389,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A directory website can be the parish school's site (Mount Carmel, Doylestown: olmcs.org is the school); open the home page and take the parish site from the bulletin footer.
 - A bulletin's Mass box can name a weekday Mass at a historic second church ('Thursday at old St. John's Church'); the parish history page gives its name, and the directory's cemetery line can give its address.
 - A John Patrick PDF and an eCatholic /bulletins file for the same Sunday can differ in layout and page count (St. Jude, Chalfont: 12 vs 10 pages); different bytes do not mean a copy, and a week-behind archive leaves the listing as the channel.
+- A parish's self-hosted WordPress /weekly-bulletins/ page that lists newest first (St. Joseph, Warrington) works as a page-pdfs recipe; its bulletin footer 'View this bulletin online at www.DiscoverMass.com' did not make it a Discover Mass row.
+- Directory Mass times can be years stale (St. Joseph, Warrington: directory Sat 5:30 PM, Sun 7/8:30/10/11:30; bulletin Sat 4:00 PM, Sun 7:30/9:30/11:30): take Mass times from the bulletin.
 
 ## Rules settled for this diocese
 
