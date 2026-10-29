@@ -458,6 +458,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A merged parish with no website can keep its pages on a school's eCatholic site under a parish menu (St. John Paul II on motherdivinegrace.com) and its old bulletins on a church's own site (stadalbert.org); read the school's menu and each church's site before concluding no channel exists.
+- Search ParishesOnline near each church of a merged parish (probe get on the search API, distance=3): its organizations give street addresses, phones and each church's own website that GCatholic's intersections lack, even with no publications.
+- Beware same-named parish sites: nativity-bvm.org (listed by ParishesOnline for Port Richmond's Nativity BVM) is Nativity BVM, Media; check the address on the page.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
