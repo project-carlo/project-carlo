@@ -189,6 +189,10 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- John Patrick bulletins on church-bulletin.org may be image-only (St. Joseph, Somers Point, id 617): probe pdf returns no text, so render page 1 with parish-site-access render.py; fetch:check still reports the PDF as ok.
+- A parish's dead directory website can be found with a duckduckgo.com/html search via `probe get`; verify the address on the page before storing it (St. Joseph moved from .com to .org).
+- St. Katharine Drexel's ParishesOnline PDF is about 37 MB, over fetch:check's 25 MB inspection limit, so document_type reports only the PDF signature; this is not an error.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
