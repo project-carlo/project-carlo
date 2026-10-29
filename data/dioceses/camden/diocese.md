@@ -246,6 +246,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - John Patrick ids in the 6000s resolve through `curl -sIL https://church-bulletin.org/<id>` (301, 302 to the listing): Holy Family, Sewell is 6009 and Sts. Peter and Paul, Turnersville is 6029, found as a parish's own file-name prefix ('6029 Bulletin ...pdf') or its site's church-bulletin.org/<id> link.
 - When a parish's own Duda page lists PDFs under irregular names ('October 25 2026.pdf', 'November 1- 2026.pdf'), pin its John Patrick listing instead: uniform dated names make fetch:check's newest pick reliable.
+- Holy Angels (Woodbury) is John Patrick code 635; the parish's own page links jppc.net/onlinebulletins/635template.pdf. Its issues are image-only, so read the masthead with render.py.
+- A merger decree notice on camdendiocese.org (e.g. /082710-decrees-issued-establishing-two-new-parishes/) and the Catholic Star Herald decree posts name the worship sites kept at a merger; read them to see which former churches were never worship sites before filing a church open/ or closed.
+- eCatholic parish sites here expose the Mass schedule on /mass-times; the bulletin masthead lists the churches and their addresses, which can differ by street number from GCatholic (Gibbstown 320 vs 313 Memorial Ave).
 
 ## Rules settled for this diocese
 
