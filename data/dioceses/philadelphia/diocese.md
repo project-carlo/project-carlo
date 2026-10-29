@@ -386,6 +386,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A directory website can be the parish school's site (Mount Carmel, Doylestown: olmcs.org is the school); open the home page and take the parish site from the bulletin footer.
+- A bulletin's Mass box can name a weekday Mass at a historic second church ('Thursday at old St. John's Church'); the parish history page gives its name, and the directory's cemetery line can give its address.
+- A John Patrick PDF and an eCatholic /bulletins file for the same Sunday can differ in layout and page count (St. Jude, Chalfont: 12 vs 10 pages); different bytes do not mean a copy, and a week-behind archive leaves the listing as the channel.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
