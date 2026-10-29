@@ -440,6 +440,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- An eCatholic parish site whose 'Weekly Parish Bulletins' menu item or 'Latest Bulletin' button points offsite (St. Christopher: http://sponsors.bonventure.net/?page=1904) has no bulletin link for probe url; read the nav hrefs in the page source for a bonventure.net/jppc/church-bulletin link before calling the bulletin missing.
+- A parish's eCatholic /bulletins archive can carry the same file as its John Patrick listing (Maternity BVM: identical md5 for 2026-10-25); compare md5 and record the eCatholic channel. Its page-source links, not the visible text, show the files.
+- A directory website can redirect to an abandoned Wix site whose tab title belongs to another church (skschurch.com shows 'New Faith Gospel Church'); the bulletin's own page-1 website line gave the live site (stkatherineofsiena.org, HTTP 403 to probe url, loads in visit.py).
+- A merged parish's masthead subtitle ('Under the Protection of Our Lady of Ransom') is a patronal title, not a Mass site; a relegation decree can state that regular worship ended at the merger, years before its effective date.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
