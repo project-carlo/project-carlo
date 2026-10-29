@@ -370,6 +370,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A Wix site's bulletin link can be a non-bulletin file (Immaculate Conception, Jenkintown's `_files/ugd` PDF is a fiscal report): read the PDF's first page before treating a site as a channel.
 - A parish site that answers 403 to probe url and curl (stlukeglenside.org) can still have a current eCatholic /bulletins archive: visit.py on /bulletins lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf, and curl downloads the file itself; compare md5 with the John Patrick listing before choosing the ecatholic row.
 - A John Patrick cover can carry the Hatboro name but a Warminster address (St. John Bosco: 215 East County Line Road, ZIP 18974, with GCatholic giving 235): follow the bulletin, directory and OSM, which agree on 215.
+- A GoDaddy Website Builder /bulletins page links hash-named img1.wsimg.com PDFs whose names carry the date (St. Lawrence, Riegelsville); page-pdfs reads them and picks next Sunday's file early, so fetch:check freshness reads 'future'.
+- A relegation decree can state that no worship occurred for decades (original St. Philip Neri, East Greenville: none since 1968, relegated 2023-01-23); use the decree's own sentence as the closure source and last_mass.
+- GCatholic's first-recorded date can belong to a parish's older closed church (St. Philip Neri, Pennsburg 'history 1919.10' is the East Greenville church built that year, not the 1968 Pennsburg building).
 
 ## Rules settled for this diocese
 
