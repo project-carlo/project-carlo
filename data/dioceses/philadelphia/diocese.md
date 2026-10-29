@@ -408,6 +408,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish site whose Bulletin page links only church-bulletin.org/?id=<n> (St. Andrew, Newtown's eCatholic 37063; St. Martin, New Hope's Wix, whose one home-page PDF is a PREP calendar) makes the listing the channel; keep the eCatholic id out of publication.
+- A parish's own archive can hold a text-layer 10-page copy of the same Sunday as an image-only 12-page listing file (St. Ignatius, Yardley), not byte-identical; if its page lists issues by month rather than newest first, keep the listing as the page-pdfs channel.
+- A bulletin banner address for a second building ('Olde Church', St. Andrew, Newtown) is a venue, not a worship site, unless a Mass box or calendar lists Mass there; older text-layer issues in the listing can be searched for it when the current one is image-only.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
