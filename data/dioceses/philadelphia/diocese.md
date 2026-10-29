@@ -145,7 +145,8 @@ listings (2026-10-28). Each batch settles its own rows.
 - **John Patrick Publishing prints most of this diocese** (the firm is local). Parish sites link
   `jppc.net/onlinebulletins/<id>template.pdf` or `church-bulletin.org/?id=<id>`, which redirect
   to a `church-bulletin.org/<slug>` listing of dated PDFs with "Latest Edition" and the parish's
-  name, town and ZIP. `tools/jppc_scan.py` read ids 1–1300 on 2026-10-28: 269 listings have a
+  name, town and ZIP. The template URL returns an HTML page, not a PDF: take the issue from the
+  listing's `church-bulletin.org/bulletin/<slug>/<yyyy-mm-dd>.pdf` link. `tools/jppc_scan.py` read ids 1–1300 on 2026-10-28: 269 listings have a
   PA 18xxx–19xxx ZIP, 193 of them with a current issue (25 October 2026), 165 in 19xxx.
   `raw/jppc-directory.json` (`tools/jppc_match.py`) pairs 184 of the 218 directory parishes with
   a listing by name and town (or a ZIP on the directory page), **172 with a current issue**: look
@@ -228,7 +229,9 @@ listings (2026-10-28). Each batch settles its own rows.
   showing 0 readable pages: Holy Cross 24, Sacred Heart, Swedesburg 143, Mother of Divine
   Providence 27, St. Bede, Holland 103, St. Vincent de Paul, Richboro 19, Our Lady of Good
   Counsel, Southampton 6; a text layer garbled by font substitution, where `pdftotext` gives gibberish,
-  counts as none: St. Patrick, Norristown 89): check `pdftotext -l 2` first. An image-only listing often has
+  counts as none: St. Patrick, Norristown 89): check `pdftotext -l 2` first. Text layers drop
+  ligatures ("Bap st", "Co on St.", "Oﬃce"): quote words without ti, tt, ff or fi so `recheck`
+  finds them (St. John the Baptist, Manayunk). An image-only listing often has
   older issues with a text layer: `pdftotext` on one a few months back reads the masthead
   cheaply and dates a joint masthead or a change of name. For the current image-only
   issue render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
@@ -290,7 +293,10 @@ listings (2026-10-28). Each batch settles its own rows.
 - **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, newest first, files
   `/s/210-Bulletin_October-25-2026.pdf` named for the listing id and the Sunday; listing 210 has
   the same issue in another layout, different bytes and text order, so the row is `page-pdfs` on
-  the parish's dated page with both URLs in `publication`), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
+  the parish's dated page with both URLs in `publication`; a site's copy can also be only the
+  inside pages: the St. Rita shrine's `/s/241_<mmddyy>.pdf` is 2 pages of Mass intentions with no
+  cover or Mass box, while listing 241 has the full 4-page issue, so compare page counts and keep
+  the listing), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
   often stop or hold only flyers and forms: St. Dorothy's "Parish Bulletin" page links a
   registration form, St. Francis of Assisi, Norristown's newest PDF is a godparent-eligibility
   letter, Immaculate Conception, Jenkintown's only PDF is a fiscal report, St. Martin of Tours,
@@ -406,7 +412,11 @@ listings (2026-10-28). Each batch settles its own rows.
   holynameofjesus-fishtown.org fails verification in `probe url` and `visit.py` follows it to
   holynameofjesusparish.org, the host to record as `website`. An expired certificate fails
   `probe url` and `visit.py` alike, over https and http (stmichaelsphiladelphia.com): the John
-  Patrick listing is then the row's `website`, with a `research` entry to recheck the site.
+  Patrick listing is then the row's `website`, with a `research` entry to recheck the site. So
+  is a site that `probe url` redirects to a network-filter warning page
+  (`block.charter-prod.hosted.cujo.io/warn.html`) and `visit.py` answers ERROR (staquinas.com,
+  St. Thomas Aquinas, Philadelphia): the filter is on this connection, not the site, so don't
+  retry in a loop; record `access-blocked` research and take the site the bulletin prints.
 - **ParishesOnline / LPi:** a minority publisher here, found in Delaware County (St. Philomena,
   Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton; St. Rose,
   Eddystone 04/0708; St. John Fisher, Boothwyn 03/1236, whose John Patrick listing has no
@@ -460,18 +470,26 @@ listings (2026-10-28). Each batch settles its own rows.
   (Immaculate Heart of Mary, Chester, effective 2024-03-01): check each batch's closed
   neighbours there for decrees. Its decree list starts in 2015, so a church closed earlier has
   none (St. Laurentius, Fishtown, closed as unsafe in March 2014, still a "Worship Site" in the
-  directory). For news of a church with no decree, CatholicPhilly's WordPress
+  directory). Nor do all later closures have one (St. Mary of the Assumption, Manayunk, closed
+  2015-11-01, still a directory worship site). For news of a church with no decree, CatholicPhilly's WordPress
   REST search (`catholicphilly.com/wp-json/wp/v2/posts?search=<name>&per_page=15&_fields=...`)
-  lists its stories and event notices; an event Mass there is not a worship site (rule below).
+  lists its stories and event notices: search the church's and the merged parish's names plus
+  "close" before leaving a worship-site line `open`. An event Mass there is not a worship site
+  (rule below).
   OSM still tags closed and relegated buildings as churches: a node is no evidence of Mass.
 - **Coordinates, addresses and chapel owners:** Nominatim through `probe get` (`format=jsonv2`,
   `q=<church name> <town>`) returns named OSM place_of_worship nodes, as JSON inside `probe
   get`'s `text` field (`jq '.text|fromjson'`); a bare street address returns only the street,
   though for some Delaware County churches it returns the church. It can file a church under the
   wrong post town (St. John Neumann, Bryn Mawr under Havertown), find it only under the
-  township's name (St. Titus under "East Norriton", not Norristown: try both) or find nothing (Our Mother of Good Counsel): fall back to GCatholic's Plus Code. GCatholic's ZIP
+  township's name (St. Titus under "East Norriton", not Norristown: try both) or find nothing (Our Mother of Good Counsel): fall back to GCatholic's Plus Code. A named
+  node can also sit 100 m or more from the church (Stella Maris: about 170 m east of GCatholic's
+  pin at 10th and Bigler): check it against the Plus Code before taking it. GCatholic's ZIP
   can differ from the bulletin's (St. Gabriel, Avondale: 19350 vs 19311): follow the parish's
-  own and leave `address_verified` false. GCatholic's "Mission of:" line names the owner of a
+  own and leave `address_verified` false. A masthead's street number can disagree with
+  GCatholic, OSM and the directory together (Holy Spirit, Philadelphia: 1857 against 1845
+  Hartranft St.); the masthead can be the office (below), so follow the three, say so in the
+  record and leave `address_verified` false. GCatholic's "Mission of:" line names the owner of a
   chapel whose name points elsewhere (Sacre Coeur adoration chapel: St. Denis, not Sacred Heart,
   Havertown). A historic second church named only in the Mass box ("Thursday at old St. John's
   Church", St. John the Baptist, Ottsville) takes its name from the parish history page and can
@@ -502,22 +520,14 @@ listings (2026-10-28). Each batch settles its own rows.
   don't. A Ukrainian GCatholic entry can share a Latin church's address, and `coverage --link`
   then attaches it to the Latin church's record, rewriting roster lists on records in other
   batches: run plain `coverage`, or check `git status` afterwards and revert what isn't yours.
+- **Writing records from the shell:** quote a heredoc's delimiter (`<<'JSON'`). Unquoted, the
+  shell runs backticked words in the payload (`address_verified`) as commands and silently drops
+  them from the record.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A chapel the bulletin gives its own address (St. John the Baptist, Manayunk: 'Office & Chapel at 146 Rector St.' while the church is 119) and that holds the weekday Mass is its own church row, not part of the church's; one on the same campus with no address of its own (IHM's Sacred Heart Chapel) stays on the church row.
-- A worship site the directory still lists can have closed on a date only CatholicPhilly gives, with no decree on the planning page (St. Mary of the Assumption, Manayunk, closed 2015-11-01): search CatholicPhilly's REST API for the merged parish's name plus 'close' before leaving a worship-site line open.
-- John Patrick text layers drop ligatures ('Bap st', 'Co on St.', 'Oﬃce'): quote words without ti/tt/ff/fi so `recheck` finds them.
-- When writing JSON payloads in a shell heredoc, quote the delimiter ('JSON'); an unquoted one runs backticked words such as `address_verified` as commands and silently drops them from the record.
-- A site can answer with a network-filter warning page (block.charter-prod.hosted.cujo.io/warn.html) in probe url and ERROR in visit.py: record access-blocked research and take the bulletin's printed site from the listing, not a retry loop.
-- A bulletin's printed worship-site address can differ from GCatholic, OSM and the directory (Holy Spirit: 1857 vs 1845 Hartranft St.): record the disagreement and leave address_verified false.
-- The John Patrick template URL jppc.net/onlinebulletins/<id>template.pdf returns an HTML page, not a PDF: take the PDF from the listing's church-bulletin.org/bulletin/<slug>/<yyyy-mm-dd>.pdf link.
-- A parish site's own bulletin page can post only the inside pages of the issue (St. Rita shrine's Squarespace /s/241_<mmddyy>.pdf: 2 pages of Mass intentions, no cover or Mass box) while the John Patrick listing holds the full 4-page issue: compare page counts and keep the listing as the channel.
-- A cover's 'Lower Church' and 'Upper Church' labels in a Mass box (Epiphany of Our Lord) are floors of one building, not two church rows.
-- OSM place_of_worship nodes can sit 100+ m from the real church (Stella Maris, on Stella Maris Street): check the node against GCatholic's Plus Code before taking it.
 
 ## Rules settled for this diocese
 
@@ -548,7 +558,12 @@ Decisions that apply to more than one record, and who made them.
   batch `media-wallingford`, 2026-10-28) A "Chapel" named in a weekday Mass line (St. Helena,
   Blue Bell's Saint Theresa Chapel) is a room of the church's campus, its Masses on the church's
   row, unless the bulletin or site gives it another address. (map batch `blue-bell-norristown`,
-  2026-10-28) A "Saint X Chapel" under the cover's "Daily Adoration" is an adoration chapel, not
+  2026-10-28) With its own address and Mass it is a church row of its own (St. John the Baptist,
+  Manayunk's All Saints' Chapel, "Chapel at 146 Rector St.", weekday 7:00 AM, the church at 119);
+  a chapel on the same campus with no address of its own stays on the church's row (IHM's Sacred
+  Heart Chapel). (map batch `manayunk-roxborough`, 2026-10-29) "Lower Church" and "Upper
+  Church" in a Mass box are floors of one building, one church row (Epiphany of Our Lord). (map
+  batch `south-philly-east`, 2026-10-29) A "Saint X Chapel" under the cover's "Daily Adoration" is an adoration chapel, not
   a church row, unless a Mass line names it (St. Frances Cabrini, Fairless Hills: its Saint Joseph
   Chapel is in the Parish Center). A second building's address in the masthead or a footer banner
   (St. Andrew, Newtown's "Olde Church") is a venue, not a church row, unless a Mass box or
