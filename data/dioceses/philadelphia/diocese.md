@@ -254,6 +254,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - GCatholic can give a different ZIP than the bulletin (St. Gabriel, Avondale: 19350 vs 19311); follow the parish's own ZIP and leave address_verified false.
 - Two parishes under one pastor can print separate John Patrick issues that share the printer's cover art (Annunciation BVM and St. Denis, Havertown, 25 Oct 2026): compare the masthead and page-2 Mass box, not the cover; the 'Mission of' line on a GCatholic page names the real owner of an ambiguous chapel.
 - A parish's own WordPress archive can be two years stale while its John Patrick listing is current (Sacred Heart, Havertown: archive ends 2024-10-27); eCatholic sites with an empty /bulletins page (St. Colman, Ardmore) link the listing: use the listing as the page-pdfs channel.
+- St. John Neumann, Bryn Mawr (text-layer John Patrick PDF) and OMGC's eCatholic archive both run a week behind listing issues (own copies stop at 2026-10-18); the listing is the channel.
+- Nominatim returns the church as OSM place_of_worship under the street address for some Delaware County churches, but can file it under the wrong post town (Neumann: Havertown) or find nothing (OMGC); fall back to the GCatholic Plus Code.
 
 ## Rules settled for this diocese
 
