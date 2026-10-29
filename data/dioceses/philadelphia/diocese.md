@@ -193,10 +193,12 @@ listings (2026-10-28). Each batch settles its own rows.
   Malvern, below). **Covers mislead; compare the masthead and the page-2 Mass box.** Two
   parishes under one pastor can share the printer's cover art (Annunciation BVM and St. Denis,
   Havertown), print the same combined Mass schedule box (St. Charles Borromeo, Drexel Hill 220
-  and Sacred Heart, Clifton Heights 92), or print each other's schedule and one joint
-  Mass-intentions list (St. Helena 43 and St. Titus 95) and still publish separate issues, with
-  different md5 and page counts, their own mastheads and page 2: shared content is not a shared
-  bulletin, and each church stays a row under its own parish. A **joint masthead** is: one issue
+  and Sacred Heart, Clifton Heights 92), print each other's schedule and one joint
+  Mass-intentions list (St. Helena 43 and St. Titus 95), or carry each other's Mass times and
+  rectory on the cover as "Twinned Parishes" (St. Joseph 7 and Presentation BVM 15, Cheltenham)
+  and still publish separate issues, with different md5 and page counts, their own mastheads and
+  page 2, whose footer code names the listing ("007 St. Joseph - Cheltenham", "015 p. 2"):
+  shared content is not a shared bulletin, and each church stays a row under its own parish. A **joint masthead** is: one issue
   headed "St. Anthony & St. Joseph Parishes" with both addresses, one combined Mass schedule and
   one intentions list tagged SA or SJ is one row with two churches, under whichever parish has
   the listing (240, St. Anthony of Padua, Ambler; St. Joseph, Ambler has none). A neighbour's box
@@ -244,7 +246,10 @@ listings (2026-10-28). Each batch settles its own rows.
   survey and 403 to a map job the same day); `probe get <url> --out <file>`
   returns the page with its PDF links (`--out` is relative to the repo root, not the shell's
   directory: give `scratch/<run>/<job>/<file>`), and `visit.py` loads it otherwise (staparishgm.org
-  showed its `church-bulletin.org/?id=097` link). A file found only in the page source (the
+  showed its `church-bulletin.org/?id=097` link). A site that answers 403 to `probe url` and
+  curl can still have a current archive: `visit.py` on `/bulletins` lists the
+  `files.ecatholic.com` PDFs, which plain curl downloads, so compare md5 with the John Patrick
+  issue before choosing the `ecatholic` row (stlukeglenside.org, 28474: byte-identical). A file found only in the page source (the
   newest `files.ecatholic.com` `href`) is not visible text: cite it in a `note`, never a
   `quote`, which recheck can't find. `probe pdf` takes URLs only; for a downloaded file use
   `render.py` or a PDF text tool. A home page's first PDF can be a flyer (St. Anselm's "St.
@@ -253,11 +258,15 @@ listings (2026-10-28). Each batch settles its own rows.
   `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
   often stop or hold only flyers and forms: St. Dorothy's "Parish Bulletin" page links a
   registration form, St. Francis of Assisi, Norristown's newest PDF is a godparent-eligibility
-  letter and Epiphany, Plymouth Meeting's archive stops in December 2025, while the home page's
+  letter, Immaculate Conception, Jenkintown's only PDF is a fiscal report and Epiphany, Plymouth
+  Meeting's archive stops in December 2025, while the home page's
   "Current Bulletin" link to `jppc.net/onlinebulletins/<id>template.pdf` or
-  `church-bulletin.org/?id=<id>` names the real channel, the listing (31 and 91). Read the
-  file's text before calling a Wix site a bulletin channel), WordPress
-  bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Hilary, St. Andrew, Drexel Hill,
+  `church-bulletin.org/?id=<id>` names the real channel, the listing (31, 91 and 145). Read the
+  file's first page before calling a Wix site a bulletin channel. A Wix `/bulletins` page can
+  list its issues oldest first, so `page-pdfs` on it would pick a stale file even when it holds
+  a byte-identical copy of the current one: St. Hilary of Poitiers, Rydal's first `_files/ugd`
+  link is 4 January 2026; use the newest-first listing, 160), WordPress
+  bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Andrew, Drexel Hill,
   Holy Innocents, St. Dominic; St. Patrick, Malvern `/bulletin/`, text-layer files
   `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
   listing carries). A WordPress site posting one page per issue (St. Katharine of Siena) gives
@@ -278,7 +287,14 @@ listings (2026-10-28). Each batch settles its own rows.
   Squarespace files with no date in the name, listed newest first (St. Mary's Quasi-Parish,
   FSSP: `/bulletin`, `/s/48-Christ-the-King-jm5e.pdf`), are read correctly by `page-pdfs`, but
   `fetch:check` freshness stays `unknown`. Don't print a Wix page's `href` list whole: it
-  carries thousands of characters of parastorage URLs (`grep -v parastorage`).
+  carries thousands of characters of parastorage URLs (`grep -v parastorage`). A GoDaddy
+  Website Builder `/bulletins` page links hash-named `img1.wsimg.com` PDFs whose names carry
+  the date (St. Lawrence, Riegelsville): `page-pdfs` reads them and picks next Sunday's file
+  early, so freshness reads `future`. A Google Sites page that embeds each Sunday as a
+  `drive.google.com/file/d/<id>/preview` iframe, with no shared folder, gives `page-pdfs` no
+  links (`resolve_failed`), though each file downloads by hand from
+  `drive.google.com/uc?export=download&id=<id>`, newest embedded first: record `no_bulletin`
+  with `bulletin_status: unsupported-format` and a `revisit` (Our Lady of Hope, Philadelphia).
 - **Bon Venture Services:** a minority printer here (Corpus Christi, Lansdale; St. Rose of
   Lima, North Wales). Its sponsor page `sponsors.bonventure.net/?page=<id>` lists dated
   `pdfs/<id>/<yyyy-mm-dd>.pdf`: record `other` with `page-pdfs
@@ -331,7 +347,9 @@ listings (2026-10-28). Each batch settles its own rows.
 - **archphila.org** answers 503 when read quickly: pause between requests and retry. Its
   relegation decree PDFs are scanned images (`probe pdf` reads no text): render them. Page 2
   gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka,
-  Chester County: none since 2016-07-02) or when Sunday worship was suspended. The host parish's
+  Chester County: none since 2016-07-02; the original St. Philip Neri, East Greenville: "has not
+  been used for divine worship of any kind since 1968", relegated 2023-01-23) or when Sunday worship
+  was suspended: quote that sentence as the closure source and take `last_mass` from it. The host parish's
   own site can post the decree too, also scanned (Sacred Heart, Clifton Heights has St. Hedwig's).
   A relegated church that is in no roster is found only on the parish-planning page
   (Immaculate Heart of Mary, Chester, effective 2024-03-01): check each batch's closed
@@ -356,23 +374,17 @@ listings (2026-10-28). Each batch settles its own rows.
   The directory's and the masthead's street can be the parish office, and GCatholic's can be
   off too (St. Patrick, Malvern: office 131 Channing Ave., church 104 Channing Ave. per its
   site footer and OSM, GCatholic 126 Woodland Ave.): read the site's contact page or footer.
+  GCatholic's number can be the parish school's on the same campus (St. Hilary, Rydal: 920
+  Susquehanna Rd. is the school in OSM, the church 820 per bulletin, directory and OSM): query
+  Nominatim for both numbers. GCatholic's "first recorded" date can belong to an older, closed
+  church of the parish (St. Philip Neri, Pennsburg's 1919.10 is the East Greenville church, not
+  the 1968 Pennsburg building). A GCatholic id is not a ZIP: `gcatholic:19096` is Presentation
+  BVM, Cheltenham (19012), not Presentation BVM, Wynnewood (19096).
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A Google Sites bulletin page that embeds each Sunday as a drive.google.com/file/d/<id>/preview iframe gives page-pdfs no links (fetch:check resolve_failed); the files download by hand from drive.google.com/uc?export=download&id=<id>, newest embedded first. Record no_bulletin with unsupported-format.
-- Twinned parishes under one pastor can each print the other's Mass times and rectory on their cover and still be separate listings (St. Joseph 7 and Presentation 15, Cheltenham): compare the page-2 footer codes ('007 ...', '015 p. 2'), page counts and md5.
-- A GCatholic id is not a ZIP: gcatholic:19096 is Presentation BVM in Cheltenham (19012), a different parish from Presentation BVM in Wynnewood (19096).
-- St. Hilary of Poitiers' Wix /bulletins page lists issues oldest first (first `_files/ugd` link is 4 January 2026), so `page-pdfs` on the site would pick a stale file; the John Patrick listing is the newest-first channel, and the Wix copy of the current issue is byte-identical.
-- GCatholic's street number can belong to the parish school on the same campus (St. Hilary, Rydal: GCatholic 920 Susquehanna Rd. is the school; the church is 820 per bulletin, directory rectory and OSM): query Nominatim for both numbers.
-- A Wix site's bulletin link can be a non-bulletin file (Immaculate Conception, Jenkintown's `_files/ugd` PDF is a fiscal report): read the PDF's first page before treating a site as a channel.
-- A parish site that answers 403 to probe url and curl (stlukeglenside.org) can still have a current eCatholic /bulletins archive: visit.py on /bulletins lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf, and curl downloads the file itself; compare md5 with the John Patrick listing before choosing the ecatholic row.
-- A John Patrick cover can carry the Hatboro name but a Warminster address (St. John Bosco: 215 East County Line Road, ZIP 18974, with GCatholic giving 235): follow the bulletin, directory and OSM, which agree on 215.
-- A GoDaddy Website Builder /bulletins page links hash-named img1.wsimg.com PDFs whose names carry the date (St. Lawrence, Riegelsville); page-pdfs reads them and picks next Sunday's file early, so fetch:check freshness reads 'future'.
-- A relegation decree can state that no worship occurred for decades (original St. Philip Neri, East Greenville: none since 1968, relegated 2023-01-23); use the decree's own sentence as the closure source and last_mass.
-- GCatholic's first-recorded date can belong to a parish's older closed church (St. Philip Neri, Pennsburg 'history 1919.10' is the East Greenville church built that year, not the 1968 Pennsburg building).
 
 ## Rules settled for this diocese
 
