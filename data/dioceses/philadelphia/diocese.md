@@ -331,6 +331,9 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish site hosted by John Patrick Publishing can still have no John Patrick listing: Corpus Christi, Lansdale's Bulletins page is empty, and the menu's BULLETIN link (only visible in visit.py's link list) goes to sponsors.bonventure.net/?page=1906; record it as `other` with `page-pdfs http://sponsors.bonventure.net/?page=<id>`, as Allentown does. Bonventure lists next Sunday's PDF early, so fetch:check freshness reads `future`.
+- An eCatholic site whose /bulletins page links only church-bulletin.org/?id=<n> and no files.ecatholic.com PDFs (Our Lady of the Sacred Heart, Hilltown, ecatholic 38359) is an `other` row on the listing, with the eCatholic id left out of `publication`.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
