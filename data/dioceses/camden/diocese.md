@@ -133,10 +133,12 @@ and verify both.
   dated PDFs (seen: St. Peter, Merchantville 502; Christ the King, Haddonfield 503; Our Lady of
   Hope, Blackwood 506; Our Lady of Peace, Williamstown 525; Our Lady of the Angels 564; St.
   Charles Borromeo, Sicklerville 584; St. Stephen, Pennsauken 591; St. Joseph, Somers Point 617;
-  St. Thomas More, Cherry Hill 632; Divine Mercy, Vineland 633; St. Gianna, Northfield 636; St.
-  Thomas, Brigantine 661; St. Joseph the Worker 663; Holy Child, Runnemede 698; Holy Spirit,
-  Mullica Hill 6006; St. Joseph, Sea Isle City 6028; St. Mary, Gloucester 6049; St. Teresa of
-  Calcutta and Christ Our Light, ids not read). New Jersey ids run in the 500s–600s and 6000s.
+  St. Thomas More, Cherry Hill 632; Divine Mercy, Vineland 633; Holy Angels, Woodbury 635; St.
+  Gianna, Northfield 636; St. Thomas, Brigantine 661; St. Joseph the Worker 663; St. Michael,
+  Clayton 695; Holy Child, Runnemede 698; Holy Spirit, Mullica Hill 6006; Holy Family, Sewell
+  6009; St. Joseph, Sea Isle City 6028; Sts. Peter and Paul, Turnersville 6029; St. Mary,
+  Gloucester 6049; St. Teresa of Calcutta and Christ Our Light, ids not read). New Jersey ids
+  run in the 500s–600s and 6000s.
   Plain curl `-L` on the template URL lands on the listing (checked for 502, 636, 6006 and 6028).
   Don't guess a slug: the `<name>-church-<town>-nj-<zip>` pattern holds only some of the time
   (`saint-charles-borromeo-church-sicklerville-nj-08081`, but `holy-child-parish-runnemede-nj-08078`),
@@ -145,18 +147,21 @@ and verify both.
   **When a parish's own site can't be read or doesn't link its bulletin, look for its listing**
   (Christ the King, Haddonfield's site links none; it is 503): first
   `tools/jp_ids_500_700.tsv`, the Run's sweep of `curl -sIL
-  http://www.jppc.net/onlinebulletins/<id>template.pdf` for ids 500–700 (id to final listing slug;
-  the 6000s aren't covered); then a search for `church-bulletin.org <parish> <town> NJ`
+  http://www.jppc.net/onlinebulletins/<id>template.pdf` for ids 500–700 (id to final listing slug);
+  for a 6000s id, `curl -sIL https://church-bulletin.org/<id>` (301, then 302 to the listing);
+  then a search for `church-bulletin.org <parish> <town> NJ`
   (duckduckgo.com/html through `probe get`, which is how St. Teresa of Calcutta's and Christ Our
   Light's, `christ-our-light-cherry-hill-nj-08034`, were found). A printer's code also shows in
   an issue's back-page footer and as the prefix of a parish's own file names (Holy Child's
   `698…`), and `church-bulletin.org/?id=<code>` redirects to the listing. The listing beats a
   parish's own copy when that copy lags (Holy Child's page stopped at 13 September while the
-  listing had 25 October) or its first PDF is something else (St. Stephen's is a registration
-  form). A listing with no `/bulletin/` editions means the parish publishes elsewhere: Christ
-  the Redeemer, Atco's 683 is empty and its bulletin is on ParishesOnline. **Most issues here
-  are image-only** (502, 617, 632, 663, St. Teresa's; 591 has a text layer): `probe pdf` returns
-  no text and `fetch:check` still reports the PDF ok with the date from the URL, so render pages
+  listing had 25 October), its first PDF is something else (St. Stephen's is a registration
+  form) or it names files irregularly (a Duda page's 'October 25 2026.pdf', 'November 1-
+  2026.pdf'): the listing's uniform dated names keep `fetch:check`'s newest pick reliable. A
+  listing with no `/bulletin/` editions means the parish publishes elsewhere: Christ the
+  Redeemer, Atco's 683 is empty and its bulletin is on ParishesOnline. **Most issues here are
+  image-only** (502, 617, 632, 635, 663, 6009, St. Teresa's; 591 has a text layer): `probe pdf`
+  returns no text and `fetch:check` still reports the PDF ok with the date from the URL, so render pages
   1–2 with parish-site-access `render.py` to read the masthead and Mass schedule (`probe pdf
   --pages N` reads the first N pages, not page N; use `--grep` or `render.py` for one page).
   church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent, so use plain curl, `probe
@@ -165,9 +170,11 @@ and verify both.
   04/0903, a text-layer masthead naming the church and Drexel Hall), St. Joseph Pro-Cathedral
   (`po-org:st-joseph-pro-cathedral`, 03/0810; issues to 2026-11-01), St. Mary, Cherry Hill
   (04/0346, image-only), Christ the Redeemer, Atco (`po-org:christ-the-redeemer`, 03/1431; its
-  John Patrick listing is empty) and Our Lady of Guadalupe, Lindenwold
-  (`po-org:our-lady-of-guadalupe-08021`, 03/4079). St. Mary of Mount Carmel, Hammonton has an old
-  `stmarymtcarmelhammonton.parishesonline.com` subdomain (TLS fails) and an eCatholic site; check
+  John Patrick listing is empty), Our Lady of Guadalupe, Lindenwold
+  (`po-org:our-lady-of-guadalupe-08021`, 03/4079), Mary, Mother of Mercy, Glassboro
+  (`po-org:mary-mother-of-mercy-parish`, 04/0882, from the widget on its Duda page
+  `/bulletin9ab2b387`) and St. Bridget University Parish (03/1233, org not found). St. Mary of
+  Mount Carmel, Hammonton has an old `stmarymtcarmelhammonton.parishesonline.com` subdomain (TLS fails) and an eCatholic site; check
   which is current. Issues are posted before their Sunday, so `fetch:check` freshness `future`
   is not a wrong pick. Some issues here are over `fetch:check`'s 25 MB inspection limit (Drexel's
   about 37 MB, St. Mary's): `document_type` then reports only the PDF signature, which is not an
@@ -175,22 +182,29 @@ and verify both.
   serves issues but no slug was found), record the parish's own page that posts the same issues
   with `page-pdfs` and keep `po-container:` in `publication`. St. Mary's Finalweb page lists PDFs
   out of date order with spaces in the names: `fetch:check` still picks the newest; percent-encode
-  the spaces for `probe pdf`. A WeConnect/Duda site can embed `publicationWidget?id=<lpi id>` without
-  `probe url` reporting it: grep the page source for `id=0018`.
+  the spaces for `probe pdf`. A page that only embeds `widget.parishesonline.com/publications?id=<40
+  hex>` shows no issue when the widget answers 502, which also hides the org (St. Bridget, 2026-10-29):
+  a search for the parish name and `container.parishesonline.com` finds the container from its PDFs,
+  but `probe po` can't take a container, so with no org slug and no page listing the PDFs the row
+  stays `other` with `po-container:`, `bulletin_status: access-blocked` and a revisit. A
+  WeConnect/Duda site can embed `publicationWidget?id=<lpi id>` without `probe url` reporting it: grep the page source for `id=0018`.
 - **eCatholic:** St. Mary of Mount Carmel, Hammonton (33982), St. Clare of Assisi (23165), St.
   Rose of Lima (35649; `strosenj.com` redirects to `strosenj.org`). An eCatholic id is the
   publication only when `/bulletins` lists current `files.ecatholic.com/<id>/bulletins/` PDFs;
-  some sites link John Patrick or another publisher instead.
+  some sites link John Patrick or another publisher instead. Their `/mass-times` page has the
+  schedule; the bulletin masthead lists the churches with addresses, which can differ from
+  GCatholic's by street number (St. Clare's Gibbstown church: 320 vs 313 Memorial Ave.).
 - **Self-hosted and other platforms:** Wix (Our Lady of Perpetual Help, Galloway: a
-  `_files/ugd/` PDF; Most Precious Blood `/bulletins`; Mary, Mother of Mercy and St. Brendan
-  `/bulletin9ab2b387`, a Duda/Wix hash suffix; Duda PDFs on `irp.cdn-website.com`, such as St.
-  Andrew, Gibbsboro's `…/40284_YYYY_MM_DD.pdf`, can have a garbled text layer: `probe pdf` shows
+  `_files/ugd/` PDF; Most Precious Blood `/bulletins`; St. Brendan `/bulletin9ab2b387`, a
+  Duda/Wix hash suffix; Duda pages hide their PDF links from `probe get`'s text, so read the
+  hrefs from plain curl of the page source: St. Gabriel the Archangel's `/bulletin` names files
+  `BULLETIN MM.DD.YY FINAL.pdf`, dated enough for `page-pdfs` to pick the newest; Duda PDFs on
+  `irp.cdn-website.com`, such as St. Andrew, Gibbsboro's `…/40284_YYYY_MM_DD.pdf`, can have a garbled text layer: `probe pdf` shows
   nonsense and `fetch:check` reports issue date unknown though the newest is picked, so render
   page 1 and date the issue from the file name; the Korean missions' own sites, such as St. Yi
   Yun Il's chkcc.org, whose bulletin page ended in June 2024: check the newest file's date
-  before making a parish row), WordPress (Holy Family, Sewell `/weekly-bulletin/`;
-  Infant Jesus; Our Lady of Sorrows `/bulletins/`; Our Lady of Hope `/current-bulletin/`;
-  Mater Ecclesiae `/bulletin/`), and fixed-name PDFs (Mary, Queen of All Saints:
+  before making a parish row), WordPress (Infant Jesus; Our Lady of Sorrows `/bulletins/`; Our
+  Lady of Hope `/current-bulletin/`; Mater Ecclesiae `/bulletin/`), and fixed-name PDFs (Mary, Queen of All Saints:
   `maryqueenofallsaints.org/currbulletin3.pdf`, overwritten weekly; `currbulletin2.pdf` is the
   week before. With no masthead date or dated name, `fetch:check` reports issue date and
   freshness `unknown` though the pick is right; `page-pdfs` alone pins it). Christ the Good Shepherd's bulletin page is
@@ -208,8 +222,10 @@ and verify both.
   stteresaofcalcuttanj.org, churchofscb.org (where saint-charles-borromeo.org redirects).
   JavaScript-rendered (NO-PARISH-WORDS): ladystarofthesea.org, sacredheartcamden.org,
   stanthonycamden.org, stjoenj.net. Use parish-site-access `visit.py` and `render.py` and
-  `fetch:check` only: the sandbox's safety check denied a custom script that downloaded a blocked
-  URL through the stealth browser (map batch `collingswood-haddon`).
+  `fetch:check` only. A frameset site returns a few-hundred-byte shell to `probe url`
+  (saintmichael-archangel.com frames psmarectory.wixsite.com/psma): `visit.py` renders the framed
+  site and its bulletin link. The sandbox's safety check denied a custom script that downloaded
+  a blocked URL through the stealth browser (map batch `collingswood-haddon`).
 - **Dead, moved or hijacked domains (2026-10-29):** no DNS: blessedteresanj.org, ctratco.com,
   christtheshepherd.com, churchofstbridget.com, olssparish.com, saintmonicanac.org,
   sacredheartcamden.net, stclareofassisiparish.org, stjosephsomerspoint.com, stjosephwkr.org,
@@ -230,7 +246,10 @@ and verify both.
   driving the stealth browser through a search engine's bot check (map batch
   `atco-sicklerville-williamstown`). Spend searches on finding a site or listing; for John
   Patrick use the id sweep above, and to date a closure use the Catholic Star Herald REST
-  search and the parish's own pages, not web search.
+  search and the parish's own pages, not web search. nj.com answers 403 to `probe get` and 429
+  through Wayback: a DuckDuckGo result snippet is then the only readable text, so record it as a
+  `note:`, not a `quote:`, and give only the closure month it supports (map batch
+  `salem-county-mullica-hill`).
 - **J.S. Paluch / Discover Mass:** not seen in the survey. If a row uses it, Discover Mass caps
   downloads per IP per day (a 134-byte "Maximum number of files downloaded today" reply, which
   `fetch:check` reports as `not_pdf`): that is the cap, not the row.
@@ -244,18 +263,6 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- John Patrick ids in the 6000s resolve through `curl -sIL https://church-bulletin.org/<id>` (301, 302 to the listing): Holy Family, Sewell is 6009 and Sts. Peter and Paul, Turnersville is 6029, found as a parish's own file-name prefix ('6029 Bulletin ...pdf') or its site's church-bulletin.org/<id> link.
-- When a parish's own Duda page lists PDFs under irregular names ('October 25 2026.pdf', 'November 1- 2026.pdf'), pin its John Patrick listing instead: uniform dated names make fetch:check's newest pick reliable.
-- Holy Angels (Woodbury) is John Patrick code 635; the parish's own page links jppc.net/onlinebulletins/635template.pdf. Its issues are image-only, so read the masthead with render.py.
-- A merger decree notice on camdendiocese.org (e.g. /082710-decrees-issued-establishing-two-new-parishes/) and the Catholic Star Herald decree posts name the worship sites kept at a merger; read them to see which former churches were never worship sites before filing a church open/ or closed.
-- eCatholic parish sites here expose the Mass schedule on /mass-times; the bulletin masthead lists the churches and their addresses, which can differ by street number from GCatholic (Gibbstown 320 vs 313 Memorial Ave).
-- A ParishesOnline widget at widget.parishesonline.com/publications?id=<40-hex> can answer 502 and hides the org; a search for the parish name plus 'container.parishesonline.com' finds its container (e.g. 03/1233), but probe po can't take a container, so the org slug may stay unknown.
-- A parish site that is a frameset (saintmichael-archangel.com framing psmarectory.wixsite.com/psma) returns a 463-byte shell to probe url; visit.py renders the framed Wix site and its bulletin link.
-- The roster's parish-level entry at a parish office address can be a naming artefact, not a church: check the bulletin masthead's church photos and addresses for the real worship sites (St. Michael, Clayton has St. Catherine and Nativity).
-- camdendiocese.org answers /wp-json/wp/v2/search?search=<word>; its 2009-2011 consolidation decree posts (e.g. St. Gabriel the Archangel, Catholic Community of the Holy Spirit) name each merged parish's worship sites, and the diocese's WP post content comes from /wp-json/wp/v2/posts/<id>.
-- Duda parish sites (saintgabrielarchangel.org) hide bulletin PDF links from probe get's text: read hrefs from plain curl of the /bulletin page source; their dated names (BULLETIN MM.DD.YY FINAL.pdf) let page-pdfs pick the newest.
-- nj.com articles answer 403 to probe get and 429 through Wayback; a DuckDuckGo result snippet is the only readable text, so record it as a note (not a quote) and the closure month only.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -267,6 +274,7 @@ Decisions that apply to more than one record, and who made them.
 - Monastery and shrine chapels (Monastery of the Perpetual Rosary, Camden; Our Lady of the Highway, Sea and Air, Pomona) follow Philadelphia's rule: a church row under a parish whose bulletin lists their public Mass, a parish row if they publish their own bulletin, otherwise excluded no-public-mass or no-bulletin. (accepted by survey-review, 002-survey-review, 2026-10-29)
 - A shared pastor is not a shared bulletin. Parishes whose masthead names one priest as pastor of one and administrator of the other keep separate parish rows when each publishes its own bulletin with its own masthead and Mass times (St. Mary, Cherry Hill, LPi 04/0346, and St. Thomas More, Cherry Hill, John Patrick 632: Rev. Michael J. Matveenko). The 2025–2026 assignments name pastors only, so read both mastheads before calling two parishes one. (map batch `cherry-hill`, 2026-10-29)
 - A merged parish's churches come from its current bulletin's masthead, not the rosters: a church the masthead lists with Mass gets a church row even when no roster has it (Our Lady of Guadalupe's St. Luke, Stratford; GCatholic and the directory list only Lindenwold), and `coverage` will show it as in no roster. (map batch `runnemede-blackwood-lindenwold`, 2026-10-29)
+- Before filing a merged parish's former church in open/ or closed, read the merger's establishment decree: the 2009–2011 decrees name the worship sites the new parish keeps, so they show which former churches had already stopped being worship sites. They are on camdendiocese.org (`/wp-json/wp/v2/search?search=<word>`, then `/wp-json/wp/v2/posts/<id>` for the content; e.g. `/082710-decrees-issued-establishing-two-new-parishes/`) and in the Catholic Star Herald's decree posts. (map batches `woodbury-paulsboro` and `salem-county-mullica-hill`, 2026-10-29)
 
 ## Log
 
