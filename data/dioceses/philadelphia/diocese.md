@@ -425,6 +425,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A cover subtitle such as 'Our Lady of Fatima Worship Site' over the parish's own address is not evidence of Mass at the worship site: check whether the Mass box names a place (St. Charles Borromeo, Bensalem).
 - `coverage --link` can attach another batch's roster entry (a Ukrainian GCatholic entry sharing an address) to your record; check the roster field afterwards.
 - An eCatholic /bulletins file can be byte-identical to the John Patrick listing's issue even when probe url answers 403: use visit.py to read the page and compare md5 (St. Thomas Aquinas, Croydon, ecatholic 2517, listing 77).
+- A John Patrick issue whose masthead sets two church titles side by side over one parish office, one pastor and one Mass box is one row with two churches, even when the directory keeps two parish pages and the cover reads 'The Roman Catholic Church of ...' (SS. Timothy and Bartholomew, listing 116); the partner's own listing (73) has no editions.
+- A Wix 'Previous Bulletins' page that lists issues oldest first and ends with next Sunday's file (St. Bernard, Mayfair: 7 June to 1 November 2026) is not a page-pdfs channel: keep the John Patrick listing.
 
 ## Rules settled for this diocese
 
