@@ -508,6 +508,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A chapel the bulletin gives its own address (St. John the Baptist, Manayunk: 'Office & Chapel at 146 Rector St.' while the church is 119) and that holds the weekday Mass is its own church row, not part of the church's; one on the same campus with no address of its own (IHM's Sacred Heart Chapel) stays on the church row.
+- A worship site the directory still lists can have closed on a date only CatholicPhilly gives, with no decree on the planning page (St. Mary of the Assumption, Manayunk, closed 2015-11-01): search CatholicPhilly's REST API for the merged parish's name plus 'close' before leaving a worship-site line open.
+- John Patrick text layers drop ligatures ('Bap st', 'Co on St.', 'Oﬃce'): quote words without ti/tt/ff/fi so `recheck` finds them.
+- When writing JSON payloads in a shell heredoc, quote the delimiter ('JSON'); an unquoted one runs backticked words such as `address_verified` as commands and silently drops them from the record.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
