@@ -427,6 +427,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - An eCatholic /bulletins file can be byte-identical to the John Patrick listing's issue even when probe url answers 403: use visit.py to read the page and compare md5 (St. Thomas Aquinas, Croydon, ecatholic 2517, listing 77).
 - A John Patrick issue whose masthead sets two church titles side by side over one parish office, one pastor and one Mass box is one row with two churches, even when the directory keeps two parish pages and the cover reads 'The Roman Catholic Church of ...' (SS. Timothy and Bartholomew, listing 116); the partner's own listing (73) has no editions.
 - A Wix 'Previous Bulletins' page that lists issues oldest first and ends with next Sunday's file (St. Bernard, Mayfair: 7 June to 1 November 2026) is not a page-pdfs channel: keep the John Patrick listing.
+- A closed parish's directory page ('Spiritual records are kept at X', 'Formerly located at ...') and an aggregator's 'Parish-Closed' title (catholicchurch.directory) record the parish ending, not the building; a church is excluded as closed only on a decree, news story or bulletin that says so.
+- A relegation decree PDF on archphila.org is a scan with no text layer; render both pages. Its effective date is not the last Mass (St. Leo's decree says regular worship stopped by 1 Jan 2018, effective 7 Jan 2019).
+- Our Lady of Consolation, Tacony's own site (olctacony.com/bulletins) hosts a text-layer copy a different file from the listing's image-only issue; either is current, and it names its issue by the Friday upload date (October-23-2026.pdf is the 25 October issue).
 
 ## Rules settled for this diocese
 
