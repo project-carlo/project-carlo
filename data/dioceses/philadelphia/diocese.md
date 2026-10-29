@@ -461,6 +461,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A merged parish with no website can keep its pages on a school's eCatholic site under a parish menu (St. John Paul II on motherdivinegrace.com) and its old bulletins on a church's own site (stadalbert.org); read the school's menu and each church's site before concluding no channel exists.
 - Search ParishesOnline near each church of a merged parish (probe get on the search API, distance=3): its organizations give street addresses, phones and each church's own website that GCatholic's intersections lack, even with no publications.
 - Beware same-named parish sites: nativity-bvm.org (listed by ParishesOnline for Port Richmond's Nativity BVM) is Nativity BVM, Media; check the address on the page.
+- A directory 'Worship Site' line on a merged parish can name a church closed years ago (St. Laurentius closed 2014, Immaculate Conception relegated 2021); CatholicPhilly search (wp-json, search=<name>) finds closures from before the planning page's 2015 decree list, and OSM can still tag such buildings as churches.
+- Pre-2020 decree PDFs on archphila.org are scans: render with pdftoppm -r 70/90 and read the PNG; probe pdf reports no extractable text.
+- A parish whose own WordPress bulletin archive lags (St. Peter the Apostle, spaphilly.org, last file 2026-01-25) keeps the John Patrick listing as channel; a parish site whose cert is expired (stmichaelsphiladelphia.com) fails probe url and visit.py alike, so use the listing as website.
+- A holynameofjesus-fishtown.org style TLS failure can be a host alias: visit.py showed it redirects to holynameofjesusparish.org, so record the redirected host as the website.
 
 ## Rules settled for this diocese
 
