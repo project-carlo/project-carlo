@@ -252,6 +252,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A ParishesOnline widget at widget.parishesonline.com/publications?id=<40-hex> can answer 502 and hides the org; a search for the parish name plus 'container.parishesonline.com' finds its container (e.g. 03/1233), but probe po can't take a container, so the org slug may stay unknown.
 - A parish site that is a frameset (saintmichael-archangel.com framing psmarectory.wixsite.com/psma) returns a 463-byte shell to probe url; visit.py renders the framed Wix site and its bulletin link.
 - The roster's parish-level entry at a parish office address can be a naming artefact, not a church: check the bulletin masthead's church photos and addresses for the real worship sites (St. Michael, Clayton has St. Catherine and Nativity).
+- camdendiocese.org answers /wp-json/wp/v2/search?search=<word>; its 2009-2011 consolidation decree posts (e.g. St. Gabriel the Archangel, Catholic Community of the Holy Spirit) name each merged parish's worship sites, and the diocese's WP post content comes from /wp-json/wp/v2/posts/<id>.
+- Duda parish sites (saintgabrielarchangel.org) hide bulletin PDF links from probe get's text: read hrefs from plain curl of the /bulletin page source; their dated names (BULLETIN MM.DD.YY FINAL.pdf) let page-pdfs pick the newest.
+- nj.com articles answer 403 to probe get and 429 through Wayback; a DuckDuckGo result snippet is the only readable text, so record it as a note (not a quote) and the closure month only.
 
 ## Rules settled for this diocese
 
