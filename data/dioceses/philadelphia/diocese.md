@@ -167,16 +167,24 @@ listings (2026-10-28). Each batch settles its own rows.
   St. Joseph, Downingtown 138, which never had one) means the parish publishes elsewhere, so
   look at its eCatholic `/bulletins` archive first; a parish archive that
   stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Basil, Kimberton's own site, a
-  year behind; St. Isaac Jogues's Squarespace `/bulletins`, July 2022) or lags by even a week
-  (St. Gabriel, Stowe's site at 18 October with 25 October on the listing, files differing
-  byte for byte; St. Elizabeth, Upper Uwchlan's eCatholic; Sacred Heart, Oxford's Wix
-  `/bulletins`) leaves the listing as the channel, so open the newest dated entry on both.
+  year behind; Sacred Heart, Havertown's WordPress, last 2024-10-27; St. Isaac Jogues's
+  Squarespace `/bulletins`, July 2022) or lags by even a week (St. Gabriel, Stowe's site at 18
+  October with 25 October on the listing, files differing byte for byte; St. John Neumann, Bryn
+  Mawr's own text-layer copies and Our Mother of Good Counsel's eCatholic, both at 18 October;
+  St. Elizabeth, Upper Uwchlan's eCatholic; Sacred Heart, Oxford's Wix `/bulletins`; Sacred
+  Heart, Clifton Heights's `/bulletins/`, two weeks behind, files `092<Month>-<day>.pdf` named
+  for its listing id, with irregular suffixes and no year) leaves the listing as the channel, so
+  open the newest dated entry on both.
   A site's "Current Bulletin" image linking `jppc.net/onlinebulletins/<id>template.pdf` names
   the listing, and a site whose footer reads "Designed and Hosted by John Patrick Publishing"
   hosts no PDFs of its own. A parish absent from the scan can still self-host (St. Patrick,
-  Malvern, below). A cover can print a neighbouring parish's Mass schedule box (St. Thomas of
-  Villanova 180 and Our Mother of Good Counsel carry each other's): that is not a worship site
-  of the row. A campus listing can have no editions (Villanova University 233), its Masses
+  Malvern, below). **Covers mislead; compare the masthead and the page-2 Mass box.** Two
+  parishes under one pastor can share the printer's cover art (Annunciation BVM and St. Denis,
+  Havertown) or print the same combined Mass schedule box (St. Charles Borromeo, Drexel Hill 220
+  and Sacred Heart, Clifton Heights 92) and still publish separate issues, with different md5,
+  their own mastheads and page 2: each church stays a row under its own parish. A neighbour's box
+  on the cover (St. Thomas of Villanova 180 and Our Mother of Good Counsel carry each other's) is
+  not a worship site of the row. A campus listing can have no editions (Villanova University 233), its Masses
   appearing only in a parish's bulletin. Never guess a slug: a wrong one returns the generic
   home page with HTTP 200. church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent;
   plain curl works. **John Patrick PDFs have no text layer** (`probe pdf` shows 0 readable
@@ -186,7 +194,7 @@ listings (2026-10-28). Each batch settles its own rows.
 - **eCatholic:** several sites (St. Anselm 24649, St. Genevieve 38659, St. Christopher 16547,
   St. Anne 34036, St. Anastasia 12297, St. Barbara 21577, St. Francis de Sales, Lenni 2405)
   answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
-  hosting the bulletin, so an eCatholic id alone is not the publication; a `/bulletins` page
+  hosting the bulletin (St. Colman, Ardmore's `/bulletins` page is empty), so an eCatholic id alone is not the publication; a `/bulletins` page
   linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
   file is the John Patrick issue, use an `ecatholic` row and add the listing as a second
   `url:` publication id: byte-identical (md5) for St. Agnes and SS. Peter and Paul, West
@@ -212,13 +220,17 @@ listings (2026-10-28). Each batch settles its own rows.
   `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
   listing carries). A WordPress site posting one page per issue (St. Katharine of Siena) gives
   `page-pdfs` on its post index nothing, though each post links a byte-identical copy of the
-  John Patrick PDF: use the listing. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
+  John Patrick PDF: use the listing. Likewise when a WordPress `/bulletins/` page carries a
+  current, byte-identical (md5) copy under irregular file names (St. Patrick, Kennett Square and
+  listing 236): keep the listing as the `page-pdfs` channel and note the copy as equal in
+  `publication_reviews`. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
   A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
   nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
   `probe get` and is readable with `visit.py`): use the parish's John Patrick listing.
 - **A shared WordPress host that answered HTTP 500 to everyone:** saintfrancescabrini.net,
   annunciationbvmchurch.org, sainthelenaparish.net, scbdh.org and epiphanychurch.church all
-  resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. Try
+  resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. The
+  500s pass: scbdh.org (St. Charles Borromeo, Drexel Hill) answered 200 later that day. Try
   again later; meanwhile find their John Patrick listings (St. Charles Borromeo, Drexel Hill is
   220, Annunciation BVM 127).
 - **Sites `probe url` can't reach:** retry in the browser (`visit.py`) before concluding
@@ -238,9 +250,17 @@ listings (2026-10-28). Each batch settles its own rows.
 - **archphila.org** answers 503 when read quickly: pause between requests and retry. Its
   relegation decree PDFs are scanned images (`probe pdf` reads no text): render them. Page 2
   gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka,
-  Chester County: none since 2016-07-02).
-- **Coordinates:** Nominatim through `probe get` (`format=jsonv2`, `q=<church name> <town>`)
-  returns named OSM place_of_worship nodes; a bare street address returns only the street.
+  Chester County: none since 2016-07-02) or when Sunday worship was suspended. The host parish's
+  own site can post the decree too, also scanned (Sacred Heart, Clifton Heights has St. Hedwig's).
+- **Coordinates, addresses and chapel owners:** Nominatim through `probe get` (`format=jsonv2`,
+  `q=<church name> <town>`) returns named OSM place_of_worship nodes; a bare street address
+  returns only the street, though for some Delaware County churches it returns the church. It
+  can file a church under the wrong post town (St. John Neumann, Bryn Mawr under Havertown) or
+  find nothing (Our Mother of Good Counsel): fall back to GCatholic's Plus Code. GCatholic's ZIP
+  can differ from the bulletin's (St. Gabriel, Avondale: 19350 vs 19311): follow the parish's
+  own and leave `address_verified` false. GCatholic's "Mission of:" line names the owner of a
+  chapel whose name points elsewhere (Sacre Coeur adoration chapel: St. Denis, not Sacred Heart,
+  Havertown).
   The directory's and the masthead's street can be the parish office, and GCatholic's can be
   off too (St. Patrick, Malvern: office 131 Channing Ave., church 104 Channing Ave. per its
   site footer and OSM, GCatholic 126 Woodland Ave.): read the site's contact page or footer.
@@ -249,16 +269,6 @@ listings (2026-10-28). Each batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- St. Patrick, Kennett Square's own WordPress /bulletins/ page carries a 2026-10-25.pdf byte-identical (md5) to John Patrick listing 236's issue, with irregular file names across months; keep the listing as the page-pdfs channel and note the parish copy as equal.
-- GCatholic can give a different ZIP than the bulletin (St. Gabriel, Avondale: 19350 vs 19311); follow the parish's own ZIP and leave address_verified false.
-- Two parishes under one pastor can print separate John Patrick issues that share the printer's cover art (Annunciation BVM and St. Denis, Havertown, 25 Oct 2026): compare the masthead and page-2 Mass box, not the cover; the 'Mission of' line on a GCatholic page names the real owner of an ambiguous chapel.
-- A parish's own WordPress archive can be two years stale while its John Patrick listing is current (Sacred Heart, Havertown: archive ends 2024-10-27); eCatholic sites with an empty /bulletins page (St. Colman, Ardmore) link the listing: use the listing as the page-pdfs channel.
-- St. John Neumann, Bryn Mawr (text-layer John Patrick PDF) and OMGC's eCatholic archive both run a week behind listing issues (own copies stop at 2026-10-18); the listing is the channel.
-- Nominatim returns the church as OSM place_of_worship under the street address for some Delaware County churches, but can file it under the wrong post town (Neumann: Havertown) or find nothing (OMGC); fall back to the GCatholic Plus Code.
-- Partnering parishes under one pastor (St. Charles Borromeo and Sacred Heart, Clifton Heights) can print the same combined Mass schedule box on each cover yet publish separate John Patrick issues (listings 220 and 92, different md5, own mastheads and page 2): the combined box does not make one bulletin, and each church is a row under its own parish.
-- Sacred Heart, Clifton Heights hosts 092<Month>-<day>.pdf files on /bulletins/ with irregular suffixes and no year, and ran two weeks behind (newest 2026-10-11): the John Patrick listing is the channel.
-- A parish's own site can carry the relegation decree (Sacred Heart posts St. Hedwig's, scanned: render page 2 for the effective date and the suspension of Sunday worship); scbdh.org answered 200 later on 2026-10-28 after its earlier HTTP 500.
 
 ## Rules settled for this diocese
 
