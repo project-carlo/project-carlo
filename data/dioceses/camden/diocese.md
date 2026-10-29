@@ -192,6 +192,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick bulletins on church-bulletin.org may be image-only (St. Joseph, Somers Point, id 617): probe pdf returns no text, so render page 1 with parish-site-access render.py; fetch:check still reports the PDF as ok.
 - A parish's dead directory website can be found with a duckduckgo.com/html search via `probe get`; verify the address on the page before storing it (St. Joseph moved from .com to .org).
 - St. Katharine Drexel's ParishesOnline PDF is about 37 MB, over fetch:check's 25 MB inspection limit, so document_type reports only the PDF signature; this is not an error.
+- Mary, Queen of All Saints publishes fixed-name overwritten PDFs (currbulletin3.pdf = current week, currbulletin2.pdf = previous) with no masthead or dated filename, so fetch:check reports issue date and freshness 'unknown' while the pick is right; pinning needs no recipe beyond page-pdfs.
+- St. Peter, Merchantville (JP 502) is image-only; St. Stephen, Pennsauken (JP 591) has a text layer and its site's first PDF link is a registration form, so use the church-bulletin.org listing.
 
 ## Rules settled for this diocese
 
