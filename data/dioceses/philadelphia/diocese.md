@@ -488,6 +488,12 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A bot-blocked WordPress Bulletins page (403 to probe url and recheck) loads in visit.py and page-pdfs reads it; irregular file names there mean fetch:check freshness stays unknown, so confirm the first-listed pick by reading its masthead.
 - A closed-parish directory page's 'Spiritual records are kept at X (through 2011)' is a records date; a host parish's page listing 'Includes <church>' with Masses and a dated news Mass in the church show it is still a worship site.
 - Campus Newman Center weekday Masses can appear in two neighbouring parishes' bulletins; file one church row under the parish whose Mass box lists the fullest schedule and note the other.
+- A weekly Mailchimp 'eBulletin' (campaign-archive.com HTML email linked from the parish site) is not a readable bulletin: record no_bulletin with bulletin_status unsupported-format (St. Vincent de Paul, Germantown), and check ParishesOnline and the merged parishes' John Patrick listings first.
+- John Patrick listings kept for merged or relegated churches (St. Therese 63, Holy Cross Church 173, St. Francis of Assisi 100, Immaculate Conception 185) show readings only and no editions: they are not bulletin channels, and the active parish's own listing (Holy Cross 3) is.
+- A GCatholic 'Using the building: X' line on an Ordinariate entry marks a congregation worshipping in a parish's church, not a separate church; check CatholicPhilly for a merger and whether the Ordinariate website still resolves.
+- One relegation decree PDF can hold two decrees (St. Madeleine Sophie pp. 1-2 and St. Therese pp. 3-4); both give the effective date but no last Mass.
+- A Wix parish site's /bulletins page can answer 4xx while its Prayer & Worship page links the jppc template (St. Raymond of Penafort 21); read the nav pages before calling the bulletin missing.
+- fetch:check reports publication_identity unverified ('No expected identity supplied') even for text-layer John Patrick issues, so unverified there is not specific to image-only files.
 
 ## Rules settled for this diocese
 
