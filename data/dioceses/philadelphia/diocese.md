@@ -304,6 +304,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- GCatholic seminary, abbey and chapel entries can describe a campus the community has left: read the institution's own site and CatholicPhilly before assuming Mass (St. Charles Seminary left Overbrook for Lower Gwynedd in Aug 2024; its Overbrook chapels are closed).
+- A parish's eCatholic /bulletins archive can match the John Patrick listing byte for byte (St. Margaret, Narberth, md5 equal) while a sibling's archive is stale (St. Matthias 2025-04): check the newest dated file on each before choosing ecatholic or page-pdfs.
+- presbvm.org (Solutio) answers 403 to probe url but loads in Chrome; its bulletin page links the JPPC template and a stale self-upload archive (March 2024).
+- For OSM-derived church coordinates use coordinates_from: osm-node (not osm).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
