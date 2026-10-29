@@ -336,6 +336,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - Squarespace /file bulletin links that answer 403 to probe get and to page-pdfs/dated-post/linked-issue-page/redirected-pdf recipes can still be downloaded by an in-page fetch() in Chrome (tools/browser_download.py); with no John Patrick edition to fall back on, the row is no_bulletin/access-blocked (St. Catherine of Siena, Horsham).
 - A John Patrick listing with no editions can belong to a parish that publishes elsewhere: Mary, Mother of the Redeemer (265) uses its own eCatholic /bulletins archive (current files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf), and St. Rose of Lima, North Wales has no listing at all (151 is the Philadelphia parish of that name).
 - St. Rose of Lima, North Wales's Bon Venture-printed bulletin sits on srol.org with irregular /assets/Uploads names listed newest first, the next Sunday posted early; page-pdfs picks the first link and freshness stays unknown.
+- Two parishes under one pastor can print a single John Patrick issue under a joint masthead ('St. Anthony & St. Joseph Parishes') with one combined Mass schedule tagged by church: that is one row, two churches, listed under whichever parish has the listing (St. Joseph, Ambler has none). Open an older text-layer issue to date it.
+- A John Patrick image-only issue can have an older issue with a text layer: pdftotext on a months-old issue reads the masthead cheaply.
 
 ## Rules settled for this diocese
 
