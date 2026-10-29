@@ -318,6 +318,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- St. Patrick, Norristown (listing 89) has a garbled text layer (font substitution: pdftotext gives gibberish, probe pdf reads nothing useful): render page 1 for the masthead; fetch:check identity stays unverified.
+- A parish Wix 'Bulletin Archive' can stop months back (Epiphany, Plymouth Meeting: last issue 2025-12-28) and its only current-looking PDFs can be flyers or forms (SFA's godparent-eligibility letter): the home page 'Current Bulletin' link to jppc.net/onlinebulletins/<id>template.pdf names the real channel, the listing.
+- A chapel's weekly Mass can differ from the directory: Holy Saviour's bulletin lists OLMC's Latin Mass every Sunday 11:30 AM, where the directory says only first Sunday Oct-May.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
