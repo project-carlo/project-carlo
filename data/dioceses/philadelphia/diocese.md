@@ -256,6 +256,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish's own WordPress archive can be two years stale while its John Patrick listing is current (Sacred Heart, Havertown: archive ends 2024-10-27); eCatholic sites with an empty /bulletins page (St. Colman, Ardmore) link the listing: use the listing as the page-pdfs channel.
 - St. John Neumann, Bryn Mawr (text-layer John Patrick PDF) and OMGC's eCatholic archive both run a week behind listing issues (own copies stop at 2026-10-18); the listing is the channel.
 - Nominatim returns the church as OSM place_of_worship under the street address for some Delaware County churches, but can file it under the wrong post town (Neumann: Havertown) or find nothing (OMGC); fall back to the GCatholic Plus Code.
+- Partnering parishes under one pastor (St. Charles Borromeo and Sacred Heart, Clifton Heights) can print the same combined Mass schedule box on each cover yet publish separate John Patrick issues (listings 220 and 92, different md5, own mastheads and page 2): the combined box does not make one bulletin, and each church is a row under its own parish.
+- Sacred Heart, Clifton Heights hosts 092<Month>-<day>.pdf files on /bulletins/ with irregular suffixes and no year, and ran two weeks behind (newest 2026-10-11): the John Patrick listing is the channel.
+- A parish's own site can carry the relegation decree (Sacred Heart posts St. Hedwig's, scanned: render page 2 for the effective date and the suspension of Sunday worship); scbdh.org answered 200 later on 2026-10-28 after its earlier HTTP 500.
 
 ## Rules settled for this diocese
 
