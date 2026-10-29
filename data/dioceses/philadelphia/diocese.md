@@ -290,6 +290,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A Lenni-style eCatholic site (sfdslenni.org, churchofstjosephaston.org) can answer 403 to `probe url` on /bulletins but `probe get` reads it; both archives stopped March 2025, so the John Patrick listing is the channel.
+- One Parish Life Director over two parishes ten km apart (Lenni and Glenolden) still means two bulletins: separate John Patrick listings, files and Mass schedules.
+- A closed parish's 'Worship site of X' line is stale once the directory page of X stops naming it: St. George's and St. Gabriel's own pages now say only 'Merged with ...'.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
