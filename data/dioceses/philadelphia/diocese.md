@@ -365,6 +365,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A Google Sites bulletin page that embeds each Sunday as a drive.google.com/file/d/<id>/preview iframe gives page-pdfs no links (fetch:check resolve_failed); the files download by hand from drive.google.com/uc?export=download&id=<id>, newest embedded first. Record no_bulletin with unsupported-format.
 - Twinned parishes under one pastor can each print the other's Mass times and rectory on their cover and still be separate listings (St. Joseph 7 and Presentation 15, Cheltenham): compare the page-2 footer codes ('007 ...', '015 p. 2'), page counts and md5.
 - A GCatholic id is not a ZIP: gcatholic:19096 is Presentation BVM in Cheltenham (19012), a different parish from Presentation BVM in Wynnewood (19096).
+- St. Hilary of Poitiers' Wix /bulletins page lists issues oldest first (first `_files/ugd` link is 4 January 2026), so `page-pdfs` on the site would pick a stale file; the John Patrick listing is the newest-first channel, and the Wix copy of the current issue is byte-identical.
+- GCatholic's street number can belong to the parish school on the same campus (St. Hilary, Rydal: GCatholic 920 Susquehanna Rd. is the school; the church is 820 per bulletin, directory rectory and OSM): query Nominatim for both numbers.
+- A Wix site's bulletin link can be a non-bulletin file (Immaculate Conception, Jenkintown's `_files/ugd` PDF is a fiscal report): read the PDF's first page before treating a site as a channel.
 
 ## Rules settled for this diocese
 
