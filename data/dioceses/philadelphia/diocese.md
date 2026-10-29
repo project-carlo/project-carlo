@@ -162,7 +162,9 @@ listings (2026-10-28). Each batch settles its own rows.
   only such a listing, e.g. St. Bartholomew 73, St. Charles Borromeo 130 and 287, St. John
   Fisher, St. Barbara, St. Cyprian, St. William), and a listing's
   name can join two parishes (116, "The Roman Catholic Church of Saint Timothy and Saint
-  Bartholomew") or keep a relegated church (167, "Old Saint Mary Church & Holy Trinity Church").
+  Bartholomew") or keep a relegated church (167, "Old Saint Mary Church & Holy Trinity Church",
+  whose masthead still carries a Holy Trinity blurb while its Mass box and intentions name one
+  church: take worship sites from the Mass box, not the listing name or masthead).
   Record the row as `other` with `page-pdfs https://www.church-bulletin.org/<slug>`, as
   Allentown, Harrisburg and Wilmington do, unless the parish's own eCatholic `/bulletins/`
   archive carries the same file (below). A parish with no website of its own takes the listing
@@ -272,13 +274,17 @@ listings (2026-10-28). Each batch settles its own rows.
   curl can still have a current archive: `visit.py` on `/bulletins` lists the
   `files.ecatholic.com` PDFs, which plain curl downloads, so compare md5 with the John Patrick
   issue before choosing the `ecatholic` row (stlukeglenside.org, 28474, and St. Thomas Aquinas,
-  Croydon, 2517 with listing 77: byte-identical). A file found only in the page source (the
+  Croydon, 2517 with listing 77: byte-identical). A home page's "Current Bulletin" link can lag
+  a week behind `/bulletins` (oldstjoseph.org, 403 to `probe url`, read in `visit.py`): take the
+  newest file from `/bulletins`. A file found only in the page source (the
   newest `files.ecatholic.com` `href`) is not visible text: cite it in a `note`, never a
   `quote`, which recheck can't find. `probe pdf` takes URLs only; for a downloaded file use
   `render.py` or a PDF text tool. A home page's first PDF can be a flyer (St. Anselm's "St.
   Lukes Open Flyer"; its bulletin is on Bon Venture, below).
-- **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, files
-  `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
+- **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, newest first, files
+  `/s/210-Bulletin_October-25-2026.pdf` named for the listing id and the Sunday; listing 210 has
+  the same issue in another layout, different bytes and text order, so the row is `page-pdfs` on
+  the parish's dated page with both URLs in `publication`), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
   often stop or hold only flyers and forms: St. Dorothy's "Parish Bulletin" page links a
   registration form, St. Francis of Assisi, Norristown's newest PDF is a godparent-eligibility
   letter, Immaculate Conception, Jenkintown's only PDF is a fiscal report, St. Martin of Tours,
@@ -366,6 +372,10 @@ listings (2026-10-28). Each batch settles its own rows.
   title is another church's (skschurch.com shows "New Faith Gospel Church"; St. Katharine of
   Siena's live site, stkatherineofsiena.org, answers 403 to `probe url` and loads in `visit.py`).
   Open the home page, and take the parish site from the bulletin's footer or page-1 website line.
+  A merged parish with no website can keep its pages under a parish menu on a school's eCatholic
+  site (St. John Paul II on motherdivinegrace.com, whose Bulletin page is empty) and its older
+  bulletins on one church's own site (stadalbert.org, stopping in April 2025): read the school's
+  menu and each church's site before concluding there is no channel.
 - **Sites `probe url` can't reach:** retry in the browser (`visit.py`) before concluding
   anything; don't fake a browser user agent in curl, which the sandbox denies (use `probe url`,
   `probe get` or `visit.py`); parish.stnorbert.org answered "RemoteDisconnected" to `probe url` and loaded in
@@ -375,15 +385,23 @@ listings (2026-10-28). Each batch settles its own rows.
   stphil-lans.solutiosoftware.com) answers 403 to `probe url` and `probe get`; `visit.py` shows
   its "Latest Bulletin" link; presbvm.org (Presentation BVM, Solutio) likewise answered 403 and
   loaded in Chrome, its bulletin page linking the John Patrick template beside a stale
-  self-upload archive (March 2024). holynameofjesus-fishtown.org failed certificate verification on
-  2026-10-28 (try `http://`, or its John Patrick listing).
+  self-upload archive (March 2024). A certificate failure can be an old host alias:
+  holynameofjesus-fishtown.org fails verification in `probe url` and `visit.py` follows it to
+  holynameofjesusparish.org, the host to record as `website`. An expired certificate fails
+  `probe url` and `visit.py` alike, over https and http (stmichaelsphiladelphia.com): the John
+  Patrick listing is then the row's `website`, with a `research` entry to recheck the site.
 - **ParishesOnline / LPi:** a minority publisher here, found in Delaware County (St. Philomena,
   Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton; St. Rose,
   Eddystone 04/0708; St. John Fisher, Boothwyn 03/1236, whose John Patrick listing has no
   editions); LPi also has organizations elsewhere (st-john-the-evangelist-church-19107,
   st-patrick-church-19401). An empty organization ("no publications") exists for many parishes
   whose bulletin is John Patrick's (St. Katharine Drexel, Our Lady of Charity, St. Madeline): it
-  is not a publication id.
+  is not a publication id, but it is a good address source: the search API (below, distance=3)
+  near each church of a merged parish returns organizations for its former parishes with street
+  address, coordinates, phone and website where GCatholic gives only an intersection (St.
+  Adalbert, St. George, Nativity BVM, Port Richmond). Check an organization's website against
+  the address on the page: nativity-bvm.org, listed for Port Richmond's Nativity BVM, is Nativity
+  BVM, Media.
   Sites built on WeConnect/Duda (bvm-darby.com, olphmorton.org) embed a `publicationWidget`
   whose `id=` is the 18-character LPi id, though `probe url` finds no publication on them. Their
   bulletin page can instead link a fixed-name PDF (St. Rose: `bulletin8.pdf`) whose text equals
@@ -402,7 +420,8 @@ listings (2026-10-28). Each batch settles its own rows.
   caps downloads per IP per day (a 134-byte "Maximum number of files downloaded today" reply,
   which `fetch:check` reports as `not_pdf`): that is the cap, not the row.
 - **archphila.org** answers 503 when read quickly: pause between requests and retry. Its
-  relegation decree PDFs are scanned images (`probe pdf` reads no text): render them. Page 2
+  relegation decree PDFs, at least those before 2020, are scanned images (`probe pdf` reads
+  no text): render them (`pdftoppm -r 70` or `-r 90`, then read the PNG). Page 2
   gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka,
   Chester County: none since 2016-07-02; the original St. Philip Neri, East Greenville: "has not
   been used for divine worship of any kind since 1968", relegated 2023-01-23) or when Sunday worship
@@ -415,9 +434,12 @@ listings (2026-10-28). Each batch settles its own rows.
   own site can post the decree too, also scanned (Sacred Heart, Clifton Heights has St. Hedwig's).
   A relegated church that is in no roster is found only on the parish-planning page
   (Immaculate Heart of Mary, Chester, effective 2024-03-01): check each batch's closed
-  neighbours there for decrees. For news of a church with no decree, CatholicPhilly's WordPress
+  neighbours there for decrees. Its decree list starts in 2015, so a church closed earlier has
+  none (St. Laurentius, Fishtown, closed as unsafe in March 2014, still a "Worship Site" in the
+  directory). For news of a church with no decree, CatholicPhilly's WordPress
   REST search (`catholicphilly.com/wp-json/wp/v2/posts?search=<name>&per_page=15&_fields=...`)
   lists its stories and event notices; an event Mass there is not a worship site (rule below).
+  OSM still tags closed and relegated buildings as churches: a node is no evidence of Mass.
 - **Coordinates, addresses and chapel owners:** Nominatim through `probe get` (`format=jsonv2`,
   `q=<church name> <town>`) returns named OSM place_of_worship nodes, as JSON inside `probe
   get`'s `text` field (`jq '.text|fromjson'`); a bare street address returns only the street,
@@ -457,17 +479,6 @@ listings (2026-10-28). Each batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A merged parish with no website can keep its pages on a school's eCatholic site under a parish menu (St. John Paul II on motherdivinegrace.com) and its old bulletins on a church's own site (stadalbert.org); read the school's menu and each church's site before concluding no channel exists.
-- Search ParishesOnline near each church of a merged parish (probe get on the search API, distance=3): its organizations give street addresses, phones and each church's own website that GCatholic's intersections lack, even with no publications.
-- Beware same-named parish sites: nativity-bvm.org (listed by ParishesOnline for Port Richmond's Nativity BVM) is Nativity BVM, Media; check the address on the page.
-- A directory 'Worship Site' line on a merged parish can name a church closed years ago (St. Laurentius closed 2014, Immaculate Conception relegated 2021); CatholicPhilly search (wp-json, search=<name>) finds closures from before the planning page's 2015 decree list, and OSM can still tag such buildings as churches.
-- Pre-2020 decree PDFs on archphila.org are scans: render with pdftoppm -r 70/90 and read the PNG; probe pdf reports no extractable text.
-- A parish whose own WordPress bulletin archive lags (St. Peter the Apostle, spaphilly.org, last file 2026-01-25) keeps the John Patrick listing as channel; a parish site whose cert is expired (stmichaelsphiladelphia.com) fails probe url and visit.py alike, so use the listing as website.
-- A holynameofjesus-fishtown.org style TLS failure can be a host alias: visit.py showed it redirects to holynameofjesusparish.org, so record the redirected host as the website.
-- A John Patrick listing's name can keep a relegated church after the parish stopped using it (167 'Old Saint Mary Church & Holy Trinity Church'): the masthead still carried a blurb for it, but the Mass schedule and intentions named one church; take worship sites from the Mass box, not the masthead or listing name.
-- A parish can post the same issue on its own Squarespace /bulletins and on its John Patrick listing with different bytes and page text order (St. Augustine 210): same issue, so record both as publication ids and use the parish's own page-pdfs as the channel.
-- oldstjoseph.org answers 403 to probe url but visit.py loads it; its home page 'Current Bulletin' link lagged a week behind /bulletins, so read /bulletins for the newest eCatholic file.
 
 ## Rules settled for this diocese
 
