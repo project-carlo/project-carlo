@@ -177,24 +177,32 @@ listings (2026-10-28). Each batch settles its own rows.
   open the newest dated entry on both.
   A site's "Current Bulletin" image linking `jppc.net/onlinebulletins/<id>template.pdf` names
   the listing, and a site whose footer reads "Designed and Hosted by John Patrick Publishing"
-  hosts no PDFs of its own. A parish absent from the scan can still self-host (St. Patrick,
+  hosts no PDFs of its own, even when an old self-upload archive remains (Holy Cross,
+  Springfield: 2025 uploads only; its new Parish Life Director did not change the publisher). A parish absent from the scan can still self-host (St. Patrick,
   Malvern, below). **Covers mislead; compare the masthead and the page-2 Mass box.** Two
   parishes under one pastor can share the printer's cover art (Annunciation BVM and St. Denis,
   Havertown) or print the same combined Mass schedule box (St. Charles Borromeo, Drexel Hill 220
   and Sacred Heart, Clifton Heights 92) and still publish separate issues, with different md5,
   their own mastheads and page 2: each church stays a row under its own parish. A neighbour's box
   on the cover (St. Thomas of Villanova 180 and Our Mother of Good Counsel carry each other's) is
-  not a worship site of the row. A campus listing can have no editions (Villanova University 233), its Masses
-  appearing only in a parish's bulletin. Never guess a slug: a wrong one returns the generic
+  not a worship site of the row. A listing with no editions can belong to a campus (Villanova
+  University 233) or a worship site (Notre Dame de Lourdes, Swarthmore 12, under Our Lady of
+  Peace 109) whose Masses appear only in a parish's bulletin. Such a listing can still carry the
+  church's own address and phone (St. Alice 38: 150 Hampden Road), useful against GCatholic's
+  intersection addresses. Never guess a slug: a wrong one returns the generic
   home page with HTTP 200. church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent;
-  plain curl works. **John Patrick PDFs have no text layer** (`probe pdf` shows 0 readable
-  pages): render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
+  plain curl works. **Some John Patrick PDFs have a text layer and some don't** (text: St.
+  Francis of Assisi 175, St. Kevin 66, Fatima 83, St. Dorothy 209; image-only, `probe pdf`
+  showing 0 readable pages: Holy Cross 24): check `pdftotext -l 2` first, and for image-only
+  issues render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
   to read the masthead; `fetch:check` then reports `publication_identity` `unverified`, by
   design.
 - **eCatholic:** several sites (St. Anselm 24649, St. Genevieve 38659, St. Christopher 16547,
   St. Anne 34036, St. Anastasia 12297, St. Barbara 21577, St. Francis de Sales, Lenni 2405)
   answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
-  hosting the bulletin (St. Colman, Ardmore's `/bulletins` page is empty), so an eCatholic id alone is not the publication; a `/bulletins` page
+  hosting the bulletin (St. Colman, Ardmore's `/bulletins` page is empty; stkevin.com,
+  ecatholic:34467, is only a link page whose `/bulletins` links the jppc template), so an
+  eCatholic id alone is not the publication and stays out of `publication`; a `/bulletins` page
   linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
   file is the John Patrick issue, use an `ecatholic` row and add the listing as a second
   `url:` publication id: byte-identical (md5) for St. Agnes and SS. Peter and Paul, West
@@ -213,8 +221,10 @@ listings (2026-10-28). Each batch settles its own rows.
   `render.py` or a PDF text tool. A home page's first PDF can be a flyer (St. Anselm's "St.
   Lukes Open Flyer").
 - **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, files
-  `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`: St. Dorothy, St. Francis
-  of Assisi, Norristown, Epiphany, Plymouth Meeting, which also links John Patrick 091), WordPress
+  `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`: St. Francis
+  of Assisi, Norristown, Epiphany, Plymouth Meeting, which also links John Patrick 091; but a
+  Wix "Parish Bulletin" page can link only a form, as St. Dorothy's registration form, so read
+  the file's text before calling a site a bulletin channel), WordPress
   bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Hilary, St. Andrew, Drexel Hill,
   Holy Innocents, St. Dominic; St. Patrick, Malvern `/bulletin/`, text-layer files
   `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
@@ -235,12 +245,22 @@ listings (2026-10-28). Each batch settles its own rows.
   220, Annunciation BVM 127).
 - **Sites `probe url` can't reach:** retry in the browser (`visit.py`) before concluding
   anything; parish.stnorbert.org answered "RemoteDisconnected" to `probe url` and loaded in
-  Chrome (2026-10-28). holynameofjesus-fishtown.org failed certificate verification on
+  Chrome (2026-10-28). A site framed from a Solutio host (stphilspa.com ->
+  stphil-lans.solutiosoftware.com) answers 403 to `probe url` and `probe get`; `visit.py` shows
+  its "Latest Bulletin" link. holynameofjesus-fishtown.org failed certificate verification on
   2026-10-28 (try `http://`, or its John Patrick listing).
-- **ParishesOnline / LPi:** not seen on the sampled sites, but LPi has organizations here
-  (st-john-the-evangelist-church-19107, st-patrick-church-19401). Its search API lists
-  organizations near a point:
+- **ParishesOnline / LPi:** a minority publisher here, found in Delaware County (St. Philomena,
+  Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton); LPi also
+  has organizations elsewhere (st-john-the-evangelist-church-19107, st-patrick-church-19401).
+  Sites built on WeConnect/Duda (bvm-darby.com, olphmorton.org) embed a `publicationWidget`
+  whose `id=` is the 18-character LPi id, though `probe url` finds no publication on them; a
+  site with no embed is found with the search API near the church (distance=3 gave
+  st-philomena-church):
   `https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/search?searchType=organization&latitude=<lat>&longitude=<lon>&distance=6`.
+  `probe po <slug or id>` then gives the container. A container's first pages can be images
+  (BVM Darby pages 1–3): render page 1 for the Mass box and use the text-layer footer line
+  ("Name | 04-0756", page 4) as the tie to the container. A container can post next Sunday's
+  file early (St. Philomena 20261101B on 2026-10-28; freshness `future`), as eCatholic does.
   As elsewhere, empty organizations are not fold-ins: read the masthead.
 - **J.S. Paluch / Discover Mass:** not seen as a publisher here. A footer "View this bulletin
   online at www.DiscoverMass.com" (St. Joseph, Downingtown's eCatholic issues) does not make it
@@ -269,19 +289,6 @@ listings (2026-10-28). Each batch settles its own rows.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- ParishesOnline orgs can be found without a site embed: the LPi search API near the church's lat/lon (distance=3) returns the org slug (St. Philomena, Lansdowne: st-philomena-church); `probe po <slug>` then gives the container.
-- A parish site on a frame/Solutio host (stphilspa.com -> stphil-lans.solutiosoftware.com) answers 403 to probe url/get; visit.py in Chrome shows the 'Latest Bulletin' link to the container PDF.
-- A John Patrick listing with no editions can still carry the church's own address and phone (St. Alice listing 38: 150 Hampden Road); use it to cross-check GCatholic's intersection addresses.
-- A parish's own Wix 'Parish Bulletin' page can link only a form (St. Dorothy's PDF is a registration form): check the file's text before calling the site a bulletin channel.
-- A ParishesOnline container can post next Sunday's file early (St. Philomena 20261101B on 2026-10-28): fetch:check reports freshness `future`.
-- A parish site footer 'Designed and Hosted by John Patrick Publishing' whose 'most recent bulletin' link is jppc.net/onlinebulletins/<id>template.pdf hosts no PDFs of its own, even when an old self-upload archive remains (Holy Cross, Springfield: 2025 uploads only); a new Parish Life Director did not change the publisher.
-- Some John Patrick issues have a text layer (St. Francis of Assisi 175, St. Kevin 66, Fatima 83) and some are image-only (Holy Cross 24): check `pdftotext -l 2` before rendering.
-- A parish's eCatholic site can exist only as a link page (stkevin.com, ecatholic:34467, /bulletins links just the jppc template): don't put the eCatholic id in `publication`.
-- Delaware County parish sites built on WeConnect/Duda (bvm-darby.com, olphmorton.org) embed a ParishesOnline publicationWidget whose id= is the 18-character LPi id; `probe po <id>` then gives the container, and `probe url` finds no publication on them.
-- A ParishesOnline container can have its first pages as images (BVM Darby 04/0756 pages 1-3): read the Mass box by rendering page 1, and use the page-4 footer line 'Name | 04-0756' as the text-layer tie to the container.
-- A John Patrick listing with no editions (Notre Dame de Lourdes, Swarthmore, 12) can belong to a worship site whose Masses are in its host parish's bulletin (Our Lady of Peace 109).
-- In bash, backticks inside a double-quoted body argument run as commands; write record bodies from a quoted heredoc to keep `code` spans.
 
 ## Rules settled for this diocese
 
