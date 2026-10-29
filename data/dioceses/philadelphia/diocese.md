@@ -321,6 +321,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - St. Patrick, Norristown (listing 89) has a garbled text layer (font substitution: pdftotext gives gibberish, probe pdf reads nothing useful): render page 1 for the masthead; fetch:check identity stays unverified.
 - A parish Wix 'Bulletin Archive' can stop months back (Epiphany, Plymouth Meeting: last issue 2025-12-28) and its only current-looking PDFs can be flyers or forms (SFA's godparent-eligibility letter): the home page 'Current Bulletin' link to jppc.net/onlinebulletins/<id>template.pdf names the real channel, the listing.
 - A chapel's weekly Mass can differ from the directory: Holy Saviour's bulletin lists OLMC's Latin Mass every Sunday 11:30 AM, where the directory says only first Sunday Oct-May.
+- Partner parishes under one pastor can print each other's Mass schedule and a joint Mass-intentions list in two separate bulletins (St. Helena 43 and St. Titus 95: different covers, page counts, md5): compare covers and files, not content; keep two rows and each church under its own parish.
+- A Nominatim answer is JSON inside probe get's text field: use jq '.text|fromjson'; a church can be found only under the township's name (St. Titus under 'East Norriton', not Norristown).
+- A site's /bulletins eCatholic archive can be read from the page source (href of the newest files.ecatholic.com file), but that is not visible text, so don't put it in a quote field; recheck can't find it.
+- A parish's 'Chapel' weekday Mass line (St. Helena's Saint Theresa Chapel) is a room of the church campus unless the site gives it another address: no church row.
 
 ## Rules settled for this diocese
 
