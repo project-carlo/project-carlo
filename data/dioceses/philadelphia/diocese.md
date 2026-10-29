@@ -465,6 +465,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - Pre-2020 decree PDFs on archphila.org are scans: render with pdftoppm -r 70/90 and read the PNG; probe pdf reports no extractable text.
 - A parish whose own WordPress bulletin archive lags (St. Peter the Apostle, spaphilly.org, last file 2026-01-25) keeps the John Patrick listing as channel; a parish site whose cert is expired (stmichaelsphiladelphia.com) fails probe url and visit.py alike, so use the listing as website.
 - A holynameofjesus-fishtown.org style TLS failure can be a host alias: visit.py showed it redirects to holynameofjesusparish.org, so record the redirected host as the website.
+- A John Patrick listing's name can keep a relegated church after the parish stopped using it (167 'Old Saint Mary Church & Holy Trinity Church'): the masthead still carried a blurb for it, but the Mass schedule and intentions named one church; take worship sites from the Mass box, not the masthead or listing name.
+- A parish can post the same issue on its own Squarespace /bulletins and on its John Patrick listing with different bytes and page text order (St. Augustine 210): same issue, so record both as publication ids and use the parish's own page-pdfs as the channel.
+- oldstjoseph.org answers 403 to probe url but visit.py loads it; its home page 'Current Bulletin' link lagged a week behind /bulletins, so read /bulletins for the newest eCatholic file.
 
 ## Rules settled for this diocese
 
