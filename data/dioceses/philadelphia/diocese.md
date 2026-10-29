@@ -515,6 +515,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A site can answer with a network-filter warning page (block.charter-prod.hosted.cujo.io/warn.html) in probe url and ERROR in visit.py: record access-blocked research and take the bulletin's printed site from the listing, not a retry loop.
 - A bulletin's printed worship-site address can differ from GCatholic, OSM and the directory (Holy Spirit: 1857 vs 1845 Hartranft St.): record the disagreement and leave address_verified false.
 - The John Patrick template URL jppc.net/onlinebulletins/<id>template.pdf returns an HTML page, not a PDF: take the PDF from the listing's church-bulletin.org/bulletin/<slug>/<yyyy-mm-dd>.pdf link.
+- A parish site's own bulletin page can post only the inside pages of the issue (St. Rita shrine's Squarespace /s/241_<mmddyy>.pdf: 2 pages of Mass intentions, no cover or Mass box) while the John Patrick listing holds the full 4-page issue: compare page counts and keep the listing as the channel.
+- A cover's 'Lower Church' and 'Upper Church' labels in a Mass box (Epiphany of Our Lord) are floors of one building, not two church rows.
+- OSM place_of_worship nodes can sit 100+ m from the real church (Stella Maris, on Stella Maris Street): check the node against GCatholic's Plus Code before taking it.
 
 ## Rules settled for this diocese
 
