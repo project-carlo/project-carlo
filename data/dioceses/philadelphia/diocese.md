@@ -333,6 +333,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 
 - A parish site hosted by John Patrick Publishing can still have no John Patrick listing: Corpus Christi, Lansdale's Bulletins page is empty, and the menu's BULLETIN link (only visible in visit.py's link list) goes to sponsors.bonventure.net/?page=1906; record it as `other` with `page-pdfs http://sponsors.bonventure.net/?page=<id>`, as Allentown does. Bonventure lists next Sunday's PDF early, so fetch:check freshness reads `future`.
 - An eCatholic site whose /bulletins page links only church-bulletin.org/?id=<n> and no files.ecatholic.com PDFs (Our Lady of the Sacred Heart, Hilltown, ecatholic 38359) is an `other` row on the listing, with the eCatholic id left out of `publication`.
+- Squarespace /file bulletin links that answer 403 to probe get and to page-pdfs/dated-post/linked-issue-page/redirected-pdf recipes can still be downloaded by an in-page fetch() in Chrome (tools/browser_download.py); with no John Patrick edition to fall back on, the row is no_bulletin/access-blocked (St. Catherine of Siena, Horsham).
+- A John Patrick listing with no editions can belong to a parish that publishes elsewhere: Mary, Mother of the Redeemer (265) uses its own eCatholic /bulletins archive (current files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf), and St. Rose of Lima, North Wales has no listing at all (151 is the Philadelphia parish of that name).
+- St. Rose of Lima, North Wales's Bon Venture-printed bulletin sits on srol.org with irregular /assets/Uploads names listed newest first, the next Sunday posted early; page-pdfs picks the first link and freshness stays unknown.
 
 ## Rules settled for this diocese
 
