@@ -39,6 +39,7 @@ evidence:
     18930''. Second source for the address; it is a third-party listing, not the parish.'
 revisit: Confirm the church's own address and pin (the 453 Haycock Run Rd. address comes from the directory's
   cemetery line and a business listing; neither bulletin nor site gives one)
+revisit_after: 2027-01-31
 ---
 
 ## Holds Mass

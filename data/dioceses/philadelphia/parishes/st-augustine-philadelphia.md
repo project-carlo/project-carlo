@@ -4,7 +4,7 @@ website: http://www.st-augustinechurch.com
 bulletin_provider: other
 provider_id: page-pdfs http://www.st-augustinechurch.com/bulletins
 publication: ['url:http://www.st-augustinechurch.com/bulletins', 'url:https://www.church-bulletin.org/saint-augustine-roman-catholic-parish-philadelphia-pa-19106']
-group: Philadelphia South and East
+group: ''
 evidence:
 - url: http://www.st-augustinechurch.com/s/210-Bulletin_October-25-2026.pdf
   seen: 2026-10-29

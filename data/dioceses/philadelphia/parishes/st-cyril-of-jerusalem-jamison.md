@@ -4,7 +4,7 @@ website: https://saint-cyril.com
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/saint-cyril-of-jerusalem-jamison-pa-18929
 publication: ['url:https://www.church-bulletin.org/saint-cyril-of-jerusalem-jamison-pa-18929']
-group: Bucks County Central and North
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-cyril-of-jerusalem-jamison-pa-18929
   seen: 2026-10-29

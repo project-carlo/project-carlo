@@ -35,7 +35,7 @@ St. Gabriel, Norwood publishes its own weekly bulletin, printed by John Patrick 
 
 ## Worship sites
 
-One: St. Gabriel Church (see `churches/st-gabriel-norwood`). The 2014 merger with St. Margaret Mary Alacoque, Essington is recorded on the directory page, and the closed-parish page for St. Margaret Mary calls it a 'Worship site of St. Gabriel Church', but neither the 25 October 2026 bulletin nor the parish website's Mass page lists a Mass in Essington. No relegation decree or news item for it turned up, so it is not called closed: see `open/st-margaret-mary-alacoque-essington`.
+One: St. Gabriel Church (see `churches/st-gabriel-norwood`). The 2014 merger with St. Margaret Mary Alacoque, Essington is recorded on the directory page, and the closed-parish page for St. Margaret Mary calls it a 'Worship site of St. Gabriel Church', but neither the 25 October 2026 bulletin nor the parish website's Mass page lists a Mass in Essington. CatholicPhilly (9 May 2017) reports the church relegated to profane use effective 12 June 2017: `excluded/st-margaret-mary-alacoque-essington` (reconcile, 2026-10-29).
 
 ## Website and bulletin provider
 
@@ -43,4 +43,4 @@ stgabrielnorwood.org (Our Sunday Visitor / Duda) hosts no bulletin file; its Bul
 
 ## Not yet confirmed
 
-Pages 3-8 were searched by text only. Whether St. Margaret Mary's church still stands or is used for Mass is open (see its record).
+Pages 3-8 were searched by text only. St. Margaret Mary's church closed in 2017 (see `excluded/st-margaret-mary-alacoque-essington`).

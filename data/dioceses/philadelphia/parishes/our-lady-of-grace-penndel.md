@@ -4,7 +4,7 @@ website: https://www.olgparishpenndel.org
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/our-lady-of-grace-catholic-parish-penndel-pa-19047
 publication: ['url:https://www.church-bulletin.org/our-lady-of-grace-catholic-parish-penndel-pa-19047']
-group: Bucks County Southeast
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/our-lady-of-grace-catholic-parish-penndel-pa-19047
   seen: 2026-10-29

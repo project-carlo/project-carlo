@@ -493,7 +493,10 @@ listings (2026-10-28). Each batch settles its own rows.
   2015-11-01, still a directory worship site). For news of a church with no decree, CatholicPhilly's WordPress
   REST search (`catholicphilly.com/wp-json/wp/v2/posts?search=<name>&per_page=15&_fields=...`)
   lists its stories and event notices: search the church's and the merged parish's names plus
-  "close" before leaving a worship-site line `open`. An event Mass there is not a worship site
+  "close" before leaving a worship-site line `open`. The site's HTML search (`catholicphilly.com/?s=<church>+church`,
+  read with `probe get`, story links in its `href`s) found four closure stories the map batches
+  missed (St. Margaret Mary Alacoque, Essington, 2017; Our Lady of the Blessed Sacrament, 2014;
+  Our Mother of Sorrows, 2017; St. Callistus, 2014; reconcile, 2026-10-29): try both. An event Mass there is not a worship site
   (rule below).
   OSM still tags closed and relegated buildings as churches: a node is no evidence of Mass.
 - **Coordinates, addresses and chapel owners:** Nominatim through `probe get` (`format=jsonv2`,
@@ -539,21 +542,27 @@ listings (2026-10-28). Each batch settles its own rows.
   don't. `coverage --link` rewrites roster lists on records in other batches, not only when a
   Ukrainian GCatholic entry shares a Latin church's address and is attached to the Latin
   church's record: run plain `coverage`, or run `git status` after `--link`, revert what isn't
-  yours and name the strays in your handoff.
+  yours and name the strays in your handoff. It also links same-named Eastern entries (Ruthenian
+  Holy Trinity onto Old City's Holy Trinity) and GCatholic's Eastern "(Mission)" entries, which
+  carry the Latin church's address (Syro-Malabar at Our Lady Help of Christians and St. Albert
+  the Great; Ukrainian at Fatima, Bensalem): `validate` warns "linked from both"; drop the id
+  from the Latin record and keep it on the Eastern exclusion (reconcile removed six, 2026-10-29).
+- **Eastern Catholic lists** (for `other-jurisdiction` exclusions; `probe get` reads them all):
+  the Ukrainian Archeparchy's https://ukrcatholic.org/parishes (ukrarcheparchy.us redirects
+  there), whose `/parish/<slug>` pages give address, pastor and liturgy times, and which omits
+  some GCatholic Ukrainian entries (still other-jurisdiction, unconfirmed) and lists a parish
+  GCatholic omits (Holy Myrrhbearers, Swarthmore); the Passaic eparchy's
+  https://www.eparchyofpassaic.com/parishes (Ruthenian, with addresses); the Maronite Brooklyn
+  directory PDF linked from stmaron.org/directory (page 12 for Pennsylvania); Syro-Malabar
+  Chicago https://stthomasdiocese.org/parishes/. No Syro-Malankara or Armenian Catholic list was
+  found: GCatholic's Jurisdiction line is the source for those. GCatholic names Ruthenian
+  churches differently from the eparchy (St. Mary, Coatesville is Blessed Virgin Mary) and its
+  websites can be dead (stmichaelbyz.net, stmarksarmenianchurch.org): match by address and phone.
 - **Writing records from the shell:** quote a heredoc's delimiter (`<<'JSON'`). Unquoted, the
   shell runs backticked words in the payload (`address_verified`) as commands and silently drops
   them from the record.
 
 ## New lessons
-
-Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
-publishers here* and *Rules settled*. Every map job reads them.
-
-- The Ukrainian Archeparchy's parish list is https://ukrcatholic.org/parishes (ukrarcheparchy.us redirects there); `probe get` reads it and each /parish/<slug> page gives address, pastor and liturgy times. It omits some GCatholic Ukrainian entries, so a Ukrainian GCatholic entry not on it is unconfirmed, still other-jurisdiction.
-- GCatholic Ukrainian entries sharing a Latin church's name or street (Christ the King, St. Josaphat) are picked up by coverage --link onto the Latin record: check the roster field of any Latin record linking a rite: Ukrainian id.
-- Eastern jurisdiction sources that `probe get` reads: Passaic eparchy list https://www.eparchyofpassaic.com/parishes (Ruthenian, with addresses), Maronite Brooklyn directory PDF linked from stmaron.org/directory (page 12 for Pennsylvania), Syro-Malabar Chicago https://stthomasdiocese.org/parishes/. No Syro-Malankara or Armenian Catholic parish list was found; GCatholic's Jurisdiction line is the source for those.
-- GCatholic names Ruthenian churches differently from the eparchy (St. Mary, Coatesville is Blessed Virgin Mary) and its websites can be dead (stmichaelbyz.net, stmarksarmenianchurch.org): match by address and phone against the eparchy list.
-- coverage --link attaches same-named Eastern GCatholic ids to Latin records (Holy Trinity, Old City); when writing the Eastern exclusion, expect the 'linked from both' validate warning.
 
 ## Rules settled for this diocese
 
@@ -561,7 +570,7 @@ Decisions that apply to more than one record, and who made them.
 
 - **Eastern Catholic churches** (Ukrainian Archeparchy of Philadelphia, Ruthenian, Syro-Malabar, Syro-Malankara, Maronite, Armenian) are excluded as `other-jurisdiction`, as in every neighbouring diocese. A Latin parish church an Eastern community also uses keeps its own row (St. Albert the Great, Huntingdon Valley, with the Syro-Malabar mission). (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **Shared pastors and Parish Life Directors don't make shared bulletins.** A pair or trio named under one pastor or PLD on the directory (14 pairs and the cathedral trio) is one row only when one current bulletin covers each member; compare mastheads and Mass schedules, not contact lines or staff. (accepted by survey-review, 003-survey-review, 2026-10-28)
-- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28) A closed parish page's 'Worship site of X' line is stale once X's own page names no worship site and says only 'Merged with …' (St. George, Glenolden and Holy Spirit, Sharon Hill; St. Gabriel, Norwood and St. Margaret Mary Alacoque, Essington): add no church row from it, and without a closure source leave the church `open`. (map batch `lenni-glenolden`, 2026-10-28) The line can be a decade stale: when X's own site, masthead and Mass page name no other site, look for a decree that ended Sunday Mass there (Sacred Heart, Swedesburg: St. Augustine's decree ended Sunday Mass at St. Augustine and Our Lady of Mount Carmel in January 2015). (map batch `conshohocken-kop`, 2026-10-28) A cover subtitle naming the worship site ("Our Lady of Fatima Worship Site") over the parish's own address is not evidence of Mass there: only a Mass box line naming the place is (St. Charles Borromeo, Bensalem). (map batch `bensalem-croydon`, 2026-10-29) Nor is a cover drawing of both churches or mission text calling the site one of "our two churches", or a history page saying it "remains a place where Mass is celebrated" (St. Stanislaus, under St. Philip Neri): when the Mass box and the parish site put every Mass at the main church, leave the site in `open/`. (map batch `queen-village-bella-vista`, 2026-10-29) Nor is a patronal subtitle keeping a merged parish's title ("Under the Protection of Our Lady of Ransom", Resurrection of Our Lord), whose church's decree can say regular worship ended at the merger, years before the effective date. (map batch `bustleton-somerton`, 2026-10-29) A single event Mass at an undecided church (a healing Mass at St. Joachim in a CatholicPhilly event notice) is not a worship site: without a Mass box line or a closure source, leave it in `open/`. (map batch `frankford-olney`, 2026-10-29) A closed parish page's "Spiritual records are kept at X", like an aggregator's "Parish-Closed" title (catholicchurch.directory), records the parish ending, not the church's: exclude the church `closed` only on a decree, news story or bulletin that says so. (map batch `holmesburg-tacony`, 2026-10-29) For a parish with no readable bulletin, its own site's Mass schedule is that evidence: St. Andrew (Lithuanian)'s site lists a 9:00 AM English Mass at St. Casimir, a church of a parish closed in 2011, which the directory gives only as a 'Worship Site' line without the Mass. (map batch `cathedral`, 2026-10-29)
+- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28) When the decree or news story states the last Mass or the end of regular worship, `last_mass` comes from that statement, not the later effective date (St. Leo, Tacony: regular worship ended 2018-01-01, decree effective 2019-01-07); a news story's closing date serves when there is no decree (St. Callistus, 2014-10-01). (map batch `holmesburg-tacony` raised it; reconcile, 2026-10-29, aligning the rule with the archphila.org note above) A closed parish page's 'Worship site of X' line is stale once X's own page names no worship site and says only 'Merged with …' (St. George, Glenolden and Holy Spirit, Sharon Hill; St. Gabriel, Norwood and St. Margaret Mary Alacoque, Essington): add no church row from it, and without a closure source leave the church `open`. (map batch `lenni-glenolden`, 2026-10-28) The line can be a decade stale: when X's own site, masthead and Mass page name no other site, look for a decree that ended Sunday Mass there (Sacred Heart, Swedesburg: St. Augustine's decree ended Sunday Mass at St. Augustine and Our Lady of Mount Carmel in January 2015). (map batch `conshohocken-kop`, 2026-10-28) A cover subtitle naming the worship site ("Our Lady of Fatima Worship Site") over the parish's own address is not evidence of Mass there: only a Mass box line naming the place is (St. Charles Borromeo, Bensalem). (map batch `bensalem-croydon`, 2026-10-29) Nor is a cover drawing of both churches or mission text calling the site one of "our two churches", or a history page saying it "remains a place where Mass is celebrated" (St. Stanislaus, under St. Philip Neri): when the Mass box and the parish site put every Mass at the main church, leave the site in `open/`. (map batch `queen-village-bella-vista`, 2026-10-29) Nor is a patronal subtitle keeping a merged parish's title ("Under the Protection of Our Lady of Ransom", Resurrection of Our Lord), whose church's decree can say regular worship ended at the merger, years before the effective date. (map batch `bustleton-somerton`, 2026-10-29) A single event Mass at an undecided church (a healing Mass at St. Joachim in a CatholicPhilly event notice) is not a worship site: without a Mass box line or a closure source, leave it in `open/`. (map batch `frankford-olney`, 2026-10-29) A closed parish page's "Spiritual records are kept at X", like an aggregator's "Parish-Closed" title (catholicchurch.directory), records the parish ending, not the church's: exclude the church `closed` only on a decree, news story or bulletin that says so. (map batch `holmesburg-tacony`, 2026-10-29) For a parish with no readable bulletin, its own site's Mass schedule is that evidence: St. Andrew (Lithuanian)'s site lists a 9:00 AM English Mass at St. Casimir, a church of a parish closed in 2011, which the directory gives only as a 'Worship Site' line without the Mass. (map batch `cathedral`, 2026-10-29)
 - **Personal Ordinariate churches** (the Chair of St. Peter) are excluded `other-jurisdiction`, as in Rochester and Scranton, even in a former archdiocesan parish church: St. John the Baptist holds Mass in Our Lady of Mount Carmel, Bridgeport, which is not a Sacred Heart worship site. (map batch `conshohocken-kop`, 2026-10-28)
 - **Seminary, monastery, abbey, retreat-house and adoration chapels** (St. Charles Borromeo Seminary and its chapels, the Visitation Monastery, Daylesford Abbey, the St. Carlo Acutis shrine at Malvern Retreat House, the Sacre Coeur adoration chapel) get a church row under a parish when that parish's bulletin lists their public Mass; a parish row of their own if the house publishes a readable bulletin; otherwise they are excluded `no-public-mass` (private or community-only Mass) or `no-bulletin` (public Mass, but no bulletin lists it), following README Settled policy 4. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A campus Mass the parish bulletin lists every week gets a church row** (Villanova's St. Thomas of Villanova church, the Penn Newman Center's St. Bede chapel under St. Agatha-St. James, Temple's Newman chaplaincy), as in Harrisburg; a campus ministry that publishes only by email or semester newsletter is excluded `no-bulletin`. (accepted by survey-review, 003-survey-review, 2026-10-28) A campus Mass listed in two neighbouring parishes' bulletins is one church row, under the parish whose Mass box gives the fullest schedule, with the other bulletin cited in its evidence (Temple Newman Center under St. Malachy, also listed by St. Martin de Porres). (map batch `north-central`, 2026-10-29)
@@ -612,6 +621,18 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-29: Reconcile (job 081, Run philadelphia-map-1) after 59 map batches (usually 2–5
+  parishes each, two Eastern Catholic). Coverage: `directory` 218/218 accounted for, 205/217
+  modelled (94%); `gcatholic` 293/293, 212/233 (91%); `worship-sites` 29/29, 12/19 (63%); 5
+  churches in no roster, each explained. Records: 214 parish rows (11 `no_bulletin`), 242
+  churches, 76 exclusions, 9 open. No merges or moves: every audit candidate was the deanery
+  `group` (cleared on 15 parish records) or a shared Bon Venture host (separate reviews added);
+  separate reviews also for Good Counsel/Villanova and Ottsville/Riegelsville. Dropped six
+  Eastern GCatholic ids from Latin records. Closed from CatholicPhilly stories: St. Margaret
+  Mary Alacoque, Essington and Our Lady of the Blessed Sacrament (from `open/`), Our Mother of
+  Sorrows and St. Callistus (new). New: Czestochowa shrine (`no-bulletin`), Holy Myrrhbearers
+  (other-jurisdiction). Fetch check: 203 rows, all PDFs; 202 current (this week's issue or next
+  week's posted early), St. Rocco a week behind.
 - 2026-10-28: Survey (job 001, Run philadelphia-map-1). Rosters: `directory` 218 open parishes,
   `gcatholic` 293 (28 Eastern Catholic), `worship-sites` 29. `batches.json`: 59 batches (57 of
   2–5 parishes, two Eastern Catholic), 540 roster entries, none excluded; `first_batch`

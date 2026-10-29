@@ -4,7 +4,7 @@ website: https://oldstmary.com
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/old-saint-mary-church-holy-trinity-church-philadelphia-pa-19106
 publication: ['url:https://www.church-bulletin.org/old-saint-mary-church-holy-trinity-church-philadelphia-pa-19106']
-group: Philadelphia South and East
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/old-saint-mary-church-holy-trinity-church-philadelphia-pa-19106/2026-10-25.pdf
   seen: 2026-10-29

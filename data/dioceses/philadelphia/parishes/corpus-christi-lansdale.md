@@ -44,6 +44,30 @@ publication_reviews:
     seen: 2026-10-28
     note: St. Stanislaus's masthead names St. Stanislaus alone, Pastor Rev. Patrick J. Brady, with different
       Mass times (Sunday 7, 9, 11 AM, 1 PM Spanish).
+- parish: st-anselm-philadelphia
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1906/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue is the bulletin for Corpus Christi Parish, Lansdale (page 1 lists
+      pastor Rev. John D. Schiele and its own staff); Bon Venture sponsor page 1906. Only the bonventure.net
+      host is shared.
+  - url: http://sponsors.bonventure.net/pdfs/10314/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 masthead (page 1) names Saint Anselm Parish, 12670 Dunks Ferry Road, Philadelphia
+      19154, pastor Rev. Jeffrey M. Stecz; Bon Venture sponsor page 10314.
+- parish: st-christopher-philadelphia
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1906/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue is the bulletin for Corpus Christi Parish, Lansdale (page 1 lists
+      pastor Rev. John D. Schiele and its own staff); Bon Venture sponsor page 1906. Only the bonventure.net
+      host is shared.
+  - url: http://sponsors.bonventure.net/pdfs/1904/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 masthead (page 1) names Saint Christopher parish and school alone, with
+      its own sacraments box; Bon Venture sponsor page 1904.
 ---
 
 ## Publisher

@@ -11,7 +11,7 @@ longitude: -75.1144375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:our-lady-help-of-christians-abington', 'gcatholic:16993', 'gcatholic:19268']
+roster: ['directory:our-lady-help-of-christians-abington', 'gcatholic:19268']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-help-of-christians-abington-pa-19001/2026-10-25.pdf
   seen: 2026-10-29

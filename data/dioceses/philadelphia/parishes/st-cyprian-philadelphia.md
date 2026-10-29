@@ -4,7 +4,7 @@ website: https://saintcyprianchurch.org
 bulletin_provider: other
 provider_id: page-pdfs https://saintcyprianchurch.org filename=bulletin_*.pdf
 publication: ['url:https://saintcyprianchurch.org#st-cyprian']
-group: Philadelphia West and Central
+group: ''
 evidence:
 - url: https://saintcyprianchurch.org/wp-content/uploads/2026/10/bulletin_10-25.pdf
   seen: 2026-10-29
@@ -59,7 +59,7 @@ No. The two share Msgr. Federico A. Britto (pastor here, parochial administrator
 
 ## Worship sites
 
-One church, St. Cyprian (Cobbs Creek Pkwy. at Cedar Ave.). Our Lady of the Blessed Sacrament (345 N. 63rd St.) merged into St. Cyprian in 2013 and the 2013 decree said its church 'will remain open as a worship site'; the 25 October 2026 bulletin and the parish's Schedule of Masses page name no Mass there. Nothing read says it closed, so it is in `open/` and not excluded: see `open/our-lady-of-the-blessed-sacrament-philadelphia`.
+One church, St. Cyprian (Cobbs Creek Pkwy. at Cedar Ave.). Our Lady of the Blessed Sacrament (345 N. 63rd St.) merged into St. Cyprian in 2013 and the 2013 decree said its church 'will remain open as a worship site'; the 25 October 2026 bulletin and the parish's Schedule of Masses page name no Mass there. It closed permanently as a place of worship on 1 August 2014 (CatholicPhilly, 4 August 2014): `excluded/our-lady-of-the-blessed-sacrament-philadelphia` (reconcile, 2026-10-29).
 
 ## Website and bulletin provider
 

@@ -4,7 +4,7 @@ website: http://www.stephrem.com
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/saint-ephrem-catholic-church-bensalem-pa-19020
 publication: ['url:https://www.church-bulletin.org/saint-ephrem-catholic-church-bensalem-pa-19020']
-group: Bucks County Southeast
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-ephrem-catholic-church-bensalem-pa-19020
   seen: 2026-10-29

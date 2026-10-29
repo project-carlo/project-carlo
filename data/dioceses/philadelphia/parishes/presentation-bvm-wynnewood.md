@@ -33,17 +33,17 @@ evidence:
 - url: https://archphila.org/parish/presentation-bvm-wynnewood/
   seen: 2026-10-28
   note: 'Directory entry: Rev. Eduardo G. Montero, rectory 204 Haverford Rd., Wynnewood 19096; ''Penn
-    Wynne - Wynnewood'' as the address. The pastor also leads St. Joseph, Cheltenham (Clerical Appointments,
-    May 2026).'
+    Wynne - Wynnewood'' as the address. (Corrected by reconcile 2026-10-29: the pastor shared with St. Joseph,
+    Cheltenham is Rev. Dominic Ishaq of Presentation B.V.M., Cheltenham, a different parish.)'
 ---
 
 ## Publisher
 
 Presentation of the Blessed Virgin Mary Parish (Penn Wynne, Wynnewood) publishes one weekly bulletin through John Patrick Publishing, listing 177 (the listing's name is 'Presentation of the Blessed Virgin Mary Parish', the issue's masthead 'PRESENTATION BVM PARISH'). The 25 October 2026 issue has a text layer; its footer code is '177-presbvm'.
 
-## One bulletin or two with St. Joseph, Cheltenham?
+## Not paired with St. Joseph, Cheltenham
 
-Two. The directory and the May 2026 Clerical Appointments give Presentation BVM and St. Joseph, Cheltenham one pastor, but the Cheltenham parish belongs to another batch and was not read here. This issue's masthead names Presentation BVM alone, gives only its own Masses and says nothing of Cheltenham. A shared pastor is not a shared bulletin (settled rule). The Cheltenham row should be compared with this issue's file when that batch is mapped.
+An earlier draft of this record said Presentation BVM, Wynnewood shares a pastor with St. Joseph, Cheltenham. That was a confusion of two parishes with the same title: the directory (read 2026-10-28) gives St. Joseph, Cheltenham's pastor as 'Rev. Dominic Ishaq in residence at Presentation BVM, Cheltenham', and Presentation B.V.M., Cheltenham (Old Soldiers Rd., its own row, John Patrick listing 15) as 'Rev. Dominic Ishaq (Twinned Parish)'; the 2026 Clerical Appointments move Rev. Dominic Ishaq from Parochial Administrator of Presentation B.V.M. (corrected by reconcile, 2026-10-29). This parish's pastor is Rev. Eduardo G. Montero, and the 25 October 2026 masthead names Presentation BVM, Wynnewood alone, with its own Masses. No other parish is a candidate for a shared bulletin.
 
 ## Worship sites
 

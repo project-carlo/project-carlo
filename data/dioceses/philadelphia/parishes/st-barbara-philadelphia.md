@@ -4,7 +4,7 @@ website: https://stbarbphila.org
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:21577']
-group: Philadelphia West and Central
+group: ''
 evidence:
 - url: https://files.ecatholic.com/21577/bulletins/20261025.pdf
   seen: 2026-10-29

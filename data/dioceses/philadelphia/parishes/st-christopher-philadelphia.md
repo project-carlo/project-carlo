@@ -33,6 +33,30 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Rev. Philip G. Bochanski, 13301 Proctor Rd.; Mass times Saturday 5 PM, Sunday 8, 10
     AM and Noon, weekdays 8:30 AM, Saturday 8 AM; page updated 3 weeks earlier. Same as the bulletin.'
+publication_reviews:
+- parish: st-anselm-philadelphia
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1904/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 masthead (page 1) names Saint Christopher parish and school alone, with
+      its own sacraments box; Bon Venture sponsor page 1904.
+  - url: http://sponsors.bonventure.net/pdfs/10314/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 masthead (page 1) names Saint Anselm Parish, 12670 Dunks Ferry Road, Philadelphia
+      19154, pastor Rev. Jeffrey M. Stecz; Bon Venture sponsor page 10314.
+- parish: corpus-christi-lansdale
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1904/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 masthead (page 1) names Saint Christopher parish and school alone, with
+      its own sacraments box; Bon Venture sponsor page 1904.
+  - url: http://sponsors.bonventure.net/pdfs/1906/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue is the bulletin for Corpus Christi Parish, Lansdale (page 1 lists
+      pastor Rev. John D. Schiele and its own staff); Bon Venture sponsor page 1906. Only the bonventure.net
+      host is shared.
 ---
 
 ## Publisher

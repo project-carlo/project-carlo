@@ -41,6 +41,19 @@ publication_reviews:
     seen: 2026-10-28
     note: The 25 October 2026 masthead names St. John Neumann Parish alone, with its own Mass schedule
       and a different Pastor.
+- parish: st-thomas-of-villanova-villanova
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/our-mother-of-good-counsel-parish-community-bryn-mawr-pa-19010/2026-10-25.pdf
+    seen: 2026-10-29
+    note: The 25 October 2026 masthead (page 1, image, rendered) names Our Mother of Good Counsel Parish
+      Community, 31 Pennswood Road, Bryn Mawr, pastor Fr. Joseph S. Mostardi, OSA, with its own staff.
+      Its Sunday Mass box also prints St. Thomas of Villanova Parish (STOV) Masses, as a cross-listing.
+  - url: https://www.church-bulletin.org/bulletin/saint-thomas-of-villanova-church-rosemont-pa-19010/2026-10-25.pdf
+    seen: 2026-10-29
+    note: The 25 October 2026 masthead (page 1) names Saint Thomas of Villanova Church, 1229 E Lancaster
+      Ave., Rosemont, pastor Fr. Joseph L. Narog, O.S.A., with its own staff; its footer prints an Our
+      Mother of Good Counsel Mass Schedule box beside the St. Thomas Mass Schedule.
 ---
 
 ## Publisher

@@ -4,7 +4,7 @@ website: https://www.church-bulletin.org/saint-ignatius-of-loyola-philadelphia-p
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/saint-ignatius-of-loyola-philadelphia-pa-19104
 publication: ['url:https://www.church-bulletin.org/saint-ignatius-of-loyola-philadelphia-pa-19104']
-group: Philadelphia West and Central
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-ignatius-of-loyola-philadelphia-pa-19104/2026-10-25.pdf
   seen: 2026-10-29
@@ -69,7 +69,7 @@ No. Msgr. Britto is Parochial Administrator here, pastor of St. Cyprian and admi
 
 ## Worship sites
 
-One church: St. Ignatius (43rd & Wallace Sts.; the parish office is 636 N. 43rd St.). The bulletin also lists a Ghanaian Mass on the last Sunday at 2:00 PM, presumably at this church (the line does not say where), and a first-Wednesday Mass at West Park Nursing & Rehab; that is a facility Mass, not a public worship site, and no church row is made for it. The directory's weekday Mass at 'St. Ignatius Nursing Home Chapel, 4401 Haverford Ave.' (a page 11 months old) is not in the bulletin, which lists no weekday Mass at all: see Not yet confirmed. Our Mother of Sorrows (48th St. & Lancaster Ave.) merged into St. Ignatius in 2013 with its church 'to remain open as a worship site' (2013 announcements); it is in no roster and the bulletin names no Mass there; not investigated further.
+One church: St. Ignatius (43rd & Wallace Sts.; the parish office is 636 N. 43rd St.). The bulletin also lists a Ghanaian Mass on the last Sunday at 2:00 PM, presumably at this church (the line does not say where), and a first-Wednesday Mass at West Park Nursing & Rehab; that is a facility Mass, not a public worship site, and no church row is made for it. The directory's weekday Mass at 'St. Ignatius Nursing Home Chapel, 4401 Haverford Ave.' (a page 11 months old) is not in the bulletin, which lists no weekday Mass at all: see Not yet confirmed. Our Mother of Sorrows (48th St. & Lancaster Ave.) merged into St. Ignatius in 2013 with its church 'to remain open as a worship site' (2013 announcements); it is in no roster and the bulletin names no Mass there. It was closed and relegated effective 9 October 2017 (CatholicPhilly, 12 September 2017): `excluded/our-mother-of-sorrows-philadelphia` (reconcile, 2026-10-29).
 
 ## Fetch check
 

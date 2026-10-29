@@ -4,7 +4,7 @@ website: https://saintrobertwarrington.org
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/saint-robert-bellarmine-church-warrington-pa-18976
 publication: ['url:https://www.church-bulletin.org/saint-robert-bellarmine-church-warrington-pa-18976']
-group: Bucks County Central and North
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-robert-bellarmine-church-warrington-pa-18976
   seen: 2026-10-29

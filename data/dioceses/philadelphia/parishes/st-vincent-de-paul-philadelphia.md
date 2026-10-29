@@ -35,6 +35,7 @@ evidence:
     and Immaculate Conception: 2012''; no deanery. The eBulletin names Fr. Sy Peterka, CM as pastor, so
     the directory''s pastor line is out of date.'
 revisit: Check whether the parish posts a PDF bulletin or a reader for Mailchimp eBulletins exists
+revisit_after: 2027-01-31
 research:
 - method: 'Looked for a PDF bulletin: probe url and home-page links on saint-vincent-church.org; the Mailchimp
     eBulletin archive and its latest issue; probe po on the ParishesOnline organization; John Patrick

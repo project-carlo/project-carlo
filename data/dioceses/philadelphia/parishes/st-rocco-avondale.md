@@ -29,6 +29,17 @@ evidence:
     Newport Pike)''; pastor Msgr. Francis J. Depman, ''In residence at Assumption B.V.M., West Grove'';
     Mass times agree with the bulletin; ''Donation Center: Mision Santa Maria, Madre de Dios, 29 Gap Newport
     Pike''.'
+research:
+- method: pnpm fetch:check --diocese philadelphia (page-pdfs on schedule.jsp) and probe get of b20261025.pdf
+    / b20261101.pdf
+  url: https://www.stroccochurch.org/schedule.jsp
+  checked: '2026-10-29'
+  outcome: not-found
+  next_action: Rerun pnpm fetch:check --diocese philadelphia --parish st-rocco-avondale and confirm it
+    picks an issue dated within a week; if the site stays two or more weeks behind, record it as a late
+    publisher
+  retry_when: After Sunday 1 November 2026, when the 25 October or 1 November file should be posted
+  revisit_after: 2026-11-03
 ---
 
 ## Publisher
@@ -47,4 +58,4 @@ The bulletin's Mass schedule covers St. Rocco Church (Avondale) and, every Sunda
 
 ## Not yet confirmed
 
-The 25 October issue was not yet posted on 2026-10-28; the fetch check shows whether the pick is the 18 October file.
+The site posts late. Reconcile's fetch check on 2026-10-29 picked `b20261018.pdf` (18 October 2026, page 1 names Saint Rocco Parish), still the newest file on the Schedules page; `b20261025.pdf` and `b20261101.pdf` both answered 404. Transport, document type and parish identity are fine; freshness is one week behind (within the 14-day threshold). See `research` for the retry.

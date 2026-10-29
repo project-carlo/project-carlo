@@ -4,7 +4,7 @@ website: https://www.staq.org
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:2517', 'url:https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021']
-group: Bucks County Southeast
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021
   seen: 2026-10-29

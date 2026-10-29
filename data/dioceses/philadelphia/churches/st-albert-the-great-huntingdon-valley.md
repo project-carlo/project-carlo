@@ -11,7 +11,7 @@ longitude: -75.0591875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['directory:st-albert-the-great-huntingdon-valley', 'gcatholic:16982', 'gcatholic:19287']
+roster: ['directory:st-albert-the-great-huntingdon-valley', 'gcatholic:19287']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-albert-the-great-church-huntingdon-valley-pa-19006/2026-10-25.pdf
   seen: 2026-10-29

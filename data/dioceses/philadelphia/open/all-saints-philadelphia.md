@@ -3,7 +3,7 @@ name: All Saints Church
 revisit: Find a source that says the All Saints church building at Buckius and E. Thompson is closed (a
   CatholicPhilly merger or closure story, the 2013 parish merger notice, a sale or relegation decree)
   or that Mass is held there; then exclude as closed or add a church row.
-revisit_after: null
+revisit_after: 2027-01-31
 roster: ['gcatholic:19055']
 evidence:
 - url: https://archphila.org/parish/all-saints-philadelphia/
@@ -52,6 +52,15 @@ research:
     sale of the Buckius St. church; ask the parish office (215-535-6667) if no source turns up.
   retry_when: A reconcile or later job can reach a CatholicPhilly or news source on the 2013 mergers,
     or a St. John Cantius bulletin lists a Mass at the old church.
+- method: CatholicPhilly site search (catholicphilly.com/?s=all+saints+bridesburg) for a closure, relegation
+    or worship-site story
+  url: https://catholicphilly.com/?s=all+saints+bridesburg
+  checked: '2026-10-29'
+  outcome: not-found
+  next_action: Ask the parish office or read a later bulletin (see revisit); search the archdiocese's
+    relegation decrees again
+  retry_when: A bulletin, decree or CatholicPhilly story names the building, or the parish office answers
+  revisit_after: 2027-01-31
 ---
 
 ## What is known

@@ -42,6 +42,20 @@ research:
   checked: '2026-10-29'
   outcome: found
 bulletin_status: available
+publication_reviews:
+- parish: st-lawrence-riegelsville
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/the-roman-catholic-church-of-saint-john-the-baptist-parish-ottsville-pa-18942/2026-10-25.pdf
+    seen: 2026-10-29
+    note: The 25 October 2026 masthead (John Patrick listing 232) names St. John the Baptist Parish, Ottsville
+      alone, Pastor Rev. Selvaraj Lucas, M.S.C., and never mentions St. Lawrence; St. Lawrence is led
+      by Rev. Walter J. Benn. A joint March for Life bus in St. Lawrence's Pastor's Corner is not a shared
+      bulletin.
+  - url: https://img1.wsimg.com/blobby/go/5f7d4b64-aed9-4c06-9603-9f147e46a35a/downloads/d01cf710-6af8-4767-8ff0-87fe7b6ac7d6/Bulletin%20November%201%202026%20Final.pdf?ver=1793201676287
+    seen: 2026-10-29
+    note: 'The 1 November 2026 bulletin for St. Lawrence, Riegelsville, posted on saint-lawrence-church.org/bulletins:
+      its own Mass intentions (Vigil 5:00 PM, Sunday 9:30 AM) and no Ottsville Mass.'
 ---
 
 ## Publisher

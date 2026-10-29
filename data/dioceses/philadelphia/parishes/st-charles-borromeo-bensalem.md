@@ -4,7 +4,7 @@ website: https://www.stcharlesbensalem.org
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/saint-charles-borromeo-parish-bensalem-pa-19020
 publication: ['url:https://www.church-bulletin.org/saint-charles-borromeo-parish-bensalem-pa-19020']
-group: Bucks County Southeast
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/saint-charles-borromeo-parish-bensalem-pa-19020
   seen: 2026-10-29

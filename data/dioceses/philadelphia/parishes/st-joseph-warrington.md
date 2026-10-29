@@ -4,7 +4,7 @@ website: https://www.saintjosephchurch.us/weekly-bulletins/
 bulletin_provider: other
 provider_id: page-pdfs https://www.saintjosephchurch.us/weekly-bulletins/
 publication: ['url:https://www.saintjosephchurch.us/weekly-bulletins/']
-group: Bucks County Central and North
+group: ''
 evidence:
 - url: https://www.saintjosephchurch.us/weekly-bulletins/
   seen: 2026-10-29

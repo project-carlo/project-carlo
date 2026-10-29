@@ -6,7 +6,7 @@ city: Philadelphia
 state: PA
 postal_code: '19106'
 decided: 2026-10-29
-roster: ['gcatholic:17229', 'gcatholic:38958']
+roster: ['gcatholic:38958']
 evidence:
 - url: https://catholicphilly.com/2022/12/news/local-news/archdiocese-announces-relegation-of-worship-sites-in-chester-montgomery-and-philadelphia-counties/
   seen: 2026-10-29

@@ -4,7 +4,7 @@ website: https://www.noolp.org
 bulletin_provider: other
 provider_id: page-pdfs https://www.church-bulletin.org/nativity-of-our-lord-church-warminster-pa-18974
 publication: ['url:https://www.church-bulletin.org/nativity-of-our-lord-church-warminster-pa-18974']
-group: Bucks County Central and North
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/nativity-of-our-lord-church-warminster-pa-18974
   seen: 2026-10-29

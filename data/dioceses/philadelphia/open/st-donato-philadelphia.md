@@ -3,7 +3,7 @@ name: St. Donato Church
 revisit: Find a source that says whether St. Donato Church (65th and Callowhill Sts.) still holds Mass,
   even on feast days (a Lourdes bulletin Mass box or notice, a relegation or closure notice, or the parish
   office, 215-473-1669); then add a church row under Our Lady of Lourdes or exclude it.
-revisit_after: null
+revisit_after: 2027-01-31
 roster: ['gcatholic:19118', 'worship-sites:st-donato-philadelphia']
 evidence:
 - url: https://archphila.org/wp-content/uploads/2015/01/Announcements2013.pdf
@@ -40,6 +40,16 @@ line1: 65th and Callowhill Sts.
 city: Philadelphia
 state: PA
 postal_code: '19151'
+research:
+- method: CatholicPhilly site search (catholicphilly.com/?s=st+donato+church) for a closure, relegation
+    or worship-site story
+  url: https://catholicphilly.com/?s=st+donato+church
+  checked: '2026-10-29'
+  outcome: not-found
+  next_action: Ask the parish office or read a later bulletin (see revisit); search the archdiocese's
+    relegation decrees again
+  retry_when: A bulletin, decree or CatholicPhilly story names the building, or the parish office answers
+  revisit_after: 2027-01-31
 ---
 
 ## What is known

@@ -4,7 +4,7 @@ website: https://www.oldstjoseph.org
 bulletin_provider: ecatholic
 provider_id: '37776'
 publication: ['ecatholic:37776']
-group: Philadelphia South and East
+group: ''
 evidence:
 - url: https://files.ecatholic.com/37776/bulletins/20261025.pdf
   seen: 2026-10-29

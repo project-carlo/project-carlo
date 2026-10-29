@@ -49,7 +49,7 @@ Our Lady of Mount Carmel Parish, Doylestown (Rev. Matthew W. Guckin, Pastor) pri
 
 ## Worship sites
 
-One church, Our Lady of Mount Carmel, 235 East State Street. The page-3 'Weekly Mass Schedule' lists every Mass at the one church (no mission, chapel or second location). Page 2 of the 25 October issue also prints 'Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa' and 'at Our Lady of Guadalupe' boxes; those are other Doylestown-area places, not Mount Carmel worship sites, and Our Lady of Guadalupe has its own bulletin (own row). The National Shrine of Our Lady of Czestochowa (654 Ferry Road, Doylestown, Pauline Fathers) is in neither the directory nor the GCatholic roster: raised as a flag, no record made here.
+One church, Our Lady of Mount Carmel, 235 East State Street. The page-3 'Weekly Mass Schedule' lists every Mass at the one church (no mission, chapel or second location). Page 2 of the 25 October issue also prints 'Sacrament of Reconciliation at the Shrine of Our Lady of Czestochowa' and 'at Our Lady of Guadalupe' boxes; those are other Doylestown-area places, not Mount Carmel worship sites, and Our Lady of Guadalupe has its own bulletin (own row). The National Shrine of Our Lady of Czestochowa (654 Ferry Road, Doylestown, Pauline Fathers) is in neither the directory nor the GCatholic roster; it has public Mass but no bulletin and is excluded `no-bulletin` (reconcile, 2026-10-29: excluded/national-shrine-of-our-lady-of-czestochowa-doylestown). The Czestochowa box on page 2 gives confession hours, not a Mass schedule.
 
 ## Website and bulletin provider
 

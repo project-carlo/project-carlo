@@ -1,11 +1,20 @@
 ---
 name: Our Lady of the Blessed Sacrament Church
-revisit: Find a source that says whether Our Lady of the Blessed Sacrament Church (345 N. 63rd St.) still
-  holds Mass or has closed (a St. Cyprian bulletin Mass box, a relegation or closure notice, or the parish
-  office, 215-747-3250); then add a church row under St. Cyprian or exclude it.
-revisit_after: null
+reason: closed
+line1: 345 N. 63rd St.
+city: Philadelphia
+state: PA
+postal_code: '19139'
+decided: 2026-10-29
 roster: ['gcatholic:19142']
 evidence:
+- url: https://catholicphilly.com/2014/08/news/local-news/our-lady-of-the-blessed-sacrament-church-closes-in-west-philadelphia/
+  seen: 2026-10-29
+  quote: Our Lady of the Blessed Sacrament Church in West Philadelphia closed permanently as a Catholic
+    place of worship on Friday, Aug. 1, due primarily to its high cost of upkeep.
+  note: Posted 4 August 2014. The same story places the church 'at 63 rd and Callowhill Streets' (built
+    1887 for Our Lady of the Rosary), says the parish 'merged with St. Cyprian Parish and became a worship
+    site for occasional liturgies' in January 2013, and that St. Cyprian's pastor requested the closing.
 - url: https://archphila.org/wp-content/uploads/2015/01/Announcements2013.pdf
   seen: 2026-10-29
   quote: Our Lady of the Blessed Sacrament Church will remai
@@ -32,16 +41,13 @@ evidence:
   note: GCatholic 'Our Lady of the Blessed Sacrament', type Church (not marked Former Church), Plus Code
     87F6XQ93+CR, phone +1 (215) 476-6511.
 parish: st-cyprian-philadelphia
-line1: 345 N. 63rd St.
-city: Philadelphia
-state: PA
-postal_code: '19139'
+last_mass: 2014-08-01
 ---
 
-## What is known
+## Why it is excluded
 
-Our Lady of the Blessed Sacrament (founded 2005) merged into St. Cyprian in 2013, and the merger announcement said its church would 'remain open as a worship site' for St. Cyprian. Today St. Cyprian's bulletin and its Schedule of Masses page list Masses at St. Cyprian only. The archdiocese's parish-planning page lists no relegation decree for it (read 2026-10-28), GCatholic does not call it a Former Church, and the directory's closed page gives only an address line. Nothing read says it has closed and nothing says Mass is held there.
+Our Lady of the Blessed Sacrament Church (63rd and Callowhill Sts.; the directory's closed page gives 345 N. 63rd St.) became a worship site of St. Cyprian at the January 2013 merger. CatholicPhilly's story of 4 August 2014 says it 'closed permanently as a Catholic place of worship on Friday, Aug. 1' (2014) at St. Cyprian's pastor's request, for the cost of upkeep; `last_mass` is that date. This agrees with St. Cyprian's 25 October 2026 bulletin and Schedule of Masses page, which list Mass at St. Cyprian only. GCatholic still lists it as a church (not 'Former Church'), which is the stale source here. Found by reconcile on 2026-10-29 with CatholicPhilly's site search; moved from `open/`.
 
-## What would settle it
+## What would change this
 
-A bulletin Mass box, a closure notice or the parish office (215-747-3250).
+Nothing short of a reopening: the archdiocese closed the building as a place of worship.

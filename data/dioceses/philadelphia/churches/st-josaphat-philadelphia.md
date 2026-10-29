@@ -11,7 +11,7 @@ longitude: -75.221456
 coordinates_from: osm-node
 name_verified: true
 address_verified: true
-roster: ['gcatholic:17525', 'worship-sites:st-josaphat-philadelphia']
+roster: ['worship-sites:st-josaphat-philadelphia']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-baptist-parish-philadelphia-pa-19127/2026-10-25.pdf
   seen: 2026-10-29

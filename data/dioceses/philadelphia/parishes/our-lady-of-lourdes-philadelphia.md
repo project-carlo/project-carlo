@@ -4,7 +4,7 @@ website: https://www.ourladylourdes.org
 bulletin_provider: parishes_online
 provider_id: our-lady-of-lourdes-church-19151
 publication: ['po-org:our-lady-of-lourdes-church-19151', 'lpi:0018000000QbzyXAAR', 'po-container:04/0156']
-group: Philadelphia West and Central
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0156/20261025B.pdf
   seen: 2026-10-29
@@ -39,7 +39,7 @@ Our Lady of Lourdes (Mercedarian Friars) publishes through ParishesOnline: organ
 
 ## Worship sites
 
-One church, Our Lady of Lourdes, 6315 Lancaster Ave. The directory names St. Donato (65th & Callowhill Sts.) as a worship site of this parish, and the 2013 merger decree said it 'will remain open as a worship site for Our Lady of Lourdes Parish'. The 25 October bulletin, the parish's home page and its All Saints / All Souls schedule name no Mass there. Nothing read says it closed, so it is in `open/st-donato-philadelphia`, with the St. Donato page's own 'Holydays, holidays, special occasions, see parish bulletin for upcoming times' as the only Mass statement. St. Callistus (merged into Lourdes in 2013) is not in any roster; its church was not looked at.
+One church, Our Lady of Lourdes, 6315 Lancaster Ave. The directory names St. Donato (65th & Callowhill Sts.) as a worship site of this parish, and the 2013 merger decree said it 'will remain open as a worship site for Our Lady of Lourdes Parish'. The 25 October bulletin, the parish's home page and its All Saints / All Souls schedule name no Mass there. Nothing read says it closed, so it is in `open/st-donato-philadelphia`, with the St. Donato page's own 'Holydays, holidays, special occasions, see parish bulletin for upcoming times' as the only Mass statement. St. Callistus (merged into Lourdes in 2013) is not in any roster; its church closed officially on 1 October 2014 (CatholicPhilly, 30 September 2014): `excluded/st-callistus-philadelphia` (reconcile, 2026-10-29).
 
 ## Website and bulletin provider
 
@@ -51,4 +51,4 @@ One church, Our Lady of Lourdes, 6315 Lancaster Ave. The directory names St. Don
 
 ## Not yet confirmed
 
-St. Donato's status and St. Callistus's church (see open/).
+St. Donato's status (see `open/st-donato-philadelphia`).

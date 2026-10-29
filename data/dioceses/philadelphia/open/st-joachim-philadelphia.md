@@ -3,7 +3,7 @@ name: St. Joachim Church
 revisit: Find a source that says whether St. Joachim Church (Church St. at Griscom St.) is still a church
   with regular Mass (a Holy Innocents bulletin Mass box, a relegation decree or CatholicPhilly report,
   or the parish office, 215-743-2600); then add a church row under Holy Innocents or exclude it.
-revisit_after: null
+revisit_after: 2027-01-31
 roster: ['gcatholic:19077']
 evidence:
 - url: https://www.holyinnocentsrc.org/stjoachim
@@ -56,6 +56,15 @@ research:
     uses the building.
   retry_when: A Holy Innocents bulletin lists a Mass at St. Joachim, a decree or sale is reported, or
     reconcile can reach the parish office
+- method: CatholicPhilly site search (catholicphilly.com/?s=st+joachim+church+frankford) for a closure,
+    relegation or worship-site story
+  url: https://catholicphilly.com/?s=st+joachim+church+frankford
+  checked: '2026-10-29'
+  outcome: not-found
+  next_action: Ask the parish office or read a later bulletin (see revisit); search the archdiocese's
+    relegation decrees again
+  retry_when: A bulletin, decree or CatholicPhilly story names the building, or the parish office answers
+  revisit_after: 2027-01-31
 ---
 
 ## What is known
