@@ -297,6 +297,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A WeConnect/Duda parish site's bulletin page can link a fixed-name PDF (St. Rose, Eddystone: bulletin8.pdf) whose text equals the ParishesOnline container's current issue; the footer code 'Name, Town, PA 04-0708' gives the container, so use the parishes_online row.
 - An empty ParishesOnline organization ('no publications') exists for many parishes whose bulletin is John Patrick's (St. Katharine Drexel, Our Lady of Charity, St. Madeline): it is not a publication id.
 - A relegation of a church that is in no roster (Immaculate Heart of Mary, Chester, decree effective 2024-03-01) is found only on the parish-planning page; check each batch's closed neighbours there for decrees.
+- A parish Wix /events/bulletins page (St. Mary Magdalen, Media) can post the printer's PDF byte-for-byte (md5 equal) under hashed /_files/ugd names; keep the dated John Patrick listing as the page-pdfs channel and note the copy as equal.
+- An 'Adoration Chapel' or 'Chapel' in a bulletin's schedule box (Nativity BVM, St. Mary Magdalen, St. Thomas the Apostle) with devotions but no Mass line is not a church row; check the page-2 weekly calendar for Mass in the chapel before adding one.
+- staparishgm.org (eCatholic) answers 403 to probe url but loads with visit.py and shows the church-bulletin.org/?id=097 link.
 
 ## Rules settled for this diocese
 
