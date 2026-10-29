@@ -217,6 +217,11 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Bon Venture serves several Camden parishes from sponsors.bonventure.net/?page=<account>; each account is its own bulletin, so write a separate peer review for each pair on the shared host (St. Simon Stock 2221, Holy Eucharist 2088).
+- St. Andrew, Gibbsboro's Duda PDFs (irp.cdn-website.com .../40284_YYYY_MM_DD.pdf) have a garbled text layer: probe pdf shows nonsense, so render page 1; fetch:check reports issue date unknown though the pick is the newest.
+- A parish site that doesn't link its bulletin (Christ the King, Haddonfield) can still be on John Patrick: search church-bulletin.org for the parish; the printer's code (503) is printed in the back-page footer of the issue.
+- duckduckgo.com/html answers a bot challenge after a few searches in one session, and bing.com returns junk for exact-phrase church queries: don't rely on web search to date a closure; use the Catholic Star Herald REST search and the parish's own pages.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
