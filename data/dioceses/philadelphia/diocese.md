@@ -195,9 +195,10 @@ listings (2026-10-28). Each batch settles its own rows.
   home page with HTTP 200. church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent;
   plain curl works. **Some John Patrick PDFs have a text layer and some don't** (text: St.
   Francis of Assisi 175, St. Kevin 66, Fatima 83, St. Dorothy 209; image-only, `probe pdf`
-  showing 0 readable pages: Holy Cross 24): check `pdftotext -l 2` first, and for image-only
-  issues render page 1, and page 2 for the Mass schedule, with parish-site-access `render.py`
-  to read the masthead; `fetch:check` then reports `publication_identity` `unverified`, by
+  showing 0 readable pages: Holy Cross 24, Sacred Heart, Swedesburg 143, Mother of Divine
+  Providence 27): check `pdftotext -l 2` first, and for image-only issues render page 1, and
+  page 2 for the Mass schedule, with parish-site-access `render.py` (or `pdftoppm -r 70 -png`,
+  which the Read tool reads) to read the masthead; `fetch:check` then reports `publication_identity` `unverified`, by
   design.
 - **eCatholic:** several sites (St. Anselm 24649, St. Genevieve 38659, St. Christopher 16547,
   St. Anne 34036, St. Anastasia 12297, St. Barbara 21577, St. Francis de Sales, Lenni 2405)
@@ -237,11 +238,15 @@ listings (2026-10-28). Each batch settles its own rows.
   John Patrick PDF: use the listing. Likewise when a WordPress `/bulletins/` page or a Wix
   `/events/bulletins` page carries a current, byte-identical (md5) copy under irregular or hashed
   `/_files/ugd/` file names (St. Patrick, Kennett Square and listing 236; St. Mary Magdalen,
-  Media): keep the listing as the `page-pdfs` channel and note the copy as equal in
+  Media; Mother of Divine Providence's WordPress `/bulletins/` and listing 27): keep the listing as the `page-pdfs` channel and note the copy as equal in
   `publication_reviews`. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
   A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
   nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
-  `probe get` and is readable with `visit.py`): use the parish's John Patrick listing.
+  `probe get` and is readable with `visit.py`): use the parish's John Patrick listing. Numbered
+  Squarespace files with no date in the name, listed newest first (St. Mary's Quasi-Parish,
+  FSSP: `/bulletin`, `/s/48-Christ-the-King-jm5e.pdf`), are read correctly by `page-pdfs`, but
+  `fetch:check` freshness stays `unknown`. Don't print a Wix page's `href` list whole: it
+  carries thousands of characters of parastorage URLs (`grep -v parastorage`).
 - **A shared WordPress host that answered HTTP 500 to everyone:** saintfrancescabrini.net,
   annunciationbvmchurch.org, sainthelenaparish.net, scbdh.org and epiphanychurch.church all
   resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. The
@@ -252,7 +257,9 @@ listings (2026-10-28). Each batch settles its own rows.
   anything; parish.stnorbert.org answered "RemoteDisconnected" to `probe url` and loaded in
   Chrome (2026-10-28). A site framed from a Solutio host (stphilspa.com ->
   stphil-lans.solutiosoftware.com) answers 403 to `probe url` and `probe get`; `visit.py` shows
-  its "Latest Bulletin" link. holynameofjesus-fishtown.org failed certificate verification on
+  its "Latest Bulletin" link; presbvm.org (Presentation BVM, Solutio) likewise answered 403 and
+  loaded in Chrome, its bulletin page linking the John Patrick template beside a stale
+  self-upload archive (March 2024). holynameofjesus-fishtown.org failed certificate verification on
   2026-10-28 (try `http://`, or its John Patrick listing).
 - **ParishesOnline / LPi:** a minority publisher here, found in Delaware County (St. Philomena,
   Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton; St. Rose,
@@ -295,6 +302,13 @@ listings (2026-10-28). Each batch settles its own rows.
   own and leave `address_verified` false. GCatholic's "Mission of:" line names the owner of a
   chapel whose name points elsewhere (Sacre Coeur adoration chapel: St. Denis, not Sacred Heart,
   Havertown).
+  GCatholic's seminary, abbey and chapel entries can describe a campus the community has left
+  (St. Charles Borromeo Seminary moved from Overbrook to Lower Gwynedd in August 2024, closing
+  the Overbrook chapels): read the institution's own site and CatholicPhilly before assuming
+  Mass. GCatholic also lists Ordinariate churches among the archdiocese's (Rite "Anglican
+  (Latin)", Jurisdiction "Anglican Personal Ordinariate of The Chair of Saint Peter": 500 Ford
+  St., Bridgeport, the former Our Lady of Mount Carmel): read the Jurisdiction line before
+  treating a former parish church as a worship site (rule below).
   The directory's and the masthead's street can be the parish office, and GCatholic's can be
   off too (St. Patrick, Malvern: office 131 Channing Ave., church 104 Channing Ave. per its
   site footer and OSM, GCatholic 126 Woodland Ave.): read the site's contact page or footer.
@@ -304,23 +318,14 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
-- GCatholic seminary, abbey and chapel entries can describe a campus the community has left: read the institution's own site and CatholicPhilly before assuming Mass (St. Charles Seminary left Overbrook for Lower Gwynedd in Aug 2024; its Overbrook chapels are closed).
-- A parish's eCatholic /bulletins archive can match the John Patrick listing byte for byte (St. Margaret, Narberth, md5 equal) while a sibling's archive is stale (St. Matthias 2025-04): check the newest dated file on each before choosing ecatholic or page-pdfs.
-- presbvm.org (Solutio) answers 403 to probe url but loads in Chrome; its bulletin page links the JPPC template and a stale self-upload archive (March 2024).
-- For OSM-derived church coordinates use coordinates_from: osm-node (not osm).
-- A closed parish's 'Worship site of X' line can be stale for a decade: Sacred Heart, Swedesburg's own site, bulletin masthead and Mass page name no worship site beyond 120 Jefferson St., and its St. Augustine relegation decree says Sunday Masses ended January 2015 at both St. Augustine and Our Lady of Mount Carmel.
-- GCatholic can list an Ordinariate church (Rite 'Anglican (Latin)', Jurisdiction 'Anglican Personal Ordinariate of The Chair of Saint Peter') among the archdiocese's churches: read its 'Jurisdiction' line, and the parish's own site, before treating it as a former parish's worship site (500 Ford St., Bridgeport is St. John the Baptist, acquired 2015).
-- John Patrick PDFs for Sacred Heart, Swedesburg (143) and Mother of Divine Providence (27) are image-only: pdftotext returns nothing, pdftoppm -r 70 -png renders pages that the Read tool reads; MDP's WordPress /bulletins/ file is byte-identical to the listing's.
-- St. Mary's Quasi-Parish (FSSP) self-hosts numbered Squarespace files (/s/48-Christ-the-King-jm5e.pdf) on /bulletin, newest first with no dates in the names: page-pdfs reads the right file but fetch:check freshness stays unknown.
-- Never print `href` lists of a Wix page: they carry thousands of characters of parastorage URLs; filter them out with grep -v parastorage.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - **Eastern Catholic churches** (Ukrainian Archeparchy of Philadelphia, Ruthenian, Syro-Malabar, Syro-Malankara, Maronite, Armenian) are excluded as `other-jurisdiction`, as in every neighbouring diocese. A Latin parish church an Eastern community also uses keeps its own row (St. Albert the Great, Huntingdon Valley, with the Syro-Malabar mission). (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **Shared pastors and Parish Life Directors don't make shared bulletins.** A pair or trio named under one pastor or PLD on the directory (14 pairs and the cathedral trio) is one row only when one current bulletin covers each member; compare mastheads and Mass schedules, not contact lines or staff. (accepted by survey-review, 003-survey-review, 2026-10-28)
-- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28) A closed parish page's 'Worship site of X' line is stale once X's own page names no worship site and says only 'Merged with …' (St. George, Glenolden and Holy Spirit, Sharon Hill; St. Gabriel, Norwood and St. Margaret Mary Alacoque, Essington): add no church row from it, and without a closure source leave the church `open`. (map batch `lenni-glenolden`, 2026-10-28)
+- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28) A closed parish page's 'Worship site of X' line is stale once X's own page names no worship site and says only 'Merged with …' (St. George, Glenolden and Holy Spirit, Sharon Hill; St. Gabriel, Norwood and St. Margaret Mary Alacoque, Essington): add no church row from it, and without a closure source leave the church `open`. (map batch `lenni-glenolden`, 2026-10-28) The line can be a decade stale: when X's own site, masthead and Mass page name no other site, look for a decree that ended Sunday Mass there (Sacred Heart, Swedesburg: St. Augustine's decree ended Sunday Mass at St. Augustine and Our Lady of Mount Carmel in January 2015). (map batch `conshohocken-kop`, 2026-10-28)
+- **Personal Ordinariate churches** (the Chair of St. Peter) are excluded `other-jurisdiction`, as in Rochester and Scranton, even in a former archdiocesan parish church: St. John the Baptist holds Mass in Our Lady of Mount Carmel, Bridgeport, which is not a Sacred Heart worship site. (map batch `conshohocken-kop`, 2026-10-28)
 - **Seminary, monastery, abbey, retreat-house and adoration chapels** (St. Charles Borromeo Seminary and its chapels, the Visitation Monastery, Daylesford Abbey, the St. Carlo Acutis shrine at Malvern Retreat House, the Sacre Coeur adoration chapel) get a church row under a parish when that parish's bulletin lists their public Mass; a parish row of their own if the house publishes a readable bulletin; otherwise they are excluded `no-public-mass` (private or community-only Mass) or `no-bulletin` (public Mass, but no bulletin lists it), following README Settled policy 4. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A campus Mass the parish bulletin lists every week gets a church row** (Villanova's St. Thomas of Villanova church, the Penn Newman Center's St. Bede chapel under St. Agatha-St. James, Temple's Newman chaplaincy), as in Harrisburg; a campus ministry that publishes only by email or semester newsletter is excluded `no-bulletin`. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A shrine in a parish church is that church's row** (the Cathedral and Shrine of St. Katharine Drexel; St. Peter the Apostle and the Neumann Shrine; St. Jude, Chalfont; St. Anne). A shrine in a former parish church is decided like a worship site: a church row under the parish whose bulletin lists its Masses, a parish row of its own when it publishes its own bulletin, or excluded `no-bulletin` when it has public Mass and no bulletin lists it. (accepted by survey-review, 003-survey-review, 2026-10-28)
