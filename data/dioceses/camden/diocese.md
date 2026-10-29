@@ -223,6 +223,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - duckduckgo.com/html answers a bot challenge after a few searches in one session, and bing.com returns junk for exact-phrase church queries: don't rely on web search to date a closure; use the Catholic Star Herald REST search and the parish's own pages.
 - A parish's own bulletin page can lag the church-bulletin.org listing by weeks (Holy Child's stopped at 13 Sept while the listing had 25 Oct); the printer's prefix in the file names (698+...) maps to church-bulletin.org/?id=<n>.
 - Merged parishes' rosters can omit a church the bulletin masthead lists (Guadalupe's St. Luke, Stratford): read the masthead's church list, not just the roster.
+- When a parish's website is dead and web search is blocked, sweep John Patrick page codes with `curl -sIL http://www.jppc.net/onlinebulletins/<id>template.pdf` (ids 500-700, tools/jp_ids_500_700.tsv): the final URL is the church-bulletin.org listing slug; that is how Christ the Redeemer, Atco (683) was found. Check the listing has /bulletin/ PDF links: 683 has none, and the parish's real bulletin is its LPi/ParishesOnline one (org christ-the-redeemer, container 03/1431).
+- church-bulletin.org slugs follow '<name>-church-<town>-nj-<zip>' only some of the time (St. Charles: saint-charles-borromeo-church-sicklerville-nj-08081); a guess is valid only if the page lists /bulletin/<slug>/<date>.pdf links.
+- A guessed parish domain can be a same-named parish abroad (christtheredeemerparish.org is in Lusaka, Zambia): read the page's town before storing a URL.
+- probe pdf --pages N reads the first N pages, not page N; use --grep or render.py to read one page of a long bulletin.
+- The stealth browser may not be used to run web searches through search engines' bot checks (denied by the sandbox classifier); use probe get search endpoints, the Catholic Star Herald REST search or the John Patrick id sweep instead.
 
 ## Rules settled for this diocese
 
