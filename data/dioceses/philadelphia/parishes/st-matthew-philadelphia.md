@@ -28,6 +28,7 @@ evidence:
   note: 'Directory: Pastor Rev. Patrick J. Welsh, church at Cottman Ave. and Battersby St., rectory 3000
     Cottman Ave. 19149; Mass times match the bulletin (Sat 4:30 PM; Sun 7, 9, 11 AM, 7 PM). Page 2 years
     old.'
+promoted: 2026-10-29
 research:
 - method: Read listing 276, rendered pages 1 of the 25 October issue, opened the parish site
   url: https://www.church-bulletin.org/saint-matthew-parish-philadelphia-pa-19149

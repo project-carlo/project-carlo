@@ -36,6 +36,7 @@ evidence:
   note: 'Directory page (updated 2 years before 2026-10-28): pastor Rev. Edward J. Casey; website ihmphila.org;
     Mass Saturday 5:15 PM vigil, Sundays 7:30, 9:30, 11:30 AM, weekdays 8:30 AM Monday-Friday and 8 AM
     Saturday. No worship site named.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-baptist-philadelphia

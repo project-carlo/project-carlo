@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry (page updated 2 years ago): Pastor Rev. Paul J. O''Donnell; 63 Main Ave., Berwyn;
     Mass times Saturday 5 PM, Sunday 7:30, 9:30, 11:30 AM, weekdays 8:30 AM. Names no worship site.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-norbert-paoli
   decision: separate

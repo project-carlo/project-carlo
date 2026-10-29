@@ -34,6 +34,7 @@ evidence:
 - url: https://www.stjudechalfont.org/
   seen: 2026-10-29
   note: Parish site title 'St. Jude Church and Shrine | Chalfont, PA' (browser read).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

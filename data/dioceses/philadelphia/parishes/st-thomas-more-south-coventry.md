@@ -23,6 +23,7 @@ evidence:
   note: Directory page (updated about four months before this date) gives Mass times Saturday 4:30 PM,
     Sunday 9:30 AM, weekdays 8:30 AM; the current bulletin has Sunday 8 a.m. and 11 a.m. The bulletin
     is newer and wins.
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-gabriel-of-the-sorrowful-mother-stowe
   decision: separate

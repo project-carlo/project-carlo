@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has an unnamed building at 3728 Chestnut Street (39.95474, -75.19797), about 40 m from the
     GCatholic pin; no source here ties that number to the church, so it is not used.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

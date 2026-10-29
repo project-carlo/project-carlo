@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Saint John Neumann Catholic' lat 40.0038864, lon -75.3383171 (a second 'church'
     building node at 40.0040001, -75.3381830), listed with the post town Havertown and no house number.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

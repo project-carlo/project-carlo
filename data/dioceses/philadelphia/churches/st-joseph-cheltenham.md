@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has a house node at 7631 Waters Road (40.05678, -75.11440), no named place of worship; it
     agrees with the Plus Code within about 25 m.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

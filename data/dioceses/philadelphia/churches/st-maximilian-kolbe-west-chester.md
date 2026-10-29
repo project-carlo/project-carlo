@@ -34,6 +34,7 @@ evidence:
   note: 'Page 1 (an image, rendered and read) of the 25 October 2026 bulletin: ''St. Maximilian Kolbe
     Church ... Mass Times: Daily Mass Monday-Saturday 8:00 AM, Saturday Vigil 4:00 PM, Sunday 7:30 AM,
     9:00 AM, 10:30 AM ... 15 East Pleasant Grove Road, West Chester, PA 19382''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

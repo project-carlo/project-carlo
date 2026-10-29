@@ -36,6 +36,7 @@ evidence:
   quote: 'Merged with St. Joseph the Worker, Fallsington: 2014'
   note: 'Directory: Pastor Rev. Msgr. Michael P. McCormac; church ''Oxford Valley Rd. and Southway Dr.'';
     rectory 325 S. Oxford Valley Rd., Fairless Hills 19030; Mass times as in the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read listing 228, rendered page 1 of the 25 October image-only issue, the 2 August text layer,
     the parish site's bulletin and adoration pages

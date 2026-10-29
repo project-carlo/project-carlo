@@ -26,6 +26,7 @@ evidence:
   quote: 'Daily Mass (M-F): 7AM &9 AM'
   note: 'The 25 October 2026 bulletin (text layer): page 1 ''338 Manor Avenue, Downingtown, PA 19335'';
     Mass Schedule Daily (M-F) 7AM & 9AM, Saturday 8AM & 5:00PM Vigil, Sunday 6AM, 7:30AM, 9:00AM, 10:30AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

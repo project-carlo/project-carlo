@@ -26,6 +26,7 @@ evidence:
   note: 'Directory entry: Rev. John C. Nguyen, pastor; Mass times Saturday vigil 5 PM, Sunday 7:30, 9:30,
     11:30 AM and 2:30 PM (Vietnamese), weekdays 8:30 AM. Differs from the bulletin on the vigil (5 PM
     vs 4:30).'
+promoted: 2026-10-29
 ---
 
 ## Publisher

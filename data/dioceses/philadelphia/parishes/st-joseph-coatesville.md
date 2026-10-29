@@ -27,6 +27,7 @@ evidence:
     as the eCatholic file, footer ''0239- St. Joseph-''. The two files are not byte-identical (4,322,794
     vs 4,320,106 bytes) but carry the same page 1 content, so the listing is recorded as a second publication
     id of one bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: our-lady-of-the-rosary-coatesville
   decision: separate

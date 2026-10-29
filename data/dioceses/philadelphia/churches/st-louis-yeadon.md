@@ -32,6 +32,7 @@ evidence:
   quote: W Cobbs Creek Pkwy., Yeadon, Pennsylvania 19050
   note: GCatholic 'St. Louis', first recorded 1928.10, phone +1 (610) 623-0553, Plus Code 87F6WQM3+JW
     (39.93406, -75.24519). It is not marked closed.
+promoted: 2026-10-29
 research:
 - method: Nominatim place search (4 phrasings of St. Louis Church, Yeadon / Cobbs Creek Parkway) and a
     bounded viewbox search for 'church' around 39.934,-75.245; GCatholic page and directory page read

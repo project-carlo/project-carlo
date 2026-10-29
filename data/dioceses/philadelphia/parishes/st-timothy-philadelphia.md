@@ -33,6 +33,7 @@ evidence:
   note: 'Directory page for St. Bartholomew: website https://www.st-tims.org/, Mass ''Sundays, 10:00 AM.
     Holy Days: Celebrated at St. Timothy Church.'' St. Timothy''s page names Rev. Francis P. Foley as
     Pastor, website http://www.st-tims.org.'
+promoted: 2026-10-29
 research:
 - method: Read listing 116 and its 25 October text layer; opened st-tims.org and its /bulletins archive
     in Chrome; checked listing 73

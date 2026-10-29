@@ -26,6 +26,7 @@ evidence:
   quote: Concord Rd., Aston, Pennsylvania 19014
   note: GCatholic 'St. Joseph', first recorded 1947.06, phone +1 (610) 497-3340, Plus Code 87F6VH8J+56
     (39.86544, -75.41944).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

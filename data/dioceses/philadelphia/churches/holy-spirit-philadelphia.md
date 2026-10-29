@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship Holy Spirit Catholic Church at 1845 Hartranft Street (39.90935, -75.18024),
     about 40 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

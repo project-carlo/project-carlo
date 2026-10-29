@@ -29,6 +29,7 @@ evidence:
     County, Pennsylvania, 19054
   note: OSM place_of_worship node at 40.1426329,-74.8183128, about 30 m from the GCatholic pin. OSM files
     it under Tullytown (Lakeside); the bulletin, directory and GCatholic say Levittown.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

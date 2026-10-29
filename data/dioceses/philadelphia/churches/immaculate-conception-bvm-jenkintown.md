@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Immaculate Conception Church, 602, West Avenue, Jenkintown' at 40.09606,
     -75.12800, within about 15 m of the Plus Code; the school is a separate node at 606 West Avenue.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 445 N. Main St., Sellersville 18960-2109; Vigil Saturday 5:15 PM, Sundays 8, 10 AM
     and Noon, weekdays 8 AM, Saturdays 9 AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

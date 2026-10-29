@@ -33,6 +33,7 @@ evidence:
     Sunday 9:30 AM and 11:30 AM (bilingual), weekdays Tuesday-Friday 7:30 AM. Agrees with the bulletin.
     No worship site named. The closed Immaculate Heart of Mary page says its spiritual records are kept
     here.'
+promoted: 2026-10-29
 research:
 - method: 'fetch:check picked the 2026-10-25 issue from the pinned page-pdfs recipe: transport ok, pdf,
     freshness fresh (3 days); identity unverified by design (image-only first page; masthead read by rendering).'

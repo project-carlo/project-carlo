@@ -28,6 +28,7 @@ evidence:
   quote: 615 S Providence Rd., Wallingford, Pennsylvania 19086
   note: GCatholic 'St. John Chrysostom', first recorded 1952.11, phone +1 (610) 874-3418, Plus Code 87F6VJMM+F8
     (39.88369, -75.36669).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

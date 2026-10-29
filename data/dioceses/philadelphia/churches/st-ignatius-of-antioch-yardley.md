@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-29
   note: OSM finds only Reading Avenue (Lower Makefield Township, 19067) near 40.2319,-74.8400, about 50
     m from the GCatholic pin; no named church node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

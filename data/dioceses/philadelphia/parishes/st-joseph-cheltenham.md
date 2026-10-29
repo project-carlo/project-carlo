@@ -36,6 +36,7 @@ evidence:
   note: 'Directory page (updated 4 months ago): 7631 Waters Rd., Cheltenham; ''Rev. Dominic Ishaq in residence
     at Presentation BVM, Cheltenham''; Sundays 10 AM, Mondays, Wednesdays, Fridays 10 AM; Parish Center
     7631 Waters Rd., Cheltenham PA 19012-1318.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: presentation-bvm-cheltenham
   decision: separate

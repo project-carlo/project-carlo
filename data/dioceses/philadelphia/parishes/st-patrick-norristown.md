@@ -37,6 +37,7 @@ evidence:
   quote: Rev. Carlos F. Keen (Parochial Administrator)
   note: 'Directory: church at DeKalb and Chestnut Sts., rectory 714 DeKalb St., parish offices 703 Green
     Street, Hispanic apostolate; Mass times as on the site.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: holy-saviour-norristown
   decision: separate

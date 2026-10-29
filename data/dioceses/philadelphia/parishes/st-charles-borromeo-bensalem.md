@@ -35,6 +35,7 @@ evidence:
   quote: 'Worship Site: Our Lady of Fatima Church'
   note: 'Directory page (updated 2 years earlier): pastor Rev. Philip M. Forlano; ''Merged with Our Lady
     of Fatima, Bensalem: 2014''; Mass times match the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read pages 1-2 of the 25 October 2026 issue (rendered) and the text layers of the 2025-06-01,
     2026-01-04 and 2026-06-07 issues for 'Fatima', 'Street Rd', 'worship site'

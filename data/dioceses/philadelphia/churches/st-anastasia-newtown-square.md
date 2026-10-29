@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Saint Anastasia Roman Catholic Church', 3301 West Chester Pike, Newtown
     Square 19073, lat 39.9854129, lon -75.3831561 (the school is a separate node at no. 3309).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

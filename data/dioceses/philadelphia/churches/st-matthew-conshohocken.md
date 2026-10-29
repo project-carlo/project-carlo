@@ -34,6 +34,7 @@ evidence:
   note: Nominatim returned no place_of_worship for St. Matthew in Conshohocken (queries 'St. Matthew Church/Catholic
     Church Conshohocken', 'Saint Matthew Fayette Street Conshohocken'), so the coordinates are GCatholic's
     Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

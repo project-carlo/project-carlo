@@ -29,6 +29,7 @@ evidence:
   note: 'Directory (updated about a year earlier): Pastor Rev. James E. Goerner; Saturday vigil 4:30 PM,
     Sundays 7:30, 10:30 AM and Noon, weekdays 9:00 AM except Wednesday. Agrees with the bulletin. The
     Our Lady of Charity page names him Parochial Administrator ''in residence at Saint Rose of Lima, Eddystone''.'
+promoted: 2026-10-29
 research:
 - method: fetch:check resolved the ParishesOnline organization to the 2026-11-01 issue (posted early;
     freshness 'future', age -4 days); page 1 reads 'St. Rose of Lima Parish ... NOVEMBER 1, 2026 ALL SAINTS

@@ -29,6 +29,7 @@ evidence:
   quote: Rev. Msgr. Kevin C. Lawrence
   note: 'Directory: pastor; 81 Swamp Rd., Newtown 18940; Bucks County Central and North deanery; Mass
     times (Sat 5 PM; Sun 6:45, 7:45, 9, 10:30, Noon) match the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read the Mass box and masthead on pages 1-2 of the 25 October 2026 issue; searched the text
     layers of the 2025-06-01, 2026-01-04, 2026-06-07 issues and the site pages for Mass at the 'Olde Church'

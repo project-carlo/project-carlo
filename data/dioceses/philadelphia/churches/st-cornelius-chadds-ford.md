@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM node 357307579, amenity=place_of_worship 'Saint Cornelius Church', 160 Ridge Road, Chadds
     Ford; 39.8645554, -75.5571485.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

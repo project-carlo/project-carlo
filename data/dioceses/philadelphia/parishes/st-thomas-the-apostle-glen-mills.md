@@ -28,6 +28,7 @@ evidence:
   note: 'Directory (page updated about a year earlier): ''Pastor: Rev. Stephen E. Shott, O.S.F.S.'', rectory
     430 Valleybrook Rd., Mass times Saturday 5 PM, Sunday 7:30, 9:30, 11:30 AM, weekdays 8 AM (Thursday
     9 AM); no worship site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

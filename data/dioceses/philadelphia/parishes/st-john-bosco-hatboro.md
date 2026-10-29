@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: 215 East County Line Road, Warminster 18974; Vigil Saturdays 4 and 7 PM (Spanish),
     Sundays 8, 9:30, 11 AM (matches the bulletin); Hispanic apostolate parish.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

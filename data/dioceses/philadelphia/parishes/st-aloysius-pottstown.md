@@ -27,6 +27,7 @@ evidence:
   note: 'Parish home page Mass schedule: Daily Mon/Tue/Thu/Fri 8:30 AM, Saturday 9:00 AM, Saturday Vigil
     5:00 PM, Sunday 7:30 AM, 10:15 AM, 11:30 AM (Spanish). It lists one church (223 Beech Street) and
     the parish office at 844 N. Keim Street; no Holy Trinity.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-gabriel-of-the-sorrowful-mother-stowe
   decision: separate

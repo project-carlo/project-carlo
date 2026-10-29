@@ -32,6 +32,7 @@ evidence:
   note: OSM place_of_worship 'St. Luke the Evangelist Catholic Church', 2316 Fairhill Avenue, Glenside
     19038, at 40.10314, -75.15189, about 30 m from GCatholic's Plus Code. 2316 is the rectory number in
     the bulletin and directory, so the street number is not taken for the church.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

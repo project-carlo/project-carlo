@@ -33,8 +33,9 @@ evidence:
 - url: https://archphila.org/parish/presentation-bvm-wynnewood/
   seen: 2026-10-28
   note: 'Directory entry: Rev. Eduardo G. Montero, rectory 204 Haverford Rd., Wynnewood 19096; ''Penn
-    Wynne - Wynnewood'' as the address. (Corrected by reconcile 2026-10-29: the pastor shared with St. Joseph,
-    Cheltenham is Rev. Dominic Ishaq of Presentation B.V.M., Cheltenham, a different parish.)'
+    Wynne - Wynnewood'' as the address. (Corrected by reconcile 2026-10-29: the pastor shared with St.
+    Joseph, Cheltenham is Rev. Dominic Ishaq of Presentation B.V.M., Cheltenham, a different parish.)'
+promoted: 2026-10-29
 ---
 
 ## Publisher

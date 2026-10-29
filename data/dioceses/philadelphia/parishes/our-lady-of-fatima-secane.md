@@ -29,6 +29,7 @@ evidence:
   note: 'Directory: Rev. Amalraj Sawarimuthu, SdC (Parochial Administrator); Mass times Saturday vigil
     4 PM, Sundays 7:30, 10, 11:30 AM; page updated 4 months ago. The Sunday times are stale: the bulletin
     and the site give 8:00 and 10:30 AM.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

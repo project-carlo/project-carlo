@@ -27,6 +27,7 @@ evidence:
   quote: 2nd St. & Jefferson St., Philadelphia, Pennsylvania 19122
   note: GCatholic 'St. Michael', first recorded 1831.04, phone +1 (215) 739-2358 (the bulletin's), Plus
     Code 87F6XVF6+8G.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

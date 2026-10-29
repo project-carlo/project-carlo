@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   quote: 203 Church Rd.
   note: Directory address and rectory at the same street address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

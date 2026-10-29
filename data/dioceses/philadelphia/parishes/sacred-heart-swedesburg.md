@@ -40,6 +40,7 @@ evidence:
     (Polish parish); 2014 (Territorial parish); Merged with St. Augustine, Bridgeport and Our Lady of
     Mount Carmel, Bridgeport: 2014''; Mass times Saturday 4 PM, Sunday 8 and 10:15 AM, holydays and weekdays
     8 AM. It names no worship site.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-matthew-conshohocken
   decision: separate

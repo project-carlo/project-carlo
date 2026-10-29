@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: Cottage and Bleigh Sts.
   note: 'Directory: church at Cottage and Bleigh Sts.; rectory 7341 Cottage St. 19136.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

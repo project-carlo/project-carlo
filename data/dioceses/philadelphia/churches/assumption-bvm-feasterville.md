@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'Assumption BVM Church, Bristol Road, Trevose Heights' at 40.16074,-74.98057, within about
     20 m of the GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

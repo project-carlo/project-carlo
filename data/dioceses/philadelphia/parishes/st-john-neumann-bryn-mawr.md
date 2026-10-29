@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Msgr. Michael J. Matz (named by no other parish); 380 Highland La., Bryn
     Mawr 19010; Delaware County West; page updated 4 months ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: our-mother-of-good-counsel-bryn-mawr
   decision: separate

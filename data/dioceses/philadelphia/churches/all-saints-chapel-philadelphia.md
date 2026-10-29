@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: OSM returned two address points for '146 Rector Street' (40.02534, -75.21989 and 40.02497, -75.22033),
     so no coordinates were taken.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

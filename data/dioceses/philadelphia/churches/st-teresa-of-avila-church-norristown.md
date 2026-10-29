@@ -32,6 +32,7 @@ evidence:
   quote: 1260 S. Trooper Rd., Audubon
   note: Directory church and rectory address 1260 S. Trooper Rd. (Audubon, 19403); Mass times Saturday
     4:15 PM, Sunday 9 and 11 AM, as the bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

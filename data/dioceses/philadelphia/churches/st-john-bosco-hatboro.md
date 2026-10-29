@@ -32,6 +32,7 @@ evidence:
   note: GCatholic 'St. John Bosco', 235 E County Line Rd., Hatboro (roster ZIP 18974), first recorded
     1953.03, Plus Code 87G65WJ7+P7 (40.1818125, -75.0868125), about 35 m from the OSM node. Its street
     number, 235, differs from the 215 given by the bulletin, directory and OSM.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

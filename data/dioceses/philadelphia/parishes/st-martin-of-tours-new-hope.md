@@ -32,6 +32,7 @@ evidence:
     Bucks County Central and North deanery. Directory times (Sat 5:30 PM vigil, Sun 8:30 and 11, Tue 7
     PM) are older than the bulletin''s (Sat 4:30 PM vigil plus 9:00 AM Saturday, Sun 8:30 and 11:00):
     the bulletin is followed.'
+promoted: 2026-10-29
 research:
 - method: Read listing 174, rendered pages 1-2 of the 25 October 2026 issue and the parish site's home
     page and PDF

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Deacon Mark D. Nowakowski (Parish Life Director); "Worship Site: Holy Trinity
     Church"; Mass times name Holy Trinity Church and St. Mary Church.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-ann-phoenixville
   decision: separate

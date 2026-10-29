@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: Cottman Ave. and Battersby St.
   note: 'Directory: church at Cottman Ave. and Battersby St.; rectory 3000 Cottman Ave. 19149.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

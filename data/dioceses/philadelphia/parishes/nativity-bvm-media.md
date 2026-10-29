@@ -27,6 +27,7 @@ evidence:
   note: 'Directory (page updated about a year earlier): ''Pastor: Rev. Edward H. Bell'', rectory 30 E.
     Franklin St., Mass times Saturday 5 PM, Sunday 7, 8, 10 AM and Noon, weekdays 8 AM; no worship site
     named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

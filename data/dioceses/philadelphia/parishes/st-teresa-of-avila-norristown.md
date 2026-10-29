@@ -31,6 +31,7 @@ evidence:
   quote: Rev. J. Jerome Wild
   note: 'Directory: rectory 1260 S. Trooper Rd., Audubon 19403-3659; pastor Rev. J. Jerome Wild; Mass
     times agree with the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

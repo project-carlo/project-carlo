@@ -33,6 +33,7 @@ evidence:
   note: OSM 'Saint Bridget Roman Catholic Church' (place_of_worship, no house number) at 40.01119, -75.19354,
     about 55 m from the Plus Code; 'St. Bridget Rectory' at 3669 and 'St. Bridget Convent' at 3665 Midvale
     Avenue nearby.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

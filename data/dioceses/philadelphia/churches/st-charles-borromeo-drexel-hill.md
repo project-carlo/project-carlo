@@ -28,6 +28,7 @@ evidence:
   quote: Burmont Rd. & Dennison Ave., Drexel Hill, Pennsylvania 19026
   note: GCatholic 'St. Charles Borromeo', first recorded 1849.01, phone +1 (610) 623-3800, Plus Code 87F6WPP6+FG
     (39.93619, -75.28869).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

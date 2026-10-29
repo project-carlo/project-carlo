@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 3rd and Reed Sts.; rectory 1404 S. 3rd St.; Pastor Rev. Shaun L. Mahoney; Hispanic
     apostolate (Spanish Mass 9:15 AM); weekday and Saturday morning Masses in the parish chapel.'
+promoted: 2026-10-29
 research:
 - method: 'pnpm fetch:check: page-pdfs on listing 161 resolved 2026-10-25.pdf; transport ok, pdf, freshness
     fresh; identity read from the masthead (tool: unverified, no expected identity)'

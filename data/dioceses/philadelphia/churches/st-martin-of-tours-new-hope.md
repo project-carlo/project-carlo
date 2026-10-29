@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'Saint Martin of Tours', 1 Riverstone Circle, New Hope 18938, at 40.36468,-74.96382, within
     about 15 m of the GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

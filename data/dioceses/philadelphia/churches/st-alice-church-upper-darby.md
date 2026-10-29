@@ -44,6 +44,7 @@ evidence:
   seen: 2026-10-28
   note: Nominatim returns a house node at 150 Hampden Road, Stonehurst, Upper Darby (39.957605, -75.2607221),
     no place_of_worship node; it lies about 110 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

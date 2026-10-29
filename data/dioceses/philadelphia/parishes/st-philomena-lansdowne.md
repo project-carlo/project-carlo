@@ -37,6 +37,7 @@ evidence:
   quote: 'Merged with St. Cyril of Alexandria, East Lansdowne: 2013'
   note: 'Directory: Pastor Rev. Paul A. Castellani; 41 E. Baltimore Ave.; Mass times as in the bulletin;
     page updated 2 years ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

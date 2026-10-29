@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Our Lady of Peace Parish', 208 Milmont Avenue (post town West Ridley Park
     in OSM), at 39.88169, -75.33528.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   note: OSM address node '1019, North 5th Street, Olde Kensington' at 39.96931, -75.14512 (a house node
     for the address, not the building outline; GCatholic omits this church, so there is no second pin).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

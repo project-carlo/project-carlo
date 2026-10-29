@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   quote: Rev. Msgr. James D. Beisel
   note: 'Directory: pastor; rectory 856 Euclid Ave., Warrington 18976; page updated 5 months ago.'
+promoted: 2026-10-29
 research:
 - method: Read the parish site's Bulletins page and listing 122 (jppc_scan); compared the 25 October masthead
   url: https://saintrobertwarrington.org/our-community/parish-bulletins/

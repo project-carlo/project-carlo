@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: 4th and Walnut Sts.
   note: Directory church address (a corner description); rectory 321 Willings Alley 19106.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

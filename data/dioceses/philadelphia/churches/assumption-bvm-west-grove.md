@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: 300 State Rd.
   note: Directory address; the 'Assumption B.V.M. Parish Life Center' is at the same address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

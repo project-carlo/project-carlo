@@ -25,6 +25,7 @@ evidence:
   note: 'John Patrick Publishing listing id 144, ''Saints Philip and James Parish'', Exton, PA 19341,
     latest October 25, 2026. Its bulletin/.../2026-10-25.pdf and the parish''s eCatholic 20261025.pdf
     are byte-identical (md5 28cedea8493cfa6e113513ea617c2bfd, 8,587,229 bytes): one bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
   note: 'Directory page (updated 2 months ago): ''Susquehanna Rd., Rydal'', rectory 820 Susquehanna Rd.,
     Rydal 19046; Parochial Administrator Rev. Msgr. Gregory J. Fairbanks; Mass Saturdays 5 PM vigil, Sundays
     8:30 and 10:30 AM, weekdays 8 AM. No worship site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

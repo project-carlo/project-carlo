@@ -2,10 +2,11 @@
 name: Roman Catholic Archdiocese of Philadelphia
 state: PA
 website: https://archphila.org
-status: exploring
+status: promoted
 gcatholic: phil0
 city_aliases:
   Buckingham: Doylestown
+promoted: 2026-10-29
 ---
 
 The City and County of Philadelphia and the four suburban counties of southeastern

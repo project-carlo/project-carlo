@@ -28,6 +28,7 @@ evidence:
   quote: Rev. Patrick J. Brady
   note: 'Directory: pastor Rev. Patrick J. Brady; 51 Lansdale Ave., Lansdale; Hispanic apostolate (Spanish
     Mass Sundays 1 PM).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: corpus-christi-lansdale
   decision: separate

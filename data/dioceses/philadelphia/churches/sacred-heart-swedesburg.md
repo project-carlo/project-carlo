@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-28
   note: Nominatim returned no place_of_worship for the church (also tried 'Sacred Heart Church Bridgeport
     Pennsylvania' and with the street address), so coordinates are GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

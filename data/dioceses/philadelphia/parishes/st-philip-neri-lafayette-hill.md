@@ -24,6 +24,7 @@ evidence:
     2026, files shared/bulletins/2026/<mm>-<dd>-2026.pdf. The 10-25-2026.pdf file is byte-identical (md5
     ab8ad7dba775b1cfb229934737ac02d4) to the listing's 2026-10-25.pdf, so the two channels carry the same
     issue; the home page also links jppc.net/onlinebulletins/014template.pdf.
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

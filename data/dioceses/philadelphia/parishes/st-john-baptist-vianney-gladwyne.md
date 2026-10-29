@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry (updated 2 years ago): Rev. William G. Donovan; rectory 1110 Vaughans La.; Mass
     times Saturday vigil 5 PM, Sundays 8:30, 10:30 AM, weekdays 7:30 AM, Saturdays 8 AM, as in the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

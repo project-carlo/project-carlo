@@ -28,6 +28,7 @@ evidence:
   note: 'Directory (updated 2 months earlier): pastor Rev. Gerald Dennis Gill; rectory 1723 Race St. 19103;
     Mass times match the bulletin (Saturday 5:15 PM, Sunday 8, 9:30, 11, 12:30 Spanish, 6:30 PM; weekdays
     7:15 AM and 12:05 PM).'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -40,6 +40,7 @@ evidence:
 revisit: Confirm the church's own address and pin (the 453 Haycock Run Rd. address comes from the directory's
   cemetery line and a business listing; neither bulletin nor site gives one)
 revisit_after: 2027-01-31
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

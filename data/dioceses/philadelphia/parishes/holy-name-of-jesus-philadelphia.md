@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 2 years ago): E. Berks and Gaul Sts., Rev. Alfred E. Bradley, C.Ss.R.;
     lists Sunday 8 and 11 AM and a Saturday 4:30 PM vigil. The Sunday times are stale: the bulletin and
     the parish site give 9 AM only.'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish holy-name-of-jesus-philadelphia (page-pdfs
     on John Patrick listing 283)

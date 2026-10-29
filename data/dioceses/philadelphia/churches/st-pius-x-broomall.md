@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Saint Pius X Church', 220 Lawrence Road, Broomall 19008, lat 39.9709112,
     lon -75.3455963 (the school is a separate node at the same address).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

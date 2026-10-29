@@ -29,6 +29,7 @@ evidence:
   quote: 333 Sunny Dell Rd.
   note: Directory gives 333 Sunny Dell Rd. with mail to 9016 Gap Newport Pike; its Mass times match the
     bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

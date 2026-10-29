@@ -28,6 +28,7 @@ evidence:
   quote: Rev. Michael J. Pawelko
   note: 'Directory: pastor; rectory 1795 Columbia Ave., Warrington 18976-2596; page updated 2 years ago,
     so its Mass times (Saturday 5:30 PM, Sunday 7, 8:30, 10, 11:30 AM) are stale against the bulletin.'
+promoted: 2026-10-29
 research:
 - method: church-bulletin.org listing scan (jppc_scan ids 1-1300) and directory match by name and town;
     no Warrington St. Joseph listing; probe url on the parish site found no John Patrick or other printer

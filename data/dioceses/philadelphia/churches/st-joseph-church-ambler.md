@@ -38,6 +38,7 @@ evidence:
   quote: 16 S. Spring Garden St., Ambler
   note: Directory address and Mass times (Vigil Saturday 4 PM, Sunday 7:30 AM, Spanish 1:00 PM first and
     third Sunday).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

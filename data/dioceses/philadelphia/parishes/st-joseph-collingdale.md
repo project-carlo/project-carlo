@@ -27,6 +27,7 @@ evidence:
   note: 'Directory: Rev. Thomas M. Sodano, pastor; Mass times Saturday vigil 4:30 PM, Sundays 8, 11 AM
     and 6 PM, weekdays 8 AM; page updated 2 years ago. The 6 PM Sunday Mass is not in the 25 October 2026
     schedule.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: our-lady-of-peace-milmont-park
   decision: separate

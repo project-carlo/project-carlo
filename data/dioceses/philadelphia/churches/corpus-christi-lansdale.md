@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   quote: 900 Sumneytown Pike., Lansdale 19446
   note: Directory rectory address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
   quote: 'Merged with Our Lady of the Blessed Sacrament: 2013'
   note: 'Directory page (updated 7 months before): Rev. Msgr. Federico A. Britto, pastor; Cobbs Creek
     Pkwy. at Cedar Ave.; rectory 525 Cobbs Creek Pkwy.; website saintcyprian.net.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-barbara-philadelphia

@@ -32,6 +32,7 @@ evidence:
   note: 'Directory: Rev. Philip J. Lowe (Parochial Administrator); Vigil Saturday 5 PM; Sundays 8 AM,
     10 AM, 12 Noon; weekdays 9 AM except Wednesday, Saturdays 9 AM; page updated 4 months ago. Agrees
     with the bulletin. No worship site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

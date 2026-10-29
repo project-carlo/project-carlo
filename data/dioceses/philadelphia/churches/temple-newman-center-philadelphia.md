@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM way 192992780 'Newman Center', place_of_worship, 2129 North Broad Street, Stanton, North Philadelphia
     19122, at 39.9855436, -75.1559711.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

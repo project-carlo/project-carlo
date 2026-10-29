@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Rev. Charles R. O''Hara; Mass times Saturday 4:30 PM, Sunday 7:30, 9, 11 AM,
     weekdays 8 AM; no worship site.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-ann-phoenixville
   decision: separate

@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (image, rendered and read): footer ''35 Old Eagle School
     Road, Strafford, PA 19087''; Mass Schedule Sunday 7:00AM, 8:30AM, & 10:00AM; Weekdays 8:00AM; Saturday
     9:00AM & 5:00PM Vigil.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

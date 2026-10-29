@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: Nominatim returned no result for 'Holy Saviour Church Norristown' or 'Holy Saviour Main Street
     Norristown', so the coordinates are GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

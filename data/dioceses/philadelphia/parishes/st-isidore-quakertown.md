@@ -25,6 +25,7 @@ evidence:
   note: 'probe url (HTTP 200, redirected from www): the home page links https://www.jppc.net/onlinebulletins/190template.pdf
     as its bulletin and hosts no dated bulletin archive (other links are PREP handbooks and a finance
     report).'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

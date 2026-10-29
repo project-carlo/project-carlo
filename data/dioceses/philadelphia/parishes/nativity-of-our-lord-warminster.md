@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   quote: Rev. Joseph G. Watson
   note: 'Directory: pastor; rectory 625 W. Street Rd., Warminster 18974-3290.'
+promoted: 2026-10-29
 research:
 - method: Read the parish site's Church Bulletins page and listing 22; compared the 25 October masthead
   url: https://www.noolp.org/parish-information/church-bulletins/

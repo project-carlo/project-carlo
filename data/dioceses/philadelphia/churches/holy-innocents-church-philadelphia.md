@@ -32,6 +32,7 @@ evidence:
   quote: L St. & Hunting Park Ave., Philadelphia, Pennsylvania 19124
   note: GCatholic 'Holy Innocents', first recorded 1927.01, Plus Code 87G62V6X+96 (40.0109375,-75.1019375),
     phone +1 (215) 743-2600.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

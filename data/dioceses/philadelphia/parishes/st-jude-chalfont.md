@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   quote: Rev. Anthony J. Costa
   note: 'Directory: pastor; 321 West Butler Ave., Chalfont 18914.'
+promoted: 2026-10-29
 research:
 - method: visit.py on stjudechalfont.org and /bulletins; curl of the eCatholic 20261018 PDF against the
     listing's 18 October PDF

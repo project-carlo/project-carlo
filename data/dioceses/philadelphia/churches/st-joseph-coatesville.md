@@ -28,6 +28,7 @@ evidence:
   note: The 25 October 2026 bulletin gives the rectory at 404 Charles St. and Mass Schedule Monday through
     Friday 8:30am - 7:00pm (Spanish), Saturday 8:30 am - 4:15 pm - 7:00 pm (Spanish), Sunday 6:30 am (Spanish),
     8:00 am - 10:00 am (English), 12:00 noon (Spanish).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

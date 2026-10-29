@@ -28,6 +28,7 @@ evidence:
   note: 'Directory page (updated 4 months before): Rev. Alessandro P. Giardini; ''Merged with Holy Spirit:
     2014''; ''Worship Site: Holy Spirit Church''; Sunday 10 AM at the Holy Spirit Worship Site, as in
     the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

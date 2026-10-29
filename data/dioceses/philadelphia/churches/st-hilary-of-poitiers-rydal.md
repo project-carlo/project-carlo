@@ -30,6 +30,7 @@ evidence:
 - url: https://archphila.org/parish/st-hilary-of-poitiers-rydal/
   seen: 2026-10-28
   note: 'Directory page: ''Susquehanna Rd., Rydal'' with rectory 820 Susquehanna Rd., Rydal 19046.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

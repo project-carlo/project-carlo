@@ -30,6 +30,7 @@ evidence:
 - url: https://archphila.org/parish/st-philip-neri-philadelphia/
   seen: 2026-10-28
   note: Directory address 218 Queen St., 19147 (also the rectory); 'All Masses at St. Philip Neri.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

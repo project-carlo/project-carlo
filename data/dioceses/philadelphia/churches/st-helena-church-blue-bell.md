@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   quote: 1489 DeKalb Pike
   note: Directory church and rectory address 1489 DeKalb Pike, Blue Bell 19422.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

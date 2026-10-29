@@ -29,6 +29,7 @@ evidence:
   note: 'Directory entry (page updated ''2 years ago''): Rev. Msgr. Hans A. L. Brouwers, Lancaster and
     Aberdeen Aves., Wayne 19087; Mass times Saturday 5 PM, Sunday 8, 9:30, 11:30 AM, weekdays 6:30, 8
     AM. The 8 AM Sunday Mass is not in the 25 October bulletin: the directory lags.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-isaac-jogues-wayne
   decision: separate

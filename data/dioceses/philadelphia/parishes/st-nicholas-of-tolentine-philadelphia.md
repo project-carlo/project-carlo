@@ -27,6 +27,7 @@ evidence:
   quote: In residence at Saint Paul, Philadelphia
   note: 'Directory: 9th and Watkins Sts.; rectory 1511 S. 10th St.; Pastor Rev. Nicholas F. Martorano,
     O.S.A. (in residence at Saint Paul, Philadelphia).'
+promoted: 2026-10-29
 research:
 - method: 'pnpm fetch:check: page-pdfs on listing 275 resolved 2026-10-25.pdf; transport ok, pdf, freshness
     fresh; identity read from the masthead (tool: unverified, no expected identity)'

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has an address point at 601 Bristol Pike, Croydon at 40.0939710,-74.9083930, about 20 m from
     GCatholic's pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

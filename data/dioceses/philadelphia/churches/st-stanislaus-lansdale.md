@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   quote: 51 Lansdale Ave., Lansdale
   note: Directory gives the church address without a ZIP (parish center ZIP 19446-2972).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

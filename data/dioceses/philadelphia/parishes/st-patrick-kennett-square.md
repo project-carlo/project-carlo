@@ -31,6 +31,7 @@ evidence:
     Meredith St., rectory 218 Meredith St., offices 205 Lafayette St.; Mass times Saturday vigil 5 PM,
     Sunday 7:30, 9, 10:30 AM and noon, which differ from the current bulletin''s Sunday 7:30, 9:00, 11:00
     AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-patrick-malvern
   decision: separate

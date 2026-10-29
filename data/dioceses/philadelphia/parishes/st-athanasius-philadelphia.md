@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page (updated 2 years before): ''Worship Site: St. Benedict Church''; Sat Vigil 4 pm
     at St. Athanasius, Sunday 8 am at St. Benedict, 10 am at St. Athanasius.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

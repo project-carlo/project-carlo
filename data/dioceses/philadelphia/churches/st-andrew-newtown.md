@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM "St. Andrew's Church", 81 Swamp Road, Newtown Township 18940, at 40.22850,-74.94672, within
     about 25 m of the GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

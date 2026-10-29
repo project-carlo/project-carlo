@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship Saint Monica Catholic Church at 1700 Ritner Street (39.92100, -75.17568),
     the corner of 17th and Ritner, about 5 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

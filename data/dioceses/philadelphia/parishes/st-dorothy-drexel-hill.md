@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Msgr. Joseph G. Prior; rectory 4910 Township Line Rd., Drexel Hill 19026;
     Mass times as in the bulletin; no worship site named; page updated 1 month ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

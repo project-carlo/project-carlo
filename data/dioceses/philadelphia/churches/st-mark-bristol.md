@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: 1025 Radcliffe St., Bristol 19007
   note: Directory rectory address; the parish office is 1024 Radcliffe St., across the street.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

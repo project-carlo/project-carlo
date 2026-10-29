@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'Our Lady of Good Counsel Church' at 40.17045,-75.04450 (filed under 2nd Street Pike), within
     about 10 m of the GCatholic pin; the school is on Knowles Avenue.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

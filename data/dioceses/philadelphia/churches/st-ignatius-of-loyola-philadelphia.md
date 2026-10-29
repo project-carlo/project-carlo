@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'St. Ignatius of Loyola Outreach, 636 North 43rd Street' (place_of_worship), 39.9639303, -75.2094326,
     about 12 m from GCatholic's pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

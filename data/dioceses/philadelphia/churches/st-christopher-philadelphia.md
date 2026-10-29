@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: 13301 Proctor Rd.
   note: Directory church and rectory address (19116-3716).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

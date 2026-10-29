@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Blessed Virgin Mary Church', 1101 Main Street, Darby 19023, at 39.92178,
     -75.26388 (about 25 m from the Plus Code).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

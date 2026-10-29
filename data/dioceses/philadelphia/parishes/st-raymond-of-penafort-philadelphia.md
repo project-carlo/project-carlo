@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page (updated 12 months before): Williams Ave. and Vernon Rd., Fr. Charles Zlock, rectory
     1350 Vernon Rd. 19150; Vigil Sat 5 PM, Sundays 8, 10 AM, weekdays 8 AM; no worship site.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

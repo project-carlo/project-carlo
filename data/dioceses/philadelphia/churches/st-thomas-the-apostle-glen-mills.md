@@ -26,6 +26,7 @@ evidence:
   quote: 430 Valleybrook Rd., Glen Mills, Pennsylvania 19342
   note: GCatholic 'St. Thomas the Apostle', first recorded 1729.01, phone +1 (610) 459-2224, Plus Code
     87F6VGRG+6F (39.89056, -75.47381).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

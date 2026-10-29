@@ -41,6 +41,7 @@ evidence:
   quote: Rev. James T. McGuinn (Pastor) in residence at Saint Anthony of Padua, Ambler
   note: 'Directory: St. Joseph''s Pastor line; St. Anthony of Padua''s page names Rev. James T. McGuinn
     too.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

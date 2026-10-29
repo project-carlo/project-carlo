@@ -32,6 +32,7 @@ evidence:
   note: 'Directory entry (updated 4 months ago): Rev. Msgr. Paul V. Dougherty; 208 N Narberth Ave.; Mass
     times Saturday vigil 5:15 PM, Sundays 7:30, 8:45, 10, 11:30 AM. The 8:45 AM Sunday Mass is not in
     the 25 October 2026 bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

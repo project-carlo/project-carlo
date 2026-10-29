@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 9th and Watkins Sts.; rectory 1511 S. 10th St. 19147-6399; Sat. vigil 5 PM, Sunday
     9 and 11 AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: 'John Patrick Publishing listing id 243, "Saints Peter and Paul Parish", West Chester, PA 19380;
     latest edition October 25, 2026. Its 2026-10-25.pdf and the parish''s eCatholic 20261025.pdf are byte-identical
     (md5 d40fcfd48e9fe2f4db6bec9d7ff61ef6, 8,936,743 bytes): one bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-agnes-west-chester
   decision: separate

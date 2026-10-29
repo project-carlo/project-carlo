@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Rev. Joseph L. Maloney; Mass times include ''Old Church: 10:30 AM (First Sunday of
     the month from October through December, and April through June)''; page updated 4 months earlier.'
+promoted: 2026-10-29
 research:
 - method: Read the 25 October 2026 bulletin pages 1-2 and the parish site's calendar for an Old Church
     Mass

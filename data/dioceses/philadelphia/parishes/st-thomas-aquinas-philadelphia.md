@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 4 months before): Rev. Dominic Tran Minh Duc; Hispanic apostolate; Sat
     4 PM English and 6 PM Spanish, Sun 8 Vietnamese, 10 English, Noon Indonesian, weekdays 8:30 AM (Chapel);
     no worship site named. The bulletin adds a Sunday 5:00 PM Spanish Mass.'
+promoted: 2026-10-29
 research:
 - method: probe url and visit.py (Chrome) on www.staquinas.com, staquinas.com
   url: http://www.staquinas.com

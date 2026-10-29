@@ -28,6 +28,7 @@ evidence:
   quote: Parochial Administrator (pro tem) resides at Saint Cyprian
   note: 'Directory page (updated 2 years before): Rev. Msgr. Federico A. Britto, Parochial Administrator
     (pro tem); 54th St. and Lebanon Ave.; rectory 5359 Lebanon Ave.; website stbarbphila.org.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

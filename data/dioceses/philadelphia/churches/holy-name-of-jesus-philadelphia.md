@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   quote: E Berks St. & Gaul St., Philadelphia, Pennsylvania 19125
   note: GCatholic 'Holy Name of Jesus', first recorded 1905.01, phone +1 (215) 739-3960, Plus Code 87F6XVGC+7W.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

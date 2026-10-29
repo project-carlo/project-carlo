@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. Richard K. McFadden
   note: 'Directory: pastor Rev. Richard K. McFadden; rectory 2007 New Hope St., Norristown 19401.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

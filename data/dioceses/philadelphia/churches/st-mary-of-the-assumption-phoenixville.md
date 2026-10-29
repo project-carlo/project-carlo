@@ -24,6 +24,7 @@ evidence:
 - url: https://archphila.org/parish/st-mary-of-the-assumption-phoenixville/
   seen: 2026-10-28
   note: 'Directory: "St. Mary''s and Dayton Sts."; Sunday 8:15 and 10:45 AM "(St. Mary Church)".'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

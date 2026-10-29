@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: '4th St. south of Vine St. (GPS: 250 N. 4th Street)'
   note: Directory church address; rectory 243 N. Lawrence St. 19106-1195.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

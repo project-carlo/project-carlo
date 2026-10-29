@@ -31,6 +31,7 @@ evidence:
 - url: https://archphila.org/parish/our-lady-of-charity-brookhaven/
   seen: 2026-10-28
   note: 'Directory: ''Address: Upland Rd., Brookhaven''; rectory 231 Upland Rd., Brookhaven 19015-3124.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Rev. John P. Stokely (Parochial Administrator); Mass times Saturday 5 PM, Sunday
     8:30 and 11 AM, weekdays 8:45 AM; no worship site or mission.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-ann-phoenixville
   decision: separate

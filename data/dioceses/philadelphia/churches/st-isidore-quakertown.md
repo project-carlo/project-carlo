@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 2545 W. Pumping Station Rd., Quakertown 18951; Sundays 8:00, 10:30 AM and 1:00 PM
     (Spanish); Saturday 5:00 PM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
   quote: 66 Levittown Pkwy., Levittown
   note: 'Directory: Pastor Rev. Jonathan J. Dalin; rectory 66 Levittown Pkwy., Levittown 19054; Mass times
     ''Vigil Mass, Saturdays, 4:30 PM. Sundays, 8, 10 AM; Noon''; no worship sites or merger named.'
+promoted: 2026-10-29
 research:
 - method: Read listing 217, rendered page 1 of the 25 October image-only issue, read the 6 September text
     layer and searched issues of 2024-11-03, 2025-06-01, 2026-01-04, 2026-06-07 and 2026-09-06 for 'Tullytown'

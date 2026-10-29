@@ -28,6 +28,7 @@ evidence:
     the John Patrick listing; the only PDF it links is a 2022 registration form. Its Mass Schedule block
     matches the bulletin (Saturday Vigil 4:30 PM; Sunday 8:00 AM, 9:30 AM Vietnamese, 11:15 AM, 12:30
     PM Spanish; Monday to Saturday 8:00 AM; First Fridays 8:00 AM and 7:00 PM).
+promoted: 2026-10-29
 research:
 - method: probe url on the directory website, then listing 48; downloaded the 25 October issue and read
     pages 1-2

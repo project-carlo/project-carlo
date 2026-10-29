@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry (page updated 1 year ago): Pastor Rev. Msgr. Joseph P. Duncan, 131 Channing Ave.
     (the parish office); Mass times as on the parish page. No worship site named. ''Founded 1915''.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-norbert-paoli
   decision: separate

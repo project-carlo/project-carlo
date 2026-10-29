@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. Msgr. J. Brian Bransfield
   note: 'Directory: pastor Msgr. Bransfield; rectory 647 Locust St., Collegeville 19426.'
+promoted: 2026-10-29
 research:
 - method: probe pdf on the parish site's fixed 'Most Recent Bulletin' file
   url: https://www.steleanor.com/resources/bulletin/297-most-recent-bulletin/file

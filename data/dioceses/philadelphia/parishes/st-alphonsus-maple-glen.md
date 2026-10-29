@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. Msgr. Brian P. Hennessy
   note: 'Directory: pastor Rev. Msgr. Brian P. Hennessy; rectory 1567 Temple Dr., Maple Glen 19002.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

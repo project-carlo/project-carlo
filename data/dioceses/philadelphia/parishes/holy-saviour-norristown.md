@@ -37,6 +37,7 @@ evidence:
   note: 'Directory entry (updated 2 years ago): Rev. Msgr. Charles L. Sangermano; chapel at 454 Fairfield
     Rd., Plymouth Township, ''Sundays, 10 AM (First Sunday of the month from October to May), 11:30 AM
     (Traditional Latin Mass)''.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-patrick-norristown
   decision: separate

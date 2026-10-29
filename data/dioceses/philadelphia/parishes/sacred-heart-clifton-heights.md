@@ -29,6 +29,7 @@ evidence:
   note: 'Directory: Pastor Rev. Msgr. George A. Majoros; Mass times Saturday vigil 4 PM, Sunday 7:30 AM,
     Monday-Wednesday 8:30 AM, and ''Mass at St. Hedwig Chapel, Sundays, 9:15 AM (Bilingual - Polish and
     English)'', page updated 1 year ago. The St. Hedwig line is stale: see excluded/st-hedwig-chester.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-charles-borromeo-drexel-hill
   decision: separate

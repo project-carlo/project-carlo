@@ -27,6 +27,7 @@ evidence:
   quote: 316 E Broadway Ave., Clifton Heights, Pennsylvania 19018
   note: GCatholic 'Sacred Heart', first recorded 1910.01, Polish, phone +1 (610) 623-0409, Plus Code 87F6WPJ6+47
     (39.93031, -75.28931).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

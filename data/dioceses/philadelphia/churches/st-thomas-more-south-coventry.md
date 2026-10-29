@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page: church "Rt. 100 North of Rt. 23, South Coventry Township"; rectory "2101 Pottstown
     Pk., Pottstown 19465".'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

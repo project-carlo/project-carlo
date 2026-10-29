@@ -30,6 +30,7 @@ evidence:
   quote: Rev. Msgr. John C. Marine
   note: 'Directory: pastor; Bucks County Central and North deanery; Mass times page 1 year old but matching
     the bulletin; ''Perpetual Adoration Chapel: Open 24 hrs/day''.'
+promoted: 2026-10-29
 research:
 - method: Read listing 103, the parish site's bulletin pages and the rendered 25 October pages 1-2
   url: https://www.church-bulletin.org/saint-bede-the-venerable-holland-pa-18966

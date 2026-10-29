@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Sunday 7, 9, 11:30 AM (4 months old; the bulletin and the parish site give 11:00
     AM); no worship site named.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-luke-the-evangelist-glenside

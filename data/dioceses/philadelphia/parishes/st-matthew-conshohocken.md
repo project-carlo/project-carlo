@@ -34,6 +34,7 @@ evidence:
   note: 'Directory entry (updated 1 month ago): Rev. Joseph Devlin; ''Merged with SS. Cosmas and Damian
     (Italian), Conshohocken, St. Mary (Polish), Conshohocken, and St. Gertrude, West Conshohocken: 2014'';
     Mass times Saturday 4:30 PM, Sunday 7:30, 9:30, 11:30 AM, holydays and weekdays 8:15 AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-mary-quasi-parish-conshohocken
   decision: separate

@@ -25,6 +25,7 @@ evidence:
 - url: https://archphila.org/parish/st-maria-goretti-hatfield/
   seen: 2026-10-28
   note: 'Directory: "Cowpath and Derstine Rds."; rectory 1601 Derstine Rd., Hatfield 19440.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

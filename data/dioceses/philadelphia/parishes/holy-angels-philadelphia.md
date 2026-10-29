@@ -28,6 +28,7 @@ evidence:
   note: 'Directory page (updated 1 year before): 7000 Old York Rd. 19126, website philaholyangels.org,
     all Masses in Korean; the 11:30 AM and 5 PM Sunday Masses it lists the site also gives, the 25 October
     bulletin box shows only 7 and 10 AM.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

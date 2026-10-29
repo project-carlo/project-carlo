@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page (updated 1 year ago): Rev. Anthony M. Raymundo; Mass times Saturday 5 PM, Sundays
     8, 10 AM, Noon, 2 PM (Spanish), which differ from the bulletin''s 4:00 PM vigil and 7:45 AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-rocco-avondale
   decision: separate

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: Morrell Ave. and Chesterfield Rd.
   note: Directory church address as free text (an intersection); rectory 3252 Chesterfield Rd. 19114-1598.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

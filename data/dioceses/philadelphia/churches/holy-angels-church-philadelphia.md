@@ -29,6 +29,7 @@ evidence:
   note: 'GCatholic ''Holy Angels'', ''Language: Korean'', Plus Code 87G63V56+V8 (40.0596875,-75.1391875),
     phone +1 (215) 927-1662; OSM has ''Holy Angels Korean Catholic Church'' on 70th Avenue at 40.05975,-75.13908
     (read 2026-10-29).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

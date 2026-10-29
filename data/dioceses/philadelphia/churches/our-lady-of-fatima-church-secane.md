@@ -28,6 +28,7 @@ evidence:
   quote: 1 Fatima Dr., Secane, Pennsylvania 19018
   note: GCatholic 'Our Lady of Fatima', first recorded 1952.10, phone +1 (610) 532-5800, Plus Code 87F6WM4V+MJ
     (39.90669, -75.30594). Nominatim found no named OSM node for it.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

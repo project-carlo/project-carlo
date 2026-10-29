@@ -24,6 +24,7 @@ evidence:
   note: 'Directory: Rev. Francis T. Hannafey, S.J.; 4th and Walnut Sts.; rectory 321 Willings Alley 19106;
     Mass ''Sundays: 7:30, 9:30, & 11:30 AM. Holydays: 12:05 PM, Daily: Tuesdays, Wednesdays, & Thursdays,
     12:05 PM.'' (page updated 2 years earlier); same times as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

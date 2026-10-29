@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Saint Athanasius Church, East Walnut Lane' at 40.06241, -75.15491; '2050
     East Walnut Lane' is a house point 25 m away.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

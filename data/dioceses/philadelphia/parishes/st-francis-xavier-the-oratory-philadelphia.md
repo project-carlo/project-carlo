@@ -30,6 +30,7 @@ evidence:
   note: 'Directory page (updated 4 months before): 24th and Green Sts.; Parish House 2319 Green St. 19130;
     Founded (Parish) 1839, (Oratory) 1990; Vigil Saturday 5:30 PM, Sundays 8 and 10:30 AM, weekdays 8
     AM; no website.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

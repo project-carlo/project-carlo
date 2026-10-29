@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: OSM way 333776270 'Old Saint Mary's Church, 248, South 4th Street', 39.9457049, -75.1486131 (OSM
     gives ZIP 19147; the bulletin and directory give 19106).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

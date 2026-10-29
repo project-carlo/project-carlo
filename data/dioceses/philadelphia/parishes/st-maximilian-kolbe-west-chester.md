@@ -27,6 +27,7 @@ evidence:
   note: 'John Patrick listing id 124, "Saint Maximilian Kolbe Church", West Chester, PA 19382: a readings
     page with no bulletin editions, so no PDF is carried there. The bulletin is on the parish''s own eCatholic
     site.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-agnes-west-chester
   decision: separate

@@ -39,6 +39,7 @@ evidence:
   quote: Frankford Ave. & Atlantic St., Philadelphia, Pennsylvania 19134
   note: GCatholic 'St. Joan of Arc', first recorded 1919.10, Plus Code 87F6XVXX+34 (39.9976875,-75.1021875),
     phone +1 (215) 535-4641 (the phone the bulletin gives).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

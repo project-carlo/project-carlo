@@ -31,6 +31,7 @@ evidence:
     Cascia (Open to the Public)'', Shrine Director Jonathan Jerome, 1166 S. Broad St., website www.saintritashrine.org;
     Sunday Vigil 5 PM, Sunday 10 AM, weekdays 8 AM and Noon; ''Spiritual records are kept at Annunciation
     B.V.M. Church''.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: annunciation-bvm-philadelphia
   decision: separate

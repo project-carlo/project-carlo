@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship "Saint Joseph Catholic Church, 3640, Schuylkill Road" at 40.1761095, -75.5615684,
     about 20 m from the GCatholic point.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-28
   quote: Norriton Dr. and Keenwood Rd., Norristown
   note: Directory church address (intersection); parish office 3000 Keenwood Rd., Norristown 19403.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

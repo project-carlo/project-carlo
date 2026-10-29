@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 923 Christian St.; rectory 808 S. Hutchinson St.; Pastor Rev. Paul W. Galetto, O.S.A.;
     Worship Site: St. Mary Magdalen De Pazzi Church.'
+promoted: 2026-10-29
 research:
 - method: 'pnpm fetch:check --diocese philadelphia --parish st-paul-philadelphia: resolved the ParishesOnline
     container; transport ok, pdf, picked 20261101B.pdf, freshness ''future'' (the 1 November issue was

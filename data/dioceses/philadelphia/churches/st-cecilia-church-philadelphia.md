@@ -23,6 +23,7 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-cecilia-church-philadelphia-pa-19111/2026-10-25.pdf
   seen: 2026-10-29
   note: Page 2 (rendered) gives 'Saint Cecilia Church, 535 Rhawn Street Philadelphia, PA 19111'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

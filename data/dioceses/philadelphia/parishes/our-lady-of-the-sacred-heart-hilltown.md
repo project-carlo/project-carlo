@@ -28,6 +28,7 @@ evidence:
   quote: Rev. Tadeusz R. Lizinczyk, O.S.P.P.E.
   note: 'Directory: pastor Rev. Tadeusz R. Lizinczyk, O.S.P.P.E.; 100 Broad St., Hilltown 18927; page
     last updated 1 year ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

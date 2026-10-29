@@ -32,6 +32,7 @@ evidence:
   quote: Saint Peter Catholic Church
   note: 'OSM way 1327398934, place_of_worship, house number 2835 (road tagged Beaver Creek Road, post
     town Coatesville), at 40.0396714, -75.8119926: same building as GCatholic''s pin.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

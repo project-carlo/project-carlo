@@ -31,6 +31,7 @@ evidence:
   note: Directory Pastor line; Mass times match the bulletin cover (Sat vigil 4 PM; Sun 8, 10 AM, Noon;
     weekdays 8:15 AM). CatholicPhilly 2026-07-22 (cited by the batch plan, not re-read) reports the PLD
     appointment.
+promoted: 2026-10-29
 research:
 - method: Read listing 200, rendered pages 1-2 of the 25 October image-only issue (no text layer), and
     the parish home page

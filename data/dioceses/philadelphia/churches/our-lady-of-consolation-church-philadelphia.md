@@ -24,6 +24,7 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-consolation-philadelphia-pa-19135/2026-10-25.pdf
   seen: 2026-10-29
   note: 'Page 1 rendered: Mass Schedule box and ''Weekdays- & Holiday 8am In Convent Chapel''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

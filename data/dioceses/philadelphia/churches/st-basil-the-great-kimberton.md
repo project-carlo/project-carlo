@@ -33,6 +33,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=St+Basil+the+Great+Church+Kimberton
   seen: 2026-10-28
   note: OSM place_of_worship "Saint Basil the Great, 2330, Kimberton Road" at 40.1292788, -75.5627122.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

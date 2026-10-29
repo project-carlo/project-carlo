@@ -30,6 +30,7 @@ evidence:
   note: 'Directory page (updated 2 years ago): ''Rev. Andrew Labatorio, C.I.C.M. (Parochial Administrator)
     in residence at Our Lady of Hope, Philadelphia'', rectory 8320 Brookside Rd., Elkins Park 19027; Sundays
     8:30, 10:30 AM, 12:30 PM, which is out of date against the bulletin''s 9:30 AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: our-lady-of-hope-philadelphia
   decision: separate

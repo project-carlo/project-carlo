@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: church ''Allendale Rd., King of Prussia'', rectory ''333 Allendale Rd., King of Prussia
     19406-1640''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

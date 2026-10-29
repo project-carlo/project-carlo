@@ -29,6 +29,7 @@ evidence:
   quote: 11321 Academy Road Phila., PA 19154
   note: Directory church address 11321 Academy Road; rectory 11301 Academy Rd. 19154, the number the bulletin
     and the John Patrick listing give for the parish.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

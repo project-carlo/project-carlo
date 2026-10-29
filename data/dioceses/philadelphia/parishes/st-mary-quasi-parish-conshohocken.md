@@ -35,6 +35,7 @@ evidence:
   note: 'Directory entry (updated 1 year ago): Rev. Carl Gismondi, F.S.S.P., 140 W. Hector Street; Sundays
     8 (low), 10:30 AM (high Mass; low in summer), 1 PM (low); weekdays and Saturdays as in the bulletin.
     The directory''s 10:30 AM high Mass is 10:00 AM in the 25 October bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-matthew-conshohocken
   decision: separate

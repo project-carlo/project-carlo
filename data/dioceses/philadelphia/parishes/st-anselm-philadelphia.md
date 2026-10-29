@@ -38,6 +38,7 @@ evidence:
   quote: Rev. Jeffrey Stecz
   note: Directory Pastor line; Mass times match the bulletin (Sat 4:30 PM; Sun 8, 10 AM, Noon; weekdays
     8:30 AM; Saturday 8 AM).
+promoted: 2026-10-29
 research:
 - method: probe url (403), visit.py on the home page and /bulletins in Chrome, John Patrick listing, Bon
     Venture sponsor page and 25 October issue

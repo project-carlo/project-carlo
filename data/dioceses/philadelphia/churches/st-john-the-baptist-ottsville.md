@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-29
   quote: 4050 Durham Rd., Ottsville
   note: Directory address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

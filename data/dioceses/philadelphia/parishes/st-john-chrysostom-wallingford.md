@@ -27,6 +27,7 @@ evidence:
   note: 'Directory (page updated about a year earlier): ''Pastor: Rev. Edward J. Hallinan'', rectory 617
     S. Providence Rd., Mass times Saturday 4 PM, Sunday 8, 9:30, 11:30 AM, Tuesday-Friday 8 AM; no worship
     site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: church at Lehigh Ave. and B St., rectory 2625 B St.; Masses in the ''lower church''
     and ''upper church'' of the same building and a weekday chapel.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

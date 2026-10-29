@@ -24,6 +24,7 @@ evidence:
     PA 19320, latest October 25, 2026 (image only; page 1 rendered): identical cover and Mass Times to
     the eCatholic 25 October file. Not byte-identical (4,846,120 vs 1,506,362 bytes), same page 1 content;
     recorded as a second publication id.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-joseph-coatesville
   decision: separate

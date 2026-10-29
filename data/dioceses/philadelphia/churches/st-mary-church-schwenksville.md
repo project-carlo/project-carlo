@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   quote: 40 Spring Mount Rd., Schwenksville 19473
   note: Directory church and rectory address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

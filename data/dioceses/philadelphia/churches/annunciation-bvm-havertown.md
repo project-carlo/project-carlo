@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Annunciation of the Blessed Virgin Mary Parish', 401 Brookline Boulevard,
     Havertown 19083, lat 39.9823936, lon -75.2952083.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

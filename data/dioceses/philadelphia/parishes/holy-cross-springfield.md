@@ -40,6 +40,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Mr. David Winter (Parish Life Director); Mass times Saturday vigil 4:30 PM, Sundays
     8:30 and 11:00 AM, Tuesday-Friday 8:30 AM; page updated 2 weeks ago. Same as the bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-francis-of-assisi-springfield
   decision: separate

@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-29
   note: OSM way 251274219 'Saint Francis Xavier Church', place_of_worship, 2319 Green Street, at 39.9661238,
     -75.1768611, about 25 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

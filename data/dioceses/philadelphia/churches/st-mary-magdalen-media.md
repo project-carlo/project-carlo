@@ -27,6 +27,7 @@ evidence:
   quote: 2400 N Providence Rd., Media, Pennsylvania 19063
   note: GCatholic 'St. Mary Magdalen', first recorded 1963.06, phone +1 (610) 566-8821, Plus Code 87F6WHWR+JQ
     (39.94656, -75.40806).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

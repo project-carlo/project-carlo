@@ -29,6 +29,7 @@ evidence:
     includes the National Shrine of St. John Neumann, 1019 N. 5th St. Directory Mass times (Sat 5:30pm;
     Sun 9:30AM, 11:00AM Spanish, 12:30pm; weekdays 12:15pm and 5:30pm) omit the bulletin''s 7:30 a.m.
     Masses and Saturday 12:15.'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish st-peter-the-apostle-philadelphia (page-pdfs
     on John Patrick listing 125)

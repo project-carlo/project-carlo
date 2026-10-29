@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   quote: Knights Rd.
   note: Directory church address 'Knights Rd.' with no number; rectory 11024 Knights Rd. 19154-4295.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

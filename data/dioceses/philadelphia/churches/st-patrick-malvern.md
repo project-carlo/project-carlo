@@ -36,6 +36,7 @@ evidence:
   quote: 'Sunday Mass: 7:30AM, 9:30AM, 11:30AM'
   note: 'The 25 October 2026 bulletin''s Liturgy Schedule (page 7): Daily Mass 9:00AM, Saturday Vigil
     5:00PM, Sunday Mass 7:30AM, 9:30AM, 11:30AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   note: 'John Patrick listing 28, ''Saint William Church'', Philadelphia, PA 19111: no edition at all
     (the page carries a daily-readings link only), so it is not a channel. The parish''s own eCatholic
     archive is current.'
+promoted: 2026-10-29
 research:
 - method: visit.py on the parish site and /bulletins, downloaded and read the 25 October issue, checked
     listing 28

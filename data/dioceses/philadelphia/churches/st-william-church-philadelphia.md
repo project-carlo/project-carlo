@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-29
   quote: 6200 Rising Sun Avenue
   note: Page 1 office address, Philadelphia, PA 19111, beside the MASS SCHEDULE.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

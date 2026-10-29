@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Joseph M. McDermott; 200 S. Oak Ave., Primos; Mass times Saturday vigil
     5 PM, Sunday 8 and 11:30 AM, weekdays Monday-Friday 8 AM; page updated 2 years ago. Matches the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM way 443643112, amenity=place_of_worship 'St. Patrick Church', 212 Meredith Street, Kennett
     Square; centre 39.8448766, -75.7147839.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

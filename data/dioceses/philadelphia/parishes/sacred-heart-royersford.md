@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. Tadeusz Gorka
   note: 'Directory: pastor Rev. Tadeusz Gorka; rectory 838 Walnut St., P.O. Box 64, Royersford 19468.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -28,6 +28,7 @@ evidence:
   note: 'The 25 October 2026 bulletin (page 1 an image, rendered): ''80 South 17th Avenue, Coatesville,
     PA 19320''; Mass Times Saturday Vigil 5:00 PM, Sunday 8:30 AM, 10:30 AM, 6:00 PM, Mon & Wed 6:00 PM,
     Tues Thurs Fri & Saturday 8:00 AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

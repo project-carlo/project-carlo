@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 4 months before): pastor Biedrzycki; Sundays 10:00 AM; weekdays Monday-Friday
     12:10 PM at the Temple University Newman Center, 2129 N. Broad St.; Saturday 9 AM (September-May);
     rectory 1429 N. 11th St. 19122; website stmalachyphilly.org.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-martin-de-porres-philadelphia
   decision: separate

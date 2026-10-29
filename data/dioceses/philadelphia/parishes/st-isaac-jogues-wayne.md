@@ -27,6 +27,7 @@ evidence:
   note: 'Directory entry: Rev. Msgr. Albin J. Grous, 50 W. Walker Rd. at Valley Forge Rd., Wayne 19087;
     Mass times Saturday 5 PM, Sunday 8, 10:30 AM, Noon, 5 PM, weekdays 8 AM and 12:05 PM, Saturdays 8
     AM. No worship site or mission named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-katharine-of-siena-wayne
   decision: separate

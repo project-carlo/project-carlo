@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: church ''Bryn Mawr and Highland Aves., Bala Cynwyd''; rectory 128 Bryn Mawr Ave.,
     19004-3013; Parish Center 120 Bryn Mawr Ave. (the bulletin says 108 N. Highland Ave.).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

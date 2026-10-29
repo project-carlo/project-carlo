@@ -29,6 +29,7 @@ evidence:
   quote: 201 N. Pennsylvania Ave., Morrisville 19067
   note: 'Directory: church address and rectory address are the same, 201 N. Pennsylvania Ave.; founded
     1900.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
 revisit: Open the parish's eCatholic /bulletins newest file and the listing's newest dated entry; if the
   archive carries the same issue byte for byte, either channel is current.
 revisit_after: 2026-12-01
+promoted: 2026-10-29
 ---
 
 ## Publisher

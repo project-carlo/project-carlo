@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: 18th St. and the Benjamin Franklin Pkwy.
   note: Directory church address (an intersection); rectory 1723 Race St. 19103.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

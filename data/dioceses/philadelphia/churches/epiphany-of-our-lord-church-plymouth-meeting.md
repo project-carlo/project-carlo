@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM way 373458757 'Epiphany of Our Lord Church', 3050 Walton Road, place_of_worship, at 40.1314353,
     -75.2781092, about 20 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   note: 'Directory page (updated 11 months before): Rev. Msgr. Federico Britto (Parochial Administrator)
     resides at St. Cyprian; 43rd and Wallace Sts.; rectory 636 N. 43rd St.; ''Merged with Our Mother of
     Sorrows: 2013''.'
+promoted: 2026-10-29
 research:
 - method: Compared the directory's weekday Mass at 'St. Ignatius Nursing Home Chapel, 4401 Haverford Ave.'
     with the 25 October 2026 bulletin's Mass schedule (probe pdf, page 1 and grep for Nursing, West Park)

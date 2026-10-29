@@ -27,6 +27,7 @@ evidence:
   quote: 200 W Sproul Rd., Springfield, Pennsylvania 19064
   note: GCatholic 'St. Kevin', first recorded 1955.10, phone +1 (610) 544-8777, Plus Code 87F6WMF2+FC
     (39.92369, -75.34894), about 20 m from the OSM node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

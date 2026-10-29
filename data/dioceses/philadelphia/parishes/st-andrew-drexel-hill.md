@@ -26,6 +26,7 @@ evidence:
   note: 'Directory: Pastor Rev. Marc F. Capizzi; rectory 3500 School La.; Mass times weekdays 6:30 AM,
     Saturday vigil 5 PM, Sunday 7:30, 10 AM, 12:30 PM; page updated 4 months ago. Matches the bulletin''s
     intentions.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

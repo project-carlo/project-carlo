@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: '`probe url` answered HTTP 403 (bot block); the site was not read, so which channel it links is
     unknown. The listing is current, so it is the channel.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

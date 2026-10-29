@@ -38,6 +38,7 @@ evidence:
   note: 'Home page Mass Times: Weekends Saturday 5pm; Sunday 9am, 11am, and 6pm; Tuesday-Friday 8am, ''During
     Summer Months, daily mass takes place in the convent chapel''. Footer: ''Proudly Designed and Hosted
     by John Patrick Publishing''.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

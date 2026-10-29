@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page (updated 2 weeks before): 9 E. Chestnut Hill Ave. 19118, Rev. John J. Fisher,
     O.S.F.S., Vigil Sat 4:30 PM, Sundays 7:30, 9, 11 AM, weekdays 7 AM; names no worship site.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

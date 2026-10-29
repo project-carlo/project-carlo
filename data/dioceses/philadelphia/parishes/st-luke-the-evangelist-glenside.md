@@ -29,6 +29,7 @@ evidence:
   note: 'Directory entry: Rev. Joseph D. Brandt, pastor; S.W. corner of Easton Rd. and Fairhill Ave.;
     names no worship site or chapel. Its Sunday 7:30, 9:30, 11:30 AM is 7 months old and no longer matches
     the bulletin.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: queen-of-peace-ardsley

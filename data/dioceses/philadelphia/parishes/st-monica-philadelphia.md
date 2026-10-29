@@ -28,6 +28,7 @@ evidence:
   note: 'Directory page (updated 5 months before): Rev. Joseph J. Kelley; ''Merged with St. Edmond: 2014'';
     ''Worship Site: St. Edmond Church''. Its Mass times (Sat 5 PM; Sun 8, 10, 11:30 AM) differ from the
     bulletin (Sun 8:30, 10, 11:30 AM at St. Monica plus 10 AM at St. Edmond).'
+promoted: 2026-10-29
 ---
 
 ## Publisher

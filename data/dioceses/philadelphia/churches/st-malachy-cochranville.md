@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'The 25 October 2026 bulletin (image, rendered): ''St. Malachi / 76 St. Malachi Road / Cochranville,
     Pa. 19330'' and Sunday Mass ''9:30 am St. Malachi Church''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 (an image, rendered and read) of the 25 October 2026 bulletin: ''A Stewardship Parish,
     8 Cavanaugh Court, West Chester, PA''; Forty Hours schedule ''Sunday: Mass in Church 6 PM ... Monday:
     Mass in Church 6:45 and 9 AM ... Tuesday: Mass in Church 6:45 and 9 AM, Mass at 7 PM''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

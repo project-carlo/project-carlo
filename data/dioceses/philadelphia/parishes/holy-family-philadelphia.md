@@ -41,6 +41,7 @@ evidence:
   note: 'Decree of the merger of Saint Lucy Parish into Holy Family Parish, dated 11 April 2012, effective
     1 July 2012 (page 8 of the announcements PDF). Dated 2012: says what was intended then, not what happens
     now.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-baptist-philadelphia

@@ -27,6 +27,7 @@ evidence:
   quote: 'Merged with St. John of the Cross, Roslyn: 2014'
   note: 'Directory entry (page 1 year old): lists Mass at Queen of Peace only (Saturday 4:30 PM; Sunday
     7:30, 9:30, 11 AM) and no worship site.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-luke-the-evangelist-glenside

@@ -27,6 +27,7 @@ evidence:
   quote: Franklin St. & Monroe St., Media, Pennsylvania 19063
   note: GCatholic 'Nativity of the Blessed Virgin Mary', first recorded 1868.01, phone +1 (610) 566-0185,
     Plus Code 87F6WJ86+9P (39.91594, -75.38819).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

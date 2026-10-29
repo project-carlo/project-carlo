@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Our Mother of Consolation Church, 9, East Chestnut Hill Avenue' at 40.07887,
     -75.21021, about 20 m from GCatholic's pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

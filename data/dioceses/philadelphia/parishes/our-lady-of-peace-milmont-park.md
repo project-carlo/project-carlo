@@ -32,6 +32,7 @@ evidence:
   note: 'Directory: Rev. Joseph C. McCaffrey; ''Merged with Notre Dame de Lourdes, Swarthmore: 2014'';
     ''Worship Site: Notre Dame de Lourdes Church, Swarthmore''; Sundays 7:30, 11:30 AM and 9:30 AM at
     Notre Dame Church; page updated 5 months ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: our-lady-of-perpetual-help-morton
   decision: separate

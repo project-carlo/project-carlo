@@ -37,6 +37,7 @@ evidence:
     Sundays 8, 9:30, 11:30 AM, weekdays 7:30 AM. Agrees with the bulletin. The page names no worship site;
     the closed Holy Saviour and Immaculate Conception (Marcus Hook) pages each say ''Spiritual records
     are kept at St. John Fisher Church, Boothwyn''.'
+promoted: 2026-10-29
 research:
 - method: fetch:check resolved the ParishesOnline organization to the 2026-11-01 issue (posted early;
     freshness 'future', age -4 days); its page 1 reads 'ST. JOHN FISHER ... NOVEMBER 1, 2026 | ALL SAINTS'

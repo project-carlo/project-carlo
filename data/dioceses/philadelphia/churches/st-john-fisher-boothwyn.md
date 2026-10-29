@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: ''Address: Chichester Ave. and Rolling Glen Dr., Boothwyn''; rectory 4225 Chichester
     Ave., Boothwyn 19061.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   note: 'The 25 October 2026 bulletin (image, rendered): ''Our Lady of Consolation Church (OLC) 603 West
     2nd Ave. Parkesburg, Pa. 19365''; Saturday 5:00 pm Vigil Mass (OLC), Sunday 8:00 am-OLC; daily 8:30
     am Monday, Wednesday, Thursday, Friday (OLC).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

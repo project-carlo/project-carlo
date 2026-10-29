@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship "Holy Trinity Church, Dayton Street" at 40.1402209, -75.5136193 (no house
     number); 217 and 219 Dayton St. are adjacent houses about 10 m north of it.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

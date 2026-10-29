@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Rev. Daniel J. Arechabala, pastor; "Chapel: 604 Main St."; Mass times name the
     St. Ann Chapel and St. Ann Church; Chester County North deanery, Hispanic apostolate.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-mary-of-the-assumption-phoenixville
   decision: separate

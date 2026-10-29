@@ -28,6 +28,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=Epiphany+Church+11th+Jackson+Philadelphia
   seen: 2026-10-29
   note: Nominatim found no OSM node for the church.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

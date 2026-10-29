@@ -28,6 +28,7 @@ evidence:
   quote: 3673 Midvale Ave.
   note: 'Directory page (updated 2 years before 2026-10-28): pastor Rev. Msgr. James M. Oliver; rectory
     3667 Midvale Ave.; Mass Saturday 4 PM vigil, Sundays 9 and 11 AM, weekdays 8 AM. No worship site named.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: holy-family-philadelphia

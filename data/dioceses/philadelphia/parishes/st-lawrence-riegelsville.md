@@ -19,6 +19,7 @@ evidence:
     Rectory 610-749-2684. Schedule: Saturday 5PM, Sunday 9:30AM, Holy Days 9AM, 12 Noon and 7PM, Monday,
     Tuesday, Wednesday, Friday and Saturday 9AM, Thursday ''Readings & Communion Distribution Only''.
     One church only.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-baptist-ottsville

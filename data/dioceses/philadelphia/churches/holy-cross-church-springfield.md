@@ -28,6 +28,7 @@ evidence:
   note: GCatholic 'Holy Cross', first recorded 1948.11, phone +1 (610) 626-3321, Plus Code 87F6WMJQ+9H
     (39.93094, -75.31106), about 20 m from the OSM way centre. Same corner as the directory's 'Bishop
     and Springfield Rds.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

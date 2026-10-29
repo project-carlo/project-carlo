@@ -28,6 +28,7 @@ evidence:
   note: 'Directory: Pastor Rev. Christopher R. Coffiey; rectory 1035 Turner Ave., Drexel Hill 19026; Vigil
     Mass Saturday 4:30 PM, Sunday 9 and 11 AM, weekdays Monday-Friday 8:30 AM (same as the bulletin);
     no worship site named; page updated 4 months ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

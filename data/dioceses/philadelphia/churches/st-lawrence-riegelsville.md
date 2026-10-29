@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 345 Elmwood La., Riegelsville 18077; Vigil Saturday 5 PM, Sundays 9:30 AM, weekdays
     Monday, Tuesday, Wednesday, Friday, Saturday 9 AM; founded 1974 (as a mission, 1872).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

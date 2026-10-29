@@ -46,6 +46,7 @@ evidence:
     Mass times ''Vigil Mass, Saturdays, 4:30PM (Rosemont Chapel). Sundays, 7:30, 10:30 AM (Villanova Church),
     9 AM (Rosemont Chapel)... Weekdays, 12:05 PM (Monday-Friday); 9 AM Saturday (Rosemont Chapel)'', office
     Rosemont 19010.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-isaac-jogues-wayne
   decision: separate

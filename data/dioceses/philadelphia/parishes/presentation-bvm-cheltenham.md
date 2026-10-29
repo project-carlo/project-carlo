@@ -30,6 +30,7 @@ evidence:
   note: 'Directory page (updated 4 months ago): ''Rev. Dominic Ishaq (Twinned Parish)'', rectory 100 Old
     Soldiers Rd., Cheltenham 19012-2184; church at Old Soldiers Rd. and Woodland Ave.; Vigil Saturdays
     5:15 PM, Sundays 8:30 and 11:30 AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-joseph-cheltenham
   decision: separate

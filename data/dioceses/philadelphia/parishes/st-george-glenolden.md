@@ -27,6 +27,7 @@ evidence:
   note: 'Directory (updated about four months earlier): ''Pastor: Mr. Mark Griswold (Parish Life Director)'',
     ''Other Parish Information: Merged with Holy Spirit, Sharon Hill: 2014''; Mass times Saturday 4:30
     PM, Sunday 8 and 10:30 AM, weekdays 4 PM. No worship site named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-francis-de-sales-lenni
   decision: separate

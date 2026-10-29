@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-29
   note: Page 1 Mass box (Saturday Vigil 4:30 PM, Sunday 7:30/9:30/11:00 AM, weekday 8:00 AM) and page
     2 header SAINT JEROME CHURCH.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

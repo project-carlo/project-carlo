@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   quote: Rev. Msgr. Robert J. Powell
   note: 'Directory: pastor; rectory 1410 Almshouse Rd., Jamison 18929; page updated 1 year ago.'
+promoted: 2026-10-29
 research:
 - method: probe url on the parish site (links listing 040); compared the 25 October masthead
   url: https://saint-cyril.com/

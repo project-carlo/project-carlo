@@ -31,6 +31,7 @@ evidence:
   note: 'Directory (updated about four months earlier): Pastor Rev. Sean A. Loomis; Saturday vigil 4 PM,
     Sundays 8:30 and 11 AM, weekdays Monday-Friday 8 AM. The bulletin cover adds a Sunday 5 PM Mass. No
     worship site named.'
+promoted: 2026-10-29
 research:
 - method: 'fetch:check picked the 2026-10-25 issue from the pinned page-pdfs recipe: transport ok, pdf,
     freshness fresh (3 days); identity unverified by design (image-only), masthead read by rendering.'

@@ -42,6 +42,7 @@ evidence:
   quote: The parish also encompasses the nearby St. Ann Church, a worship site.
   note: 'CatholicPhilly 22 July 2026: Deacon Gonzalez becomes Parish Life Director of St. Mark Parish,
     ''estimated 5,500 members''.'
+promoted: 2026-10-29
 research:
 - method: Read listing 137 and the 25 October 2026 issue text; searched issues of 2024-11-03, 2025-06-01,
     2026-01-04 and 2026-06-07 for 'Tullytown' and 'Sacred Heart of Jesus'; read the parish home page

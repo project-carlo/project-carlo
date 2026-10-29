@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-29
   quote: (Fifth Street and Godfrey Avenue)
   note: Page 1 gives 6161 N. 5th Street, Philadelphia, PA 19120-1497 and the MASSES box.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

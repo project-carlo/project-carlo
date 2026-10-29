@@ -33,6 +33,7 @@ evidence:
   note: 'Directory: Rev. Msgr. David C. Quitugua (Parochial Administrator) in residence at Redemptoris
     Mater Seminary; Mass times ''Sundays, 8, 9:30 (at St. Louis Church, Yeadon), 11 AM; 4 PM''; ''Worship
     Site: St. Louis Church, Yeadon''; page updated 2 years ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-joseph-collingdale
   decision: separate

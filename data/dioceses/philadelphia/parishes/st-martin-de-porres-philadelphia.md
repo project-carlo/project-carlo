@@ -32,6 +32,7 @@ evidence:
   quote: Rev. Wilfred E. Emeh (pro tem) resides at Saint Malachy Philadelphia
   note: 'Directory page (updated 11 months before): 24th and Lehigh Ave.; rectory 2340 W. Lehigh Ave.
     19132; Vigil Saturday 5 PM, Sunday 10 AM, weekdays 7 AM (directory times are older than the bulletin''s).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-malachy-philadelphia
   decision: separate

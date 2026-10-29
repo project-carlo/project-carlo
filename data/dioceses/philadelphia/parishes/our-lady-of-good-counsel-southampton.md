@@ -31,6 +31,7 @@ evidence:
   quote: Rev. Robert G. Suskey
   note: 'Directory: pastor; 611 Knowles Ave., Southampton 18966-4198; Bucks County Southeast deanery;
     Mass times match the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read listing 6, the parish site's Bulletins page and compared md5 of the 25 October PDF from
     both

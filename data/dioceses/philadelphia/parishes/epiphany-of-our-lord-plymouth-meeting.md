@@ -32,6 +32,7 @@ evidence:
   note: 'Directory (updated 1 year ago): church at Walton Rd. and Township Line, rectory 3050 Walton Rd.,
     Plymouth Meeting 19462-2361; Vigil Saturdays 5 PM, Sundays 8:00, 10:00 AM and 4:00 PM, weekdays 8:30
     AM, same as the bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: holy-saviour-norristown
   decision: separate

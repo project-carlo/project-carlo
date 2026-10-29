@@ -26,6 +26,7 @@ evidence:
   note: 'The parish''s Weekly Bulletins page: ''Our Lady of Consolation and our bulletin administrator,
     John Patrick Publishing Co. Inc., have created links to Weekly Bulletins dating back two years'';
     its button links church-bulletin.org/098. The site hosts no PDFs of its own.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -29,6 +29,7 @@ evidence:
 - url: https://archphila.org/parish/st-francis-de-sales-philadelphia/
   seen: 2026-10-28
   note: 'Directory: 47th St. and Springfield Ave.; rectory 4625 Springfield Ave. 19143.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

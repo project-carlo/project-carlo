@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-28
   note: 'probe url: the parish site''s bulletin link is http://www.jppc.net/onlinebulletins/146template.pdf,
     the listing id 146; it hosts no PDFs of its own and no eCatholic or other publication id was found.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

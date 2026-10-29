@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Our Lady Help of Christians Church, 1500, Marian Road, Abington Township'
     at 40.12608, -75.11452, within about 15 m of the Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: 33 New Rd., Lenni, Pennsylvania 19014
   note: GCatholic 'St. Francis de Sales', first recorded 1894.01, phone +1 (610) 459-2203, Plus Code 87F6VHR3+GJ
     (39.89131, -75.44594).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

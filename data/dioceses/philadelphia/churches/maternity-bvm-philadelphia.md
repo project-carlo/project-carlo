@@ -33,6 +33,7 @@ evidence:
   quote: All Sunday Masses will be held in the Lower Chapel for approximately 10 weeks while the new roof
     is being installed.
   note: The Lower Chapel is part of this building; the move is temporary.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

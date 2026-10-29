@@ -36,6 +36,7 @@ evidence:
   note: OSM place_of_worship 'Church of the Holy Family', 240 Hermitage Street, at 40.03291, -75.22866;
     OSM also has a building at 234 Hermitage (40.03266, -75.22875), a house at 236 and a school at 240.
     All within about 50 m of the Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

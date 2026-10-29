@@ -30,6 +30,7 @@ evidence:
   note: 'Directory (page updated about four months earlier): ''Pastor: Rev. Kenneth L. Cavara'', rectory
     2400 N. Providence Rd., Mass times Saturday 4:30 PM, Sunday 7:30, 9:30, 11:30 AM and 7:00 PM, weekdays
     6:30 and 8:30 AM, Saturday 8:30 AM; no worship site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

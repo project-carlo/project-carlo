@@ -29,6 +29,7 @@ evidence:
   note: 'Title only (CatholicPhilly REST search result, not opened): Deacon Thomas Croke is the leader
     of Holy Martyrs Parish (profile 2025-12-12), matching the directory''s ''Deacon Thomas M. Croke (Parish
     Life Director)''.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

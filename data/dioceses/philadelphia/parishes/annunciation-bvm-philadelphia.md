@@ -23,6 +23,7 @@ evidence:
   note: 'Directory: S.E. Cor. 10th and Dickinson Sts.; rectory 1511 S. 10th St. 19147; ''Merged with St.
     Rita of Cascia: 2016''; Mass times include ''Weekdays, Monday - Friday, 7:30 AM (chapel)'', which
     the 25 October bulletin does not carry.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: national-shrine-of-st-rita-of-cascia-philadelphia
   decision: separate

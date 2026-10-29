@@ -26,6 +26,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (image, rendered and read): masthead address ''50 West
     Walker Road, Wayne, PA 19087''; Mass Schedule Daily Mon.-Fri. 12:05pm, Saturday 8am Daily & 5pm Vigil,
     Sunday 8 & 10:30am, 12 Noon & 5pm.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

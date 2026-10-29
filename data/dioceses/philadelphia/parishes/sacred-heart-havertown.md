@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. John B. Flanagan (no other parish names him); 105 Wilson Ave. as rectory;
     page updated 4 months ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-denis-havertown
   decision: separate

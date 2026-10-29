@@ -30,6 +30,7 @@ evidence:
   quote: Rev. Joseph N. Accardi
   note: 'Directory: Pastor Rev. Joseph N. Accardi, church at Cottage and Bleigh Sts., rectory 7341 Cottage
     St. 19136; Mass times match the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read listing 93, rendered pages 1 of the 25 October issue, opened the parish site
   url: https://www.church-bulletin.org/the-parish-family-of-saint-bernard-church-philadelphia-pa-19136

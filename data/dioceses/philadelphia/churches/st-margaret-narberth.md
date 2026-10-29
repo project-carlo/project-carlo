@@ -31,6 +31,7 @@ evidence:
 - url: https://archphila.org/parish/st-margaret-narberth/
   seen: 2026-10-28
   note: 'Directory: church and rectory both ''208 N Narberth Ave., Narberth, PA 19072''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

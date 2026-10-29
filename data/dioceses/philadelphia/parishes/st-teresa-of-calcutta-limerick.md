@@ -24,6 +24,7 @@ evidence:
   note: John Patrick Publishing listing id 135, "Saint Teresa of Calcutta Parish", Schwenksville, PA 19473.
     Its 2026-10-25.pdf and the parish's eCatholic 20261025.pdf are byte-identical (md5 7c732669177afa88418a348c7a3d25b3,
     8,512,887 bytes), so they are one bulletin.
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-aloysius-pottstown
   decision: separate

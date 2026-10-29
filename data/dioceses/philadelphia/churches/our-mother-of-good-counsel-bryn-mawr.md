@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: No OSM place_of_worship turned up for it in a Nominatim search (2026-10-28), so the coordinates
     are GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

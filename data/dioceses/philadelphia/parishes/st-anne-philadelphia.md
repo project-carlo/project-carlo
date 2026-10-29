@@ -28,6 +28,7 @@ evidence:
   note: 'Directory page (updated 7 months ago): E. Lehigh Ave. and Memphis St., Rev. Lourdes Sri Dharshanna
     Jayamanne, Parochial Administrator; Vigil Saturdays 5 PM, Sundays 7:30 and 10:30 AM, which agrees
     with the bulletin.'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish st-anne-philadelphia (page-pdfs on John Patrick
     listing 154)

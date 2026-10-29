@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   note: OSM returns a 'house' at 1000 Fairview Road, 19081 (39.88845, -75.34771), about 40 m from the
     Plus Code; it has no place_of_worship node by name.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. John J. Ames (named by no other parish); church Lancaster Ave. and Argyle
     Rd.; rectory 11 Simpson Rd.; page updated 11 months ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

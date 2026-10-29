@@ -32,6 +32,7 @@ evidence:
   note: 'Directory entry (updated 1 year ago): Rev. Thomas J. Gardner, rectory 333 Allendale Rd., King
     of Prussia 19406-1640; Vigil Saturday 4 PM, Sunday 8 and 10:30 AM, weekdays and Saturday 8 AM. The
     same as the bulletin. No worship sites named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-matthew-conshohocken
   decision: separate

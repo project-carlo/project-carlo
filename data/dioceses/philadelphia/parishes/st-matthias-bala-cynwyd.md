@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry (updated 3 weeks ago): Rev. Joseph F. Gleason; Sunday 8:30, 10:30 AM; 7 PM; same
     Saturday vigil and weekday times as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

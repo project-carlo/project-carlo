@@ -28,6 +28,7 @@ evidence:
   quote: Bartram & Woodlawn Ave., Collingdale, Pennsylvania 19023
   note: GCatholic 'St. Joseph', first recorded 1916.01, phone +1 (610) 583-4530 (the bulletin's phone),
     Plus Code 87F6WP78+6H (39.91306, -75.28356).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

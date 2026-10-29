@@ -27,6 +27,7 @@ evidence:
   quote: 8245 W Chester Pk., Upper Darby, Pennsylvania 19082
   note: GCatholic 'St. Laurence', first recorded 1917.01, phone +1 (610) 449-0600, Plus Code 87F6XP89+MX
     (39.96669, -75.28006), 40 m from the OSM node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

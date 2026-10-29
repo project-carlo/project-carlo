@@ -27,6 +27,7 @@ evidence:
   note: 'Directory entry: ''Our Lady of the Assumption (Italian)'', Rev. Gerald P. Carey, 35 Old Eagle
     School Rd., Strafford 19087; Mass times Saturday 5 PM, Sunday 7, 8:30, 10 AM, weekdays 8 AM, Saturday
     9 AM. No worship site or mission named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-isaac-jogues-wayne
   decision: separate

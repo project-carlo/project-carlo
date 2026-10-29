@@ -27,6 +27,7 @@ evidence:
   note: 'Parish Mass page: Saturday 5:15 PM; Sunday 7:00, 9:00, 10:30 AM, 12:00 PM (Spanish), 5:15 PM;
     Monday-Friday 6:30 and 8:00 AM; Saturday 8:00 AM. The "lower chapel" is where Wednesday adoration
     (8:30 AM to 8:00 PM) is held; no Mass is listed there.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: ss-peter-and-paul-west-chester
   decision: separate

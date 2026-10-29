@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   note: OSM returned no named Queen of Peace church node for Ardsley, so the Plus Code is the only coordinate
     source.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

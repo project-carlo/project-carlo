@@ -28,6 +28,7 @@ evidence:
   note: 'Directory entry: Pastor Rev. Steven J. Albero, O.Praem. ''In residence at Daylesford Abbey'';
     6 Greenlawn Road; rectory 50 Leopard Rd.; Mass times Saturday 5:00 PM, Sunday 9:00, 11:30, 1:30 PM
     (Spanish), 6 PM, daily 7:30 AM. No worship site or mission is named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-monica-berwyn
   decision: separate

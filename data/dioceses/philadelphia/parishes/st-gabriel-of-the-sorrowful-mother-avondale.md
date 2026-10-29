@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 2 years ago): Rev. Anthony J. DiGuglielmo; 8910 Gap Newport Pike, P.O.
     Box 709; Mass times Saturday vigil 4:15 PM, Sunday 8:00 and 10:00 AM, weekdays Monday-Thursday 9 AM,
     Holy Days 9:00 AM and 7:00 PM, which match the bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-rocco-avondale
   decision: separate

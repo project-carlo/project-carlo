@@ -23,6 +23,7 @@ evidence:
   note: 'Parish site stjeromechurchphila.org (probe url 200, redirects to www.): the only bulletin link
     is ''http://www.jppc.net/onlinebulletins/148template.pdf'', the John Patrick template for listing
     148.'
+promoted: 2026-10-29
 research:
 - method: Read listing 148, downloaded the 25 October issue, read page 1-2 text or render, opened the
     parish site

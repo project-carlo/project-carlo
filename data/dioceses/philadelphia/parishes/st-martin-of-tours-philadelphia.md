@@ -31,6 +31,7 @@ evidence:
   note: Parish site (eCatholic id 37607, read in visit.py; the directory's www.smtparish.org redirects
     to it). Its Bulletins page links only 'https://www.jppc.net/onlinebulletins/162template.pdf', the
     listing's template, and hosts no PDFs, so ecatholic:37607 stays out of `publication`.
+promoted: 2026-10-29
 research:
 - method: probe url and visit.py on the parish site and /bulletins, listing 162, rendered the 25 October
     issue, read a text-layer issue

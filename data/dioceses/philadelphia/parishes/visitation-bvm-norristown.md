@@ -38,6 +38,7 @@ evidence:
   quote: Rev. Robert M. Gross
   note: 'Directory: 196 N. Trooper Rd., Norristown 19403-2665; Saturday vigil 5:15 PM, Sunday 7:30, 9,
     11 AM; weekday times out of date against the bulletin (Mon-Sat 8:15 AM) and site.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

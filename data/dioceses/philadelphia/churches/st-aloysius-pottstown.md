@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page: parish address 844 N. Keim Street (the parish office and school); rectory 223
     Beech Street; Founded 1856; Montgomery County West deanery.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

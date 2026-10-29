@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship St. Edmond Church at 2130 South 21st Street (39.92547, -75.18152), about
     40 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Rev. John C. Moloney, Pastor; Mass times Saturday vigil 4:00 PM, Sundays 8:00 AM,
     11:00 AM & 5:30 PM, weekdays 8:30 AM; page updated 1 year ago. Same as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -31,6 +31,7 @@ evidence:
     13th St. (between Market and Chestnut Sts.); friary phone 215-563-4145; Mass times match the bulletin''s.
     Its ''Other'' lines also name ''Holy Redeemer Chinese Catholic Church: Rev. Thomas R. Betz, O.F.M.
     Cap. (Coordinator, Chinese Apostolate)''.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

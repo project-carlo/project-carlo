@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: 424 S. Main St., North Wales; rectory 425 Pennsylvania Ave.; Sunday 8, 9:30, 11:30
     AM.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

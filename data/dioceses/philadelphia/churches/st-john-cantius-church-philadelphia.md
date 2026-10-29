@@ -24,6 +24,7 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-cantius-roman-catholic-church-philadelphia-pa-19137/2026-10-25.pdf
   seen: 2026-10-29
   note: Page 1 MASS SCHEDULE (Church and Chapel columns).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

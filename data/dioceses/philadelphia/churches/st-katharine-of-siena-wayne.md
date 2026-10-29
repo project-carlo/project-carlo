@@ -28,6 +28,7 @@ evidence:
     Sunday 9:30 & 11:30am; Weekday Masses Monday-Friday 6:30, 8:00am, Saturday 8:00am; footer gives the
     rectory (104 S. Aberdeen Avenue), the school (229 Windermere Ave.) and convent, not the church''s
     street number.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

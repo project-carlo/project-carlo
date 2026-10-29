@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'OSM: ''Saint John the Evangelist Catholic Church, 21, South 13th Street, Washington Square West'',
     39.9512335, -75.1612944. ParishesOnline puts the org at 39.9517245, -75.1616351 (same block).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

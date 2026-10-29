@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   note: 'Page 1 of the neighbouring parish''s 25 October 2026 issue (image, rendered): ''University led
     Masses at 5:00 PM, 7:00 PM., & 9:00 PM at Villanova Church, when university is in session''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

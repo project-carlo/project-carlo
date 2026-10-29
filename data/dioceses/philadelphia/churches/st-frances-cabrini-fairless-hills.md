@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   quote: 325 South Oxford Valley Road, Fairless Hills, PA, 19030
   note: Parish site header gives the same address with the Mass times.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

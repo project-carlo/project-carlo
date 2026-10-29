@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'Directory page: parish with this one church; address line and rectory as recorded in the parish
     file.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

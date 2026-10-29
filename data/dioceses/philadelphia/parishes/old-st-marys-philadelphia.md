@@ -35,6 +35,7 @@ evidence:
     page updated 2 years earlier. Its weekday line ''Monday to Friday, 7:30 AM in chapel of former convent,
     5th and Locust'' is out of date: the 25 October 2026 bulletin says ''DAILY MASS IN OSM CHURCH MON-FRI
     7:30 AM''. Its Sunday 10 AM and Saturday 4:30 PM vigil match the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

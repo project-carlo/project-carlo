@@ -24,6 +24,7 @@ evidence:
   note: 'Parish site stjohncantiusparish.org: probe url 403; the browser (visit.py) reads it. Home page
     ''Weekday Mass (Chapel)'' and ''Sunday Mass (Church)'' match the bulletin; its Bulletin link is ''https://church-bulletin.org/?id=279''.
     ''Our History'' page: ''in 2013 it merged with the nearby All Saints Parish''.'
+promoted: 2026-10-29
 research:
 - method: Read listing 279, downloaded the 25 October issue, read page 1-2 text or render, opened the
     parish site

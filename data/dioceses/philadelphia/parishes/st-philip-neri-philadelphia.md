@@ -27,6 +27,7 @@ evidence:
   quote: All Masses at St. Philip Neri.
   note: 'Directory: 218 Queen St.; Pastor Rev. Edward P. Kuczynski; Worship Site: St. Stanislaus (Polish)
     Church; page updated ''1 year ago''.'
+promoted: 2026-10-29
 research:
 - method: 'pnpm fetch:check: page-pdfs on listing 51 resolved 2026-10-25.pdf; transport ok, pdf, freshness
     fresh; first page has no extractable text (image only), so identity is unverified by the tool and

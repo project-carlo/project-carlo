@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   quote: 259 Forest Ave., Ambler
   note: Directory address; Mass times 'Sunday 9:00AM, 11:00AM, 5:00PM; Spanish Second Sunday at 1:00PM'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

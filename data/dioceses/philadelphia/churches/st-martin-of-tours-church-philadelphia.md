@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-29
   quote: 5450 E. Roosevelt Boulevard
   note: Masthead address, Philadelphia, Pennsylvania 19124.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

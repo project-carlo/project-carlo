@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   quote: 838 Walnut St., P.O. Box 64, Royersford 19468
   note: Directory rectory address; church listed at 'Lewis Rd. and Walnut St.'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

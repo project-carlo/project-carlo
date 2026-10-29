@@ -33,6 +33,7 @@ evidence:
   quote: Deacon John Teson (Parish Life Director)
   note: 'Directory: church ''Big Oak and Makefield Rds.''; rectory 752 Big Oak Rd., Morrisville 19067;
     Mass Sat 4 PM, Sun 7:30, 9:30, 11:30 AM, weekdays 8 AM, Saturdays 8 AM, as the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read listing 193, rendered page 1 of the 25 October image-only issue, read the 2 August text-layer
     issue and the parish home page

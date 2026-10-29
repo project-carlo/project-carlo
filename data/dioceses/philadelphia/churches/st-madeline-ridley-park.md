@@ -30,6 +30,7 @@ evidence:
 - url: https://archphila.org/parish/st-madeline-ridley-park/
   seen: 2026-10-28
   note: 'Directory: ''Address: 400 Morton Ave., Ridley Park''; rectory 110 Park St., Ridley Park 19078.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

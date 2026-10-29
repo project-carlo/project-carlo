@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-28
   note: OSM node 5935912224, amenity=place_of_worship 'St. Gabriel of the Sorrowful Mother', 8910 Gap
     Newport Pike, Toughkenamon, Avondale; 39.8100620, -75.7579402.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-29
   quote: Rev. Matthew W. Guckin
   note: 'Directory: pastor; rectory 235 E. State St., Doylestown 18901-4770; page updated 3 weeks ago.'
+promoted: 2026-10-29
 research:
 - method: visit.py on the parish site's /parish-bulletins page and curl of the 2026-10-25.pdf copy; md5
     against the listing's PDF

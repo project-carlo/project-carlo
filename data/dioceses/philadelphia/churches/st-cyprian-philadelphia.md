@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'Saint Cyprian Church, 525, South Cobbs Creek Parkway' (type social_facility, not place_of_worship),
     39.9535358, -75.2483055, about 25 m from GCatholic's pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

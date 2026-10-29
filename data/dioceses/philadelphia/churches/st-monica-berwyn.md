@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (image, rendered and read): ''Church Address 63 Main Avenue
     Berwyn, PA 19312''; Mass Times Daily Mass (Mon - Sat) 8:30 am, Saturday Vigil 5:00 pm, Sunday 7:30
     am, 9:30 am, 11:30 am.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

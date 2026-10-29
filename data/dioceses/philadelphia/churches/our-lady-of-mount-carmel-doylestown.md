@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   quote: 235 E. State St., Doylestown 18901-4770
   note: Directory rectory address; its church address line reads only 'E. State St.'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

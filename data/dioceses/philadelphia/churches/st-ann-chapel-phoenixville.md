@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship "Saint Ann Chapel, Buttonwood Street" at 40.1261834, -75.5141442, about 130
     m south of the church on the same street.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

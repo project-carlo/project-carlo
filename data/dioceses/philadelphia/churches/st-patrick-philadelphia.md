@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: 20th and Locust Sts.
   note: Directory church address; rectory 242 South 20th Street 19103.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

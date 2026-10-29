@@ -23,6 +23,7 @@ evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-dominic-church-philadelphia-pa-19136/2026-10-25.pdf
   seen: 2026-10-29
   note: Page 1 MASSES box and rectory line 8504 Frankford Ave., Phila., PA 19136.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

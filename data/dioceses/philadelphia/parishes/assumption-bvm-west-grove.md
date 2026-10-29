@@ -32,6 +32,7 @@ evidence:
   note: 'Directory page (updated 4 months ago): 300 State Rd.; Rev. Brian T. Connolly, Parochial Administrator;
     Mass times ''Sundays, 8, 10 AM; Noon'' and weekday 6:30 AM / 8:15 AM, which differ from the bulletin
     (no Noon Mass; daily 8:15 am).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-rocco-avondale
   decision: separate

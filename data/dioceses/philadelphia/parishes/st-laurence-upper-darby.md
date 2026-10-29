@@ -31,6 +31,7 @@ evidence:
   note: 'Directory: Pastor Rev. Thomas P. Whittingham; church 8245 West Chester Pk., office 30 St. Laurence
     Road; ''Vietnamese: 10:00 AM [at St. Alice Church]'' and ''Worship Site: St. Alice Church (Vietnamese
     only)''; page updated 4 months ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

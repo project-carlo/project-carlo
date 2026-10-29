@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: S.E. corner of 3rd and Wolf Sts.; Vigil Saturday 4 PM, Sundays 8, 10:30 AM, weekdays
     7:30 AM: the bulletin''s times.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

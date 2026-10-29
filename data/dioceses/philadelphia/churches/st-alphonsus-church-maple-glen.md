@@ -36,6 +36,7 @@ evidence:
   note: OSM node 357307071 'Saint Alphonsus School' on Temple Drive at 40.17011, -75.18934, about 25 m
     from GCatholic's Plus Code; no OSM place_of_worship node for the church was returned. A search for
     '1567 Temple Drive' returns a street way at 40.17031, -75.19203.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

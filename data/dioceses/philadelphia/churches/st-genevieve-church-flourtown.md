@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: OSM has only 'Saint Genevieve School', 1237 Bethlehem Pike (40.10178, -75.21296), about 70 m from
     GCatholic's Plus Code; no named church node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

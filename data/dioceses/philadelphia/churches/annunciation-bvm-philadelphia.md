@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Annunciation BVM Church', 1511 South 10th Street, Passyunk Square, 39.9305604,
     -75.1609443 (about 25 m from GCatholic's pin).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

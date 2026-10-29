@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: 'Page 1 of the 25 October 2026 bulletin (image, rendered and read): ''Rosemont Chapel Saturday:
     9:00am, Vigil Mass: 4:30pm; Sunday: 9:00am''; masthead ''1229 E Lancaster Ave., Rosemont, PA 19010''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

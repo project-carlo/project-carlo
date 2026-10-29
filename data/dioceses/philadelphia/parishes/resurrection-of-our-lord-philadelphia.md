@@ -38,6 +38,7 @@ evidence:
   note: 'Directory: Rev. Vincent E. Smith, OSFS (Parochial Administrator); ''Castor Ave. and Vista St.'';
     rectory 2000 Shelmire Ave. 19152-4293; Mass times Saturday 4:30 PM, Sunday 6:30, 8:30, 10:30 AM and
     Noon, weekdays 8:30 AM; page updated 4 months earlier. Same as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

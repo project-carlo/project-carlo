@@ -30,6 +30,7 @@ evidence:
     Administrator, rectory 1445 N. 2nd St.; Sundays 9:30 English and 11:30 Spanish, weekdays 8:30 AM,
     which agrees with the bulletin; ''Worship Site: Immaculate Conception Church'', which the bulletin
     does not support (see excluded/immaculate-conception-philadelphia-2).'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish st-michael-philadelphia (page-pdfs on John
     Patrick listing 214)

@@ -31,6 +31,7 @@ evidence:
   note: 'Directory page (updated 12 months ago): 212 Welsh Rd., Huntingdon Valley; pastor Rev. Robert
     B. McDermott; Mass Saturdays 4 PM vigil, Sundays 8, 10 AM and noon, weekdays and Saturdays 8 AM. No
     worship site named.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

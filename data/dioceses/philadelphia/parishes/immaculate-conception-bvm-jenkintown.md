@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 3 months ago): 602 West Ave., Jenkintown; pastor Rev. Joseph Howarth;
     website iccjenkintown.org; Mass Saturdays 4:30 PM vigil, Sundays 7:30, 9:30, 11:30 AM and 4:30 PM,
     weekdays 8 AM. It names no worship site or chapel.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

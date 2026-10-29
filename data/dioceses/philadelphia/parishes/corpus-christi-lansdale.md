@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. John D. Schiele
   note: 'Directory: pastor Rev. John D. Schiele; 900 Sumneytown Pk., Lansdale 19446; parish center 215-855-1311.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-stanislaus-lansdale
   decision: separate

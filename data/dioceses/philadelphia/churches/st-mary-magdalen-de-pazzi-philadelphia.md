@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: 'Nominatim places 714 Montrose Street, 19147 (way 12149717) at 39.9375324, -75.1555493: an address
     point, not a church node.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

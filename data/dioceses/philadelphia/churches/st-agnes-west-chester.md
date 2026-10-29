@@ -32,6 +32,7 @@ evidence:
   note: 'Page 1 (an image, rendered and read) of the 25 October 2026 bulletin: ''Saint Agnes Parish ...
     Sunday October 25, 2026 ... 12:00pm Solemn Opening Mass ... 5:15pm Mass'', ''Monday ... 8:00am Holy
     Mass''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

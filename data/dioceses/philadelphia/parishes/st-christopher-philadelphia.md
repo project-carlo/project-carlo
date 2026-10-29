@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Rev. Philip G. Bochanski, 13301 Proctor Rd.; Mass times Saturday 5 PM, Sunday 8, 10
     AM and Noon, weekdays 8:30 AM, Saturday 8 AM; page updated 3 weeks earlier. Same as the bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-anselm-philadelphia
   decision: separate

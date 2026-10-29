@@ -29,6 +29,7 @@ evidence:
   note: 'Directory page (updated 2 years ago): Lehigh Ave. and B St., Rev. Francis D. Mulvaney, C.Ss.R.,
     rectory 2625 B St.; Sunday Masses 8 Spanish, 9:30 English, 10 Spanish (upper church), 11 Vietnamese,
     which agrees with the bulletin.'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish visitation-bvm-philadelphia (page-pdfs on John
     Patrick listing 57)

@@ -27,6 +27,7 @@ evidence:
   note: 'ParishesOnline organization: 6315 Lancaster Ave., Philadelphia 19151 (39.9858606, -75.2480647),
     the same number as the directory''s rectory and parish-center lines; OSM''s place_of_worship node
     is at 39.9858607, -75.2480647.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

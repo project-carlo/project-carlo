@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship "Saint Ann Roman Catholic Church, 500, South Main Street" at 40.1273084,
     -75.5144211, within 10 m of GCatholic's Plus Code point.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

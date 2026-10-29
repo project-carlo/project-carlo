@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: S.E. corner 10th and Bigler Sts.; rectory 2901 S. 10th St. 19148-5010; Vigil 5 PM,
     Sunday 8, 10:30 AM, weekdays Tuesday-Saturday 8 AM, as in the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

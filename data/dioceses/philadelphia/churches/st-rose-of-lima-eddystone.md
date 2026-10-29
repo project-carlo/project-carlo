@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: ''Address: Chester Pike at Simpson St., Eddystone''; rectory 1901 Chester Pk., Eddystone
     19022-1395.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

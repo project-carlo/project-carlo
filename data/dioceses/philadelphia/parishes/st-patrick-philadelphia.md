@@ -30,6 +30,7 @@ evidence:
   quote: Rev. Hyacinth Cordell, O.P.
   note: 'Directory page (updated 2 months earlier): Philadelphia West and Central deanery, 20th and Locust
     Sts., rectory 242 South 20th Street; Mass times match the bulletin''s.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

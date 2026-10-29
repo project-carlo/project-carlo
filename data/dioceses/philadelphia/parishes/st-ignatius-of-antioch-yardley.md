@@ -33,6 +33,7 @@ evidence:
   quote: Rev. Andrew C. Brownholtz
   note: 'Directory: pastor; 999 Reading Ave., Yardley 19067-1626; Bucks County Central and North deanery;
     Mass times match the bulletin (page last updated 2 years ago).'
+promoted: 2026-10-29
 research:
 - method: Compared the listing's 25 October PDF with the parish site's same-date file; read the site's
     Bulletin page

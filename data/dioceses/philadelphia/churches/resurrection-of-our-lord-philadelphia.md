@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: Castor Ave. and Vista St.
   note: Directory church address as free text (an intersection); rectory 2000 Shelmire Ave.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

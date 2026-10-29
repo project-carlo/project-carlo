@@ -28,6 +28,7 @@ evidence:
   note: 'Directory: Pastor ''Rev. Kevin J. Gallagher (In residence at Saint Denis, Havertown)''; 401 Brookline
     Blvd.; Mass times as in the bulletin (Vigil 4:30 PM, Sundays 7:30, 9, 11 AM: the 9 and 11 AM are older
     than the bulletin''s 7:30 and 10:30).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-denis-havertown
   decision: separate

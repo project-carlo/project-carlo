@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: Big Oak and Makefield Rds., Morrisville
   note: 'Directory: church at the intersection; rectory 752 Big Oak Rd., Morrisville 19067; founded 1964.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

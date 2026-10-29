@@ -28,6 +28,7 @@ evidence:
   note: 'John Patrick listing 165, ''Saint Aloysius & King of Peace Church'', 2530 Wharton Street 19146,
     no editions: a former parish whose records are at St. Gabriel (the bulletin cover says so). The jppc
     scan lists no St. Gabriel (Philadelphia) listing.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   quote: Ulmer Ave. and Allison Rd.
   note: Directory church address as an intersection; its rectory address is 120 Allison Rd., Oreland 19075-1896.
     Mass times (Saturday 4:30 PM, Sunday 9 AM, weekdays 8:30 AM) agree with the bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

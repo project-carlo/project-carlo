@@ -27,6 +27,7 @@ evidence:
   quote: Rev. John F. Wackerman
   note: 'Directory: pastor; rectory 1900 Meadowbrook Rd., Feasterville 19053; Mass times (Sat 5 PM, Sun
     8, 11 AM) match the bulletin except the Malayalam Mass, which the directory omits.'
+promoted: 2026-10-29
 research:
 - method: Read listing 23, the parish home page and the 25 October text layer
   url: https://www.church-bulletin.org/assumption-of-the-blessed-virgin-mary-church-feasterville-pa-19053

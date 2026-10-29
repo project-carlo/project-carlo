@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Matthew P. Windle (named by no other parish); 220 Lawrence Rd., Broomall
     19008; Delaware County East; page updated 1 month ago.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

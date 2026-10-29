@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Brandon M. Artman (named by no other parish); 3301 West Chester Pk., Newtown
     Square 19073; Delaware County West; page updated 4 months ago; Mass times as in the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

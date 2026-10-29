@@ -37,6 +37,7 @@ evidence:
   note: OSM place_of_worship 'Holy Cross Catholic Church, 154, East Mount Airy Avenue' at 40.06155, -75.18900,
     about 20 m from GCatholic's pin; 140 East Mount Airy Avenue is a separate house point at 40.06177,
     -75.18921.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

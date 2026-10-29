@@ -33,6 +33,7 @@ evidence:
   note: 'Directory page (updated 3 months before): L St. and Hunting Park Ave., rectory 1337 E. Hunting
     Park Ave. 19124-4938, website holyinnocentsrc.org, Pastor Rev. Thomas M. Higgins; Mass times as the
     bulletin.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

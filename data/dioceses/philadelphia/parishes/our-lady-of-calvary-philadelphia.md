@@ -30,6 +30,7 @@ evidence:
   quote: Rev. John F. Babowitch
   note: Directory Pastor line; Mass times match the bulletin (Sat 5 PM; Sun 6:30, 8, 10 AM, Noon; daily
     6:30 September-June and 8 AM).
+promoted: 2026-10-29
 research:
 - method: Read listing 203, the 25 October text layer, the parish's own bulletin archive and home page;
     compared with listing 150's issue

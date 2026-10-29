@@ -29,6 +29,7 @@ evidence:
   note: 'Directory: Pastor Rev. Joseph S. Mostardi, O.S.A. (named by no other parish); 31 Pennswood Rd.,
     Bryn Mawr 19010-3475; Mass times 5 PM Sat, 7:30, 9:30, 11:15 AM Sun (stale against the bulletin);
     page updated 2 weeks ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-john-neumann-bryn-mawr
   decision: separate

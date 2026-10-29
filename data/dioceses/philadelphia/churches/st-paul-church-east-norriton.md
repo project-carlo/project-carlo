@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   quote: Johnson Hwy. and New Hope St., Norristown
   note: Directory church address as an intersection; rectory 2007 New Hope St., Norristown 19401.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

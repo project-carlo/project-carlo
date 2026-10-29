@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-28
   note: OSM node 7382858049 'Saint Patrick Church', tagged address 703 Green Street (the parish office
     street), at 40.1174877, -75.3396799, about 12 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

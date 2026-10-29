@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM finds only house nodes at 240 Haverford Road (39.98623, -75.27678) and 204 Haverford Road
     (39.98532, -75.27608), no named place of worship; the GCatholic Plus Code lies between them.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

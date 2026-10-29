@@ -27,6 +27,7 @@ evidence:
   note: 'Directory page (updated 2 years before): C St. and Roosevelt Blvd., rectory 401 E. Roosevelt
     Blvd. 19120, no website, Hispanic apostolate; Mass Saturday 4 PM, Sunday 9 AM and 10:30 AM (Spanish),
     weekdays 8 AM (the bulletin gives 8:05 AM weekdays, no Saturday 8 AM).'
+promoted: 2026-10-29
 research:
 - method: Read the directory page, listing 284 and its 25 October issue; looked for a parish site
   checked: '2026-10-29'

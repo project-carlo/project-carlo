@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: Nominatim returned no result for 'St Francis of Assisi Church Norristown' or the Marshall Street
     query, so the coordinates are GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   note: 'Directory (updated about four months earlier): ''Rev. John D. Hand'', ''Other Parish Information:
     Merged with St. Margaret Mary Alacoque, Essington: 2014'', Mass times Saturday 4:30 PM, Sunday 9 AM
     and Noon, ''Sunday evenings at 5 PM beginning Sept 7, 2025''. The page names no worship site.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

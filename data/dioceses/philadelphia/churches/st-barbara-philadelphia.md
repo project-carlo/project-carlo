@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Saint Barbara's Roman Catholic Church', Lebanon Avenue, 39.9877531, -75.2318785
     (about 30 m from GCatholic's pin); an OSM house point for 5359 Lebanon Avenue is at 39.9876766, -75.2315225.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

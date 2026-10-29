@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: ''Rev. Henry F. Graebe, III (Parochial Administrator)'', Mass times Saturday 4 PM,
     Sunday 6:30, 9:30 and 11:30 AM, weekdays 6:30 AM (page updated 4 months earlier).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-francis-de-sales-lenni
   decision: separate

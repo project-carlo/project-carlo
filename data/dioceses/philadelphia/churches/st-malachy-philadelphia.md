@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-29
   note: OSM way 973999518 'St. Malachy's Church', 1419 North 11th Street, place_of_worship at 39.9743971,
     -75.1530081, about 15 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

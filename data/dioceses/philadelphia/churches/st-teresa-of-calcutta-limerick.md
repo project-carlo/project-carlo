@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page: 256 Swamp Pk., Schwenksville 19473 (the roster lists the town as Limerick); rectory
     284 Swamp Pk.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

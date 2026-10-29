@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has the school 'Saint Albert The Great Catholic School, 214, Welsh Road' at 40.11310, -75.05942,
     about 25 m from the Plus Code; no named church node was returned.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

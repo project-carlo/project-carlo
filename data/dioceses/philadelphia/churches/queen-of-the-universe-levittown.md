@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: 2443 Trenton Rd., Levittown 19056
   note: Directory rectory address; its church line says only 'Trenton Rd., Levittown'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

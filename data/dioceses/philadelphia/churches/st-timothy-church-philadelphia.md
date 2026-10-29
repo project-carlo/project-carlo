@@ -30,6 +30,7 @@ evidence:
   quote: Levick and Battersby Sts.
   note: 'Directory: church at Levick and Battersby Sts., rectory 3001 Levick St. 19149; Mass times there
     (6:30 AM lower church, 9:15 AM upper) predate the bulletin''s.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

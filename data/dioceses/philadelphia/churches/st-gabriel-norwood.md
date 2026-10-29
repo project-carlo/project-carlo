@@ -27,6 +27,7 @@ evidence:
   quote: Mohawk Ave. & Seminole Ave., Norwood, Pennsylvania 19074
   note: GCatholic 'St. Gabriel', first recorded 1891.11, phone +1 (610) 586-1225, Plus Code 87F6VPQ3+Q4
     (39.88944, -75.29719).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

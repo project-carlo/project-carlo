@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   note: John Patrick listing 151, "Saint Rose of Lima Church", is Philadelphia 19151, a different parish;
     North Wales has no John Patrick listing in the 1-1300 scan (raw/jppc-pa.json).
+promoted: 2026-10-29
 ---
 
 ## Publisher

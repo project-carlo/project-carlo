@@ -32,6 +32,7 @@ evidence:
   note: 'Directory (updated 2 months ago): church 1109 W. Marshall Street, parish center 601 Buttonwood
     Street; Hispanic apostolate; Mass times Saturday 5:30 PM, Sunday 7 AM, 9 AM (Spanish), 11:30 AM, weekdays
     8:30 AM (except Wednesdays), same as the bulletin.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: holy-saviour-norristown
   decision: separate

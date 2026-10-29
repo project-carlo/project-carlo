@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Saint David Church', Summit Avenue, Willow Grove 19090, at 40.14674, -75.11874,
     about 20 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

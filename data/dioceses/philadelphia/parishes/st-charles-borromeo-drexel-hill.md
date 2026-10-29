@@ -29,6 +29,7 @@ evidence:
   note: 'Directory: Pastor Rev. Msgr. George A. Majoros (resides at Sacred Heart Parish, Clifton Heights);
     rectory 3422 Dennison Ave.; Mass times Saturday vigil 5:30 PM, Sunday 10 AM and 4 PM, Thursday-Saturday
     8:30 AM; page updated 5 months ago (the Saturday vigil is no longer in the bulletin).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: sacred-heart-clifton-heights
   decision: separate

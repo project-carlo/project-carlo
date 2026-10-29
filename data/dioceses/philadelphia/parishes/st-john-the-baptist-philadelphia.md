@@ -38,6 +38,7 @@ evidence:
   note: 'CatholicPhilly, 26 October 2015: St. Mary of the Assumption (German) closed entirely on 1 November
     2015 and was no longer a worship site; St. Josaphat was merged into St. John''s too, and is not named
     among the closures.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: holy-family-philadelphia

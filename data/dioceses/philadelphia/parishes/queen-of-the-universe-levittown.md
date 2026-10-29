@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: 'probe url: 200, ''Queen of the Universe'', no embedded publication; the one bulletin link is
     https://jppc.net/onlinebulletins/267template.pdf (the listing).'
+promoted: 2026-10-29
 research:
 - method: Read listing 267, rendered page 1 of the 25 October image-only issue, read the 7 June 2026 text
     layer and searched issues of 2024-11-03, 2025-06-01, 2026-01-04 and 2026-06-07 for 'Immaculate Conception'

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Our Lady of Mount Carmel' at 39.9192084, -75.1517561, about 10 m from GCatholic's
     pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

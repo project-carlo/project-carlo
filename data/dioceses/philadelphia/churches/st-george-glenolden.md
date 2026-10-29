@@ -27,6 +27,7 @@ evidence:
   quote: Lamont Ave. E of Chester Pk., Glenolden, Pennsylvania 19036
   note: GCatholic 'St. George', first recorded 1923.01, phone +1 (610) 237-1633, Plus Code 87F6WP27+FH
     (39.90119, -75.28606).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

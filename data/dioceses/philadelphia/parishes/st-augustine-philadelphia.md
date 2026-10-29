@@ -32,6 +32,7 @@ evidence:
   note: 'Directory: Rev. Christopher J. Drennen, O.S.A. (Parochial Administrator); rectory 243 N. Lawrence
     St.; Mass ''Sundays, 9, 11 AM; 7 PM. Weekdays, 12:05 PM.'' (page updated 4 months earlier); same times
     as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship St Gabriels Catholic Church at 2917 Dickinson Street (39.93521, -75.19293),
     about 40 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

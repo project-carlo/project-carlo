@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: ''Address: 1920 Providence Ave., Chester''; rectory 1920 Providence Ave., Chester
     19013-5695.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

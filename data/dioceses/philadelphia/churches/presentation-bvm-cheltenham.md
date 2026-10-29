@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: church at ''Old Soldiers Rd. and Woodland Ave., Cheltenham'', rectory 100 Old Soldiers
     Rd., Cheltenham 19012-2184.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

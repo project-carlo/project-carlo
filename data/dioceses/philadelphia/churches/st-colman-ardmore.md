@@ -35,6 +35,7 @@ evidence:
   note: Four Nominatim searches (St. Colman Church Ardmore; Saint Colman Ardmore; St. Colman Catholic
     Church Argyle Road Ardmore; St Colman Church Lancaster Avenue Ardmore PA) returned no OSM place_of_worship
     node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

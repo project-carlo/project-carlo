@@ -33,6 +33,7 @@ evidence:
   note: GCatholic 'St. Francis of Assisi', first recorded 1923.06, phone +1 (610) 543-0848, Plus Code
     87F6WMH8+QC (39.92944, -75.33394), about 70 m from the 136 Saxer Ave house node. Its ZIP reads 19064
     on the roster page, as in the bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
 - url: https://archphila.org/parish/st-john-baptist-vianney-gladwyne/
   seen: 2026-10-28
   note: 'Directory: ''350 Conshohocken State Road, Gladwyne, 19035''; rectory 1110 Vaughans La.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

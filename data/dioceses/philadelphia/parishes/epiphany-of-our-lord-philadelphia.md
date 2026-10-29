@@ -26,6 +26,7 @@ evidence:
   note: 'Directory: 11th and Jackson Sts.; Vigil Saturdays 5 PM, Sundays 8:30, 11 AM; weekdays Monday
     to Saturday 8 AM (Tuesday 8:30). Page updated ''2 years ago''; the bulletin''s weekday time is Tuesday-Saturday
     8:30am.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -25,6 +25,7 @@ evidence:
     4 as self-uploaded PDFs under /wp-content/uploads/2026/10/. The ''October-23-2026.pdf'' file (6 pages,
     text layer, md5 a60730e4f94d6aa8ab71feba1b64c9bd) is the issue for 25 October (page 3 header ''THIRTIETH
     SUNDAY IN ORDINARY TIME, OCTOBER 23, 2026''), a different file from the listing''s image-only issue.'
+promoted: 2026-10-29
 research:
 - method: Read listing 156, downloaded the 25 October issue, read page 1-2 text or render, opened the
     parish site

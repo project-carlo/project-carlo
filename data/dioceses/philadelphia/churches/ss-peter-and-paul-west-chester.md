@@ -27,6 +27,7 @@ evidence:
   note: 'Page 2 (an image, rendered and read) of the 25 October 2026 bulletin, Mass Schedule: ''SaturdayVigil:
     4:30 PM; Sunday: 7:30, 9:30, & 11:30 AM; Saturday: 8:30 AM; Weekdays: 8:30 AM''. Page 1: ''1325 E.
     Boot Road, West Chester, PA 19380''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

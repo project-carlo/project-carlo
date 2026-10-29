@@ -30,6 +30,7 @@ evidence:
     Philadelphia
   note: Directory Pastor line. Its Mass times add a Sunday Noon Mass (Sat 5 PM; Sun 8, 10 AM, Noon) that
     the 25 October bulletin's Masses box does not list.
+promoted: 2026-10-29
 research:
 - method: Read listing 150, the 25 October text layer and the parish home page; compared with listing
     203's issue

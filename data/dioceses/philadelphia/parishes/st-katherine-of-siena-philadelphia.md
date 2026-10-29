@@ -37,6 +37,7 @@ evidence:
   note: 'Directory: Rev. Joseph S. Zaleski, 9700 Frankford Ave.; Mass times Saturday 5 PM, Sunday 6:30,
     8, 10 AM and Noon; holydays 6:30, 8 AM, Noon, 7 PM; weekdays 6:30, 8 AM; page updated 4 months earlier.
     Same as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -28,6 +28,7 @@ evidence:
   quote: 'Weekday Masses Monday through Friday: 6:45 AM & 9:00 AM'
   note: 'Parish Mass page: Saturday vigil 5:00 PM (March through October), 4:00 PM (January, February,
     November and December); Sunday 7:30, 9:30, 11:30 AM and 6:00 PM; Saturday 9:00 AM.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-agnes-west-chester
   decision: separate

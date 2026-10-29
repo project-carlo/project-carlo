@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   quote: 225 Bellevue Ave., Penndel, PA 19047
   note: Directory church and rectory address; parish offices at 338 Hulmeville Ave.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

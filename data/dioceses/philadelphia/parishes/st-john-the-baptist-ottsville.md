@@ -36,6 +36,7 @@ evidence:
     8:35 AM ''St. Joseph''s Daily Chapel''; pastor Rev. Selvaraj Lucas, M.S.C.; cemetery 453 Haycock Run
     Rd., Kintnersville 18930. Older than the bulletin, which gives 4:30 PM, 9:00 AM and the Thursday Mass
     at Old St. John''s; the bulletin was followed.'
+promoted: 2026-10-29
 research:
 - method: probe pdf text of the 25 October 2026 issue and probe get of the parish site
   url: https://stjohnsottsville.org/

@@ -33,6 +33,7 @@ evidence:
     Church Chester Springs, PA''; Mass Schedule Mon-Fri 7:30 AM, Saturday 8:30 AM, Saturday Vigil 4:30
     PM, Sunday 8:00, 9:30 and 11:30 AM; Mullin Ministry Center, 110 St Elizabeth Drive, Chester Springs
     19425.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. James M. Cox
   note: 'Directory: pastor Rev. James M. Cox; rectory 40 Spring Mount Rd., Schwenksville 19473.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

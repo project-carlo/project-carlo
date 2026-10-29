@@ -31,6 +31,7 @@ evidence:
   note: 'Directory (updated about a year earlier): ''Rev. James E. Goerner (Parochial Administrator) in
     residence at Saint Rose of Lima, Eddystone''; Saturday vigil 4 PM, Sunday 9 AM, weekdays Monday, Tuesday,
     Thursday, Friday 8 AM. Agrees with the bulletin. No worship site named.'
+promoted: 2026-10-29
 research:
 - method: 'fetch:check picked the 2026-10-25 issue from the pinned page-pdfs recipe: transport ok, pdf,
     freshness fresh (3 days); identity ''No expected identity supplied'', masthead read by hand.'

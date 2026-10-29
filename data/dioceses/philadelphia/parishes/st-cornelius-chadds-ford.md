@@ -25,6 +25,7 @@ evidence:
   note: 'Directory page (updated 1 year ago): Rev. Msgr. David E. Diamond; 160 Ridge Rd., Chadds Ford
     19317; Mass times Saturday vigil 4 PM, Sunday 7:30, 9, 11 AM and 4 PM, weekdays 7:30 AM, matching
     the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

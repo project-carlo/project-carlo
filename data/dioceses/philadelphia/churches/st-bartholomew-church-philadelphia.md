@@ -29,6 +29,7 @@ evidence:
   quote: 5600 Jackson St.
   note: 'Directory: church and rectory 5600 Jackson St. 19124; Mass ''Sundays, 10:00 AM. Holy Days: Celebrated
     at St. Timothy Church.'' matches the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

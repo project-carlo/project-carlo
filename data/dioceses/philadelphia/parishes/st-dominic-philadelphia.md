@@ -24,6 +24,7 @@ evidence:
   note: 'Parish site saintdominicparish.org (Wix-style, probe url 200): its ''Church Bulletins'' page
     links only ''https://www.jppc.net/onlinebulletins/260template.pdf'', the John Patrick template for
     listing 260, and hosts no PDFs.'
+promoted: 2026-10-29
 research:
 - method: Read listing 260, downloaded the 25 October issue, read page 1-2 text or render, opened the
     parish site

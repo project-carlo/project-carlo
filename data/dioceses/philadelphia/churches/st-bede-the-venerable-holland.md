@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM node 'Saint Bede the Venerable, Holland Road, Holland' at 40.20089,-74.98263, within about
     50 m of the GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

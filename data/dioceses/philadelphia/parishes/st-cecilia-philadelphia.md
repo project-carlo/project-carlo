@@ -32,6 +32,7 @@ evidence:
     PA''; behind Cloudflare, read in a browser). Its only bulletin link is ''https://church-bulletin.org/?id=179''.
     Mass Times page: Saturday 5:00 pm; Sunday 6:30, 8:00, 9:30, 11:00 am and 5:00 pm (not June-August);
     weekdays 6:30 am (not August) and 8:30 am; Saturday 8:30 am.'
+promoted: 2026-10-29
 research:
 - method: visit.py on the parish site, listing 179, downloaded and rendered the 25 October issue, read
     a text-layer issue

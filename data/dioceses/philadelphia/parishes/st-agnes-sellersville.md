@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-29
   note: 'probe url (HTTP 200): the home page links https://church-bulletin.org/?id=225 and http://www.jppc.net/onlinebulletins/225template.pdf
     as its bulletin and hosts no PDFs of its own.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

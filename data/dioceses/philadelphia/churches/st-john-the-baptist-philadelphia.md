@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has an address point (house) at 119 Rector Street, Manayunk, 40.02496, -75.22037, about 15
     m from the Plus Code; no church node was returned.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

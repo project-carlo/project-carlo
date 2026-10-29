@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship St. Thomas Aquinas Catholic Church at 1719 Morris Street (39.93022, -75.17388),
     about 30 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

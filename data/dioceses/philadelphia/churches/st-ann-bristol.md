@@ -35,6 +35,7 @@ evidence:
   quote: St. Ann Church, Bristol, remains an active worship site of St. Mark Parish
   note: 'CatholicPhilly, July 2019: ''with Sunday Mass celebrated at 10:30 a.m. and Mass each Tuesday
     at 7 p.m.'' (the times the directory still gives).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

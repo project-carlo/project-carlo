@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM 'St. Vincent de Paul Church, Hatboro Road, Richboro' at 40.21753,-75.03360, within about 50
     m of the GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

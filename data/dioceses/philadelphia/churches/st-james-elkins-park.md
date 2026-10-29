@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship node 'St James Church', Brookside Road, Elkins Park (40.07976, -75.12029),
     about 25 m from the GCatholic Plus Code point.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

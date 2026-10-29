@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-28
   quote: Rev. Joseph W. Bongard
   note: 'Directory: pastor Rev. Joseph W. Bongard; rectory 1489 DeKalb Pike, Blue Bell 19422.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-titus-norristown
   decision: separate

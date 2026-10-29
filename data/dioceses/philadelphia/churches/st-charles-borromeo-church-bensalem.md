@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-29
   quote: located at Bristol Pike and Hulmeville Road in Bensalem
   note: 2014 Unification Mass report places the church at the same intersection.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

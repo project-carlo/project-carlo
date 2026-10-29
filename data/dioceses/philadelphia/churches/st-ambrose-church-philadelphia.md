@@ -32,6 +32,7 @@ evidence:
   note: GCatholic 'St. Ambrose', first recorded 1923.06, Plus Code 87G62VGM+R8 (40.0270625,-75.1166875),
     phone +1 (215) 329-7900; OSM has 'Saint Ambrose Church', 401 Roosevelt Boulevard 19120, place_of_worship,
     at 40.02719,-75.11676 (read 2026-10-29).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

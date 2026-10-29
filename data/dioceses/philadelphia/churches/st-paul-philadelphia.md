@@ -26,6 +26,7 @@ evidence:
 - url: https://archphila.org/parish/st-paul-philadelphia/
   seen: 2026-10-28
   note: Directory address 923 Christian St., 19147; rectory 808 S. Hutchinson St.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

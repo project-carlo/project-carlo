@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: Nominatim address match for 1166 South Broad Street (house, 39.9362037, -75.1669529; building
     39.9361808, -75.1675353); no OSM place_of_worship node for the shrine. GCatholic has no entry.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: Turner Ave. & Marvine Ave., Drexel Hill, Pennsylvania 19026
   note: GCatholic 'St. Bernadette', first recorded 1947.05, phone +1 (610) 789-7676 x3, Plus Code 87F6XM5W+MC
     (39.95919, -75.30394).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

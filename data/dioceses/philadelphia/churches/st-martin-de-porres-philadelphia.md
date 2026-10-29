@@ -31,6 +31,7 @@ evidence:
   note: OSM returns the house 2340 West Lehigh Avenue at 39.99591, -75.17038 and a 'St. Martin De Porres'
     social_facility at 39.99568, -75.16986; its place_of_worship node 7515240700 'St. Martin De Porres
     Church' (West Lehigh Avenue) is at 39.9958392, -75.1702669, about 3 m from GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Klinerd Rd., Pennsburg; rectory 1325 Klinerd Rd., Pennsburg 18073; Saturday 5 PM,
     Sunday 7:30 and 10 AM, weekdays Tuesday to Friday 8 AM; Adoration in St. Anne Chapel.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

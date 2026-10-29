@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   note: LPi organization record gives '2139 Franklin Ave' (a transposed digit against the four other sources)
     and 39.90937, -75.32189.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

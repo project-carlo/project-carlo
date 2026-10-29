@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship St. Richards Catholic Church at 3010 South 18th Street (39.91349, -75.17820),
     about 5 m from GCatholic pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -42,6 +42,7 @@ evidence:
   quote: 140 W. Hector Street
   note: 'Directory: St. Mary''s Quasi-Parish, 140 W. Hector Street; the closed parish page (https://archphila.org/parish/st-mary-conshohocken/,
     ''St. Mary (Polish) (1905-2014)'') gives the old church''s address as ''W. Elm and Oak Sts., Conshohocken''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

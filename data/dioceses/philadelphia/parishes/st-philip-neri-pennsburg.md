@@ -23,6 +23,7 @@ evidence:
   note: The parish's own Parish Bulletins page (probe get HTTP 200) lists weekly files from spn-bulletin-10-26-2025.pdf
     to spn-bulletin-10-25-2026.pdf on a cloudfront host. The 25 October 2026 file is byte-identical (md5
     1f9d790147a9edf4bebcfac5f5caa41c) to the listing's, so both channels carry the same issue.
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

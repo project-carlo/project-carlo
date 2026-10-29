@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Pastor Rev. Kevin J. Gallagher; rectory 2401 St. Denis La.; Mass times as in the bulletin;
     page updated 1 year ago.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: annunciation-bvm-havertown
   decision: separate

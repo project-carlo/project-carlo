@@ -25,6 +25,7 @@ evidence:
   quote: Rev. Michael G. Speziale
   note: 'Directory: 5400 Hulmeville Rd., Bensalem 19020; Mass times match the bulletin (adds Sun 4:00
     PM quiet Mass, as the bulletin does). No worship sites or merger named.'
+promoted: 2026-10-29
 research:
 - method: Rendered page 1 of the 25 October 2026 issue; directory page and parish Bulletin page
   url: https://www.church-bulletin.org/bulletin/saint-ephrem-catholic-church-bensalem-pa-19020/2026-10-25.pdf

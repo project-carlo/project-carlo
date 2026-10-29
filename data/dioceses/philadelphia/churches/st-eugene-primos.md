@@ -27,6 +27,7 @@ evidence:
   quote: 200 S Oak Ave., Primos, Pennsylvania 19018
   note: GCatholic 'St. Eugene', first recorded 1955.10, phone +1 (610) 626-2866, Plus Code 87F6WMFX+RM
     (39.92456, -75.30081).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

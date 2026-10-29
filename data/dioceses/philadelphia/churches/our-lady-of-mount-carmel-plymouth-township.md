@@ -35,6 +35,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=Fairfield+Road+Plymouth+Meeting+Mount+Carmel+church
   seen: 2026-10-28
   note: Nominatim returned no result for the church, so the coordinates are GCatholic's Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

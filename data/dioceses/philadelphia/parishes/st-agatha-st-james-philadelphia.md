@@ -31,6 +31,7 @@ evidence:
   note: 'Directory page (updated 3 months ago): 38th and Chestnut Sts.; rectory (residence only) Newman
     Center, 111 South 38th St. 3rd fl., 19104; Rev. Remigio Morales Bermudez Buse; Sunday 9am, 11:30am,
     5:30pm (Main Church), daily Mass in the Newman Chapel.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-francis-de-sales-philadelphia

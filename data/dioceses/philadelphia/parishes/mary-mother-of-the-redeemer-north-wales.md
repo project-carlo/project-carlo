@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Rev. Joseph T. Shenosky, pastor; website mmredeemer.org; Mass times Saturday
     5:15 pm, Sunday 7:30, 9:30, 11:30 am, which agree with the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

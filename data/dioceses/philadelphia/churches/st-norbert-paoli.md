@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin (image, rendered and read): Mass & Worship Schedule Saturday
     7:30 am and 5:00 pm Vigil, Sunday 9:00 am, 11:30 am, 6:00 pm and 1:30 pm Español, daily 7:30am; footer
     ''6 Greenlawn Rd. Paoli, PA 19301 (610) 644-1655''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

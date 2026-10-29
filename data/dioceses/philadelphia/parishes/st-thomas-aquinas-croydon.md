@@ -30,6 +30,7 @@ evidence:
   quote: 'Merged with St. Elizabeth Ann Seton, Bensalem: 2014'
   note: 'Directory: Rev. David A. Fernandes; 601 Bristol Pike; ''Weekdays, 8:30 AM (Chapel, 126 Walnut
     Ave.)''.'
+promoted: 2026-10-29
 research:
 - method: Rendered pages 1-2 of the 25 October 2026 issue; compared md5 of the eCatholic and listing copies;
     read the parish's About and Mass-times pages in Chrome

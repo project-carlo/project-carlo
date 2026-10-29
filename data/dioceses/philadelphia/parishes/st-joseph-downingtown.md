@@ -24,6 +24,7 @@ evidence:
   note: 'John Patrick Publishing listing id 138, ''Saint Joseph Church'', Downingtown, PA 19335: no editions,
     only a USCCB daily-readings page with the parish''s address and phone. The parish does not publish
     there; not a publication id of this row.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

@@ -22,6 +22,7 @@ evidence:
   quote: 11 AM (Schneider Parish Center)
   note: 'Directory times list ''Sundays, 8 (OLC Church), 9:30 (St. Malachy) 11 AM (Schneider Parish Center)''
     and ''Schneider Parish Center: 2995 Cemetery Rd., Parkesburg 19365''.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

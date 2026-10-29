@@ -29,6 +29,7 @@ evidence:
   note: 'Directory: 225 Bellevue Ave., Penndel 19047; Mass times Sat 4 PM, Sun 7:45 and 10 AM, weekdays
     8 AM match the bulletin; no worship sites. Parish Business Manager is Deacon John Teson (also Parish
     Life Director of the Morrisville parishes): a staff role, not a shared pastor.'
+promoted: 2026-10-29
 research:
 - method: Rendered page 1 of the 25 October 2026 issue; directory page; parish site in Chrome
   url: https://www.church-bulletin.org/bulletin/our-lady-of-grace-catholic-parish-penndel-pa-19047/2026-10-25.pdf

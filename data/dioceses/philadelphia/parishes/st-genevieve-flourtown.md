@@ -25,6 +25,7 @@ evidence:
     PA'', an eCatholic site (ecatholic:38659 embedded) whose only bulletin link (''Bullletins'') goes
     to https://church-bulletin.org/?id=119; no files.ecatholic.com PDF. So the eCatholic id is not the
     publication.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

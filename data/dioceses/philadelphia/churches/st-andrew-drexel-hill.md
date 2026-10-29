@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Saint Andrew the Apostle Church', 3500 School Lane, Drexel Hill, lat 39.9489275,
     lon -75.297882.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

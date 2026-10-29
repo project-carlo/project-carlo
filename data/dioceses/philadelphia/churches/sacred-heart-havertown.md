@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'Sacred Heart Church', 105 Wilson Avenue, Havertown 19083, lat 39.9729436,
     lon -75.3119497.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

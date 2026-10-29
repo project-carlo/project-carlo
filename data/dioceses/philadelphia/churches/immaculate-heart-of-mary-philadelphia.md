@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Immaculate Heart of Mary', 819 Cathedral Road, Andorra, at 40.06439, -75.23573,
     about 35 m from the Plus Code.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

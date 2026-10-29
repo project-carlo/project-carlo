@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Stella Maris Catholic Church' at 39.9125501, -75.1631252, about 170 m east
     of GCatholic's pin, on Stella Maris Street.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

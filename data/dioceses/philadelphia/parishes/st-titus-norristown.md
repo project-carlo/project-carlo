@@ -39,6 +39,7 @@ evidence:
   note: 'Directory: Rev. Joseph W. Bongard (Parochial Administrator) in residence at Saint Helena; office
     3000 Keenwood Rd., Norristown 19403; Mass times (Sundays 9 and 11 AM) older than the bulletin and
     the site (Sunday 10:00 AM only).'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-helena-blue-bell
   decision: separate

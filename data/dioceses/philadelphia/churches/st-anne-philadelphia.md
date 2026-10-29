@@ -26,6 +26,7 @@ evidence:
   quote: E Lehigh Ave. & Memphis St., Philadelphia, Pennsylvania 19125
   note: GCatholic 'St. Anne', first recorded 1845.07, phone +1 (215) 739-4590, Plus Code 87F6XVJJ+XH (39.98244,
     -75.11856).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

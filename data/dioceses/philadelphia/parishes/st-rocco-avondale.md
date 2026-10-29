@@ -29,6 +29,7 @@ evidence:
     Newport Pike)''; pastor Msgr. Francis J. Depman, ''In residence at Assumption B.V.M., West Grove'';
     Mass times agree with the bulletin; ''Donation Center: Mision Santa Maria, Madre de Dios, 29 Gap Newport
     Pike''.'
+promoted: 2026-10-29
 research:
 - method: pnpm fetch:check --diocese philadelphia (page-pdfs on schedule.jsp) and probe get of b20261025.pdf
     / b20261101.pdf

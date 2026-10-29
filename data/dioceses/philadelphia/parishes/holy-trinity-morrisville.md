@@ -34,6 +34,7 @@ evidence:
   note: 'Directory page: Pastor line ''Deacon John Teson (Parish Life Director)'', parochial vicars Rev.
     Eugene C. Wilson and Rev. Jacob John; church and rectory 201 N. Pennsylvania Ave., Morrisville 19067;
     Mass times Sat 5:30 PM, Sun 7:30, 9:30, 11 AM match the bulletin.'
+promoted: 2026-10-29
 research:
 - method: Read listing 9, the 25 October text layer, and the parish home page in Chrome; compared with
     St. John's listing 193 issue

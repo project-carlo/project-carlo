@@ -25,6 +25,7 @@ evidence:
 - url: https://archphila.org/parish/sacred-heart-of-jesus-philadelphia/
   seen: 2026-10-28
   note: 'Directory: 3rd and Reed Sts.; rectory 1404 S. 3rd St. 19147.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

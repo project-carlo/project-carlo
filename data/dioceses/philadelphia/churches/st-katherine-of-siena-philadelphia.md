@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-28
   quote: 9700 Frankford Ave.
   note: Directory church and rectory address (19114-2896).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

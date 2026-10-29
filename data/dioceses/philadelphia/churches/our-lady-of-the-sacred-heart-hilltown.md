@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-28
   quote: 100 Broad St., Hilltown
   note: Directory address.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

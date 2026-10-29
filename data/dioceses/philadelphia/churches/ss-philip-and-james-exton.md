@@ -29,6 +29,7 @@ evidence:
     Catholic Church Exton, PA''; Mass Schedule Monday-Saturday 8:30 AM, Saturday Vigil 4:00 PM, Sunday
     8:30am, 10:30am, 12:00pm & 5:30pm; rectory 107 N. Ship Road. The bulletin''s weekend times differ
     from the directory''s (7:30, 9 AM); the bulletin is current.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

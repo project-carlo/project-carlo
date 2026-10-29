@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: Nominatim finds only a house point for '1940, East Chelten Avenue, East Germantown' at 40.05158,
     -75.15158, about 25 m from GCatholic's pin; no OSM church node was found for St. Benedict.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

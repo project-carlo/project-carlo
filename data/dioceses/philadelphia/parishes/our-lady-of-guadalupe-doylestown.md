@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: 'Directory: pastor Rev. Msgr. Joseph P. Gentili; 5194 Cold Spring Creamery Road, Doylestown, PA
     18902; Hispanic apostolate parish.'
+promoted: 2026-10-29
 research:
 - method: probe url on olguadalupe.org, probe get of the /bulletin page and four sampled _files/ugd PDFs
   url: https://www.olguadalupe.org/bulletin

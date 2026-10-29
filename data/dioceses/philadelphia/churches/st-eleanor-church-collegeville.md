@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-28
   quote: 647 Locust St., Collegeville 19426
   note: Directory rectory address; church listed as 'Locust St., Collegeville'.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

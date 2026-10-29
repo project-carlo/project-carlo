@@ -27,6 +27,7 @@ evidence:
   quote: Township Line & Burmont Rd., Drexel Hill, Pennsylvania 19026
   note: GCatholic 'St. Dorothy', first recorded 1947.05, phone +1 (610) 789-7788, Plus Code 87F6XM4H+JQ
     (39.95656, -75.32056), 40 m from the OSM node.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

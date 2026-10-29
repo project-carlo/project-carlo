@@ -30,6 +30,7 @@ evidence:
   note: 'Directory page (updated 2 years before): Rev. Matthew H. Phelan, O. de M.; 63rd St. and Lancaster
     Ave.; ''Merged with St. Callistus, Philadelphia and St. Donato, Philadelphia: 2013''; Mass times as
     the bulletin, none at St. Donato.'
+promoted: 2026-10-29
 bulletin_status: available
 ---
 

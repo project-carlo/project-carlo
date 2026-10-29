@@ -27,6 +27,7 @@ evidence:
   note: 'Directory: ''Pastor: Mr. Mark Griswold (Parish Life Director)'', Mass times ''Vigil Mass, Saturdays,
     5 PM. Sundays, 7:30, 9:30, 11:30 AM'' (page updated 1 year ago; the 25 October bulletin gives Sunday
     8:00 and 10:30 AM), no worship sites named.'
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-george-glenolden
   decision: separate

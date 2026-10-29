@@ -37,6 +37,7 @@ evidence:
   note: OSM place_of_worship 'Saint Raymond's Catholic Church' at 40.07211, -75.16748 (street labelled
     Forrest Avenue), about 15 m from GCatholic's pin; '1350 East Vernon Road' is a house point at 40.07242,
     -75.16788.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

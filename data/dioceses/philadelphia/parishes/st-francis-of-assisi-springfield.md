@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory: Rev. Matthew J. Tralies, Pastor; Mass times Saturday vigil 4 PM, Sundays 7:30, 9:30,
     11:30 AM, weekdays 8 AM, Saturdays 8 AM; page updated 11 months ago. Same as the bulletin.'
+promoted: 2026-10-29
 ---
 
 ## Publisher

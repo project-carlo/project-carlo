@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: OSM place_of_worship 'Saint Josephat's Church', 124 Cotton Street, Manayunk 19127, node at 40.0262625,
     -75.2214560 (and a chapel building at 40.02604, -75.22194).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-28
   note: 'Directory page: 127 E. Howard St., Stowe; rectory 421 Jefferson St.; Mass times Saturday 4 PM,
     Sunday 9 AM, weekdays Monday-Thursday 9 AM (the bulletin has Monday-Friday).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

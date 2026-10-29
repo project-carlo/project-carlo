@@ -33,6 +33,7 @@ evidence:
   quote: 196 N. Trooper Rd., Norristown
   note: Directory church and rectory address; its Saturday 5:15 PM vigil and weekday times are out of
     date against the bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

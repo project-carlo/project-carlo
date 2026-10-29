@@ -25,6 +25,7 @@ evidence:
   note: 'Directory page (updated 4 months ago): 47th St. and Springfield Ave.; rectory 4625 Springfield
     Ave.; Rev. Robert Ngageno (Parochial Administrator); Sat 5 PM, Sun 7 and 10:15 AM, weekdays 7 AM.
     No worship site named.'
+promoted: 2026-10-29
 bulletin_status: available
 publication_reviews:
 - parish: st-agatha-st-james-philadelphia

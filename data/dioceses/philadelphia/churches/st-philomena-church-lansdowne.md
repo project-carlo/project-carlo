@@ -30,6 +30,7 @@ evidence:
 - url: https://archphila.org/parish/st-philomena-lansdowne/
   seen: 2026-10-28
   note: 'Directory: 41 E. Baltimore Ave., Lansdowne 19050 (church and rectory).'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

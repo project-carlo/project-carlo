@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-28
   note: OSM place_of_worship 'St. Denis Catholic Church', 2401 St Denis Lane, Havertown 19083, lat 39.9915561,
     lon -75.3042098.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-29
   note: 'OSM: Penn-Drexel Newman Center, 111 South 38th Street (39.95446, -75.19798), about 45 m from
     the GCatholic pin.'
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

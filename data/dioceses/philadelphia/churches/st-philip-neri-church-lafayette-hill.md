@@ -32,6 +32,7 @@ evidence:
   quote: 437 Ridge Pk., Lafayette Hill
   note: Directory address and Mass times (Saturday 5 PM; Sunday 7:30, 9:30, 11:00 AM; weekdays Monday-Saturday
     8:30 AM), equal to the bulletin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

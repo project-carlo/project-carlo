@@ -25,6 +25,7 @@ evidence:
     but its newest was 18 October 2026, a week behind the John Patrick listing. Its Oct. 18 file and the
     John Patrick 2026-10-18.pdf are different files byte for byte (not compared for content). The listing
     is the current channel.
+promoted: 2026-10-29
 publication_reviews:
 - parish: st-thomas-more-south-coventry
   decision: separate

@@ -27,6 +27,7 @@ evidence:
   quote: Rev. Stephen H. Paolino
   note: 'Directory: pastor; 654 Hatboro Rd., Richboro 18954-1039; Mass times match the bulletin (''GPS:
     Use Ivyland, PA rather than Richboro, PA'').'
+promoted: 2026-10-29
 research:
 - method: Read listing 19, the site's Linktree and the rendered 25 October page 1
   url: https://www.church-bulletin.org/saint-vincent-de-paul-parish-richboro-pa-18954

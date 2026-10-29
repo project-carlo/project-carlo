@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   quote: 5194 Cold Spring Creamery Road, Doylestown, PA 18902
   note: Directory address (Doylestown).
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-28
   quote: 12670 Dunks Ferry Rd.
   note: Directory church and rectory address 12670 Dunks Ferry Rd. 19154.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: OSM has a house at 5400 Hulmeville Road, Bensalem Township 19020 at 40.1248768,-74.9261174, about
     170 m south-east of GCatholic's pin.
+promoted: 2026-10-29
 ---
 
 ## Holds Mass
