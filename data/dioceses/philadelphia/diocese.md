@@ -422,6 +422,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A cover subtitle such as 'Our Lady of Fatima Worship Site' over the parish's own address is not evidence of Mass at the worship site: check whether the Mass box names a place (St. Charles Borromeo, Bensalem).
+- `coverage --link` can attach another batch's roster entry (a Ukrainian GCatholic entry sharing an address) to your record; check the roster field afterwards.
+- An eCatholic /bulletins file can be byte-identical to the John Patrick listing's issue even when probe url answers 403: use visit.py to read the page and compare md5 (St. Thomas Aquinas, Croydon, ecatholic 2517, listing 77).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
