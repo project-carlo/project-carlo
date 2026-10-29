@@ -249,6 +249,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Holy Angels (Woodbury) is John Patrick code 635; the parish's own page links jppc.net/onlinebulletins/635template.pdf. Its issues are image-only, so read the masthead with render.py.
 - A merger decree notice on camdendiocese.org (e.g. /082710-decrees-issued-establishing-two-new-parishes/) and the Catholic Star Herald decree posts name the worship sites kept at a merger; read them to see which former churches were never worship sites before filing a church open/ or closed.
 - eCatholic parish sites here expose the Mass schedule on /mass-times; the bulletin masthead lists the churches and their addresses, which can differ by street number from GCatholic (Gibbstown 320 vs 313 Memorial Ave).
+- A ParishesOnline widget at widget.parishesonline.com/publications?id=<40-hex> can answer 502 and hides the org; a search for the parish name plus 'container.parishesonline.com' finds its container (e.g. 03/1233), but probe po can't take a container, so the org slug may stay unknown.
+- A parish site that is a frameset (saintmichael-archangel.com framing psmarectory.wixsite.com/psma) returns a 463-byte shell to probe url; visit.py renders the framed Wix site and its bulletin link.
+- The roster's parish-level entry at a parish office address can be a naming artefact, not a church: check the bulletin masthead's church photos and addresses for the real worship sites (St. Michael, Clayton has St. Catherine and Nativity).
 
 ## Rules settled for this diocese
 
