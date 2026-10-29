@@ -391,6 +391,11 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A John Patrick PDF and an eCatholic /bulletins file for the same Sunday can differ in layout and page count (St. Jude, Chalfont: 12 vs 10 pages); different bytes do not mean a copy, and a week-behind archive leaves the listing as the channel.
 - A parish's self-hosted WordPress /weekly-bulletins/ page that lists newest first (St. Joseph, Warrington) works as a page-pdfs recipe; its bulletin footer 'View this bulletin online at www.DiscoverMass.com' did not make it a Discover Mass row.
 - Directory Mass times can be years stale (St. Joseph, Warrington: directory Sat 5:30 PM, Sun 7/8:30/10/11:30; bulletin Sat 4:00 PM, Sun 7:30/9:30/11:30): take Mass times from the bulletin.
+- A John Patrick PDF can be image-only for the whole parish (St. Bede 103, St. Vincent de Paul 19, Our Lady of Good Counsel 6); render pages 1-2 with `pdftoppm -r 70 -png` to read the masthead and Mass box, and note them (not quote them) in the record.
+- A parish site can post its own current PDF newest first (olgc.org/bulletin/, files `006-October-25th-2026.pdf`) that is byte-identical to the listing's: keep the listing as the page-pdfs channel and note the md5.
+- A directory website can redirect to a Linktree (saintvincents.net -> linktr.ee/svdprichboro) whose bulletin link is the jppc template: still the listing channel, not a self-hosted site.
+- `probe get --out FILE` saves the raw response body (HTML or PDF), not JSON: read it with htmltext.py or grep, not jq.
+- Spoofing a browser user agent with curl is denied by the sandbox; use `probe get`/`probe url` (or visit.py) for parish sites.
 
 ## Rules settled for this diocese
 
