@@ -263,6 +263,10 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A John Patrick parish's own bulletin page can be years stale while church-bulletin.org has current issues (Christ the Good Shepherd, Vineland: page dated 2025-01-05, listing at 2026-11-01); a site footer 'Hosted by John Patrick Publishing' with a jppc.net/onlinebulletins/<id>template.pdf link gives the id (6016) even when the bulletin page names none.
+- A merged parish's bulletin masthead can list a Spanish-Mass church that no roster has (Divine Mercy: Immaculate Heart of Mary); read the whole Mass-schedule column, and the parish's own weekly-mass-schedule page.
+- Padre Pio's Duda bulletins page (pppnj.org/bulletins-2023) lists irp.cdn-website.com pppnj+MM+DD+YYYY.pdf newest-first under a stale 'BULLETINS 2025' heading, so page-pdfs picks the newest correctly.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
