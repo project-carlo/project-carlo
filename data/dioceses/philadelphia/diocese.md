@@ -415,6 +415,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - saintfrancescabrini.net, which answered 500 in the survey, answered 200 to probe url on 2026-10-29; its Parish Bulletin page links only the John Patrick template 228, so the listing is the channel.
 - A 'Saint X Chapel' under 'Daily Adoration' on a bulletin cover is an adoration chapel (Cabrini's is in the Parish Center, 2 Goble Court): no church row unless a Mass line names it.
 - holytrinitymorrisville.org answers 403 to probe url and loads in visit.py; it links only the jppc template 009 and hosts no bulletins despite an embedded eCatholic id (1047).
+- A directory 'parish' page with only a rectory address and phone, no pastor or Mass, and a records link to another parish is a former or worship-site entry, not a bulletin publisher; its rectory phone can match a neighbouring church's GCatholic phone (Sacred Heart, Tullytown and St. Ann, Bristol: 215-788-2128).
+- stmichaellvt.org gave probe url NO-PARISH-WORDS but visit.py loaded it (redirect to stmichaellvt.com) and showed the jppc template 217 link.
+- Search-engine and aggregator sites (catholicindex.org Cloudflare-blocks; churchfinder.com addresses) are weak evidence for a church's status: a Church Finder address differed from GCatholic's and OSM's.
 
 ## Rules settled for this diocese
 
