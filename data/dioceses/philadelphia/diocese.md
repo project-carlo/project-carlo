@@ -165,8 +165,10 @@ listings (2026-10-28). Each batch settles its own rows.
   archive carries the same file (below). **The current channel is whichever has the latest
   issue:** a listing with no editions (a daily-readings page only, St. Maximilian Kolbe 124;
   St. Joseph, Downingtown 138, which never had one) means the parish publishes elsewhere, so
-  look at its eCatholic `/bulletins` archive first; a parish archive that
-  stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Basil, Kimberton's own site, a
+  look at its eCatholic `/bulletins` archive first, then ParishesOnline (St. John Fisher,
+  Boothwyn, below); a parish archive that
+  stopped (SS. Simon and Jude's eCatholic, last 2025-02-16; St. Francis de Sales, Lenni's and
+  St. Joseph, Aston's eCatholic, March 2025; St. Basil, Kimberton's own site, a
   year behind; Sacred Heart, Havertown's WordPress, last 2024-10-27; St. Isaac Jogues's
   Squarespace `/bulletins`, July 2022) or lags by even a week (St. Gabriel, Stowe's site at 18
   October with 25 October on the listing, files differing byte for byte; St. John Neumann, Bryn
@@ -215,9 +217,11 @@ listings (2026-10-28). Each batch settles its own rows.
   Files under `/documents/` instead of `/bulletins/` (St. Ann, Phoenixville) make the
   `ecatholic` resolver pick a stale issue (2016): use the `other` row on the John Patrick
   listing and keep `ecatholic:<id>` in `publication`. Plain curl of a `/bulletins` page gets a
-  Cloudflare "Just a moment" stub; `probe get <url> --out <file>` returns the page with its PDF
-  links (`--out` is relative to the repo root, not the shell's directory: give
-  `scratch/<run>/<job>/<file>`). `probe pdf` takes URLs only; for a downloaded file use
+  Cloudflare "Just a moment" stub, and `probe url` can answer 403 (sfdslenni.org and
+  churchofstjosephaston.org on `/bulletins`, staparishgm.org); `probe get <url> --out <file>`
+  returns the page with its PDF links (`--out` is relative to the repo root, not the shell's
+  directory: give `scratch/<run>/<job>/<file>`), and `visit.py` loads it otherwise (staparishgm.org
+  showed its `church-bulletin.org/?id=097` link). `probe pdf` takes URLs only; for a downloaded file use
   `render.py` or a PDF text tool. A home page's first PDF can be a flyer (St. Anselm's "St.
   Lukes Open Flyer").
 - **Self-hosted:** Squarespace (St. Augustine: `/bulletins`, files
@@ -230,9 +234,10 @@ listings (2026-10-28). Each batch settles its own rows.
   `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
   listing carries). A WordPress site posting one page per issue (St. Katharine of Siena) gives
   `page-pdfs` on its post index nothing, though each post links a byte-identical copy of the
-  John Patrick PDF: use the listing. Likewise when a WordPress `/bulletins/` page carries a
-  current, byte-identical (md5) copy under irregular file names (St. Patrick, Kennett Square and
-  listing 236): keep the listing as the `page-pdfs` channel and note the copy as equal in
+  John Patrick PDF: use the listing. Likewise when a WordPress `/bulletins/` page or a Wix
+  `/events/bulletins` page carries a current, byte-identical (md5) copy under irregular or hashed
+  `/_files/ugd/` file names (St. Patrick, Kennett Square and listing 236; St. Mary Magdalen,
+  Media): keep the listing as the `page-pdfs` channel and note the copy as equal in
   `publication_reviews`. St. Bernard's site is a bare Wix page (stbernard-mayfair.wixsite.com).
   A Squarespace page whose issue links end in `/file` rather than `.pdf` gives `page-pdfs`
   nothing (St. Mary of the Assumption, Phoenixville, which also answers 403 to `probe url` and
@@ -250,12 +255,18 @@ listings (2026-10-28). Each batch settles its own rows.
   its "Latest Bulletin" link. holynameofjesus-fishtown.org failed certificate verification on
   2026-10-28 (try `http://`, or its John Patrick listing).
 - **ParishesOnline / LPi:** a minority publisher here, found in Delaware County (St. Philomena,
-  Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton); LPi also
-  has organizations elsewhere (st-john-the-evangelist-church-19107, st-patrick-church-19401).
+  Lansdowne; Blessed Virgin Mary, Darby 04/0756; Our Lady of Perpetual Help, Morton; St. Rose,
+  Eddystone 04/0708; St. John Fisher, Boothwyn 03/1236, whose John Patrick listing has no
+  editions); LPi also has organizations elsewhere (st-john-the-evangelist-church-19107,
+  st-patrick-church-19401). An empty organization ("no publications") exists for many parishes
+  whose bulletin is John Patrick's (St. Katharine Drexel, Our Lady of Charity, St. Madeline): it
+  is not a publication id.
   Sites built on WeConnect/Duda (bvm-darby.com, olphmorton.org) embed a `publicationWidget`
-  whose `id=` is the 18-character LPi id, though `probe url` finds no publication on them; a
-  site with no embed is found with the search API near the church (distance=3 gave
-  st-philomena-church):
+  whose `id=` is the 18-character LPi id, though `probe url` finds no publication on them. Their
+  bulletin page can instead link a fixed-name PDF (St. Rose: `bulletin8.pdf`) whose text equals
+  the container's current issue; its footer code ("Name, Town, PA 04-0708") gives the container:
+  use the `parishes_online` row. A site with no embed is found with the search API near the
+  church (distance=3 gave st-philomena-church):
   `https://f2141mdwk2.execute-api.us-east-1.amazonaws.com/prod/search?searchType=organization&latitude=<lat>&longitude=<lon>&distance=6`.
   `probe po <slug or id>` then gives the container. A container's first pages can be images
   (BVM Darby pages 1–3): render page 1 for the Mass box and use the text-layer footer line
@@ -272,6 +283,9 @@ listings (2026-10-28). Each batch settles its own rows.
   gives the effective date, and a decree may state the last Mass (St. Stanislaus Kostka,
   Chester County: none since 2016-07-02) or when Sunday worship was suspended. The host parish's
   own site can post the decree too, also scanned (Sacred Heart, Clifton Heights has St. Hedwig's).
+  A relegated church that is in no roster is found only on the parish-planning page
+  (Immaculate Heart of Mary, Chester, effective 2024-03-01): check each batch's closed
+  neighbours there for decrees.
 - **Coordinates, addresses and chapel owners:** Nominatim through `probe get` (`format=jsonv2`,
   `q=<church name> <town>`) returns named OSM place_of_worship nodes; a bare street address
   returns only the street, though for some Delaware County churches it returns the church. It
@@ -290,24 +304,13 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
-- A Lenni-style eCatholic site (sfdslenni.org, churchofstjosephaston.org) can answer 403 to `probe url` on /bulletins but `probe get` reads it; both archives stopped March 2025, so the John Patrick listing is the channel.
-- One Parish Life Director over two parishes ten km apart (Lenni and Glenolden) still means two bulletins: separate John Patrick listings, files and Mass schedules.
-- A closed parish's 'Worship site of X' line is stale once the directory page of X stops naming it: St. George's and St. Gabriel's own pages now say only 'Merged with ...'.
-- A parish whose John Patrick listing has no editions can publish through ParishesOnline: search the LPi API near its address (probe po <slug>), as the WeConnect site embeds the widget (St. John Fisher, Boothwyn: container 03/1236).
-- A WeConnect/Duda parish site's bulletin page can link a fixed-name PDF (St. Rose, Eddystone: bulletin8.pdf) whose text equals the ParishesOnline container's current issue; the footer code 'Name, Town, PA 04-0708' gives the container, so use the parishes_online row.
-- An empty ParishesOnline organization ('no publications') exists for many parishes whose bulletin is John Patrick's (St. Katharine Drexel, Our Lady of Charity, St. Madeline): it is not a publication id.
-- A relegation of a church that is in no roster (Immaculate Heart of Mary, Chester, decree effective 2024-03-01) is found only on the parish-planning page; check each batch's closed neighbours there for decrees.
-- A parish Wix /events/bulletins page (St. Mary Magdalen, Media) can post the printer's PDF byte-for-byte (md5 equal) under hashed /_files/ugd names; keep the dated John Patrick listing as the page-pdfs channel and note the copy as equal.
-- An 'Adoration Chapel' or 'Chapel' in a bulletin's schedule box (Nativity BVM, St. Mary Magdalen, St. Thomas the Apostle) with devotions but no Mass line is not a church row; check the page-2 weekly calendar for Mass in the chapel before adding one.
-- staparishgm.org (eCatholic) answers 403 to probe url but loads with visit.py and shows the church-bulletin.org/?id=097 link.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
 
 - **Eastern Catholic churches** (Ukrainian Archeparchy of Philadelphia, Ruthenian, Syro-Malabar, Syro-Malankara, Maronite, Armenian) are excluded as `other-jurisdiction`, as in every neighbouring diocese. A Latin parish church an Eastern community also uses keeps its own row (St. Albert the Great, Huntingdon Valley, with the Syro-Malabar mission). (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **Shared pastors and Parish Life Directors don't make shared bulletins.** A pair or trio named under one pastor or PLD on the directory (14 pairs and the cathedral trio) is one row only when one current bulletin covers each member; compare mastheads and Mass schedules, not contact lines or staff. (accepted by survey-review, 003-survey-review, 2026-10-28)
-- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28)
+- **A worship site of a merged parish** keeps a church row under the parish whose current bulletin or Mass schedule lists Mass there. The directory's 'Worship site of …' line (on either parish's page) is a lead, not evidence of current Mass, and a closed parish page's 'Formerly located at …' is only its address line. A relegation decree or CatholicPhilly report is the closure source: exclude `closed` with `last_mass` from the bulletin, or the decree's effective date when no bulletin gives it. (accepted by survey-review, 003-survey-review, 2026-10-28) A closed parish page's 'Worship site of X' line is stale once X's own page names no worship site and says only 'Merged with …' (St. George, Glenolden and Holy Spirit, Sharon Hill; St. Gabriel, Norwood and St. Margaret Mary Alacoque, Essington): add no church row from it, and without a closure source leave the church `open`. (map batch `lenni-glenolden`, 2026-10-28)
 - **Seminary, monastery, abbey, retreat-house and adoration chapels** (St. Charles Borromeo Seminary and its chapels, the Visitation Monastery, Daylesford Abbey, the St. Carlo Acutis shrine at Malvern Retreat House, the Sacre Coeur adoration chapel) get a church row under a parish when that parish's bulletin lists their public Mass; a parish row of their own if the house publishes a readable bulletin; otherwise they are excluded `no-public-mass` (private or community-only Mass) or `no-bulletin` (public Mass, but no bulletin lists it), following README Settled policy 4. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A campus Mass the parish bulletin lists every week gets a church row** (Villanova's St. Thomas of Villanova church, the Penn Newman Center's St. Bede chapel under St. Agatha-St. James, Temple's Newman chaplaincy), as in Harrisburg; a campus ministry that publishes only by email or semester newsletter is excluded `no-bulletin`. (accepted by survey-review, 003-survey-review, 2026-10-28)
 - **A shrine in a parish church is that church's row** (the Cathedral and Shrine of St. Katharine Drexel; St. Peter the Apostle and the Neumann Shrine; St. Jude, Chalfont; St. Anne). A shrine in a former parish church is decided like a worship site: a church row under the parish whose bulletin lists its Masses, a parish row of its own when it publishes its own bulletin, or excluded `no-bulletin` when it has public Mass and no bulletin lists it. (accepted by survey-review, 003-survey-review, 2026-10-28)
@@ -323,7 +326,10 @@ Decisions that apply to more than one record, and who made them.
   directory "parish" that is really a parish's own center or mission name, where the bulletin
   puts classes and meetings but no Mass, is excluded `no-public-mass` under that parish
   (Mision Santa Maria, Madre de Dios, Avondale, St. Rocco's "donation center"). (map batches
-  `coatesville-parkesburg` and `southern-chester`, 2026-10-28)
+  `coatesville-parkesburg` and `southern-chester`, 2026-10-28) Likewise an "Adoration Chapel" or "Chapel" in the
+  schedule box with devotions but no Mass line is not a church row: check the page-2 weekly
+  calendar for a Mass there first (Nativity BVM, St. Mary Magdalen, St. Thomas the Apostle). (map
+  batch `media-wallingford`, 2026-10-28)
 - **A Mass one parish staffs at another parish's church is that church's row only.** It
   appears in both bulletins, but it is not a worship site of the staffing parish (St. Rocco's
   Sunday 2:00 PM Spanish Mass at Sacred Heart, Oxford is on Sacred Heart's church row). (map
