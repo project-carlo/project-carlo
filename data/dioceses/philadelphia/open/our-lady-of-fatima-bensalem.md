@@ -5,7 +5,7 @@ revisit: 'Find out whether Mass is celebrated at the Fatima church on Street Rd.
   page or Spanish-language notice that places a Mass there. Church row under st-charles-borromeo-bensalem
   if so; excluded as closed if a source says it closed.'
 revisit_after: 2027-01-31
-roster: ['gcatholic:19156', 'worship-sites:our-lady-of-fatima-bensalem']
+roster: ['gcatholic:17498', 'gcatholic:19156', 'worship-sites:our-lady-of-fatima-bensalem']
 evidence:
 - url: https://gcatholic.org/churches/usa-03/19156
   seen: 2026-10-28

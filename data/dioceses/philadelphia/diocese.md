@@ -444,6 +444,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish's eCatholic /bulletins archive can carry the same file as its John Patrick listing (Maternity BVM: identical md5 for 2026-10-25); compare md5 and record the eCatholic channel. Its page-source links, not the visible text, show the files.
 - A directory website can redirect to an abandoned Wix site whose tab title belongs to another church (skschurch.com shows 'New Faith Gospel Church'); the bulletin's own page-1 website line gave the live site (stkatherineofsiena.org, HTTP 403 to probe url, loads in visit.py).
 - A merged parish's masthead subtitle ('Under the Protection of Our Lady of Ransom') is a patronal title, not a Mass site; a relegation decree can state that regular worship ended at the merger, years before its effective date.
+- `pnpm diocese coverage --link` rewrites roster lists on records in other batches (attaching Ukrainian GCatholic entries that share a Latin church's address); run plain `coverage`, or check `git status` and revert afterwards.
+- A John Patrick listing with no editions (St. William 28) can sit beside a current parish eCatholic /bulletins archive that is behind Cloudflare: visit.py on /bulletins lists the files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf links, which plain curl downloads.
+- A relegation decree can record that the church had only a monthly Sunday Mass in its last year (Incarnation of Our Lord, effective 2015-07-15, given 2015-06-08): use the effective month as an upper bound for last_mass and say so.
 
 ## Rules settled for this diocese
 

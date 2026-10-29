@@ -11,7 +11,7 @@ longitude: -74.9955625
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: false
-roster: ['directory:christ-the-king-philadelphia', 'gcatholic:19065']
+roster: ['directory:christ-the-king-philadelphia', 'gcatholic:17524', 'gcatholic:19065']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/christ-the-king-church-philadelphia-pa-19114/2026-10-25.pdf
   seen: 2026-10-29
