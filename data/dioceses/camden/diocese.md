@@ -289,6 +289,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Bon Venture sponsors pages can be found with a DuckDuckGo query on the parish's school or town plus sponsors.bonventure.net; check the page header's street address, because same-named parishes (OLPH Maple Shade is account 2214) have their own accounts.
 - A Wix parish page can link one PDF under /_files/ugd/ that is replaced weekly and may lag a Sunday or more (OLPH's showed 18 October on 29 October); fetch:check reports date and freshness unknown for it, so read page 3's Mass intentions to date it.
 - A GCatholic roadside shrine listed as a 'mission of' a parish with no Mass line in that parish's bulletin is excluded no-public-mass, with the absence and the search described in research.
+- accatholic.org (St. Monica, Atlantic City) closes the connection for probe url but loads in the browser; its Parish Bulletin menu links the Bon Venture sponsor page (account 2027), which probe url missed.
+- A GCatholic church of a merged parish that a current schedule omits can be dated closed from a Catholic Star Herald feature (search the REST API for the parish and town); the merger decree posts are scanned images with no text.
+- A summer guide's 'June 29th to Labor Day' note does not make a church seasonal: compare the parish site's off-season schedule (St. Thomas, Brigantine has the same Masses in November).
 
 ## Rules settled for this diocese
 
