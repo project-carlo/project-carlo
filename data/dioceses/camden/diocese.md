@@ -244,6 +244,9 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- John Patrick ids in the 6000s resolve through `curl -sIL https://church-bulletin.org/<id>` (301, 302 to the listing): Holy Family, Sewell is 6009 and Sts. Peter and Paul, Turnersville is 6029, found as a parish's own file-name prefix ('6029 Bulletin ...pdf') or its site's church-bulletin.org/<id> link.
+- When a parish's own Duda page lists PDFs under irregular names ('October 25 2026.pdf', 'November 1- 2026.pdf'), pin its John Patrick listing instead: uniform dated names make fetch:check's newest pick reliable.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
