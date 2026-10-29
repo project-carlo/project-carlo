@@ -485,6 +485,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - An empty ParishesOnline organization can carry an old parish website (holy-redeemer: www.holyredeemer.cc); probe po near a church's coordinates before concluding there is no channel.
 - A parish site's Mass schedule can show a worship site the directory page omits: St. Andrew (Lithuanian)'s site lists a 9 AM English Mass at St. Casimir (a church of a parish closed in 2011) that the directory gives only as a 'Worship Site' line, so read a no-bulletin parish's own site before judging a closed-parish worship site.
 - A cathedral bulletin's 'Adopted by the Parish Council August 10, 2021' line makes fetch:check report an issue_date conflict on an otherwise current John Patrick issue; the file-name date (the Sunday) is the issue date.
+- A bot-blocked WordPress Bulletins page (403 to probe url and recheck) loads in visit.py and page-pdfs reads it; irregular file names there mean fetch:check freshness stays unknown, so confirm the first-listed pick by reading its masthead.
+- A closed-parish directory page's 'Spiritual records are kept at X (through 2011)' is a records date; a host parish's page listing 'Includes <church>' with Masses and a dated news Mass in the church show it is still a worship site.
+- Campus Newman Center weekday Masses can appear in two neighbouring parishes' bulletins; file one church row under the parish whose Mass box lists the fullest schedule and note the other.
 
 ## Rules settled for this diocese
 
