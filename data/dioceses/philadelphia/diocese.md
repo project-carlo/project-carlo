@@ -338,6 +338,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - St. Rose of Lima, North Wales's Bon Venture-printed bulletin sits on srol.org with irregular /assets/Uploads names listed newest first, the next Sunday posted early; page-pdfs picks the first link and freshness stays unknown.
 - Two parishes under one pastor can print a single John Patrick issue under a joint masthead ('St. Anthony & St. Joseph Parishes') with one combined Mass schedule tagged by church: that is one row, two churches, listed under whichever parish has the listing (St. Joseph, Ambler has none). Open an older text-layer issue to date it.
 - A John Patrick image-only issue can have an older issue with a text layer: pdftotext on a months-old issue reads the masthead cheaply.
+- A John Patrick listing that matches no roster can be a non-Roman community: Saint Miriam, Flourtown (286) is Old Catholic (Union of Utrecht claim, 'Bishop in Residence'); read the cover and the parish's own Who We Are page, and exclude not-catholic.
+- Holy Martyrs, Oreland's directory website holymartyrschurch.org redirects to holymartyrsparish.org (probe url REDIRECT-OFFSITE, same parish); its Bulletin link is the JP template.
+- A parish's own /bulletins archive (St. Philip Neri, Lafayette Hill: shared/bulletins/2026/<mm>-<dd>-2026.pdf) can carry the md5-identical John Patrick issue; either channel is current, the listing stays the recipe.
+- stgensparish.com (St. Genevieve, Flourtown) answers 403 to probe url and loads in visit.py; it is an eCatholic site whose Bulletins link goes only to JP listing 119.
 
 ## Rules settled for this diocese
 
