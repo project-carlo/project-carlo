@@ -194,6 +194,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - St. Katharine Drexel's ParishesOnline PDF is about 37 MB, over fetch:check's 25 MB inspection limit, so document_type reports only the PDF signature; this is not an error.
 - Mary, Queen of All Saints publishes fixed-name overwritten PDFs (currbulletin3.pdf = current week, currbulletin2.pdf = previous) with no masthead or dated filename, so fetch:check reports issue date and freshness 'unknown' while the pick is right; pinning needs no recipe beyond page-pdfs.
 - St. Peter, Merchantville (JP 502) is image-only; St. Stephen, Pennsauken (JP 591) has a text layer and its site's first PDF link is a registration form, so use the church-bulletin.org listing.
+- stteresaofcalcuttanj.org (Solutio CMS) links issues as /bulletin/<n>-<date>/file with no .pdf and 403s plain fetches, so fetch:check finds no PDF links under any recipe; the same issues are on the parish's church-bulletin.org listing (John Patrick), which is the pick. Check for a church-bulletin.org listing (search 'church-bulletin.org <town> NJ') when a parish's own site can't be read.
+- The sandbox's safety check denies a custom script that downloads a blocked URL through the stealth browser; use only visit.py, render.py and fetch:check.
+- St. Teresa's, St. Joseph the Worker's John Patrick issues are image-only: render pages 1-2 with render.py to read mastheads and Mass schedules.
 
 ## Rules settled for this diocese
 
