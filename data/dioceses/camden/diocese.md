@@ -221,6 +221,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - St. Andrew, Gibbsboro's Duda PDFs (irp.cdn-website.com .../40284_YYYY_MM_DD.pdf) have a garbled text layer: probe pdf shows nonsense, so render page 1; fetch:check reports issue date unknown though the pick is the newest.
 - A parish site that doesn't link its bulletin (Christ the King, Haddonfield) can still be on John Patrick: search church-bulletin.org for the parish; the printer's code (503) is printed in the back-page footer of the issue.
 - duckduckgo.com/html answers a bot challenge after a few searches in one session, and bing.com returns junk for exact-phrase church queries: don't rely on web search to date a closure; use the Catholic Star Herald REST search and the parish's own pages.
+- A parish's own bulletin page can lag the church-bulletin.org listing by weeks (Holy Child's stopped at 13 Sept while the listing had 25 Oct); the printer's prefix in the file names (698+...) maps to church-bulletin.org/?id=<n>.
+- Merged parishes' rosters can omit a church the bulletin masthead lists (Guadalupe's St. Luke, Stratford): read the masthead's church list, not just the roster.
 
 ## Rules settled for this diocese
 
