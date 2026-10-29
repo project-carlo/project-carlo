@@ -512,6 +512,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A worship site the directory still lists can have closed on a date only CatholicPhilly gives, with no decree on the planning page (St. Mary of the Assumption, Manayunk, closed 2015-11-01): search CatholicPhilly's REST API for the merged parish's name plus 'close' before leaving a worship-site line open.
 - John Patrick text layers drop ligatures ('Bap st', 'Co on St.', 'Oﬃce'): quote words without ti/tt/ff/fi so `recheck` finds them.
 - When writing JSON payloads in a shell heredoc, quote the delimiter ('JSON'); an unquoted one runs backticked words such as `address_verified` as commands and silently drops them from the record.
+- A site can answer with a network-filter warning page (block.charter-prod.hosted.cujo.io/warn.html) in probe url and ERROR in visit.py: record access-blocked research and take the bulletin's printed site from the listing, not a retry loop.
+- A bulletin's printed worship-site address can differ from GCatholic, OSM and the directory (Holy Spirit: 1857 vs 1845 Hartranft St.): record the disagreement and leave address_verified false.
+- The John Patrick template URL jppc.net/onlinebulletins/<id>template.pdf returns an HTML page, not a PDF: take the PDF from the listing's church-bulletin.org/bulletin/<slug>/<yyyy-mm-dd>.pdf link.
 
 ## Rules settled for this diocese
 
