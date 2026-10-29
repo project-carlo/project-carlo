@@ -480,6 +480,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish whose 'Bulletin' is an HTML WordPress post (readings and announcements, no PDF or image) cannot be read by page-pdfs or dated-post: record no_bulletin with bulletin_status unsupported-format (Holy Redeemer Chinese Catholic Church), and check how many Sundays the posts lag.
+- A sidebar box with another church's address, Sunday Masses and pastor in a ParishesOnline bulletin (St. John the Evangelist's for Holy Redeemer) is not a joint masthead; check the footer code and Mass schedule before folding the neighbour in.
+- An empty ParishesOnline organization can carry an old parish website (holy-redeemer: www.holyredeemer.cc); probe po near a church's coordinates before concluding there is no channel.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
