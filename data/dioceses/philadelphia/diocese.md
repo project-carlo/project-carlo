@@ -325,6 +325,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A Nominatim answer is JSON inside probe get's text field: use jq '.text|fromjson'; a church can be found only under the township's name (St. Titus under 'East Norriton', not Norristown).
 - A site's /bulletins eCatholic archive can be read from the page source (href of the newest files.ecatholic.com file), but that is not visible text, so don't put it in a quote field; recheck can't find it.
 - A parish's 'Chapel' weekday Mass line (St. Helena's Saint Theresa Chapel) is a room of the church campus unless the site gives it another address: no church row.
+- Sacred Heart, Royersford's eCatholic /bulletins file (files.ecatholic.com/25820/bulletins/20261025.pdf) is byte-identical to John Patrick listing 13: ecatholic row with both ids, listing as fallback.
+- steleanor.com is a Joomla site answering 403 to probe url/pdf; its dated bulletin archive stops at 2025-08-31, so the John Patrick listing 10 is the channel.
+- Image-only John Patrick issues (St. Eleanor 10, Sacred Heart 13, St. Mary 4) show Mass times on the cover or page-2 sidebar; a parish's Mass box may be only on its site (St. Eleanor), so read the site for times.
 
 ## Rules settled for this diocese
 
