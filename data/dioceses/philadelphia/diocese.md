@@ -362,6 +362,10 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A Google Sites bulletin page that embeds each Sunday as a drive.google.com/file/d/<id>/preview iframe gives page-pdfs no links (fetch:check resolve_failed); the files download by hand from drive.google.com/uc?export=download&id=<id>, newest embedded first. Record no_bulletin with unsupported-format.
+- Twinned parishes under one pastor can each print the other's Mass times and rectory on their cover and still be separate listings (St. Joseph 7 and Presentation 15, Cheltenham): compare the page-2 footer codes ('007 ...', '015 p. 2'), page counts and md5.
+- A GCatholic id is not a ZIP: gcatholic:19096 is Presentation BVM in Cheltenham (19012), a different parish from Presentation BVM in Wynnewood (19096).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
