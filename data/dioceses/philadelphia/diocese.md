@@ -483,6 +483,8 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish whose 'Bulletin' is an HTML WordPress post (readings and announcements, no PDF or image) cannot be read by page-pdfs or dated-post: record no_bulletin with bulletin_status unsupported-format (Holy Redeemer Chinese Catholic Church), and check how many Sundays the posts lag.
 - A sidebar box with another church's address, Sunday Masses and pastor in a ParishesOnline bulletin (St. John the Evangelist's for Holy Redeemer) is not a joint masthead; check the footer code and Mass schedule before folding the neighbour in.
 - An empty ParishesOnline organization can carry an old parish website (holy-redeemer: www.holyredeemer.cc); probe po near a church's coordinates before concluding there is no channel.
+- A parish site's Mass schedule can show a worship site the directory page omits: St. Andrew (Lithuanian)'s site lists a 9 AM English Mass at St. Casimir (a church of a parish closed in 2011) that the directory gives only as a 'Worship Site' line, so read a no-bulletin parish's own site before judging a closed-parish worship site.
+- A cathedral bulletin's 'Adopted by the Parish Council August 10, 2021' line makes fetch:check report an issue_date conflict on an otherwise current John Patrick issue; the file-name date (the Sunday) is the issue date.
 
 ## Rules settled for this diocese
 
