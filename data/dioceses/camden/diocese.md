@@ -266,6 +266,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick parish's own bulletin page can be years stale while church-bulletin.org has current issues (Christ the Good Shepherd, Vineland: page dated 2025-01-05, listing at 2026-11-01); a site footer 'Hosted by John Patrick Publishing' with a jppc.net/onlinebulletins/<id>template.pdf link gives the id (6016) even when the bulletin page names none.
 - A merged parish's bulletin masthead can list a Spanish-Mass church that no roster has (Divine Mercy: Immaculate Heart of Mary); read the whole Mass-schedule column, and the parish's own weekly-mass-schedule page.
 - Padre Pio's Duda bulletins page (pppnj.org/bulletins-2023) lists irp.cdn-website.com pppnj+MM+DD+YYYY.pdf newest-first under a stale 'BULLETINS 2025' heading, so page-pdfs picks the newest correctly.
+- A Blogger parish site (olbsparishnj.com) can show probe url only the USCCB calendar as a bulletin link; its Bulletins page (/p/about.html) links the ParishesOnline organization page, and `probe po <slug>` then gives the container; its 'churches' page prints short Plus Codes that tools/olc.py decodes.
+- A merged parish's bulletin masthead address block can list more churches than GCatholic and the directory (OLBS: four churches, rosters have the seat only); read the whole address block and Mass Schedule on page 1.
+- A parish's new daily-Mass chapel on its campus (Saint John Bosco Chapel, Millville) is a church row of its own with no roster entry; the bulletin may say only 'in the chapel', so the parish home page names it.
+- A WeConnect/LPi bulletin with image-only pages 1-5 (All Saints, Millville) still reads on page 1 through render.py; fetch:check reports date inferred and identity unverified.
 
 ## Rules settled for this diocese
 
