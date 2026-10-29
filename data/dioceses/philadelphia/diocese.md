@@ -308,6 +308,11 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish's eCatholic /bulletins archive can match the John Patrick listing byte for byte (St. Margaret, Narberth, md5 equal) while a sibling's archive is stale (St. Matthias 2025-04): check the newest dated file on each before choosing ecatholic or page-pdfs.
 - presbvm.org (Solutio) answers 403 to probe url but loads in Chrome; its bulletin page links the JPPC template and a stale self-upload archive (March 2024).
 - For OSM-derived church coordinates use coordinates_from: osm-node (not osm).
+- A closed parish's 'Worship site of X' line can be stale for a decade: Sacred Heart, Swedesburg's own site, bulletin masthead and Mass page name no worship site beyond 120 Jefferson St., and its St. Augustine relegation decree says Sunday Masses ended January 2015 at both St. Augustine and Our Lady of Mount Carmel.
+- GCatholic can list an Ordinariate church (Rite 'Anglican (Latin)', Jurisdiction 'Anglican Personal Ordinariate of The Chair of Saint Peter') among the archdiocese's churches: read its 'Jurisdiction' line, and the parish's own site, before treating it as a former parish's worship site (500 Ford St., Bridgeport is St. John the Baptist, acquired 2015).
+- John Patrick PDFs for Sacred Heart, Swedesburg (143) and Mother of Divine Providence (27) are image-only: pdftotext returns nothing, pdftoppm -r 70 -png renders pages that the Read tool reads; MDP's WordPress /bulletins/ file is byte-identical to the listing's.
+- St. Mary's Quasi-Parish (FSSP) self-hosts numbered Squarespace files (/s/48-Christ-the-King-jm5e.pdf) on /bulletin, newest first with no dates in the names: page-pdfs reads the right file but fetch:check freshness stays unknown.
+- Never print `href` lists of a Wix page: they carry thousands of characters of parastorage URLs; filter them out with grep -v parastorage.
 
 ## Rules settled for this diocese
 
