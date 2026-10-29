@@ -275,6 +275,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A John Patrick listing with no editions can still carry the church's own address and phone (St. Alice listing 38: 150 Hampden Road); use it to cross-check GCatholic's intersection addresses.
 - A parish's own Wix 'Parish Bulletin' page can link only a form (St. Dorothy's PDF is a registration form): check the file's text before calling the site a bulletin channel.
 - A ParishesOnline container can post next Sunday's file early (St. Philomena 20261101B on 2026-10-28): fetch:check reports freshness `future`.
+- A parish site footer 'Designed and Hosted by John Patrick Publishing' whose 'most recent bulletin' link is jppc.net/onlinebulletins/<id>template.pdf hosts no PDFs of its own, even when an old self-upload archive remains (Holy Cross, Springfield: 2025 uploads only); a new Parish Life Director did not change the publisher.
+- Some John Patrick issues have a text layer (St. Francis of Assisi 175, St. Kevin 66, Fatima 83) and some are image-only (Holy Cross 24): check `pdftotext -l 2` before rendering.
+- A parish's eCatholic site can exist only as a link page (stkevin.com, ecatholic:34467, /bulletins links just the jppc template): don't put the eCatholic id in `publication`.
 
 ## Rules settled for this diocese
 
