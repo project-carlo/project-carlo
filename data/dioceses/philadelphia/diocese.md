@@ -430,6 +430,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A closed parish's directory page ('Spiritual records are kept at X', 'Formerly located at ...') and an aggregator's 'Parish-Closed' title (catholicchurch.directory) record the parish ending, not the building; a church is excluded as closed only on a decree, news story or bulletin that says so.
 - A relegation decree PDF on archphila.org is a scan with no text layer; render both pages. Its effective date is not the last Mass (St. Leo's decree says regular worship stopped by 1 Jan 2018, effective 7 Jan 2019).
 - Our Lady of Consolation, Tacony's own site (olctacony.com/bulletins) hosts a text-layer copy a different file from the listing's image-only issue; either is current, and it names its issue by the Friday upload date (October-23-2026.pdf is the 25 October issue).
+- When a parish's eCatholic /bulletins archive has stopped (St. Anselm: January 2022) and its John Patrick listing has no editions, the home page's 'WEEKLY BULLETIN' heading can link a Bon Venture sponsor page (sponsors.bonventure.net/?page=10314) with the current issue: read the home page's link list in visit.py, not only its PDF links (which showed a school flyer).
+- A dean who is pastor of one parish and administrator of its neighbour (Christ the King and Our Lady of Calvary, Far Northeast) still publishes two bulletins: different mastheads, page counts and Mass boxes; a shared vicar's joint title ('Our Lady of Calvary/Christ the King') is staff, not a joint masthead.
+- A parish's own WordPress bulletin archive can lag the John Patrick listing by weeks (Our Lady of Calvary: newest 4 October against the listing's 25 October); the listing is the channel.
 
 ## Rules settled for this diocese
 
