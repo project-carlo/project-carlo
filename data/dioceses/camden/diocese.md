@@ -197,6 +197,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - stteresaofcalcuttanj.org (Solutio CMS) links issues as /bulletin/<n>-<date>/file with no .pdf and 403s plain fetches, so fetch:check finds no PDF links under any recipe; the same issues are on the parish's church-bulletin.org listing (John Patrick), which is the pick. Check for a church-bulletin.org listing (search 'church-bulletin.org <town> NJ') when a parish's own site can't be read.
 - The sandbox's safety check denies a custom script that downloads a blocked URL through the stealth browser; use only visit.py, render.py and fetch:check.
 - St. Teresa's, St. Joseph the Worker's John Patrick issues are image-only: render pages 1-2 with render.py to read mastheads and Mass schedules.
+- christourlight.net (Joomla/Solutio) links issues as /home/bulletins/<id>-<date>/file with no .pdf, so fetch:check says resolve_failed and probe pdf gets 403; the same issues are on a church-bulletin.org listing found by searching 'church-bulletin.org <parish> <town> NJ' (christ-our-light-cherry-hill-nj-08034), which is the pick.
+- Holy Eucharist, Cherry Hill uses Bon Venture: record `page-pdfs http://sponsors.bonventure.net/?page=2088`; its issues have a text layer and appear before their Sunday.
+- St. Mary, Cherry Hill's Finalweb 'Parish Bulletins' page lists PDFs out of date order with spaces in the file names (percent-encode them for probe pdf); fetch:check still picks the newest by date. The PDFs are LPi 04/0346 image-only issues over 25 MB, and the ParishesOnline org slug was not found.
+- Neighbouring parishes can share a pastor while publishing separate bulletins from different printers (Fr. Matveenko: pastor of St. Mary, administrator of St. Thomas More, Cherry Hill); read both mastheads before calling it a merger.
+- Camden's Korean missions have their own Wix sites (chkcc.org) whose bulletin page can be years stale; check the newest file's date before making a parish row.
 
 ## Rules settled for this diocese
 
