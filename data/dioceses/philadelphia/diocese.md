@@ -195,8 +195,10 @@ listings (2026-10-28). Each batch settles its own rows.
   Havertown), print the same combined Mass schedule box (St. Charles Borromeo, Drexel Hill 220
   and Sacred Heart, Clifton Heights 92), print each other's schedule and one joint
   Mass-intentions list (St. Helena 43 and St. Titus 95), or carry each other's Mass times and
-  rectory on the cover as "Twinned Parishes" (St. Joseph 7 and Presentation BVM 15, Cheltenham)
-  and still publish separate issues, with different md5 and page counts, their own mastheads and
+  rectory on the cover as "Twinned Parishes" (St. Joseph 7 and Presentation BVM 15, Cheltenham),
+  or name one Parish Life Director and the same clergy on both mastheads and run a joint CYO
+  (Holy Trinity 9 and St. John the Evangelist, Morrisville: 4 pages with a text layer against 8
+  image-only) and still publish separate issues, with different md5 and page counts, their own mastheads and
   page 2, whose footer code names the listing ("007 St. Joseph - Cheltenham", "015 p. 2"):
   shared content is not a shared bulletin, and each church stays a row under its own parish. A **joint masthead** is: one issue
   headed "St. Anthony & St. Joseph Parishes" with both addresses, one combined Mass schedule and
@@ -231,8 +233,10 @@ listings (2026-10-28). Each batch settles its own rows.
   answered plain `probe url` on 2026-10-28. Many link a John Patrick listing rather than
   hosting the bulletin (St. Colman, Ardmore's `/bulletins` page is empty; stkevin.com,
   ecatholic:34467, is only a link page whose `/bulletins` links the jppc template; Our Lady of
-  the Sacred Heart, Hilltown 38359 and St. Genevieve 38659 link only `church-bulletin.org/?id=<n>`
-  and no `files.ecatholic.com` PDF: an `other` row on the listing), so an
+  the Sacred Heart, Hilltown 38359, St. Genevieve 38659 and St. Andrew, Newtown 37063 link only
+  `church-bulletin.org/?id=<n>` and no `files.ecatholic.com` PDF: an `other` row on the listing;
+  holytrinitymorrisville.org embeds eCatholic id 1047 and hosts no bulletins, linking only the
+  jppc template 009), so an
   eCatholic id alone is not the publication and stays out of `publication`; a `/bulletins` page
   linking a current `files.ecatholic.com/<site id>/bulletins/<yyyymmdd>.pdf` is. Where that
   file is the John Patrick issue, use an `ecatholic` row and add the listing as a second
@@ -268,14 +272,18 @@ listings (2026-10-28). Each batch settles its own rows.
   `/s/210-Bulletin_October-25-2026.pdf`), Wix (`/_files/ugd/<hash>.pdf`; but Wix archives here
   often stop or hold only flyers and forms: St. Dorothy's "Parish Bulletin" page links a
   registration form, St. Francis of Assisi, Norristown's newest PDF is a godparent-eligibility
-  letter, Immaculate Conception, Jenkintown's only PDF is a fiscal report and Epiphany, Plymouth
+  letter, Immaculate Conception, Jenkintown's only PDF is a fiscal report, St. Martin of Tours,
+  New Hope's one home-page PDF is a PREP calendar and Epiphany, Plymouth
   Meeting's archive stops in December 2025, while the home page's
   "Current Bulletin" link to `jppc.net/onlinebulletins/<id>template.pdf` or
   `church-bulletin.org/?id=<id>` names the real channel, the listing (31, 91 and 145). Read the
   file's first page before calling a Wix site a bulletin channel. A Wix `/bulletins` page can
   list its issues oldest first, so `page-pdfs` on it would pick a stale file even when it holds
   a byte-identical copy of the current one: St. Hilary of Poitiers, Rydal's first `_files/ugd`
-  link is 4 January 2026; use the newest-first listing, 160), WordPress
+  link is 4 January 2026; use the newest-first listing, 160). A plain-HTML archive ordered by
+  month then year does the same (St. Ignatius, Yardley's `Bulletins/<yyyy>/Bulletin-<Month>-<dd>-<yyyy>.pdf`,
+  a 10-page text-layer layout of the listing's 12-page image-only issue, not byte-identical but
+  handy for reading the masthead): keep the listing, 245, as the `page-pdfs` channel. WordPress
   bulletin pages (St. Denis `/bulletinandworshipaids/`, St. Andrew, Drexel Hill,
   Holy Innocents, St. Dominic; St. Patrick, Malvern `/bulletin/`, text-layer files
   `wp-content/uploads/<yyyy>/<mm>/<yyyymmdd>B.pdf`, which `page-pdfs` reads and no John Patrick
@@ -322,9 +330,10 @@ listings (2026-10-28). Each batch settles its own rows.
 - **A shared WordPress host that answered HTTP 500 to everyone:** saintfrancescabrini.net,
   annunciationbvmchurch.org, sainthelenaparish.net, scbdh.org and epiphanychurch.church all
   resolve to 69.16.220.73 (nginx) and gave 500 to `probe url` and to Chrome on 2026-10-28. The
-  500s pass: scbdh.org (St. Charles Borromeo, Drexel Hill) answered 200 later that day. Try
-  again later; meanwhile find their John Patrick listings (St. Charles Borromeo, Drexel Hill is
-  220, Annunciation BVM 127).
+  500s pass: scbdh.org (St. Charles Borromeo, Drexel Hill) answered 200 later that day and
+  saintfrancescabrini.net on 2026-10-29, its Parish Bulletin page linking only the jppc template
+  228. Try again later; meanwhile find their John Patrick listings (St. Charles Borromeo, Drexel
+  Hill is 220, Annunciation BVM 127, St. Frances Cabrini 228).
 - **The directory's website can be the wrong site:** the parish school's (Our Lady of Mount
   Carmel, Doylestown: olmcs.org is the school; the bulletin footer gives ourladymtcarmel.org) or
   a Linktree (saintvincents.net -> linktr.ee/svdprichboro, whose bulletin link is the jppc
@@ -333,7 +342,9 @@ listings (2026-10-28). Each batch settles its own rows.
 - **Sites `probe url` can't reach:** retry in the browser (`visit.py`) before concluding
   anything; don't fake a browser user agent in curl, which the sandbox denies (use `probe url`,
   `probe get` or `visit.py`); parish.stnorbert.org answered "RemoteDisconnected" to `probe url` and loaded in
-  Chrome (2026-10-28). A site framed from a Solutio host (stphilspa.com ->
+  Chrome (2026-10-28), holytrinitymorrisville.org answered 403 and loaded in `visit.py`, and
+  stmichaellvt.org gave NO-PARISH-WORDS while `visit.py` followed its redirect to
+  stmichaellvt.com and showed the jppc template 217 link. A site framed from a Solutio host (stphilspa.com ->
   stphil-lans.solutiosoftware.com) answers 403 to `probe url` and `probe get`; `visit.py` shows
   its "Latest Bulletin" link; presbvm.org (Presentation BVM, Solutio) likewise answered 403 and
   loaded in Chrome, its bulletin page linking the John Patrick template beside a stale
@@ -401,23 +412,15 @@ listings (2026-10-28). Each batch settles its own rows.
   Nominatim for both numbers. GCatholic's "first recorded" date can belong to an older, closed
   church of the parish (St. Philip Neri, Pennsburg's 1919.10 is the East Greenville church, not
   the 1968 Pennsburg building). A GCatholic id is not a ZIP: `gcatholic:19096` is Presentation
-  BVM, Cheltenham (19012), not Presentation BVM, Wynnewood (19096).
+  BVM, Cheltenham (19012), not Presentation BVM, Wynnewood (19096). Aggregators are weak
+  evidence for a church's address or status: catholicindex.org is behind Cloudflare, and Church
+  Finder (readable with `visit.py`) gave Sacred Heart, Tullytown an address that GCatholic and OSM
+  don't.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
-
-- A parish site whose Bulletin page links only church-bulletin.org/?id=<n> (St. Andrew, Newtown's eCatholic 37063; St. Martin, New Hope's Wix, whose one home-page PDF is a PREP calendar) makes the listing the channel; keep the eCatholic id out of publication.
-- A parish's own archive can hold a text-layer 10-page copy of the same Sunday as an image-only 12-page listing file (St. Ignatius, Yardley), not byte-identical; if its page lists issues by month rather than newest first, keep the listing as the page-pdfs channel.
-- A bulletin banner address for a second building ('Olde Church', St. Andrew, Newtown) is a venue, not a worship site, unless a Mass box or calendar lists Mass there; older text-layer issues in the listing can be searched for it when the current one is image-only.
-- A shared Parish Life Director can appear on both mastheads (Holy Trinity lists Deacon Teson; St. John's clergy list the same staff) and still be two issues: compare listing ids, page counts, md5 and Mass boxes; a joint CYO is content, not a joint bulletin.
-- saintfrancescabrini.net, which answered 500 in the survey, answered 200 to probe url on 2026-10-29; its Parish Bulletin page links only the John Patrick template 228, so the listing is the channel.
-- A 'Saint X Chapel' under 'Daily Adoration' on a bulletin cover is an adoration chapel (Cabrini's is in the Parish Center, 2 Goble Court): no church row unless a Mass line names it.
-- holytrinitymorrisville.org answers 403 to probe url and loads in visit.py; it links only the jppc template 009 and hosts no bulletins despite an embedded eCatholic id (1047).
-- A directory 'parish' page with only a rectory address and phone, no pastor or Mass, and a records link to another parish is a former or worship-site entry, not a bulletin publisher; its rectory phone can match a neighbouring church's GCatholic phone (Sacred Heart, Tullytown and St. Ann, Bristol: 215-788-2128).
-- stmichaellvt.org gave probe url NO-PARISH-WORDS but visit.py loaded it (redirect to stmichaellvt.com) and showed the jppc template 217 link.
-- Search-engine and aggregator sites (catholicindex.org Cloudflare-blocks; churchfinder.com addresses) are weak evidence for a church's status: a Church Finder address differed from GCatholic's and OSM's.
 
 ## Rules settled for this diocese
 
@@ -448,11 +451,24 @@ Decisions that apply to more than one record, and who made them.
   batch `media-wallingford`, 2026-10-28) A "Chapel" named in a weekday Mass line (St. Helena,
   Blue Bell's Saint Theresa Chapel) is a room of the church's campus, its Masses on the church's
   row, unless the bulletin or site gives it another address. (map batch `blue-bell-norristown`,
-  2026-10-28)
+  2026-10-28) A "Saint X Chapel" under the cover's "Daily Adoration" is an adoration chapel, not
+  a church row, unless a Mass line names it (St. Frances Cabrini, Fairless Hills: its Saint Joseph
+  Chapel is in the Parish Center). A second building's address in the masthead or a footer banner
+  (St. Andrew, Newtown's "Olde Church") is a venue, not a church row, unless a Mass box or
+  calendar lists Mass there; when the current issue is image-only, search the listing's older
+  text-layer issues for it. (map batches `morrisville-fairless-hills` and `newtown-yardley`,
+  2026-10-29)
 - **A Mass one parish staffs at another parish's church is that church's row only.** It
   appears in both bulletins, but it is not a worship site of the staffing parish (St. Rocco's
   Sunday 2:00 PM Spanish Mass at Sacred Heart, Oxford is on Sacred Heart's church row). (map
   batch `southern-chester`, 2026-10-28)
+- **A directory "parish" page with only a rectory address and phone**, no pastor, Mass times or
+  website, and a "where all spiritual records are kept" link to another parish, is a former
+  parish or worship-site entry, not a bulletin publisher: make no parish row, and decide its
+  church as a worship site of the records parish (Sacred Heart of Jesus, Tullytown under St.
+  Mark, Bristol, left `open` until a source gives its Mass or closure). Its rectory phone can be
+  a neighbouring church's (Tullytown's is the one GCatholic gives St. Ann, Bristol). (map batch
+  `bristol-levittown`, 2026-10-29)
 
 ## Log
 
