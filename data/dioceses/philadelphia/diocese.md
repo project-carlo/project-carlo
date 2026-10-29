@@ -293,6 +293,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A Lenni-style eCatholic site (sfdslenni.org, churchofstjosephaston.org) can answer 403 to `probe url` on /bulletins but `probe get` reads it; both archives stopped March 2025, so the John Patrick listing is the channel.
 - One Parish Life Director over two parishes ten km apart (Lenni and Glenolden) still means two bulletins: separate John Patrick listings, files and Mass schedules.
 - A closed parish's 'Worship site of X' line is stale once the directory page of X stops naming it: St. George's and St. Gabriel's own pages now say only 'Merged with ...'.
+- A parish whose John Patrick listing has no editions can publish through ParishesOnline: search the LPi API near its address (probe po <slug>), as the WeConnect site embeds the widget (St. John Fisher, Boothwyn: container 03/1236).
+- A WeConnect/Duda parish site's bulletin page can link a fixed-name PDF (St. Rose, Eddystone: bulletin8.pdf) whose text equals the ParishesOnline container's current issue; the footer code 'Name, Town, PA 04-0708' gives the container, so use the parishes_online row.
+- An empty ParishesOnline organization ('no publications') exists for many parishes whose bulletin is John Patrick's (St. Katharine Drexel, Our Lady of Charity, St. Madeline): it is not a publication id.
+- A relegation of a church that is in no roster (Immaculate Heart of Mary, Chester, decree effective 2024-03-01) is found only on the parish-planning page; check each batch's closed neighbours there for decrees.
 
 ## Rules settled for this diocese
 
