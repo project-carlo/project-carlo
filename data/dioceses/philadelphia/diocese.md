@@ -529,6 +529,11 @@ listings (2026-10-28). Each batch settles its own rows.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin
 publishers here* and *Rules settled*. Every map job reads them.
 
+- A John Patrick listing a lead names by saint can be another parish: id 62 for 'St. Paul' is the Cathedral (19103); St. Paul, 19147 prints on ParishesOnline (po-org:st-paul-church-19147) and has no listing.
+- A ParishesOnline container can hold next Sunday's file on the Thursday (St. Paul, Philadelphia: 20261101B.pdf on 2026-10-29), so fetch:check reports freshness 'future'; read the current Sunday's file for the record.
+- A cover drawing or mission text calling a former parish church one of 'our two churches' (St. Stanislaus, under St. Philip Neri) is not a Mass line: when the bulletin box and the site put every Mass at the main church, leave the site open.
+- A parish site whose bulletin menu links church-bulletin.org/<id>/<date>.pdf for every Sunday (Sacred Heart of Jesus, Philadelphia's Joomla site) hosts nothing: use the listing as the page-pdfs channel.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
