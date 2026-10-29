@@ -11,15 +11,15 @@ longitude: -75.221456
 coordinates_from: osm-node
 name_verified: true
 address_verified: true
-roster: ['worship-sites:st-josaphat-philadelphia']
+roster: ['gcatholic:17525', 'worship-sites:st-josaphat-philadelphia']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-baptist-parish-philadelphia-pa-19127/2026-10-25.pdf
   seen: 2026-10-29
   quote: First Saturday Mass at 8:30 AM; confessions at 8:00 AM.
   note: 'Mass box of the 25 October 2026 issue (page 1): ''Worship Site: St. Josaphat Church (124 Co on
-    St.)'' (the text layer drops the ''tt'' ligature). Page 4: ''FIRST SATURDAY—NOV 7 First Saturday
-    Mass 8:30AM & Novena at St. Josaphat Church: preceded by Confessions at 8:00 AM. Afterwards a Polish
-    American Heritage Association meeting is held''.'
+    St.)'' (the text layer drops the ''tt'' ligature). Page 4: ''FIRST SATURDAY—NOV 7 First Saturday Mass
+    8:30AM & Novena at St. Josaphat Church: preceded by Confessions at 8:00 AM. Afterwards a Polish American
+    Heritage Association meeting is held''.'
 - url: https://archphila.org/parish/st-josaphat-philadelphia/
   seen: 2026-10-28
   quote: 8:30 AM with devotions to St. John Paul II on the 1st Saturday of the month.

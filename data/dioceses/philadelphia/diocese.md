@@ -533,6 +533,9 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A ParishesOnline container can hold next Sunday's file on the Thursday (St. Paul, Philadelphia: 20261101B.pdf on 2026-10-29), so fetch:check reports freshness 'future'; read the current Sunday's file for the record.
 - A cover drawing or mission text calling a former parish church one of 'our two churches' (St. Stanislaus, under St. Philip Neri) is not a Mass line: when the bulletin box and the site put every Mass at the main church, leave the site open.
 - A parish site whose bulletin menu links church-bulletin.org/<id>/<date>.pdf for every Sunday (Sacred Heart of Jesus, Philadelphia's Joomla site) hosts nothing: use the listing as the page-pdfs channel.
+- A pastor shared by three West Philadelphia parishes (Msgr. Britto) still gave three separate bulletins: compare the same-Sunday mastheads and hosts before sharing a row.
+- A WordPress.com site whose 'Weekly Bulletin' menu item links the PDF directly (St. Cyprian) resolves with bare page-pdfs to the wordpress.com mirror; pin 'page-pdfs <site> filename=bulletin_*.pdf'.
+- `coverage --link` rewrites roster lines on records outside your batch; run `git status` after it and report the strays.
 
 ## Rules settled for this diocese
 
