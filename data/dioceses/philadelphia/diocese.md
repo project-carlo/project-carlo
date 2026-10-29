@@ -411,6 +411,10 @@ publishers here* and *Rules settled*. Every map job reads them.
 - A parish site whose Bulletin page links only church-bulletin.org/?id=<n> (St. Andrew, Newtown's eCatholic 37063; St. Martin, New Hope's Wix, whose one home-page PDF is a PREP calendar) makes the listing the channel; keep the eCatholic id out of publication.
 - A parish's own archive can hold a text-layer 10-page copy of the same Sunday as an image-only 12-page listing file (St. Ignatius, Yardley), not byte-identical; if its page lists issues by month rather than newest first, keep the listing as the page-pdfs channel.
 - A bulletin banner address for a second building ('Olde Church', St. Andrew, Newtown) is a venue, not a worship site, unless a Mass box or calendar lists Mass there; older text-layer issues in the listing can be searched for it when the current one is image-only.
+- A shared Parish Life Director can appear on both mastheads (Holy Trinity lists Deacon Teson; St. John's clergy list the same staff) and still be two issues: compare listing ids, page counts, md5 and Mass boxes; a joint CYO is content, not a joint bulletin.
+- saintfrancescabrini.net, which answered 500 in the survey, answered 200 to probe url on 2026-10-29; its Parish Bulletin page links only the John Patrick template 228, so the listing is the channel.
+- A 'Saint X Chapel' under 'Daily Adoration' on a bulletin cover is an adoration chapel (Cabrini's is in the Parish Center, 2 Goble Court): no church row unless a Mass line names it.
+- holytrinitymorrisville.org answers 403 to probe url and loads in visit.py; it links only the jppc template 009 and hosts no bulletins despite an embedded eCatholic id (1047).
 
 ## Rules settled for this diocese
 
