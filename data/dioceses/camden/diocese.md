@@ -292,6 +292,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - accatholic.org (St. Monica, Atlantic City) closes the connection for probe url but loads in the browser; its Parish Bulletin menu links the Bon Venture sponsor page (account 2027), which probe url missed.
 - A GCatholic church of a merged parish that a current schedule omits can be dated closed from a Catholic Star Herald feature (search the REST API for the parish and town); the merger decree posts are scanned images with no text.
 - A summer guide's 'June 29th to Labor Day' note does not make a church seasonal: compare the parish site's off-season schedule (St. Thomas, Brigantine has the same Masses in November).
+- Solutio CMS parish sites (holytrinitydownbeach.org) show their weekend and daily Mass schedule on the home page in visit.py, even when the PDFs behind /news/bulletin/<n>-<date>/file are 403; use it for church Mass times and say no bulletin was read.
+- The sandbox safety check denies a curl with a spoofed browser User-Agent to a bot-blocked bulletin URL; don't try it, read pages with visit.py and leave the bulletin access-blocked with a retry trigger.
+- The per-church John Patrick codes of merged downbeach parishes (501 Ventnor, 504 Margate, 529 Longport) have empty church-bulletin.org listings: a tsv hit is not a live bulletin until the listing shows /bulletin/ editions.
 
 ## Rules settled for this diocese
 
