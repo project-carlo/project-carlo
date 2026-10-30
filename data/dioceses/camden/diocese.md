@@ -340,6 +340,9 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Eastern Catholic churches in GCatholic's territory lists: confirm on the eparchy's own list. Ukrainian: ukrcatholic.org/parishes (www.ukrarcheparchy.us redirects); probe get reads it. Maronite: stmaron.org/directory-of-parishes is JS-filtered, but its alphabetical pages (/parishes-c, -f, -m, -n, -p, -rsv) fetch with plain curl. Their street numbers and zips can differ from GCatholic's. GCatholic can list a church the eparchy no longer does.
+- Eastern church websites on GCatholic (stmichaelscherryhill.com, stnicholasmillville.com, ourladystaroftheeast.org) no longer resolve; don't spend probes on them.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
