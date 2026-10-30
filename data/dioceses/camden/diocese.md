@@ -137,7 +137,8 @@ and verify both.
   Gianna, Northfield 636; St. Thomas, Brigantine 661; St. Joseph the Worker 663; St. Michael,
   Clayton 695; Holy Child, Runnemede 698; Holy Spirit, Mullica Hill 6006; Holy Family, Sewell
   6009; Christ the Good Shepherd, Vineland 6016; St. Joseph, Sea Isle City 6028; Sts. Peter and
-  Paul, Turnersville 6029; Our Lady of the Lakes, Collings Lakes 6045; St. Mary, Gloucester 6049;
+  Paul, Turnersville 6029; Our Lady of the Lakes, Collings Lakes 6045; St. Mary, Gloucester 6049; Cathedral of the Immaculate Conception, Camden 606; Sacred Heart,
+  Camden 6039; St. Rose of Lima, Haddon Heights 646 (row on eCatholic, below);
   St. Teresa of Calcutta and Christ Our Light, ids not read). New Jersey ids
   run in the 500s–600s and 6000s.
   Plain curl `-L` on the template URL lands on the listing (checked for 502, 636, 6006 and 6028).
@@ -156,7 +157,9 @@ and verify both.
   (duckduckgo.com/html through `probe get`, which is how St. Teresa of Calcutta's, Christ Our
   Light's, `christ-our-light-cherry-hill-nj-08034`, and Our Lady of the Lakes', whose
   lakescatholic.com refuses both `probe` and the browser, were found; `church-bulletin.org/<code>`
-  then confirms it). A printer's code also shows in an issue's back-page footer and PDF title,
+  then confirms it). When the parish's own site is dead or an empty template, search `<parish>
+  <street> bulletin`: it can surface both the listing and the parish's real site (Sacred Heart,
+  Camden's 6039 and sacredheartofcamden.com). A printer's code also shows in an issue's back-page footer and PDF title,
   and as the prefix of a parish's own file names (Holy Child's
   `698…`), and `church-bulletin.org/?id=<code>` redirects to the listing. The listing beats a
   parish's own copy when that copy lags, by weeks or years (Holy Child's page stopped at 13
@@ -217,8 +220,16 @@ and verify both.
   publisher instead, and an eCatholic copy can lag its printer's by weeks: St. Mary of Mount
   Carmel, Hammonton's (33982) `/bulletins` stopped at 6 September and its "this week" at 4
   October while its Bon Venture page had 1 November (2026-10-29). Compare the newest eCatholic
-  issue with the parish's Bon Venture or John Patrick listing before taking `ecatholic:<id>`. Their `/mass-times` page has the
-  schedule; the bulletin masthead lists the churches with addresses, which can differ from
+  issue with the parish's Bon Venture or John Patrick listing before taking `ecatholic:<id>`.
+  St. Rose of Lima is printed by John Patrick (646, in its back-page footer) and posts the same
+  issues on eCatholic, current to the past Sunday; its row keeps `ecatholic:35649` with the
+  listing, a week ahead because it posts before the Sunday, as a fallback (map batch
+  `gloucester-bellmawr-haddon-heights`). This conflicts with the John Patrick bullet, where the
+  listing beats a parish copy that runs a week behind (Notre Dame de la Mer's row is on its
+  listing); until it is settled, either choice passes `fetch:check`. Their `/mass-times` page has the
+  schedule, and the staff page the priests' roles, which a bulletin grep doesn't give (St. Rose's
+  bulletin prints 'Rev. Francis Kim' apart from 'Father Dave Grover-Pastor'; the staff page makes
+  Kim a parochial vicar); the bulletin masthead lists the churches with addresses, which can differ from
   GCatholic's by street number (St. Clare's Gibbstown church: 320 vs 313 Memorial Ave.).
 - **Self-hosted and other platforms:** Wix (Our Lady of Perpetual Help, Galloway: one
   `_files/ugd/` PDF replaced weekly that can lag a Sunday or more, 18 October on 29 October;
@@ -256,17 +267,23 @@ and verify both.
   `/bulletin/<n>-<date>/file` or `/home/bulletins/<id>-<date>/file`, with no `.pdf`, and answer
   403 to plain fetches: `fetch:check` finds no PDF links or says `resolve_failed` under any
   recipe, and `probe pdf` gets 403. Both parishes' issues are on church-bulletin.org (John
-  Patrick, above); look there first. Holy Trinity, Downbeach (holytrinitydownbeach.org,
-  `/news/bulletin/<n>-<date>/file`) has no live listing, so its row stays `access-blocked`; its
-  home page in `visit.py` still shows the weekend and daily Mass schedule by church: use that
-  for Mass times and say no bulletin was read.
+  Patrick, above); look there first. With no live listing (Holy Trinity, Downbeach,
+  holytrinitydownbeach.org `/news/bulletin/<n>-<date>/file`; Holy Cross, Bridgeton,
+  parishholycross.org `/bulletin/<n>-<date>/file`), `visit.py` still shows the bulletin list,
+  the per-church pages (`/churches/<id>-<name>`, with Mass times), the home page's weekend and
+  daily schedule by church and the staff page, but the `/file` PDFs answer 403 to `probe get`,
+  `render.py` and `fetch:check`: map the churches from those pages, record the row
+  `access-blocked` and say no bulletin was read. `visit.py` on a Solutio home page can hang past
+  its 300 s timeout while `/bulletin` and `/our-churches` load in seconds: go straight to the
+  subpages.
 - **Sites `probe url` couldn't read (2026-10-29):** 403 to `probe url`: holytrinitydownbeach.org
   (loads in the browser, bulletin at `/news/bulletin`), christourlight.net (browser:
-  `/home/bulletins`), parishholycross.org (the browser run failed; retry), lakescatholic.com
+  `/home/bulletins`), parishholycross.org (Solutio, above: open
+  its subpages, not the home page), lakescatholic.com
   (the browser too; its bulletin is John Patrick 6045),
   stteresaofcalcuttanj.org, churchofscb.org (where saint-charles-borromeo.org redirects).
-  JavaScript-rendered (NO-PARISH-WORDS): ladystarofthesea.org, sacredheartcamden.org,
-  stanthonycamden.org, stjoenj.net. Use parish-site-access `visit.py` and `render.py` and
+  JavaScript-rendered (NO-PARISH-WORDS): ladystarofthesea.org, stjoenj.net (sacredheartcamden.org
+  and stanthonycamden.org are dead: below). Use parish-site-access `visit.py` and `render.py` and
   `fetch:check` only. A frameset site returns a few-hundred-byte shell to `probe url`
   (saintmichael-archangel.com frames psmarectory.wixsite.com/psma): `visit.py` renders the framed
   site and its bulletin link. ladystarofthesea.org (Our Lady Star of the Sea, Cape May) is a
@@ -286,7 +303,9 @@ and verify both.
   parishofstmichaelthearchangel.org, and the Eastern sites stmichaelscherryhill.com,
   stnicholasmillville.com, ourladystaroftheeast.org. **parishofstmichaelthearchangel.com** (the directory's, St. Michael, Clayton)
   redirects to a spam site (thestudiotrack.com), and **stelizabethannseton.com** (GCatholic's
-  for Seton) lands on an ISP's unsafe-site warning: don't store either. Moved:
+  for Seton) lands on an ISP's unsafe-site warning, **stanthonycamden.org** (GCatholic's for St. Anthony of
+  Padua, Camden) serves a spam page and **sacredheartcamden.org** is an empty template: don't
+  store any of them. Moved:
   stjosephtheworker.net → sjwparish.net; saint-charles-borromeo.org → churchofscb.org;
   stjosephsomerspoint.com → stjosephsomerspoint.org;
   notredamedelamer.org/notredame/ answers 404 (try the bare domain); acswebnetworks.com/incarnation
@@ -321,17 +340,6 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- When a parish's own site is dead or an empty template and no jppc id is known, a DuckDuckGo search for '<parish> <street> bulletin' surfaced its church-bulletin.org listing and the real parish site (Sacred Heart, Camden: JP 6039, sacredheartofcamden.com); `church-bulletin.org/<id>` then confirms it. Its own site's bulletin page lagged the listing by a week.
-- GCatholic's website for St. Anthony of Padua, Camden (stanthonycamden.org) now serves a spam page, and sacredheartcamden.org is an empty template; don't store either. The Pro-Cathedral's parish bulletin covers both its churches.
-- A GCatholic monastery/shrine chapel that the diocese's own news reports closed is excluded closed with last_mass from that article (Monastery of the Perpetual Rosary, Camden: final public Mass 2013-12-09, camdendiocese.org); parish records can't carry a `roster` field, so roster links go on the church records.
-- A worship site missing from a merged parish's weekly bulletin may still hold a regular ethnic-apostolate Mass: search the Catholic Star Herald REST posts and the Bishop's Schedule for the church's name before filing it open or closed (St. Francis de Sales, Barrington: Igbo Catholic Apostolate, third Sunday noon).
-- The diocese's relegation decrees are posts on camdendiocese.org (REST /wp-json/wp/v2/search?search=relegation): 'Decree of the Relegation of the Formerly Used Mary, Mother of the Church' (2021-04-19) dates a closure the bulletins don't. The 2014 consolidation decree PDFs (images/pastoral_planning/...) answer 404.
-- A parish's own staff page, not a bulletin grep, gives its pastor roles: St. Rose's bulletin carries 'Rev. Francis Kim' and 'Father Dave Grover-Pastor' in separate places; the staff page lists Kim as parochial vicar.
-- John Patrick prints St. Rose of Lima, Haddon Heights (646) but the parish also posts the same issues on its eCatholic site (35649), so the row uses ecatholic; the JP listing runs about a week ahead of the eCatholic copy.
-- Solutio CMS sites (parishholycross.org, holytrinitydownbeach.org) show their /bulletin list and per-church pages (/churches/<id>-<name>, with Mass times) in visit.py but 403 the /file PDFs to probe get, render.py and fetch:check; map them from church pages and the staff page and record the bulletin access-blocked.
-- visit.py on a Solutio site's home page can hang past a 300 s timeout while its /bulletin and /our-churches subpages load in seconds: go straight to subpages.
-- A GCatholic 'St. Mary, Bridgeton' at 732 Morton Ave. is the former St. Mary, Rosenhayn: the 2010 decree post (camdendiocese.org, search 'Holy Cross') names the uniting parishes, a quick check for mailing-address vs place-name differences.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -340,11 +348,11 @@ Decisions that apply to more than one record, and who made them.
 - A merger decree ends a parish, not a church. A former parish church of a merged parish keeps a church row under the merged parish when its current bulletin or Mass schedule lists Mass there; it is excluded closed only on a source that says so (relegation decree, sale, or the bulletin's last Mass), with last_mass. A church a current source calls 'currently not open' (St. Bernard, Dorothy) goes in open/ with a revisit, not closed. (accepted by survey-review, 002-survey-review, 2026-10-29)
 - The Korean Catholic missions (St. Andrew Kim, Absecon; St. Yi Yun Il) are Latin and diocesan, not other-jurisdiction: a church row under the parish whose bulletin lists their Mass, a parish row of their own if they publish a readable bulletin, otherwise excluded no-bulletin (README Settled policy 4). (accepted by survey-review, 002-survey-review, 2026-10-29)
 - A seasonal shore church keeps its church row with a dated revisit for its next season (Wilmington's rule); the summer guide's season notes are checked against an off-season bulletin before a church is called seasonal (St. Casimir, Woodbine; St. Agnes, Cape May Point; St. Thomas, Brigantine's 'June 29th to Labor Day' schedule). The off-season proof is an off-season bulletin's masthead ('Masses celebrated Memorial Day-Labor Day', St. Casimir, Woodbine) or the parish's own Mass page headed 'Winter Schedule' with a no-Mass line ('No Mass at St. Elizabeth from October through the end of April', Our Lady of the Angels; 'NO MASS AT ST. AGNES', Our Lady Star of the Sea); the summer guide gives no season dates, so take the dates from that source and set `revisit_after` just after the season opens (just past Memorial Day, or the parish's own summer-schedule start). The same winter page and bulletin show which churches are year-round: there the summer guide's times are only the summer additions (St. Damien, Ocean City). (accepted by survey-review, 002-survey-review, 2026-10-29; extended by map batches `ocean-city-marmora-sea-isle`, `avalon-court-house` and `wildwood-cape-may`, 2026-10-29)
-- Monastery and shrine chapels (Monastery of the Perpetual Rosary, Camden; Our Lady of the Highway, Sea and Air, Pomona) follow Philadelphia's rule: a church row under a parish whose bulletin lists their public Mass, a parish row if they publish their own bulletin, otherwise excluded no-public-mass or no-bulletin. A GCatholic 'Mission of' a parish whose bulletin has no Mass line for it is excluded no-public-mass, with the bulletin pages searched and the absence described in research (Our Lady of the Highway, Sea and Air, Pomona). (accepted by survey-review, 002-survey-review, 2026-10-29; extended by map batch `galloway-absecon`, 2026-10-29)
+- Monastery and shrine chapels (Monastery of the Perpetual Rosary, Camden; Our Lady of the Highway, Sea and Air, Pomona) follow Philadelphia's rule: a church row under a parish whose bulletin lists their public Mass, a parish row if they publish their own bulletin, otherwise excluded no-public-mass or no-bulletin. A GCatholic 'Mission of' a parish whose bulletin has no Mass line for it is excluded no-public-mass, with the bulletin pages searched and the absence described in research (Our Lady of the Highway, Sea and Air, Pomona). One the diocese's own news reports closed is excluded closed with `last_mass` from that article (Monastery of the Perpetual Rosary, Camden: final public Mass 2013-12-09, camdendiocese.org). (accepted by survey-review, 002-survey-review, 2026-10-29; extended by map batches `galloway-absecon` and `camden-city`, 2026-10-29)
 - A shared pastor is not a shared bulletin. Parishes whose masthead names one priest as pastor of one and administrator of the other keep separate parish rows when each publishes its own bulletin with its own masthead and Mass times (St. Mary, Cherry Hill, LPi 04/0346, and St. Thomas More, Cherry Hill, John Patrick 632: Rev. Michael J. Matveenko). The 2025–2026 assignments name pastors only, so read both mastheads before calling two parishes one. (map batch `cherry-hill`, 2026-10-29)
 - A merged parish's churches come from its current bulletin's masthead, not the rosters: a church the masthead lists with Mass gets a church row even when no roster has it (Our Lady of Guadalupe's St. Luke, Stratford; GCatholic and the directory list only Lindenwold), and `coverage` will show it as in no roster. Read the masthead's whole address block and Mass-schedule column on page 1, and the parish's own Mass-schedule page (Divine Mercy, Vineland's Spanish-Mass Immaculate Heart of Mary; Our Lady of the Blessed Sacrament's four churches, where the rosters have the seat only). A new daily-Mass chapel on a parish's campus is a church row of its own (Saint John Bosco Chapel, All Saints, Millville); when the bulletin says only 'in the chapel', the parish home page names it. A church named only in a bulletin's Sanctuary Lights or intentions is not a place of Mass: read the parish's own page for it before counting it (St. Martin de Porres, Hammonton, excluded closed). Nor is every building on a parish's 'Places of Worship' page: one the bulletin lists only under 'OPEN FOR PRIVATE PRAYER' (usually on the devotions page) and the page 1 Mass schedule omits is excluded no-public-mass (Sacred Heart, Avalon). (map batch `runnemede-blackwood-lindenwold`, 2026-10-29; extended by map batches `vineland`, `millville-newfield`, `hammonton-mays-landing` and `avalon-court-house`, 2026-10-29)
-- Before filing a merged parish's former church in open/ or closed, read the merger's establishment decree: the 2009–2011 decrees name the worship sites the new parish keeps, so they show which former churches had already stopped being worship sites. They are on camdendiocese.org (`/wp-json/wp/v2/search?search=<word>`, then `/wp-json/wp/v2/posts/<id>` for the content; e.g. `/082710-decrees-issued-establishing-two-new-parishes/`) and in the Catholic Star Herald's decree posts. (map batches `woodbury-paulsboro` and `salem-county-mullica-hill`, 2026-10-29)
-- A GCatholic church of a merged parish that the current bulletin and Mass schedule omit is dated closed from a Catholic Star Herald article (its REST search on the parish and the town), with the article's merger plan for the worship sites the parish kept, when no decree text names them: the 2015 Atlantic City decree on the Star Herald is a scanned image with no text (St. Monica, Atlantic City: 'has been closed', 2024-11-21; the 2015-06-11 merger article names the two churches kept). With no closing date found, `closed` rests on the article and the bulletin's absence. (map batch `atlantic-city-brigantine`, 2026-10-29)
+- Before filing a merged parish's former church in open/ or closed, read the merger's establishment decree: the 2009–2011 decrees name the worship sites the new parish keeps, so they show which former churches had already stopped being worship sites. They are on camdendiocese.org (`/wp-json/wp/v2/search?search=<word>`, then `/wp-json/wp/v2/posts/<id>` for the content; e.g. `/082710-decrees-issued-establishing-two-new-parishes/`) and in the Catholic Star Herald's decree posts. A decree's list of uniting parishes also untangles a GCatholic place name that is only a mailing address (its 'St. Mary, Bridgeton' at 732 Morton Ave. is the former St. Mary, Rosenhayn, in the 2010 Holy Cross decree). Later closures have relegation decrees, also posts there (`search=relegation`; 'Decree of the Relegation of the Formerly Used Mary, Mother of the Church', 2021-04-19), which date a closure the bulletins don't. The 2014 Camden County consolidation decree PDFs (`images/pastoral_planning/…`) answer 404: use the 2014 Star Herald and camdendiocese.org articles. (map batches `woodbury-paulsboro` and `salem-county-mullica-hill`, 2026-10-29; extended by map batches `gloucester-bellmawr-haddon-heights` and `bridgeton`, 2026-10-29)
+- A GCatholic church of a merged parish that the current bulletin and Mass schedule omit is dated closed from a Catholic Star Herald article (its REST search on the parish and the town), with the article's merger plan for the worship sites the parish kept, when no decree text names them: the 2015 Atlantic City decree on the Star Herald is a scanned image with no text (St. Monica, Atlantic City: 'has been closed', 2024-11-21; the 2015-06-11 merger article names the two churches kept). With no closing date found, `closed` rests on the article and the bulletin's absence. Before filing such a church open or closed, search the Star Herald's REST posts and the Bishop's Schedule for its name: a regular ethnic-apostolate Mass the weekly bulletin never lists keeps it a church of the parish (St. Francis de Sales, Barrington: the Igbo Catholic Apostolate, third Sunday at noon, a church row of St. Rose of Lima; the batch flagged that choice for review). (map batch `atlantic-city-brigantine`, 2026-10-29; extended by map batch `gloucester-bellmawr-haddon-heights`, 2026-10-29)
 
 ## Log
 
