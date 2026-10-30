@@ -151,6 +151,14 @@ output in `scratch/metuchen-map-1/001-survey/`):
   22511) and saintthomasob.com (St. Thomas, Old Bridge) both serve parish pages but were flagged.
   Read them before treating either as squatted.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- A site's bulletin page can link only HTML viewer pages wrapping the PDF (Immaculate Motherhood LLC sites: bulletin-view?f=<name>, PDF at /bulletins/file/<name>); fetch:check guesses the wrong edition and none of the pinned recipes read it. Look for the file path in the viewer page's HTML.
+- A parish can publish its bulletin as an HTML page with no PDF (St. Stephen, South River); fetch:check reports 'No PDF links found'.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
