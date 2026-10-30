@@ -304,6 +304,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick listing with no edition can still be the parish's printer number: the bulletin footer ('#562 St. Ann - P.1') carries it while the issues sit on a Bon Venture page linked from the homepage's 'Weekly Bulletin' (St. Ann, Lawrenceville, 11520); read the homepage links before treating the empty listing as a dead bulletin.
 - A site that answers 403 to probe url can still show its bulletin only through the browser (churchofsaintann.net); its eCatholic /bulletins can be frozen years back (October 2021) while the homepage link goes to Bon Venture.
 - A language community's 'parish' on the finder or GCatholic (Korean Martyrs) can worship in another parish's church and have its Masses listed in the host parish's bulletin: link all its roster entries to that one church row.
+- A merged parish's second church can keep the old parish's name on directories: Sacred Heart's Holy Cross Church is GCatholic's 'Divine Mercy' (201 vs 233 Adeline St) and Discover Mass's 'Divine Mercy (Holy Cross)'; match a GCatholic 'dead' parish to the host's bulletin masthead (two churches named there) before excluding it, using shared phone and the old bulletin header.
+- The Monitor's 2017-2018 merger stories carry the 2019-07-29 migration date; take the event date from the body (a 'June 24' last Sunday Mass) and check the weekday (24 June 2018 was a Sunday) against the decisions' deadline.
+- A ParishesOnline masthead can print the church's street number apart from the parish office's (Incarnation 1555 vs office 1545 Pennington Rd) and a church can sit beside a religious community's house (St. James, 29 vs 11 East Paul Ave: OSM names 29 Holy Trinity Novitiate): record both and leave address_verified false.
+- A parish's own Bulletins archive can lag its John Patrick listing by months (St. Hedwig: site ends 19 July 2026, listing has 1 Nov): read the listing.
 
 ## Rules settled for this diocese
 
