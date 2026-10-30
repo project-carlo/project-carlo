@@ -328,6 +328,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - The diocese's relegation decrees are posts on camdendiocese.org (REST /wp-json/wp/v2/search?search=relegation): 'Decree of the Relegation of the Formerly Used Mary, Mother of the Church' (2021-04-19) dates a closure the bulletins don't. The 2014 consolidation decree PDFs (images/pastoral_planning/...) answer 404.
 - A parish's own staff page, not a bulletin grep, gives its pastor roles: St. Rose's bulletin carries 'Rev. Francis Kim' and 'Father Dave Grover-Pastor' in separate places; the staff page lists Kim as parochial vicar.
 - John Patrick prints St. Rose of Lima, Haddon Heights (646) but the parish also posts the same issues on its eCatholic site (35649), so the row uses ecatholic; the JP listing runs about a week ahead of the eCatholic copy.
+- Solutio CMS sites (parishholycross.org, holytrinitydownbeach.org) show their /bulletin list and per-church pages (/churches/<id>-<name>, with Mass times) in visit.py but 403 the /file PDFs to probe get, render.py and fetch:check; map them from church pages and the staff page and record the bulletin access-blocked.
+- visit.py on a Solutio site's home page can hang past a 300 s timeout while its /bulletin and /our-churches subpages load in seconds: go straight to subpages.
+- A GCatholic 'St. Mary, Bridgeton' at 732 Morton Ave. is the former St. Mary, Rosenhayn: the 2010 decree post (camdendiocese.org, search 'Holy Cross') names the uniting parishes, a quick check for mailing-address vs place-name differences.
 
 ## Rules settled for this diocese
 
