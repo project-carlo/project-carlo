@@ -23,6 +23,51 @@ evidence:
   quote: http://sponsors.bonventure.net/?page=2078
   note: The parish's own site (the directory's website) links the Bon Venture page from its Bulletin menu
     entry; its only other bulletin link is thekidsbulletin.com, a children's bulletin.
+publication_reviews:
+- parish: st-mary-of-mount-carmel-hammonton
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2078/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names St. Elizabeth Ann Seton, 591 New Jersey Avenue,
+      Absecon, alone, with its own Mass schedule.
+  - url: http://sponsors.bonventure.net/pdfs/4219/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead lists St. Joseph Church, 226 French St., and St.
+      Anthony of Padua Church, 285 Rte. 206, Hammonton, with Rev. James King, Pastor.
+- parish: st-vincent-de-paul-mays-landing
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2078/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names St. Elizabeth Ann Seton, 591 New Jersey Avenue,
+      Absecon, alone, with its own Mass schedule.
+  - url: http://sponsors.bonventure.net/pdfs/2080/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Vincent de Paul, 5021
+      Harding Highway, Mays Landing, with Rev. John W March, Pastor.
+- parish: the-parish-of-saint-monica
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2078/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names St. Elizabeth Ann Seton, 591 New Jersey Avenue,
+      Absecon, alone, with its own Mass schedule.
+  - url: http://sponsors.bonventure.net/pdfs/2027/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Monica, Our Lady Star
+      of the Sea, 2651 Atlantic Avenue, Atlantic City, with its own Mass schedule.
+- parish: st-simon-stock-berlin
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2078/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names St. Elizabeth Ann Seton, 591 New Jersey Avenue,
+      Absecon, alone, with its own Mass schedule.
+  - url: http://sponsors.bonventure.net/pdfs/2221/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Saint Simon Stock Parish, 178 W. White Horse
+      Pike, Berlin, with Rev. Michael A. de Leon, A.M., Pastor.
 ---
 
 ## Publisher

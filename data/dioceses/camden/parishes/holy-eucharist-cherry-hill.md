@@ -23,6 +23,51 @@ evidence:
   quote: Holy Eucharist Parish
   note: 'probe url: the parish site (directory and GCatholic website) is alive and links http://sponsors.bonventure.net/?page=2088
     as its bulletin source.'
+publication_reviews:
+- parish: st-elizabeth-ann-seton-absecon
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2088/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Holy Eucharist Parish, 344 Kresson Road, Cherry
+      Hill, alone.
+  - url: http://sponsors.bonventure.net/pdfs/2078/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names St. Elizabeth Ann Seton, 591 New Jersey Avenue,
+      Absecon, alone, with its own Mass schedule.
+- parish: st-mary-of-mount-carmel-hammonton
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2088/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Holy Eucharist Parish, 344 Kresson Road, Cherry
+      Hill, alone.
+  - url: http://sponsors.bonventure.net/pdfs/4219/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead lists St. Joseph Church, 226 French St., and St.
+      Anthony of Padua Church, 285 Rte. 206, Hammonton, with Rev. James King, Pastor.
+- parish: st-vincent-de-paul-mays-landing
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2088/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Holy Eucharist Parish, 344 Kresson Road, Cherry
+      Hill, alone.
+  - url: http://sponsors.bonventure.net/pdfs/2080/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Vincent de Paul, 5021
+      Harding Highway, Mays Landing, with Rev. John W March, Pastor.
+- parish: the-parish-of-saint-monica
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2088/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Holy Eucharist Parish, 344 Kresson Road, Cherry
+      Hill, alone.
+  - url: http://sponsors.bonventure.net/pdfs/2027/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Monica, Our Lady Star
+      of the Sea, 2651 Atlantic Avenue, Atlantic City, with its own Mass schedule.
 ---
 
 ## Publisher

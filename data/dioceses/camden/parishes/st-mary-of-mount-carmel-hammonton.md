@@ -31,6 +31,40 @@ evidence:
   seen: 2026-10-29
   quote: Sunday Masses ended in January 2013 and all services at the church ended in October 2013
   note: 'The parish''s own page for the third merged church: it closed and was sold in 2016.'
+publication_reviews:
+- parish: st-vincent-de-paul-mays-landing
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4219/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead lists St. Joseph Church, 226 French St., and St.
+      Anthony of Padua Church, 285 Rte. 206, Hammonton, with Rev. James King, Pastor.
+  - url: http://sponsors.bonventure.net/pdfs/2080/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Vincent de Paul, 5021
+      Harding Highway, Mays Landing, with Rev. John W March, Pastor.
+- parish: the-parish-of-saint-monica
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4219/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead lists St. Joseph Church, 226 French St., and St.
+      Anthony of Padua Church, 285 Rte. 206, Hammonton, with Rev. James King, Pastor.
+  - url: http://sponsors.bonventure.net/pdfs/2027/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Monica, Our Lady Star
+      of the Sea, 2651 Atlantic Avenue, Atlantic City, with its own Mass schedule.
+- parish: st-simon-stock-berlin
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4219/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead lists St. Joseph Church, 226 French St., and St.
+      Anthony of Padua Church, 285 Rte. 206, Hammonton, with Rev. James King, Pastor.
+  - url: http://sponsors.bonventure.net/pdfs/2221/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Saint Simon Stock Parish, 178 W. White Horse
+      Pike, Berlin, with Rev. Michael A. de Leon, A.M., Pastor.
 ---
 
 ## Publisher

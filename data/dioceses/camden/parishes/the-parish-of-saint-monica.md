@@ -40,6 +40,18 @@ evidence:
     meeting space. The other two church properties will become the property of the new parish, which will
     determine their future use.'''
 bulletin_status: available
+publication_reviews:
+- parish: st-simon-stock-berlin
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2027/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Monica, Our Lady Star
+      of the Sea, 2651 Atlantic Avenue, Atlantic City, with its own Mass schedule.
+  - url: http://sponsors.bonventure.net/pdfs/2221/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Saint Simon Stock Parish, 178 W. White Horse
+      Pike, Berlin, with Rev. Michael A. de Leon, A.M., Pastor.
 ---
 
 ## Publisher

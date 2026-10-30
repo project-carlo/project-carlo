@@ -32,6 +32,29 @@ evidence:
   quote: will unite into one parish, the Parish of St. Vincent de Paul on November 3, 2010
   note: 'Diocese, 2010-10-01: St. Vincent de Paul in Mays Landing and St. Bernard Mission in Dorothy unite
     into one parish, one pastor.'
+publication_reviews:
+- parish: the-parish-of-saint-monica
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2080/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Vincent de Paul, 5021
+      Harding Highway, Mays Landing, with Rev. John W March, Pastor.
+  - url: http://sponsors.bonventure.net/pdfs/2027/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Monica, Our Lady Star
+      of the Sea, 2651 Atlantic Avenue, Atlantic City, with its own Mass schedule.
+- parish: st-simon-stock-berlin
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2080/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names the Parish of Saint Vincent de Paul, 5021
+      Harding Highway, Mays Landing, with Rev. John W March, Pastor.
+  - url: http://sponsors.bonventure.net/pdfs/2221/2026-11-01.pdf
+    seen: 2026-10-29
+    note: The 1 November 2026 issue's page 1 masthead names Saint Simon Stock Parish, 178 W. White Horse
+      Pike, Berlin, with Rev. Michael A. de Leon, A.M., Pastor.
 ---
 
 ## Publisher

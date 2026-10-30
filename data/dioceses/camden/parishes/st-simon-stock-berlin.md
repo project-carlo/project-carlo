@@ -3,7 +3,7 @@ name: St. Simon Stock Parish
 website: https://www.stsimonstock.net/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=2221
-publication: ['url:http://sponsors.bonventure.net/?page=2221#bonventure-2221']
+publication: ['url:http://sponsors.bonventure.net/?page=2221#bon-venture-2221']
 group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/2221/2026-11-01.pdf
