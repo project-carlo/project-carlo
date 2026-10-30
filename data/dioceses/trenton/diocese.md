@@ -248,6 +248,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site's eCatholic id can be only the site host when its Bulletins page links church-bulletin.org/<id>/<date>.pdf (Holy Cross 37867): record the John Patrick listing, not the ecatholic id, as the publication.
 - A parish site's footer address can be the office, not the church (Oratory, Red Bank: 27 Oratory Way vs the church at 121 Bridge Ave); read the staff/contact page before calling it a disagreement.
 - OSM's named node can be off by hundreds of metres (Nativity, Fair Haven: 750 m); compare GCatholic's Plus Code with the finder's pin before trusting it.
+- A parish's own eCatholic /bulletins page can serve the same PDF as its John Patrick listing (St. Catharine-St. Margaret, files.ecatholic.com/30561 vs church-bulletin.org 513: identical md5 for the same Sunday); compare md5 and take the channel with the latest issue, keeping ecatholic:<id> in publication.
+- A parish's moved domain can hide its current bulletin: churchofstdenis.org redirects to stdenischurchnj.org whose Archived Bulletins page stops at Oct 2025, while the homepage's 'currentbulletin' image links Bon Venture 2095; grep the homepage HTML for sponsors.bonventure.net before calling a Joomla archive current.
+- Bon Venture PDFs live at sponsors.bonventure.net/pdfs/<page>/<yyyy-mm-dd>.pdf and the coming Sunday's is often not posted yet (404): probe the latest date on the sponsor page, not today's Sunday.
+- To date a GCatholic chapel's seasonality, grep winter issues (Jan-Mar) of the parish bulletin for its Mass line: Star of the Sea Beach Chapel's Sunday 10 AM Mass is in all of them, so it is year-round.
 
 ## Rules settled for this diocese
 
