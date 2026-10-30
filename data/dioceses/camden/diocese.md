@@ -321,6 +321,10 @@ and verify both.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- When a parish's own site is dead or an empty template and no jppc id is known, a DuckDuckGo search for '<parish> <street> bulletin' surfaced its church-bulletin.org listing and the real parish site (Sacred Heart, Camden: JP 6039, sacredheartofcamden.com); `church-bulletin.org/<id>` then confirms it. Its own site's bulletin page lagged the listing by a week.
+- GCatholic's website for St. Anthony of Padua, Camden (stanthonycamden.org) now serves a spam page, and sacredheartcamden.org is an empty template; don't store either. The Pro-Cathedral's parish bulletin covers both its churches.
+- A GCatholic monastery/shrine chapel that the diocese's own news reports closed is excluded closed with last_mass from that article (Monastery of the Perpetual Rosary, Camden: final public Mass 2013-12-09, camdendiocese.org); parish records can't carry a `roster` field, so roster links go on the church records.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
