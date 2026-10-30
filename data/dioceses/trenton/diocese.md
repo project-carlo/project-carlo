@@ -301,6 +301,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - A John Patrick listing can carry the coming Sunday's issue (image-only) while the parish's own eCatholic site still holds the current text-layer issue; pick the eCatholic row when its newest file is the Sunday just passed, and keep the listing in publication (St. Paul, Princeton).
 - A parish's printed street number can differ from the finder's and GCatholic's (216 vs 214 Nassau St); check OSM's named place_of_worship by nominatim for each number before choosing.
+- A John Patrick listing with no edition can still be the parish's printer number: the bulletin footer ('#562 St. Ann - P.1') carries it while the issues sit on a Bon Venture page linked from the homepage's 'Weekly Bulletin' (St. Ann, Lawrenceville, 11520); read the homepage links before treating the empty listing as a dead bulletin.
+- A site that answers 403 to probe url can still show its bulletin only through the browser (churchofsaintann.net); its eCatholic /bulletins can be frozen years back (October 2021) while the homepage link goes to Bon Venture.
+- A language community's 'parish' on the finder or GCatholic (Korean Martyrs) can worship in another parish's church and have its Masses listed in the host parish's bulletin: link all its roster entries to that one church row.
 
 ## Rules settled for this diocese
 
