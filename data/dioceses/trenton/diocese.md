@@ -285,6 +285,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick PDF whose text layer is font-garbled (St. Vincent de Paul, 1 Nov 2026) returns glyph codes, not words, and floods the context: use `--grep` first, and render page 1 with render.py. Older issues can be readable, and one carried a stale 2019 date from its template next to the real one.
 - The finder's website for a parish can fail TLS in every client (svdpnj.org: hostname mismatch, also in the browser, also over http); use the printer's listing as the row's website and record an access-blocked research item with a retry trigger.
 - Slugs for common saint names collide with other dioceses' live rows (st-john-the-baptist-allentown is Allentown, PA): run `diocese search` and add the state or -nj.
+- A joint-masthead John Patrick listing can be image-only in every recent issue (Hopewell Valley 547): render pages 1-4 for masthead, directory and per-church Mass times; fetch:check then reports identity 'unverified' and freshness 'future' for the coming Sunday, which is expected.
+- When one eCatholic site answers on every member parish's own domain (Hopewell Valley, id 22670), the row's website can be the domain printed on the bulletin masthead; the eCatholic /bulletins page may lag the printer's listing by a week, with the same Sunday byte-identical.
 
 ## Rules settled for this diocese
 
