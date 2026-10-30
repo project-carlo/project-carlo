@@ -262,6 +262,10 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Joomla weblinks lists (Epiphany, Brick; Camden saw the same) hold no PDF hrefs: every entry is a task=weblink.go link that 301s to the PDF. No existing recipe collects them, and unpinned fetch:check picks an unrelated PDF such as ministers.pdf. Find the newest by `curl -I` on the last entry.
+- A parish site's eCatholic id (St. Peter, Point Pleasant Beach 35377) may be host only: its 'Bulletins' link goes to Bon Venture (page 2097). Record the Bon Venture page, not the eCatholic id.
+- A bulletin cover that credits Bon Venture Services (Epiphany) shows the printer, not a Bon Venture sponsor-page channel: its PDFs may still be self-hosted.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
