@@ -252,6 +252,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish's moved domain can hide its current bulletin: churchofstdenis.org redirects to stdenischurchnj.org whose Archived Bulletins page stops at Oct 2025, while the homepage's 'currentbulletin' image links Bon Venture 2095; grep the homepage HTML for sponsors.bonventure.net before calling a Joomla archive current.
 - Bon Venture PDFs live at sponsors.bonventure.net/pdfs/<page>/<yyyy-mm-dd>.pdf and the coming Sunday's is often not posted yet (404): probe the latest date on the sponsor page, not today's Sunday.
 - To date a GCatholic chapel's seasonality, grep winter issues (Jan-Mar) of the parish bulletin for its Mass line: Star of the Sea Beach Chapel's Sunday 10 AM Mass is in all of them, so it is year-round.
+- St. Elizabeth Ann Seton, Whiting has no John Patrick listing: its Solutio site's 'Bulletins' link goes to Bon Venture 2166 (sponsors.bonventure.net/pdfs/2166/<date>.pdf, text layer); find such links with visit.py --links when probe url answers 403.
+- Jackson and Lakehurst parishes mirror John Patrick PDFs byte-identically on their own sites (St. Aloysius WordPress as wp-content/uploads/2017/06/640template-<date>.pdf; St. Monica Drupal; St. John eCatholic), a week behind the listing: compare md5 and read the listing.
+- A parish's 'Chapel Schedule' or 'All Saints Chapel' daily Mass with no street of its own (St. John, Lakehurst; Seton, Whiting) is part of the church's campus, not a second church row.
+- diocese recheck cannot verify quotes from sites that 403 plain fetch (seaswhiting.org): quote a page plain fetch reads, or record the browser read in research.
 
 ## Rules settled for this diocese
 
