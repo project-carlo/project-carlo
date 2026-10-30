@@ -320,6 +320,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An LPi bulletin's footer ('Mary, Mother of the Church, Bordentown, NJ 03-4119') is the ParishesOnline container id (03/4119); `probe po <finder-name-with-ZIP slug>` (e.g. st-katharine-drexel-parish-08016) finds the org when the site embeds no id. Squarespace /bulletins pages hide their /s/<date>web.pdf links from probe get: use visit.py --links.
 - A two-church parish can move weekday Mass from one church to the other between issues (St. Katharine Drexel: All Saints on 25 Oct 2026, St. Paul on 1 Nov): read the whole Mass block before counting a church as having no daily Mass, and keep both rows while the weekend schedule lists both.
 - A merger can be older than the 2017 plan: Sts. Francis and Clare Parish formed in 2008 from St. Clare and Holy Assumption; the Monitor's obituaries and feast-day stories state mergers and worship-site counts that the REST search finds by town name when a parish name search returns nothing.
+- tools/jppc-trenton.tsv misses listings whose ZIP was not in its filter (Hainesport 08036, listing 565): when a parish is not in the tsv, grep the jsonl scan files by name or ZIP before calling it unlisted.
+- A parish page that lists a 'Chapel' with its own street address and daily Mass (St. Isidore's Assumption Chapel, 76 Evergreen Rd, the parish office address) is a church row; one on a church's own campus with no address stays part of that church.
+- A linked-then-vanished parish (Christ the Redeemer, Mount Holly) can be traced through the linked parish's old eCatholic bulletin archive: its masthead listed the building as the priests' 'Residence' (2018-2020) and nothing later; grep old issues for the name before deciding it never had Mass, but absence alone leaves it in open/.
+- An eCatholic site whose /bulletins archive is frozen (Sacred Heart, Mount Holly 14457, ends March 2025) is only the host: record the John Patrick listing as the row and leave the eCatholic id out of publication.
+- Large probe pdf --pages output floods the context for 7+ page bulletins: use --grep first, then --pages 1 with --chars and pipe through jq on .pages[N].text.
 
 ## Rules settled for this diocese
 
