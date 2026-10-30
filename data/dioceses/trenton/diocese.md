@@ -356,6 +356,11 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Two linked parishes sharing a pastor can print separate bulletins that each carry a combined 'LINKED PARISHES' Mass table (St. Dorothea and Precious Blood): compare file md5, mastheads and Mass intentions for the same Sunday, then keep separate rows with separate publication_reviews.
+- A parish row can't be created with publication_reviews naming a peer that doesn't exist yet: create both rows, then patch the reviews on the first; `parish` records also reject a roster field (roster links live on church records).
+- A directory pin can be a language community's church (Immaculate Conception, Eatontown is the Korean community with an EUC-KR ASP site and Korean bulletin): read its PDF's Latin-script address line and numerals, and note the language.
+- ParishesOnline's `probe po` issue list can lag the container: St. Anselm's 20261101B.pdf was served (HTTP 200) while the list ended at 2026-10-25.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
