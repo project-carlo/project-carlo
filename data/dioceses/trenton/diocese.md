@@ -281,6 +281,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic bulletin filename can be the upload week, not the issue date: Corpus Christi's files.ecatholic.com/13717/bulletins/20261018.pdf is the 25 October issue. Read the masthead's date before trusting the filename.
 - A Solutio parish site whose own bulletin archive is stale (Jesus the Good Shepherd, ending January 2025) can still link the printer: its 'JPPC Bulletin - View Current Bulletin' link is jppc.net/onlinebulletins/<id>template.pdf, which redirects to the John Patrick listing.
 - The Monitor's REST dates for old stories (2017-era closings) can be a site-migration date (2019-07-29 on posts about June 2017 events): take the event date from the body and cross-check with the 2017 decisions.
+- A parish's eCatholic id can be only the host: Hamilton's OLS-St. Anthony (2974) has a /bulletins archive frozen at Nov 2017 and St. Gregory's (2431) has no current files; both link a Bon Venture page from the 'Bulletin' menu item, which is the row. Run `visit.py --links` on the homepage before trusting the id.
+- A John Patrick PDF whose text layer is font-garbled (St. Vincent de Paul, 1 Nov 2026) returns glyph codes, not words, and floods the context: use `--grep` first, and render page 1 with render.py. Older issues can be readable, and one carried a stale 2019 date from its template next to the real one.
+- The finder's website for a parish can fail TLS in every client (svdpnj.org: hostname mismatch, also in the browser, also over http); use the printer's listing as the row's website and record an access-blocked research item with a retry trigger.
+- Slugs for common saint names collide with other dioceses' live rows (st-john-the-baptist-allentown is Allentown, PA): run `diocese search` and add the state or -nj.
 
 ## Rules settled for this diocese
 
