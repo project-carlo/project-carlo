@@ -221,6 +221,16 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   searches; spend searches on finding a site or listing, and use The Monitor's REST search to
   date closures.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- The finder's coordinates can be kilometres off (St. Catharine, Holmdel: 3.5 km); compare with GCatholic's Plus Code and an OSM address lookup (nominatim via probe get) before taking either.
+- An eCatholic site's own /bulletins page can be stale or empty while the parish bulletin is elsewhere (St. Leo: Bon Venture page linked as 'Bulletin' on the homepage; St. Mary, Colts Neck: Constant Contact PDFs; St. Catharine: Constant Contact HTML email). Read the homepage's 'Bulletin' link with visit.py --links before trusting the ecatholic id.
+- Hand-edited parish bulletin pages can list stale links first; run fetch:check against both the 'current' page and a 'past bulletins' page and pin whichever picks the current issue.
+- Trenton's parishes alternate weekday Masses between cohort churches (St. Mary's bulletin lists Thu-Sat 9 AM 'AT ST. CATHARINE, HOLMDEL'): that is not a shared bulletin or an added church.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
