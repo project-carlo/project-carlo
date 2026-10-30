@@ -398,6 +398,9 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Eparchy of Passaic's parish list (eparchyofpassaic.com/parishfinder) is JavaScript and 403s probe get; parish-site-access finder.py reads it. Ukrainian list ukrcatholic.org/parishes and Romanian romaniancatholic.org/parishfinder both work with probe get.
+- GCatholic's Eastern entries match the eparchy lists' addresses and phones; the Passaic finder prints Roebling ZIP 08854 for 08554 (typo).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
