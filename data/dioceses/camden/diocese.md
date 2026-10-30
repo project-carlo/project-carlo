@@ -309,6 +309,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A WeConnect (LPi) site's bulletin page can embed a ParishesOnline widget with an 0018... id (St. Brendan, Avalon: `probe po <id>` gives org st-brendan-the-navigator and container 04/0697); grep the page source for 'id=0018'.
 - A parish's 'Places of Worship' page can list a church that holds no Mass (Sacred Heart, Avalon): the bulletin's 'OPEN FOR PRIVATE PRAYER' block, usually on the devotions page, shows which buildings are prayer-only; read it before adding a church row.
 - Nominatim's free-text search finds a church node that a structured address query misses ('Delsea Drive Goshen Middle Township church' returned the OSM node; '561 Route 47 North Goshen NJ' returned nothing).
+- A Joomla Weblinks list (links '/index.php/component/weblinks/weblink/<id>-<title>?task=weblink.go') 301s to the PDF but no collector follows it: unpinned page-pdfs then picks an unrelated PDF (a Religious Education calendar). Pin 'filename=bulletin*.pdf' so the fetch fails loudly, and set bulletin_status unsupported-format.
+- A Zumu Software parish site (ladystarofthesea.org, a frameset that probe url calls NO-PARISH-WORDS) keeps its menu in onclick handlers: save visit.py --html and grep "location='...'" for page paths (/olss/Bulletins/, /olss/Mass/), then curl them; the Bulletins page links the John Patrick template id.
+- A parish's own Mass page headed 'Winter Mass Schedule Now in Effect' with 'NO MASS AT ST. AGNES' settles a summer mission as seasonal; John Patrick listings run a week ahead of parish copies that mirror them (Notre Dame de la Mer's own page stopped at 25 October, the listing had 1 November).
+- probe pdf --grep still prints the first pages' text, so on a text-layer bulletin it can return several KB: use --chars with --pages 1 for a masthead and add --grep only for a far page.
 
 ## Rules settled for this diocese
 
