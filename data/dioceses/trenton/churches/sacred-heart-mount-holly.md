@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=260+High+Street+Mount+Holly+NJ&format=json
   seen: 2026-10-30
   note: OSM has the house 260 High Street at 39.99899, -74.79051, about 45 m from the Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

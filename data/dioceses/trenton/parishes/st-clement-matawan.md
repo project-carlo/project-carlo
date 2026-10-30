@@ -26,6 +26,7 @@ evidence:
   note: 'July 2024 cohort list, Cohort 14: St. Benedict (Holmdel), St. Clement (Matawan), Our Lady of
     Fatima (Keyport), Holy Family (Union Beach). A cohort is not a shared bulletin; each of the four publishes
     its own (see the sibling rows).'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-clement-matawan (headed Chrome); page-pdfs on
     the church-bulletin.org listing

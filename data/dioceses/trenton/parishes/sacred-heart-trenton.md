@@ -25,6 +25,7 @@ evidence:
   note: 'Worship Schedule: Sacred Heart Church Saturday 5:15 pm, Sunday 9:00 am and 11:15am, weekdays
     Monday, Tuesday, Wednesday & Friday 12:10pm; Holy Cross Church Saturday 4:00 pm, Sunday 10:00 Gospel
     Mass, 12:00 Noon Polish Mass.'
+promoted: 2026-10-30
 research:
 - method: probe url and probe get on the site's Weekly Bulletin page; probe pdf on the 1 November 2026
     issue; fetch:check

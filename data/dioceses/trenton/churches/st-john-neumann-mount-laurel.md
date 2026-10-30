@@ -28,6 +28,7 @@ evidence:
   quote: 560 Walton Ave., Mount Laurel, New Jersey 08054-9582
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton; kind: Church; Plus Code
     87F7X427+C4.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

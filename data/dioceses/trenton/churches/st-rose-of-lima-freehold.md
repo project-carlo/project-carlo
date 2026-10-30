@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The finder (roster directory:14625) lists 'St. Rose of Lima Parish', 16 McLean St, Freehold, NJ
     07728-2111, coordinates 40.2567858, -74.2746638.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

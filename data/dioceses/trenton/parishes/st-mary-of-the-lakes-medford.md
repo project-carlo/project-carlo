@@ -26,6 +26,7 @@ evidence:
     20261011 ... below it). That PDF is byte-identical to the listing's 2026-10-25.pdf (md5 8f2b5ceb56a52c3d17ee98d3ca5e483f,
     10,554,511 bytes). The listing already has 1 November; the site's newest is 25 October. The homepage's
     Bulletin links include https://www.jppc.net/onlinebulletins/0556template.pdf.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-mary-of-the-lakes-medford (headed Chrome); page-pdfs
     on the John Patrick listing

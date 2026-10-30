@@ -2,13 +2,14 @@
 name: Roman Catholic Diocese of Trenton
 state: NJ
 website: https://dioceseoftrenton.org
-status: exploring
+status: promoted
 gcatholic: tren1
 city_aliases:
   Point Pleasant Boro: Point Pleasant Borough
   Princeton Jct: Princeton Junction
   Millstone Twp: Millstone Township
   Barnegat Township: Barnegat
+promoted: 2026-10-30
 ---
 
 Four counties of central New Jersey: Mercer (Trenton, Hamilton and Yardville, Ewing and West

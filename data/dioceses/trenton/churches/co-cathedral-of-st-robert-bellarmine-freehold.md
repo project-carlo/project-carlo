@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: OSM node 1028660800, 'Saint Robert Bellarmine Roman Catholic Church, 61, Georgia Road, Freehold',
     07728, at 40.2151469, -74.2928630.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

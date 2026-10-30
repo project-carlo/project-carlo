@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-30
   note: The parish's own eCatholic site (id 28530; probe url reads it). Its Bulletins page links files.ecatholic.com/28530/bulletins/20261025.pdf,
     20261018.pdf and earlier weekly issues.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

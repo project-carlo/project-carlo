@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's finder (directory:14628) lists 'St. Veronica Parish', 4215 US Highway 9, Howell,
     NJ 07731-3378, pin 40.152316, -74.224353, within about 100 m of GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

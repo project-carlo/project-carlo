@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's finder (roster directory:14571) lists 'Church of St Ann', 1253 Lawrenceville Rd,
     Lawrenceville, NJ 08648-3545, (609) 882-6491.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

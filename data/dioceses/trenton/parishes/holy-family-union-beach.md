@@ -25,6 +25,7 @@ evidence:
   note: 'Read in the browser (probe url: NO-PARISH-WORDS, JavaScript redirect to /hfs/). Zumu site, "HOLY
     FAMILY PARISH, 727 Highway 36, Union Beach, NJ 07735", rectory 732-264-1484; its "Parish Bulletins"
     button opens http://sponsors.bonventure.net/?page=2213 (onclick in the page HTML).'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish holy-family-union-beach (headed Chrome); page-pdfs
     on Bon Venture sponsor page 2213

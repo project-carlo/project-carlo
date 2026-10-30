@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The finder (roster directory:14615) lists 'St. Joseph Church', 91 Stillhouse Rd, Millstone Twp,
     NJ 08510-9414, coordinates 40.2181263, -74.4010830.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=54+East+Prospect+Street,+Hopewell,+NJ&format=json
   seen: 2026-10-30
   note: OSM way 11642514, 54 East Prospect Street, Hopewell, at 40.3884793, -74.7566237.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: OSM house node 141 Navesink Avenue at 40.39954, -73.98744 (no place_of_worship), about 75 m from
     the Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

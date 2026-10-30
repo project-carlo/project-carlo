@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14617) lists 'St. Leo the Great Parish', 50 Hurleys
     Ln, Lincroft, NJ 07738-1406.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

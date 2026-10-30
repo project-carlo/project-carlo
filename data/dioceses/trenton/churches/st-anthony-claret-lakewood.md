@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap has two house points for 780 Ocean Avenue, 40.08875, -74.18454 and 40.08891, -74.18573,
     within about 40-120 m of GCatholic's Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

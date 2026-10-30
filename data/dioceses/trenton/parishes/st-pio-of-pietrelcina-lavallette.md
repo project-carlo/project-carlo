@@ -38,6 +38,7 @@ evidence:
   quote: pastor of the linked parishes of St. Pio, Lavallette, and Sacred Heart, Bay Head
   note: 'The Monitor, 13 February 2025: one pastor, two canonical parishes (the 2017 linkage), which the
     masthead now prints as one bulletin.'
+promoted: 2026-10-30
 research:
 - method: 'church-bulletin.org listings by id (jppc-trenton.tsv and the two jsonl scans): 6003 ''Saint
     Pio of Pietrelcina & Church of the Sacred Heart'' (Lavallette 08735) has editions to 1 November 2026;

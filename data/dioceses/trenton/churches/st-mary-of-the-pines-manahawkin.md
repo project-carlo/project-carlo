@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   note: OSM place_of_worship 'St Mary of the Pines Catholic Church' at GCatholic's point, on 'All Saints
     Way', Stafford Township 08050. Searches for 'Bishop Lane' and 'Bishop Way' in Manahawkin found nothing.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

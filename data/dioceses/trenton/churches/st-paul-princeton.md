@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: OSM names "St. Paul's Catholic Church" at 216 Nassau Street (40.3518047, -74.6542901, place_of_worship);
     the same search for 214 Nassau Street returns a plain house at 40.3515394, -74.6538475.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

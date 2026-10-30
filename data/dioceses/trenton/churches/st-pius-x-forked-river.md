@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14657, 300 Lacey Road, Forked River 08731-2619 (39.84604, -74.19272), at
     the same church.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

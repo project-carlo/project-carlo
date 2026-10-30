@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OSM has only a house node for 1674 Old Freehold Road (40.01185, -74.20224, about 200 m from the
     Plus Code point); no place_of_worship node. The Plus Code point is used.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

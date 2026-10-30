@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14612) lists 'St. James Parish', 94 Broad St, Red
     Bank, NJ 07701-1915, pin 40.34878, -74.06567.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   note: Diocese finder pin directory:14637 'Sacred Heart Church', 751 Main Ave, Bay Head 08742-5340, (732)
     899-1398, site sacredheartbayhead.com; its pin (40.06080, -74.04651) is about 25 m from GCatholic's
     point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

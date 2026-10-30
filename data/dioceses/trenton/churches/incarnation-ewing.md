@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM house points: 1555 Pennington Road 40.25213, -74.77692; 1545 Pennington Road 40.25051, -74.77611
     (about 190 m south-east of the 1555 point).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

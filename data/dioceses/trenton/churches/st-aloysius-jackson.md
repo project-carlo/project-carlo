@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'St. Aloysius Parish', 935 Bennetts Mills Rd, Jackson, NJ, 08527-2224;
     pin 40.1307982, -74.2715443.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

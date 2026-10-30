@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM named place ''St. Hedwig''s'', 872 Brunswick Avenue: 40.23850, -74.75005, about 20 m from
     GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

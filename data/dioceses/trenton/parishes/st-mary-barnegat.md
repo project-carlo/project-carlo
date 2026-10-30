@@ -29,6 +29,7 @@ evidence:
   note: 'Finder pin directory:14653 ''St. Mary Parish'', 747 W Bay Ave, Barnegat 08005-2130, (609) 698-5531:
     one pin for the parish, at the Barnegat church. GCatholic lists St. Mary (18783) and, grouped under
     ''St. Mary Parish'', St. Mary of the Pines, Manahawkin (18820).'
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs church-bulletin.org/saint-mary-s-barnegat-nj-08005), run 2026-10-30
   url: https://www.church-bulletin.org/bulletin/saint-mary-s-barnegat-nj-08005/2026-11-01.pdf

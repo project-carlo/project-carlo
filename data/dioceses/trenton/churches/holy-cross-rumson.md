@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14597) lists 'Holy Cross Parish', 30 Ward Ave, Rumson,
     NJ 07760-1914, pin 40.36600, -73.97975.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

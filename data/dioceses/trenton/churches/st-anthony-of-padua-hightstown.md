@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?format=jsonv2&q=251+Franklin+St,+Hightstown+NJ
   seen: 2026-10-30
   note: OSM names 'St. Anthony of Padua' (place_of_worship) at 251 Franklin Street, 40.2694935, -74.5189135.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

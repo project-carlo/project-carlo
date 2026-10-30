@@ -24,6 +24,7 @@ evidence:
   note: 'Parish site (WordPress) links the John Patrick bulletin 533, which redirects to the listing above.
     It also embeds ecatholic:14277, the diocese''s own site (not this parish''s), and ecatholic:13541
     (St. Isaac Jogues''s id, a diocesan embed): neither is recorded in publication.'
+promoted: 2026-10-30
 research:
 - method: probe url on olgcc.net, probe pdf and render.py on the 1 November 2026 listing issue
   url: https://www.church-bulletin.org/our-lady-of-good-counsel-west-trenton-nj-08628

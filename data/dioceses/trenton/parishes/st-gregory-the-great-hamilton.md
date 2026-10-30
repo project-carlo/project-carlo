@@ -23,6 +23,7 @@ evidence:
   note: Read in the browser (probe url answers 403). The homepage's 'Bulletin' link is https://sponsors.bonventure.net/?page=2098;
     its only publication id is ecatholic:2431, but issues.py finds no files.ecatholic.com/2431/bulletins
     PDF for the four Sundays 11 October-1 November 2026 (403 each), so eCatholic is only the host.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-gregory-the-great-hamilton (headed Chrome); page-pdfs
     on http://sponsors.bonventure.net/?page=2098

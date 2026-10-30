@@ -39,6 +39,7 @@ evidence:
   note: 'From a search-result snippet, not re-read in full: a 2013 obituary asks donations to ''the Divine
     Mercy Parish Church of the Holy Cross, 233 Adeline St., Trenton''. An old Divine Mercy bulletin (studylib.net/doc/7038937)
     heads ''Church of the Holy Cross Founded 1891'', ''Parish Office 233 Adeline Street'', phone 609-393-4826.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

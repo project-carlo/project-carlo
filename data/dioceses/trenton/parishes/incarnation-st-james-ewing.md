@@ -24,6 +24,7 @@ evidence:
   quote: https://container.parishesonline.com/bulletins/04/0399/20261101B.pdf
   note: The parish's WeConnect site publications page lists the container's weekly issues, 16 August to
     1 November 2026.
+promoted: 2026-10-30
 research:
 - method: probe url, probe po incarnation-st-james, probe container 04/0399; fetch:check
   url: https://parishesonline.com/organization/incarnation-st-james

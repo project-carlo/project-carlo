@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap house 100, Grant Avenue, Seaside Heights 08751 at 39.94276, -74.07362, about 40
     m from GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -39,6 +39,7 @@ evidence:
   seen: 2026-10-30
   quote: 233 E Union St.
   note: The site's May 2024 note gives 'St. Paul Church, 233 E Union St.', a third number.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

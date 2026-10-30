@@ -24,6 +24,7 @@ evidence:
   note: Read in the browser (plain fetch answers 403). The Solutio site's own archive stops at 19 January
     2025; its 'JPPC Bulletin - View Current Bulletin' link is https://jppc.net/onlinebulletins/511template.pdf,
     which redirects to the listing above. The listing is the bulletin.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish jesus-the-good-shepherd-beverly (headed Chrome);
     page-pdfs on the John Patrick listing

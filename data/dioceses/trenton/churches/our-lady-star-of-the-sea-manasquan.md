@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap returned no result for '554 East Main Street', '544 East Main Street' or 'Star of
     the Sea chapel Manasquan' (empty lists), so it gave no independent address or point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

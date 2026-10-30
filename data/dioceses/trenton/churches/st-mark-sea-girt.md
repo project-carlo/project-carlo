@@ -31,6 +31,7 @@ evidence:
   note: 'The finder''s pin for ''St. Mark Catholic Church'' (directory:14618): 215 Crescent Pkwy, Sea
     Girt, NJ 08750-3107, 40.13206, -74.03458, about 180 m north of the building, so it is not used for
     coordinates.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

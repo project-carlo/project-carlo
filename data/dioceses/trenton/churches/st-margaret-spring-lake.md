@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap geocodes '300, Ludlow Avenue, Spring Lake' to 40.15919, -74.02800, about 15 m from
     GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

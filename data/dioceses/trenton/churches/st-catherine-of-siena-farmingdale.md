@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's finder (directory:14606) lists 'St. Catherine of Siena Parish', 31 Asbury Rd, Farmingdale,
     NJ 07727-3531, pin 40.200230, -74.163841.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

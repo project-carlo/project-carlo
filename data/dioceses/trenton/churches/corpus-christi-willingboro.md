@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'The finder pins Corpus Christi Parish at 63 Sylvan Ln, Willingboro 08046-2032 (the rectory):
     40.0424, -74.8991, about 180 m east of GCatholic''s point.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

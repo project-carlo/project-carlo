@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-30
   note: 'The finder''s pin for ''St. Catharine-St Margaret Parish'' (directory:14605): 215 Essex Ave,
     Spring Lake, NJ 07762-1143, 40.14757, -74.02949.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

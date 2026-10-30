@@ -34,6 +34,7 @@ evidence:
   quote: while the All Saints Church roof is being worked on
   note: 'Site note dated May 20, 2024: daily Mass was at St. Paul while the roof was repaired. Superseded:
     All Saints has weekend Masses in the Oct-Nov 2026 bulletins and daily Mass in the 25 Oct issue.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

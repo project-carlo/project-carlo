@@ -33,6 +33,7 @@ evidence:
   note: 'Finder pin directory:14644 ''St. Francis of Assisi Parish'', 4700 Long Beach Blvd, Long Beach
     Township 08008-3926, (609) 492-2893, website stfrancisparishlbi.org: one pin for the parish, at the
     Brant Beach church.'
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs stfrancisparishlbi.org/weekly-bulletin), run 2026-10-30
   url: https://www.stfrancisparishlbi.org/s/046a_2026_11_01-1.pdf

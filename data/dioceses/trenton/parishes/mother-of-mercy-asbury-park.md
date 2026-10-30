@@ -40,6 +40,7 @@ evidence:
   quote: with residence in Mother of Mercy Parish, Asbury Park, effective Sept. 1, 2026
   note: 'The Monitor''s Clergy Appointments of 2026-08-17 gives Rev. Enel Almeus, chaplain at Jersey Shore
     Medical Center, residence in Mother of Mercy Parish: the bulletin''s ''Fr. Enel Almeus, CSSp, Chaplain''.'
+promoted: 2026-10-30
 research:
 - method: pnpm diocese probe url and parish-site-access visit.py on https://www.momapnj.org/ and https://momapnj.org/
   url: https://momapnj.org/

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-30
   note: OSM has a church node 'St. Ann's Church', 22 Trenton Road, Pemberton Township, at 39.97222, -74.58223,
     about 45 m from the Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

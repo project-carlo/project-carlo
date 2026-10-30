@@ -22,6 +22,7 @@ evidence:
   quote: CURRENT BULLETIN
   note: The parish's WordPress homepage; its 'CURRENT BULLETIN' link goes to https://www.jppc.net/onlinebulletins/627template.pdf,
     the John Patrick listing 627's redirect. No other bulletin channel on the site.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish nativity-fair-haven (headed Chrome); page-pdfs on
     the John Patrick listing

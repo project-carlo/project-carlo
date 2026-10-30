@@ -30,6 +30,7 @@ evidence:
   quote: Saint Dominic's Church Bulletin
   note: John Patrick listing 571 for Saint Dominic's Church, Brick 08724 shows daily readings and no bulletin
     edition; the parish prints on Bon Venture.
+promoted: 2026-10-30
 research:
 - method: probe url and visit.py on stdominicsparish.com; issues.py ecatholic:40144; probe pdf on Bon
     Venture 4139 issues

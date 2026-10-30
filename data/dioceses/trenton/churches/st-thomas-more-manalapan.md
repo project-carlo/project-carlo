@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The finder (roster directory:14627) lists 'St. Thomas More Parish', 186 Gordons Corner Rd, Manalapan,
     NJ 07726-3323.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

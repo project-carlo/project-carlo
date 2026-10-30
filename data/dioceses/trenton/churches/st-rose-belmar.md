@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'OpenStreetMap: ''Saint Rose Roman Catholic Church, 603, 7th Avenue, Belmar'' place_of_worship
     at 40.18171, -74.02294, about 12 m from GCatholic''s point.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin "Holy Family Parish", 727 Hwy 36, Union Beach 07735-3337 (40.43804, -74.17049), website
     holyfamily.us (roster directory:14598).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

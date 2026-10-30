@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'Church of St Monica', 679 W Veterans Hwy, Jackson, NJ, 08527-3732;
     pin 40.1024912, -74.3961602.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

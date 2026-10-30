@@ -39,6 +39,7 @@ evidence:
   note: Finder pin "Our Lady of Fatima Parish", 376 Maple Place, Keyport 07735-1148, but its coordinates
     (40.43595, -74.19739) are about 1.7 km north-east of that address; GCatholic and ParishesOnline agree
     with each other, so the finder pin is not used (roster directory:14616).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

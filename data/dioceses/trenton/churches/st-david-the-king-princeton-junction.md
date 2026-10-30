@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   quote: 1 New Village Rd., Princeton Junction, New Jersey 08550-2016
   note: GCatholic lists 'St. David the King', Plus Code 87G779JF+8X.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

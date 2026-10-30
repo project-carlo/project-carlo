@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: The parish's eCatholic site (id 14711; plain fetch answers 403, read in the browser) lists files.ecatholic.com/14711/bulletins/<yyyymmdd>.pdf
     from 20260802 to 20261025, so it is a week behind the listing (no 1 November issue yet).
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish resurrection-delran (headed Chrome); page-pdfs on
     the John Patrick listing

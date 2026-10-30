@@ -33,6 +33,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=19+Cherry+Tree+Farm+Rd+Middletown+NJ&format=json
   seen: 2026-10-30
   note: OSM house node 19 Cherry Tree Farm Road at 40.41273, -74.10504, about 130 m from the Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

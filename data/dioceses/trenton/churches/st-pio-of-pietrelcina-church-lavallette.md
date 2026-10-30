@@ -35,6 +35,7 @@ evidence:
   note: GCatholic 'Church of St. Bonaventure', 1100 Grand Central Ave., Lavallette, New Jersey 08735,
     grouped under St. Pio of Pietrelcina Parish, phone (732) 793-7291, Plus Code 87F7XWCJ+38 (39.97019,
     -74.06919); its website padrepionj.com is a spam squat and is not stored.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

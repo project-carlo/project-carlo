@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14622 'St. Michael Church', 800 Ocean Ave, Long Branch 07740-9001, (732)
     222-8080, website stmichaelnj.com.
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs on /sunday-bulletins, filename=bulletin*.pdf), 25 October
     2026 issue

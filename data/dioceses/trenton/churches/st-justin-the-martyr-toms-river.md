@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OSM has only house nodes for 975 Fischer Boulevard (39.97875, -74.14028 and 39.97815, -74.13944),
     about 70 m and 80 m from the Plus Code point; no place_of_worship node.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

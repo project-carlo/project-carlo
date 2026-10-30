@@ -27,6 +27,7 @@ evidence:
     the listing above). Its Mass schedule: Saturday 4:00 pm St. Andrew, 5:30 pm Assumption; Sunday 8:00
     am Assumption, 9:30 am St. Andrew, 11:00 am Assumption; ''Daily Mass 8 am Mass at Assumption Chapel
     Monday through Thursday, 8 am Communion Service on Friday''.'
+promoted: 2026-10-30
 research:
 - method: probe url saintisidoreparish.church; probe pdf (image-only, no text); render.py of pages 1-2
     of the 1 November issue; church-bulletin.org listing 690

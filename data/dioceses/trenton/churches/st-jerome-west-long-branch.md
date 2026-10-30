@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: 'Finder pin directory:14613 ''Our Lady of Hope Parish'', 254 Wall St, West Long Branch 07764-1123
     at 40.28477, -74.02383, 70 m from this church: the parish office''s address.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM house point 555 Yardville-Allentown Road, Yardville: 40.17636, -74.66038, about 10 m from
     GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

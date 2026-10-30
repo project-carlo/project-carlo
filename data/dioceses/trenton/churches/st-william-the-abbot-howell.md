@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's finder (directory:14629) lists 'St. William the Abbot Parish', 2740 Lakewood Allenwood
     Rd, Howell, NJ 07731-8671, pin 40.122046, -74.152173.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

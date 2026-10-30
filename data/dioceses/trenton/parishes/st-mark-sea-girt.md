@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-30
   note: The parish's homepage (read with the browser; probe url answers 403) links https://church-bulletin.org/?id=613
     as its bulletin and https://stmarkseagirt.com/whats-happening/mass-schedule; no second channel.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-mark-sea-girt (headed Chrome); page-pdfs on the
     John Patrick listing

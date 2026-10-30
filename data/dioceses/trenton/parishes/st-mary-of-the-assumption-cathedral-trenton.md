@@ -21,6 +21,7 @@ evidence:
   quote: Cathedral of Saint Mary of the Assumption
   note: 'probe url: the parish site''s bulletin link is http://www.jppc.net/onlinebulletins/524template.pdf,
     which redirects to the John Patrick listing above (524).'
+promoted: 2026-10-30
 research:
 - method: 'church-bulletin.org listing 524 and its 1 November 2026 PDF (probe pdf: no text; render.py
     pages 1-2)'

@@ -31,6 +31,7 @@ evidence:
   note: 'Text-layer issue of 1 March 2026, page 10 (''Parish Presentations on the Shroud ... St. Raphael-Holy
     Angels Church, March 25, 6:30 pm (in the Church)''): the bulletin calls the one 3500 South Broad Street
     building ''St. Raphael-Holy Angels Church''.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-raphael-holy-angels-hamilton (headed Chrome);
     page-pdfs on https://www.church-bulletin.org/saint-raphael-holy-angels-parish-hamilton-nj-08610

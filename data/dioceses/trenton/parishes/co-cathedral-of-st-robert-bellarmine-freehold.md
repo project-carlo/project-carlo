@@ -25,6 +25,7 @@ evidence:
   note: Read with the browser (plain probe url gets HTTP 403). Homepage lists the same Mass times as the
     bulletin; its Bulletin button goes to https://www.strobert.cc/bulletin, whose only link is 'Most Current
     Bulletins' (strobert.cc/bulletin/53-bulletin/file), which the sandbox could not read.
+promoted: 2026-10-30
 research:
 - method: probe pdf on https://www.strobert.cc/bulletin/53-bulletin/file (the site's 'Most Current Bulletins'
     link)

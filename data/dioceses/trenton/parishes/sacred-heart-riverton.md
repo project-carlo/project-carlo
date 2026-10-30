@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: 'probe po church-of-the-sacred-heart-08077: lpi 0018000000Qx8obAAB, address ''103 4th Street,
     Riverton, New Jersey, 08077'', container 03/1347, latest issue 2026-11-01.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish sacred-heart-riverton (headed Chrome); ParishesOnline
     container 03/1347 by org slug

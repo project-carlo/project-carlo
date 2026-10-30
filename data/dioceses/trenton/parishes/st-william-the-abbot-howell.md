@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-30
   note: 'John Patrick listing 566 ''The Church of Saint William the Abbot'', Howell NJ 07731: PDFs dated
     2026-11-01, 2026-10-25, 2026-10-18.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-veronica-howell
   decision: separate

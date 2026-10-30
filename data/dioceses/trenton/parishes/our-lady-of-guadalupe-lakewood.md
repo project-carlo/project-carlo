@@ -33,6 +33,7 @@ evidence:
   note: 'The Monitor, 9 October 2025: Our Lady of Guadalupe was created in 2020 by the merger of St. Mary
     of the Lake and St. Anthony Claret, wrapping in the Holy Family School and Church campus; the Holy
     Family school building on East County Line Road burned on 3 October 2025.'
+promoted: 2026-10-30
 research:
 - method: visit.py --links on olglakewood.org; probe url on Bon Venture 2195; probe pdf --grep on the
     1 November 2026 issue; Monitor REST search

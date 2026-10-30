@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-30
   note: 'The finder''s pin for ''St. Denis Parish'' (directory:14608): 90 Union Ave, Manasquan, NJ 08736-3634,
     40.11925, -74.05034.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

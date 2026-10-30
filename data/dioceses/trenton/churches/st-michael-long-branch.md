@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14622 'St. Michael Church', 800 Ocean Ave, Long Branch 07740-9001 at 40.27775,
     -73.98601, 20 m from GCatholic's Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -14,6 +14,7 @@ evidence:
     ''Pastor ... Rev. Msgr. Joseph Roldan'', parochial vicar Rev. Erwin Candelaria; ''ENGLISH MASSES Saturday:
     4:00 PM'', ''MISAS EN ESPAÑOL Domingo: 9:30 am y 11:30 am''. Page 2 footer ''553 St. Joseph, Trenton''.
     A different file from the Cathedral''s 1 November issue (md5 a3f2b475... against ff9963cd...).'
+promoted: 2026-10-30
 research:
 - method: church-bulletin.org listing 553 and its 1 November 2026 PDF (probe pdf --pages 2)
   url: https://www.church-bulletin.org/saint-joseph-s-parish-roman-catholic-church-trenton-nj-08638

@@ -16,6 +16,7 @@ evidence:
   seen: 2026-10-30
   note: probe url finds ecatholic:11159 and files.ecatholic.com/11159/bulletins/ PDFs dated weekly from
     2026-08-02 to 2026-10-25.
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-rose-of-lima-freehold

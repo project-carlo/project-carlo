@@ -26,6 +26,7 @@ evidence:
     at St. Joachim, 6:30 p.m. Spanish at Immaculate Conception; Sunday 7:30 a.m. Spanish and 9:30 a.m.
     English at Immaculate Conception, 11:00 a.m. English at St. Joachim, 12:30 p.m. Spanish at Immaculate
     Conception. ''Click for Current Bulletin'' links John Patrick 594 (probe url: jppc.net/onlinebulletins/594template.pdf).'
+promoted: 2026-10-30
 research:
 - method: church-bulletin.org listing 594; probe pdf and render.py on the 25 October 2026 issue; probe
     url and visit.py on olanj.org

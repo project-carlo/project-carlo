@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: OSM nominatim finds no house or church for the address or for 'Church of the Assumption Wrightstown',
     so there is no OSM point to compare.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-30
   note: OSM house nodes for 130 Bray Avenue (40.43842, -74.11188) and, on a second query, 110 Bray Avenue
     (40.43863, -74.11188); neither is a place_of_worship.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

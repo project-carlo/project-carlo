@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14644, 4700 Long Beach Blvd, Long Beach Township 08008-3926 (39.62878, -74.19253),
     at the same church.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

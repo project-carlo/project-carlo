@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: 'July 2024 cohort list: Cohort 28 is Precious Blood (Monmouth Beach), St. Dorothea (Eatontown),
     Immaculate Conception (Eatontown, in parentheses) and St. Anselm (Wayside).'
+promoted: 2026-10-30
 research:
 - method: fetch:check with the recipe 'page-pdfs http://eatoncatholic.org/WeeklyBulletin/list.asp', then
     'linked-issue-page', 'redirected-pdf' and 'dated-post' on the same page

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OSM place_of_worship 'Saint Joseph's Roman Catholic Church', Hooper Avenue, at 39.95964, -74.18916
     (about 25 m from the Plus Code point).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

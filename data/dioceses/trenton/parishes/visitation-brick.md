@@ -23,6 +23,7 @@ evidence:
   note: The eCatholic Bulletin Archive lists issues weekly from 1 November 2026; the home page also links
     jppc.net/onlinebulletins/574template.pdf. visitationchurch.com (GCatholic's site) is a parked domain-sale
     page; the finder's visitationrcchurch.org is the parish.
+promoted: 2026-10-30
 research:
 - method: issues.py ecatholic:6597; probe get of the eCatholic and John Patrick files for the same Sunday,
     md5 compared

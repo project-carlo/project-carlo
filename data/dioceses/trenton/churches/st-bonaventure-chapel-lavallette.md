@@ -34,6 +34,7 @@ evidence:
   note: 'The Monitor, 13 February 2025, on the reopened ''St. Bonaventure Chapel'', erected June 1924
     as the first church building of St. Bonaventure Parish: daily Mass, ''expanding to near capacity of
     90 during the summer months''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

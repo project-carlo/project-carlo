@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'St. John R.C. Church', 619 Chestnut St, Lakehurst, NJ, 08733-2505;
     pin 40.0180481, -74.3258306.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

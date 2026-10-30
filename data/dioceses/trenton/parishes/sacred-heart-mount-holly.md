@@ -29,6 +29,7 @@ evidence:
   note: The parish's eCatholic site (id 14457; probe url reads it, issues.py finds no Sunday-dated files)
     has an Archived Bulletins page that ends at 'March 16, 2025' (files.ecatholic.com/14457/bulletins/20250316.pdf).
     It is frozen, so ecatholic:14457 is not recorded as the bulletin.
+promoted: 2026-10-30
 research:
 - method: visit.py sacredheartmh.org and /bulletins; issues.py ecatholic 14457; church-bulletin.org listing
     512

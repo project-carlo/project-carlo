@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (read with finder.py; the roster entry directory:14611) lists 'St.
     Gabriel Parish', 100 N Main St, Marlboro, NJ 07746-1035.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

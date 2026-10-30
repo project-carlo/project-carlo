@@ -25,6 +25,7 @@ evidence:
     403) links church-bulletin.org/623/<date>.pdf for each Sunday from 7 December 2025 to 25 October 2026
     in its archive: the same John Patrick listing, not a separate bulletin. ecatholic:37867 is therefore
     the site host, not a publication.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish holy-cross-rumson (headed Chrome); page-pdfs on
     the John Patrick listing

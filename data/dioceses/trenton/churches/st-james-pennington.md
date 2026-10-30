@@ -38,6 +38,7 @@ evidence:
   seen: 2026-10-30
   note: OSM way 11645768 (house), 6 Eglantine Avenue, Pennington, at 40.3287017, -74.7888303; and way
     27459467, 115 East Delaware Avenue, at 40.3284820, -74.7872610.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

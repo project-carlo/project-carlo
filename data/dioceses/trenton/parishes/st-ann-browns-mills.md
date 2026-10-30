@@ -25,6 +25,7 @@ evidence:
   note: 'Absence only: the John Patrick scans of ids 1-1300 and 6000-6110 (tools/jppc-nj-1-1300.jsonl,
     jppc-6000-6110.jsonl) hold no Browns Mills (08015) listing, so no printer''s listing was found for
     St. Ann.'
+promoted: 2026-10-30
 research:
 - method: probe url stannschurch.org; probe get /bulletin; probe pdf of the 25 October issue
   url: https://www.stannschurch.org/bulletin

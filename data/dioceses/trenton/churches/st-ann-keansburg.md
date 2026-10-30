@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OSM house node 311 Carr Avenue at 40.44436, -74.13243 (no place_of_worship node), about 30 m from
     GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

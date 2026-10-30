@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14640, 33 Woodland Rd, Bayville 08721-1919 (39.91447, -74.16690), at the
     same church.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

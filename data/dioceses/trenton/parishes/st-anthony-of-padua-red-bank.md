@@ -24,6 +24,7 @@ evidence:
   note: The parish's Google Sites page (the old www.stanthonysofredbank.net redirects here); its 'Click
     here for the Bulletin' and 'Parish Bulletin' links go to jppc.net/onlinebulletins/544template.pdf,
     listing 544's redirect. The site lists Fr. Alberto, C.O., as Provost and Pastor.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-anthony-of-padua-red-bank (headed Chrome); page-pdfs
     on the John Patrick listing

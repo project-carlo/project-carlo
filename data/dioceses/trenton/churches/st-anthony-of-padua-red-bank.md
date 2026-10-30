@@ -44,6 +44,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14603) lists 'The Oratory Church of St. Anthony
     of Padua', 121 Bridge Ave, Red Bank, NJ 07701-1201, pin 40.34649, -74.07450.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

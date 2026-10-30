@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   quote: 58 Main St., Englishtown, New Jersey 07726
   note: GCatholic lists 'Our Lady of Mercy', Plus Code 87G77JXR+MV, website moremercy.org.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

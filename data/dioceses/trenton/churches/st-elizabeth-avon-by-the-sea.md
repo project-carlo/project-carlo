@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap has a house node '424 Lincoln Avenue, Avon-by-the-Sea' at 40.19050, -74.01912, about
     100 m from GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

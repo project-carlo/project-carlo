@@ -29,6 +29,7 @@ evidence:
   note: Finder pin directory:14640 'St. Barnabas Parish', 33 Woodland Rd, Bayville 08721-1919, (732) 269-2208,
     website stbarnabasbayville.com; one pin for the parish. GCatholic's website for it (sbrcc.com) is
     the old one.
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs church-bulletin.org/6048), 1 November 2026 issue
   url: https://www.church-bulletin.org/bulletin/saint-barnabas-parish-community-bayville-nj-08721/2026-11-01.pdf

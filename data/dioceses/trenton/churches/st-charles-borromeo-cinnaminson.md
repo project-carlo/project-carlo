@@ -28,6 +28,7 @@ evidence:
   quote: 2500 Branch Pike, Cinnaminson, New Jersey 08077-3711
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton as ''St. Charles Borromeo'';
     kind: Church; Plus Code 87F7X2Q5+7J.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

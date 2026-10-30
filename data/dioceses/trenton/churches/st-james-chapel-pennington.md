@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-30
   note: OSM way 11645768 (tagged as a house, unnamed), 6 Eglantine Avenue, Pennington, at 40.3287017,
     -74.7888303, about 125 m from St. James Church's Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'St. Joan of Arc Parish', 100 Willow Bend Road, Marlton, NJ 08053;
     pin 39.8818815, -74.9061765.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

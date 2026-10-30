@@ -39,6 +39,7 @@ evidence:
   note: OpenStreetMap has unnamed house points for 1139 (40.10241, -74.16977) and 1141 (40.10240, -74.16973)
     County Line Road East, about 290 m east of GCatholic's Plus Code. No OpenStreetMap place of worship
     named Holy Family turned up in two searches.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

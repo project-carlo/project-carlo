@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-30
   note: 'The Monitor (2020-12-04): ''Our Lady of Mount Carmel Church located on Pine Street'', the parish
     school on the same campus; Holy Spirit''s Masses were to move here.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

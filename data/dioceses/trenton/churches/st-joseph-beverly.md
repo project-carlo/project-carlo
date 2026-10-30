@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-30
   note: 'The finder gives 805 Warren Street, Beverly for the parish but pins it at 40.0377, -74.9569,
     which is the site of the closed St. Peter, Riverside (about 3.5 km from Beverly): don''t use the pin.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

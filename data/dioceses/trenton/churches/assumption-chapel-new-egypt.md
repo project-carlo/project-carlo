@@ -39,6 +39,7 @@ evidence:
   note: OSM has only a house node at 76 Evergreen Road (Plumsted Township, Ocean County) at 40.07368,
     -74.53133, about 100 m from the finder's pin; no place_of_worship. GCatholic has no entry for this
     address.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

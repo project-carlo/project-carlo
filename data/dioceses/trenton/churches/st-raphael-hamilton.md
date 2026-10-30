@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM house point 3500 South Broad Street: 40.18795, -74.69707, about 100 m from GCatholic''s Plus
     Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

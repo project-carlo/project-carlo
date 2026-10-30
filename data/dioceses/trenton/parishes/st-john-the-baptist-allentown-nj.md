@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-30
   note: John Patrick listing 548 for the parish has no latest edition (dead or unused); the parish posts
     its own PDFs, so it is not the publisher.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-john-the-baptist-allentown-nj (headed Chrome);
     page-pdfs on https://www.stjohnromancatholic.org/sjrc/News%20%26%20Bulletins

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap geocodes the road only (Herbertsville Road, 40.08792, -74.08592; no house point),
     about 130 m from GCatholic's point, so it does not independently place the building.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

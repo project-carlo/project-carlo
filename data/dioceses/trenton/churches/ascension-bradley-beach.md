@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap has a house node '501 Brinley Avenue, Bradley Beach' at 40.20246, -74.01464, about
     90 m from GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

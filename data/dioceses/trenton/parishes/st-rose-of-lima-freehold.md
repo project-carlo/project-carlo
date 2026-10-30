@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: 'John Patrick listing 626 (Saint Rose of Lima Church, Freehold) has no latest edition in tools/jppc-trenton.tsv:
     a dead listing, not a second bulletin.'
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-thomas-more-manalapan

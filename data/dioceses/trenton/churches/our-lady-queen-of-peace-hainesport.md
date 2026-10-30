@@ -34,6 +34,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=1603+Marne+Highway+Hainesport+NJ&format=json
   seen: 2026-10-30
   note: OSM has the house 1603 Marne Highway at 39.98370, -74.82742, about 35 m from the Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

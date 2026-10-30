@@ -24,6 +24,7 @@ evidence:
   note: Read in the browser (probe url answers 403). The homepage links 'Bulletins' to https://sponsors.bonventure.net/?page=2097
     and embeds eCatholic site 35377. The site's Mass block (#massModeAll) was not read; Mass times come
     from the bulletin.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-peter-point-pleasant-beach (headed Chrome); page-pdfs
     on Bon Venture page 2097

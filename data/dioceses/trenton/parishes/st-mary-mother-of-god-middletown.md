@@ -39,6 +39,7 @@ evidence:
   quote: 'Saturday Vigil: 5:00PM'
   note: 'Site''s Mass Times page: ''Sunday: 8:00AM, 10:00AM, 12:00PM & 5:00PM Weekdays: 8:15 AM & 12:00PM''.
     stmarychurchnj.org (the finder''s website) redirects to mmog.church.'
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row, 1 November 2026 issue
   url: https://container.parishesonline.com/bulletins/03/1430/20261101B.pdf

@@ -42,6 +42,7 @@ revisit: Read the parish's spring and summer 2027 Mass schedule (stfrancisparish
   or a bulletin from late May-June 2027) to confirm the church reopens; dated revisit per the seasonal
   shore church rule.
 revisit_after: 2027-05-15
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

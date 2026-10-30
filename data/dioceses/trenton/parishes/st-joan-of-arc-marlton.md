@@ -25,6 +25,7 @@ evidence:
     2026-10-18 (2026-10-11, 2026-10-04 ... below); the listing already has 25 October and 1 November.
     The site''s ''Our Cohort'' links list Holy Eucharist, Saint Mary of the Lakes, Saint Isaac Jogues
     and Saint John Neumann.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-joan-of-arc-marlton (headed Chrome); page-pdfs
     on the John Patrick listing

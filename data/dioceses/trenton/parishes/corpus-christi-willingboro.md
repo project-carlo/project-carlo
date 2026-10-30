@@ -23,6 +23,7 @@ evidence:
     reads 'Sunday, October 25, 2026'; created 19 Oct 2026), so the filename is the upload week. The listing's
     18 October file is a different PDF (md5 fb33841e..., 6 pages), and the listing has 1 November, so
     the listing is the current channel.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish corpus-christi-willingboro (headed Chrome); page-pdfs
     on the John Patrick listing

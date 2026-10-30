@@ -29,6 +29,7 @@ evidence:
   quote: Cohort 15 St. Ann, Keansburg
   note: 'July 2024 cohort list: Cohort 15 is St. Ann, St. Catherine Laboure, St. Mary (Middletown) and
     OLPH-St. Agnes.'
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-catherine-laboure-north-middletown

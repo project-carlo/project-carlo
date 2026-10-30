@@ -24,6 +24,7 @@ evidence:
   note: The homepage (a Joomla site; the directory's churchofstdenis.org redirects here) shows a 'currentbulletin'
     image linking http://sponsors.bonventure.net/?page=2095. Its /archived-bulletins page lists only 2024
     and 2025 issues (the newest 5 October 2025), so it is not the current channel.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-denis-manasquan (headed Chrome); page-pdfs on
     the Bon Venture page

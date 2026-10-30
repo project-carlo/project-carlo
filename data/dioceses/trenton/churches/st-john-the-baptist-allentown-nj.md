@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM way ''Yardville-Allentown Road'' near the number (street match, Spring Mill): 40.17429, -74.59976,
     about 100 m from GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

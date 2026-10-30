@@ -26,6 +26,7 @@ evidence:
     whose only live link is the Bon Venture page above (plus one 2022 PDF). The eCatholic site (id 2974)
     has a /bulletins page, but its archive stops at 12 November 2017 ('Bulletins pre-11-2017'), so ecatholic:2974
     is only the host and is not recorded as the publication.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish our-lady-of-sorrows-st-anthony-hamilton (headed
     Chrome); page-pdfs on http://sponsors.bonventure.net/?page=2163

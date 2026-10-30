@@ -20,6 +20,7 @@ evidence:
   note: The page (read with the browser) shows both churches' addresses under one phone number, (732)
     446-6661, and embeds the Google Drive folder 'Bulletins' (docs.google.com/folderview?id=1PD8joT1ZetaRdAc8RYb9LN4Xf_X9RZB6)
     listing weekly PDFs from September 2026 to 'November 1, 2026 bulletin.pdf'.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

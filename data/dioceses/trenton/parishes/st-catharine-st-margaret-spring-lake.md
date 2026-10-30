@@ -40,6 +40,7 @@ evidence:
   seen: 2026-10-30
   note: The directory's website for this parish (finder pin 14605). It refused probe url and the browser
     on 2026-10-30; the bulletin footer and the working site are scsmsl.org, so the row uses that.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-catharine-st-margaret-spring-lake (headed Chrome);
     page-pdfs on the John Patrick listing

@@ -41,6 +41,7 @@ evidence:
   quote: Linkage Model for Sts. Francis and Clare and St. Mary, no later than July 1, 2017; Merger Model,
     no later than July 1, 2018
   note: 'January 2017 decisions, Cohort 5 item 2: the plan the 2018 merger carried out.'
+promoted: 2026-10-30
 research:
 - method: probe url mmotcp.org; probe po mary-mother-of-the-church-parish-08505; probe container 03/4119;
     probe pdf on the site's and ParishesOnline's 1 Nov 2026 issue; visit.py --links on /bulletins

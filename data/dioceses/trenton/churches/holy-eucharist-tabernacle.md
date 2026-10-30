@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'Church of the Holy Eucharist', 520 Medford Lakes Rd, Tabernacle,
     NJ, 08088-8590; pin 39.8450004, -74.7136842.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

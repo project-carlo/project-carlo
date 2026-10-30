@@ -23,6 +23,7 @@ evidence:
   note: The parish's Solutio site (plain fetch answers 403; read in the browser) lists /get-connected/bulletin/188-november-1-2026/file
     back to 176-august-9-2026. Those /file PDFs answer 403 to probe get, so the Bon Venture page (same
     Sunday, same parish) is the readable channel.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish our-lady-of-perpetual-help-maple-shade (headed Chrome);
     page-pdfs on the Bon Venture page

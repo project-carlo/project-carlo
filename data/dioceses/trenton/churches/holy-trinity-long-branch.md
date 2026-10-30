@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   note: OSM (nominatim) finds no named place of worship for Holy Trinity; it resolves 'Prospect Street,
     Long Branch' to 40.29757, -73.99469, within 30 m of GCatholic's Plus Code point (40.29781, -73.99469).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

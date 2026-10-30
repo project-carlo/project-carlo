@@ -28,6 +28,7 @@ evidence:
   quote: 42 W Main St., Moorestown, New Jersey 08057-2430
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton; kind: Church; Plus Code
     87F7X372+4H.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

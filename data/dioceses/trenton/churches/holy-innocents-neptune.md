@@ -32,6 +32,7 @@ evidence:
   note: 'OpenStreetMap has two house nodes for 3455 West Bangs Avenue: 40.21015, -74.07862 (about 115
     m from GCatholic''s point) and 40.21243, -74.07789 (about 300 m, probably a different parcel); neither
     is named as a church.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

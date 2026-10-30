@@ -24,6 +24,7 @@ evidence:
   quote: church-bulletin.org/?id=676
   note: The parish's own site (plain fetch answers 403, read in the browser). Its Bulletin page and homepage
     link church-bulletin.org/?id=676, the listing; the site has no archive of its own.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish our-lady-of-good-counsel-moorestown (headed Chrome);
     page-pdfs on the John Patrick listing

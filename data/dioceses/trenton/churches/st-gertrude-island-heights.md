@@ -36,6 +36,7 @@ evidence:
 revisit: 'Summer 2027: confirm the weekly Sunday 9:00 am Mass in summer months against that season''s
   bulletin.'
 revisit_after: 2027-07-15
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   note: 'Liturgy page: Saturday Vigil 4:00PM at Our Lady of Perpetual Help, 4:30PM at St. Catharine of
     Siena; Sunday 8:00 AM and 11:00 AM at St. Catharine, 9:30 AM and 7:00 PM Spanish Mass at Our Lady
     of Perpetual Help.'
+promoted: 2026-10-30
 research:
 - method: 'Compared page 1 of the 2 August 2026, 1 February 2026 and 1 November 2026 issues on Bon Venture
     4142 (the barrier island''s seasonal-shore question): both Seaside churches list the same Sunday Masses

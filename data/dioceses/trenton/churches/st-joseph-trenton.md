@@ -29,6 +29,7 @@ evidence:
   quote: St. Joseph's Catholic Church
   note: 'OSM place of worship (way 813643996) at 40.23300, -74.74470, 540 North Olden Avenue, 08638: 20
     m from GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

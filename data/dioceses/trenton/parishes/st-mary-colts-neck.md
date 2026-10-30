@@ -11,7 +11,8 @@ evidence:
   quote: 'Pastor: Reverend Fr. Jeffrey E. Lee'
   note: 'Masthead, page 1 of the 1 November 2026 issue (12 pages, text layer): ''THE PARISH OF SAINT MARY'',
     One Phalanx Road, Colts Neck, NJ 07722, Pastor Reverend Fr. Jeffrey E. Lee, Parish Trustees Linda
-    Dickinson-Pancila and Tom Nathanson (the text layer reads "One Phalanz Road", a typo in the PDF). Names St. Mary alone.'
+    Dickinson-Pancila and Tom Nathanson (the text layer reads "One Phalanz Road", a typo in the PDF).
+    Names St. Mary alone.'
 - url: https://files.constantcontact.com/6512d43c001/1aa2d97e-3e96-48ad-8188-7213e02b7ca6.pdf
   seen: 2026-10-30
   quote: AT ST. CATHARINE , HOLMDEL
@@ -33,6 +34,7 @@ evidence:
     30 August ...). Its first dated link, https://files.constantcontact.com/6512d43c001/51c737bf-c2ec-4a44-b348-2e69ace27468.pdf,
     is labelled 25 October but its page-1 masthead reads ''Pastor: Reverend Fr. Jeffrey E. Lee ... November
     1, 2026 Solemnity of All Saints'' (a second copy of the 1 November issue).'
+promoted: 2026-10-30
 research:
 - method: fetch:check with page-pdfs on /bulletins-1 and on /past-bulletins
   url: https://www.stmaryscoltsneck.org/past-bulletins

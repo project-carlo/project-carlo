@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: OSM has no house point for 45 Crosswicks; it returns the street (40.14626, -74.70730 among its
     segments). Not used for coordinates.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

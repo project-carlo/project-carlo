@@ -30,6 +30,7 @@ evidence:
     St. Elizabeth Ann Seton, Whiting): the Collaborative Model for all four, so a cohort and not a linkage;
     item 2 ''Status of St. Monica to be reviewed periodically, beginning July 1, 2018''. Read in the browser
     with visit.py --text.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-elizabeth-ann-seton-whiting (headed Chrome);
     page-pdfs on the Bon Venture sponsor page

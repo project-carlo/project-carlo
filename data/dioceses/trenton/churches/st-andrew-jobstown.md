@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=2489+Monmouth+Road+Jobstown+NJ&format=json
   seen: 2026-10-30
   note: OSM has the house 2489 Monmouth Road at 40.03805, -74.69166, about 20 m from the Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
     numbered issues 'October 25, 2026 New' (291) back to June 2026 over 8 pages, each a /file link that
     also answers 403 to probe get. The site's issue is a week behind the listing's 1 November issue, so
     the row reads the listing.
+promoted: 2026-10-30
 research:
 - method: visit.py ourladyqop.org --bulletin; probe get of the Solutio /file link; church-bulletin.org
     listing 565

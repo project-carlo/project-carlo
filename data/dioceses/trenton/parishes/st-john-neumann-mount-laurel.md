@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: The parish's own eCatholic site (id 2914; plain fetch answers 403, read in the browser). Its Bulletins
     page links files.ecatholic.com/2914/bulletins/20261101.pdf and 20261025.pdf.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-john-neumann-mount-laurel (headed Chrome)
   url: https://www.sjnmtl.org/bulletins

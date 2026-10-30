@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: The parish site (Joomla; probe url reads it) links https://www.jppc.net/onlinebulletins/618template.pdf,
     the listing 618 redirect, as its bulletin. It embeds no other publication.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-james-red-bank (headed Chrome); page-pdfs on
     the John Patrick listing

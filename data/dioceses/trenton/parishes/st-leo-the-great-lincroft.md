@@ -25,6 +25,7 @@ evidence:
   note: The homepage's 'Bulletin' link goes to http://sponsors.bonventure.net/?page=2156. The site's own
     /bulletins page (an eCatholic page, ecatholic:14276) lists only files.ecatholic.com/14276/bulletins/
     issues from May-August 2017, so ecatholic:14276 is the parish's website host, not its current bulletin.
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-luke-toms-river

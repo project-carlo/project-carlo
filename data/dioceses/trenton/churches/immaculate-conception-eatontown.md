@@ -30,6 +30,7 @@ evidence:
   note: Finder pin directory:14600 'Church of Immaculate Conception', 64 Broad St, Eatontown 07724-1518,
     (732) 389-3830, website eatoncatholic.org; pin 40.30543, -74.05706, about 20 m from GCatholic's Plus
     Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -53,6 +53,7 @@ evidence:
   note: The Korean community's own site (titled in Korean 'Princeton Korean Martyrs Church') keeps a 'Jubo'
     (weekly bulletin) board of one post per Sunday; each post links a single Google Drive file. The newest
     post is 27 September 2026 (post 29751).
+promoted: 2026-10-30
 research:
 - method: Read the Korean Martyrs community's own site (princetonsd.org) in the browser, its Jubo board
     and the 27 September 2026 post; fetched the linked Drive file with probe pdf

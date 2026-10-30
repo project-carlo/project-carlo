@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'St. Mary of the Lakes', 40 Jackson Rd, Medford, NJ, 08055-9200; pin
     39.8732066, -74.8188339.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

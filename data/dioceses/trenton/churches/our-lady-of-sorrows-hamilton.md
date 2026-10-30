@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM node ''Our Lady of Sorrows Church, East State Street'': 40.23671, -74.69093, about 35 m from
     GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

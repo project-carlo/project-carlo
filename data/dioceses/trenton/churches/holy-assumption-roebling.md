@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   quote: has two worship sites – Holy Assumption, Roebling, and St. Mary Church, Bordentown
   note: The Monitor, 2025-07-11.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

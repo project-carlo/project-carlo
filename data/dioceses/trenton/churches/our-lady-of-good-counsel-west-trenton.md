@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM house point 137 West Upper Ferry Road: 40.26270, -74.82511, about 30 m from GCatholic''s
     Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14613 'Our Lady of Hope Parish', 254 Wall St, West Long Branch 07764-1123,
     (732) 222-1424, website ladyofhopeparish.org (the parish office address, also GCatholic's St. Jerome).
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs church-bulletin.org/555), 1 November 2026 issue
   url: https://www.church-bulletin.org/bulletin/the-parish-of-our-lady-of-hope-west-long-branch-nj-07764/2026-11-01.pdf

@@ -31,6 +31,7 @@ evidence:
   quote: Cohort 15 St. Ann, Keansburg
   note: 'July 2024 cohort list: St. Catherine Laboure is in Cohort 15 with St. Ann, St. Mary and OLPH-St.
     Agnes.'
+promoted: 2026-10-30
 research:
 - method: probe get on the finder website stcathek.org (homepage and bulletin.htm)
   url: http://www.stcathek.org/bulletin.htm

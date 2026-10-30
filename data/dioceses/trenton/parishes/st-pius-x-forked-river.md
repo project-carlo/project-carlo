@@ -31,6 +31,7 @@ evidence:
   note: Finder pin directory:14657 'St. Pius X Parish', 300 Lacey Road, Forked River 08731-2619, (609)
     693-5107, website churchofstpius.org; one pin for the parish. GCatholic's churchofstpiusx.net does
     not resolve (no DNS, 2026-10-30).
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs church-bulletin.org/590), 1 November 2026 issue
   url: https://www.church-bulletin.org/bulletin/the-church-of-saint-pius-the-tenth-forked-river-nj-08731/2026-11-01.pdf

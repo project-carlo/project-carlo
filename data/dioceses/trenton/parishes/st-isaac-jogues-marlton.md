@@ -26,6 +26,7 @@ evidence:
     Bulletins page links files.ecatholic.com/13541/bulletins/20261025.pdf as the newest issue (20261018
     ... below). That PDF is byte-identical to the listing's 2026-10-25.pdf (md5 23749c166f39a6e8ceb4242580aa1751,
     8,396,720 bytes). The listing already has 1 November.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-isaac-jogues-marlton (headed Chrome); page-pdfs
     on the John Patrick listing

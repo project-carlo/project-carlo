@@ -25,6 +25,7 @@ evidence:
   note: 'probe url: HTTP 200, WordPress site ''Parish of St. Teresa of Calcutta - 501 Brinley Avenue Bradley
     Beach, NJ 07720''; its bulletin link is https://www.jppc.net/onlinebulletins/687template.pdf, the
     other bulletin links are forms (registration, ministries, funeral guidelines). No second channel.'
+promoted: 2026-10-30
 research:
 - method: Rendered pages 1-2 of the 1 Nov 2026 issue (render.py) and read the masthead and Mass blocks;
     compared against GCatholic's separate Ascension and St. Elizabeth entries

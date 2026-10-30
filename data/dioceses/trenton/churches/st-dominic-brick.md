@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap geocodes 250 Old Squan Road to Saint Dominics School (node 357716879), 40.07541,
     -74.11450, about 40 m from GCatholic's Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

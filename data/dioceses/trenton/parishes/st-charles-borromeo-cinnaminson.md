@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-30
   note: 'Read in the browser (visit.py): the homepage''s only bulletin-related link is https://sponsors.bonventure.net/?page=2203.
     probe url finds no publication ids on it.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-charles-borromeo-cinnaminson (headed Chrome);
     page-pdfs on the Bon Venture page

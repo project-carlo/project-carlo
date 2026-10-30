@@ -29,6 +29,7 @@ evidence:
   note: 'The diocese''s finder pins ''St. Mary of the Assumption Cathedral'', 151 N Warren St, Trenton
     08608-1307, (609) 396-8447 at 40.22199, -74.76562: 65 m from OSM''s way. GCatholic omits the Cathedral,
     so there is no Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

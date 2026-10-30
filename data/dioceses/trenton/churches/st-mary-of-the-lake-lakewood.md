@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap has two house points for 43 Madison Avenue, 40.09034, -74.21651 and 40.08987, -74.21611,
     within about 60-90 m of GCatholic's Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

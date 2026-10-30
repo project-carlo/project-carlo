@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14620) lists 'St. Mary Parish', 1 Phalanx Rd, Colts
     Neck, NJ 07722-1515, website stmaryscoltsneck.org.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

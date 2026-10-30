@@ -29,6 +29,7 @@ evidence:
   note: Finder pin directory:14658 'St. Theresa Catholic Parish', 450 Radio Rd, Little Egg Harbor Township
     08087-1882, (609) 296-2504, website sttheresa450.org. GCatholic's sttheresa-littleeggharbor.com has
     no DNS.
+promoted: 2026-10-30
 research:
 - method: issues.py ecatholic 5085 (weeks 11 Oct-1 Nov) and fetch:check with the ecatholic provider
   url: https://files.ecatholic.com/5085/bulletins/20140119.pdf

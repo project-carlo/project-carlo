@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese finder pin "St. Clement Parish", 172 Freneau Ave, Matawan 07747-3400 (40.39456, -74.23802),
     website stclementmatawan.org; read with finder.py (roster directory:14607).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

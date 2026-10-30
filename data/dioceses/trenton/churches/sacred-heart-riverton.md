@@ -28,6 +28,7 @@ evidence:
   quote: 103 4th St., Riverton, New Jersey 08077-1205
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton as ''Sacred Heart''; kind:
     Church; Plus Code 87G62X5J+G9.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

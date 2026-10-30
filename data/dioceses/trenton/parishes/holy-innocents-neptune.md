@@ -24,6 +24,7 @@ evidence:
   note: 'probe url: HTTP 200 (the finder''s http://www.holyinnocentschurch.net/ redirects here); its bulletin
     links are https://www.jppc.net/onlinebulletins/608template.pdf, /bulletin/ and /bulletins-archive/.
     The /bulletin/ page links the same 608 template.'
+promoted: 2026-10-30
 research:
 - method: Rendered pages 1-2 of the 1 Nov 2026 issue and read the masthead and Mass block; grep of the
     text layer returned nothing (image-only)

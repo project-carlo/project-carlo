@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14590 'Christ the King Parish', 111 Chelsea Ave. Rear, Long Branch 07740-6056,
     (732) 222-3216, website cklb.org; one pin for the parish, at the seat.
+promoted: 2026-10-30
 research:
 - method: fetch:check on the row (page-pdfs church-bulletin.org/539), 1 November 2026 issue
   url: https://www.church-bulletin.org/bulletin/christ-the-king-parish-long-branch-nj-07740/2026-11-01.pdf

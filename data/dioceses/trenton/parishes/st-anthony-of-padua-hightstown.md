@@ -17,6 +17,7 @@ evidence:
   seen: 2026-10-30
   note: 'The parish''s site (probe url reads it): its bulletin link is www.jppc.net/onlinebulletins/568template.pdf,
     which redirects to the John Patrick listing; no PDFs of its own.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-anthony-of-padua-hightstown (headed Chrome)
   url: https://church-bulletin.org/568

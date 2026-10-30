@@ -27,6 +27,7 @@ evidence:
   note: Finder pin directory:14596 'Church of the Precious Blood Parish', 72 Riverdale Ave, Monmouth Beach
     07750-1475, (732) 222-4756; pin 40.33075, -73.98218, about 20 m from GCatholic's Plus Code point.
     The ZIP+4 differs (1475 vs 1464); street and town agree.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

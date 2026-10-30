@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-30
   quote: Keyport
   note: July 2024 cohort list, Cohort 14, lists Our Lady of Fatima (Keyport) as one parish.
+promoted: 2026-10-30
 research:
 - method: Grepped the 27 Sept, 4, 18, 25 Oct and 1 Nov 2026 issues for "Jesus the Lord", "Jesus el Senor"
     and "Broad"; read the site Mass Schedule and Parish Life pages; searched The Monitor for "Jesus the

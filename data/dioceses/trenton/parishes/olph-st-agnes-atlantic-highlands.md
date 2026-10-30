@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-30
   quote: OLPH-St. Agnes, Atlantic Highlands
   note: Cohort 15 entry.
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-ann-keansburg

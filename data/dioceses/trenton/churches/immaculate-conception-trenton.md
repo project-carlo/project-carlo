@@ -33,6 +33,7 @@ evidence:
   quote: Our Lady of the Angels
   note: 'OSM place of worship (way 818070141) named ''Our Lady of the Angels'' at 540 Chestnut Avenue,
     40.21248, -74.74647: 30 m from GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

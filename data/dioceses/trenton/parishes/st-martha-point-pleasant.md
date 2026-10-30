@@ -24,6 +24,7 @@ evidence:
   note: 'Page 2: the St. Vincent de Paul wreath-sale notice names Sacred Heart, St. Martha''s and St.
     Peter''s as sale venues. It shows cooperation among cohort parishes, not a shared bulletin; the bulletin''s
     own Mass schedule lists St. Martha only.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-martha-point-pleasant (headed Chrome); page-pdfs
     on the Bulletin page

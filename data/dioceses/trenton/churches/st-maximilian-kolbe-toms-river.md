@@ -36,6 +36,7 @@ evidence:
   seen: 2026-10-30
   note: OSM place_of_worship 'Saint Maximilian Kolbe Church', 130 Saint Maximilian Lane, at 39.95452,
     -74.25970 (about 40 m from the Plus Code point).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

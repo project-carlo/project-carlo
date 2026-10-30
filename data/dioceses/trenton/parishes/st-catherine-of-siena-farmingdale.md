@@ -19,6 +19,7 @@ evidence:
   note: 'The parish''s Bulletins page (read in the browser) lists dated PDFs on a becdn.net host, newest
     first: 84885-OCT-25-2026-BULLETIN.pdf, then C84885-2026-10-18.pdf, 10-11, 10-04 and weekly back to
     2026-08-30.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-veronica-howell
   decision: separate

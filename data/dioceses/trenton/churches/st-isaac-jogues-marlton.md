@@ -28,6 +28,7 @@ evidence:
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton; kind: Church; Plus Code
     87F7W427+36. GCatholic''s street is ''3 Lord Pl.'' with the same ZIP+4 (08053-1960) as the finder''s
     349 Evesboro Medford Road; its coordinates are about 25 m from the finder''s pin.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

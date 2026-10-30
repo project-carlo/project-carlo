@@ -30,6 +30,7 @@ evidence:
     stgeorgetitusville.org and stjamespennington.org all return the title "The Catholic Community of Hopewell
     Valley - NJ", link jppc.net/onlinebulletins/547template.pdf (listing 547) and carry ecatholic:22670
     (probe url, 2026-10-30). Its Mass & Confession page lists all three churches with their addresses.'
+promoted: 2026-10-30
 research:
 - method: 'pnpm fetch:check --diocese trenton --parish catholic-community-of-hopewell-valley (headed Chrome):
     picked .../2026-11-01.pdf, transport ok, document_type pdf, freshness future (the coming Sunday, posted

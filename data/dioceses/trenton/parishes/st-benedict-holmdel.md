@@ -34,6 +34,7 @@ evidence:
   note: 'Homepage Mass times read in the browser: Saturday 5:00 PM; Sunday 8:00 AM, 9:30 AM, 11:00 AM,
     5:00 PM; Monday-Friday 9:00 AM; perpetual adoration in the Our Lady of Victory Adoration Chapel. Pastor
     Father Garry Koch.'
+promoted: 2026-10-30
 research:
 - method: issues.py ecatholic 15175 and 39277 (files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf, Sundays
     30 Aug-1 Nov 2026)

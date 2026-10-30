@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap geocodes 406 Forman Avenue to a house point at 40.08898, -74.04598, about 8 m from
     GCatholic's.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

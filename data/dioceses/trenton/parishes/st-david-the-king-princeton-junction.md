@@ -24,6 +24,7 @@ evidence:
   quote: 1 New Village Road | Princeton Junction NJ 08550
   note: The parish's John Patrick-built homepage; its footer reads 'Proudly Designed and Hosted by John
     Patrick Publishing Company', and its 'Weekly Bulletins' link and parish-bulletins page point to church-bulletin.org/?id=6043.
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-david-the-king-princeton-junction (headed Chrome)
   url: https://church-bulletin.org/6043

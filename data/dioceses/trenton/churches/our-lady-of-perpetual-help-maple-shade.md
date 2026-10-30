@@ -27,6 +27,7 @@ evidence:
   quote: 236 E Main St., Maple Shade, New Jersey 08052-2624
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton as ''Our Lady of Perpetual
     Help''; kind: Church; Plus Code 87F7X243+46.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

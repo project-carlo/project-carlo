@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=103+Center+Ave+Atlantic+Highlands+NJ&format=json
   seen: 2026-10-30
   note: OSM house node 103 Center Avenue at 40.41595, -74.04404 (no place_of_worship).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

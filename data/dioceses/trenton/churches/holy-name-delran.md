@@ -32,6 +32,7 @@ evidence:
   quote: 260 Conrow Rd., Delran, New Jersey 08075-1757
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton as ''Holy Name''; kind:
     Church; group: Resurrection Parish; Plus Code 87G72344+FF.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

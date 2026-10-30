@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-30
   note: The homepage links https://www.jppc.net/onlinebulletins/570template.pdf as its 'CURRENT BULLETIN';
     that URL redirects to the church-bulletin.org listing above.
+promoted: 2026-10-30
 research:
 - method: Read the Duda homepage, the about-our-parish history page and the Mass schedule on the 1 Nov
     2026 bulletin page 2 for any second worship site

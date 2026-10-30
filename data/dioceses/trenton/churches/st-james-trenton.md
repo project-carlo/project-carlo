@@ -30,6 +30,7 @@ evidence:
   note: 'OSM ''St. James Roman Catholic Church'', 11 East Paul Avenue, North Trenton: 40.23474, -74.75745.
     The same query for ''29 East Paul Avenue'' returns ''Holy Trinity Novitiate'' at 29 East Paul Avenue
     (40.23463, -74.75692), about 45 m away.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

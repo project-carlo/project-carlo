@@ -36,6 +36,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=1370+River+Road,+Titusville,+NJ&format=json
   seen: 2026-10-30
   note: OSM way 588372163, "Saint George Church, 1370, River Road", at 40.3009085, -74.8690378.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

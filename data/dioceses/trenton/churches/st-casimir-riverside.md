@@ -32,6 +32,7 @@ evidence:
   quote: 502 New Jersey Ave., Riverside, New Jersey 08075
   note: 'Listed in GCatholic: churches of the Roman Catholic Diocese of Trenton as ''St. Casimir''; kind:
     Church; group: Resurrection Parish; Plus Code 87G722MM+V2. No website.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   note: Diocese parish finder lists 'St. Elizabeth Ann Seton Parish', 30 Schoolhouse Rd, Whiting, NJ,
     08759-3025; pin 39.9369703, -74.3472082.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

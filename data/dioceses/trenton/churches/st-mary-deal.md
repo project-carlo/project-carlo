@@ -32,6 +32,7 @@ evidence:
 revisit: 'Read Our Lady of Hope''s summer schedule (June-August 2027) for St. Mary, Deal: the cohort list
   and the diocese treat Deal as possibly seasonal, and the November 2026 schedule is year-round.'
 revisit_after: 2027-06-15
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

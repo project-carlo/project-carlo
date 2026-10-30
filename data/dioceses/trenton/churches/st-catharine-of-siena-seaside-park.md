@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: OpenStreetMap house 50, E Street, Seaside Park 08752 at 39.92655, -74.07602, about 130 m from
     GCatholic's point (same block); a house node, not a named church.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

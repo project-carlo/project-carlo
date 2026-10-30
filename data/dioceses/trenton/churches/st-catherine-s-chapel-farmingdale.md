@@ -29,6 +29,7 @@ evidence:
   quote: W Main St. & N Main St., Farmingdale, New Jersey 07727
   note: GCatholic lists 'St. Catherine', kind Chapel, Plus Code 87G75RXH+PM (40.19931, -74.17081), no
     street number.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14658, 450 Radio Rd, Little Egg Harbor Township 08087-1882 (39.58811, -74.35730),
     60 m from GCatholic's point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

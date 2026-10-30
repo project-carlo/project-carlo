@@ -34,6 +34,7 @@ evidence:
     community serving English, Korean and Slovak-speaking Catholics.
   note: 'The Monitor, 19 October 2026: the St. Jude Solemn Novena is at St. Michael Church, 1130 Brunswick
     Ave., Trenton; it is part of St. Ann Parish.'
+promoted: 2026-10-30
 research:
 - method: 'probe url on the finder''s website (churchofsaintann.net), then visit.py in the browser: homepage
     links, /bulletins, /mass-schedule'

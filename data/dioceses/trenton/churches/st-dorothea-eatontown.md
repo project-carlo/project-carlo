@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14609 'St. Dorothea Parish', 240 Broad St, Eatontown 07724-1601, (732) 542-0148;
     pin 40.30544, -74.04949, about 60 m from GCatholic's Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

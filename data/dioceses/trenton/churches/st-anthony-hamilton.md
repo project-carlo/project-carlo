@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM house point 626 South Olden Avenue: 40.21839, -74.73135, about 35 m from GCatholic''s Plus
     Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   note: 'Kolbe''s RCCTR page: a collaboration of leaders and clergy of four parishes that ''collaborate
     to find ways to strengthen our parishes''. It describes four parishes, not a shared bulletin; each
     publishes its own (see the four mastheads in the peer reviews).'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-luke-toms-river (headed Chrome); page-pdfs on
     http://sponsors.bonventure.net/?page=4167

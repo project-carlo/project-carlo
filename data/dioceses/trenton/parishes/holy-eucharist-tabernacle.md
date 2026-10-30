@@ -25,6 +25,7 @@ evidence:
     10:30am. The homepage lists daily Mass 9:00am Monday, Wednesday, Thursday and Friday and a Communion
     service Tuesday. Its Bulletin link is https://www.jppc.net/onlinebulletins/602template.pdf, the John
     Patrick template for listing 602.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish holy-eucharist-tabernacle (headed Chrome); page-pdfs
     on the John Patrick listing

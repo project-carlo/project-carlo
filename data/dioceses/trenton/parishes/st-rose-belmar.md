@@ -25,6 +25,7 @@ evidence:
     is only the host: its Bulletin page''s ''Click to View Current Bulletin'' link is https://sponsors.bonventure.net/pdfs/2155/2026-11-01.pdf,
     and issues.py ecatholic 37219 found no files.ecatholic.com bulletins. The page''s Mass Schedule agrees
     with the bulletin''s.'
+promoted: 2026-10-30
 research:
 - method: visit.py on strosebelmar.com/bulletin, then probe pdf on the linked Bon Venture issue (http://
     because sponsors.bonventure.net fails TLS verification)

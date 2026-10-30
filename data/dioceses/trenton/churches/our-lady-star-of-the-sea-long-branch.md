@@ -36,6 +36,7 @@ evidence:
     and phone as GCatholic's church) is plotted at 40.29902, -73.99481, 1.05 km from this church and 130
     m from Holy Trinity, though the address is the office beside this church (OSM 111 Chelsea Ave at 40.30145,
     -73.98337). The pin is wrong; its roster entry is linked here because the address and phone match.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

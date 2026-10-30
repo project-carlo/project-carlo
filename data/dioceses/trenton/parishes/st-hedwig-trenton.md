@@ -25,6 +25,7 @@ evidence:
   note: 'The parish''s own Parish Bulletin page links the John Patrick bulletin 592 and also lists self-hosted
     /Bulletins/Bulletin-<date>.pdf files, the newest of which is Bulletin-2026-07-19.pdf (the 1 November
     file answers 404): that archive is stale (about 15 weeks), the listing is current.'
+promoted: 2026-10-30
 research:
 - method: probe url on sainthedwigparish.com; probe pdf on the 1 November 2026 listing issue; compared
     the site's own /Bulletins archive

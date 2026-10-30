@@ -33,6 +33,7 @@ evidence:
     for 4 to 25 October and 1 November). Its text still carries a note dated May 20, 2024: daily Mass
     is at St. Paul ''while the All Saints Church roof is being worked on''; the current bulletin shows
     daily Mass at St. Paul and weekend Masses at both.'
+promoted: 2026-10-30
 research:
 - method: probe url stkatharinedrexel-nj.org; visit.py --links on /bulletin; probe po st-katharine-drexel-parish-08016;
     probe container 03/4122; probe pdf on the 1 and 25 Oct 2026 issues

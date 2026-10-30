@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-30
   note: The diocese's parish finder (roster directory:14595) lists 'Church of The Nativity Parish', 180
     Ridge Rd, Fair Haven, NJ 07704-3431, pin 40.35469, -74.03002.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

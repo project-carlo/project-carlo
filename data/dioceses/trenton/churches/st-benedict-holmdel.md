@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin "St. Benedict Parish", 165 Bethany Rd, Holmdel 07733-1654 (40.40452, -74.20321), website
     parish.stbenedictholmdel.org (roster directory:14604).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

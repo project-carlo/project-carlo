@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'OSM node ''St. Gregory the Great Church, 4620 Nottingham Way'': 40.2232, -74.64011, about 25
     m from GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

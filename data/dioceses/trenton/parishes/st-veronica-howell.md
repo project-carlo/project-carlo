@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: 'John Patrick listing 532 ''Saint Veronica Church'', Howell NJ 07731: dated PDFs /bulletin/saint-veronica-church-howell-nj-07731/2026-11-01.pdf,
     2026-10-25, 2026-10-18.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-william-the-abbot-howell
   decision: separate

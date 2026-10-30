@@ -32,6 +32,7 @@ evidence:
     all fail the TLS check (''certificate is not valid for svdpnj.org'', ERR_CERT_COMMON_NAME_INVALID,
     also for www. and over http://). The bulletin''s own email domain is svdpnj.org, so the domain is
     the parish''s but its site cannot be read.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-vincent-de-paul-yardville (headed Chrome); page-pdfs
     on https://www.church-bulletin.org/saint-vincent-de-paul-parish-yardville-nj-08620

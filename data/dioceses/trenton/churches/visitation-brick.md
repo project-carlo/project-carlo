@@ -32,6 +32,7 @@ evidence:
   note: OpenStreetMap places 755 Mantoloking Road at 40.05023, -74.12230 and 730 Lynnwood Avenue at 40.04926,
     -74.12131 (both unnamed house points); GCatholic's Plus Code is about 45 m from the first and 95 m
     from the second.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=26+Leonardville+Rd+New+Monmouth+NJ&format=json
   seen: 2026-10-30
   note: OSM house node 26 Leonardville Road at 40.41331, -74.09965, no place_of_worship.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

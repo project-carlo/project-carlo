@@ -35,6 +35,7 @@ evidence:
   quote: Church of Saint Joachim
   note: 'OSM place of worship (way 818491844) ''Church of Saint Joachim, 20 Butler Street, Chambersburg,
     Trenton 08611'' at 40.21299, -74.75266: 14 m from GCatholic''s Plus Code.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

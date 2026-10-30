@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: Finder pin directory:14592 'Church of St. Anselm', 1028 Wayside Rd, Tinton Falls 07712-3146, (732)
     493-4411; pin 40.26132, -74.07479, about 30 m from GCatholic's Plus Code point.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass
