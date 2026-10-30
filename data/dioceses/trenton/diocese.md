@@ -373,6 +373,11 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A John Patrick joint listing's masthead address for a parish can be its parish center, not its church (St. Pio: 103 Washington Ave is the office; the church is 1100 Grand Central Ave on the parish's Contact page): take the church address from the site's contact page.
+- GCatholic's name for a merged parish's church can be the pre-merger parish's (St. Bonaventure, Lavallette = St. Pio's church, 1100 Grand Central Ave): match by street address, and look for the daily-Mass chapel with its own address on the site's Contact page (1206 Grand Central Ave).
+- A Bon Venture issue can have a text layer whose English headings are font-garbled while the Mass lines read (St. Junipero Serra, 4142): fetch:check reports identity unverified; read page 1 with probe pdf --pages 1 and cite the readable lines.
+- Seaside Park/Heights and Lavallette churches show the same Masses in February, August and November bulletins: compare page 1 of a summer and a winter issue before treating a shore church as seasonal.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
