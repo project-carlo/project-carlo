@@ -379,6 +379,12 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A site hosted by John Patrick Publishing is not a John Patrick bulletin: St. Joseph's (561) and St. Maximilian Kolbe's (549) listings are hosting pages with no PDFs; their bulletins are on Bon Venture (3204, 6497).
+- probe url finding no publisher does not mean none: St. Maximilian Kolbe's 'Bulletins' menu link is sponsors.bonventure.net/?page=6497, found with visit.py --links --match 'ulletin'. Check the sponsor header's address against the church (it printed ZIP 08756-4144 against 08757 elsewhere).
+- An eCatholic homepage (St. Luke 36011) can carry a Bon Venture sponsor page (4167) in its Bulletins page with no files.ecatholic.com PDFs: the row is the Bon Venture page, not the eCatholic id.
+- A cohort name (RCCTR, Toms River) is a collaboration, not a shared bulletin: four pastors, four printers' pages. A GCatholic entry carrying another parish's website (St. Gertrude, Island Heights with St. Joseph's) is a mission worth checking against that parish's Mass schedule: it is the 2nd-Sunday 9:00 am Mass in St. Joseph's bulletin.
+- fetch:check can report an issue-date 'conflict' on a John Patrick issue whose weekly readings list the following week's dates; the cover date and file name settle it.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
