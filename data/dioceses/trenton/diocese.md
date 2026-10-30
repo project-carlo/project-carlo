@@ -377,6 +377,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - GCatholic's name for a merged parish's church can be the pre-merger parish's (St. Bonaventure, Lavallette = St. Pio's church, 1100 Grand Central Ave): match by street address, and look for the daily-Mass chapel with its own address on the site's Contact page (1206 Grand Central Ave).
 - A Bon Venture issue can have a text layer whose English headings are font-garbled while the Mass lines read (St. Junipero Serra, 4142): fetch:check reports identity unverified; read page 1 with probe pdf --pages 1 and cite the readable lines.
 - Seaside Park/Heights and Lavallette churches show the same Masses in February, August and November bulletins: compare page 1 of a summer and a winter issue before treating a shore church as seasonal.
+- A GCatholic entry named for a merged-away parish can be a different campus the merger absorbed (GCatholic's 'St. Mary of the Lake' at 1141 E County Line Rd, Lakewood is Holy Family): match by street and read the bulletin's Mass schedule for every church it names before deciding which roster entry is which.
+- An eCatholic parish site can carry its bulletin link only on the homepage 'Weekly Bulletin' menu item, with an empty /bulletins archive and 403 on every files.ecatholic.com issue (St. Dominic, Brick; Bon Venture 4139): list the homepage links with visit.py --links --match . before calling the eCatholic id the bulletin.
+- A Bon Venture issue can be image-only for most pages one week and text-readable the next (St. Dominic: 1 Nov pages 1-16 image-only, 25 Oct 14 readable pages): read the previous Sunday's issue for the masthead and cite it; fetch:check will report identity unverified for the image issue.
+- A parish bulletin can print the church address apart from the rectory while the finder, GCatholic and the John Patrick listing give only the rectory (Visitation, Brick: church 755 Mantoloking Rd, rectory 730 Lynnwood Ave).
+- When writing record JSON from a shell heredoc, quote the delimiter ('JSON'): a backtick in the body inside an unquoted heredoc runs as a command and silently drops text.
 
 ## Rules settled for this diocese
 
