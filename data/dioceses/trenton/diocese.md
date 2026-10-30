@@ -265,6 +265,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Joomla weblinks lists (Epiphany, Brick; Camden saw the same) hold no PDF hrefs: every entry is a task=weblink.go link that 301s to the PDF. No existing recipe collects them, and unpinned fetch:check picks an unrelated PDF such as ministers.pdf. Find the newest by `curl -I` on the last entry.
 - A parish site's eCatholic id (St. Peter, Point Pleasant Beach 35377) may be host only: its 'Bulletins' link goes to Bon Venture (page 2097). Record the Bon Venture page, not the eCatholic id.
 - A bulletin cover that credits Bon Venture Services (Epiphany) shows the printer, not a Bon Venture sponsor-page channel: its PDFs may still be self-hosted.
+- A parish site that links jppc.net/onlinebulletins/<id>template.pdf (Holy Eucharist, Clover site) points at the John Patrick listing; no site archive to compare.
+- An eCatholic parish site that answers 403 to probe url (smlparish.org) still lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf in the browser; those PDFs fetch with probe get and can be md5-compared with the John Patrick listing.
 
 ## Rules settled for this diocese
 
