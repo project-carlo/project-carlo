@@ -386,6 +386,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - fetch:check can report an issue-date 'conflict' on a John Patrick issue whose weekly readings list the following week's dates; the cover date and file name settle it.
 - A John Patrick listing the Run's id scan showed with no edition (St. Barnabas 6048, scanned 2026-10-30 earlier) can carry current issues when rechecked: reload the listing with probe url before treating it as dead.
 - St. Barnabas and St. Pius X issues are image-only: read masthead and Mass schedule from render.py pages 1-3 (the Mass lines can be a Mass-intentions page, as in St. Pius X page 3).
+- An eCatholic parish whose current issues are /documents/<yyyy>/<m>/ uploads on a Weekly Parish Bulletins page (St. Theresa, Little Egg Harbor 5085) breaks the ecatholic resolver, which picks /bulletins/20140119.pdf; record the row as other with page-pdfs on that page and keep ecatholic:5085 in publication.
+- St. Francis of Assisi (LBI) prints one Mass schedule for four churches and marks Surf City, Beach Haven and Loveladies CLOSED from mid-October to at least 20 December: check the bulletin's seasonal schedule block (p. 5) and the mass-schedule page before judging a shore church, and read an August issue for the summer Masses.
+- GCatholic's St. Thomas (Beach Haven) is the bulletin's St. Thomas Aquinas; its Manahawkin church's street is Bishop Lane in the bulletin, Bishop Way in GCatholic and All Saints Way in OSM at the same point.
 
 ## Rules settled for this diocese
 
