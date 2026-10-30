@@ -26,6 +26,7 @@ evidence:
   note: 'Parish Mass Schedule page: St. Luke Monday-Thursday 8am, Friday 9am, Saturday 4pm, Sunday 10am;
     page footer lists ''St. Luke Church 55 Warwick Road, Stratford, NJ''. The parish office is at 55A
     Warwick Rd. in the bulletin.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

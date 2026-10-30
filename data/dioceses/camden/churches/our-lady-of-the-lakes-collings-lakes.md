@@ -27,6 +27,7 @@ evidence:
   quote: 19 Malaga Road
   note: 'Diocese Parish/School Locator (2015 entry): ''Our Lady of the Lakes Parish'', 19 Malaga Road,
     Collings Lakes 08094, point 39.592642, -74.884013; phone 609-561-8313.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

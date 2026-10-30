@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-29
   quote: 10:00am (live-stream)*
   note: 'Mass Times section: Saturday 4:30pm (english), 7:00pm (español); Sunday 8:00am, 10:00am, 12:00pm.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

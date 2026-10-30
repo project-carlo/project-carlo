@@ -33,6 +33,7 @@ evidence:
   note: 'Image-only PDF, pages 1 and 2 rendered and read: page 1 mentions ''the 11am mass'' and the monthly
     Teen Mass; page 2''s week ahead lists ''Family Mass 9:00 AM | Church'' on Sunday Nov 1 and Eucharistic
     Adoration Monday 8:30 AM in the Church. recheck can''t find these words as text.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

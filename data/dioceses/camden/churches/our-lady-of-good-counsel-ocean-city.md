@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   quote: Our Lady of Good Counsel
   note: 'Parish ''Winter Schedule'' page: ''40th Street & Asbury Ave.'', Sunday 7:30 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

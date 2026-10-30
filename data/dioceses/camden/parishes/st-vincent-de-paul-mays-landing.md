@@ -32,6 +32,7 @@ evidence:
   quote: will unite into one parish, the Parish of St. Vincent de Paul on November 3, 2010
   note: 'Diocese, 2010-10-01: St. Vincent de Paul in Mays Landing and St. Bernard Mission in Dorothy unite
     into one parish, one pastor.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: the-parish-of-saint-monica
   decision: separate

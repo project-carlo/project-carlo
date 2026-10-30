@@ -26,6 +26,7 @@ evidence:
   note: 'The parish''s own bulletin page is stale: dated ''January 5, 2025'', with links to 2022, 2023
     and 2024 archive pages only. The site''s footer says ''Proudly Designed and Hosted by John Patrick
     Publishing Company''.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

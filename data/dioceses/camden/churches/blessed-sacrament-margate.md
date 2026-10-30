@@ -34,6 +34,7 @@ evidence:
   seen: 2026-10-29
   note: 'Summer guide (Catholic Star Herald, 2026-05-22) lists ''Blessed Sacrament Church'', 11 N. Kenyon
     Ave., Margate, under Holy Trinity Parish: Sun 9:30 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

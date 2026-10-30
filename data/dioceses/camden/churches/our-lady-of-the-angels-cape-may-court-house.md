@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-29
   note: '2026 summer guide: ''Our Lady of the Angels'', East Mechanic St. & Garden State Parkway, Sat
     5 PM; Sun 8, 9:30 & 11 AM (its St. Elizabeth, Goshen, Sun 10:15 AM, is `st-elizabeth-goshen`).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

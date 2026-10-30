@@ -2,13 +2,14 @@
 name: Roman Catholic Diocese of Camden
 state: NJ
 website: https://camdendiocese.org
-status: exploring
+status: promoted
 gcatholic: camd0
 city_aliases:
   Somers Poin: Somers Point
   Haddon Twp: Haddon Township
   Gloucester: Gloucester City
   Margate: Margate City
+promoted: 2026-10-30
 ---
 
 The six southernmost counties of New Jersey: Camden (Camden, Cherry Hill, Pennsauken,

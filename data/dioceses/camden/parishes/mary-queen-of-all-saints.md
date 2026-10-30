@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: The directory's website for this parish is the old St. Cecilia domain; probe url (200) shows the
     same page, linking maryqueenofallsaints.org/currbulletin3.pdf and currbulletin2.pdf.
+promoted: 2026-10-30
 research:
 - method: fetch:check --diocese camden --parish mary-queen-of-all-saints (2026-10-29)
   url: http://www.maryqueenofallsaints.org/currbulletin3.pdf

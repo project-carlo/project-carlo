@@ -24,6 +24,7 @@ evidence:
   quote: 7:00pm at the Church of the Immaculate Heart of Mary on 8th Street (410 S. 8th St. Vineland,
     NJ)
   note: The parish's own Mass schedule gives the same times as the bulletin.
+promoted: 2026-10-30
 ---
 
 ## Publisher

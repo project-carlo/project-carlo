@@ -37,6 +37,7 @@ evidence:
   note: '2010-04-16 decree notice: the church''s full name is St. Francis de Sales; it was kept as a worship
     site of the new St. Rita parish. The 2014-05-08 consolidation notice then put its parishioners under
     St. Rose of Lima.'
+promoted: 2026-10-30
 research:
 - method: Read the 25 October 2026 St. Rose of Lima bulletin (grep Francis, Barrington, Igbo; pages 1,
     3 and 10) and the parish's home page Mass Times

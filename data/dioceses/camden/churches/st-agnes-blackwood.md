@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic roster entry: St. Agnes, 701 Little Gloucester Rd., Blackwood 08012, group Our Lady
     of Hope Parish, Plus Code 87F6RX62+W7, website ourladyofhopenj.org.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

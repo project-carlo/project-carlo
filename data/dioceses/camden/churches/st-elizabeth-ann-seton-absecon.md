@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic: ''St. Elizabeth Ann Seton'', 591 New Jersey Ave., Absecon 08201, Plus Code 87F7CFJR+P8;
     its website stelizabethannseton.com is not used (ISP unsafe-site block).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

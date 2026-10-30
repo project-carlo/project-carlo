@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'Listing ''Saint Charles Borromeo Church Bulletin'' (John Patrick 584): 11 dated PDFs, weekly,
     latest 2026-10-25.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese camden --parish st-charles-borromeo-sicklerville
   url: https://www.church-bulletin.org/saint-charles-borromeo-church-sicklerville-nj-08081

@@ -18,6 +18,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read (recheck can''t find it as text): masthead ''St. John
     Vianney Church, 2901 Good Intent Road, Deptford, NJ 08096''; schedule: ''Sunday: 8:30, 10:00 AM at
     St. Margaret, 11:30 AM at St. John Vianney''; Holy Day vigil ''6:00PM at St. John Vianney''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

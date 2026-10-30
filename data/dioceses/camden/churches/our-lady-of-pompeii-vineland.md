@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: 4680 Dante Ave.
   note: GCatholic lists it under St. Padre Pio Parish, Plus Code 87F7F335+9F, ZIP 08360.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

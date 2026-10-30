@@ -28,6 +28,7 @@ evidence:
   quote: Saint Matthew, 4th Street and Monument Avenue, National Park
   note: '2010 decree text: Saint Matthew Church ''will be maintained as a worship site to be used by the
     merged community''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

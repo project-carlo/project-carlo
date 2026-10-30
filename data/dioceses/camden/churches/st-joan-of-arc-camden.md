@@ -28,6 +28,7 @@ evidence:
   quote: Sunday, 9 a.m. Mass in Spanish
   note: The old Bakhita site (2020 content) lists St. Joan of Arc with Saturday 4 p.m. English and Sunday
     9 a.m. and Tuesday 7 p.m. Spanish Masses, matching the 2026 bulletin.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

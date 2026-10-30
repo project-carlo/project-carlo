@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   quote: 285 Route 206, Hammonton, New Jersey 08037
   note: GCatholic lists 'St. Anthony of Padua', group St. Mary of Mount Carmel Parish; Plus Code 87F7M669+8M.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

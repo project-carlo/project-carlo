@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   quote: 125 Church St.
   note: GCatholic 'St. Bridget', Plus Code 87F6PV3M+2R; its website churchofstbridget.com has no DNS.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

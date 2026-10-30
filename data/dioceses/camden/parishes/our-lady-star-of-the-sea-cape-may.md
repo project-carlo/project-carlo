@@ -33,6 +33,7 @@ evidence:
   note: 'Parish Mass page: ''Winter Mass Schedule Now in Effect Saturday: 4:00PM Sunday: 8:30, 10:30AM
     (Live Streamed as well) 6:00PM NO MASS AT ST. AGNES Daily Mass Monday - Friday 11:00AM (Our Lady Star
     of the Sea)''.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

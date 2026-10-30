@@ -40,6 +40,7 @@ evidence:
   note: 'Catholic Star Herald, 2010-07-01: Maris Stella (Avalon) and St. Paul (Stone Harbor) united as
     St. Brendan the Navigator Parish from 2010-08-04; the seat is Maris Stella Church. The decree (decree-for-publication-to-each-and-everyone-17)
     gives Maris Stella at 5012 Dune Drive and St. Paul at 9910 Third Avenue.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

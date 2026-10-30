@@ -24,6 +24,7 @@ evidence:
   quote: Church of the Nativity
   note: 'Parish contact page: ''2677 Delsea Dr Franklinville, NJ 08322''. The parish''s welcome page (psma/welcome)
     also gives ''the Church of the Nativity, located at 2677 Delsea Drive, Franklinville''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

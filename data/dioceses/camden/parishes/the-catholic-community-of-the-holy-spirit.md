@@ -40,6 +40,7 @@ evidence:
   note: 'Diocese news, 2010-05-21: established 23 June 2010, ''located at Holy Name of Jesus Church. St.
     Joseph Church also will be used as a worship site by the new parish.'' St. Ann is not named a worship
     site.'
+promoted: 2026-10-30
 research:
 - method: probe url on the directory's and GCatholic's website (holyspiritweb.org), then the church-bulletin.org
     listing for code 6006

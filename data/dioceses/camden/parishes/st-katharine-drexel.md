@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-29
   note: 'probe po: org ''St. Katharine Drexel Church'', 6075 W. Jersey Ave., ids lpi:0018000000Qc1VfAAJ
     and po-container:04/0903, latest issue 2026-11-01.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

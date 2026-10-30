@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic roster entry: St. Jude, 402 S Black Horse Pike, Blackwood 08012, group Our Lady of
     Hope Parish, no website, Plus Code 87F6QWVP+WJ.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

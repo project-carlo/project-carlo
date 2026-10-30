@@ -34,6 +34,7 @@ evidence:
   note: 'GCatholic roster entry: ''Our Lady of Guadalupe'', qualifier Shrine, 135 N White Horse Pike,
     Lindenwold 08021, no group, Plus Code 87F7R2C4+93. The directory''s Our Lady of Guadalupe Parish (id
     36) is at the same address.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

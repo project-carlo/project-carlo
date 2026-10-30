@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday: 4PM'
   note: 'Parish site: Mass Times Saturday 4PM, Sunday 8AM, 10AM, 12PM, daily Monday - Saturday 8AM; its
     Bulletins button links sponsors.bonventure.net/?page=2221.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: holy-eucharist-cherry-hill
   decision: separate

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   quote: Queen of the Apostles and St. Mary also will be used as worship sites for the new parish.
   note: Diocese news, 2010-10-29.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

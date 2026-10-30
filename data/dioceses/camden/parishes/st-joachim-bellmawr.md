@@ -23,6 +23,7 @@ evidence:
   note: John Patrick listing (id 508, from tools/jp_ids_500_700.tsv and curl -sIL jppc.net/onlinebulletins/508template.pdf)
     exists but lists no /bulletin/ editions, so it is not this parish's bulletin; the parish hosts its
     own PDFs.
+promoted: 2026-10-30
 ---
 
 ## Publisher

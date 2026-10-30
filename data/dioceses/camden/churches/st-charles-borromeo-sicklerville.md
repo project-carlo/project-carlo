@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   note: 'Diocese Parish Locator (2015) entry 67: ''St. Charles Borromeo Parish'', 176 Stage Coach Road,
     Washington Township, NJ 08081, with coordinates 39.7298, -75.0331.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

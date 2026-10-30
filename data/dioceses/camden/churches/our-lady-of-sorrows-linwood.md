@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   note: Summer guide (Catholic Star Herald, 2026-05-22) lists 'Our Lady of Sorrows', 'Wabash & Poplar
     Aves.', Linwood, with Sat 5 PM; Sun 8 & 10 AM.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

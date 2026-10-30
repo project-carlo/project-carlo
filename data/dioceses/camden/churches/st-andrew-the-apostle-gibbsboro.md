@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   note: 'Diocese Parish/School Locator (2015 entry): ''St. Andrew the Apostle Parish'', 27 Kresson-Gibbsboro
     Road, Gibbsboro, NJ 08026.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   quote: Fr. Pawel Kryszkiewicz
   note: 'Staff page: Fr. Pawel Kryszkiewicz, Pastor; Fr. Christuraj Gnanapragasam, Parochial Vicar. One
     pastor for the whole parish.'
+promoted: 2026-10-30
 research:
 - method: probe url on holytrinitydownbeach.org and probe pdf on the /news/bulletin/197-november-1-2026/file
     link

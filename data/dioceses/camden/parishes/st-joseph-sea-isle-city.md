@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: 'Listing page: dated weekly PDFs /bulletin/saint-joseph-church-sea-isle-city-nj-08243/<date>.pdf,
     newest 2026-11-01, then 2026-10-25, 2026-10-18, 2026-10-11, 2026-10-04.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

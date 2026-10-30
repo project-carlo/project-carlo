@@ -48,6 +48,7 @@ revisit: 'Read Our Lady of the Angels'' May 2027 bulletin or its site: confirm S
   St. Elizabeth resumes (the site''s summer schedule starts May 9, 2027) and find a Goshen ZIP and coordinates
   (geocode after promotion).'
 revisit_after: 2027-05-10
+promoted: 2026-10-30
 research:
 - method: Read the parish site's Mass Schedule block, the 1 November 2026 bulletin's page 2, the 2011
     Kolbe decree and the 2017 and 2026 summer guides; Nominatim search '561 Route 47 North Goshen NJ'

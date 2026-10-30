@@ -32,6 +32,7 @@ evidence:
   quote: 226 French Street
   note: Diocese Parish/School Locator (2015 entry) gives the parish at 226 French Street, Hammonton 08037,
     point 39.6390421, -74.8053709.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

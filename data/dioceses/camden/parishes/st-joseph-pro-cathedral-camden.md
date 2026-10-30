@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   quote: Saint Anthony of Padua Parish will merge into Saint Joseph Pro-Cathedral Parish.
   note: 'Catholic Star Herald, 2017-07-06: the merger decision.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

@@ -57,6 +57,7 @@ revisit: 'Read the parish''s 2027 St. Bernard Mass list (its Bon Venture bulleti
   church is closed, exclude it with last_mass. Settle 20 vs 42 Pennsylvania Ave. if a source gives an
   exact address.'
 revisit_after: 2027-03-01
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

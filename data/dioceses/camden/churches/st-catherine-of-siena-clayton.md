@@ -29,6 +29,7 @@ evidence:
   quote: 49 W North St., Clayton, New Jersey 08312
   note: GCatholic's only Clayton entry, named 'St. Michael the Archangel' (the parish), at the parish
     office address, Plus Code 87F6MW73+GJ (about 39.66381, -75.09594).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

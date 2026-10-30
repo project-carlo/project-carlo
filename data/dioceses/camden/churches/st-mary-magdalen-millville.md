@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   quote: 621 Dock Street
   note: 'Parish contact page: All Saints Church address 621 Dock Street, Millville, NJ 08332.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

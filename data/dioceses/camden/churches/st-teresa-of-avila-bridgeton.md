@@ -28,6 +28,7 @@ evidence:
   note: '2010-09-09 post on the decree establishing The Parish of the Holy Cross: it names the five uniting
     parishes (Immaculate Conception, St. Teresa of Avila, St. Michael and its mission St. Anthony, St.
     Mary of Rosenhayn).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

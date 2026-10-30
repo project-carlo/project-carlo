@@ -39,6 +39,7 @@ evidence:
     to use the current Our Lady Star of the Sea and St. Nicholas of Tolentine churches for worship and
     meeting space. The other two church properties will become the property of the new parish, which will
     determine their future use.'''
+promoted: 2026-10-30
 bulletin_status: available
 publication_reviews:
 - parish: st-simon-stock-berlin

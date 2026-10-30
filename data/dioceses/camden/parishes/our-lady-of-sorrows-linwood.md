@@ -18,6 +18,7 @@ evidence:
   note: The parish's own WordPress bulletins page links weekly wp-content/uploads/YYYY/MM/bulletin.YYYY.MM.DD.pdf
     files, newest bulletin.2026.10.25.pdf (8 pages, image-only), so it lags the John Patrick listing's
     2026-11-01 issue by a week.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

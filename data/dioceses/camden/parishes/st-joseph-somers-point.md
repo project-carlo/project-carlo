@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Saint Joseph Roman Catholic Church Bulletin', Somers Point NJ 08244; dated PDFs weekly,
     latest 2026-10-25; reached from the site's id=617 link.
+promoted: 2026-10-30
 ---
 
 ## Publisher

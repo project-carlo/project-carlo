@@ -36,6 +36,7 @@ evidence:
   quote: 178 W White Horse Pike, Berlin, New Jersey 08009
   note: 'GCatholic: ''Our Lady of Mount Carmel'', group St. Simon Stock Parish, Plus Code 87F7R332+F5
     (coordinates come from it).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

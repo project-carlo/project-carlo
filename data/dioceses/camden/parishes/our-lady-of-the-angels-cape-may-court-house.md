@@ -25,6 +25,7 @@ evidence:
     302) to the church-bulletin.org listing above. The home page's Mass Schedule block also gives 'Winter
     Schedule (Sept 20, 2026 - May 2, 2027)' and 'No Mass at St. Elizabeth from October through the end
     of April'.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

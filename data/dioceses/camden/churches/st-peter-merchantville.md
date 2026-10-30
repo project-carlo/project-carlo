@@ -23,6 +23,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read: Mass Schedule Saturday evening 4:00pm, Sunday 8:30,
     10:30 and 7:00pm, weekdays 9:00am, Saturdays 9:00am; Rectory 43 West Maple Avenue. recheck can''t
     find these words as text.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

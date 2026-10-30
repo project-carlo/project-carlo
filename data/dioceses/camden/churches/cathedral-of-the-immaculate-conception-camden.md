@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: 'Diocese directory (rosters/directory.json id 51): 642 Market Street, Camden, NJ 08102, point
     39.944529, -75.118611; ''Rector: Fr. John Fisher, OSFS'' (2015).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

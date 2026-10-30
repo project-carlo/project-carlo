@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: The Church of St. Rose of Lima will be the seat of the new parish
   note: Diocese news, 2011-07-27.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

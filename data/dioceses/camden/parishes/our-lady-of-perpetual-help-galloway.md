@@ -18,6 +18,7 @@ evidence:
     (Sat 4:00 pm; Sun 10:15 am and 1:00 pm Creole; weekdays 8:00 am) and St. Nicholas Church, 525 St.
     Louis Avenue, Egg Harbor (Sun 8:30 am English, 10:30 am Spanish; Mon and Wed 7:00 am; Wed 6:30 pm
     Spanish). Pastor Rev. Edward Kennedy.
+promoted: 2026-10-30
 research:
 - method: Searched DuckDuckGo (three queries) and the Bon Venture sponsors pages for an OLPH Galloway
     account; read the parish Wix site and its Weekly Bulletins page

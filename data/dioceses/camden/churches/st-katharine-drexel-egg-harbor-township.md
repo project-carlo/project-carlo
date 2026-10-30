@@ -29,6 +29,7 @@ evidence:
   note: 'Summer-guide image (Catholic Star Herald, 2026-05-22), hand-transcribed into scratch/camden-map-1/tools/summer_guide_2026.json:
     ''All masses and services take place in Drexel Hall''; address given as 6077 West Jersey Ave. An image,
     so recheck can''t find it as text.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

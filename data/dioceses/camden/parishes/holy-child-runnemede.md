@@ -23,6 +23,7 @@ evidence:
   note: 'Newest issue linked from the parish''s own Bulletin page (https://www.holychildparish.net/bulletin,
     a Duda/Our Sunday Visitor site): 13 September 2026, text layer. The parish page lags the listing by
     six weeks, so the listing is the pick.'
+promoted: 2026-10-30
 research:
 - method: Looked for a newer issue than 13 September 2026 on the parish's own bulletin and archive pages;
     followed the 698 file prefix to church-bulletin.org/?id=698

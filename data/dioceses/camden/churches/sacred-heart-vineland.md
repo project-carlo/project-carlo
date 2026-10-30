@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   quote: 1010 E Landis Ave.
   note: GCatholic Plus Code 87F6FXPM+8W.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

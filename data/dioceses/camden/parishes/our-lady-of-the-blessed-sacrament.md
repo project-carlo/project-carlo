@@ -40,6 +40,7 @@ evidence:
   note: 'Diocese news, 2011-07-27: the parish is formed from Queen of Angels (Our Lady of Victories, Landisville
     and St. Michael, Minotola), Buena; St. Mary, Malaga; and St. Rose of Lima, Newfield, effective 31
     August 2011.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese camden --parish our-lady-of-the-blessed-sacrament
   url: https://container.parishesonline.com/bulletins/03/0188/20261101B.pdf

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Saint Peter Roman Catholic Church Bulletin'; dated weekly PDFs, latest 2026-10-25; reached
     from the site's id=502 link.
+promoted: 2026-10-30
 ---
 
 ## Publisher

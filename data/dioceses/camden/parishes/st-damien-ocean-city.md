@@ -25,6 +25,7 @@ evidence:
   quote: Winter Schedule
   note: The parish Mass Schedule page, headed 'Winter Schedule', gives the same three sites and times
     as the 25 October bulletin.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

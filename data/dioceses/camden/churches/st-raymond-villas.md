@@ -35,6 +35,7 @@ evidence:
   quote: New Schedule as of September 10, 2026!
   note: 'Parish site sidebar: St. Raymond Church, 800 Bayshore Road, Villas, NJ 08251, with the new schedule
     from 10 September 2026 (Sunday 8am English, 12pm and 6pm Spanish).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

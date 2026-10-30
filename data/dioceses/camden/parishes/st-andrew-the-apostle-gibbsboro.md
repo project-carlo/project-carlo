@@ -21,6 +21,7 @@ evidence:
     10-11-26, 10-04-26), each linking irp.cdn-website.com/3adbeedb/files/uploaded/40284_<date>.pdf. The
     10-25 issue's page 1 is the 2026-2027 Ministry Guide cover (rendered and read), with the same Mass
     schedule.
+promoted: 2026-10-30
 ---
 
 ## Publisher

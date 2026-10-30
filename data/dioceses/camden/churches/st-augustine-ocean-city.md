@@ -37,6 +37,7 @@ evidence:
   note: 'Parish ''Winter Schedule'' page: ''13th Street & Wesley Ave.'', Saturday Vigil 4:00 PM, Sunday
     9:00 AM, Daily Mass (Mon - Sat) 8:30 AM; Eucharistic Adoration Monday-Friday 9:00 AM-1:00 PM at St.
     Augustine, 13th St.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

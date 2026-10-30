@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic roster entry: St. Maria Goretti, 321 Orchard Ave, Runnemede 08078, group Holy Child
     Parish, no website, Plus Code 87F6VW29+FV.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

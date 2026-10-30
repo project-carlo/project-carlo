@@ -32,9 +32,10 @@ evidence:
 - url: https://www.camdendiocese.org/?post_type=store_page&p=4137
   seen: 2026-10-29
   quote: 300 Kings Highway
-  note: The diocese's Parish/School Locator entry 'St. Rose of Lima' (2015), Haddon Heights 08035. The store page now
-    answers HTTP 404 to a plain GET, so recheck reports it unreachable; the entry is in rosters/directory.json
-    (scraped 2026-10-29).
+  note: The diocese's Parish/School Locator entry 'St. Rose of Lima' (2015), Haddon Heights 08035. The
+    store page now answers HTTP 404 to a plain GET, so recheck reports it unreachable; the entry is in
+    rosters/directory.json (scraped 2026-10-29).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

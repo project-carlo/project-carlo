@@ -29,6 +29,7 @@ evidence:
   quote: St. Joseph Church - Swedesboro
   note: 'Mass Times page: Sunday and daily schedule at Gibbstown and Swedesboro only; confession and adoration
     at St. Joseph, Swedesboro and St. Michael, Gibbstown. St. John, Paulsboro appears nowhere.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

@@ -49,6 +49,7 @@ evidence:
   seen: 2026-10-29
   note: '2026 summer guide: ''Maris Stella Church'', 5012 Dune Drive, Avalon, (May 2 - October 1, 2026)
     Sat 5 PM; Sun 7 AM, 9 AM, 11 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

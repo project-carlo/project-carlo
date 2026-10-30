@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   quote: In 1963, he purchased the land on which the Woodstown Parish Center now stands.
   note: History page, St. Joseph, Woodstown section.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

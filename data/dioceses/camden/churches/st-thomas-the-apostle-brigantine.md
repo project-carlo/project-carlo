@@ -35,6 +35,7 @@ evidence:
   seen: 2026-10-29
   note: Summer guide (Catholic Star Herald, 2026-05-22) lists 'St. Thomas the Apostle', 331 8th Street
     South, Brigantine, with '(June 29th to Labor Day Weekend) Sat 4 PM; Sun 8, 9:30, 11 AM'.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

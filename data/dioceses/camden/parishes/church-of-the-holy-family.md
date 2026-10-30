@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-29
   note: Listing for Church of the Holy Family, Sewell NJ 08080; dated PDFs weekly, latest 2026-11-01 (posted
     ahead), then 2026-10-25, 2026-10-18, 2026-10-11.
+promoted: 2026-10-30
 ---
 
 ## Publisher

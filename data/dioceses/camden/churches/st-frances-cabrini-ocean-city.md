@@ -31,6 +31,7 @@ evidence:
   quote: St. Frances Cabrini
   note: 'Parish ''Winter Schedule'' page: ''2nd Street & Atlantic Ave.'', Sunday 10:30 AM and 4:00 PM
     (Spanish), Confession Sunday 3:00 PM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   quote: 'Church of the Resurrection:'
   note: 'Page 1 of the 25 October 2026 issue (text layer): ''200 Tuckahoe Road, Marmora, NJ 08223. Daily
     Mass: Tues-Fri, 8:00am. Saturday, 4:00pm. Sunday, 8:00am, 10:00am (also live streamed)''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

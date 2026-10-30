@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: 'HTTP 403 to probe url and to the parish-site-access browser on http, https, with and without
     www (3 loads): bot-blocked. The site''s content was not read; the listing carries the bulletin.'
+promoted: 2026-10-30
 research:
 - method: probe url and parish-site-access visit.py --bulletin on lakescatholic.com (http, https, www)
   url: https://lakescatholic.com

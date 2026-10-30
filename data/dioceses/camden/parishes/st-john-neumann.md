@@ -33,6 +33,7 @@ evidence:
   note: 'The directory''s website redirects to https://www.parishofstjohnneumann.org/ (probe url: ok,
     title ''Welcome to the Parish of St. John Neumann''). stjohnneumann.org is the National Shrine in
     Philadelphia, not this parish.'
+promoted: 2026-10-30
 research:
 - method: fetch:check with recipes page-pdfs (default), linked-issue-page, dated-post and redirected-pdf
     on the Sunday Bulletins page; curl -I on the weblink hrefs

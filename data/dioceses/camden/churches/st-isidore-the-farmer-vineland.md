@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: 1655 Magnolia Rd.
   note: GCatholic Plus Code 87F7F273+5F.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

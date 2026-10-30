@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-29
   note: 'Summer guide (Catholic Star Herald, 2026-05-22) lists ''St. Nicholas of Tolentine Church'', 1409
     Pacific Ave., under the Parish of St. Monica: Sun 11:30 AM, the same as the bulletin.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

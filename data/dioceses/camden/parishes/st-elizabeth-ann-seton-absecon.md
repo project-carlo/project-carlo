@@ -23,6 +23,7 @@ evidence:
   quote: http://sponsors.bonventure.net/?page=2078
   note: The parish's own site (the directory's website) links the Bon Venture page from its Bulletin menu
     entry; its only other bulletin link is thekidsbulletin.com, a children's bulletin.
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-mary-of-mount-carmel-hammonton
   decision: separate

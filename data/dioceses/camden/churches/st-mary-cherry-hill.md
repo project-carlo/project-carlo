@@ -31,6 +31,7 @@ evidence:
   note: '1 November 2026 issue, image-only; page 1 rendered and read: masthead ''Catholic Church of St.
     Mary, 2001 Springdale Rd., Cherry Hill, NJ 08003''; Weekends Saturday 5:00pm, Sunday 8:30am & 10:30am;
     Weekdays Monday-Friday 8:00am (Chapel).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

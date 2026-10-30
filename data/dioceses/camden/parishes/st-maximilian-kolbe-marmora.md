@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: 'probe po 001C000000n6fqzIAA: ''St. Maximilian Kolbe'', 200 W. Tuckahoe Rd., Marmora; ids po-org:st-maximilian-kolbe-08223,
     po-container:04/0453; latest issue 2026-10-25, then 10-18, 10-11, 10-04.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

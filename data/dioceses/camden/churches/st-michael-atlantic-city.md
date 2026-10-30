@@ -40,6 +40,7 @@ evidence:
   note: '2015-06-11: the plan named Our Lady Star of the Sea and St. Nicholas of Tolentine for worship
     and left St. Monica and St. Michael''s properties to the new parish. St. Michael has weekend Mass
     again in the 2026 bulletin and on the parish''s page, so the plan didn''t hold for it.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-29
   quote: St. Joseph Church also will be used as a worship site by the new parish.
   note: Diocese news, 2010-05-21.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

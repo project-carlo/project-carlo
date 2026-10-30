@@ -19,6 +19,7 @@ evidence:
   note: 'The parish''s own Bulletin page (WordPress): ''Bulletin for the week of October 25, 2026'' and
     October 18, each a PDF in wp-content/uploads/2026/10/. Site header: ''Mater Ecclesiae Parish, A Roman
     Catholic Church celebrating the traditional Latin Mass, 261 Cross Keys Road, Berlin, NJ 08009''.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

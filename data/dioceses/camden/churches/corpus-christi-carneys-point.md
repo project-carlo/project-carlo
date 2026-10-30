@@ -33,6 +33,7 @@ evidence:
   quote: The seat of the new parish will be located at Corpus Christi Church.
   note: Diocese news, 2010-10-29. The Parish Locator (directory:71, 2015) gives 369 Georgetown Road, Carneys
     Point for the parish.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

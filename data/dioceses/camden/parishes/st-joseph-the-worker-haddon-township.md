@@ -20,6 +20,7 @@ evidence:
 - url: https://www.church-bulletin.org/saint-joseph-the-worker-parish-haddon-township-nj-08033
   seen: 2026-10-29
   note: Listing 'Saint Joseph the Worker Parish Bulletin'; dated weekly PDFs, latest 2026-10-25.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

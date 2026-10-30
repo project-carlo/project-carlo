@@ -30,6 +30,7 @@ evidence:
 revisit: Read a summer 2027 bulletin of the Parish of St. Maximilian Kolbe (ParishesOnline 04/0453) and
   confirm Sunday 9:00 am Mass at St. Casimir is held again.
 revisit_after: 2027-06-07
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

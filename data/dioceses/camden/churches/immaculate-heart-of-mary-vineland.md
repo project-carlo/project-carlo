@@ -28,6 +28,7 @@ evidence:
   quote: St. Francis of Assisi Parish and the Immaculate Heart of Mary Parish were merged to create the
     Divine Mercy Parish
   note: Sacred Heart history page, saying the diocese merged the two parishes.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

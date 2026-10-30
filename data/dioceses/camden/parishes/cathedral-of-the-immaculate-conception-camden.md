@@ -31,6 +31,7 @@ evidence:
     into the Cathedral parish, with ''an apostolate for the Polish Catholic Community, coordinated from
     the Parish of the Cathedral''. The current bulletin, not this article, shows St. Joseph still holds
     Mass.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

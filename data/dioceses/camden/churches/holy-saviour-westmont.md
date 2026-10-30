@@ -27,6 +27,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18856
   seen: 2026-10-29
   note: GCatholic roster entry (address and Plus Code; the group it names is stale where noted).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

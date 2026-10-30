@@ -26,6 +26,7 @@ evidence:
     (''11.1.2026 revised with ads.pdf'', ''October 25 2026 REVISED with ads.pdf'', ''10.11.2026 revisedwith
     ads.pdf'', ...), which carry the same ''St. Mary Church | 04-0346'' footer as the ParishesOnline container
     issue.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

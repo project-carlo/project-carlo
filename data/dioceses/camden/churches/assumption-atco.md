@@ -32,6 +32,7 @@ evidence:
   quote: Assumption Church and Parish Office 318 Carl Hasselhan Drive Atco, NJ 08004
   note: The parish's General Information page; its Mass schedule is Saturday vigil 4:00pm, Sunday 9:00am
     and 11:00am, daily 8:00am.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

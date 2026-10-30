@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-29
   note: The parish site's bulletin page (Wix/Duda) embeds the publicationWidget?type=bulletin&id=001C000000oOrSSIA0
     ParishesOnline widget; probe url on the home page links this page.
+promoted: 2026-10-30
 ---
 
 ## Publisher

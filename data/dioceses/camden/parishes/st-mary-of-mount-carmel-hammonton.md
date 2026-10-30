@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-29
   quote: Sunday Masses ended in January 2013 and all services at the church ended in October 2013
   note: 'The parish''s own page for the third merged church: it closed and was sold in 2016.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-vincent-de-paul-mays-landing
   decision: separate

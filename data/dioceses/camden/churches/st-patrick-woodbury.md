@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-29
   quote: 86 Cooper St.
   note: GCatholic's 'St. Patrick Holy Angels Parish', Plus Code 87F6RRPX+QW.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

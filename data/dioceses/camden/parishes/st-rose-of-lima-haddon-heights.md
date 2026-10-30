@@ -33,6 +33,7 @@ evidence:
     then 2026-10-25 and 2026-10-18). The parish's own eCatholic copy is the same printed bulletin and
     is on the parish's site, so the eCatholic id is recorded; the listing is a fallback if the eCatholic
     copy lags.
+promoted: 2026-10-30
 research:
 - method: fetch:check --diocese camden --parish st-rose-of-lima-haddon-heights (recipe page-pdfs on the
     John Patrick listing)

@@ -33,6 +33,7 @@ evidence:
   note: 'Contact page: ''PSMA - Parish Office 49 W North St Clayton'' (''Brick building with white-columned
     front porch right next to Saint Catherine of Siena Church''), ''Saint Catherine of Siena Church 700
     N Delsea Dr Clayton'', ''Church of the Nativity 2677 Delsea Dr Franklinville''.'
+promoted: 2026-10-30
 research:
 - method: probe url on the directory's website (parishofstmichaelthearchangel.com) and GCatholic's (.org),
     2026-10-29 survey; then the parish's own bulletin masthead, which gives saintmichael-archangel.com

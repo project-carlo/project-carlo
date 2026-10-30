@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: St. Joseph Church - Swedesboro
   note: 'Mass Times page: Swedesboro Masses as in the bulletin; Friday adoration 9:00 AM to 1:00 PM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

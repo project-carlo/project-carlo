@@ -40,6 +40,7 @@ evidence:
   quote: 2901 Atlantic Avenue, Wildwood, NJ
   note: 'Parish Mass Schedule page: St. Ann Church, 2901 Atlantic Avenue, Wildwood; winter schedule (first
     weekend in October to the weekend before Memorial Day) Saturday 4:30PM, Sunday 10:30AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

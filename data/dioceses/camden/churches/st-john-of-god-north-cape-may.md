@@ -38,6 +38,7 @@ evidence:
   quote: 680 Town Bank Road
   note: 'Parish site sidebar: St. John of God Church, 680 Town Bank Road, North Cape May, NJ 08204; Weekend
     Masses Saturday 4pm & Sunday 10am, Daily Mass 9am.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

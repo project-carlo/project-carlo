@@ -26,6 +26,7 @@ evidence:
   quote: We are three churches - St. Bartholomew,
   note: The old Bakhita site (2020 content) lists St. Bartholomew among the parish's three churches and
     a Sunday 11 a.m. Mass there.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

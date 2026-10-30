@@ -25,6 +25,7 @@ evidence:
   note: The parish's own 2026 page lists the same issues as wp-content/uploads PDFs, latest 10-25-2026;
     the 25 October file is image-only too. Year-named pages change each January, so the listing is the
     pick.
+promoted: 2026-10-30
 ---
 
 ## Publisher

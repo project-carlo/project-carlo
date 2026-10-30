@@ -22,6 +22,7 @@ evidence:
   quote: Sunday – 9:00am & 10:30am
   note: '25 October 2026 bulletin, page 1: Daily Mass Monday thru Friday 9:00am; Saturday 4:00pm; Sunday
     9:00am & 10:30am.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -18,6 +18,7 @@ evidence:
   note: 'Image-only PDF, pages 1-2 rendered and read (recheck can''t find it as text): masthead ''CHURCH
     OF THE HOLY FAMILY, 226 Hurffville Road, Sewell, NJ 08080''; page 2 schedule Saturday 4:30 pm, Sunday
     8:00, 10:00, 11:30 am, daily 9:00 am.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

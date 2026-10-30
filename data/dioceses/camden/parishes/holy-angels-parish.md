@@ -27,6 +27,7 @@ evidence:
     Grove, and Verga
   note: Parish home page. Its Sunday and daily Mass schedule names only St. Patrick's and St. Matthew's.
     Links 'Sunday Bulletins' (bulletin-archives.html) and the jppc.net 635 template.
+promoted: 2026-10-30
 ---
 
 ## Publisher

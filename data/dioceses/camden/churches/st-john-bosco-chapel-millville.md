@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-29
   note: '25 October 2026 issue, page 1 (image, rendered and read): ''Monday through Friday - 8:00am -
     in the chapel''; Confessions ''Everyday following 8:00AM Mass - chapel confessional''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

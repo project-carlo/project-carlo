@@ -28,6 +28,7 @@ evidence:
   note: 'Summer guide image (hand-transcribed): St. Nicholas Church, 525 St. Louis Avenue, Egg Harbor
     City; Tue 6:30 PM (Spanish); Sun 8:30 AM (English), 10:30 AM (Spanish). It says Tuesday where the
     bulletin says Wednesday for the Spanish weekday Mass.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

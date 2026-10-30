@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'Summer guide lists ''St. James Church'', Ventnor, under Holy Trinity Parish: Sat 4 PM; Sun 8:30
     & 10:30 AM (no 12:00 Polish Mass).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

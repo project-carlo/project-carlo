@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic (id 18836): ''Sacred Heart'', 1739 Ferry Ave., Camden NJ 08104, Plus Code 87F6WVCH+VW,
     phone (856) 966-6700; the directory (id 57) has 1739 Ferry Avenue at 39.922257, -75.119958.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

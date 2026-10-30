@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'Summer guide image (hand-transcribed): Assumption Church, 146 S Pitney Rd., Sat 4 PM; Sun 10:15
     AM; Creole Mass 1:00 PM, agreeing with the bulletin''s year-round times.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

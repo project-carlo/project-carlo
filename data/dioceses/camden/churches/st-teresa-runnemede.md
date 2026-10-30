@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: 'GCatholic roster entry: St. Teresa, 13 E Evesham Rd, Runnemede 08078, group Holy Child Parish,
     Plus Code 87F6RWVH+VM. The directory''s Holy Child Parish entry (id 23) is at the same address.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

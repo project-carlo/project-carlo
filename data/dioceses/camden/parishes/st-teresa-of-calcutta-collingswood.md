@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Saint Teresa of Calcutta Parish Bulletin', hosted by John Patrick Publishing Company;
     dated weekly PDFs, latest 2026-10-25.
+promoted: 2026-10-30
 research:
 - method: probe get / render.py / fetch:check on the parish site's own /bulletin/<n>-<date>/file links
   url: https://stteresaofcalcuttanj.org/bulletin

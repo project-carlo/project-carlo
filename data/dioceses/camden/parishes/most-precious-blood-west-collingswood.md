@@ -18,6 +18,7 @@ evidence:
   seen: 2026-10-29
   note: 'Wix page ''Bulletins'': links Wix-hosted PDFs (_files/ugd/39797f_*.pdf), the four read being
     the 4, 11, 18 and 25 October 2026 issues; the home page links the 25 October issue.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

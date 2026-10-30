@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-29
   quote: 500 Greentree Rd.
   note: 'GCatholic: ''Our Lady of Lourdes'', group ''Mary, Mother of Mercy Parish'', Plus Code 87F6PV9W+F7.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

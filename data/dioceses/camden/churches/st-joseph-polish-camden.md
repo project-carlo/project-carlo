@@ -35,6 +35,7 @@ evidence:
   note: 'Catholic Star Herald, 2017-07-06: the personal parish for the Polish community merged into the
     Cathedral parish; the Polish Catholic apostolate is coordinated from the Cathedral. The same article
     says ''all affected churches will remain open for normal worship''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

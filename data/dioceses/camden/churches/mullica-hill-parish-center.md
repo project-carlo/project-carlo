@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   quote: 17 Earlington Ave., Mullica Hill, New Jersey 08062
   note: GCatholic lists 'Holy Name of Jesus', group 'Holy Spirit Parish'; Plus Code 87F6PQRH+9M.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

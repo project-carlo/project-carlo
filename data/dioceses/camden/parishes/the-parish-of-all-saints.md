@@ -33,6 +33,7 @@ evidence:
     St. Mary Magdalen Parish, both in Millville.
   note: 'Diocese news, 2010-10-29: ''The seat of the new parish will be St. Mary Magdalen Church''; established
     1 December 2010.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese camden --parish the-parish-of-all-saints
   url: https://container.parishesonline.com/bulletins/03/1255/20261025B.pdf

@@ -18,6 +18,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read (recheck can''t find it as text): masthead ''SAINTS
     PETER & PAUL CHURCH, 362 Ganttown Road, P.O. Box 1022, Turnersville, NJ 08012''; Sunday Masses Saturday
     4:00 PM, Sunday 8:30, 10:00 & 11:30 AM; daily Monday thru Saturday 9:00 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

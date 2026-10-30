@@ -24,6 +24,7 @@ evidence:
   note: The parish site embeds the ParishesOnline publicationWidget with id=0018000000QxBElAAN on its
     Bulletins page; the same page lists its two churches, St. Luke (55 Warwick Road, Stratford) and St.
     Lawrence (135 N White Horse Pike, Lindenwold).
+promoted: 2026-10-30
 ---
 
 ## Publisher

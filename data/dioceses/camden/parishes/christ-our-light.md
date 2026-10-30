@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Christ Our Light Bulletin' (John Patrick Publishing); dated weekly PDFs 2026-10-04, 10-11,
     10-18, 10-25 (latest). Found through a web search, not linked from the parish's page.
+promoted: 2026-10-30
 ---
 
 ## Publisher

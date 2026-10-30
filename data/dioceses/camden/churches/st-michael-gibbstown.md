@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   quote: 313 Memorial Ave., Gibbstown
   note: GCatholic gives 313; Plus Code 87F6RPC8+RF.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

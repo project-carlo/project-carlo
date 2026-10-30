@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-29
   quote: 'Sunday 12 Noon: Novus Ordo Latin'
   note: Page 1 weekend Masses.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

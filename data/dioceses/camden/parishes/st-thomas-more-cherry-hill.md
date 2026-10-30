@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Saint Thomas More Church Bulletin'; dated weekly PDFs, latest 2026-10-25 (the 1 November
     issue was not yet posted).
+promoted: 2026-10-30
 ---
 
 ## Publisher

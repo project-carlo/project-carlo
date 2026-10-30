@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-29
   quote: Our Lady of Victories, Landisville
   note: Diocese news, 2011-07-27, the merger decree.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

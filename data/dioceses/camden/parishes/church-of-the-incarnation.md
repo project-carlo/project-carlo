@@ -23,6 +23,7 @@ evidence:
   note: 'probe get: Duda page listing weekly PDFs on irp.cdn-website.com/0a3c030e (names like ''bulletin
     10-25-26.pdf'', ''bulletin 11-1-26-048e45ad.pdf'', some GiF-*.pdf are not bulletins); newest is 1
     November 2026, posted ahead.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

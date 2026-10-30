@@ -35,6 +35,7 @@ evidence:
   quote: Saint Josephine Bakhita Parish will merge into Sacred Heart Parish.
   note: 'Catholic Star Herald, 2017-07-06: the merger decision; Bakhita''s apostolate for African American
     Catholics is coordinated from Sacred Heart.'
+promoted: 2026-10-30
 bulletin_status: available
 ---
 

@@ -38,6 +38,7 @@ evidence:
   note: '2010-09-09 decree post: Immaculate Conception and St. Teresa of Avila (Bridgeton), St. Michael
     (Cedarville) and its mission St. Anthony (Port Norris) and St. Mary (Rosenhayn) unite as The Parish
     of the Holy Cross, established 2010-10-13.'
+promoted: 2026-10-30
 research:
 - method: probe url, probe get and probe get --out on parishholycross.org and its /bulletin/213-november-1-2026/file
     link

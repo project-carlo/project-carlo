@@ -38,6 +38,7 @@ evidence:
   seen: 2026-10-29
   note: The diocese's Parish/School Locator (2015 entry) lists the merged parish, 'The Parish of Saint
     Monica', at 2651 Atlantic Avenue, the address of this church.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

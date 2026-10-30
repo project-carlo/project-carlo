@@ -23,6 +23,7 @@ evidence:
   quote: SUNDAY, NOVEMBER 1st
   note: 'Current bulletin''s Mass intentions for 31 October to 8 November 2026: Saturday 6:30pm, Sunday
     8:30am and 10:30am, weekdays 8:00am.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

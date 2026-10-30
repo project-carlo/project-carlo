@@ -29,6 +29,7 @@ evidence:
   note: GCatholic 'St. Vincent de Paul', Plus Code 87F7C8X9+7G. The directory (2015) gives 5021 Harding
     Highway, point 39.4473472, -74.6810497, a short walk from GCatholic's. The summer guide lists 'St.
     Vincent de Paul Church' at 5021 Harding Highway, Sat 5 PM, Sun 8 and 10:45 AM.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: 736 Union Rd.
   note: GCatholic lists it under St. Padre Pio Parish, Plus Code 87F7F3CH+H7.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

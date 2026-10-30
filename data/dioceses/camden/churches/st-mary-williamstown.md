@@ -28,6 +28,7 @@ evidence:
   quote: 'Parish Address: 32 Carroll Ave. Williamstown, NJ 08094'
   note: 'Page 1 of the 25 October 2026 bulletin (rendered): Masses Saturday 8:00am & 4:00pm (Vigil), Sunday
     7:45am, 9:30am, 11:30am & 6:00pm, Monday-Friday 6:45 & 8:00am, Thursday 6:30pm.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

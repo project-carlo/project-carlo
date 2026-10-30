@@ -31,6 +31,7 @@ evidence:
   note: GCatholic names it 'St. Joachim' (no group), Plus Code 87F6VVFW+7H; the diocese's directory (directory:73,
     2015) gives the parish 'St. Joachim Parish' at 601 W. Browning Road with coordinates 39.874284, -75.1045423,
     about 130 m from the Plus Code.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

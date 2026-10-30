@@ -31,6 +31,7 @@ evidence:
   note: 'Image-only PDF, page 2 rendered and read: ''Rectory / Parish Center: 126 44th Street, Sea Isle
     City, NJ 08243 ... Mass schedule: Monday thru Friday 8:00 AM, Saturday 4:00 PM, Sunday 8:00 AM & 10:30
     AM. Reconciliation: Saturday 3:00-3:30 PM''. Page 1 is headed ''ST. JOSEPH CHURCH''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

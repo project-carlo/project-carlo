@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 bulletin, page 1: ''HOLY EUCHARIST PARISH, 344 Kresson Road, Cherry Hill, New
     Jersey 08034''; Masses Saturday 9:00 am & 5:00 pm, Sunday 8:15 am, 9:45 am & 11:15 am, weekdays 9:00
     am.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

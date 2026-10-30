@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-29
   note: 'Listing ''Our Lady of Peace Parish Bulletin'': dated PDFs weekly, latest 2026-10-25, then 10-18,
     10-11, 10-04.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese camden --parish our-lady-of-peace-williamstown
   url: https://www.church-bulletin.org/our-lady-of-peace-parish-williamstown-nj-08094

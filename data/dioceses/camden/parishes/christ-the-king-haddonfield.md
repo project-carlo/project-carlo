@@ -25,6 +25,7 @@ evidence:
     and Haddon townships.
   note: 'Parish site (WordPress). It links no bulletin: its Parish Communications page lists a weekly
     newsletter ''This Week at CTK'' and a ''Current bulletin cover story'' only.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

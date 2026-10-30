@@ -22,6 +22,7 @@ evidence:
   seen: 2026-10-29
   quote: 161 Pitman Ave.
   note: 'GCatholic: ''Our Lady Queen of Peace'', group ''Mary, Mother of Mercy Parish'', Plus Code 87F6PVMF+5W.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -39,6 +39,7 @@ evidence:
   note: 'Parish Mass page: Winter Mass Schedule Now in Effect, Saturday 4:00PM, Sunday 8:30, 10:30AM and
     6:00PM, daily Monday-Friday 11:00AM at Our Lady Star of the Sea. The home page gives the church as
     525 Washington Street and the parish office as 520 Lafayette Street.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

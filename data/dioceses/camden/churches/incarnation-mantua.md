@@ -21,6 +21,7 @@ evidence:
   seen: 2026-10-29
   quote: Sunday……………….7:30 a.m., 9:30 a.m., 11:30 a.m.
   note: Page 1 Mass schedule.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

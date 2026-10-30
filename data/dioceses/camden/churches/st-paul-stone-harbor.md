@@ -42,6 +42,7 @@ evidence:
   seen: 2026-10-29
   note: '2026 summer guide: ''St. Paul Church'', 9910 Third Avenue, Stone Harbor, Sat 4 PM; Sun 8, 10
     AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

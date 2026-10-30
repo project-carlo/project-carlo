@@ -26,6 +26,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read: masthead ''St. Thomas More Church, 1439 Springdale
     Road, Cherry Hill, New Jersey 08003''; Mass Schedule Daily Mass Mon.-Fri. 9:00 AM in the Chapel, Sat.
     4:30 PM, Sun. 8:30 and 11:00 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

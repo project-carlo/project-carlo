@@ -30,6 +30,7 @@ evidence:
   note: 'John Patrick listing (id 683, from jppc.net/onlinebulletins/683template.pdf) for the same parish:
     no bulletin editions, only USCCB readings and a link to christtheredeemer.us. John Patrick hosts the
     listing but the bulletin is the LPi one.'
+promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese camden --parish christ-the-redeemer
   url: https://container.parishesonline.com/bulletins/03/1431/20261101B.pdf

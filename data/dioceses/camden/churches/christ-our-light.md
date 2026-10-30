@@ -26,6 +26,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read: masthead ''Christ Our Light, 402 Kings Highway North,
     Cherry Hill, NJ 08034''; Liturgies Saturday 4:00 PM, Sunday 8:30 AM, 10:30 AM, 6:30 PM; Monday thru
     Friday 8:00 AM, Saturday 9:00 AM.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

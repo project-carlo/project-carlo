@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-29
   note: 'Diocese Parish/School Locator (2015 entry): ''Mater Ecclesiae Mission'', 261 Cross Keys Road,
     Berlin, NJ 08009, Rector: Rev. Robert C. Pasley.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

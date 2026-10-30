@@ -24,6 +24,7 @@ evidence:
     inconsistent names (''October 25 2026.pdf'', ''November 1- 2026.pdf'', ''2026-05-03.pdf'', ''6029
     Bulletin 10-26-2025.pdf''), so the church-bulletin.org listing, which has uniform dated names, is
     the pinned source. It also links thekidsbulletin.com, a children''s insert, not the bulletin.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

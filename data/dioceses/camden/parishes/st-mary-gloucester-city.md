@@ -23,6 +23,7 @@ evidence:
   note: 'probe url: the parish''s own site (the directory''s old stmarysgloucestercity.org, current; GCatholic''s
     stmarysgloucester.org has no DNS) links jppc.net/onlinebulletins/6049template.pdf from every page
     and has no other bulletin. Its Mass Schedule 2026 page carries no times as text.'
+promoted: 2026-10-30
 ---
 
 ## Publisher

@@ -36,6 +36,7 @@ evidence:
 revisit: 'Summer-only mission church: read the Our Lady Star of the Sea bulletin or parish Mass page once
   summer Masses are published to confirm St. Agnes is open again.'
 revisit_after: 2027-06-01
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

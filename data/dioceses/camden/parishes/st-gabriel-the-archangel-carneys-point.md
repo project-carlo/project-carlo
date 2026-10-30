@@ -32,6 +32,7 @@ evidence:
   note: 'Diocese news, 2010-10-29: parish established 1 December 2010; ''The seat of the new parish will
     be located at Corpus Christi Church. Queen of the Apostles and St. Mary also will be used as worship
     sites''. St. James, Penns Grove was merged in but not named a worship site.'
+promoted: 2026-10-30
 research:
 - method: probe url on the directory's website, then the parish's /bulletin page source
   url: https://www.saintgabrielarchangel.org/bulletin

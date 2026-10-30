@@ -18,6 +18,7 @@ evidence:
   note: 'Image-only PDF, page 1 rendered and read (recheck can''t find it as text): masthead ''St. Margaret
     Church, 845 Third Street, Woodbury Heights, NJ 08097''; schedule: Saturday 4:00 PM (live streamed),
     Sunday 8:30 and 10:00 AM at St. Margaret, weekdays 8:30 AM at St. Margaret.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

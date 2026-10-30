@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   quote: 23 W Chestnut Ave.
   note: GCatholic Plus Code 87F6FXH5+M6.
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

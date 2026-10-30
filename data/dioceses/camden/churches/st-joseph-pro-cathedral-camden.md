@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-29
   note: 'probe po: 2907 Federal St, Camden, New Jersey, 08105; point 39.947372, -75.083838 (the directory''s
     is 39.9471892, -75.0834511, about 30 m away).'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

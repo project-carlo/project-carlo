@@ -28,6 +28,7 @@ evidence:
   note: The diocese's Parish/School Locator entry 'St. Mary Parish - Gloucester' (last updated 2015) gives
     the same street address. The store page now answers HTTP 404 to a plain GET, so recheck reports it
     unreachable; the entry is in rosters/directory.json (scraped 2026-10-29).
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

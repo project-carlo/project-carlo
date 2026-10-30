@@ -20,6 +20,7 @@ evidence:
   note: Bulletins page (Duda site; URL says 2023, heading says 'BULLETINS 2025', but the list runs from
     'October 18, 2026' back through 2026) links PDFs under irp.cdn-website.com/6c9c727d/files/uploaded/
     named pppnj+MM+DD+YYYY.pdf. The 25 October issue was not yet posted on 29 October.
+promoted: 2026-10-30
 ---
 
 ## Publisher

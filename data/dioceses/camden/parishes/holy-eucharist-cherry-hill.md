@@ -23,6 +23,7 @@ evidence:
   quote: Holy Eucharist Parish
   note: 'probe url: the parish site (directory and GCatholic website) is alive and links http://sponsors.bonventure.net/?page=2088
     as its bulletin source.'
+promoted: 2026-10-30
 publication_reviews:
 - parish: st-elizabeth-ann-seton-absecon
   decision: separate

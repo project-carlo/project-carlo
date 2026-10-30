@@ -24,6 +24,7 @@ evidence:
   seen: 2026-10-29
   note: Listing 'Saint Gianna Beretta Molla Parish Roman Catholic Church', Northfield NJ 08225; dated
     PDFs weekly, latest 2026-10-25.
+promoted: 2026-10-30
 ---
 
 ## Publisher

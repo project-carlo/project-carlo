@@ -34,6 +34,7 @@ evidence:
   note: 'Parish Mass Schedule page lists Assumption Church at 7101 Seaview Avenue under the Winter, Summer
     and Modified Summer schedules (winter: Sunday 8:30AM, daily Monday-Saturday 8:30AM); the page footer
     gives the church as ''7100 Seaview Avenue''.'
+promoted: 2026-10-30
 ---
 
 ## Holds Mass

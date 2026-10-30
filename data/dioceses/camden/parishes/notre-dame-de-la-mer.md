@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-29
   note: The directory's website path answers 404 (as the diocese playbook records); the bare domain notredamedelamer.org
     is the current site.
+promoted: 2026-10-30
 bulletin_status: available
 ---
 
