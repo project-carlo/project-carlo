@@ -337,6 +337,12 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A merged parish's masthead can list both churches while its Mass schedule names no church (Our Lady of Fatima, Keyport): the second church goes in open/, not excluded, until a source assigns a Mass to it.
+- A ParishesOnline cover can keep a stale template date beside the real one ('May 17th, 2026' over 'November 1st, 2026'); fetch:check reports an issue-date conflict, which is not a stale issue: confirm by file name and the org's issue list.
+- An eCatholic site that 403s probe url can still be only the host: its Bulletins page in the browser (visit.py --links) may link ParishesOnline issues (St. Benedict, Holmdel); then the row is parishes_online and neither eCatholic id goes in publication.
+- A Zumu site (holyfamily.us) hides its Bon Venture link in a button's onclick window.open: save the HTML with visit.py --html and grep for bonventure.net.
+- A John Patrick listing can mix text-layer and image-only issues week to week (St. Clement 677: 25 Oct text, 18 Oct and 1 Nov image-only): read the masthead from the nearest text issue.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
