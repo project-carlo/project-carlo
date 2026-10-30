@@ -194,6 +194,10 @@ output in `scratch/metuchen-map-1/001-survey/`), and the map batches since:
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- The SPAM-SQUAT verdict can come from one stray word (saintthomasob.com: a 'Casino Trip' parish event); read the page's title, links and bulletin before treating a live parish site as squatted.
+- A parish eCatholic site can link only a John Patrick template (St. Ambrose, Old Bridge: jppc.net id 601); its ecatholic id is then the website's, so record `other` with `page-pdfs https://church-bulletin.org/<id>`. Some John Patrick issues are image-only (render page 1; take the Mass schedule from the parish site).
+- Self-hosted Metuchen sites can list dated PDFs (/uploads/docs/bulletins/<YYYYMMDD>.pdf at saintthomasob.com, Bulletin page /event): `page-pdfs` on that page works and the parish posts the next Sunday early (freshness `future`).
+
 
 ## Rules settled for this diocese
 
