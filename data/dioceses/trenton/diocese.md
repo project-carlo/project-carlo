@@ -314,6 +314,9 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A cohort's linked parishes under one pastor can both print Mass times for each other: the Cathedral's John Patrick 524 schedule lists St. Joseph's Masses while St. Joseph publishes its own 553 file. Compare file md5 for the same Sunday and the masthead before merging.
+- A finder pin with no website can have a parked-domain e-mail (sjctrenton.com): check the domain with visit.py before using it, and fall back to the printer's listing as the row's website.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
