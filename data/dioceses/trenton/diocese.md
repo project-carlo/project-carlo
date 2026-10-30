@@ -141,11 +141,17 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   Trenton 530, "St. Ann & St. Michael", Lawrenceville 562). A listing's name can join two
   parishes ("The Catholic Community of Hopewell Valley" 547; "Saint Pio of Pietrelcina & Church
   of the Sacred Heart" 6003): read the masthead for its members. Record the row as `other` with
-  `page-pdfs https://www.church-bulletin.org/<slug>`. When a parish also posts the issues on its
-  own site, take whichever channel has the latest issue (Camden's and Philadelphia's rule: the
-  parish copy often lags). Many issues are image-only (most in Camden; here St. Veronica 532
-  and St. William the Abbot 566, Howell): render pages 1–2 with `render.py` when `probe pdf`
-  returns no text. `fetch:check` passes such an issue as `document_type` pdf with no text, and
+  `page-pdfs https://www.church-bulletin.org/<slug>`. Many parishes also post the same PDFs on
+  their own site, byte-identical and often a week behind: a WordPress
+  `wp-content/uploads/.../<id>template-<date>.pdf` (St. Aloysius, Jackson 640), Drupal (St.
+  Monica 649), an eCatholic `/bulletins` page (St. John, Lakehurst; St. Catharine-St. Margaret
+  513 = `ecatholic:30561`). Compare md5 for the same Sunday, take whichever channel has the
+  latest issue (usually the listing) and keep the other's id in `publication`. An eCatholic
+  site whose Bulletins page links `church-bulletin.org` PDFs is only the host: record the
+  listing, not the eCatholic id (Holy Cross, Rumson 37867). Many issues are image-only (most
+  in Camden; here St. Veronica 532, St. William the Abbot 566, Howell, Holy Cross, Rumson and
+  Nativity, Fair Haven, St. Aloysius): render pages 1–2 with `render.py` when `probe pdf`
+  returns no text, and cite what you read there as a `note` with no `quote`. `fetch:check` passes such an issue as `document_type` pdf with no text, and
   gives the coming Sunday's issue, posted days before its date, `future` freshness: that is
   the current issue, not a fault. church-bulletin.org answers 406 to a bare "Mozilla/5.0"
   user agent; plain curl and `probe pdf` work. `probe pdf --pages N` reads the first N pages
@@ -157,7 +163,7 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   Holmdel 35015; St. John, Lakehurst 25374; St. Joseph, Millstone 11159; St. Leo 14276; St. Mary,
   Colts Neck 33474; St. Rose, Belmar 37219; St. Dominic 40144; St. Gregory 2431; St. Luke 36011;
   St. Peter 35377; St. Theresa 5085; Visitation 6597; St. Paul 28530; the Hopewell Valley
-  parishes 22670). An eCatholic id is the bulletin only when `/bulletins` lists current
+  parishes 22670; St. Catharine-St. Margaret, Spring Lake 30561). An eCatholic id is the bulletin only when `/bulletins` lists current
   `files.ecatholic.com/<id>/bulletins/` PDFs. Several of these sites link a John Patrick listing
   instead, and others keep a stale or empty `/bulletins` while the homepage's "Bulletin" link
   goes elsewhere (St. Leo: a Bon Venture page; St. Mary, Colts Neck: Constant Contact PDFs on
@@ -172,13 +178,22 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   and GCatholic's old stanselm.weconnect.com and holyspiritasburypk.weconnect.com.
 - **Bon Venture:** St. Joseph, Toms River (`sponsors.bonventure.net/?page=3204`, found by
   `visit.py --bulletin` from its Solutio site); St. Leo the Great, Lincroft (`?page=2156`, the
-  "Bulletin" link on its eCatholic homepage). Camden found Our Lady of Perpetual Help, Maple
-  Shade's account (2214). Record `page-pdfs http://sponsors.bonventure.net/?page=<n>` over
-  `http://`; check the header's address, since same-named parishes have their own accounts.
+  "Bulletin" link on its eCatholic homepage); St. Denis, Manasquan (2095, a "currentbulletin"
+  image on its homepage); St. Elizabeth Ann Seton, Whiting (2166, its Solutio site's
+  "Bulletins" link). Camden found Our Lady of Perpetual Help, Maple Shade's account (2214).
+  The link is often only on the homepage while the site's own bulletin archive is stale (St.
+  Denis's Joomla "Archived Bulletins" stops at October 2025): grep the homepage HTML for
+  `sponsors.bonventure.net`, or list its links with `visit.py --links` when `probe url`
+  answers 403, before calling a site's archive current. Record
+  `page-pdfs http://sponsors.bonventure.net/?page=<n>` over `http://`; check the header's
+  address, since same-named parishes have their own accounts. Issues are
+  `sponsors.bonventure.net/pdfs/<n>/<yyyy-mm-dd>.pdf`; the coming Sunday's is often not posted
+  yet (404), so take the latest date from the sponsor page rather than guessing today's
+  Sunday.
 - **Solutio CMS sites** (`/news/bulletin/<n>-<date>`, `/get-connected/bulletin/<n>-<date>/file`,
   `/parish-events/bulletin`, `/bulletin/7-latest-bulletin`): St. Mary, Barnegat; St. Barnabas,
   Bayville; Our Lady of Perpetual Help, Maple Shade; Our Lady Queen of Peace, Hainesport; St.
-  Pius X, Forked River; St. Joseph, Toms River. In Camden their `/file` PDFs answered 403 to
+  Pius X, Forked River; St. Joseph, Toms River; St. Elizabeth Ann Seton, Whiting. In Camden their `/file` PDFs answered 403 to
   `probe get`, `render.py` and `fetch:check`: look for the parish's John Patrick listing or
   Bon Venture page first (St. Mary 563, St. Pius X 590 are current), and only then read the
   site with `visit.py`. St. Mary, Barnegat's list also has Word-document entries.
@@ -188,7 +203,7 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   Farmingdale on a `becdn.net` host ("84885-OCT-25-2026-BULLETIN.pdf"); St. Catherine Laboure's
   `bulletin.htm`; Immaculate Conception, Eatontown's `WeeklyBulletin/list.asp`; Epiphany's
   Joomla `/index.php/sunday-bulletins` (Camden: Joomla weblinks lists don't collect; pin a
-  filename); St. Aloysius links a Constant Contact PDF; Duda (`irp.cdn-website.com`: St.
+  filename); Duda (`irp.cdn-website.com`: St.
   Katharine Drexel, St. Gabriel), Squarespace (Our Lady of Perpetual Help-St. Agnes, St. Francis,
   LBI) and WordPress sites. Read the file before taking a site's first PDF as the bulletin (Sacred
   Heart, Bay Head's and St. Pio's first PDFs are registration forms). A hand-edited bulletin
@@ -210,7 +225,9 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   seaswhiting.org, stmarkseagirt.com, stbarnabasbayville.com, churchofstpius.org,
   olphparish.com, ourladyqop.org, stmarybarnegat.com), though strobert.cc's own
   `/bulletin/53-bulletin/file` is blocked too (the Co-Cathedral's John Patrick listing 558 is
-  current). Five GCatholic-only sites weren't tried
+  current). `diocese recheck` can't verify a quote from a site that refuses plain fetch
+  (seaswhiting.org): quote a page plain fetch reads (the printer's issue), or record the
+  browser read as a `note` in the research. Five GCatholic-only sites weren't tried
   in the browser (catholicchurchasburypark.org, churchofstdominic.com,
   churchoftheassumption.com, divineword.org, stpaulsprinceton.org); the finder's sites for those
   parishes are the ones to use.
@@ -231,7 +248,8 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   **visitationchurch.com** to a domain-sale page: don't store either. Moved:
   IncarnationStJames.com → incarnationstjames.org; churchofepiphany.org → churchofepiphanynj.org;
   mycorpuschristichurch.com → ccnj.church; parishofsacredheart.org → sacredheartmh.org;
-  stisaacjogues.org → cosij.org; stmarychurchnj.org → mmog.church.
+  stisaacjogues.org → cosij.org; stmarychurchnj.org → mmog.church; churchofstdenis.org (the
+  directory's) → stdenischurchnj.org.
 - **Eastern Catholic eparchies:** confirm a GCatholic Eastern church on the eparchy's own list
   before excluding it (Camden: Ukrainian ukrcatholic.org/parishes, which `probe get` reads; the
   Ruthenian churches are the Eparchy of Passaic's, the Romanian the Eparchy of St. George in
@@ -244,19 +262,6 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- Holy Cross, Rumson and Nativity, Fair Haven issues are image-only (probe pdf no text); render pages 1-2 with render.py and cite the note as read from a render, with no quote.
-- A parish site's eCatholic id can be only the site host when its Bulletins page links church-bulletin.org/<id>/<date>.pdf (Holy Cross 37867): record the John Patrick listing, not the ecatholic id, as the publication.
-- A parish site's footer address can be the office, not the church (Oratory, Red Bank: 27 Oratory Way vs the church at 121 Bridge Ave); read the staff/contact page before calling it a disagreement.
-- OSM's named node can be off by hundreds of metres (Nativity, Fair Haven: 750 m); compare GCatholic's Plus Code with the finder's pin before trusting it.
-- A parish's own eCatholic /bulletins page can serve the same PDF as its John Patrick listing (St. Catharine-St. Margaret, files.ecatholic.com/30561 vs church-bulletin.org 513: identical md5 for the same Sunday); compare md5 and take the channel with the latest issue, keeping ecatholic:<id> in publication.
-- A parish's moved domain can hide its current bulletin: churchofstdenis.org redirects to stdenischurchnj.org whose Archived Bulletins page stops at Oct 2025, while the homepage's 'currentbulletin' image links Bon Venture 2095; grep the homepage HTML for sponsors.bonventure.net before calling a Joomla archive current.
-- Bon Venture PDFs live at sponsors.bonventure.net/pdfs/<page>/<yyyy-mm-dd>.pdf and the coming Sunday's is often not posted yet (404): probe the latest date on the sponsor page, not today's Sunday.
-- To date a GCatholic chapel's seasonality, grep winter issues (Jan-Mar) of the parish bulletin for its Mass line: Star of the Sea Beach Chapel's Sunday 10 AM Mass is in all of them, so it is year-round.
-- St. Elizabeth Ann Seton, Whiting has no John Patrick listing: its Solutio site's 'Bulletins' link goes to Bon Venture 2166 (sponsors.bonventure.net/pdfs/2166/<date>.pdf, text layer); find such links with visit.py --links when probe url answers 403.
-- Jackson and Lakehurst parishes mirror John Patrick PDFs byte-identically on their own sites (St. Aloysius WordPress as wp-content/uploads/2017/06/640template-<date>.pdf; St. Monica Drupal; St. John eCatholic), a week behind the listing: compare md5 and read the listing.
-- A parish's 'Chapel Schedule' or 'All Saints Chapel' daily Mass with no street of its own (St. John, Lakehurst; Seton, Whiting) is part of the church's campus, not a second church row.
-- diocese recheck cannot verify quotes from sites that 403 plain fetch (seaswhiting.org): quote a page plain fetch reads, or record the browser read in research.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -266,9 +271,10 @@ Decisions that apply to more than one record, and who made them.
 - A merger ends a parish, not a church: a former parish church of a 2017-2020 merger keeps a church row under the merged parish when its current bulletin or Mass schedule lists Mass there, and is excluded closed only on a source that says so (closing Mass, relegation, sale), with last_mass. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - A seasonal shore church (Long Beach Island, the Seaside/Lavallette barrier island, Deal, Manasquan's Star of the Sea chapel) keeps its church row with a dated revisit for its next season, on an off-season bulletin or the parish's own winter schedule. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - When a parish's printer's listing (John Patrick, Bon Venture) and its own site carry the same bulletin, the row reads whichever channel has the latest issue, keeping the other's id in publication. (accepted by survey-review, 002-survey-review, 2026-10-30)
-- A church's coordinates come from GCatholic's Plus Code or an OSM address lookup (nominatim via `probe get`), compared with each other, not from the finder's pin alone: the finder's pins can be kilometres off (St. Catharine, Holmdel: 3.5 km). (map batch `holmdel-marlboro-colts-neck`, 2026-10-30)
+- A church's coordinates come from GCatholic's Plus Code or an OSM address lookup (nominatim via `probe get`), compared with each other, not from the finder's pin alone: the finder's pins can be kilometres off (St. Catharine, Holmdel: 3.5 km). (map batch `holmdel-marlboro-colts-neck`, 2026-10-30) OSM's named node can be off too, by hundreds of metres (Nativity, Fair Haven: 750 m), so a single OSM point needs the Plus Code beside it. (map batch `red-bank-rumson-fair-haven`, 2026-10-30)
 - Weekday Masses a bulletin lists at a cohort neighbour's church (St. Mary, Colts Neck's Thu-Sat 9 AM "AT ST. CATHARINE, HOLMDEL") neither make a shared bulletin nor add a church to that parish; the church stays with its own parish. (map batch `holmdel-marlboro-colts-neck`, 2026-10-30)
 - GCatholic's three chapels (St. Catherine, Farmingdale; Star of the Sea, Manasquan; St. Mary, New Monmouth) keep a church row when the parish bulletin lists public Mass there, weekday Mass included, which may appear only in its schedule block: grep the bulletin for "Chapel" before excluding one (St. Catherine's Chapel, Farmingdale: "Weekday Mass Now Open"). (map batch `howell-farmingdale`, 2026-10-30)
+- A chapel a parish lists for daily Mass with no street address of its own (St. John, Lakehurst's "Chapel Schedule"; St. Elizabeth Ann Seton, Whiting's "All Saints Chapel") is part of the church's campus, not a second church row. (map batch `jackson-lakehurst-whiting`, 2026-10-30)
 
 ## Log
 
