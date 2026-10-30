@@ -157,6 +157,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - A site's bulletin page can link only HTML viewer pages wrapping the PDF (Immaculate Motherhood LLC sites: bulletin-view?f=<name>, PDF at /bulletins/file/<name>); fetch:check guesses the wrong edition and none of the pinned recipes read it. Look for the file path in the viewer page's HTML.
 - A parish can publish its bulletin as an HTML page with no PDF (St. Stephen, South River); fetch:check reports 'No PDF links found'.
+- John Patrick Publishing: the jppc.net/onlinebulletins/<id>template.pdf link returns HTML, so probe pdf can't read it. Use church-bulletin.org/?id=<id>, which redirects to the listing; record it as other with `page-pdfs https://church-bulletin.org/<id>` and fetch:check picks the newest issue. The listing posts the coming Sunday's issue about two days early, so fetch:check reports freshness 'future'.
+- A parish's own site can host bulletin PDFs whose page 1 is an image (St. Mary of Czestochowa, Bound Brook): probe pdf --grep only reaches the ad pages. Render page 1 with pdftoppm -r 70 -jpeg and read it, and quote the page-5 publisher code line for recheck.
+- Google Sites parish pages (OLM, South Bound Brook) embed the John Patrick template link, so check the page's links for jppc.net before looking for a Drive folder.
 
 
 ## Rules settled for this diocese
