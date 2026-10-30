@@ -229,6 +229,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic site's own /bulletins page can be stale or empty while the parish bulletin is elsewhere (St. Leo: Bon Venture page linked as 'Bulletin' on the homepage; St. Mary, Colts Neck: Constant Contact PDFs; St. Catharine: Constant Contact HTML email). Read the homepage's 'Bulletin' link with visit.py --links before trusting the ecatholic id.
 - Hand-edited parish bulletin pages can list stale links first; run fetch:check against both the 'current' page and a 'past bulletins' page and pin whichever picks the current issue.
 - Trenton's parishes alternate weekday Masses between cohort churches (St. Mary's bulletin lists Thu-Sat 9 AM 'AT ST. CATHARINE, HOLMDEL'): that is not a shared bulletin or an added church.
+- Howell's John Patrick issues (532, 566) are image-only: render pages 1-2 with render.py to read the masthead; fetch:check reports document_type pdf with no text and 'future' freshness for the coming Sunday's issue (dated two days ahead).
+- A GCatholic 'Chapel' entry can hold public weekday Mass the parish bulletin states only in its schedule block (St. Catherine's Chapel, Farmingdale: 'Weekday Mass Now Open'): grep the bulletin for 'Chapel' before excluding it.
 
 
 ## Rules settled for this diocese
