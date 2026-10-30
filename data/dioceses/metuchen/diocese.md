@@ -163,6 +163,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Finder clergy lines can be wrong either way: Sayreville's Pekola matched the parish's own masthead, while St. Stanislaus's Murphy did not (Michalowski). Check the parish's masthead for each.
 - eCatholic bulletins can be all-image PDFs (OLV Sayreville, St. Stanislaus); render page 1 to read the masthead, and quote a text page or the parish website for recheck.
 - A parish may post the same bulletin on its eCatholic site and on church-bulletin.org (St. Stanislaus Kostka, Sayreville); compare page-1 renders before counting two publishers, and record only the parish-hosted copy.
+- A finder website that no longer resolves can be replaced by the live site found by web search (ddg.sh): Sacred Heart, South Amboy is sacredheartsa.org (eCatholic 12058); confirm the address and the bulletin masthead's printed URL.
+- An eCatholic site's Bulletin page can be a frozen archive while the menu's 'Bulletin' item points to the live publisher: Most Holy Redeemer, Matawan (ecatholic:15478, last file Aug 2023) uses Bonventure page 2238 (http only; record as other with page-pdfs http://sponsors.bonventure.net/?page=2238, as in Allentown). Do not record the stale eCatholic id.
+- John Patrick Publishing also hosts copies of eCatholic parishes' bulletins (Sacred Heart, South Amboy has both); the page-1 text is identical with extra ad pages, so record only the parish-hosted copy. St. Mary, South Amboy's own site only links the JPPC template (id 537), so it is `other` with page-pdfs https://church-bulletin.org/537.
+- issues.py ecatholic answers 403 for dates the site doesn't date by Sunday; use visit.py --links on the Bulletin page to read the real file names.
+- Finder clergy stale again: St. Mary, South Amboy lists Weezorak but its 25 Oct 2026 bulletin names Rev. Guy W. Selvester; Sacred Heart and Most Holy Redeemer match their mastheads.
 
 
 ## Rules settled for this diocese
