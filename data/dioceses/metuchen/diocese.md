@@ -76,7 +76,8 @@ Oxford, Iselin/Woodbridge, Frenchtown/Milford), and (c) among the three Raritan 
   keeps churches of merged parishes that the finder no longer lists:
   - Sacred Heart (67 Fitch St) and St. Elizabeth of Hungary (119 Washington Ave), Carteret,
     beside Divine Mercy's Holy Family.
-  - Holy Spirit (580 Hazel Ave) and St. Mary (104 Center St), Perth Amboy.
+  - Holy Spirit (580 Hazel Ave) and St. Mary (104 Center St), Perth Amboy. GCatholic puts Holy
+    Spirit under Good Shepherd Parish and St. Mary under Parish of St. John Paul II.
 
   It gives three shrines: Blessed Sacrament (50 W Somerset St, Raritan, shrinechapel.com), Our
   Lady of Fatima (674 Mountain View Rd E, Washington; the World Apostolate of Fatima shrine)
