@@ -324,6 +324,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When a parish's own site is dead or an empty template and no jppc id is known, a DuckDuckGo search for '<parish> <street> bulletin' surfaced its church-bulletin.org listing and the real parish site (Sacred Heart, Camden: JP 6039, sacredheartofcamden.com); `church-bulletin.org/<id>` then confirms it. Its own site's bulletin page lagged the listing by a week.
 - GCatholic's website for St. Anthony of Padua, Camden (stanthonycamden.org) now serves a spam page, and sacredheartcamden.org is an empty template; don't store either. The Pro-Cathedral's parish bulletin covers both its churches.
 - A GCatholic monastery/shrine chapel that the diocese's own news reports closed is excluded closed with last_mass from that article (Monastery of the Perpetual Rosary, Camden: final public Mass 2013-12-09, camdendiocese.org); parish records can't carry a `roster` field, so roster links go on the church records.
+- A worship site missing from a merged parish's weekly bulletin may still hold a regular ethnic-apostolate Mass: search the Catholic Star Herald REST posts and the Bishop's Schedule for the church's name before filing it open or closed (St. Francis de Sales, Barrington: Igbo Catholic Apostolate, third Sunday noon).
+- The diocese's relegation decrees are posts on camdendiocese.org (REST /wp-json/wp/v2/search?search=relegation): 'Decree of the Relegation of the Formerly Used Mary, Mother of the Church' (2021-04-19) dates a closure the bulletins don't. The 2014 consolidation decree PDFs (images/pastoral_planning/...) answer 404.
+- A parish's own staff page, not a bulletin grep, gives its pastor roles: St. Rose's bulletin carries 'Rev. Francis Kim' and 'Father Dave Grover-Pastor' in separate places; the staff page lists Kim as parochial vicar.
+- John Patrick prints St. Rose of Lima, Haddon Heights (646) but the parish also posts the same issues on its eCatholic site (35649), so the row uses ecatholic; the JP listing runs about a week ahead of the eCatholic copy.
 
 ## Rules settled for this diocese
 
