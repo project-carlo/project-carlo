@@ -118,56 +118,81 @@ Oxford, Iselin/Woodbridge, Frenchtown/Milford), and (c) among the three Raritan 
 ### Bulletin publishers here
 
 From `probe url` on the 74 finder websites and `visit.py --bulletin` on 13 more (2026-10-30;
-output in `scratch/metuchen-map-1/001-survey/`):
+output in `scratch/metuchen-map-1/001-survey/`), and the map batches since:
 
 - **eCatholic** hosts most parish sites (34 distinct site ids on the probed sites). Unlike Allentown, they answered
   `probe url` directly here; only the diocese's own site and qomchurch.org returned 403. A site
   id is the website's, not proof the bulletin is there. St. Matthew, Edison's site embeds both
   `ecatholic:22680` and an LPi id, so read the bulletin page. **`ecatholic:21916` is the
   diocese's own site:** don't record it. Read issues with `issues.py ecatholic` at
-  `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`.
+  `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`; it answers 403 for a site that doesn't
+  name its files by the Sunday date, so read the real file names with `visit.py --links` on the
+  Bulletin page. A site's Bulletin page can be a frozen archive while the menu's "Bulletin" item
+  points to the live publisher (Most Holy Redeemer, Matawan: `ecatholic:15478` stopped in
+  August 2023, the live issues are on Bonventure): check the newest file's date, and don't
+  record a stale id. Several eCatholic bulletins are all-image PDFs (Our Lady of Victories and
+  St. Stanislaus Kostka, Sayreville); see *Image-only pages* below.
 - **ParishesOnline / LPi:** Transfiguration of the Lord (`po-container:04/1001`, behind a
-  `/wordpress/` redirect), St. Patrick/St. Rose (`po-container:04/0870`), Our Lady of Lourdes,
-  Whitehouse Station, St. Joseph, High Bridge, St. Matthew (LPi ids). Holy Family, New
-  Brunswick posts LPi-named files (`20261011B-3.pdf`) on its own WordPress. Look for its
-  container.
-- **John Patrick Publishing** (`jppc.net/onlinebulletins/<id>template.pdf`, which redirects to
-  `church-bulletin.org/<slug>`): Sts. Joseph and Luke (685), St. Joseph, Bound Brook (557),
-  Annunciation, Bloomsbury (589), St. John Neumann, Califon (652), Divine Mercy, Carteret
-  (church-bulletin.org/divine-mercy-parish-carteret-nj-07008). Allentown records it as `other`
-  with a pinned `page-pdfs` recipe on the listing. It answers 406 to a bare "Mozilla/5.0" user
-  agent.
+  `/wordpress/` redirect), St. Patrick/St. Rose (`po-container:04/0870`; pages 1–6 are images),
+  Our Lady of Lourdes, Whitehouse Station, St. Joseph, High Bridge, St. Matthew (LPi ids). Holy
+  Family, New Brunswick posts LPi-named files (`20261011B-3.pdf`) on its own WordPress. Look for
+  its container.
+- **John Patrick Publishing** (church-bulletin.org): Sts. Joseph and Luke (685), St. Joseph,
+  Bound Brook (557), Our Lady of Mercy, South Bound Brook (593), St. Mary, Star of the Sea, South
+  Amboy (537), Annunciation, Bloomsbury (589), St. John Neumann, Califon (652), Divine Mercy,
+  Carteret (church-bulletin.org/divine-mercy-parish-carteret-nj-07008). Parish sites link
+  `jppc.net/onlinebulletins/<id>template.pdf`, which returns HTML, so `probe pdf` can't read it;
+  `church-bulletin.org/?id=<id>` redirects to the listing. Record provider `other` with
+  `page-pdfs https://church-bulletin.org/<id>` (as Allentown does); `fetch:check` picks the
+  newest issue, and because the listing posts the coming Sunday's issue about two days early it
+  reports freshness `future`. John Patrick also carries copies of bulletins that parishes host
+  on their own eCatholic sites (St. Stanislaus Kostka, Sayreville; Sacred Heart, South Amboy:
+  page-1 text identical, extra ad pages), so compare page 1 before counting two publishers (see
+  *Rules settled*). It answers 406 to a bare "Mozilla/5.0" user agent.
+- **Bonventure:** Most Holy Redeemer, Matawan (`sponsors.bonventure.net/?page=2238`, http only).
+  Record provider `other` with `page-pdfs http://sponsors.bonventure.net/?page=<n>`, as in
+  Allentown; the listing also posts the coming Sunday early.
 - **Discover Mass:** the cathedral (`discovermass:st-francis-of-assisi-cathedral-metuchen-nj`).
   Discover Mass caps downloads per IP per day (a 134-byte "Maximum number of files downloaded
   today" reply, which `fetch:check` reports as `not_pdf`), so cite the church page and the
   issue date, not a tokenised download link.
 - **Self-hosted PDFs:** Christ the Redeemer (`ctrmanville.com/assets/PDF/<yyyy>/<yyyy-mm-dd>.pdf`),
   Nativity, Monroe (Wix `_files/ugd/` hashes), St. John, Dunellen (Weebly), Our Lady of Lourdes,
-  Milltown (`/olol/Bulletins/`), and bulletin pages at St. Anthony of Padua, St. John Paul II,
-  Corpus Christi, St. Lawrence, St. Augustine, St. Joseph Washington, St. Mary of Czestochowa,
-  St. Elizabeth Ann Seton and Ss. Peter and Paul (`/English/Bulletins.html`). Our Lady of Mercy,
-  South Bound Brook keeps a `church-bulletin` page on Google Sites.
+  Milltown (`/olol/Bulletins/`), St. Mary of Czestochowa, Bound Brook (`page-pdfs` on its
+  `/Bulletin` page; page 1 is an image), and bulletin pages at St. Anthony of Padua, St. John
+  Paul II, Corpus Christi, St. Lawrence, St. Augustine, St. Joseph Washington, St. Elizabeth Ann
+  Seton and Ss. Peter and Paul (`/English/Bulletins.html`). Google Sites parish pages embed the
+  John Patrick template link (Our Lady of Mercy, South Bound Brook), so check their links for
+  `jppc.net` before looking for a Drive folder.
+- **Immaculate Motherhood LLC sites** (the footer says "Website by Immaculate Motherhood LLC";
+  Corpus Christi, South River) link only HTML viewer pages (`bulletin-view?f=<name>`) wrapping
+  the PDF at `/bulletins/file/<name>`. `fetch:check` guesses the wrong edition, and no pinned
+  recipe (`page-pdfs`, `linked-issue-page`, `dated-post`, `redirected-pdf`) reads it: confirm
+  the bulletin from the file path in the viewer page's HTML, and record the row
+  `unsupported-format` until a collector exists.
+- **HTML-only bulletins:** a parish can publish its bulletin as a web page with no PDF
+  (St. Stephen, South River); `fetch:check` reports "No PDF links found". Record it
+  `unsupported-format`.
+- **Image-only pages** (eCatholic and self-hosted alike): when page 1 is an image, `probe pdf
+  --grep` only reaches the text pages. Render page 1 (`pdftoppm -r 70 -jpeg -f 1 -l 1`) to read
+  the masthead, and for recheck quote a text page (often the publisher's code line on an ad
+  page) or the parish website.
+- **Finder websites that don't resolve:** find the live site with `scratch/metuchen-map-1/tools/ddg.sh`,
+  then confirm it by the address and the URL printed on the bulletin's masthead (Sacred Heart,
+  South Amboy is now sacredheartsa.org, eCatholic 12058). The other dead finder domains are
+  St. Joseph, Carteret and St. Theodore, Port Murray.
 - **The probes' SPAM-SQUAT verdict needs a look:** stannparish.com (St. Ann, Raritan; eCatholic
   22511) and saintthomasob.com (St. Thomas, Old Bridge) both serve parish pages but were flagged.
   Read them before treating either as squatted.
+- **The finder's clergy lines** (see *Sources*) were checked against six mastheads in the first
+  four batches: four matched (including Rev. David J. Pekola at Our Lady of Victories,
+  Sayreville, which *Sources* calls probably stale) and two did not (St. Stanislaus Kostka,
+  Sayreville: Michalowski, not Murphy; St. Mary, South Amboy: Rev. Guy W. Selvester, not
+  Weezorak). Take the pastor from each parish's own masthead.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- A site's bulletin page can link only HTML viewer pages wrapping the PDF (Immaculate Motherhood LLC sites: bulletin-view?f=<name>, PDF at /bulletins/file/<name>); fetch:check guesses the wrong edition and none of the pinned recipes read it. Look for the file path in the viewer page's HTML.
-- A parish can publish its bulletin as an HTML page with no PDF (St. Stephen, South River); fetch:check reports 'No PDF links found'.
-- John Patrick Publishing: the jppc.net/onlinebulletins/<id>template.pdf link returns HTML, so probe pdf can't read it. Use church-bulletin.org/?id=<id>, which redirects to the listing; record it as other with `page-pdfs https://church-bulletin.org/<id>` and fetch:check picks the newest issue. The listing posts the coming Sunday's issue about two days early, so fetch:check reports freshness 'future'.
-- A parish's own site can host bulletin PDFs whose page 1 is an image (St. Mary of Czestochowa, Bound Brook): probe pdf --grep only reaches the ad pages. Render page 1 with pdftoppm -r 70 -jpeg and read it, and quote the page-5 publisher code line for recheck.
-- Google Sites parish pages (OLM, South Bound Brook) embed the John Patrick template link, so check the page's links for jppc.net before looking for a Drive folder.
-- Finder clergy lines can be wrong either way: Sayreville's Pekola matched the parish's own masthead, while St. Stanislaus's Murphy did not (Michalowski). Check the parish's masthead for each.
-- eCatholic bulletins can be all-image PDFs (OLV Sayreville, St. Stanislaus); render page 1 to read the masthead, and quote a text page or the parish website for recheck.
-- A parish may post the same bulletin on its eCatholic site and on church-bulletin.org (St. Stanislaus Kostka, Sayreville); compare page-1 renders before counting two publishers, and record only the parish-hosted copy.
-- A finder website that no longer resolves can be replaced by the live site found by web search (ddg.sh): Sacred Heart, South Amboy is sacredheartsa.org (eCatholic 12058); confirm the address and the bulletin masthead's printed URL.
-- An eCatholic site's Bulletin page can be a frozen archive while the menu's 'Bulletin' item points to the live publisher: Most Holy Redeemer, Matawan (ecatholic:15478, last file Aug 2023) uses Bonventure page 2238 (http only; record as other with page-pdfs http://sponsors.bonventure.net/?page=2238, as in Allentown). Do not record the stale eCatholic id.
-- John Patrick Publishing also hosts copies of eCatholic parishes' bulletins (Sacred Heart, South Amboy has both); the page-1 text is identical with extra ad pages, so record only the parish-hosted copy. St. Mary, South Amboy's own site only links the JPPC template (id 537), so it is `other` with page-pdfs https://church-bulletin.org/537.
-- issues.py ecatholic answers 403 for dates the site doesn't date by Sunday; use visit.py --links on the Bulletin page to read the real file names.
-- Finder clergy stale again: St. Mary, South Amboy lists Weezorak but its 25 Oct 2026 bulletin names Rev. Guy W. Selvester; Sacred Heart and Most Holy Redeemer match their mastheads.
 
 
 ## Rules settled for this diocese
@@ -178,6 +203,7 @@ Decisions that apply to more than one record, and who made them.
 - A pastor the parish finder lists for two parishes is a lead, not evidence of a shared pastor or a shared bulletin: whether rows share a bulletin is decided from the current bulletins. (accepted by survey-review, 003-survey-review, 2026-10-30)
 - A GCatholic church of a merged parish that neither the finder's worship-site list nor the parish's current bulletin names goes to `open/` unless a dated source says it closed; absence from the finder alone is not a closure. (accepted by survey-review, 003-survey-review, 2026-10-30)
 - A shrine or shrine chapel with public Mass but no parish of its own and no bulletin is excluded `no-bulletin`, as in Allentown (the Padre Pio Centre, Barto); one that publishes a bulletin or a schedule the pipeline can read gets a parish row. (accepted by survey-review, 003-survey-review, 2026-10-30)
+- One bulletin posted both on the parish's own site (eCatholic) and on church-bulletin.org is one publication: record only the parish-hosted copy, after comparing page-1 renders. A parish whose own site only links John Patrick is recorded on John Patrick. (map batches `sayreville-parlin` and `south-amboy-matawan`, 2026-10-30)
 
 ## Log
 
