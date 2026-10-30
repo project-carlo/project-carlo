@@ -270,6 +270,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - The 2017 linkage of St. Isaac Jogues and St. John Neumann no longer shows in their 1 Nov 2026 bulletins: different pastors (Rev. James Smith; Rev. Fr. Michael Dunn), separate listings (637, 6000) and eCatholic sites (13541, 2914). Read mastheads before treating a 2017 linkage as one bulletin.
 - An eCatholic site and the John Patrick listing can carry the same Sunday as different files (St. John Neumann 2914 vs listing 6000: 10-page text PDF vs 12-page image PDF, different md5); prefer the eCatholic text PDF when both are current.
 - A 'Family Mass in Chapel' at Our Lady of Good Counsel, Moorestown is in the church's Crypt Chapel (same building), not a second church.
+- A GCatholic church such as St. Casimir, Riverside with no site of its own can be confirmed on its parish's eCatholic /contact-us page (it lists each 'Worship Site' with street address); read that page with visit.py when GCatholic is the only address source.
+- The finder's pin can be far off the building (St. Charles Borromeo, Cinnaminson: ~500 m); GCatholic's Plus Code agreed with OSM's address lookup there.
+- A parish's Solutio site (olphparish.com) can number its bulletins (188 = 1 Nov 2026) while its /file PDFs answer 403; the same Sunday is on the Bon Venture sponsor page, which probe get reads.
 
 ## Rules settled for this diocese
 
