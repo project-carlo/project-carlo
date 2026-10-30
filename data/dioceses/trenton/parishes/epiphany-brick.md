@@ -1,7 +1,7 @@
 ---
 name: Church of Epiphany
 website: https://churchofepiphanynj.org/
-bulletin_provider: other
+bulletin_provider: no_bulletin
 provider_id: page-pdfs https://churchofepiphanynj.org/index.php/sunday-bulletins filename=bulletin*.pdf
 publication: ['url:https://churchofepiphanynj.org/index.php/sunday-bulletins#epiphany']
 group: Cohort 20 (Point Pleasant, Brick)
@@ -23,8 +23,8 @@ evidence:
   quote: October 25 - 30th Sunday in Ordinary Time
   note: 'Joomla weblinks list, 2025 and 2026 issues in date order, oldest first; the newest entry on 2026-10-30
     is 25 October. Each entry is a weblink.go redirect: entry 252 answers 301 to http://www.churchofepiphanynj.org/images/pdf/bulletin/2026/bulletin102526.pdf.'
-revisit: Pin a working recipe for the Joomla weblinks list once a collector exists (fetch:check currently
-  resolves nothing from it).
+revisit: 'Restore bulletin_provider to other with a working recipe once a collector follows Joomla weblink.go
+  redirects (owner decision 2026-10-30: add the collector, keep the row off the live CSVs until then).'
 revisit_after: 2026-12-01
 research:
 - method: pnpm fetch:check --diocese trenton --parish epiphany-brick (headed Chrome), unpinned
@@ -62,8 +62,8 @@ One: Church of Epiphany, 615 Thiele Road (see `epiphany-brick`). The 2017 *Faith
 
 ## Website and bulletin provider
 
-The bulletin is real and current, but the current resolver can't collect it. The Sunday Bulletins page is a Joomla weblinks list, oldest first: each entry is a `task=weblink.go` link that redirects (301) to `/images/pdf/bulletin/<yyyy>/bulletin<mmddyy>.pdf`, so the page contains no PDF href. `fetch:check` unpinned picks `/images/pdf/ministers.pdf?refresh=yes` (a staff list, the homepage's only PDF link) as 'first-listed'; the recipes `page-pdfs` (with `filename=bulletin*.pdf`), `dated-post`, `linked-issue-page` and `redirected-pdf` all fail to resolve. The recipe recorded here is the filename-pinned `page-pdfs`, which fails loudly rather than picking the staff list. The list lags the server by a week: the 1 November issue (bulletin110126.pdf) is on the server while the page's newest entry is 25 October.
+The bulletin is real and current, but the current resolver can't collect it, so the row is `no_bulletin` for now: the records keep it, `promote` leaves it off the live CSVs (README, Settled policy 4), and this is not a claim that Epiphany publishes no bulletin. The Sunday Bulletins page is a Joomla weblinks list, oldest first: each entry is a `task=weblink.go` link that redirects (301) to `/images/pdf/bulletin/<yyyy>/bulletin<mmddyy>.pdf`, so the page contains no PDF href. `fetch:check` unpinned picks `/images/pdf/ministers.pdf?refresh=yes` (a staff list) as 'first-listed'; the recipes `page-pdfs` (with `filename=bulletin*.pdf`), `dated-post`, `linked-issue-page` and `redirected-pdf` all fail to resolve. The list lags the server by a week: the 1 November issue (bulletin110126.pdf) is on the server while the page's newest entry is 25 October.
 
-## Not yet confirmed
+## Owner decision and what remains
 
-Whether a fetch can be made to work: it needs a collector that follows Joomla weblink redirects (a code change outside this map job), or an owner decision on how to carry the row. See `research`.
+The owner answered (2026-10-30): add a collector that follows weblink.go 301s and picks the newest, and keep the row off the live CSVs until then. The collector is a change to `src/pdf_extract/parish_sites/collectors.py`, which a map job may not edit; a sketch is in `scratch/trenton-map-1/037-map/weblinks_collector.md` (untested). When it lands, set `bulletin_provider: other`, pin `page-pdfs https://churchofepiphanynj.org/index.php/sunday-bulletins` (or the new collector's recipe name), run `fetch:check`, and confirm it picks the newest bulletin<mmddyy>.pdf.
