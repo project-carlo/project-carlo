@@ -56,4 +56,4 @@ The directory's three sites (stalphonsushopewell.org, stgeorgetitusville.org, st
 
 ## Worship sites
 
-Three churches: St. Alphonsus (Hopewell), St. George (Titusville) and St. James (Pennington); see `st-alphonsus-hopewell`, `st-george-titusville`, `st-james-pennington`. The masthead also names "St. James Chapel, 6 Eglantine Avenue, Pennington"; its weekday Masses are a St. James matter, written up in `st-james-pennington`.
+Three churches and a chapel: St. Alphonsus (Hopewell), St. George (Titusville), St. James (Pennington) and St. James Chapel; see `st-alphonsus-hopewell`, `st-george-titusville`, `st-james-pennington`, `st-james-chapel-pennington`. The masthead also names "St. James Chapel, 6 Eglantine Avenue, Pennington", where St. James's weekday Masses are said; reconcile (2026-10-30) gave it a church row, `st-james-chapel-pennington`, under the settled chapel rule.

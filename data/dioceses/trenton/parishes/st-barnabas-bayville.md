@@ -48,6 +48,30 @@ research:
   retry_when: Plain fetch of the parish site stops answering 403, or the listing stops carrying the newest
     issue
 bulletin_status: available
+publication_reviews:
+- parish: st-pius-x-forked-river
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-barnabas-parish-community-bayville-nj-08721/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: ST. BARNABAS COMMUNITY A Roman Catholic Parish 33 WOODLAND ROAD * PO BOX I * BAYVILLE, NEW
+      JERSEY 08721-0320
+    note: 'Bulletin for St. Barnabas Parish (row st-barnabas-bayville), read by its map batch: Masthead
+      (page 1) and page 2 of the 1 November 2026 issue (12 pages, scanned images with no text layer; read
+      from renders). Page 2: ''Fr. Carlos Florez, Servant/Pastor'', ''PARISH OFFICE --- 732-269-2208'',
+      MASS SCHEDULE ''DAILY: Monday - Friday 8:00 am; SATURDAY 4:00 pm; SUNDAY 8:00, 10:00 & 12 Noon (Spanish)''.
+      Names this parish alone.'
+  - url: https://www.church-bulletin.org/bulletin/the-church-of-saint-pius-the-tenth-forked-river-nj-08731/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: The Church of St. Pius the Tenth 300 Lacey Road, Forked River, New Jersey 08731 609-693-5107
+      www.churchofstpius.org
+    note: 'Bulletin for St. Pius X Parish (row st-pius-x-forked-river), read by its map batch: Masthead
+      (page 1), page 2 and page 3 of the 1 November 2026 issue (12 pages, scanned images with no text
+      layer; read from renders). Page 2: ''PASTOR Rev. Richard Basznianin'', ''ST. PIUS X CHURCH IS OPEN
+      Monday - Friday 7:30AM - 3:00PM, Saturday 2:30PM - 5:30PM & Sunday 7:30AM - 1:00PM'', footer ''Page
+      1-590''. Page 3 (Solemnity of All Saints, Mass intentions): Sat 4:00pm; Sun 8:00am, 10:00am, 12:00pm;
+      Mon-Fri 8:00am. Names this parish alone; its Hispanic Ministry line is ''ST. BARNABAS Bayville,
+      NJ'' with a St. Barnabas phone number, a ministry contact and not a shared bulletin.'
 ---
 
 ## Publisher

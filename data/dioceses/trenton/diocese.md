@@ -160,11 +160,10 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   latest issue (usually the listing) and keep the other's id in `publication`. The two can
   carry the same Sunday as different files (St. John Neumann, Mount Laurel: eCatholic 2914's
   10-page text PDF, listing 6000's 12-page image PDF): when both are equally current, prefer
-  the one with a text layer. When the listing is a week ahead only because it holds the coming
+  the one with a text layer. When the listing is a week ahead because it holds the coming
   Sunday's image-only issue and the parish's own site has the Sunday just passed with a text
-  layer, map batch `princeton-west-windsor-hightstown` read the site (St. Paul, Princeton:
-  eCatholic 28530, listing 694 in publication); this conflicts with the settled rule to read
-  the channel with the latest issue (*Rules settled*), so it is not yet the method. An eCatholic
+  layer, the listing is still the row (*Rules settled*: the latest issue wins): St. Paul,
+  Princeton reads listing 694 and keeps eCatholic 28530 in publication. An eCatholic
   site whose Bulletins page links `church-bulletin.org` PDFs is only the host: record the
   listing, not the eCatholic id (Holy Cross, Rumson 37867). Many issues are image-only (most
   in Camden; here St. Veronica 532, St. William the Abbot 566, Howell, Holy Cross, Rumson and
@@ -384,7 +383,12 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 - **Eastern Catholic eparchies:** confirm a GCatholic Eastern church on the eparchy's own list
   before excluding it (Camden: Ukrainian ukrcatholic.org/parishes, which `probe get` reads; the
   Ruthenian churches are the Eparchy of Passaic's, the Romanian the Eparchy of St. George in
-  Canton's). Their street numbers can differ from GCatholic's.
+  Canton's). Their street numbers can differ from GCatholic's. Here GCatholic's Eastern entries
+  matched the eparchy lists' addresses and phones. The Eparchy of Passaic's list
+  (eparchyofpassaic.com/parishfinder) is JavaScript and answers 403 to `probe get`, so read it
+  with parish-site-access `finder.py`; it prints Roebling's ZIP as 08854 (for 08554). The
+  Ukrainian (ukrcatholic.org/parishes) and Romanian (romaniancatholic.org/parishfinder) lists
+  read with `probe get`.
 - **Web search is rationed** (Camden): duckduckgo.com/html answers a bot challenge after a few
   searches; spend searches on finding a site or listing, and use The Monitor's REST search to
   date closures. Its REST dates for 2017-era stories can be the 2019-07-29 site migration,
@@ -398,9 +402,6 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- Eparchy of Passaic's parish list (eparchyofpassaic.com/parishfinder) is JavaScript and 403s probe get; parish-site-access finder.py reads it. Ukrainian list ukrcatholic.org/parishes and Romanian romaniancatholic.org/parishfinder both work with probe get.
-- GCatholic's Eastern entries match the eparchy lists' addresses and phones; the Passaic finder prints Roebling ZIP 08854 for 08554 (typo).
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -408,7 +409,7 @@ Decisions that apply to more than one record, and who made them.
 - Eastern Catholic churches GCatholic lists in the territory (St. Mary, St. Basil, St. Josaphat, Trenton; St. Mary, St. Nicholas, Roebling; Our Lady of Perpetual Help, St. Stephen, Toms River) are excluded as other-jurisdiction once confirmed on their eparchy's list; the former Basilian monastery, Matawan, as other-jurisdiction or closed on what its source says. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - A cohort or a linkage (one pastor) is not a shared bulletin. Parishes keep separate rows when each publishes its own bulletin with its own masthead; they are one row only when a current masthead names them together. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - A merger ends a parish, not a church: a former parish church of a 2017-2020 merger keeps a church row under the merged parish when its current bulletin or Mass schedule lists Mass there, and is excluded closed only on a source that says so (closing Mass, relegation, sale), with last_mass. (accepted by survey-review, 002-survey-review, 2026-10-30) Weekday Mass can move between a parish's churches from one issue to the next (St. Katharine Drexel: All Saints on 25 Oct 2026, St. Paul on 1 Nov): read the whole Mass block before counting a church as having no daily Mass, and keep both rows while the weekend schedule lists both. (map batch `burlington-bordentown`, 2026-10-30) A merged parish whose masthead lists both churches while its Mass schedule names no church for any Mass (Our Lady of Fatima, Keyport: Jesus the Lord Church) keeps the second church in `open/`, not excluded, until a source assigns it a Mass or dates a closing. (map batch `keyport-matawan-union-beach-holmdel`, 2026-10-30)
-- A seasonal shore church (Long Beach Island, the Seaside/Lavallette barrier island, Deal, Manasquan's Star of the Sea chapel) keeps its church row with a dated revisit for its next season, on an off-season bulletin or the parish's own winter schedule. (accepted by survey-review, 002-survey-review, 2026-10-30) Check a "may be seasonal" church against the November schedule first: Our Lady of Hope's 1 Nov 2026 bulletin lists St. Mary, Deal year-round (Sat 5 PM, Sun 8 and 10 AM, Mon-Wed 9 AM), so its dated revisit is only to read the summer schedule. (map batch `long-branch-west-long-branch`, 2026-10-30) The Seaside Park, Seaside Heights and Lavallette churches list the same Masses in February, August and November issues: compare page 1 of a summer and a winter issue before treating a shore church as seasonal. (map batch `bay-head-lavallette-seaside`, 2026-10-30) A parish can print one schedule for several shore churches and mark some CLOSED for the off-season (St. Francis of Assisi, LBI: Surf City, Beach Haven and Loveladies closed from mid-October to at least 20 December 2026): read the bulletin's seasonal schedule block and the parish's mass-schedule page, and an August issue for the summer Masses, before judging one; a church listed with summer Mass keeps its row with a spring revisit. (map batch `barnegat-lbi-little-egg-harbor`, 2026-10-30)
+- A seasonal shore church keeps its church row with a dated revisit for its next season, on an off-season bulletin or the parish's own winter schedule. (accepted by survey-review, 002-survey-review, 2026-10-30) The survey named Long Beach Island, the Seaside/Lavallette barrier island, Deal and Manasquan's Star of the Sea chapel as seasonal; the map batches' bulletins found only Long Beach Island's churches closed for the winter. Star of the Sea's Sunday 10:00 AM Mass is in St. Denis's 11 Jan, 1 Feb and 1 Mar 2026 issues; for Deal and the barrier island, see below. (reconcile, 045-reconcile, 2026-10-30, from map batches `spring-lake-sea-girt-manasquan`, `long-branch-west-long-branch` and `bay-head-lavallette-seaside`) Before treating a church as seasonal, grep the parish's January-March issues for its Mass line. Check a "may be seasonal" church against the November schedule first: Our Lady of Hope's 1 Nov 2026 bulletin lists St. Mary, Deal year-round (Sat 5 PM, Sun 8 and 10 AM, Mon-Wed 9 AM), so its dated revisit is only to read the summer schedule. (map batch `long-branch-west-long-branch`, 2026-10-30) The Seaside Park, Seaside Heights and Lavallette churches list the same Masses in February, August and November issues: compare page 1 of a summer and a winter issue before treating a shore church as seasonal. (map batch `bay-head-lavallette-seaside`, 2026-10-30) A parish can print one schedule for several shore churches and mark some CLOSED for the off-season (St. Francis of Assisi, LBI: Surf City, Beach Haven and Loveladies closed from mid-October to at least 20 December 2026): read the bulletin's seasonal schedule block and the parish's mass-schedule page, and an August issue for the summer Masses, before judging one; a church listed with summer Mass keeps its row with a spring revisit. (map batch `barnegat-lbi-little-egg-harbor`, 2026-10-30)
 - When a parish's printer's listing (John Patrick, Bon Venture) and its own site carry the same bulletin, the row reads whichever channel has the latest issue, keeping the other's id in publication. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - A church's coordinates come from GCatholic's Plus Code or an OSM address lookup (nominatim via `probe get`), compared with each other, not from the finder's pin alone: the finder's pins can be kilometres off (St. Catharine, Holmdel: 3.5 km). (map batch `holmdel-marlboro-colts-neck`, 2026-10-30) OSM's named node can be off too, by hundreds of metres (Nativity, Fair Haven: 750 m), so a single OSM point needs the Plus Code beside it. (map batch `red-bank-rumson-fair-haven`, 2026-10-30) A merged parish's finder pin can sit at its closed church rather than at the address it prints (Jesus the Good Shepherd's pin is St. Peter, Riverside, 3.5 km from its Beverly address). (map batch `willingboro-beverly`, 2026-10-30) The pin can also sit at its open second church (St. Teresa of Calcutta's is at St. Elizabeth, Avon, 1.3 km from 501 Brinley Ave, Bradley Beach): match the pin to a church by address and Plus Code. (map batch `asbury-park-neptune-bradley-beach-belmar`, 2026-10-30) A multi-church parish's single pin can sit by the wrong church (Christ the King, Long Branch: pin 130 m from Holy Trinity, while its address, 111 Chelsea Ave, is beside Our Lady Star of the Sea in OSM): match a finder entry to a church by ZIP+4, phone and an OSM house lookup, not by the pin. (map batch `long-branch-west-long-branch`, 2026-10-30) Sources can give one building different ZIP+4s (Our Lady of Mount Carmel, 805 Pine St, Asbury Park: GCatholic 07712-5769, ParishesOnline and catholicmasses.org 07712-5793), so compare ZIP+4s from the same source, and read each value before saying two places share one. (map batch `asbury-park-neptune-bradley-beach-belmar`, 2026-10-30)
 - A slug for a common saint's name can already be another diocese's live row (st-john-the-baptist-allentown is Allentown, PA): run `pnpm diocese search` before writing a record and add the state when it collides (`st-john-the-baptist-allentown-nj`). (map batch `hamilton-yardville-allentown`, 2026-10-30)
@@ -423,6 +424,19 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-10-30: Reconcile (045-reconcile) after 30 map batches (4-12 roster entries each, usually
+  about 8). Coverage: directory 98/98 accounted for (96 modelled as churches on the site),
+  GCatholic 136/136 (118 of the 125 non-excluded modelled). 93 parish rows (2 `no_bulletin`:
+  Epiphany, Brick; St. Catharine, Holmdel), 125 churches, 11 exclusions, 6 open. Nothing merged
+  or moved between parishes. St. Paul, Princeton now reads John Patrick listing 694 (the latest
+  issue, per the settled rule). St. James Chapel, 6 Eglantine Avenue, Pennington became a church
+  row under the settled chapel rule. Princeton's campus ministry (Aquinas Institute) went to
+  `open/`. The 180 unresolved audit pairs (cohort neighbours, 130 of them on the shared Bon
+  Venture host, and two pairs from stray eCatholic embeds) got `separate` reviews citing both
+  rows' masthead evidence. `fetch:check` on all 91 bulletin rows: 90 picked their parish's 25 Oct or
+  1 Nov issue (St. Francis, LBI's 1 Nov file is misdated by the resolver as 1 Jan); Immaculate
+  Conception, Eatontown can't be collected (extensionless `opendoc.asp` links). The seasonal-shore rule now
+  says which places were found year-round.
 - 2026-10-30: Initialised (factory survey, Run trenton-map-1). Rosters: the diocese's parish
   finder as `directory` (98 pins: 97 parishes and the merged St. Mary of the Lake), GCatholic
   (136 entries, 8 of them Eastern Catholic). Planned 30 map batches in `batches.json` from the

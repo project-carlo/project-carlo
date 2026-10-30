@@ -71,6 +71,27 @@ publication_reviews:
     seen: 2026-10-30
     note: The 1 November 2026 masthead (page 2) names Saint Hedwig Parish alone (pastor Rev. Can. Dr.
       Jacek W. Labinski, 872 Brunswick Ave.), with its own Mass schedule. (John Patrick 592)
+- parish: st-isaac-jogues-marlton
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/our-lady-of-good-counsel-west-trenton-nj-08628/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Our Lady of Good Counsel Parish (row our-lady-of-good-counsel-west-trenton), read
+      by its map batch: 1 November 2026 issue, 8 pages, image-only (no text layer); I rendered page 1.
+      Masthead: ''Our Lady of Good Counsel'', ''www.olgcc.net'', ''November 1, 2026'', ''Tel: 609-882-3277'',
+      pastor Fr. Ariel Robles; picture caption ''Our Lady of Good Counsel church, 137 West Upper Ferry
+      Road, West Trenton''. One MASS SCHEDULE: Monday-Friday 7:30 am, Saturday 8:00 am; weekend Saturday
+      5:00 pm, Sunday 8:30 am and 10:30 am; Holy Days 7:30 AM, 12 Noon & 7:00 PM. No other church or parish
+      is named.'
+  - url: https://www.church-bulletin.org/bulletin/the-roman-catholic-church-of-saint-isaac-jogues-marlton-nj-08053/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Church of St. Isaac Jogues (row st-isaac-jogues-marlton), read by its map batch:
+      12-page issue dated 1 November 2026 (Solemnity of All Saints), image-only (probe pdf: no extractable
+      text), so pages 1-2 were read from renders. Page 1 masthead ''ROMAN CATHOLIC CHURCH OF ST. ISAAC
+      JOGUES, MARLTON, NEW JERSEY'', ''REV. JAMES SMITH, PASTOR'', ''DEACON JOHN SCANLON''; ''Parish Address
+      349 Evesboro-Medford Rd., Marlton, NJ 08053'', ''Phone: (856) 797-0999'', ''Website: cosij.org'';
+      Weekly Masses Tuesday-Friday 8:30am (Monday Communion Service), Friday 7:00pm (Ordinary Form of
+      the Mass in Latin), Saturday 5:00pm, Sunday 9:00am and 11:00am. It names this parish alone.'
 ---
 
 ## Publisher

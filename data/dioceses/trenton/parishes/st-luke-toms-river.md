@@ -73,6 +73,45 @@ publication_reviews:
     seen: 2026-10-30
     note: The issue is a bulletin for St. Maximilian Kolbe alone, with its own pastor (Rev. Stephen M.
       Piga) and its own Mass times.
+- parish: st-peter-point-pleasant-beach
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4167/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Michael Kennedy
+    note: 'Bulletin for St. Luke Parish (row st-luke-toms-river), read by its map batch: Page 1 of the
+      1 November 2026 issue (12 pages, text layer; Bon Venture 4167): St. Luke alone: ''ST. LUKE'', ''1674
+      OLD FREEHOLD ROAD • TOMS RIVER, NEW JERSEY 08755'', pastor Rev. Michael Kennedy, Mass schedule Saturday
+      vigil 4:00 pm, Sunday 7:30, 10:00 am and 12:00 pm, weekdays 7:30 am (Wednesday also 12:30 pm, Friday
+      also 11:00 am). The Bon Venture issue is the coming Sunday''s (future freshness).'
+  - url: http://sponsors.bonventure.net/pdfs/2097/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Saint Peter Catholic Church
+    note: 'Bulletin for St. Peter Church (row st-peter-point-pleasant-beach), read by its map batch: Page
+      1 of the 1 November 2026 issue (12 pages; text on 10, pages 6-7 image-only): ''The Solemnity of
+      All Saints, St. Peter Church, November 1, 2026, Saint Peter Catholic Church, 406 Forman Avenue,
+      Point Pleasant Beach, New Jersey 08742, (732) 892-0049''. Page 2: Sunday Masses 7:30, 9:00 and 11:00
+      a.m.; weekday 8:30 a.m.; Saturday 5:00 p.m. It names St. Peter alone.'
+- parish: st-rose-belmar
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4167/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Michael Kennedy
+    note: 'Bulletin for St. Luke Parish (row st-luke-toms-river), read by its map batch: Page 1 of the
+      1 November 2026 issue (12 pages, text layer; Bon Venture 4167): St. Luke alone: ''ST. LUKE'', ''1674
+      OLD FREEHOLD ROAD • TOMS RIVER, NEW JERSEY 08755'', pastor Rev. Michael Kennedy, Mass schedule Saturday
+      vigil 4:00 pm, Sunday 7:30, 10:00 am and 12:00 pm, weekdays 7:30 am (Wednesday also 12:30 pm, Friday
+      also 11:00 am). The Bon Venture issue is the coming Sunday''s (future freshness).'
+  - url: http://sponsors.bonventure.net/pdfs/2155/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Msgr. Edward J. Arnister
+    note: 'Bulletin for Church of Saint Rose (row st-rose-belmar), read by its map batch: Page 1 of the
+      1 November 2026 issue (16 pages, text layer): ''MASS SCHEDULE / WEEKDAYS 6:45 am & 9:00 am / SATURDAY
+      5:00 pm (Vigil) / SUNDAY 7:00, 9:30, 11:30 am & 5:00 pm'', Rev. Msgr. Edward J. Arnister, Pastor,
+      Rev. Dr. John Paul Del Rosario, Parochial Vicar, ''RECTORY & PARISH OFFICE 603 Seventh Ave., Belmar,
+      NJ 07719 p: 732-681-0512''; page 2''s header reads ''CHURCH OF SAINT ROSE - BELMAR, NEW JERSEY -
+      NOVEMBER 1, 2026''. It names this parish alone.'
 ---
 
 ## Publisher

@@ -38,6 +38,29 @@ research:
     before its date); identity unverified only because no expected identity is supplied, the masthead
     reads ''the parish of our lady of hope''.'
 bulletin_status: available
+publication_reviews:
+- parish: st-michael-long-branch
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/the-parish-of-our-lady-of-hope-west-long-branch-nj-07764/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: 'ST. MARY: SATURDAY 5PM VIGIL; SUNDAY 8AM & 10AM'
+    note: 'Bulletin for Our Lady of Hope Parish (row our-lady-of-hope-west-long-branch), read by its map
+      batch: Page 2 of the 1 November 2026 issue (12 pages, text layer), ''SCHEDULE OF SERVICES'': ''St.
+      Jerome Church is located at 250 Wall Street, West Long Branch, NJ 07764'', ''St. Mary Church is
+      located at 46 Richmond Avenue, Deal, NJ 07723''; ''ST. JEROME: SATURDAY 4PM VIGIL; SUNDAY 7:30AM
+      & 11AM''; weekdays ''ST. MARY: 9AM MON/TUES/WED'', ''ST. JEROME: 8:30AM THURS/FRI/SAT''; footer
+      ''OUR LADY OF HOPE PARISH est.2018''. Page 3 prints the Mass intentions by church (SJC, SMC) and
+      is signed ''Rev. Mark Nillo'' as pastor and bulletin editor. Names the parish alone.'
+  - url: https://www.stmichaelnj.com/images/bulletins/bulletin102526.pdf
+    seen: 2026-10-30
+    quote: 'Saturday: 4:00PM, 5:30PM, 7:00 PM Sunday: 7:00'
+    note: 'Bulletin for St. Michael''s Church (row st-michael-long-branch), read by its map batch: Page
+      1 of the 25 October 2026 issue (7 pages; the cover is an image, read from a render): masthead ''St.
+      Michael''s Church'', ''Parish Office 800 Ocean Avenue | Long Branch, NJ 07740'', ''Rev. John K.
+      Butler, Pastor''. Text layer: weekend Masses ''Saturday: 4:00PM, 5:30PM, 7:00 PM Sunday: 7:00 AM,
+      8:30AM, 10:00AM, 12:00 PM, 4:00 PM, 7:00 PM''; daily ''Mon - Sat: 8:00 AM | Mon: 7:00 PM''. Page
+      2 Mass intentions for the week. Names the church alone.'
 ---
 
 ## Publisher

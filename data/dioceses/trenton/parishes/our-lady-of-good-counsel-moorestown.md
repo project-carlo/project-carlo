@@ -32,6 +32,51 @@ research:
   outcome: found
   next_action: None
 bulletin_status: available
+publication_reviews:
+- parish: st-isaac-jogues-marlton
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/our-lady-of-good-counsel-parish-moorestown-nj-08057/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Our Lady of Good Counsel Parish (row our-lady-of-good-counsel-moorestown), read
+      by its map batch: 12-page issue dated 1 November 2026 (All Saints Day), image-only (probe pdf: no
+      extractable text), so pages 1-2 were read from renders. Page 1 masthead ''OUR LADY OF GOOD COUNSEL
+      PARISH'', ''42 W. MAIN STREET - MOORESTOWN'', ''WWW.OLGCNJ.ORG'', ''VERY REV. JIM GROGAN, SR., V.F.
+      PASTOR'', ''REV. JACK BOGACZ, ASSOCIATE'', ''PARISH OFFICE: (856) 235-0181''; ''CONFESSIONS: SATURDAY
+      3:30PM WEEKEND MASSES: SATURDAY 5PM SUNDAY 8AM, 10AM, (MAIN CHURCH, & FAMILY MASS IN CHAPEL) AND
+      12PM DAILY MASS: 9AM''. Page 2 sanctuary lamp for ''Church'' and ''Chapel''; ''Reconciliation: 3:30
+      PM Saturdays in the Crypt Chapel''. It names this parish alone.'
+  - url: https://www.church-bulletin.org/bulletin/the-roman-catholic-church-of-saint-isaac-jogues-marlton-nj-08053/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Church of St. Isaac Jogues (row st-isaac-jogues-marlton), read by its map batch:
+      12-page issue dated 1 November 2026 (Solemnity of All Saints), image-only (probe pdf: no extractable
+      text), so pages 1-2 were read from renders. Page 1 masthead ''ROMAN CATHOLIC CHURCH OF ST. ISAAC
+      JOGUES, MARLTON, NEW JERSEY'', ''REV. JAMES SMITH, PASTOR'', ''DEACON JOHN SCANLON''; ''Parish Address
+      349 Evesboro-Medford Rd., Marlton, NJ 08053'', ''Phone: (856) 797-0999'', ''Website: cosij.org'';
+      Weekly Masses Tuesday-Friday 8:30am (Monday Communion Service), Friday 7:00pm (Ordinary Form of
+      the Mass in Latin), Saturday 5:00pm, Sunday 9:00am and 11:00am. It names this parish alone.'
+- parish: st-john-neumann-mount-laurel
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/our-lady-of-good-counsel-parish-moorestown-nj-08057/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Our Lady of Good Counsel Parish (row our-lady-of-good-counsel-moorestown), read
+      by its map batch: 12-page issue dated 1 November 2026 (All Saints Day), image-only (probe pdf: no
+      extractable text), so pages 1-2 were read from renders. Page 1 masthead ''OUR LADY OF GOOD COUNSEL
+      PARISH'', ''42 W. MAIN STREET - MOORESTOWN'', ''WWW.OLGCNJ.ORG'', ''VERY REV. JIM GROGAN, SR., V.F.
+      PASTOR'', ''REV. JACK BOGACZ, ASSOCIATE'', ''PARISH OFFICE: (856) 235-0181''; ''CONFESSIONS: SATURDAY
+      3:30PM WEEKEND MASSES: SATURDAY 5PM SUNDAY 8AM, 10AM, (MAIN CHURCH, & FAMILY MASS IN CHAPEL) AND
+      12PM DAILY MASS: 9AM''. Page 2 sanctuary lamp for ''Church'' and ''Chapel''; ''Reconciliation: 3:30
+      PM Saturdays in the Crypt Chapel''. It names this parish alone.'
+  - url: https://files.ecatholic.com/2914/bulletins/20261101.pdf
+    seen: 2026-10-30
+    quote: 560 WALTON AVE., MT. LAUREL, NJ 08054
+    note: 'Bulletin for St. John Neumann Roman Catholic Church (row st-john-neumann-mount-laurel), read
+      by its map batch: The eCatholic issue dated 1 November 2026 (10 pages, text layer; md5 4671b2a3802925bddc66b5f8e417e639):
+      ''St. John Neumann Roman Catholic Church'', ''Pastor - Rev. Fr. Michael Dunn'', ''1 November 2026
+      - Solemnity of All Saints''. Page 2 ''Weekly Liturgical Schedule'': Monday 9:00am, Wednesday 7:00pm,
+      Thursday 9:00am, Friday 9:00am (Tuesday no Masses), Saturday 4:00pm, Sunday 8:00am and 10:00am.
+      It names this parish alone.'
 ---
 
 ## Publisher

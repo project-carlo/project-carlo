@@ -40,6 +40,28 @@ publication_reviews:
     note: St. Dorothea's 25 October 2026 bulletin masthead names St. Dorothea Church, 240 Broad Street,
       with Rev. Michael Sullivan as Pastor, and its own intentions; it is published by St. Dorothea, a
       different file from Precious Blood's.
+- parish: st-anselm-wayside
+  decision: separate
+  evidence:
+  - url: https://cloud-1de12d.becdn.net/customfile/ebb273e3fe75a6e49bd62ed19bb698286b0f46145f3a7bd41a18ec91be7c6cef/Bulletin-PBC-Oct-25-2026-O30.pdf
+    seen: 2026-10-30
+    quote: 72 Riverdale Avenue
+    note: 'Bulletin for Church of the Precious Blood (row precious-blood-monmouth-beach), read by its
+      map batch: Masthead, page 1 of the 25 October 2026 issue (Bulletin-PBC-Oct-25-2026-O30.pdf, 4 pages,
+      text layer): Church of the Precious Blood, 72 Riverdale Avenue, Monmouth Beach, NJ 07750, 732-222-4756;
+      Rev. Michael Sullivan, Pastor and Rev. Andrés Serna, Parochial Vicar. Mass schedule (Mass intentions):
+      Saturday 5:30p; Sunday 8:00a, 9:30a, 11:00a; weekdays 8:30a. Page 3 prints a table, SUNDAY MASSES
+      / WEEKDAY MASSES OF OUR LINKED PARISHES, with both Precious Blood and St. Dorothea. The file (md5
+      3644811e...) is not the St. Dorothea file (md5 8caa7516...) for the same Sunday: the intentions
+      and Mass times are Precious Blood only.'
+  - url: https://container.parishesonline.com/bulletins/03/1017/20261101B.pdf
+    seen: 2026-10-30
+    quote: 1028 Wayside Road
+    note: 'Bulletin for Church of St. Anselm (row st-anselm-wayside), read by its map batch: Masthead,
+      page 1 of the 1 November 2026 issue (8 pages, text layer): ''CHURCH OF SAINT ANSELM'', 1028 Wayside
+      Road, Wayside, NJ 07712, 732.493.4411. Mass schedule: Saturday 4:30pm; Sunday 9:00am & 11:00am;
+      weekdays Monday, Wednesday and Friday 9:00am; Reconciliation Saturday 3:00-4:00pm. Names this parish
+      alone. The 25 October issue (same container) page 2 lists ''Parish Administrator Rev. Carlo Calisin''.'
 ---
 
 ## Publisher

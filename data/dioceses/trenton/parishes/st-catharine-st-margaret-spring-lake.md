@@ -49,6 +49,53 @@ research:
   next_action: 'None; transport ok, document_type pdf, picks the current issue (freshness future: the
     coming Sunday issue, posted early)'
 bulletin_status: available
+publication_reviews:
+- parish: st-denis-manasquan
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/the-parish-of-saint-catharine-and-saint-margaret-spring-lake-nj-07762/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for The Parish of St. Catharine and St. Margaret (row st-catharine-st-margaret-spring-lake),
+      read by its map batch: 12-page issue dated 1 November 2026 (Solemnity of All Saints), image-only
+      (probe pdf: no extractable text), so pages 1-2 were read from renders. Page 1 masthead: ''THE PARISH
+      OF St. Catharine & St. Margaret''; Parish Directory ''Pastor Very Rev. Damian McElroy, Parochial
+      Vicar Rev. John Large'', three-plus deacons; Mass Schedule lists ''ST. CATHARINE CHURCH, 215 Essex
+      Avenue'' (Monday, Tuesday, Thursday & Friday 12:00pm; Wednesday 9:00am and 12:00pm (St. Catharine
+      Chapel); Saturday 5:00pm; Sunday 9:00am and 12:00pm) and ''ST. MARGARET CHURCH, 300 Ludlow Avenue''
+      (Saturday 4:00pm; Sunday 8:00am and 10:00am). Footer www.scsmsl.org | 732-449-5765. It names this
+      parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/2095/2026-10-25.pdf
+    seen: 2026-10-30
+    quote: Reverend William J. P. Lago, Pastor
+    note: 'Bulletin for Church of St. Denis (row st-denis-manasquan), read by its map batch: Page 1 of
+      the 25 October 2026 issue (8 pages, text layer; header on page 2 ''St. Denis Church 732-223-0287
+      October 25, 2026''): staff list with Pastor Rev. William J. P. Lago, then ''MASS SCHEDULE: Weekday
+      Masses 7:30 AM (Mon.-Tues.-Wed.-Fri.) - St. Denis Church; Saturday 8:30 AM; Saturday Evening 4:30
+      PM; Sunday 8:00 AM & 9:30 AM - St. Denis Church ... Sunday: 10:00 AM - Our Lady Star of the Sea
+      Chapel''. It names St. Denis alone.'
+- parish: st-mark-sea-girt
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/the-parish-of-saint-catharine-and-saint-margaret-spring-lake-nj-07762/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for The Parish of St. Catharine and St. Margaret (row st-catharine-st-margaret-spring-lake),
+      read by its map batch: 12-page issue dated 1 November 2026 (Solemnity of All Saints), image-only
+      (probe pdf: no extractable text), so pages 1-2 were read from renders. Page 1 masthead: ''THE PARISH
+      OF St. Catharine & St. Margaret''; Parish Directory ''Pastor Very Rev. Damian McElroy, Parochial
+      Vicar Rev. John Large'', three-plus deacons; Mass Schedule lists ''ST. CATHARINE CHURCH, 215 Essex
+      Avenue'' (Monday, Tuesday, Thursday & Friday 12:00pm; Wednesday 9:00am and 12:00pm (St. Catharine
+      Chapel); Saturday 5:00pm; Sunday 9:00am and 12:00pm) and ''ST. MARGARET CHURCH, 300 Ludlow Avenue''
+      (Saturday 4:00pm; Sunday 8:00am and 10:00am). Footer www.scsmsl.org | 732-449-5765. It names this
+      parish alone.'
+  - url: https://www.church-bulletin.org/bulletin/saint-mark-s-catholic-church-sea-girt-nj-08750/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for St. Mark''s Catholic Church (row st-mark-sea-girt), read by its map batch: 16-page
+      issue dated 1 November 2026 (All Saints Day), image-only (probe pdf: no extractable text), so pages
+      1-2 were read from renders. Page 1 masthead: "St. Mark''s Catholic Church, Fr. Miguel Virella, SVD,
+      Pastor, Dr. Joseph V. Stillo, Deacon, Michael Keary, Deacon"; Weekend Masses Saturday 4:30 PM, Sunday
+      8 AM, 10 AM and 12 Noon, 5PM in Spanish; Daily Masses Monday-Friday 7:30 AM and 11 AM, Saturday
+      7:30 AM only; footer ''215 Crescent Pkwy, Sea Girt, NJ 08750 - Phone 732-449-6364 - www.stmarkseagirt.com''.
+      It names St. Mark alone.'
 ---
 
 ## Publisher

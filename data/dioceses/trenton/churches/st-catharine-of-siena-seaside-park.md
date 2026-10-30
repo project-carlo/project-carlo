@@ -11,7 +11,7 @@ longitude: -74.0774375
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:18743']
+roster: ['directory:14641', 'gcatholic:18743']
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
   seen: 2026-10-30

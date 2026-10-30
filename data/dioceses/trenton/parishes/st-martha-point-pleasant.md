@@ -33,6 +33,26 @@ research:
   next_action: 'None: transport ok, document_type pdf, picks Bulletin-11-1-2026.pdf (''current''; freshness
     ''future'', the coming Sunday''s issue posted two days early).'
 bulletin_status: available
+publication_reviews:
+- parish: st-peter-point-pleasant-beach
+  decision: separate
+  evidence:
+  - url: https://saintmartha.net/wp-content/uploads/2026/10/Bulletin-11-1-2026.pdf
+    seen: 2026-10-30
+    quote: THE CATHOLIC COMMUNITY OF SAINT MARTHA
+    note: 'Bulletin for The Church of St. Martha (row st-martha-point-pleasant), read by its map batch:
+      Page 1 of the 1 November 2026 (All Saints) issue, 8 pages with a text layer. Masthead names St.
+      Martha alone: ''Pastor: Rev. David Swantek'', Mass ''Saturday Vigil 4:30 pm; Sunday 7:30 am, 10:00
+      am, 12:00 noon; Daily Mass: Tuesday - Friday 9:00 am'', 3800 Herbertsville Road, Point Pleasant,
+      NJ 08742.'
+  - url: http://sponsors.bonventure.net/pdfs/2097/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Saint Peter Catholic Church
+    note: 'Bulletin for St. Peter Church (row st-peter-point-pleasant-beach), read by its map batch: Page
+      1 of the 1 November 2026 issue (12 pages; text on 10, pages 6-7 image-only): ''The Solemnity of
+      All Saints, St. Peter Church, November 1, 2026, Saint Peter Catholic Church, 406 Forman Avenue,
+      Point Pleasant Beach, New Jersey 08742, (732) 892-0049''. Page 2: Sunday Masses 7:30, 9:00 and 11:00
+      a.m.; weekday 8:30 a.m.; Saturday 5:00 p.m. It names St. Peter alone.'
 ---
 
 ## Publisher

@@ -31,6 +31,27 @@ research:
   outcome: found
   next_action: None
 bulletin_status: available
+publication_reviews:
+- parish: jesus-the-good-shepherd-beverly
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/corpus-christi-parish-willingboro-nj-08046/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: "Corpus Christi Parish \nWillingboro, New Jersey"
+    note: 'Bulletin for Corpus Christi Parish (row corpus-christi-willingboro), read by its map batch:
+      6-page issue for All Saints, Sunday 1 November 2026, text layer. Masthead names Corpus Christi Parish
+      alone (Rev. John J. Testa, pastor; Rectory 63 Sylvan Lane; website www.ccnj.church). Masses: daily
+      M-F 8:00am, Saturday 4:00pm, Sunday 9:00am and 11:00am. Page 2 prints only this parish''s intentions.'
+  - url: https://www.church-bulletin.org/bulletin/the-parish-community-of-jesus-the-good-shepherd-beverly-nj-08010/2026-10-25.pdf
+    seen: 2026-10-30
+    quote: 805 Warren Street
+    note: 'Bulletin for Jesus the Good Shepherd Parish (row jesus-the-good-shepherd-beverly), read by
+      its map batch: 8-page issue of 25 October 2026 (text layer, trilingual English/Spanish/Portuguese).
+      Cover: ''The Parish of Jesus, the Good Shepherd'', 805 Warren Street, Beverly NJ 08010; Mass Saturday
+      vigil 5 PM and Sunday 9 AM (English), Sunday 11 AM (Spanish), Saturday 7:30 PM (Portuguese), daily
+      Tuesday-Friday 9 AM. Page 2: ''Fr. Jorge Antonio Bedoya. Pastor''. Page 8 footer: ''511 Jesus The
+      Good Shepherd, Riverside, NJ (b) John Patrick Publishing Company''. No mention of St. Peter or any
+      second church.'
 ---
 
 ## Publisher

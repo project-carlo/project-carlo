@@ -30,6 +30,48 @@ evidence:
   note: 'July 2024 cohort list: Cohort 15 is St. Ann, St. Catherine Laboure, St. Mary (Middletown) and
     OLPH-St. Agnes.'
 bulletin_status: available
+publication_reviews:
+- parish: st-catherine-laboure-north-middletown
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1344/20261101B.pdf
+    seen: 2026-10-30
+    quote: 311 CARR AVE, KEANSBURG, NJ 07734 (732) 787-0315
+    note: 'Bulletin for Church of St. Ann (row st-ann-keansburg), read by its map batch: Masthead, page
+      1 of the 1 November 2026 issue (6 pages, text layer). Names the Church of Saint Ann alone, ''Rev.
+      Richard Vila, Pastor''. Mass schedule: Saturday vigil 5:00 PM, Sunday 9:00 AM and 5:30 PM, daily
+      8:00 AM; Confessions Saturday 1:00 - 2:00 PM. The Mass intentions list one church''s Masses and
+      mention no other parish.'
+  - url: https://www.church-bulletin.org/bulletin/saint-catherine-laboure-church-middletown-nj-07748/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for Church of St. Catherine Laboure (row st-catherine-laboure-north-middletown), read
+      by its map batch: John Patrick listing 696, 1 November 2026 issue (8 pages, image-only: no text
+      layer, so read from renders of pages 1-2). Page 1 masthead: ''Saint Catherine Labouré Church ...
+      All Saints'' Day November 1, 2026 ... Proclaiming in North Middletown in word and deed, Jesus Christ'';
+      Parish Office (732)-787-1318, 20 Shore Acres Ave. Middletown NJ 07748; ''Pastor Rev. Richard M.
+      Osborn'', ''Pastor Emeritus Rev. Daniel C. Hesko''. Page 2 Weekly Schedule: Saturday Vigil 5:30
+      pm; Sunday 7:30 am (Spoken), 9:00 am (Traditional Latin Mass), 11:00 am (Sung Mass with Incense);
+      weekday Mon 7:00 pm, Tue, Thu, Fri, Sat 8:00 am, Fri 12:00 pm. Names St. Catherine alone.'
+- parish: st-mary-mother-of-god-middletown
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1344/20261101B.pdf
+    seen: 2026-10-30
+    quote: 311 CARR AVE, KEANSBURG, NJ 07734 (732) 787-0315
+    note: 'Bulletin for Church of St. Ann (row st-ann-keansburg), read by its map batch: Masthead, page
+      1 of the 1 November 2026 issue (6 pages, text layer). Names the Church of Saint Ann alone, ''Rev.
+      Richard Vila, Pastor''. Mass schedule: Saturday vigil 5:00 PM, Sunday 9:00 AM and 5:30 PM, daily
+      8:00 AM; Confessions Saturday 1:00 - 2:00 PM. The Mass intentions list one church''s Masses and
+      mention no other parish.'
+  - url: https://container.parishesonline.com/bulletins/03/1430/20261025B.pdf
+    seen: 2026-10-30
+    quote: 19 Cherry Tree Farm Road Middletown, NJ 07748
+    note: 'Bulletin for St. Mary, Mother of God Parish (row st-mary-mother-of-god-middletown), read by
+      its map batch: 25 October 2026 issue (16 pages; pages 2-13 have a text layer in this issue). Page
+      4: ''Pastor Rev. Jeffrey J. Kegley'', Associate Pastor Rev. Vic Magdaraog, Parochial Vicar Rev.
+      Marcin Kania; MASS SCHEDULE: ''Saint Mary, Mother of God Church Saturday Vigil: 5:00 p.m. Sunday:
+      8:00 a.m., 10:00 a.m., 12:00 p.m. & 5:00 p.m. Daily Mass Monday through Friday , 8:15 am & 12 pm''
+      and ''Our Lady of the Most Blessed Sacrament Shrine Saturday 8:15 a.m.''. Names St. Mary alone.'
 ---
 
 ## Publisher

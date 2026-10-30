@@ -1,9 +1,9 @@
 ---
 name: St. Paul Parish
 website: https://www.stpaulsofprinceton.org/
-bulletin_provider: ecatholic
-provider_id: ''
-publication: ['ecatholic:28530', 'url:https://www.church-bulletin.org/saint-paul-parish-princeton-nj-08542']
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/saint-paul-parish-princeton-nj-08542
+publication: ['url:https://www.church-bulletin.org/saint-paul-parish-princeton-nj-08542', 'ecatholic:28530']
 group: Cohort 7 (Princeton, West Windsor, Hightstown)
 evidence:
 - url: https://files.ecatholic.com/28530/bulletins/20261025.pdf
@@ -33,12 +33,12 @@ St. Paul Parish, Princeton, publishes its own weekly bulletin. The 25 October 20
 
 ## Worship sites
 
-One church, on Nassau Street (see `st-paul-princeton`). The bulletin mentions a 'Mercy Chapel' (Children's Rosary; Tuesday afternoons) with no address or Mass of its own, so it is a room of the church campus. Its back pages advertise the Aquinas Institute (Princeton University Catholic Campus Ministry, 'Mass & confession on campus'), Francis House of Prayer and a St. Mary of the Pines event in Manahawkin; none is part of this parish's schedule. The campus ministry's own Mass site isn't in either roster and is not recorded here.
+One church, on Nassau Street (see `st-paul-princeton`). The bulletin mentions a 'Mercy Chapel' (Children's Rosary; Tuesday afternoons) with no address or Mass of its own, so it is a room of the church campus. Its back pages advertise the Aquinas Institute (Princeton University Catholic Campus Ministry, 'Mass & confession on campus'), Francis House of Prayer and a St. Mary of the Pines event in Manahawkin; none is part of this parish's schedule. The campus ministry's own Mass site isn't in either roster; reconcile left it in `open/princeton-university-catholic-campus-ministry`.
 
 ## Website and bulletin provider
 
-The finder's site (stpaulsofprinceton.org; GCatholic's stpaulsprinceton.org is the older domain) is an eCatholic site, id 28530, whose Bulletins page lists current files, so the row reads eCatholic. The John Patrick listing (694) is a week ahead but image-only; the parish's own file is the current issue and has the text layer, so it is the row, with the listing kept in `publication`. diocese.md's settled rule would read the listing when it is the latest issue; here it is the coming Sunday's issue, one posting ahead of the parish's own, and `fetch:check` is run on the eCatholic row.
+The finder's site (stpaulsofprinceton.org; GCatholic's stpaulsprinceton.org is the older domain) is an eCatholic site, id 28530, whose Bulletins page lists current files with a text layer. The John Patrick listing (694) carries the same bulletin a week earlier, as image-only PDFs (the 1 November issue was on the listing on 30 October, while the eCatholic site's newest was 25 October). The map batch first chose the eCatholic site for its text layer. Reconcile (2026-10-30) switched the row to the listing under the diocese's settled rule (*Rules settled*: read whichever channel has the latest issue, keeping the other's id in `publication`). The owner has not asked to prefer a text layer over a week's lead. If that changes, set the row back to `ecatholic` with the parish site as `website` and no `provider_id`. `fetch:check` picked the listing's 1 November issue on 2026-10-30.
 
 ## Not yet confirmed
 
-Nothing open for the parish row. Whether the campus ministry's Mass place is a public worship site is outside this batch's rosters.
+Nothing open for the parish row. Whether the campus ministry's Mass place is a public worship site is in `open/princeton-university-catholic-campus-ministry`.

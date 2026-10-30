@@ -29,6 +29,28 @@ evidence:
   note: 'July 2024 cohort list: Cohort 28 is Precious Blood (Monmouth Beach), St. Dorothea (Eatontown),
     Immaculate Conception (Eatontown, in parentheses) and St. Anselm (Wayside).'
 bulletin_status: available
+publication_reviews:
+- parish: st-dorothea-eatontown
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1017/20261101B.pdf
+    seen: 2026-10-30
+    quote: 1028 Wayside Road
+    note: 'Bulletin for Church of St. Anselm (row st-anselm-wayside), read by its map batch: Masthead,
+      page 1 of the 1 November 2026 issue (8 pages, text layer): ''CHURCH OF SAINT ANSELM'', 1028 Wayside
+      Road, Wayside, NJ 07712, 732.493.4411. Mass schedule: Saturday 4:30pm; Sunday 9:00am & 11:00am;
+      weekdays Monday, Wednesday and Friday 9:00am; Reconciliation Saturday 3:00-4:00pm. Names this parish
+      alone. The 25 October issue (same container) page 2 lists ''Parish Administrator Rev. Carlo Calisin''.'
+  - url: https://uploads.weconnect.com/mce/0d467c11c1f788a43266782aac388b66b0f22551/Bulletin%20DOR%20Oct%2025%202026%20O30.pdf
+    seen: 2026-10-30
+    quote: 240 Broad Street
+    note: 'Bulletin for St. Dorothea Parish (row st-dorothea-eatontown), read by its map batch: Masthead,
+      page 1 of the 25 October 2026 issue (Bulletin DOR Oct 25 2026 O30.pdf, 4 pages, text layer): St.
+      Dorothea Church, 240 Broad Street, Eatontown, NJ 07724, 732-542-0148; Rev. Michael Sullivan, Pastor
+      and Rev. Andrés Serna, Parochial Vicar. Mass intentions: Saturday 4:00p; Sunday 8:30a, 10:00a; Monday,
+      Wednesday, Thursday, Friday 12:15p; Tuesday 7:00p; Sunday 3p Filipino/English Mass at St. Dorothea.
+      Page 3 prints SUNDAY MASSES / WEEKDAY MASSES OF OUR LINKED PARISHES for Precious Blood and St. Dorothea.
+      The file (md5 8caa7516...) differs from Precious Blood''s for the same Sunday.'
 ---
 
 ## Publisher

@@ -58,6 +58,34 @@ research:
     (25,324,636 bytes), which exceeds fetch:check''s 25,000,000-byte inspection limit (document_type ''pdf_signature''
     only), hence the switch.'
 bulletin_status: available
+publication_reviews:
+- parish: st-katharine-drexel-burlington
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/4119/20261101B.pdf
+    seen: 2026-10-30
+    quote: MARY, MOTHER OF THE CHURCH PARISH
+    note: 'Bulletin for Mary, Mother of the Church Parish (row mary-mother-of-the-church-bordentown),
+      read by its map batch: 1 November 2026 issue, 12 pages, page 1 masthead: ''ST. MARY CHURCH 45 Crosswicks
+      Street Bordentown, NJ 08505'' and ''HOLY ASSUMPTION CHURCH 1290 Hornberger Avenue Roebling, NJ 08554'';
+      ''REV. MARTIN O’REILLY, Pastor'', ''REV. CESAR R. ANSON, Parochial Vicar'', Parish Office 609-298-0261.
+      Page 2 ''MASS TIMES'': Saturday Vigil Holy Assumption 4:00 PM, St. Mary 5:30 PM; Sunday Holy Assumption
+      8:00 AM, St. Mary 9:45 AM and 11:30 AM; weekdays Holy Assumption - Roebling 9:30 AM (Tues., Wed.,
+      & Fri.), St. Mary - Bordentown 12:30 PM (Mon.-Fri.). The text was read from the parish site''s copy
+      of the same issue (mmotcp.org/s/20261101web.pdf); the ParishesOnline copy is a different file (25
+      MB against the site''s smaller one) with the identical page-1 masthead. Footer ''Mary, Mother of
+      the Church, Bordentown, NJ 03-4119'' is the LPi container.'
+  - url: https://container.parishesonline.com/bulletins/03/4122/20261101B.pdf
+    seen: 2026-10-30
+    quote: The Parish of St. Katharine Drexel
+    note: 'Bulletin for St. Katharine Drexel Parish (row st-katharine-drexel-burlington), read by its
+      map batch: 1 November 2026 issue, 12 pages (text layer). Page 1 ''The Parish of St. Katharine Drexel
+      Burlington, New Jersey''; page 2 ''PARISH CLERGY: Rev. Jerome Guld, Pastor, Deacon Matthew Fung,
+      Deacon Walter J. Karpecik, Jr.''; ''MASS SCHEDULE: SATURDAY: 4:00 PM--All Saints Church. SUNDAY:
+      8:00 AM--All Saints Church, 10:30 AM--St. Paul Church. Daily: 8:00 AM--St. Paul Church.'' ''PARISH
+      LOCATIONS: All Saints Church 502 High Street, Burlington, NJ 08016; St. Paul Church 223 E. Union
+      Street, Burlington, NJ 08016''. Parish office 223 E. Union Street. Intentions for 2 to 8 November
+      are at St. Paul (Mass of Remembrance 6:30 PM, Holy Hour 7:00 PM Friday) and All Saints.'
 ---
 
 ## Publisher

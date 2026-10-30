@@ -54,6 +54,49 @@ research:
   next_action: 'None: it picked the 1 November 2026 issue; the date conflict comes from a stale "May 17th,
     2026" template line on the cover.'
 bulletin_status: available
+publication_reviews:
+- parish: st-benedict-holmdel
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/04/0792/20261101B.pdf
+    seen: 2026-10-30
+    quote: 118 Broad Street
+    note: 'Bulletin for Our Lady of Fatima Parish (row our-lady-of-fatima-keyport), read by its map batch:
+      1 November 2026 issue (12 pages, 10 with text), page 1 cover: "SAINT JOSEPH CATHOLIC CHURCH 376
+      Maple Place Keyport, NJ. 07735" and "JESUS THE LORD CATHOLIC CHURCH 118 Broad Street Keyport, NJ.
+      07735", parish office 376 Maple Place 732-264-0322, www.fatimakeyport.org, dated "November 1st,
+      2026" (a stray "May 17th, 2026" template line sits above). Page 2: Mass intentions Saturday 4:00
+      pm, Sunday 9:00 am, 10:30 am and 12:00 pm, Tuesday and Thursday 12:00 pm, Wednesday 7:00 pm. The
+      27 September, 4 and 18 October and 25 October issues carry the same masthead.'
+  - url: https://container.parishesonline.com/bulletins/03/1050/20261025B.pdf
+    seen: 2026-10-30
+    quote: Very Rev. Garry R. Koch, V.F.
+    note: 'Bulletin for St. Benedict Parish (row st-benedict-holmdel), read by its map batch: 25 October
+      2026 issue (16 pages, text layer), page 1: parish office voice 732/264-4712, Pastor Very Rev. Garry
+      R. Koch, V.F., Parochial Vicar Rev. Adam Midor; Mass Schedule block: Saturday Vigil 5:00 p.m., Sunday
+      8:00, 9:30, 11:00 am and 5:00 pm, Monday-Friday 9:00 am. It names St. Benedict alone ("St. Benedict
+      School" in the staff list). Page 3 mentions "Our Lady of Victory Adoration Chapel".'
+- parish: st-clement-matawan
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/04/0792/20261101B.pdf
+    seen: 2026-10-30
+    quote: 118 Broad Street
+    note: 'Bulletin for Our Lady of Fatima Parish (row our-lady-of-fatima-keyport), read by its map batch:
+      1 November 2026 issue (12 pages, 10 with text), page 1 cover: "SAINT JOSEPH CATHOLIC CHURCH 376
+      Maple Place Keyport, NJ. 07735" and "JESUS THE LORD CATHOLIC CHURCH 118 Broad Street Keyport, NJ.
+      07735", parish office 376 Maple Place 732-264-0322, www.fatimakeyport.org, dated "November 1st,
+      2026" (a stray "May 17th, 2026" template line sits above). Page 2: Mass intentions Saturday 4:00
+      pm, Sunday 9:00 am, 10:30 am and 12:00 pm, Tuesday and Thursday 12:00 pm, Wednesday 7:00 pm. The
+      27 September, 4 and 18 October and 25 October issues carry the same masthead.'
+  - url: https://www.church-bulletin.org/bulletin/church-of-saint-clement-matawan-nj-07747/2026-10-25.pdf
+    seen: 2026-10-30
+    quote: 'Mass Schedule: Saturday: 5:00PM | Sunday 8:00, & 11:00AM Daily Mass: Mon, Tues, Wed, Fri 8:00AM'
+    note: 'Bulletin for St. Clement Parish (row st-clement-matawan), read by its map batch: 25 October
+      2026 issue (8 pages, text layer). Page 1 masthead: "Church of ST. CLEMENT, 172 Freneau Avenue Matawan,
+      NJ 07747 (732)-566-3616 www.stclementmatawan.org"; staff list names "REV. THOMAS VALA, PASTOR".
+      It names St. Clement alone, with no other church or parish. The 18 October and 1 November issues
+      on the same listing are image-only (no text layer).'
 ---
 
 ## Publisher

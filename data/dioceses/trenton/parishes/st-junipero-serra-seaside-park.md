@@ -51,6 +51,138 @@ research:
   next_action: None; the pick is the current bulletin. No `recipe` line was printed (the stored page-pdfs
     provider_id already resolves).
 bulletin_status: available
+publication_reviews:
+- parish: st-leo-the-great-lincroft
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/2156/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Reverend Daniel F. Swift
+    note: 'Bulletin for St. Leo the Great Parish (row st-leo-the-great-lincroft), read by its map batch:
+      Page 2 of the 1 November 2026 issue (16 pages, text layer), ''Pastoral Staff'', Pastor Reverend
+      Daniel F. Swift. Page 1 gives the Mass schedule: weekend Saturday 5:30 p.m., Sunday 7:00, 8:30,
+      10:00, 11:30 a.m.; daily Monday through Saturday 9:00 a.m. The issue names St. Leo the Great alone
+      (its own school, staff and parish center); the text layer has no mention of St. Catharine, St. Gabriel
+      or St. Mary.'
+- parish: st-luke-toms-river
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/4167/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Michael Kennedy
+    note: 'Bulletin for St. Luke Parish (row st-luke-toms-river), read by its map batch: Page 1 of the
+      1 November 2026 issue (12 pages, text layer; Bon Venture 4167): St. Luke alone: ''ST. LUKE'', ''1674
+      OLD FREEHOLD ROAD • TOMS RIVER, NEW JERSEY 08755'', pastor Rev. Michael Kennedy, Mass schedule Saturday
+      vigil 4:00 pm, Sunday 7:30, 10:00 am and 12:00 pm, weekdays 7:30 am (Wednesday also 12:30 pm, Friday
+      also 11:00 am). The Bon Venture issue is the coming Sunday''s (future freshness).'
+- parish: st-maximilian-kolbe-toms-river
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/6497/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Stephen M. Piga
+    note: 'Bulletin for St. Maximilian Kolbe Parish (row st-maximilian-kolbe-toms-river), read by its
+      map batch: Page 1 of the 1 November 2026 issue (12 pages, text layer; Bon Venture 6497): St. Maximilian
+      Kolbe alone: ''Prayer to Saint Maximilian Kolbe'', Pastor Rev. Stephen M. Piga; Mass schedule weekend
+      Saturday 4:00 pm, Sunday 7:00, 9:00, 11:00 am and 1:00 pm; weekday Tuesday and Saturday 7:00 am,
+      Monday, Wednesday, Thursday and Friday 8:30 am.'
+- parish: st-peter-point-pleasant-beach
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/2097/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Saint Peter Catholic Church
+    note: 'Bulletin for St. Peter Church (row st-peter-point-pleasant-beach), read by its map batch: Page
+      1 of the 1 November 2026 issue (12 pages; text on 10, pages 6-7 image-only): ''The Solemnity of
+      All Saints, St. Peter Church, November 1, 2026, Saint Peter Catholic Church, 406 Forman Avenue,
+      Point Pleasant Beach, New Jersey 08742, (732) 892-0049''. Page 2: Sunday Masses 7:30, 9:00 and 11:00
+      a.m.; weekday 8:30 a.m.; Saturday 5:00 p.m. It names St. Peter alone.'
+- parish: st-pio-of-pietrelcina-lavallette
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: https://www.church-bulletin.org/bulletin/saint-pio-of-pietrelcina-church-of-the-sacred-heart-lavallette-nj-08735/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for St. Pio of Pietrelcina Parish and Church of the Sacred Heart (row st-pio-of-pietrelcina-lavallette),
+      read by its map batch: 12-page issue dated 1 November 2026 (Solemnity of All Saints), image-only
+      (probe pdf: no extractable text); read from renders of pages 1-2. Page 1 masthead shows two parishes
+      side by side: ''Church of the Sacred Heart, 751 Main Avenue, Bay Head, NJ 08742'' and ''Saint Pio
+      of Pietrelcina, 103 Washington Avenue, Lavallette, NJ 08735'', each with its own Mass Times. Page
+      2 directory: ''Rev. Joseph G. Hlubik, Pastor'' with one parochial vicar, deacon and staff for both,
+      ''THE ADMINISTRATIVE OFFICE FOR BOTH PARISHES IS LOCATED AT SAINT PIO PARISH CENTER'', a separate
+      Sacred Heart rectory/office, and separate contributions columns for Sacred Heart and Saint Pio.
+      The masthead names both parishes together.'
+- parish: st-rose-belmar
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/4142/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Dos Templos en una Parroquia UNIDA
+    note: 'Bulletin for St. Junipero Serra Parish (row st-junipero-serra-seaside-park), read by its map
+      batch: Page 1 of the 1 November 2026 issue (8 pages, text layer; md5 of the file e3c3c4e2a15a0705ace462adb94938e8):
+      header ''50 E Street • Seaside Park, NJ 08752, 732-793-0041 / www.stjuniperoserra.org'', ''Served
+      by the Franciscan Friars Conventual'', ''Two Houses of Worship in ONE UNITED Parish'' (the English
+      words are font-garbled in the text layer; the Spanish line is readable), then each church''s Sunday
+      and daily Masses: Our Lady of Perpetual Help, 100 Grant Avenue, Seaside Heights, and St. Catharine
+      of Siena Church, 50 E Street, Seaside Park. It names this parish alone.'
+  - url: http://sponsors.bonventure.net/pdfs/2155/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Rev. Msgr. Edward J. Arnister
+    note: 'Bulletin for Church of Saint Rose (row st-rose-belmar), read by its map batch: Page 1 of the
+      1 November 2026 issue (16 pages, text layer): ''MASS SCHEDULE / WEEKDAYS 6:45 am & 9:00 am / SATURDAY
+      5:00 pm (Vigil) / SUNDAY 7:00, 9:30, 11:30 am & 5:00 pm'', Rev. Msgr. Edward J. Arnister, Pastor,
+      Rev. Dr. John Paul Del Rosario, Parochial Vicar, ''RECTORY & PARISH OFFICE 603 Seventh Ave., Belmar,
+      NJ 07719 p: 732-681-0512''; page 2''s header reads ''CHURCH OF SAINT ROSE - BELMAR, NEW JERSEY -
+      NOVEMBER 1, 2026''. It names this parish alone.'
 ---
 
 ## Publisher

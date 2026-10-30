@@ -31,6 +31,28 @@ research:
   outcome: found
   next_action: None
 bulletin_status: available
+publication_reviews:
+- parish: st-paul-princeton
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-david-the-king-church-princeton-junction-nj-08550/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for St. David the King Parish (row st-david-the-king-princeton-junction), read by
+      its map batch: Page 1 of the 1 November 2026 issue (8 pages, image-only; read from a render): masthead
+      ''THE CATHOLIC COMMUNITY OF ST. DAVID THE KING'', ''Letter from Fr. Jason''. Page 2 ''Mass Intentions''
+      shows Masses Saturday 4 p.m. and 5:30 p.m., Sunday 9 a.m., 10:30 a.m. and 7 p.m., weekday 9 a.m.
+      (12 noon and 7 p.m. on All Souls'' Day, Monday 2 November) and an ''Eucharistic Holy Hour'' at Our
+      Lady of Sorrows Church, Hamilton. The back cover''s printer line reads ''6043 St. David the King,
+      Princeton Junction, NJ (B)''. It names this parish alone.'
+  - url: https://files.ecatholic.com/28530/bulletins/20261025.pdf
+    seen: 2026-10-30
+    quote: ST. PAUL PARISH · OCTOBER 25, 2026
+    note: 'Bulletin for St. Paul Parish (row st-paul-princeton), read by its map batch: Page 2 of the
+      25 October 2026 issue (13 pages, text layer; the newest file on the parish''s eCatholic Bulletins
+      page): masthead ''ST. PAUL PARISH'', 216 Nassau Street, Princeton, NJ 08542, 609-924-1743; Pastor
+      Fr. Chris Dayton, Parochial Vicar Fr. Kerly François. MASS TIMES: Daily 8:15am (Mon-Sat), Saturday
+      5:30pm, Sunday 8:30am, 10:00am, 11:30am, 5:00pm and 1:00pm en español, weekday 12:10pm (Mon-Fri)
+      as printed beside the daily Mass. It names this parish alone.'
 ---
 
 ## Publisher

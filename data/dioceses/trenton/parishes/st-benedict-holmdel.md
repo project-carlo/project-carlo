@@ -49,6 +49,46 @@ research:
   outcome: found
   next_action: 'None: see the fetch check result in the Website and bulletin provider section.'
 bulletin_status: available
+publication_reviews:
+- parish: st-clement-matawan
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1050/20261025B.pdf
+    seen: 2026-10-30
+    quote: Very Rev. Garry R. Koch, V.F.
+    note: 'Bulletin for St. Benedict Parish (row st-benedict-holmdel), read by its map batch: 25 October
+      2026 issue (16 pages, text layer), page 1: parish office voice 732/264-4712, Pastor Very Rev. Garry
+      R. Koch, V.F., Parochial Vicar Rev. Adam Midor; Mass Schedule block: Saturday Vigil 5:00 p.m., Sunday
+      8:00, 9:30, 11:00 am and 5:00 pm, Monday-Friday 9:00 am. It names St. Benedict alone ("St. Benedict
+      School" in the staff list). Page 3 mentions "Our Lady of Victory Adoration Chapel".'
+  - url: https://www.church-bulletin.org/bulletin/church-of-saint-clement-matawan-nj-07747/2026-10-25.pdf
+    seen: 2026-10-30
+    quote: 'Mass Schedule: Saturday: 5:00PM | Sunday 8:00, & 11:00AM Daily Mass: Mon, Tues, Wed, Fri 8:00AM'
+    note: 'Bulletin for St. Clement Parish (row st-clement-matawan), read by its map batch: 25 October
+      2026 issue (8 pages, text layer). Page 1 masthead: "Church of ST. CLEMENT, 172 Freneau Avenue Matawan,
+      NJ 07747 (732)-566-3616 www.stclementmatawan.org"; staff list names "REV. THOMAS VALA, PASTOR".
+      It names St. Clement alone, with no other church or parish. The 18 October and 1 November issues
+      on the same listing are image-only (no text layer).'
+- parish: st-john-neumann-mount-laurel
+  decision: separate
+  evidence:
+  - url: https://container.parishesonline.com/bulletins/03/1050/20261025B.pdf
+    seen: 2026-10-30
+    quote: Very Rev. Garry R. Koch, V.F.
+    note: 'Bulletin for St. Benedict Parish (row st-benedict-holmdel), read by its map batch: 25 October
+      2026 issue (16 pages, text layer), page 1: parish office voice 732/264-4712, Pastor Very Rev. Garry
+      R. Koch, V.F., Parochial Vicar Rev. Adam Midor; Mass Schedule block: Saturday Vigil 5:00 p.m., Sunday
+      8:00, 9:30, 11:00 am and 5:00 pm, Monday-Friday 9:00 am. It names St. Benedict alone ("St. Benedict
+      School" in the staff list). Page 3 mentions "Our Lady of Victory Adoration Chapel".'
+  - url: https://files.ecatholic.com/2914/bulletins/20261101.pdf
+    seen: 2026-10-30
+    quote: 560 WALTON AVE., MT. LAUREL, NJ 08054
+    note: 'Bulletin for St. John Neumann Roman Catholic Church (row st-john-neumann-mount-laurel), read
+      by its map batch: The eCatholic issue dated 1 November 2026 (10 pages, text layer; md5 4671b2a3802925bddc66b5f8e417e639):
+      ''St. John Neumann Roman Catholic Church'', ''Pastor - Rev. Fr. Michael Dunn'', ''1 November 2026
+      - Solemnity of All Saints''. Page 2 ''Weekly Liturgical Schedule'': Monday 9:00am, Wednesday 7:00pm,
+      Thursday 9:00am, Friday 9:00am (Tuesday no Masses), Saturday 4:00pm, Sunday 8:00am and 10:00am.
+      It names this parish alone.'
 ---
 
 ## Publisher

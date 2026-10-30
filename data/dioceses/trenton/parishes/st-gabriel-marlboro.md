@@ -32,6 +32,45 @@ research:
     inside Mass schedule page (holy days / daily Mass notes) or calling the parish office
   retry_when: A text-layer St. Gabriel's issue is found, or the parish site lists a second Mass location
 bulletin_status: available
+publication_reviews:
+- parish: st-leo-the-great-lincroft
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-gabriel-s-roman-catholic-church-marlboro-nj-07746/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for St. Gabriel Parish (row st-gabriel-marlboro), read by its map batch: Masthead,
+      page 2 of the 1 November 2026 issue (12 pages, scanned images with no text layer; read from a render
+      of the page). Reads "St. Gabriel''s Roman Catholic Church, 100 North Main Street, Marlboro, New
+      Jersey 07746", Pastor Rev. Brian T. Butch, and the schedule ''WEEKEND MASSES: Saturday Evening Vigil:
+      4:30PM; Sunday Masses: 8:00AM; 9:30AM; 11:00AM; 5:00PM''. Names St. Gabriel alone; no other parish
+      or church appears in the masthead.'
+  - url: http://sponsors.bonventure.net/pdfs/2156/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: Reverend Daniel F. Swift
+    note: 'Bulletin for St. Leo the Great Parish (row st-leo-the-great-lincroft), read by its map batch:
+      Page 2 of the 1 November 2026 issue (16 pages, text layer), ''Pastoral Staff'', Pastor Reverend
+      Daniel F. Swift. Page 1 gives the Mass schedule: weekend Saturday 5:30 p.m., Sunday 7:00, 8:30,
+      10:00, 11:30 a.m.; daily Monday through Saturday 9:00 a.m. The issue names St. Leo the Great alone
+      (its own school, staff and parish center); the text layer has no mention of St. Catharine, St. Gabriel
+      or St. Mary.'
+- parish: st-mary-colts-neck
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-gabriel-s-roman-catholic-church-marlboro-nj-07746/2026-11-01.pdf
+    seen: 2026-10-30
+    note: 'Bulletin for St. Gabriel Parish (row st-gabriel-marlboro), read by its map batch: Masthead,
+      page 2 of the 1 November 2026 issue (12 pages, scanned images with no text layer; read from a render
+      of the page). Reads "St. Gabriel''s Roman Catholic Church, 100 North Main Street, Marlboro, New
+      Jersey 07746", Pastor Rev. Brian T. Butch, and the schedule ''WEEKEND MASSES: Saturday Evening Vigil:
+      4:30PM; Sunday Masses: 8:00AM; 9:30AM; 11:00AM; 5:00PM''. Names St. Gabriel alone; no other parish
+      or church appears in the masthead.'
+  - url: https://files.constantcontact.com/6512d43c001/1aa2d97e-3e96-48ad-8188-7213e02b7ca6.pdf
+    seen: 2026-10-30
+    quote: 'Pastor: Reverend Fr. Jeffrey E. Lee'
+    note: 'Bulletin for St. Mary Parish (row st-mary-colts-neck), read by its map batch: Masthead, page
+      1 of the 1 November 2026 issue (12 pages, text layer): ''THE PARISH OF SAINT MARY'', One Phalanx
+      Road, Colts Neck, NJ 07722, Pastor Reverend Fr. Jeffrey E. Lee, Parish Trustees Linda Dickinson-Pancila
+      and Tom Nathanson (the text layer reads "One Phalanz Road", a typo in the PDF). Names St. Mary alone.'
 ---
 
 ## Publisher

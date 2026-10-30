@@ -33,6 +33,28 @@ research:
   next_action: 'None; transport ok, document_type pdf, picks the 2026-11-01 issue (freshness ''future'':
     the coming Sunday''s issue, posted early, which the playbook treats as current)'
 bulletin_status: available
+publication_reviews:
+- parish: st-james-red-bank
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/the-oratory-church-of-saint-anthony-of-padua-red-bank-nj-07701/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: The Oratory Church of Saint Anthony of Padua
+    note: 'Bulletin for The Oratory Church of St. Anthony of Padua (row st-anthony-of-padua-red-bank),
+      read by its map batch: 8-page issue dated 1 November 2026 (All Saints Day), text layer. Page 1 masthead:
+      ''The Oratory of Saint Philip Neri & The Oratory Church of Saint Anthony of Padua''. Page 2 ''Mass
+      Schedule'': weekday Monday to Friday 7:30am and Monday to Wednesday and Friday 12:15pm (LATIN);
+      weekend Saturday 4pm and 7pm (Español), Sunday 7:30am, 9:00am, 10:30am, 12pm (LATIN), 1:30pm (Español)
+      and 6pm. It names the Oratory alone.'
+  - url: https://www.church-bulletin.org/bulletin/saint-james-parish-red-bank-nj-07701/2026-11-01.pdf
+    seen: 2026-10-30
+    quote: A Catholic Community on the Pilgrimage of Holiness
+    note: 'Bulletin for St. James Parish (row st-james-red-bank), read by its map batch: 12-page issue
+      dated 1 November 2026 (Feast of All Saints), text layer. Page 1: ''Saint James Parish'', 94 Broad
+      Street, Red Bank, NJ 07701, with the parish office hours, Saint James Elementary School, Mount Olivet
+      Cemetery and Red Bank Catholic High School; ''A Message from Msgr. Joe''. Page 3 ''This Week, Worship'':
+      ''Saturday Evening Mass: 5:30 pm'', Sunday 7:30 am, 9:00 am, 10:30 am, 12:00 pm and 5:30 pm, weekday
+      Monday to Friday 6:30 am and 8:15 am, Saturday 8:15 am. It names St. James alone.'
 ---
 
 ## Publisher

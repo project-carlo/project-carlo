@@ -11,7 +11,7 @@ longitude: -74.0691875
 coordinates_from: gcatholic-plus-code
 name_verified: false
 address_verified: true
-roster: ['gcatholic:18791']
+roster: ['directory:14656', 'gcatholic:18791']
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-pio-of-pietrelcina-church-of-the-sacred-heart-lavallette-nj-08735/2026-11-01.pdf
   seen: 2026-10-30
