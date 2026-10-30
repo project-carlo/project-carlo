@@ -305,6 +305,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish's own Mass-schedule page headed 'Winter Schedule' (St. Damien) plus an off-season bulletin settles which shore churches are year-round: the summer guide's times there are only the summer additions.
 - A WeConnect (LPi) site can embed a ParishesOnline widget with a 001C... id (18 characters, not 0018...): grep the page source for 'publicationWidget?' and pass the id to `probe po` to get the org slug and container.
 - A bulletin masthead printing 'Masses celebrated Memorial Day-Labor Day' (St. Casimir, Woodbine) is the off-season proof that a church is summer-only; set revisit_after just past Memorial Day.
+- A parish's own site schedule headed 'Winter Schedule (dates)' with a line such as 'No Mass at St. Elizabeth from October through the end of April' settles a summer mission as seasonal; the summer guide gives no season dates.
+- A WeConnect (LPi) site's bulletin page can embed a ParishesOnline widget with an 0018... id (St. Brendan, Avalon: `probe po <id>` gives org st-brendan-the-navigator and container 04/0697); grep the page source for 'id=0018'.
+- A parish's 'Places of Worship' page can list a church that holds no Mass (Sacred Heart, Avalon): the bulletin's 'OPEN FOR PRIVATE PRAYER' block, usually on the devotions page, shows which buildings are prayer-only; read it before adding a church row.
+- Nominatim's free-text search finds a church node that a structured address query misses ('Delsea Drive Goshen Middle Township church' returned the OSM node; '561 Route 47 North Goshen NJ' returned nothing).
 
 ## Rules settled for this diocese
 
