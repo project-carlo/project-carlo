@@ -197,6 +197,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - The SPAM-SQUAT verdict can come from one stray word (saintthomasob.com: a 'Casino Trip' parish event); read the page's title, links and bulletin before treating a live parish site as squatted.
 - A parish eCatholic site can link only a John Patrick template (St. Ambrose, Old Bridge: jppc.net id 601); its ecatholic id is then the website's, so record `other` with `page-pdfs https://church-bulletin.org/<id>`. Some John Patrick issues are image-only (render page 1; take the Mass schedule from the parish site).
 - Self-hosted Metuchen sites can list dated PDFs (/uploads/docs/bulletins/<YYYYMMDD>.pdf at saintthomasob.com, Bulletin page /event): `page-pdfs` on that page works and the parish posts the next Sunday early (freshness `future`).
+- A finder pin or GCatholic address can be the rectory, not the church (Our Lady of Peace, North Brunswick: 277 Washington Pl is the rectory, church at 1730 Rt 130); check the parish Contact page and the bulletin masthead.
+- An eCatholic parish site's Bulletin page can just say 'Click Here' to a ParishesOnline org (olopnb.org): follow it with visit.py --links and record the po ids, not the site's ecatholic id.
+- A finder-listed old domain can redirect to a new eCatholic site (stbartseb.com to stbartseb.org, ecatholic:22610; bulletins at files.ecatholic.com/22610/bulletins/<YYYYMMDD>.pdf, all-image PDFs).
+- Bon Venture also serves Spotswood (sponsors.bonventure.net/?page=2152, pdfs/2152/<date>.pdf, page 1 an image); its eCatholic site only links it.
+- A self-hosted bulletin list can contain unfinished uploads (Milltown: '.crdownload' files); check that the newest entries are real PDFs.
 
 
 ## Rules settled for this diocese
