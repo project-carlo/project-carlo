@@ -160,6 +160,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick Publishing: the jppc.net/onlinebulletins/<id>template.pdf link returns HTML, so probe pdf can't read it. Use church-bulletin.org/?id=<id>, which redirects to the listing; record it as other with `page-pdfs https://church-bulletin.org/<id>` and fetch:check picks the newest issue. The listing posts the coming Sunday's issue about two days early, so fetch:check reports freshness 'future'.
 - A parish's own site can host bulletin PDFs whose page 1 is an image (St. Mary of Czestochowa, Bound Brook): probe pdf --grep only reaches the ad pages. Render page 1 with pdftoppm -r 70 -jpeg and read it, and quote the page-5 publisher code line for recheck.
 - Google Sites parish pages (OLM, South Bound Brook) embed the John Patrick template link, so check the page's links for jppc.net before looking for a Drive folder.
+- Finder clergy lines can be wrong either way: Sayreville's Pekola matched the parish's own masthead, while St. Stanislaus's Murphy did not (Michalowski). Check the parish's masthead for each.
+- eCatholic bulletins can be all-image PDFs (OLV Sayreville, St. Stanislaus); render page 1 to read the masthead, and quote a text page or the parish website for recheck.
+- A parish may post the same bulletin on its eCatholic site and on church-bulletin.org (St. Stanislaus Kostka, Sayreville); compare page-1 renders before counting two publishers, and record only the parish-hosted copy.
 
 
 ## Rules settled for this diocese
