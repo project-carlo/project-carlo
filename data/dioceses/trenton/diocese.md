@@ -342,6 +342,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic site that 403s probe url can still be only the host: its Bulletins page in the browser (visit.py --links) may link ParishesOnline issues (St. Benedict, Holmdel); then the row is parishes_online and neither eCatholic id goes in publication.
 - A Zumu site (holyfamily.us) hides its Bon Venture link in a button's onclick window.open: save the HTML with visit.py --html and grep for bonventure.net.
 - A John Patrick listing can mix text-layer and image-only issues week to week (St. Clement 677: 25 Oct text, 18 Oct and 1 Nov image-only): read the masthead from the nearest text issue.
+- A GCatholic chapel can be a parish's named adoration shrine with its own Mass line in the bulletin schedule (St. Mary, Middletown: 'Our Lady of the Most Blessed Sacrament Shrine Saturday 8:15 a.m.' at 26 Leonardville Rd); read the schedule block beyond the church's own lines, and grep the site for the chapel's street address.
+- A ParishesOnline issue can exceed fetch:check's 25 MB inspection limit and pass as pdf_signature with no identity check (St. Mary, Middletown 1 Nov: 49 MB, 25 Oct: 17.6 MB); keep the ParishesOnline row and confirm the masthead from the previous issue.
+- Image-only ParishesOnline issues can have a text layer in some weeks (St. Mary 25 Oct readable pages 2-13, 1 Nov image-only pages 1-13): grep a neighbouring issue before rendering.
 
 ## Rules settled for this diocese
 
