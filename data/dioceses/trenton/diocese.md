@@ -267,6 +267,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A bulletin cover that credits Bon Venture Services (Epiphany) shows the printer, not a Bon Venture sponsor-page channel: its PDFs may still be self-hosted.
 - A parish site that links jppc.net/onlinebulletins/<id>template.pdf (Holy Eucharist, Clover site) points at the John Patrick listing; no site archive to compare.
 - An eCatholic parish site that answers 403 to probe url (smlparish.org) still lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf in the browser; those PDFs fetch with probe get and can be md5-compared with the John Patrick listing.
+- The 2017 linkage of St. Isaac Jogues and St. John Neumann no longer shows in their 1 Nov 2026 bulletins: different pastors (Rev. James Smith; Rev. Fr. Michael Dunn), separate listings (637, 6000) and eCatholic sites (13541, 2914). Read mastheads before treating a 2017 linkage as one bulletin.
+- An eCatholic site and the John Patrick listing can carry the same Sunday as different files (St. John Neumann 2914 vs listing 6000: 10-page text PDF vs 12-page image PDF, different md5); prefer the eCatholic text PDF when both are current.
+- A 'Family Mass in Chapel' at Our Lady of Good Counsel, Moorestown is in the church's Crypt Chapel (same building), not a second church.
 
 ## Rules settled for this diocese
 
