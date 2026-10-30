@@ -316,6 +316,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - A cohort's linked parishes under one pastor can both print Mass times for each other: the Cathedral's John Patrick 524 schedule lists St. Joseph's Masses while St. Joseph publishes its own 553 file. Compare file md5 for the same Sunday and the masthead before merging.
 - A finder pin with no website can have a parked-domain e-mail (sjctrenton.com): check the domain with visit.py before using it, and fall back to the printer's listing as the row's website.
+- A parish site and its ParishesOnline container can carry different files for the same Sunday: Mary, Mother of the Church's was 25.3 MB, over fetch:check's 25,000,000-byte inspection limit (document_type pdf_signature, no text check). Try the site's smaller file with `page-pdfs` before settling on the container.
+- An LPi bulletin's footer ('Mary, Mother of the Church, Bordentown, NJ 03-4119') is the ParishesOnline container id (03/4119); `probe po <finder-name-with-ZIP slug>` (e.g. st-katharine-drexel-parish-08016) finds the org when the site embeds no id. Squarespace /bulletins pages hide their /s/<date>web.pdf links from probe get: use visit.py --links.
+- A two-church parish can move weekday Mass from one church to the other between issues (St. Katharine Drexel: All Saints on 25 Oct 2026, St. Paul on 1 Nov): read the whole Mass block before counting a church as having no daily Mass, and keep both rows while the weekend schedule lists both.
+- A merger can be older than the 2017 plan: Sts. Francis and Clare Parish formed in 2008 from St. Clare and Holy Assumption; the Monitor's obituaries and feast-day stories state mergers and worship-site counts that the REST search finds by town name when a parish name search returns nothing.
 
 ## Rules settled for this diocese
 
