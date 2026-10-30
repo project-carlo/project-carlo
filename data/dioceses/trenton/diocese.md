@@ -384,6 +384,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic homepage (St. Luke 36011) can carry a Bon Venture sponsor page (4167) in its Bulletins page with no files.ecatholic.com PDFs: the row is the Bon Venture page, not the eCatholic id.
 - A cohort name (RCCTR, Toms River) is a collaboration, not a shared bulletin: four pastors, four printers' pages. A GCatholic entry carrying another parish's website (St. Gertrude, Island Heights with St. Joseph's) is a mission worth checking against that parish's Mass schedule: it is the 2nd-Sunday 9:00 am Mass in St. Joseph's bulletin.
 - fetch:check can report an issue-date 'conflict' on a John Patrick issue whose weekly readings list the following week's dates; the cover date and file name settle it.
+- A John Patrick listing the Run's id scan showed with no edition (St. Barnabas 6048, scanned 2026-10-30 earlier) can carry current issues when rechecked: reload the listing with probe url before treating it as dead.
+- St. Barnabas and St. Pius X issues are image-only: read masthead and Mass schedule from render.py pages 1-3 (the Mass lines can be a Mass-intentions page, as in St. Pius X page 3).
 
 ## Rules settled for this diocese
 
