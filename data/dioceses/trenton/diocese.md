@@ -142,11 +142,14 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   parishes ("The Catholic Community of Hopewell Valley" 547; "Saint Pio of Pietrelcina & Church
   of the Sacred Heart" 6003): read the masthead for its members. Record the row as `other` with
   `page-pdfs https://www.church-bulletin.org/<slug>`. Many parishes also post the same PDFs on
-  their own site, byte-identical and often a week behind: a WordPress
+  their own site, usually byte-identical and often a week behind: a WordPress
   `wp-content/uploads/.../<id>template-<date>.pdf` (St. Aloysius, Jackson 640), Drupal (St.
   Monica 649), an eCatholic `/bulletins` page (St. John, Lakehurst; St. Catharine-St. Margaret
   513 = `ecatholic:30561`). Compare md5 for the same Sunday, take whichever channel has the
-  latest issue (usually the listing) and keep the other's id in `publication`. An eCatholic
+  latest issue (usually the listing) and keep the other's id in `publication`. The two can
+  carry the same Sunday as different files (St. John Neumann, Mount Laurel: eCatholic 2914's
+  10-page text PDF, listing 6000's 12-page image PDF): when both are equally current, prefer
+  the one with a text layer. An eCatholic
   site whose Bulletins page links `church-bulletin.org` PDFs is only the host: record the
   listing, not the eCatholic id (Holy Cross, Rumson 37867). Many issues are image-only (most
   in Camden; here St. Veronica 532, St. William the Abbot 566, Howell, Holy Cross, Rumson and
@@ -166,11 +169,17 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   parishes 22670; St. Catharine-St. Margaret, Spring Lake 30561). An eCatholic id is the bulletin only when `/bulletins` lists current
   `files.ecatholic.com/<id>/bulletins/` PDFs. Several of these sites link a John Patrick listing
   instead, and others keep a stale or empty `/bulletins` while the homepage's "Bulletin" link
-  goes elsewhere (St. Leo: a Bon Venture page; St. Mary, Colts Neck: Constant Contact PDFs on
+  goes elsewhere (St. Leo and St. Peter, Point Pleasant Beach 35377: a Bon Venture page,
+  which is then the row, not the eCatholic id; St. Mary, Colts Neck: Constant Contact PDFs on
   its own `/past-bulletins`; St. Catharine, Holmdel: a Constant Contact HTML email only). Read
   that link with `visit.py --links` before trusting the id. **`ecatholic:14277` is the Diocese of Trenton's own site**, embedded wherever a
   parish links a diocesan PDF (Our Lady of Good Counsel, West Trenton's olgcc.net shows it):
-  don't record it. Read issues with parish-site-access `issues.py ecatholic`.
+  don't record it. Read issues with parish-site-access `issues.py ecatholic`. An eCatholic site
+  that answers 403 to `probe url` (smlparish.org) still lists its
+  `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf` in `visit.py`, and those PDFs fetch
+  with `probe get`. A parish's `/contact-us` page lists each "Worship Site" with its street
+  address: read it with `visit.py` to confirm a GCatholic church that has no site of its own
+  (St. Casimir, Riverside).
 - **LPi / ParishesOnline:** St. Rose of Lima, Freehold (`lpi:0018000000Qx8o4AAB`), St. Anselm,
   Wayside (`lpi:0018000000Qx8nnAAB`), St. Ann, Keansburg (`lpi:0018000000Qx8pMAAR`, on a Duda
   `/bulletin9ab2b387` page). `probe po <lpi id>` gives the org and container. WeConnect (LPi)
@@ -182,28 +191,34 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   image on its homepage); St. Elizabeth Ann Seton, Whiting (2166, its Solutio site's
   "Bulletins" link). Camden found Our Lady of Perpetual Help, Maple Shade's account (2214).
   The link is often only on the homepage while the site's own bulletin archive is stale (St.
-  Denis's Joomla "Archived Bulletins" stops at October 2025): grep the homepage HTML for
+  Denis's Joomla "Archived Bulletins" stops at October 2025), and an eCatholic site can be
+  only the host (St. Peter, Point Pleasant Beach 35377 → `?page=2097`): grep the homepage HTML for
   `sponsors.bonventure.net`, or list its links with `visit.py --links` when `probe url`
   answers 403, before calling a site's archive current. Record
   `page-pdfs http://sponsors.bonventure.net/?page=<n>` over `http://`; check the header's
   address, since same-named parishes have their own accounts. Issues are
   `sponsors.bonventure.net/pdfs/<n>/<yyyy-mm-dd>.pdf`; the coming Sunday's is often not posted
   yet (404), so take the latest date from the sponsor page rather than guessing today's
-  Sunday.
+  Sunday. A cover crediting "Bon Venture Services" names the printer only: it doesn't mean a
+  sponsor page exists, and the PDFs may be self-hosted (Epiphany, Brick).
 - **Solutio CMS sites** (`/news/bulletin/<n>-<date>`, `/get-connected/bulletin/<n>-<date>/file`,
   `/parish-events/bulletin`, `/bulletin/7-latest-bulletin`): St. Mary, Barnegat; St. Barnabas,
   Bayville; Our Lady of Perpetual Help, Maple Shade; Our Lady Queen of Peace, Hainesport; St.
-  Pius X, Forked River; St. Joseph, Toms River; St. Elizabeth Ann Seton, Whiting. In Camden their `/file` PDFs answered 403 to
-  `probe get`, `render.py` and `fetch:check`: look for the parish's John Patrick listing or
-  Bon Venture page first (St. Mary 563, St. Pius X 590 are current), and only then read the
+  Pius X, Forked River; St. Joseph, Toms River; St. Elizabeth Ann Seton, Whiting. Their `/file` PDFs answer 403 to
+  `probe get`, `render.py` and `fetch:check` (Camden, and here olphparish.com, whose issues are
+  numbered: 188 = 1 Nov 2026): look for the parish's John Patrick listing or
+  Bon Venture page first (St. Mary 563, St. Pius X 590 are current; Our Lady of Perpetual
+  Help, Maple Shade's same Sunday is on Bon Venture 2214, which `probe get` reads), and only then read the
   site with `visit.py`. St. Mary, Barnegat's list also has Word-document entries.
 - **Self-hosted and other platforms:** St. John the Baptist, Allentown posts dated PDFs under
   `/sjrc/News & Bulletins/` ("October 25, 2026 Bulletin.pdf"); St. Stephen, Toms River
   (Ukrainian) `ststephenchurch.us/staging/pdf/Bul.<Month><d>,<yyyy>.pdf`; St. Catherine of Siena,
   Farmingdale on a `becdn.net` host ("84885-OCT-25-2026-BULLETIN.pdf"); St. Catherine Laboure's
   `bulletin.htm`; Immaculate Conception, Eatontown's `WeeklyBulletin/list.asp`; Epiphany's
-  Joomla `/index.php/sunday-bulletins` (Camden: Joomla weblinks lists don't collect; pin a
-  filename); Duda (`irp.cdn-website.com`: St.
+  Joomla `/index.php/sunday-bulletins`, a weblinks list with no PDF hrefs: each entry is a
+  `task=weblink.go` link that 301s to the PDF, no recipe collects them and an unpinned
+  `fetch:check` picks an unrelated PDF (ministers.pdf), so find the newest with `curl -I` on
+  the last entry and pin its filename (Camden saw the same); Duda (`irp.cdn-website.com`: St.
   Katharine Drexel, St. Gabriel), Squarespace (Our Lady of Perpetual Help-St. Agnes, St. Francis,
   LBI) and WordPress sites. Read the file before taking a site's first PDF as the bulletin (Sacred
   Heart, Bay Head's and St. Pio's first PDFs are registration forms). A hand-edited bulletin
@@ -261,18 +276,6 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- Joomla weblinks lists (Epiphany, Brick; Camden saw the same) hold no PDF hrefs: every entry is a task=weblink.go link that 301s to the PDF. No existing recipe collects them, and unpinned fetch:check picks an unrelated PDF such as ministers.pdf. Find the newest by `curl -I` on the last entry.
-- A parish site's eCatholic id (St. Peter, Point Pleasant Beach 35377) may be host only: its 'Bulletins' link goes to Bon Venture (page 2097). Record the Bon Venture page, not the eCatholic id.
-- A bulletin cover that credits Bon Venture Services (Epiphany) shows the printer, not a Bon Venture sponsor-page channel: its PDFs may still be self-hosted.
-- A parish site that links jppc.net/onlinebulletins/<id>template.pdf (Holy Eucharist, Clover site) points at the John Patrick listing; no site archive to compare.
-- An eCatholic parish site that answers 403 to probe url (smlparish.org) still lists files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf in the browser; those PDFs fetch with probe get and can be md5-compared with the John Patrick listing.
-- The 2017 linkage of St. Isaac Jogues and St. John Neumann no longer shows in their 1 Nov 2026 bulletins: different pastors (Rev. James Smith; Rev. Fr. Michael Dunn), separate listings (637, 6000) and eCatholic sites (13541, 2914). Read mastheads before treating a 2017 linkage as one bulletin.
-- An eCatholic site and the John Patrick listing can carry the same Sunday as different files (St. John Neumann 2914 vs listing 6000: 10-page text PDF vs 12-page image PDF, different md5); prefer the eCatholic text PDF when both are current.
-- A 'Family Mass in Chapel' at Our Lady of Good Counsel, Moorestown is in the church's Crypt Chapel (same building), not a second church.
-- A GCatholic church such as St. Casimir, Riverside with no site of its own can be confirmed on its parish's eCatholic /contact-us page (it lists each 'Worship Site' with street address); read that page with visit.py when GCatholic is the only address source.
-- The finder's pin can be far off the building (St. Charles Borromeo, Cinnaminson: ~500 m); GCatholic's Plus Code agreed with OSM's address lookup there.
-- A parish's Solutio site (olphparish.com) can number its bulletins (188 = 1 Nov 2026) while its /file PDFs answer 403; the same Sunday is on the Bon Venture sponsor page, which probe get reads.
 
 ## Rules settled for this diocese
 
