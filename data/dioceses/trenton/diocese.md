@@ -143,9 +143,14 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   of the Sacred Heart" 6003): read the masthead for its members. Record the row as `other` with
   `page-pdfs https://www.church-bulletin.org/<slug>`. When a parish also posts the issues on its
   own site, take whichever channel has the latest issue (Camden's and Philadelphia's rule: the
-  parish copy often lags). Most issues in Camden were image-only: render pages 1–2 with
-  `render.py` when `probe pdf` returns no text. church-bulletin.org answers 406 to a bare
-  "Mozilla/5.0" user agent; plain curl and `probe pdf` work.
+  parish copy often lags). Many issues are image-only (most in Camden; here St. Veronica 532
+  and St. William the Abbot 566, Howell): render pages 1–2 with `render.py` when `probe pdf`
+  returns no text. `fetch:check` passes such an issue as `document_type` pdf with no text, and
+  gives the coming Sunday's issue, posted days before its date, `future` freshness: that is
+  the current issue, not a fault. church-bulletin.org answers 406 to a bare "Mozilla/5.0"
+  user agent; plain curl and `probe pdf` work. `probe pdf --pages N` reads the first N pages
+  (not page N) and prints pypdf font warnings on stdout before the JSON: cut to the first `{`
+  before parsing, and use `--grep` on long issues.
 - **eCatholic:** common (ids seen: Sacred Heart, Mount Holly 14457; St. Isaac Jogues 13541;
   Corpus Christi 13717; St. Ann, Lawrenceville 20164; Holy Cross 37867; OLS-St. Anthony 2974;
   Resurrection 14711; St. Mary of the Lakes 12486; St. Benedict 39277 or 15175; St. Catharine,
@@ -153,8 +158,11 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   Colts Neck 33474; St. Rose, Belmar 37219; St. Dominic 40144; St. Gregory 2431; St. Luke 36011;
   St. Peter 35377; St. Theresa 5085; Visitation 6597; St. Paul 28530; the Hopewell Valley
   parishes 22670). An eCatholic id is the bulletin only when `/bulletins` lists current
-  `files.ecatholic.com/<id>/bulletins/` PDFs; several of these sites link a John Patrick listing
-  instead. **`ecatholic:14277` is the Diocese of Trenton's own site**, embedded wherever a
+  `files.ecatholic.com/<id>/bulletins/` PDFs. Several of these sites link a John Patrick listing
+  instead, and others keep a stale or empty `/bulletins` while the homepage's "Bulletin" link
+  goes elsewhere (St. Leo: a Bon Venture page; St. Mary, Colts Neck: Constant Contact PDFs on
+  its own `/past-bulletins`; St. Catharine, Holmdel: a Constant Contact HTML email only). Read
+  that link with `visit.py --links` before trusting the id. **`ecatholic:14277` is the Diocese of Trenton's own site**, embedded wherever a
   parish links a diocesan PDF (Our Lady of Good Counsel, West Trenton's olgcc.net shows it):
   don't record it. Read issues with parish-site-access `issues.py ecatholic`.
 - **LPi / ParishesOnline:** St. Rose of Lima, Freehold (`lpi:0018000000Qx8o4AAB`), St. Anselm,
@@ -163,7 +171,8 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   sites: St. Dorothea (bulletins on `uploads.weconnect.com/mce/<hash>/Bulletin DOR <date>.pdf`),
   and GCatholic's old stanselm.weconnect.com and holyspiritasburypk.weconnect.com.
 - **Bon Venture:** St. Joseph, Toms River (`sponsors.bonventure.net/?page=3204`, found by
-  `visit.py --bulletin` from its Solutio site). Camden found Our Lady of Perpetual Help, Maple
+  `visit.py --bulletin` from its Solutio site); St. Leo the Great, Lincroft (`?page=2156`, the
+  "Bulletin" link on its eCatholic homepage). Camden found Our Lady of Perpetual Help, Maple
   Shade's account (2214). Record `page-pdfs http://sponsors.bonventure.net/?page=<n>` over
   `http://`; check the header's address, since same-named parishes have their own accounts.
 - **Solutio CMS sites** (`/news/bulletin/<n>-<date>`, `/get-connected/bulletin/<n>-<date>/file`,
@@ -182,7 +191,15 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   filename); St. Aloysius links a Constant Contact PDF; Duda (`irp.cdn-website.com`: St.
   Katharine Drexel, St. Gabriel), Squarespace (Our Lady of Perpetual Help-St. Agnes, St. Francis,
   LBI) and WordPress sites. Read the file before taking a site's first PDF as the bulletin (Sacred
-  Heart, Bay Head's and St. Pio's first PDFs are registration forms).
+  Heart, Bay Head's and St. Pio's first PDFs are registration forms). A hand-edited bulletin
+  page can list stale links first: run `fetch:check` on both its current and its past-bulletins
+  page and pin the one that picks the current issue (St. Mary, Colts Neck pins `/past-bulletins`).
+- **Google Drive:** St. Thomas More, Manalapan's Google Sites page (moremercy.org/bulletins)
+  embeds a Drive folder. `probe url` finds no publications there; `visit.py --links` lists the
+  Drive file links. Record `google_drive` with `drive-folder
+  https://drive.google.com/drive/folders/<id>` (the id from the embed's old
+  `docs.google.com/folderview?id=`), which passes `fetch:check`. The folder's issues are not
+  strictly newest-first: check the date of the issue it picks.
 - **Discover Mass / J.S. Paluch:** not seen in the survey. If a row uses it, Discover Mass caps
   downloads per IP per day (a 134-byte "Maximum number of files downloaded today" reply that
   `fetch:check` reports as `not_pdf`): that is the cap, not the row.
@@ -191,7 +208,9 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
   St. Catharine-St. Margaret; Mother of Mercy has no listing in the scan). Eleven loaded in
   `visit.py` (strobert.cc, jesusthegoodshepherd.org, olgcnj.org, stjosephtomsriver.org,
   seaswhiting.org, stmarkseagirt.com, stbarnabasbayville.com, churchofstpius.org,
-  olphparish.com, ourladyqop.org, stmarybarnegat.com). Five GCatholic-only sites weren't tried
+  olphparish.com, ourladyqop.org, stmarybarnegat.com), though strobert.cc's own
+  `/bulletin/53-bulletin/file` is blocked too (the Co-Cathedral's John Patrick listing 558 is
+  current). Five GCatholic-only sites weren't tried
   in the browser (catholicchurchasburypark.org, churchofstdominic.com,
   churchoftheassumption.com, divineword.org, stpaulsprinceton.org); the finder's sites for those
   parishes are the ones to use.
@@ -225,17 +244,6 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- The finder's coordinates can be kilometres off (St. Catharine, Holmdel: 3.5 km); compare with GCatholic's Plus Code and an OSM address lookup (nominatim via probe get) before taking either.
-- An eCatholic site's own /bulletins page can be stale or empty while the parish bulletin is elsewhere (St. Leo: Bon Venture page linked as 'Bulletin' on the homepage; St. Mary, Colts Neck: Constant Contact PDFs; St. Catharine: Constant Contact HTML email). Read the homepage's 'Bulletin' link with visit.py --links before trusting the ecatholic id.
-- Hand-edited parish bulletin pages can list stale links first; run fetch:check against both the 'current' page and a 'past bulletins' page and pin whichever picks the current issue.
-- Trenton's parishes alternate weekday Masses between cohort churches (St. Mary's bulletin lists Thu-Sat 9 AM 'AT ST. CATHARINE, HOLMDEL'): that is not a shared bulletin or an added church.
-- Howell's John Patrick issues (532, 566) are image-only: render pages 1-2 with render.py to read the masthead; fetch:check reports document_type pdf with no text and 'future' freshness for the coming Sunday's issue (dated two days ahead).
-- A GCatholic 'Chapel' entry can hold public weekday Mass the parish bulletin states only in its schedule block (St. Catherine's Chapel, Farmingdale: 'Weekday Mass Now Open'): grep the bulletin for 'Chapel' before excluding it.
-- A Google Sites parish page (moremercy.org/bulletins) embeds a Google Drive folder: probe url finds no publications; visit.py --links lists the Drive file links, and a google_drive row with `drive-folder https://drive.google.com/drive/folders/<id>` (id from the old docs.google.com/folderview?id=) passes fetch:check; the Drive folder's issues are not strictly newest-first.
-- probe pdf --pages N reads the first N pages (not page N) and prints pypdf font warnings before the JSON on stdout: strip to the first '{' before parsing, and use --grep on long bulletins.
-- strobert.cc (Co-Cathedral) answers probe url 403 but its John Patrick listing 558 gives the current issue; the site's own /bulletin/53-bulletin/file is also blocked.
-
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -245,6 +253,9 @@ Decisions that apply to more than one record, and who made them.
 - A merger ends a parish, not a church: a former parish church of a 2017-2020 merger keeps a church row under the merged parish when its current bulletin or Mass schedule lists Mass there, and is excluded closed only on a source that says so (closing Mass, relegation, sale), with last_mass. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - A seasonal shore church (Long Beach Island, the Seaside/Lavallette barrier island, Deal, Manasquan's Star of the Sea chapel) keeps its church row with a dated revisit for its next season, on an off-season bulletin or the parish's own winter schedule. (accepted by survey-review, 002-survey-review, 2026-10-30)
 - When a parish's printer's listing (John Patrick, Bon Venture) and its own site carry the same bulletin, the row reads whichever channel has the latest issue, keeping the other's id in publication. (accepted by survey-review, 002-survey-review, 2026-10-30)
+- A church's coordinates come from GCatholic's Plus Code or an OSM address lookup (nominatim via `probe get`), compared with each other, not from the finder's pin alone: the finder's pins can be kilometres off (St. Catharine, Holmdel: 3.5 km). (map batch `holmdel-marlboro-colts-neck`, 2026-10-30)
+- Weekday Masses a bulletin lists at a cohort neighbour's church (St. Mary, Colts Neck's Thu-Sat 9 AM "AT ST. CATHARINE, HOLMDEL") neither make a shared bulletin nor add a church to that parish; the church stays with its own parish. (map batch `holmdel-marlboro-colts-neck`, 2026-10-30)
+- GCatholic's three chapels (St. Catherine, Farmingdale; Star of the Sea, Manasquan; St. Mary, New Monmouth) keep a church row when the parish bulletin lists public Mass there, weekday Mass included, which may appear only in its schedule block: grep the bulletin for "Chapel" before excluding one (St. Catherine's Chapel, Farmingdale: "Weekday Mass Now Open"). (map batch `howell-farmingdale`, 2026-10-30)
 
 ## Log
 
