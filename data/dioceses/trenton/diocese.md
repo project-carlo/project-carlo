@@ -244,6 +244,11 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Holy Cross, Rumson and Nativity, Fair Haven issues are image-only (probe pdf no text); render pages 1-2 with render.py and cite the note as read from a render, with no quote.
+- A parish site's eCatholic id can be only the site host when its Bulletins page links church-bulletin.org/<id>/<date>.pdf (Holy Cross 37867): record the John Patrick listing, not the ecatholic id, as the publication.
+- A parish site's footer address can be the office, not the church (Oratory, Red Bank: 27 Oratory Way vs the church at 121 Bridge Ave); read the staff/contact page before calling it a disagreement.
+- OSM's named node can be off by hundreds of metres (Nativity, Fair Haven: 750 m); compare GCatholic's Plus Code with the finder's pin before trusting it.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
