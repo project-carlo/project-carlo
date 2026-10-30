@@ -360,6 +360,11 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish row can't be created with publication_reviews naming a peer that doesn't exist yet: create both rows, then patch the reviews on the first; `parish` records also reject a roster field (roster links live on church records).
 - A directory pin can be a language community's church (Immaculate Conception, Eatontown is the Korean community with an EUC-KR ASP site and Korean bulletin): read its PDF's Latin-script address line and numerals, and note the language.
 - ParishesOnline's `probe po` issue list can lag the container: St. Anselm's 20261101B.pdf was served (HTTP 200) while the list ended at 2026-10-25.
+- A site that 'refuses' both probe url and the browser can be a disconnected Wix domain (title 'Reconnect Your Domain', HTTP 404, momapnj.org): read the Wayback copy (probe get https://archive.org/wayback/available?url=<domain>, then visit.py on the snapshot; archive PDFs answer 429) for its bulletin channel, and look for the printer elsewhere.
+- When a parish's site is dead and the printer scan has no listing, search the web for its bulletin: a ParishesOnline container whose masthead and 'Mother of Mercy Parish | 04-0324' footer name the parish identifies it, and `probe po <name-slug without ZIP>` (mother-of-mercy-parish) finds the org when the usual slug-with-ZIP guesses fail.
+- A merged parish's finder pin can sit at the second church rather than the address it prints (St. Teresa of Calcutta: pin at St. Elizabeth, Avon, 1.3 km from 501 Brinley Ave, Bradley Beach); match by address and Plus Code.
+- An eCatholic site whose Bulletin page shows 'Click to View Current Bulletin' links a Bon Venture PDF (St. Rose, Belmar: sponsors.bonventure.net/pdfs/2155/): the row is the Bon Venture page; probe pdf needs http:// there (https fails certificate verification).
+- ZIP+4 differs between sources for one building (GCatholic 07712-5769, ParishesOnline and catholicmasses.org 07712-5793 for Mount Carmel): compare the same-source pairs and don't call it a shared ZIP+4 without reading each value.
 
 ## Rules settled for this diocese
 
