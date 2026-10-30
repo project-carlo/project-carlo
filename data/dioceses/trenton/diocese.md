@@ -299,6 +299,9 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A John Patrick listing can carry the coming Sunday's issue (image-only) while the parish's own eCatholic site still holds the current text-layer issue; pick the eCatholic row when its newest file is the Sunday just passed, and keep the listing in publication (St. Paul, Princeton).
+- A parish's printed street number can differ from the finder's and GCatholic's (216 vs 214 Nassau St); check OSM's named place_of_worship by nominatim for each number before choosing.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
