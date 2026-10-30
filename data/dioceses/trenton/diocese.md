@@ -277,6 +277,11 @@ settles its own rows. Use the finder's website before GCatholic's, and verify bo
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- The diocesan finder's pin for a merged parish can sit at the closed church's old site: Jesus the Good Shepherd's pin (40.0377,-74.9569) is St. Peter, Riverside, 3.5 km from the Beverly address it prints. Check the pin against GCatholic's Plus Code and an OSM house point.
+- An eCatholic bulletin filename can be the upload week, not the issue date: Corpus Christi's files.ecatholic.com/13717/bulletins/20261018.pdf is the 25 October issue. Read the masthead's date before trusting the filename.
+- A Solutio parish site whose own bulletin archive is stale (Jesus the Good Shepherd, ending January 2025) can still link the printer: its 'JPPC Bulletin - View Current Bulletin' link is jppc.net/onlinebulletins/<id>template.pdf, which redirects to the John Patrick listing.
+- The Monitor's REST dates for old stories (2017-era closings) can be a site-migration date (2019-07-29 on posts about June 2017 events): take the event date from the body and cross-check with the 2017 decisions.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
