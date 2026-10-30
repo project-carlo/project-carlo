@@ -231,6 +231,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Trenton's parishes alternate weekday Masses between cohort churches (St. Mary's bulletin lists Thu-Sat 9 AM 'AT ST. CATHARINE, HOLMDEL'): that is not a shared bulletin or an added church.
 - Howell's John Patrick issues (532, 566) are image-only: render pages 1-2 with render.py to read the masthead; fetch:check reports document_type pdf with no text and 'future' freshness for the coming Sunday's issue (dated two days ahead).
 - A GCatholic 'Chapel' entry can hold public weekday Mass the parish bulletin states only in its schedule block (St. Catherine's Chapel, Farmingdale: 'Weekday Mass Now Open'): grep the bulletin for 'Chapel' before excluding it.
+- A Google Sites parish page (moremercy.org/bulletins) embeds a Google Drive folder: probe url finds no publications; visit.py --links lists the Drive file links, and a google_drive row with `drive-folder https://drive.google.com/drive/folders/<id>` (id from the old docs.google.com/folderview?id=) passes fetch:check; the Drive folder's issues are not strictly newest-first.
+- probe pdf --pages N reads the first N pages (not page N) and prints pypdf font warnings before the JSON on stdout: strip to the first '{' before parsing, and use --grep on long bulletins.
+- strobert.cc (Co-Cathedral) answers probe url 403 but its John Patrick listing 558 gives the current issue; the site's own /bulletin/53-bulletin/file is also blocked.
 
 
 ## Rules settled for this diocese
