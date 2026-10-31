@@ -61,6 +61,11 @@ class PageLike(Protocol):
     def request(self) -> RequestLike: ...
 
 
+def chromium_sandbox_enabled() -> bool:
+    """The worker image enables Chromium's own sandbox; host launches keep their default."""
+    return _env_bool("PLAYWRIGHT_CHROMIUM_SANDBOX", False)
+
+
 def proxy_from_env() -> dict[str, str] | None:
     """Playwright's `proxy=` from HTTPS_PROXY (or HTTP_PROXY), or None when neither is set.
 
@@ -89,6 +94,7 @@ def launch_stealth_browser(*, channel: str | None = None) -> Iterator[PageLike]:
     whose bot checks reject bundled Chromium)."""
     launch_kwargs: dict[str, object] = {
         "headless": _env_bool("PLAYWRIGHT_HEADLESS", False),
+        "chromium_sandbox": chromium_sandbox_enabled(),
     }
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or channel
     if channel:

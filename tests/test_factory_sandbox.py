@@ -298,6 +298,7 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
     joined = " ".join(argv)
     assert launch.container == "carlo-job-42"
     for flag in ("--rm", "-i", "--init", "--cap-drop=ALL", "no-new-privileges", "--read-only",
+                 f"seccomp={ROOT / 'factory/sandbox/seccomp.json'}",
                  "--ipc=private", "--pid=private", "--userns=keep-id:uid=1000,gid=1000",
                  "--label carlo.factory=1", f"--network {NETWORK}", "--pids-limit 2048",
                  "--memory 6g", f"--workdir {work}", "--shm-size 1g",
@@ -484,6 +485,35 @@ def test_a_sandbox_failure_never_starts_the_worker_on_the_host(
     monkeypatch.setattr(worker, "_run", never)
     result = worker.run(request(tmp_path))
     assert result.outcome == workers.SANDBOX and "podman" in result.error
+
+
+@pytest.mark.parametrize("setting, enabled", [(None, False), ("1", True)])
+def test_chromium_sandbox_setting_reaches_the_browser(
+        monkeypatch: pytest.MonkeyPatch, setting: str | None, enabled: bool) -> None:
+    from contextlib import nullcontext
+    from types import SimpleNamespace
+
+    from pdf_extract import browser
+
+    if setting is None:
+        monkeypatch.delenv("PLAYWRIGHT_CHROMIUM_SANDBOX", raising=False)
+    else:
+        monkeypatch.setenv("PLAYWRIGHT_CHROMIUM_SANDBOX", setting)
+    calls = []
+    page = object()
+    context = SimpleNamespace(new_page=lambda: page)
+    fake_browser = SimpleNamespace(new_context=lambda: context, close=lambda: None)
+
+    def launch(**options):
+        calls.append(options)
+        return fake_browser
+
+    pw = SimpleNamespace(chromium=SimpleNamespace(launch=launch))
+    monkeypatch.setattr(browser, "sync_playwright", lambda: nullcontext(pw))
+    monkeypatch.setattr(browser, "Stealth", lambda: SimpleNamespace(apply_stealth_sync=lambda c: None))
+    with browser.launch_stealth_browser() as result:
+        assert result is page
+    assert calls[0]["chromium_sandbox"] is enabled
 
 
 def test_chrome_gets_the_proxy_only_when_one_is_set(monkeypatch: pytest.MonkeyPatch) -> None:

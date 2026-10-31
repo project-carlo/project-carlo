@@ -2,9 +2,9 @@
 
 Status: written 2026-10-31 from the code at `01926ac2` and the live factory in
 `~/carlo-factory`. Phases 0, 2, 3, 4 and 6 are built, with unit tests and container tests
-that skip without Podman. Podman is now installed and rootless. The proxy image builds and all ten
-container isolation tests pass here; the full worker image, Phase 1 spikes and Phase 5 live
-checks still need verification and account tokens. Where the build differs from
+that skip without Podman. Podman is now installed and rootless. The proxy and full worker
+images build; the ten container isolation tests and the full-image smoke test pass here.
+Cloudflare parish access, token/account spikes and Phase 5 live jobs remain unverified. Where the build differs from
 this plan, the section says so ("Built:").
 
 ## 1. Decision
@@ -118,7 +118,10 @@ files (never from a Run worktree). It is tagged by a hash of the Containerfile,
 Dependencies are installed at build time, before any untrusted content is processed.
 Built: the tag hashes the Containerfile (which pins the CLI, Node and pnpm), `pyproject.toml`
 and `uv.lock`. Not `pnpm-lock.yaml`: workers' `pnpm` scripts only call `uv run`, so the
-image installs no Node packages.
+image installs no Node packages. pnpm 12 otherwise tries to install the Node workspace
+before running a script, so the image sets `PNPM_CONFIG_VERIFY_DEPS_BEFORE_RUN=false`.
+The full-image smoke test runs `pnpm diocese --help` and `pnpm seed --help` with no
+`node_modules`, proving those scripts use the preinstalled Python environment.
 
 ### 3.3 Workspace
 
@@ -157,7 +160,7 @@ The existing diff-scope and HEAD checks stay as a second layer.
 podman run --rm -i --init --name carlo-job-<id> --label carlo.factory=1
   --userns=keep-id --user worker
   --cap-drop=ALL --security-opt no-new-privileges
-  --security-opt seccomp=<default, or Playwright's Chrome profile if the spike needs it>
+  --security-opt seccomp=<dispatcher>/factory/sandbox/seccomp.json
   --ipc=private --pid=private --uts=private
   --read-only --tmpfs /tmp --tmpfs /home/worker
   --memory 6g --cpus 4 --pids-limit 2048
@@ -167,6 +170,14 @@ podman run --rm -i --init --name carlo-job-<id> --label carlo.factory=1
   --env-file <per-attempt allowlist>
   carlo-worker:<hash> xvfb-run -a claude <SDK args>
 ```
+
+Built: the default Podman profile blocks Chromium's `chroot` after it creates its
+nested user namespace. `factory/sandbox/seccomp.json` retains that profile's other
+rules and allows `chroot` unconditionally at the seccomp layer; the kernel still
+requires the capability inside the relevant user namespace. The container gains no
+capabilities. Source, checksum and attribution are in `seccomp.README.md`.
+The worker image sets `PLAYWRIGHT_CHROMIUM_SANDBOX=1`, and both launch sites pass it
+to Playwright explicitly (Playwright's default disables Chromium's own sandbox).
 
 There is no `--privileged`, no host network, and no mounts of the host home, Podman or
 Docker sockets, SSH agent, X11 socket, `~/carlo-factory` or the main repository.
@@ -324,6 +335,31 @@ clones for `~/carlo-factory` and Run worktrees (with a migration for live Runs).
 **Phase 6: docs.** `docs/factory-spec.md` (§5 Worker setup, Running it, Future
 enhancements: the Bash-sandbox item changes), `factory/local.example.yaml`, the systemd
 unit (the dispatcher no longer needs `xvfb-run`), and machine setup.
+
+### Full-image smoke test (2026-10-31)
+
+From the PR checkout, run:
+
+```bash
+uv run python factory/sandbox/smoke-worker.py
+```
+
+This intentionally builds from trusted `HEAD` for pre-merge verification (production
+still builds from `origin/main`). `--image carlo-worker:<hash>` reuses a built image.
+The test uses the production container settings with temporary files, sessions, its own
+network and proxy; it reads no account token and submits no Claude prompt.
+
+Verified on rootless Podman 5.7.0 in WSL2: Python 3.13.11, Node 22.12.0, pnpm 12.7.0,
+Claude Code 2.1.312, uv, Ghostscript and Poppler execute. Python dependencies import;
+`pnpm diocese` and `pnpm seed` show help without installing Node packages. The root and
+tools stay read-only, home/tmp/sessions/workspace are writable, and the worker has no
+capability to chroot in its original namespace. Headed bundled Chromium and Google
+Chrome load HTTPS through the proxy and report PID/network namespaces plus seccomp-BPF
+on `chrome://sandbox`, without `--no-sandbox`. The real PDF renderer produces a JPEG
+using sandboxed headless Chrome. Outputs have the host user's ownership.
+
+This does not validate Cloudflare access, Claude authentication/billing, rate-limit
+reporting, model usage, resume or real factory jobs.
 
 ## 5. Verification (the issue's acceptance criteria)
 

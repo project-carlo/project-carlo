@@ -88,7 +88,7 @@ def main() -> int:
     from playwright.sync_api import sync_playwright
 
     sys.path.insert(0, str(REPO / "src"))
-    from pdf_extract.browser import proxy_from_env
+    from pdf_extract.browser import chromium_sandbox_enabled, proxy_from_env
 
     channel = "chrome" if shutil.which("google-chrome") else None
     args.out.parent.mkdir(parents=True, exist_ok=True)
@@ -98,6 +98,7 @@ def main() -> int:
         # Through the proxy when there is one (a factory sandbox reaches pdf.js only so).
         proxy = proxy_from_env()
         browser = p.chromium.launch(channel=channel, headless=True,
+                                    chromium_sandbox=chromium_sandbox_enabled(),
                                     **({"proxy": proxy} if proxy else {}))
         try:
             page = browser.new_page()

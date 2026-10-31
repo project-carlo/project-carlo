@@ -47,7 +47,11 @@ RUN useradd --uid 1000 --user-group --create-home --shell /bin/bash worker
 
 USER worker
 WORKDIR /home/worker
+# pnpm scripts only invoke Python: never auto-install the web workspace dependencies.
+# Chromium must keep its own namespace/seccomp sandbox inside the container.
 ENV HOME=/home/worker \
     UV_NO_SYNC=1 \
     UV_CACHE_DIR=/tmp/uv-cache \
-    PNPM_HOME=/tmp/pnpm
+    PNPM_HOME=/tmp/pnpm \
+    PNPM_CONFIG_VERIFY_DEPS_BEFORE_RUN=false \
+    PLAYWRIGHT_CHROMIUM_SANDBOX=1

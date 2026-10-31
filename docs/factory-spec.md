@@ -582,6 +582,12 @@ Where the implementation had to decide something this spec left open.
   loopback, private, CGNAT, link-local and metadata, multicast and the host's own
   addresses, and resolves names itself, so DNS rebinding doesn't get past it. Workers
   get `HTTP(S)_PROXY`; Chrome gets `proxy=` from it at both Playwright launches.
+  The worker image disables pnpm's automatic pre-script dependency install, since its
+  scripts use the preinstalled Python environment without `node_modules`. Both browser
+  launch sites enable Chromium's own sandbox in the image. The checked-in seccomp
+  profile allows its nested-namespace `chroot` without adding container capabilities;
+  see `factory/sandbox/seccomp.README.md`. `factory/sandbox/smoke-worker.py` tests the
+  full image without credentials, including headed Chromium/Chrome and PDF rendering.
   The proxy uses the first DNS resolver discovered in an external-only container,
   because the internal network's DNS refuses public lookups.
   Claude's web search runs on Anthropic's side and doesn't pass through it.

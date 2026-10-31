@@ -38,6 +38,7 @@ LOGGER = logging.getLogger(__name__)
 # Relative to the dispatcher's own checkout, where it runs; never a Run's copy.
 SANDBOX_DIR = Path("factory") / "sandbox"
 LAUNCHER = SANDBOX_DIR / "claude-in-box"
+SECCOMP = Path(__file__).resolve().parents[3] / SANDBOX_DIR / "seccomp.json"
 
 # What a host worker keeps of the dispatcher's environment: what the CLI, uv, pnpm and
 # Chrome need to run. Not DISPLAY, SSH_AUTH_SOCK or XDG_RUNTIME_DIR (its sockets).
@@ -248,6 +249,7 @@ def run_argv(podman: str, box: Box) -> list[str]:
             f"--userns=keep-id:uid={WORKER_UID},gid={WORKER_UID}",
             "--user", f"{WORKER_UID}:{WORKER_UID}",
             "--cap-drop=ALL", "--security-opt", "no-new-privileges",
+            "--security-opt", f"seccomp={SECCOMP}",
             "--ipc=private", "--pid=private", "--uts=private",
             "--read-only", "--tmpfs", "/tmp:rw,exec,mode=1777",
             "--tmpfs", "/home/worker:rw,exec,mode=1777",
