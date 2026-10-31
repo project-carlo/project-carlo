@@ -24,6 +24,7 @@ import json
 import logging
 import tempfile
 from dataclasses import dataclass
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -34,7 +35,7 @@ from pdf_extract.extract_frontend_db import SNAPSHOT_NAME
 from pdf_extract.extract_frontend_db import extract as extract_snapshot
 from pdf_extract.fetch import fetch_bulletins
 from pdf_extract.process import process_bulletins
-from pdf_extract.report import build_report, render_markdown
+from pdf_extract.report import build_report, render_markdown, snapshot_context
 from pdf_extract.runs import finish_run, start_run
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, list_parishes
@@ -218,12 +219,22 @@ def run_weekly(
             model=model, concurrency=concurrency, run_id=run_id, slugs=slugs,
         )
 
+        # One date for both snapshots and the comparison, so a run that
+        # crosses midnight doesn't compare two different cutoffs.
+        as_of = _today()
         snapshot = out / SNAPSHOT_NAME
-        stages["snapshot"] = extract_snapshot(db_path, snapshot, keep_previous=False)
+        stages["snapshot"] = extract_snapshot(
+            db_path, snapshot, keep_previous=False, build_date=as_of,
+        )
         with tempfile.TemporaryDirectory() as tmp:
             before_snapshot = Path(tmp) / "before.snapshot"
-            extract_snapshot(before_db, before_snapshot, keep_previous=False)
-            verification = verify_frontend_snapshot(current=snapshot, previous=before_snapshot)
+            extract_snapshot(before_db, before_snapshot, keep_previous=False, build_date=as_of)
+            # The whole site is compared, not just the run's scope: a change
+            # outside it is just as visible.
+            verification = verify_frontend_snapshot(
+                current=snapshot, previous=before_snapshot, as_of=as_of,
+                **snapshot_context(before_db, db_path),
+            )
 
         report = build_report(
             run_id=run_id,
@@ -263,6 +274,10 @@ def run_weekly(
     }
 
 
+def _today() -> date:
+    return date.today()
+
+
 def _failed_report(run_id: str, stages: dict[str, Any]) -> dict[str, Any]:
     return {
         "run_id": run_id,
@@ -277,7 +292,12 @@ def _failed_report(run_id: str, stages: dict[str, Any]) -> dict[str, Any]:
             "events_removed": 0,
             "parishes_changed": 0,
             "parishes_with_new_bulletin": 0,
+            "cancellations_added": 0,
+            "cancellations_removed": 0,
+            "by_mode": {},
+            "onboarding": {"parishes": 0, "events": 0},
         },
+        "comparison": None,
         "attention": {
             "failures": [],
             "wrong_bulletins": [],
@@ -286,6 +306,8 @@ def _failed_report(run_id: str, stages: dict[str, Any]) -> dict[str, Any]:
             "stale_parishes": {},
             "dropped_to_zero": [],
             "big_drops": [],
+            "local_losses": [],
+            "onboarding": [],
         },
         "changes": [],
     }
