@@ -86,6 +86,7 @@ from pdf_extract.factory.workers import (
     CRASH,
     OK,
     PARTIAL,
+    SANDBOX,
     TIMEOUT,
     USAGE,
     Worker,
@@ -97,6 +98,10 @@ from pdf_extract.factory.workers import (
 
 LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
+# The sandbox failing to start a worker (no image, Podman or proxy): the job waits this
+# long, and the Run blocks after this many in a row. Never counted as a worker crash.
+SANDBOX_RETRY = timedelta(minutes=10)
+MAX_SANDBOX_FAILURES = 3
 MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
 FAILURE_RETRY = timedelta(minutes=5)
 # How long the usage check waits after the endpoint answers 429 Too Many Requests.
@@ -156,6 +161,7 @@ class Dispatcher:
         queue_path: Path | None = None,
         pull_data: Callable[[], None] | None = None,
         backup: Callable[[], str] | None = None,
+        cleanup: Callable[[], None] | None = None,
         push: bool = True,
     ) -> None:
         self.ledger, self.config, self.repo = ledger, config, repo
@@ -164,6 +170,7 @@ class Dispatcher:
         self.db_path, self.runs_dir, self.queue_path = db_path, runs_dir, queue_path
         self.pull_data, self.backup, self.push_enabled = pull_data, backup, push
         self.secrets = secrets or {}
+        self.cleanup = cleanup
 
     # ── The loop ────────────────────────────────────────────────────────────
     def run_forever(self) -> None:
@@ -179,7 +186,13 @@ class Dispatcher:
             time.sleep(pause)
 
     def _recover(self) -> None:
-        """A job still marked running when the dispatcher starts crashed with it."""
+        """A job still marked running when the dispatcher starts crashed with it. Its
+        worker's container, if any, goes first (`cleanup`)."""
+        if self.cleanup is not None:
+            try:
+                self.cleanup()
+            except Exception:  # a broken Podman fails the next attempt as SANDBOX
+                LOGGER.exception("removing leftover worker containers failed")
         for row in self.ledger.all("SELECT id FROM job WHERE status = ?", RUNNING):
             self.ledger.set_job(row["id"], status=QUEUED, pending_prompt=json.dumps(
                 {"kind": "resume", "prompt": None}))
@@ -202,8 +215,9 @@ class Dispatcher:
             if cooldown:  # no usage check to retry: the periodic readings take over again
                 self.ledger.set("usage_cooldown", None)
             return Outcome("idle")
-        if job["status"] == WAITING_USAGE and job["wait_until"] \
-                and not self.ledger.get("override_caps", False):
+        # A usage wait (which --override-caps skips), or a sandbox retry.
+        if job["wait_until"] and (job["status"] == QUEUED or (
+                job["status"] == WAITING_USAGE and not self.ledger.get("override_caps", False))):
             until = datetime.fromisoformat(job["wait_until"])
             if until > self.clock():
                 return Outcome("waiting", f"job {job['id']} until {job['wait_until']}", until)
@@ -604,6 +618,11 @@ class Dispatcher:
                             turns=job["turns"] + result.turns,
                             session_id=result.session_id or job["session_id"])
         job = self.ledger.job(job["id"])
+        key = f"sandbox_failures:{run['id']}"
+        if result.outcome == SANDBOX:
+            return self._sandbox_failed(run, job, key, result)
+        if self.ledger.get(key):
+            self.ledger.set(key, 0)
         if result.outcome == USAGE:
             until = result.resets_at or self.clock() + timedelta(minutes=30)
             # With a session, it continues where it stopped. Without one, the next attempt
@@ -632,6 +651,24 @@ class Dispatcher:
         assert result.outcome == OK
         self.ledger.set_job(job["id"], status=GATING, pending_prompt=None)
         return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
+
+    def _sandbox_failed(self, run: Any, job: Any, key: str, result: WorkerResult) -> Outcome:
+        """No worker ran: the job waits as it was (same prompt, same session) and tries
+        again; after MAX_SANDBOX_FAILURES in a row the Run blocks on an issue."""
+        failures = (self.ledger.get(key) or 0) + 1
+        self.ledger.set(key, failures)
+        if failures >= MAX_SANDBOX_FAILURES:
+            self.ledger.set(key, 0)
+            self.ledger.set_job(job["id"], status=QUEUED)
+            return self._block_run(run, job, f"The worker sandbox failed {failures} times in "
+                                   f"a row: {result.error}", suggestion="Fix the sandbox "
+                                   "(Podman, the worker image or the egress proxy; see "
+                                   "docs/factory-spec.md), then close this issue. Workers "
+                                   "never run on the host instead.")
+        until = self.clock() + SANDBOX_RETRY
+        self.ledger.set_job(job["id"], status=QUEUED, wait_until=until.isoformat())
+        return Outcome("waiting", f"job {job['id']}: sandbox failed ({result.error}); "
+                                  "trying again", until)
 
     def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
                      worktree: Path, account: Account | None, result: WorkerResult,

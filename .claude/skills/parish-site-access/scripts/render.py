@@ -87,12 +87,18 @@ def main() -> int:
     data = base64.b64encode(_pdf_bytes(args.pdf)).decode()
     from playwright.sync_api import sync_playwright
 
+    sys.path.insert(0, str(REPO / "src"))
+    from pdf_extract.browser import proxy_from_env
+
     channel = "chrome" if shutil.which("google-chrome") else None
     args.out.parent.mkdir(parents=True, exist_ok=True)
     images = []
     with sync_playwright() as p:
         # Headless is fine here: the page is local and loads nothing behind Cloudflare.
-        browser = p.chromium.launch(channel=channel, headless=True)
+        # Through the proxy when there is one (a factory sandbox reaches pdf.js only so).
+        proxy = proxy_from_env()
+        browser = p.chromium.launch(channel=channel, headless=True,
+                                    **({"proxy": proxy} if proxy else {}))
         try:
             page = browser.new_page()
             page.set_content(PAGE)

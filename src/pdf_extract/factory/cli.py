@@ -162,6 +162,7 @@ def _repo() -> Path:
 def _run(args: argparse.Namespace) -> Result:
     from pdf_extract.factory import forge
     from pdf_extract.factory.dispatcher import Dispatcher, run_command
+    from pdf_extract.factory.sandbox import Limits, backend
     from pdf_extract.factory.workers import SdkWorker, StubWorker, scenario_script
 
     # The dispatcher's log is what it did, tick by tick.
@@ -172,6 +173,7 @@ def _run(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
     secrets = load_secrets()  # .env, kept out of os.environ (secrets.py)
     stub = args.stub is not None
+    box = None
     if stub:
         worker: Any = StubWorker(scenario_script(Path(args.stub)))
         the_forge: Any = forge.LocalForge(STUB_DATA)
@@ -183,7 +185,10 @@ def _run(args: argparse.Namespace) -> Result:
         if not config.accounts:
             raise FactoryError("no accounts: list them in data/factory/local.yaml "
                                "(factory/local.example.yaml)")
-        worker = SdkWorker()
+        box = backend(config.worker_backend, _repo(), config.upstream,
+                      Limits(config.sandbox_memory, config.sandbox_cpus, config.sandbox_pids))
+        worker = SdkWorker(box)
+        ledger.set("worker_backend", box.name)
         the_forge = forge.GhForge(Path.cwd())
         config.owner = config.owner or forge.owner_login()
 
@@ -199,6 +204,7 @@ def _run(args: argparse.Namespace) -> Result:
         backup=None if stub else (lambda: backup_ledger(LEDGER_PATH, config.backup_prefix,
                                                         secrets)),
         push=not (stub or args.no_push), secrets=secrets,
+        cleanup=box.cleanup if box is not None else None,
     )
     if args.once:
         outcome = dispatcher.tick()

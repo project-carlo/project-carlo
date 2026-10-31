@@ -68,6 +68,12 @@ class Config:
     owner: str = ""
     worktrees_dir: Path = DATA / "worktrees"
     setup: list[str] = field(default_factory=lambda: ["uv sync --group dev"])
+    # Where workers run (docs/factory-sandbox-plan.md): `host`, or `sandbox` (a rootless
+    # Podman container per attempt, never falling back to the host), and its limits.
+    worker_backend: str = "host"
+    sandbox_memory: str = "6g"
+    sandbox_cpus: str = "4"
+    sandbox_pids: int = 2048
 
     @property
     def upstream(self) -> str:
@@ -96,4 +102,7 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
     ]
     if "worktrees_dir" in raw:
         raw["worktrees_dir"] = Path(str(raw["worktrees_dir"])).expanduser()
+    if raw.get("worker_backend", "host") not in ("host", "sandbox"):
+        raise FactoryError(f"worker_backend must be host or sandbox, not "
+                           f"{raw['worker_backend']!r}")
     return Config(**raw, accounts=accounts)

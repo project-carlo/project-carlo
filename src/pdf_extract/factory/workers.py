@@ -22,12 +22,13 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from pdf_extract.factory.config import Account
-from pdf_extract.factory.sandbox import Backend, HostBackend, Launch
+from pdf_extract.factory.sandbox import Backend, HostBackend, Launch, SandboxError
 from pdf_extract.factory.secrets import NO_DOTENV
 from pdf_extract.factory.stages import StageSpec, fill
 
-# How an attempt ended.
+# How an attempt ended. SANDBOX: the sandbox couldn't start it, so no worker ran.
 OK, CRASH, USAGE, TIMEOUT, PARTIAL = "ok", "crash", "usage", "timeout", "partial"
+SANDBOX = "sandbox"
 
 # Workers never commit, push, use gh or move HEAD; the dispatcher does.
 DENIED = [
@@ -188,11 +189,11 @@ class SdkWorker:
         self._start(request.session_id)
         launch: Launch | None = None
         try:
-            launch = self.backend.launch(f"{request.job_id}-{request.attempt_id or 0}",
-                                         request.worktree,
-                                         worker_env(request.account, request.secrets))
+            launch = self.backend.launch(request, worker_env(request.account, request.secrets))
             result = asyncio.run(asyncio.wait_for(
                 self._run(request, launch), timeout=request.spec.max_minutes * 60))
+        except SandboxError as exc:  # nothing started; never run it on the host instead
+            result = WorkerResult(SANDBOX, session_id=self._session, error=str(exc)[:2000])
         except TimeoutError:
             result = WorkerResult(TIMEOUT, session_id=self._session, error="over max_minutes",
                                   cost_usd=self._cost, turns=self._turns)

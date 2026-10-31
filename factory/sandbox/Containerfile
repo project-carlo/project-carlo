@@ -1,0 +1,53 @@
+# The factory's worker image (docs/factory-sandbox-plan.md §3.2).
+#
+# The dispatcher builds it itself, from origin/main's copy of this file, pyproject.toml
+# and uv.lock (never a Run's), tagged carlo-worker:<hash of the three>. Changing any of
+# them, or the pinned versions below, builds a new image on the next attempt.
+#
+# Everything is installed here, before a worker has read anything from the web. At run
+# time the Run's files are mounted at their host path, and `uv run` uses /opt/venv
+# (read-only) with the Run's src/ on PYTHONPATH.
+
+FROM ghcr.io/astral-sh/uv:python3.13-bookworm-slim
+
+ARG CLAUDE_CODE_VERSION=2.1.312
+ARG NODE_VERSION=22.12.0
+ARG PNPM_VERSION=12.7.0
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    UV_PROJECT_ENVIRONMENT=/opt/venv \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=never \
+    PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright \
+    PATH=/opt/node/bin:/opt/venv/bin:$PATH
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends ca-certificates curl xz-utils xvfb xauth \
+        ghostscript poppler-utils fonts-liberation \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Node, pnpm (workers run `pnpm diocese` and `pnpm seed`) and the pinned Claude CLI.
+RUN curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" \
+        | tar -xJ -C /opt \
+    && mv "/opt/node-v${NODE_VERSION}-linux-x64" /opt/node \
+    && npm install -g "pnpm@${PNPM_VERSION}" "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}" \
+    && npm cache clean --force
+
+# The project's dependencies, without the project: its src/ is the Run's, mounted later.
+WORKDIR /opt/carlo
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --group dev --no-install-project \
+    && uv run --no-sync playwright install --with-deps chromium chrome \
+    && rm -rf /root/.cache \
+    && chmod -R a-w /opt/venv /opt/ms-playwright
+
+# The unprivileged user. The dispatcher maps it to the owner's uid (--userns=keep-id).
+RUN useradd --uid 1000 --user-group --create-home --shell /bin/bash worker
+
+USER worker
+WORKDIR /home/worker
+ENV HOME=/home/worker \
+    UV_NO_SYNC=1 \
+    UV_CACHE_DIR=/tmp/uv-cache \
+    PNPM_HOME=/tmp/pnpm

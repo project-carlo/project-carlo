@@ -69,6 +69,7 @@ from pdf_extract.factory.usage import (
 )
 from pdf_extract.factory.workers import (
     OK,
+    SANDBOX,
     USAGE,
     StubAction,
     StubWorker,
@@ -940,6 +941,35 @@ def test_map_stages_get_no_secrets(env: Env) -> None:
     drive(d)
     assert env.worker.calls and all(r.secrets == {} for r in env.worker.calls)
     assert all(not s for s in env.command_secrets.values())
+
+
+def test_a_sandbox_failure_waits_then_blocks_the_run_without_counting_a_crash(
+        env: Env) -> None:
+    def broken(req: WorkerRequest, attempt: int) -> StubAction:
+        return StubAction(outcome=SANDBOX)
+
+    d = env.dispatcher(map_script(survey=broken))
+    outcome = d.tick()
+    assert outcome.action == "waiting" and "sandbox failed" in outcome.detail
+    job = env.ledger.jobs(map_run(env)["id"])[0]
+    assert job["status"] == "queued" and job["crashes"] == 0 and job["wait_until"]
+    assert d.tick().action == "waiting" and len(env.worker.calls) == 1  # waits it out
+    for _ in range(2):
+        env.now += timedelta(minutes=11)
+        outcome = d.tick()
+    assert outcome.action == "blocked" and "sandbox failed 3 times" in outcome.detail
+    assert map_run(env)["status"] == BLOCKED and len(env.worker.calls) == 3
+    assert env.ledger.job(job["id"])["crashes"] == 0
+
+
+def test_restart_removes_leftover_containers_before_resuming(env: Env) -> None:
+    seen: list[str] = []
+    d = env.dispatcher(map_script(), cleanup=lambda: seen.append("cleanup"))
+    d.tick()
+    env.ledger.set_job(env.ledger.jobs(map_run(env)["id"])[-1]["id"], status=RUNNING)
+    d._recover()
+    assert seen == ["cleanup"]
+    assert env.ledger.jobs(map_run(env)["id"])[-1]["status"] == "queued"
 
 
 def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
