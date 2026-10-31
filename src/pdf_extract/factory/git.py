@@ -57,12 +57,18 @@ def ensure_worktree(repo: Path, path: Path, branch: str, *, remote: str, base: s
     path.parent.mkdir(parents=True, exist_ok=True)
     url = git(repo, "remote", "get-url", remote).strip()
     git(path.parent, "clone", "--quiet", "--no-checkout", "--origin", remote,
-        "--reference-if-able", str(repo), "--dissociate", url, str(path))
+        "--reference-if-able", str(common_dir(repo)), "--dissociate", url, str(path))
     if ok(path, "rev-parse", "--verify", "--quiet", f"refs/remotes/{remote}/{branch}"):
         git(path, "checkout", "--quiet", "-b", branch, f"{remote}/{branch}")
     else:
         git(path, "checkout", "--quiet", "--no-track", "-b", branch, base)
     return True
+
+
+def common_dir(path: Path) -> Path:
+    """The repository's own git folder, also from a linked worktree (which clone's
+    --reference can't take)."""
+    return Path(git(path, "rev-parse", "--path-format=absolute", "--git-common-dir").strip())
 
 
 def is_linked(path: Path) -> bool:
@@ -78,7 +84,7 @@ def make_standalone(path: Path, remote: str) -> None:
     """
     if not is_linked(path):
         return
-    common = Path(git(path, "rev-parse", "--path-format=absolute", "--git-common-dir").strip())
+    common = common_dir(path)
     url = git(path, "remote", "get-url", remote).strip()
     branch = git(path, "branch", "--show-current").strip()
     sha = head(path)
