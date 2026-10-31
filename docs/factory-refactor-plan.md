@@ -3,7 +3,10 @@
 Status: plan only, written 2026-10-31 from the code at `40ae1478` (main) and the live
 factory in `~/carlo-factory` (Wilmington, Philadelphia, Camden and Trenton in review;
 Metuchen active, 6 of 29 batches mapped; six more dioceses queued). Reviewed once by an
-agent against the code and the ledger; its corrections are folded in.
+agent against the code and the ledger; its corrections are folded in. Revised the same
+day after a second review: the fixes ship first as Phase 0, the stage modules wait until
+a stage needs one, and §4 covers the case of new spec keys reaching a dispatcher that
+hasn't restarted. Line numbers are from `40ae1478`.
 
 ## 1. Goals and decisions
 
@@ -24,10 +27,15 @@ Decided (owner, 2026-10-31):
   sizes; add a hard size budget only after one Run's data (Phase 3).
 - **Rules settled:** `integrate` may condense it (merge duplicates, tighten wording),
   keeping each rule's decision and attribution; it never changes what a rule decides and
-  flags apparent contradictions.
-- **Order:** this refactor's Phases 1–4 land before the sandbox plan
-  (`docs/factory-sandbox-plan.md`, #168) changes the dispatcher, so the sandbox code goes
-  into the new `attempts.py`. One docs rewrite covers both (Phase 5).
+  flags apparent contradictions. It lists every rule it merged or reworded in its
+  handoff, and the Run's PR shows the list.
+- **Order:** Phases 0–4 land before the sandbox plan (`docs/factory-sandbox-plan.md`,
+  #168) changes the dispatcher. Phase 4 is only the mechanical split, so the sandbox code
+  goes into the new `attempts.py` without waiting for the stage modules. One docs rewrite
+  covers both (Phase 5).
+- **Stage modules come later, one stage at a time** (§3.2, *Later*): a stage gets its
+  module when it is next changed for its own reasons. Seed and seed-review wait until a
+  seed Run has run live.
 
 Taken on the reviewer's advice (say if you disagree):
 
@@ -66,7 +74,10 @@ and precedents; issues, answers, follow-up Runs, merges, readiness and backups.
 - **Version skew.** Stage specs and prompts are read from the Run's worktree; the Python
   comes from `~/carlo-factory`. `load_stage` runs *before* `_merge_main`
   (`dispatcher.py:333` vs `:337`), so the first job of each stage runs with the
-  pre-merge stage spec (model, tools, writes) but the post-merge prompt file.
+  pre-merge stage spec (model, tools, writes) but the post-merge prompt file. If the
+  merge widened the stage's `writes`, the diff-scope gate reverts that job's new writes.
+- **Strict specs.** `load_stage` passes the YAML straight to `StageSpec(**raw)`, so a key
+  the running dispatcher doesn't know is a `TypeError`, and the stage can't start (§4).
 
 ### 2.4 What a worker is given is spread over many layers
 
@@ -150,7 +161,7 @@ src/pdf_extract/factory/
   housekeeping.py              # merged Runs, retire, readiness, backups
   render.py                    # every piece of worker-facing text code builds
   spec.py                      # stage spec loading (today's stages.py)
-  stages/                      # behaviour of the stages that have any (§3.2)
+  stages/                      # later, one stage at a time (§3.2)
     map.py  seed.py  survey_review.py  seed_review.py  code.py
   plan.py  ledger.py  git.py  forge.py  playbook.py  config.py  cli.py
   metrics/                     # quota, tokens, readings, attempt_meta, quota reports
@@ -164,9 +175,12 @@ writes nothing.
 ### 3.2 Stage behaviour
 
 Only five stages have behaviour beyond "run the agent, run the gates, commit": map,
-seed, survey-review, seed-review, and the code stages (promote, pr). Each gets a module of
-plain functions; a stage without a module gets the defaults. The hooks, from today's
-branches in `dispatcher.py`:
+seed, survey-review, seed-review, and the code stages (promote, pr). This is where their
+branches in `dispatcher.py` end up, not one change: the split in Phase 4 leaves them in
+`engine.py`, and a stage moves into a module of plain functions when it is next changed
+for its own reasons (*Later*, §5). A stage without a module gets the defaults. Several
+hooks have a single user today, so a hook is added with the first stage that needs it,
+not all at once. The hooks, from today's branches:
 
 | Hook | Default | Who overrides it (today's code) |
 |---|---|---|
@@ -184,7 +198,8 @@ branches in `dispatcher.py`:
 
 `on_done` gets an engine services object (send back or exhaust another job, run a command,
 commit), because reviewers act on the job they reviewed. Seed stages have never run live
-(no seed Runs in the ledger): their part of the refactor rests on the stub tests.
+(no seed Runs in the ledger), so their behaviour isn't moved until a seed Run has shown
+what it needs; until then the stub tests are the only check on it.
 
 ### 3.3 Where a change goes, and when it takes effect
 
@@ -207,8 +222,13 @@ This table moves into `docs/factory.md` (Phase 5).
 ### 3.4 Seeing what a worker gets
 
 - `stages/<s>.yaml` gets `reads:`, the files the worker must read first, replacing
-  "read X first" prose. Entries may name a section:
+  "read X first" prose. Entries may name a section by its heading:
   `data/dioceses/README.md#Fields`. The header renders the list.
+- A section read is a file, not an instruction: at attempt start the engine writes the
+  named sections of each file, in order, to `scratch/<run>/<job>/reads/<file>.md`, and
+  the header lists that path instead of the whole file. A whole-file entry is listed by
+  its own path. A section name that isn't a heading in the file fails the job before the
+  worker starts, and a test checks every stage's `reads:` against the files on main.
 - Small, computed context (playbook sections, precedents, leads) is inlined by code.
   Large or bulky context (the README sections, reconcile's flags and leads list) is a
   read or a file in the job's scratch folder.
@@ -219,7 +239,7 @@ This table moves into `docs/factory.md` (Phase 5).
   (stage files from its `commit_sha`).
 - Golden tests cover the text code renders (header, each stage's input from a fixture
   Run, the schema, the resume prompts), not `prompts/*.md`, so a prompt edit isn't shown
-  twice in its PR.
+  twice in its PR. One command rewrites them after an intended change.
 
 ### 3.5 One home per rule
 
@@ -238,40 +258,58 @@ main at every stage start (each integrate counts), so a change reaches it within
 
 - The dispatcher's Python works with the stage specs and prompts of a Run worktree that
   hasn't merged the change yet. New spec keys default to today's behaviour.
+- The other direction matters too: a running dispatcher merges main into the Run at the
+  next stage start, before anyone has pulled `~/carlo-factory`. `StageSpec` rejects
+  unknown keys, so a spec that uses a new key (`reads:`, `deny:`, the sandbox plan's
+  `secrets:`) would stop every stage of that Run from loading. A new key is therefore
+  added to `StageSpec` in an earlier PR, already pulled and restarted, than the first
+  spec that uses it. Phase 0 adds `reads` and `deny` this way.
 - No `factory/` file moves or renames. (`_record_meta` hardcodes the spec path,
   `dispatcher.py:648`; `load_stage` would fail in an old worktree, which counts as a
   transient failure and blocks the Run after three.)
-- Phase 1 moves the merge before `load_stage`, so a job always runs with the spec and
+- Phase 0 moves the merge before `load_stage`, so a job always runs with the spec and
   prompt of the same commit.
-- Python changes: `pnpm factory pause`, wait for the running job, pull `~/carlo-factory`,
-  restart the service, `pnpm factory resume`.
+- Python changes: `pnpm factory pause`, wait for the running job, merge the PR, pull
+  `~/carlo-factory`, restart the service, `pnpm factory resume`. Merging while paused
+  matters for a PR that changes both Python and `factory/` files (Phases 2 and 3): no
+  stage starts between the merge and the restart.
 
 ## 5. Phases
 
-Each phase is one PR (Phase 4 is two), passes `uv run pytest` and a stub Run
-(`pnpm factory run --stub`), and follows §4.
+Each phase is one PR, passes `uv run pytest` and a stub Run (`pnpm factory run --stub`),
+and follows §4.
 
-### Phase 1: render, compatibility, settings (no worker-visible change)
+### Phase 0: fixes (no worker-visible change)
+
+Small and independent of the rest, so it can land now.
+
+- Merge main before loading the stage spec.
+- `config.yaml`: `max_crashes`, `max_failures`, `failure_retry_minutes`,
+  `usage_cooldown_minutes`, `max_continues`, defaults as today. Remove
+  `QUOTA_SETTLE_SECONDS`'s duplicate and the unused `max_workers`.
+- `StageSpec` gains `reads` and `deny`, both empty by default and unused until Phase 2
+  (§4).
+
+### Phase 1: render and preview (no worker-visible change)
 
 - `render.py`: move the header, inputs and resume prompts out of `inputs.py` and
-  `dispatcher.py` unchanged. Move lead claiming (`inputs.py:163-167`) into the engine,
-  before rendering, keeping a fresh worker's leads stable.
+  `dispatcher.py` unchanged.
+- Move lead claiming (`inputs.py:163-167`) out of rendering into the engine, at attempt
+  start. This is a behaviour change, not a move, so it gets its own tests: the preview
+  claims nothing; a fresh attempt gets the leads its first attempt got, plus any added
+  since (as today); a job that crashes before its first attempt starts claims nothing.
 - `prompt` command and the `inspect --prompt` breakdown (§3.4); golden tests.
 - The config fingerprint adds a hash of the rendered header and input template, the
   skills' contents, `reads:` and the dispatcher's commit, so before/after comparisons see
   code-built text too (today it covers only the spec, prompt file and skill names,
   `quota.py:448`).
-- Merge main before loading the stage spec.
-- `config.yaml`: `max_crashes`, `max_failures`, `failure_retry_minutes`,
-  `usage_cooldown_minutes`, `max_continues`, defaults as today. Remove
-  `QUOTA_SETTLE_SECONDS`'s duplicate and the unused `max_workers`.
 - Done when `pnpm factory prompt map --run metuchen-map-1` prints the next map job's
   input and leaves the ledger unchanged, and golden tests pass on unchanged output.
 
 ### Phase 2: prompt diet (changes what workers read)
 
-- Add `reads:` (default empty) and `deny:` (default empty, passed to `disallowed_tools`
-  alongside `DENIED`).
+- Use the `reads:` and `deny:` keys Phase 0 added: section reads as in §3.4, and `deny:`
+  passed to `disallowed_tools` alongside `DENIED`.
 - Map reads only the README's *Fields*, *Structured writes and bounded research*, *Traps*
   and *The explanation* (~14 KB instead of 34 KB); the playbook sections it needs
   (*Bulletin publishers here*, *Rules settled*, *New lessons*) are inlined, and it stops
@@ -291,12 +329,16 @@ Each phase is one PR (Phase 4 is two), passes `uv run pytest` and a stub Run
 - Expected: map instructions from ~17–28k tokens to ~10–14k; ~10% less context per turn.
   Measure the instruction tokens from the `prompt` command's sizes; guard against
   regressions with the send-back rate and gate failures on the next batches (cost per
-  batch varies too much between dioceses to compare).
+  batch varies too much between dioceses to compare). Those rates are noisy, so also
+  review the first three map jobs after the change with the foreman skill: did workers
+  still `cat` the whole README or `diocese.md`, and did they make a mistake the removed
+  text used to prevent?
 
 ### Phase 3: keep the playbook short (changes integrate and map)
 
 - Rewrite integrate's brief: the playbook is a guide, not a log; one parish's detail is
-  dropped (it is in the records); it may condense *Rules settled* as decided in §1.
+  dropped (it is in the records); it may condense *Rules settled* as decided in §1, and
+  its handoff lists each rule it merged or reworded, which the Run's PR shows.
 - Integrate's input gives each section's current size and a target (publishers ~8 KB,
   rules ~6 KB). Reconcile's summary and the PR report the final sizes.
 - Tighten map's lesson guidance: a publisher's method or a decision for several records,
@@ -306,22 +348,20 @@ Each phase is one PR (Phase 4 is two), passes `uv run pytest` and a stub Run
   when *New lessons* is non-empty.
 - After the next full Run: decide on a hard budget gate from its sizes.
 
-### Phase 4: stage modules and the engine split (no worker-visible change)
+### Phase 4: the engine split (no worker-visible change)
 
-- Commit 1, mechanical moves: split `dispatcher.py` into `engine.py`, `attempts.py`,
+- Mechanical moves only: split `dispatcher.py` into `engine.py`, `attempts.py`,
   `accounts.py`, `answers.py` and `housekeeping.py`; rename `stages.py` to `spec.py`.
-  `Dispatcher` stays as a thin facade so `cli.py` changes little.
-- Commit 2: the stage modules and hooks (§3.2); `PARKING_STAGES`, `MODELS`,
-  `default_handoff` and `work_units` move into them.
+  `Dispatcher` stays as a thin facade so `cli.py` changes little. The stage branches stay
+  in `engine.py`.
 - Ledger keys (`approved:<job>`, `failures:<job>`, `set_up:<run>`, action names) keep
   their names, so a ledger written before the refactor resumes after it.
 - Tests that reach into the dispatcher (`test_factory.py:874` `_seed_verdicts`;
   `:1623`, `:1829` `USAGE_COOLDOWN`, `AFTER_READING_WAIT`) are updated; add a stub
   scenario for a whole seed Run if the suite lacks one.
-- Done when no stage name appears in `engine.py`.
 
 Then the sandbox plan's dispatcher phases (#168), with their code in `attempts.py` and
-their per-stage `secrets:` key in the stage specs.
+their per-stage `secrets:` key added to `StageSpec` one PR before any spec uses it (§4).
 
 ### Phase 5: metrics package and docs
 
@@ -331,3 +371,11 @@ their per-stage `secrets:` key in the stage specs.
   `docs/factory-spec.md` with `docs/factory.md` (~150 lines: goal, pipeline, vocabulary,
   §3.3's table, how to run it) and `docs/factory-quota.md` (the measurement design).
   Update the pointers in the foreman and explore-diocese skills.
+
+### Later: stage modules, one at a time
+
+Not a phase. When a stage is next changed for its own reasons, its branches move out of
+`engine.py` into `stages/<s>.py`, with only the hooks from §3.2 it needs, plus its share
+of `PARKING_STAGES`, `MODELS`, `default_handoff` and `work_units`. Map and survey-review
+are the likely first. Seed and seed-review wait until a seed Run has run live. The goal,
+reached gradually, is no stage name in `engine.py`.
