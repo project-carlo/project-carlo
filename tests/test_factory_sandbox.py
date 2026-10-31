@@ -296,7 +296,8 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
     for flag in ("--rm", "-i", "--init", "--cap-drop=ALL", "no-new-privileges", "--read-only",
                  "--ipc=private", "--pid=private", "--userns=keep-id:uid=1000,gid=1000",
                  "--label carlo.factory=1", f"--network {NETWORK}", "--pids-limit 2048",
-                 "--memory 6g", f"--workdir {work}"):
+                 "--memory 6g", f"--workdir {work}", "--shm-size 1g",
+                 "--tmpfs /home/worker/.claude:rw,mode=1777"):
         assert flag in joined, flag
     assert "--privileged" not in joined and "host" not in argv
     # The private copy, without .git, its tools read-only on top; never the Run's worktree.

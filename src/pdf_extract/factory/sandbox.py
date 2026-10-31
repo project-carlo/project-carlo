@@ -236,6 +236,10 @@ def run_argv(podman: str, box: Box) -> list[str]:
             "--ipc=private", "--pid=private", "--uts=private",
             "--read-only", "--tmpfs", "/tmp:rw,exec,mode=1777",
             "--tmpfs", "/home/worker:rw,exec,mode=1777",
+            # Its own, so the folder holding the sessions mount isn't root's: the CLI
+            # keeps other state in ~/.claude.
+            "--tmpfs", f"{WORKER_PROJECTS.parent}:rw,mode=1777",
+            "--shm-size", "1g",  # Chrome crashes in the default 64 MB
             "--memory", box.limits.memory, "--cpus", box.limits.cpus,
             "--pids-limit", str(box.limits.pids),
             "--network", NETWORK, "--workdir", str(box.workdir)]
