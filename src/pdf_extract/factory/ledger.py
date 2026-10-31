@@ -14,7 +14,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.factory.config import LEDGER_PATH
+from pdf_extract.factory.config import LEDGER_PATH, FactoryError
 
 # Run states and kinds.
 ACTIVE, BLOCKED, IN_REVIEW, MERGED = "active", "blocked", "in_review", "merged"
@@ -256,9 +256,17 @@ def when(value: Any) -> datetime | None:
 class Ledger:
     """A connection to the ledger, with the queries the dispatcher and reports share."""
 
-    def __init__(self, path: Path = LEDGER_PATH) -> None:
-        path.parent.mkdir(parents=True, exist_ok=True)
+    def __init__(self, path: Path = LEDGER_PATH, *, read_only: bool = False) -> None:
         self.path = path
+        if read_only:
+            # For previews: SQLite refuses any write, and nothing is created or migrated.
+            if not path.exists():
+                raise FactoryError(f"no ledger at {path}")
+            self.conn = sqlite3.connect(f"{path.resolve().as_uri()}?mode=ro", uri=True,
+                                        isolation_level=None, timeout=30)
+            self.conn.row_factory = sqlite3.Row
+            return
+        path.parent.mkdir(parents=True, exist_ok=True)
         self.conn = sqlite3.connect(path, isolation_level=None, timeout=30)
         self.conn.row_factory = sqlite3.Row
         self.conn.execute("PRAGMA journal_mode = WAL")

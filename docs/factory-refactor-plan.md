@@ -292,6 +292,22 @@ Done, in the PR that adds this plan. Small and independent of the rest, so it ca
 
 ### Phase 1: render and preview (no worker-visible change)
 
+Built in the PR after #183. Where it differs from the bullets below:
+
+- `render.py` also took the handoff schema text (from `handoff.py`), the job's placeholder
+  values and the choice of the next attempt's prompt (from the dispatcher). The texts of
+  gate and handoff problems stay where they are until Phase 4 moves that code anyway.
+- Leads are claimed in the same transaction that records the attempt, so an attempt
+  never exists without its leads, nor the reverse.
+- The fingerprint hashes `render.py`'s source for the code-built text, rather than a
+  rendering with dummy values. For `reads:` it hashes each read's contents (the key
+  itself is already in the spec text). Without the new part, as for backfilled attempts,
+  the hash is the same as before.
+- `prompt` previews the Run's unfinished job of that stage if there is one, else a new job
+  with the inputs the plan would give it (the next batch, even when `integrate` is due
+  first), or `--input`. `inspect --prompt` takes `--attempt N`.
+- Token sizes are estimates (four characters a token); there is no tokenizer here.
+
 - `render.py`: move the header, inputs and resume prompts out of `inputs.py` and
   `dispatcher.py` unchanged.
 - Move lead claiming (`inputs.py:163-167`) out of rendering into the engine, at attempt

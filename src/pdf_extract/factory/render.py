@@ -1,25 +1,48 @@
-"""The prompt each job starts from, built in code: a common header, then the stage's input.
+"""Every piece of worker-facing text the factory builds in code.
 
 The stage spec's prompt file (an agent definition or `factory/prompts/<stage>.md`) is the
-system prompt; this is the first user message. Resumed attempts get a short message
-instead: the problems a send-back found, your answer to an issue, or "continue".
+system prompt; a job's first message is a common header, then the stage's input. Resumed
+attempts get a short message instead: the problems a send-back found, your answer to an
+issue, or "continue".
+
+Rendering is pure: it reads the ledger and the Run's files and writes nothing, so
+`pnpm factory prompt` can preview a job that hasn't run. The leads a map input shows are
+claimed by the dispatcher when the attempt starts (`leads_shown`).
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
+import re
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import playbook
-from pdf_extract.factory.handoff import PARKING_STAGES, schema_text
+from pdf_extract.factory.config import FactoryError
+from pdf_extract.factory.handoff import PARKING_STAGES
 from pdf_extract.factory.ledger import LISTED, Ledger
 from pdf_extract.factory.plan import describe_entry, diocese_dir, ordered_batches
 from pdf_extract.factory.stages import StageSpec, fill
+from pdf_extract.factory.workers import strip_frontmatter
+
+SKILLS_DIR = Path(".claude") / "skills"
 
 
 def handoff_rel(run_id: str, job_name: str) -> str:
     return f"scratch/{run_id}/{job_name}/handoff.json"
+
+
+def job_values(ledger: Ledger, run: Any, job: Any) -> dict[str, str]:
+    """The placeholders a stage spec's `writes` and `gates` may use."""
+    data = json.loads(job["input"])
+    approved = ledger.get(f"approved:{job['id']}", [])
+    return {
+        "diocese": run["diocese"], "run": run["id"], "job": job["name"],
+        "branch": run["branch"], "parish": data.get("parish", ""),
+        "parishes": " ".join(data.get("parishes") or []), "approved": " ".join(approved),
+    }
 
 
 def header(run: Any, job: Any, spec: StageSpec, values: dict[str, str]) -> str:
@@ -74,6 +97,38 @@ def _flags_help(stage: str) -> str:
   (README, *What to flag*): a church left in `open/`, a bulletin `fetch` can't collect
   (`fetch_gap`), a check blocked for now (`research` with a retry trigger), or an address
   you chose between sources."""
+
+
+def schema_text(stage: str) -> str:
+    """The handoff format, as the job input shows it to a worker."""
+    base = {
+        "status": "done | partial | blocked",
+        "summary": "one or two sentences",
+        "flags": [{
+            "severity": "blocking | advisory", "scope": "parish | run",
+            "subject": "roster:id or parish slug", "question": "what needs deciding",
+            "evidence": ["path#section or URL with date"],
+            "suggestion": "what you would do",
+        }],
+        "leads": [{"touches": "batch id or roster:id", "note": "..."}],
+        "lessons": ["reusable publisher or rule lesson"],
+    }
+    if stage == "survey-review":
+        base |= {"verdict": "approve | send_back", "problems": ["..."],
+                 "rules": ["each proposed rule you accept, as written"]}
+    if stage == "reconcile":
+        base |= {"settled": [{"flag": "the id from your input, e.g. 12",
+                              "how": "what you did, or what settled it, in one line"}]}
+    if stage == "seed-review":
+        base |= {"seeds": [{
+            "parish": "slug", "verdict": "approve | send_back",
+            "answers": [{"slot": "slot id", "question": "...",
+                         "choice": "option index | dropped | edited",
+                         "entry": "only for edited", "basis": "rule | precedent | judgment",
+                         "why": "..."}],
+            "problems": ["..."],
+        }]}
+    return json.dumps(base, indent=1)
 
 
 def _lines(items: list[str]) -> str:
@@ -164,17 +219,28 @@ They answered: {inputs['answer']}
 """
 
 
+def leads_shown(ledger: Ledger, run: Any, job: Any) -> list[Any]:
+    """The leads a map job's input shows: those about its batch or entries that no other
+    job has claimed. A fresh attempt gets the leads its first attempt claimed again, plus
+    any added since. Other stages show none."""
+    if job["stage"] != "map":
+        return []
+    inputs = json.loads(job["input"])
+    entries = inputs.get("entries") or next(
+        (b.get("entries") or [] for b in ordered_batches(Path(run["worktree"]), run["diocese"])
+         if b["id"] == inputs.get("batch")), [])
+    touches = {inputs.get("batch"), *entries}
+    leads = ledger.all("SELECT * FROM lead WHERE run_id = ? AND (used_by IS NULL OR "
+                       "used_by = ?) ORDER BY id", run["id"], job["id"])
+    return [r for r in leads if r["touches"] in touches]
+
+
 def _map_input(ledger: Ledger, run: Any, job: Any, inputs: dict[str, Any]) -> str:
     worktree, diocese, run_id = Path(run["worktree"]), run["diocese"], run["id"]
     batch = next((b for b in ordered_batches(worktree, diocese)
                   if b["id"] == inputs.get("batch")), {})
     entries = inputs.get("entries") or batch.get("entries") or []
-    touches = {inputs.get("batch"), *entries}
-    leads = ledger.all("SELECT * FROM lead WHERE run_id = ? AND (used_by IS NULL OR "
-                       "used_by = ?)", run_id, job["id"])  # the same leads for a fresh worker
-    mine = [r for r in leads if r["touches"] in touches]
-    for r in mine:
-        ledger.run_sql("UPDATE lead SET used_by = ? WHERE id = ?", job["id"], r["id"])
+    mine = leads_shown(ledger, run, job)
     scope = ("only these entries, set aside earlier for a question" if inputs.get("answer")
              else f"batch `{batch.get('id', inputs.get('batch'))}`: {batch.get('name', '')}")
     return f"""\
@@ -247,3 +313,133 @@ def answer_prompt(question: str, answer: str, handoff: str, scope: str) -> str:
     return (f"The owner answered the question you raised about {scope}.\n\nYou asked: "
             f"{question}\nThey answered: {answer}\n\nFinish that work now, following the "
             f"answer, and write a new handoff at `{handoff}`.")
+
+
+def reviewer_send_back_prompt(problems: list[str], handoff: str) -> str:
+    return "A reviewer sent your work back.\n\n" + send_back_prompt(problems, handoff)
+
+
+def next_prompt(ledger: Ledger, run: Any, job: Any, spec: StageSpec,
+                values: dict[str, str]) -> tuple[str, str, str | None]:
+    """The next attempt's kind, its prompt and the session it resumes."""
+    rel = handoff_rel(run["id"], job["name"])
+    pending = json.loads(job["pending_prompt"] or "null")
+    if pending is None:
+        if job["resumes_job"]:
+            original = ledger.job(job["resumes_job"])
+            data = json.loads(job["input"])
+            if original["session_id"] and original["run_id"] == run["id"]:
+                return "answer", answer_prompt(
+                    data.get("question", ""), data.get("answer", ""), rel,
+                    data.get("subject", "the parish you set aside")), original["session_id"]
+        return "start", job_input(ledger, run, job, spec, values), None
+    if not job["session_id"]:
+        # A fresh worker needs the whole job input, whatever the last attempt was told.
+        prompt = job_input(ledger, run, job, spec, values)
+        extra = pending.get("prompt")
+        return "fresh", prompt + (f"\n\n{extra}" if extra else ""), None
+    kind = pending["kind"]
+    prompt = pending.get("prompt") or (continue_prompt(rel) if kind != "resume"
+                                       else resume_prompt(rel))
+    return kind, prompt, job["session_id"]
+
+
+# ── What a worker is given, and its size ────────────────────────────────────
+TextOf = Callable[[str], str | None]  # a repo-relative path's text, None if it's missing
+
+
+def tokens(text: str) -> int:
+    """A rough token count (about four characters a token), for comparing sizes."""
+    return round(len(text) / 4)
+
+
+def skill_path(name: str) -> str:
+    return (SKILLS_DIR / name / "SKILL.md").as_posix()
+
+
+def read_entry(text_of: TextOf, entry: str) -> str:
+    """A `reads:` entry's text: a whole file (`path`), or one section (`path#Heading`), from
+    its heading to the next heading of its level or above."""
+    path, _, heading = entry.partition("#")
+    text = text_of(path)
+    if text is None:
+        raise FactoryError(f"reads: no file {path}")
+    if not heading:
+        return text
+    lines = text.splitlines()
+    start = next((i for i, line in enumerate(lines)
+                  if re.fullmatch(r"#+\s+" + re.escape(heading.strip()) + r"\s*", line)), None)
+    if start is None:
+        raise FactoryError(f"reads: {path} has no heading {heading!r}")
+    level = len(lines[start]) - len(lines[start].lstrip("#"))
+    end = next((i for i in range(start + 1, len(lines))
+                if (m := re.match(r"(#+)\s", lines[i])) and len(m.group(1)) <= level),
+               len(lines))
+    return "\n".join(lines[start:end]).strip() + "\n"
+
+
+def message_label(kind: str) -> str:
+    """What an attempt's prompt is: a job's first message, or a resumed session's next."""
+    return "first message" if kind in ("start", "fresh") else f"{kind} message"
+
+
+def given(spec: StageSpec, message: str, text_of: TextOf,
+          label: str = "first message") -> list[dict[str, Any]]:
+    """Each part of what a worker is given, with its size: the appended system prompt, the
+    attempt's message, each skill it may load and each file it must read."""
+    def part(kind: str, source: str | None, text: str | None, **extra: Any) -> dict[str, Any]:
+        return {"part": kind, "source": source, "missing": text is None,
+                "chars": len(text or ""), "tokens": tokens(text or ""), **extra}
+
+    prompt = text_of(spec.prompt) if spec.prompt else ""
+    parts = [part("system prompt", spec.prompt,
+                  strip_frontmatter(prompt) if prompt is not None else None),
+             part(label, None, message)]
+    for name in spec.skills:
+        parts.append(part("skill", skill_path(name), text_of(skill_path(name)), name=name))
+    for entry in spec.reads:
+        try:
+            parts.append(part("read", entry, read_entry(text_of, entry)))
+        except FactoryError as exc:
+            parts.append(part("read", entry, None, error=str(exc)))
+    return parts
+
+
+def _digest(*parts: bytes | str) -> str:
+    h = hashlib.sha256()
+    for p in parts:
+        h.update(p.encode() if isinstance(p, str) else p)
+        h.update(b"\0")
+    return h.hexdigest()[:12]
+
+
+def context_hashes(worktree: Path, spec: StageSpec) -> dict[str, Any]:
+    """For the attempt's config fingerprint, what the spec and prompt file don't show: the
+    code that builds the first message (this module), the skills' contents and the reads'."""
+    def skill(name: str) -> str:
+        folder = worktree / SKILLS_DIR / name
+        files = sorted(p for p in folder.rglob("*") if p.is_file()
+                       and "__pycache__" not in p.parts and p.suffix != ".pyc")
+        return _digest(*[x for p in files for x in (p.relative_to(folder).as_posix(),
+                                                    p.read_bytes())]) if files else "missing"
+
+    def read(entry: str) -> str:
+        try:
+            return _digest(read_entry(lambda p: _text(worktree / p), entry))
+        except FactoryError:
+            return "missing"
+
+    return {"render": _digest(Path(__file__).read_bytes()),
+            "skills": {name: skill(name) for name in spec.skills},
+            "reads": {entry: read(entry) for entry in spec.reads}}
+
+
+def _text(path: Path) -> str | None:
+    try:
+        return path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError):
+        return None
+
+
+def worktree_text(worktree: Path) -> TextOf:
+    return lambda rel: _text(worktree / rel)

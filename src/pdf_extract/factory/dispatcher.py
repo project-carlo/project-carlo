@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import git, inputs, playbook, readiness, report
+from pdf_extract.factory import git, playbook, readiness, render, report
 from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.config import QUEUE_PATH, RUNS_DIR, Account, Config, FactoryError
 from pdf_extract.factory.forge import Forge
@@ -69,7 +69,15 @@ from pdf_extract.factory.plan import (
     seed_status,
 )
 from pdf_extract.factory.quota import fingerprint, work_units
-from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
+from pdf_extract.factory.stages import (
+    CODE,
+    StageSpec,
+    fill,
+    in_scope,
+    load_stage,
+    placeholders,
+    spec_path,
+)
 from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
 from pdf_extract.factory.usage import (
     Fetch,
@@ -120,6 +128,14 @@ def main_queue(repo: Path, upstream: str) -> list[dict[str, Any]]:
     return json.loads(text)
 
 
+def code_commit() -> str | None:
+    """The commit of the checkout this dispatcher's code was loaded from, if it is one."""
+    try:
+        return git.head(Path(__file__).resolve().parent)
+    except (FactoryError, OSError):
+        return None
+
+
 def run_command(command: str, cwd: Path, timeout: int = 3600) -> tuple[bool, str]:
     try:
         proc = subprocess.run(command, shell=True, cwd=cwd, capture_output=True, text=True,
@@ -153,6 +169,7 @@ class Dispatcher:
         self.clock, self.commands = clock, commands
         self.db_path, self.runs_dir, self.queue_path = db_path, runs_dir, queue_path
         self.pull_data, self.backup, self.push_enabled = pull_data, backup, push
+        self.code_commit = code_commit()
 
     # ── The loop ────────────────────────────────────────────────────────────
     def run_forever(self) -> None:
@@ -313,13 +330,7 @@ class Dispatcher:
         return path
 
     def values(self, run: Any, job: Any) -> dict[str, str]:
-        data = json.loads(job["input"])
-        approved = self.ledger.get(f"approved:{job['id']}", [])
-        return {
-            "diocese": run["diocese"], "run": run["id"], "job": job["name"],
-            "branch": run["branch"], "parish": data.get("parish", ""),
-            "parishes": " ".join(data.get("parishes") or []), "approved": " ".join(approved),
-        }
+        return render.job_values(self.ledger, run, job)
 
     def work(self, job: Any) -> Outcome:
         run = self.ledger.run(job["run_id"])
@@ -509,30 +520,6 @@ class Dispatcher:
             for a in self.config.accounts:
                 self._reading(a, "periodic")
 
-    def _next_prompt(self, run: Any, job: Any, spec: StageSpec,
-                     values: dict[str, str]) -> tuple[str, str, str | None]:
-        """The attempt's kind, its prompt and the session it resumes."""
-        rel = inputs.handoff_rel(run["id"], job["name"])
-        pending = json.loads(job["pending_prompt"] or "null")
-        if pending is None:
-            if job["resumes_job"]:
-                original = self.ledger.job(job["resumes_job"])
-                data = json.loads(job["input"])
-                if original["session_id"] and original["run_id"] == run["id"]:
-                    return "answer", inputs.answer_prompt(
-                        data.get("question", ""), data.get("answer", ""), rel,
-                        data.get("subject", "the parish you set aside")), original["session_id"]
-            return "start", inputs.job_input(self.ledger, run, job, spec, values), None
-        if not job["session_id"]:
-            # A fresh worker needs the whole job input, whatever the last attempt was told.
-            prompt = inputs.job_input(self.ledger, run, job, spec, values)
-            extra = pending.get("prompt")
-            return "fresh", prompt + (f"\n\n{extra}" if extra else ""), None
-        kind = pending["kind"]
-        prompt = pending.get("prompt") or (inputs.continue_prompt(rel) if kind != "resume"
-                                           else inputs.resume_prompt(rel))
-        return kind, prompt, job["session_id"]
-
     def _attempt(self, run: Any, job: Any, spec: StageSpec, worktree: Path) -> Outcome:
         if job["resumes_job"] and job["account"] is None:
             original = self.ledger.job(job["resumes_job"])
@@ -546,15 +533,18 @@ class Dispatcher:
         job = self.ledger.job(job["id"])
         values = self.values(run, job)
         pending = json.loads(job["pending_prompt"] or "null") or {}
-        kind, prompt, session = self._next_prompt(run, job, spec, values)
+        kind, prompt, session = render.next_prompt(self.ledger, run, job, spec, values)
         if pending.get("kind") not in ("resume", "continue"):
             # A send-back or an answer needs a new handoff: the old one mustn't pass again.
             handoff_path(worktree, run["id"], job["name"]).unlink(missing_ok=True)
         commit_sha = git.head(worktree)
         started = self._stamp()
-        attempt_id = self.ledger.add_attempt(job["id"], kind, prompt,
-                                             account.name if account else None, commit_sha,
-                                             at=started)
+        with self.ledger.tx():
+            attempt_id = self.ledger.add_attempt(job["id"], kind, prompt,
+                                                 account.name if account else None, commit_sha,
+                                                 at=started)
+            if kind in ("start", "fresh"):
+                self._claim_leads(run, job)
         if reading is not None:  # the selection's reading of this account is its before
             self.ledger.link_usage(reading, "before", attempt_id, job["id"])
         self.ledger.set_job(job["id"], status=RUNNING, started_at=job["started_at"] or now(),
@@ -622,6 +612,12 @@ class Dispatcher:
         self.ledger.set_job(job["id"], status=GATING, pending_prompt=None)
         return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
 
+    def _claim_leads(self, run: Any, job: Any) -> None:
+        """The leads the attempt's input shows become the job's when the attempt starts: a
+        later job's input leaves them out, and reconcile lists only those no job took."""
+        for lead in render.leads_shown(self.ledger, run, job):
+            self.ledger.run_sql("UPDATE lead SET used_by = ? WHERE id = ?", job["id"], lead["id"])
+
     def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
                      worktree: Path, account: Account | None, result: WorkerResult,
                      transcript: Path | None, session: str | None, started: str,
@@ -643,8 +639,8 @@ class Dispatcher:
             gaps.append("no token usage reported")
         prompt = (worktree / spec.prompt).read_text(encoding="utf-8") \
             if spec.prompt and (worktree / spec.prompt).exists() else ""
-        spec_path = worktree / "factory" / "stages" / f"{job['stage']}.yaml"
-        spec_text = spec_path.read_text(encoding="utf-8") if spec_path.exists() else ""
+        spec_file = worktree / spec_path(job["stage"])
+        spec_text = spec_file.read_text(encoding="utf-8") if spec_file.exists() else ""
         models = sorted(set(tokens.per_model) | set(info.get("models") or []))
         self.ledger.set_attempt_meta(
             attempt_id, source=source, approximate=0, requested_model=spec.model,
@@ -652,7 +648,9 @@ class Dispatcher:
             cli_version=info.get("cli_version") or tokens.cli_version,
             entrypoint=info.get("entrypoint") or tokens.entrypoint,
             plan=account_plan(account) if account else None,
-            config_hash=fingerprint(spec_text, prompt, list(spec.skills)),
+            config_hash=fingerprint(spec_text, prompt, list(spec.skills),
+                                    render.context_hashes(worktree, spec)
+                                    | {"dispatcher": self.code_commit}),
             resumed_from=self.ledger.previous_in_session(session, attempt_id),
             work_units=work_units(job["stage"], json.loads(job["input"]),
                                   ordered_batches(worktree, run["diocese"])),
@@ -764,11 +762,11 @@ class Dispatcher:
     def _send_back(self, run: Any, job: Any, problems: list[str]) -> Outcome:
         if job["send_backs"] >= self.config.max_send_backs:
             return self._exhausted(run, job, problems)
-        rel = inputs.handoff_rel(run["id"], job["name"])
+        rel = render.handoff_rel(run["id"], job["name"])
         self.ledger.set_job(job["id"], status=SENT_BACK, send_backs=job["send_backs"] + 1,
                             pending_prompt=json.dumps({
                                 "kind": "send_back",
-                                "prompt": inputs.send_back_prompt(problems, rel)}))
+                                "prompt": render.send_back_prompt(problems, rel)}))
         return Outcome("ran", f"job {job['id']} sent back: {len(problems)} problems")
 
     def _exhausted(self, run: Any, job: Any, problems: list[str], *,
@@ -948,13 +946,12 @@ class Dispatcher:
         if reviewed["send_backs"] >= self.config.max_send_backs:
             self._exhausted(run, reviewed, problems, own_work=False)
             return
-        rel = inputs.handoff_rel(run["id"], reviewed["name"])
+        rel = render.handoff_rel(run["id"], reviewed["name"])
         self.ledger.clear_actions(reviewed["id"])
         self.ledger.set_job(reviewed["id"], status=SENT_BACK, send_backs=reviewed["send_backs"] + 1,
                             pending_prompt=json.dumps({
                                 "kind": "send_back",
-                                "prompt": "A reviewer sent your work back.\n\n"
-                                          + inputs.send_back_prompt(problems, rel)}))
+                                "prompt": render.reviewer_send_back_prompt(problems, rel)}))
 
     def _seed_job(self, run: Any, parish: str) -> Any | None:
         jobs = [j for j in self.ledger.jobs(run["id"], "seed")
@@ -1155,8 +1152,8 @@ class Dispatcher:
         self.ledger.run_sql("UPDATE flag SET status = ? WHERE id = ?", SETTLED, flag["id"])
 
     def _resume_blocked(self, run: Any, job: Any, flag: Any) -> None:
-        rel = inputs.handoff_rel(run["id"], job["name"])
-        prompt = inputs.answer_prompt(flag["question"], flag["answer"], rel, "this job")
+        rel = render.handoff_rel(run["id"], job["name"])
+        prompt = render.answer_prompt(flag["question"], flag["answer"], rel, "this job")
         pending = json.loads(job["pending_prompt"] or "null")
         if job["status"] == SENT_BACK and pending:
             # Another of its flags was answered first: the job gets both answers.
