@@ -1,6 +1,7 @@
 import json
 import logging
 import sqlite3
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +22,7 @@ from pdf_extract.storage import (
     save_processed_bulletin,
     utc_now_iso,
 )
+from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
 from pdf_extract.weekly import RunScopeError, resolve_run_scope, run_weekly
 
 EVENTS = [
@@ -229,6 +231,55 @@ def test_weekly_run_is_held_when_weekly_schedule_changes(
         "Weekly schedule at least 90.0% unchanged",
     ]
     assert report["totals"]["events_added"] == report["totals"]["events_removed"] == 1
+
+
+def test_weekly_run_reads_both_snapshots_on_one_date(
+    published_db: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # The clock passes midnight after the first look: everything still uses that one.
+    days = iter([date(2026, 9, 21), date(2026, 9, 22), date(2026, 9, 22)])
+    monkeypatch.setattr(weekly, "_today", lambda: next(days))
+    built: list[date | None] = []
+    real_extract = weekly.extract_snapshot
+
+    def recording_extract(*args: Any, **kwargs: Any) -> dict[str, Any]:
+        built.append(kwargs.get("build_date"))
+        return real_extract(*args, **kwargs)
+
+    monkeypatch.setattr(weekly, "extract_snapshot", recording_extract)
+    _install_stages(monkeypatch, EVENTS)
+
+    run_weekly(run_id="run-1")
+
+    assert built == [date(2026, 9, 21), date(2026, 9, 21)]
+    report = json.loads((run_out_dir("run-1") / "report.json").read_text(encoding="utf-8"))
+    assert report["as_of"] == "2026-09-21"
+    assert report["comparison"]["as_of"] == "2026-09-21"
+    assert report["comparison"]["gate_policy_version"] == GATE_POLICY_VERSION
+    assert report["comparison"]["recurring"]["matched"] == 3
+    assert "Compared as of 2026-09-21" in (run_out_dir("run-1") / "report.md").read_text(
+        encoding="utf-8")
+
+
+def test_weekly_run_checks_changes_outside_its_scope(
+    published_db: Path, pipeline_dir: Path, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from tests.conftest import PARISH_FIELDS, write_csv
+
+    write_csv(pipeline_dir / "data" / "parishes.csv", PARISH_FIELDS, [
+        {"slug": "test-parish", "name": "Test Parish", "website": "https://example.org"},
+        {"slug": "mary", "name": "Mary", "website": "https://mary.example"},
+    ])
+    # Only mary is asked for, but test-parish's schedule changes anyway.
+    _install_stages(monkeypatch, [])
+
+    result = run_weekly(run_id="run-1", parishes=["mary"])
+
+    assert result["status"] == "held"
+    report = json.loads((run_out_dir("run-1") / "report.json").read_text(encoding="utf-8"))
+    assert report["scope"]["selected"] == ["mary"]
+    assert report["attention"]["dropped_to_zero"] == ["test-parish"]
+    assert [c["parish_slug"] for c in report["changes"]] == ["test-parish"]
 
 
 @pytest.mark.parametrize("failing_stage", ["fetch_bulletins", "process_bulletins"])
