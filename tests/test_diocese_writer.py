@@ -257,3 +257,7 @@ def test_fetch_gaps_are_written_listed_by_kind_and_cleared(root):
     with pytest.raises(DioceseError):
         report.gaps("missing")
 
+    # new_record (scripts, bulk adds) keeps the object rather than turning it into text
+    records.new_record("test", "parish", {"name": "St. Edith", "fetch_gap": _gap(),
+                                          "website": "https://example.org/edith"})
+    assert records.load("test").of(records.PARISH)["st-edith"]["fetch_gap"] == _gap()

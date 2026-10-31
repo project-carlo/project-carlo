@@ -293,8 +293,8 @@ quota [--by ...] [--windows] [backfill] | cost [--stage]`.
   *What to flag*): a church no source settles (an `open/` record, which `reconcile` tries
   once more and the PR lists), a bulletin `fetch` can't collect (the parish's `fetch_gap`,
   which the PR lists by kind and `pnpm diocese gaps` lists across dioceses), and an
-  address the sources disagree on (the worker chooses, preferring the parish's and the
-  diocese's own, and says why in the record).
+  address or name the sources disagree on (the worker chooses, preferring the parish's
+  and the diocese's own, and says why in the record).
 - A blocking flag becomes a **GitHub issue** with labels `factory`, `run:<diocese>` and
   `stage:<stage>`, holding the question, the evidence and the suggestion.
 - You answer by commenting and closing the issue. The dispatcher checks open factory

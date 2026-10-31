@@ -24,7 +24,7 @@ import pytest
 from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import playbook, readiness, report
+from pdf_extract.factory import inputs, playbook, readiness, report
 from pdf_extract.factory.backfill import backfill
 from pdf_extract.factory.config import Account, Config, FactoryError, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
@@ -168,11 +168,6 @@ class Env:
                 return False, f"Already approved by {seed['reviewer']}"
             seed |= {"status": "approved", "reviewer": reviewer}
             path.write_text(json.dumps(seed))
-        if "diocese gaps" in command:
-            return True, json.dumps({"total": 1, "kinds": [{
-                "kind": "solutio-file-403", "parishes": 1, "dioceses": [D], "entries": [
-                    {"diocese": D, "parish": "p-003-map",
-                     "note": "Solutio /file links answer 403."}]}]})
         if "diocese coverage" in command:
             return True, json.dumps({"diocese": D, "rosters": [
                 {"roster": "directory", "title": "Directory", "accounted_for": "3/3 (100%)",
@@ -600,12 +595,17 @@ def test_a_parish_flag_from_a_stage_that_cant_park_is_sent_back(tmp_path: Path) 
 
 OPEN_RECORD = ("---\nname: Chapel\nrevisit: Ask the parish office\nrevisit_after: 2027-01-31\n"
                "roster: []\nevidence: []\n---\nNotes.\n")
+GAP = ("fetch_gap:\n  kind: solutio-file-403\n  seen: 2026-10-21\n"
+       "  note: \"Solutio /file links\\n  answer 403.\"\n")
 
 
 def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> None:
     def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        parish = parish_record("x:1")
+        if req.job_name == "003-map":
+            parish = parish.replace("---\nNotes", GAP + "---\nNotes")
         return StubAction(
-            files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record("x:1"),
+            files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish,
                    "data/dioceses/{diocese}/open/chapel-{job}.md": OPEN_RECORD},
             handoff=done(flags=[{"severity": "advisory", "scope": "parish",
                                  "subject": f"p-{req.job_name}",
@@ -617,19 +617,25 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
         if attempt == 1:
             shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", req.prompt))
             return StubAction(handoff=done(settled=[{"flag": 999, "how": "?"}]))
-        return StubAction(handoff=done(settled=[{"flag": shown[0],
-                                                 "how": "Merged; one masthead."}]))
+        return StubAction(handoff=done(
+            settled=[{"flag": shown[0], "how": "Merged;\none masthead."}],
+            flags=[{"severity": "advisory", "scope": "parish", "subject": "p-004-map",
+                    "question": "Kept apart: two mastheads."}]))
 
     d = env.dispatcher(map_script(map=mapping, reconcile=reconciling))
     drive(d)
     run = map_run(env)
-    first, second = env.ledger.flags(run["id"])
+    first, second, own = env.ledger.flags(run["id"])
     assert shown == [first["id"], second["id"]]
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
     assert reconcile["send_backs"] == 1  # flag 999 isn't one of its Run's
     assert (first["status"], first["answer"], first["settled_by"]) == (
-        "settled", "Merged; one masthead.", reconcile["id"])
+        "settled", "Merged;\none masthead.", reconcile["id"])
     assert second["status"] == "listed"
+    # A fresh input (after a resume or a retry) leaves out the flags it raised itself,
+    # which it can't settle.
+    again = inputs.stage_input(env.ledger, run, reconcile, {})
+    assert f"[#{second['id']}]" in again and f"[#{own['id']}]" not in again
 
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
     open_section = pr.split("## Left open")[1].split("##")[0]

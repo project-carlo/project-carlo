@@ -515,6 +515,10 @@ def _coverage(worktree: Path, diocese: str, commands: Commands) -> list[str]:
     return lines or ["- (coverage unavailable)"]
 
 
+def _one_line(text: Any) -> str:
+    return " ".join(str(text or "").split())
+
+
 def _left_open(worktree: Path, diocese: str) -> list[str]:
     """The `open/` records: places with no source yet for Mass or a closure. They need no
     flag; the PR lists them from the files, with what would settle each."""
@@ -525,26 +529,29 @@ def _left_open(worktree: Path, diocese: str) -> list[str]:
         except Exception:
             lines.append(f"- `{path.stem}`: (unreadable)")
             continue
+        name = f" {_one_line(front.get('name'))}" if front.get("name") else ""
+        revisit = (str(front.get("revisit") or "").strip().splitlines() or ["-"])[0]
         after = f" (after {front['revisit_after']})" if front.get("revisit_after") else ""
-        lines.append(f"- `{path.stem}` {front.get('name') or ''}: "
-                     f"{str(front.get('revisit') or '-').splitlines()[0]}{after}")
+        lines.append(f"- `{path.stem}`{name}: {revisit}{after}")
     return lines or ["- none"]
 
 
-def _fetch_gaps(worktree: Path, diocese: str, commands: Commands) -> list[str]:
-    """Parishes whose bulletin `fetch` can't collect yet, by kind (`pnpm diocese gaps`)."""
-    ok, out = commands(f"pnpm --silent diocese gaps --diocese {diocese}", worktree)
-    try:
-        data = json.loads(out[out.index("{"):]) if ok else None
-    except ValueError:
-        data = None
-    if not isinstance(data, dict):
-        return [f"- (unavailable: run `pnpm diocese gaps --diocese {diocese}`)"]
+def _fetch_gaps(worktree: Path, diocese: str) -> list[str]:
+    """Parishes whose bulletin `fetch` can't collect yet, by kind, as `pnpm diocese gaps`
+    groups them. Read from the files: that command's JSON outgrows a command's output."""
+    groups: dict[str, list[tuple[str, str]]] = {}
+    for path in sorted((diocese_dir(worktree, diocese) / "parishes").glob("*.md")):
+        try:
+            gap = parse_file(path)[0].get("fetch_gap")
+        except Exception:
+            continue  # the validate gate reports it
+        if isinstance(gap, dict):
+            groups.setdefault(str(gap.get("kind") or "?"), []).append(
+                (path.stem, _one_line(gap.get("note"))))
     lines = []
-    for k in data.get("kinds") or []:
-        parishes = ", ".join(f"`{e['parish']}`" for e in k.get("entries") or [])
-        first = (k.get("entries") or [{}])[0].get("note", "")
-        lines.append(f"- `{k['kind']}` ({k['parishes']}): {parishes}. {first}".rstrip())
+    for kind, entries in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        parishes = ", ".join(f"`{p}`" for p, _ in entries)
+        lines.append(f"- `{kind}` ({len(entries)}): {parishes}. {entries[0][1]}".rstrip())
     return lines or ["- none"]
 
 
@@ -556,7 +563,7 @@ def _settled_lines(rows: list[Any], names: dict[int, str]) -> list[str]:
             "Run</summary>", "",
             *[f"- `{f['subject']}`: {f['question'].splitlines()[0]} **Settled"
               f"{' by ' + names[f['settled_by']] if f['settled_by'] in names else ''}:** "
-              f"{f['answer']}" for f in rows],
+              f"{_one_line(f['answer'])}" for f in rows],
             "", "</details>"]
 
 
@@ -597,7 +604,7 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
                   "settle it.", "", *_left_open(worktree, diocese),
                   "", "## Bulletins fetch can't collect yet", "",
                   "Grouped by kind, as `pnpm diocese gaps` lists them for a collector fix.",
-                  "", *_fetch_gaps(worktree, diocese, commands),
+                  "", *_fetch_gaps(worktree, diocese),
                   "", "## Advisory flags", "", *_flag_lines(advisory),
                   *_settled_lines(settled, {j["id"]: j["name"] for j in jobs}),
                   "", "## Parked parishes", "", *_flag_lines(parked),

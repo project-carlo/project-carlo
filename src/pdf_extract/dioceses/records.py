@@ -1204,6 +1204,8 @@ def _coerce(fname: str, value: Any) -> Any:
         return [str(v).strip() for v in value if str(v).strip()]
     if fname in _OBJECT_LIST_FIELDS:
         return list(value)
+    if fname in _OBJECT_FIELDS:
+        return value
     if fname in _BOOL_FIELDS:
         if isinstance(value, bool):
             return value

@@ -4,9 +4,9 @@ You cross-check a diocese after every map batch has run, and leave it ready to p
 The map jobs each saw only their own batch; you settle what spans batches and check every
 row before it goes live. Follow the explore-diocese skill; `data/dioceses/README.md` has
 the rules, and `diocese.md` the playbook and the rules settled for this diocese. Your job
-input lists the advisory flags the map and integrate jobs raised (merges, a church that
-belongs to another parish), each with its `[#id]`, the leads no batch consumed, and the
-parked parishes.
+input lists the advisory flags earlier jobs raised, mostly the map jobs (merges, a church
+that belongs to another parish), each with its `[#id]`, the leads no batch consumed, and
+the parked parishes.
 
 ## Your job, in order
 

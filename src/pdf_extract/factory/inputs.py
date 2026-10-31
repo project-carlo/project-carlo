@@ -117,9 +117,10 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
 """
     if stage == "reconcile":
         raised_by = {j["id"]: j["name"] for j in ledger.jobs(run_id)}
+        # Not its own: a fresh input after a resume or retry can't settle what it raised.
         advisory = [f"[#{f['id']}] {f['subject']} ({raised_by.get(f['job_id'], '?')}): "
                     f"{f['question']} (suggestion: {f['suggestion'] or '-'})"
-                    for f in ledger.flags(run_id, LISTED)]
+                    for f in ledger.flags(run_id, LISTED) if f["job_id"] != job["id"]]
         leads = [f"{r['touches']}: {r['note']}" for r in ledger.all(
             "SELECT * FROM lead WHERE run_id = ? AND used_by IS NULL", run_id)]
         parked = [f"{f['subject']}: {f['question']}" for f in ledger.parked(run_id)]
@@ -128,7 +129,7 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
 
 Every batch is mapped. Use `{tools}` as the tools folder.
 
-Advisory flags from the batches and `integrate`. Put each one you settle in your
+Advisory flags from earlier jobs, mostly the batches. Put each one you settle in your
 handoff's `settled`, by its `[#id]`; the PR lists the rest as still open:
 {_lines(advisory)}
 

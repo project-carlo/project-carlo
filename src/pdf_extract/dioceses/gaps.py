@@ -3,8 +3,8 @@
 A parish record's optional `fetch_gap` names the pattern (`kind`, a slug shared by every
 parish with the same problem) and what fails. `pnpm diocese gaps` (`report.gaps`) lists
 them across every diocese, grouped by kind, so a collector can be written once for all the
-parishes that need it. When a fix lands, its parishes are rechecked with `fetch:check` and the field is
-removed (`"fetch_gap": null` in a `diocese write` patch).
+parishes that need it. When a fix lands, its parishes are rechecked with `fetch:check` and
+the field is removed (`"fetch_gap": null` in a `diocese write` patch).
 """
 
 from __future__ import annotations
