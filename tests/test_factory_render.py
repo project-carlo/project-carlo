@@ -12,6 +12,7 @@ stands in for the real one, so a prompt or spec edit shows up once in its PR.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -20,9 +21,12 @@ from typing import Any
 import pytest
 
 from pdf_extract.factory import render
+from pdf_extract.factory.config import FactoryError
 from pdf_extract.factory.ledger import MAP, SEED, Ledger
-from pdf_extract.factory.stages import STAGES, StageSpec
+from pdf_extract.factory.quota import fingerprint
+from pdf_extract.factory.stages import STAGES, StageSpec, load_stage
 
+ROOT = Path(__file__).resolve().parents[1]
 GOLDEN = Path(__file__).parent / "golden" / "factory"
 UPDATE = bool(os.environ.get("UPDATE_GOLDENS"))
 D = "testd"
@@ -179,3 +183,84 @@ def test_resume_prompts() -> None:
         render.resume_prompt(rel),
         render.answer_prompt("Is St. Zita open?", "Closed in 2025.", rel, "directory:9"),
     ]) + "\n")
+
+
+# ── Reads, sizes and the context fingerprint ────────────────────────────────
+README = """\
+# Dioceses
+
+Intro.
+
+## Fields
+
+- `name`: the parish's name.
+
+### Dates
+
+Use ISO dates.
+
+## Traps
+
+Don't guess.
+"""
+
+
+def test_a_read_is_a_whole_file_or_one_section() -> None:
+    def text_of(path: str) -> str | None:
+        return README if path == "data/dioceses/README.md" else None
+
+    assert render.read_entry(text_of, "data/dioceses/README.md") == README
+    assert render.read_entry(text_of, "data/dioceses/README.md#Fields") == (
+        "## Fields\n\n- `name`: the parish's name.\n\n### Dates\n\nUse ISO dates.\n")
+    assert render.read_entry(text_of, "data/dioceses/README.md#Dates") == (
+        "### Dates\n\nUse ISO dates.\n")
+    with pytest.raises(FactoryError, match="no heading 'Method'"):
+        render.read_entry(text_of, "data/dioceses/README.md#Method")
+    with pytest.raises(FactoryError, match="no file"):
+        render.read_entry(text_of, "data/missing.md")
+    spec = StageSpec(stage="map", kind="agent", prompt="p.md", skills=["s"],
+                     reads=["data/dioceses/README.md#Traps", "data/dioceses/README.md#Method"])
+    parts = render.given(spec, "first", lambda p: {"p.md": "---\nx: 1\n---\nDo it.",
+                                                    "data/dioceses/README.md": README}.get(p))
+    assert [(p["part"], p["chars"], p["missing"]) for p in parts] == [
+        ("system prompt", 6, False), ("first message", 5, False), ("skill", 0, True),
+        ("read", len("## Traps\n\nDon't guess.\n"), False), ("read", 0, True)]
+    assert "no heading" in parts[-1]["error"]
+
+
+def test_every_stage_reads_files_that_exist_on_main() -> None:
+    for stage in STAGES:
+        spec = load_stage(stage, ROOT)
+        for entry in spec.reads:
+            render.read_entry(render.worktree_text(ROOT), entry)
+        for name in spec.skills:
+            assert (ROOT / render.skill_path(name)).exists(), f"{stage}: no skill {name}"
+
+
+def test_context_hashes_change_with_a_skill_or_a_read(tmp_path: Path) -> None:
+    skill = tmp_path / ".claude" / "skills" / "s"
+    (skill / "scripts").mkdir(parents=True)
+    (skill / "SKILL.md").write_text("Method.")
+    (skill / "scripts" / "go.py").write_text("print(1)")
+    (tmp_path / "README.md").write_text(README)
+    spec = StageSpec(stage="map", kind="agent", skills=["s"], reads=["README.md#Traps"])
+    before = render.context_hashes(tmp_path, spec)
+    (skill / "scripts" / "__pycache__").mkdir()
+    (skill / "scripts" / "__pycache__" / "go.cpython-313.pyc").write_bytes(b"x")
+    assert render.context_hashes(tmp_path, spec) == before  # running a script changes nothing
+    (skill / "scripts" / "go.py").write_text("print(2)")
+    changed = render.context_hashes(tmp_path, spec)
+    assert changed["skills"] != before["skills"] and changed["render"] == before["render"]
+    (tmp_path / "README.md").write_text(README.replace("Don't guess.", "Never guess."))
+    assert render.context_hashes(tmp_path, spec)["reads"] != changed["reads"]
+    (tmp_path / "README.md").write_text(README.replace("Intro.", "Another intro."))
+    assert render.context_hashes(tmp_path, spec)["reads"] == changed["reads"]  # not a read
+
+
+def test_the_fingerprint_without_code_hashes_as_before() -> None:
+    old = hashlib.sha256(json.dumps(["spec", "prompt", ["a", "b"]]).encode()).hexdigest()[:12]
+    assert fingerprint("spec", "prompt", ["b", "a"]) == old  # backfilled attempts match
+    code = {"render": "1", "skills": {}, "reads": {}, "dispatcher": "abc"}
+    assert fingerprint("spec", "prompt", ["a", "b"], code) != old
+    assert fingerprint("spec", "prompt", ["a", "b"], code | {"dispatcher": "def"}) != \
+        fingerprint("spec", "prompt", ["a", "b"], code)

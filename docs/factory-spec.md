@@ -256,8 +256,9 @@ says its PR is merged. Merge factory PRs with a merge commit where you can, so m
 the Run's history. You handle review comments in your
 own session.
 
-CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
-quota [--by ...] [--windows] [backfill] | cost [--stage]`.
+CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job>
+[--prompt] | prompt <stage> [--run R] | quota [--by ...] [--windows] [backfill] | cost
+[--stage]`.
 
 ### Worker setup
 
@@ -485,9 +486,11 @@ Where the implementation had to decide something this spec left open.
   scratch folder is `scratch/<run>/<job>/`, and the Run's shared tools folder
   `scratch/<run>/tools/`.
 - **Job input.** The stage's prompt file, frontmatter stripped, is appended to Claude
-  Code's system prompt. The first message is built in code (`inputs.py`): a header with the
+  Code's system prompt. The first message is built in code (`render.py`): a header with the
   write boundaries, the gates, the handoff path and schema, then the stage's input.
-  Resumed attempts get only the problems, your answer, or "continue".
+  Resumed attempts get only the problems, your answer, or "continue". `pnpm factory prompt
+  <stage>` previews what the next job of a stage would be given, with sizes, without
+  changing the ledger; `inspect <job> --prompt` shows the same for a past attempt.
 - **Stage prompts** are `factory/prompts/<stage>.md`, one per agent and reviewer stage.
 - **Crashes.** A crashed attempt resumes its session; one that couldn't resume (no turns)
   gets a fresh worker, with the whole job input and whatever that attempt was told (the

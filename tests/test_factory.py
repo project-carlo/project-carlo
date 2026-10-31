@@ -68,6 +68,7 @@ from pdf_extract.factory.usage import (
     standing,
 )
 from pdf_extract.factory.workers import (
+    CRASH,
     OK,
     USAGE,
     StubAction,
@@ -289,6 +290,135 @@ def test_map_run_end_to_end(env: Env) -> None:
     assert "Directory: 3/3 (100%) accounted for" in pr
     assert run["pr_url"] and run["head_sha"] == git(Path(run["worktree"]), "rev-parse",
                                                     "HEAD").strip()
+
+
+def _lead_owners(env: Env) -> dict[str, int | None]:
+    return {r["note"]: r["used_by"] for r in env.ledger.all("SELECT * FROM lead ORDER BY id")}
+
+
+def test_a_fresh_attempt_gets_the_leads_its_first_attempt_claimed_and_newer_ones(
+        env: Env) -> None:
+    base = map_script()
+    seen: list[str] = []
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.job_name != "004-map":
+            return base(req, attempt)
+        seen.append(req.prompt)
+        if attempt == 1:
+            # Claimed when the first attempt started, so b1's lead is this job's now.
+            assert set(_lead_owners(env).values()) == {req.job_id}
+            return StubAction(outcome=CRASH)
+        if attempt == 2:  # a resume that can't start: the next attempt is a fresh worker
+            env.ledger.run_sql("INSERT INTO lead (run_id, touches, note) VALUES (?,?,?)",
+                               req.run_id, "directory:2", "St. Bede moved its site")
+            return StubAction(outcome=CRASH)
+        return StubAction(handoff=done())
+
+    d = env.dispatcher(map_script(map=mapping))
+    drive(d)
+    b1 = env.ledger.jobs(map_run(env)["id"], "map")[1]
+    kinds = [a["kind"] for a in env.ledger.all(
+        "SELECT kind FROM attempt WHERE job_id = ? ORDER BY n", b1["id"])]
+    assert kinds == ["start", "resume", "fresh"]
+    assert "St. Ann may share" in seen[0] and "St. Bede moved" not in seen[0]
+    assert "St. Ann may share" in seen[2] and "St. Bede moved" in seen[2]
+    assert _lead_owners(env) == {"St. Ann may share St. Bede's": b1["id"],
+                                 "St. Bede moved its site": b1["id"]}
+
+
+def test_a_job_that_fails_before_its_first_attempt_claims_no_leads(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    d = env.dispatcher(map_script())
+    for _ in range(20):  # until the first map job is done; b1's job is next
+        d.tick()
+        if env.ledger.one("SELECT 1 FROM job WHERE stage = 'map' AND status = ?", DONE):
+            break
+    real, armed = dispatcher_mod.git.head, [True]
+
+    def head(cwd: Path) -> str:  # git fails once, between the input and the attempt
+        if armed:
+            armed.clear()
+            raise FactoryError("git rev-parse HEAD: failed on purpose")
+        return real(cwd)
+
+    monkeypatch.setattr(dispatcher_mod.git, "head", head)
+    assert d.tick().action == "waiting"
+    b1 = env.ledger.jobs(map_run(env)["id"], "map")[1]
+    assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", b1["id"])
+    assert _lead_owners(env) == {"St. Ann may share St. Bede's": None}
+    env.now += timedelta(hours=1)
+    drive(d)
+    first = env.ledger.one("SELECT * FROM lead ORDER BY id LIMIT 1")
+    assert (first["job_id"], first["used_by"]) == (env.ledger.jobs(
+        map_run(env)["id"], "map")[0]["id"], b1["id"])
+
+
+def _dump(ledger: Ledger) -> list[str]:
+    return list(ledger.conn.iterdump())
+
+
+def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> None:
+    env.commit_main({".claude/skills/explore-diocese/SKILL.md": "# Explore\n\nThe method.\n"},
+                    "a skill")
+    d = env.dispatcher(map_script())
+    for _ in range(20):  # until the first map job is done: b1's job is next, not yet added
+        d.tick()
+        if env.ledger.one("SELECT 1 FROM job WHERE stage = 'map' AND status = ?", DONE):
+            break
+    run = map_run(env)
+    before = _dump(env.ledger)
+    ro = Ledger(env.ledger.path, read_only=True)
+    with pytest.raises(sqlite3.OperationalError):
+        ro.set("paused", {"reason": "a preview mustn't write"})
+    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8)
+    assert (preview["job"], preview["kind"], preview["existing"]) == ("004-map", "start", False)
+    assert preview["input"] == {"batch": "b1"}
+    assert "St. Ann may share" in preview["first_message"]  # shown, but not claimed
+    assert preview["system_prompt"].startswith(
+        (Path(run["worktree"]) / "factory" / "prompts" / "map.md").read_text().strip()[:200])
+    parts = {(p["part"], p["source"]): p for p in preview["parts"]}
+    assert not parts[("system prompt", "factory/prompts/map.md")]["missing"]
+    assert parts[("skill", ".claude/skills/explore-diocese/SKILL.md")]["tokens"] > 0
+    assert parts[("skill", ".claude/skills/parish-site-access/SKILL.md")]["missing"]
+    assert preview["tokens"] == sum(p["tokens"] for p in preview["parts"])
+    assert "## First message" in report.text_preview(preview)
+    # Even integrate due first, the map preview shows the next batch.
+    assert report.preview(ro, "map", run["id"], repo=env.repo,
+                          lessons_before_integrate=0)["input"] == {"batch": "b1"}
+    assert _dump(env.ledger) == before
+
+    drive(d)
+    b1 = env.ledger.jobs(run["id"], "map")[1]
+    first = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 1", b1["id"])
+    assert first["prompt"] == preview["first_message"]  # what the job then got
+
+
+def test_inspect_prompt_sizes_what_an_attempt_was_given(env: Env) -> None:
+    d = env.dispatcher(map_script())
+    drive(d)
+    run = map_run(env)
+    job = env.ledger.jobs(run["id"], "map")[0]
+    worktree = Path(run["worktree"])
+
+    def text_at(sha: str, path: str) -> str | None:
+        try:
+            return git(worktree, "show", f"{sha}:{path}")
+        except subprocess.CalledProcessError:
+            return None
+
+    r = report.attempt_prompt(env.ledger, job, 1, text_at)
+    first = env.ledger.one("SELECT * FROM attempt WHERE job_id = ? AND n = 1", job["id"])
+    assert (r["kind"], r["commit"], r["prompt"]) == ("start", first["commit_sha"],
+                                                     first["prompt"])
+    assert [(p["part"], p["source"]) for p in r["parts"]] == [
+        ("system prompt", "factory/prompts/map.md"), ("first message", None),
+        ("skill", ".claude/skills/explore-diocese/SKILL.md"),
+        ("skill", ".claude/skills/parish-site-access/SKILL.md")]
+    assert r["parts"][1]["chars"] == len(first["prompt"])
+    text = report.text_attempt_prompt(r)
+    assert "first message" in text and text.endswith(first["prompt"])
+    assert report.attempt_prompt(env.ledger, job, 9, text_at)["prompt"] is None
 
 
 def test_integrate_runs_when_new_lessons_pass_the_threshold(env: Env) -> None:

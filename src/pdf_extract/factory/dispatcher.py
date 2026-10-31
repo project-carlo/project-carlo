@@ -69,7 +69,15 @@ from pdf_extract.factory.plan import (
     seed_status,
 )
 from pdf_extract.factory.quota import fingerprint, work_units
-from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
+from pdf_extract.factory.stages import (
+    CODE,
+    StageSpec,
+    fill,
+    in_scope,
+    load_stage,
+    placeholders,
+    spec_path,
+)
 from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
 from pdf_extract.factory.usage import (
     Fetch,
@@ -631,8 +639,8 @@ class Dispatcher:
             gaps.append("no token usage reported")
         prompt = (worktree / spec.prompt).read_text(encoding="utf-8") \
             if spec.prompt and (worktree / spec.prompt).exists() else ""
-        spec_path = worktree / "factory" / "stages" / f"{job['stage']}.yaml"
-        spec_text = spec_path.read_text(encoding="utf-8") if spec_path.exists() else ""
+        spec_file = worktree / spec_path(job["stage"])
+        spec_text = spec_file.read_text(encoding="utf-8") if spec_file.exists() else ""
         models = sorted(set(tokens.per_model) | set(info.get("models") or []))
         self.ledger.set_attempt_meta(
             attempt_id, source=source, approximate=0, requested_model=spec.model,

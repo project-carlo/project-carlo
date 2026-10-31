@@ -378,9 +378,15 @@ def read_entry(text_of: TextOf, entry: str) -> str:
     return "\n".join(lines[start:end]).strip() + "\n"
 
 
-def given(spec: StageSpec, first_message: str, text_of: TextOf) -> list[dict[str, Any]]:
+def message_label(kind: str) -> str:
+    """What an attempt's prompt is: a job's first message, or a resumed session's next."""
+    return "first message" if kind in ("start", "fresh") else f"{kind} message"
+
+
+def given(spec: StageSpec, message: str, text_of: TextOf,
+          label: str = "first message") -> list[dict[str, Any]]:
     """Each part of what a worker is given, with its size: the appended system prompt, the
-    first message, each skill it may load and each file it must read."""
+    attempt's message, each skill it may load and each file it must read."""
     def part(kind: str, source: str | None, text: str | None, **extra: Any) -> dict[str, Any]:
         return {"part": kind, "source": source, "missing": text is None,
                 "chars": len(text or ""), "tokens": tokens(text or ""), **extra}
@@ -388,7 +394,7 @@ def given(spec: StageSpec, first_message: str, text_of: TextOf) -> list[dict[str
     prompt = text_of(spec.prompt) if spec.prompt else ""
     parts = [part("system prompt", spec.prompt,
                   strip_frontmatter(prompt) if prompt is not None else None),
-             part("first message", None, first_message)]
+             part(label, None, message)]
     for name in spec.skills:
         parts.append(part("skill", skill_path(name), text_of(skill_path(name)), name=name))
     for entry in spec.reads:

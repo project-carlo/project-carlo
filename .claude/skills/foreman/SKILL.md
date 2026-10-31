@@ -20,6 +20,10 @@ You change nothing unless the owner asks.
   events, and its five-hour and weekly quota points: a range with a label (`settled`,
   `immediate` a minimum, `shared` with other attempts, `reset`, `missing`) and the
   readings used. Only `settled` is a measurement of that attempt alone.
+  `inspect <job> --prompt [--attempt N]` prints what an attempt was given: its message,
+  and the size of each part (system prompt, message, skills, reads) at its commit.
+  `pnpm factory prompt <stage> [--run R]` shows the same for the stage's next job, so you
+  can check a proposed change before it runs.
 - **A stage:** `pnpm factory inspect --stage <stage> --last N` lists its recent jobs with
   their quota, and `pnpm factory quota` shows points per unit of completed work (batch
   entries, parishes) by stage; `--by model|effort|mode|account|plan|date|hour` compares

@@ -8,8 +8,14 @@
   pause [REASON]               stop starting jobs (the running one finishes)
   resume [--override-caps]     start again; --override-caps ignores the usage caps
   retry <job>                  run a blocked or failed job again from where it stopped
-  inspect <job> [--prompt]     everything about a job, for a foreman review
+  inspect <job> [--prompt [--attempt N]]
+                               everything about a job, for a foreman review; --prompt
+                               prints what an attempt was given, with sizes
   inspect --stage S [--last N] a stage's recent jobs, with their quota
+  prompt <stage> [--run R] [--input JSON]
+                               preview what a stage's next job would be given (the
+                               system prompt, first message, skills and reads, with
+                               sizes), without running anything or changing the ledger
   quota [--by K] [--tz ZONE]   quota points per unit of work, by stage, or within stages by
                                model, effort, mode, account, plan, date or hour
   quota --windows              each account's five-hour and weekly windows over time
@@ -33,7 +39,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.factory import report
+from pdf_extract.factory import git, report
 from pdf_extract.factory.backup import backup_ledger
 from pdf_extract.factory.config import (
     LEDGER_PATH,
@@ -53,13 +59,15 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
+from pdf_extract.factory.stages import STAGES
 
 Result = dict[str, Any]
 
 
-def _ledger(args: argparse.Namespace) -> Ledger:
+def _ledger(args: argparse.Namespace, *, read_only: bool = False) -> Ledger:
     """The real ledger, or the stub runs' (`--stub`), so a stub Run never reaches the real one."""
-    return Ledger(STUB_DATA / LEDGER_PATH.name if args.stub else LEDGER_PATH)
+    return Ledger(STUB_DATA / LEDGER_PATH.name if args.stub else LEDGER_PATH,
+                  read_only=read_only)
 
 
 def _status(args: argparse.Namespace) -> Result:
@@ -122,12 +130,37 @@ def _inspect(args: argparse.Namespace) -> Result:
     except KeyError:
         raise FactoryError(f"no job {args.job}") from None
     if args.prompt:
-        first = ledger.one("SELECT prompt FROM attempt WHERE job_id = ? ORDER BY n LIMIT 1",
-                           job["id"])
-        args.render = lambda r: r["prompt"]
-        return {"prompt": first["prompt"] if first else None}
+        args.render = report.text_attempt_prompt
+        return report.attempt_prompt(ledger, job, args.attempt,
+                                     _text_at([Path(ledger.run(job["run_id"])["worktree"]),
+                                               _repo()]))
     return report.inspect(ledger, job, STUB_DATA / RUNS_DIR.name if args.stub else RUNS_DIR,
                           settle)
+
+
+def _text_at(roots: list[Path]) -> Callable[[str, str], str | None]:
+    """A file as a commit has it, from the first of `roots` that has the commit (a Run's
+    worktree, else this checkout, which shares or fetches its objects)."""
+    def text_at(sha: str, path: str) -> str | None:
+        for root in roots:
+            if (root / ".git").exists():
+                try:
+                    return git.git(root, "show", f"{sha}:{path}")
+                except FactoryError:
+                    continue
+        return None
+    return text_at
+
+
+def _prompt(args: argparse.Namespace) -> Result:
+    """Preview what a stage's next job would be given, without running anything."""
+    try:
+        inputs = json.loads(args.input) if args.input else None
+    except ValueError as exc:
+        raise FactoryError(f"--input isn't JSON: {exc}") from None
+    return report.preview(_ledger(args, read_only=True), args.stage, args.run, repo=_repo(),
+                          lessons_before_integrate=load_config().lessons_before_integrate,
+                          inputs=inputs)
 
 
 def _quota(args: argparse.Namespace) -> Result:
@@ -246,9 +279,16 @@ def add_factory_parser(
     p.add_argument("job")
     p = leaf("inspect", _inspect, report.text_inspect)
     p.add_argument("job", nargs="?")
-    p.add_argument("--prompt", action="store_true", help="Print the job input it started from")
+    p.add_argument("--prompt", action="store_true",
+                   help="Print what an attempt was given (its first, or --attempt), with sizes")
+    p.add_argument("--attempt", type=int, default=1, metavar="N")
     p.add_argument("--stage", help="List a stage's recent jobs instead")
     p.add_argument("--last", type=int, default=10)
+    p = leaf("prompt", _prompt, report.text_preview)
+    p.add_argument("stage", choices=[s for s in STAGES if s not in ("promote", "pr")])
+    p.add_argument("--run", help="The Run (default: the active one)")
+    p.add_argument("--input", help="The job's input as JSON, e.g. '{\"batch\": \"b3\"}' "
+                   "(default: what the plan would give it)")
     p = leaf("quota", _quota, report.text_quota)
     p.add_argument("action", nargs="?", choices=["backfill"],
                    help="backfill: tokens and metadata for older attempts, from transcripts")

@@ -48,12 +48,22 @@ class StageSpec:
         return self.kind in (AGENT, REVIEWER)
 
 
+def spec_path(stage: str) -> str:
+    return (STAGES_DIR / f"{stage}.yaml").as_posix()
+
+
 def load_stage(stage: str, root: Path) -> StageSpec:
-    path = root / STAGES_DIR / f"{stage}.yaml"
+    path = root / spec_path(stage)
     try:
-        raw: dict[str, Any] = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        text = path.read_text(encoding="utf-8")
     except OSError as exc:
         raise FactoryError(f"no stage spec for {stage}: {exc}") from None
+    return parse_stage(stage, text, path)
+
+
+def parse_stage(stage: str, text: str, path: Path | str) -> StageSpec:
+    """A stage spec from its YAML (`path` names it in errors)."""
+    raw: dict[str, Any] = yaml.safe_load(text) or {}
     limits = raw.pop("limits", None) or {}
     if raw.get("stage") != stage:
         raise FactoryError(f"{path}: stage must be {stage!r}")

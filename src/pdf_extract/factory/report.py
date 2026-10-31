@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import statistics
+import sys
 from collections.abc import Callable
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -12,8 +13,10 @@ from typing import Any
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from pdf_extract.dioceses.records import parse_file
+from pdf_extract.factory import git, render
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.ledger import (
+    ACTIVE,
     ANSWERED,
     DONE,
     FAILED,
@@ -21,11 +24,12 @@ from pdf_extract.factory.ledger import (
     LISTED,
     OPEN,
     PENDING,
+    QUEUED,
     UNFINISHED,
     Ledger,
 )
 from pdf_extract.factory.ledger import SETTLED as FLAG_SETTLED
-from pdf_extract.factory.plan import diocese_dir, read_seed
+from pdf_extract.factory.plan import diocese_dir, next_job, read_seed
 from pdf_extract.factory.quota import (
     SETTLED,
     WINDOWS,
@@ -37,6 +41,8 @@ from pdf_extract.factory.quota import (
     range_text,
     work_units,
 )
+from pdf_extract.factory.stages import load_stage, parse_stage, spec_path
+from pdf_extract.factory.workers import strip_frontmatter
 
 Commands = Callable[[str, Path], tuple[bool, str]]
 
@@ -642,3 +648,105 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
                   "(https://claude.com/claude-code)"]
     return title, "\n".join(lines)
 
+
+
+# ── What a worker is given: `factory prompt` and `inspect --prompt` ──────────
+def _sizes(parts: list[dict[str, Any]]) -> dict[str, Any]:
+    return {"parts": parts, "tokens": sum(p["tokens"] for p in parts)}
+
+
+def preview(ledger: Ledger, stage: str, run_id: str | None, *, repo: Path,
+            lessons_before_integrate: int, inputs: dict[str, Any] | None = None
+            ) -> dict[str, Any]:
+    """What the next attempt of a stage's job would be given, without running anything:
+    the Run's unfinished job of that stage, else a new job with the inputs the plan would
+    give it (or `inputs`). Reads the ledger and the Run's worktree, and writes neither."""
+    runs = [ledger.run(run_id)] if run_id else ledger.runs(ACTIVE)
+    if not runs:
+        raise FactoryError("no active Run: name one with --run")
+    run = dict(runs[0])
+    root = Path(run["worktree"])
+    if not (root / ".git").exists():  # not set up yet, or retired: main's files instead
+        root = repo
+        run["worktree"] = str(root)
+    spec = load_stage(stage, root)
+    if not spec.is_agent:
+        raise FactoryError(f"{stage} is a code stage: no worker runs it")
+    job: Any = ledger.unfinished_job(run["id"])
+    existing = inputs is None and job is not None and job["stage"] == stage
+    if not existing:
+        if inputs is None:
+            nxt = next_job(ledger, run, lessons_before_integrate=lessons_before_integrate)
+            if nxt is None or nxt.stage != stage:  # e.g. map while integrate is due first
+                nxt = next_job(ledger, run, lessons_before_integrate=sys.maxsize)
+            inputs = nxt.inputs if nxt is not None and nxt.stage == stage else {}
+        seq = 1 + len(ledger.jobs(run["id"]))
+        job = {"id": None, "run_id": run["id"], "name": f"{seq:03d}-{stage}", "stage": stage,
+               "input": json.dumps(inputs), "status": QUEUED, "pending_prompt": None,
+               "session_id": None, "resumes_job": None}
+    values = render.job_values(ledger, run, job)
+    kind, prompt, _ = render.next_prompt(ledger, run, job, spec, values)
+    try:
+        commit = git.head(root)
+    except FactoryError:
+        commit = None
+    text_of = render.worktree_text(root)
+    system = text_of(spec.prompt) if spec.prompt else ""
+    return {"run": run["id"], "job": job["name"], "stage": stage, "existing": existing,
+            "kind": kind, "input": json.loads(job["input"]), "files": str(root),
+            "commit": commit,
+            **_sizes(render.given(spec, prompt, text_of, render.message_label(kind))),
+            "system_prompt": strip_frontmatter(system or ""), "first_message": prompt}
+
+
+def attempt_prompt(ledger: Ledger, job: Any, n: int,
+                   text_at: Callable[[str, str], str | None]) -> dict[str, Any]:
+    """What one past attempt was given: its prompt as sent, and the stage's files at the
+    commit it ran at (`text_at(commit, path)`), with their sizes."""
+    attempt = ledger.one("SELECT * FROM attempt WHERE job_id = ? AND n = ?", job["id"], n)
+    if attempt is None:
+        return {"job": job["id"], "attempt": n, "prompt": None}
+    sha = attempt["commit_sha"]
+    spec_text = text_at(sha, spec_path(job["stage"])) if sha else None
+    if spec_text is None:
+        parts = [{"part": render.message_label(attempt["kind"]), "source": None,
+                  "missing": False,
+                  "chars": len(attempt["prompt"]), "tokens": render.tokens(attempt["prompt"])}]
+    else:
+        spec = parse_stage(job["stage"], spec_text, f"{sha[:12]}:{spec_path(job['stage'])}")
+        parts = render.given(spec, attempt["prompt"], lambda path: text_at(sha, path),
+                             render.message_label(attempt["kind"]))
+    return {"job": job["id"], "name": f"{job['run_id']}/{job['name']}", "attempt": n,
+            "kind": attempt["kind"], "commit": sha, "stage_files": spec_text is not None,
+            **_sizes(parts), "prompt": attempt["prompt"]}
+
+
+def _size_table(parts: list[dict[str, Any]], total: int) -> list[str]:
+    width = max(len(p["part"]) for p in parts)
+    lines = [f"  {'~tokens':>8}  {'part':{width}}  source"]
+    for p in parts:
+        note = " (missing)" if p["missing"] else ""
+        lines.append(f"  {p['tokens']:>8,}  {p['part']:{width}}  {p['source'] or ''}{note}"
+                     + (f": {p['error']}" if p.get("error") else ""))
+    lines.append(f"  {total:>8,}  total (about four characters a token)")
+    return lines
+
+
+def text_preview(r: dict[str, Any]) -> str:
+    what = "its next attempt" if r["existing"] else "a new job"
+    lines = [f"{r['run']}/{r['job']}: {r['stage']}, {what} ({r['kind']}); files from "
+             f"{r['files']} at {(r['commit'] or '-')[:12]}",
+             f"input: {json.dumps(r['input'])}", "", *_size_table(r["parts"], r["tokens"])]
+    return "\n".join(lines + ["", "## Appended system prompt", "", r["system_prompt"], "",
+                              f"## {render.message_label(r['kind']).capitalize()}", "",
+                              r["first_message"]])
+
+
+def text_attempt_prompt(r: dict[str, Any]) -> str:
+    if r["prompt"] is None:
+        return f"job {r['job']} has no attempt {r['attempt']}"
+    head = (f"{r['name']} attempt {r['attempt']} ({r['kind']}), commit "
+            f"{(r['commit'] or '-')[:12]}")
+    if not r["stage_files"]:
+        head += ": its stage files aren't in this checkout, so only the prompt is sized"
+    return "\n".join([head, *_size_table(r["parts"], r["tokens"]), "", r["prompt"]])
