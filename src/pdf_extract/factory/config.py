@@ -107,6 +107,9 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
     ]
     if "worktrees_dir" in raw:
         raw["worktrees_dir"] = Path(str(raw["worktrees_dir"])).expanduser()
+    for key in ("sandbox_memory", "sandbox_cpus"):  # `4` in YAML is still podman's "4"
+        if key in raw:
+            raw[key] = str(raw[key])
     if raw.get("worker_backend", "host") not in ("host", "sandbox"):
         raise FactoryError(f"worker_backend must be host or sandbox, not "
                            f"{raw['worker_backend']!r}")

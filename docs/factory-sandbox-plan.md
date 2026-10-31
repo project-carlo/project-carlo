@@ -1,7 +1,10 @@
 # Plan: sandboxed factory workers (issue #168)
 
-Status: plan only, written 2026-10-31 from the code at `01926ac2` and the live factory in
-`~/carlo-factory`. Nothing here has been built or tested yet.
+Status: written 2026-10-31 from the code at `01926ac2` and the live factory in
+`~/carlo-factory`. Phases 0, 2, 3, 4 and 6 are built, with unit tests and container tests
+that skip without Podman. Nothing has run in a real container yet: Phase 1 (spikes) and
+Phase 5 (live checks) wait on Podman and the account tokens. Where the build differs from
+this plan, the section says so ("Built:").
 
 ## 1. Decision
 
@@ -94,6 +97,8 @@ The launcher:
 - names the container `carlo-job-<attempt id>` with label `carlo.factory=1`, traps
   SIGTERM/SIGINT and runs `podman rm -f` on it;
 - answers the SDK's `claude -v` version probe by running the same image.
+  Built: the host's `claude -v` answers it. The probe comes without the worker's
+  environment, and the SDK only uses the answer for a warning.
 
 ### 3.2 Image
 
@@ -110,6 +115,9 @@ files (never from a Run worktree). It is tagged by a hash of the Containerfile,
   files it writes are the owner's on the host.
 
 Dependencies are installed at build time, before any untrusted content is processed.
+Built: the tag hashes the Containerfile (which pins the CLI, Node and pnpm), `pyproject.toml`
+and `uv.lock`. Not `pnpm-lock.yaml`: workers' `pnpm` scripts only call `uv run`, so the
+image installs no Node packages.
 
 ### 3.3 Workspace
 
@@ -222,6 +230,8 @@ without also blocking them for the owner. A proxy on the only route out does it 
   closes DNS rebinding. It refuses loopback, RFC 1918, CGNAT, link-local (including
   `169.254.169.254`), ULA and multicast addresses, and the host's own addresses. It
   only allows ports 80 and 443. Every redirect is a new request and is checked again.
+  Built: smokescreen has no port allowlist, so any port on a public address is
+  allowed. Private addresses are refused on every port.
 - Tools that ignore the proxy fail closed, since there is no other route.
 This doesn't stop a worker sending data to a public site. That's why §3.5 limits what is
 inside rather than relying on the network. Per-stage hostname allowlists are not planned,
@@ -233,6 +243,8 @@ since workers need open web access.
   `~/.claude/projects`. Resume works because the job, its directory and its workspace
   path are stable. One Run can't read another's transcripts, and nothing lands in the
   account's own config directory.
+  Built: per Run (`data/factory/sessions/<run>/`), not per job, because an answer job
+  resumes the session of the job it answers. Jobs in a Run already share `scratch/`.
 - `find_transcript` and `copy_transcript` look there for sandboxed attempts.
 - Copied back after each attempt: nothing else. `.claude.json` and other CLI state stay
   in the container's tmpfs home.

@@ -370,8 +370,11 @@ def test_local_yaml_names_each_accounts_worker_token(tmp_path: Path) -> None:
 
     local = tmp_path / "local.yaml"
     local.write_text("accounts:\n  - {name: a, config_dir: ~/.claude}\n"
-                     "  - {name: b, config_dir: ~/.claude_2, worker_token_file: ~/.t/b}\n")
-    a, b = load_config(tmp_path / "none.yaml", local).accounts
+                     "  - {name: b, config_dir: ~/.claude_2, worker_token_file: ~/.t/b}\n"
+                     "sandbox_cpus: 4\n")
+    config = load_config(tmp_path / "none.yaml", local)
+    assert config.sandbox_cpus == "4"
+    a, b = config.accounts
     assert a.worker_token_file is None
     assert b.worker_token_file == Path.home() / ".t" / "b"
 
