@@ -68,6 +68,7 @@ from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
+from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
 from pdf_extract.seeding.cli import add_seed_parser
 from pdf_extract.seeding.queries import SeedError
@@ -381,8 +382,16 @@ def _cmd_extract_frontend_db(_args: argparse.Namespace) -> Result:
     return extract_frontend_db()
 
 
-def _cmd_verify_frontend_snapshot(_args: argparse.Namespace) -> Result:
-    return verify_frontend_snapshot()
+def _cmd_verify_frontend_snapshot(args: argparse.Namespace) -> Result:
+    result = verify_frontend_snapshot(as_of=args.as_of)
+    comparison = result.get("comparison")
+    if comparison:
+        # Every parish is compared; print the ones with something to say.
+        comparison["parishes"] = [
+            p for p in comparison["parishes"]
+            if parish_changed(p) or p["notes"] or p["diagnostics"] or p["availability"]["lost"]
+        ]
+    return result
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
@@ -786,6 +795,10 @@ def _build_parser() -> argparse.ArgumentParser:
     verify_frontend_snapshot_parser = subparsers.add_parser(
         "verify-frontend-snapshot",
         help="Verify frontend snapshot similarity against frontend.json.gz.previous",
+    )
+    verify_frontend_snapshot_parser.add_argument(
+        "--as-of", type=date.fromisoformat, default=None, metavar="YYYY-MM-DD",
+        help="Read both snapshots as of this date (default: today)",
     )
     verify_frontend_snapshot_parser.set_defaults(
         handler=_cmd_verify_frontend_snapshot, fail_on_verification_error=True,
