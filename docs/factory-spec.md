@@ -100,7 +100,8 @@ What a map job learns reaches later batches in three ways:
   job is `integrate`, which merges them into *Bulletin publishers here* and *Rules
   settled*, keeps only what's reusable, and empties the list.
 - **Fixes across batches** (a merge, a church that belongs to another parish) are raised
-  as advisory flags and handled by `reconcile`.
+  as advisory flags and handled by `reconcile`, which names each flag it settles so the PR
+  stops listing it as open (§7).
 
 Lessons from `seed` jobs don't go into `diocese.md`. They stay in the ledger for foreman
 reviews. What a seed Run carries forward is `seed-review`'s decisions that no rule
@@ -166,6 +167,9 @@ Reviewers add their verdicts:
 
 - `survey-review`: `"verdict": "approve | send_back"`, `"problems": [...]`, and
   `"rules": [...]`, the proposed rules it accepts, as written.
+- `reconcile` (not a reviewer) adds `"settled": [{ "flag": 12, "how": "..." }]`: the
+  earlier advisory flags it settled, by the ids its job input shows. The dispatcher sends
+  it back for an id that isn't an advisory flag of its Run.
 - `seed-review`: `"seeds": [{ "parish", "verdict": "approve | send_back", "answers":
   [{ "question", "choice", "basis": "rule | precedent | judgment", "why" }], "problems":
   [...] }]`, a verdict for every parish. It never raises a blocking parish flag: it
@@ -235,7 +239,8 @@ Each tick:
    Each step after the gates is recorded in the ledger as it completes, so a dispatcher
    restarted partway through skips what's done instead of committing or appending lessons
    twice.
-5. **Flags.** Advisory flags are stored for the PR. A blocking flag about a parish, from a
+5. **Flags.** Advisory flags are stored for the PR; those `reconcile` lists in `settled`
+   are marked settled, with its `how` and its job. A blocking flag about a parish, from a
    map or seed job (other stages are sent back for one), **parks** that parish and opens
    an issue (§7); the Run carries on with the next job. A
    blocking flag about the Run (a bad survey, a merge conflict, a gate the worker can't pass
@@ -281,7 +286,15 @@ quota [--by ...] [--windows] [backfill] | cost [--stage]`.
 ## 7. Flags and issues
 
 - Flags are either **blocking** or **advisory**. An advisory flag lets the Run continue;
-  the parish is left open or excluded with a reason, and the flag is listed in the PR.
+  the parish is left open or excluded with a reason, and the flag is listed in the PR
+  unless `reconcile` settles it. The PR lists settled flags apart, collapsed, with how
+  each was settled.
+- Some things need no flag, because the records carry them (`data/dioceses/README.md`,
+  *What to flag*): a church no source settles (an `open/` record, which `reconcile` tries
+  once more and the PR lists), a bulletin `fetch` can't collect (the parish's `fetch_gap`,
+  which the PR lists by kind and `pnpm diocese gaps` lists across dioceses), and an
+  address the sources disagree on (the worker chooses, preferring the parish's and the
+  diocese's own, and says why in the record).
 - A blocking flag becomes a **GitHub issue** with labels `factory`, `run:<diocese>` and
   `stage:<stage>`, holding the question, the evidence and the suggestion.
 - You answer by commenting and closing the issue. The dispatcher checks open factory
@@ -359,8 +372,9 @@ a stage's recent jobs, or a Run, and it tells you what went wrong and how to imp
   except in `parishes.csv` and `churches.csv`: there a code job takes main's version and
   runs `promote` again.
 - The `pr` code step writes the PR summary from the ledger and the CLIs:
-  - **map Run:** coverage numbers, advisory flags, parked parishes, and `reconcile`'s
-    lessons for every diocese;
+  - **map Run:** coverage numbers, the `open/` records with what would settle each, the
+    fetch gaps by kind, advisory flags still open, the flags settled during the Run
+    (collapsed), parked parishes, and `reconcile`'s lessons for every diocese;
   - **seed Run:** seeds by status, advisory flags, parked parishes, and **every decision
     `seed-review` made**, by judgment, by precedent and by a rule, each with the parish
     and slot, the drafter's lean, the choice and why. Answers against the lean come first.
