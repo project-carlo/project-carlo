@@ -281,7 +281,7 @@ and follows §4.
 
 ### Phase 0: fixes (no worker-visible change)
 
-Small and independent of the rest, so it can land now.
+Done, in the PR that adds this plan. Small and independent of the rest, so it can land now.
 
 - Merge main before loading the stage spec.
 - `config.yaml`: `max_crashes`, `max_failures`, `failure_retry_minutes`,

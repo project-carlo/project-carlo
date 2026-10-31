@@ -59,7 +59,7 @@ survey ─▶ survey-review ─▶ map × each batch ─▶ reconcile ─▶ pro
 for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you merge)
 ```
 
-- **One Run at a time**, and one job at a time within it (`max_workers: 1`). Batches run
+- **One Run at a time**, and one job at a time within it. Batches run
   in order, so each map batch starts from the playbook the earlier ones built.
 - When no job is running, the dispatcher picks, in order: the active Run's next job; a
   blocked Run whose issues are all answered; a ready seed Run; a map Run for the next

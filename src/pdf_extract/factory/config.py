@@ -24,10 +24,6 @@ RUNS_DIR = DATA / "runs"
 STUB_DATA = DATA / "stub"
 
 
-# How long after an attempt the usage meter has caught up (docs/factory-spec.md, Usage).
-QUOTA_SETTLE_SECONDS = 150
-
-
 class FactoryError(RuntimeError):
     """Something the dispatcher can't do; the message says what to fix."""
 
@@ -43,8 +39,15 @@ class Account:
 class Config:
     five_hour_cap: float = 75
     weekly_cap: float = 100
-    max_workers: int = 1
     max_send_backs: int = 2
+    # A job's attempts: crashes before its Run blocks, "continue"s after a partial session,
+    # and git or GitHub failing on it tick after tick, retried this often.
+    max_crashes: int = 3
+    max_continues: int = 1
+    max_failures: int = 3
+    failure_retry_minutes: int = 5
+    # How long the usage check waits after the endpoint answers 429 Too Many Requests.
+    usage_cooldown_minutes: int = 30
     lessons_before_integrate: int = 8
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
@@ -60,7 +63,7 @@ class Config:
     # Quota readings (docs/factory-spec.md, Usage): a settled reading once an account has
     # been idle this long after an attempt, one of every account this often, and an
     # optional idle gap between attempts on an account so each gets a settled reading.
-    quota_settle_seconds: int = QUOTA_SETTLE_SECONDS
+    quota_settle_seconds: int = 150
     quota_sample_minutes: int = 15
     calibration_gap_seconds: int = 0
     # This machine's, from local.yaml.

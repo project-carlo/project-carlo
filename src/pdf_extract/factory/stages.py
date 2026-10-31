@@ -35,6 +35,11 @@ class StageSpec:
     tools: list[str] = field(default_factory=list)
     writes: list[str] = field(default_factory=list)
     gates: list[str] = field(default_factory=list)
+    # Files the worker reads first (`path` or `path#Heading`), and commands it may not run.
+    # Unused until the prompt diet (docs/factory-refactor-plan.md, Phase 2); known now so a
+    # spec that uses them loads in a dispatcher that hasn't restarted since.
+    reads: list[str] = field(default_factory=list)
+    deny: list[str] = field(default_factory=list)
     max_turns: int = 150
     max_minutes: int = 90
 
