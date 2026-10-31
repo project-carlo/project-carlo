@@ -127,6 +127,8 @@ writes:                        # globs, checked by the diff-scope gate
   - scratch/{run}/{job}/**
 gates:
   - pnpm --silent diocese validate {diocese}
+secrets: []                    # .env entries its workers get (seed: R2_*, model keys)
+gate_secrets: []               # .env entries its gate commands get
 limits: { max_turns: 300, max_minutes: 90 }
 ```
 
@@ -137,7 +139,9 @@ and CLI it ran with.
 
 - **Handoff gate.** The handoff exists and matches the schema.
 - **Diff-scope gate.** Every changed path matches `writes`. On a failure the dispatcher
-  reverts the out-of-scope changes and sends the job back with the paths.
+  reverts the out-of-scope changes and sends the job back with the paths. A sandboxed
+  worker's changes that were never brought back into the Run (out of scope, a link, too
+  big) fail it the same way.
 
 Reviewers write nothing but their handoff (`writes` is only their scratch folder). The
 dispatcher acts on their verdicts (§8).
@@ -257,21 +261,44 @@ the Run's history. You handle review comments in your
 own session.
 
 CLI: `pnpm factory status | queue | run | pause | resume | retry <job> | inspect <job> |
-quota [--by ...] [--windows] [backfill] | cost [--stage]`.
+quota [--by ...] [--windows] [backfill] | cost [--stage] | backup | clones [--apply]`.
 
 ### Worker setup
 
-- **Worktree.** The dispatcher works in its own worktree, one branch per Run, with its own
-  copy of the database and its own `node_modules`, so it never touches your checkout.
+See `docs/factory-sandbox-plan.md` for the design and what is still to verify live.
+
+- **Checkout.** The dispatcher works in its own clone, one standalone clone per Run on
+  the Run's branch, each with its own copy of the database and its own `.venv`. None
+  shares git metadata with your checkout or with each other.
+- **Sandbox.** `worker_backend: sandbox` runs each attempt's Claude CLI, and everything
+  it starts (Bash, `uv`, Chrome, Xvfb), in a fresh rootless Podman container: no
+  capabilities, a read-only root, memory, CPU and process limits, and an internal
+  network whose only way out is an egress proxy that refuses private, host and metadata
+  addresses. The worker edits a private copy of the Run's files with no `.git`, its
+  tools (`src/`, `.claude/`, `factory/`) read-only. After the attempt the dispatcher
+  copies back only ordinary files inside `writes`. If Podman, the image or the proxy
+  fails, the attempt ends as `sandbox` and the job waits; it never runs on the host
+  instead. `worker_backend: host` (the default until the live checks pass) runs the CLI
+  on the host.
+- **Environment.** Either way, a worker starts through `factory/sandbox/claude-in-box`
+  with only what the dispatcher names: no `.env` keys but its stage's `secrets:`, no
+  GitHub, Cloudflare or SSH, and its own Xvfb, not the host's display. `pnpm factory`
+  reads `.env` into a dict instead of its own environment, and gate commands get its
+  environment without secrets, plus their stage's `gate_secrets:`.
+- **Claude login.** Host workers use the account's config folder. Sandboxed workers get
+  the account's `claude setup-token` token (`worker_token_file:`), which never refreshes,
+  so a worker can't rotate the login the dispatcher reads usage with.
 - **Permissions.** Workers run in auto mode, where a classifier checks each action
   instead of a person. The SDK starts in `default` mode, so the dispatcher sets
   `permission_mode="auto"` explicitly.
 - **Only the dispatcher commits, pushes and opens PRs.** Workers start without
   `GH_TOKEN` or git credentials in their environment, and with deny rules for `git
   commit`, `git push` and `gh`. The diff-scope gate checks files git tracks or would
-  track; gitignored files (the database copy, `scratch/`) are left to the worker.
+  track; gitignored files (the database copy, `scratch/`) are left to the worker. The
+  dispatcher's own git calls run without hooks or fsmonitor.
 - **Supervision.** The dispatcher runs as a systemd user service with `Restart=always`.
-  On startup, a job still marked `running` is treated as a crash and resumed.
+  On startup it removes any worker container left behind, then treats a job still
+  marked `running` as a crash and resumes it.
 
 ## 6. Ledger and storage
 
@@ -446,9 +473,11 @@ you've already mapped. You review its PRs closely; they are the test of the fact
 
 ## Running it
 
-1. Make the dispatcher its own checkout of `main`, apart from yours:
-   `git worktree add ~/carlo-factory origin/main --detach`. Run `pnpm factory` from there;
-   its ledger, transcripts and Run worktrees live in its `data/factory/`.
+1. Make the dispatcher its own clone of `main`, apart from yours:
+   `git clone <origin url> ~/carlo-factory`. Run `pnpm factory` from there; its ledger,
+   transcripts and Run checkouts live in its `data/factory/`. (A checkout made earlier
+   as a linked worktree: stop the dispatcher, then `pnpm factory clones --apply` turns it
+   and its Run worktrees into standalone clones in place.)
 2. `uv sync --group dev --group factory` (the `factory` group holds the Agent SDK),
    `pnpm data:pull`, and R2 keys that can write in `.env` for the nightly backup.
 3. Sign each account in once: `CLAUDE_CONFIG_DIR=~/.claude claude /login`, and the
@@ -459,7 +488,13 @@ you've already mapped. You review its PRs closely; they are the test of the fact
    and PRs under `data/factory/stub/` and branches `factory-stub/<run>`, and pushes
    nothing, so it never touches the real Runs; `pnpm factory status --stub` (and
    `inspect`, `cost`... `--stub`) reads it.
-5. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
+5. To sandbox workers: `sudo apt install podman` (rootless; check `podman info` as
+   yourself). For each account, `CLAUDE_CONFIG_DIR=~/.claude_2 claude setup-token`, save
+   the token to a file only you can read (`chmod 600`) and name it as that account's
+   `worker_token_file:`. Then set `worker_backend: sandbox`. The first attempt builds the
+   worker image (`factory/sandbox/Containerfile`, from `origin/main`) and starts the
+   egress proxy; `pnpm factory status` says when workers run on the host.
+6. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
    `pnpm factory status` shows what it is doing and what waits on you.
 
 ## Implementation decisions
@@ -468,15 +503,15 @@ Where the implementation had to decide something this spec left open.
 
 ### Runs and jobs
 
-- **A worktree per Run**, under `data/factory/worktrees/<run>` (`worktrees_dir` in
-  `local.yaml`), created from `origin/main` with the Run's branch, a copy of the
-  dispatcher's database and `uv sync --group dev` (`setup`). Workers resume a session
-  only in the worktree that made it, so a follow-up Run's jobs start fresh workers with
-  your answer in their input.
-- **A merged Run's worktree is deleted**, with its local branch, once the dispatcher sees
-  the merge: nothing needs it after that, since answers go to a follow-up Run and seed
-  readiness reads the parish records from `origin/main`. Its `scratch/<run>/` (handoffs,
-  manifests, tools) is copied to `data/factory/runs/<run>/scratch/` first.
+- **A checkout per Run**, under `data/factory/worktrees/<run>` (`worktrees_dir` in
+  `local.yaml`): a standalone clone of the remote on the Run's branch from `origin/main`,
+  with a copy of the dispatcher's database and `uv sync --group dev` (`setup`). Workers
+  resume a session only in the Run that made it, so a follow-up Run's jobs start fresh
+  workers with your answer in their input.
+- **A merged Run's checkout is deleted**, with its sandbox workspace, once the dispatcher
+  sees the merge: nothing needs it after that, since answers go to a follow-up Run and
+  seed readiness reads the parish records from `origin/main`. Its `scratch/<run>/`
+  (handoffs, manifests, tools) is copied to `data/factory/runs/<run>/scratch/` first.
 - **The next job is computed, not queued ahead** (`plan.py`): a queued job (a send-back,
   an answer) first, then the stage order. A seed Run's batches are the map Run's
   `batches.json`, each parish placed by the roster refs in its record; parishes in no
@@ -512,6 +547,43 @@ Where the implementation had to decide something this spec left open.
   after the approvals.
 - **Promote and pr are code.** A failing promote command blocks the Run with its output.
   The PR is opened with `gh pr create`; an open PR for the branch is reused.
+
+### Workers and the sandbox
+
+- **The boundary is the CLI, not the SDK.** The Agent SDK stays in the dispatcher and
+  starts `factory/sandbox/claude-in-box` as its CLI (`cli_path`), which starts the real
+  CLI on the host or in the container. The SDK only reads its messages, so steps, costs
+  and rate-limit events are unchanged. That holds only while the dispatcher's
+  `ClaudeAgentOptions` set no `hooks`, `can_use_tool` or in-process MCP servers, which
+  would run tools in the dispatcher; a test checks it.
+- **The launcher** keeps only the environment names the dispatcher lists in `CARLO_BOX`,
+  drops the rest of what the SDK passes down (the dispatcher's whole environment), and
+  on SIGTERM (a timeout) removes the container or kills the worker's process group, so
+  no Chrome survives an attempt.
+- **The image** is built on the dispatcher's machine from `origin/main`'s Containerfile,
+  `pyproject.toml` and `uv.lock`, tagged by their hash: a Run can't change what its
+  workers run in. The project's dependencies are in a read-only `/opt/venv`; the Run's
+  `src/` is on `PYTHONPATH`.
+- **The workspace** is `data/factory/sandbox/<run>/work`, refreshed from the Run's
+  checkout before each attempt (rsync, without `.git`, `.venv` or `node_modules`; the
+  worker's database copy and caches are kept). It sits at its own path in the container,
+  so the CLI's working directory and session keys match the host's. After each attempt
+  the container is removed first, then changed files matching `writes` are copied back
+  by content. Links, hard links, devices, `..` and `.git` paths, files over 50 MB and
+  more than 2,000 files are refused and recorded on the attempt (`attempt.refused`).
+- **Sessions** are in `data/factory/sessions/<run>/`, mounted as the container's
+  `~/.claude/projects`: per Run, since an answer job resumes the session of the job it
+  answers.
+- **The egress proxy** is Stripe's smokescreen, one long-lived container (`carlo-egress`)
+  on the workers' internal network (`carlo-workers`) and the normal one. It refuses
+  loopback, private, CGNAT, link-local and metadata, multicast and the host's own
+  addresses, and resolves names itself, so DNS rebinding doesn't get past it. Workers
+  get `HTTP(S)_PROXY`; Chrome gets `proxy=` from it at both Playwright launches.
+  Claude's web search runs on Anthropic's side and doesn't pass through it.
+- **`sandbox` outcome.** Podman missing, the image failing to build, the network or
+  proxy failing, an account without a `worker_token_file`, or a container that can't be
+  removed: the job waits 10 minutes and tries again, without counting a crash. The third
+  in a row blocks the Run.
 
 ### Usage
 
@@ -613,9 +685,12 @@ usage endpoint (`quota.py`):
   anything waiting on you. Until then, `pnpm factory status`.
 - **Triage.** An agent that tries to settle blocking flags itself (an existing rule, a
   retry later) before opening an issue. Worth adding if there are too many issues.
-- **Sandbox.** Run workers in the SDK's Bash sandbox with permissions bypassed, instead of
-  auto mode, to save the classifier's usage and its false blocks. First check that
-  `parish-site-access`'s headed Chrome works inside it.
+- **Sandbox, next steps.** Once the live checks pass and `sandbox` is the default: refuse
+  `host` for real Runs unless `allow_host_workers: true`. Then bypass permissions inside
+  the container instead of auto mode, to save the classifier's usage and its false
+  blocks, now that the container is the boundary. Scoped keys for seed stages (a
+  read-only R2 token, model keys with spend caps). gVisor or a microVM if host-kernel
+  exploits become a concern.
 - **More at once.** Several Runs, or several workers, in parallel.
 - **Overrules and auto-merge.** Record your corrections against reviewer decisions,
   shorten the PR's list of seed-review's decisions once the record supports it, and

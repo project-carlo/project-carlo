@@ -7,6 +7,7 @@ import os
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import Protocol
+from urllib.parse import unquote, urlsplit
 
 from playwright.sync_api import sync_playwright
 from playwright_stealth import Stealth
@@ -60,6 +61,26 @@ class PageLike(Protocol):
     def request(self) -> RequestLike: ...
 
 
+def proxy_from_env() -> dict[str, str] | None:
+    """Playwright's `proxy=` from HTTPS_PROXY (or HTTP_PROXY), or None when neither is set.
+
+    Chrome doesn't read those itself. A factory worker's sandbox reaches the web only
+    through its egress proxy (docs/factory-sandbox-plan.md §3.6).
+    """
+    names = ("HTTPS_PROXY", "https_proxy", "HTTP_PROXY", "http_proxy")
+    raw = next((os.environ[n] for n in names if os.environ.get(n)), None)
+    if raw is None:
+        return None
+    url = urlsplit(raw if "://" in raw else f"http://{raw}")
+    proxy = {"server": f"{url.scheme}://{url.hostname}" + (f":{url.port}" if url.port else "")}
+    if url.username:
+        proxy |= {"username": unquote(url.username), "password": unquote(url.password or "")}
+    bypass = os.environ.get("NO_PROXY") or os.environ.get("no_proxy")
+    if bypass:
+        proxy["bypass"] = bypass
+    return proxy
+
+
 @contextmanager
 def launch_stealth_browser(*, channel: str | None = None) -> Iterator[PageLike]:
     """Yield a stealth-patched page. PLAYWRIGHT_HEADLESS and
@@ -72,6 +93,9 @@ def launch_stealth_browser(*, channel: str | None = None) -> Iterator[PageLike]:
     channel = os.getenv("PLAYWRIGHT_BROWSER_CHANNEL") or channel
     if channel:
         launch_kwargs["channel"] = channel
+    proxy = proxy_from_env()
+    if proxy:
+        launch_kwargs["proxy"] = proxy
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(**launch_kwargs)

@@ -8,6 +8,11 @@ tools: [Bash, Read, Edit, Write]
 writes:
   - data/seeds/{parish}.json
   - scratch/{run}/{job}/**
+# What its workers get from the dispatcher's .env: bulletins from R2, and the model keys
+# `seed ask` and `seed extract` call. Scoped keys are a follow-up (factory-sandbox-plan.md).
+secrets: [R2_*, GEMINI_API_KEY, OPENAI_API_KEY]
+# `seed check` reads bulletins from R2.
+gate_secrets: [R2_*]
 gates:
   - pnpm seed check {parish}
 limits: { max_turns: 150, max_minutes: 60 }

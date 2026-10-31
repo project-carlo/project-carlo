@@ -7,6 +7,11 @@ skills: [draft-parish-seed]
 tools: [Bash, Read, Write]
 writes:
   - scratch/{run}/{job}/**
+# What its workers get from the dispatcher's .env: bulletins from R2, and the model keys
+# `seed ask` and `seed extract` call. Scoped keys are a follow-up (factory-sandbox-plan.md).
+secrets: [R2_*, GEMINI_API_KEY, OPENAI_API_KEY]
+# `seed check` reads bulletins from R2.
+gate_secrets: [R2_*]
 # Run after the dispatcher approves the seeds the reviewer approved.
 gates:
   - pnpm seed check {approved}

@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import git, inputs, playbook, readiness, report
+from pdf_extract.factory import git, inputs, playbook, readiness, report, workspace
 from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.config import QUEUE_PATH, RUNS_DIR, Account, Config, FactoryError
 from pdf_extract.factory.forge import Forge
@@ -69,6 +69,7 @@ from pdf_extract.factory.plan import (
     seed_status,
 )
 from pdf_extract.factory.quota import fingerprint, work_units
+from pdf_extract.factory.secrets import Secrets, command_env, pick
 from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
 from pdf_extract.factory.usage import (
@@ -85,6 +86,7 @@ from pdf_extract.factory.workers import (
     CRASH,
     OK,
     PARTIAL,
+    SANDBOX,
     TIMEOUT,
     USAGE,
     Worker,
@@ -96,6 +98,10 @@ from pdf_extract.factory.workers import (
 
 LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
+# The sandbox failing to start a worker (no image, Podman or proxy): the job waits this
+# long, and the Run blocks after this many in a row. Never counted as a worker crash.
+SANDBOX_RETRY = timedelta(minutes=10)
+MAX_SANDBOX_FAILURES = 3
 MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
 FAILURE_RETRY = timedelta(minutes=5)
 # How long the usage check waits after the endpoint answers 429 Too Many Requests.
@@ -125,10 +131,13 @@ def main_queue(repo: Path, upstream: str) -> list[dict[str, Any]]:
     return json.loads(text)
 
 
-def run_command(command: str, cwd: Path, timeout: int = 3600) -> tuple[bool, str]:
+def run_command(command: str, cwd: Path, secrets: dict[str, str] | None = None,
+                timeout: int = 3600) -> tuple[bool, str]:
+    """A shell command, with the dispatcher's environment scrubbed of secrets plus
+    `secrets`, and without reading a `.env` (secrets.command_env)."""
     try:
         proc = subprocess.run(command, shell=True, cwd=cwd, capture_output=True, text=True,
-                              timeout=timeout)
+                              timeout=timeout, env=command_env(secrets))
     except subprocess.TimeoutExpired:
         return False, f"timed out after {timeout}s"
     return proc.returncode == 0, (proc.stdout + proc.stderr)[-6000:]
@@ -145,12 +154,15 @@ class Dispatcher:
         forge: Forge,
         fetch_usage: Fetch = fetch_usage,
         clock: Callable[[], datetime] = lambda: datetime.now(UTC),
-        commands: Callable[[str, Path], tuple[bool, str]] = run_command,
+        commands: Callable[..., tuple[bool, str]] = run_command,
+        secrets: Secrets | None = None,
         db_path: Path = Path("data") / "parish_events.db",
         runs_dir: Path = RUNS_DIR,
         queue_path: Path | None = None,
         pull_data: Callable[[], None] | None = None,
         backup: Callable[[], str] | None = None,
+        cleanup: Callable[[], None] | None = None,
+        sandbox_dir: Path | None = None,
         push: bool = True,
     ) -> None:
         self.ledger, self.config, self.repo = ledger, config, repo
@@ -158,6 +170,9 @@ class Dispatcher:
         self.clock, self.commands = clock, commands
         self.db_path, self.runs_dir, self.queue_path = db_path, runs_dir, queue_path
         self.pull_data, self.backup, self.push_enabled = pull_data, backup, push
+        self.secrets = secrets or {}
+        self.cleanup = cleanup
+        self.sandbox_dir = sandbox_dir  # sandboxed workers' workspaces, one per Run
 
     # ── The loop ────────────────────────────────────────────────────────────
     def run_forever(self) -> None:
@@ -173,7 +188,13 @@ class Dispatcher:
             time.sleep(pause)
 
     def _recover(self) -> None:
-        """A job still marked running when the dispatcher starts crashed with it."""
+        """A job still marked running when the dispatcher starts crashed with it. Its
+        worker's container, if any, goes first (`cleanup`)."""
+        if self.cleanup is not None:
+            try:
+                self.cleanup()
+            except Exception:  # a broken Podman fails the next attempt as SANDBOX
+                LOGGER.exception("removing leftover worker containers failed")
         for row in self.ledger.all("SELECT id FROM job WHERE status = ?", RUNNING):
             self.ledger.set_job(row["id"], status=QUEUED, pending_prompt=json.dumps(
                 {"kind": "resume", "prompt": None}))
@@ -196,8 +217,9 @@ class Dispatcher:
             if cooldown:  # no usage check to retry: the periodic readings take over again
                 self.ledger.set("usage_cooldown", None)
             return Outcome("idle")
-        if job["status"] == WAITING_USAGE and job["wait_until"] \
-                and not self.ledger.get("override_caps", False):
+        # A usage wait (which --override-caps skips), or a sandbox retry.
+        if job["wait_until"] and (job["status"] == QUEUED or (
+                job["status"] == WAITING_USAGE and not self.ledger.get("override_caps", False))):
             until = datetime.fromisoformat(job["wait_until"])
             if until > self.clock():
                 return Outcome("waiting", f"job {job['id']} until {job['wait_until']}", until)
@@ -570,6 +592,7 @@ class Dispatcher:
             job_id=job["id"], run_id=run["id"], job_name=job["name"], stage=job["stage"],
             spec=spec, worktree=worktree, account=account, prompt=prompt,
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
+            attempt_id=attempt_id, secrets=pick(self.secrets, spec.secrets),
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
             on_rate_limit=lambda info: self._rate_limit(attempt_id, info),
@@ -581,7 +604,8 @@ class Dispatcher:
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
                                    session_id=result.session_id, finished_at=finished,
-                                   transcript=str(transcript) if transcript else None)
+                                   transcript=str(transcript) if transcript else None,
+                                   refused=json.dumps(result.refused) if result.refused else None)
         try:
             self._record_meta(attempt_id, run, job, spec, worktree, account, result,
                               transcript, session, started, finished)
@@ -597,6 +621,11 @@ class Dispatcher:
                             turns=job["turns"] + result.turns,
                             session_id=result.session_id or job["session_id"])
         job = self.ledger.job(job["id"])
+        key = f"sandbox_failures:{run['id']}"
+        if result.outcome == SANDBOX:
+            return self._sandbox_failed(run, job, key, result)
+        if self.ledger.get(key):
+            self.ledger.set(key, 0)
         if result.outcome == USAGE:
             until = result.resets_at or self.clock() + timedelta(minutes=30)
             # With a session, it continues where it stopped. Without one, the next attempt
@@ -625,6 +654,24 @@ class Dispatcher:
         assert result.outcome == OK
         self.ledger.set_job(job["id"], status=GATING, pending_prompt=None)
         return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
+
+    def _sandbox_failed(self, run: Any, job: Any, key: str, result: WorkerResult) -> Outcome:
+        """No worker ran: the job waits as it was (same prompt, same session) and tries
+        again; after MAX_SANDBOX_FAILURES in a row the Run blocks on an issue."""
+        failures = (self.ledger.get(key) or 0) + 1
+        self.ledger.set(key, failures)
+        if failures >= MAX_SANDBOX_FAILURES:
+            self.ledger.set(key, 0)
+            self.ledger.set_job(job["id"], status=QUEUED)
+            return self._block_run(run, job, f"The worker sandbox failed {failures} times in "
+                                   f"a row: {result.error}", suggestion="Fix the sandbox "
+                                   "(Podman, the worker image or the egress proxy; see "
+                                   "docs/factory-spec.md), then close this issue. Workers "
+                                   "never run on the host instead.")
+        until = self.clock() + SANDBOX_RETRY
+        self.ledger.set_job(job["id"], status=QUEUED, wait_until=until.isoformat())
+        return Outcome("waiting", f"job {job['id']}: sandbox failed ({result.error}); "
+                                  "trying again", until)
 
     def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
                      worktree: Path, account: Account | None, result: WorkerResult,
@@ -692,11 +739,15 @@ class Dispatcher:
                              "\n".join(handoff_problems) or "ok")
         problems += handoff_problems
         outside = self._revert_outside(worktree, spec, values)
-        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside,
-                             "\n".join(outside) or "ok")
+        # A sandboxed worker's changes that were never brought back (workspace.py).
+        refused = json.loads(attempts[-1]["refused"] or "[]") if attempts else []
+        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside and not refused,
+                             "\n".join(outside + refused) or "ok")
         if outside:
             problems.append("You changed files outside your write boundaries; they were "
                             "reverted: " + ", ".join(outside))
+        if refused:
+            problems.append("Some of your changes were not kept: " + ", ".join(refused))
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
             problems += self._settled_problems(run, job, handoff)
@@ -756,7 +807,8 @@ class Dispatcher:
             if any(not values.get(name) for name in placeholders(gate)):
                 continue  # e.g. no approved seeds to check
             command = fill(gate, values)
-            ok, out = self.commands(command, worktree)
+            ok, out = self.commands(command, worktree,
+                                    secrets=pick(self.secrets, spec.gate_secrets))
             self.ledger.add_gate(job["id"], attempt, command, ok, out)
             if not ok:
                 problems.append(f"`{command}` failed:\n\n```\n{out[-2500:]}\n```")
@@ -1206,6 +1258,8 @@ class Dispatcher:
             git.remove_worktree(self.repo, path, run["branch"])
         except FactoryError as exc:
             LOGGER.warning("couldn't remove %s: %s", path, exc)
+        if self.sandbox_dir is not None:
+            workspace.remove(self.sandbox_dir, run["id"])
 
     def check_readiness(self) -> None:
         dioceses = readiness.dioceses_to_check(self.ledger)

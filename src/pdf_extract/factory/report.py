@@ -68,7 +68,8 @@ def status(ledger: Ledger) -> dict[str, Any]:
         "account) last ON last.id = u.id ORDER BY u.account")]
     return {"paused": ledger.get("paused"), "usage_cooldown": ledger.get("usage_cooldown"),
             "override_caps": ledger.get("override_caps", False),
-            "runs": runs, "usage": usage, "last_backup": ledger.get("backed_up")}
+            "runs": runs, "usage": usage, "last_backup": ledger.get("backed_up"),
+            "workers": ledger.get("worker_backend")}
 
 
 def text_status(r: dict[str, Any]) -> str:
@@ -81,6 +82,8 @@ def text_status(r: dict[str, Any]) -> str:
                      f"(since {c.get('since', '')[:16]})")
     if r["override_caps"]:
         lines.append("Caps overridden (`pnpm factory pause` or `resume` to restore)")
+    if r.get("workers") == "host":
+        lines.append("WORKERS RUN ON THE HOST, not sandboxed (worker_backend: host)")
     for u in r["usage"]:
         lines.append(f"account {u['account']}: 5h {u['five_hour']:.0f}% (resets "
                      f"{u['five_hour_resets'][:16]}), week {u['seven_day']:.0f}% (resets "

@@ -6,6 +6,11 @@
 #   systemctl --user enable --now carlo-factory
 #   loginctl enable-linger "$USER"   # keep it running after you log out
 #   journalctl --user -u carlo-factory -f
+#
+# No EnvironmentFile and no xvfb-run: the dispatcher reads .env itself without putting it
+# in its environment, and each worker gets its own Xvfb (docs/factory-sandbox-plan.md).
+# With `worker_backend: sandbox`, rootless Podman runs as you: lingering (above) gives
+# the service the XDG_RUNTIME_DIR it needs.
 [Unit]
 Description=Project Carlo onboarding factory dispatcher
 After=network-online.target

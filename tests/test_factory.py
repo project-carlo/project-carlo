@@ -69,6 +69,7 @@ from pdf_extract.factory.usage import (
 )
 from pdf_extract.factory.workers import (
     OK,
+    SANDBOX,
     USAGE,
     StubAction,
     StubWorker,
@@ -149,12 +150,15 @@ class Env:
         self.now = datetime(2026, 11, 2, 12, tzinfo=UTC)
         self.commands_run: list[str] = []
         self.failing: dict[str, int] = {}  # command substring -> failures left
+        self.command_secrets: dict[str, dict[str, str]] = {}
 
     def clock(self) -> datetime:
         return self.now
 
-    def commands(self, command: str, cwd: Path) -> tuple[bool, str]:
+    def commands(self, command: str, cwd: Path,
+                 secrets: dict[str, str] | None = None) -> tuple[bool, str]:
         self.commands_run.append(command)
+        self.command_secrets[command] = secrets or {}
         for needle, left in list(self.failing.items()):
             if needle in command and left > 0:
                 self.failing[needle] = left - 1
@@ -272,7 +276,7 @@ def test_map_run_end_to_end(env: Env) -> None:
     maps = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "map")]
     assert maps == ["b2", "b1"]
     # Every job committed and pushed with its trailer.
-    log = git(env.repo, "log", f"origin/{run['branch']}", "--format=%B")
+    log = git(env.remote, "log", run["branch"], "--format=%B")
     assert f"Factory-Job: {run['id']}/001-survey" in log
     assert f"Factory-Job: {run['id']}/003-map" in log
     meta = Path(run["worktree"]) / "data" / "dioceses" / D / "diocese.md"
@@ -341,6 +345,27 @@ def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
                           "ORDER BY id LIMIT 1", first["id"])
     assert not gate["passed"] and "data/parishes.csv" in gate["output"]
     assert (Path(run["worktree"]) / "data" / "parishes.csv").read_text() == "slug\n"
+
+
+def test_changes_a_sandbox_refused_are_recorded_and_sent_back(env: Env) -> None:
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        refused = ["data/parishes.csv (outside your write boundaries)"] if attempt == 1 else []
+        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")},
+                          handoff=done(), refused=refused)
+
+    d = env.dispatcher(map_script(map=mapping))
+    drive(d)
+    first = env.ledger.jobs(map_run(env)["id"], "map")[0]
+    assert first["send_backs"] == 1
+    attempt = env.ledger.one("SELECT * FROM attempt WHERE job_id = ? ORDER BY n LIMIT 1",
+                             first["id"])
+    assert json.loads(attempt["refused"]) == ["data/parishes.csv (outside your write boundaries)"]
+    gate = env.ledger.one("SELECT * FROM gate WHERE job_id = ? AND name = 'diff-scope' "
+                          "ORDER BY id LIMIT 1", first["id"])
+    assert not gate["passed"] and "data/parishes.csv" in gate["output"]
+    prompt = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2",
+                            first["id"])["prompt"]
+    assert "were not kept" in prompt
 
 
 def test_past_its_send_backs_a_job_blocks_the_run(env: Env) -> None:
@@ -916,6 +941,56 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     approve = [c for c in env.commands_run if c.startswith("pnpm seed approve st-ann")][0]
     answers = json.loads((wt / approve.split("--answers ")[1]).read_text())
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
+
+
+def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
+    secrets = {"R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o",
+               "CLOUDFLARE_API_TOKEN": "cf", "GH_TOKEN": "gh", "OTHER": "x"}
+    run = seed_env(env)
+    d = env.dispatcher(seed_script, secrets=secrets)
+    drive(d)
+    seen = {r.stage: r.secrets for r in env.worker.calls}
+    assert seen["seed"] == seen["seed-review"] == {
+        "R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o"}
+    check = next(c for c in env.command_secrets if c.startswith("pnpm seed check"))
+    assert env.command_secrets[check] == {"R2_ACCESS_KEY_ID": "r2"}
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
+def test_map_stages_get_no_secrets(env: Env) -> None:
+    d = env.dispatcher(map_script(), secrets={"R2_ACCESS_KEY_ID": "r2", "OPENAI_API_KEY": "o"})
+    drive(d)
+    assert env.worker.calls and all(r.secrets == {} for r in env.worker.calls)
+    assert all(not s for s in env.command_secrets.values())
+
+
+def test_a_sandbox_failure_waits_then_blocks_the_run_without_counting_a_crash(
+        env: Env) -> None:
+    def broken(req: WorkerRequest, attempt: int) -> StubAction:
+        return StubAction(outcome=SANDBOX)
+
+    d = env.dispatcher(map_script(survey=broken))
+    outcome = d.tick()
+    assert outcome.action == "waiting" and "sandbox failed" in outcome.detail
+    job = env.ledger.jobs(map_run(env)["id"])[0]
+    assert job["status"] == "queued" and job["crashes"] == 0 and job["wait_until"]
+    assert d.tick().action == "waiting" and len(env.worker.calls) == 1  # waits it out
+    for _ in range(2):
+        env.now += timedelta(minutes=11)
+        outcome = d.tick()
+    assert outcome.action == "blocked" and "sandbox failed 3 times" in outcome.detail
+    assert map_run(env)["status"] == BLOCKED and len(env.worker.calls) == 3
+    assert env.ledger.job(job["id"])["crashes"] == 0
+
+
+def test_restart_removes_leftover_containers_before_resuming(env: Env) -> None:
+    seen: list[str] = []
+    d = env.dispatcher(map_script(), cleanup=lambda: seen.append("cleanup"))
+    d.tick()
+    env.ledger.set_job(env.ledger.jobs(map_run(env)["id"])[-1]["id"], status=RUNNING)
+    d._recover()
+    assert seen == ["cleanup"]
+    assert env.ledger.jobs(map_run(env)["id"])[-1]["status"] == "queued"
 
 
 def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
