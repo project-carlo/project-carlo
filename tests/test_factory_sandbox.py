@@ -693,6 +693,12 @@ def test_a_new_run_checkout_shares_nothing_with_the_dispatchers(
     assert not path.exists()
     git.ensure_worktree(repo, path, "factory/run-1", remote="origin", base="origin/main")
     assert (path / "b.txt").read_text() == "b\n"
+    # worktrees_dir is relative to the dispatcher's checkout by default.
+    monkeypatch.chdir(repo)
+    rel = Path("data") / "factory" / "worktrees" / "run-2"
+    git.ensure_worktree(repo, rel, "factory/run-2", remote="origin", base="origin/main")
+    assert (repo / rel / "a.txt").exists()
+    assert sh_git(repo / rel, "branch", "--show-current").strip() == "factory/run-2"
 
 
 def test_a_linked_worktree_becomes_a_standalone_clone_in_place(

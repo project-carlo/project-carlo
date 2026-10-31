@@ -54,6 +54,7 @@ def ensure_worktree(repo: Path, path: Path, branch: str, *, remote: str, base: s
     """
     if (path / ".git").exists():
         return False
+    path = path.resolve()  # worktrees_dir is relative to the dispatcher's checkout
     path.parent.mkdir(parents=True, exist_ok=True)
     url = git(repo, "remote", "get-url", remote).strip()
     git(path.parent, "clone", "--quiet", "--no-checkout", "--origin", remote,
@@ -84,6 +85,7 @@ def make_standalone(path: Path, remote: str) -> None:
     """
     if not is_linked(path):
         return
+    path = path.resolve()
     common = common_dir(path)
     url = git(path, "remote", "get-url", remote).strip()
     branch = git(path, "branch", "--show-current").strip()
