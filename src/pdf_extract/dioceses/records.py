@@ -35,7 +35,7 @@ from typing import Any
 import yaml
 
 from pdf_extract import storage
-from pdf_extract.dioceses import research
+from pdf_extract.dioceses import gaps, research
 from pdf_extract.dioceses.publications import (
     REVIEW_WORDING,
     review_gap,
@@ -126,7 +126,7 @@ PARISH = Kind(
         "name", "website", "bulletin_provider", "provider_id", "publication", "group", "evidence",
     ),
     optional=("replaces", *_REVISIT, "promoted", "research", "bulletin_status",
-              "publication_reviews"),
+              "fetch_gap", "publication_reviews"),
     template="""\
 ## Publisher
 
@@ -208,6 +208,7 @@ KINDS: dict[str, Kind] = {k.name: k for k in (PARISH, CHURCH, EXCLUDED, OPEN)}
 
 _LIST_FIELDS = {"publication", "replaces", "roster"}
 _OBJECT_LIST_FIELDS = {"evidence", "research", "publication_reviews"}
+_OBJECT_FIELDS = {"fetch_gap"}  # one object, or null to remove it
 _BOOL_FIELDS = {"name_verified", "address_verified"}
 _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
@@ -249,7 +250,7 @@ def _empty(fname: str) -> Any:
         return []
     if fname in _BOOL_FIELDS:
         return False
-    if fname in _FLOAT_FIELDS or fname in _DATE_FIELDS:
+    if fname in _FLOAT_FIELDS or fname in _DATE_FIELDS or fname in _OBJECT_FIELDS:
         return None
     return ""
 
@@ -591,7 +592,8 @@ def _check_record(kind: Kind, r: Mapping[str, Any], rosters: Mapping[str, set[st
             p.errors.append(f"{label}: {fname} must be a finite number or null")
         elif fname in _DATE_FIELDS:
             _check_date(label, fname, value, p)
-        elif (fname not in _LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | _OBJECT_LIST_FIELDS
+        elif (fname not in (_LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | _OBJECT_LIST_FIELDS
+                            | _OBJECT_FIELDS)
               and not isinstance(value, str)):
             hint = " (quote it: postal_code: \"01234\")" if fname == "postal_code" else ""
             p.errors.append(f"{label}: {fname} must be text, got {value!r}{hint}")
@@ -650,6 +652,8 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
     if status and (not isinstance(status, str) or status not in research.BULLETIN_STATUSES):
         p.errors.append(f"{label}: bulletin_status must be one of "
                         f"{', '.join(sorted(research.BULLETIN_STATUSES))}")
+    if r.get("fetch_gap") is not None:
+        p.errors.extend(f"{label}: {e}" for e in gaps.errors(r["fetch_gap"]))
     reviews = r.get("publication_reviews", [])
     if not isinstance(reviews, list):
         p.errors.append(f"{label}: publication_reviews must be a list")
@@ -1152,6 +1156,8 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
             valid = isinstance(value, list) and all(isinstance(v, str) for v in value)
         elif key in _OBJECT_LIST_FIELDS:
             valid = isinstance(value, list) and all(isinstance(v, dict) for v in value)
+        elif key in _OBJECT_FIELDS:
+            valid = value is None or isinstance(value, dict)
         elif key in _BOOL_FIELDS:
             valid = isinstance(value, bool)
         elif key in _FLOAT_FIELDS:

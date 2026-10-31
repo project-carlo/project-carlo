@@ -193,6 +193,7 @@ HANDLERS: dict[str, Handler] = {
                                            website=a.website or "", gcatholic=a.gcatholic or ""),
     "show": lambda a: records.show_diocese(a.diocese),
     "todo": lambda a: report.todo(a.diocese),
+    "gaps": lambda a: report.gaps(a.diocese, a.kind),
     "validate": lambda a: records.validate(a.diocese),
     "write": _write_record,
     "batches-validate": lambda a: batches.validate(a.diocese, Path(a.file) if a.file else None),
@@ -268,6 +269,11 @@ def add_diocese_parser(
 
     p = leaf("todo", "todo", "What is left: errors, revisits due, coverage gaps, incomplete records")
     p.add_argument("diocese")
+
+    p = leaf("gaps", "gaps", "Parishes whose bulletin fetch can't collect yet (fetch_gap), "
+             "grouped by kind: the work list for new collectors")
+    p.add_argument("--diocese", help="one diocese; every diocese when omitted")
+    p.add_argument("--kind", help="one kind, e.g. solutio-file-403")
 
     p = leaf("validate", "validate", "Check one diocese (or all); exits 1 on errors")
     p.add_argument("diocese", nargs="?")

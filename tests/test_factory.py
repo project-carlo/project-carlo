@@ -8,6 +8,7 @@ gate runs are faked.
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sqlite3
 import subprocess
@@ -167,6 +168,11 @@ class Env:
                 return False, f"Already approved by {seed['reviewer']}"
             seed |= {"status": "approved", "reviewer": reviewer}
             path.write_text(json.dumps(seed))
+        if "diocese gaps" in command:
+            return True, json.dumps({"total": 1, "kinds": [{
+                "kind": "solutio-file-403", "parishes": 1, "dioceses": [D], "entries": [
+                    {"diocese": D, "parish": "p-003-map",
+                     "note": "Solutio /file links answer 403."}]}]})
         if "diocese coverage" in command:
             return True, json.dumps({"diocese": D, "rosters": [
                 {"roster": "directory", "title": "Directory", "accounted_for": "3/3 (100%)",
@@ -590,6 +596,50 @@ def test_a_parish_flag_from_a_stage_that_cant_park_is_sent_back(tmp_path: Path) 
     del data["verdict"]
     path.write_text(json.dumps(data))
     assert not read_handoff(path, "map")[1]  # a map job parks the parish
+
+
+OPEN_RECORD = ("---\nname: Chapel\nrevisit: Ask the parish office\nrevisit_after: 2027-01-31\n"
+               "roster: []\nevidence: []\n---\nNotes.\n")
+
+
+def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> None:
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        return StubAction(
+            files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish_record("x:1"),
+                   "data/dioceses/{diocese}/open/chapel-{job}.md": OPEN_RECORD},
+            handoff=done(flags=[{"severity": "advisory", "scope": "parish",
+                                 "subject": f"p-{req.job_name}",
+                                 "question": f"Merge p-{req.job_name} into St. Ann?"}]))
+
+    shown: list[int] = []
+
+    def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt == 1:
+            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", req.prompt))
+            return StubAction(handoff=done(settled=[{"flag": 999, "how": "?"}]))
+        return StubAction(handoff=done(settled=[{"flag": shown[0],
+                                                 "how": "Merged; one masthead."}]))
+
+    d = env.dispatcher(map_script(map=mapping, reconcile=reconciling))
+    drive(d)
+    run = map_run(env)
+    first, second = env.ledger.flags(run["id"])
+    assert shown == [first["id"], second["id"]]
+    reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
+    assert reconcile["send_backs"] == 1  # flag 999 isn't one of its Run's
+    assert (first["status"], first["answer"], first["settled_by"]) == (
+        "settled", "Merged; one masthead.", reconcile["id"])
+    assert second["status"] == "listed"
+
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    open_section = pr.split("## Left open")[1].split("##")[0]
+    assert "- `chapel-003-map` Chapel: Ask the parish office (after 2027-01-31)" in open_section
+    assert "`solutio-file-403` (1): `p-003-map`. Solutio /file links answer 403." in pr
+    flags = pr.split("## Advisory flags")[1].split("## Parked")[0]
+    listed, collapsed = flags.split("<details>")
+    assert "Merge p-004-map into St. Ann?" in listed and "p-003-map" not in listed
+    assert ("Merge p-003-map into St. Ann? **Settled by 005-reconcile:** Merged; one "
+            "masthead.") in collapsed
 
 
 def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
@@ -1245,6 +1295,13 @@ def test_handoff_validation(tmp_path: Path) -> None:
     path.write_text(json.dumps({"status": "blocked", "summary": "s", "seeds": [], "flags": [{
         "severity": "blocking", "scope": "parish", "subject": "p", "question": "q"}]}))
     assert "decides every question" in read_handoff(path, "seed-review")[1][0]
+    path.write_text(json.dumps({"status": "done", "summary": "s", "settled": [
+        {"flag": 1, "how": "merged"}, {"flag": 1, "how": "again"}]}))
+    assert "settle each flag once" in read_handoff(path, "reconcile")[1][0]
+    path.write_text(json.dumps({"status": "done", "summary": "s", "settled": [
+        {"flag": 1, "how": "merged"}]}))
+    assert not read_handoff(path, "reconcile")[1]
+    assert read_handoff(path, "map")[1]  # only reconcile settles flags
 
 
 def test_runs_take_their_branch_prefix(tmp_path: Path) -> None:

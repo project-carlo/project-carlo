@@ -27,7 +27,8 @@ WAITING_USAGE, SENT_BACK, JOB_BLOCKED, FAILED = "waiting_usage", "sent_back", "b
 UNFINISHED = (QUEUED, RUNNING, GATING, WAITING_USAGE, SENT_BACK)
 
 # Flag states: open (an issue waits for you), answered (its answer not yet acted on),
-# settled, or listed (advisory, for the PR).
+# settled (answered and acted on, or an advisory flag a later job settled), or listed
+# (advisory, for the PR).
 OPEN, ANSWERED, SETTLED, LISTED = "open", "answered", "settled", "listed"
 
 SCHEMA = """
@@ -128,7 +129,8 @@ CREATE TABLE IF NOT EXISTS flag (
     issue_number INTEGER,
     answer TEXT,
     answered_at TEXT,
-    created_at TEXT NOT NULL
+    created_at TEXT NOT NULL,
+    settled_by INTEGER REFERENCES job(id)
 );
 CREATE TABLE IF NOT EXISTS lead (
     id INTEGER PRIMARY KEY,
@@ -232,6 +234,7 @@ CREATE INDEX IF NOT EXISTS rate_limit_attempt ON rate_limit_event (attempt_id);
 COLUMNS = {
     "usage": [("source", "TEXT NOT NULL DEFAULT 'select'"), ("attempt_id", "INTEGER"),
               ("job_id", "INTEGER"), ("raw", "TEXT")],
+    "flag": [("settled_by", "INTEGER REFERENCES job(id)")],  # the job that settled it
 }
 
 

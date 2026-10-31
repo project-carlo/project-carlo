@@ -58,6 +58,21 @@ records. Unresolved research belongs in structured `research`, not fabricated ce
 a parish you can't settle without the owner's decision gets a blocking flag with
 `scope: parish`, and the rest of the batch carries on.
 
+## Record it, don't flag it
+
+Three things go in the records, not in a flag (README, *What to flag*):
+
+- **A church you can't settle.** No source shows Mass there now and none says it closed:
+  an `open/` record, with the next check in `revisit` and a date in `revisit_after`. The
+  PR lists every `open/` record.
+- **A bulletin `fetch` can't collect.** The parish publishes one, but no recipe reads it
+  (a host that answers 403, links that aren't PDFs, an HTML-only bulletin, an embedded
+  viewer): set the row's `fetch_gap`, reusing a `kind` that `pnpm diocese gaps` lists for
+  the same problem.
+- **Sources that disagree on an address or a name.** Choose, preferring the parish's and
+  the diocese's own sources unless you have a reason not to, and say why in *Name and
+  address*.
+
 ## Manifest and handoff
 
 Write a small `manifest.json` in your scratch folder: changed paths, counts by kind,

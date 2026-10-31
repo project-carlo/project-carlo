@@ -63,11 +63,15 @@ def _flags_help(stage: str) -> str:
 - `flags`: `blocking` sets a parish aside (`scope: parish`, subject `roster:id` or the
   parish slug) until the owner answers an issue, while the rest of the Run carries on; a
   blocking flag with `scope: run` stops the Run. `advisory` is listed in the PR: leave
-  that parish open or excluded with a reason. Give evidence and what you would do."""
+  that parish open or excluded with a reason. Give evidence and what you would do. Don't
+  flag what the records already carry (README, *What to flag*): a church left in `open/`,
+  a bulletin `fetch` can't collect (`fetch_gap`), or an address you chose between sources."""
     return """\
 - `flags`: a `blocking` flag (`scope: run`) stops the Run until the owner answers an
   issue; this stage can't set a single parish aside. `advisory` is listed in the PR.
-  Give evidence and what you would do."""
+  Give evidence and what you would do. Don't flag what the records already carry
+  (README, *What to flag*): a church left in `open/`, a bulletin `fetch` can't collect
+  (`fetch_gap`), or an address you chose between sources."""
 
 
 def _lines(items: list[str]) -> str:
@@ -112,7 +116,9 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
 `data/dioceses/{diocese}/diocese.md` has {n} entries under *New lessons*.
 """
     if stage == "reconcile":
-        advisory = [f"{f['subject']}: {f['question']} (suggestion: {f['suggestion'] or '-'})"
+        raised_by = {j["id"]: j["name"] for j in ledger.jobs(run_id)}
+        advisory = [f"[#{f['id']}] {f['subject']} ({raised_by.get(f['job_id'], '?')}): "
+                    f"{f['question']} (suggestion: {f['suggestion'] or '-'})"
                     for f in ledger.flags(run_id, LISTED)]
         leads = [f"{r['touches']}: {r['note']}" for r in ledger.all(
             "SELECT * FROM lead WHERE run_id = ? AND used_by IS NULL", run_id)]
@@ -122,7 +128,8 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
 
 Every batch is mapped. Use `{tools}` as the tools folder.
 
-Advisory flags from the batches:
+Advisory flags from the batches and `integrate`. Put each one you settle in your
+handoff's `settled`, by its `[#id]`; the PR lists the rest as still open:
 {_lines(advisory)}
 
 Leads no batch took:
