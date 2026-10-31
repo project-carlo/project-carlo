@@ -95,11 +95,6 @@ from pdf_extract.factory.workers import (
 )
 
 LOGGER = logging.getLogger(__name__)
-MAX_CRASHES = 3
-MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
-FAILURE_RETRY = timedelta(minutes=5)
-# How long the usage check waits after the endpoint answers 429 Too Many Requests.
-USAGE_COOLDOWN = timedelta(minutes=30)
 # How long an attempt's gates wait for its after reading (seconds); usually under one.
 AFTER_READING_WAIT = 10
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -223,7 +218,7 @@ class Dispatcher:
             self.ledger.set_job(job["id"], status=QUEUED, pending_prompt=json.dumps(
                 {"kind": "resume", "prompt": None}) if job["session_id"]
                 else job["pending_prompt"])
-        if failures >= MAX_FAILURES:
+        if failures >= self.config.max_failures:
             # The Run blocks, not the job: once the issue is closed, the job carries on
             # from the step that failed instead of starting its worker again.
             self.ledger.set(key, 0)
@@ -232,7 +227,7 @@ class Dispatcher:
                                    f"times in a row: {exc}",
                                    suggestion="Fix what failed (git, GitHub or the network), "
                                    "then close this issue to try the job again.")
-        until = self.clock() + FAILURE_RETRY
+        until = self.clock() + timedelta(minutes=self.config.failure_retry_minutes)
         return Outcome("waiting", f"job {job['id']} failed ({exc}); trying again", until)
 
     # ── Picking (§3) ────────────────────────────────────────────────────────
@@ -332,13 +327,14 @@ class Dispatcher:
             worktree = self._worktree(run)
         except FactoryError as exc:
             return self._block_run(run, job, f"Can't set up the Run's worktree: {exc}")
-        spec = load_stage(job["stage"], worktree)
-        if job["status"] == GATING:
-            return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
+        # Merge first, so the job runs with the stage spec and prompt of the same commit.
         if job["status"] in (QUEUED, WAITING_USAGE) and not self._attempts(job["id"]):
             merged = self._merge_main(run, job, worktree)
             if merged is not None:
                 return merged
+        spec = load_stage(job["stage"], worktree)
+        if job["status"] == GATING:
+            return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
         if spec.kind == CODE:
             return self._code(run, job, spec, worktree)
         return self._attempt(run, job, spec, worktree)
@@ -413,10 +409,10 @@ class Dispatcher:
         return pick.account, ids[pick.account.name], None
 
     def _cool_down(self, exc: UsageError) -> Outcome:
-        """The endpoint is rate limiting the factory: wait USAGE_COOLDOWN, then try again
-        (another 429 waits again). Kept apart from `paused`, which only the owner clears."""
+        """The endpoint is rate limiting the factory: wait `usage_cooldown_minutes`, then try
+        again (another 429 waits again). Kept apart from `paused`, which only the owner clears."""
         at = self.clock()
-        until = at + USAGE_COOLDOWN
+        until = at + timedelta(minutes=self.config.usage_cooldown_minutes)
         since = (self.ledger.get("usage_cooldown") or {}).get("since", at.isoformat())
         self.ledger.set("usage_cooldown", {"reason": f"usage check failed: {exc}",
                                            "since": since, "until": until.isoformat()})
@@ -615,7 +611,7 @@ class Dispatcher:
                 pending = job["pending_prompt"] or pending
             crashes = job["crashes"] + 1
             self.ledger.set_job(job["id"], crashes=crashes)
-            if crashes >= MAX_CRASHES:
+            if crashes >= self.config.max_crashes:
                 return self._block_run(run, job, f"The worker crashed {crashes} times: "
                                        f"{result.error}")
             self.ledger.set_job(job["id"], status=QUEUED, pending_prompt=pending)
@@ -665,11 +661,12 @@ class Dispatcher:
                                    "model": tokens.model or info.get("model")}))
 
     def _partial(self, run: Any, job: Any, why: str) -> Outcome:
-        if job["continues"] < 1:
+        if job["continues"] < self.config.max_continues:
             self.ledger.set_job(job["id"], status=SENT_BACK, continues=job["continues"] + 1,
                                 pending_prompt=json.dumps({"kind": "continue", "prompt": None}))
             return Outcome("ran", f"job {job['id']} partial; continuing")
-        return self._exhausted(run, job, [f"The job stopped partway twice: {why}."])
+        return self._exhausted(run, job, [f"The job stopped partway {job['continues'] + 1} "
+                                          f"times: {why}."])
 
     # ── Gates ───────────────────────────────────────────────────────────────
     def _gate(self, run: Any, job: Any, spec: StageSpec, worktree: Path) -> Outcome:

@@ -5,9 +5,18 @@
 five_hour_cap: 75
 weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
 
-max_workers: 1
 max_send_backs: 2
 lessons_before_integrate: 8
+
+# A job's attempts. The Run blocks after max_crashes worker crashes, or after
+# max_failures git or GitHub failures in a row (retried every failure_retry_minutes).
+# A session that ends partway is continued max_continues times, then the Run blocks.
+max_crashes: 3
+max_continues: 1
+max_failures: 3
+failure_retry_minutes: 5
+# How long the usage check waits after the endpoint answers 429 Too Many Requests.
+usage_cooldown_minutes: 30
 
 # Seed Runs (§11).
 seed_ready_bulletins: 2

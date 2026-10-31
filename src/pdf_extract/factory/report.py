@@ -12,7 +12,7 @@ from typing import Any
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from pdf_extract.dioceses.records import parse_file
-from pdf_extract.factory.config import QUOTA_SETTLE_SECONDS, FactoryError
+from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.ledger import (
     ANSWERED,
     DONE,
@@ -133,8 +133,8 @@ SHORT = {"five_hour": "5h", "seven_day": "week"}
 META_JSON = ("models", "per_model", "gaps")
 
 
-def analysis(ledger: Ledger,
-             settle_seconds: int = QUOTA_SETTLE_SECONDS) -> tuple[Analysis, dict[int, Span]]:
+def analysis(ledger: Ledger, settle_seconds: int = Config.quota_settle_seconds
+             ) -> tuple[Analysis, dict[int, Span]]:
     spans = {s.id: s for s in map(Span.from_row, ledger.all(
         "SELECT id, job_id, account, started_at, finished_at FROM attempt"))}
     readings = [Reading.from_row(r) for r in ledger.all("SELECT * FROM usage")]
@@ -171,7 +171,7 @@ def _measures(an: Analysis, spans: dict[int, Span], ids: list[int]) -> dict[str,
 
 
 def inspect(ledger: Ledger, job: Any, runs_dir: Path,
-            settle_seconds: int = QUOTA_SETTLE_SECONDS) -> dict[str, Any]:
+            settle_seconds: int = Config.quota_settle_seconds) -> dict[str, Any]:
     """Everything about a job in one place, for a foreman review (§9)."""
     an, spans = analysis(ledger, settle_seconds)
     attempts = []
@@ -292,7 +292,7 @@ def _attempt_quota_lines(a: dict[str, Any]) -> list[str]:
 
 
 def recent(ledger: Ledger, stage: str, last: int,
-           settle_seconds: int = QUOTA_SETTLE_SECONDS) -> dict[str, Any]:
+           settle_seconds: int = Config.quota_settle_seconds) -> dict[str, Any]:
     an, spans = analysis(ledger, settle_seconds)
     rows = ledger.all("SELECT * FROM job WHERE stage = ? ORDER BY id DESC LIMIT ?", stage, last)
     out = []
@@ -338,7 +338,7 @@ def _per_unit(values: list[float]) -> dict[str, Any]:
 
 
 def quota(ledger: Ledger, by: str = "stage", tz: str | None = None,
-          settle_seconds: int = QUOTA_SETTLE_SECONDS) -> dict[str, Any]:
+          settle_seconds: int = Config.quota_settle_seconds) -> dict[str, Any]:
     """Points per unit of completed work, by stage (or within stages by model, effort,
     mode, account, plan, date or hour), with outcomes, sample sizes and coverage."""
     try:
@@ -454,7 +454,8 @@ def text_quota(r: dict[str, Any]) -> str:
     return "\n".join(lines) if r["rows"] else "No attempts yet."
 
 
-def windows(ledger: Ledger, settle_seconds: int = QUOTA_SETTLE_SECONDS) -> dict[str, Any]:
+def windows(ledger: Ledger,
+            settle_seconds: int = Config.quota_settle_seconds) -> dict[str, Any]:
     """Per account and window instance: points used, and how much the factory's measured
     attempts explain (settled, shared, uncertain); the rest is unexplained."""
     an, _ = analysis(ledger, settle_seconds)

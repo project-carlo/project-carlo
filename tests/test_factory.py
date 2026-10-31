@@ -380,6 +380,18 @@ def test_partial_is_continued_once(env: Env) -> None:
     assert kinds == ["start", "continue"] and survey["continues"] == 1
 
 
+def test_the_number_of_continues_is_a_setting(env: Env) -> None:
+    def surveying(req: WorkerRequest, attempt: int) -> StubAction:
+        status = "partial" if attempt < 3 else "done"
+        return StubAction(files=survey_files(), handoff={"status": status, "summary": "s"})
+
+    env.config.max_continues = 2
+    d = env.dispatcher(map_script(survey=surveying))
+    drive(d)
+    survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
+    assert survey["continues"] == 2 and survey["status"] == DONE
+
+
 def test_a_crash_resumes_the_session_and_a_restart_resumes_a_running_job(env: Env) -> None:
     def surveying(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
@@ -819,6 +831,19 @@ def test_main_is_merged_at_the_start_of_each_stage(env: Env) -> None:
     d.tick()  # survey-review: a new stage, so main is merged first
     run = map_run(env)
     assert (Path(run["worktree"]) / "README.md").read_text() == "new spec\n"
+
+
+def test_a_stage_runs_with_the_spec_main_had_when_it_started(env: Env) -> None:
+    d = env.dispatcher(map_script())
+    d.tick()  # survey
+    spec = env.repo / "factory" / "stages" / "survey-review.yaml"
+    text = spec.read_text().replace("max_turns: 80", "max_turns: 7")
+    env.commit_main({"factory/stages/survey-review.yaml": text + "reads: [README.md]\n"},
+                    "spec change")
+    d.tick()  # survey-review: main is merged before its spec is read
+    request = env.worker.calls[-1]
+    assert request.stage == "survey-review"
+    assert request.spec.max_turns == 7 and request.spec.reads == ["README.md"]
 
 
 def test_a_merge_conflict_blocks_the_run(env: Env) -> None:
@@ -1358,6 +1383,23 @@ def test_stage_specs_load_and_cover_every_stage() -> None:
             assert spec.writes and spec.model
 
 
+def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
+    from pdf_extract.factory.stages import load_stage
+
+    (tmp_path / "factory" / "stages").mkdir(parents=True)
+    spec = (ROOT / "factory" / "stages" / "map.yaml").read_text()
+    (tmp_path / "factory" / "stages" / "map.yaml").write_text(
+        spec + "reads: [data/dioceses/README.md#Fields]\ndeny: [Bash(pnpm seed extract:*)]\n")
+    loaded = load_stage("map", tmp_path)
+    assert loaded.reads == ["data/dioceses/README.md#Fields"]
+    assert loaded.deny == ["Bash(pnpm seed extract:*)"]
+    assert load_stage("map", ROOT).reads == [] and load_stage("map", ROOT).deny == []
+
+
+def test_the_committed_config_is_the_defaults(tmp_path: Path) -> None:
+    assert load_config(ROOT / "factory" / "config.yaml", tmp_path / "none.yaml") == Config()
+
+
 def test_inspect_shows_attempts_gates_and_reviews(env: Env) -> None:
     env.failing["diocese validate"] = 1
     d = env.dispatcher(map_script())
@@ -1698,12 +1740,15 @@ def failing_usage_check(env: Env, status: int, fail: int = 1) -> Meter:
     return meter
 
 
+COOLDOWN = timedelta(minutes=Config().usage_cooldown_minutes)
+
+
 def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None:
     meter = failing_usage_check(env, 429, 2)
     d = env.dispatcher(map_script(), fetch_usage=meter)
     first = d.tick()
     assert first.action == "waiting" and "cooldown" in first.detail
-    assert first.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert first.wait_until == env.now + COOLDOWN
     assert env.ledger.get("paused") is None
     since = env.ledger.get("usage_cooldown")["since"]
     status = report.text_status(report.status(env.ledger))
@@ -1718,7 +1763,7 @@ def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None
     env.now += timedelta(minutes=1)
     second = d.tick()
     assert second.action == "waiting" and meter.calls == calls + 1
-    assert second.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert second.wait_until == env.now + COOLDOWN
     assert env.ledger.get("usage_cooldown")["since"] == since
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] != DONE
     # The next check succeeds: the cooldown clears and queued work resumes.
@@ -1734,7 +1779,7 @@ def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "waiting"
     meter.five = env.config.five_hour_cap + 5  # over the 5-hour cap once it answers
-    env.now += dispatcher_mod.USAGE_COOLDOWN
+    env.now += COOLDOWN
     out = d.tick()
     assert out.action == "waiting" and "no account under its caps" in out.detail
     assert env.ledger.get("usage_cooldown") is None
@@ -1747,7 +1792,7 @@ def test_a_cooldown_never_lifts_the_owners_pause(env: Env) -> None:
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "waiting"
     env.ledger.set("paused", {"reason": "paused by the owner", "at": "now"})
-    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    env.now += COOLDOWN * 3
     calls = meter.calls
     out = d.tick()
     assert (out.action, out.detail) == ("paused", "paused by the owner")
@@ -1774,7 +1819,7 @@ def test_other_usage_check_failures_still_pause(env: Env) -> None:
     meter = failing_usage_check(env, 500, 1)
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "paused"
-    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    env.now += COOLDOWN * 3
     assert d.tick().action == "paused"
     assert env.ledger.get("usage_cooldown") is None
     assert "endpoint down" in env.ledger.get("paused")["reason"]
