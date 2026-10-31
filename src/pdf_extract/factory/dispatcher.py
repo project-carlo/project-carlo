@@ -20,7 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import git, inputs, playbook, readiness, report
+from pdf_extract.factory import git, inputs, playbook, readiness, report, workspace
 from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.config import QUEUE_PATH, RUNS_DIR, Account, Config, FactoryError
 from pdf_extract.factory.forge import Forge
@@ -162,6 +162,7 @@ class Dispatcher:
         pull_data: Callable[[], None] | None = None,
         backup: Callable[[], str] | None = None,
         cleanup: Callable[[], None] | None = None,
+        sandbox_dir: Path | None = None,
         push: bool = True,
     ) -> None:
         self.ledger, self.config, self.repo = ledger, config, repo
@@ -171,6 +172,7 @@ class Dispatcher:
         self.pull_data, self.backup, self.push_enabled = pull_data, backup, push
         self.secrets = secrets or {}
         self.cleanup = cleanup
+        self.sandbox_dir = sandbox_dir  # sandboxed workers' workspaces, one per Run
 
     # ── The loop ────────────────────────────────────────────────────────────
     def run_forever(self) -> None:
@@ -602,7 +604,8 @@ class Dispatcher:
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
                                    session_id=result.session_id, finished_at=finished,
-                                   transcript=str(transcript) if transcript else None)
+                                   transcript=str(transcript) if transcript else None,
+                                   refused=json.dumps(result.refused) if result.refused else None)
         try:
             self._record_meta(attempt_id, run, job, spec, worktree, account, result,
                               transcript, session, started, finished)
@@ -736,11 +739,15 @@ class Dispatcher:
                              "\n".join(handoff_problems) or "ok")
         problems += handoff_problems
         outside = self._revert_outside(worktree, spec, values)
-        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside,
-                             "\n".join(outside) or "ok")
+        # A sandboxed worker's changes that were never brought back (workspace.py).
+        refused = json.loads(attempts[-1]["refused"] or "[]") if attempts else []
+        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside and not refused,
+                             "\n".join(outside + refused) or "ok")
         if outside:
             problems.append("You changed files outside your write boundaries; they were "
                             "reverted: " + ", ".join(outside))
+        if refused:
+            problems.append("Some of your changes were not kept: " + ", ".join(refused))
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
             problems += self._settled_problems(run, job, handoff)
@@ -1251,6 +1258,8 @@ class Dispatcher:
             git.remove_worktree(self.repo, path, run["branch"])
         except FactoryError as exc:
             LOGGER.warning("couldn't remove %s: %s", path, exc)
+        if self.sandbox_dir is not None:
+            workspace.remove(self.sandbox_dir, run["id"])
 
     def check_readiness(self) -> None:
         dioceses = readiness.dioceses_to_check(self.ledger)

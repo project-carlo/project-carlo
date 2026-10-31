@@ -25,10 +25,12 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING, Protocol
 
-from pdf_extract.factory.config import FactoryError
+from pdf_extract.factory.config import DATA, FactoryError
+from pdf_extract.factory.stages import fill
 
 if TYPE_CHECKING:
     from pdf_extract.factory.workers import WorkerRequest
+    from pdf_extract.factory.workspace import Snapshot
 
 LOGGER = logging.getLogger(__name__)
 
@@ -82,6 +84,12 @@ class Launch:
     cli_path: str
     env: dict[str, str]  # options.env: the worker's environment and CARLO_BOX
     container: str | None = None
+    # A sandboxed attempt's private workspace (the CLI's cwd), and what to bring back
+    # from it into `trusted` afterwards: paths matching `writes`.
+    work: Path | None = None
+    trusted: Path | None = None
+    before: Snapshot | None = None
+    writes: list[str] = field(default_factory=list)
 
 
 def plan_env(env: dict[str, str], argv: list[str], keep: list[str],
@@ -96,7 +104,9 @@ class Backend(Protocol):
 
     def launch(self, request: WorkerRequest, env: dict[str, str]) -> Launch: ...
 
-    def finish(self, launch: Launch) -> None: ...
+    def finish(self, launch: Launch) -> list[str]:
+        """After the attempt, whatever its outcome: what was refused, for diff-scope."""
+        ...
 
     def cleanup(self) -> None: ...
 
@@ -117,8 +127,8 @@ class HostBackend:
         keep = [*HOST_PASS, *SDK_ENV, "PWD", *env]
         return Launch(str(self.launcher), plan_env(env, argv, keep))
 
-    def finish(self, launch: Launch) -> None:
-        pass  # the launcher stops the worker's process group itself
+    def finish(self, launch: Launch) -> list[str]:
+        return []  # the launcher stops the worker's process group itself
 
     def cleanup(self) -> None:
         pass
@@ -257,8 +267,8 @@ class PodmanBackend:
 
     def __init__(self, repo: Path, upstream: str, *, launcher: Path = LAUNCHER,
                  podman: str | None = None, limits: Limits | None = None,
-                 call: PodmanCall | None = None) -> None:
-        self.repo, self.upstream = repo, upstream
+                 call: PodmanCall | None = None, sandbox_dir: Path = DATA / "sandbox") -> None:
+        self.repo, self.upstream, self.sandbox_dir = repo, upstream, sandbox_dir
         self.launcher = launcher.resolve()
         self.podman = podman or shutil.which("podman") or ""
         self.limits = limits or Limits()
@@ -314,35 +324,47 @@ class PodmanBackend:
         return image
 
     # ── An attempt ───────────────────────────────────────────────────────────
-    def mounts(self, request: WorkerRequest) -> list[Mount]:
-        """The Run's worktree at its own path. Its .git and .venv read-only: the
-        dispatcher's git and gates use them."""
-        wt = request.worktree.resolve()
-        mounts = [Mount(wt, wt)]
-        for name in (".git", ".venv"):
-            if (wt / name).exists():
-                mounts.append(Mount(wt / name, wt / name, read_only=True))
-        return mounts
-
     def launch(self, request: WorkerRequest, env: dict[str, str]) -> Launch:
+        """A fresh copy of the Run's files (workspace.py) and the container to work on
+        it, at the same path as on the host: no .git, its tools read-only."""
+        from pdf_extract.factory import workspace
+
         image = self.ready()
         name = f"carlo-job-{request.attempt_id or request.job_id}"
         self.call("rm", "--force", name)  # a leftover from a crash
-        workdir = request.worktree.resolve()
+        work = workspace.workspace(self.sandbox_dir, request.run_id)
+        before = workspace.refresh(request.worktree.resolve(), work)
+        mounts = [Mount(path, path, ro) for path, ro in workspace.mounts(work)]
         passed = {k: v for k, v in env.items() if k not in HOST_ONLY}
-        box = Box(name=name, image=image, workdir=workdir, mounts=self.mounts(request),
-                  env=container_env(workdir), pass_env=[*passed, *SDK_ENV, "PWD"],
+        box = Box(name=name, image=image, workdir=work, mounts=mounts,
+                  env=container_env(work), pass_env=[*passed, *SDK_ENV, "PWD"],
                   limits=self.limits)
         keep = [*PODMAN_PASS, *SDK_ENV, "PWD", *passed]
-        return Launch(str(self.launcher),
-                      plan_env(passed, run_argv(self.podman, box), keep, name), container=name)
+        return Launch(str(self.launcher), plan_env(passed, run_argv(self.podman, box), keep,
+                                                   name),
+                      container=name, work=work, trusted=request.worktree.resolve(),
+                      before=before,
+                      writes=[fill(w, request.values) for w in request.spec.writes])
 
-    def finish(self, launch: Launch) -> None:
+    def finish(self, launch: Launch) -> list[str]:
+        """The container goes first, so nothing changes the workspace while its changes
+        are brought back."""
+        from pdf_extract.factory import workspace
+
         if launch.container:
             try:
-                self.call("rm", "--force", "--time", "0", launch.container)
-            except (OSError, subprocess.SubprocessError) as exc:
-                LOGGER.warning("removing %s failed: %s", launch.container, exc)
+                # --rm has usually removed it already: --ignore makes that a success.
+                self._ok("rm", "--force", "--ignore", "--time", "0", launch.container)
+            except SandboxError as exc:
+                raise SandboxError(f"couldn't remove {launch.container}, so its changes "
+                                   f"weren't brought back: {exc}") from None
+        if launch.work is None or launch.trusted is None or launch.before is None:
+            return []
+        sync = workspace.sync_back(launch.work, launch.trusted, launch.before, launch.writes)
+        LOGGER.info("%s: brought back %d files, deleted %d, refused %d, dropped %d",
+                    launch.container, len(sync.applied), len(sync.deleted),
+                    len(sync.rejected), len(sync.dropped))
+        return sync.rejected
 
     def cleanup(self) -> None:
         """At startup: remove every worker container a crashed dispatcher left."""
@@ -354,9 +376,10 @@ class PodmanBackend:
             self.call("rm", "--force", "--time", "0", *ids)
 
 
-def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None) -> Backend:
+def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None,
+            sandbox_dir: Path = DATA / "sandbox") -> Backend:
     if name == "host":
         return HostBackend()
     if name == "sandbox":
-        return PodmanBackend(repo, upstream, limits=limits)
+        return PodmanBackend(repo, upstream, limits=limits, sandbox_dir=sandbox_dir)
     raise FactoryError(f"worker_backend must be host or sandbox, not {name!r}")

@@ -263,7 +263,8 @@ def main_repo(tmp: Path) -> Path:
 def podman_backend(tmp: Path, fake: FakePodman, podman: str = "/usr/bin/podman"):
     from pdf_extract.factory.sandbox import PodmanBackend
 
-    return PodmanBackend(main_repo(tmp), "main", launcher=BOX, podman=podman, call=fake)
+    return PodmanBackend(main_repo(tmp), "main", launcher=BOX, podman=podman, call=fake,
+                         sandbox_dir=tmp / "sandbox")
 
 
 def test_the_container_is_locked_down(tmp_path: Path) -> None:
@@ -272,24 +273,29 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
     fake = FakePodman()
     wt = tmp_path / "wt"
     (wt / ".git").mkdir(parents=True)
+    (wt / "src").mkdir()
+    (wt / "data").mkdir()
     req = request(wt, attempt_id=42, secrets={"OPENAI_API_KEY": "stage-secret"})
     launch = podman_backend(tmp_path, fake).launch(req, worker_env(req.account, req.secrets))
+    work = (tmp_path / "sandbox" / "r" / "work").resolve()
+    assert launch.work == work and launch.trusted == wt.resolve()
     argv = json.loads(launch.env["CARLO_BOX"])["argv"]
     joined = " ".join(argv)
     assert launch.container == "carlo-job-42"
     for flag in ("--rm", "-i", "--init", "--cap-drop=ALL", "no-new-privileges", "--read-only",
                  "--ipc=private", "--pid=private", "--userns=keep-id:uid=1000,gid=1000",
                  "--label carlo.factory=1", f"--network {NETWORK}", "--pids-limit 2048",
-                 "--memory 6g", f"--workdir {wt.resolve()}"):
+                 "--memory 6g", f"--workdir {work}"):
         assert flag in joined, flag
     assert "--privileged" not in joined and "host" not in argv
+    # The private copy, without .git, its tools read-only on top; never the Run's worktree.
     volumes = [argv[i + 1] for i, a in enumerate(argv) if a == "--volume"]
-    assert volumes == [f"{wt.resolve()}:{wt.resolve()}:rw",
-                       f"{wt.resolve() / '.git'}:{wt.resolve() / '.git'}:ro"]
+    assert volumes == [f"{work}:{work}:rw", f"{work / 'src'}:{work / 'src'}:ro"]
+    assert not (work / ".git").exists() and str(wt.resolve()) not in joined
     # Secrets go by name, their values from podman's environment, never on its command line.
     assert "stage-secret" not in joined and "--env OPENAI_API_KEY" in joined
     assert f"--env HTTPS_PROXY={PROXY_URL}" in joined
-    assert f"--env PYTHONPATH={wt.resolve() / 'src'}" in joined
+    assert f"--env PYTHONPATH={work / 'src'}" in joined
     for name in ("CLAUDE_CONFIG_DIR", "DISPLAY", "SSH_AUTH_SOCK", "GH_CONFIG_DIR"):
         assert f"--env {name}" not in joined
     assert argv[-3:] == ["xvfb-run", "-a", "claude"]
@@ -301,7 +307,8 @@ def test_the_sandbox_launcher_gives_podman_only_what_it_names(tmp_path: Path) ->
     fake_podman.write_text("#!/usr/bin/env python3\nimport json, os, sys\n"
                            "print(json.dumps({'args': sys.argv[1:], 'env': dict(os.environ)}))\n")
     fake_podman.chmod(0o755)
-    req = request(tmp_path, attempt_id=7, secrets={"GEMINI_API_KEY": "stage-key"})
+    (tmp_path / "wt").mkdir()
+    req = request(tmp_path / "wt", attempt_id=7, secrets={"GEMINI_API_KEY": "stage-key"})
     backend = podman_backend(tmp_path, FakePodman(), podman=str(fake_podman))
     got = run_launcher(backend.launch(req, worker_env(req.account, req.secrets)),
                        ["--verbose"])
@@ -407,6 +414,184 @@ def test_chrome_gets_the_proxy_only_when_one_is_set(monkeypatch: pytest.MonkeyPa
     monkeypatch.setenv("HTTPS_PROXY", "http://u%40x:p@proxy:8080")
     assert proxy_from_env() == {"server": "http://proxy:8080", "username": "u@x",
                                 "password": "p", "bypass": "localhost"}
+
+
+# ── Phase 3: the private workspace and bringing changes back ──────────────────
+WRITES = ["data/dioceses/d/**", "scratch/r/**"]
+
+
+def trusted_tree(tmp: Path) -> Path:
+    """A Run worktree as the dispatcher has it: a git checkout with a database copy."""
+    import sqlite3
+
+    wt = tmp / "wt"
+    (wt / "data" / "dioceses" / "d").mkdir(parents=True)
+    (wt / "src").mkdir()
+    (wt / "src" / "tool.py").write_text("print('tool')\n")
+    (wt / "data" / "dioceses" / "d" / "a.md").write_text("a\n")
+    (wt / "data" / "parishes.csv").write_text("slug\n")
+    (wt / ".gitignore").write_text(".venv/\n*.db\nscratch/\n.env\n")
+    (wt / ".venv").mkdir()
+    sqlite3.connect(wt / "data" / "parish_events.db").close()
+    subprocess.run(["git", "init", "-q", "-b", "main"], cwd=wt, check=True)
+    return wt
+
+
+def fresh(tmp: Path) -> tuple[Path, Path, dict]:
+    from pdf_extract.factory import workspace
+
+    wt = trusted_tree(tmp)
+    work = workspace.workspace(tmp / "sandbox", "r")
+    return wt, work, workspace.refresh(wt, work)
+
+
+def test_the_workspace_is_a_copy_without_git_or_the_venv(tmp_path: Path) -> None:
+    from pdf_extract.factory import workspace
+
+    wt, work, _ = fresh(tmp_path)
+    assert (work / "data" / "dioceses" / "d" / "a.md").read_text() == "a\n"
+    assert not (work / ".git").exists() and not (work / ".venv").exists()
+    assert (work / "data" / "parish_events.db").exists()  # its own copy
+    # Out of scope last time: gone. Private state (the database, caches): kept.
+    (work / "data" / "parishes.csv").write_text("sneaky\n")
+    (work / "data" / "parish_events.db").write_bytes(b"worker's")
+    (work / ".cache").mkdir()
+    (work / ".cache" / "x").write_text("cached")
+    workspace.refresh(wt, work)
+    assert (work / "data" / "parishes.csv").read_text() == "slug\n"
+    assert (work / "data" / "parish_events.db").read_bytes() == b"worker's"
+    assert (work / ".cache" / "x").read_text() == "cached"
+    assert [p for p, ro in workspace.mounts(work) if ro] == [work / "src"]
+
+
+def test_in_scope_changes_come_back_and_the_rest_is_refused(tmp_path: Path) -> None:
+    from pdf_extract.factory import workspace
+
+    wt, work, before = fresh(tmp_path)
+    d = work / "data" / "dioceses" / "d"
+    (d / "a.md").write_text("edited\n")
+    (d / "new" / "b.md").parent.mkdir()
+    (d / "new" / "b.md").write_text("b\n")
+    (work / "scratch" / "r" / "001-map").mkdir(parents=True)
+    (work / "scratch" / "r" / "001-map" / "handoff.json").write_text("{}")
+    (work / "data" / "parishes.csv").write_text("sneaky\n")  # out of scope
+    (work / "src" / "tool.py").write_text("evil\n")  # out of scope (read-only in the box)
+    (work / ".env").write_text("CARLO_REMOTE_WRITE=1\n")  # out of scope and gitignored
+    (d / "link.md").symlink_to("/etc/passwd")
+    (d / "escape").symlink_to("/etc")
+    os.link(d / "a.md", d / "hard.md")
+    os.mkfifo(d / "pipe")
+    sync = workspace.sync_back(work, wt, before, WRITES)
+    assert sorted(sync.applied) == ["data/dioceses/d/new/b.md",
+                                    "scratch/r/001-map/handoff.json"]
+    refused = " ".join(sync.rejected)
+    for path, why in (("data/parishes.csv", "outside your write boundaries"),
+                      ("src/tool.py", "outside"), ("link.md", "a symlink"),
+                      ("escape", "a symlink"), ("hard.md", "a hard link"),
+                      ("pipe", "not an ordinary file"), ("a.md", "a hard link")):
+        assert path in refused and why in refused, path
+    assert sync.dropped == [".env"]
+    assert (wt / "data" / "dioceses" / "d" / "new" / "b.md").read_text() == "b\n"
+    assert (wt / "data" / "parishes.csv").read_text() == "slug\n"
+    assert (wt / "src" / "tool.py").read_text() == "print('tool')\n"
+    assert not (wt / ".env").exists()
+    for name in ("link.md", "escape", "hard.md", "pipe"):
+        assert not os.path.lexists(wt / "data" / "dioceses" / "d" / name)
+
+
+def test_sync_back_deletes_and_catches_a_backdated_edit(tmp_path: Path) -> None:
+    from pdf_extract.factory import workspace
+
+    wt, work, before = fresh(tmp_path)
+    (wt / "data" / "dioceses" / "d" / "gone.md").write_text("x\n")
+    before = workspace.refresh(wt, work)
+    (work / "data" / "dioceses" / "d" / "gone.md").unlink()
+    a = work / "data" / "dioceses" / "d" / "a.md"
+    st = a.stat()
+    a.write_text("b\n")  # same size, then its mtime set back
+    os.utime(a, ns=(st.st_atime_ns, st.st_mtime_ns))
+    sync = workspace.sync_back(work, wt, before, WRITES)
+    assert sync.deleted == ["data/dioceses/d/gone.md"]
+    assert sync.applied == ["data/dioceses/d/a.md"]
+    assert (wt / "data" / "dioceses" / "d" / "a.md").read_text() == "b\n"
+    assert not (wt / "data" / "dioceses" / "d" / "gone.md").exists()
+
+
+def test_sync_back_never_writes_through_a_link_in_the_run_worktree(tmp_path: Path) -> None:
+    from pdf_extract.factory import workspace
+
+    wt, work, before = fresh(tmp_path)
+    outside = tmp_path / "outside"
+    outside.mkdir()
+    (wt / "data" / "dioceses" / "d" / "via").symlink_to(outside)
+    (work / "data" / "dioceses" / "d" / "via").mkdir()  # a real folder in the workspace
+    (work / "data" / "dioceses" / "d" / "via" / "x.md").write_text("x\n")
+    sync = workspace.sync_back(work, wt, before, WRITES)
+    assert any("via/x.md" in r and "not a real folder" in r for r in sync.rejected)
+    assert list(outside.iterdir()) == []
+
+
+def test_sync_back_caps_size_and_count(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from pdf_extract.factory import workspace
+
+    monkeypatch.setattr(workspace, "MAX_FILE_BYTES", 10)
+    monkeypatch.setattr(workspace, "MAX_FILES", 2)
+    wt, work, before = fresh(tmp_path)
+    d = work / "data" / "dioceses" / "d"
+    (d / "big.md").write_text("x" * 11)
+    for n in range(3):
+        (d / f"n{n}.md").write_text("n\n")
+    sync = workspace.sync_back(work, wt, before, WRITES)
+    assert any("big.md" in r and "over" in r for r in sync.rejected)
+    assert len(sync.applied) == 2
+    assert any("more than 2 files" in r for r in sync.rejected)
+    assert not (wt / "data" / "dioceses" / "d" / "big.md").exists()
+
+
+def test_unsafe_paths_are_refused() -> None:
+    from pdf_extract.factory.workspace import _unsafe
+
+    for rel in ("../x", "a/../b", "/etc/passwd", "a//b", "a/./b", ".git/config",
+                "data/.git/hooks/post-commit"):
+        assert _unsafe(rel), rel
+    assert _unsafe("data/dioceses/d/a.md") is None
+
+
+def test_a_sandboxed_attempt_brings_back_its_changes_or_ends_as_sandbox(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    from pdf_extract.factory import workers
+    from pdf_extract.factory.sandbox import SandboxError
+
+    class Box:
+        name = "sandbox"
+
+        def __init__(self, fail: bool) -> None:
+            self.fail = fail
+
+        def launch(self, request, env):
+            return Launch("claude", env, container="c", work=tmp_path / "work")
+
+        def finish(self, launch):
+            if self.fail:
+                raise SandboxError("couldn't remove c")
+            return ["data/x (a symlink)"]
+
+        def cleanup(self):
+            pass
+
+    async def ran(request, launch):
+        return workers.WorkerResult(workers.OK, cost_usd=1.5)
+
+    for fail, outcome in ((False, workers.OK), (True, workers.SANDBOX)):
+        worker = workers.SdkWorker(Box(fail))
+        monkeypatch.setattr(worker, "_run", ran)
+        result = worker.run(request(tmp_path))
+        assert result.outcome == outcome
+        assert result.refused == ([] if fail else ["data/x (a symlink)"])
+    pytest.importorskip("claude_agent_sdk")
+    options = workers.sdk_options(request(tmp_path),
+                                  Launch("claude", {}, work=tmp_path / "work"))
+    assert options.cwd == str(tmp_path / "work")  # the copy, not the Run's worktree
 
 
 # ── With Podman: the real launcher and container (skipped without Podman) ─────

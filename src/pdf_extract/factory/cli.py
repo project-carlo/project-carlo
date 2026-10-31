@@ -205,6 +205,7 @@ def _run(args: argparse.Namespace) -> Result:
                                                         secrets)),
         push=not (stub or args.no_push), secrets=secrets,
         cleanup=box.cleanup if box is not None else None,
+        sandbox_dir=getattr(box, "sandbox_dir", None),
     )
     if args.once:
         outcome = dispatcher.tick()

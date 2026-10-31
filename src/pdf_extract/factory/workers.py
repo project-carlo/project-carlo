@@ -83,6 +83,8 @@ class WorkerResult:
     # From the session: cli_version, model (init), models (each message's), messages and
     # duplicates (records repeating a message id), entrypoint.
     info: dict[str, Any] = field(default_factory=dict)
+    # A sandboxed attempt's changes that weren't brought back, with why (workspace.py).
+    refused: list[str] = field(default_factory=list)
 
 
 def sdk_version() -> str | None:
@@ -153,7 +155,7 @@ def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
     spec = request.spec
     tools = list(spec.tools) + (["Skill"] if spec.skills else [])
     return ClaudeAgentOptions(
-        cwd=str(request.worktree),
+        cwd=str(launch.work or request.worktree),
         cli_path=launch.cli_path,
         model=spec.model,
         effort=spec.effort,
@@ -200,9 +202,16 @@ class SdkWorker:
         except Exception as exc:  # the SDK or the CLI died: resume the session
             result = WorkerResult(CRASH, session_id=self._session, error=repr(exc)[:2000],
                                   cost_usd=self._cost, turns=self._turns)
-        finally:
+        except BaseException:  # the dispatcher is stopping: its container goes too
             if launch is not None:
                 self.backend.finish(launch)
+            raise
+        if launch is not None:
+            try:
+                result.refused = self.backend.finish(launch)
+            except SandboxError as exc:  # it ran, but its changes couldn't come back
+                result = WorkerResult(SANDBOX, session_id=self._session, error=str(exc)[:2000],
+                                      cost_usd=self._cost, turns=self._turns)
         result.info = self._summary()
         result.transcript = find_transcript(request.account, self._session)
         return result
@@ -288,6 +297,8 @@ class StubAction:
     rate_limits: list[dict[str, Any]] = field(default_factory=list)
     usage: dict[str, Any] | None = None
     model_usage: dict[str, Any] | None = None
+    # What a sandbox would have refused to bring back (workspace.py).
+    refused: list[str] = field(default_factory=list)
 
 
 Script = Callable[[WorkerRequest, int], StubAction]
@@ -325,7 +336,7 @@ class StubWorker:
             path.write_text(json.dumps(action.handoff), encoding="utf-8")
         return WorkerResult(action.outcome, session_id=f"stub-{request.job_id}",
                             resets_at=action.resets_at, usage=action.usage,
-                            model_usage=action.model_usage)
+                            model_usage=action.model_usage, refused=list(action.refused))
 
 
 def scenario_script(path: Path) -> Script:

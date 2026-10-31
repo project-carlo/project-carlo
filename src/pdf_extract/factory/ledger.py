@@ -84,11 +84,12 @@ CREATE TABLE IF NOT EXISTS attempt (
     commit_sha TEXT,
     started_at TEXT NOT NULL,
     finished_at TEXT,
-    outcome TEXT,                   -- ok | crash | usage | timeout | partial | error
+    outcome TEXT,                   -- ok | crash | usage | timeout | partial | sandbox
     error TEXT,
     cost_usd REAL NOT NULL DEFAULT 0,
     turns INTEGER NOT NULL DEFAULT 0,
-    transcript TEXT
+    transcript TEXT,
+    refused TEXT                    -- JSON: sandboxed changes not brought back, with why
 );
 CREATE TABLE IF NOT EXISTS step (
     id INTEGER PRIMARY KEY,
@@ -235,6 +236,7 @@ COLUMNS = {
     "usage": [("source", "TEXT NOT NULL DEFAULT 'select'"), ("attempt_id", "INTEGER"),
               ("job_id", "INTEGER"), ("raw", "TEXT")],
     "flag": [("settled_by", "INTEGER REFERENCES job(id)")],  # the job that settled it
+    "attempt": [("refused", "TEXT")],
 }
 
 

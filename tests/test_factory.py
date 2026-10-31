@@ -347,6 +347,27 @@ def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
     assert (Path(run["worktree"]) / "data" / "parishes.csv").read_text() == "slug\n"
 
 
+def test_changes_a_sandbox_refused_are_recorded_and_sent_back(env: Env) -> None:
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        refused = ["data/parishes.csv (outside your write boundaries)"] if attempt == 1 else []
+        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")},
+                          handoff=done(), refused=refused)
+
+    d = env.dispatcher(map_script(map=mapping))
+    drive(d)
+    first = env.ledger.jobs(map_run(env)["id"], "map")[0]
+    assert first["send_backs"] == 1
+    attempt = env.ledger.one("SELECT * FROM attempt WHERE job_id = ? ORDER BY n LIMIT 1",
+                             first["id"])
+    assert json.loads(attempt["refused"]) == ["data/parishes.csv (outside your write boundaries)"]
+    gate = env.ledger.one("SELECT * FROM gate WHERE job_id = ? AND name = 'diff-scope' "
+                          "ORDER BY id LIMIT 1", first["id"])
+    assert not gate["passed"] and "data/parishes.csv" in gate["output"]
+    prompt = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2",
+                            first["id"])["prompt"]
+    assert "were not kept" in prompt
+
+
 def test_past_its_send_backs_a_job_blocks_the_run(env: Env) -> None:
     env.failing["diocese batches validate"] = 99
     d = env.dispatcher(map_script())
