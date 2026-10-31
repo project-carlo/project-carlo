@@ -1,6 +1,6 @@
 import shutil
-import sqlite3
 from collections.abc import Iterator
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -11,11 +11,12 @@ from pdf_extract.db import create_db
 from pdf_extract.report import (
     build_report,
     describe_event,
-    diff_databases,
     render_markdown,
+    verify_databases,
 )
 from pdf_extract.runs import record_parish_result, start_run
 from pdf_extract.storage import connect_db, insert_bulletin, save_processed_bulletin, utc_now_iso
+from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
 
 MASS_9 = {
     "church_slug": "test-church", "event_type": "mass", "event_kind": "weekly",
@@ -23,6 +24,8 @@ MASS_9 = {
     "cancelled": False,
 }
 MASS_11 = {**MASS_9, "start_time": "11:00 AM"}
+# The Monday after the newer test bulletin's week.
+AS_OF = date(2026, 9, 21)
 CONFESSION = {
     **MASS_9, "event_type": "confession", "day_of_week": "Saturday",
     "start_time": "3:00 PM", "end_time": "4:00 PM",
@@ -74,17 +77,6 @@ def _before_and_after(
     return before, after
 
 
-def _passing_verification() -> dict[str, Any]:
-    return {
-        "passed": True,
-        "thresholds": {"event_delta_max_pct": 10.0, "weekly_match_min_pct": 90.0},
-        "churches": {"current": 1, "previous": 1, "passed": True},
-        "events": {"current": 3, "previous": 3, "delta_pct": 0.0, "passed": True},
-        "weekly_events": {"match_pct": 100.0, "passed": True},
-        "errors": [],
-    }
-
-
 @pytest.fixture
 def ticking_clock(monkeypatch: pytest.MonkeyPatch) -> Iterator[None]:
     """Distinct, increasing pipeline_run.started_at values for consecutive runs."""
@@ -123,67 +115,93 @@ def test_describe_event_with_unknown_type_and_missing_fields() -> None:
     )
 
 
-# ── diff_databases ──────────────────────────────────────────────────────────
-def test_diff_reports_added_and_removed_events(pipeline_dir: Path) -> None:
+# ── The schedule comparison ─────────────────────────────────────────────────
+def _report(before: Path, after: Path, **kwargs: Any) -> dict[str, Any]:
+    """`build_report` with the snapshot gates read on AS_OF."""
+    return build_report(
+        run_id=kwargs.pop("run_id", "r"), before_db=before, after_db=after,
+        stages=kwargs.pop("stages", {}),
+        snapshot_verification=verify_databases(before, after, AS_OF), **kwargs,
+    )
+
+
+def _summaries(change: dict[str, Any]) -> list[tuple[str, str]]:
+    return [(c["change"], c["summary"]) for c in change["recurring"]]
+
+
+def _gate(report: dict[str, Any], prefix: str) -> dict[str, Any]:
+    [gate] = [g for g in report["gates"] if g["name"].startswith(prefix)]
+    return gate
+
+
+def test_report_lists_added_and_removed_events(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9, CONFESSION])
     _add_bulletin(after, [MASS_9, MASS_11], published_date="2026-09-20")
 
-    [change] = diff_databases(before, after)
+    [change] = _report(before, after)["changes"]
 
-    assert change.parish_slug == "test-parish"
-    assert change.bulletin_changed
-    assert (change.before_count, change.after_count) == (2, 2)
-    assert change.added == [
-        ("test-church", "mass", "weekly", "Sunday", None, "11:00 AM", None, False),
+    assert (change["parish_slug"], change["mode"]) == ("test-parish", "extract")
+    assert change["bulletin_changed"]
+    assert change["bulletin_url"] == "https://example.org/2026-09-20.pdf"
+    assert (change["before_count"], change["after_count"]) == (2, 2)
+    assert _summaries(change) == [
+        ("removed", "Confession · Sat 3:00 PM–4:00 PM, every Saturday; "
+                    "6 of 6 dates in the window removed"),
+        ("added", "Mass · Sun 11:00 AM, every Sunday"),
     ]
-    assert change.removed == [
-        ("test-church", "confession", "weekly", "Saturday", None, "3:00 PM", "4:00 PM", False),
-    ]
+    assert change["recurring"][1]["church_slug"] == "test-church"
 
 
-def test_diff_of_unchanged_database(pipeline_dir: Path) -> None:
+def test_report_of_an_unchanged_database(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9])
 
-    [change] = diff_databases(before, after)
+    report = _report(before, after)
 
-    assert not change.bulletin_changed
-    assert change.added == change.removed == []
-    assert (change.before_count, change.after_count) == (1, 1)
+    assert report["status"] == "passed"
+    assert report["changes"] == []
+    assert report["totals"]["parishes_changed"] == 0
+    assert report["totals"]["parishes_with_new_bulletin"] == 0
 
 
-def test_diff_new_bulletin_with_same_events_is_not_a_schedule_change(pipeline_dir: Path) -> None:
+def test_a_new_bulletin_with_the_same_events_is_not_a_schedule_change(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9, MASS_11])
     _add_bulletin(after, [MASS_11, MASS_9], published_date="2026-09-20")
 
-    [change] = diff_databases(before, after)
+    report = _report(before, after)
 
-    assert change.bulletin_changed
-    assert change.added == change.removed == []
+    assert report["changes"] == []
+    assert report["totals"]["parishes_with_new_bulletin"] == 1
+    assert report["status"] == "passed"
 
 
-def test_diff_ignores_unprocessed_and_older_bulletins(pipeline_dir: Path) -> None:
+def test_report_ignores_unprocessed_and_older_bulletins(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9])
     _add_bulletin(after, [], published_date="2026-09-20", processed=False)
     _add_bulletin(after, [MASS_11], published_date="2026-09-06")
 
-    [change] = diff_databases(before, after)
+    report = _report(before, after)
 
-    assert not change.bulletin_changed
-    assert change.added == change.removed == []
+    assert report["changes"] == []
+    assert report["totals"]["parishes_with_new_bulletin"] == 0
 
 
-def test_diff_parish_with_first_bulletin(pipeline_dir: Path) -> None:
+def test_a_parish_with_its_first_bulletin_is_onboarding(pipeline_dir: Path) -> None:
     before = pipeline_dir / "before.db"
     create_db(before)
     after = pipeline_dir / "after.db"
     shutil.copyfile(before, after)
     _add_bulletin(after, [MASS_9], published_date="2026-09-20")
 
-    [change] = diff_databases(before, after)
+    report = _report(before, after)
 
-    assert change.bulletin_changed
-    assert (change.before_count, change.after_count) == (0, 1)
-    assert len(change.added) == 1
+    [change] = report["changes"]
+    assert change["onboarding"]
+    assert (change["before_count"], change["after_count"]) == (0, 1)
+    assert report["totals"]["onboarding"] == {"parishes": 1, "events": 1}
+    assert _gate(report, "Weekly schedule")["detail"] == (
+        "not measured: no recurring slots last time (1 now)"
+    )
+    assert "Onboarding: 1 parishes showing events for the first time" in render_markdown(report)
 
 
 # ── build_report ────────────────────────────────────────────────────────────
@@ -191,57 +209,68 @@ def test_report_holds_when_parish_drops_to_zero(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9, MASS_11, CONFESSION])
     _add_bulletin(after, [], published_date="2026-09-20")
 
-    report = build_report(
-        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
-    )
+    report = _report(before, after)
 
     assert report["status"] == "held"
     assert report["attention"]["dropped_to_zero"] == ["test-parish"]
-    assert report["gates"][0] == {
-        "name": "No parish dropped to zero events", "passed": False, "detail": "test-parish",
-    }
-    assert all(gate["passed"] for gate in report["gates"][1:])
+    gate = _gate(report, "No parish dropped to zero")
+    assert (gate["passed"], gate["detail"]) == (False, "test-parish")
+    assert gate["affected"] == [
+        {"parish_id": gate["affected"][0]["parish_id"], "parish_slug": "test-parish",
+         "events_before": 3},
+    ]
     assert report["totals"]["events_before"] == 3
     assert report["totals"]["events_after"] == 0
     assert report["totals"]["events_removed"] == 3
     assert report["totals"]["parishes_showing_events"] == 0
 
 
-def test_report_passes_small_parish_dropping_to_zero(pipeline_dir: Path) -> None:
+def test_report_does_not_hold_a_small_parish_dropping_to_zero_for_that(
+    pipeline_dir: Path,
+) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9, MASS_11])
     _add_bulletin(after, [], published_date="2026-09-20")
 
-    report = build_report(
-        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
-    )
+    report = _report(before, after)
 
-    assert report["status"] == "passed"
     assert report["attention"]["dropped_to_zero"] == []
+    assert _gate(report, "No parish dropped to zero")["passed"]
 
 
-def test_report_passes_and_summarises_changes(pipeline_dir: Path) -> None:
+def test_report_summarises_changes(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9, CONFESSION, MASS_11])
     _add_bulletin(
         after, [MASS_9, MASS_11, {**CONFESSION, "start_time": "2:00 PM"}],
         published_date="2026-09-20",
     )
 
-    report = build_report(
-        run_id="r", before_db=before, after_db=after, stages={"fetch": {"new": 1}},
-        snapshot_verification=_passing_verification(),
-    )
+    report = _report(before, after, stages={"fetch": {"new": 1}})
 
-    assert report["status"] == "passed"
-    assert all(gate["passed"] for gate in report["gates"])
     assert [g["name"] for g in report["gates"]] == [
         "Church count unchanged",
         "Total events within ±10.0%",
         "Weekly schedule at least 90.0% unchanged",
         "No parish dropped to zero events",
+        "No severe local loss of upcoming services",
         "No parish or church removed from the CSVs",
         "At most 50% of parishes failed to fetch",
     ]
+    # One of three slots changed, so the retention check holds the run, and
+    # every upcoming Confession moved, so the local check does too.
+    assert [g["name"] for g in report["gates"] if not g["passed"]] == [
+        "Weekly schedule at least 90.0% unchanged",
+        "No severe local loss of upcoming services",
+    ]
     assert report["gates"][0]["detail"] == "1 → 1"
+    assert report["as_of"] == AS_OF.isoformat()
+    assert report["comparison"]["gate_policy_version"] == GATE_POLICY_VERSION
+    assert report["comparison"]["window"] == {
+        "start": "2026-09-21", "end": "2026-11-02", "days": 42,
+    }
+    extract_totals = {
+        "parishes": 1, "parishes_showing_events": 1, "events_before": 3, "events_after": 3,
+        "events_added": 1, "events_removed": 1, "parishes_changed": 1,
+    }
     assert report["totals"] == {
         "parishes_showing_events": 1,
         "events_before": 3,
@@ -249,15 +278,21 @@ def test_report_passes_and_summarises_changes(pipeline_dir: Path) -> None:
         "events_added": 1,
         "events_removed": 1,
         "parishes_changed": 1,
+        "cancellations_added": 0,
+        "cancellations_removed": 0,
+        "by_mode": {"extract": extract_totals},
+        "onboarding": {"parishes": 0, "events": 0},
         "parishes_with_new_bulletin": 1,
         "update_mode_parishes": 0,
         "update_changes_applied": 0,
         "update_proposals_rejected": 0,
     }
     [change] = report["changes"]
-    assert [e["summary"] for e in change["added"]] == ["Confession · Sat 2:00 PM–4:00 PM"]
-    assert [e["summary"] for e in change["removed"]] == ["Confession · Sat 3:00 PM–4:00 PM"]
-    assert change["added"][0]["church_slug"] == "test-church"
+    assert _summaries(change) == [(
+        "modified",
+        "Confession · Sat 3:00 PM–4:00 PM, every Saturday → 2:00 PM–4:00 PM; "
+        "6 of 6 dates in the window removed",
+    )]
 
 
 def test_report_unchanged_parishes_are_not_listed_as_changes(pipeline_dir: Path) -> None:
@@ -271,11 +306,24 @@ def test_report_unchanged_parishes_are_not_listed_as_changes(pipeline_dir: Path)
     assert report["totals"]["parishes_changed"] == 0
 
 
-@pytest.mark.parametrize("failing", ["churches", "events", "weekly_events"])
-def test_report_holds_when_snapshot_verification_fails(pipeline_dir: Path, failing: str) -> None:
+def test_without_a_verification_the_report_builds_one(pipeline_dir: Path) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9, MASS_11, CONFESSION])
+    _add_bulletin(after, [], published_date="2026-09-20")
+
+    report = build_report(
+        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
+    )
+
+    assert report["status"] == "held"
+    assert not _gate(report, "No parish dropped to zero")["passed"]
+
+
+@pytest.mark.parametrize("failing", range(5))
+def test_report_holds_when_a_snapshot_gate_fails(pipeline_dir: Path, failing: int) -> None:
     before, after = _before_and_after(pipeline_dir, [MASS_9])
-    verification = _passing_verification()
-    verification[failing]["passed"] = False
+    verification = verify_databases(before, after, AS_OF)
+    verification["gates"][failing]["passed"] = False
+    verification["passed"] = False
 
     report = build_report(
         run_id="r", before_db=before, after_db=after, stages={},
@@ -299,16 +347,14 @@ def test_report_holds_on_snapshot_verification_errors(pipeline_dir: Path) -> Non
             "detail": "Snapshot not found: x"} in report["gates"]
 
 
-def test_report_warns_about_big_drops_without_holding(pipeline_dir: Path) -> None:
+def test_report_warns_about_big_drops_without_holding_for_them(pipeline_dir: Path) -> None:
     before, after = _before_and_after(pipeline_dir, _masses(6))
     _add_bulletin(after, _masses(2), published_date="2026-09-20")
 
-    report = build_report(
-        run_id="r", before_db=before, after_db=after, stages={}, snapshot_verification=None,
-    )
+    report = _report(before, after)
 
-    assert report["status"] == "passed"
     assert report["attention"]["big_drops"] == ["test-parish"]
+    assert not any("big" in g["name"].lower() for g in report["gates"])
 
 
 def test_report_lists_failures_with_consecutive_failure_streak(
@@ -354,6 +400,7 @@ def test_report_lists_failures_with_consecutive_failure_streak(
     [fetch_gate] = [g for g in report["gates"] if "failed to fetch" in g["name"]]
     assert fetch_gate == {
         "name": "At most 50% of parishes failed to fetch", "passed": False, "detail": "1 of 1",
+        "threshold": 0.5, "numerator": 1, "denominator": 1,
     }
 
 
@@ -482,31 +529,63 @@ def test_report_opens_databases_read_only(pipeline_dir: Path) -> None:
     )
 
     assert before.read_bytes() == before_bytes
-    with pytest.raises(sqlite3.OperationalError):
-        diff_databases(pipeline_dir / "missing.db", after)
+    with pytest.raises(FileNotFoundError):
+        verify_databases(pipeline_dir / "missing.db", after, AS_OF)
+    assert not (pipeline_dir / "missing.db").exists()
 
 
 # ── render_markdown ─────────────────────────────────────────────────────────
 def test_render_markdown_includes_status_gates_and_changes(pipeline_dir: Path) -> None:
-    before, after = _before_and_after(pipeline_dir, [MASS_9, CONFESSION])
-    _add_bulletin(after, [MASS_11, CONFESSION], published_date="2026-09-20")
-    report = build_report(
-        run_id="run-7", before_db=before, after_db=after,
-        stages={"fetch": {"new": 1, "parishes": ["x"]}},
-        snapshot_verification=_passing_verification(),
+    before, after = _before_and_after(pipeline_dir, _masses(10))
+    _add_bulletin(after, [*_masses(10), MASS_11], published_date="2026-09-20")
+    report = _report(
+        before, after, run_id="run-7", stages={"fetch": {"new": 1, "parishes": ["x"]}},
     )
 
     markdown = render_markdown(report)
 
     assert "## ✅ Weekly data run `run-7`: passed" in markdown
+    assert "Compared as of 2026-09-21; upcoming dates 2026-09-21 to 2026-11-01 (42 days); " \
+        f"gate policy v{GATE_POLICY_VERSION}." in markdown
     assert "| Church count unchanged | ✅ | 1 → 1 |" in markdown
     assert "| No parish dropped to zero events | ✅ | none |" in markdown
+    assert "| Weekly schedule at least 90.0% unchanged | ✅ | 10 of 10 recurring slots " \
+        "unchanged (100.0%); 0 removed or changed, 1 added |" in markdown
     assert "| fetch | new 1 |" in markdown
-    assert "<b>test-parish</b>: +1 / −1 (2 → 2 events)" in markdown
-    # Entries sort by their text (so "11:00" before "9:00"), not by sign.
-    # In clock order, not text order ("11:00" sorts before "9:00" as text).
-    assert "- `test-church`\n  - − Mass · Sun 9:00 AM\n  - + Mass · Sun 11:00 AM\n" in markdown
+    assert "<b>test-parish</b> (extract, new bulletin): 1 recurring (10 → 11 events)" in markdown
+    assert "- `test-church`\n  - + Mass · Sun 11:00 AM, every Sunday\n" in markdown
+    assert "[Current bulletin](https://example.org/2026-09-20.pdf) for the week of " \
+        "2026-09-20." in markdown
     assert markdown.endswith("\n")
+
+
+def test_render_markdown_shows_modifications_lost_dates_and_notes(pipeline_dir: Path) -> None:
+    friday = {**MASS_9, "event_type": "adoration", "day_of_week": "Friday",
+              "start_time": "7:00 PM", "end_time": "8:00 PM"}
+    before, after = _before_and_after(pipeline_dir, [MASS_9, friday])
+    _add_bulletin(after, [
+        {**MASS_9, "note": "Choir sings"}, {**friday, "start_time": "6:00 PM"},
+    ], published_date="2026-09-20")
+    report = _report(before, after)
+
+    markdown = render_markdown(report)
+
+    assert report["status"] == "held"
+    assert (
+        "  - changed: Adoration · Fri 7:00 PM–8:00 PM, every Friday → 6:00 PM–8:00 PM; "
+        "6 of 6 dates in the window removed"
+    ) in markdown
+    assert "**Upcoming dates**: 12 → 12 (−6 / +6)" in markdown
+    assert "- `test-church` Adoration: lost 6 of 6, gained 6 (lost 2026-09-25 7:00 PM, " \
+        "2026-10-02 7:00 PM, 2026-10-09 7:00 PM, 2026-10-16 7:00 PM, 2026-10-23 7:00 PM, " \
+        "2026-10-30 7:00 PM)" in markdown
+    assert "**Notes** (not counted as schedule changes)" in markdown
+    assert "- `test-church` Mass · Sun 9:00 AM, every Sunday: “no note” → “Choir sings”" \
+        in markdown
+    assert "**test-parish** `test-church` Adoration loses 6 of its 6 upcoming dates " \
+        "(holds the run)" in markdown
+    assert report["changes"][0]["notes"][0]["after"] == ["Choir sings"]
+    assert report["totals"]["parishes_changed"] == 1
 
 
 def test_render_markdown_held_report_with_attention_notes(pipeline_dir: Path) -> None:
@@ -545,8 +624,10 @@ def test_render_markdown_without_changes(pipeline_dir: Path) -> None:
 
 def test_render_markdown_truncates_long_change_lists() -> None:
     change = {
-        "parish_slug": "p", "before_count": 0, "after_count": 0,
-        "added": [], "removed": [],
+        "parish_slug": "p", "mode": "update", "bulletin_changed": False,
+        "before_count": 0, "after_count": 0, "recurring": [], "dated": [],
+        "cancellations": [], "notes": [], "diagnostics": [],
+        "availability": {"before": 0, "after": 0, "lost": 0, "gained": 0, "groups": []},
     }
     report = {
         "run_id": "r", "status": "passed", "gates": [], "stages": {},
@@ -565,6 +646,7 @@ def test_render_markdown_truncates_long_change_lists() -> None:
     markdown = render_markdown(report, max_changed_parishes=2)
 
     assert markdown.count("<details>") == 2
+    assert "<b>p</b> (update): no schedule change (0 → 0 events)" in markdown
     assert "…and 1 more parishes; see report.json." in markdown
 
 
