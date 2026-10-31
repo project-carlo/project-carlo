@@ -69,6 +69,7 @@ from pdf_extract.factory.plan import (
     seed_status,
 )
 from pdf_extract.factory.quota import fingerprint, work_units
+from pdf_extract.factory.secrets import Secrets, command_env, pick
 from pdf_extract.factory.stages import CODE, StageSpec, fill, in_scope, load_stage, placeholders
 from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
 from pdf_extract.factory.usage import (
@@ -125,10 +126,13 @@ def main_queue(repo: Path, upstream: str) -> list[dict[str, Any]]:
     return json.loads(text)
 
 
-def run_command(command: str, cwd: Path, timeout: int = 3600) -> tuple[bool, str]:
+def run_command(command: str, cwd: Path, secrets: dict[str, str] | None = None,
+                timeout: int = 3600) -> tuple[bool, str]:
+    """A shell command, with the dispatcher's environment scrubbed of secrets plus
+    `secrets`, and without reading a `.env` (secrets.command_env)."""
     try:
         proc = subprocess.run(command, shell=True, cwd=cwd, capture_output=True, text=True,
-                              timeout=timeout)
+                              timeout=timeout, env=command_env(secrets))
     except subprocess.TimeoutExpired:
         return False, f"timed out after {timeout}s"
     return proc.returncode == 0, (proc.stdout + proc.stderr)[-6000:]
@@ -145,7 +149,8 @@ class Dispatcher:
         forge: Forge,
         fetch_usage: Fetch = fetch_usage,
         clock: Callable[[], datetime] = lambda: datetime.now(UTC),
-        commands: Callable[[str, Path], tuple[bool, str]] = run_command,
+        commands: Callable[..., tuple[bool, str]] = run_command,
+        secrets: Secrets | None = None,
         db_path: Path = Path("data") / "parish_events.db",
         runs_dir: Path = RUNS_DIR,
         queue_path: Path | None = None,
@@ -158,6 +163,7 @@ class Dispatcher:
         self.clock, self.commands = clock, commands
         self.db_path, self.runs_dir, self.queue_path = db_path, runs_dir, queue_path
         self.pull_data, self.backup, self.push_enabled = pull_data, backup, push
+        self.secrets = secrets or {}
 
     # ── The loop ────────────────────────────────────────────────────────────
     def run_forever(self) -> None:
@@ -570,6 +576,7 @@ class Dispatcher:
             job_id=job["id"], run_id=run["id"], job_name=job["name"], stage=job["stage"],
             spec=spec, worktree=worktree, account=account, prompt=prompt,
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
+            attempt_id=attempt_id, secrets=pick(self.secrets, spec.secrets),
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
             on_rate_limit=lambda info: self._rate_limit(attempt_id, info),
@@ -756,7 +763,8 @@ class Dispatcher:
             if any(not values.get(name) for name in placeholders(gate)):
                 continue  # e.g. no approved seeds to check
             command = fill(gate, values)
-            ok, out = self.commands(command, worktree)
+            ok, out = self.commands(command, worktree,
+                                    secrets=pick(self.secrets, spec.gate_secrets))
             self.ledger.add_gate(job["id"], attempt, command, ok, out)
             if not ok:
                 problems.append(f"`{command}` failed:\n\n```\n{out[-2500:]}\n```")

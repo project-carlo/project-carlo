@@ -53,6 +53,7 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
+from pdf_extract.factory.secrets import load_secrets, pick
 
 Result = dict[str, Any]
 
@@ -148,7 +149,7 @@ def _cost(args: argparse.Namespace) -> Result:
 
 
 def _backup(args: argparse.Namespace) -> Result:
-    return {"backup": backup_ledger(LEDGER_PATH, load_config().backup_prefix)}
+    return {"backup": backup_ledger(LEDGER_PATH, load_config().backup_prefix, load_secrets())}
 
 
 def _repo() -> Path:
@@ -169,6 +170,7 @@ def _run(args: argparse.Namespace) -> Result:
     os.environ.pop("VIRTUAL_ENV", None)
     config = load_config()
     ledger = _ledger(args)
+    secrets = load_secrets()  # .env, kept out of os.environ (secrets.py)
     stub = args.stub is not None
     if stub:
         worker: Any = StubWorker(scenario_script(Path(args.stub)))
@@ -186,7 +188,7 @@ def _run(args: argparse.Namespace) -> Result:
         config.owner = config.owner or forge.owner_login()
 
     def pull() -> None:
-        ok, out = run_command("pnpm data:pull", Path.cwd())
+        ok, out = run_command("pnpm data:pull", Path.cwd(), pick(secrets, ["R2_*"]))
         if not ok:
             raise FactoryError(f"pnpm data:pull failed: {out[-500:]}")
 
@@ -194,8 +196,9 @@ def _run(args: argparse.Namespace) -> Result:
         ledger, config, repo=_repo(), worker=worker, forge=the_forge,
         runs_dir=STUB_DATA / RUNS_DIR.name if stub else RUNS_DIR,
         pull_data=None if stub else pull,
-        backup=None if stub else (lambda: backup_ledger(LEDGER_PATH, config.backup_prefix)),
-        push=not (stub or args.no_push),
+        backup=None if stub else (lambda: backup_ledger(LEDGER_PATH, config.backup_prefix,
+                                                        secrets)),
+        push=not (stub or args.no_push), secrets=secrets,
     )
     if args.once:
         outcome = dispatcher.tick()

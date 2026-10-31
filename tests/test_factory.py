@@ -149,12 +149,15 @@ class Env:
         self.now = datetime(2026, 11, 2, 12, tzinfo=UTC)
         self.commands_run: list[str] = []
         self.failing: dict[str, int] = {}  # command substring -> failures left
+        self.command_secrets: dict[str, dict[str, str]] = {}
 
     def clock(self) -> datetime:
         return self.now
 
-    def commands(self, command: str, cwd: Path) -> tuple[bool, str]:
+    def commands(self, command: str, cwd: Path,
+                 secrets: dict[str, str] | None = None) -> tuple[bool, str]:
         self.commands_run.append(command)
+        self.command_secrets[command] = secrets or {}
         for needle, left in list(self.failing.items()):
             if needle in command and left > 0:
                 self.failing[needle] = left - 1
@@ -916,6 +919,27 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     approve = [c for c in env.commands_run if c.startswith("pnpm seed approve st-ann")][0]
     answers = json.loads((wt / approve.split("--answers ")[1]).read_text())
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
+
+
+def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
+    secrets = {"R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o",
+               "CLOUDFLARE_API_TOKEN": "cf", "GH_TOKEN": "gh", "OTHER": "x"}
+    run = seed_env(env)
+    d = env.dispatcher(seed_script, secrets=secrets)
+    drive(d)
+    seen = {r.stage: r.secrets for r in env.worker.calls}
+    assert seen["seed"] == seen["seed-review"] == {
+        "R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o"}
+    check = next(c for c in env.command_secrets if c.startswith("pnpm seed check"))
+    assert env.command_secrets[check] == {"R2_ACCESS_KEY_ID": "r2"}
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
+def test_map_stages_get_no_secrets(env: Env) -> None:
+    d = env.dispatcher(map_script(), secrets={"R2_ACCESS_KEY_ID": "r2", "OPENAI_API_KEY": "o"})
+    drive(d)
+    assert env.worker.calls and all(r.secrets == {} for r in env.worker.calls)
+    assert all(not s for s in env.command_secrets.values())
 
 
 def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:

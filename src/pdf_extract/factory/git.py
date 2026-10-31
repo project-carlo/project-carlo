@@ -14,8 +14,17 @@ from pdf_extract.factory.config import FactoryError
 REGENERATED = ("data/parishes.csv", "data/churches.csv")
 
 
+# Git config a worker might have written (hooks, an fsmonitor command) never runs in the
+# dispatcher's git calls, which hold the GitHub login. As `-c` options for git, and as
+# environment for `gh`, which runs git itself.
+SAFE = ("-c", "core.hooksPath=/dev/null", "-c", "core.fsmonitor=false")
+SAFE_ENV = {"GIT_CONFIG_COUNT": "2",
+            "GIT_CONFIG_KEY_0": "core.hooksPath", "GIT_CONFIG_VALUE_0": "/dev/null",
+            "GIT_CONFIG_KEY_1": "core.fsmonitor", "GIT_CONFIG_VALUE_1": "false"}
+
+
 def git(cwd: Path, *args: str, check: bool = True) -> str:
-    proc = subprocess.run(["git", *args], cwd=cwd, capture_output=True, text=True,
+    proc = subprocess.run(["git", *SAFE, *args], cwd=cwd, capture_output=True, text=True,
                           env={**os.environ, "GIT_TERMINAL_PROMPT": "0"})
     if check and proc.returncode != 0:
         raise FactoryError(f"git {' '.join(args)}: {(proc.stderr or proc.stdout).strip()}")
@@ -23,7 +32,7 @@ def git(cwd: Path, *args: str, check: bool = True) -> str:
 
 
 def ok(cwd: Path, *args: str) -> bool:
-    return subprocess.run(["git", *args], cwd=cwd, capture_output=True).returncode == 0
+    return subprocess.run(["git", *SAFE, *args], cwd=cwd, capture_output=True).returncode == 0
 
 
 def head(cwd: Path) -> str:
