@@ -65,7 +65,8 @@ def status(ledger: Ledger) -> dict[str, Any]:
     usage = [dict(r) for r in ledger.all(
         "SELECT u.* FROM usage u JOIN (SELECT account, MAX(id) AS id FROM usage GROUP BY "
         "account) last ON last.id = u.id ORDER BY u.account")]
-    return {"paused": ledger.get("paused"), "override_caps": ledger.get("override_caps", False),
+    return {"paused": ledger.get("paused"), "usage_cooldown": ledger.get("usage_cooldown"),
+            "override_caps": ledger.get("override_caps", False),
             "runs": runs, "usage": usage, "last_backup": ledger.get("backed_up")}
 
 
@@ -73,6 +74,10 @@ def text_status(r: dict[str, Any]) -> str:
     lines = []
     if r["paused"]:
         lines.append(f"PAUSED: {r['paused'].get('reason')}")
+    if r.get("usage_cooldown"):
+        c = r["usage_cooldown"]
+        lines.append(f"USAGE CHECK COOLDOWN: {c.get('reason')}; next retry {c['until'][:16]} "
+                     f"(since {c.get('since', '')[:16]})")
     if r["override_caps"]:
         lines.append("Caps overridden (`pnpm factory pause` or `resume` to restore)")
     for u in r["usage"]:

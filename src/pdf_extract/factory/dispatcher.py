@@ -96,6 +96,8 @@ LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
 MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
 FAILURE_RETRY = timedelta(minutes=5)
+# How long the usage check waits after the endpoint answers 429 Too Many Requests.
+USAGE_COOLDOWN = timedelta(minutes=30)
 # How long an attempt's gates wait for its after reading (seconds); usually under one.
 AFTER_READING_WAIT = 10
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -178,9 +180,19 @@ class Dispatcher:
         paused = self.ledger.get("paused")
         if paused:
             return Outcome("paused", paused.get("reason", ""))
+        cooldown = self.ledger.get("usage_cooldown")
+        if cooldown:
+            # Nothing reads the endpoint until the cooldown ends, housekeeping's readings
+            # included; then the next job's usage check tries it again.
+            until = datetime.fromisoformat(cooldown["until"])
+            if until > self.clock():
+                return Outcome("waiting", f"usage check cooldown until {cooldown['until']}: "
+                                          f"{cooldown.get('reason', '')}", until)
         self.housekeeping()
         job = self.pick()
         if job is None:
+            if cooldown:  # no usage check to retry: the periodic readings take over again
+                self.ledger.set("usage_cooldown", None)
             return Outcome("idle")
         if job["status"] == WAITING_USAGE and job["wait_until"] \
                 and not self.ledger.get("override_caps", False):
@@ -375,8 +387,12 @@ class Dispatcher:
         try:
             rows = standings(self.config, self.fetch_usage, self.clock())
         except UsageError as exc:
+            if exc.status == 429:
+                return None, None, self._cool_down(exc)
             self.ledger.set("paused", {"reason": f"usage check failed: {exc}", "at": now()})
             return None, None, Outcome("paused", str(exc))
+        if self.ledger.get("usage_cooldown"):
+            self.ledger.set("usage_cooldown", None)
         stamp = self._stamp()
         ids = {s.account.name: self.ledger.add_usage(s.account.name, stamp, s.usage, "select")
                for s in rows}
@@ -393,6 +409,17 @@ class Dispatcher:
             return None, None, Outcome("waiting", f"no account under its caps until {until}",
                                        until)
         return pick.account, ids[pick.account.name], None
+
+    def _cool_down(self, exc: UsageError) -> Outcome:
+        """The endpoint is rate limiting the factory: wait USAGE_COOLDOWN, then try again
+        (another 429 waits again). Kept apart from `paused`, which only the owner clears."""
+        at = self.clock()
+        until = at + USAGE_COOLDOWN
+        since = (self.ledger.get("usage_cooldown") or {}).get("since", at.isoformat())
+        self.ledger.set("usage_cooldown", {"reason": f"usage check failed: {exc}",
+                                           "since": since, "until": until.isoformat()})
+        return Outcome("waiting", f"usage check cooldown until {until.isoformat()}: {exc}",
+                       until)
 
     def _last_finished(self, account: str) -> datetime | None:
         row = self.ledger.one("SELECT MAX(finished_at) AS at FROM attempt WHERE account = ?",
@@ -1031,7 +1058,9 @@ class Dispatcher:
         """Each step on its own: one failing (GitHub down, R2 keys wrong) is logged and
         tried again on its next turn, without stopping the others or the jobs."""
         at = self.clock()
-        self._safely("quota", self.sample_quota)
+        if not self.ledger.get("usage_cooldown"):
+            # After a 429, the next job's usage check is what tries the endpoint again.
+            self._safely("quota", self.sample_quota)
         if self._due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes), at):
             self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),
                                             self.poll_issues(), self.check_merged()))
