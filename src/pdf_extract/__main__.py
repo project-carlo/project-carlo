@@ -67,6 +67,8 @@ from pdf_extract.labeling.server import serve as serve_labeler
 from pdf_extract.paths import DATA_DIR
 from pdf_extract.process import process_bulletins
 from pdf_extract.recurrence import apply_recurrence
+from pdf_extract.replay_gates import archived_run_ids, replay
+from pdf_extract.replay_gates import render as render_replay
 from pdf_extract.schedule.cli import ScheduleCommandError, add_schedule_parser
 from pdf_extract.schedule_diff import parish_changed
 from pdf_extract.schedule_extraction import DEFAULT_GEMINI_MODEL
@@ -392,6 +394,11 @@ def _cmd_verify_frontend_snapshot(args: argparse.Namespace) -> Result:
             if parish_changed(p) or p["notes"] or p["diagnostics"] or p["availability"]["lost"]
         ]
     return result
+
+
+def _cmd_replay_gates(args: argparse.Namespace) -> Result:
+    run_ids = list(args.run or []) or archived_run_ids(args.last)
+    return replay(run_ids)
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
@@ -804,6 +811,23 @@ def _build_parser() -> argparse.ArgumentParser:
         handler=_cmd_verify_frontend_snapshot, fail_on_verification_error=True,
     )
     _add_common_args(verify_frontend_snapshot_parser)
+
+    # -- replay gates --
+    replay_gates_parser = subparsers.add_parser(
+        "replay-gates",
+        help="Run today's snapshot gates over consecutive archived runs (needs R2 read access)",
+    )
+    replay_gates_parser.add_argument(
+        "--run", action="append", default=None, metavar="RUN_ID",
+        help="An archived run id, oldest first (repeatable; at least two)",
+    )
+    replay_gates_parser.add_argument(
+        "--last", type=int, default=8,
+        help="Without --run, replay the last N archived runs (default: 8)",
+    )
+    replay_gates_parser.add_argument("--json", action="store_true", help="Print the JSON result")
+    replay_gates_parser.set_defaults(handler=_cmd_replay_gates, render=render_replay)
+    _add_common_args(replay_gates_parser, default_level="WARNING")
 
     return parser
 

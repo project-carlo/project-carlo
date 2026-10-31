@@ -566,9 +566,11 @@ scope.
 
 ## The report
 
-The report has a section for each mode. Extract-mode parishes are reported as
-today. For update-mode parishes, `report.py` reports from the run's
-`proposed_change` rows, per parish:
+Every parish's schedule changes, whatever its mode, come from one comparison
+of the frontend snapshots before and after the run (`schedule_diff.py`,
+[Publishing gates](#publishing-gates)). For update-mode parishes the report
+also shows where their changes came from, from the run's `proposed_change`
+rows, per parish:
 
 - **Applied changes**, each with its page number and rationale. A modify shows
   before → after. A delete and an add of the same church, event type and
@@ -585,15 +587,51 @@ today. For update-mode parishes, `report.py` reports from the run's
 - **Rejections:** counts by reason in the summary, and the proposals of every
   `mass_delete` and `stale_bulletin` call listed in full.
 
-An update-mode parish no longer holds the run for its schedule changes: the
-per-parish checks (a parish dropping to zero events, say) apply only to
-extract-mode parishes, and `mass_delete` takes their place. The run-level
-checks stay: more than half the parishes failed to fetch, a stage crashed, or
-`verify_frontend_snapshot` fails, with its thresholds as today (church count,
-±10% events, 90% of weekly slots kept). They compare the whole snapshot, so a
+`mass_delete` guards each update call; the publishing gates below check the
+final schedule of every parish, in either mode. The run-level checks stay:
+more than half the parishes failed to fetch, a stage crashed, or a parish or
+church was removed from the CSVs. The gates compare the whole snapshot, so a
 run right after a large batch of parishes was seeded compares the seeded
 schedules with those parishes' last extracted ones and may be held; it is
 approved by hand, or the batch is made smaller.
+
+### Publishing gates
+
+`verify_frontend_snapshot` (gate policy version 2, issue #159) reads both
+snapshots on one date, `as_of`: the weekly run takes it once, before building
+either snapshot, so a run crossing midnight compares like with like, and a
+saved snapshot's past dated rows are dropped before comparing. Each row is
+reduced to its meaning: church slug, event type, weekday or date, start and
+end, the exact set of month-days its weeks of the month and season allow
+(`recurrence_mask`), valid dates and cancellation. Ids, order, page numbers,
+bulletin links and notes are left out, and a cancellation is its date plus the
+meaning of the row it cancels. Notes and duplicate rows are reported, not
+counted. The gates, all holding the run:
+
+- church count unchanged, raw event count within ±10%;
+- at least 90% of last time's recurring slots unchanged, additions not making
+  up for removals (not measured, and passing, when there were none);
+- no parish that showed at least 3 events shows none;
+- no severe local loss: over the next 42 days (as the site's `nextForWeekly`
+  reads them), no parish, and no church's services of one type, lost at least
+  3 of its dates and more than half of them. A parish switched to update mode
+  this run doesn't hold for this when its seed is at least as recent as its
+  current bulletin's week; it is still checked by every other gate.
+
+`replay-gates` runs today's gates over consecutive archived runs, each run's
+database standing in for the next one's `before.db`. Replayed on the 8 runs
+from 2026-09-28 to 2026-10-25 (7 pairs), the site-wide gates agreed with what
+was recorded: the September growth broke the event count and church count
+gates, the CSV deletions of October 4 and 11 showed as church count changes,
+and recurring retention on the October runs was 91.7–100%. The October 25
+drop to zero that held that run was a parish whose new bulletin was marked
+wrong; the site kept showing its previous schedule, which the snapshot
+comparison sees. But the church-level local hold fired on every weekly run:
+51 church/type groups on 2026-10-18 (recorded passed) and 72 on 2026-10-25,
+mostly Adoration and Confession at extract-mode parishes with a new bulletin,
+about half of them a time moved rather than a service gone. The parish level
+fired 0 and 7 times. Leaving `"church"` out of `LOCAL_LOSS_HOLD_LEVELS` makes
+that level reported only.
 
 ## Processing order
 
@@ -884,10 +922,11 @@ code departs from it.
   most notable outcome and every call's detail. The new outcomes are
   `updated`, `no_change`, `stale_bulletin`, `mass_delete`, `undated` and
   `gave_up`. Its `event_count` is the number of live entries.
-- **The change diff leaves out update-mode parishes.** Any parish in update
-  mode in either database is left out of the extract-mode diff, so it can't be
-  counted as dropping to zero. A church retired from the CSV holds the run the
-  same way a deleted one does.
+- **One change diff for both modes.** The report's schedule changes and
+  per-parish checks come from the snapshot comparison, so an update-mode
+  parish is compared by its final schedule like any other (this replaced an
+  extract-only diff; see [Publishing gates](#publishing-gates)). A church
+  retired from the CSV holds the run the same way a deleted one does.
 - **The "not printed" flag** counts only the calls that were shown the entry
   (base revision at or after the entry's `since_revision`) and weren't a wrong
   bulletin or stale.
