@@ -105,7 +105,10 @@ def prompt_body(worktree: Path, path: str | None) -> str:
     """A stage's prompt file without its frontmatter (an agent file's model, tools...)."""
     if not path:
         return ""
-    text = (worktree / path).read_text(encoding="utf-8")
+    return strip_frontmatter((worktree / path).read_text(encoding="utf-8"))
+
+
+def strip_frontmatter(text: str) -> str:
     if text.startswith("---\n"):
         end = text.find("\n---\n", 4)
         if end != -1:

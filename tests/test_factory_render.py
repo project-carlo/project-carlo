@@ -19,8 +19,7 @@ from typing import Any
 
 import pytest
 
-from pdf_extract.factory import inputs as render
-from pdf_extract.factory.handoff import schema_text
+from pdf_extract.factory import render
 from pdf_extract.factory.ledger import MAP, SEED, Ledger
 from pdf_extract.factory.stages import STAGES, StageSpec
 
@@ -169,7 +168,7 @@ def test_first_message(fx: Fixture, kind: str, name: str) -> None:
 
 @pytest.mark.parametrize("stage", [s for s in STAGES if s not in ("promote", "pr")])
 def test_handoff_schema(stage: str) -> None:
-    check(f"schema-{stage}", schema_text(stage) + "\n")
+    check(f"schema-{stage}", render.schema_text(stage) + "\n")
 
 
 def test_resume_prompts() -> None:

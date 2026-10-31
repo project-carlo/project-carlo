@@ -24,7 +24,7 @@ import pytest
 from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import inputs, playbook, readiness, report
+from pdf_extract.factory import playbook, readiness, render, report
 from pdf_extract.factory.backfill import backfill
 from pdf_extract.factory.config import Account, Config, FactoryError, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
@@ -646,7 +646,7 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
     assert second["status"] == "listed"
     # A fresh input (after a resume or a retry) leaves out the flags it raised itself,
     # which it can't settle.
-    again = inputs.stage_input(env.ledger, run, reconcile, {})
+    again = render.stage_input(env.ledger, run, reconcile, {})
     assert f"[#{second['id']}]" in again and f"[#{own['id']}]" not in again
 
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()

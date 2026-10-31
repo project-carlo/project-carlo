@@ -445,7 +445,12 @@ def work_units(stage: str, inputs: dict[str, Any],
     return 1
 
 
-def fingerprint(spec_text: str, prompt_text: str, skills: list[str]) -> str:
-    """The stage's prompt and context configuration: its spec, prompt file and skills."""
-    blob = json.dumps([spec_text, prompt_text, sorted(skills)])
+def fingerprint(spec_text: str, prompt_text: str, skills: list[str],
+                code: dict[str, Any] | None = None) -> str:
+    """The stage's prompt and context configuration: its spec, prompt file and skill names,
+    and `code`: hashes of what else shapes what the worker is given (the code that builds
+    its first message, the skills' contents, its reads) and the dispatcher's commit.
+    Attempts recorded before `code` existed (and backfilled ones) hash without it."""
+    blob = json.dumps([spec_text, prompt_text, sorted(skills)]
+                      + ([code] if code is not None else []), sort_keys=True)
     return hashlib.sha256(blob.encode()).hexdigest()[:12]

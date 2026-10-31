@@ -145,34 +145,3 @@ def read_handoff(path: Path, stage: str) -> tuple[Handoff | None, list[str]]:
                                 "an answer, or `advisory`")
     return (None, problems) if problems else (handoff, [])
 
-
-def schema_text(stage: str) -> str:
-    """The handoff format, as the job input shows it to a worker."""
-    base = {
-        "status": "done | partial | blocked",
-        "summary": "one or two sentences",
-        "flags": [{
-            "severity": "blocking | advisory", "scope": "parish | run",
-            "subject": "roster:id or parish slug", "question": "what needs deciding",
-            "evidence": ["path#section or URL with date"],
-            "suggestion": "what you would do",
-        }],
-        "leads": [{"touches": "batch id or roster:id", "note": "..."}],
-        "lessons": ["reusable publisher or rule lesson"],
-    }
-    if stage == "survey-review":
-        base |= {"verdict": "approve | send_back", "problems": ["..."],
-                 "rules": ["each proposed rule you accept, as written"]}
-    if stage == "reconcile":
-        base |= {"settled": [{"flag": "the id from your input, e.g. 12",
-                              "how": "what you did, or what settled it, in one line"}]}
-    if stage == "seed-review":
-        base |= {"seeds": [{
-            "parish": "slug", "verdict": "approve | send_back",
-            "answers": [{"slot": "slot id", "question": "...",
-                         "choice": "option index | dropped | edited",
-                         "entry": "only for edited", "basis": "rule | precedent | judgment",
-                         "why": "..."}],
-            "problems": ["..."],
-        }]}
-    return json.dumps(base, indent=1)
