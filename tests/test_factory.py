@@ -8,6 +8,7 @@ gate runs are faked.
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import sqlite3
 import subprocess
@@ -23,7 +24,7 @@ import pytest
 from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import playbook, readiness, report
+from pdf_extract.factory import inputs, playbook, readiness, report
 from pdf_extract.factory.backfill import backfill
 from pdf_extract.factory.config import Account, Config, FactoryError, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
@@ -592,6 +593,61 @@ def test_a_parish_flag_from_a_stage_that_cant_park_is_sent_back(tmp_path: Path) 
     assert not read_handoff(path, "map")[1]  # a map job parks the parish
 
 
+OPEN_RECORD = ("---\nname: Chapel\nrevisit: Ask the parish office\nrevisit_after: 2027-01-31\n"
+               "roster: []\nevidence: []\n---\nNotes.\n")
+GAP = ("fetch_gap:\n  kind: solutio-file-403\n  seen: 2026-10-21\n"
+       "  note: \"Solutio /file links\\n  answer 403.\"\n")
+
+
+def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> None:
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        parish = parish_record("x:1")
+        if req.job_name == "003-map":
+            parish = parish.replace("---\nNotes", GAP + "---\nNotes")
+        return StubAction(
+            files={"data/dioceses/{diocese}/parishes/p-{job}.md": parish,
+                   "data/dioceses/{diocese}/open/chapel-{job}.md": OPEN_RECORD},
+            handoff=done(flags=[{"severity": "advisory", "scope": "parish",
+                                 "subject": f"p-{req.job_name}",
+                                 "question": f"Merge p-{req.job_name} into St. Ann?"}]))
+
+    shown: list[int] = []
+
+    def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
+        if attempt == 1:
+            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", req.prompt))
+            return StubAction(handoff=done(settled=[{"flag": 999, "how": "?"}]))
+        return StubAction(handoff=done(
+            settled=[{"flag": shown[0], "how": "Merged;\none masthead."}],
+            flags=[{"severity": "advisory", "scope": "parish", "subject": "p-004-map",
+                    "question": "Kept apart: two mastheads."}]))
+
+    d = env.dispatcher(map_script(map=mapping, reconcile=reconciling))
+    drive(d)
+    run = map_run(env)
+    first, second, own = env.ledger.flags(run["id"])
+    assert shown == [first["id"], second["id"]]
+    reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
+    assert reconcile["send_backs"] == 1  # flag 999 isn't one of its Run's
+    assert (first["status"], first["answer"], first["settled_by"]) == (
+        "settled", "Merged;\none masthead.", reconcile["id"])
+    assert second["status"] == "listed"
+    # A fresh input (after a resume or a retry) leaves out the flags it raised itself,
+    # which it can't settle.
+    again = inputs.stage_input(env.ledger, run, reconcile, {})
+    assert f"[#{second['id']}]" in again and f"[#{own['id']}]" not in again
+
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    open_section = pr.split("## Left open")[1].split("##")[0]
+    assert "- `chapel-003-map` Chapel: Ask the parish office (after 2027-01-31)" in open_section
+    assert "`solutio-file-403` (1): `p-003-map`. Solutio /file links answer 403." in pr
+    flags = pr.split("## Advisory flags")[1].split("## Parked")[0]
+    listed, collapsed = flags.split("<details>")
+    assert "Merge p-004-map into St. Ann?" in listed and "p-003-map" not in listed
+    assert ("Merge p-003-map into St. Ann? **Settled by 005-reconcile:** Merged; one "
+            "masthead.") in collapsed
+
+
 def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
     def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
@@ -1084,6 +1140,26 @@ def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env)
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
 
 
+def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
+    merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
+    path = f"data/dioceses/{D}/parishes/g.md"
+    gap = parish_record("directory:1").replace("---\nNotes", GAP + "---\nNotes")
+    env.commit_main({path: gap}, "g waits on a collector")
+    env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.tmp / "wt", status=MERGED,
+                       parishes=[])
+    make_db(env.tmp / "parish_events.db", {"a": 2, "b": 2, "g": 0})
+    d = env.dispatcher(seed_script)
+    d.check_readiness()
+    run = next(r for r in env.ledger.runs(PENDING) if r["kind"] == SEED)
+    assert json.loads(run["parishes"]) == ["a", "b"]
+    assert "1 wait on a collector" in run["notes"]
+    assert not list((env.forge.folder / "issues").glob("*.json"))  # g isn't overdue
+    env.commit_main({path: parish_record("directory:1")}, "collector landed")
+    r = readiness.assess(env.ledger, env.config, D, env.tmp / "parish_events.db", env.now,
+                         repo=env.repo)
+    assert r is not None and "g" in r.seedable and r.fetch_gaps == []
+
+
 # ── Units ────────────────────────────────────────────────────────────────────
 def test_usage_caps_and_weekly_pacing() -> None:
     config = Config(five_hour_cap=75, weekly_cap=70)
@@ -1245,6 +1321,13 @@ def test_handoff_validation(tmp_path: Path) -> None:
     path.write_text(json.dumps({"status": "blocked", "summary": "s", "seeds": [], "flags": [{
         "severity": "blocking", "scope": "parish", "subject": "p", "question": "q"}]}))
     assert "decides every question" in read_handoff(path, "seed-review")[1][0]
+    path.write_text(json.dumps({"status": "done", "summary": "s", "settled": [
+        {"flag": 1, "how": "merged"}, {"flag": 1, "how": "again"}]}))
+    assert "settle each flag once" in read_handoff(path, "reconcile")[1][0]
+    path.write_text(json.dumps({"status": "done", "summary": "s", "settled": [
+        {"flag": 1, "how": "merged"}]}))
+    assert not read_handoff(path, "reconcile")[1]
+    assert read_handoff(path, "map")[1]  # only reconcile settles flags
 
 
 def test_runs_take_their_branch_prefix(tmp_path: Path) -> None:

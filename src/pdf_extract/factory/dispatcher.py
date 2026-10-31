@@ -30,6 +30,7 @@ from pdf_extract.factory.handoff import (
     PARKING_STAGES,
     SEND_BACK,
     Handoff,
+    Reconcile,
     SeedReview,
     SurveyReview,
     handoff_path,
@@ -46,6 +47,7 @@ from pdf_extract.factory.ledger import (
     GATING,
     IN_REVIEW,
     JOB_BLOCKED,
+    LISTED,
     MAP,
     MERGED,
     OPEN,
@@ -697,6 +699,7 @@ class Dispatcher:
                             "reverted: " + ", ".join(outside))
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
+            problems += self._settled_problems(run, job, handoff)
         if handoff is not None and not problems and handoff.status == HANDOFF_PARTIAL:
             return self._partial(run, job, "the handoff says partial")
         run_blocked = handoff is not None and any(
@@ -721,6 +724,19 @@ class Dispatcher:
         problems = [f"no verdict for {p}" for p in sorted(wanted - covered)]
         problems += [f"{v.parish} is not one of the seeds to review" for v in handoff.seeds
                      if v.parish not in wanted]
+        return problems
+
+    def _settled_problems(self, run: Any, job: Any, handoff: Handoff) -> list[str]:
+        """Reconcile settles only advisory flags other jobs of its Run raised."""
+        if not isinstance(handoff, Reconcile):
+            return []
+        problems = []
+        for s in handoff.settled:
+            row = self.ledger.one("SELECT * FROM flag WHERE id = ?", s.flag)
+            if (row is None or row["run_id"] != run["id"] or row["severity"] == BLOCKING
+                    or row["job_id"] == job["id"]):
+                problems.append(f"settled: flag {s.flag} is not one of the advisory flags in "
+                                "your input; use the ids shown there, as in `[#12]`")
         return problems
 
     def _revert_outside(self, worktree: Path, spec: StageSpec,
@@ -847,6 +863,7 @@ class Dispatcher:
         self._once(job, "leads", lambda: [self.ledger.run_sql(
             "INSERT INTO lead (run_id, job_id, touches, note) VALUES (?,?,?,?)",
             run["id"], job["id"], lead.touches, lead.note) for lead in handoff.leads] and None)
+        self._once(job, "settled", lambda: self._settle(job, handoff))
         self._once(job, "flags", lambda: self._flags(run, job, handoff))
         self._once(job, "commit", lambda: git.commit(
             worktree, self._subject(run, job), _trailers(run, job)))
@@ -880,6 +897,14 @@ class Dispatcher:
             return []
         meta = diocese_dir(worktree, run["diocese"]) / "diocese.md"
         return playbook.append(meta, playbook.NEW_LESSONS, handoff.lessons)
+
+    def _settle(self, job: Any, handoff: Handoff) -> None:
+        """Mark the earlier advisory flags reconcile settled, so the PR stops listing them
+        as open and shows how each was settled instead."""
+        for s in handoff.settled if isinstance(handoff, Reconcile) else []:
+            self.ledger.run_sql("UPDATE flag SET status = ?, answer = ?, answered_at = ?, "
+                                "settled_by = ? WHERE id = ? AND status = ?", SETTLED, s.how,
+                                now(), job["id"], s.flag, LISTED)
 
     def _flags(self, run: Any, job: Any, handoff: Handoff) -> None:
         """Record the handoff's flags. One this job raised and the owner already settled is
@@ -1198,7 +1223,10 @@ class Dispatcher:
                                     worktrees_dir=self.config.worktrees_dir,
                                     branch_prefix=self.config.branch_prefix,
                                     parishes=result.start,
-                                    notes=f"{len(result.start)} parishes ready")
+                                    notes=f"{len(result.start)} parishes ready"
+                                    + (f"; {len(result.fetch_gaps)} wait on a collector "
+                                       f"(`pnpm diocese gaps --diocese {diocese}`)"
+                                       if result.fetch_gaps else ""))
             for parish in result.overdue:
                 key = f"overdue:{diocese}:{parish}"
                 if self.ledger.get(key):

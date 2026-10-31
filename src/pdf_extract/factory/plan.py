@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import json
 import tempfile
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -72,14 +73,26 @@ def parish_records(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
     return out
 
 
+def _with_source(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
+    return {slug: r for slug, r in parish_records(worktree, diocese).items()
+            if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN}
+
+
 def seedable_parishes(worktree: Path, diocese: str) -> list[str]:
-    """Parishes the map Run promoted with a bulletin source; excluded and open ones never."""
-    return [slug for slug, r in parish_records(worktree, diocese).items()
-            if r.get("bulletin_provider") and r.get("bulletin_provider") != NO_BULLETIN]
+    """Parishes the map Run promoted with a bulletin source; excluded and open ones never,
+    nor one whose bulletin `fetch` can't collect yet (`fetch_gap`): it has no bulletins to
+    seed from until its collector lands and the gap is cleared."""
+    return [slug for slug, r in _with_source(worktree, diocese).items()
+            if not r.get("fetch_gap")]
 
 
-def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
-    """`seedable_parishes` as main (`ref`) has them, since a merged Run's worktree is gone."""
+def fetch_gap_parishes(worktree: Path, diocese: str) -> list[str]:
+    """Parishes with a bulletin source that wait on a collector (`fetch_gap`)."""
+    return [slug for slug, r in _with_source(worktree, diocese).items() if r.get("fetch_gap")]
+
+
+def _on_main(repo: Path, ref: str, diocese: str,
+             read: Callable[[Path, str], list[str]]) -> list[str]:
     with tempfile.TemporaryDirectory() as tmp:
         folder = diocese_dir(Path(tmp), diocese) / "parishes"
         folder.mkdir(parents=True)
@@ -87,7 +100,17 @@ def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
                 repo, ref, f"data/dioceses/{diocese}/parishes").items():
             if name.endswith(".md"):
                 (folder / name).write_text(text, encoding="utf-8")
-        return seedable_parishes(Path(tmp), diocese)
+        return read(Path(tmp), diocese)
+
+
+def seedable_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
+    """`seedable_parishes` as main (`ref`) has them, since a merged Run's worktree is gone."""
+    return _on_main(repo, ref, diocese, seedable_parishes)
+
+
+def fetch_gaps_on_main(repo: Path, ref: str, diocese: str) -> list[str]:
+    """`fetch_gap_parishes` as main (`ref`) has them."""
+    return _on_main(repo, ref, diocese, fetch_gap_parishes)
 
 
 def seed_batches(worktree: Path, diocese: str, parishes: list[str]) -> list[tuple[str, list[str]]]:

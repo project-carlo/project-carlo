@@ -328,8 +328,33 @@ def todo(diocese: str, *, limit: int = 40) -> dict[str, Any]:
         out["churches_in_no_roster"] = cov.get("churches_in_no_roster", [])
     else:
         out["coverage"] = "no rosters yet: fetch or import the diocese's own list first"
+    out["fetch_gaps"] = [{"parish": e["parish"], "kind": k["kind"], "note": e["note"]}
+                         for k in gaps(diocese)["kinds"] for e in k["entries"]]
     out["incomplete"] = p.incomplete[:limit]
     out["warnings"] = len(p.warnings)
     out["counts"] = {"errors": len(p.errors), "incomplete": len(p.incomplete),
                      "warnings": len(p.warnings)}
     return out
+
+
+def gaps(diocese: str | None = None, kind: str | None = None) -> dict[str, Any]:
+    """Parishes whose bulletin `fetch` can't collect yet (`fetch_gap`), every diocese or
+    one, grouped by kind, the largest group first: the work list for new collectors."""
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for slug in [diocese] if diocese else records.diocese_slugs():
+        for parish, r in records.load(slug).of(PARISH).items():
+            gap = r.get("fetch_gap")
+            if not isinstance(gap, Mapping) or (kind and gap.get("kind") != kind):
+                continue
+            groups.setdefault(str(gap.get("kind") or "?"), []).append({
+                "diocese": slug, "parish": parish, "name": r.get("name", ""),
+                "website": r.get("website", ""),
+                "bulletin_provider": r.get("bulletin_provider", ""),
+                "bulletin_status": r.get("bulletin_status", ""),
+                "url": gap.get("url", ""), "seen": gap.get("seen", ""),
+                "note": gap.get("note", ""),
+            })
+    kinds = [{"kind": k, "parishes": len(v), "dioceses": sorted({e["diocese"] for e in v}),
+              "entries": v}
+             for k, v in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0]))]
+    return {"total": sum(k["parishes"] for k in kinds), "kinds": kinds}
