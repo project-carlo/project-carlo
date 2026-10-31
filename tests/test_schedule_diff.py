@@ -350,8 +350,8 @@ def test_one_holiday_cancellation_is_listed_with_the_slot_still_matched() -> Non
 
 
 def test_cancelling_most_upcoming_dates_trips_the_local_hold() -> None:
-    before = _tables([_adoration(1), _event(2)])
-    after = _tables([_adoration(1), _event(2)] + [
+    before = _tables([_adoration(1)])
+    after = _tables([_adoration(1)] + [
         _cancel(10 + i, day, 1, start_time=1140) for i, day in enumerate(FRIDAYS[:4])
     ])
 
@@ -361,8 +361,35 @@ def test_cancelling_most_upcoming_dates_trips_the_local_hold() -> None:
     gate = _gate(result, "No severe local loss")
     assert not gate["passed"]
     [loss] = gate["affected"]
+    assert loss["level"] == "parish"
+    assert (loss["lost"], loss["moved"], loss["missing"], loss["before"]) == (4, 0, 4, 6)
+
+
+def test_a_time_that_moved_is_not_a_local_loss() -> None:
+    before = _tables([_adoration(1), _event(2)])
+    after = _tables([_adoration(1, start_time=1080, end_time=1140), _event(2)])
+
+    result = check_snapshots(after, before, AS_OF)
+
+    assert _gate(result, "No severe local loss")["passed"]
+    [group] = _parish(result["comparison"], 10)["availability"]["groups"][:1]
+    assert (group["event_type"], group["lost"], group["moved"]) == ("adoration", 6, 6)
+    assert not [loss for loss in result["local_losses"] if loss["severe"]]
+
+
+def test_a_church_level_loss_is_reported_without_holding() -> None:
+    # Church a's Adoration loses most dates; the parish as a whole keeps most.
+    before = _tables([_adoration(1), _event(2)])
+    after = _tables([_adoration(1), _event(2)] + [
+        _cancel(10 + i, day, 1, start_time=1140) for i, day in enumerate(FRIDAYS[:4])
+    ])
+
+    result = check_snapshots(after, before, AS_OF)
+
+    assert _gate(result, "No severe local loss")["passed"]
+    [loss] = [loss for loss in result["local_losses"] if loss["severe"]]
     assert (loss["level"], loss["church_slug"], loss["event_type"]) == ("church", "a", "adoration")
-    assert (loss["lost"], loss["before"]) == (4, 6)
+    assert loss["holds"] is False
 
 
 def test_a_cancellation_naming_no_weekly_row_fails_closed() -> None:
@@ -413,27 +440,10 @@ def test_a_severe_local_loss_holds_while_the_site_barely_changes() -> None:
     gate = _gate(result, "No severe local loss")
     assert not gate["passed"]
     assert {(loss["level"], loss["parish_slug"]) for loss in gate["affected"]} == {
-        ("parish", "pb"), ("church", "pb"),
+        ("parish", "pb"),
     }
-    assert gate["detail"] == "pb: 4 of 6 dates; pb `b` adoration: 4 of 6 dates"
+    assert gate["detail"] == "pb: 4 of 6 dates"
     assert gate["threshold"] == {"min_dates": 3, "max_fraction": 0.5}
-
-
-def test_a_level_left_out_of_the_hold_levels_is_reported_only(
-    monkeypatch: pytest.MonkeyPatch,
-) -> None:
-    from pdf_extract import verify_frontend_snapshot as gates
-
-    monkeypatch.setattr(gates, "LOCAL_LOSS_HOLD_LEVELS", ("parish",))
-    # Church a's Adoration loses most dates; the parish as a whole keeps most.
-    before = _tables([_adoration(1), *_masses(10)])
-    after = _tables([_adoration(1, weeks_of_month=["first"]), *_masses(10)])
-
-    result = check_snapshots(after, before, AS_OF)
-
-    assert _gate(result, "No severe local loss")["passed"]
-    [loss] = [loss for loss in result["local_losses"] if loss["severe"]]
-    assert (loss["level"], loss["holds"]) == ("church", False)
 
 
 def test_a_small_or_partial_local_loss_is_reported_without_holding() -> None:
@@ -495,8 +505,8 @@ def test_a_zero_baseline_is_not_measured_and_onboarding_is_reported() -> None:
 def test_a_parish_seeded_this_run_holds_only_on_an_out_of_date_seed(
     seed_as_of: str, holds: bool,
 ) -> None:
-    before = _tables([_adoration(1), _event(2)])
-    after = _tables([_adoration(1, weeks_of_month=["first"]), _event(2)])
+    before = _tables([_adoration(1)])
+    after = _tables([_adoration(1, weeks_of_month=["first"])])
 
     result = check_snapshots(after, before, AS_OF, seeded_this_run={10: seed_as_of})
 
@@ -504,7 +514,7 @@ def test_a_parish_seeded_this_run_holds_only_on_an_out_of_date_seed(
     assert gate["passed"] is not holds
     severe = [loss for loss in result["local_losses"] if loss["severe"]]
     assert severe and all(loss["seeded_this_run"] for loss in severe)
-    assert all(loss["holds"] is holds for loss in severe)
+    assert all(loss["holds"] is (holds and loss["level"] == "parish") for loss in severe)
     # Never exempt from the site-wide retention check.
     assert not _gate(result, "Weekly schedule")["passed"]
 

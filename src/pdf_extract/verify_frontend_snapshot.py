@@ -53,11 +53,14 @@ PARISH_DROP_WARN_FRACTION = 0.5
 PARISH_DROP_WARN_MIN_EVENTS = 6
 
 # A parish, or one church's services of one type, that loses at least this
-# many dates in the window, and more than this share of them, holds the run.
+# many dates in the window, and more than this share of them, is a severe loss.
+# A date the same church kept at another time (a time that moved) isn't lost.
 LOCAL_LOSS_MIN_DATES = 3
 LOCAL_LOSS_MAX_FRACTION = 0.5
 # The levels whose severe losses hold the run; a level left out is reported only.
-LOCAL_LOSS_HOLD_LEVELS = ("parish", "church")
+# The church level fired on every replayed weekly run, mostly Adoration and
+# Confession at parishes with a new bulletin, so it is reported only.
+LOCAL_LOSS_HOLD_LEVELS = ("parish",)
 
 Tables = dict[str, list[dict[str, Any]]]
 
@@ -262,8 +265,9 @@ def _comparison_gates(
                 continue
             if not counts["lost"]:
                 continue
-            fraction = counts["lost"] / counts["before"]
-            severe = counts["lost"] >= LOCAL_LOSS_MIN_DATES and fraction > LOCAL_LOSS_MAX_FRACTION
+            missing = counts["lost"] - counts["moved"]
+            fraction = missing / counts["before"]
+            severe = missing >= LOCAL_LOSS_MIN_DATES and fraction > LOCAL_LOSS_MAX_FRACTION
             losses.append({
                 "level": level,
                 "parish_id": parish_id,
@@ -272,6 +276,8 @@ def _comparison_gates(
                 "event_type": event_type,
                 "before": counts["before"],
                 "lost": counts["lost"],
+                "moved": counts["moved"],
+                "missing": missing,
                 "fraction": round(fraction, 3),
                 "lost_dates": counts.get("lost_dates", []),
                 "severe": severe,
@@ -308,7 +314,7 @@ def _describe_loss(loss: dict[str, Any]) -> str:
     where = loss["parish_slug"]
     if loss["level"] == "church":
         where += f" `{loss['church_slug']}` {loss['event_type']}"
-    return f"{where}: {loss['lost']} of {loss['before']} dates"
+    return f"{where}: {loss['missing']} of {loss['before']} dates"
 
 
 def verify_frontend_snapshot(

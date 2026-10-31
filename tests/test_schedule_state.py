@@ -1512,26 +1512,29 @@ def test_a_parish_seeded_this_run_is_compared_with_its_extracted_schedule(
     sat_4 = {**SAT_5, "start_time": "4:00 PM"}
     _extracted(conn, "b1", [SUN_9, SUN_11, sat_4, {**sat_4, "church_slug": "second-church"}])
     before = _copy(conn, tmp_path)
-    _seed(conn, [SUN_9, SUN_11, SAT_5, {**SAT_5, "church_slug": "second-church"}],
-          as_of=seed_as_of)
+    _seed(conn, [SAT_5], as_of=seed_as_of)
 
     report = _snapshot_report(conn, before)
 
     [change] = report["changes"]
     assert change["mode"] == "extract→update"
-    assert [c["change"] for c in change["recurring"]] == ["modified", "modified"]
+    assert sorted(c["change"] for c in change["recurring"]) == [
+        "modified", "removed", "removed", "removed",
+    ]
     [local] = [g for g in report["gates"] if g["name"].startswith("No severe local loss")]
     assert local["passed"] is not holds
     severe = [loss for loss in change["local_losses"] if loss["severe"]]
-    # Every upcoming Mass at second-church moved; the parish as a whole kept half.
-    assert {(loss["level"], loss["church_slug"]) for loss in severe} == {
-        ("church", "second-church"),
+    # Both Sundays and second-church's Saturday are gone, 18 of the parish's 24
+    # dates; test-church's Saturday moved to 5:00, which loses none.
+    assert {(loss["level"], loss["church_slug"], loss["missing"]) for loss in severe} == {
+        ("parish", None, 18), ("church", "test-church", 12), ("church", "second-church", 6),
     }
-    assert all(loss["seeded_this_run"] and loss["holds"] is holds for loss in severe)
+    assert all(loss["seeded_this_run"] for loss in severe)
+    assert all(loss["holds"] is (holds and loss["level"] == "parish") for loss in severe)
     # The seed's changes still count against the site-wide retention check.
     [weekly] = [g for g in report["gates"] if g["name"].startswith("Weekly schedule")]
-    assert (weekly["passed"], weekly["numerator"], weekly["denominator"]) == (False, 2, 4)
-    assert report["totals"]["by_mode"]["extract→update"]["events_removed"] == 2
+    assert (weekly["passed"], weekly["numerator"], weekly["denominator"]) == (False, 0, 4)
+    assert report["totals"]["by_mode"]["extract→update"]["events_removed"] == 4
     if not holds:
         assert "(seeded this run from a current seed; does not hold)" in render_markdown(report)
 

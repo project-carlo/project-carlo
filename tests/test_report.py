@@ -255,11 +255,11 @@ def test_report_summarises_changes(pipeline_dir: Path) -> None:
         "No parish or church removed from the CSVs",
         "At most 50% of parishes failed to fetch",
     ]
-    # One of three slots changed, so the retention check holds the run, and
-    # every upcoming Confession moved, so the local check does too.
+    # One of three slots changed, so the retention check holds the run. Every
+    # upcoming Confession moved an hour earlier: no date went missing, so the
+    # local check passes.
     assert [g["name"] for g in report["gates"] if not g["passed"]] == [
         "Weekly schedule at least 90.0% unchanged",
-        "No severe local loss of upcoming services",
     ]
     assert report["gates"][0]["detail"] == "1 → 1"
     assert report["as_of"] == AS_OF.isoformat()
@@ -293,6 +293,8 @@ def test_report_summarises_changes(pipeline_dir: Path) -> None:
         "Confession · Sat 3:00 PM–4:00 PM, every Saturday → 2:00 PM–4:00 PM; "
         "6 of 6 dates in the window removed",
     )]
+    [group] = change["availability"]["groups"]
+    assert (group["lost"], group["gained"], group["moved"]) == (6, 6, 6)
 
 
 def test_report_unchanged_parishes_are_not_listed_as_changes(pipeline_dir: Path) -> None:
@@ -559,6 +561,21 @@ def test_render_markdown_includes_status_gates_and_changes(pipeline_dir: Path) -
     assert markdown.endswith("\n")
 
 
+def test_render_markdown_says_which_local_losses_hold(pipeline_dir: Path) -> None:
+    friday = {**MASS_9, "event_type": "adoration", "day_of_week": "Friday",
+              "start_time": "7:00 PM", "end_time": "8:00 PM"}
+    before, after = _before_and_after(pipeline_dir, [friday])
+    _add_bulletin(after, [MASS_9], published_date="2026-09-20")
+
+    markdown = render_markdown(_report(before, after))
+
+    # The parish's every upcoming date is gone, so the parish level holds;
+    # the church's Adoration losing them all is only reported.
+    assert "- **test-parish** loses 6 of its 6 upcoming dates (holds the run)" in markdown
+    assert "- **test-parish** `test-church` Adoration loses 6 of its 6 upcoming dates " \
+        "(reported only)" in markdown
+
+
 def test_render_markdown_shows_modifications_lost_dates_and_notes(pipeline_dir: Path) -> None:
     friday = {**MASS_9, "event_type": "adoration", "day_of_week": "Friday",
               "start_time": "7:00 PM", "end_time": "8:00 PM"}
@@ -576,14 +593,15 @@ def test_render_markdown_shows_modifications_lost_dates_and_notes(pipeline_dir: 
         "6 of 6 dates in the window removed"
     ) in markdown
     assert "**Upcoming dates**: 12 → 12 (−6 / +6)" in markdown
-    assert "- `test-church` Adoration: lost 6 of 6, gained 6 (lost 2026-09-25 7:00 PM, " \
+    assert "- `test-church` Adoration: lost 6 of 6, gained 6 (6 of them a time that moved) " \
+        "(lost 2026-09-25 7:00 PM, " \
         "2026-10-02 7:00 PM, 2026-10-09 7:00 PM, 2026-10-16 7:00 PM, 2026-10-23 7:00 PM, " \
         "2026-10-30 7:00 PM)" in markdown
     assert "**Notes** (not counted as schedule changes)" in markdown
     assert "- `test-church` Mass · Sun 9:00 AM, every Sunday: “no note” → “Choir sings”" \
         in markdown
-    assert "**test-parish** `test-church` Adoration loses 6 of its 6 upcoming dates " \
-        "(holds the run)" in markdown
+    # Every Adoration date is still there an hour earlier, so nothing is called out.
+    assert "Adoration loses" not in markdown
     assert report["changes"][0]["notes"][0]["after"] == ["Choir sings"]
     assert report["totals"]["parishes_changed"] == 1
 

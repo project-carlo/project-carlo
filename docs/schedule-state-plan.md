@@ -613,10 +613,12 @@ counted. The gates, all holding the run:
   up for removals (not measured, and passing, when there were none);
 - no parish that showed at least 3 events shows none;
 - no severe local loss: over the next 42 days (as the site's `nextForWeekly`
-  reads them), no parish, and no church's services of one type, lost at least
-  3 of its dates and more than half of them. A parish switched to update mode
-  this run doesn't hold for this when its seed is at least as recent as its
-  current bulletin's week; it is still checked by every other gate.
+  reads them), no parish lost at least 3 of its dates and more than half of
+  them. A date the same church still has, same type, at another time is a time
+  that moved, not a lost date. The same check on one church's services of one
+  type is reported only, not held on. A parish switched to update mode this
+  run doesn't hold for this when its seed is at least as recent as its current
+  bulletin's week; it is still checked by every other gate.
 
 `replay-gates` runs today's gates over consecutive archived runs, each run's
 database standing in for the next one's `before.db`. Replayed on the 8 runs
@@ -630,8 +632,11 @@ comparison sees. But the church-level local hold fired on every weekly run:
 51 church/type groups on 2026-10-18 (recorded passed) and 72 on 2026-10-25,
 mostly Adoration and Confession at extract-mode parishes with a new bulletin,
 about half of them a time moved rather than a service gone. The parish level
-fired 0 and 7 times. Leaving `"church"` out of `LOCAL_LOSS_HOLD_LEVELS` makes
-that level reported only.
+fired 0 and 7 times. So the church level is reported only (`"church"` is left
+out of `LOCAL_LOSS_HOLD_LEVELS`), and a moved time no longer counts as lost.
+Replayed again with both, the local hold fires on 2 of the 7 pairs, at the
+parish level only: 2 parishes on 2026-10-04 and 5 on 2026-10-25 (the first
+run). 2026-10-18 passes, as it did when it ran.
 
 ## Processing order
 

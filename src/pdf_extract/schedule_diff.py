@@ -497,7 +497,9 @@ def compare(
                 "cancellations_removed": 0, "cancellations_added": 0,
                 "recurring": [], "dated": [], "cancellations": [], "notes": [],
                 "diagnostics": [],
-                "availability": {"before": 0, "after": 0, "lost": 0, "gained": 0, "groups": []},
+                "availability": {
+                    "before": 0, "after": 0, "lost": 0, "gained": 0, "moved": 0, "groups": [],
+                },
             }
         return parishes[parish_id]
 
@@ -564,19 +566,29 @@ def compare(
             parish(parish_id)["availability"][side] += 1
             group = groups.setdefault((parish_id, church, event_type), {
                 "church_slug": church, "event_type": event_type,
-                "before": 0, "after": 0, "lost": 0, "gained": 0, "lost_dates": [],
+                "before": 0, "after": 0, "lost": 0, "gained": 0, "moved": 0, "lost_dates": [],
             })
             group[side] += 1
+    # A lost date the same church gained back, same type, at another time, is a
+    # time that moved: `moved` counts those, so `lost - moved` is what went missing.
+    lost_on: Counter[tuple] = Counter()
+    gained_on: Counter[tuple] = Counter()
     for occurrence in lost:
         parish_id = avail_b[occurrence]
         parish(parish_id)["availability"]["lost"] += 1
         group = groups[(parish_id, occurrence[0], occurrence[1])]
         group["lost"] += 1
         group["lost_dates"].append(f"{occurrence[2]} {minutes_to_time(occurrence[3])}")
+        lost_on[(parish_id, *occurrence[:3])] += 1
     for occurrence in gained:
         parish_id = avail_a[occurrence]
         parish(parish_id)["availability"]["gained"] += 1
         groups[(parish_id, occurrence[0], occurrence[1])]["gained"] += 1
+        gained_on[(parish_id, *occurrence[:3])] += 1
+    for (parish_id, church, event_type, day), count in lost_on.items():
+        moved = min(count, gained_on[(parish_id, church, event_type, day)])
+        parish(parish_id)["availability"]["moved"] += moved
+        groups[(parish_id, church, event_type)]["moved"] += moved
     for (parish_id, _church, _type), group in sorted(
         groups.items(), key=lambda kv: (str(kv[0][1]), str(kv[0][2])),
     ):
@@ -602,6 +614,7 @@ def compare(
         "availability": {
             "before": len(avail_b), "after": len(avail_a),
             "lost": len(lost), "gained": len(gained),
+            "moved": sum(p["availability"]["moved"] for p in parishes.values()),
         },
         "parishes": [parishes[k] for k in sorted(parishes, key=lambda k: (k is None, k or 0))],
     }

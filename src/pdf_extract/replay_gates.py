@@ -116,7 +116,7 @@ def replay(run_ids: list[str], *, fetch: Fetch = fetch_run) -> dict[str, Any]:
                 "local_losses": [
                     {key: loss[key] for key in (
                         "parish_slug", "level", "church_slug", "event_type", "before", "lost",
-                        "holds", "seeded_this_run",
+                        "moved", "missing", "holds", "seeded_this_run",
                     )}
                     for loss in result.get("local_losses") or [] if loss["severe"]
                 ],

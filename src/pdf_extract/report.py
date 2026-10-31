@@ -186,6 +186,7 @@ def _parish_report(
             "after": availability["after"],
             "lost": availability["lost"],
             "gained": availability["gained"],
+            "moved": availability["moved"],
             "groups": [g for g in availability["groups"] if g["lost"] or g["gained"]],
         },
         "local_losses": [loss for loss in losses if loss["parish_id"] == section["parish_id"]],
@@ -524,7 +525,9 @@ def _describe_loss(loss: dict[str, Any]) -> str:
     if loss["level"] == "church":
         label = _TYPE_LABELS.get(loss["event_type"], loss["event_type"])
         where += f" `{loss['church_slug']}` {label}"
-    text = f"{where} loses {loss['lost']} of its {loss['before']} upcoming dates"
+    text = f"{where} loses {loss['missing']} of its {loss['before']} upcoming dates"
+    if loss["moved"]:
+        text += f" ({loss['moved']} more moved to another time)"
     if loss["holds"]:
         return text + " (holds the run)"
     if loss["seeded_this_run"] and loss["severe"]:
@@ -581,6 +584,7 @@ def _render_parish(change: dict[str, Any]) -> list[str]:
             text = (
                 f"- `{group['church_slug']}` {label}: lost {group['lost']} of {group['before']}"
                 f", gained {group['gained']}"
+                + (f" ({group['moved']} of them a time that moved)" if group["moved"] else "")
             )
             if group["lost_dates"]:
                 shown = ", ".join(group["lost_dates"][:6])
