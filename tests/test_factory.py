@@ -1140,6 +1140,26 @@ def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env)
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
 
 
+def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
+    merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
+    path = f"data/dioceses/{D}/parishes/g.md"
+    gap = parish_record("directory:1").replace("---\nNotes", GAP + "---\nNotes")
+    env.commit_main({path: gap}, "g waits on a collector")
+    env.ledger.add_run(diocese=D, kind=SEED, worktrees_dir=env.tmp / "wt", status=MERGED,
+                       parishes=[])
+    make_db(env.tmp / "parish_events.db", {"a": 2, "b": 2, "g": 0})
+    d = env.dispatcher(seed_script)
+    d.check_readiness()
+    run = next(r for r in env.ledger.runs(PENDING) if r["kind"] == SEED)
+    assert json.loads(run["parishes"]) == ["a", "b"]
+    assert "1 wait on a collector" in run["notes"]
+    assert not list((env.forge.folder / "issues").glob("*.json"))  # g isn't overdue
+    env.commit_main({path: parish_record("directory:1")}, "collector landed")
+    r = readiness.assess(env.ledger, env.config, D, env.tmp / "parish_events.db", env.now,
+                         repo=env.repo)
+    assert r is not None and "g" in r.seedable and r.fetch_gaps == []
+
+
 # ── Units ────────────────────────────────────────────────────────────────────
 def test_usage_caps_and_weekly_pacing() -> None:
     config = Config(five_hour_cap=75, weekly_cap=70)

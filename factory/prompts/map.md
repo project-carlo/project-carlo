@@ -60,7 +60,7 @@ a parish you can't settle without the owner's decision gets a blocking flag with
 
 ## Record it, don't flag it
 
-Three things go in the records, not in a flag (README, *What to flag*):
+These go in the records, not in a flag (README, *What to flag*):
 
 - **A church you can't settle.** No source shows Mass there now and none says it closed:
   an `open/` record, with the next check in `revisit` and a date in `revisit_after`. The
@@ -69,6 +69,8 @@ Three things go in the records, not in a flag (README, *What to flag*):
   (a host that answers 403, links that aren't PDFs, an HTML-only bulletin, an embedded
   viewer): set the row's `fetch_gap`, reusing a `kind` that `pnpm diocese gaps` lists for
   the same problem.
+- **A check blocked for now** (a daily download cap, a site that is down): the row's
+  `research`, with a retry trigger.
 - **Sources that disagree on an address or a name.** Choose, preferring the parish's and
   the diocese's own sources unless you have a reason not to, and say why in *Name and
   address*.

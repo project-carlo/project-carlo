@@ -1223,7 +1223,10 @@ class Dispatcher:
                                     worktrees_dir=self.config.worktrees_dir,
                                     branch_prefix=self.config.branch_prefix,
                                     parishes=result.start,
-                                    notes=f"{len(result.start)} parishes ready")
+                                    notes=f"{len(result.start)} parishes ready"
+                                    + (f"; {len(result.fetch_gaps)} wait on a collector "
+                                       f"(`pnpm diocese gaps --diocese {diocese}`)"
+                                       if result.fetch_gaps else ""))
             for parish in result.overdue:
                 key = f"overdue:{diocese}:{parish}"
                 if self.ledger.get(key):

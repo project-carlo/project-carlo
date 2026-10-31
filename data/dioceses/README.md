@@ -286,9 +286,9 @@ A factory flag asks the owner for a decision. These need none, so record them in
   page of announcements), it sits in an embedded viewer (Drive `/preview`), or `fetch`
   picks the right file and misreads it (a date taken from a file name). Set the parish's
   `fetch_gap`. `pnpm diocese gaps` lists them across every diocese by kind, which is the
-  work list for new collectors. A block a retry may clear (a daily download cap, a site
-  that is down) is `research` with a retry trigger, and a bulletin not found at all is
-  `research` too; neither is a gap.
+  work list for new collectors. A bulletin not found at all is `research`, not a gap.
+- **A check blocked for now.** A block a retry may clear (a daily download cap, a site
+  that is down) is `research` with a retry trigger, not a gap and not a flag.
 - **Sources that disagree on an address or a name.** Choose, as above.
 
 Flag what only the owner can decide: a question of policy no rule settles, a structural

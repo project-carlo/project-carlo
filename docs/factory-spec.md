@@ -292,9 +292,10 @@ quota [--by ...] [--windows] [backfill] | cost [--stage]`.
 - Some things need no flag, because the records carry them (`data/dioceses/README.md`,
   *What to flag*): a church no source settles (an `open/` record, which `reconcile` tries
   once more and the PR lists), a bulletin `fetch` can't collect (the parish's `fetch_gap`,
-  which the PR lists by kind and `pnpm diocese gaps` lists across dioceses), and an
-  address or name the sources disagree on (the worker chooses, preferring the parish's
-  and the diocese's own, and says why in the record).
+  which the PR lists by kind and `pnpm diocese gaps` lists across dioceses), a check
+  blocked for now (the row's `research`, with a retry trigger), and an address or name
+  the sources disagree on (the worker chooses, preferring the parish's and the diocese's
+  own, and says why in the record).
 - A blocking flag becomes a **GitHub issue** with labels `factory`, `run:<diocese>` and
   `stage:<stage>`, holding the question, the evidence and the suggestion.
 - You answer by commenting and closing the issue. The dispatcher checks open factory
@@ -392,7 +393,9 @@ rows first.
 
 - **When a parish is ready.** A parish from a merged map Run is ready once the database has
   at least 2 of its bulletins. Only parishes the map Run promoted with a bulletin source
-  count, for readiness and for the 80% below; excluded and open ones never do. Once a day the dispatcher refreshes its database copy
+  count, for readiness and for the 80% below; excluded and open ones never do, and one
+  with a `fetch_gap` counts only once its collector lands and the gap is cleared on main
+  (the seed Run's notes say how many wait). Once a day the dispatcher refreshes its database copy
   (`pnpm data:pull`) and counts them.
 - **First seed Run.** Starts once 80% of the diocese's mapped parishes are ready, and
   seeds those. If that hasn't happened 6 weeks after the map Run merged, it starts then

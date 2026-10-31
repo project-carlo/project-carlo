@@ -72,9 +72,10 @@ read it with `jq` or `grep`; grep a bulletin before reading it.
 - `settled`: every flag from your input that the PR no longer needs to list, as
   `{"flag": 12, "how": "Merged into st-ann-dover; one masthead"}`.
 - `flags`: advisory, only for a new question the owner should see in the PR: a merge you
-  decided against and why, a check blocked for now with its retry trigger, a rule the
-  evidence contradicts. Not a row left in `open/` or a `fetch_gap`, which the PR lists from
-  the records, nor an address you chose. Blocking, scope `parish`, only when
+  decided against and why, a rule the evidence contradicts. Not a row left in `open/` or a
+  `fetch_gap`, which the PR lists from the records, nor an address you chose, nor a check
+  blocked for now (a daily cap, a site that is down), which is the row's `research` with
+  its retry trigger. Blocking, scope `parish`, only when
   promoting that parish as it stands would put a wrong bulletin live and only the owner
   can settle it. Blocking, scope `run`, when a gate fails on shared files you can't fix.
 - `lessons`: only what would help in **any** diocese, for the PR: a publisher quirk

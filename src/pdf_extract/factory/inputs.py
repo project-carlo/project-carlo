@@ -65,13 +65,15 @@ def _flags_help(stage: str) -> str:
   blocking flag with `scope: run` stops the Run. `advisory` is listed in the PR: leave
   that parish open or excluded with a reason. Give evidence and what you would do. Don't
   flag what the records already carry (README, *What to flag*): a church left in `open/`,
-  a bulletin `fetch` can't collect (`fetch_gap`), or an address you chose between sources."""
+  a bulletin `fetch` can't collect (`fetch_gap`), a check blocked for now (`research`
+  with a retry trigger), or an address you chose between sources."""
     return """\
 - `flags`: a `blocking` flag (`scope: run`) stops the Run until the owner answers an
   issue; this stage can't set a single parish aside. `advisory` is listed in the PR.
   Give evidence and what you would do. Don't flag what the records already carry
   (README, *What to flag*): a church left in `open/`, a bulletin `fetch` can't collect
-  (`fetch_gap`), or an address you chose between sources."""
+  (`fetch_gap`), a check blocked for now (`research` with a retry trigger), or an address
+  you chose between sources."""
 
 
 def _lines(items: list[str]) -> str:
