@@ -243,6 +243,8 @@ class FakePodman:
             code = 1
         elif args[:2] == ("container", "inspect"):
             out = "true" if self.proxy_running else "false"
+        elif args[:2] == ("run", "--rm"):
+            out = "nameserver 169.254.1.1\n"
         elif args[0] == "ps":
             out = "aaa\nbbb\n"
         return subprocess.CompletedProcess(args, code, out, "failed" if code else "")
@@ -252,6 +254,8 @@ def main_repo(tmp: Path) -> Path:
     repo = tmp / "main"
     (repo / "factory" / "sandbox").mkdir(parents=True)
     (repo / "factory" / "sandbox" / "Containerfile").write_text("FROM scratch\n")
+    (repo / "factory" / "sandbox" / "Proxy.Containerfile").write_bytes(
+        (ROOT / "factory" / "sandbox" / "Proxy.Containerfile").read_bytes())
     (repo / "pyproject.toml").write_text("[project]\n")
     (repo / "uv.lock").write_text("lock\n")
     for args in (["init", "-q", "-b", "main"], ["add", "-A"],
@@ -409,17 +413,44 @@ def test_the_image_is_built_from_mains_files_and_tagged_by_their_hash(tmp_path: 
 def test_the_proxy_refuses_private_and_host_addresses(tmp_path: Path) -> None:
     from pdf_extract.factory.sandbox import NETWORK, PROXY, proxy_argv
 
-    argv = proxy_argv(["172.20.0.5"])
+    argv = proxy_argv(["172.20.0.5"], "carlo-egress:test", "169.254.1.1:53")
     joined = " ".join(argv)
     for cidr in ("10.0.0.0/8", "127.0.0.0/8", "169.254.0.0/16", "172.16.0.0/12",
                  "192.168.0.0/16", "100.64.0.0/10", "fc00::/7", "fe80::/10", "::1/128"):
         assert f"--deny-range {cidr}" in joined
     assert "--deny-address 172.20.0.5" in joined
     assert f"--name {PROXY}" in joined and f"--network {NETWORK}" in joined
+    assert "--resolver-address 169.254.1.1:53" in joined
+    assert "carlo-egress:test" in argv
     assert "--unsafe-allow-private-ranges" not in joined
     fake = FakePodman(proxy_running=False)
     podman_backend(tmp_path, fake).proxy()
     assert ("rm", "--force", PROXY) in fake.calls and any(c[0] == "run" for c in fake.calls)
+
+
+def test_proxy_dns_uses_egress_resolvers() -> None:
+    from pdf_extract.factory.sandbox import SandboxError, resolver_address
+
+    assert resolver_address("# generated\nsearch lan\nnameserver 169.254.1.1\n"
+                            "nameserver 2001:4860:4860::8888\n") == "169.254.1.1:53"
+    assert resolver_address("nameserver 2001:4860:4860::8888\n") == "[2001:4860:4860::8888]:53"
+    with pytest.raises(SandboxError, match="no DNS nameserver"):
+        resolver_address("search lan\n")
+
+
+def test_proxy_image_is_built_from_the_trusted_ref(tmp_path: Path) -> None:
+    from pdf_extract.factory.sandbox import PROXY_FILE, PROXY_IMAGE, image_tag, main_files
+
+    fake = FakePodman(have_image=False, proxy_running=False)
+    backend = podman_backend(tmp_path, fake)
+    (backend.repo / PROXY_FILE).write_text("FROM untrusted\n")
+    backend.proxy()
+    tag = image_tag(main_files(backend.repo, "main", (PROXY_FILE,)), PROXY_IMAGE)
+    build = next(c for c in fake.calls if c[0] == "build")
+    assert tag in build
+    assert Path(build[build.index("--file") + 1]).name == "Proxy.Containerfile"
+    run = next(c for c in fake.calls if c[:2] == ("run", "-d"))
+    assert tag in run
 
 
 def test_restart_cleanup_removes_every_labelled_container(tmp_path: Path) -> None:
@@ -759,8 +790,25 @@ def test_a_linked_run_worktree_from_before_is_still_removed(
 # ── With Podman: the real launcher and container (skipped without Podman) ─────
 needs_podman = pytest.mark.skipif(not shutil.which("podman"),
                                   reason="needs Podman (sudo apt install podman)")
-TEST_IMAGE = "docker.io/library/alpine:3.20"  # sh and wget are enough to probe the box
+TEST_IMAGE = "docker.io/library/python:3.13-alpine"  # urllib tests real HTTPS CONNECT
 CANARIES = {k: v for k, v in DISPATCHER_SECRETS.items() if k != "XDG_RUNTIME_DIR"}
+
+
+@pytest.fixture(scope="module")
+def podman_network():
+    from pdf_extract.factory import sandbox
+
+    network = f"carlo-test-workers-{os.getpid()}"
+    proxy = f"carlo-test-egress-{os.getpid()}"
+    with pytest.MonkeyPatch.context() as patch:
+        patch.setattr(sandbox, "NETWORK", network)
+        patch.setattr(sandbox, "PROXY", proxy)
+        patch.setattr(sandbox, "PROXY_URL", f"http://{proxy}:{sandbox.PROXY_PORT}")
+        try:
+            yield
+        finally:
+            subprocess.run(["podman", "rm", "-f", proxy], capture_output=True)
+            subprocess.run(["podman", "network", "rm", network], capture_output=True)
 
 
 def box_command(tmp: Path, script: str, *, secrets: dict[str, str] | None = None,
@@ -780,7 +828,7 @@ def box_command(tmp: Path, script: str, *, secrets: dict[str, str] | None = None
     wt.mkdir(parents=True, exist_ok=True)
     for name in read_only:
         (wt / name).mkdir(exist_ok=True)
-    backend = PodmanBackend(ROOT, "HEAD", launcher=BOX)
+    backend = PodmanBackend(main_repo(tmp), "main", launcher=BOX)
     backend.network()
     backend.proxy()
     if subprocess.run(["podman", "image", "exists", TEST_IMAGE]).returncode != 0:
@@ -806,7 +854,7 @@ def containers(name: str) -> list[str]:
 
 
 @needs_podman
-def test_box_sees_no_host_secrets_files_or_sockets(tmp_path: Path) -> None:
+def test_box_sees_no_host_secrets_files_or_sockets(tmp_path: Path, podman_network) -> None:
     out = in_box(tmp_path, f"""env; echo ---
 test -e {Path.home()} && echo HOST_HOME
 test -e /tmp/.X11-unix && echo X11
@@ -823,7 +871,7 @@ true""", secrets={"GEMINI_API_KEY": "stage-key"})
 
 
 @needs_podman
-def test_box_tools_and_git_metadata_are_read_only(tmp_path: Path) -> None:
+def test_box_tools_and_git_metadata_are_read_only(tmp_path: Path, podman_network) -> None:
     wt = (tmp_path / "wt").resolve()
     out = in_box(tmp_path, f"""touch /usr/x 2>/dev/null && echo ROOT_WRITABLE
 touch {wt}/.git/config 2>/dev/null && echo GIT_WRITABLE
@@ -836,20 +884,42 @@ touch {wt}/ok && echo WORKTREE_OK""")
     "http://127.0.0.1/", "http://169.254.169.254/latest/meta-data/", "http://10.0.0.1/",
     "http://192.168.1.1/", "http://[::1]/", "http://localtest.me/",  # resolves to 127.0.0.1
 ])
-def test_box_cant_reach_private_or_metadata_addresses(tmp_path: Path, url: str) -> None:
-    out = in_box(tmp_path, f"wget -q -T 10 -O- '{url}' >/dev/null && echo REACHED")
-    assert "REACHED" not in out.stdout
+def test_box_cant_reach_private_or_metadata_addresses(tmp_path: Path, url: str, podman_network) -> None:
+    out = in_box(tmp_path, f"""python3 - <<'PYTHON'
+import urllib.request
+try:
+    urllib.request.urlopen({url!r}, timeout=10).read()
+except OSError:
+    print('BLOCKED')
+else:
+    print('REACHED')
+PYTHON""")
+    assert out.returncode == 0, out.stderr
+    assert out.stdout.split() == ["BLOCKED"], out.stderr
 
 
 @needs_podman
-def test_box_reaches_the_web_only_through_the_proxy(tmp_path: Path) -> None:
-    out = in_box(tmp_path, """wget -q -T 15 -O- https://example.com/ >/dev/null && echo PROXIED
-wget -q -Y off -T 10 -O- http://1.1.1.1/ >/dev/null && echo DIRECT""")
-    assert out.stdout.split() == ["PROXIED"], out.stderr
+def test_box_reaches_the_web_only_through_the_proxy(tmp_path: Path, podman_network) -> None:
+    out = in_box(tmp_path, """python3 - <<'PYTHON'
+import urllib.request
+for url in ('http://example.com/', 'https://example.com/'):
+    with urllib.request.urlopen(url, timeout=15) as response:
+        assert response.status == 200
+        print('PROXIED', flush=True)
+direct = urllib.request.build_opener(urllib.request.ProxyHandler({}))
+try:
+    direct.open('http://1.1.1.1/', timeout=10)
+except OSError:
+    print('DIRECT_BLOCKED')
+else:
+    print('DIRECT')
+PYTHON""")
+    assert out.returncode == 0, out.stderr
+    assert out.stdout.split() == ["PROXIED", "PROXIED", "DIRECT_BLOCKED"], out.stderr
 
 
 @needs_podman
-def test_box_is_removed_on_sigterm(tmp_path: Path) -> None:
+def test_box_is_removed_on_sigterm(tmp_path: Path, podman_network) -> None:
     cmd, env, name = box_command(tmp_path, "sleep 600")
     proc = subprocess.Popen(cmd, env=env)  # as the SDK starts it, then stops it on a timeout
     for _ in range(100):

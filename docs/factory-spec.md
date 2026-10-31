@@ -574,11 +574,16 @@ Where the implementation had to decide something this spec left open.
 - **Sessions** are in `data/factory/sessions/<run>/`, mounted as the container's
   `~/.claude/projects`: per Run, since an answer job resumes the session of the job it
   answers.
-- **The egress proxy** is Stripe's smokescreen, one long-lived container (`carlo-egress`)
+- **The egress proxy** is Stripe's smokescreen, built locally from
+  `factory/sandbox/Proxy.Containerfile` using the checksum-pinned v0.1.0 release binary
+  (pulling its GHCR image returns 403 here and in CI). Like the worker image, its build file
+  comes from `origin/main`, never a Run. It runs as one long-lived container (`carlo-egress`)
   on the workers' internal network (`carlo-workers`) and the normal one. It refuses
   loopback, private, CGNAT, link-local and metadata, multicast and the host's own
   addresses, and resolves names itself, so DNS rebinding doesn't get past it. Workers
   get `HTTP(S)_PROXY`; Chrome gets `proxy=` from it at both Playwright launches.
+  The proxy uses the first DNS resolver discovered in an external-only container,
+  because the internal network's DNS refuses public lookups.
   Claude's web search runs on Anthropic's side and doesn't pass through it.
 - **`sandbox` outcome.** Podman missing, the image failing to build, the network or
   proxy failing, an account without a `worker_token_file`, or a container that can't be

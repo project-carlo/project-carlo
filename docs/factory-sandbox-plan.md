@@ -2,8 +2,9 @@
 
 Status: written 2026-10-31 from the code at `01926ac2` and the live factory in
 `~/carlo-factory`. Phases 0, 2, 3, 4 and 6 are built, with unit tests and container tests
-that skip without Podman. Nothing has run in a real container yet: Phase 1 (spikes) and
-Phase 5 (live checks) wait on Podman and the account tokens. Where the build differs from
+that skip without Podman. Podman is now installed and rootless. The proxy image builds and all ten
+container isolation tests pass here; the full worker image, Phase 1 spikes and Phase 5 live
+checks still need verification and account tokens. Where the build differs from
 this plan, the section says so ("Built:").
 
 ## 1. Decision
@@ -231,7 +232,11 @@ without also blocking them for the owner. A proxy on the only route out does it 
   `169.254.169.254`), ULA and multicast addresses, and the host's own addresses. It
   only allows ports 80 and 443. Every redirect is a new request and is checked again.
   Built: smokescreen has no port allowlist, so any port on a public address is
-  allowed. Private addresses are refused on every port.
+  allowed. Private addresses are refused on every port. Its GHCR package returns 403,
+  so `Proxy.Containerfile` builds a local image from the official v0.1.0 binary with
+  pinned SHA-256 checksums. The build file comes from the trusted upstream ref. The
+  proxy uses the first DNS resolver discovered on the external-only network, bypassing
+  the internal network's DNS (which refuses external lookups).
 - Tools that ignore the proxy fail closed, since there is no other route.
 This doesn't stop a worker sending data to a public site. That's why §3.5 limits what is
 inside rather than relying on the network. Per-stage hostname allowlists are not planned,
@@ -371,11 +376,11 @@ All settled on 2026-10-31:
 One PR, with a commit per phase (0, 2, 3, 4, 6), built in its own worktree. Constraints
 for that PR:
 
-- Podman isn't installed on this machine, and installing it needs the owner's `sudo`
-  (`sudo apt install podman`; 5.7 is available). So the PR ships the code, the
-  Containerfile, the launcher, and the container tests, which skip without Podman. It
-  does not claim any live result. The Phase 1 spikes and Phase 5 live checks become a
-  checklist in the PR, for after the owner installs Podman and creates the tokens.
+- Podman is now installed and rootless. Container isolation tests run with a local,
+  checksum-pinned smokescreen image and an isolated test network; they still skip on
+  machines without Podman. The full worker image, Phase 1 spikes and Phase 5 live
+  checks remain a separate checklist and need the account tokens. No production
+  worker result is claimed by the container tests.
 - Nothing in the PR touches the live factory (`~/carlo-factory`, its ledger, its Run
   worktrees, the systemd service) or migrates live Runs. Migration is a documented
   command the owner runs.

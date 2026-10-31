@@ -16,6 +16,7 @@ dispatcher's whole environment.
 from __future__ import annotations
 
 import hashlib
+import ipaddress
 import json
 import logging
 import shutil
@@ -58,7 +59,8 @@ LABEL = "carlo.factory=1"
 NETWORK = "carlo-workers"
 PROXY = "carlo-egress"
 PROXY_PORT = 4750
-PROXY_IMAGE = "ghcr.io/stripe/smokescreen:v0.1.0"
+PROXY_IMAGE = "carlo-egress"
+PROXY_FILE = "factory/sandbox/Proxy.Containerfile"
 PROXY_URL = f"http://{PROXY}:{PROXY_PORT}"
 WORKER_UID = 1000  # `worker` in the Containerfile
 WORKER_PROJECTS = Path("/home/worker/.claude/projects")  # the CLI's session transcripts
@@ -149,18 +151,19 @@ def podman_runner(podman: str) -> PodmanCall:
     return call
 
 
-def image_tag(files: dict[str, bytes]) -> str:
-    """carlo-worker:<hash of the files it's built from>."""
+def image_tag(files: dict[str, bytes], image: str = IMAGE) -> str:
+    """An image name tagged by the hash of its build files."""
     digest = hashlib.sha256()
     for name in sorted(files):
         digest.update(name.encode() + b"\0" + files[name] + b"\0")
-    return f"{IMAGE}:{digest.hexdigest()[:16]}"
+    return f"{image}:{digest.hexdigest()[:16]}"
 
 
-def main_files(repo: Path, upstream: str) -> dict[str, bytes]:
+def main_files(repo: Path, upstream: str,
+               names: tuple[str, ...] = IMAGE_FILES) -> dict[str, bytes]:
     """The image's files as main has them: a Run can't change what its workers run in."""
     files = {}
-    for name in IMAGE_FILES:
+    for name in names:
         proc = subprocess.run(["git", "show", f"{upstream}:{name}"], cwd=repo,
                               capture_output=True)
         if proc.returncode != 0:
@@ -181,14 +184,26 @@ def host_addresses() -> list[str]:
                    if a.get("local")})
 
 
-def proxy_argv(deny_addresses: list[str]) -> list[str]:
+def resolver_address(resolv_conf: str) -> str:
+    """The first egress nameserver: smokescreen v0.1.0 accepts only one."""
+    for line in resolv_conf.splitlines():
+        fields = line.split()
+        if len(fields) >= 2 and fields[0] == "nameserver":
+            address = ipaddress.ip_address(fields[1])
+            return f"[{address}]:53" if address.version == 6 else f"{address}:53"
+    raise SandboxError("the proxy's egress network has no DNS nameserver")
+
+
+def proxy_argv(deny_addresses: list[str], image: str,
+               resolver: str) -> list[str]:
     """`podman run` for the egress proxy: on the workers' internal network and the
     normal one, the only container on both."""
     args = ["run", "-d", "--name", PROXY, "--label", "carlo.proxy=1",
-            "--network", "podman", "--network", NETWORK,
+            "--network", NETWORK, "--network", "podman",
             "--read-only", "--cap-drop=ALL", "--security-opt", "no-new-privileges",
             "--memory", "512m", "--pids-limit", "256", "--restart", "always",
-            PROXY_IMAGE, "--listen-ip", "0.0.0.0", "--listen-port", str(PROXY_PORT)]
+            image, "--listen-ip", "0.0.0.0", "--listen-port", str(PROXY_PORT)]
+    args += ["--resolver-address", resolver]
     for cidr in DENY_RANGES:
         args += ["--deny-range", cidr]
     for address in deny_addresses:
@@ -295,7 +310,7 @@ class PodmanBackend:
         self.repo, self.upstream, self.sandbox_dir = repo, upstream, sandbox_dir
         self.sessions_dir = sessions_dir
         self.launcher = launcher.resolve()
-        self.podman = podman or shutil.which("podman") or ""
+        self.podman = (shutil.which("podman") or "") if podman is None else podman
         self.limits = limits or Limits()
         self.call = call or podman_runner(self.podman or "podman")
         self._image: str | None = None
@@ -317,15 +332,19 @@ class PodmanBackend:
         tag = image_tag(files)
         if self._image == tag:
             return tag
+        self.build_image(files, tag)
+        self._image = tag
+        return tag
+
+    def build_image(self, files: dict[str, bytes], tag: str,
+                    containerfile: str = "Containerfile") -> None:
         if self.call("image", "exists", tag).returncode != 0:
-            LOGGER.info("building worker image %s", tag)
+            LOGGER.info("building sandbox image %s", tag)
             with tempfile.TemporaryDirectory(prefix="carlo-image-") as ctx:
                 for name, data in files.items():
                     (Path(ctx) / Path(name).name).write_bytes(data)
                 self._ok("build", "--pull=newer", "--tag", tag, "--label", LABEL,
-                         "--file", str(Path(ctx) / "Containerfile"), ctx, timeout=3600)
-        self._image = tag
-        return tag
+                         "--file", str(Path(ctx) / containerfile), ctx, timeout=3600)
 
     def network(self) -> None:
         if self.call("network", "exists", NETWORK).returncode != 0:
@@ -337,7 +356,16 @@ class PodmanBackend:
         if state.returncode == 0 and state.stdout.strip() == "true":
             return
         self.call("rm", "--force", PROXY)
-        self._ok(*proxy_argv(host_addresses()))
+        files = main_files(self.repo, self.upstream, (PROXY_FILE,))
+        tag = image_tag(files, PROXY_IMAGE)
+        self.build_image(files, tag, "Proxy.Containerfile")
+        # On two networks Podman may give us the internal network's DNS server,
+        # which refuses public lookups. Discover the external-only resolver instead;
+        # this also handles rootless pasta DNS and host loopback stub resolvers.
+        dns = self._ok("run", "--rm", "--network", "podman", "--read-only",
+                       "--cap-drop=ALL", "--security-opt", "no-new-privileges",
+                       "--entrypoint", "cat", tag, "/etc/resolv.conf")
+        self._ok(*proxy_argv(host_addresses(), tag, resolver_address(dns.stdout)))
 
     def ready(self) -> str:
         """Everything a worker container needs, or SandboxError saying what's missing."""
