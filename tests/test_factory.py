@@ -276,7 +276,7 @@ def test_map_run_end_to_end(env: Env) -> None:
     maps = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "map")]
     assert maps == ["b2", "b1"]
     # Every job committed and pushed with its trailer.
-    log = git(env.repo, "log", f"origin/{run['branch']}", "--format=%B")
+    log = git(env.remote, "log", run["branch"], "--format=%B")
     assert f"Factory-Job: {run['id']}/001-survey" in log
     assert f"Factory-Job: {run['id']}/003-map" in log
     meta = Path(run["worktree"]) / "data" / "dioceses" / D / "diocese.md"

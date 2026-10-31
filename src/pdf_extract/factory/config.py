@@ -37,6 +37,9 @@ class Account:
     name: str
     config_dir: Path
     plan: str | None = None  # if its login doesn't say (pro, max...)
+    # Its `claude setup-token` token, for sandboxed workers (docs/factory-sandbox-plan.md
+    # §3.5): never refreshed, so a worker can't rotate the login the dispatcher reads.
+    worker_token_file: Path | None = None
 
 
 @dataclass
@@ -97,7 +100,9 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
         raise FactoryError(f"unknown factory settings: {', '.join(unknown)}")
     accounts = [
         Account(str(a["name"]), Path(str(a["config_dir"])).expanduser(),
-                str(a["plan"]) if a.get("plan") else None)
+                str(a["plan"]) if a.get("plan") else None,
+                Path(str(a["worker_token_file"])).expanduser()
+                if a.get("worker_token_file") else None)
         for a in raw.pop("accounts", None) or []
     ]
     if "worktrees_dir" in raw:

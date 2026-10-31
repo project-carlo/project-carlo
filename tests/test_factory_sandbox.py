@@ -264,7 +264,16 @@ def podman_backend(tmp: Path, fake: FakePodman, podman: str = "/usr/bin/podman")
     from pdf_extract.factory.sandbox import PodmanBackend
 
     return PodmanBackend(main_repo(tmp), "main", launcher=BOX, podman=podman, call=fake,
-                         sandbox_dir=tmp / "sandbox")
+                         sandbox_dir=tmp / "sandbox", sessions_dir=tmp / "sessions")
+
+
+def boxed_request(tmp: Path, worktree: Path, **kw) -> WorkerRequest:
+    """A request whose account has a `claude setup-token` token, as sandboxed ones need."""
+    token = tmp / "token"
+    token.write_text("worker-token\n")
+    req = request(worktree, **kw)
+    req.account = Account("a", tmp / ".claude_a", worker_token_file=token)
+    return req
 
 
 def test_the_container_is_locked_down(tmp_path: Path) -> None:
@@ -275,10 +284,12 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
     (wt / ".git").mkdir(parents=True)
     (wt / "src").mkdir()
     (wt / "data").mkdir()
-    req = request(wt, attempt_id=42, secrets={"OPENAI_API_KEY": "stage-secret"})
+    req = boxed_request(tmp_path, wt, attempt_id=42, secrets={"OPENAI_API_KEY": "stage-secret"})
     launch = podman_backend(tmp_path, fake).launch(req, worker_env(req.account, req.secrets))
     work = (tmp_path / "sandbox" / "r" / "work").resolve()
+    sessions = (tmp_path / "sessions" / "r").resolve()
     assert launch.work == work and launch.trusted == wt.resolve()
+    assert launch.sessions == sessions and sessions.is_dir()
     argv = json.loads(launch.env["CARLO_BOX"])["argv"]
     joined = " ".join(argv)
     assert launch.container == "carlo-job-42"
@@ -290,10 +301,13 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
     assert "--privileged" not in joined and "host" not in argv
     # The private copy, without .git, its tools read-only on top; never the Run's worktree.
     volumes = [argv[i + 1] for i, a in enumerate(argv) if a == "--volume"]
-    assert volumes == [f"{work}:{work}:rw", f"{work / 'src'}:{work / 'src'}:ro"]
+    assert volumes == [f"{work}:{work}:rw", f"{work / 'src'}:{work / 'src'}:ro",
+                       f"{sessions}:/home/worker/.claude/projects:rw"]
     assert not (work / ".git").exists() and str(wt.resolve()) not in joined
     # Secrets go by name, their values from podman's environment, never on its command line.
     assert "stage-secret" not in joined and "--env OPENAI_API_KEY" in joined
+    assert "worker-token" not in joined and "--env CLAUDE_CODE_OAUTH_TOKEN" in joined
+    assert launch.env["CLAUDE_CODE_OAUTH_TOKEN"] == "worker-token"
     assert f"--env HTTPS_PROXY={PROXY_URL}" in joined
     assert f"--env PYTHONPATH={work / 'src'}" in joined
     for name in ("CLAUDE_CONFIG_DIR", "DISPLAY", "SSH_AUTH_SOCK", "GH_CONFIG_DIR"):
@@ -308,13 +322,15 @@ def test_the_sandbox_launcher_gives_podman_only_what_it_names(tmp_path: Path) ->
                            "print(json.dumps({'args': sys.argv[1:], 'env': dict(os.environ)}))\n")
     fake_podman.chmod(0o755)
     (tmp_path / "wt").mkdir()
-    req = request(tmp_path / "wt", attempt_id=7, secrets={"GEMINI_API_KEY": "stage-key"})
+    req = boxed_request(tmp_path, tmp_path / "wt", attempt_id=7,
+                        secrets={"GEMINI_API_KEY": "stage-key"})
     backend = podman_backend(tmp_path, FakePodman(), podman=str(fake_podman))
     got = run_launcher(backend.launch(req, worker_env(req.account, req.secrets)),
                        ["--verbose"])
     assert got["args"][0] == "run" and got["args"][-1] == "--verbose"
     env = got["env"]
     assert env["GEMINI_API_KEY"] == "stage-key"
+    assert env["CLAUDE_CODE_OAUTH_TOKEN"] == "worker-token"  # the account's, not the owner's
     assert env["XDG_RUNTIME_DIR"] == "/run/user/1"  # podman's own, not passed in (no --env)
     assert "--env XDG_RUNTIME_DIR" not in " ".join(got["args"])
     for name in ("CANARY_SECRET", "GH_TOKEN", "R2_ACCESS_KEY_ID", "CLOUDFLARE_API_TOKEN",
@@ -334,6 +350,41 @@ def test_a_sandbox_that_cant_start_fails_closed(tmp_path: Path, fake: FakePodman
 
     with pytest.raises(SandboxError, match=says):
         podman_backend(tmp_path, fake, podman=podman).launch(request(tmp_path), {})
+
+
+def test_a_sandboxed_worker_needs_its_accounts_token(tmp_path: Path) -> None:
+    from pdf_extract.factory.sandbox import SandboxError
+
+    (tmp_path / "wt").mkdir()
+    backend = podman_backend(tmp_path, FakePodman())
+    with pytest.raises(SandboxError, match="no worker_token_file"):
+        backend.launch(request(tmp_path / "wt"), {})
+    req = boxed_request(tmp_path, tmp_path / "wt")
+    (tmp_path / "token").write_text("\n")
+    with pytest.raises(SandboxError, match="empty"):
+        backend.launch(req, {})
+
+
+def test_local_yaml_names_each_accounts_worker_token(tmp_path: Path) -> None:
+    from pdf_extract.factory.config import load_config
+
+    local = tmp_path / "local.yaml"
+    local.write_text("accounts:\n  - {name: a, config_dir: ~/.claude}\n"
+                     "  - {name: b, config_dir: ~/.claude_2, worker_token_file: ~/.t/b}\n")
+    a, b = load_config(tmp_path / "none.yaml", local).accounts
+    assert a.worker_token_file is None
+    assert b.worker_token_file == Path.home() / ".t" / "b"
+
+
+def test_a_sandboxed_transcript_is_found_in_its_session_folder(tmp_path: Path) -> None:
+    from pdf_extract.factory.workers import find_transcript
+
+    (tmp_path / "sessions" / "-work").mkdir(parents=True)
+    (tmp_path / "sessions" / "-work" / "s1.jsonl").write_text("{}")
+    account = Account("a", tmp_path / ".claude_a")
+    assert find_transcript(account, "s1", tmp_path / "sessions") == \
+        tmp_path / "sessions" / "-work" / "s1.jsonl"
+    assert find_transcript(account, "s1") is None
 
 
 def test_the_image_is_built_from_mains_files_and_tagged_by_their_hash(tmp_path: Path) -> None:
@@ -592,6 +643,107 @@ def test_a_sandboxed_attempt_brings_back_its_changes_or_ends_as_sandbox(
     options = workers.sdk_options(request(tmp_path),
                                   Launch("claude", {}, work=tmp_path / "work"))
     assert options.cwd == str(tmp_path / "work")  # the copy, not the Run's worktree
+
+
+# ── Phase 4: standalone clones ────────────────────────────────────────────────
+def sh_git(cwd: Path, *args: str) -> str:
+    return subprocess.run(["git", *args], cwd=cwd, check=True, capture_output=True,
+                          text=True).stdout
+
+
+def owner_checkout(tmp: Path, monkeypatch: pytest.MonkeyPatch) -> Path:
+    """An `origin` and a checkout of it, like the owner's (or the dispatcher's)."""
+    for name in ("GIT_AUTHOR", "GIT_COMMITTER"):
+        monkeypatch.setenv(f"{name}_NAME", "t")
+        monkeypatch.setenv(f"{name}_EMAIL", "t@example.com")
+    sh_git(tmp, "init", "-q", "--bare", "-b", "main", "origin.git")
+    repo = tmp / "repo"
+    repo.mkdir()
+    sh_git(repo, "init", "-q", "-b", "main")
+    (repo / ".gitignore").write_text("*.db\n")
+    (repo / "a.txt").write_text("a\n")
+    sh_git(repo, "add", "-A")
+    sh_git(repo, "commit", "-qm", "init")
+    sh_git(repo, "remote", "add", "origin", str(tmp / "origin.git"))
+    sh_git(repo, "push", "-q", "-u", "origin", "main")
+    return repo
+
+
+def test_a_new_run_checkout_shares_nothing_with_the_dispatchers(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    repo = owner_checkout(tmp_path, monkeypatch)
+    path = tmp_path / "wt" / "run-1"
+    assert git.ensure_worktree(repo, path, "factory/run-1", remote="origin", base="origin/main")
+    assert (path / ".git").is_dir()
+    assert not (path / ".git" / "objects" / "info" / "alternates").exists()
+    assert sh_git(path, "branch", "--show-current").strip() == "factory/run-1"
+    assert (path / "a.txt").read_text() == "a\n"
+    assert len(sh_git(repo, "worktree", "list").splitlines()) == 1
+    assert not git.ensure_worktree(repo, path, "factory/run-1", remote="origin",
+                                   base="origin/main")
+    # Lost with the machine: the pushed branch is checked out again.
+    (path / "b.txt").write_text("b\n")
+    sh_git(path, "add", "-A")
+    sh_git(path, "commit", "-qm", "b")
+    git.push(path, "origin", "factory/run-1")
+    git.remove_worktree(repo, path, "factory/run-1")
+    assert not path.exists()
+    git.ensure_worktree(repo, path, "factory/run-1", remote="origin", base="origin/main")
+    assert (path / "b.txt").read_text() == "b\n"
+
+
+def test_a_linked_worktree_becomes_a_standalone_clone_in_place(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    repo = owner_checkout(tmp_path, monkeypatch)
+    path = tmp_path / "wt" / "run-1"
+    sh_git(repo, "worktree", "add", "-q", "--no-track", "-b", "factory/run-1", str(path),
+           "origin/main")
+    (path / "b.txt").write_text("b\n")
+    sh_git(path, "add", "-A")
+    sh_git(path, "commit", "-qm", "not pushed yet")
+    sha = sh_git(path, "rev-parse", "HEAD").strip()
+    (path / "data.db").write_text("ignored, kept")
+    (path / "wip.txt").write_text("uncommitted, kept")
+    assert git.is_linked(path)
+    git.make_standalone(path, "origin")
+    assert not git.is_linked(path) and (path / ".git").is_dir()
+    assert not (path / ".git" / "objects" / "info" / "alternates").exists()
+    assert sh_git(path, "branch", "--show-current").strip() == "factory/run-1"
+    assert sh_git(path, "rev-parse", "HEAD").strip() == sha
+    assert sh_git(path, "status", "--porcelain").split() == ["??", "wip.txt"]
+    assert (path / "data.db").read_text() == "ignored, kept"
+    assert sh_git(path, "remote", "get-url", "origin").strip() == str(tmp_path / "origin.git")
+    assert len(sh_git(repo, "worktree", "list").splitlines()) == 1
+    git.make_standalone(path, "origin")  # already one: nothing to do
+    git.remove_worktree(repo, path, "factory/run-1")
+    assert not path.exists()
+
+
+def test_factory_clones_lists_then_converts_linked_checkouts(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch, capsys: pytest.CaptureFixture) -> None:
+    repo = owner_checkout(tmp_path, monkeypatch)
+    dispatcher = tmp_path / "carlo-factory"
+    sh_git(repo, "worktree", "add", "-q", "--detach", str(dispatcher), "origin/main")
+    monkeypatch.chdir(dispatcher)
+    assert cli.main(["factory", "clones", "--json"]) == 0
+    assert json.loads(capsys.readouterr().out) == {"linked": [str(dispatcher)],
+                                                   "converted": False}
+    assert git.is_linked(dispatcher)
+    assert cli.main(["factory", "clones", "--apply", "--json"]) == 0
+    assert json.loads(capsys.readouterr().out)["converted"] is True
+    assert not git.is_linked(dispatcher)
+    assert len(sh_git(repo, "worktree", "list").splitlines()) == 1
+
+
+def test_a_linked_run_worktree_from_before_is_still_removed(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    repo = owner_checkout(tmp_path, monkeypatch)
+    path = tmp_path / "wt" / "old"
+    sh_git(repo, "worktree", "add", "-q", "-b", "factory/old", str(path), "origin/main")
+    assert not git.ensure_worktree(repo, path, "factory/old", remote="origin",
+                                   base="origin/main")
+    git.remove_worktree(repo, path, "factory/old")
+    assert not path.exists() and not sh_git(repo, "branch", "--list", "factory/old").strip()
 
 
 # ── With Podman: the real launcher and container (skipped without Podman) ─────

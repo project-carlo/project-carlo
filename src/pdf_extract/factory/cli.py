@@ -16,6 +16,9 @@
   quota backfill               tokens and metadata for attempts from before quota tracking
   cost [--stage]               cost by Run, or by stage (API-price dollars: a diagnostic)
   backup                       back the ledger up to R2 now
+  clones [--apply]             the dispatcher's checkout and Run worktrees that are still
+                               linked worktrees; --apply makes them standalone clones (stop
+                               the dispatcher first)
 
 A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). `--stub` on the
 other commands reads the stub runs' ledger. Run it from the dispatcher's own checkout;
@@ -152,6 +155,21 @@ def _backup(args: argparse.Namespace) -> Result:
     return {"backup": backup_ledger(LEDGER_PATH, load_config().backup_prefix, load_secrets())}
 
 
+def _clones(args: argparse.Namespace) -> Result:
+    """The dispatcher's checkout and Run worktrees that are linked worktrees of another
+    repository; --apply turns each into a standalone clone in place, keeping its branch,
+    commits and files (docs/factory-sandbox-plan.md §3.8). Stop the dispatcher first."""
+    from pdf_extract.factory import git
+
+    config = load_config()
+    paths = [_repo()] + [Path(r["worktree"]) for r in _ledger(args).runs()]
+    linked = list(dict.fromkeys(p for p in paths if p.exists() and git.is_linked(p)))
+    if args.apply:
+        for path in linked:
+            git.make_standalone(path, config.remote)
+    return {"linked": [str(p) for p in linked], "converted": bool(args.apply)}
+
+
 def _repo() -> Path:
     out = subprocess.run(["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True)
     if out.returncode != 0:
@@ -268,3 +286,5 @@ def add_factory_parser(
     p = leaf("cost", _cost, report.text_cost)
     p.add_argument("--stage", action="store_true", help="By stage instead of by Run")
     leaf("backup", _backup)
+    p = leaf("clones", _clones)
+    p.add_argument("--apply", action="store_true", help="Convert them (dispatcher stopped)")

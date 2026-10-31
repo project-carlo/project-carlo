@@ -139,12 +139,17 @@ def worker_env(account: Account | None, secrets: dict[str, str] | None = None) -
     return (secrets or {}) | env
 
 
-def find_transcript(account: Account | None, session_id: str | None) -> Path | None:
+def find_transcript(account: Account | None, session_id: str | None,
+                    projects: Path | None = None) -> Path | None:
+    """The session's transcript: in `projects` (a sandboxed attempt's session folder), or
+    the account's own."""
     if not session_id:
         return None
-    base = account.config_dir if account else Path(os.environ.get(
-        "CLAUDE_CONFIG_DIR", Path.home() / ".claude"))
-    return next(iter((base / "projects").glob(f"*/{session_id}.jsonl")), None)
+    if projects is None:
+        base = account.config_dir if account else Path(os.environ.get(
+            "CLAUDE_CONFIG_DIR", Path.home() / ".claude"))
+        projects = base / "projects"
+    return next(iter(projects.glob(f"*/{session_id}.jsonl")), None)
 
 
 def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
@@ -213,7 +218,8 @@ class SdkWorker:
                 result = WorkerResult(SANDBOX, session_id=self._session, error=str(exc)[:2000],
                                       cost_usd=self._cost, turns=self._turns)
         result.info = self._summary()
-        result.transcript = find_transcript(request.account, self._session)
+        result.transcript = find_transcript(request.account, self._session,
+                                            launch.sessions if launch else None)
         return result
 
     def _summary(self) -> dict[str, Any]:

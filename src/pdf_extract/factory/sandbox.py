@@ -61,6 +61,7 @@ PROXY_PORT = 4750
 PROXY_IMAGE = "ghcr.io/stripe/smokescreen:v0.1.0"
 PROXY_URL = f"http://{PROXY}:{PROXY_PORT}"
 WORKER_UID = 1000  # `worker` in the Containerfile
+WORKER_PROJECTS = Path("/home/worker/.claude/projects")  # the CLI's session transcripts
 
 # What the proxy refuses, besides its own addresses (smokescreen's default) and the
 # host's (added at start): loopback, RFC 1918, CGNAT, link-local and cloud metadata
@@ -90,6 +91,8 @@ class Launch:
     trusted: Path | None = None
     before: Snapshot | None = None
     writes: list[str] = field(default_factory=list)
+    # Where its session transcripts go: the container's ~/.claude/projects.
+    sessions: Path | None = None
 
 
 def plan_env(env: dict[str, str], argv: list[str], keep: list[str],
@@ -255,6 +258,22 @@ def container_env(workdir: Path) -> dict[str, str]:
             "LANG": "C.UTF-8"}
 
 
+def worker_token(request: WorkerRequest) -> str:
+    """The account's `claude setup-token` token, from its `worker_token_file`."""
+    account = request.account
+    if account is None or account.worker_token_file is None:
+        name = account.name if account else "(none)"
+        raise SandboxError(f"account {name} has no worker_token_file: run `claude "
+                           "setup-token` for it and name the file in local.yaml")
+    try:
+        token = account.worker_token_file.read_text(encoding="utf-8").strip()
+    except OSError as exc:
+        raise SandboxError(f"account {account.name}'s worker_token_file: {exc}") from None
+    if not token:
+        raise SandboxError(f"account {account.name}'s worker_token_file is empty")
+    return token
+
+
 class PodmanBackend:
     """A fresh rootless Podman container per attempt (§3.4).
 
@@ -267,8 +286,10 @@ class PodmanBackend:
 
     def __init__(self, repo: Path, upstream: str, *, launcher: Path = LAUNCHER,
                  podman: str | None = None, limits: Limits | None = None,
-                 call: PodmanCall | None = None, sandbox_dir: Path = DATA / "sandbox") -> None:
+                 call: PodmanCall | None = None, sandbox_dir: Path = DATA / "sandbox",
+                 sessions_dir: Path = DATA / "sessions") -> None:
         self.repo, self.upstream, self.sandbox_dir = repo, upstream, sandbox_dir
+        self.sessions_dir = sessions_dir
         self.launcher = launcher.resolve()
         self.podman = podman or shutil.which("podman") or ""
         self.limits = limits or Limits()
@@ -326,16 +347,23 @@ class PodmanBackend:
     # ── An attempt ───────────────────────────────────────────────────────────
     def launch(self, request: WorkerRequest, env: dict[str, str]) -> Launch:
         """A fresh copy of the Run's files (workspace.py) and the container to work on
-        it, at the same path as on the host: no .git, its tools read-only."""
+        it, at the same path as on the host: no .git, its tools read-only. The account's
+        long-lived token instead of its login, and the Run's own session folder."""
         from pdf_extract.factory import workspace
 
         image = self.ready()
+        token = worker_token(request)
         name = f"carlo-job-{request.attempt_id or request.job_id}"
         self.call("rm", "--force", name)  # a leftover from a crash
         work = workspace.workspace(self.sandbox_dir, request.run_id)
         before = workspace.refresh(request.worktree.resolve(), work)
+        # Per Run, not per job: an answer job resumes the session of the job it answers.
+        sessions = (self.sessions_dir / request.run_id).resolve()
+        sessions.mkdir(parents=True, exist_ok=True)
         mounts = [Mount(path, path, ro) for path, ro in workspace.mounts(work)]
+        mounts.append(Mount(sessions, WORKER_PROJECTS))
         passed = {k: v for k, v in env.items() if k not in HOST_ONLY}
+        passed["CLAUDE_CODE_OAUTH_TOKEN"] = token
         box = Box(name=name, image=image, workdir=work, mounts=mounts,
                   env=container_env(work), pass_env=[*passed, *SDK_ENV, "PWD"],
                   limits=self.limits)
@@ -344,7 +372,8 @@ class PodmanBackend:
                                                    name),
                       container=name, work=work, trusted=request.worktree.resolve(),
                       before=before,
-                      writes=[fill(w, request.values) for w in request.spec.writes])
+                      writes=[fill(w, request.values) for w in request.spec.writes],
+                      sessions=sessions)
 
     def finish(self, launch: Launch) -> list[str]:
         """The container goes first, so nothing changes the workspace while its changes
@@ -376,10 +405,9 @@ class PodmanBackend:
             self.call("rm", "--force", "--time", "0", *ids)
 
 
-def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None,
-            sandbox_dir: Path = DATA / "sandbox") -> Backend:
+def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None) -> Backend:
     if name == "host":
         return HostBackend()
     if name == "sandbox":
-        return PodmanBackend(repo, upstream, limits=limits, sandbox_dir=sandbox_dir)
+        return PodmanBackend(repo, upstream, limits=limits)
     raise FactoryError(f"worker_backend must be host or sandbox, not {name!r}")
