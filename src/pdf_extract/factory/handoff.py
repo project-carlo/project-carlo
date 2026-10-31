@@ -50,6 +50,23 @@ class Handoff(_Strict):
         return v
 
 
+class Settled(_Strict):
+    flag: int  # the id the job input shows, as in `[#12]`
+    how: str = Field(min_length=1)
+
+
+class Reconcile(Handoff):
+    settled: list[Settled] = []  # earlier advisory flags the PR no longer needs to list
+
+    @field_validator("settled")
+    @classmethod
+    def _each_flag_once(cls, v: list[Settled]) -> list[Settled]:
+        ids = [s.flag for s in v]
+        if len(ids) != len(set(ids)):
+            raise ValueError("settle each flag once")
+        return v
+
+
 class SurveyReview(Handoff):
     verdict: Literal["approve", "send_back"]
     problems: list[str] = []
@@ -77,7 +94,8 @@ class SeedReview(Handoff):
     seeds: list[SeedVerdict]
 
 
-MODELS: dict[str, type[Handoff]] = {"survey-review": SurveyReview, "seed-review": SeedReview}
+MODELS: dict[str, type[Handoff]] = {"survey-review": SurveyReview, "seed-review": SeedReview,
+                                     "reconcile": Reconcile}
 # Only these stages can set a parish aside: answering requeues the parish's own job.
 PARKING_STAGES = ("map", "seed")
 
@@ -145,6 +163,9 @@ def schema_text(stage: str) -> str:
     if stage == "survey-review":
         base |= {"verdict": "approve | send_back", "problems": ["..."],
                  "rules": ["each proposed rule you accept, as written"]}
+    if stage == "reconcile":
+        base |= {"settled": [{"flag": "the id from your input, e.g. 12",
+                              "how": "what you did, or what settled it, in one line"}]}
     if stage == "seed-review":
         base |= {"seeds": [{
             "parish": "slug", "verdict": "approve | send_back",

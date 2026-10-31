@@ -29,7 +29,12 @@ FIVE_HOURS = timedelta(hours=5)
 
 
 class UsageError(RuntimeError):
-    """The endpoint failed or answered something unexpected: the dispatcher pauses."""
+    """The endpoint failed or answered something unexpected: the dispatcher pauses, or for
+    a 429 (`status`) waits out a cooldown and tries again."""
+
+    def __init__(self, message: str, status: int | None = None) -> None:
+        super().__init__(message)
+        self.status = status  # the endpoint's HTTP status, when it answered with an error
 
 
 @dataclass(frozen=True)
@@ -130,6 +135,9 @@ def fetch_usage(account: Account) -> Usage:
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
             body = json.loads(response.read())
+    except urllib.error.HTTPError as exc:
+        raise UsageError(f"{account.name}: usage endpoint failed: {exc}",
+                         status=exc.code) from None
     except (urllib.error.URLError, TimeoutError, ValueError) as exc:
         raise UsageError(f"{account.name}: usage endpoint failed: {exc}") from None
     return parse_usage(body)

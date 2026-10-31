@@ -24,6 +24,7 @@ from pdf_extract.factory.ledger import (
     UNFINISHED,
     Ledger,
 )
+from pdf_extract.factory.ledger import SETTLED as FLAG_SETTLED
 from pdf_extract.factory.plan import diocese_dir, read_seed
 from pdf_extract.factory.quota import (
     SETTLED,
@@ -65,7 +66,8 @@ def status(ledger: Ledger) -> dict[str, Any]:
     usage = [dict(r) for r in ledger.all(
         "SELECT u.* FROM usage u JOIN (SELECT account, MAX(id) AS id FROM usage GROUP BY "
         "account) last ON last.id = u.id ORDER BY u.account")]
-    return {"paused": ledger.get("paused"), "override_caps": ledger.get("override_caps", False),
+    return {"paused": ledger.get("paused"), "usage_cooldown": ledger.get("usage_cooldown"),
+            "override_caps": ledger.get("override_caps", False),
             "runs": runs, "usage": usage, "last_backup": ledger.get("backed_up")}
 
 
@@ -73,6 +75,10 @@ def text_status(r: dict[str, Any]) -> str:
     lines = []
     if r["paused"]:
         lines.append(f"PAUSED: {r['paused'].get('reason')}")
+    if r.get("usage_cooldown"):
+        c = r["usage_cooldown"]
+        lines.append(f"USAGE CHECK COOLDOWN: {c.get('reason')}; next retry {c['until'][:16]} "
+                     f"(since {c.get('since', '')[:16]})")
     if r["override_caps"]:
         lines.append("Caps overridden (`pnpm factory pause` or `resume` to restore)")
     for u in r["usage"]:
@@ -509,6 +515,58 @@ def _coverage(worktree: Path, diocese: str, commands: Commands) -> list[str]:
     return lines or ["- (coverage unavailable)"]
 
 
+def _one_line(text: Any) -> str:
+    return " ".join(str(text or "").split())
+
+
+def _left_open(worktree: Path, diocese: str) -> list[str]:
+    """The `open/` records: places with no source yet for Mass or a closure. They need no
+    flag; the PR lists them from the files, with what would settle each."""
+    lines = []
+    for path in sorted((diocese_dir(worktree, diocese) / "open").glob("*.md")):
+        try:
+            front, _ = parse_file(path)
+        except Exception:
+            lines.append(f"- `{path.stem}`: (unreadable)")
+            continue
+        name = f" {_one_line(front.get('name'))}" if front.get("name") else ""
+        revisit = (str(front.get("revisit") or "").strip().splitlines() or ["-"])[0]
+        after = f" (after {front['revisit_after']})" if front.get("revisit_after") else ""
+        lines.append(f"- `{path.stem}`{name}: {revisit}{after}")
+    return lines or ["- none"]
+
+
+def _fetch_gaps(worktree: Path, diocese: str) -> list[str]:
+    """Parishes whose bulletin `fetch` can't collect yet, by kind, as `pnpm diocese gaps`
+    groups them. Read from the files: that command's JSON outgrows a command's output."""
+    groups: dict[str, list[tuple[str, str]]] = {}
+    for path in sorted((diocese_dir(worktree, diocese) / "parishes").glob("*.md")):
+        try:
+            gap = parse_file(path)[0].get("fetch_gap")
+        except Exception:
+            continue  # the validate gate reports it
+        if isinstance(gap, dict):
+            groups.setdefault(str(gap.get("kind") or "?"), []).append(
+                (path.stem, _one_line(gap.get("note"))))
+    lines = []
+    for kind, entries in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        parishes = ", ".join(f"`{p}`" for p, _ in entries)
+        lines.append(f"- `{kind}` ({len(entries)}): {parishes}. {entries[0][1]}".rstrip())
+    return lines or ["- none"]
+
+
+def _settled_lines(rows: list[Any], names: dict[int, str]) -> list[str]:
+    if not rows:
+        return []
+    return ["", "<details><summary>"
+            f"{len(rows)} advisory flag{'s' if len(rows) > 1 else ''} settled during the "
+            "Run</summary>", "",
+            *[f"- `{f['subject']}`: {f['question'].splitlines()[0]} **Settled"
+              f"{' by ' + names[f['settled_by']] if f['settled_by'] in names else ''}:** "
+              f"{_one_line(f['answer'])}" for f in rows],
+            "", "</details>"]
+
+
 def _flag_lines(rows: list[Any]) -> list[str]:
     return [f"- `{f['subject']}`: {f['question'].splitlines()[0]}"
             + (f" (#{f['issue_number']})" if f["issue_number"] else "") for f in rows] or ["- none"]
@@ -525,6 +583,8 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
     name = _diocese_name(worktree, diocese)
     jobs = ledger.jobs(run["id"])
     advisory = ledger.flags(run["id"], LISTED)
+    settled = [f for f in ledger.flags(run["id"], FLAG_SETTLED)
+               if f["severity"] == "advisory" and f["settled_by"]]
     parked = [f for f in ledger.flags(run["id"], OPEN, ANSWERED) if f["scope"] == "parish"]
     cost_usd = sum(j["cost_usd"] for j in jobs)
     lines = [f"Opened by the onboarding factory (`docs/factory-spec.md`), Run `{run['id']}`: "
@@ -539,7 +599,14 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
                              run["id"])
         lines += ["", "## Coverage", "", *_coverage(worktree, diocese, commands),
                   "", f"{batches} map jobs.",
+                  "", "## Left open", "",
+                  "No source yet shows Mass or a closure; each record says what would "
+                  "settle it.", "", *_left_open(worktree, diocese),
+                  "", "## Bulletins fetch can't collect yet", "",
+                  "Grouped by kind, as `pnpm diocese gaps` lists them for a collector fix.",
+                  "", *_fetch_gaps(worktree, diocese),
                   "", "## Advisory flags", "", *_flag_lines(advisory),
+                  *_settled_lines(settled, {j["id"]: j["name"] for j in jobs}),
                   "", "## Parked parishes", "", *_flag_lines(parked),
                   "", "## Lessons for every diocese", "",
                   *([f"- {r['text']}" for r in lessons] or ["- none"])]

@@ -30,6 +30,7 @@ from pdf_extract.factory.handoff import (
     PARKING_STAGES,
     SEND_BACK,
     Handoff,
+    Reconcile,
     SeedReview,
     SurveyReview,
     handoff_path,
@@ -46,6 +47,7 @@ from pdf_extract.factory.ledger import (
     GATING,
     IN_REVIEW,
     JOB_BLOCKED,
+    LISTED,
     MAP,
     MERGED,
     OPEN,
@@ -96,6 +98,8 @@ LOGGER = logging.getLogger(__name__)
 MAX_CRASHES = 3
 MAX_FAILURES = 3  # git or GitHub failing on one job, tick after tick
 FAILURE_RETRY = timedelta(minutes=5)
+# How long the usage check waits after the endpoint answers 429 Too Many Requests.
+USAGE_COOLDOWN = timedelta(minutes=30)
 # How long an attempt's gates wait for its after reading (seconds); usually under one.
 AFTER_READING_WAIT = 10
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -178,9 +182,19 @@ class Dispatcher:
         paused = self.ledger.get("paused")
         if paused:
             return Outcome("paused", paused.get("reason", ""))
+        cooldown = self.ledger.get("usage_cooldown")
+        if cooldown:
+            # Nothing reads the endpoint until the cooldown ends, housekeeping's readings
+            # included; then the next job's usage check tries it again.
+            until = datetime.fromisoformat(cooldown["until"])
+            if until > self.clock():
+                return Outcome("waiting", f"usage check cooldown until {cooldown['until']}: "
+                                          f"{cooldown.get('reason', '')}", until)
         self.housekeeping()
         job = self.pick()
         if job is None:
+            if cooldown:  # no usage check to retry: the periodic readings take over again
+                self.ledger.set("usage_cooldown", None)
             return Outcome("idle")
         if job["status"] == WAITING_USAGE and job["wait_until"] \
                 and not self.ledger.get("override_caps", False):
@@ -375,8 +389,12 @@ class Dispatcher:
         try:
             rows = standings(self.config, self.fetch_usage, self.clock())
         except UsageError as exc:
+            if exc.status == 429:
+                return None, None, self._cool_down(exc)
             self.ledger.set("paused", {"reason": f"usage check failed: {exc}", "at": now()})
             return None, None, Outcome("paused", str(exc))
+        if self.ledger.get("usage_cooldown"):
+            self.ledger.set("usage_cooldown", None)
         stamp = self._stamp()
         ids = {s.account.name: self.ledger.add_usage(s.account.name, stamp, s.usage, "select")
                for s in rows}
@@ -393,6 +411,17 @@ class Dispatcher:
             return None, None, Outcome("waiting", f"no account under its caps until {until}",
                                        until)
         return pick.account, ids[pick.account.name], None
+
+    def _cool_down(self, exc: UsageError) -> Outcome:
+        """The endpoint is rate limiting the factory: wait USAGE_COOLDOWN, then try again
+        (another 429 waits again). Kept apart from `paused`, which only the owner clears."""
+        at = self.clock()
+        until = at + USAGE_COOLDOWN
+        since = (self.ledger.get("usage_cooldown") or {}).get("since", at.isoformat())
+        self.ledger.set("usage_cooldown", {"reason": f"usage check failed: {exc}",
+                                           "since": since, "until": until.isoformat()})
+        return Outcome("waiting", f"usage check cooldown until {until.isoformat()}: {exc}",
+                       until)
 
     def _last_finished(self, account: str) -> datetime | None:
         row = self.ledger.one("SELECT MAX(finished_at) AS at FROM attempt WHERE account = ?",
@@ -670,6 +699,7 @@ class Dispatcher:
                             "reverted: " + ", ".join(outside))
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
+            problems += self._settled_problems(run, job, handoff)
         if handoff is not None and not problems and handoff.status == HANDOFF_PARTIAL:
             return self._partial(run, job, "the handoff says partial")
         run_blocked = handoff is not None and any(
@@ -694,6 +724,19 @@ class Dispatcher:
         problems = [f"no verdict for {p}" for p in sorted(wanted - covered)]
         problems += [f"{v.parish} is not one of the seeds to review" for v in handoff.seeds
                      if v.parish not in wanted]
+        return problems
+
+    def _settled_problems(self, run: Any, job: Any, handoff: Handoff) -> list[str]:
+        """Reconcile settles only advisory flags other jobs of its Run raised."""
+        if not isinstance(handoff, Reconcile):
+            return []
+        problems = []
+        for s in handoff.settled:
+            row = self.ledger.one("SELECT * FROM flag WHERE id = ?", s.flag)
+            if (row is None or row["run_id"] != run["id"] or row["severity"] == BLOCKING
+                    or row["job_id"] == job["id"]):
+                problems.append(f"settled: flag {s.flag} is not one of the advisory flags in "
+                                "your input; use the ids shown there, as in `[#12]`")
         return problems
 
     def _revert_outside(self, worktree: Path, spec: StageSpec,
@@ -820,6 +863,7 @@ class Dispatcher:
         self._once(job, "leads", lambda: [self.ledger.run_sql(
             "INSERT INTO lead (run_id, job_id, touches, note) VALUES (?,?,?,?)",
             run["id"], job["id"], lead.touches, lead.note) for lead in handoff.leads] and None)
+        self._once(job, "settled", lambda: self._settle(job, handoff))
         self._once(job, "flags", lambda: self._flags(run, job, handoff))
         self._once(job, "commit", lambda: git.commit(
             worktree, self._subject(run, job), _trailers(run, job)))
@@ -853,6 +897,14 @@ class Dispatcher:
             return []
         meta = diocese_dir(worktree, run["diocese"]) / "diocese.md"
         return playbook.append(meta, playbook.NEW_LESSONS, handoff.lessons)
+
+    def _settle(self, job: Any, handoff: Handoff) -> None:
+        """Mark the earlier advisory flags reconcile settled, so the PR stops listing them
+        as open and shows how each was settled instead."""
+        for s in handoff.settled if isinstance(handoff, Reconcile) else []:
+            self.ledger.run_sql("UPDATE flag SET status = ?, answer = ?, answered_at = ?, "
+                                "settled_by = ? WHERE id = ? AND status = ?", SETTLED, s.how,
+                                now(), job["id"], s.flag, LISTED)
 
     def _flags(self, run: Any, job: Any, handoff: Handoff) -> None:
         """Record the handoff's flags. One this job raised and the owner already settled is
@@ -1031,7 +1083,9 @@ class Dispatcher:
         """Each step on its own: one failing (GitHub down, R2 keys wrong) is logged and
         tried again on its next turn, without stopping the others or the jobs."""
         at = self.clock()
-        self._safely("quota", self.sample_quota)
+        if not self.ledger.get("usage_cooldown"):
+            # After a 429, the next job's usage check is what tries the endpoint again.
+            self._safely("quota", self.sample_quota)
         if self._due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes), at):
             self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),
                                             self.poll_issues(), self.check_merged()))
@@ -1169,7 +1223,10 @@ class Dispatcher:
                                     worktrees_dir=self.config.worktrees_dir,
                                     branch_prefix=self.config.branch_prefix,
                                     parishes=result.start,
-                                    notes=f"{len(result.start)} parishes ready")
+                                    notes=f"{len(result.start)} parishes ready"
+                                    + (f"; {len(result.fetch_gaps)} wait on a collector "
+                                       f"(`pnpm diocese gaps --diocese {diocese}`)"
+                                       if result.fetch_gaps else ""))
             for parish in result.overdue:
                 key = f"overdue:{diocese}:{parish}"
                 if self.ledger.get(key):
