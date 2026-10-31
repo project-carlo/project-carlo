@@ -1,0 +1,369 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "peace-of-christ",
+  "content_hash": "91be5c6dd29f3b6123935c6f8fd6c4b3741df0e2ed0324b3417a09ca1170a7ba",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=ZlrOqpkca01y3bU7Wme5uXYCASeLlpu0Gi2ckoXLPqDbo%2BrADvqQQ1euhD1xV820kT7eM7N%2BjVLfA8LTOK9p4ZLyR6CmsxxPtw0jqN%2FNSCI%3D",
+  "fetched_at": "2026-09-27T14:00:28Z",
+  "reference_date": "2026-09-27",
+  "churches": [
+    {
+      "slug": "st-ambrose",
+      "name": "St. Ambrose Church",
+      "address": "25 Empire Boulevard, Rochester, NY 14609"
+    },
+    {
+      "slug": "st-james-rochester",
+      "name": "St. James Church",
+      "address": "130 Brett Road, Rochester, NY 14609"
+    },
+    {
+      "slug": "st-john-evangelist-humboldt",
+      "name": "St. John the Evangelist Church",
+      "address": "553 Humboldt Street, Rochester, NY 14610"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/91be5c6dd29f3b6123935c6f8fd6c4b3741df0e2ed0324b3417a09ca1170a7ba-8be22dd06b3a.json",
+    "modified_at": "2026-09-25T17:33:02.278000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/peace-of-christ/91be5c6dd29f.pdf",
+  "pdf_sha256": "11a9f0436499c793d4f9f2be682f032e36ab363daacdd2eaabf6f8fef1051f5a",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-james-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-evangelist-humboldt",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-evangelist-humboldt",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-evangelist-humboldt",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-rochester",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "12:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "12:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-rochester",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:45",
+      "end_time": "16:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:45 PM",
+        "end_time": "4:15 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-evangelist-humboldt",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:15",
+      "end_time": "08:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:15 AM",
+        "end_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "16:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "4:00 PM",
+        "end_time": "4:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": "12:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "1st Fridays",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "11:00 AM",
+        "end_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Family Friendly Holy Hour",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-ambrose",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "19:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "1st Tuesdays; Mothers of Lu Holy Hour for Vocations",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4618,
+    "output_tokens": 1421
+  }
+}

@@ -193,3 +193,8 @@ Newest first: date, what was done, and the `pnpm diocese coverage` numbers after
   4). St. Patrick, Savannah and St. Rose of Lima, Sodus Point (no 2026 Mass found) moved to
   `open/` with `diocese question`, which takes them off the site. St. Jude, Fair Haven (summer)
   stays a church row with no Mass this week. Promoted.
+- 2026-10-27: Church-list questions from seed drafts. Excluded Peace of Christ's Perpetual
+  Adoration Chapel, 123 Whittington Rd. (`no-public-mass`: adoration only). No rows for the
+  senior-living Masses of Eastern Wayne (DeMay Living Center, The Terrace) or Auburn's "FLCL"
+  nursing-home Mass; explained in the parish records. Nothing to promote. Coverage: directory
+  168/168; GCatholic 165/165; parish-directory 134/134.

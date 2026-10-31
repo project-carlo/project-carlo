@@ -1,0 +1,101 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-joseph-st-patrick-utica",
+  "content_hash": "38a89b9b55ce167405c5acdfd8ced021358cbfdc436e8e40d54a6832776d86d2",
+  "source_url": "https://parishesonline.com/publication-page/st-joseph-and-st-patrick-church?selectedPublication=https://container.parishesonline.com/bulletins/04/0809/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 15675,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2032,
+    "reasoning_tokens": 1621
+  },
+  "seconds": 18.456,
+  "response_id": "resp_03b034ef3ee3f1bd016ac911a4e87487d28566e6e02baeb341",
+  "events": [
+    {
+      "church_slug": "st-joseph-st-patrick-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-st-patrick-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-st-patrick-utica",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-05",
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Chapel",
+      "raw": {
+        "date": "2026-10-05",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-st-patrick-utica",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-12",
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "date": "2026-10-12",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "6245b7613d903fbc8819fc98e1b1f3338fdd0b001531df72c67cf50d022641d1"
+}

@@ -1,0 +1,109 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-mary-clinton",
+  "content_hash": "6331d54ffa90dff6f5388eb3ebd8dd2e9bf3d786e5c2dad0f553432bc267cdb4",
+  "source_url": "https://files.ecatholic.com/33641/bulletins/20260927.pdf?t=1790276934000",
+  "fetched_at": "2026-09-28T00:14:21Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-mary-clinton",
+      "name": "St. Mary's Church",
+      "address": "13 Marvin St., Clinton, NY 13323"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/6331d54ffa90dff6f5388eb3ebd8dd2e9bf3d786e5c2dad0f553432bc267cdb4-ef0509873910.json",
+    "modified_at": "2026-09-28T00:23:17.957000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-mary-clinton/6331d54ffa90.pdf",
+  "pdf_sha256": "d818cf37e9deaf5078e989d4915ee21f40cc3f684d53af9d13d1e48218570fd0",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:30 PM",
+        "end_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 3494,
+    "output_tokens": 270
+  }
+}

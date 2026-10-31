@@ -1,0 +1,2079 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-st-thomas-aquinas-binghamton",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:56Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:36:37Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Two linked churches, St. Patrick's and St. Thomas Aquinas. Weekend, weekday and Saturday Reconciliation times, the Divine Mercy Adoration Chapel and the third-Thursday young adult Confession and Mass are the same in all three bulletins. Open: the end time of Thursday Exposition at St. Thomas Aquinas (4:00 vs 4:30 PM, the bulletin disagrees with itself) and the First Saturday confessions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4e20167d44270eef9ae4c4751aa01c187d37908b6220c14773a866e9b070d48b",
+      "fetched_at": "2026-10-11T16:36:56Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "185955c506e7cd3daa56ae2c1ae31151d3af84f115d8e23d79f2044becb07e94",
+      "fetched_at": "2026-10-04T14:44:34Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "121ab02682d922b15d198b78b7be4a0d6f6eefa2e1977ebad121520b775c788d",
+      "fetched_at": "2026-09-28T00:16:14Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Monday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Monday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Monday 07:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Tuesday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Tuesday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Tuesday 07:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Wednesday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Wednesday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Wednesday 07:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Thursday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Thursday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Thursday 07:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS 7:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Friday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Friday 07:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Friday 07:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Monday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Monday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Monday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Tuesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Tuesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Tuesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Wednesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Wednesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Wednesday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Thursday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Thursday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Thursday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "MON. - FRI. MASS ... 10:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Friday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Friday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Friday 10:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SATURDAY MORNING MASS 8:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SATURDAY MORNING MASS 8:00am | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SATURDAY MORNING MASS 8:00am | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Saturday 08:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Saturday 08:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Saturday 08:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4:00pm | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4:00pm | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 4:00pm | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Saturday 16:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Saturday 16:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Saturday 16:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 5:15pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 5:15pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SATURDAY VIGIL MASS 5:15pm | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Saturday 17:15 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Saturday 17:15 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Saturday 17:15 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Sunday 09:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Sunday 09:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Sunday 09:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins; also in the intentions (SP 9:00am, SP 4:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SUNDAY MASS 9:00am | St. Patrick's ... 4:00pm | St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Sunday 16:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Sunday 16:00 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Sunday 16:00 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins; also in the intentions (SP 9:00am, SP 4:00pm).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "SUNDAY MASS 11:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "SUNDAY MASS 11:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "SUNDAY MASS 11:00am | St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly mass Sunday 11:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly mass Sunday 11:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly mass Sunday 11:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays - 11:30am, St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays - 11:30am, St. Patrick's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "RECONCILIATION Saturdays - 11:30am, St. Patrick's"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly confession Saturday 11:30 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly confession Saturday 11:30 st-patrick-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly confession Saturday 11:30 st-patrick-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins; no end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "Saturdays - 3:00pm, St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "Saturdays - 3:00pm, St. Thomas Aquinas"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "Saturdays - 3:00pm, St. Thomas Aquinas"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly confession Saturday 15:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly confession Saturday 15:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly confession Saturday 15:00 st-thomas-aquinas-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all three bulletins; no end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Monday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Monday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Monday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Tuesday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Tuesday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Tuesday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Wednesday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Wednesday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Wednesday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Thursday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Thursday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Thursday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Friday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Friday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Friday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Saturday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Saturday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Saturday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Divine Mercy Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "ADORATION CHAPEL AT ST. PATRICK'S Mon. - Sun., 7:30am - 9:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 3,
+          "said": "Divine Mercy Eucharist Adoration Chapel at St Patrick's hours are: 7:30am - 9pm everyday"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Sunday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Sunday 07:30–21:00 st-patrick-binghamton  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Sunday 07:30–21:00 st-patrick-binghamton  “Divine Mercy Eucharistic Adoration Chapel; registration requested”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the chapel is headed 'at St. Patrick's' in the schedule box and on the prayer page of all three bulletins (POLICY, Churches and chapels). Registration is requested, but the hours are posted.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Followed by Young Adult Discussion Group"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 4,
+          "said": "Every third Thursday of the month at St. Thomas Aquinas Church ... Confessions at 5pm & Mass at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 6,
+          "said": "Thursday, October 15: Confessions 5:00pm at STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "specific_date confession 2026-10-15 17:00 st-thomas-aquinas-binghamton  “Young Adult Discussion Group”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "specific_date confession 2026-10-15 17:00–18:00 st-thomas-aquinas-binghamton  “Young Adult Discussion Group”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "specific_date confession 2026-10-01 17:00 st-thomas-aquinas-binghamton  “Feast of St. Thérèse”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "specific_date confession 2026-10-15 17:00 st-thomas-aquinas-binghamton  “Young Adult Discussion Group”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 2): named 'every third Thursday', so weekly with weeks_of_month; Oct 15 is a third Thursday in the newest week. No end time printed. History has only the Oct 15 date, which POLICY turns into the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Followed by Young Adult Discussion Group"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 4,
+          "said": "Every third Thursday of the month at St. Thomas Aquinas Church ... Confessions at 5pm & Mass at 6pm; all are welcome to attend confession and Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 6,
+          "said": "Thursday, October 15: Mass 6:00pm at STA"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "specific_date mass 2026-10-15 18:00 st-thomas-aquinas-binghamton  “Young Adult Discussion Group”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "specific_date mass 2026-10-15 18:00 st-thomas-aquinas-binghamton  “Young Adult Discussion Group”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 2): named 'every third Thursday', so weekly with weeks_of_month; the Mass is open to all ('All are welcome to attend confession and Mass').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-aquinas-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open Church"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 3,
+          "said": "Exposition every Thursday after the daily Mass 10:30am - 4pm at the St. Thomas Aquinas Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 6,
+          "said": "Open Church with Eucharistic Adoration 10:30am-4:00pm in STA Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "OPEN CHURCH AT ST. THOMAS AQUINAS Thursdays, 10:30am - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "OPEN CHURCH AT ST. THOMAS AQUINAS Thursdays, 10:30am - 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "OPEN CHURCH AT ST. THOMAS AQUINAS Thursdays, 10:30am - 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4e20167d4427",
+          "said": "weekly adoration Thursday 10:30–16:00 st-thomas-aquinas-binghamton  “Exposition in the STA Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "185955c506e7",
+          "said": "weekly adoration Thursday 10:30–16:00 st-thomas-aquinas-binghamton  “Open Church”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "weekly adoration Thursday 10:30–16:30 st-thomas-aquinas-binghamton  “Exposition in the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R28: the schedule box on page 1 of all three bulletins says 4:30pm; the Spirituality page (all three) and this week's calendar (newest) say 4pm. Leaning 4:00 PM: the page that describes the Exposition itself and the weekly calendar agree, and history stored 16:00 in three of four readings.\n\nReview 2026-10-22: Use Thursday 10:30 AM–4 PM for St. Thomas Aquinas Adoration: the service-specific exposition description and current calendar agree. The generic Open Church box’s 4:30 PM may describe building access rather than exposition.",
+      "question": "What are the hours of Thursday Exposition at St. Thomas Aquinas ('Open Church')?",
+      "options": [
+        {
+          "label": "10:30 AM - 4:00 PM",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-binghamton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Open Church"
+          },
+          "leaning": true
+        },
+        {
+          "label": "10:30 AM - 4:30 PM",
+          "entry": {
+            "church_slug": "st-thomas-aquinas-binghamton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Open Church"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "sta-thursday"
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Devotion; after the 8:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "FIRST SATURDAY DEVOTION Following the 8am Mass at St. Patrick's (Rosary, short talk, Consecration, & confessions with the Mount St. Francis Hermitage Friars)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "FIRST SATURDAY DEVOTION Following the 8am Mass at St. Patrick's (Rosary, short talk, Consecration, & confessions with the Mount St. Francis Hermitage Friars)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "FIRST SATURDAY DEVOTION Following the 8am Mass at St. Patrick's (Rosary, short talk, Consecration, & confessions with the Mount St. Francis Hermitage Friars)"
+        },
+        {
+          "source": "history",
+          "bulletin": "121ab02682d9",
+          "said": "specific_date confession 2026-10-03 08:45 st-patrick-binghamton  “First Saturday Devotion; confessions with Mount St. Francis Hermitage Friars”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R30: the confessions come after a Rosary, talk and Consecration, so they have no definite start time of their own (POLICY, Final source checks); R10's half hour after the Mass would be a guess. History read a dated 08:45 confession for Oct 3 (before as_of, not carried over). Leaning leave out. The newest bulletin's week holds no first Saturday; the 9/27 bulletin's does and prints the same line.\n\nReview 2026-10-22: Exclude guessed first-Saturday 8:30 AM Confession: the larger devotion includes a Rosary, talk and consecration, with no definite confession start.",
+      "question": "Add a confession on First Saturdays at St. Patrick's, after the 8:00 AM Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "First Saturdays 8:30 AM",
+          "entry": {
+            "church_slug": "st-patrick-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Saturday Devotion; after the 8:00 AM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION Offered after the 10am daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION Offered after the 10am daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "FIRST FRIDAY DEVOTION Offered after the 10am daily Mass"
+        }
+      ],
+      "rationale": "R24: the devotion is not named as Mass, Confession or Adoration and has no clock time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 1,
+          "said": "DAILY ROSARY 25 minutes before the start of Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "185955c5",
+          "page": 1,
+          "said": "DAILY ROSARY 25 minutes before the start of Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "121ab026",
+          "page": 1,
+          "said": "DAILY ROSARY 25 minutes before the start of Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion POLICY leaves out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Revive Night"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4e20167d",
+          "page": 4,
+          "said": "Tuesday, October 13, St. Mary's Church ... Mass at St. Mary of the Assumption Church at 6:15pm"
+        }
+      ],
+      "rationale": "R22: another parish's church (St. Mary of the Assumption, Binghamton); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

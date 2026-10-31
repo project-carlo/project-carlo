@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-kateri-latin-mass-community",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:55:48Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "One-church Latin Mass community at St. Thomas the Apostle, Rochester. Sunday 9:00 AM English and 11:15 AM Latin Masses are settled; Sunday Confession after the 11:15 Mass is settled at 12:15 PM by POLICY's relative-time rule. Two open questions: the website-only Monday-Friday adoration chapel hours (leaning include) and website-homepage-only Confession after the 9:00 Mass (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "307f3de8ed4056ae433e5fa30c98f3934b0fa6a3304ed75a0d835b97df522a90",
+      "fetched_at": "2026-10-11T16:32:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d96fe7be88f3ee5fac8c8267e26a4a9294b51098f4fc0cca6b7f86059669c6bc",
+      "fetched_at": "2026-10-04T15:00:24Z",
+      "published_date": "2026-10-04",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English, Ordinary Form"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "MASS TIMES Sundays 9:00am-English, 11:15am-Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96fe7be",
+          "page": 10,
+          "said": "MASS TIMES Sundays 9:00am-English, 11:15am-Latin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Sunday Mass | English 9:00 AM | Latin 11:15 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "307f3de8ed40",
+          "said": "weekly mass Sunday 09:00 st-thomas-apostle  “English (Ordinary Form)”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d96fe7be88f3",
+          "said": "weekly mass Sunday 09:00 st-thomas-apostle  “English”",
+          "page": 10
+        }
+      ],
+      "rationale": "R1: the community info box in both bulletins, plus the Ordinary Form (English) readings printed on pages 5-6 of the newest. Note says the language/form (POLICY, Notes).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin, Extraordinary Form"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "MASS TIMES Sundays 9:00am-English, 11:15am-Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96fe7be",
+          "page": 10,
+          "said": "MASS TIMES Sundays 9:00am-English, 11:15am-Latin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Sunday Mass | English 9:00 AM | Latin 11:15 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "307f3de8ed40",
+          "said": "weekly mass Sunday 11:15 st-thomas-apostle  “Latin (Extraordinary Form)”",
+          "page": 9
+        },
+        {
+          "source": "history",
+          "bulletin": "d96fe7be88f3",
+          "said": "weekly mass Sunday 11:15 st-thomas-apostle  “Latin”",
+          "page": 10
+        },
+        {
+          "source": "history",
+          "bulletin": "d96fe7be88f3",
+          "said": "specific_date mass 2026-10-25 11:15 st-thomas-apostle  “High Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: the community info box in both bulletins, plus the Extraordinary Form (Latin) propers on pages 7-8 of the newest.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:15 AM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "CONFESSION Sundays before & after 11:15am Mass. Two priests hear confession on the first Sunday of each month."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96fe7be",
+          "page": 10,
+          "said": "CONFESSION Sundays before & after 11:15am Mass. Two priests hear confession on the first Sunday of each month."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/mass-sacraments/",
+          "said": "Every Sunday: Fr. Helfrich hears confessions before and after the Sunday 11:15am Mass."
+        }
+      ],
+      "rationale": "R10: 'after the 11:15 AM Mass' with no clock time is worked out as 1 hour after a weekend Mass starts (POLICY, Times): 12:15 PM, no end time. The extra priest on first Sundays does not change the time. History read only the 'before' half (10:45).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:15 AM Mass"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "CONFESSION Sundays before & after 11:15am Mass."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/mass-sacraments/",
+          "said": "Please leave the confession line 5 minutes before Mass begins so Fr. Helfrich can prepare."
+        },
+        {
+          "source": "history",
+          "said": "extract mode read the 'before' half as Sunday 10:45 Confession (1 of 2 bulletins)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d96fe7be88f3",
+          "said": "weekly confession Sunday 10:45 st-thomas-apostle  “Before and after 11:15 AM Mass. Two priests available on the first Sunday of each month.”",
+          "page": 10
+        }
+      ],
+      "rationale": "R26, POLICY (Times): the 'before 11:15 AM Mass' half has no clock time and no stated length (no 'N minutes before'), so it has no definite start. Only the 'after' half is recorded. The entry shown is extract history's 10:45 guess, kept only so the excluded reading is recorded (R9); the bulletin gives no such time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Confession | After both Masses every Sunday"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/mass-sacraments/",
+          "said": "Every Sunday: Fr. Helfrich hears confessions before and after the Sunday 11:15am Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "CONFESSION Sundays before & after 11:15am Mass."
+        }
+      ],
+      "rationale": "R29: only the website homepage says confession follows both Masses; the bulletins (both) and the website's own Mass & Sacraments page tie it to the 11:15 Mass alone. Leaning leave out. If included, POLICY's relative time is 1 hour after the 9:00 AM Mass starts (10:00 AM).\n\nReview 2026-10-22: Exclude Confession after the 9 AM English Mass: both the bulletins and the website’s specific sacrament page name only the 11:15 AM Mass.",
+      "question": "Is there Confession after the 9:00 AM English Mass too? (Only the website homepage says 'after both Masses'.)",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Sundays 10:00 AM, after the 9:00 AM Mass",
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "ADORATION CHAPEL Mary Jo Maurer 585-771-0084 (contact only; no hours printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/eucharistic-adoration/",
+          "said": "Our adoration chapel is located attached to the Parish Center east of the church and is open Monday through Friday from 9am to 10pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
+        }
+      ],
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
+      "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-10 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "ADORATION CHAPEL Mary Jo Maurer 585-771-0084 (contact only; no hours printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/eucharistic-adoration/",
+          "said": "Our adoration chapel is located attached to the Parish Center east of the church and is open Monday through Friday from 9am to 10pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
+        }
+      ],
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
+      "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-10 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "ADORATION CHAPEL Mary Jo Maurer 585-771-0084 (contact only; no hours printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/eucharistic-adoration/",
+          "said": "Our adoration chapel is located attached to the Parish Center east of the church and is open Monday through Friday from 9am to 10pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
+        }
+      ],
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
+      "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-10 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "ADORATION CHAPEL Mary Jo Maurer 585-771-0084 (contact only; no hours printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/eucharistic-adoration/",
+          "said": "Our adoration chapel is located attached to the Parish Center east of the church and is open Monday through Friday from 9am to 10pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
+        }
+      ],
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
+      "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-10 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 9,
+          "said": "ADORATION CHAPEL Mary Jo Maurer 585-771-0084 (contact only; no hours printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/eucharistic-adoration/",
+          "said": "Our adoration chapel is located attached to the Parish Center east of the church and is open Monday through Friday from 9am to 10pm."
+        },
+        {
+          "source": "website",
+          "url": "https://www.skt-lmc.org/",
+          "said": "Adoration Chapel | Open Monday through Friday 9am to 10pm"
+        }
+      ],
+      "rationale": "R29, C9 (leaning per C9): the bulletins list an Adoration Chapel contact but no hours; the hours are only on the website. The chapel is attached to the parish center beside the church, so POLICY puts it at St. Thomas the Apostle. Leaning include: the website is explicit and the bulletin confirms the chapel exists; nothing contradicts it. A 9 AM-10 PM open chapel may be perpetual-style adoration (sign-up), so a reviewer should confirm it is public Exposition.\n\nReview 2026-10-22: Include St. Kateri Latin community’s Mon–Fri 9 AM–10 PM Adoration chapel only if adopting a website-only exception: the bulletin confirms its existence, and the site gives explicit hours and same-campus location.",
+      "question": "Include the adoration chapel, Monday to Friday 9:00 AM-10:00 PM (hours only on the website)?",
+      "options": [
+        {
+          "label": "Mon-Fri 9 AM-10 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-thomas-apostle",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": "22:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Adoration chapel"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "adoration-chapel"
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-apostle",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "High Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 3,
+          "said": "THE NEXT HIGH MASS will be on October 25."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d96fe7be",
+          "page": 3,
+          "said": "THE NEXT HIGH MASS will be on October 25."
+        },
+        {
+          "source": "history",
+          "bulletin": "d96fe7be88f3",
+          "said": "specific_date mass 2026-10-25 11:15 st-thomas-apostle  “High Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 7): a High Mass is the sung form of the regular Sunday Latin Mass, a special occasion at a regular weekly Mass; the bulletin gives no separate time. Only the weekly Sunday 11:15 slot is recorded. Extract history's dated 10/25 11:15 event is this item.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "307f3de8",
+          "page": 3,
+          "said": "ALL SOULS OCTAVE CEMETERY WALK ... Nov 1st and 8th at 3:30pm - Holy Sepulcher Cemetery ... prayers for the plenary indulgence and a rosary."
+        }
+      ],
+      "rationale": "R24, R22: a cemetery walk with a rosary is not a Mass, Confession or Adoration, and it is held at Holy Sepulcher Cemetery, not at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

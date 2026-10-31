@@ -5,8 +5,9 @@ to a resolver can fix one site and quietly break another. This module makes
 the resolvers testable against real sites without a network or a browser:
 
 - `check_fetch` runs each parish's resolver in the real browser, downloads
-  what it resolves to, and reports per parish whether a PDF came back. With a
-  record directory it also saves every page the resolver read.
+  what it resolves to, and separately reports transport, PDF validity, identity
+  and issue freshness. With a record directory it also saves every page the
+  resolver read.
 - `SnapshotPage` replays those saved pages: a `PageLike` whose `goto` serves
   the recorded HTML, so tests can run a resolver offline and check it still
   picks the same bulletin it picked when the pages were recorded.
@@ -22,17 +23,22 @@ import json
 import logging
 import re
 from collections import Counter
-from collections.abc import Collection, Iterable
+from collections.abc import Collection, Iterable, Mapping
+from contextlib import closing
 from dataclasses import dataclass, field
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import HTTPError, URLError
+from urllib.parse import unquote, urlsplit
+
+import pypdfium2 as pdfium
 
 from pdf_extract import fetch
 from pdf_extract.browser import PageLike, launch_stealth_browser
 from pdf_extract.parish_sites import Recipe
 from pdf_extract.parish_sites.dates import parse_date
+from pdf_extract.parish_sites.links import decoded_base64_json
 from pdf_extract.storage import PARISHES_CSV_PATH
 
 LOGGER = logging.getLogger(__name__)
@@ -222,14 +228,19 @@ _STRIP_PATTERNS = [
     re.compile(r"<!--.*?-->", re.DOTALL),
     re.compile(r"<(?:link|meta)\b[^>]*>", re.IGNORECASE),
 ]
-_SCRIPT = re.compile(r"<script\b.*?</script>", re.IGNORECASE | re.DOTALL)
+_SCRIPT = re.compile(r"<script\b.*?</script\b[^>]*>", re.IGNORECASE | re.DOTALL)
 
 
 def _slim_html(html: str) -> str:
     for pattern in _STRIP_PATTERNS:
         html = pattern.sub("", html)
-    # A script can hold a PDF URL (flipbook viewers); any other is dead weight.
-    return _SCRIPT.sub(lambda m: m.group(0) if ".pdf" in m.group(0).lower() else "", html)
+    # A script can hold a PDF URL (flipbook viewers), in plain sight or in
+    # base64 JSON (3D FlipBook); any other is dead weight.
+    return _SCRIPT.sub(
+        lambda m: m.group(0)
+        if ".pdf" in m.group(0).lower() or decoded_base64_json(m.group(0)) else "",
+        html,
+    )
 
 
 class _RecordingRequest:
@@ -379,6 +390,143 @@ BLOCKED = "blocked"
 
 _CHALLENGE_TITLE = re.compile(r"<title>\s*Just a moment", re.IGNORECASE)
 
+# Limit inspection to the first page's opening text, where mastheads usually
+# appear, and require standalone date lines to reduce event-date confusion.
+# This does not establish page layout. Large or scanned PDFs stay unverified.
+_VERIFY_MAX_BYTES = 25_000_000
+_MASTHEAD_CHARS = 2000
+_DATE_LINE = re.compile(
+    r"^(?:(?:bulletin|issue)(?:\s+date)?\s*[:–—-]?\s*)?"
+    r"(?:(?:mon|tues|wednes|thurs|fri|satur|sun)day\s*[,–—-]?\s*)?"
+    r"(?:[a-z]+\.?\s+\d{1,2}(?:st|nd|rd|th)?\s*,?\s+20\d{2}"
+    r"|\d{1,2}\s+[a-z]+\.?\s+20\d{2}"
+    r"|20\d{2}[-/.]\d{1,2}[-/.]\d{1,2}"
+    r"|\d{1,2}[-/.]\d{1,2}[-/.](?:20)?\d{2})[.\s]*$",
+    re.IGNORECASE,
+)
+
+
+def _masthead(pdf: bytes) -> tuple[str, str, str]:
+    """PDF type, bounded first-page text, and any inspection limitation."""
+    if not pdf.startswith(b"%PDF-"):
+        return "not_pdf", "", "Response does not have a PDF signature"
+    if len(pdf) > _VERIFY_MAX_BYTES:
+        return "pdf_signature", "", f"PDF exceeds the {_VERIFY_MAX_BYTES:,} byte inspection limit"
+    try:
+        with pdfium.PdfDocument(pdf) as document:
+            if not len(document):
+                return "invalid_pdf", "", "PDF has no pages"
+            try:
+                with closing(document[0]) as page, closing(page.get_textpage()) as textpage:
+                    text = textpage.get_text_range(0, min(textpage.count_chars(), _MASTHEAD_CHARS))
+            except Exception as exc:
+                return "pdf", "", f"Cannot extract first-page text: {type(exc).__name__}: {exc}"
+        return "pdf", text, "" if text.strip() else "First page has no extractable text"
+    except Exception as exc:
+        # Parsing errors must not erase the independent transport result.
+        return "invalid_pdf", "", f"{type(exc).__name__}: {exc}"
+
+
+def _identity_text(text: str) -> str:
+    return " ".join(re.findall(r"\w+", text.casefold()))
+
+
+def _verification(
+    *, link: fetch.BulletinLink | None, pdf: bytes | None, transport: str,
+    reference_date: date, expected_identity: str | None, expected_issue_date: date | None,
+    max_issue_age_days: int,
+) -> dict[str, object]:
+    """Evidence about this selection; resolver recipes are never identity evidence.
+
+    `matched` identity means the configured literal phrase occurs in the first
+    page's bounded text. `not_matched` means only that this expectation was not
+    found there. Dates from URL filenames are inferred, not document verified.
+    """
+    document_type, text, limitation = (
+        _masthead(pdf) if pdf is not None else ("not_checked", "", "No document inspected")
+    )
+    identity: dict[str, object] = {"status": "unverified", "reason": "No expected identity supplied"}
+    if expected_identity is not None:
+        identity = {"status": "unknown", "expected": expected_identity, "reason": limitation}
+        if text.strip():
+            normalized = f" {_identity_text(text)} "
+            expected = f" {_identity_text(expected_identity)} "
+            position = normalized.find(expected)
+            matched = position >= 0
+            identity.update(
+                status="matched" if matched else "not_matched", source="document_text",
+                inspected_characters=len(text),
+                reason="Expected phrase found in first-page text" if matched
+                else "Expected phrase absent from inspected first-page text",
+            )
+            if matched:
+                identity["normalized_excerpt"] = normalized[
+                    max(0, position - 60):position + len(expected) + 60
+                ].strip()
+
+    evidence: list[dict[str, str]] = []
+    for line in text.splitlines():
+        line = line.strip()
+        if _DATE_LINE.fullmatch(line):
+            # The permissive filename parser may otherwise read "18 Oct. 2025"
+            # as yearless "18 Oct" and silently choose the current year.
+            normalized = re.sub(r"(?<=[a-zA-Z])\.(?=\s|$)", "", line)
+            explicit_year = re.search(r"\b(20\d{2})\b", normalized)
+            year = int(explicit_year[1]) if explicit_year else None
+            parsed = parse_date(normalized, reference_date, year=year)
+            if parsed is not None and (year is None or parsed.year == year):
+                evidence.append({"date": parsed.isoformat(), "source": "document_text", "text": line})
+    if link is not None:
+        for source, url in (("source_url", link.source_url), ("fetch_url", link.fetch_url)):
+            # Upload folders, query parameters and HTTP Last-Modified are not
+            # publication dates. Keep legacy url_date separate from this evidence.
+            filename = unquote(urlsplit(url).path.rsplit("/", 1)[-1])
+            if (parsed := parse_date(filename, reference_date)) is not None:
+                evidence.append({"date": parsed.isoformat(), "source": source, "url": url})
+    dates = {e["date"] for e in evidence}
+    issue: dict[str, object] = {"status": "unknown", "evidence": evidence}
+    observed: date | None = None
+    if len(dates) > 1:
+        issue.update(status="conflict", reason="Selected document/URL evidence has conflicting dates")
+    elif dates:
+        observed = date.fromisoformat(next(iter(dates)))
+        issue.update(
+            status="observed" if any(e["source"] == "document_text" for e in evidence)
+            else "inferred", date=observed.isoformat(),
+        )
+    else:
+        issue["reason"] = "No unambiguous issue date in inspected masthead or selected URL filename"
+    issue["expected_status"] = "unverified" if expected_issue_date is None else "unknown"
+    if expected_issue_date is not None:
+        issue["expected"] = expected_issue_date.isoformat()
+        if observed is not None:
+            issue["expected_status"] = "matched" if observed == expected_issue_date else "mismatch"
+
+    freshness: dict[str, object] = {"status": "unknown", "max_issue_age_days": max_issue_age_days}
+    if observed is not None:
+        age = (reference_date - observed).days
+        freshness.update(
+            status="future" if age < 0 else "stale" if age > max_issue_age_days else "fresh",
+            age_days=age, date_status=issue["status"],
+        )
+    failed = (
+        link is None or transport == "failed" or document_type in {"not_pdf", "invalid_pdf"}
+        or identity["status"] == "not_matched" or issue["expected_status"] == "mismatch"
+        or freshness["status"] == "stale"
+    )
+    verified = (
+        transport == "ok" and document_type == "pdf" and identity["status"] == "matched"
+        and issue["status"] == "observed" and freshness["status"] == "fresh"
+    )
+    return {
+        "transport": {"status": transport},
+        "document_type": {"status": document_type, **({"reason": limitation} if limitation else {})},
+        "publication_identity": identity,
+        "issue_date": issue,
+        "freshness": freshness,
+        "overall": "failed" if failed else "verified" if verified else "unverified",
+    }
+
 
 def _challenged(page: PageLike) -> bool:
     try:
@@ -387,10 +535,14 @@ def _challenged(page: PageLike) -> bool:
         return False
 
 
+def _fetch_rows(rows: Iterable[dict[str, str]]) -> list[dict[str, str]]:
+    """Rows in the parishes.csv layout, keyed the way the fetch stage reads the parish table."""
+    return [{**row, "homepage_url": row["website"]} for row in rows]
+
+
 def _read_parishes(path: Path) -> list[dict[str, str]]:
-    """parishes.csv rows, keyed the way the fetch stage reads the parish table."""
     with open(path, newline="", encoding="utf-8") as fh:
-        return [{**row, "homepage_url": row["website"]} for row in csv.DictReader(fh)]
+        return _fetch_rows(csv.DictReader(fh))
 
 
 def _same_recipe(recipe: str, source: fetch.FetchSource) -> bool:
@@ -405,14 +557,28 @@ def _same_recipe(recipe: str, source: fetch.FetchSource) -> bool:
 def _check_one(
     slug: str, source: fetch.FetchSource, page: PageLike, *,
     reference_date: date, download: bool,
+    expected_identity: str | None = None, expected_issue_date: date | None = None,
+    max_issue_age_days: int = 14,
 ) -> dict[str, object]:
     result: dict[str, object] = {"slug": slug, "provider": source.provider}
+    link = None
+    pdf = None
+    transport = "not_checked"
+
+    def finish() -> dict[str, object]:
+        result["verification"] = _verification(
+            link=link, pdf=pdf, transport=transport, reference_date=reference_date,
+            expected_identity=expected_identity, expected_issue_date=expected_issue_date,
+            max_issue_age_days=max_issue_age_days,
+        )
+        return result
+
     try:
         link = _resolve(source, page=page, reference_date=reference_date)
     except Exception as exc:
         status = BLOCKED if _challenged(page) else RESOLVE_FAILED
         result.update(status=status, detail=f"{type(exc).__name__}: {exc}")
-        return result
+        return finish()
     result["source_url"] = link.source_url
     if link.how:
         result["how"] = link.how
@@ -427,15 +593,17 @@ def _check_one(
         result["url_date"] = url_date.isoformat()
     if not download:
         result["status"] = OK
-        return result
+        return finish()
     try:
         pdf = fetch._download_pdf(fetch_url=link.fetch_url, source_url=link.source_url)
     except (HTTPError, URLError, OSError) as exc:
+        transport = "failed"
         result.update(status=DOWNLOAD_FAILED, detail=f"{type(exc).__name__}: {exc}")
-        return result
+        return finish()
+    transport = "ok"
     result["bytes"] = len(pdf)
     result["status"] = OK if pdf[:5] == b"%PDF-" else NOT_PDF
-    return result
+    return finish()
 
 
 def check_fetch(
@@ -445,20 +613,43 @@ def check_fetch(
     record_dir: Path | None = None,
     download: bool = True,
     reference_date: date | None = None,
-    parishes_csv: Path = PARISHES_CSV_PATH,
+    parishes: Iterable[dict[str, str]] | None = None,
+    expected_identity: str | Mapping[str, str] | None = None,
+    expected_issue_date: date | Mapping[str, date] | None = None,
+    max_issue_age_days: int = 14,
 ) -> dict[str, object]:
     """Resolve (and download) each parish's latest bulletin without saving it.
 
     Returns one row per parish with its status, so a resolver change can be
     compared site by site with the run before it. With `record_dir`, the pages
     each resolver read are saved there as `<slug>.json.gz` for `SnapshotPage`.
+    `parishes` (rows in the parishes.csv layout, such as a diocese's records
+    before promotion) defaults to data/parishes.csv.
+
+    Legacy `status`/`counts` describe resolution/download only. Additive
+    `verification`/`verification_counts` separate transport, parsed PDF type,
+    literal expected identity in the first page, issue date and freshness.
+    Expectations may be scalar (all selected parishes) or keyed by slug; they
+    are never inferred from a recipe or parish name. Missing evidence remains
+    unknown/unverified. Filename dates can indicate staleness but cannot alone
+    establish a verified issue. `max_issue_age_days` is inclusive, relative to
+    `reference_date`; future issues are reported separately. Inspection reads
+    at most 2000 first-page characters from documents up to 25 MB; no OCR.
     """
+    if max_issue_age_days < 0:
+        raise ValueError("max_issue_age_days must be nonnegative")
+    identities = (expected_identity.values() if isinstance(expected_identity, Mapping)
+                  else [expected_identity] if expected_identity is not None else [])
+    if any(not _identity_text(identity) for identity in identities):
+        raise ValueError("expected_identity must contain a nonempty phrase")
     today = reference_date or date.today()
-    all_parishes = _read_parishes(parishes_csv)
+    all_parishes = (
+        _read_parishes(PARISHES_CSV_PATH) if parishes is None else _fetch_rows(parishes)
+    )
     missing = sorted(set(slugs or ()) - {p["slug"] for p in all_parishes})
     if missing:
         raise ValueError(f"Parish not found: {', '.join(missing)}")
-    parishes = [
+    to_check = [
         p for p in all_parishes
         if fetch._resolve_fetch_source(p) is not None
         and (slugs is None or p["slug"] in slugs)
@@ -467,13 +658,19 @@ def check_fetch(
 
     rows: list[dict[str, object]] = []
     with launch_stealth_browser() as live_page:
-        for parish in parishes:
+        for parish in to_check:
             slug = parish["slug"]
             source = fetch._resolve_fetch_source(parish)
             assert source is not None
             page = RecordingPage(live_page) if record_dir else None
             row = _check_one(
                 slug, source, page or live_page, reference_date=today, download=download,
+                expected_identity=(expected_identity.get(slug)
+                                   if isinstance(expected_identity, Mapping) else expected_identity),
+                expected_issue_date=(expected_issue_date.get(slug)
+                                     if isinstance(expected_issue_date, Mapping)
+                                     else expected_issue_date),
+                max_issue_age_days=max_issue_age_days,
             )
             LOGGER.info("%s: %s %s", slug, row["status"], row.get("source_url", row.get("detail")))
             rows.append(row)
@@ -487,4 +684,18 @@ def check_fetch(
                 )
 
     counts = Counter(str(row["status"]) for row in rows)
-    return {"reference_date": today.isoformat(), "counts": dict(counts), "parishes": rows}
+    verification_counts: dict[str, dict[str, int]] = {}
+    for dimension in (
+        "transport", "document_type", "publication_identity", "issue_date", "freshness", "overall",
+    ):
+        dimension_counts: Counter[str] = Counter()
+        for row in rows:
+            verification = row["verification"]
+            assert isinstance(verification, dict)
+            value = verification[dimension]
+            dimension_counts[str(value["status"] if isinstance(value, dict) else value)] += 1
+        verification_counts[dimension] = dict(dimension_counts)
+    return {
+        "reference_date": today.isoformat(), "counts": dict(counts), "parishes": rows,
+        "verification_counts": verification_counts,
+    }

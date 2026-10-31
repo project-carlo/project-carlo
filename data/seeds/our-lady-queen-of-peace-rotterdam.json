@@ -1,0 +1,759 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-queen-of-peace-rotterdam",
+  "status": "ready",
+  "as_of": "2026-10-18T12:39:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:04:33Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches in a network of parishes: Our Lady Queen of Peace and its mission church St. Margaret of Cortona. The Network Mass Schedule, the Saturday Reconciliation and the First Saturday Devotion (exposition, Rosary, Benediction, Mass) are the same in all four bulletins read. Masses and Confession at St. Madeleine Sophie and St. Gabriel are other parishes' and left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6d0368e07ea0a98169584e7423ba4a1e902d051c38fe85be53c6f60b19358276",
+      "fetched_at": "2026-10-18T12:39:00Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "dfe72e171a887e6d0f261607f037cbaf054cc489abac2bc1de5755440b932c28",
+      "fetched_at": "2026-10-11T16:28:43Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d6b78e0ec6ea0c919512cfbe36be032f3b3d75ea6aae09dda3145d91da8f8466",
+      "fetched_at": "2026-10-04T14:50:55Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6ad95faca13eb2363c1d467ec00e1e657c795528f80cef0893cf6b5dae2c932c",
+      "fetched_at": "2026-09-28T22:00:57Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Monday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Monday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Monday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Monday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Tuesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Tuesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Tuesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Tuesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Weekday/Saturday Morning Celebration: Mon. thru Wed. 7:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Wednesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Wednesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Wednesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Wednesday 07:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Saturday 8:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Saturday 8:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Saturday 8:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Saturday 8:30 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Saturday 08:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Saturday 08:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Saturday 08:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Saturday 08:30 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Weekend Celebration, Saturday: 4:00 PM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Weekend Celebration, Saturday: 4:00 PM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Weekend Celebration, Saturday: 4:00 PM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Weekend Celebration, Saturday: 4:00 PM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read; the Saturday intentions also list the 4:00 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Sunday: 8:00 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Sunday: 8:00 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Sunday: 8:00 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Sunday: 8:00 AM Our Lady Queen of Peace"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Sunday 08:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Sunday 08:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Sunday 08:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Sunday 08:00 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read; the intentions list the 8:00 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-cortona-rotterdam-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Sunday: 10:00 AM St. Margaret of Cortona"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "Sunday: 10:00 AM St. Margaret of Cortona"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "Sunday: 10:00 AM St. Margaret of Cortona"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "Sunday: 10:00 AM St. Margaret of Cortona"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 2,
+          "said": "Saint Margaret Cortona, 10:00 Ruth Vaughn by Vaughn Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly mass Sunday 10:00 st-margaret-of-cortona-rotterdam-junction",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly mass Sunday 10:00 st-margaret-of-cortona-rotterdam-junction",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly mass Sunday 10:00 st-margaret-of-cortona-rotterdam-junction",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly mass Sunday 10:00 st-margaret-of-cortona-rotterdam-junction",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all four bulletins read; St. Margaret of Cortona is the parish's mission church on the church list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "RECONCILIATION: OLQP Every Saturday 3:00pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "RECONCILIATION: OLQP Every Saturday 3:00pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "RECONCILIATION: OLQP Every Saturday 3:00pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "RECONCILIATION: OLQP Every Saturday 3:00pm-3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 3,
+          "said": "Saturday, October 24, 3:00-3:45 Reconciliation"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-peace-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation list of all four bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday Devotion: Rosary 7:45, Benediction 8:15, then Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dfe72e17",
+          "page": 1,
+          "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6b78e0e",
+          "page": 1,
+          "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ad95fac",
+          "page": 1,
+          "said": "First Saturday Devotion: Each first Saturday the following will take place at Our Lady Queen of Peace: 7:30 am Exposition of the Blessed Sacrament, 7:45 am Rosary, 8:15 am Benediction, 8:30 am Holy Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6d0368e07ea0",
+          "said": "weekly adoration Saturday 07:30–08:15 our-lady-queen-of-peace-rotterdam  “First Saturday of the month; includes Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dfe72e171a88",
+          "said": "weekly adoration Saturday 07:30–08:15 our-lady-queen-of-peace-rotterdam  “First Saturday of the month; includes Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6b78e0ec6ea",
+          "said": "specific_date adoration 2026-11-07 07:30–08:15 our-lady-queen-of-peace-rotterdam  “First Saturday Devotion; includes Rosary and Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ad95faca13e",
+          "said": "weekly adoration Saturday 07:30–08:15 our-lady-queen-of-peace-rotterdam  “First Saturday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R11: the newest bulletin prints the monthly devotion, and the three older ones agree; Oct 3 (Sept 27 issue) was a first Saturday. POLICY: exposition with Benediction is Adoration. No end time is printed (Benediction is at 8:15), so none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 1,
+          "said": "Network Mass Schedule: St. Madeleine Sophie; St. Gabriel the Archangel (Sunday 7:30, 10:30; Mon & Thurs 9:00; Reconciliation Sunday 11:30)"
+        }
+      ],
+      "rationale": "R22: these Masses and the St. Gabriel Confession are at other parishes' churches (St. Madeleine Sophie and St. Gabriel belong to the St. Madeleine Sophie - St. Gabriel parish); their events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6d0368e0",
+          "page": 2,
+          "said": "Thursday, October 22 - No Mass; Friday, October 23 - No Mass"
+        }
+      ],
+      "rationale": "R17: the weekday schedule has no Thursday or Friday Mass at Our Lady Queen of Peace, so these lines state the regular schedule and are not a cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

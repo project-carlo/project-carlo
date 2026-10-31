@@ -12,6 +12,7 @@ import {
 /** The qualifiers as the snapshot's flat columns, for writing cases briefly. */
 interface FlatPattern {
   weeks_of_month?: WeekOfMonth[];
+  exclude_weeks?: boolean;
   season_start_month?: number;
   season_start_day?: number;
   season_end_month?: number;
@@ -22,6 +23,7 @@ function pattern(flat: FlatPattern = {}): SchedulePattern {
   const { season_start_month: start, season_end_month: end } = flat;
   return {
     weeks_of_month: flat.weeks_of_month ?? [],
+    exclude_weeks: flat.exclude_weeks,
     season:
       start == null || end == null
         ? null
@@ -129,6 +131,26 @@ describe("dateMatchesWeeks", () => {
       [false, true, false, true],
     );
   });
+
+  it("skips the excluded weeks and keeps the rest", () => {
+    expect(fridays.map((d) => dateMatchesWeeks(d, ["last"], true))).toEqual([
+      true,
+      true,
+      true,
+      false,
+    ]);
+    // October 2026 has five Fridays: the fourth (23rd) is kept, the last
+    // (30th) skipped, which no list of kept weeks could say for every month.
+    expect(dateMatchesWeeks(new Date(2026, 9, 23), ["last"], true)).toBe(true);
+    expect(dateMatchesWeeks(new Date(2026, 9, 30), ["last"], true)).toBe(false);
+    expect(
+      fridays.map((d) => dateMatchesWeeks(d, ["first", "last"], true)),
+    ).toEqual([false, true, true, false]);
+  });
+
+  it("keeps every week when an exclusion names none", () => {
+    expect(fridays.every((d) => dateMatchesWeeks(d, [], true))).toBe(true);
+  });
 });
 
 describe("dateMatchesPattern", () => {
@@ -165,6 +187,12 @@ describe("patternKey", () => {
     );
   });
 
+  it("separates the weeks kept from the same weeks skipped", () => {
+    expect(
+      patternKey(pattern({ weeks_of_month: ["last"], exclude_weeks: true })),
+    ).not.toBe(patternKey(pattern({ weeks_of_month: ["last"] })));
+  });
+
   it("ignores the order the weeks are listed in", () => {
     expect(patternKey(pattern({ weeks_of_month: ["third", "first"] }))).toBe(
       patternKey(pattern({ weeks_of_month: ["first", "third"] })),
@@ -188,6 +216,21 @@ describe("describeSchedulePattern", () => {
     expect(
       describeSchedulePattern(pattern({ weeks_of_month: ["first"] }), "Friday"),
     ).toBe("First Friday of the month");
+  });
+
+  it("words an exclusion as the weeks skipped", () => {
+    expect(
+      describeSchedulePattern(
+        pattern({ weeks_of_month: ["last"], exclude_weeks: true }),
+        "sunday",
+      ),
+    ).toBe("Every Sunday except the last");
+    expect(
+      describeSchedulePattern(
+        pattern({ weeks_of_month: ["last", "first"], exclude_weeks: true }),
+        null,
+      ),
+    ).toBe("Every week except the first and last");
   });
 
   it("lists several weeks in one phrase", () => {

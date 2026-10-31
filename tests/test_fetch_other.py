@@ -6,7 +6,10 @@ sites these come from are replayed in test_fetch_replay.py.
 
 from __future__ import annotations
 
+import base64
+import json
 from datetime import date
+from urllib.parse import quote
 
 import pytest
 
@@ -78,6 +81,11 @@ def _resolve(
         ("/uploads/3/8/1/3/38133239/02-12-2017_6th_sun.pdf", date(2017, 2, 12)),
         # A ParishesOnline container number is no month and day.
         ("/bulletins/03/0408/20260927B.pdf", date(2026, 9, 27)),
+        # Nor are Weebly's numbered folders a month and day ("1/3" of
+        # "/1/3/1/4/"), or a mistyped five-digit year a year.
+        ("/uploads/1/3/1/4/131484079/bulletin_sept_13.pdf", date(2026, 9, 13)),
+        ("September 27, 20026", date(2026, 9, 27)),
+        ("/var/m_8/8d/8dc/64111/1024614-09-27-2026-aab32.pdf?download", date(2026, 9, 27)),
         # Ids and timestamps are not dates.
         ("/bulletins/1790326230.pdf", None),
         ("/_files/ugd/cea846_00334ad9684947469dd533a9f70fcc50.pdf", None),
@@ -97,6 +105,25 @@ def _resolve(
         # A run of digits that is no month-day-year gives a later yearless
         # date no year.
         ("scan 13-45-19 bulletin 9-27", date(2026, 9, 27)),
+        # An ordinal after a date is the Sunday's number, not a two-digit year
+        # (Saint John Bosco, Conyngham).
+        ("10/4-27th Sunday in Ordinary Time", date(2025, 10, 4)),
+        ("9/20-25th Sunday in Ordinary Time", date(2026, 9, 20)),
+        # Weebly's upload folders are no date: "3/4" is not 4 March
+        # (Nativity of Our Lord, Duryea).
+        ("/uploads/3/4/1/2/34124530/11th__october_2026_bulletin_.pdf", date(2026, 10, 11)),
+        # A file name's spaces as "+" (Our Lady of Peace, Hazleton).
+        ("/files/uploaded/10+18+26.pdf", date(2026, 10, 18)),
+        ("/files/uploaded/9.20.26+bulletin.pdf", date(2026, 9, 20)),
+        ("/files/uploaded/August+2-+2026.pdf", date(2026, 8, 2)),
+        ("/files/uploaded/Bulletin+for+July+5.pdf", date(2026, 7, 5)),
+        # A year before the month is the issue's (St. Michael the Archangel,
+        # Scranton lists a 2022 issue among this year's).
+        ("/wp-content/uploads/2022/10/bulletin-2022-october-23.pdf", date(2022, 10, 23)),
+        ("Bulletin 2026 October 10-11", date(2026, 10, 10)),
+        ("Bulletin_October 12_2025", date(2025, 10, 12)),
+        # Pilot Bulletins: the issue's YYMMDD names its folder and its file.
+        ("https://www.thebostonpilot.com/bcd/Bulletins/260927/32223_260927.pdf", date(2026, 9, 27)),
     ],
 )
 def test_parse_relaxed_date_reads_file_name_and_abbreviated_dates(text, expected) -> None:
@@ -112,6 +139,81 @@ def testunwrap_pdf_viewer_url() -> None:
     assert unwrap_pdf_viewer_url(direct) == direct
     relative = f"{HOME}/page?url=/relative.pdf"
     assert unwrap_pdf_viewer_url(relative) == relative
+
+
+@pytest.mark.parametrize("encoding_layers", [0, 1, 2])
+def test_parishes_online_viewer_unwraps_encoded_pdf(encoding_layers: int) -> None:
+    pdf = "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf"
+    selected = pdf
+    for _ in range(encoding_layers):
+        selected = quote(selected, safe="")
+    viewer = (
+        "https://parishesonline.com/publication-page/st-james-church-15670"
+        f"?selectedPublication={selected}"
+    )
+    assert unwrap_pdf_viewer_url(viewer) == pdf
+
+
+@pytest.mark.parametrize(
+    ("viewer", "selected"),
+    [
+        (
+            "https://example.org/publication-page/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/organization/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://example.org/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com.example.org/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "http://container.parishesonline.com/bulletins/14/1661/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com/other/20261025B.pdf",
+        ),
+        (
+            "https://parishesonline.com/publication-page/st-james",
+            "https://container.parishesonline.com/bulletins/14/1661/20261025B.html",
+        ),
+    ],
+)
+def test_parishes_online_viewer_leaves_unrecognized_links_alone(viewer: str, selected: str) -> None:
+    url = f"{viewer}?selectedPublication={quote(selected, safe='')}"
+    assert unwrap_pdf_viewer_url(url) == url
+
+
+def test_parishes_online_widget_recipe_picks_latest_weekly_pdf() -> None:
+    widget = "https://parishesonline.com/publicationWidget?type=bulletin&id=0018000000QxC0DAAV"
+    container = "https://container.parishesonline.com/bulletins/14/1661"
+
+    def anchor(issue: str, label: str) -> str:
+        selected = quote(f"{container}/{issue}.pdf", safe="")
+        return (
+            '<a href="/publication-page/st-james-church-15670'
+            f'?selectedPublication={selected}">{label}</a>'
+        )
+
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY,
+        recipe=f"page-pdfs {widget} filename=*B.pdf",
+        page=_site({widget: (
+            anchor("20261004S", "October 4, 2026 Special")
+            + anchor("20260920B", "September 20, 2026")
+            + anchor("20260927B", "September 27, 2026")
+        )}),
+    )
+    assert link.source_url == f"{container}/20260927B.pdf"
+    assert link.fetch_url == link.source_url
 
 
 def test_flipbook_pdf_named_with_repeated_extension_is_read_whole() -> None:
@@ -336,6 +438,70 @@ def test_pdf_embedder_post_is_read_as_served() -> None:
     ) == pdf
 
 
+def _base64_json(value: dict[str, object]) -> str:
+    return base64.b64encode(json.dumps(value).encode()).decode()
+
+
+def test_pilot_bulletins_embed_pages_resolve_to_their_dated_pdfs() -> None:
+    # St. Therese, Shavertown: the bulletin page lists Pilot Bulletins embed
+    # pages, below the site menu's undated registration form.
+    def embed(issue: str) -> str:
+        return f"https://www.thebostonpilot.com/bcd/bulletinclick_embed.asp?Id=32223_{issue}.pdf"
+
+    assert _resolve({
+        HOME: '<a href="/bulletins/">Weekly Parish Bulletin</a>',
+        f"{HOME}/bulletins/": (
+            '<a href="/wp-content/uploads/2024/05/Registration-Form.pdf">Registration</a>'
+            f'<a href="{embed("260927")}"><img></a><a href="{embed("260920")}"><img></a>'
+        ),
+    }) == "https://www.thebostonpilot.com/bcd/Bulletins/260927/32223_260927.pdf"
+
+
+def test_a_script_naming_a_pdf_in_base64_is_kept_in_a_recording() -> None:
+    from pdf_extract.fetch_check import _slim_html
+
+    data = _base64_json({"url": "https://parish.example/b.pdf"})
+    kept = f"<script>FB3D_CLIENT_DATA.push('{data}');</script>"
+    assert _slim_html(f"{kept}<script>var x = 'eyJhbGciOiJIUzI1NiJ9';</script>") == kept
+
+
+def test_pdf_embedder_iframe_names_its_pdf_in_base64() -> None:
+    # Our Lady of Victory, Tannersville: the PDF Embedder iframe's settings,
+    # with the PDF's address, are only in its base64 pdfemb-data parameter.
+    pdf = "https://parish.example/wp-content/uploads/2026/09/bulletin9-27-2026.pdf"
+    data = _base64_json({"pdfID": 11570, "url": pdf, "title": "bulletin9-27-2026"})
+    assert _resolve({
+        HOME: '<a href="/bulletin/">Bulletin</a>',
+        f"{HOME}/bulletin/": (
+            '<a href="/wp-content/uploads/2024/01/Annual-Report-2023.pdf">Annual Report</a>'
+            f'<iframe class="pdfembed-iframe" src="{HOME}/?pdfemb-data={data}"></iframe>'
+        ),
+    }) == pdf
+
+
+def test_3d_flipbook_names_its_pdf_in_base64_client_data() -> None:
+    # St. Thomas More, Lake Ariel: 3D FlipBook pushes its books' settings as
+    # base64 JSON, with JSON-escaped slashes.
+    pdf = "https://parish.example/download/19/bulletin/18800/bul-september-27-2026.pdf"
+    settings = '{"posts":{"1":{"data":{"guid":"%s"}}}}' % pdf.replace("/", "\\/")
+    data = base64.b64encode(settings.encode()).decode()
+    script = (
+        "<script>var FB3D_CLIENT_DATA=window.FB3D_CLIENT_DATA||[];"
+        f"FB3D_CLIENT_DATA.push('{data}');</script>"
+    )
+    assert _resolve({
+        HOME: '<a href="/bulletin/">Bulletin</a>',
+        f"{HOME}/bulletin/": f'<div class="_3d-flip-book"></div>{script}',
+    }) == pdf
+
+
+def test_base64_that_is_not_json_naming_a_pdf_is_ignored() -> None:
+    from pdf_extract.parish_sites.links import decoded_base64_json
+
+    no_pdf = _base64_json({"url": "https://parish.example/page"})
+    assert decoded_base64_json(f"x={no_pdf} y=eyJ!!notbase64 z=eyJhbGciOiJIUzI1NiJ9xx") == []
+
+
 def test_pdf_linked_by_script_wins_over_an_unrelated_footer_pdf() -> None:
     post = f"{HOME}/bulletin-27-september-2026/"
     pdf = f"{HOME}/wp-content/uploads/09-27-2026-Bulletin.pdf"
@@ -397,6 +563,51 @@ def test_a_link_titled_bulletin_beats_an_undated_first_pdf() -> None:
             '<a href="/_files/ugd/c3.pdf">Bulletin</a>'
         ),
     }) == f"{HOME}/_files/ugd/c3.pdf"
+
+
+def test_a_link_titled_this_weeks_bulletin_beats_one_titled_bulletin() -> None:
+    # St. Ignatius, Orrtanna: the Wix header links a 2018 issue as "Bulletin".
+    assert _resolve({
+        HOME: (
+            '<a href="/_files/ugd/old.pdf">Bulletin</a>'
+            '<a href="/_files/ugd/new.pdf">This Weeks Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/new.pdf"
+
+
+def test_a_dated_series_beats_an_undated_unlabelled_first_pdf() -> None:
+    # Our Lady of Peace, Hazleton lists a "Parish Consolidation" PDF above its
+    # weekly issues, the newest of which can be two weeks old.
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/Parish+Consolidation-1bcc83bd.pdf">Parish Consolidation</a>'
+            '<a href="/files/9.13.26.pdf">24th Sunday in Ordinary Time</a>'
+            '<a href="/files/9.6.26.pdf">23rd Sunday in Ordinary Time</a>'
+        ),
+    }) == f"{HOME}/files/9.13.26.pdf"
+
+
+def test_an_undated_first_pdf_labelled_bulletin_is_kept_over_a_dated_series() -> None:
+    # A bulletin overwritten each week under one name is not dated.
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/current-bulletin.pdf">This week</a>'
+            '<a href="/files/festival-9.13.26.pdf">Festival</a>'
+            '<a href="/files/picnic-9.6.26.pdf">Picnic</a>'
+        ),
+    }) == f"{HOME}/files/current-bulletin.pdf"
+
+
+def test_one_dated_pdf_does_not_make_a_series() -> None:
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            '<a href="/files/latest.pdf">Latest</a>'
+            '<a href="/files/festival-9.13.26.pdf">Festival</a>'
+        ),
+    }) == f"{HOME}/files/latest.pdf"
 
 
 def test_drive_files_listed_on_the_website_itself_are_read_there() -> None:
@@ -498,6 +709,104 @@ def test_concrete_cms_download_links_are_bulletins() -> None:
     assert source_url == f"{site}/download_file/view/4445/2079"
 
 
+def test_dotnetnuke_linkclick_downloads_are_bulletins() -> None:
+    # Saints Peter & Paul, Plains: each issue is a DNN file ticket, labelled by date.
+    def ticket(t: str) -> str:
+        return f"/LinkClick.aspx?fileticket={t}%3d&amp;tabid=2011&amp;portalid=34&amp;mid=3661"
+
+    assert _resolve({
+        HOME: '<a href="/Sunday-Bulletin">Sunday Bulletin</a>',
+        f"{HOME}/Sunday-Bulletin": (
+            f'<a href="{ticket("A")}">September 20, 2026</a><a href="{ticket("A")}">Download</a>'
+            f'<a href="{ticket("B")}">September 27, 2026</a><a href="{ticket("B")}">Download</a>'
+        ),
+    }) == f"{HOME}/LinkClick.aspx?fileticket=B%3d&tabid=2011&portalid=34&mid=3661"
+
+
+def test_godaddy_nebula_file_links_are_bulletins() -> None:
+    # St. Joseph, Matamoras: one hash-named file per Sunday, dated only in the
+    # link text, in no particular order.
+    def nebula(h: str) -> str:
+        return f"https://nebula.wsimg.com/{h * 32}?AccessKeyId=A3711114AD1870F3198A&amp;disposition=0"
+
+    assert _resolve({
+        HOME: '<a href="/bulletins-1.html">Bulletins</a>',
+        f"{HOME}/bulletins-1.html": (
+            f'<a href="{nebula("a")}">September 20, 2026</a>'
+            f'<a href="{nebula("b")}">September 27, 2026</a>'
+            f'<a href="{nebula("c")}">September 13, 2026</a>'
+        ),
+    }) == f"https://nebula.wsimg.com/{'b' * 32}?AccessKeyId=A3711114AD1870F3198A&disposition=0"
+
+
+def test_a_google_doc_is_downloaded_as_a_pdf() -> None:
+    # Most Holy Trinity, Susquehanna links each issue as a shared Google Doc.
+    doc = "https://docs.google.com/document/d/18ujWxlm2oDDbN16o-_x/edit?usp=sharing"
+    page = f"{HOME}/bulletin"
+    source_url, fetch_url = _resolve_other(
+        provider_id=page, reference_date=TODAY, recipe="page-pdfs",
+        page=_site({page: f'<a href="/bulletin">Bulletin</a><a href="{doc}"></a>'}),
+    )
+    assert source_url == doc
+    assert fetch_url == "https://docs.google.com/document/d/18ujWxlm2oDDbN16o-_x/export?format=pdf"
+
+
+# ── Bulletins posted as images ──────────────────────────────────────────────
+
+CDN = "https://images.squarespace-cdn.com/content/v1/56b2"
+_GALLERY = (
+    f'<img data-src="{CDN}/a1/2026+BULLETIN+COVER+TEMPLATE.jpg" '
+    f'data-image="{CDN}/a1/2026+BULLETIN+COVER+TEMPLATE.jpg">'
+    f'<img src="{CDN}/logo.png" alt="St. Mary">'
+    f'<img data-src="{CDN}/b2/Bulletin+2026+September+26-27.jpg?format=1500w" '
+    f'data-image="{CDN}/b2/Bulletin+2026+September+26-27.jpg">'
+    f'<img data-image="{CDN}/c3/Bulletin+2026+September+19-20.jpg">'
+)
+
+
+def test_a_bulletin_posted_as_an_image_is_read_by_recipe() -> None:
+    # St. Mary, Waymart: a Squarespace gallery of one image per weekend, after
+    # a cover template that is not an issue.
+    page = f"{HOME}/newbulletin"
+    link = build_latest_other_bulletin_links(
+        provider_id=page, reference_date=TODAY, page=_site({page: _GALLERY}),
+        recipe="page-images",
+    )
+    assert link.source_url == f"{CDN}/b2/Bulletin+2026+September+26-27.jpg"
+    assert link.how == f"page-images on {page}: current"
+
+
+def test_images_are_not_read_without_a_recipe() -> None:
+    page = f"{HOME}/newbulletin"
+    with pytest.raises(ValueError, match="No PDF links found"):
+        _resolve({HOME: '<a href="/newbulletin">Bulletin</a>', page: _GALLERY})
+
+
+def test_a_downloaded_image_is_kept_as_a_pdf(monkeypatch) -> None:
+    from io import BytesIO
+
+    from PIL import Image
+
+    from pdf_extract import fetch
+
+    jpeg = BytesIO()
+    Image.new("RGB", (300, 150), "white").save(jpeg, format="JPEG")
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(jpeg.getvalue()))
+    url = f"{CDN}/b2/Bulletin+2026+September+26-27.jpg"
+    pdf = fetch._download_pdf(fetch_url=url, source_url=url)
+    assert pdf.startswith(b"%PDF-")
+    # The same image makes the same PDF, so a re-fetch is seen as a duplicate.
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == pdf
+
+
+def test_a_download_that_is_neither_pdf_nor_image_is_left_as_it_is(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "_http_get", lambda url, **_: fetch._Response(b"<html>"))
+    url = f"{HOME}/bulletin.pdf"
+    assert fetch._download_pdf(fetch_url=url, source_url=url) == b"<html>"
+
+
 def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
     # Weebly's file host (St. Michael's, Cohoes) answers 429 to quick requests.
     from urllib.error import HTTPError
@@ -517,6 +826,36 @@ def test_a_download_answered_429_is_retried_once(monkeypatch) -> None:
     pdf = f"{HOME}/uploads/bulletin-2026-09-27.pdf"
     assert fetch._download_pdf(fetch_url=pdf, source_url=pdf) == b"%PDF-1.7"
     assert calls == [pdf, pdf]
+
+
+def test_a_website_that_is_the_bulletin_pdf_is_taken_as_it_is() -> None:
+    # No page to read: the diocese hosts the parish's one weekly file.
+    pdf = "https://www.rcdony.org/images/Harrisvillebulletin-1.pdf"
+    assert _resolve_other(provider_id=pdf, reference_date=TODAY, page=_site({})) == (pdf, pdf)
+
+
+def test_a_homepage_download_link_dated_this_week_is_the_bulletin() -> None:
+    # cathcommsbse.org: "Download File" links, the week's date only in the file name.
+    files = f"{HOME}/var/m_8/8d/8dc/64111"
+    assert _resolve({
+        HOME: (
+            f'<a href="{files}/1024129-Registration_for_RE-6512b.pdf?download">Download File</a>'
+            f'<a href="{files}/1024614-09-27-2026-aab32.pdf?download">Download File</a>'
+        ),
+    }) == f"{files}/1024614-09-27-2026-aab32.pdf?download"
+
+
+def test_a_publishers_listing_beats_pdfs_that_are_not_the_bulletin() -> None:
+    # St. Agnes, Lake Placid: a survey report beside "recent bulletins".
+    listing = "https://church-bulletin.org/?id=4047"
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f"{HOME}/bulletin": (
+            f'<a href="{listing}">recent bulletins</a>'
+            f'<a href="{HOME}/s/Gallup-ME25-2024.pdf">the complete survey report</a>'
+        ),
+        listing: LISTING_HTML,
+    }) == "https://www.church-bulletin.org/bulletin/saint-joseph-camillus-ny-13031/2026-09-27.pdf"
 
 
 def test_a_conditional_download_answered_304_brings_back_no_pdf(monkeypatch) -> None:
@@ -560,6 +899,24 @@ def test_a_304_to_an_unconditional_download_is_a_failure(monkeypatch) -> None:
         fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
 
 
+def test_a_bot_check_over_http_is_retried_over_https(monkeypatch) -> None:
+    from pdf_extract import fetch
+
+    asked: list[str] = []
+
+    def get(url: str, **_: object) -> fetch._Response:
+        asked.append(url)
+        if url.startswith("http://"):
+            return fetch._Response(b"<html><head><link rel=stylesheet href=/.well-known/sgcaptcha/>")
+        return fetch._Response(b"%PDF-1.5")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+    pdf = "http://example.org/wp-content/uploads/10.18.26-bulletin.pdf"
+    download = fetch._download_bulletin(fetch_url=pdf, source_url=pdf)
+    assert download.pdf == b"%PDF-1.5"
+    assert asked == [pdf, "https://example.org/wp-content/uploads/10.18.26-bulletin.pdf"]
+
+
 # ── Recipes ─────────────────────────────────────────────────────────────────
 
 def test_recipe_reads_collector_page_or_both() -> None:
@@ -575,6 +932,10 @@ def test_recipe_reads_collector_page_or_both() -> None:
         Recipe.parse("pdfs", website=HOME)
     with pytest.raises(ValueError, match="two pages"):
         Recipe.parse(f"{page} {HOME}", website=HOME)
+    # A page with spaces in its URL is written so that parse reads it back.
+    spaced = f"{HOME}/documents/Parish Bulletin - October 18 2026.pdf"
+    text = Recipe(spaced, "redirected-pdf").text(website=HOME)
+    assert Recipe.parse(text, website=HOME) == Recipe(spaced.replace(" ", "%20"), "redirected-pdf")
 
 
 def test_a_recipe_skips_the_homepage_and_runs_only_its_collector() -> None:
@@ -611,3 +972,284 @@ def test_a_recipe_written_differently_is_the_same_recipe() -> None:
     assert _same_recipe(f"{HOME}/b page-pdfs", source._replace(recipe=f"page-pdfs {HOME}/b"))
     assert not _same_recipe(f"page-pdfs {HOME}/b", source)
     assert not _same_recipe("page-pdfs", source._replace(recipe=""))
+
+
+def test_recipe_filename_filter_round_trips_and_distinguishes_publishers() -> None:
+    recipe = Recipe(HOME, "page-pdfs", filename="St-Annes-Bulletin*.pdf")
+    text = "page-pdfs filename=St-Annes-Bulletin*.pdf"
+    assert recipe.text(website=HOME) == text
+    assert Recipe.parse(text, website=HOME) == recipe
+    source = FetchSource(OTHER_TYPE, HOME, text)
+    assert _same_recipe(f"{text} {HOME}", source)
+    assert not _same_recipe("page-pdfs", source)
+    assert not _same_recipe("page-pdfs filename=STTHERESESBULLETIN*.pdf", source)
+    with pytest.raises(ValueError, match="nonempty glob"):
+        Recipe.parse("page-pdfs filename=", website=HOME)
+    with pytest.raises(ValueError, match="two filename filters"):
+        Recipe.parse(f"{text} filename=other*.pdf", website=HOME)
+
+
+@pytest.mark.parametrize("prefix", ["St-Annes-Bulletin", "STTHERESESBULLETIN"])
+@pytest.mark.parametrize("other_day", [18, 25])
+@pytest.mark.parametrize("other_first", [False, True])
+@pytest.mark.parametrize("reference_date", [date(2026, 10, 21), date(2026, 10, 26)])
+def test_recipe_selects_its_own_parish_on_a_shared_newest_first_page(
+    prefix: str, other_day: int, other_first: bool, reference_date: date,
+) -> None:
+    other = "STTHERESESBULLETIN" if prefix == "St-Annes-Bulletin" else "St-Annes-Bulletin"
+    own_link = f'<a href="/{prefix}-Oct-18-2026.pdf">October 18, 2026</a>'
+    other_link = f'<a href="/{other}-Oct-{other_day}-2026.pdf">October {other_day}, 2026</a>'
+    links = [other_link, own_link] if other_first else [own_link, other_link]
+    links.append(f'<a href="/{prefix}-Oct-4-2026.pdf">October 4, 2026</a>')
+    page = f"{HOME}/bulletins/"
+    recipe = f"page-pdfs {page} filename={prefix}*.pdf"
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=reference_date, page=_site({page: "".join(links)}),
+        recipe=recipe,
+    )
+    assert link.source_url == f"{HOME}/{prefix}-Oct-18-2026.pdf"
+    assert link.recipe == recipe
+
+
+def test_recipe_filename_filter_decodes_the_name_and_ignores_case_and_query() -> None:
+    pdf = f"{HOME}/files/st%2Dannes-bulletin-20260927.PDF?download=1"
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY,
+        page=_site({HOME: f'<a href="{pdf}">Bulletin September 27</a>'}),
+        recipe="page-pdfs filename=St-Annes-Bulletin*.pdf",
+    )
+    assert link.source_url == pdf
+
+
+def test_recipe_filename_filter_fails_when_only_the_other_parish_is_available() -> None:
+    with pytest.raises(ValueError, match="No PDF links matching filename"):
+        build_latest_other_bulletin_links(
+            provider_id=HOME, reference_date=TODAY,
+            page=_site({HOME: '<a href="/STTHERESESBULLETIN-20260927.pdf">Bulletin</a>'}),
+            recipe="page-pdfs filename=St-Annes-Bulletin*.pdf",
+        )
+
+
+def test_recipe_filename_filter_is_applied_to_a_direct_pdf() -> None:
+    pdf = f"{HOME}/STTHERESESBULLETIN-20260927.pdf"
+    link = build_latest_other_bulletin_links(
+        provider_id=pdf, reference_date=TODAY, page=_site({}),
+        recipe="filename=STTHERESESBULLETIN*.pdf",
+    )
+    assert link.source_url == pdf
+    assert "filename=STTHERESESBULLETIN*.pdf" in link.recipe
+    with pytest.raises(ValueError, match="does not match filename"):
+        build_latest_other_bulletin_links(
+            provider_id=pdf, reference_date=TODAY, page=_site({}),
+            recipe="filename=St-Annes-Bulletin*.pdf",
+        )
+
+
+def _wix_card(day: str, sunday: str, file: str) -> str:
+    return (
+        f'<div role="listitem"><div><p><span>{day}</span></p></div>'
+        f'<div><p>{sunday}</p></div>'
+        f'<div><a href="/_files/ugd/{file}.pdf" aria-label="View"><span>View</span></a></div></div>'
+    )
+
+
+def test_a_wix_card_dates_the_hash_named_pdf_it_links() -> None:
+    # St. Charles Borromeo, Ashland: a header "Coat of Arms" PDF, then a grid of
+    # cards, each a date, the Sunday's name and a "View" link to a hash-named PDF.
+    assert _resolve({
+        HOME: '<a href="/bulletins">Bulletins</a>',
+        f"{HOME}/bulletins": (
+            '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a>'
+            '<div role="list">'
+            + _wix_card("August 30, 2026", "Twenty-second Sunday in Ordinary Time", "23b1db_aa")
+            + _wix_card("September 27, 2026", "Twenty-sixth Sunday in Ordinary Time", "23b1db_bb")
+            + _wix_card("September 20, 2026", "Twenty-fifth Sunday in Ordinary Time", "23b1db_cc")
+            + "</div>"
+        ),
+    }) == f"{HOME}/_files/ugd/23b1db_bb.pdf"
+
+
+def test_a_card_naming_two_dates_does_not_date_its_link() -> None:
+    # An events card giving two days is no issue date: the link stays undated,
+    # and the PDF titled "Bulletin" wins.
+    assert _resolve({
+        HOME: (
+            '<div role="listitem"><p>Festival</p><p>September 27, 2026</p>'
+            '<p>October 4, 2026</p>'
+            '<a href="/_files/ugd/flyer.pdf">View</a></div>'
+            '<a href="/_files/ugd/c3.pdf">Bulletin</a>'
+        ),
+    }) == f"{HOME}/_files/ugd/c3.pdf"
+
+
+def test_a_page_whose_cards_render_late_is_read_again() -> None:
+    # St. Joseph the Worker, Frackville: on a busy run the Wix repeater is still
+    # empty when the page is first read, which finds only the header PDF.
+    bulletins = f"{HOME}/bulletins"
+    early = '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a><div role="list"></div>'
+    late = (
+        '<a href="/_files/ugd/23b1db_arms.pdf">Coat of Arms</a><div role="list">'
+        + _wix_card("September 27, 2026", "Twenty-sixth Sunday in Ordinary Time", "23b1db_bb")
+        + "</div>"
+    )
+
+    class LatePage(SnapshotPage):
+        def wait_for_timeout(self, timeout: int) -> None:
+            self._by_url[bulletins] = PageSnapshot(
+                requested_url=bulletins, final_url=bulletins, html=late,
+            )
+            self.goto(bulletins)
+
+    page = LatePage([
+        PageSnapshot(requested_url=HOME, final_url=HOME, html='<a href="/bulletins">Bulletins</a>'),
+        PageSnapshot(requested_url=bulletins, final_url=bulletins, html=early),
+    ])
+    source_url, _ = _resolve_other(provider_id=HOME, reference_date=TODAY, page=page)
+    assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
+
+
+def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
+    # A WordPress file name with an en dash used to raise UnicodeEncodeError
+    # when it was sent as the Referer of the next request.
+    from pdf_extract import fetch
+
+    seen = {}
+
+    class _Resp:
+        headers = {}
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *exc):
+            return False
+
+        def read(self):
+            return b"%PDF"
+
+    def fake_urlopen(req, timeout):
+        seen["referer"] = req.get_header("Referer")
+        return _Resp()
+
+    monkeypatch.setattr(fetch, "urlopen", fake_urlopen)
+    fetch._http_get("https://example.org/b.pdf", referer="https://example.org/Bulletin – October 18.pdf")
+    assert seen["referer"] == "https://example.org/Bulletin%20%E2%80%93%20October%2018.pdf"
+    seen["referer"].encode("latin-1")
+
+
+def test_document_base_url_honours_base_href():
+    from pdf_extract.parish_sites.collectors import document_base_url
+
+    html = '<html><head><base href="http://stjohneverettpa.org/"></head><body></body></html>'
+    page = "http://stjohneverettpa.org/Bulletins/"
+    assert document_base_url(html, page) == "http://stjohneverettpa.org/"
+    assert document_base_url("<html><body></body></html>", page) == page
+    assert document_base_url("<base target='_blank'>", page) == page
+
+
+def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():
+    ref = date(2026, 10, 21)
+    assert parse_date_from_texts(["10112026.jpg"], ref) == date(2026, 10, 11)
+    # YYYYMMDD still wins, and an id whose year is far off is no date.
+    assert parse_date_from_texts(["20261018.pdf"], ref) == date(2026, 10, 18)
+    assert parse_date_from_texts(["photo-12312011.jpg"], ref) is None
+
+
+@pytest.mark.parametrize("location", ["script", "served-embed", "late-render"])
+def test_other_publishers_current_pdf_cannot_hide_a_filtered_issue(location):
+    bulletins = f"{HOME}/bulletins/"
+    own = f"{HOME}/Anne-Bulletin-20260927.pdf"
+    other = '<a href="/Therese-Bulletin-20260927.pdf">September 27, 2026 Bulletin</a>'
+    script = f'<script>var diviElementLinkData = [{{"url":"{own}"}}];</script>'
+    initial = other + (script if location == "script" else
+                       '<div class="pdfemb-viewer"></div>' if location == "served-embed" else "")
+
+    class LatePage(SnapshotPage):
+        waited = False
+
+        def wait_for_timeout(self, timeout):
+            self.waited = True
+            if location == "late-render":
+                self._by_url[bulletins.rstrip("/").lower()] = PageSnapshot(
+                    bulletins, bulletins, other + script,
+                )
+                self.goto(bulletins)
+
+    page = LatePage([PageSnapshot(bulletins, bulletins, initial)],
+                    {bulletins: other + script})
+    link = build_latest_other_bulletin_links(
+        provider_id=HOME, reference_date=TODAY, page=page,
+        recipe=f"page-pdfs {bulletins} filename=Anne-Bulletin*.pdf",
+    )
+    assert link.source_url == own
+    assert link.fetch_url == own
+    assert page.waited is (location == "late-render")
+
+
+@pytest.mark.parametrize(('text', 'expected'), [
+    ('dougs-and-bottle-drive-10-26.pdf', date(2026, 10, 26)),
+    ('October-10-111-23.pdf', date(2026, 10, 10)),
+    ('10/25/206', None),
+    ('OCTOBER-3-4-26.pdf', date(2026, 10, 3)),
+    ('Sep-20-26.pdf', date(2026, 9, 20)),
+    ('2026-10-25.pdf', date(2026, 10, 25)),
+    ('10/25/1999', None),
+    ('October 25 2099', None),
+    ('20991025.pdf', None),
+    ('/bulletins/2099/October_25.pdf', None),
+])
+def test_dates_reject_implausible_and_ambiguous_years(text, expected) -> None:
+    assert parse_date_from_texts([text], date(2026, 10, 25)) == expected
+
+
+def test_st_michael_series_beats_month_year_flyer() -> None:
+    names = [
+        'dougs-and-bottle-drive-10-26.pdf', 'October-10-111-23.pdf',
+        'OCTOBER-3-4-26.pdf', 'Set-26-27-26.pdf', 'Sep-20-26.pdf',
+    ]
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{name}">{name}</a>' for name in names),
+    }, today=date(2026, 10, 25)) == f'{HOME}/s/October-10-111-23.pdf'
+
+
+@pytest.mark.parametrize(('text', 'today'), [
+    ('bulletin-7-26.pdf', date(2026, 7, 26)),
+    ('4-26 Bulletin.pdf', date(2026, 4, 26)),
+    ('4.26.pdf', date(2026, 4, 26)),
+    ('Bulletin 7/26', date(2026, 7, 26)),
+    ('bulletin-6-27.pdf', date(2027, 6, 27)),
+])
+def test_yearless_month_day_matching_year(text, today) -> None:
+    assert parse_date_from_texts([text], today) == today
+
+
+@pytest.mark.parametrize(('name', 'today'), [
+    ('4.26.pdf', date(2026, 4, 26)),
+    ('bulletin-10-26.pdf', date(2026, 10, 25)),
+    ('10-26-26.pdf', date(2026, 10, 25)),
+])
+def test_month_day_corroboration_preserves_bulletins(name, today) -> None:
+    names = [name, f'{today.year}-{today.month:02d}-10.pdf',
+             f'{today.year}-{today.month:02d}-03.pdf']
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{n}">{n}</a>' for n in names),
+    }, today=today) == f'{HOME}/s/{name}'
+
+
+def test_standalone_weekday_month_day_is_preserved() -> None:
+    name = '10-26.pdf'
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': f'<a href="/s/{name}">{name}</a>',
+    }, today=date(2026, 10, 25)) == f'{HOME}/s/{name}'
+
+
+@pytest.mark.parametrize('year', [2026, 2027])
+def test_weekday_month_day_yields_to_series_independently_of_year(year) -> None:
+    names = ['drive-10-26.pdf', f'October-10-{year}.pdf', f'October-3-{year}.pdf']
+    assert _resolve({
+        HOME: '<a href="/bulletin">Bulletin</a>',
+        f'{HOME}/bulletin': ''.join(f'<a href="/s/{n}">{n}</a>' for n in names),
+    }, today=date(year, 10, 25)) == f'{HOME}/s/October-10-{year}.pdf'

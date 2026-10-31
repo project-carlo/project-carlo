@@ -17,6 +17,7 @@ function weekly(day: string, start: number): EventSummary {
     page_number: null,
     note: null,
     weeks_of_month: [],
+    exclude_weeks: false,
     season: null,
   };
 }

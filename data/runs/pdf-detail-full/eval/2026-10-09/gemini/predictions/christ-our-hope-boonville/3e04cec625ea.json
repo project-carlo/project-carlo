@@ -1,0 +1,568 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "christ-our-hope-boonville",
+  "content_hash": "3e04cec625ea0aef47ced0b5e17532f642b835d08b9e1492fd32fece34e90efa",
+  "source_url": "https://www.christourhoperc.org/assets/Uploads/files/bulletin-files/Christ-Our-Hope-Bulletin-Template-1-26th.pdf",
+  "fetched_at": "2026-09-28T00:04:51Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-joseph-boonville",
+      "name": "St. Joseph Church",
+      "address": "108 Charles St., Boonville, NY 13309"
+    },
+    {
+      "slug": "st-mary-of-the-snows-otter-lake",
+      "name": "St. Mary of the Snows",
+      "address": "14040 State Route 28, Otter Lake, NY 13338"
+    },
+    {
+      "slug": "st-patrick-forestport",
+      "name": "St. Patrick Church",
+      "address": "12000 River St., Forestport, NY 13338"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/3e04cec625ea0aef47ced0b5e17532f642b835d08b9e1492fd32fece34e90efa-0f03330149a0.json",
+    "modified_at": "2026-09-28T00:18:31.188000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/christ-our-hope-boonville/3e04cec625ea.pdf",
+  "pdf_sha256": "8efeefb1caee15992691f6c7c6b7cd3d926e246713d3fc283d24c2be7d68a313",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-forestport",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-forestport",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-of-the-snows-otter-lake",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "6:00 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "6:00 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "6:00 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:00 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "6:00 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-forestport",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "07:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "7:15 AM",
+        "end_time": "7:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:15 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:15 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:15 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:15 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:15",
+      "end_time": "08:15",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:15 AM",
+        "end_time": "8:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Holy Hour",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "5:30 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-29",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Fr. Ward is away",
+      "raw": {
+        "date": "2026-09-29",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-boonville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "07:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Fr. Ward is away",
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "7:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-patrick-forestport",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Fr. Ward is away",
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2558,
+    "output_tokens": 1438
+  }
+}

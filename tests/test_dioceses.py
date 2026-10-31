@@ -219,6 +219,19 @@ def test_rename_moves_references(root: Path) -> None:
     assert "replaces" not in d.of(records.PARISH)["st-ann-town"]  # never promoted
 
 
+def test_last_mass_may_be_a_year_or_month_when_no_source_gives_the_day(root: Path) -> None:
+    _parish()
+    _church()
+    records.exclude_church("test", "st-ann-town", reason="closed", last_mass="2019-02")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path = root / "excluded" / "st-ann-town.md"
+    path.write_text(path.read_text().replace("last_mass: 2019-02", "last_mass: 2017"))
+    assert records.load("test").of(records.EXCLUDED)["st-ann-town"]["last_mass"] == "2017"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    path.write_text(path.read_text().replace("last_mass: 2017", "last_mass: 2017-13"))
+    assert any("last_mass" in e for e in records.validate("test")["dioceses"]["test"]["errors"])
+
+
 def test_exclude_turns_a_church_into_an_exclusion(root: Path) -> None:
     _parish()
     _church(roster=["gcatholic:1"])
@@ -319,7 +332,7 @@ def test_audit_sorts_groups_by_what_is_recorded(root: Path) -> None:
     _parish("c", group="Family #2", publication=["po-container:1/3"])
     _parish("d", group="Family #2")
     groups = {g["group"]: g["verdict"] for g in report.audit("test")["groups_spanning_rows"]}
-    assert groups["group: Family #1"].startswith("separate")
+    assert groups["group: Family #1"].startswith("unknown")
     assert groups["group: Family #2"].startswith("unknown")
 
 
@@ -459,6 +472,14 @@ def test_gcatholic_pages_parse() -> None:
                             "index_city": "Forestport", "group": "Christ our Hope Parish",
                             "kind": "Mission"}
     assert rows[1]["rite"] == "Greek-Melkite"
+    # A diocese across two states (Wilmington: DE and MD) adds ", DE" after the town.
+    two_states = rosters.parse_gcatholic_index(
+        '<tr id="L1"><td><span class="znote">Bear</span><span class="znote">, </span>'
+        '<span class="zregion">DE</span></td><td>'
+        '<a href="../usa-04/19333" title="Church of St. Elizabeth Ann Seton"><img></a> '
+        '<a href="../usa-04/19333" class="chw">St. Elizabeth Ann Seton</a></td></tr>')
+    assert two_states[0]["index_city"] == "Bear" and two_states[0]["group"] == ""
+    assert two_states[0]["index_state"] == "DE"
     detail = rosters.parse_gcatholic_detail(
         "<div>Type: Church Rite: Roman (Latin) History: 1914 Location: 87J67GR9+RC "
         "Address: 34 S Main St., Bainbridge, New York 13733-1215 Country: USA "
@@ -514,6 +535,77 @@ def test_a_pdf_that_does_not_parse_is_an_error_not_a_crash(monkeypatch) -> None:
     assert web.pdf_text("https://example.org/x.pdf")["error"].startswith("could not read")
 
 
+def test_probe_get_prints_text_saves_files_and_names_blocks(monkeypatch, tmp_path) -> None:
+    bodies = {
+        "https://a.org/": web.Response("https://a.org/", 200, "https://a.org/", "text/html",
+                                       b"<title>St. Ann</title><p>Mass 9 am</p>"),
+        "https://a.org/b.pdf": web.Response("https://a.org/b.pdf", 200, "https://a.org/b.pdf",
+                                            "application/pdf", b"%PDF-1.7 bulletin"),
+        "https://cf.org/": web.Response("https://cf.org/", 403, "https://cf.org/",
+                                        error="HTTP 403"),
+        "https://bv.net/x.pdf": web.Response(
+            "https://bv.net/x.pdf", error="SSLCertVerificationError: [SSL: "
+            "CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate"),
+    }
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: bodies[url])
+    assert "Mass 9 am" in web.get("https://a.org/")["text"]
+    # A PDF is read from the body already fetched, not fetched again by probe pdf.
+    assert web.get("https://a.org/b.pdf")["error"].startswith("could not read")
+    saved = web.get("https://a.org/b.pdf", out=tmp_path / "b.pdf")
+    assert (tmp_path / "b.pdf").read_bytes() == b"%PDF-1.7 bulletin" and saved["bytes"] == 17
+    assert "visit.py" in web.get("https://cf.org/")["note"]
+    assert "http://" in web.get("https://bv.net/x.pdf")["note"]
+
+
+def test_probe_get_saves_only_the_content_itself(monkeypatch, tmp_path) -> None:
+    challenge = b"<html><head><title>Just a moment...</title></head></html>"
+    bodies = {
+        "https://cf.org/b.pdf": web.Response("https://cf.org/b.pdf", 200, "https://cf.org/b.pdf",
+                                             "text/html", challenge),
+        "https://big.org/b.pdf": web.Response("https://big.org/b.pdf", 200, "", "application/pdf",
+                                              b"%PDF-1.7 part", truncated=True),
+        "https://a.org/x.jpg": web.Response("https://a.org/x.jpg", 200, "", "image/jpeg",
+                                            b"\xff\xd8\xff\xe0\x00JFIF"),
+        "https://busy.org/": web.Response("https://busy.org/", 429, error="HTTP 429"),
+    }
+    calls = []
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: calls.append(url) or bodies[url])
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    challenged = web.get("https://cf.org/b.pdf", out=tmp_path / "c.pdf")
+    assert "visit.py" in challenged["note"] and "saved" not in challenged
+    assert calls.count("https://cf.org/b.pdf") == 2  # retried once, as recheck does
+    cut = web.get("https://big.org/b.pdf", out=tmp_path / "big.pdf")
+    assert cut["truncated"] and "saved" not in cut and "cut off" in cut["note"]
+    assert not (tmp_path / "c.pdf").exists() and not (tmp_path / "big.pdf").exists()
+    image = web.get("https://a.org/x.jpg")
+    assert "text" not in image and "--out" in image["note"]
+    assert "browser won't help" in web.get("https://busy.org/")["note"]
+
+
+def test_recheck_reports_a_bot_check_page_as_unreachable(monkeypatch: pytest.MonkeyPatch) -> None:
+    loader = b"<html><head><title>One moment, please...</title></head><body>Loader</body></html>"
+    calls = []
+
+    def fake_fetch(url: str, **_: object) -> web.Response:
+        calls.append(url)
+        return web.Response(url, 200, url, "text/html", loader)
+
+    monkeypatch.setattr(web, "fetch", fake_fetch)
+    monkeypatch.setattr(web, "BOT_CHECK_RETRY_SECONDS", 0)
+    out = web.recheck_evidence([("church x", {"url": "https://gcatholic.org/c/1", "quote": "17 Grove St."})])
+    assert out[0]["result"] == "unreachable"
+    assert len(calls) == 2  # retried once before giving up
+
+
+def test_probe_url_takes_a_bare_domain(monkeypatch: pytest.MonkeyPatch) -> None:
+    page = b"<html><title>St. Ann Parish</title>Mass times, bulletin</html>"
+    monkeypatch.setattr(web, "_resolves", lambda host: True)
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: web.Response(url, 200, url, "text/html", page))
+    out = web.probe_url("stann.org")
+    assert out["url_tried"] == "https://stann.org" and out["verdict"] == "ok"
+    assert web.probe_url("not a url")["verdict"] == "BAD-URL"
+
+
 def test_quote_found_tolerates_layout_and_elisions() -> None:
     text = "Mass Schedule\n  Weekend: Sat. 5:10 pm\n   Sun. 7:30 am, 9:45 am\nSt. Bernard’s"
     assert web.quote_found("Weekend: Sat. 5:10 pm … Sun. 7:30 am", text)
@@ -537,6 +629,45 @@ def test_new_exclusion_from_a_roster_drops_coordinates(root: Path, tmp_path: Pat
 
 
 # ── CLI and the committed data ──────────────────────────────────────────────
+def test_fetch_check_reads_a_diocese_before_promotion(
+    root: Path, monkeypatch: pytest.MonkeyPatch, capsys,
+) -> None:
+    import contextlib
+
+    from pdf_extract import fetch_check
+    _parish()
+    _parish("st-bede", bulletin_provider="no_bulletin")
+    checked: list[str] = []
+
+    def check_one(slug, source, page, **_):
+        checked.append(slug)
+        return {"slug": slug, "provider": source.provider, "status": "ok", "verification": {
+            **{dimension: {"status": "unknown"} for dimension in (
+                "transport", "document_type", "publication_identity", "issue_date", "freshness",
+            )}, "overall": "unverified",
+        }}
+
+    monkeypatch.setattr(fetch_check, "launch_stealth_browser", contextlib.nullcontext)
+    monkeypatch.setattr(fetch_check, "_check_one", check_one)
+    # The live CSV only has live-parish; the diocese's unpromoted row is still found.
+    assert main(["fetch-check", "--diocese", "test", "--parish", "st-ann"]) == 0
+    assert checked == ["st-ann"]
+    assert '"ok": 1' in capsys.readouterr().out
+
+    # A no_bulletin parish has a record but nothing to fetch: say so, not "not found".
+    assert main(["fetch-check", "--diocese", "test", "--parish", "st-bede"]) == 1
+    assert "no_bulletin, so there is nothing to fetch: st-bede" in capsys.readouterr().err
+    # An empty --diocese (an unset shell variable) fails instead of reading parishes.csv.
+    assert main(["fetch-check", "--diocese", "", "--parish", "live-parish"]) == 1
+    assert "diocese must be a slug" in capsys.readouterr().err
+    # A record that does not parse is reported, not silently left out.
+    _write(root / "parishes" / "st-cyr.md", "no frontmatter here\n")
+    assert main(["fetch-check", "--diocese", "test"]) == 1
+    err = capsys.readouterr().err
+    assert "do not parse" in err and "st-cyr.md" in err
+    assert checked == ["st-ann"]
+
+
 def test_cli_prints_errors_without_a_traceback(root: Path, capsys) -> None:
     assert main(["diocese", "new", "church", "test", "--name", "X", "--parish", "nope"]) == 1
     err = capsys.readouterr().err
@@ -570,3 +701,196 @@ def test_rows_losing_events_come_from_the_database(root: Path, tmp_path: Path) -
     assert records._referenced_by_events(["st-live", "st-quiet", "st-gone"]) == ["st-live"]
     assert records._referenced_by_events([], ["retired"]) == ["st-moved"]
     assert records._referenced_by_events([], []) == []
+
+
+def test_promote_adds_parishes_as_fetch_only(root: Path) -> None:
+    _parish()
+    _church()
+    report_ = records.promote("test")
+    assert "1 new parishes are fetch-only" in report_["next"]
+    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
+    assert rows["live-parish"]["fetch_only"] == ""
+    assert rows["st-ann"]["fetch_only"] == "true"
+
+    # Switched on by hand, the row stays on when the diocese is promoted again.
+    text = storage.PARISHES_CSV_PATH.read_text(encoding="utf-8")
+    storage.PARISHES_CSV_PATH.write_text(text.replace(",true\n", ",\n"), encoding="utf-8")
+    _parish("st-bede")
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    rows = {r["slug"]: r for r in _live("PARISHES_CSV_PATH")}
+    assert [rows[s]["fetch_only"] for s in ("live-parish", "st-ann", "st-bede")] == [
+        "", "", "true",
+    ]
+
+
+SHARED_SITE = "https://family.example/bulletins"
+
+
+def _separate_review(peer="st-ann", **changes):
+    return {"parish": peer, "decision": "separate", "evidence": [{
+        **EVIDENCE[0], "note": "Ann's masthead lists Ann alone; Bede's masthead lists Bede alone.",
+    }], **changes}
+
+
+def _shared_parish(slug, filename, **fields):
+    return _parish(slug, website=SHARED_SITE, bulletin_provider="other",
+                   provider_id=f"page-pdfs {SHARED_SITE} filename={filename}", **fields)
+
+
+def test_reviewed_shared_site_survives_promotion_import_and_fetch(root, tmp_path):
+    from datetime import date
+
+    from pdf_extract import db, fetch, fetch_check
+
+    _shared_parish("st-ann", "Anne-Bulletin*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede-Bulletin*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test", dry_run=True)["parishes"]["added"] == ["st-ann", "st-bede"]
+    records.promote("test")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test")["parishes"]["updated"] == {}
+
+    html = ('<a href="/Bede-Bulletin-20260927.pdf">September 27, 2026 Bulletin</a>'
+            '<script>var file="https://family.example/Anne-Bulletin-20260927.pdf";</script>')
+    with storage.connect_db(tmp_path / "shared.db") as conn:
+        db.migrate(conn)
+        db.seed_reference_data(conn, parishes_csv=storage.PARISHES_CSV_PATH,
+                               churches_csv=storage.CHURCHES_CSV_PATH)
+        imported = conn.execute("SELECT * FROM parish WHERE slug IN ('st-ann', 'st-bede')").fetchall()
+        assert len(imported) == 2
+        assert {row["homepage_url"] for row in imported} == {SHARED_SITE}
+        for row in imported:
+            source = fetch._resolve_fetch_source(dict(row))
+            link = fetch_check._resolve(
+                source, reference_date=date(2026, 9, 26),
+                page=fetch_check.SnapshotPage([
+                    fetch_check.PageSnapshot(SHARED_SITE, SHARED_SITE, html),
+                ]),
+            )
+            expected = "Anne" if row["slug"] == "st-ann" else "Bede"
+            assert link.source_url == f"https://family.example/{expected}-Bulletin-20260927.pdf"
+
+
+def test_write_warns_about_a_review_audit_will_not_count(root):
+    _parish("st-ann")
+    weak = _separate_review(evidence=[{**EVIDENCE[0], "note": "Own masthead and Mass times."}])
+    result = _parish("st-bede", publication_reviews=[weak])
+    assert any("audit won't count this review (it doesn't say whose bulletin it is)" in w
+               for w in result["warnings"])
+    assert not any("audit won't count" in w for w in _parish(
+        "st-cecilia", publication_reviews=[_separate_review()])["warnings"])
+
+
+@pytest.mark.parametrize("filename,reviews", [
+    ("Bede*.pdf", []),
+    ("Bede*.pdf", [_separate_review(evidence=[{**EVIDENCE[0], "note": "Different URL ids."}])]),
+    ("Bede*.pdf", [_separate_review(decision="shared")]),
+    ("anne-bulletin*.PDF", [_separate_review()]),
+    ("*.pdf", [_separate_review()]),
+    ("Anne*.pdf", [_separate_review()]),
+    ("Anne-Bulletin-2026*.pdf", [_separate_review()]),
+])
+def test_shared_site_requires_supported_review_and_provably_disjoint_filters(root, filename, reviews):
+    _shared_parish("st-ann", "Anne-Bulletin*.pdf")
+    with pytest.raises(DioceseError, match="website also used"):
+        _shared_parish("st-bede", filename, publication_reviews=reviews)
+    assert not (root / "parishes/st-bede.md").exists()
+
+
+def test_shared_site_checks_every_peer_and_preserves_publication_uniqueness(root):
+    _shared_parish("st-ann", "Anne*.pdf", publication=["po-container:14/0434"])
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    with pytest.raises(DioceseError, match="website also used by parish 'st-ann'"):
+        _shared_parish("st-cyr", "Cyr*.pdf", publication_reviews=[_separate_review("st-bede")])
+    with pytest.raises(DioceseError, match="both publish"):
+        _shared_parish("st-cyr", "Cyr*.pdf", publication=["po-container:14/0434"],
+                       publication_reviews=[_separate_review(), _separate_review("st-bede")])
+    _shared_parish("st-cyr", "Cyr*.pdf",
+                   publication_reviews=[_separate_review(), _separate_review("st-bede")])
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+
+def test_shared_site_does_not_override_external_csv_or_diocese_claims(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    with storage.PARISHES_CSV_PATH.open("a") as file:
+        file.write(f"outside,Outside,{SHARED_SITE},other,page-pdfs\n")
+    errors = records.validate("test")["dioceses"]["test"]["errors"]
+    assert sum("row 'outside'" in error for error in errors) == 2
+    records.init_diocese("other", name="Other")
+    with pytest.raises(DioceseError, match="diocese 'test'"):
+        records.new_record("other", "parish", {
+            "name": "Another", "website": SHARED_SITE, "bulletin_provider": "other",
+            "provider_id": "page-pdfs filename=Another*.pdf", "evidence": EVIDENCE,
+        }, slug="another", body="Another publisher.")
+
+
+@pytest.mark.parametrize("keep_sibling", [False, True])
+def test_promoted_shared_site_can_merge_publishers_then_retire_the_source(root, keep_sibling):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    if keep_sibling:
+        _shared_parish("st-cyr", "Cyr*.pdf",
+                       publication_reviews=[_separate_review(), _separate_review("st-bede")])
+        _church("st-cyr-town", parish="st-cyr")
+    records.promote("test")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+    merged = records.merge_parishes("test", ["st-bede"], "st-ann",
+                                    note="The new masthead now covers Ann and Bede together.")
+    assert merged["moved_churches"] == ["st-bede-town"]
+    assert not (root / "parishes/st-bede.md").exists()
+    assert "st-bede" in records.load("test").of(records.PARISH)["st-ann"]["replaces"]
+    assert "st-bede" in {r["slug"] for r in _live("PARISHES_CSV_PATH")}
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    assert records.promote("test", dry_run=True)["parishes"]["removed"] == ["st-bede"]
+    assert records.promote("test")["parishes"]["removed"] == ["st-bede"]
+    assert {r["slug"] for r in _live("PARISHES_CSV_PATH")} == (
+        {"live-parish", "st-ann", "st-cyr"} if keep_sibling else {"live-parish", "st-ann"}
+    )
+    parents = {r["slug"]: r["parish_id"] for r in _live("CHURCHES_CSV_PATH")}
+    assert parents["st-ann-town"] == parents["st-bede-town"] == "st-ann"
+    if keep_sibling:
+        assert parents["st-cyr-town"] == "st-cyr"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+
+
+def test_pending_shared_site_retirement_does_not_hide_an_unrelated_live_row(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    records.merge_parishes("test", ["st-bede"], "st-ann")
+    with storage.PARISHES_CSV_PATH.open("a") as file:
+        file.write(f"outside,Outside,{SHARED_SITE},other,page-pdfs\n")
+    errors = records.validate("test")["dioceses"]["test"]["errors"]
+    assert any("row 'outside'" in error for error in errors)
+    assert not any("row 'st-bede'" in error for error in errors)
+    with pytest.raises(DioceseError, match="row 'outside'"):
+        records.promote("test")
+    assert {r["slug"] for r in _live("PARISHES_CSV_PATH")} == {
+        "live-parish", "st-ann", "st-bede", "outside",
+    }
+
+
+def test_promoted_shared_site_can_rename_a_publisher_before_promotion(root):
+    _shared_parish("st-ann", "Anne*.pdf")
+    _church()
+    _shared_parish("st-bede", "Bede*.pdf", publication_reviews=[_separate_review()])
+    _church("st-bede-town", parish="st-bede")
+    records.promote("test")
+    records.rename_record("test", "parish", "st-ann", "st-ann-town")
+    assert not records.validate("test")["dioceses"]["test"]["errors"]
+    promoted = records.promote("test")
+    assert promoted["parishes"]["removed"] == ["st-ann"]
+    assert promoted["parishes"]["added"] == ["st-ann-town"]
+    parents = {r["slug"]: r["parish_id"] for r in _live("CHURCHES_CSV_PATH")}
+    assert parents["st-ann-town"] == "st-ann-town"
+    assert parents["st-bede-town"] == "st-bede"
+    assert not records.validate("test")["dioceses"]["test"]["errors"]

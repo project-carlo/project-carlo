@@ -1,0 +1,101 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-stanislaus-our-lady-of-mount-carmel-amsterdam",
+  "content_hash": "2e44b95d182ea2a0bba3bc76388a34bdab55686d9396925314280f4f2a69a3fd",
+  "source_url": "https://parishesonline.com/publication-page/the-parish-of-saint-joseph-saint-michael-our-lady-of-mt-carmel?selectedPublication=https://container.parishesonline.com/bulletins/03/0895/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 15098,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 972,
+    "reasoning_tokens": 553
+  },
+  "seconds": 10.954,
+  "response_id": "resp_0f9d184131214248016ac9137f0fac87d28ef1b4c613a4f9ca",
+  "events": [
+    {
+      "church_slug": "st-stanislaus-amsterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-stanislaus-amsterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-mount-carmel-amsterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-mount-carmel-amsterdam",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "6ea18b108a7ae6d8e80c324658934d5a4436f1bccd1191b2696e1db8881b43f9"
+}

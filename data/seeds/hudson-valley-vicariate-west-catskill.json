@@ -1,0 +1,1821 @@
+{
+  "schema_version": 1,
+  "parish_slug": "hudson-valley-vicariate-west-catskill",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:26:03Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T01:02:47Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "The newest bulletin (Oct 24) is a four-church bulletin (Catskill, Athens, Coxsackie, Ravena) with new weekend, weekday, Reconciliation and Adoration schedules; St. Patrick's Ravena belongs to another parish and is excluded. The old 1st and 3rd Thursday Coxsackie confession and the older Saturday confession times are superseded by the new list. The Mass Times box gives Catskill as 66 Williams Street while the church list says 157 Bridge St.; it is attached to the only Catskill church. Open: whether the older bulletins' Sunday Masses at Haines Falls and Palenville, absent from the newest bulletin, still belong here.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b38a1f96350d928f48c34b4a122a404e99be9231a0da6f38357ed40a11e3a4e1",
+      "fetched_at": "2026-10-25T13:26:03Z",
+      "published_date": "2026-10-24",
+      "read": true
+    },
+    {
+      "content_hash": "8e59518b61da78041cb4f17a2751d2ee3ca2dfe04eee5c01be46197e63458f4d",
+      "fetched_at": "2026-10-11T16:32:02Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "cfe1dc10dc90eb0d404b3ede91532abc2533b6fbd48c7afb9f0ccce0727186e8",
+      "fetched_at": "2026-09-28T21:58:46Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's, 66 Williams Street, Catskill: Sunday 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Sunday, October 25 Catskill 8:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Patrick's Catskill Mass Times: Sunday 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Patrick's Catskill Mass Times: Sunday 8:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Sunday 08:45 st-patrick-catskill",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 08:45 st-patrick-catskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 08:45 st-patrick-catskill",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass table of the newest bulletin and in the Mass Times box of both older bulletins. The box gives 66 Williams Street, Catskill, while the church list gives 157 Bridge St.; St. Patrick's is the only Catskill church, so it is attached to st-patrick-catskill (R21).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's Catskill: 2nd, 4th & 5th Saturday 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Saturday, October 24 Catskill 4:00 pm; Saturday, October 31 Catskill 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Patrick's Catskill: 2nd 4th & 5th Saturday 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Patrick's Catskill: 2nd 4th & 5th Saturday 4 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Saturday 16:00 st-patrick-catskill  “2nd, 4th & 5th Saturday of month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Saturday 16:00 st-patrick-catskill  “2nd, 4th, & 5th Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Saturday 16:00 st-patrick-catskill  “2nd, 4th, and 5th Saturdays of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: named by week of the month in the newest bulletin and both older ones; Oct 24 (4th) and Oct 31 (5th) intentions fit.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's, 24 N. Washington Street, Athens: Sunday 10:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Sunday, October 25 Athens 10:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Patrick's Athens Mass Times: Sunday 10:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Patrick's Athens Mass Times: Sunday 10:45 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Sunday 10:45 st-patrick-athens",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 10:45 st-patrick-athens",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 10:45 st-patrick-athens",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass table of the newest bulletin and in both older Mass Times boxes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's Athens: 1st & 3rd Saturday 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Patrick's Athens: 1st & 3rd Saturday 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Patrick's Athens: 1st & 3rd Saturday 4 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Saturday 16:00 st-patrick-athens  “1st & 3rd Saturday of month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Saturday 16:00 st-patrick-athens  “1st & 3rd Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Saturday 16:00 st-patrick-athens  “1st and 3rd Saturdays of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: named by week of the month in the newest bulletin and both older ones.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Mary's, 80 Mansion Street, Coxsackie: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Sunday, October 25 Coxsackie 7:30 am; Coxsackie 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Mary's Coxsackie Mass Times: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Mary's Coxsackie Mass Times: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Sunday 07:30 st-mary-coxsackie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 07:30 st-mary-coxsackie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 07:30 st-mary-coxsackie",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass table of the newest bulletin and in both older Mass Times boxes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Mary's, 80 Mansion Street, Coxsackie: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Sunday, October 25 Coxsackie 7:30 am; Coxsackie 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "St. Mary's Coxsackie Mass Times: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "St. Mary's Coxsackie Mass Times: Sunday 7:30 AM; Sunday 11:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Sunday 11:30 st-mary-coxsackie",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 11:30 st-mary-coxsackie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 11:30 st-mary-coxsackie",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass table of the newest bulletin and in both older Mass Times boxes.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Patrick's Catskill: Tuesday 8:30 AM; Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Tuesday, October 27 Catskill 8:30 am; Wednesday, October 28 Catskill 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Tuesday 08:30 st-patrick-catskill",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table, with the Oct 27 and 28 intentions. The two older bulletins print no weekday Masses (read p1-p2 and searched), so none contradicts; the '*New' label announces the schedule rather than a later start (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Patrick's Catskill: Tuesday 8:30 AM; Wednesday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Tuesday, October 27 Catskill 8:30 am; Wednesday, October 28 Catskill 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Wednesday 08:30 st-patrick-catskill",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table, with the Oct 27 and 28 intentions. The two older bulletins print no weekday Masses (read p1-p2 and searched), so none contradicts; the '*New' label announces the schedule rather than a later start (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Patrick's Athens: Thursday 8:30 AM; Friday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Thursday 08:30 st-patrick-athens",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table. The older bulletins print no weekday Masses, so none contradicts; the '*New' label announces the schedule (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Patrick's Athens: Thursday 8:30 AM; Friday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Friday 08:30 st-patrick-athens",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table. The older bulletins print no weekday Masses, so none contradicts; the '*New' label announces the schedule (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Mary's Coxsackie: Thursday 9:00 AM; Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Thursday, October 29 Coxsackie 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Thursday 09:00 st-mary-coxsackie",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table, with the Oct 29 intention. The older bulletins print no weekday Masses, so none contradicts; the '*New' label announces the schedule (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Weekday Mass Times, St. Mary's Coxsackie: Thursday 9:00 AM; Friday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 3,
+          "said": "Thursday, October 29 Coxsackie 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly mass Friday 09:00 st-mary-coxsackie",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the newest bulletin's weekday table, with the Oct 29 intention. The older bulletins print no weekday Masses, so none contradicts; the '*New' label announces the schedule (R20 does not apply).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Patrick's in Catskill: Tuesday & Wednesday after 8:30 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Tuesday 09:00 st-patrick-catskill  “After 8:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 8:30 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Patrick's in Catskill: Tuesday & Wednesday after 8:30 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Wednesday 09:00 st-patrick-catskill  “After 8:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 8:30 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth",
+          "fifth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's in Catskill: 2nd, 4th & 5th Saturday 3:15 - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 2,
+          "said": "St. Patrick's in Catskill: 2nd, 4th & 5th Saturday 3:00 - 3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 2,
+          "said": "St. Patrick's in Catskill: 2nd, 4th & 5th Saturday 3:00 - 3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Saturday 15:15–15:45 st-patrick-catskill  “2nd, 4th & 5th Saturday of month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly confession Saturday 15:00–15:30 st-patrick-catskill  “2nd, 4th, & 5th Saturday of the month”  (a different time)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly confession Saturday 15:00–15:30 st-patrick-catskill  “2nd, 4th, and 5th Saturdays of the month”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R40: the newest bulletin's *New Reconciliation Schedule gives 3:15-3:45; the older 3:00-3:30 is superseded (history reads the old time, R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Mary's in Coxsackie: Thursday & Friday after 9 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Thursday 09:30 st-mary-coxsackie  “After 9:00 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 9:00 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Mary's in Coxsackie: Thursday & Friday after 9 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Friday 09:30 st-mary-coxsackie  “After 9:00 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 9:00 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Patrick's in Athens: Thursday & Friday after 8:30 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Thursday 09:00 st-patrick-athens  “After 8:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 8:30 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After 8:30 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Patrick's in Athens: Thursday & Friday after 8:30 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Friday 09:00 st-patrick-athens  “After 8:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: after a weekday Mass with no clock time, 30 minutes after the 8:30 AM Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's in Athens: 1st & 3rd Saturday 3:15 - 3:45 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 2,
+          "said": "St. Patrick's in Athens: 1st & 3rd Saturday 3:00 - 3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 2,
+          "said": "St. Patrick's in Athens: 1st & 3rd Saturday 3:00 - 3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly confession Saturday 15:15–15:45 st-patrick-athens  “1st & 3rd Saturday of month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly confession Saturday 15:00–15:30 st-patrick-athens  “1st & 3rd Saturday of the month”  (a different time)",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly confession Saturday 15:00–15:30 st-patrick-athens  “1st and 3rd Saturdays of the month”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R40: the newest bulletin's *New Reconciliation Schedule gives 3:15-3:45; the older 3:00-3:30 is superseded (history reads the old time, R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Patrick's in Catskill: Tuesday, 7:30 AM (followed by Mass); Wednesday, 7:30 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Tuesday 07:30–08:30 st-patrick-catskill  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Patrick's in Catskill: Tuesday, 7:30 AM (followed by Mass); Wednesday, 7:30 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Wednesday 07:30–08:30 st-patrick-catskill  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's in Catskill: 1st Friday of month 5:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Friday 17:00 st-patrick-catskill  “1st Friday of month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: a named monthly Adoration printed in the newest bulletin's *New Eucharistic Adoration Schedule (R12 is not needed; the bulletin prints it). No end time is printed and the 'hour before weekday Mass' line does not apply to a 5:00 PM start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Patrick's in Athens: Thursday, 7:30 AM (followed by Mass); Friday, 7:30 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Thursday 07:30–08:30 st-patrick-athens  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Patrick's in Athens: Thursday, 7:30 AM (followed by Mass); Friday, 7:30 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Friday 07:30–08:30 st-patrick-athens  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 8:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Mary's in Coxsackie: Thursday, 8:00 AM (followed by Mass); Friday, 8:00 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Thursday 08:00–09:00 st-mary-coxsackie  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 9:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Eucharistic Adoration Schedule: There will be an hour of Adoration before each weekday Mass. St. Mary's in Coxsackie: Thursday, 8:00 AM (followed by Mass); Friday, 8:00 AM (followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Friday 08:00–09:00 st-mary-coxsackie  “Hour of Adoration before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Times: the start is printed and the bulletin says an hour before the Mass, so it ends at 9:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Mary's in Coxsackie: Monday, 8:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Monday 08:00 st-mary-coxsackie",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Adoration schedule. No Mass follows it (St. Mary's has no Monday Mass), so no hour-before-Mass end time applies and none is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Followed by Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Mary's in Coxsackie: Tuesday, 5:30 PM (followed by Rosary)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "weekly adoration Tuesday 17:30 st-mary-coxsackie  “Followed by Rosary”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the newest bulletin's Adoration schedule. It is not before a Mass, so no end time is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-athens",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 5,
+          "said": "We will have two All Souls Day Masses: Monday, November 2 @ 6pm in Athens"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "specific_date mass 2026-11-02 18:00 st-patrick-athens  “All Souls Day”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: a dated All Souls Day Mass on or after as_of at Athens, open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-catskill",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-12",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass for Fr. Stephen, Bishop Mark"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 5,
+          "said": "Bishop Mark installs Father Stephen as Pastor of the Community of Saint Patrick Athens/Catskill on Thursday, November 12 at 6pm at St. Patrick's in Catskill. Please join us"
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "specific_date mass 2026-11-12 18:00 st-patrick-catskill  “Installation Mass for Fr. Stephen”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: a dated installation Mass at Catskill on or after as_of; the bulletin invites everyone, so it is open (POLICY, closed Masses).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-24",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass for Fr. Stephen, Bishop Mark"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 5,
+          "said": "Please join us as Bishop Mark installs Father Stephen as Pastor of the parishes of St. Mary's and the Church of St. Patrick in Ravena on Tuesday, November 24 at 6pm at St. Mary's in Coxsackie."
+        },
+        {
+          "source": "history",
+          "bulletin": "b38a1f96350d",
+          "said": "specific_date mass 2026-11-24 18:00 st-mary-coxsackie  “Installation Mass for Fr. Stephen”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: a dated installation Mass at Coxsackie on or after as_of; the bulletin invites everyone, so it is open.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's, 21 Main Street, Ravena: Saturday 4:30 PM"
+        }
+      ],
+      "rationale": "R22: St. Patrick's Ravena is another parish's church (st-patrick-ravena); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's, 21 Main Street, Ravena: Sunday 9:30 AM"
+        }
+      ],
+      "rationale": "R22: St. Patrick's Ravena is another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "St. Patrick's Ravena: weekday Masses Monday, Tuesday, Wednesday 9:00 AM; Adoration Mon-Wed 8:00 AM and 1st Sunday 6:30 PM; Reconciliation Mon-Wed after 9 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 5,
+          "said": "Monday, November 2 @ 6pm in Ravena (All Souls Day Mass)"
+        }
+      ],
+      "rationale": "R22: all of these are held at St. Patrick's Ravena, another parish's church; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-coxsackie",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 2,
+          "said": "St. Mary's in Coxsackie: 1st & 3rd Thursday 5:30 - 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 2,
+          "said": "St. Mary's in Coxsackie: 1st & 3rd Thursday 5:30 - 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "*New Reconciliation Schedule, St. Mary's in Coxsackie: Thursday & Friday after 9 AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-coxsackie  “1st & 3rd Thursday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly confession Thursday 17:30–18:30 st-mary-coxsackie  “1st and 3rd Thursdays of the month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R40: the newest bulletin's explicit *New Reconciliation Schedule lists only Thursday and Friday after 9 AM Mass for Coxsackie, replacing the older 1st & 3rd Thursday evening hour (the Saturday times at Athens and Catskill changed in the same list). History reads the old slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 2,
+          "said": "Liturgy of the Hours Morning Prayer - Wednesday 8:00 AM at St. Mary's in Coxsackie"
+        }
+      ],
+      "rationale": "R24: Morning Prayer is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b38a1f96",
+          "page": 5,
+          "said": "All are invited to the Cathedral of the Immaculate Conception in Albany on Sunday, October 25 at 2pm, where the Sacrament of Confirmation will be conferred"
+        }
+      ],
+      "rationale": "R22: the Confirmation Mass is at the Cathedral in Albany, not one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "Immaculate Conception Haines Fall, 55 North Lake Road: Mass Time Sunday 11:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "Immaculate Conception Haines Fall, 55 North Lake Road: Mass Time Sunday 11:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-haines-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 11:00 immaculate-conception-haines-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: both older bulletins print it, but the newest bulletin (Four Churches - One Mission: Catskill, Athens, Coxsackie, Ravena) does not mention Haines Falls or Palenville at all, and the older issues are two weeks apart, so R36 does not apply. The approved St. Theresa Windham seed treats both as another parish's churches (Sacred Heart-Immaculate Conception), though the church list assigns them to this parish. Leaning leave out, since this bulletin no longer covers them.",
+      "question": "Keep the Sunday Masses at Haines Falls (11:00) and Palenville (9:00)?",
+      "options": [
+        {
+          "label": "Keep the Sunday Mass",
+          "entry": {
+            "church_slug": "immaculate-conception-haines-falls",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "haines-palenville"
+    },
+    {
+      "id": "s40",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "8e59518b",
+          "page": 1,
+          "said": "Sacred Heart Palenville, 710 NY-32A: Mass Time Sunday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cfe1dc10",
+          "page": 1,
+          "said": "Sacred Heart Palenville, 710 NY-32A: Mass Time Sunday 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "8e59518b61da",
+          "said": "weekly mass Sunday 09:00 sacred-heart-palenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cfe1dc10dc90",
+          "said": "weekly mass Sunday 09:00 sacred-heart-palenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: both older bulletins print it, but the newest bulletin (Four Churches - One Mission: Catskill, Athens, Coxsackie, Ravena) does not mention Haines Falls or Palenville at all, and the older issues are two weeks apart, so R36 does not apply. The approved St. Theresa Windham seed treats both as another parish's churches (Sacred Heart-Immaculate Conception), though the church list assigns them to this parish. Leaning leave out, since this bulletin no longer covers them.",
+      "question": "Keep the Sunday Masses at Haines Falls (11:00) and Palenville (9:00)?",
+      "options": [
+        {
+          "label": "Keep the Sunday Mass",
+          "entry": {
+            "church_slug": "sacred-heart-palenville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null,
+      "group": "haines-palenville"
+    }
+  ]
+}

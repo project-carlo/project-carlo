@@ -1,0 +1,479 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-annunciation-queensbury",
+  "status": "approved",
+  "as_of": "2026-10-11T16:37:53Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:17Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Weekend Masses (Sat 4 PM, Sun 8 AM and 11:30 AM), Saturday 3:15-3:45 PM Reconciliation and Friday 7-8 PM Adoration are printed clearly on page 1 of the newest bulletin. Tuesday 7:30 AM Mass is weekly (dated in three bulletins). The Monday 7:30 AM Mass is not printed in the newest bulletin, which says no Mass on Monday Oct 12 (Columbus Day); recorded that cancellation and left the weekly Monday slot as a question. Website holy-day times (7:30 AM and 7 PM) have no dates and are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0f6964195d54206389a055a67e92b55810f174b9d0bf596761237e481928c461",
+      "fetched_at": "2026-10-11T16:37:53Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "357188148477bfee10ea27d3a22cb2b3fbb2ee0c2e540db4565668b50d509dab",
+      "fetched_at": "2026-10-04T14:50:14Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "46c3f354a4fe6acedbbc91268e18328ea703ecef16319c77ff2a7b95e60d7cae",
+      "fetched_at": "2026-09-28T22:00:23Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 1,
+          "said": "Mass Schedule: Saturday 4 PM, Sunday 8 AM, Sunday 11:30 AM."
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1; the page 2 intentions list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 1,
+          "said": "Sunday 8 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly mass Sunday 08:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "weekly mass Sunday 08:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly mass Sunday 08:00 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 1,
+          "said": "Sunday 11:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly mass Sunday 11:30 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "weekly mass Sunday 11:30 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly mass Sunday 11:30 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 1,
+          "said": "Reconciliation: Saturdays 3:15 PM to 3:45 PM or by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly confession Saturday 15:15–15:45 our-lady-of-the-annunciation-queensbury",
+          "page": 1
+        }
+      ],
+      "rationale": "Clock times printed; the by-appointment part has no time and is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Rosary at 7:40 PM"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 1,
+          "said": "Weekly Adoration Fridays: 7 PM to 8 PM, recitation of the Rosary 7:40 PM to 8 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 3,
+          "said": "October 16th - 7 PM to 8 PM - Weekly Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly adoration Friday 19:00–20:00 our-lady-of-the-annunciation-queensbury  “Includes Rosary at 7:40 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "weekly adoration Friday 19:00–20:00 our-lady-of-the-annunciation-queensbury  “Includes recitation of the Rosary at 7:40 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly adoration Friday 19:00–20:00 our-lady-of-the-annunciation-queensbury  “Includes Rosary at 7:40 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed weekly on page 1 and in the page 3 calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 2,
+          "said": "Tuesday, Oct. 13th 7:30 Ralph Cerasuolo (Living)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "357188148477",
+          "page": 2,
+          "said": "Tuesday, Oct. 6th 7:30 Charlie Porto"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46c3f354a4fe",
+          "page": 2,
+          "said": "Tuesday, Sept. 29th 7:30 Charlie Porto"
+        },
+        {
+          "source": "history",
+          "bulletin": "0f6964195d54",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-the-annunciation-queensbury",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "specific_date mass 2026-10-06 07:30 our-lady-of-the-annunciation-queensbury",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-the-annunciation-queensbury",
+          "page": 2
+        }
+      ],
+      "rationale": "Tuesday 7:30 AM Mass appears dated in three consecutive bulletins (Sep 29, Oct 6, Oct 13), so it is the regular weekly Mass (policy rule 4). The parish website also lists weekday Masses Monday and Tuesday at 7:30 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 2,
+          "said": "Monday, Oct. 12th No Mass at OLA"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 3,
+          "said": "October 12th - Columbus Day. Church Closed. No Meetings"
+        }
+      ],
+      "rationale": "The newest bulletin cancels the Monday Mass for Columbus Day. The time 7:30 AM is the Monday time of the two earlier bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-annunciation-queensbury",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "357188148477",
+          "page": 2,
+          "said": "Monday, Oct. 5th ... 7:30 John Dziedzic (Living)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46c3f354a4fe",
+          "page": 2,
+          "said": "Monday, Sept. 28th ... 7:30 For the People"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0f6964195d54",
+          "page": 2,
+          "said": "Monday, Oct. 12th No Mass at OLA"
+        },
+        {
+          "source": "website",
+          "url": "https://www.olaqueensbury.org",
+          "said": "Weekdays: Monday and Tuesday at 7:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "357188148477",
+          "said": "specific_date mass 2026-10-05 07:30 our-lady-of-the-annunciation-queensbury",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "46c3f354a4fe",
+          "said": "weekly mass Monday 07:30 our-lady-of-the-annunciation-queensbury",
+          "page": 2
+        }
+      ],
+      "rationale": "Monday 7:30 AM Mass is dated in the two older bulletins (Sep 28, Oct 5) and the website lists it weekly, but the newest bulletin prints no Monday Mass, only 'No Mass at OLA' for the Columbus Day Monday. Policy asks a human to confirm a slot the newest bulletin does not print.\n\nReview 2026-10-22: Include weekly Monday 7:30 AM Mass; keep the explicit Oct 12 cancellation. R18 covers a holiday interruption.",
+      "question": "Keep a weekly Monday 7:30 AM Mass at Our Lady of the Annunciation?",
+      "options": [
+        {
+          "label": "Mondays 7:30 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "our-lady-of-the-annunciation-queensbury",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    }
+  ]
+}

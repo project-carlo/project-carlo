@@ -272,6 +272,7 @@ def test_gemini_rows_carry_schema_v2_qualifiers_and_problems():
     assert rows[0]["day_of_week"] == "Friday"
     assert rows[0]["start_time"] == "12:00"
     assert rows[0]["weeks_of_month"] == ["first", "last"]
+    assert rows[0]["exclude_weeks"] is False
     assert rows[0]["season"] == {"start_month": 9, "start_day": None, "end_month": 5,
                                  "end_day": None}
     assert rows[0]["problems"] == []
@@ -290,6 +291,23 @@ def test_a_complete_label_is_valid():
     ])
     label["published_date"] = "2026-09-27"
     assert validate_label(label) == []
+
+
+def test_gemini_rows_carry_excluded_weeks():
+    [row] = gemini_rows([
+        {"church_slug": "c", "type": "mass", "kind": "weekly", "day_of_week": "Sunday",
+         "start_time": "9:00 AM", "weeks_of_month": ["last"], "exclude_weeks": True},
+    ])
+    assert (row["weeks_of_month"], row["exclude_weeks"]) == (["last"], True)
+
+
+def test_excluded_weeks_are_valid_and_older_labels_may_lack_the_flag():
+    events = [_event(weeks_of_month=["last"], exclude_weeks=True),
+              _event(weeks_of_month=["first"], exclude_weeks=False)]
+    assert validate_label(_label(events=events)) == []
+    legacy = _event()
+    legacy.pop("exclude_weeks", None)
+    assert validate_label(_label(events=[legacy])) == []
 
 
 def test_optional_events_carry_a_preference_and_older_labels_may_lack_it():
@@ -315,6 +333,10 @@ def test_optional_events_carry_a_preference_and_older_labels_may_lack_it():
     ({"end_time": "7pm"}, "end_time must be null or HH:MM"),
     ({"weeks_of_month": ["first", "first"]}, "weeks_of_month has duplicates"),
     ({"weeks_of_month": ["1st"]}, "weeks_of_month must be a list"),
+    ({"exclude_weeks": "yes"}, "exclude_weeks must be true or false"),
+    ({"exclude_weeks": True}, "exclude_weeks needs the weeks it leaves out"),
+    ({"weeks_of_month": ["first", "second", "third", "fourth", "fifth"], "exclude_weeks": True},
+     "exclude_weeks leaves out every week"),
     ({"season": {"start_month": 13, "start_day": None, "end_month": 5, "end_day": None}},
      "season.start_month must be 1-12"),
     ({"season": {"start_month": 2, "start_day": 30, "end_month": 5, "end_day": None}},

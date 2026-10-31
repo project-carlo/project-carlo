@@ -1,0 +1,347 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-john-vianney",
+  "content_hash": "98f96cbf0eb9e8f8af81b243c312e766d1a877e70e34638f19d8dfe6d44a6a86",
+  "source_url": "https://www.sjvbath.org/wp-content/uploads/June-14th-11th-Sun-in-OT.pdf",
+  "fetched_at": "2026-06-10T22:53:00Z",
+  "reference_date": "2026-06-10",
+  "churches": [
+    {
+      "slug": "st-marys-bath",
+      "name": "St. Mary's Church",
+      "address": "32 East Morris Street, Bath, NY 14810"
+    },
+    {
+      "slug": "st-gabriels",
+      "name": "St. Gabriel's Church",
+      "address": "78 Shethar Street, Hammondsport, NY 14840"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview-bb3981be5245/98f96cbf0eb9e8f8af81b243c312e766d1a877e70e34638f19d8dfe6d44a6a86.json",
+    "kind": "local_legacy_raw_cache",
+    "modified_at": null,
+    "timestamp_caveat": "Local mtime is not an extraction timestamp; legacy fallback only"
+  },
+  "gemini_church_context_matches": null,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-john-vianney/98f96cbf0eb9.pdf",
+  "pdf_sha256": "98f96cbf0eb9e8f8af81b243c312e766d1a877e70e34638f19d8dfe6d44a6a86",
+  "label_status": "unlabeled",
+  "published_date": "2026-06-14",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-marys-bath",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gabriels",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {}
+}

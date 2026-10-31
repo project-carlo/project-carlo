@@ -1,0 +1,641 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-rose-of-lima-north-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-11T16:28:15Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:19Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Single-church parish with a clean Mass schedule box (Tue-Fri 9:00, Sat 4:00 PM, Sun 8:00 and 10:30), Reconciliation Wed 6-7 PM and Sat 3-3:45 PM, and a Wednesday 6-7 PM Holy Hour with Confession (p5). One open question: the 'Saturday after 1st Friday, 24-hr Adoration Only: 9:00 AM' line, whose start time and weeks pattern the bulletin does not pin down.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3f9aa8c4abdcc21407287b9a4980f52fb410a7bf1aaebceca2f0785e758a9aab",
+      "fetched_at": "2026-10-11T16:28:15Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "402a4560e526bc6f62a4e08c5bbfbbad6404eaa8899b36afe0c756d81a8e3a53",
+      "fetched_at": "2026-10-04T14:45:20Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7ffdc6922293b78a316bcf6f52e4e1f67cd3376907de24a1bfa76684d7e8b513",
+      "fetched_at": "2026-09-28T00:16:49Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Tuesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Tuesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Tuesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box and Mass intentions of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Wednesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Wednesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Wednesday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box and Mass intentions of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Thursday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Thursday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Thursday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box and Mass intentions of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Tuesday - Friday: 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Friday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Friday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Friday 09:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box and Mass intentions of the newest bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Saturday Vigil: 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Saturday 16:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Saturday 16:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Saturday 16:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Mass Schedule box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Sunday: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Sunday 08:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Sunday 08:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Sunday 08:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Mass Schedule box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Sunday: 8:00 AM | 10:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly mass Sunday 10:30 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Mass Schedule box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: Wednesday: 6:00 - 7:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 5,
+          "said": "HOLY HOUR WITH CONFESSION Every Wednesday (except Holy Days) 6 - 7PM | In the Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly confession Wednesday 18:00–19:00 st-rose-of-lima-north-syracuse  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly confession Wednesday 18:00–19:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly confession Wednesday 18:00–19:00 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Reconciliation box and the Holy Hour with Confession notice agree. The Holy Day exception cannot be expressed; kept weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour; in the church"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 5,
+          "said": "HOLY HOUR WITH CONFESSION Every Wednesday (except Holy Days) 6 - 7PM | In the Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffdc6922293",
+          "page": 4,
+          "said": "Holy Hour with Confession will still take place on Wednesday, September 30, from 6-7PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly adoration Wednesday 18:00–19:00 st-rose-of-lima-north-syracuse  “Holy Hour with Confession”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly adoration Wednesday 18:00–19:00 st-rose-of-lima-north-syracuse  “Holy Hour”",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed as a weekly notice in the newest bulletin (p5); the 09-27 bulletin also names it. The Holy Day exception cannot be expressed; kept weekly. Only the 10-11 and 09-27 history events include it as adoration, but the text says Holy Hour every Wednesday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Saturday: 3:00 - 3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3f9aa8c4abdc",
+          "said": "weekly confession Saturday 15:00–15:45 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly confession Saturday 15:00–15:45 st-rose-of-lima-north-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7ffdc6922293",
+          "said": "weekly confession Saturday 15:00–15:45 st-rose-of-lima-north-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Reconciliation box; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-rose-of-lima-north-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour adoration after First Friday"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Saturday after 1st Friday 24-hr Adoration Only: 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 5,
+          "said": "FIRST FRIDAY ADORATION ... sign up for a 1hr guardian time slot for Nov 6/7."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7ffdc6922293",
+          "page": 4,
+          "said": "24-hour First Friday Adoration (Guardian sign-up for Oct 2/3); Sat Oct 3 also had a 9:00 AM Mass intention"
+        },
+        {
+          "source": "history",
+          "bulletin": "402a4560e526",
+          "said": "weekly adoration Saturday 09:00 st-rose-of-lima-north-syracuse  “Saturday after 1st Friday; 24-hour duration”",
+          "page": 2
+        }
+      ],
+      "rationale": "The Mass Schedule box lists 'Saturday after 1st Friday: 24-hr Adoration Only: 9:00 AM'. Guardian sign-ups span Friday to Saturday (Nov 6/7), so 9:00 AM Saturday may be where the 24 hours END, not start; the start time on Friday is not printed. 'Saturday after 1st Friday' is the first Saturday except when the first Friday is the 7th, so it only approximates weeks_of_month first. The 09-27 bulletin shows a 9:00 AM Saturday Mass intention on Oct 3, so a Mass that day was also possible. Only the 10-04 history event has it in one bulletin of three; the box is in all three.\n\nReview 2026-10-22: Exclude the offered first-Saturday 9 AM start. It may be the END of a Friday–Saturday vigil, and Saturday after first Friday is not always first Saturday. This reverses the agent’s lean.",
+      "question": "Record First Friday 24-hour adoration as a first-Saturday 9:00 AM Adoration?",
+      "options": [
+        {
+          "label": "Saturday 9:00 AM, first week of month (note: 24-hour First Friday adoration)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-rose-of-lima-north-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "24-hour adoration after First Friday"
+          }
+        },
+        {
+          "label": "Leave out (start time is not printed; 9:00 AM Saturday may be the end)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3f9aa8c4abdc",
+          "page": 2,
+          "said": "Monday: No Mass / MONDAY, OCTOBER 12 NO MASS"
+        }
+      ],
+      "rationale": "Monday has no weekly Mass, so the 'No Mass' lines cancel nothing.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -4,22 +4,24 @@ An entry is immutable (`schedule_entry`): a change to a slot is a new entry.
 Its `hash` covers every column, so identical content is stored once and an
 entry id names its content. Its `identity_key` says which slot it is:
 
-- weekly: church, event type, weekday, start time
+- weekly: church, event type, weekday, start time, weeks and season
 - specific_date: church, event type, date, start time
 
-End time, weeks of the month, season, cancelled and note are not part of
-identity, so changing any of them is a modify of the same slot.
+End time, cancelled and note are not part of identity. `slot_key` groups
+recurrence variants at the same weekday and time; `conflicts_with` checks
+whether two variants can occur together. A modify names its target by entry
+id, so it can still change qualifiers (or move a slot).
 
 Entries arrive in the labels' form (times as "h:MM AM", weeks of the month as
-a list, the season as an object, the church by slug), from the model's answer,
-a hand edit or a seed. `parse_entry` checks one and turns it into an `Entry`;
+a list with `exclude_weeks`, the season as an object, the church by slug), from
+the model's answer, a hand edit or a seed. `parse_entry` checks one and turns it into an `Entry`;
 `Entry.view` turns it back.
 """
 
 from __future__ import annotations
 
 import json
-from dataclasses import astuple, dataclass, fields
+from dataclasses import dataclass, fields
 from datetime import date
 from hashlib import sha256
 from typing import Any
@@ -29,7 +31,9 @@ from pdf_extract.labeling.labels import DAYS, EVENT_KINDS, EVENT_TYPES
 from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
+    mask_excludes_weeks,
     mask_to_weeks,
+    recurrence_mask,
     season_to_columns,
     weeks_to_mask,
 )
@@ -42,7 +46,8 @@ INVALID_ENTRY = "invalid_entry"
 # The keys an entry may carry in the labels' form.
 ENTRY_KEYS = frozenset({
     "church_slug", "event_type", "event_kind", "day_of_week", "date", "start_time",
-    "end_time", "cancelled", "weeks_of_month", "season", "note",
+    "end_time", "cancelled", "weeks_of_month", "exclude_weeks", "season", "note",
+    "valid_from", "valid_until",
 })
 
 
@@ -58,21 +63,64 @@ class Entry:
     start_time: int
     end_time: int | None
     cancelled: int
-    weeks_of_month: int
+    weeks_of_month: int  # the mask, exclusion bit and all (`qualifiers.weeks_to_mask`)
     season_start_month: int | None
     season_start_day: int | None
     season_end_month: int | None
     season_end_day: int | None
     note: str | None
+    valid_from: str | None = None
+    valid_until: str | None = None
 
     @property
     def hash(self) -> str:
-        return sha256(json.dumps(astuple(self)).encode("utf-8")).hexdigest()
+        # Unset bounds are left out, so entries written before they existed keep their hashes.
+        content = [getattr(self, name) for name in ENTRY_COLUMNS
+                   if self.bounded or name not in BOUND_COLUMNS]
+        return sha256(json.dumps(content).encode("utf-8")).hexdigest()
+
+    @property
+    def bounded(self) -> bool:
+        return self.valid_from is not None or self.valid_until is not None
+
+    @property
+    def slot_key(self) -> str:
+        """The unqualified slot, shared by disjoint recurrence variants."""
+        anchor = self.day_of_week if self.event_kind == "weekly" else self.date
+        return f"{self.church_id}|{self.event_type}|{self.event_kind}|{anchor}|{self.start_time}"
 
     @property
     def identity_key(self) -> str:
-        anchor = self.day_of_week if self.event_kind == "weekly" else self.date
-        return f"{self.church_id}|{self.event_type}|{self.event_kind}|{anchor}|{self.start_time}"
+        if not self.weekly:
+            return self.slot_key
+        qualifiers = (self.weeks_of_month, self.season_start_month, self.season_start_day,
+                      self.season_end_month, self.season_end_day)
+        key = self.slot_key + "|" + "|".join(str(value or 0) for value in qualifiers)
+        if self.bounded:
+            key += f"|{self.valid_from or ''}|{self.valid_until or ''}"
+        return key
+
+    def conflicts_with(self, other: Entry) -> bool:
+        """Whether entries duplicate a pattern or claim the same occurrence.
+
+        Dated overrides and weekly entries retain their separate identities.
+        End times and notes never make overlapping recurrences distinct slots.
+        """
+        if self.slot_key != other.slot_key:
+            return False
+        if not self.weekly or self.identity_key == other.identity_key:
+            return True
+        if max(self.valid_from or '0001-01-01', other.valid_from or '0001-01-01') > min(
+            self.valid_until or '9999-12-31', other.valid_until or '9999-12-31',
+        ):
+            return False
+        return bool(self._recurrence_mask() & other._recurrence_mask())
+
+    def _recurrence_mask(self) -> int:
+        return recurrence_mask(
+            self.weeks_of_month, self.season_start_month, self.season_start_day,
+            self.season_end_month, self.season_end_day,
+        )
 
     @property
     def weekly(self) -> bool:
@@ -81,6 +129,12 @@ class Entry:
     def dated_before(self, day: date) -> bool:
         """Whether this is a dated entry for a day before `day`."""
         return not self.weekly and self.date is not None and self.date < day.isoformat()
+
+    def expired_before(self, day: date) -> bool:
+        """Whether this is a dated entry before `day` or a weekly one that ended before it."""
+        return self.dated_before(day) or (
+            self.weekly and self.valid_until is not None and self.valid_until < day.isoformat()
+        )
 
     def season(self) -> dict[str, int | None] | None:
         return columns_to_season(
@@ -102,8 +156,11 @@ class Entry:
             out.update(
                 day_of_week=self.day_of_week,
                 weeks_of_month=mask_to_weeks(self.weeks_of_month),
+                exclude_weeks=mask_excludes_weeks(self.weeks_of_month),
                 season=self.season(),
             )
+            if self.bounded:
+                out.update(valid_from=self.valid_from, valid_until=self.valid_until)
         else:
             out.update(date=self.date, cancelled=bool(self.cancelled))
         return out
@@ -116,6 +173,7 @@ class Entry:
 
 
 ENTRY_COLUMNS = tuple(f.name for f in fields(Entry))
+BOUND_COLUMNS = ("valid_from", "valid_until")
 
 
 def entry_from_row(row: Any) -> Entry:
@@ -179,7 +237,7 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
     if not isinstance(cancelled, bool):
         raise EntryError(INVALID_ENTRY, "cancelled must be true or false")
     try:
-        weeks = weeks_to_mask(raw.get("weeks_of_month") or [])
+        weeks = weeks_to_mask(raw.get("weeks_of_month") or [], raw.get("exclude_weeks") or False)
         season = season_to_columns(raw.get("season"))
     except QualifierError as exc:
         raise EntryError(INVALID_ENTRY, str(exc)) from exc
@@ -203,12 +261,25 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
         if raw.get("day_of_week") is not None and day_of_week != DAYS[parsed.weekday()]:
             raise EntryError(INVALID_ENTRY, "a dated entry has no day_of_week")
         if weeks or season[0] is not None:
-            raise EntryError(INVALID_ENTRY, "weeks_of_month and season are for weekly entries")
+            raise EntryError(
+                INVALID_ENTRY, "weeks_of_month, exclude_weeks and season are for weekly entries",
+            )
         entry_date, day_of_week = parsed.isoformat(), None
 
     note = raw.get("note")
     if note is not None and not isinstance(note, str):
         raise EntryError(INVALID_ENTRY, "note must be text or null")
+    bounds = {}
+    for name in ("valid_from", "valid_until"):
+        value = raw.get(name)
+        parsed = parse_iso_date(value) if isinstance(value, str) else None
+        if value is not None and (kind != "weekly" or parsed is None):
+            raise EntryError(INVALID_ENTRY, f"{name} must be a weekly YYYY-MM-DD date or null")
+        bounds[name] = parsed.isoformat() if parsed else None
+    if bounds['valid_from'] and bounds['valid_until'] and (
+        bounds['valid_from'] > bounds['valid_until']
+    ):
+        raise EntryError(INVALID_ENTRY, "valid_until must not precede valid_from")
     return Entry(
         church_id=churches[slug],
         event_type=event_type,
@@ -224,4 +295,5 @@ def parse_entry(raw: Any, churches: dict[str, int]) -> Entry:
         season_end_month=season[2],
         season_end_day=season[3],
         note=note.strip() or None if isinstance(note, str) else None,
+        **bounds,
     )

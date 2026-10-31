@@ -24,7 +24,9 @@ from __future__ import annotations
 
 import csv
 import datetime as dt
+import math
 import re
+import tempfile
 from collections.abc import Iterable, Mapping
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -33,6 +35,13 @@ from typing import Any
 import yaml
 
 from pdf_extract import storage
+from pdf_extract.dioceses import research
+from pdf_extract.dioceses.publications import (
+    REVIEW_WORDING,
+    review_gap,
+    separate_recipes,
+    supported_review,
+)
 from pdf_extract.fetch import PROVIDERS_TAKING_RECIPE
 from pdf_extract.parish_sites import Recipe
 
@@ -85,6 +94,7 @@ _STATE_RE = re.compile(r"^[A-Z]{2}$")
 _POSTAL_RE = re.compile(r"^\d{5}(?:-\d{4})?$")
 _URL_RE = re.compile(r"^https?://\S+$")
 _DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+_PARTIAL_DATE_RE = re.compile(r"^\d{4}(-(0[1-9]|1[0-2]))?$")
 _ROSTER_REF_RE = re.compile(r"^([a-z0-9-]+):(\S+)$")
 
 
@@ -115,7 +125,8 @@ PARISH = Kind(
     always=(
         "name", "website", "bulletin_provider", "provider_id", "publication", "group", "evidence",
     ),
-    optional=("replaces", *_REVISIT, "promoted"),
+    optional=("replaces", *_REVISIT, "promoted", "research", "bulletin_status",
+              "publication_reviews"),
     template="""\
 ## Publisher
 
@@ -148,7 +159,7 @@ CHURCH = Kind(
         "latitude", "longitude", "coordinates_from", "name_verified", "address_verified",
         "roster", "evidence",
     ),
-    optional=("replaces", *_REVISIT, "promoted"),
+    optional=("replaces", *_REVISIT, "promoted", "research"),
     template="""\
 ## Holds Mass
 
@@ -165,7 +176,7 @@ EXCLUDED = Kind(
     name="excluded",
     dir="excluded",
     always=("name", "reason", *_ADDRESS, "decided", "roster", "evidence"),
-    optional=("parish", "last_mass", *_REVISIT, "promoted"),
+    optional=("parish", "last_mass", *_REVISIT, "promoted", "research"),
     template="""\
 ## Why it is excluded
 
@@ -182,7 +193,7 @@ OPEN = Kind(
     name="open",
     dir="open",
     always=("name", "revisit", "revisit_after", "roster", "evidence"),
-    optional=("parish", *_ADDRESS, "promoted"),
+    optional=("parish", *_ADDRESS, "promoted", "research"),
     template="""\
 ## What is known
 
@@ -196,6 +207,7 @@ TODO: Why neither a church row nor an exclusion is justified yet.
 KINDS: dict[str, Kind] = {k.name: k for k in (PARISH, CHURCH, EXCLUDED, OPEN)}
 
 _LIST_FIELDS = {"publication", "replaces", "roster"}
+_OBJECT_LIST_FIELDS = {"evidence", "research", "publication_reviews"}
 _BOOL_FIELDS = {"name_verified", "address_verified"}
 _FLOAT_FIELDS = {"latitude", "longitude"}
 _DATE_FIELDS = {"decided", "last_mass", "revisit_after", "promoted"}
@@ -216,6 +228,12 @@ Fill this in as you find them (see data/dioceses/README.md, "Sources").
 - Closed parishes and where their records went:
 - Pastoral plan / closure announcements:
 
+### Bulletin publishers here
+
+Which publishers print this diocese's bulletins, how to read each, and which sites block the
+sandbox and where their bulletins are instead. Agents researching parishes start here, so
+keep it current rather than a log.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -227,7 +245,7 @@ Newest first: date, what was done, and the `pnpm diocese coverage` numbers after
 
 
 def _empty(fname: str) -> Any:
-    if fname in _LIST_FIELDS or fname == "evidence":
+    if fname in _LIST_FIELDS | _OBJECT_LIST_FIELDS:
         return []
     if fname in _BOOL_FIELDS:
         return False
@@ -305,7 +323,10 @@ def parse_file(path: Path) -> tuple[dict[str, Any], str]:
         raise DioceseError(f"{path}: frontmatter is not valid YAML: {e}") from None
     if not isinstance(front, dict):
         raise DioceseError(f"{path}: frontmatter must be a mapping of field: value")
-    return _plain(front), m.group(2).strip("\n")
+    front = _plain(front)
+    if isinstance(front, dict) and type(front.get("last_mass")) is int:
+        front["last_mass"] = str(front["last_mass"])  # a bare year: last_mass: 2017
+    return front, m.group(2).strip("\n")
 
 
 class _Flow(list):
@@ -448,9 +469,17 @@ def load(diocese: str) -> Diocese:
 
 def _write_text(path: Path, text: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(text, encoding="utf-8")
-    tmp.replace(path)
+    # Different records/scouts must not share a predictable temporary pathname.
+    tmp = None
+    try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=path.parent,
+                                         prefix=f".{path.name}.", suffix=".tmp", delete=False) as f:
+            tmp = Path(f.name)
+            f.write(text)
+        tmp.replace(path)
+    finally:
+        if tmp is not None:
+            tmp.unlink(missing_ok=True)
 
 
 def _save(before: Diocese, after: Diocese) -> dict[str, list[str]]:
@@ -496,8 +525,16 @@ def _label(kind: Kind, slug: str) -> str:
 def _check_date(label: str, fname: str, value: Any, p: Problems) -> None:
     if value in (None, ""):
         return
+    if fname == "last_mass" and isinstance(value, str) and _PARTIAL_DATE_RE.match(value):
+        return  # a source that gives only the year or month ("final Mass in 2017")
     if not isinstance(value, str) or not _DATE_RE.match(value):
-        p.errors.append(f"{label}: {fname} must be a date like 2026-09-06, got {value!r}")
+        hint = " (or 2017, or 2017-06, when a source gives no day)" if fname == "last_mass" else ""
+        p.errors.append(f"{label}: {fname} must be a date like 2026-09-06{hint}, got {value!r}")
+    else:
+        try:
+            dt.date.fromisoformat(value)
+        except ValueError:
+            p.errors.append(f"{label}: {fname} is not a calendar date: {value!r}")
 
 
 def _check_evidence(label: str, evidence: Any, p: Problems) -> None:
@@ -511,6 +548,9 @@ def _check_evidence(label: str, evidence: Any, p: Problems) -> None:
         if not isinstance(item, Mapping):
             p.errors.append(f"{where} must be a mapping with url and seen, got {item!r}")
             continue
+        for key in _EVIDENCE_FIELDS:
+            if key in item and not isinstance(item[key], str):
+                p.errors.append(f"{where}: {key} must be text")
         if not _URL_RE.match(str(item.get("url") or "")):
             p.errors.append(f"{where}: url must start with http:// or https://")
         if not item.get("seen"):
@@ -546,18 +586,23 @@ def _check_record(kind: Kind, r: Mapping[str, Any], rosters: Mapping[str, set[st
         elif fname in _BOOL_FIELDS and not isinstance(value, bool):
             p.errors.append(f"{label}: {fname} must be true or false")
         elif fname in _FLOAT_FIELDS and (isinstance(value, bool)
-                                         or not isinstance(value, int | float)):
-            p.errors.append(f"{label}: {fname} must be a number or null")
+                                         or not isinstance(value, int | float)
+                                         or not math.isfinite(value)):
+            p.errors.append(f"{label}: {fname} must be a finite number or null")
         elif fname in _DATE_FIELDS:
             _check_date(label, fname, value, p)
-        elif (fname not in _LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | {"evidence"}
+        elif (fname not in _LIST_FIELDS | _BOOL_FIELDS | _FLOAT_FIELDS | _OBJECT_LIST_FIELDS
               and not isinstance(value, str)):
             hint = " (quote it: postal_code: \"01234\")" if fname == "postal_code" else ""
             p.errors.append(f"{label}: {fname} must be text, got {value!r}{hint}")
 
     _check_evidence(label, r.get("evidence", []), p)
+    if "research" in r:
+        p.errors.extend(f"{label}: {e}" for e in research.errors(r["research"], today=today()))
     body = r.get("body") or ""
-    if not body.strip():
+    if not isinstance(body, str):
+        p.errors.append(f"{label}: body must be text")
+    elif not body.strip():
         p.incomplete.append(f"{label}: the explanation (the text below the frontmatter) is empty")
     elif TODO in body:
         p.incomplete.append(f"{label}: the explanation still has {TODO} placeholders")
@@ -601,6 +646,36 @@ def _check_record(kind: Kind, r: Mapping[str, Any], rosters: Mapping[str, set[st
 
 
 def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
+    status = r.get("bulletin_status")
+    if status and (not isinstance(status, str) or status not in research.BULLETIN_STATUSES):
+        p.errors.append(f"{label}: bulletin_status must be one of "
+                        f"{', '.join(sorted(research.BULLETIN_STATUSES))}")
+    reviews = r.get("publication_reviews", [])
+    if not isinstance(reviews, list):
+        p.errors.append(f"{label}: publication_reviews must be a list")
+    else:
+        for i, review in enumerate(reviews, 1):
+            where = f"{label}: publication_reviews #{i}"
+            if not isinstance(review, Mapping):
+                p.errors.append(f"{where} must be an object")
+                continue
+            peer = review.get("parish")
+            if not isinstance(peer, str) or not _SLUG_RE.fullmatch(peer):
+                p.errors.append(f"{where}: parish must be a peer slug")
+            if review.get("decision") not in ("separate", "shared"):
+                p.errors.append(f"{where}: decision must be separate or shared")
+            evidence = review.get("evidence", [])
+            _check_evidence(where, evidence, p)
+            if not isinstance(evidence, list) or not evidence or not all(
+                isinstance(e, Mapping) and any(isinstance(e.get(k), str) and e[k].strip()
+                                              for k in ("quote", "note")) for e in evidence
+            ):
+                p.errors.append(f"{where}: dated masthead/member evidence is required")
+            elif (gap := review_gap(review)) is not None:
+                p.warnings.append(f"{where}: audit won't count this review ({gap}); one "
+                                  f"evidence item needs {REVIEW_WORDING}")
+            if set(review) - {"parish", "decision", "evidence"}:
+                p.errors.append(f"{where}: unknown fields")
     website = str(r.get("website") or "")
     if not website:
         p.errors.append(f"{label}: website is required (where the bulletin can be found)")
@@ -727,13 +802,31 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
 
     parishes, churches = d.of(PARISH), d.of(CHURCH)
     excluded, open_ = d.of(EXCLUDED), d.of(OPEN)
+    reviewed_pairs: dict[tuple[str, str], str] = {}
+    for slug, record in parishes.items():
+        reviews = record.get("publication_reviews")
+        for review in reviews if isinstance(reviews, list) else []:
+            if not isinstance(review, Mapping) or not isinstance(review.get("parish"), str):
+                continue
+            peer = review["parish"]
+            if peer == slug or peer not in parishes:
+                p.errors.append(f"parish {slug!r}: publication_reviews peer {peer!r} must be "
+                                "another parish in this diocese")
+                continue
+            pair = tuple(sorted((slug, peer)))
+            decision = review.get("decision")
+            if decision not in ("shared", "separate"):
+                continue
+            if pair in reviewed_pairs and reviewed_pairs[pair] != decision:
+                p.errors.append(f"parishes {pair}: conflicting publication_reviews decisions")
+            reviewed_pairs[pair] = decision
 
     # Cross-kind slug clashes: a place is a church, an exclusion or an open question.
     for a, b in ((CHURCH, EXCLUDED), (CHURCH, OPEN), (EXCLUDED, OPEN)):
         for slug in d.of(a).keys() & d.of(b).keys():
             p.errors.append(f"{slug!r} is both in {a.dir}/ and {b.dir}/; keep one")
 
-    # Uniqueness the database enforces, across dioceses and the live CSVs. A
+    # Slug uniqueness, across dioceses and the live CSVs. A
     # record stamped `promoted` owns the live row with its slug.
     for kind, own, live in ((PARISH, owners.parish, owners.live_parish),
                             (CHURCH, owners.church, owners.live_church)):
@@ -745,9 +838,33 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
                     f"{_label(kind, slug)}: slug already used in data/{kind.dir}.csv; slugs are "
                     "unique across all dioceses"
                 )
-    live_sites = {url_key(row.get("website", "")): slug
-                  for slug, row in owners.live_parish.items()}
-    seen_sites: dict[str, str] = {}
+    def reviewed_separate(left: str, right: str) -> bool:
+        pair = tuple(sorted((left, right)))
+        if reviewed_pairs.get(pair) != "separate" or not separate_recipes(
+            parishes[left], parishes[right],
+        ):
+            return False
+        for owner, peer in ((left, right), (right, left)):
+            reviews = parishes[owner].get("publication_reviews")
+            for review in reviews if isinstance(reviews, list) else []:
+                if isinstance(review, Mapping) and review.get("parish") == peer \
+                        and review.get("decision") == "separate" and supported_review(review):
+                    return True
+        return False
+
+    # A merge/rename carries ownership in the promoted successor's `replaces`.
+    # Its source rows remain live until promote removes them, but no longer
+    # represent active peers that need separate-publication reviews. Apply this
+    # to every surviving publisher on the site, not only the merge destination.
+    retiring_parishes = {
+        old for record in parishes.values() if record.get("promoted")
+        for old in record.get("replaces") or []
+        if isinstance(old, str) and old not in parishes and old not in owners.parish
+    }
+    live_sites: dict[str, list[str]] = {}
+    for live_slug, row in owners.live_parish.items():
+        live_sites.setdefault(url_key(row.get("website", "")), []).append(live_slug)
+    seen_sites: dict[str, list[str]] = {}
     for slug, r in parishes.items():
         key = url_key(r.get("website", ""))
         if not key:
@@ -755,13 +872,24 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
         label = _label(PARISH, slug)
         if key in owners.website:
             p.errors.append(f"{label}: website already used by {owners.website[key]}")
-        elif key in live_sites and not (r.get("promoted") and live_sites[key] == slug):
+        for live_slug in live_sites.get(key, []):
+            if (r.get("promoted") and live_slug == slug) or live_slug in retiring_parishes:
+                continue
+            # A promoted same-diocese peer is checked below with its full
+            # evidence and recipe; a bare live CSV row cannot authorize sharing.
+            if live_slug in parishes and parishes[live_slug].get("promoted") \
+                    and reviewed_separate(slug, live_slug):
+                continue
             p.errors.append(f"{label}: website already used by data/parishes.csv "
-                            f"row {live_sites[key]!r}")
-        if key in seen_sites:
-            p.errors.append(f"{label}: website also used by parish {seen_sites[key]!r}; one "
-                            "website is one bulletin, so these are probably one parish")
-        seen_sites[key] = slug
+                            f"row {live_slug!r}")
+        for peer in seen_sites.get(key, []):
+            if not reviewed_separate(slug, peer):
+                p.errors.append(
+                    f"{label}: website also used by parish {peer!r}; shared sites need "
+                    "content-supported separate publication_reviews and filename filters "
+                    "with disjoint literal prefixes"
+                )
+        seen_sites.setdefault(key, []).append(slug)
 
     # One bulletin, one row: the check with no other symptom anywhere.
     pubs: dict[str, str] = {}
@@ -846,6 +974,8 @@ def export_rows(d: Diocese) -> tuple[list[dict[str, str]], list[dict[str, str]]]
 
 
 PARISH_CSV_FIELDS = ["slug", "name", "website", "bulletin_provider", "provider_id"]
+# Set on the parish rows `promote` adds; kept as it is on rows already live.
+FETCH_ONLY_COLUMN = "fetch_only"
 CHURCH_CSV_FIELDS = [
     "parish_id", "slug", "name", "line1", "line2", "city", "state", "postal_code",
     "name_verified", "address_verified", "latitude", "longitude",
@@ -887,7 +1017,8 @@ def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
                                   f"{', '.join(differ)}; run `diocese promote` to reconcile")
 
 
-def _commit(before: Diocese, after: Diocese, *, tolerate_unreadable: bool = False
+def _commit(before: Diocese, after: Diocese, *, tolerate_unreadable: bool = False,
+            summary_record: tuple[Kind, str] | None = None,
             ) -> dict[str, Any]:
     """Save `after` unless it adds errors; return what changed and the new warnings.
 
@@ -908,9 +1039,17 @@ def _commit(before: Diocese, after: Diocese, *, tolerate_unreadable: bool = Fals
     if added:
         raise DioceseError("refused, nothing was written:\n  " + "\n  ".join(added))
     changes = _save(before, after)
-    return {**changes, "warnings": [w for w in new.warnings + new.incomplete
-                                    if w not in old.warnings + old.incomplete]
-            + [f"does not parse (left alone): {u}" for u in before.unreadable]}
+    result = {**changes, "warnings": [w for w in new.warnings + new.incomplete
+                                     if w not in old.warnings + old.incomplete]
+              + [f"does not parse (left alone): {u}" for u in before.unreadable]}
+    if summary_record is not None:
+        kind, slug = summary_record
+        label = _label(kind, slug) + ":"
+        result["validation"] = {"scope": f"{kind.dir}/{slug}.md", **{
+            key: sum(message.startswith(label) for message in messages)
+            for key, messages in new.as_dict().items()
+        }}
+    return result
 
 
 def _get(d: Diocese, kind: Kind, slug: str) -> dict[str, Any]:
@@ -990,13 +1129,74 @@ def new_record(diocese: str, kind_name: str, fields: Mapping[str, Any], *,
     return {"created": f"{kind.dir}/{slug}.md", "diocese": diocese, "slug": slug, **result}
 
 
+def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, Any], *,
+                 create: bool = False) -> dict[str, Any]:
+    """Patch one record from typed JSON, validating before any file changes.
+
+    Lists replace their previous value; omitted fields remain unchanged. Creation
+    must be explicit so a mistyped slug cannot silently produce a second record.
+    Incomplete drafts are allowed and reported, just as with `new`.
+    """
+    if kind_name not in KINDS:
+        raise DioceseError(f"unknown record kind {kind_name!r}")
+    if not isinstance(slug, str) or not _SLUG_RE.fullmatch(slug):
+        raise DioceseError("slug must be lowercase words joined by '-'")
+    if not isinstance(payload, Mapping):
+        raise DioceseError("record JSON must be an object of fields plus optional body")
+    kind = KINDS[kind_name]
+    unknown = set(payload) - set(kind.fields) - {"body"}
+    if unknown:
+        raise DioceseError(f"{kind_name} has no writable fields: {', '.join(sorted(unknown))}")
+    for key, value in payload.items():
+        if key in _LIST_FIELDS:
+            valid = isinstance(value, list) and all(isinstance(v, str) for v in value)
+        elif key in _OBJECT_LIST_FIELDS:
+            valid = isinstance(value, list) and all(isinstance(v, dict) for v in value)
+        elif key in _BOOL_FIELDS:
+            valid = isinstance(value, bool)
+        elif key in _FLOAT_FIELDS:
+            valid = value is None or (type(value) in (int, float) and math.isfinite(value))
+        elif key in _DATE_FIELDS:
+            valid = value is None or isinstance(value, str)
+        else:
+            valid = isinstance(value, str) or (value is None and key in kind.optional)
+        if not valid:
+            raise DioceseError(f"{key} has the wrong JSON type; use the record's stored types")
+    before = load(diocese)
+    path = diocese_dir(diocese) / kind.dir / f"{slug}.md"
+    if create:
+        if path.exists():
+            raise DioceseError(f"{kind.dir}/{slug}.md already exists; omit --create to edit it")
+        record = {f: _empty(f) for f in kind.fields}
+        record.update(slug=slug, body=kind.template)
+        if kind is EXCLUDED:
+            record["decided"] = today()
+    else:
+        if path.exists() and slug not in before.of(kind):
+            raise DioceseError(f"{kind.dir}/{slug}.md does not parse; repair it before editing")
+        record = _deep_copy(_get(before, kind, slug))
+    record.update(_deep_copy(dict(payload)))
+    # JSON uses the stored types, never flag-style coercion. Reject invalid data
+    # rather than silently dropping an evidence item during serialization.
+    target_problems = Problems()
+    _check_record(kind, record, roster_ids(diocese), target_problems)
+    if target_problems.errors:
+        raise DioceseError("refused, nothing was written:\n  "
+                           + "\n  ".join(target_problems.errors))
+    after = before.copy()
+    after.of(kind)[slug] = record
+    result = _commit(before, after, tolerate_unreadable=True, summary_record=(kind, slug))
+    return {"diocese": diocese, "kind": kind_name, "slug": slug,
+            "path": f"{kind.dir}/{slug}.md", "created": create, **result}
+
+
 def _coerce(fname: str, value: Any) -> Any:
     """A CLI string (or Python value) as the type stored for `fname`."""
     if fname in _LIST_FIELDS:
         if isinstance(value, str):
             value = [value]
         return [str(v).strip() for v in value if str(v).strip()]
-    if fname == "evidence":
+    if fname in _OBJECT_LIST_FIELDS:
         return list(value)
     if fname in _BOOL_FIELDS:
         if isinstance(value, bool):
@@ -1017,6 +1217,35 @@ def _coerce(fname: str, value: Any) -> Any:
     if fname in _DATE_FIELDS:
         return str(value).strip() or None
     return str(value).strip()
+
+
+def _retarget_reviews(d: Diocese, old: str, new: str) -> None:
+    """Keep peer decisions attached through a rename/merge, dropping self-reviews."""
+    for slug, record in d.of(PARISH).items():
+        if not isinstance(record.get("publication_reviews"), list):
+            continue
+        kept = []
+        for review in record["publication_reviews"]:
+            if not isinstance(review, dict):
+                kept.append(review)
+                continue
+            previous_peer = review.get("parish")
+            if review.get("parish") == old:
+                review["parish"] = new
+            if review.get("parish") == slug:
+                # The merge retires this relationship, not the sources supporting
+                # it. Keep both its evidence and the earlier decision auditable.
+                evidence = record.setdefault("evidence", [])
+                for item in review.get("evidence") or []:
+                    if item not in evidence:
+                        evidence.append(_deep_copy(item))
+                record["body"] = (f"{record.get('body', '').rstrip()}\n\n"
+                                  f"## Publication review before merge\n\n"
+                                  f"Peer {previous_peer}: {review.get('decision')}. "
+                                  "The supporting sources are retained in evidence.")
+            if review.get("parish") != slug and review not in kept:
+                kept.append(review)
+        record["publication_reviews"] = kept
 
 
 def merge_parishes(diocese: str, sources: Iterable[str], into: str,
@@ -1055,6 +1284,9 @@ def merge_parishes(diocese: str, sources: Iterable[str], into: str,
         target["publication"] = list(dict.fromkeys(
             [*(target.get("publication") or []), *(source.get("publication") or [])]
         ))
+        for fname in ("research", "publication_reviews"):
+            if source.get(fname):
+                target.setdefault(fname, []).extend(_deep_copy(source[fname]))
         if not target.get("provider_id") and source.get("provider_id"):
             target["provider_id"] = source["provider_id"]
             target["bulletin_provider"] = target.get("bulletin_provider") or source.get(
@@ -1073,6 +1305,8 @@ def merge_parishes(diocese: str, sources: Iterable[str], into: str,
             + "Its explanation before the merge:\n\n" + old_body
         )
         del after.of(PARISH)[slug]
+    for source in sources:
+        _retarget_reviews(after, source, into)
     result = _commit(before, after)
     return {"merged": sources, "into": into, "moved_churches": sorted(moved), **result}
 
@@ -1091,6 +1325,7 @@ def rename_record(diocese: str, kind_name: str, old: str, new: str) -> dict[str,
         record["replaces"] = list(dict.fromkeys([*(record.get("replaces") or []), old]))
     after.of(kind)[new] = record
     if kind is PARISH:
+        _retarget_reviews(after, old, new)
         for k in (CHURCH, EXCLUDED, OPEN):
             for r in after.of(k).values():
                 if r.get("parish") == old:
@@ -1121,6 +1356,7 @@ def exclude_church(diocese: str, slug: str, *, reason: str, last_mass: str = "",
         **{f: church.get(f, "") for f in _ADDRESS},
         "last_mass": last_mass or None, "decided": today(),
         "roster": church.get("roster") or [], "evidence": church.get("evidence") or [],
+        "research": church.get("research") or [],
         "promoted": church.get("promoted"),
         "body": f"{why.rstrip()}\n\n## When it was a church row\n\n{old_body}",
     }
@@ -1149,6 +1385,7 @@ def question_church(diocese: str, slug: str, *, revisit: str,
         "revisit_after": revisit_after or None, "parish": church.get("parish", ""),
         **{f: church.get(f, "") for f in _ADDRESS},
         "roster": church.get("roster") or [], "evidence": church.get("evidence") or [],
+        "research": church.get("research") or [],
         "promoted": church.get("promoted"),
         "body": f"{OPEN.template.rstrip()}\n\n## When it was a church row\n\n{old_body}",
     }
@@ -1223,8 +1460,10 @@ def export_csv(diocese: str, out_dir: Path) -> dict[str, Any]:
 
 
 def _write_live_csv(path: Path, columns: list[str], rows: list[dict[str, str]]) -> None:
+    """Write `rows` under the file's own header, adding any of `columns` it lacks."""
     with open(path, encoding="utf-8", newline="") as f:
-        header = next(csv.reader(f), columns)
+        header = next(csv.reader(f), [])
+    header += [col for col in columns if col not in header]
     tmp = path.with_suffix(".csv.tmp")
     with open(tmp, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=header, lineterminator="\n", extrasaction="ignore")
@@ -1244,6 +1483,10 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share
     its slug with a live row from then on; an `unpublished` one loses its stamp.
+
+    A parish row added here is marked `fetch_only`: the weekly run fetches its
+    bulletins but makes no model call for it and leaves it off the website
+    until the flag is cleared. Rows already live keep their flag.
     """
     d = _ready(diocese)
     after = d.copy()
@@ -1294,6 +1537,10 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                      "kept_live_values": adopted}
 
     new_p, report["parishes"] = apply(PARISH, live_p, parish_rows, retired_p)
+    added_p = set(report["parishes"]["added"])
+    for row in new_p:
+        if row.get("slug") in added_p:
+            row[FETCH_ONLY_COLUMN] = "true"
     new_c, report["churches"] = apply(CHURCH, live_c, church_rows, retired_c)
 
     live_church_parents = {row.get("parish_id") for row in new_c}
@@ -1312,7 +1559,9 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
                     r.pop("promoted", None)
                 else:
                     r["promoted"] = r.get("promoted") or stamp
-        _write_live_csv(storage.PARISHES_CSV_PATH, PARISH_CSV_FIELDS, new_p)
+        _write_live_csv(
+            storage.PARISHES_CSV_PATH, [*PARISH_CSV_FIELDS, FETCH_ONLY_COLUMN], new_p,
+        )
         _write_live_csv(storage.CHURCHES_CSV_PATH, CHURCH_CSV_FIELDS, new_c)
         _save(d, after)
         meta_path = diocese_dir(diocese) / META_FILE
@@ -1321,6 +1570,11 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
         _write_text(meta_path, f"---\n{_dump_front(front)}---\n\n{body}\n")
         report["next"] = (
             "run `pnpm test`; the next pipeline command seeds the new rows into the database"
+            + (
+                f". The {len(added_p)} new parishes are fetch-only: clear `fetch_only` in"
+                " data/parishes.csv to process them and show them on the site"
+                if added_p else ""
+            )
         )
     return report
 

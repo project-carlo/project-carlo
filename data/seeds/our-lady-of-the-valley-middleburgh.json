@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-valley-middleburgh",
+  "status": "approved",
+  "as_of": "2026-10-04T14:50:32Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T16:32:29Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:36:21Z",
+  "summary": "One church. The Schoharie County Cluster schedule box on page 1 is identical in both bulletins read: Sat 6:00 PM, Sun 9:00 AM, Wed 9:00 AM Masses and Monday 5:30-6:30 PM Adoration; history agrees. The cluster partner Our Lady of Fatima (Delanson, its own parish) and off-site nursing-home Masses are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aeea356cec9b5a7792f400613e651e710eae14998414de5c5fa67e129f77643c",
+      "fetched_at": "2026-10-04T14:50:32Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3aff1190597116de54da17a2c99524c7a24134fddc4005a879cdc00add134f2e",
+      "fetched_at": "2026-09-28T22:00:41Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 6:00 p.m. Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3aff11905971",
+          "page": 1,
+          "said": "Saturday Vigil Masses: 6:00 p.m. Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "history",
+          "bulletin": "aeea356cec9b",
+          "said": "weekly Saturday 18:00"
+        }
+      ],
+      "rationale": "Printed in the cluster liturgy schedule of both bulletins and in the page-2 Mass intentions for every Saturday; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 1,
+          "said": "Sunday Masses: 9:00 a.m. Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3aff11905971",
+          "page": 1,
+          "said": "Sunday Masses: 9:00 a.m. Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "history",
+          "bulletin": "aeea356cec9b",
+          "said": "weekly Sunday 09:00"
+        }
+      ],
+      "rationale": "Printed in the cluster liturgy schedule of both bulletins and in every Sunday's Mass intentions; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. Wednesdays Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3aff11905971",
+          "page": 1,
+          "said": "Weekdays: 9:00 a.m. Wednesdays Our Lady of the Valley in Middleburgh"
+        },
+        {
+          "source": "history",
+          "bulletin": "aeea356cec9b",
+          "said": "weekly Wednesday 09:00"
+        }
+      ],
+      "rationale": "The only weekday Mass at this church in both bulletins' schedule box; the page-2 calendars list Wednesday 9:00 AM each week; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION: Mondays 5:30—6:30 PM."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 2,
+          "said": "Monday, October 5, 2026 ... 5:30—6:30 PM quiet Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3aff11905971",
+          "page": 1,
+          "said": "EUCHARISTIC ADORATION: Mondays 5:30—6:30 PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "aeea356cec9b",
+          "said": "weekly Monday 17:30–18:30"
+        }
+      ],
+      "rationale": "Standing devotions schedule in both bulletins; history agrees. The older bulletin's calendar shows 5:20-6:30 on the last Monday (after a shorter Divine Mercy chaplet), a calendar variation, not a different standing time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Our Lady of Fatima, Delanson"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 1,
+          "said": "4:00 p.m. Our Lady of Fatima in Delanson ... 11:15 a.m. Our Lady of Fatima in Delanson ... 9:00 a.m. Tuesdays at Our Lady of Fatima in Delanson."
+        }
+      ],
+      "rationale": "The cluster schedule also lists Our Lady of Fatima in Delanson (Sat 4:00 PM, Sun 11:15 AM, Tue 9:00 AM). That church is its own parish (our-lady-of-fatima-delanson, with its own seed), not a church of this parish, so all three are left out here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-09-29",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Kingsway Nursing Facility"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3aff11905971",
+          "page": 2,
+          "said": "Tuesday, September 29, 2026, 2:00 PM and 3:00 PM Kingsway Nursing Facility Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "3aff11905971",
+          "said": "specific_date mass 2026-09-29 14:00 and 15:00 “Kingsway Nursing Facility”"
+        }
+      ],
+      "rationale": "Masses at a nursing facility (another address, likely for residents), and dated before as_of anyway; history stored both at the church, which is wrong. Same for the 3:00 PM one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-valley-middleburgh",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeea356cec9b",
+          "page": 2,
+          "said": "Prayer services will be at Our Lady of the Valley at 12:00 noon; 5:00 PM—Rosary, 5:30 PM-reading of the names of loved ones who passed this year; followed by quiet prayer in Adoration."
+        }
+      ],
+      "rationale": "All Souls' Day prayer services, not Masses; the Adoration that follows has no clock time of its own, and it falls on a Monday already covered by the weekly Monday Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

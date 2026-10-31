@@ -85,16 +85,16 @@ describe("churchBreadcrumbJsonLd", () => {
 describe("church page title", () => {
   it("leads with the church and its town", () => {
     expect(buildChurchTitle(church)).toBe(
-      "St. Charles Borromeo, Rochester — Mass & Confession Times",
+      "St. Charles Borromeo, Rochester · Mass Times · Project Carlo",
     );
   });
 
   it("falls back to the state, then to the name alone", () => {
     expect(buildChurchTitle({ ...church, city: null })).toBe(
-      "St. Charles Borromeo, NY — Mass & Confession Times",
+      "St. Charles Borromeo, NY · Mass Times · Project Carlo",
     );
     expect(buildChurchTitle({ ...church, city: " ", state: null })).toBe(
-      "St. Charles Borromeo — Mass & Confession Times",
+      "St. Charles Borromeo · Mass Times · Project Carlo",
     );
   });
 });

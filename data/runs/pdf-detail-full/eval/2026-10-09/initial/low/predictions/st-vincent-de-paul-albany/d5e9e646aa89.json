@@ -1,0 +1,101 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-vincent-de-paul-albany",
+  "content_hash": "d5e9e646aa89fae939827300631da946ae8121307bee6a18497412a0bd3d4ad4",
+  "source_url": "https://files.ecatholic.com/11351/bulletins/20261004.pdf?t=1790948417000",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 7837,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1160,
+    "reasoning_tokens": 736
+  },
+  "seconds": 12.531,
+  "response_id": "resp_066b158295a95c2e016ac913a9f97c87d29de6ce81016a16e0",
+  "events": [
+    {
+      "church_slug": "st-vincent-de-paul-albany",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-albany",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-albany",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-vincent-de-paul-albany",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-07",
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Our Lady of Lourdes Grotto",
+      "raw": {
+        "date": "2026-10-07",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "865fc0fc021a71a85a3d721f49a923819ff0335c59d2faa8ddde5191d1b4ccae"
+}

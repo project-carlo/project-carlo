@@ -1,0 +1,836 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-camillus",
+  "status": "approved",
+  "as_of": "2026-10-11T16:30:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:51:46Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "One-church parish: Sat 4:30 PM, Sun 8:00 and 10:45 AM, Mon/Wed/Fri 9:00 AM Masses, Saturday 3-4 PM Reconciliation and Monday-Friday 9:30 AM-3:00 PM Adoration Chapel, all on the front page of the newest bulletin and the two before it. Monday Oct 12 Mass is cancelled. Tuesday and Thursday Masses are at St. Patrick's in Jordan and are left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "05111b3f892eb62a2ea834898dd0447f676c24eb83832dc6bef7ec907f728736",
+      "fetched_at": "2026-10-11T16:30:57Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d7562d15865b73cf28fc0767bd558cf678e600364ba0a10baa1f8f8fcd5439b9",
+      "fetched_at": "2026-10-04T14:41:50Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6a5b3c6292e056ac1d2945aa79914e3dcf422579bc283b47b0e06015d56f5c27",
+      "fetched_at": "2026-09-28T00:13:10Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Saturday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Saturday: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Saturday: 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Saturday 16:30 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Saturday 16:30 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Saturday 16:30 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Sunday 08:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Sunday 08:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Sunday 08:00 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Sunday: 8:00am & 10:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Sunday 10:45 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Sunday 10:45 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Sunday 10:45 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Monday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Monday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Monday 09:00 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees. The p2 liturgy schedule agrees; Tuesday and Thursday have no liturgy here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Wednesday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Wednesday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Wednesday 09:00 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees. The p2 liturgy schedule agrees; Tuesday and Thursday have no liturgy here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Monday, Wednesday and Friday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly mass Friday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly mass Friday 09:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly mass Friday 09:00 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees. The p2 liturgy schedule agrees; Tuesday and Thursday have no liturgy here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Reconciliation: Saturday 3-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Reconciliation: Saturday 3-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Reconciliation: Saturday 3-4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly confession Saturday 15:00–16:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly confession Saturday 15:00–16:00 st-joseph-camillus",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly confession Saturday 15:00–16:00 st-joseph-camillus",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly adoration Monday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly adoration Monday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly adoration Monday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Listed with St. Joseph's Church's own address and hours block on the front page of all three bulletins; the church and its Adoration Chapel lamp are both mentioned on p2. Chapel location is not stated explicitly, but nothing suggests another address; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly adoration Tuesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly adoration Tuesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly adoration Tuesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Listed with St. Joseph's Church's own address and hours block on the front page of all three bulletins; the church and its Adoration Chapel lamp are both mentioned on p2. Chapel location is not stated explicitly, but nothing suggests another address; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly adoration Wednesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly adoration Wednesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly adoration Wednesday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Listed with St. Joseph's Church's own address and hours block on the front page of all three bulletins; the church and its Adoration Chapel lamp are both mentioned on p2. Chapel location is not stated explicitly, but nothing suggests another address; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly adoration Thursday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly adoration Thursday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly adoration Thursday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Listed with St. Joseph's Church's own address and hours block on the front page of all three bulletins; the church and its Adoration Chapel lamp are both mentioned on p2. Chapel location is not stated explicitly, but nothing suggests another address; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d7562d15865b",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6a5b3c6292e0",
+          "page": 1,
+          "said": "Adoration Chapel Hours: Monday - Friday 9:30am-3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "weekly adoration Friday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d7562d15865b",
+          "said": "weekly adoration Friday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6a5b3c6292e0",
+          "said": "weekly adoration Friday 09:30–15:00 st-joseph-camillus  “Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Listed with St. Joseph's Church's own address and hours block on the front page of all three bulletins; the church and its Adoration Chapel lamp are both mentioned on p2. Chapel location is not stated explicitly, but nothing suggests another address; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-camillus",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "No liturgy (Columbus Day)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 2,
+          "said": "MONDAY, October 12 WEEKDAY 9:00am - No Liturgy"
+        },
+        {
+          "source": "history",
+          "bulletin": "05111b3f892e",
+          "said": "specific_date mass 2026-10-12 09:00 st-joseph-camillus  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "The newest bulletin cancels this one date of the weekly Monday Mass. The bulletin gives no reason; Oct 12 is Columbus Day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05111b3f892e",
+          "page": 2,
+          "said": "TUESDAY, October 13 9:00am - No Liturgy (Mass at St. Patrick's in Jordan); THURSDAY, October 15 same"
+        }
+      ],
+      "rationale": "Tuesday and Thursday 9:00 AM have no liturgy at St. Joseph's in any bulletin read; Mass those days is at St. Patrick's in Jordan, a different church and parish, so nothing is recorded here. The Sept 29 Tuesday also reads No Liturgy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -18,6 +18,8 @@ from __future__ import annotations
 import csv
 import json
 import re
+from dataclasses import replace
+from datetime import date
 from pathlib import Path
 
 import pytest
@@ -67,6 +69,16 @@ def test_resolver_replays_recorded_site(path: Path) -> None:
     link = recording.resolve(recipe=recipe)
     assert link.source_url == expected["source_url"]
     assert link.fetch_url == expected.get("fetch_url", expected["source_url"])
+
+
+@pytest.mark.parametrize("slug", [
+    "saint-anne-johnstown", "saint-therese-of-the-child-jesus-johnstown",
+])
+def test_johnstown_recipes_keep_the_latest_own_issue_after_the_current_window(slug: str) -> None:
+    recording = load_recording(FIXTURES / f"{slug}{SNAPSHOT_SUFFIX}")
+    delayed = replace(recording, reference_date=date(2026, 10, 26))
+    link = delayed.resolve(recipe=_current_recipe(slug, recording.provider))
+    assert link.source_url == EXPECTED[slug]["source_url"]
 
 
 def test_snapshot_page_matches_the_selectors_resolvers_use() -> None:

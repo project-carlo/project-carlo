@@ -3,20 +3,24 @@ import { api, pdfUrl } from "../api";
 import { PdfViewer, type ScrollRequest } from "../components/PdfViewer";
 import { RowEditor } from "../components/RowEditor";
 import { formatDate } from "../lib/dates";
-import { SEEDS_HREF } from "../lib/route";
+import { navigate, seedHref, SEEDS_HREF } from "../lib/route";
 import { asDated, editRow, rowProblems } from "../lib/rows";
 import {
   approve,
-  chooseOption,
+  chooseForGroup,
   describeEntry,
   dropSlot,
   editSlot,
+  expiredQuestions,
   fromEditorRow,
+  groupOf,
   isOpen,
   newestReadBulletin,
+  nextSeedToReview,
   openCount,
   reopenSlot,
   replaceSlot,
+  replaceSlots,
   resolveBulletin,
   slotGroups,
   toEditorRow,
@@ -33,6 +37,14 @@ interface Props {
 
 function isTyping(el: Element | null): boolean {
   return !!el?.matches('input:not([type="checkbox"]), textarea, select, [contenteditable="true"]');
+}
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).host;
+  } catch {
+    return url;
+  }
 }
 
 export function SeedPage(props: Props) {
@@ -87,6 +99,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const [seed, setSeed] = useState<SeedFile>(initial.seed);
   const [message, setMessage] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [advancing, setAdvancing] = useState(false);
+  const advancingRef = useRef(false);
   // Saves go one at a time: each sends the whole file, so two in flight could
   // land out of order. A ref, so keys pressed before a re-render see it too.
   const savingRef = useRef(false);
@@ -138,7 +152,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const canAct = (): boolean => {
     let why: string | null = null;
     if (savingRef.current) why = "Still saving the last change; try again in a moment.";
-    else if (drafting) why = "A subagent is still drafting this parish.";
+    else if (advancingRef.current) why = "Still finding the next seed; try again in a moment.";
+    else if (drafting) why = "A drafter is still drafting this parish.";
     else if (!reviewer) why = "Type your name as the reviewer first.";
     if (why) setMessage(why);
     return !why;
@@ -151,11 +166,25 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     save(replaceSlot(seed, next));
   };
 
-  const choose = (slot: SeedSlot, index: number) =>
-    act(slot, (s) => (isOpen(s) ? chooseOption(s, index, reviewer) : null), "That option can't settle this slot.");
-  const drop = (slot: SeedSlot) => act(slot, (s) => dropSlot(s, reviewer), "This slot has no entry to keep.");
-  const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "");
+  const choose = (slot: SeedSlot, index: number) => {
+    if (!canAct()) return;
+    const next = isOpen(slot) ? chooseForGroup(seed, slot, index, reviewer) : null;
+    if (!next) return setMessage("That option can't settle this slot.");
+    save(next);
+  };
+  /** Leave a slot out: an open question's whole group with it. */
+  const drop = (slot: SeedSlot) => {
+    if (!canAct()) return;
+    const slots = isOpen(slot) ? groupOf(seed, slot) : [slot];
+    save(replaceSlots(seed, slots.map((s) => dropSlot(s, reviewer))));
+  };
+  const dropExpired = () => {
+    if (!canAct() || !expired.length) return;
+    save(replaceSlots(seed, expired.map((s) => dropSlot(s, reviewer))));
+  };
+  const reopen = (slot: SeedSlot) => act(slot, (s) => reopenSlot(s), "This slot was left out with no entry to include.");
   const startEdit = (slot: SeedSlot) => {
+    if (advancingRef.current) return;
     const entry = slot.entry ?? slot.options?.find((o) => o.leaning && o.entry)?.entry ?? slot.options?.find((o) => o.entry)?.entry;
     if (!entry) return setMessage("This slot has no entry to edit.");
     setEditing({ slotId: slot.id, row: toEditorRow(entry, slot.page) });
@@ -176,6 +205,24 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
     const next = approve(seed, reviewer);
     if (!next) return setMessage("Answer every open question first.");
     save(next);
+  };
+
+  const goNext = async () => {
+    if (savingRef.current || advancingRef.current || editing) return;
+    advancingRef.current = true;
+    setAdvancing(true);
+    setMessage(null);
+    try {
+      const { seeds } = await api.seeds();
+      const next = nextSeedToReview(seeds, parish);
+      if (next) navigate(seedHref(next.parish_slug));
+      else setMessage("No other seeds are ready to approve or need review.");
+    } catch (e) {
+      setMessage(`Could not find the next seed: ${(e as Error).message}`);
+    } finally {
+      advancingRef.current = false;
+      setAdvancing(false);
+    }
   };
 
   const showSource = (hash: string | null, page: number | null | undefined) => {
@@ -242,6 +289,11 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
   const activeBulletin = seed.bulletins.find((b) => b.content_hash === activeHash) ?? null;
   const asOfHash = newestReadBulletin(seed)?.content_hash ?? null;
   const n_open = openCount(seed);
+  const today = new Date().toLocaleDateString("en-CA");
+  const expired = expiredQuestions(seed, today);
+  const expiredIds = new Set(expired.map((s) => s.id));
+  const expiredCount = new Set(expired.map((s) => s.group || s.id)).size;
+  const churchIssues = seed.church_list_issues ?? [];
   const missing = new Set(seed.bulletins.map((b) => b.content_hash).filter((h) => !detail.bulletins_in_db.includes(h)));
 
   return (
@@ -297,12 +349,21 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
             </label>
             <button
               className="btn-primary"
-              disabled={n_open > 0 || drafting || seed.status === "approved" || seed.status === "blocked" || saving}
+              disabled={n_open > 0 || drafting || seed.status === "approved" || seed.status === "blocked" || saving || advancing}
               onClick={doApprove}
               title={n_open ? `${n_open} questions still open` : "Approve: the next pipeline command loads it once merged"}
               data-testid="approve"
             >
               {seed.status === "approved" ? "Approved" : "Approve"}
+            </button>
+            <button
+              className="btn"
+              disabled={saving || advancing || !!editing}
+              onClick={goNext}
+              title="Open the next ready-to-approve seed, then seeds needing review"
+              data-testid="next-seed"
+            >
+              {advancing ? "Finding next…" : "Next to review →"}
             </button>
           </div>
           {seed.summary && <p className="text-sm text-slate-700">{seed.summary}</p>}
@@ -313,13 +374,41 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
             {seed.approved_at && ` · approved ${seed.approved_at.slice(0, 10)}`}
           </p>
           {seed.status === "blocked" && <p className="text-sm text-zinc-700">Blocked: {seed.blocked_reason}</p>}
-          {drafting && <p className="text-sm text-amber-800">A subagent is still drafting this parish; it can't be reviewed yet.</p>}
+          {drafting && <p className="text-sm text-amber-800">A drafter is still drafting this parish; it can't be reviewed yet.</p>}
           {detail.problems.length > 0 && (
             <ul className="list-disc pl-5 text-xs text-red-700" data-testid="seed-problems">
               {detail.problems.map((p) => (
                 <li key={p}>{p}</li>
               ))}
             </ul>
+          )}
+          {churchIssues.length > 0 && (
+            <div className="text-xs text-slate-700" data-testid="church-list-issues">
+              <p className="font-medium">For the church list (not seeded):</p>
+              <ul className="list-disc pl-5">
+                {churchIssues.map((issue, i) => {
+                  const hash = resolveBulletin(seed, issue.bulletin);
+                  return (
+                    <li key={i}>
+                      <span className="font-medium">{issue.church}</span>: {issue.said}
+                      {hash && (
+                        <button className="ml-1 text-sky-700 hover:underline" onClick={() => showSource(hash, issue.page)}>
+                          {issue.page ? `p. ${issue.page}` : "bulletin"}
+                        </button>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+          {expired.length > 0 && !drafting && (
+            <p className="flex items-center gap-2 text-xs text-amber-800">
+              {expiredCount} {expiredCount === 1 ? "question asks" : "questions ask"} about dates that have passed.
+              <button className="btn px-1.5 py-0 text-xs" onClick={dropExpired} disabled={saving} data-testid="drop-expired">
+                Leave them out
+              </button>
+            </p>
           )}
           {message && <p className="text-sm text-red-700" data-testid="seed-message">{message}</p>}
         </header>
@@ -360,6 +449,8 @@ function SeedReview({ initial, parish, labeler, onLabelerChange }: Props & { ini
       seed,
       churches: detail.churches,
       selected: slot.id === selectedId,
+      groupmates: isOpen(slot) ? groupOf(seed, slot) : [slot],
+      expired: expiredIds.has(slot.id),
       editing: editing?.slotId === slot.id ? editing.row : null,
       refDate: activeBulletin?.published_date ?? null,
       onSelect: () => setSelectedId(slot.id),
@@ -404,6 +495,9 @@ function Section({
 
 interface SlotCardProps {
   slot: SeedSlot;
+  /** The slots an answer to this one settles: its open group, or itself. */
+  groupmates: SeedSlot[];
+  expired: boolean;
   seed: SeedFile;
   churches: Church[];
   selected: boolean;
@@ -421,7 +515,7 @@ interface SlotCardProps {
 }
 
 function SlotCard(props: SlotCardProps) {
-  const { slot, seed, churches, selected, editing } = props;
+  const { slot, seed, churches, selected, editing, groupmates } = props;
   const church = (slug: string | undefined) => churches.find((c) => c.slug === slug)?.name ?? slug ?? "";
   const open = isOpen(slot);
   const calls = new Map(seed.calls.map((c) => [c.id, c]));
@@ -442,13 +536,14 @@ function SlotCard(props: SlotCardProps) {
             {describeEntry(slot.entry)} <span className="font-normal text-slate-500">· {church(slot.entry.church_slug)}</span>
           </span>
         ) : (
-          <span className="font-medium text-slate-500">No entry yet</span>
+          <span className="font-medium text-slate-500">{open ? "No entry yet" : "No time (left out)"}</span>
         )}
         {slot.page && (
           <button className="text-xs text-sky-700 hover:underline" onClick={() => props.onSource(newest, slot.page)}>
             p. {slot.page}
           </button>
         )}
+        {props.expired && <span className="text-xs text-amber-800">date passed</span>}
         {!open && (
           <span className={`text-xs ${slot.decision === "include" ? "text-emerald-700" : "text-zinc-500"}`}>
             {slot.decision === "include" ? "included" : "left out"}
@@ -473,6 +568,11 @@ function SlotCard(props: SlotCardProps) {
       {open && (
         <div className="mt-1.5 rounded bg-amber-50 p-2">
           <p className="font-medium text-amber-900">{slot.question}</p>
+          {groupmates.length > 1 && (
+            <p className="text-xs text-amber-800" data-testid={`group-${slot.id}`}>
+              One answer for {groupmates.length} slots: {groupmates.map((s) => s.id).join(", ")}
+            </p>
+          )}
           <div className="mt-1 flex flex-col gap-1">
             {(slot.options ?? []).map((option, i) => (
               <button
@@ -486,7 +586,20 @@ function SlotCard(props: SlotCardProps) {
                 <kbd>{i + 1}</kbd>
                 <span>
                   {option.label}
-                  {option.entry && <span className="block text-xs text-slate-600">{describeEntry(option.entry)} · {church(option.entry.church_slug)}</span>}
+                  {groupmates.length > 1
+                    ? groupmates.map((g) => {
+                        const entry = g.options?.[i]?.entry;
+                        return entry ? (
+                          <span key={g.id} className="block text-xs text-slate-600">
+                            {describeEntry(entry)} · {church(entry.church_slug)}
+                          </span>
+                        ) : null;
+                      })
+                    : option.entry && (
+                        <span className="block text-xs text-slate-600">
+                          {describeEntry(option.entry)} · {church(option.entry.church_slug)}
+                        </span>
+                      )}
                 </span>
                 {option.leaning && <span className="ml-auto text-xs text-amber-800">agent leans to this</span>}
               </button>
@@ -525,8 +638,43 @@ function SlotCard(props: SlotCardProps) {
         </div>
       )}
 
+      {slot.weekly_omission && (
+        <p className="mt-1.5 rounded bg-sky-50 px-2 py-1 text-xs text-slate-700">
+          <button
+            className="font-semibold underline"
+            onClick={() => props.onSource(resolveBulletin(seed, slot.weekly_omission?.bulletin), null)}
+          >
+            Kept after one missing mention
+          </button>
+          {": "}{slot.weekly_omission.reason}
+        </p>
+      )}
       <div className="mt-1.5 grid grid-cols-[repeat(auto-fill,minmax(10rem,1fr))] gap-1.5">
         {slot.sources.map((source, i) => {
+          if (source.url && /^https?:\/\//.test(source.url)) {
+            return (
+              <a
+                key={i}
+                href={source.url}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded border border-slate-200 bg-slate-50 px-1.5 py-1 text-left text-xs hover:border-sky-400"
+              >
+                <span className="font-semibold text-slate-600">{source.source}</span>
+                <span className="text-slate-400"> · {hostOf(source.url)}</span>
+                <span className="block text-slate-800">{source.said}</span>
+                {source.schedule_check && (
+                  <span className="mt-1 block text-slate-600">
+                    <span className="block">Checked {source.schedule_check.checked_at}</span>
+                    <span className="block">Current: {source.schedule_check.current_because}</span>
+                    <span className="block">
+                      Fits bulletin {source.schedule_check.bulletin}: {source.schedule_check.fits_because}
+                    </span>
+                  </span>
+                )}
+              </a>
+            );
+          }
           const call = calls.get(source.source);
           const hash = resolveBulletin(seed, source.bulletin ?? call?.bulletin);
           const bulletin = seed.bulletins.find((b) => b.content_hash === hash);

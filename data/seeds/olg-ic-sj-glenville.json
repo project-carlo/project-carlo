@@ -1,0 +1,1973 @@
+{
+  "schema_version": 1,
+  "parish_slug": "olg-ic-sj-glenville",
+  "status": "ready",
+  "as_of": "2026-10-25T13:22:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:14:20Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (Immaculate Conception Glenville, Our Lady of Grace Ballston Lake, St. Joseph's Scotia). The Mass and Reconciliation boxes on page 1 are identical in all five bulletins, and page 5 lists the weekly Adoration and the first-Saturday devotion. All settled: the Nov 2 noon All Souls Mass at OLG and the shortened Nov 3 Tuesday Adoration at IC are dated entries. The Disciples Together gathering has no Mass time and is excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "2eb9cf021ca6f9b55ecf1cc009858eae0b8bea3f56ab6f9418aa0801dbd76233",
+      "fetched_at": "2026-10-25T13:22:58Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "2ed7cf37163bfdfef7160d3175d60ee90106550d331845ee31bb559d5000331a",
+      "fetched_at": "2026-10-18T12:51:01Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "44ac40a2f2970b79132d1114e77696aece3e7c71fe24c9fe24c5b8795136a9a3",
+      "fetched_at": "2026-10-11T16:37:44Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "187facfe80f072dfdc4ed11b59319371795377ea62b3fdb6730b0f4bcb9b95df",
+      "fetched_at": "2026-10-04T14:49:19Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6c0e929915d45d7041dd6398e171829421b6212226400d25de34b78327c163c8",
+      "fetched_at": "2026-09-28T21:59:33Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Saturdays 4 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Saturdays 4 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Saturdays 4 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Saturdays 4 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Saturdays 4 pm Mass SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Saturday 16:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Saturday 16:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Saturday 16:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Saturday 16:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Saturday 16:00 st-joseph-scotia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekend Mass Times box on the front page of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Saturdays ... 5 pm Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Saturdays ... 5 pm Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Saturdays ... 5 pm Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Saturdays ... 5 pm Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Saturdays ... 5 pm Mass IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-glenville  “New time”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekend Mass Times box, all five bulletins (the Sep 27 issue labels 5 pm IC as a new time; it is unchanged since).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Sundays 8 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Sundays 8 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Sundays 8 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Sundays 8 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Sundays 8 am Mass SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Sunday 08:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Sunday 08:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Sunday 08:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Sunday 08:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Sunday 08:00 st-joseph-scotia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekend Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "9 am Mass IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-glenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekend Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-ballston-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "11 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "11 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "11 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "11 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "11 am Mass OLG"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Sunday 11:00 our-lady-of-grace-ballston-lake  “Includes Youth Mass and Children's Liturgy of the Word on select Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Sunday 11:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Sunday 11:00 our-lady-of-grace-ballston-lake  “Children's Liturgy of the Word available on select Sundays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Sunday 11:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Sunday 11:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekend Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Monday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Monday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Monday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Monday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Monday 9 am Mass IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Monday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Monday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Monday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Monday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Monday 09:00 immaculate-conception-glenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Monday ... 6 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Monday ... 6 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Monday ... 6 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Monday ... 6 pm Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Monday ... 6 pm Mass SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Monday 18:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Monday 18:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "specific_date mass 2026-11-02 18:00 st-joseph-scotia  “All Souls Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Monday 18:00 st-joseph-scotia  “Relic veneration after Mass on Oct 12”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Monday 18:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Monday 18:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "specific_date mass 2026-10-12 18:00 st-joseph-scotia  “Novena to St. Carlo celebration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Tuesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Tuesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Tuesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Tuesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Tuesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Tuesday 9 am Mass IC; Wednesday 9 am Mass IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Wednesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Wednesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Wednesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Wednesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Wednesday 09:00 immaculate-conception-glenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-ballston-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Thursday 9 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Thursday 9 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Thursday 9 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Thursday 9 am Mass OLG"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Thursday 9 am Mass OLG"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Thursday 09:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Thursday 09:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Thursday 09:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Thursday 09:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Thursday 09:00 our-lady-of-grace-ballston-lake",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Friday 7:30 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Friday 7:30 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Friday 7:30 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Friday 7:30 am Mass SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Friday 7:30 am Mass SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly mass Friday 07:30 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Friday 07:30 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Friday 07:30 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Friday 07:30 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly mass Friday 07:30 st-joseph-scotia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Weekday Mass Times box, all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday ... Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday ... Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday ... Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday ... Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday ... Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "specific_date mass 2026-11-07 08:30 immaculate-conception-glenville  “First Saturday Monthly Devotion”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly mass Saturday 08:30 immaculate-conception-glenville  “First Saturday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly mass Saturday 08:30 immaculate-conception-glenville  “First Saturday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly mass Saturday 08:30 immaculate-conception-glenville  “First Saturday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "specific_date mass 2026-10-03 08:30 immaculate-conception-glenville  “Monthly Devotion”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1 and POLICY, Weekly or dated rule 2: named monthly service (every first Saturday), so weekly with weeks_of_month first. Newest week holds no first Saturday but its page 5 prints the devotion.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 8,
+          "said": "Reconciliation is available Saturdays from 3-3:30 pm at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Saturdays at 3 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Saturdays at 3 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Saturdays at 3 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Saturdays at 3 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Saturdays at 3 pm at SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-scotia",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-scotia",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-scotia",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-scotia",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-scotia",
+          "page": 8
+        }
+      ],
+      "rationale": "R1: Sacrament of Reconciliation box on page 1 gives the start; page 8 gives the 3-3:30 window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 8,
+          "said": "Saturdays from 4-4:30 at IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Saturdays at 4 pm at IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Saturdays at 4 pm at IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Saturdays at 4 pm at IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Saturdays at 4 pm at IC"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Saturdays at 4 pm at IC"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-glenville",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-glenville",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-glenville",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-glenville",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-glenville  “New time”",
+          "page": 8
+        }
+      ],
+      "rationale": "R1: Sacrament of Reconciliation box on page 1 gives the start; page 8 gives the 4-4:30 window.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 1,
+          "said": "Mondays at 5 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 1,
+          "said": "Mondays at 5 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 1,
+          "said": "Mondays at 5 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 1,
+          "said": "Mondays at 5 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 1,
+          "said": "Mondays at 5 pm at SJ"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 8,
+          "said": "Mondays at 5 pm at St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly confession Monday 17:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly confession Monday 17:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly confession Monday 17:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly confession Monday 17:00 st-joseph-scotia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly confession Monday 17:00 st-joseph-scotia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Reconciliation box on page 1 and page 8, all five bulletins; no end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 8:00 AM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament: at SJ - Sundays, after 8 am Mass until 11 am. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament: at SJ - Sundays, after 8 am Mass until 11 am. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament: at SJ - Sundays, after 8 am Mass until 11 am. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "Adoration of the Blessed Sacrament: at SJ - Sundays, after 8 am Mass until 11 am. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "Eucharistic ministers are also needed to open & close for Adoration on Sunday (open at 9/close at 11)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "Eucharistic ministers are also needed to open & close for Adoration on Sunday (open at 9/close at 11)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "Eucharistic ministers are also needed to open & close for Adoration on Sunday (open at 9/close at 11)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "Eucharistic ministers are also needed to open & close for Adoration on Sunday (open at 9/close at 11)"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly adoration Sunday 09:00–11:00 st-joseph-scotia  “After 8 am Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly adoration Sunday 09:00–11:00 st-joseph-scotia  “Starts after 8 am Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly adoration Sunday 09:00–11:00 st-joseph-scotia  “Following 8:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly adoration Sunday 09:00–11:00 st-joseph-scotia  “Starts after 8:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly adoration Sunday 08:00–11:00 st-joseph-scotia  “Following 8 am Mass”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R10: after a weekend Mass is one hour after it starts, so 9:00 AM; the bulletin's own 'open at 9/close at 11' for Adoration confirms the time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "at IC - Tuesdays, from 1-8 pm in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "at IC - Tuesdays, from 1-8 pm in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "at IC - Tuesdays, from 1-8 pm in church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "at IC - Tuesdays, from 1-8 pm in church"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly adoration Tuesday 13:00–20:00 immaculate-conception-glenville",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly adoration Tuesday 13:00–20:00 immaculate-conception-glenville",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly adoration Tuesday 13:00–20:00 immaculate-conception-glenville",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly adoration Tuesday 13:00–20:00 immaculate-conception-glenville",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly adoration Tuesday 13:00–20:00 immaculate-conception-glenville",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: Adoration list on page 5 of the issues read; weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-ballston-lake",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "On days with a morning Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "at OLG - Thursdays, from 9:30-12 on days when there is a morning Mass. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "at OLG - Thursdays, from 9:30-12 on days when there is a morning Mass. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "at OLG - Thursdays, from 9:30-12 on days when there is a morning Mass. Sign-up, please."
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "at OLG - Thursdays, from 9:30-12 on days when there is a morning Mass. Sign-up, please."
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "weekly adoration Thursday 09:30–12:00 our-lady-of-grace-ballston-lake  “Only on days with morning Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly adoration Thursday 09:30–12:00 our-lady-of-grace-ballston-lake  “Only on days when there is a morning Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly adoration Thursday 09:30–12:00 our-lady-of-grace-ballston-lake  “On days when there is a morning Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly adoration Thursday 09:30–12:00 our-lady-of-grace-ballston-lake  “Only when morning Mass occurs”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "weekly adoration Thursday 09:30–12:00 our-lady-of-grace-ballston-lake  “On days when there is a morning Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed weekly in the Adoration list on page 5. Thursday has a regular 9 am Mass at OLG, so the condition holds each week; the note keeps the qualifier.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Rosary; Benediction at 8:30 AM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday. Exposition of the Blessed Sacrament, Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2ed7cf37",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday. Exposition of the Blessed Sacrament, Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday. Exposition of the Blessed Sacrament, Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday. Exposition of the Blessed Sacrament, Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6c0e9299",
+          "page": 5,
+          "said": "Monthly Devotion - held at IC every first Saturday. Exposition of the Blessed Sacrament, Eucharistic Adoration, and Rosary at 7:30 am; Benediction and Holy Mass at 8:30 am."
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "specific_date adoration 2026-11-07 07:30–08:30 immaculate-conception-glenville  “First Saturday Monthly Devotion”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "2ed7cf37163b",
+          "said": "weekly adoration Saturday 07:30 immaculate-conception-glenville  “First Saturday of the month; followed by Rosary and Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "weekly adoration Saturday 07:30–08:30 immaculate-conception-glenville  “First Saturday of the month; includes Rosary and Benediction”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "187facfe80f0",
+          "said": "weekly adoration Saturday 07:30–08:30 immaculate-conception-glenville  “First Saturday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6c0e929915d4",
+          "said": "specific_date adoration 2026-10-03 07:30–08:30 immaculate-conception-glenville  “Monthly Devotion”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2 and Benediction rule: one Adoration event with Benediction in the note, weeks_of_month first. No end time is printed (Benediction and Mass are both at 8:30), so end is left null rather than guessed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-glenville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "13:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Shortened for All Souls; Benediction at 5:30 PM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 5,
+          "said": "at IC - Tuesdays, from 1-8 pm in church (ends at 6 pm on Nov. 3 with Benediction at 5:30)"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "specific_date adoration 2026-11-03 18:00–20:00 immaculate-conception-glenville  CANCELLED; “Adoration shortened for All Souls Liturgy”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16, R40: on Nov 3 the usual Tuesday 1-8 pm Adoration ends at 6 pm with Benediction at 5:30. The file cannot hold a cancellation and a replacement with the same start time on one date, so only the printed shortened occurrence is recorded as a dated entry; it changes that date, not the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-grace-ballston-lake",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "2eb9cf02",
+          "page": 8,
+          "said": "Nov. 2 Masses for All Souls' Day 9 am at IC 12 noon at OLG 6 pm at SJ"
+        },
+        {
+          "source": "history",
+          "bulletin": "2eb9cf021ca6",
+          "said": "specific_date mass 2026-11-02 12:00 our-lady-of-grace-ballston-lake  “All Souls' Day”",
+          "page": 8
+        }
+      ],
+      "rationale": "R1, R16, POLICY Weekly or dated rule 7: the noon Mass at OLG is outside the weekly schedule, so it is dated. The 9 am IC and 6 pm SJ All Souls Masses fall on Monday at the regular Monday times, so they are the weekly Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Disciples Together"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "specific_date mass 2026-11-29 16:45 st-joseph-scotia  “Disciples Together monthly family gathering and Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R24/R26 and R7: the bulletin gives only the 4:45-7 pm gathering window and no start time for the Mass inside it; history read the gathering's start as a Mass time. Not definite (POLICY, What to extract). Not in the newest bulletin either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-12-27",
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Disciples Together"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "specific_date mass 2026-12-27 16:45 st-joseph-scotia  “Disciples Together monthly family gathering and Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R24/R26 and R7: the bulletin gives only the 4:45-7 pm gathering window and no start time for the Mass inside it; history read the gathering's start as a Mass time. Not definite (POLICY, What to extract). Not in the newest bulletin either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-02-28",
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Disciples Together"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "specific_date mass 2027-02-28 16:45 st-joseph-scotia  “Disciples Together monthly family gathering and Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R24/R26 and R7: the bulletin gives only the 4:45-7 pm gathering window and no start time for the Mass inside it; history read the gathering's start as a Mass time. Not definite (POLICY, What to extract). Not in the newest bulletin either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-scotia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2027-05-16",
+        "start_time": "16:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Disciples Together"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44ac40a2",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "agent",
+          "bulletin": "187facfe",
+          "page": 4,
+          "said": "Disciples Together is a monthly gathering ... families and ALL AGES are invited to join us at St. Joseph's for faith-building activities, Mass, and time to connect with one another from 4:45 pm to 7 pm. Dates: September 27 November 29 December 27 February 28 May 16"
+        },
+        {
+          "source": "history",
+          "bulletin": "44ac40a2f297",
+          "said": "specific_date mass 2027-05-16 16:45 st-joseph-scotia  “Disciples Together monthly family gathering and Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R24/R26 and R7: the bulletin gives only the 4:45-7 pm gathering window and no start time for the Mass inside it; history read the gathering's start as a Mass time. Not definite (POLICY, What to extract). Not in the newest bulletin either.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-vincent-de-paul-cobleskill",
+  "status": "approved",
+  "as_of": "2026-10-04T14:59:56Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:14:23Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Mass schedule (Sat 5:15 PM vigil, Sun 8:30 AM, Tue and Thu 9:00 AM, First Friday 9:00 AM) is in the p1 schedule box and matches history and the older bulletin. Saturday Reconciliation is \"after Mass\" and is converted to 6:15 PM per the policy (history had 6:00 PM). Thursday Adoration \"after 9:00 AM Mass\" appears only in the newest bulletin and is raised as a question.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3999d3001141dd9ed43329c0971b9317d82a7645cc76150627fa3cc609e16740",
+      "fetched_at": "2026-10-04T14:59:56Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ac16276cd39c45345934deddfe8b3a7fffc6edabff400264c356da2ee0237d13",
+      "fetched_at": "2026-09-28T22:09:30Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday | 5:15 PM Vigil"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "Masses: Saturday Vigil - 5:15 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly mass Saturday 17:15 st-vincent-de-paul-cobleskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly mass Saturday 17:15 st-vincent-de-paul-cobleskill",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box; the Mass-intentions list on p2 agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "Sunday | 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "Sunday - 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly mass Sunday 08:30 st-vincent-de-paul-cobleskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly mass Sunday 08:30 st-vincent-de-paul-cobleskill",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box; intentions p2 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "WEEKDAY MASSES Tuesday | 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "Tuesday - 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly mass Tuesday 09:00 st-vincent-de-paul-cobleskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly mass Tuesday 09:00 st-vincent-de-paul-cobleskill",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box; intentions p2 list Tuesday Oct 6.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "Thursday | 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "Thursday - 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly mass Thursday 09:00 st-vincent-de-paul-cobleskill",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly mass Thursday 09:00 st-vincent-de-paul-cobleskill",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box; intentions p2 list Thursday Oct 8.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "First Friday | 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "First Friday - 9:00 AM; p2: First Friday, October 2"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly mass Friday 09:00 st-vincent-de-paul-cobleskill  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly mass Friday 09:00 st-vincent-de-paul-cobleskill  “First Friday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "A weeks-of-the-month slot, so weekly with weeks_of_month first (policy rule 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:15 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | After Mass; Other | By Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "Reconciliation: Available after 5:15 p.m. Mass weekly, or by appointment"
+        }
+      ],
+      "rationale": "No clock time, only \"after Mass\" on Saturday; the only Saturday Mass is the 5:15 PM vigil (the 9/27 bulletin names it), so policy puts it 1 hour after the weekend Mass starts: 6:15 PM, no end time. History recorded 6:00 PM, which differs from the policy rule. The by-appointment option has no time and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "Reconciliation Other | By Appointment"
+        }
+      ],
+      "rationale": "Confession by appointment has no definite start time; policy leaves it out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "ADORATION Thursday | After 9:00 AM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ac16276cd39c",
+          "page": 1,
+          "said": "No adoration line in the 9/27 bulletin p1 (read in full text)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly adoration Thursday 09:30 st-vincent-de-paul-cobleskill  “After 9:00 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Newest bulletin lists Thursday adoration \"after 9:00 AM Mass\" with no clock time or end time; the 9/27 bulletin does not print any adoration, and history has it in one of two bulletins. Policy converts \"after a weekday Mass\" to 30 minutes after the Mass start (9:30 AM), no end time. Unclear whether it is a standing weekly slot or newly added.\n\nReview 2026-10-22: Include weekly Thursday 9:30 AM Adoration under R1/R10: the newest regular schedule says after 9 AM Mass. A new clear standing schedule does not require repetition.",
+      "question": "Add Thursday Adoration after the 9:00 AM Mass (9:30 AM, no end time)?",
+      "options": [
+        {
+          "label": "Thursday 9:30 AM Adoration (after the 9:00 AM Mass)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-vincent-de-paul-cobleskill",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 9:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-cobleskill",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3999d3001141",
+          "page": 1,
+          "said": "RECONCILIATION Saturday | After Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3999d3001141",
+          "said": "weekly confession Saturday 18:00 st-vincent-de-paul-cobleskill  “After Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ac16276cd39c",
+          "said": "weekly confession Saturday 18:00 st-vincent-de-paul-cobleskill  “Following the 5:15 PM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "History read \"after Mass\" as 6:00 PM; the policy rule for \"after\" a Saturday vigil starting 5:15 PM is 1 hour after the start, 6:15 PM, which is the included Saturday confession slot. This 6:00 PM reading is left out as a duplicate with the wrong time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

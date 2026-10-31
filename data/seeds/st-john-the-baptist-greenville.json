@@ -1,0 +1,1060 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-greenville",
+  "status": "ready",
+  "as_of": "2026-10-25T13:19:38Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:08:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (St. John the Baptist, Our Lady of Knock Shrine, Sacred Heart Cairo) in one shared bulletin. Weekend Masses, the Wednesday noon and Friday 6:30 PM weekday Masses, Wednesday and Friday Adoration, and all five Reconciliation times agree in all four bulletins. Added the one-time October 27 Adoration day and Holy Hour at Sacred Heart. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "628c6176ab049e08ac6f7ff30d1533d88ecb94f5a2076392f4932b6dd9b83b84",
+      "fetched_at": "2026-10-25T13:19:38Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "d9ad60d4eed6b3dc2ad0ba468f96da49de0c5a5c6f2f7501dcac533468a71dc1",
+      "fetched_at": "2026-10-11T16:34:24Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c731b07413348d68c3fe8e46952483507bb7bb23758ff5c6b10bbeffed8b7c5a",
+      "fetched_at": "2026-10-04T14:54:06Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b671b6e9e954b2c1b8e45bb6abac3747b19cc3ab9bf621a0d31d89ca04c6e923",
+      "fetched_at": "2026-09-28T22:03:28Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-knock-east-durham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM at Our Lady of Knock Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM at Our Lady of Knock Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM at Our Lady of Knock Shrine"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 PM at Our Lady of Knock Shrine"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly mass Saturday 16:00 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly mass Saturday 16:00 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly mass Saturday 16:00 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly mass Saturday 16:00 our-lady-of-knock-east-durham",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of the newest bulletin and the three older ones; the p4 church table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-greenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Sunday 9:00 AM St. John the Baptist, Greenville, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Sunday 9:00 AM St. John the Baptist, Greenville, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Sunday 9:00 AM St. John the Baptist, Greenville, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Sunday 9:00 AM St. John the Baptist, Greenville, NY"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-greenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of every bulletin read; the p4 church table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cairo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Sunday 11:00 AM Sacred Heart Church, Cairo, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Sunday 11:00 AM Sacred Heart Church, Cairo, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Sunday 11:00 AM Sacred Heart Church, Cairo, NY"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Sunday 11:00 AM Sacred Heart Church, Cairo, NY"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly mass Sunday 11:00 sacred-heart-cairo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly mass Sunday 11:00 sacred-heart-cairo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly mass Sunday 11:00 sacred-heart-cairo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly mass Sunday 11:00 sacred-heart-cairo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sunday Mass Schedule box of every bulletin read; the p4 church table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-greenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 2,
+          "said": "WEDNESDAY: October 28, 2026 Daily Mass at St John's at 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 4,
+          "said": "Masses during the week: 12:00PM at St. John's and 6:30PM at OLOK"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 2,
+          "said": "WEDNESDAY Daily Mass at St John's at 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 2,
+          "said": "WEDNESDAY Daily Mass at St John's at 12 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 2,
+          "said": "WEDNESDAY Daily Mass at St John's at 12 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly mass Wednesday 12:00 st-john-the-baptist-greenville",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly mass Wednesday 12:00 st-john-the-baptist-greenville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly mass Wednesday 12:00 st-john-the-baptist-greenville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly mass Wednesday 12:00 st-john-the-baptist-greenville  “Daily Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 4): the Wednesday noon Mass at St. John's is listed under This Week in all four bulletins (four different weeks) and in the standing 'Masses during the week' line; its intention appears in the Oct 11 list.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-knock-east-durham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 2,
+          "said": "FRIDAY: October 30, 2026 Daily Mass at Our Lady of Knock in East Durham at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 4,
+          "said": "Masses during the week: 12:00PM at St. John's and 6:30PM at OLOK"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 2,
+          "said": "FRIDAY Daily Mass at Our Lady of Knock in East Durham at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 2,
+          "said": "FRIDAY Daily Mass at Our Lady of Knock in East Durham at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 2,
+          "said": "FRIDAY Daily Mass at Our Lady of Knock in East Durham at 6:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly mass Friday 18:30 our-lady-of-knock-east-durham",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly mass Friday 18:30 our-lady-of-knock-east-durham",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly mass Friday 18:30 our-lady-of-knock-east-durham",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly mass Friday 18:30 our-lady-of-knock-east-durham  “Daily Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 4): the Friday 6:30 PM Mass at Our Lady of Knock is listed under This Week in all four bulletins (four different weeks) and in the standing weekday line; its intention appears in the Oct 4 and Oct 11 lists.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-greenville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 2,
+          "said": "Daily Mass at St John's at 12 PM with Adoration and Rosary starting at 11 AM, Confessions available"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 2,
+          "said": "Daily Mass at St John's at 12 PM with Adoration and Rosary starting at 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 2,
+          "said": "Daily Mass at St John's at 12 PM with Adoration and Rosary starting at 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 2,
+          "said": "Daily Mass at St John's at 12 PM with Holy Hour and Rosary starting at 11 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 4,
+          "said": "St. John's will also have Adoration, followed by daily Mass at noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly adoration Wednesday 11:00–12:00 st-john-the-baptist-greenville  “Includes Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly adoration Wednesday 11:00–12:00 st-john-the-baptist-greenville  “Includes Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly adoration Wednesday 11:00–12:00 st-john-the-baptist-greenville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly adoration Wednesday 11:00–12:00 st-john-the-baptist-greenville  “Holy Hour and Rosary before Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly or dated, rule 4): weekly Wednesday Adoration at St. John's starts at 11 AM in all four bulletins (four weeks). No end is printed, but the Oct 4 issue says Adoration is followed by the noon Mass, so it ends at 12:00.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-knock-east-durham",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:30 PM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 2,
+          "said": "Daily Mass at Our Lady of Knock in East Durham at 6:30 PM. Adoration and Confessions to follow"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 2,
+          "said": "Adoration and Confessions to follow"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 2,
+          "said": "Adoration and Confessions to follow"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 2,
+          "said": "Holy Hour and Confessions to follow"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly adoration Friday 19:00 our-lady-of-knock-east-durham  “Following 6:30 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly adoration Friday 19:00 our-lady-of-knock-east-durham  “Follows 6:30 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly adoration Friday 19:00 our-lady-of-knock-east-durham  “Follows 6:30 PM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly adoration Friday 19:00 our-lady-of-knock-east-durham  “Holy Hour following 6:30 PM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R10, POLICY (Times): no clock time is printed; Adoration follows the weekday 6:30 PM Mass, so it starts 30 minutes after it, 7:00 PM, which is also when the printed Friday Reconciliation starts. Listed in all four bulletins (four weeks), so weekly (R35). No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-greenville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly confession Wednesday 11:15–11:45 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly confession Wednesday 11:15–11:45 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly confession Wednesday 11:15–11:45 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly confession Wednesday 11:15–11:45 st-john-the-baptist-greenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation Schedule of every bulletin read; the p4 table agrees. 'Or by appointment' adds no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-greenville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "St. John the Baptist: Wednesday 11:15 - 11:45 AM and Sunday 8-8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly confession Sunday 08:00–08:30 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly confession Sunday 08:00–08:30 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly confession Sunday 08:00–08:30 st-john-the-baptist-greenville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly confession Sunday 08:00–08:30 st-john-the-baptist-greenville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation Schedule of every bulletin read; the p4 table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-knock-east-durham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly confession Friday 19:00–19:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly confession Friday 19:00–19:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly confession Friday 19:00–19:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly confession Friday 19:00–19:30 our-lady-of-knock-east-durham",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation Schedule of every bulletin read; the p4 table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-knock-east-durham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Our Lady of Knock Shrine: Friday 7:00 - 7:30 PM and Saturday 3-3:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-knock-east-durham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly confession Saturday 15:00–15:30 our-lady-of-knock-east-durham",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation Schedule of every bulletin read; the p4 table agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cairo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 11:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 1,
+          "said": "Sacred Heart: Sunday after 11 AM Mass, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 1,
+          "said": "Sacred Heart: Sunday after 11 AM Mass, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c731b074",
+          "page": 1,
+          "said": "Sacred Heart: Sunday after 11 AM Mass, or by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b671b6e9",
+          "page": 1,
+          "said": "Sacred Heart: Sunday after 11 AM Mass, or by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "weekly confession Sunday 12:00 sacred-heart-cairo  “After 11:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "weekly confession Sunday 12:00 sacred-heart-cairo  “After 11:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c731b0741334",
+          "said": "weekly confession Sunday 12:00 sacred-heart-cairo  “After 11:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b671b6e9e954",
+          "said": "weekly confession Sunday 12:00 sacred-heart-cairo  “After 11 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R10, POLICY (Times): no clock time is printed; Confession follows the 11:00 AM weekend Mass, so it starts one hour after it, at 12:00. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cairo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 5,
+          "said": "This Tuesday, October 27th at Sacred Heart Church Adoration begins at 1:00, Holy Hour with Fr. Russ at 6:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 5,
+          "said": "Adoration will also be available starting at 1:00 on the 27th. There is a sign-up sheet in the information corner in the annex at SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "628c6176ab04",
+          "said": "specific_date adoration 2026-10-27 13:00–18:00 sacred-heart-cairo  “Concludes with Holy Hour at 6:00 PM”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "specific_date adoration 2026-10-27 13:00 sacred-heart-cairo",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Dates): a one-time Adoration day at Sacred Heart on Tuesday, October 27 (on or after as_of). Start time only; the bulletins give no end for the afternoon Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cairo",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with Benediction"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 5,
+          "said": "This Tuesday, October 27th at Sacred Heart Church Adoration begins at 1:00, Holy Hour with Fr. Russ at 6:00"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d9ad60d4",
+          "page": 5,
+          "said": "there will be a holy hour with adoration and benediction at Sacred Heart Church in Cairo from 6-7 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "d9ad60d4eed6",
+          "said": "specific_date adoration 2026-10-27 18:00–19:00 sacred-heart-cairo  “Holy hour and benediction”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16, POLICY (What to extract, Dates): Holy Hour with Benediction is Adoration at Sacred Heart on Tuesday, October 27. The 6-7 PM end time is from the Oct 11 announcement (R19); the newest issue repeats the 6:00 start. It is not recorded inside the afternoon Adoration because that one has no printed end.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "628c6176",
+          "page": 6,
+          "said": "Installation Mass for Father Pat ... Thursday, November 5 at 5pm at St. Theresa's in Windham"
+        }
+      ],
+      "rationale": "R22, R24: an installation Mass for another parish's pastor at St. Theresa's, Windham, which is not one of this parish's churches (the church list has it under another parish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

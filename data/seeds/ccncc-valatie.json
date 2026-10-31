@@ -1,0 +1,691 @@
+{
+  "schema_version": 1,
+  "parish_slug": "ccncc-valatie",
+  "status": "approved",
+  "as_of": "2026-10-11T16:37:10Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:37:41Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Three churches (St. John's Valatie, St. James Chatham, St. Joseph/San Jose Stuyvesant). The bulletin has no schedule box, only a two-week calendar, so weekly Masses come from the same slots appearing in all six weeks across three bulletins. Open: whether the Wednesday 'Mass & Adoration' at St. Joseph's counts as a timed Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "bc25bbc7ef9b6477c4c7acaf4a0dab2159b5aea2383b2031102c2d2df7a95acd",
+      "fetched_at": "2026-10-11T16:37:10Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "55f0bfd2f21820efe68593270182c9d11db543055eef9b10086eb64b488bbc39",
+      "fetched_at": "2026-10-04T14:46:14Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "21eee4518e6385a859902a6bdbf676ff46e7fc7c753100e2622ae23862e55b08",
+      "fetched_at": "2026-09-28T21:56:44Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "4 pm | Mass | St. Joseph's (Saturday, listed in both weeks of every bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "4 pm | Mass | St. Joseph's (Saturday, listed in both weeks of every bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "4 pm | Mass | St. Joseph's (Saturday, listed in both weeks of every bulletin)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Saturday 16:00 st-joseph-stuyvesant",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Saturday 16:00 st-joseph-stuyvesant",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Saturday 16:00 st-joseph-stuyvesant",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the same Saturday slot is listed in both weeks of the calendar of each of the three bulletins read (six weeks), and the bulletin prints no separate schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-valatie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "8:30 am | Mass | St. John's (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "8:30 am | Mass | St. John's (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "8:30 am | Mass | St. John's (Sunday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-valatie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-valatie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Sunday 08:30 st-john-the-baptist-valatie",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Sunday in all six weeks shown across the three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "10:30 am | Mass | St. James (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "10:30 am | Mass | St. James (Sunday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "10:30 am | Mass | St. James (Sunday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Sunday 10:30 st-james-chatham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Sunday 10:30 st-james-chatham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Sunday 10:30 st-james-chatham",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Sunday in all six weeks shown across the three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "12:30 pm | Misa | San José (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "12:30 pm | Misa | San José (Español)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "12:30 pm | Misa | San José (Español)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Sunday 12:30 st-joseph-stuyvesant  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Sunday 12:30 st-joseph-stuyvesant  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Sunday 12:30 st-joseph-stuyvesant  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Sunday in all six weeks shown; San José is the Church of St. Joseph / San José, Stuyvesant (bulletin directory, p1). Note records the language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's (Wednesday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's (Wednesday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Wednesday 10:05 st-joseph-stuyvesant",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Wednesday 10:05 st-joseph-stuyvesant",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Wednesday 10:05 st-joseph-stuyvesant",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Wednesday in all six weeks shown. The Adoration half is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-valatie",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "12:05 pm | Mass | St. John's (Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "12:05 pm | Mass | St. John's (Thursday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "12:05 pm | Mass | St. John's (Thursday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Thursday 12:05 st-john-the-baptist-valatie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Thursday 12:05 st-john-the-baptist-valatie",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Thursday 12:05 st-john-the-baptist-valatie",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Thursday in all six weeks shown.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-chatham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "10:30 am | Rosary & Mass | St. James (Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "10:30 am | Rosary & Mass | St. James (Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "10:30 am | Rosary & Mass | St. James (Friday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly mass Friday 10:30 st-james-chatham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly mass Friday 10:30 st-james-chatham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly mass Friday 10:30 st-james-chatham",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: listed each Friday in all six weeks shown. The Rosary that goes with it is not recorded (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "55f0bfd2",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21eee451",
+          "page": 1,
+          "said": "10:05 am | Mass & Adoration | St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "weekly adoration Wednesday 10:05 st-joseph-stuyvesant",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "55f0bfd2f218",
+          "said": "weekly adoration Wednesday 10:05 st-joseph-stuyvesant  “Mass followed by Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21eee4518e63",
+          "said": "weekly adoration Wednesday 10:05 st-joseph-stuyvesant",
+          "page": 1
+        }
+      ],
+      "rationale": "R30, leaning per C6: Adoration is attached to the Mass at 10:05 with no clock time of its own, start or end. POLICY says an event that includes Adoration does not set the component's times. History reads it as Adoration at 10:05.\n\nReview 2026-10-22: Exclude Adoration at the Mass’s 10:05 AM start. “Mass & Adoration” supplies no separate Adoration time; POLICY final checks already prohibit copying it.",
+      "question": "Add weekly Wednesday Adoration at St. Joseph's, Stuyvesant, 10:05 AM?",
+      "options": [
+        {
+          "label": "Weekly Wed 10:05 AM Adoration",
+          "entry": {
+            "church_slug": "st-joseph-stuyvesant",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:05",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-james-chatham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls (English)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 4,
+          "said": "All Souls' Masses - November 2, 2026 ... 5 pm Mass - English - St. James - All are invited"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "specific_date mass 2026-11-02 17:00 st-james-chatham  “English”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on or after as_of, open to all (POLICY, Weekly or dated rule 7: special services outside the weekly schedule are dated).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-stuyvesant",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls (Spanish)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 4,
+          "said": "7 pm Mass - Spanish - Church of St. Joseph - all names of our beloved deceased will be prayed for"
+        },
+        {
+          "source": "history",
+          "bulletin": "bc25bbc7ef9b",
+          "said": "specific_date mass 2026-11-02 19:00 st-joseph-stuyvesant  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass on or after as_of; the notice says the mass is open to all parishes of the three communities.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 1,
+          "said": "9 am Rosary & Prayer Service | St. James; 9:30 am | Rosary | St. Joseph's; 12:00 pm | Prayer for Peace | St. John's; 7:00 pm | Rosaria | San José (Español)"
+        }
+      ],
+      "rationale": "R24: a Rosary, prayer service and Prayer for Peace are devotions, not Mass, Confession or Adoration. Listed every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 2,
+          "said": "Please email or call our Central Office if you would like to schedule a confession time."
+        }
+      ],
+      "rationale": "R26: Reconciliation is by appointment only; no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bc25bbc7",
+          "page": 4,
+          "said": "Nov 28 | Thanksgiving Day Mass"
+        }
+      ],
+      "rationale": "R24, R26: the calendar gives a date but no time or church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,1730 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-daniel-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:22Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T19:22:16Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:20:41Z",
+  "summary": "St. Daniel (one church, 3004 Court St). Weekend, daily and first-Saturday Masses and both Confession blocks are clear from the printed schedule boxes; the First Friday Holy Hour, Confession and Healing Mass (September through June) are included with the season from the 9/27 bulletin. The 24/7 Adoration Chapel has no stated location, so seven day-by-day questions ask whether to record it; Evening Prayer in the chapel is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "88f02c1435159ad82a13c82f4e20ff63e1e260a4d4519e67773f9b171924a01d",
+      "fetched_at": "2026-10-11T16:36:22Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "cf0c03d25e6d5d1cb36e44a2d73b93b9ce6da52c981147be8022ef6c8b3d813c",
+      "fetched_at": "2026-10-04T14:40:40Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "acab4bb616b21f35009f7d829fe7382212c6861a8b1a4359f171ae2a79c0566c",
+      "fetched_at": "2026-09-28T00:11:30Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Saturday | 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Saturday 16:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Saturday 16:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Saturday 16:00 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 of all three bulletins; calendar intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Weekend Saturday - 4:00pm - Sunday 10:30am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Sunday | 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Sunday 10:30 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Sunday 10:30 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Sunday 10:30 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 of all three bulletins; calendar intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Tuesday 12:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Tuesday 12:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Tuesday 12:00 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Daily Mass box on p1 of all three bulletins; the calendar's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Daily Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Tuesday & Thursday 12:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Thursday 12:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Thursday 12:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Thursday 12:00 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Daily Mass box on p1 of all three bulletins; the calendar's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Wed & Fri: 7:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Wednesday 07:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Wednesday 07:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Wednesday 07:00 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Daily Mass box on p1 of all three bulletins; the calendar's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "Daily Wed & Fri: 7:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Wed & Fri: 7:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Friday 07:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Friday 07:00 st-daniel-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly mass Friday 07:00 st-daniel-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Daily Mass box on p1 of all three bulletins; the calendar's intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "First Saturday of month: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 1,
+          "said": "First Saturday of month: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 1,
+          "said": "First Saturday of month: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Anointing of the Sick: First Saturday of each month at the 9:00am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 3,
+          "said": "FIRST SATURDAY October 3: 9:00a.m. The People of Saint Daniel"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Saturday 09:00 st-daniel-syracuse  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Saturday 09:00 st-daniel-syracuse  “First Saturday of the month; includes Anointing of the Sick”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "specific_date mass 2026-10-03 09:00 st-daniel-syracuse  “First Saturday Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box; a weeks-of-the-month slot, weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "website",
+          "url": "https://www.stdaniel.com",
+          "said": "Confession Saturday | 3:00pm; Before Mass on Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly confession Saturday 15:00–15:45 st-daniel-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly confession Saturday 15:00–15:45 st-daniel-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly confession Saturday 15:00–15:45 st-daniel-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Parish Information box, same in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": "10:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Confessions Saturdays at 3:00pm-3:45pm and 9:45am-10:15am on Sunday."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly confession Sunday 09:45–10:15 st-daniel-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly confession Sunday 09:45–10:15 st-daniel-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly confession Sunday 09:45–10:15 st-daniel-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "Parish Information box, same in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Monthly Healing Mass- First Friday 6pm Holy Hour and Confession 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 3,
+          "said": "FIRST FRIDAY October 2: 5:00 p.m. Holy Hour/Confessions; 6:00 p.m. Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 4,
+          "said": "On the First Fridays of the month September through June, there will be a Holy Hour at 5:00 PM followed by Mass at 6:00PM with a Healing Service after Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly mass Friday 18:00 st-daniel-syracuse  “First Friday healing mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly mass Friday 18:00 st-daniel-syracuse  “First Friday of the month Healing Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "specific_date mass 2026-10-02 18:00 st-daniel-syracuse  “First Friday Healing Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "The newest bulletin's wording is compressed ('First Friday 6pm Holy Hour and Confession 5pm'); the 9/27 calendar and p4 give Holy Hour/Confessions at 5:00 and the Healing Mass at 6:00, September through June. The newest bulletin does not repeat the season; it is inside it now.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Monthly Healing Mass- First Friday 6pm Holy Hour and Confession 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 3,
+          "said": "FIRST FRIDAY October 2: 5:00 p.m. Holy Hour/Confessions; 6:00 p.m. Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 4,
+          "said": "On the First Fridays of the month September through June, there will be a Holy Hour at 5:00 PM followed by Mass at 6:00PM with a Healing Service after Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Friday 17:00–18:00 st-daniel-syracuse  “First Friday holy hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Friday 17:00–18:00 st-daniel-syracuse  “First Friday of the month Holy Hour”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "specific_date adoration 2026-10-02 17:00–18:00 st-daniel-syracuse  “First Friday Holy Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "Holy Hour at 5:00 PM followed by the 6:00 PM Mass; one-hour end time inferred from 'Holy Hour' and the Mass that follows. Season from the 9/27 bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 9,
+          "start_day": null,
+          "end_month": 6,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Monthly Healing Mass- First Friday 6pm Holy Hour and Confession 5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 3,
+          "said": "FIRST FRIDAY October 2: 5:00 p.m. Holy Hour/Confessions; 6:00 p.m. Healing Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 4,
+          "said": "On the First Fridays of the month September through June, there will be a Holy Hour at 5:00 PM followed by Mass at 6:00PM with a Healing Service after Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly confession Friday 17:00–18:00 st-daniel-syracuse  “First Friday”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly confession Friday 17:00–18:00 st-daniel-syracuse  “First Friday of the month”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "specific_date confession 2026-10-02 17:00–18:00 st-daniel-syracuse  “First Friday Healing Service”",
+          "page": 4
+        }
+      ],
+      "rationale": "Confessions at 5:00 PM with the Holy Hour; no end time printed. Season from the 9/27 bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Monday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Monday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Monday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Monday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:20Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Tuesday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Tuesday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Tuesday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Tuesday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:22Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Wednesday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Wednesday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Wednesday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Wednesday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:24Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Thursday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Thursday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Thursday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Thursday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:27Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Friday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Friday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Friday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Friday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:28Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Saturday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Saturday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Saturday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Saturday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:30Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Perpetual Adoration Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 3,
+          "said": "Perpetual Adoration Chapel Candle / SAINT DANIEL ADORATION CHAPEL CANDLE"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "acab4bb616b2",
+          "page": 2,
+          "said": "Adoration Chapel is open 24 hours 7 days a week."
+        },
+        {
+          "source": "history",
+          "bulletin": "88f02c143515",
+          "said": "weekly adoration Sunday 00:00 st-daniel-syracuse  “Open 24 hours”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Sunday 00:00–23:59 st-daniel-syracuse  “Perpetual Adoration Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletins say the Adoration Chapel is open 24 hours a day, 7 days a week, but never say where it is; the parish office is at 611 Roxford Rd. South, a different address from the church at 3004 Court St, and the website lists no chapel location (its /adoration page is a 404). Policy leaves out a chapel whose location is unclear. The same question covers all seven days.",
+      "question": "Record the perpetual Adoration Chapel as Sunday 12:00 AM-11:59 PM at St. Daniel Church (same question each day)?",
+      "options": [
+        {
+          "label": "Sunday 24 hours (00:00-23:59)",
+          "entry": {
+            "church_slug": "st-daniel-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "23:59",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Perpetual Adoration Chapel"
+          }
+        },
+        {
+          "label": "Leave out (chapel location unclear)",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:32Z"
+      }
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Evening Prayer Liturgy of the Hours Adoration Chapel Mon-Fri 6pm-6:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Monday 18:00–18:15 st-daniel-syracuse  “Evening Prayer / Liturgy of the Hours”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly adoration Monday 18:00–18:15 st-daniel-syracuse  “Evening Prayer (Liturgy of the Hours) in Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Evening Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration under the policy, and the chapel's location is unclear; history recorded it as adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Evening Prayer Liturgy of the Hours Adoration Chapel Mon-Fri 6pm-6:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Tuesday 18:00–18:15 st-daniel-syracuse  “Evening Prayer / Liturgy of the Hours”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly adoration Tuesday 18:00–18:15 st-daniel-syracuse  “Evening Prayer (Liturgy of the Hours) in Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Evening Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration under the policy, and the chapel's location is unclear; history recorded it as adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Evening Prayer Liturgy of the Hours Adoration Chapel Mon-Fri 6pm-6:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Wednesday 18:00–18:15 st-daniel-syracuse  “Evening Prayer / Liturgy of the Hours”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly adoration Wednesday 18:00–18:15 st-daniel-syracuse  “Evening Prayer (Liturgy of the Hours) in Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Evening Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration under the policy, and the chapel's location is unclear; history recorded it as adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Evening Prayer Liturgy of the Hours Adoration Chapel Mon-Fri 6pm-6:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Thursday 18:00–18:15 st-daniel-syracuse  “Evening Prayer / Liturgy of the Hours”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly adoration Thursday 18:00–18:15 st-daniel-syracuse  “Evening Prayer (Liturgy of the Hours) in Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Evening Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration under the policy, and the chapel's location is unclear; history recorded it as adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88f02c143515",
+          "page": 1,
+          "said": "Evening Prayer Liturgy of the Hours Adoration Chapel Mon-Fri 6pm-6:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Friday 18:00–18:15 st-daniel-syracuse  “Evening Prayer / Liturgy of the Hours”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "acab4bb616b2",
+          "said": "weekly adoration Friday 18:00–18:15 st-daniel-syracuse  “Evening Prayer (Liturgy of the Hours) in Adoration Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Evening Prayer (Liturgy of the Hours) is not Mass, Confession or Adoration under the policy, and the chapel's location is unclear; history recorded it as adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-daniel-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "cf0c03d25e6d",
+          "page": 4,
+          "said": "The Rosary is said at Evening Prayer, Sunday through Friday, beginning at 6:00PM."
+        },
+        {
+          "source": "history",
+          "bulletin": "cf0c03d25e6d",
+          "said": "weekly adoration Sunday 18:00 st-daniel-syracuse  “Evening Prayer and Rosary”",
+          "page": 4
+        }
+      ],
+      "rationale": "A Rosary at Evening Prayer is not Adoration; left out, same reasoning as the weekday Evening Prayer.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

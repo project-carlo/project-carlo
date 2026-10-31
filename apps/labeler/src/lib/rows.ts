@@ -9,7 +9,7 @@ import type {
   Origin,
 } from "../types";
 import { dateForWeekday, dayOfDate, daysBetween, formatDate } from "./dates";
-import { seasonProblems } from "./pattern";
+import { canonicalWeeks, seasonProblems } from "./pattern";
 import { formatTime, minutesOf } from "./time";
 
 let counter = 0;
@@ -45,6 +45,7 @@ export function blankRow(
     end_time: null,
     cancelled: false,
     weeks_of_month: [],
+    exclude_weeks: false,
     season: null,
     page_number: viewedPage ?? previous?.page_number ?? null,
     note: null,
@@ -68,6 +69,7 @@ export function fromGemini(g: GeminiRow): EditorRow {
     end_time: g.end_time,
     cancelled: g.cancelled,
     weeks_of_month: kind === "weekly" ? [...g.weeks_of_month] : [],
+    exclude_weeks: kind === "weekly" && g.exclude_weeks,
     season: kind === "weekly" && g.season ? { ...g.season } : null,
     page_number: g.page_number,
     note: g.note,
@@ -88,7 +90,8 @@ const SAME = (a: unknown, b: unknown) => JSON.stringify(a) === JSON.stringify(b)
  * Apply an edit. A Gemini row whose event actually changes becomes
  * "gemini-edited"; marking it optional is not a change to the event.
  * Switching kind clears what the other kind carries: a dated row has no
- * weekday, weeks of the month or season, and a weekly row has no date.
+ * weekday, weeks of the month or season, and a weekly row has no date. No
+ * weeks listed is every week, never an exclusion.
  */
 export function editRow(row: EditorRow, patch: Patch): EditorRow {
   const changed = (Object.keys(patch) as (keyof Patch)[]).filter((k) => !SAME(row[k], patch[k]));
@@ -102,6 +105,7 @@ export function editRow(row: EditorRow, patch: Patch): EditorRow {
   } else {
     next.date = null;
   }
+  if (next.weeks_of_month.length === 0) next.exclude_weeks = false;
   const pending = next.pending_split;
   if (!pending || !(next.event_kind === "weekly" ? pending.days : pending.dates)) delete next.pending_split;
   return next;
@@ -149,6 +153,7 @@ export function asFirstOfMonth(row: EditorRow): EditorRow {
     event_kind: "weekly",
     day_of_week: day,
     weeks_of_month: ["first"],
+    exclude_weeks: false,
     note: null,
   });
 }
@@ -160,6 +165,7 @@ export function isFirstOfMonth(row: EditorRow): boolean {
     !!row.day_of_week &&
     row.weeks_of_month.length === 1 &&
     row.weeks_of_month[0] === "first" &&
+    !row.exclude_weeks &&
     !row.note?.trim() &&
     !row.pending_split
   );
@@ -266,6 +272,7 @@ export function toLabelEvent(row: EditorRow): LabelEvent {
     end_time: row.end_time || null,
     cancelled: row.cancelled,
     weeks_of_month: row.event_kind === "weekly" ? row.weeks_of_month : [],
+    exclude_weeks: row.event_kind === "weekly" && row.exclude_weeks,
     season: row.event_kind === "weekly" ? row.season : null,
     page_number: row.page_number,
     note: row.note?.trim() ? row.note.trim() : null,
@@ -275,7 +282,12 @@ export function toLabelEvent(row: EditorRow): LabelEvent {
 }
 
 export function fromLabelEvent(event: LabelEvent): EditorRow {
-  return { ...event, optional: event.optional ?? null, id: newId() };
+  return {
+    ...event,
+    exclude_weeks: event.exclude_weeks ?? false,
+    optional: event.optional ?? null,
+    id: newId(),
+  };
 }
 
 type Slot = Pick<
@@ -284,7 +296,11 @@ type Slot = Pick<
 >;
 
 /** What makes two rows the same event (for duplicates, and for matching Gemini rows). */
-export function slotKey(row: Slot & Partial<Pick<EditorRow, "weeks_of_month" | "season">>): string {
+export function slotKey(
+  row: Slot & Partial<Pick<EditorRow, "weeks_of_month" | "exclude_weeks" | "season">>,
+): string {
+  // The same weeks however written: "all but 2nd" excluded is 1st, 3rd, 4th and 5th.
+  const weeks = canonicalWeeks(row.weeks_of_month ?? [], row.exclude_weeks ?? false);
   return JSON.stringify([
     row.church_slug,
     row.event_type,
@@ -292,7 +308,8 @@ export function slotKey(row: Slot & Partial<Pick<EditorRow, "weeks_of_month" | "
     row.event_kind === "weekly" ? row.day_of_week : row.date,
     row.start_time,
     row.cancelled,
-    row.weeks_of_month ?? [],
+    weeks.weeks,
+    weeks.exclude,
     row.season ?? null,
   ]);
 }

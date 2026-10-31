@@ -1,0 +1,82 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "our-lady-of-the-americas-albany",
+  "content_hash": "3449965a536fd9c5ccbd85cf162d65141109eee7ff813557d20ce93d8fc14ae3",
+  "source_url": "https://www.ourladyoftheamericas.org/_files/ugd/bafe59_138f42b414d64d0d8e894405950e72ef.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-13",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 9049,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1692,
+    "reasoning_tokens": 1337
+  },
+  "seconds": 16.071,
+  "response_id": "resp_0a006d5189593cd7016ac90ee5138487d29556cb5ccf87223b",
+  "events": [
+    {
+      "church_slug": "our-lady-of-the-americas-albany",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "English",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-americas-albany",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-americas-albany",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:15 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "f6a89d3350b455fb4f1e586358da3c52616c74ca8573645fff00360b032a0651"
+}

@@ -1,0 +1,80 @@
+{
+  "parish": "st-edward-the-confessor-clifton-park",
+  "trial": 2,
+  "required": true,
+  "checks": {
+    "absent_{\"day_of_week\": \"Friday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 540}": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 81,
+      "context_sha256": "c5b8f4e6e9e0e0ed55046ea260da819369390e008a5f39df7818eadccb5d8225",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 15108,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 1121,
+        "reasoning_tokens": 958
+      },
+      "latency_ms": 15252,
+      "published_date": "2026-10-18",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [],
+      "seen": [
+        {
+          "entry_id": 475,
+          "page_number": 2
+        },
+        {
+          "entry_id": 476,
+          "page_number": 2
+        },
+        {
+          "entry_id": 465,
+          "page_number": 2
+        },
+        {
+          "entry_id": 464,
+          "page_number": 2
+        },
+        {
+          "entry_id": 466,
+          "page_number": 2
+        },
+        {
+          "entry_id": 470,
+          "page_number": 2
+        },
+        {
+          "entry_id": 467,
+          "page_number": 2
+        },
+        {
+          "entry_id": 471,
+          "page_number": 2
+        },
+        {
+          "entry_id": 469,
+          "page_number": 2
+        },
+        {
+          "entry_id": 472,
+          "page_number": 2
+        },
+        {
+          "entry_id": 473,
+          "page_number": 2
+        },
+        {
+          "entry_id": 474,
+          "page_number": 2
+        }
+      ]
+    }
+  ]
+}

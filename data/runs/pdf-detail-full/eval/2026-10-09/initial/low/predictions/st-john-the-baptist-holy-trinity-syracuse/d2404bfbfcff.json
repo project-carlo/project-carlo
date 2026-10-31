@@ -1,0 +1,84 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
+  "content_hash": "d2404bfbfcff643bd3e7589b4a72182b8feb11af6a16182cf5068baaab8cf89e",
+  "source_url": "https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/10/october-4.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 9745,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1630,
+    "reasoning_tokens": 1256
+  },
+  "seconds": 15.399,
+  "response_id": "resp_0cc633f78b9d39f4016ac911432fe487d295f0ec255c321353",
+  "events": [
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "e6e492104689100bf510a2c32855db3c5e31b76025d0ce95bb410463c23d1cdc"
+}

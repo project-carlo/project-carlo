@@ -1,0 +1,157 @@
+{
+  "parish": "mary-mother-of-our-savior-utica",
+  "trial": 1,
+  "required": true,
+  "checks": {
+    "entry_190_retained": true,
+    "entry_195_retained": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 34,
+      "context_sha256": "c4445d83d3b1808744766864127494548da56cd5e9d7cadf97bfe7f8b2a64575",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 15860,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 1423,
+        "reasoning_tokens": 1159
+      },
+      "latency_ms": 16772,
+      "published_date": "2026-10-11",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [],
+      "seen": [
+        {
+          "entry_id": 194,
+          "page_number": 1
+        },
+        {
+          "entry_id": 201,
+          "page_number": 1
+        },
+        {
+          "entry_id": 202,
+          "page_number": 1
+        },
+        {
+          "entry_id": 203,
+          "page_number": 1
+        },
+        {
+          "entry_id": 189,
+          "page_number": 3
+        },
+        {
+          "entry_id": 191,
+          "page_number": 1
+        },
+        {
+          "entry_id": 200,
+          "page_number": 1
+        },
+        {
+          "entry_id": 193,
+          "page_number": 1
+        },
+        {
+          "entry_id": 196,
+          "page_number": 1
+        },
+        {
+          "entry_id": 198,
+          "page_number": 1
+        },
+        {
+          "entry_id": 199,
+          "page_number": 1
+        },
+        {
+          "entry_id": 197,
+          "page_number": 1
+        },
+        {
+          "entry_id": 192,
+          "page_number": 6
+        }
+      ]
+    },
+    {
+      "original_call_id": 39,
+      "context_sha256": "c5407d057c2673b13bb856dda45550289db5f82b9586923f48b076ba998cfef2",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 16772,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 851,
+        "reasoning_tokens": 678
+      },
+      "latency_ms": 11473,
+      "published_date": "2026-10-18",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [],
+      "seen": [
+        {
+          "entry_id": 194,
+          "page_number": 1
+        },
+        {
+          "entry_id": 201,
+          "page_number": 1
+        },
+        {
+          "entry_id": 202,
+          "page_number": 1
+        },
+        {
+          "entry_id": 203,
+          "page_number": 1
+        },
+        {
+          "entry_id": 189,
+          "page_number": 3
+        },
+        {
+          "entry_id": 191,
+          "page_number": 1
+        },
+        {
+          "entry_id": 200,
+          "page_number": 1
+        },
+        {
+          "entry_id": 193,
+          "page_number": 1
+        },
+        {
+          "entry_id": 196,
+          "page_number": 1
+        },
+        {
+          "entry_id": 198,
+          "page_number": 1
+        },
+        {
+          "entry_id": 199,
+          "page_number": 1
+        },
+        {
+          "entry_id": 197,
+          "page_number": 1
+        },
+        {
+          "entry_id": 192,
+          "page_number": 4
+        }
+      ]
+    }
+  ]
+}

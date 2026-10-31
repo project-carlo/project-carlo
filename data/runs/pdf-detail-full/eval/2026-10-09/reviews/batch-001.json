@@ -1,0 +1,176 @@
+{
+  "bulletins": [
+    {
+      "parish_slug": "blessed-trinity-buffalo",
+      "content_hash": "1224cf29410be6614b1ab69036e4f65c49c3ad9740200a7e2fed86856dfb411b",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": true,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": true,
+      "mechanism": "raster_small_text",
+      "verdict": "Supported high addition: original PDF page 4 prints Oct. 28: Healing Mass, 7:00 PM @ BT, identifying Blessed Trinity Church, Buffalo, on October 28, 2026. The page's introductory notice says all events are open to members of any parish, so the later for-members-of-HOBCCE wording does not establish a private Mass. This is outside the shared regular schedule (Saturday 4:30 PM, Sunday 10:00 AM, Monday/Tuesday/Wednesday/Friday 11:00 AM). The small calendar paragraph is genuinely raster-only: pypdfium2 native extraction returns zero characters for page 4; the saved original-render crop confirms the time, date, and venue. No harmful high change demonstrated. Frozen PDF bytes match packet pdf_sha256; content_hash is an identity key, not the compacted PDF byte hash. Gemini was context only, not evidence.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-buffalo-1224cf29410b/page-04.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-buffalo-1224cf29410b/healing-mass.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-buffalo-1224cf29410b/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "blessed-trinity-st-patrick",
+      "content_hash": "25a82fdee8d339c41a0cdf86f6fd0e68232a83f682d9794e08b185334268c7d4",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": null,
+      "has_supported_gain": true,
+      "has_supported_harm": true,
+      "has_supported_raster_gain": true,
+      "mechanism": "mixed",
+      "verdict": "Mixed; retain the optical gain independently. Page 1's small St. James Church, Waverly, sidebar prints Mon & Fri - 8:30 a.m., not Monday-Friday. High correctly removes Tuesday/Wednesday/Thursday 8:30 AM Masses and their derived 8:00-8:30 AM confessions: page 3 permits confession one-half hour before weekday Masses. This corrected phrase is absent from native extraction (pages 1, 2, and 3 each return zero characters), and the original-render sidebar crop verifies it. Page 2, Thursday October 8, 2026, prints 5:00 PM Exposition, 5:15 PM Confession, and 6:00 PM Benediction at St. James; no 6:30 PM Mass is printed, so high's removal of that low hallucination is also supported. However, high adds a 6:00 PM end to the dated 5:15 PM confession. That clock time belongs to Benediction, not an explicit end of this confession; the separate regular Thursday 5:00-6:00 PM confession on page 3 does not establish the modified dated slot's end. Policy forbids transferring component times. Gains plus a demonstrated unsupported endpoint prevent a net-safe true verdict; raster net is likewise set aside as mixed. Page 1 issue date is October 4, 2026. Frozen PDF bytes match pdf_sha256; Gemini is context, not truth.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-25a82fdee8d3/page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-25a82fdee8d3/weekday-mass.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-25a82fdee8d3/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-25a82fdee8d3/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-25a82fdee8d3/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "blessed-trinity-st-patrick",
+      "content_hash": "7644470de864d9d994fc3e0e746c21638525f5831999c51727f67c93703fc6fd",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": true,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": true,
+      "mechanism": "raster_small_text",
+      "verdict": "Supported high improvements. Original page 3's tiny Reconciliation table explicitly prints St. James Church, Waverly, Sunday 8:30 a.m.-8:50 a.m.; low's 8:45 AM endpoint is incorrect. The saved crop confirms the final digits. Page 2 puts St. Patrick Church, Owego, 12:30-6:00 PM Adoration, 5:00 PM Confession, and 6:00 PM Benediction under Tuesday September 29, 2026, not Monday September 28. The Tuesday confession is already covered by the shared weekly Tuesday 5:00-6:00 PM entry, so dropping low's wrong Monday entry is not a harmful omission. High correctly replaces the wrong Monday adoration and duplicate separate Tuesday Benediction with September 29 adoration 12:30-6:00 PM, note Benediction. Under Thursday October 1 the same page prints St. James 5:15 PM Confession, which high adds with no invented endpoint. Native extraction returns zero characters for both pages: the endpoint correction is genuinely small raster-only text, while the calendar fixes also use visual heading association. No harmful high change demonstrated. Frozen PDF bytes match pdf_sha256; Gemini was reviewed as context only.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-7644470de864/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-7644470de864/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-7644470de864/reconciliation.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-7644470de864/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "blessed-trinity-st-patrick",
+      "content_hash": "a323e97c7c9263000aff08f091ce426c5d6031cda1688881e7ef1852268f7323",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Supported semantic correction, not an optical gain. Original page 2 under Thursday May 7, 2026, prints St. James Church, Waverly: 5:00 PM Exposition, 5:15 PM Confession, 6:00 PM Benediction, and 7:00 PM Living Rosary. It does not give an endpoint for the 5:15 PM confession. High correctly leaves end_time null instead of borrowing low's 6:00 PM from Benediction. The native extraction contains all three service names and clock times (3492 characters on page 2), and visual inspection confirms their separate lines. Shared Thursday weekly confession does not establish a definite end for this dated 5:15 PM start. The other schedule slots remain materially unchanged; Corpus Christi occasion-note wording changes are not gains or harms. No demonstrated harmful high change. Frozen PDF bytes match pdf_sha256; Gemini is context only.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-a323e97c7c92/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/blessed-trinity-st-patrick-a323e97c7c92/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "bread-of-life-catholic-community",
+      "content_hash": "9e5cbeb9c8268863f80da7a64b0fb58109b8c5b4f790fdc7716a22f10b658fa3",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Supported high improvement from applying native-text schedule exceptions. Original page 3 states Christ the King, Snyder, Adoration Chapel open 7 AM-7 PM every day, but closed for cleaning Mondays from 1 PM-2 PM. High correctly splits Monday into 7:00 AM-1:00 PM and 2:00 PM-7:00 PM rather than advertising low's uninterrupted 7:00 AM-7:00 PM. The exact closure phrase exists in native extraction (2887 page-3 characters), so this is not raster-only recovery. Page 7 prints St. Benedict Church, Amherst, Memorial Mass Sunday November 1, 2026, at 8 AM. Both full predictions already contain the weekly Sunday 8:00 AM St. Benedict Mass; policy says a special occasion at a regular weekly slot is not a separate dated event. High's removal of low's November 1 duplicate is supported, not an omission of the Mass. The date and time also exist natively. No harmful high change demonstrated. Frozen PDF bytes match pdf_sha256; Gemini's inclusion of the duplicate is not evidence against the printed source and policy.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/bread-of-life-catholic-community-9e5cbeb9c826/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/bread-of-life-catholic-community-9e5cbeb9c826/page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/bread-of-life-catholic-community-9e5cbeb9c826/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "catholic-community-buffalo-north",
+      "content_hash": "8ce2422862eb21a1d4dd37bf8b1399caf8fbc249d89d6bfc34e333f7c91a43f8",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Supported high corrections from venue/date and component semantics, with no raster gain. Page 7's standing schedule lists Assumption Church Saturday 4:30 PM and Sunday 10:00 AM, and St. Margaret Church Sunday 9:30 AM. Original pages 2 and 3 independently show the mission weekend's replacement Masses: Assumption Saturday September 26, 2026, 5:00 PM; St. Margaret Sunday September 27, 9:00 AM; Assumption Sunday September 27, 10:30 AM. Page 2 also returns to the regular times on October 3-4, confirming that these are dated changes, not a replacement standing schedule. High's cancellations of the original September 26 4:30 PM and September 27 9:30/10:00 AM slots correctly accompany the replacement single events already present in both full predictions. The movement is established by the dated Mass-intentions/calendar schedules rather than a verbatim word cancelled. Page 3 Tuesday September 29 lists a 6:30 PM Mission Talk (Beatitudes) and Reconciliation Service at Assumption; it does not establish the reconciliation component's own start. High appropriately removes low's borrowed 6:30 PM confession time under the final source-check rule. All relevant phrases and times are in native extraction and were visually verified. Frozen PDF bytes match pdf_sha256; Gemini is not used as proof.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-8ce2422862eb/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-8ce2422862eb/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-8ce2422862eb/page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-8ce2422862eb/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "catholic-community-buffalo-north",
+      "content_hash": "9b3390dbe6ddc6c736d4b4fee47421ca07d12ae316c86d23ffecdf26582ce2aa",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": null,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": true,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Mixed native semantics/layout; do not declare net-safe high advantage. Original page 2 explicitly assigns Monday October 5, Tuesday October 6, and Wednesday October 7, 2026, 7:00 AM Masses to SM (St. Margaret Church, Buffalo), distinct from page 7's standing Monday-Friday 7:00 AM Mass at St. Rose of Lima. High preserves the three dated known-church occurrences omitted by low, as policy requires; another church's weekly slot does not cover them. But high also adds St. Mark Church 8:00 AM on Saturday October 3. Visually the 8:00 AM ~ SMK line starts the right column as a continuation of Wednesday October 7 at the bottom of the left column, before the Thursday October 8 heading. Saturday October 3 in the left column has only 12:00 PM SR, 4:00 PM SR, and 4:30 PM ASMP, not an 8:00 AM SMK Mass. High's October 3 addition is therefore a demonstrated wrong-date/layout error. Page 7 additionally describes regular Wednesday 8:00 AM St. Mark school-year Mass as closed to the public; this does not justify inventing a Saturday occurrence. Native page 2 contains the times, SM/SMK strings, and date headings (4583 characters); page 7 contains the venue directory and restriction. No small raster-only correction. Frozen PDF bytes match pdf_sha256; baseline/scorer agreement is not evidence.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-9b3390dbe6dd/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-9b3390dbe6dd/page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-community-buffalo-north-9b3390dbe6dd/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "catholic-family-holy-spirit-alden",
+      "content_hash": "5efb17cb5463e746b6d217f2c52af0631aeedefd89ef90bf034a69bc66325595",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": false,
+      "observed_raster_advantage": false,
+      "has_supported_gain": false,
+      "has_supported_harm": true,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Clear high loss under the current weeks-of-month policy. Original page 3 prints First Saturday, October 3 - BVM, followed by 8:30am; SJB, and its legend identifies SJB as St. John the Baptist Church, Alden. The policy expressly says First Saturday slots remain weekly with weeks_of_month=[first] even when this month's date is also printed, unless explicitly one-time. No such one-time statement accompanies this Mass. Low's weekly first-Saturday 8:30 AM is therefore supported; high incorrectly replaces it with only October 3, 2026, 8:30 AM, losing the monthly qualifier. The phrase, clock time, and SJB legend are all present in native extraction (3289 characters), so this is recurrence interpretation, not optical recovery. Removing the uninformative Mass-for-Rita note from an otherwise unchanged October 17 9:30 AM event is not a material gain. Frozen PDF bytes match pdf_sha256; Gemini is context only.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-family-holy-spirit-alden-5efb17cb5463/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-family-holy-spirit-alden-5efb17cb5463/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "catholic-family-south-buffalo",
+      "content_hash": "36f7063f171093315635351635e5edd2201d886559f602debd3b743f329819dc",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Supported high addition of continuous Adoration, not raster-only improvement. Original page 3 explicitly heads the notice 24/7 Eucharistic Adoration and says the chapel at the St. Martin of Tours worship site, 1140 Abbott Rd., Buffalo, is open 24/7 for prayer before Jesus in the Most Blessed Sacrament. This is the listed St. Martin of Tours Church address, not a separate off-site chapel. Seven weekday entries at 12:00 AM with a 24/7 chapel note encode continuous availability; midnight is a daily representation boundary, not a claimed discrete printed liturgy start. The continuous schedule is definite and supports these additions; no harmful high change demonstrated. Native extraction includes the 24/7 phrase, church, and address (2264 page-3 characters), so improved recognition/application of continuous chapel availability is semantic. Cover page 1 prints October 3-4, 2026: low/high both report October 3, while Gemini reports October 4. The cover is a two-date issue range, not proof that either model's choice is a differential metadata error. Frozen PDF bytes match pdf_sha256; Gemini remains context, not truth.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-family-south-buffalo-36f7063f1710/page-01.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-family-south-buffalo-36f7063f1710/page-03.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-family-south-buffalo-36f7063f1710/native-text.txt"
+      ]
+    },
+    {
+      "parish_slug": "catholic-neighbors-in-faith",
+      "content_hash": "26381128c1ace10cfe5feb7295e671f5eefd5211bc7bfbf4a9f7fba159d0cca7",
+      "review_status": "visually_reviewed",
+      "observed_supported_advantage": true,
+      "observed_raster_advantage": false,
+      "has_supported_gain": true,
+      "has_supported_harm": false,
+      "has_supported_raster_gain": false,
+      "mechanism": "native_semantics",
+      "verdict": "Supported high weekly classification from an explicit recurring Mass anchor. Original page 7's Rosary Schedule under Ss. Peter & Paul Church, Jamestown, prints Monday & Friday: 11:30 am. (before 12:10 pm Mass). The printed Mass clock time establishes the regular Monday and Friday 12:10 PM slots; the rosary itself is not extracted and its inconsistent lead interval does not alter the explicit Mass time. Original page 2 corroborates SPP 12:10 PM Mass on Monday October 5 and Friday October 9, 2026; its legend explicitly maps SPP to Ss. Peter & Paul, Jamestown. High correctly replaces low's two dated entries with weekly Monday/Friday 12:10 PM rather than duplicating them. October language qualifies the rosary initiative, not explicitly the underlying Mass schedule. All relevant words, parenthetical Mass time, and church heading are present in native extraction (2646 page-7 characters), and the original images confirm the heading association. No harmful high change demonstrated and no raster-only gain. Frozen PDF bytes match pdf_sha256; Gemini is context only.",
+      "evidence_paths": [
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-neighbors-in-faith-26381128c1ac/page-02.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-neighbors-in-faith-26381128c1ac/page-07.png",
+        "data/runs/pdf-detail-full/eval/2026-10-09/evidence/batch-001/catholic-neighbors-in-faith-26381128c1ac/native-text.txt"
+      ]
+    }
+  ]
+}

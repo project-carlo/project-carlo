@@ -1,0 +1,1035 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-the-assumption-baldwinsville",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:41Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:13Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "St. Mary's is one of three churches in a shared community (with St. Augustine's and St. Elizabeth Ann Seton) and its cover page lists them all; only St. Mary's items are included: Sat 4 PM, Sun 9 AM, Mon 9 AM, Tue 7 PM Masses, Tuesday adoration 9-6:30, Saturday confession 3-3:45, and the dated Oct 27 Holy Hour for Life. One open question: the every-other-Tuesday Reconciliation (Oct 20 is the next St. Mary's date).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ea36e39830659eb79ebb8f95ae536a6708fd7ffdf0a524e0693a31f45cc4815f",
+      "fetched_at": "2026-10-11T16:36:41Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8f9655c697ad30a9e8b9536b61cb71dd8ed42461414afc176b6ef0de298021d4",
+      "fetched_at": "2026-10-04T14:43:09Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "f5296a616437316dd375fc54159110cc4ebff0b26303b9c7c80ffe05b78eb349",
+      "fetched_at": "2026-09-28T00:14:51Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Saturday Vigil: 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Saturday Vigil: 4 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Saturday Vigil: 4 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Sunday: 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Sunday: 9 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Sunday: 9 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-baldwinsville  “Children's Liturgy of the Word”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Monday: 9 AM St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Monday: 9 AM St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Monday: 9 AM St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly mass Monday 09:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Tuesday: 7 PM at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Tuesday: 7 PM at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Tuesday: 7 PM at St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly mass Tuesday 19:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly mass Tuesday 19:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly mass Tuesday 19:00 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Tuesday: 9 am - 6:30 pm, followed by Rosary & Miraculous Medal Novena 6:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Tuesday: 9 am - 6:30 pm, followed by Rosary & Miraculous Medal Novena 6:30 pm St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Tuesday: 9 am - 6:30 pm, followed by Rosary & Miraculous Medal Novena 6:30 pm St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly adoration Tuesday 09:00–18:30 st-mary-of-the-assumption-baldwinsville  “Followed by Rosary & Miraculous Medal Novena at 6:30 PM”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly adoration Tuesday 09:00–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly adoration Tuesday 09:00–18:30 st-mary-of-the-assumption-baldwinsville  “Followed by Rosary & Miraculous Medal Novena at 6:30 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Confessions are also held here at St. Mary's Church on Saturdays: 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Confessions are also held here at St. Mary's Church on Saturdays: 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Confessions are also held here at St. Mary's Church on Saturdays: 3-3:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the cover page (page 1) of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour for Life"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 3,
+          "said": "HOLY HOUR FOR LIFE ST MARY OF THE ASSUMPTION TUESDAY OCTOBER 27TH AT 6:00PM ... in the presence of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 3,
+          "said": "HOLY HOUR FOR LIFE ST MARY OF THE ASSUMPTION TUESDAY OCTOBER 27TH AT 6:00PM ... in the presence of the Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 5,
+          "said": "Holy Hour for Life, St Mary of the Assumption, Tuesday October 27th at 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "specific_date adoration 2026-10-27 18:00 st-mary-of-the-assumption-baldwinsville  “Holy Hour for Life”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "specific_date adoration 2026-10-27 18:00 st-mary-of-the-assumption-baldwinsville  “Holy Hour for Life”",
+          "page": 3
+        }
+      ],
+      "rationale": "Dated one-off Holy Hour at St. Mary's (printed twice in the newest bulletin). It falls inside the regular Tuesday 9-6:30 adoration, but is a named special service with its own start time, so it is kept as a dated entry; history agrees. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-20",
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Reconciliation: Held every other week: ... Tue., Oct. 20, 5:30 - 6:30 pm at St. Mary's (Oct 14 and Oct 28 Wed 10:30-11:30 am at St. Augustine's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Reconciliation: Held every other week: ... Tue., Oct. 20, 5:30 - 6:30 pm at St. Mary's (Oct 14 and Oct 28 Wed 10:30-11:30 am at St. Augustine's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Reconciliation: Held every other week: ... Tue., Oct. 20, 5:30 - 6:30 pm at St. Mary's (Oct 14 and Oct 28 Wed 10:30-11:30 am at St. Augustine's)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 6,
+          "said": "Reconciliation: every other Tuesday, 5:30 - 6:30 pm in the Reconciliation Room. See schedule on the cover"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Tue., Oct. 6, 5:30 - 6:30 pm at St. Mary's; Tue., Oct. 20, 5:30 - 6:30 pm at St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "ea36e3983065",
+          "said": "specific_date confession 2026-10-20 17:30–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "specific_date confession 2026-10-06 17:30–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8f9655c697ad",
+          "said": "specific_date confession 2026-10-20 17:30–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "specific_date confession 2026-10-06 17:30–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f5296a616437",
+          "said": "specific_date confession 2026-10-20 17:30–18:30 st-mary-of-the-assumption-baldwinsville",
+          "page": 1
+        }
+      ],
+      "rationale": "The cover prints dated Tuesdays at St. Mary's (Oct 6, Oct 20) alternating with Wednesdays at St. Augustine's, and page 6 calls it 'every other Tuesday'. A strict every-other-week rhythm cannot be expressed in the file. Only Oct 20 (on or after as_of) is pinned by the newest bulletin; the Oct 6 date is past. Policy prefers dated entries when unclear and forbids projecting dates, so the leaning is the Oct 20 dated entry.\n\nReview 2026-10-22: Use the explicitly printed Oct 20, 5:30–6:30 PM dated Confession only, under R14. Never turn every other Tuesday into every Tuesday. The printed occurrence has now passed, although the weekly alternative remains open.",
+      "question": "Record St. Mary's every-other-Tuesday Reconciliation (5:30-6:30 PM) as the dated Oct 20 event, as a weekly Tuesday slot, or leave it out?",
+      "options": [
+        {
+          "label": "Dated: Tuesday Oct 20, 5:30-6:30 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-baldwinsville",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-20",
+            "start_time": "17:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Weekly Tuesday 5:30-6:30 PM (actually every other week; next Oct 20)",
+          "leaning": false,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-baldwinsville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Every other week; next Oct 20"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": false,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Wed., Oct. 14 and Oct. 28, 10:30 - 11:30 am at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Wed., Oct. 14 and Oct. 28, 10:30 - 11:30 am at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Wed., Oct. 14 and Oct. 28, 10:30 - 11:30 am at St. Augustine's"
+        }
+      ],
+      "rationale": "Held at St. Augustine's, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-augustine-baldwinsville). Dated (Oct 14, Oct 28) every-other-week Reconciliation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "St. Augustine's Weekend Masses Sunday: 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "St. Augustine's Weekend Masses Sunday: 10:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "St. Augustine's Weekend Masses Sunday: 10:30 AM"
+        }
+      ],
+      "rationale": "Held at St. Augustine's, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-augustine-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Wednesday: 10 AM at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Wednesday: 10 AM at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Wednesday: 10 AM at St. Augustine's"
+        }
+      ],
+      "rationale": "Held at St. Augustine's, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-augustine-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "St. Elizabeth Ann Seton Weekend Masses Saturday 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "St. Elizabeth Ann Seton Weekend Masses Saturday 5:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "St. Elizabeth Ann Seton Weekend Masses Saturday 5:30 PM"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Sunday 7:30, 10:30AM"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Thursday: 6:45 AM at St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Thursday: 6:45 AM at St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Thursday: 6:45 AM at St. Elizabeth Ann Seton"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Friday: 9 AM at St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Friday: 9 AM at St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Friday: 9 AM at St. Elizabeth Ann Seton"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Eucharistic Adoration Wednesday: 5 - 7 pm, St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Eucharistic Adoration Wednesday: 5 - 7 pm, St. Elizabeth Ann Seton"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Eucharistic Adoration Wednesday: 5 - 7 pm, St. Elizabeth Ann Seton"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ea36e3983065",
+          "page": 1,
+          "said": "Note: on Fridays, Morning Prayer and Adoration 7:30 - 9 am (listed under the St. Elizabeth Ann Seton Friday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8f9655c697ad",
+          "page": 1,
+          "said": "Note: on Fridays, Morning Prayer and Adoration 7:30 - 9 am (listed under the St. Elizabeth Ann Seton Friday Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f5296a616437",
+          "page": 1,
+          "said": "Note: on Fridays, Morning Prayer and Adoration 7:30 - 9 am (listed under the St. Elizabeth Ann Seton Friday Mass)"
+        }
+      ],
+      "rationale": "Held at St. Elizabeth Ann Seton, a separate church in the three-parish community and not one of this parish's listed churches (own slug st-elizabeth-ann-seton-baldwinsville). The bulletin does not name the church for Friday adoration; it follows the Friday 9 AM Mass at St. Elizabeth Ann Seton.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

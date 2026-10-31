@@ -1,0 +1,404 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-glens-falls",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:38Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:31Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Simple one-church parish; the p1 schedule box and p3 area lists agree across all three bulletins and with history: Sat 4:00 PM, Sun 8:30 and 11:15, Wed and Thu 12:10 PM Mass, Wednesday Adoration 1-6 PM and Wednesday 1:00 PM Reconciliation. Other churches on the regional lists are left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "892c67ed92c691ed18b8ac3fca4ed3c5e1110197a62d6b232f41c14efe4b3c64",
+      "fetched_at": "2026-10-11T16:32:38Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8d2585337fe0736f1e9c3ae75852d6f7d3f4a9ba25eb01cd11348216c564a5dd",
+      "fetched_at": "2026-10-04T14:56:29Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "73bd75240a4a1dbc787dc455fa207808d7f350f0ab2849ae76614a893fcb253d",
+      "fetched_at": "2026-09-28T22:06:21Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Saturday: 4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly mass Saturday 16:00 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly mass Saturday 16:00 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly mass Saturday 16:00 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 and Mass Intentions on p5, in all three bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m. & 11:15 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly mass Sunday 08:30 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly mass Sunday 08:30 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly mass Sunday 08:30 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 and Mass Intentions on p5, in all three bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Sunday: 8:30 a.m. & 11:15 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly mass Sunday 11:15 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly mass Sunday 11:15 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly mass Sunday 11:15 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 and Mass Intentions on p5, in all three bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Wednesday: 12:10 p.m"
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly mass Wednesday 12:10 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly mass Wednesday 12:10 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly mass Wednesday 12:10 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 and Mass Intentions on p5, in all three bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Thursday: 12:10 p.m"
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly mass Thursday 12:10 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly mass Thursday 12:10 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly mass Thursday 12:10 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on p1 and Mass Intentions on p5, in all three bulletins read; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 1,
+          "said": "Adoration: Wednesdays 1:00-6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly adoration Wednesday 13:00–18:00 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly adoration Wednesday 13:00–18:00 st-mary-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly adoration Wednesday 13:00–18:00 st-mary-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "Header box on p1 and p3 ('12:10 PM: St. Mary's (followed by Adoration until 6 PM)') agree, in all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-glens-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 3,
+          "said": "Wednesday: 1:00 pm St. Mary's, Glens Falls"
+        },
+        {
+          "source": "history",
+          "bulletin": "892c67ed92c6",
+          "said": "weekly confession Wednesday 13:00 st-mary-glens-falls",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8d2585337fe0",
+          "said": "weekly confession Wednesday 13:00 st-mary-glens-falls",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "73bd75240a4a",
+          "said": "weekly confession Wednesday 13:00 st-mary-glens-falls  “After 12:10 PM Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "p3 gives a clock time of 1:00 PM, which wins over p1's 'after the 12:10 p.m. Mass'; no end time printed. 'Or by appointment' is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "892c67ed92c6",
+          "page": 3,
+          "said": "Local Daily Mass Schedule / Weekly Reconciliation Times: other churches (Our Lady of the Annunciation, St. Michael's, St. Mary's-St. Paul's, St. Joseph's, Sacred Heart, St. Ann's, St. Clement's)"
+        }
+      ],
+      "rationale": "The p3 regional lists are other parishes' churches; only the St. Mary's, Glens Falls lines are recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

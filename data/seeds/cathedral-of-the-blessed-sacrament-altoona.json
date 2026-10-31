@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cathedral-of-the-blessed-sacrament-altoona",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:36:12Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:56:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church (the cathedral). Mass times and Reconciliation are in the page 2 boxes of the only bulletin stored; the website confirms them and resolves the ambiguous Sunday 5 PM line. Open: whether to include the 'Normally' First Wednesday Adoration (12:30-6:45 PM).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "04178971a552a084aac39969c8d9ccd4e6161af06b287034cbdf9b4e35a8e718",
+      "fetched_at": "2026-10-25T13:36:12Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Weekday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Monday-Saturday 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the Mass Times box on page 2 prints Weekday 12:00 Noon; the website's Monday-Saturday noon Mass agrees. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Weekday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Monday-Saturday 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the Mass Times box on page 2 prints Weekday 12:00 Noon; the website's Monday-Saturday noon Mass agrees. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Weekday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Monday-Saturday 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the Mass Times box on page 2 prints Weekday 12:00 Noon; the website's Monday-Saturday noon Mass agrees. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Weekday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Monday-Saturday 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the Mass Times box on page 2 prints Weekday 12:00 Noon; the website's Monday-Saturday noon Mass agrees. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Weekday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Monday-Saturday 12:00 Noon"
+        }
+      ],
+      "rationale": "R1: the Mass Times box on page 2 prints Weekday 12:00 Noon; the website's Monday-Saturday noon Mass agrees. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Saturday: 12:00 Noon"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Saturday 12:00 NOON"
+        }
+      ],
+      "rationale": "R1: printed under Saturday in the Mass Times box on page 2; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Sunday: 5:00 PM (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 1,
+          "said": "On Saturday, November 7, Bishop Mark will celebrate the 5 P.M. Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Saturday 5:00 PM (Vigil)"
+        }
+      ],
+      "rationale": "R1: the box lists the 5:00 PM (Vigil) first in its Sunday column; the website puts it under Saturday and page 1 confirms a Saturday 5 PM Mass. The November 7 anniversary Mass is this regular Saturday Mass (POLICY, Weekly or dated rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Sunday: 8:00 AM, 10:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Sunday 8:00 AM 10:00 AM 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 2; the website agrees. Page 2 also says the Baby Shower follows the 10 o'clock Mass on October 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Sunday: 8:00 AM, 10:00 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Sunday 8:00 AM 10:00 AM 5:00 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on page 2; the website agrees. Page 2 also says the Baby Shower follows the 10 o'clock Mass on October 25.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "Mass Times Sunday: 5:00 PM (Vigil), 8:00 AM, 10:00 AM, 5:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Sunday 8:00 AM 10:00 AM 5:00 PM"
+        }
+      ],
+      "rationale": "R1: the Sunday column of the box ends with a second 5:00 PM line after 10:00 AM, which the website confirms as a Sunday 5:00 PM Mass (the first 5:00 PM is the Saturday vigil). The extracted text separates the columns badly, so the page image was read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "RECONCILIATION: Wednesday: 7:00 PM, Saturday: 12:30 PM or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Sacrament Of Reconciliation Wednesday: 7:00 PM Saturday: 12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation entry on page 2; the website agrees. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "RECONCILIATION: Wednesday: 7:00 PM, Saturday: 12:30 PM or by appointment"
+        },
+        {
+          "source": "website",
+          "url": "https://www.altoonacathedral.org/mass-times-schedules/",
+          "said": "Saturday: 12:30 PM"
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation entry on page 2; the website agrees. 'Or by appointment' adds no separate time. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "DEVOTIONS: Eucharistic Adoration - Normally, the First Wednesday 12:30 PM - 6:45 PM"
+        }
+      ],
+      "rationale": "R30: a named monthly service (R11/R12) printed in the newest bulletin, but hedged with 'Normally', the website lists no first-Wednesday Adoration, and no other bulletin is stored to show it recurring. The newest week holds no first Wednesday. Leaning to include since the bulletin names the week and times.",
+      "question": "Add First Wednesday Eucharistic Adoration, 12:30-6:45 PM?",
+      "options": [
+        {
+          "label": "First Wednesdays 12:30-6:45 PM",
+          "entry": {
+            "church_slug": "cathedral-of-the-blessed-sacrament-altoona",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:30",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "04178971",
+          "page": 2,
+          "said": "PRO-LIFE ROSARY Sponsored by the Christian Mothers on Thursdays after the noon Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

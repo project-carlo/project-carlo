@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-martin-de-porres-buffalo",
+  "status": "approved",
+  "as_of": "2026-09-27T14:05:15Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:59:42Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:34:18Z",
+  "summary": "Single-church parish with one stored bulletin (Sept. 27, 2026) that prints no schedule box. Sunday 8:00 AM and 9:30 AM Masses are weekly from the repeated intentions and lectors lists and the website. One grouped question asks about a Tue-Thu noon chapel Mass that only the website lists, as cancelled until further notice.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "50d7b9db4b66eba3a566b13332ad0886221096b06066977078c0ed95c2c619d0",
+      "fetched_at": "2026-09-27T14:05:15Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50d7b9db",
+          "page": 1,
+          "said": "Sunday - September 27 8:00am - For all Fathers; Sunday - October 4 8:00am - Eugene & Dorothy Kuczka; Lectors 8:00am Sunday Mass October 4, 11, 18, 25"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartindpbuffalo.org/mass-times",
+          "said": "Weekend Masses: Sunday @ 8:00am - Traditional Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "50d7b9db4b66",
+          "said": "weekly mass Sunday 08:00 st-martin-de-porres-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4), R6: the bulletin prints no schedule box, but the Mass intentions list this Sunday time on both Sept. 27 and Oct. 4, and the October lectors list names it for each of the four Sundays; so it is weekly. The website's regular schedule gives the same time. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50d7b9db",
+          "page": 1,
+          "said": "Sunday - September 27 9:30am - For all Fathers; Sunday - October 4 9:30am - Jake Brock; 9:30am Mass Lectors October 4, 11, 18, 25"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartindpbuffalo.org/mass-times",
+          "said": "@ 9:30am - Gospel Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "50d7b9db4b66",
+          "said": "weekly mass Sunday 09:30 st-martin-de-porres-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "POLICY (Weekly or dated, rule 4), R6: the bulletin prints no schedule box, but the Mass intentions list this Sunday time on both Sept. 27 and Oct. 4, and the October lectors list names it for each of the four Sundays; so it is weekly. The website's regular schedule gives the same time. Only one bulletin is stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50d7b9db",
+          "page": 1,
+          "said": "Mass intentions list only Sunday 8:00am and 9:30am; no weekday Mass appears anywhere in the bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartindpbuffalo.org/mass-times",
+          "said": "Weekday Masses: Tuesday through Thursday @ 12:00pm - Mass in the Chapel (CANCELLED until further notice)"
+        }
+      ],
+      "rationale": "R29, leaning per C2: only the website lists a Tue-Thu noon chapel Mass, and it says it is cancelled until further notice; the newest bulletin prints no weekday Mass. Leaning toward leaving it out until it returns.",
+      "question": "Add a weekday noon Mass in the Chapel on Tuesday, Wednesday and Thursday?",
+      "options": [
+        {
+          "label": "Leave out (cancelled until further notice)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Tuesday-Thursday 12:00 PM, in the Chapel",
+          "entry": {
+            "church_slug": "st-martin-de-porres-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
+      "group": "weekday-chapel-mass"
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50d7b9db",
+          "page": 1,
+          "said": "Mass intentions list only Sunday 8:00am and 9:30am; no weekday Mass appears anywhere in the bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartindpbuffalo.org/mass-times",
+          "said": "Weekday Masses: Tuesday through Thursday @ 12:00pm - Mass in the Chapel (CANCELLED until further notice)"
+        }
+      ],
+      "rationale": "R29, leaning per C2: only the website lists a Tue-Thu noon chapel Mass, and it says it is cancelled until further notice; the newest bulletin prints no weekday Mass. Leaning toward leaving it out until it returns.",
+      "question": "Add a weekday noon Mass in the Chapel on Tuesday, Wednesday and Thursday?",
+      "options": [
+        {
+          "label": "Leave out (cancelled until further notice)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Tuesday-Thursday 12:00 PM, in the Chapel",
+          "entry": {
+            "church_slug": "st-martin-de-porres-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
+      "group": "weekday-chapel-mass"
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-martin-de-porres-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "50d7b9db",
+          "page": 1,
+          "said": "Mass intentions list only Sunday 8:00am and 9:30am; no weekday Mass appears anywhere in the bulletin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmartindpbuffalo.org/mass-times",
+          "said": "Weekday Masses: Tuesday through Thursday @ 12:00pm - Mass in the Chapel (CANCELLED until further notice)"
+        }
+      ],
+      "rationale": "R29, leaning per C2: only the website lists a Tue-Thu noon chapel Mass, and it says it is cancelled until further notice; the newest bulletin prints no weekday Mass. Leaning toward leaving it out until it returns.",
+      "question": "Add a weekday noon Mass in the Chapel on Tuesday, Wednesday and Thursday?",
+      "options": [
+        {
+          "label": "Leave out (cancelled until further notice)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Tuesday-Thursday 12:00 PM, in the Chapel",
+          "entry": {
+            "church_slug": "st-martin-de-porres-buffalo",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In the chapel"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:34:17Z"
+      },
+      "group": "weekday-chapel-mass"
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "parish_slug": "basilica-sacred-heart-conewago-hanover",
+  "status": "ready",
+  "as_of": "2026-10-25T13:34:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:56:00Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One church. Weekend Masses, Saturday Confession and the First Friday Mass and Confession are printed in the schedule box of the only bulletin stored (no history, no older issues). Weekday Masses vary ('Check bulletin') so they are recorded as dated entries for the week of Oct 26 plus the three All Souls Day Masses on Nov 2. The website has no schedule. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "aeeecf20e663e5ed98cd185a6dffaba44afcd7c53a69af4537d03e3f77e1eea9",
+      "fetched_at": "2026-10-25T13:34:50Z",
+      "published_date": null,
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "Mass Schedule Saturday: 5:30pm"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1 of the newest (only) bulletin; the October 24 and 31 intentions on page 2 list 5:30pm.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Sunday October 25 7:30am, 10:00am; Sunday November 1 7:30am, 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1; the intentions on page 2 list the same times on both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "Sunday: 7:30am & 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Sunday October 25 7:30am, 10:00am; Sunday November 1 7:30am, 10:00am"
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box on page 1; the intentions on page 2 list the same times on both Sundays.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "First Friday of the Month: 7:00pm"
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box prints a named monthly service. The newest week (Oct 25 to Nov 1) holds no first Friday and only one bulletin is stored, so no older evidence exists; the box itself is the clear print.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "Confession Saturday: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Saturday October 24 4:00pm Confessions; Saturday October 31 4:00pm Confessions"
+        }
+      ],
+      "rationale": "R1: printed in the Confession box on page 1 and in the parish calendar on both Saturdays. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 1,
+          "said": "First Friday of the Month: 6:00pm"
+        }
+      ],
+      "rationale": "R1: the Confession box prints a named monthly service. The newest week holds no first Friday and only one bulletin is stored, so the box is the clear print. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Monday October 26 12:15pm— In Honor of Jay Donelson"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3: a time given only with a date in the Mass intentions is dated. The box says 'Weekdays: Check bulletin' and only one bulletin is stored, so no cross-week recurrence (R35) can be shown. Update mode will promote it if it repeats.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sts. Simon & Jude"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Wednesday October 28 + Sts. Simon & Jude + 8:30am—In Honor of Susie & Dick Peck"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3: a dated feast-day Mass in the intentions; the time differs from the other weekdays' 12:15, so it is not a weekly pattern.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Thursday October 29 12:15pm—Dory Sneeringer"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3: a time given only with a date in the Mass intentions is dated; only one bulletin is stored (see the Monday slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-30",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Friday October 30 12:15pm—Marie Klunk"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 3: a time given only with a date in the Mass intentions is dated; only one bulletin is stored (see the Monday slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Monday November 2 All Souls Day Masses at 8:00am, 12:15pm, & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 3,
+          "said": "Special Mass Times for All Souls Day 8:00am, 12:15pm, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: special All Souls Day Masses outside the weekly schedule are dated; printed on pages 2 and 3, on or after as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Monday November 2 All Souls Day Masses at 8:00am, 12:15pm, & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 3,
+          "said": "Special Mass Times for All Souls Day 8:00am, 12:15pm, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: special All Souls Day Masses outside the weekly schedule are dated; printed on pages 2 and 3, on or after as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "basilica-sacred-heart-conewago-hanover",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Monday November 2 All Souls Day Masses at 8:00am, 12:15pm, & 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 3,
+          "said": "Special Mass Times for All Souls Day 8:00am, 12:15pm, 7:00pm"
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: special All Souls Day Masses outside the weekly schedule are dated; printed on pages 2 and 3, on or after as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "aeeecf20",
+          "page": 2,
+          "said": "Tuesday October 27 No public Mass"
+        }
+      ],
+      "rationale": "R26: the bulletin says there is no public Mass on Tuesday October 27. It cancels no established weekly slot (no weekday Mass is established), so nothing is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

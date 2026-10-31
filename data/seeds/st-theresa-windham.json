@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-theresa-windham",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:13:45Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "St. Theresa's has a Saturday 5:00 PM Vigil Mass, Thursday 9:00 AM Mass and Saturday 4:00-4:30 PM Confession, identical in all three bulletins and history. The Tuesday (Haines Falls) and Wednesday (Palenville) 9:00 AM Masses in the same box are at other parishes' churches and are excluded. The Nov 5 5:00 PM installation Mass for Fr. Pat Rice is a dated Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5c022bbd751505a788a2e101d3b6c705858000f1930afc24115691653a252d9b",
+      "fetched_at": "2026-10-11T16:32:50Z",
+      "published_date": "2026-10-10",
+      "read": true
+    },
+    {
+      "content_hash": "73fc606b53c1211826e00657dafd5dfa20a7cf5884050b80679d81faa1304f6f",
+      "fetched_at": "2026-10-04T14:59:02Z",
+      "published_date": "2026-10-03",
+      "read": true
+    },
+    {
+      "content_hash": "7db54ac9a5f4e7e4742e380358924bfa666759c1b75c7ca86c08edae496fbd9f",
+      "fetched_at": "2026-09-28T22:09:11Z",
+      "published_date": "2026-09-12",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-windham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 1,
+          "said": "5:00 PM Vigil Mass (cover panel, Oct 10 bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 1,
+          "said": "5:00 PM Vigil Mass (cover panel, Oct 10 bulletin)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7db54ac9",
+          "page": 1,
+          "said": "5:00 PM Vigil Mass (cover panel, Oct 10 bulletin)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c022bbd7515",
+          "said": "weekly mass Saturday 17:00 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73fc606b53c1",
+          "said": "weekly mass Saturday 17:00 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7db54ac9a5f4",
+          "said": "weekly mass Saturday 17:00 st-theresa-windham",
+          "page": 1
+        }
+      ],
+      "rationale": "Cover panel of the newest bulletin names the 5:00 PM Vigil Mass; same in the two earlier bulletins and history. The bulletin prints no Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-windham",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 1,
+          "said": "WEEKDAY MASSES 9:00 AM ... Thursdays at St. Theresa's, Windham"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 1,
+          "said": "WEEKDAY MASSES 9:00 AM ... Thursdays at St. Theresa's, Windham"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7db54ac9",
+          "page": 1,
+          "said": "WEEKDAY MASSES 9:00 AM ... Thursdays at St. Theresa's, Windham"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c022bbd7515",
+          "said": "weekly mass Thursday 09:00 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73fc606b53c1",
+          "said": "weekly mass Thursday 09:00 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7db54ac9a5f4",
+          "said": "weekly mass Thursday 09:00 st-theresa-windham",
+          "page": 1
+        }
+      ],
+      "rationale": "Weekday Masses box, page 1 (read as image); same in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-windham",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 1,
+          "said": "CONFESSION Saturdays, 4:00-4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 1,
+          "said": "CONFESSION Saturdays, 4:00-4:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7db54ac9",
+          "page": 1,
+          "said": "CONFESSION Saturdays, 4:00-4:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c022bbd7515",
+          "said": "weekly confession Saturday 16:00–16:30 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73fc606b53c1",
+          "said": "weekly confession Saturday 16:00–16:30 st-theresa-windham",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7db54ac9a5f4",
+          "said": "weekly confession Saturday 16:00–16:30 st-theresa-windham",
+          "page": 1
+        }
+      ],
+      "rationale": "Confession box, page 1; same in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-theresa-windham",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-05",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Installation Mass for Fr. Pat Rice"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 2,
+          "said": "Bishop Mark will appoint Fr. Pat as pastor ... at his installation Mass on Thursday, November 5 at 5 pm at St. Theresa's."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 3,
+          "said": "installation Mass on Thursday, November 5 at 5 pm at St. Theresa's"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c022bbd7515",
+          "said": "specific_date mass 2026-11-05 17:00 st-theresa-windham  “Installation Mass for Fr. Pat Rice”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "73fc606b53c1",
+          "said": "specific_date mass 2026-11-05 17:00 st-theresa-windham  “Installation Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "One-off dated Mass at St. Theresa's with a printed date, time and place; appears in the newest bulletin. It is outside the weekly schedule so it is dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-haines-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 1,
+          "said": "Tuesdays at Immaculate Conception, Haines Falls"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 1,
+          "said": "Tuesdays at Immaculate Conception, Haines Falls"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7db54ac9",
+          "page": 1,
+          "said": "Tuesdays at Immaculate Conception, Haines Falls"
+        }
+      ],
+      "rationale": "Held at Immaculate Conception in Haines Falls, a separate listed church of another parish (Sacred Heart-Immaculate Conception), not St. Theresa's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-palenville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c022bbd",
+          "page": 1,
+          "said": "Wednesdays at Sacred Heart, Palenville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73fc606b",
+          "page": 1,
+          "said": "Wednesdays at Sacred Heart, Palenville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7db54ac9",
+          "page": 1,
+          "said": "Wednesdays at Sacred Heart, Palenville"
+        }
+      ],
+      "rationale": "Held at Sacred Heart in Palenville, a separate listed church of another parish (Sacred Heart-Immaculate Conception), not St. Theresa's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

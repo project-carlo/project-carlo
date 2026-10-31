@@ -90,7 +90,7 @@ committed to git. Each file (`schema_version` 1) holds:
 - `events`: one per event, each with:
   - `church_slug`, `event_type` (`mass`/`confession`/`adoration`), `event_kind` (`weekly`/`specific_date`)
   - `day_of_week` or `date`, `start_time` and `end_time` (24-hour `HH:MM`), `cancelled`, `page_number`, `note`
-  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These two apply to weekly rows only.
+  - `weeks_of_month` (`first`…`fifth`, `last`; empty means every week), `exclude_weeks` (true when the listed weeks are the ones skipped: "every Sunday except the last" is `["last"]` excluded; an exclusion the remaining weeks can say, such as "every week except the first", is written as those weeks instead; files saved before this field existed lack it, which reads as false) and `season` (`{start_month, start_day, end_month, end_day}`, which may wrap past New Year). These apply to weekly rows only.
   - `origin`: `human`, `gemini` or `gemini-edited`
   - `optional`: `null` for a required event; `include` or `exclude` for one where it is a judgment call whether it belongs at all, naming the preferred answer (press `o` on a row to cycle). Files saved before this field existed lack it, which reads as `null`.
 
@@ -136,7 +136,7 @@ schema:
   served from the prompt cache, then the parish's churches and today's date,
   then the PDF;
 - the schema in `classifiers/qualified_schedule.py`: the production schema plus
-  `weeks_of_month` and `season` on weekly slots.
+  `weeks_of_month`, `exclude_weeks` and `season` on weekly slots.
 
 Editing either changes the version of every classifier that uses them.
 
@@ -279,6 +279,22 @@ The run's status decides what happens next:
 
 A local run never publishes anything.
 
+### Fetch-only parishes
+
+A parish with `fetch_only` set to `true` in `data/parishes.csv` has its
+bulletins fetched and stored every week, but `process` makes no model call for
+it (Gemini or OpenAI), and the snapshot leaves out its churches, so the site
+doesn't show them yet. Its fetch results get their own section of the run
+report, and its failures don't count toward the publishing checks.
+`pnpm diocese promote` marks every parish row it adds this way, so a new
+diocese's bulletins can be checked before any money goes on extracting them.
+
+To switch parishes on, clear the flag (leave the cell empty). The next run
+processes each one's latest bulletin, not the weeks it was fetch-only.
+Expect that run to be held if many parishes go live at once: their events
+move the total past the 10% check. `pnpm process -- --include-fetch-only`
+processes fetch-only parishes anyway, e.g. to try a few with `--parish`.
+
 ### GitHub Actions
 
 `.github/workflows/weekly-docker.yml` runs Sundays at 08:17 UTC (and on
@@ -309,10 +325,8 @@ CSV change that removes a parish or church: that deletes events, so deploys
 build the snapshot from the published database as it stands, without the CSV
 edits, until a reviewed weekly run publishes the removal.
 
-Pushes to `main` deploy the site. Pull requests get a preview only on request:
-add the `preview` label and **Deploy Web** uploads the pull request's latest
-commit and comments the link. The run takes the label off when it ends, so
-adding it again after more pushes deploys a fresh preview.
+Pushes to `main` deploy the site. Every pull request that touches the site gets
+a preview: **Deploy Web** uploads each push to it and comments the link.
 
 CI (`.github/workflows/ci.yml`) runs on pull requests in two jobs, `python`
 (ruff, pytest) and `node` (web lint, type check and unit tests; the labeler's
@@ -421,7 +435,7 @@ Run each stage independently:
 
 ```bash
 pnpm run fetch [-- --parish "..."]
-pnpm fetch:check [-- --parish SLUG --provider other --record tests/fixtures/fetch]
+pnpm fetch:check [--parish SLUG --provider other --diocese SLUG --record tests/fixtures/fetch]
 pnpm process [-- --parish "..." --model gemini-3-flash-preview]
 pnpm weekly:run [-- --parish SLUG --diocese SLUG]
 pnpm detect [-- --dry-run --limit N --pause-seconds 0.5]
@@ -467,6 +481,27 @@ browser without touching the database, downloads what each one picks, and
 prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
 `not_pdf`, or `blocked` when Cloudflare challenged the browser instead).
 
+Those legacy statuses describe resolution and download. Each row also has a
+`verification` block, with aggregate `verification_counts`, separating transport,
+PDF validity, publication identity, issue date and freshness. For one parish:
+
+```bash
+pnpm --silent fetch:check --parish saint-joseph-renovo \
+  --expected-identity "Saint Joseph" --expected-issue-date 2026-10-18 \
+  --reference-date 2026-10-21 --max-issue-age-days 14
+```
+
+Expectations apply to every selected parish. Identity is a normalized literal phrase
+match within the first 2,000 characters of first-page PDF text, not semantic authorship.
+Missing/scanned text stays unknown; a missing expected phrase is reported as `not_matched`.
+Standalone or labeled dates in that text are observed; filename dates are inferred.
+Conflicting dates stay unresolved. The inclusive freshness threshold defaults to 14 days;
+future issues are reported separately. `verification.overall` becomes `verified` only
+with a parsed PDF, matched identity and an observed fresh issue date. URL dates alone
+cannot verify an issue. These checks inspect PDFs up to 25 MB without OCR. `--no-download`
+leaves document inspection unchecked. Inspect verification separately from legacy `ok`;
+the command's existing exit behavior is unchanged.
+
 #### How the `other` resolver reads a site
 
 `src/pdf_extract/parish_sites/` reads a parish's own site in three stages:
@@ -478,10 +513,18 @@ prints one row per parish (`ok`, `resolve_failed`, `download_failed`,
    is the PDF), `page-pdfs` (links, or addresses in the page's markup),
    `linked-issue-page` (an embedded flipbook or a publisher's listing) and
    `dated-post` (a weekly post that wraps the PDF). They run in that order
-   until one finds a convincing set.
+   until one finds a convincing set. `page-pdfs` also reads PDF addresses a
+   viewer plugin keeps in base64 JSON (PDF Embedder's `pdfemb-data`, 3D
+   FlipBook's `FB3D_CLIENT_DATA`), and takes Google Drive files, Google Docs
+   (exported as PDF), Concrete CMS and DotNetNuke (`LinkClick.aspx`) downloads
+   as PDFs. One more collector runs only when a recipe names it:
+   `page-images`, for a parish that posts each issue as an image (a JPEG per
+   weekend); `fetch` stores the image as a one-page PDF.
 3. **Choose** this week's issue among them (`choose.py`), and say why:
    `current` (dated this week), or a fallback (`newest-recent`, `titled`,
-   `first-listed`).
+   `first-listed`). `newest-recent` is the newest issue dated in the last 45
+   days, taken when the first listed is plainly old, or when it is neither
+   dated nor labelled "bulletin" and the page lists a dated series.
 
 Each fetch result records how its bulletin was found ("page-pdfs on
 https://…/bulletins: current"), and the run report lists any new bulletin the
@@ -494,6 +537,13 @@ the homepage and runs only its collector, so it fails loudly when its site
 changes rather than guessing, and no change made for another site can change
 what it picks. `fetch:check` prints the recipe that reproduces each pick it
 guessed; pin it once the pick is right.
+
+A shared page can be restricted to one parish's PDFs with a filename glob:
+`page-pdfs https://example.org/bulletins filename=St-Annes-Bulletin*.pdf`.
+The filter matches the decoded file name, ignores case and query parameters,
+and runs before choosing an issue. Patterns cannot contain whitespace. If
+no file matches, the fetch fails. Use a page that lists the newest issue first
+so the fallback also keeps the latest matching bulletin when uploads are late.
 
 When a site needs something new, add a collector rather than a branch inside
 an existing one, and record the site (below).
@@ -511,7 +561,7 @@ recipe in `data/parishes.csv` as it is now. After changing `fetch.py` or
    A site that now opens a page the old resolver never did fails with "re-record
    this parish".
 2. Re-record the sites whose result should change, then check them by hand:
-   `pnpm fetch:check -- --parish SLUG --record tests/fixtures/fetch`.
+   `pnpm fetch:check --parish SLUG --record tests/fixtures/fetch`.
 3. Update their entries in `tests/fixtures/fetch/expected.json`. That diff is the
    coverage change.
 
@@ -617,8 +667,10 @@ Review submissions in the Tally dashboard for your form → **Submissions**. Exp
 
 The site records pageviews and a few actions (search picks, filters, bulletin
 clicks) itself, in Cloudflare Workers Analytics Engine: no cookies, no third
-party. `pnpm analytics` prints a report. See [docs/analytics.md](docs/analytics.md)
-for what's recorded, the token the report needs, and how to add an event.
+party. `pnpm analytics` prints a report, and `/admin/analytics` shows the same
+reports as a page you can open on a phone, behind Cloudflare Access. See
+[docs/analytics.md](docs/analytics.md) for what's recorded, the tokens and
+Access setup they need, and how to add an event.
 
 ## Believed schedules (update mode)
 
@@ -638,6 +690,38 @@ classifier, and need `OPENAI_API_KEY`. Their prompt
 schedule. `--model` on `pnpm process` only picks the Gemini model for
 extract-mode parishes.
 
+The update view also carries `reviewed_seed_context` from the parish's latest
+imported, approved seed: excluded slots, answered questions, and monthly or
+seasonal entries with their evidence. These explain intentional omissions and
+unusual services; ordinary included slots are already in the live schedule.
+The updater honors the resolved decision until new evidence addresses its
+reason, and does not treat routine panel omissions as discontinuing a monthly
+service. Draft summaries are left out. Context is stored and hashed with the
+view, so editing a reviewed rationale changes the request/cache key without
+re-seeding or replacing the current schedule.
+
+Announced weekly changes are retained immediately with inclusive absolute
+`valid_from` / `valid_until` dates. The old entry ends the day before the new
+entry starts. These bounds apply to times, weekdays and location notes, and
+do not repeat annually like a season. The snapshot and website honor them
+without another bulletin or pipeline run. Snapshot format 3 carries the bounds.
+A weekly entry whose end date has passed is deleted at the start of the
+parish's next revision.
+
+When a cancellation's duration is unclear, update mode keeps the weekly slot
+and cancels only the dated occurrences the bulletin establishes. Repeated
+omissions or cancellations do not establish permanent discontinuation on their
+own. An explicit ongoing change can still replace or remove a weekly slot.
+History-based promotion of repeated cancellations is tracked in
+[issue #141](https://github.com/project-carlo/project-carlo/issues/141).
+
+The [October 18 replay report](data/update-evals/2026-10-18/report.md) records
+the source cases, real model reruns, remaining ambiguity, and the guarded data
+repair in migration 0008. Replays can be repeated with
+`uv run python scripts/replay-schedule-updates.py --help`.
+The [October 25 audit](data/update-evals/2026-10-25/verification.md) records
+the source evidence behind the guarded repairs in migration 0012.
+
 `pnpm schedule` looks at and hand-edits believed schedules:
 
 ```bash
@@ -649,48 +733,41 @@ pnpm schedule seed --parish st-mary-albany --file entries.json --actor you
 
 ## Seeding parishes
 
-A parish's first seed is drafted by a Claude Code agent and approved by a
-person ([docs/seeding-plan.md](docs/seeding-plan.md)). The agent follows the
-`seed-parishes` skill in `.claude/skills/`: it reads the parish's bulletins
-itself against the extraction policy, compares them with extract mode's stored
-history, asks `gpt-6.1-sol` or `gemini-3-flash-preview` only when those leave
-doubt, and writes `data/seeds/<parish>.json` with every slot's sources,
-decision and rationale, and a question for each slot it couldn't decide.
+A parish's first seed (`data/seeds/<parish>.json`) is drafted from its bulletins and
+approved by the onboarding factory's seed Runs (below; [docs/seeding-plan.md](docs/seeding-plan.md)).
+Its drafters follow the `draft-parish-seed` skill, whose
+[rules.md](.claude/skills/draft-parish-seed/rules.md) holds every seeding decision (a slot no
+rule covers becomes a question), and
+[file-format.md](.claude/skills/draft-parish-seed/file-format.md) holds the file format.
+`seed-review` answers the questions and approves; the factory's PR lists each answer, and
+the owner changes one in the labeler's **Seeds** mode (`pnpm label`) before merging.
+Pipeline commands load newly approved files as `seed` revisions, which puts those parishes
+in update mode (a deploy never loads them). `pnpm seed --help` lists every command by phase.
 
 ```bash
-pnpm seed pick                                # parishes to seed next, easiest first
-pnpm seed init st-mary-albany                 # start a parish's seed file
-pnpm seed bulletins st-mary-albany            # its bulletins, newest first
-pnpm seed pdf st-mary-albany latest           # the stored PDF, as a local file to read
-pnpm seed pages st-mary-albany 9f2c41 --page 2  # one page as a PNG
-pnpm seed history st-mary-albany              # what extract mode stored (free)
-pnpm seed ask st-mary-albany 9f2c41 --model gemini-3-flash-preview "Page 2: Saturday confessions?"
-pnpm seed extract st-mary-albany 9f2c41 --model gpt-6.1-sol
-pnpm seed check st-mary-albany                # or --all
-pnpm seed status                              # every seed file, and whether it is loaded
+pnpm seed start st-mary-albany          # start or resume a draft; prints where it starts from
+pnpm seed finalize st-mary-albany       # the drafter's last step: bookkeeping, then check
+pnpm seed check --all                   # check every file; `status` lists them
+pnpm seed questions --answered --by person   # the owner's changed answers, to find new rules
 ```
 
-Output is compact text (`--json` for the full result). `ask` and `extract`
-are cached and recorded in the seed file, and refuse after
-`CARLO_SEED_CALL_LIMIT` (default 4) calls per parish that weren't cache hits.
-They need `OPENAI_API_KEY` or `GEMINI_API_KEY`.
+## Onboarding factory
 
-A person reviews the drafts in the labeler's **Seeds** mode (`pnpm label`, then
-Seeds): the open questions next to the PDFs, `1`-`9` to choose an option, `e`
-to edit a slot, `x` to leave it out, `r` to reopen a settled one, then Approve.
-Approved files are committed. Every pipeline command loads the approved seed
-files not yet in its database as `seed` revisions, which puts those parishes
-in update mode. A changed approved file is loaded again only when its `as_of` is
-later than the parish's latest seed. The weekly run loads them after taking its
-before-copy, so a large batch can hold the run's change checks, and a deploy
-never loads them.
-
-Test the agent on the labeled parishes first:
+The factory takes a diocese from nothing to seeded parishes without a person in the loop,
+apart from merging its PRs and answering its GitHub issues
+([docs/factory-spec.md](docs/factory-spec.md)). A dispatcher runs small agent jobs one at a
+time: a map Run (survey, batches of parishes, reconcile, promote, PR) for each diocese in
+`factory/queue.json`, then seed Runs once the mapped parishes have bulletins. Stage specs
+and prompts are in `factory/`; the ledger, transcripts and Run worktrees are in
+`data/factory/` of the dispatcher's own checkout.
 
 ```bash
-pnpm seed pick --labeled --eval try-1   # starts data/seed-evals/try-1/ (drafts are never loaded)
-# ...the agent drafts with --eval try-1 on every command; newer bulletins are hidden...
-pnpm seed score try-1                   # data/seed-evals/try-1/report.md
+uv sync --group dev --group factory            # the Agent SDK
+pnpm factory run --stub scenario.json          # canned workers: no usage, no GitHub
+pnpm factory run                               # the dispatcher (or factory/carlo-factory.service)
+pnpm factory status                            # Runs, the running job, usage, open issues
+pnpm factory inspect wilmington-map-1/004-map  # one job in full; the `foreman` skill starts here
+pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answers.json
 ```
 
 ## Project layout
@@ -707,7 +784,7 @@ pnpm seed score try-1                   # data/seed-evals/try-1/report.md
 - `apps/web/` - React + TypeScript + Vite frontend
 - `apps/labeler/` - the local bulletin labeling UI (never deployed)
 - `data/labels/` - ground-truth labels, one JSON file per bulletin (committed)
-- `data/seeds/` - parish seed files, drafted by an agent and approved in the labeler (committed); `data/seed-evals/` holds test runs on the labeled parishes
+- `data/seeds/` - parish seed files, drafted and approved by the factory's seed Runs (committed)
 - `src/pdf_extract/extract_frontend_db.py` - builds the frontend snapshot (gzipped JSON; the format is in its docstring)
 - `src/pdf_extract/` - Python CLI package
   - `__main__.py` - CLI entry point
@@ -723,7 +800,7 @@ pnpm seed score try-1                   # data/seed-evals/try-1/report.md
   - `detect.py` - bulletin provider detection (Playwright)
   - `recurrence.py` - promotes repeatedly-dated events to weekly ones
   - `schedule/` - believed schedules for update-mode parishes: the change log, the decision policy, the update stage, hand edits (`pnpm schedule`)
-  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, scoring test runs, the labeler's review
+  - `seeding/` - seed files: their format and checks, the agent's tools (`pnpm seed`), loading approved ones, the labeler's review
   - `timeparse.py` - shared parsing of the loose time/date strings the LLM returns
   - `geocode.py` - address geocoding (Nominatim)
   - `dioceses/` - diocese exploration: records, rosters and coverage, web probes, the `diocese` command
@@ -757,3 +834,32 @@ Run tests:
 ```bash
 pnpm test
 ```
+
+## License
+
+The code is licensed under the [GNU Affero General Public License v3.0](LICENSE).
+If you run a modified version as a website, you must offer its source to the
+people who use it.
+
+The curated data in `data/` and the schedule data the site publishes (the
+database and snapshot `pnpm data:pull` fetches) are licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/): reuse them for any
+purpose with credit to Project Carlo. The bulletins themselves belong to their
+parishes and are not covered.
+
+Two exceptions in that data:
+
+- Church coordinates taken from OpenStreetMap are © OpenStreetMap contributors
+  and available under the
+  [Open Database License (ODbL)](https://opendatacommons.org/licenses/odbl/),
+  not CC BY. These are the churches whose record in
+  `data/dioceses/<diocese>/churches/` says `coordinates_from: osm-node` or
+  `nominatim`, or `geocode-stage` (the `pnpm geocode` stage looks addresses up
+  in OpenStreetMap's Nominatim). Their latitude and longitude carry the same
+  terms in `data/churches.csv` and the published database.
+- Other coordinates come from the sources their record names, most from
+  [GCatholic](https://gcatholic.org)'s Plus Codes (`gcatholic-plus-code`);
+  credit those sources too when you reuse them.
+
+The fonts, map tiles and other third-party material the site uses are listed,
+with their licenses, in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

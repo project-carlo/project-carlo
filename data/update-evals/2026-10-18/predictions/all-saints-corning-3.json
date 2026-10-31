@@ -1,0 +1,70 @@
+{
+  "parish": "all-saints-corning",
+  "trial": 3,
+  "required": true,
+  "checks": {
+    "absent_{\"day_of_week\": \"Saturday\", \"event_kind\": \"weekly\", \"event_type\": \"mass\", \"start_time\": 960}": true,
+    "present_{\"date\": \"2026-10-22\", \"event_type\": \"mass\", \"start_time\": 510}": true,
+    "responses_valid": true
+  },
+  "passed": true,
+  "calls": [
+    {
+      "original_call_id": 19,
+      "context_sha256": "e753aac15170511a736e3612bcfde8a65eb5d9ca4433baa502e37794e6b19b7e",
+      "served_model": "gpt-6-luna",
+      "service_tier": "default",
+      "usage": {
+        "input_tokens": 16179,
+        "cached_tokens": 4923,
+        "cache_write_tokens": 0,
+        "output_tokens": 1735,
+        "reasoning_tokens": 1424
+      },
+      "latency_ms": 20761,
+      "published_date": "2026-10-17",
+      "wrong_bulletin": false,
+      "church_list_needs_review": false,
+      "changes": [
+        {
+          "op": "add",
+          "entry_id": null,
+          "entry": {
+            "church_slug": "st-marys-corning",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-22",
+            "start_time": "8:30 AM",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "page_number": 2,
+          "rationale": "The Thursday, October 22 schedule lists an 8:30 AM Mass, and page 1 says daily Mass this week will be Thursday morning rather than evening."
+        }
+      ],
+      "seen": [
+        {
+          "entry_id": 14,
+          "page_number": 1
+        },
+        {
+          "entry_id": 16,
+          "page_number": 1
+        },
+        {
+          "entry_id": 17,
+          "page_number": 1
+        },
+        {
+          "entry_id": 18,
+          "page_number": 1
+        }
+      ]
+    }
+  ]
+}

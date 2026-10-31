@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-cross-utica",
+  "status": "approved",
+  "as_of": "2026-10-11T16:35:19Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:05:29Z",
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
+  "summary": "Holy Cross Parish, Utica (St. Mark's and St. Peter's). The bulletins print no schedule box, so weekly slots come from the intentions listing repeated in all three bulletins: Sat 4 PM, Sun 10 AM and Mon 10 AM at St. Mark's (Oct 12 cancelled for Columbus Day), and Wed 10 AM at St. Peter's. One question asks whether to include the 'Most Saturdays' 3:15-3:45 PM Confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b5ad3f506651e1cbf331d6d55db074f0bd0f1ab9acab4e1368e32821529181be",
+      "fetched_at": "2026-10-11T16:35:19Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "dc3ad2d2e664a388a4918591ef5f067e3bd589636875799c3055f862a28392b3",
+      "fetched_at": "2026-10-04T14:34:18Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "8c1024184f82720199ff80645890f1a8748bef67ba18b0aa0470b31ed04effab",
+      "fetched_at": "2026-09-28T00:05:45Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "Sat, 4:00pm (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc3ad2d2e664",
+          "page": 2,
+          "said": "Sat, 4:00pm (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c1024184f82",
+          "page": 2,
+          "said": "Sat, 4:00pm (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 3,
+          "said": "4:00 pm Saturday Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarkschurchutica.weebly.com/",
+          "said": "Saturday : 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "weekly mass Saturday 16:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc3ad2d2e664",
+          "said": "weekly mass Saturday 16:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8c1024184f82",
+          "said": "weekly mass Saturday 16:00 st-mark-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): there is no schedule box; the 'This Week We Pray For' intentions on page 2 list this slot at the same time on both weekends/weeks in each of the three bulletins read. History has it weekly in 3/3 bulletins. The page 3 volunteer form and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "Sun, 10:00am (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc3ad2d2e664",
+          "page": 2,
+          "said": "Sun, 10:00am (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c1024184f82",
+          "page": 2,
+          "said": "Sun, 10:00am (Keyes Road, St. Mark's campus unless otherwise indicated)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 3,
+          "said": "10:00 am Sunday Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarkschurchutica.weebly.com/",
+          "said": "Sunday : 10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "weekly mass Sunday 10:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc3ad2d2e664",
+          "said": "weekly mass Sunday 10:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8c1024184f82",
+          "said": "weekly mass Sunday 10:00 st-mark-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): there is no schedule box; the 'This Week We Pray For' intentions on page 2 list this slot at the same time on both weekends/weeks in each of the three bulletins read. History has it weekly in 3/3 bulletins. The page 3 volunteer form and the website agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "Mon, October 12, 10:00am No Mass due to Columbus Day Holiday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc3ad2d2e664",
+          "page": 2,
+          "said": "Mon, October 5, 10:00am For the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c1024184f82",
+          "page": 2,
+          "said": "Mon, September 28, 10:00am For the Parish"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarkschurchutica.weebly.com/",
+          "said": "Monday : 10:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "weekly mass Monday 10:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc3ad2d2e664",
+          "said": "weekly mass Monday 10:00 st-mark-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8c1024184f82",
+          "said": "weekly mass Monday 10:00 st-mark-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "R18: the newest bulletin skips Monday Oct 12 for a stated reason (Columbus Day), so the weekly slot stands; the two older bulletins list it on Oct 5 and Sept 28 and the website lists Monday 10:00 AM. The dated cancellation is its own slot (R16). History has it weekly in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day Holiday"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "Mon, October 12, 10:00am No Mass due to Columbus Day Holiday"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "specific_date mass 2026-10-12 10:00 st-mark-utica  CANCELLED; “Columbus Day Holiday”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no Mass on Monday, October 12 (on or after as_of); recorded as a cancellation of the weekly Monday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-peter-utica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "Wednesday, October 14, 10:00am (St. Peter's) For the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc3ad2d2e664",
+          "page": 2,
+          "said": "Wednesday, October 7, 10:00am (St. Peter's) For the Parish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c1024184f82",
+          "page": 2,
+          "said": "Wednesday, September 30, 10:00am (St. Peter's) For the Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "weekly mass Wednesday 10:00 st-peter-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "dc3ad2d2e664",
+          "said": "weekly mass Wednesday 10:00 st-peter-utica",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "8c1024184f82",
+          "said": "weekly mass Wednesday 10:00 st-peter-utica",
+          "page": 2
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated 4 (R1): the intentions list Wednesday 10:00 AM at St. Peter's in each of the three bulletins read (the heading says other Masses are at St. Mark's, so this one is marked St. Peter's). History has it weekly in 3/3 bulletins. The website does not list it, but the website is stale (it names only St. Mark's) and never outweighs the bulletins (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mark-utica",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Most Saturdays"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 1,
+          "said": "Sacraments of Healing (Anointing/Reconciliation) Most Saturdays 3:15-3:45 (SM). Also by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "dc3ad2d2e664",
+          "page": 1,
+          "said": "Most Saturdays 3:15-3:45 (SM). Also by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "8c1024184f82",
+          "page": 1,
+          "said": "Most Saturdays 3:15-3:45 (SM). Also by appointment."
+        },
+        {
+          "source": "website",
+          "url": "https://stmarkschurchutica.weebly.com/",
+          "said": "Reconciliation : Saturday at 3:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5ad3f506651",
+          "said": "weekly confession Saturday 15:15–15:45 st-mark-utica  “Most Saturdays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dc3ad2d2e664",
+          "said": "weekly confession Saturday 15:15–15:45 st-mark-utica  “Most Saturdays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8c1024184f82",
+          "said": "weekly confession Saturday 15:15–15:45 st-mark-utica",
+          "page": 1
+        }
+      ],
+      "rationale": "R33: 'Most Saturdays' means some Saturdays have no Confession and the bulletins print no dates for them, which the file cannot express. Printed identically in all three bulletins; the website says plain 'Saturday at 3:15pm' and history has it weekly in 3/3 bulletins. Leaning toward weekly with a note, per the website and history. (The 'by appointment' part has no time, R26.)\n\nDelegated review (owner authorized best judgment on 2026-10-22): Accept the habitual Saturday Confession window with the literal Most Saturdays qualifier visible. It describes conditional weekly availability, not a guaranteed occurrence every Saturday. The undated website does not erase the bulletin qualification; no exception dates are invented.",
+      "question": "Add Saturday 3:15-3:45 PM Confession at St. Mark's, which the bulletin gives as 'Most Saturdays'?",
+      "options": [
+        {
+          "label": "Saturdays 3:15-3:45 PM, note 'Most Saturdays'",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mark-utica",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:15",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Most Saturdays"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 1,
+          "said": "Rosary: Saturdays @ 3:25 pm & Sunday @ 9:25 am"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 3,
+          "said": "Willow Park Communion Service Sun 11:00 am Paul Zaleski"
+        }
+      ],
+      "rationale": "R24, R25: a Communion Service is not a Mass, and Willow Park is not one of the parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "historic-old-st-johns-utica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Relics of St. Bernadette"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5ad3f506651",
+          "page": 2,
+          "said": "As part of a National Tour, the Relics of St. Bernadette will stop at Historic Old St. John's (Downtown) on Tuesday, October 27th ... 12:10 pm Mass"
+        }
+      ],
+      "rationale": "R22: the Mass is at Historic Old St. John's, which belongs to another parish (seed church lookup); the veneration and Rosary there are not Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

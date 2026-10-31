@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-chittenango",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:49Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:10Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Five regular slots at St. Patrick's, all in the page 1 schedule box and matching history in all three bulletins: Sat 4:00 PM vigil, Sun 10:30 AM, Wed 11:00 AM, Confession 2:00-2:45 PM on 1st and 3rd Saturdays, and Adoration 6:30-7:30 PM on 2nd Mondays. The bulletin's calendar confirms the Oct 12 Adoration and Oct 17 Confession. No conflicts, dated entries or doubts. Only the newest bulletin was read as images; the older two match history.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "61c4c486ed3f04f9bbd33924b9d2536a9dbab58df563e494201c2e6b8ecb9c57",
+      "fetched_at": "2026-10-11T16:36:49Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "a919f49deb44de0ccf38989790714c81a81b899cacfbd3eb79d099edeb0222d8",
+      "fetched_at": "2026-10-04T14:44:07Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "aabd543ae15bef0a0b4c345300c134db16c2f5d23d65792ef339a27fc62ddca4",
+      "fetched_at": "2026-09-28T00:15:51Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chittenango",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "Weekend Masses Saturday | 4:00 pm Vigil"
+        },
+        {
+          "source": "history",
+          "bulletin": "61c4c486ed3f",
+          "said": "weekly mass Saturday 16:00 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a919f49deb44",
+          "said": "weekly mass Saturday 16:00 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aabd543ae15b",
+          "said": "weekly mass Saturday 16:00 st-patrick-chittenango",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on page 1; the page 3 calendar and page 2 intentions repeat it. History agrees in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chittenango",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "Sunday | 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "61c4c486ed3f",
+          "said": "weekly mass Sunday 10:30 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a919f49deb44",
+          "said": "weekly mass Sunday 10:30 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aabd543ae15b",
+          "said": "weekly mass Sunday 10:30 st-patrick-chittenango",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on page 1; calendar and intentions agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chittenango",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "Weekday Mass Wednesday | 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "61c4c486ed3f",
+          "said": "weekly mass Wednesday 11:00 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a919f49deb44",
+          "said": "weekly mass Wednesday 11:00 st-patrick-chittenango",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aabd543ae15b",
+          "said": "weekly mass Wednesday 11:00 st-patrick-chittenango",
+          "page": 1
+        }
+      ],
+      "rationale": "Mass Schedule box on page 1; calendar (Oct 14 11:00 am Mass) agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chittenango",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "14:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "Reconciliation Saturday | 2:00 pm - 2:45 pm on the 1st & 3rd Saturdays of the month"
+        },
+        {
+          "source": "history",
+          "bulletin": "61c4c486ed3f",
+          "said": "weekly confession Saturday 14:00–14:45 st-patrick-chittenango  “1st & 3rd Saturdays of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a919f49deb44",
+          "said": "weekly confession Saturday 14:00–14:45 st-patrick-chittenango  “1st & 3rd Saturdays of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aabd543ae15b",
+          "said": "weekly confession Saturday 14:00–14:45 st-patrick-chittenango  “1st & 3rd Saturdays of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "Schedule box gives the weeks; the calendar lists Confessions at 2:00 pm on Saturday Oct 17, the third Saturday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-chittenango",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "Adoration Monday | 6:30 pm - 7:30 pm on the 2nd Monday of the Month"
+        },
+        {
+          "source": "history",
+          "bulletin": "61c4c486ed3f",
+          "said": "weekly adoration Monday 18:30–19:30 st-patrick-chittenango  “2nd Monday of the Month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a919f49deb44",
+          "said": "weekly adoration Monday 18:30–19:30 st-patrick-chittenango  “2nd Monday of the Month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "aabd543ae15b",
+          "said": "weekly adoration Monday 18:30–19:30 st-patrick-chittenango  “2nd Monday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "Schedule box gives the weeks; calendar shows Monday Oct 12 (the second Monday) 6:30 pm Adoration. Weeks-of-month slots stay weekly even with a printed date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "61c4c486",
+          "page": 1,
+          "said": "HOLY DAYS As announced"
+        }
+      ],
+      "rationale": "Holy day Masses are 'as announced' with no times; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -2,7 +2,6 @@ import { memo } from "react";
 import type { Church, EditorRow, EventType, OptionalPreference, WeekOfMonth } from "../types";
 import { describeDays, formatDate, parseDates, parseDays, shortDay } from "../lib/dates";
 import {
-  ALL_BUT_LAST_NOTE,
   NUMBERED_WEEKS,
   WEEK_LABELS,
   allBut,
@@ -11,6 +10,7 @@ import {
   describeWeeks,
   parseSeason,
   toggleWeek,
+  type WeeksSelection,
 } from "../lib/pattern";
 import { describeOptional, rowProblems, setDates, setDays } from "../lib/rows";
 import { formatTime, parseLooseTime } from "../lib/time";
@@ -124,20 +124,27 @@ function Seg<T extends string>({
 
 function WeeksPicker({
   weeks,
+  exclude,
   onChange,
-  onAllButLast,
 }: {
   weeks: WeekOfMonth[];
-  onChange: (weeks: WeekOfMonth[]) => void;
-  onAllButLast: () => void;
+  exclude: boolean;
+  onChange: (selection: WeeksSelection) => void;
 }) {
-  const skipped = allButWeek(weeks);
+  const skipped = allButWeek(weeks, exclude);
+  // An exclusion of several weeks (from Gemini or a seed) has no single "all but" option.
+  const otherExclusion = exclude && !skipped;
   const chip = (active: boolean) =>
     `px-1.5 py-0.5 text-xs ${active ? "bg-sky-600 text-white" : "bg-white text-slate-600 hover:bg-slate-100"}`;
   return (
     <div className="flex items-center gap-1" title="Weeks of the month">
       <div className="flex overflow-hidden rounded border border-slate-300">
-        <button type="button" tabIndex={-1} className={chip(weeks.length === 0)} onClick={() => onChange([])}>
+        <button
+          type="button"
+          tabIndex={-1}
+          className={chip(weeks.length === 0)}
+          onClick={() => onChange({ weeks: [], exclude: false })}
+        >
           Every
         </button>
         {[...NUMBERED_WEEKS, "last" as const].map((w) => (
@@ -145,8 +152,8 @@ function WeeksPicker({
             key={w}
             type="button"
             tabIndex={-1}
-            className={`${chip(!skipped && weeks.includes(w))} border-l border-slate-200`}
-            onClick={() => onChange(toggleWeek(skipped ? [] : weeks, w))}
+            className={`${chip(!skipped && !exclude && weeks.includes(w))} border-l border-slate-200`}
+            onClick={() => onChange({ weeks: toggleWeek(skipped || exclude ? [] : weeks, w), exclude: false })}
           >
             {WEEK_LABELS[w]}
           </button>
@@ -154,18 +161,17 @@ function WeeksPicker({
       </div>
       <select
         tabIndex={-1}
-        value={skipped ?? ""}
+        value={otherExclusion ? "other" : (skipped ?? "")}
         onChange={(e) => {
-          const w = e.target.value as WeekOfMonth | "";
-          if (!w) return onChange([]);
-          const list = allBut(w);
-          if (list) onChange(list);
-          else onAllButLast();
+          const w = e.target.value as WeekOfMonth | "" | "other";
+          if (w === "other") return;
+          onChange(w ? allBut(w) : { weeks: [], exclude: false });
         }}
-        className={`rounded border px-1 py-0.5 text-xs ${skipped ? "border-sky-600 bg-sky-50 text-sky-800" : "border-slate-300 bg-white text-slate-600"}`}
-        title='"All but" one week. "All but last" cannot be stored as weeks; it goes in the note.'
+        className={`rounded border px-1 py-0.5 text-xs ${skipped || exclude ? "border-sky-600 bg-sky-50 text-sky-800" : "border-slate-300 bg-white text-slate-600"}`}
+        title='"All but" one week. "All but last" is stored as the last week excluded.'
       >
         <option value="">All but…</option>
+        {otherExclusion && <option value="other">{describeWeeks(weeks, true)}</option>}
         {[...NUMBERED_WEEKS, "last" as const].map((w) => (
           <option key={w} value={w}>
             All but {WEEK_LABELS[w]}
@@ -198,7 +204,7 @@ export const RowEditor = memo(function RowEditor({
   const pendingCount = (weekly ? row.pending_split?.days : row.pending_split?.dates)?.length ?? 0;
   const summary = [
     describeOptional(row.optional),
-    weekly && row.weeks_of_month.length > 0 ? describeWeeks(row.weeks_of_month) : null,
+    weekly && row.weeks_of_month.length > 0 ? describeWeeks(row.weeks_of_month, row.exclude_weeks) : null,
     weekly && row.season ? describeSeason(row.season) : null,
     row.note,
   ]
@@ -394,15 +400,8 @@ export const RowEditor = memo(function RowEditor({
             <>
               <WeeksPicker
                 weeks={row.weeks_of_month}
-                onChange={(w) => patch({ weeks_of_month: w })}
-                onAllButLast={() =>
-                  patch({
-                    weeks_of_month: [],
-                    note: row.note?.includes(ALL_BUT_LAST_NOTE)
-                      ? row.note
-                      : [row.note, ALL_BUT_LAST_NOTE].filter(Boolean).join("; "),
-                  })
-                }
+                exclude={row.exclude_weeks}
+                onChange={(w) => patch({ weeks_of_month: w.weeks, exclude_weeks: w.exclude })}
               />
               <CommitInput
                 display={row.season ? describeSeason(row.season) : ""}

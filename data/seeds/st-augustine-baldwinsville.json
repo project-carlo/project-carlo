@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-augustine-baldwinsville",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:15Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:47:28Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:30:06Z",
+  "summary": "One church in a three-parish Baldwinsville bulletin box. Sunday 10:30 AM and Wednesday 10:00 AM Masses agree with history in all three bulletins; St. Mary's and St. Elizabeth Ann Seton columns belong to their own parishes and are left out. Open question: Confession is every other Wednesday 10:30-11:30, which weeks_of_month can't express.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "46e2e6ed0181c733d5ae855cd38c3d5e0e13ab2b47608ff420a1b2b667816556",
+      "fetched_at": "2026-10-11T16:36:15Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "4b5307121e332693b6c7ddd524b4e8724f1fdb8c0bac8f33c4eef39b3981792a",
+      "fetched_at": "2026-10-04T14:39:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ed89f2a9d283af640aedbdf0733fadc46ec30cb18c138fb8b62d67142a5831d6",
+      "fetched_at": "2026-09-28T00:10:50Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 2,
+          "said": "Mass Times - St. Augustine's - Weekend Mass Sunday 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46e2e6ed0181",
+          "said": "weekly Sunday 10:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b5307121e33",
+          "said": "weekly Sunday 10:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed89f2a9d283",
+          "said": "weekly Sunday 10:30"
+        }
+      ],
+      "rationale": "St. Augustine's only weekend Mass in the page 2 Mass Times box; history agrees in all three bulletins. The Nov 8 Mass of Remembrance (page 6) and CLOW are at this regular Mass, so no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 2,
+          "said": "Weekday Mass Wednesday 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "46e2e6ed0181",
+          "said": "weekly Wednesday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b5307121e33",
+          "said": "weekly Wednesday 10:00"
+        },
+        {
+          "source": "history",
+          "bulletin": "ed89f2a9d283",
+          "said": "weekly Wednesday 10:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Times box; history agrees in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-baldwinsville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "10:30",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 2,
+          "said": "Confession Every Other Wednesday 10:30am-11:30am (see cover)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 1,
+          "said": "Confession Schedule: Wed, Oct 14, 10:30am-11:30am, at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b5307121e33",
+          "page": 1,
+          "said": "Confession Schedule: Wed, Oct 14, 10:30am-11:30am, at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed89f2a9d283",
+          "page": 1,
+          "said": "Confession Schedule: Wed, Oct 14, 10:30am-11:30am, at St. Augustine's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ed89f2a9d283",
+          "page": 3,
+          "said": "no Mass or Confession at SA on Wednesday, September 30 due to Priest Convocation"
+        },
+        {
+          "source": "history",
+          "bulletin": "46e2e6ed0181",
+          "said": "weekly Wednesday 10:30-11:30 confession, note 'Every other Wednesday'"
+        }
+      ],
+      "rationale": "Confession at St. Augustine's is every other Wednesday (Sept 30, cancelled; Oct 14; so Oct 28 next), which weeks_of_month cannot express. The cover always names the next date. A weekly entry with an 'every other Wednesday' note matches history and tells visitors the cadence; a dated Oct 14 entry is exactly right but lapses unless later bulletins keep adding dates.",
+      "question": "St. Augustine's every-other-Wednesday 10:30-11:30 AM Confession: record as weekly with a note, as the dated Oct 14 session only, or leave out?",
+      "options": [
+        {
+          "label": "Weekly Wednesday 10:30-11:30, note 'Every other Wednesday'",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-augustine-baldwinsville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "10:30",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": "Every other Wednesday"
+          }
+        },
+        {
+          "label": "Dated: Wed Oct 14 10:30-11:30 only",
+          "entry": {
+            "church_slug": "st-augustine-baldwinsville",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-14",
+            "start_time": "10:30",
+            "end_time": "11:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-11T21:29:58Z"
+      }
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 2,
+          "said": "St. Mary's: Weekend Mass Saturday 4:00pm & Sunday 9:00am; Weekday Mass Monday 9:00 am & Tuesday 7:00pm; Adoration Tuesday 9:00am-6:30pm; Confession Every Other Tuesday 5:30pm-6:30pm & Every Saturday 3:00pm-3:45pm"
+        }
+      ],
+      "rationale": "St. Mary of the Assumption is its own parish (st-mary-of-the-assumption-baldwinsville); its whole column in the shared Mass Times box and cover Confession Schedule is left out here. This entry stands for all of it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-baldwinsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 2,
+          "said": "St. Elizabeth Ann Seton: Weekend Mass Saturday 5:30pm & Sunday 7:30am & 10:30am; Weekday Mass Thursday 6:45am & Friday 9:00am; Adoration Wednesday 5:15pm-6:15pm & Friday 7:30am-9:00am; Confession Every Saturday 4:30pm-5:15pm"
+        }
+      ],
+      "rationale": "St. Elizabeth Ann Seton is its own parish (st-elizabeth-ann-seton-baldwinsville); its whole column is left out here. This entry stands for all of it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "46e2e6ed0181",
+          "page": 1,
+          "said": "Or by appointment. To make an appointment, please call the Parish Office"
+        }
+      ],
+      "rationale": "Confession by appointment has no time: left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -8,7 +8,9 @@ import { AppLayout } from "./views/AppLayout";
 import { LandingPage } from "./views/LandingPage";
 import { NotFoundPage } from "./views/NotFoundPage";
 import { RouteError } from "./views/RouteError";
+import { MapLoadingIndicator } from "./components/MapLoadingIndicator";
 import { isAboutPageEnabled } from "./lib/featureFlags";
+import { ANALYTICS_DASHBOARD_PATH } from "./lib/analyticsReports";
 
 const lazyPageFallback = (
   <main className="flex min-h-svh items-center justify-center bg-paper px-4">
@@ -65,6 +67,14 @@ function routes(queryClient: QueryClient): RouteObject[] {
         return null;
       },
     },
+    {
+      // Behind Cloudflare Access (docs/analytics.md); linked from nowhere.
+      path: ANALYTICS_DASHBOARD_PATH,
+      lazy: () =>
+        import("./views/AnalyticsDashboardPage").then((m) => ({
+          Component: m.AnalyticsDashboardPage,
+        })),
+    },
   ];
 
   if (isAboutPageEnabled()) {
@@ -89,10 +99,18 @@ export function createAppRouter(queryClient: QueryClient) {
     {
       element: <AppLayout />,
       errorElement: <RouteError fallback={lazyPageFallback} />,
-      // Shown on the first load, while the first page's code arrives: just
-      // the paper, as each page has a loading state of its own (the map's
-      // "Loading map…") and this one would only flash before it.
-      hydrateFallbackElement: <main className="min-h-svh bg-paper" />,
+      // Shown on the first load, while the first page's code arrives. The
+      // home map's startup data often lands with its code, so its own
+      // "Loading map…" never shows: the fallback shows it instead, as does
+      // index.html before any script runs. Other pages get just the paper.
+      hydrateFallbackElement:
+        window.location.pathname === "/" ? (
+          <main className="fixed inset-x-0 top-0 h-dvh bg-paper">
+            <MapLoadingIndicator systemFont />
+          </main>
+        ) : (
+          <main className="min-h-svh bg-paper" />
+        ),
       children: routes(queryClient),
     },
   ]);

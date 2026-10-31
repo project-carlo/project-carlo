@@ -5,7 +5,7 @@
  */
 import type { ChurchBase, ChurchDetail } from "../types";
 import { cityPath, type City, type CityLink } from "./cities";
-import { ALL_CHURCHES, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
+import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "../copy";
 
 export const SITE_NAME = "Project Carlo";
 export const SITE_LOCALE = "en_US";
@@ -17,9 +17,12 @@ export const OG_IMAGE_HEIGHT = 630;
 export const OG_IMAGE_ALT =
   "Project Carlo — Mass, Confession & Adoration times near you";
 
-/** Default homepage title/description — keep keyword-forward, location-agnostic. */
-export const HOME_TITLE =
-  "Mass, Confession & Adoration Times Near You · Project Carlo";
+/**
+ * Homepage title. The brand leads here because the page is the site itself;
+ * every other page puts its own subject first and the brand last, so open
+ * tabs, which show only the first 20–30 characters, can be told apart.
+ */
+export const HOME_TITLE = `${SITE_NAME} · Mass, Confession & Adoration Times`;
 export const HOME_DESCRIPTION = `Find Mass, Confession, and Adoration times at Catholic churches on an interactive map. Times come ${SOURCE_PHRASE}.`;
 
 /** Resolve a site-relative path against an origin into an absolute URL. */
@@ -49,7 +52,7 @@ export function churchLocation(church: ChurchDetail): string {
 }
 
 /**
- * Church page title, e.g. "St. Mary, East Aurora — Mass & Confession Times".
+ * Church page title, e.g. "St. Mary, East Aurora · Mass Times · Project Carlo".
  * The church's name and town lead, since search results cut titles off at
  * about 60 characters and those are what tell one St. Mary from another; the
  * services people search for follow, and the description names all three.
@@ -57,7 +60,7 @@ export function churchLocation(church: ChurchDetail): string {
 export function buildChurchTitle(church: ChurchDetail): string {
   const name = church.name?.trim() || UNNAMED_CHURCH;
   const place = church.city?.trim() || church.state?.trim();
-  return `${place ? `${name}, ${place}` : name} — Mass & Confession Times`;
+  return `${place ? `${name}, ${place}` : name} · Mass Times · ${SITE_NAME}`;
 }
 
 /** SERP-snippet description for a church page (kept under ~155 chars). */
@@ -76,7 +79,7 @@ export function churchPath(slug: string): string {
   return `${CHURCH_INDEX_PATH}${encodeURIComponent(slug)}/`;
 }
 
-export const CHURCH_INDEX_TITLE = `Browse Catholic Churches — Mass, Confession & Adoration Times · ${SITE_NAME}`;
+export const CHURCH_INDEX_TITLE = `Catholic Churches · ${SITE_NAME}`;
 
 export function buildChurchIndexDescription(churchCount: number): string {
   return `Browse all ${churchCount} Catholic churches on ${SITE_NAME} and find Mass, Confession, and Adoration times ${SOURCE_PHRASE}.`;
@@ -167,7 +170,7 @@ export function churchWebPageJsonLd(
 }
 
 /**
- * BreadcrumbList: Home → All churches → {City} → {Church}, without the city level
+ * BreadcrumbList: Home → Church list → {City} → {Church}, without the city level
  * when the church's address has none.
  */
 export function churchBreadcrumbJsonLd(
@@ -178,7 +181,7 @@ export function churchBreadcrumbJsonLd(
   const origin = new URL(canonicalUrl).origin;
   const crumbs: { name: string; item: string }[] = [
     { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-    { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+    { name: CHURCH_LIST, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
   ];
   if (city) {
     crumbs.push({ name: city.label, item: absoluteUrl(origin, cityPath(city.slug)) });
@@ -202,9 +205,9 @@ function breadcrumbList(
   };
 }
 
-/** City page title, e.g. "Catholic Mass Times in East Aurora, NY — Confession & Adoration · Project Carlo". */
+/** City page title, e.g. "Mass Times in East Aurora, NY · Project Carlo". */
 export function buildCityTitle(city: Pick<City, "label">): string {
-  return `Catholic Mass Times in ${city.label} — Confession & Adoration · ${SITE_NAME}`;
+  return `Mass Times in ${city.label} · ${SITE_NAME}`;
 }
 
 /** SERP-snippet description for a city page. */
@@ -221,7 +224,7 @@ export function buildCityDescription(
 
 /**
  * Structured data for a city page: the page as a CollectionPage of its
- * churches' pages, and its breadcrumbs (Home → All churches → {City}).
+ * churches' pages, and its breadcrumbs (Home → Church list → {City}).
  */
 export function cityJsonLd(
   city: Pick<City, "label" | "churches">,
@@ -250,7 +253,7 @@ export function cityJsonLd(
     },
     breadcrumbList([
       { name: SITE_NAME, item: absoluteUrl(origin, "/") },
-      { name: ALL_CHURCHES, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
+      { name: CHURCH_LIST, item: absoluteUrl(origin, CHURCH_INDEX_PATH) },
       { name: city.label, item: canonicalUrl },
     ]),
   ];

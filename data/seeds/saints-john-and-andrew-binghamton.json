@@ -1,0 +1,1024 @@
+{
+  "schema_version": 1,
+  "parish_slug": "saints-john-and-andrew-binghamton",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:01Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:20Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:21:49Z",
+  "summary": "Saints John and Andrew (Binghamton) one-church parish. Weekend Masses, MWF 6:30 AM, Wednesday 7-3 Adoration, and Saturday Reconciliation are clear from the masthead and calendar; the calendar also prints Tuesday and Thursday 6:30 AM Masses that the masthead and website do not list, the Reconciliation end time differs (3:30 vs 3:00), and the Wednesday evening Adoration was dropped from the newest bulletin. Black calendar lines are Masses at the separate St. Vincent de Paul Blessed Sacrament church and are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9a2a93f90e99b27b5759e2795e78fced4f71ba02fe1b49c329de9b8fef3e09e8",
+      "fetched_at": "2026-10-11T16:36:01Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9237addb989769b44e412992857b04245b06b46b11deb1f1ba8b2a3da31acf6a",
+      "fetched_at": "2026-10-04T14:38:38Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "9cf65914334f5112666e80e8e01b0673df00483db638e08c91a7c3e115181c34",
+      "fetched_at": "2026-09-28T00:09:33Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Saturday at 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 1,
+          "said": "Saturday at 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 1,
+          "said": "Saturday at 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Saturday 16:00 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Saturday 16:00 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly mass Saturday 16:00 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead Mass Schedule in all three bulletins; calendar intentions on p4 agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Sunday at 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 1,
+          "said": "Sunday at 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 1,
+          "said": "Sunday at 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Sunday 08:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Sunday 08:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly mass Sunday 08:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead Mass Schedule in all three bulletins; calendar intentions agree. The 10:15 AM Sunday Mass in the calendar is at St. Vincent de Paul Blessed Sacrament.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Monday, Wednesday, Friday : 6:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Monday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Monday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly mass Monday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead Mass Schedule lists Monday, Wednesday and Friday 6:30 AM; the calendar shows a 6:30 AM intention each such day. The calendar shows no 6:30 AM Mass on Oct 12 (see the dated slots).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Monday, Wednesday, Friday : 6:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Wednesday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Wednesday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly mass Wednesday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead Mass Schedule lists Monday, Wednesday and Friday 6:30 AM; the calendar shows a 6:30 AM intention each such day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Monday, Wednesday, Friday : 6:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Friday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Friday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly mass Friday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead Mass Schedule lists Monday, Wednesday and Friday 6:30 AM; the calendar shows a 6:30 AM intention each such day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "Tue Oct 13 6:30 am Rev. James C. Fritzen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 4,
+          "said": "6:30 am daily-Mass intention printed for Tuesday Oct 6 and Thursday Oct 8"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 4,
+          "said": "Tue Sep 29 and Thu Oct 1 6:30 am intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Monday, Wednesday, Friday : 6:30am; no Tuesday or Thursday Mass listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Tuesday 06:30 saints-john-and-andrew-binghamton",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "specific_date mass 2026-10-06 06:30 saints-john-and-andrew-binghamton",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "specific_date mass 2026-09-29 06:30 saints-john-and-andrew-binghamton",
+          "page": 4
+        }
+      ],
+      "rationale": "The masthead (all three bulletins) and the website list weekday Mass only on Monday, Wednesday and Friday, but all three bulletins' calendars print a 6:30 AM Mass with a named intention every Tuesday and Thursday, at the red SJA entries (not the 9:00 AM St. Vincent de Paul Blessed Sacrament ones). Sources conflict.",
+      "question": "Is there a regular weekly Tuesday 6:30 AM Mass at Saints John and Andrew?",
+      "options": [
+        {
+          "label": "Weekly Tuesday 6:30 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:56Z"
+      }
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "Thu Oct 15 6:30 am Ruth Ostanek"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 4,
+          "said": "6:30 am daily-Mass intention printed for Tuesday Oct 6 and Thursday Oct 8"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 4,
+          "said": "Tue Sep 29 and Thu Oct 1 6:30 am intentions"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Monday, Wednesday, Friday : 6:30am; no Tuesday or Thursday Mass listed"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly mass Thursday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly mass Thursday 06:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "specific_date mass 2026-10-01 06:30 saints-john-and-andrew-binghamton",
+          "page": 4
+        }
+      ],
+      "rationale": "The masthead (all three bulletins) and the website list weekday Mass only on Monday, Wednesday and Friday, but all three bulletins' calendars print a 6:30 AM Mass with a named intention every Tuesday and Thursday, at the red SJA entries (not the 9:00 AM St. Vincent de Paul Blessed Sacrament ones). Sources conflict.",
+      "question": "Is there a regular weekly Thursday 6:30 AM Mass at Saints John and Andrew?",
+      "options": [
+        {
+          "label": "Weekly Thursday 6:30 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:20:59Z"
+      }
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Sacrament of Reconciliation Saturday 2:30 - 3:30 PM or anytime by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "SATURDAY, OCTOBER 17: 2:30 pm - 3:00 pm Sacrament of Reconciliation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 4,
+          "said": "2:30 pm - 3:00 pm Sacrament of Reconciliation (Sat Oct 10)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 4,
+          "said": "SATURDAY, OCTOBER 3: 2:30 pm - 3:30 pm Sacrament of Reconciliation"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org",
+          "said": "Saturday 2:30pm - 3:30pm or anytime by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly confession Saturday 14:30–15:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "weekly confession Saturday 14:30–15:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "weekly confession Saturday 14:30–15:30 saints-john-and-andrew-binghamton",
+          "page": 1
+        }
+      ],
+      "rationale": "Masthead (all bulletins) and website say 2:30-3:30 PM; the calendar in the last two bulletins says 2:30-3:00 PM for the following Saturday, while the Sep 27 calendar says 3:30. History has 3:30.",
+      "question": "What is the end time of Saturday Reconciliation?",
+      "options": [
+        {
+          "label": "Saturdays 2:30-3:30 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "14:30",
+            "end_time": "15:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Saturdays 2:30-3:00 PM",
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "14:30",
+            "end_time": "15:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:13Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "or anytime by appointment"
+        }
+      ],
+      "rationale": "Confession by appointment has no definite start time; left out per policy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "No Benediction"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "ADORATION AT SS. JOHN & ANDREW 7 AM to 3 PM -NO BENEDICTION (Wednesday Oct 14)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 4,
+          "said": "7 AM to 3 PM & 5 PM to 6:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 4,
+          "said": "7 AM TO 3 PM & 5 PM TO 6:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org/adoration",
+          "said": "Wednesdays: 7:00am - 3:00pm, 5:00pm - 7:00pm (Benediction at 6:50 pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "weekly adoration Wednesday 07:00–15:00 saints-john-and-andrew-binghamton  “No benediction”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "specific_date adoration 2026-10-07 07:00–15:00 saints-john-and-andrew-binghamton",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "specific_date adoration 2026-09-30 07:00–15:00 saints-john-and-andrew-binghamton",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed on the Wednesday of the newest calendar and in both earlier bulletins as a recurring Wednesday block; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9237addb9897",
+          "page": 4,
+          "said": "ADORATION AT SAINTS JOHN & ANDREW 7 AM to 3 PM & 5 PM to 6:45 pm. Benediction at 6:45 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9cf65914334f",
+          "page": 4,
+          "said": "7 AM TO 3 PM & 5 PM TO 6:45 PM Benediction at 6:45 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "7 AM to 3 PM -NO BENEDICTION (no evening session printed)"
+        },
+        {
+          "source": "website",
+          "url": "https://saintsjohnandandrew.org/adoration",
+          "said": "Wednesdays: ... 5:00pm - 7:00pm (Benediction at 6:50 pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9237addb9897",
+          "said": "specific_date adoration 2026-10-07 17:00–18:45 saints-john-and-andrew-binghamton  “Benediction at 6:45 PM”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9cf65914334f",
+          "said": "specific_date adoration 2026-09-30 17:00–18:45 saints-john-and-andrew-binghamton  “Benediction at 6:45 PM”",
+          "page": 4
+        }
+      ],
+      "rationale": "The two older bulletins print a Wednesday evening session with Benediction; the newest bulletin prints only 7-3 'NO BENEDICTION'. The website still lists an evening session (ending 7:00, Benediction 6:50). Unclear whether the evening session was dropped.",
+      "question": "Is there still a Wednesday 5:00-6:45 PM Adoration with Benediction?",
+      "options": [
+        {
+          "label": "Wednesdays 5:00-6:45 PM, Benediction",
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Wednesday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "18:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:45Z"
+      }
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "MONDAY, OCTOBER 12, 2026: 9:00 am Canon John E. Mikalajunas - Fr. Jim, Fr. Thomas & Monsignor"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "NO FAITH FORMATION CLASSES DUE TO THE COLUMBUS HOLIDAY"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "specific_date mass 2026-10-12 09:00 saints-john-and-andrew-binghamton  “Columbus Day”",
+          "page": 4
+        }
+      ],
+      "rationale": "Red (Saints John and Andrew) intention on the holiday Monday at 9:00 AM, with no 6:30 AM entry that day.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Replaced by holiday Mass at 9:00 AM"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "MONDAY, OCTOBER 12, 2026 lists only a 9:00 am Mass; no 6:30 am Mass printed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 1,
+          "said": "Monday-Wednesday-Friday : 6:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "specific_date mass 2026-10-12 06:30 saints-john-and-andrew-binghamton  CANCELLED; “Replaced by holiday Mass at 9:00 AM”",
+          "page": 4
+        }
+      ],
+      "rationale": "The bulletin does not say the 6:30 AM Mass is cancelled; it just prints a 9:00 AM intention for Columbus Day and none at 6:30. Inferred replacement. Oct 12 is the day after as_of.",
+      "question": "Cancel the regular Monday 6:30 AM Mass on Oct 12 (replaced by 9:00 AM)?",
+      "options": [
+        {
+          "label": "Cancel Oct 12 6:30 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "saints-john-and-andrew-binghamton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-12",
+            "start_time": "06:30",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Replaced by holiday Mass at 9:00 AM"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:21:47Z"
+      }
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "saints-john-and-andrew-binghamton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-23",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Relic of St. Bernadette"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 3,
+          "said": "RELIC OF ST. BERNADETTE at Saints John and Andrew Church, Friday, October 23: 9:00 am Mass, 9:45 Public Veneration"
+        },
+        {
+          "source": "history",
+          "bulletin": "9a2a93f90e99",
+          "said": "specific_date mass 2026-10-23 09:00 saints-john-and-andrew-binghamton  “Relic of St. Bernadette”",
+          "page": 3
+        }
+      ],
+      "rationale": "Special Mass at the church outside the regular Friday time; the bulletin prints '2006' but Oct 23 2026 is a Friday. Public veneration is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-blessed-sacrament-vestal",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9a2a93f90e99",
+          "page": 4,
+          "said": "10:15 am St. Vincent de Paul Blessed Sacrament (also 9:00 am Tue/Wed/Fri and 4:00 pm Sat at the same church)"
+        }
+      ],
+      "rationale": "Black calendar lines are Masses at St. Vincent de Paul Blessed Sacrament, a separate church at 465 Clubhouse Rd., Vestal, not this parish's listed church; left out here.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

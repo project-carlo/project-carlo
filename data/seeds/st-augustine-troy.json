@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-augustine-troy",
+  "status": "approved",
+  "as_of": "2026-09-28T22:02:13Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:03:48Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "One-church parish; the only stored bulletin is the Sept 13 issue (fetched Sept 28), whose page 1 schedule box matches the website. Mass, Confession and the first-Friday Benediction are settled. The 8 AM to 8 PM Adoration Chapel is left out because neither source says where it is, and is listed in church_list_issues; there are no open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "88ba5f68262601e9381998ae48d696d4442aeb34ac9eab2e451234a1dc90705e",
+      "fetched_at": "2026-09-28T22:02:13Z",
+      "published_date": "2026-09-13",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "SUNDAY MASS SCHEDULE Saturday: 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 2,
+          "said": "Saturday, September 12 4:00 PM, Vigil Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Sunday Mass Schedule Saturday: 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Saturday 16:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Sunday: 9:00 AM (with Children's Liturgy), 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Sunday: 9:00 AM (with Children's Liturgy), 6:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Sunday 09:00 st-augustine-troy  “With Children's Liturgy”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Sunday: 9:00 AM (with Children's Liturgy), 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Sunday: ... 6:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Sunday 18:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Perpetual Help Novena"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Monday: 8:30 AM (Our Lady of Perpetual Help Novena)"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Monday: 8:30 AM (Our Lady of Perpetual Help Novena)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Monday 08:30 st-augustine-troy  “Our Lady of Perpetual Help Novena”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Thursday: 6:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Thursday: 6:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Thursday 18:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Friday: 8:30 AM (First Friday Sacred Heart Devotions and Benediction following Mass)"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Friday: 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Friday 08:30 st-augustine-troy  “First Friday Sacred Heart Devotions and Benediction following Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Saturday: 8:30 AM (8.00 AM First Saturday - Rosary followed by Mass)"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Saturday: 8:30 AM (8.00AM First Saturday - Rosary followed by Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly mass Saturday 08:30 st-augustine-troy  “8:00 AM First Saturday Rosary followed by Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored (issue Sept 13, fetched Sept 28); the website's Mass Times list agrees. On first Saturdays a Rosary at 8:00 comes first and the 8:30 Mass follows, so the time does not change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "CONFESSION Thursday: 5:30 PM to 6:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly confession Thursday 17:30–18:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "CONFESSION ... Saturday: 3:00 PM to 3:45 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly confession Saturday 15:00–15:45 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 of the only bulletin stored.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction; Sacred Heart devotions after the 8:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Friday: 8:30 AM (First Friday Sacred Heart Devotions and Benediction following Mass)"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/",
+          "said": "Friday: 8:30 AM (First Friday Sacred Heart Devotions and Benediction following Mass)"
+        }
+      ],
+      "rationale": "R1, R10, POLICY Notes: the first-Friday Benediction follows the 8:30 AM weekday Mass with no clock time, so it is 30 minutes after, 9:00 AM; POLICY records Benediction as Adoration. The newest bulletin's week holds no first Friday, but it prints this line itself, and the website repeats it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Monday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Tuesday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Wednesday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Thursday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Friday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Saturday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-augustine-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week"
+        },
+        {
+          "source": "website",
+          "url": "https://staugustinetroy.org/adorationchapel",
+          "said": "upon the altar in our Perpetual Adoration Chapel, Jesus waits for you! (no address or location given)"
+        },
+        {
+          "source": "history",
+          "bulletin": "88ba5f682626",
+          "said": "weekly adoration Sunday 08:00–20:00 st-augustine-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "R23, POLICY Churches and chapels: the Adoration Chapel is listed on its own and neither the bulletin nor the website says where it is (inside, attached to or on the grounds of the church, or elsewhere). Its location is unclear, so its seven daily slots are left out and the chapel is listed in church_list_issues. History recorded them at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "HOLY DAYS: 8:30 AM, 6:00 PM"
+        }
+      ],
+      "rationale": "R26: Holy Day Masses are given with no date, and a holy day is not a weekly slot, so there is nothing to record. The dated holy days are for later bulletins to show.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "88ba5f682626",
+          "page": 1,
+          "said": "Saturday: 8:30 AM (8.00 AM First Saturday - Rosary followed by Mass)"
+        }
+      ],
+      "rationale": "R24: the first-Saturday Rosary at 8:00 AM is a devotion, not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "Adoration Chapel (St. Augustine Parish, Troy; no address given)",
+      "said": "Adoration Chapel 8:00 AM to 8:00 PM seven days a week",
+      "bulletin": "88ba5f682626",
+      "page": 1
+    }
+  ]
+}

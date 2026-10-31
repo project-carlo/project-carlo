@@ -4,11 +4,18 @@
  * "Review in the labeler") and src/pdf_extract/seeding/files.py, which the
  * server validates every save against.
  */
-import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedSlot, SeedStatus } from "../types";
+import type { EditorRow, SeedAnswer, SeedEntry, SeedFile, SeedQueueRow, SeedSlot, SeedStatus } from "../types";
 import { formatDate } from "./dates";
 import { describeSeason, describeWeeks } from "./pattern";
 import { newId } from "./rows";
 import { formatTime } from "./time";
+
+/** Ready seeds first, then questions; continue after the current parish and wrap. */
+export function nextSeedToReview(seeds: readonly SeedQueueRow[], currentParish?: string): SeedQueueRow | undefined {
+  const index = seeds.findIndex((s) => s.parish_slug === currentParish);
+  const candidates = index < 0 ? seeds : [...seeds.slice(index + 1), ...seeds.slice(0, index)];
+  return candidates.find((s) => s.status === "ready") ?? candidates.find((s) => s.status === "needs_review");
+}
 
 function answer(choice: SeedAnswer["choice"], by: string): SeedAnswer {
   return { choice, by, at: new Date().toISOString().replace(/\.\d{3}Z$/, "Z") };
@@ -18,11 +25,42 @@ export function isOpen(slot: SeedSlot): boolean {
   return slot.status === "needs_human";
 }
 
-export function openCount(seed: SeedFile): number {
-  return seed.slots.filter(isOpen).length;
+/** The open slots answered with `slot`: its group's, or itself alone. */
+export function groupOf(seed: SeedFile, slot: SeedSlot): SeedSlot[] {
+  if (!slot.group) return [slot];
+  return seed.slots.filter((s) => s.id === slot.id || (isOpen(s) && s.group === slot.group));
 }
 
-/** The entry an excluded slot keeps for review: its own, or one its options name. */
+/** One open slot per question: a group's first slot stands for the rest. */
+export function openQuestions(seed: SeedFile): SeedSlot[] {
+  const seen = new Set<string>();
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    if (!s.group) return true;
+    if (seen.has(s.group)) return false;
+    seen.add(s.group);
+    return true;
+  });
+}
+
+/** How many questions are open: a group counts once. */
+export function openCount(seed: SeedFile): number {
+  return openQuestions(seed).length;
+}
+
+/**
+ * Open slots every proposed entry of which is dated before `today` (YYYY-MM-DD):
+ * whatever the answer, nothing would reach the site.
+ */
+export function expiredQuestions(seed: SeedFile, today: string): SeedSlot[] {
+  return seed.slots.filter((s) => {
+    if (!isOpen(s)) return false;
+    const entries = (s.options ?? []).map((o) => o.entry).filter((e): e is SeedEntry => !!e);
+    return entries.length > 0 && entries.every((e) => e.event_kind !== "weekly" && !!e.date && e.date < today);
+  });
+}
+
+/** The entry an excluded slot keeps for review: its own, or one its options name, or none. */
 function keptEntry(slot: SeedSlot): SeedEntry | null {
   if (slot.entry) return slot.entry;
   const options = slot.options ?? [];
@@ -36,16 +74,12 @@ export function chooseOption(slot: SeedSlot, index: number, by: string): SeedSlo
   if (option.entry) {
     return { ...slot, status: "settled", decision: "include", entry: option.entry, answer: answer(index, by) };
   }
-  const entry = keptEntry(slot);
-  if (!entry) return null;
-  return { ...slot, status: "settled", decision: "exclude", entry, answer: answer(index, by) };
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer(index, by) };
 }
 
-/** Leave a slot out, whatever it was. Null when it has no entry to keep. */
-export function dropSlot(slot: SeedSlot, by: string): SeedSlot | null {
-  const entry = keptEntry(slot);
-  if (!entry) return null;
-  return { ...slot, status: "settled", decision: "exclude", entry, answer: answer("dropped", by) };
+/** Leave a slot out, whatever it was. */
+export function dropSlot(slot: SeedSlot, by: string): SeedSlot {
+  return { ...slot, status: "settled", decision: "exclude", entry: keptEntry(slot), answer: answer("dropped", by) };
 }
 
 /** Settle a slot as the reviewer edited it. */
@@ -53,9 +87,13 @@ export function editSlot(slot: SeedSlot, entry: SeedEntry, page: number | null, 
   return { ...slot, status: "settled", decision: "include", entry, page, answer: answer("edited", by) };
 }
 
-/** Open a settled slot again as a question, its current decision as the leaning answer. */
-export function reopenSlot(slot: SeedSlot): SeedSlot {
+/**
+ * Open a settled slot again as a question, its current decision as the leaning
+ * answer. Null for a slot left out with no entry: there is nothing to include.
+ */
+export function reopenSlot(slot: SeedSlot): SeedSlot | null {
   if (isOpen(slot)) return slot;
+  if (!slot.entry && !slot.options?.some((o) => o.leaning)) return null;
   const included = slot.decision === "include";
   const options =
     slot.options && slot.options.some((o) => o.leaning)
@@ -83,8 +121,20 @@ export function statusAfterChange(seed: SeedFile): SeedStatus {
 }
 
 export function replaceSlot(seed: SeedFile, next: SeedSlot): SeedFile {
-  const changed = { ...seed, slots: seed.slots.map((s) => (s.id === next.id ? next : s)) };
+  return replaceSlots(seed, [next]);
+}
+
+export function replaceSlots(seed: SeedFile, nexts: readonly SeedSlot[]): SeedFile {
+  const byId = new Map(nexts.map((s) => [s.id, s]));
+  const changed = { ...seed, slots: seed.slots.map((s) => byId.get(s.id) ?? s) };
   return { ...changed, status: statusAfterChange(changed), approved_at: null };
+}
+
+/** Answer a question for every slot of its group (or the slot alone). Null when an option can't settle one. */
+export function chooseForGroup(seed: SeedFile, slot: SeedSlot, index: number, by: string): SeedFile | null {
+  const chosen = groupOf(seed, slot).map((s) => (isOpen(s) ? chooseOption(s, index, by) : null));
+  if (chosen.some((s) => !s)) return null;
+  return replaceSlots(seed, chosen as SeedSlot[]);
 }
 
 export function approve(seed: SeedFile, reviewer: string): SeedFile | null {
@@ -92,10 +142,10 @@ export function approve(seed: SeedFile, reviewer: string): SeedFile | null {
   return { ...seed, status: "approved", reviewer: reviewer.trim() };
 }
 
-/** Slots in the order the page lists them: open questions, settled, left out. */
+/** Slots in the order the page lists them: open questions (one per group), settled, left out. */
 export function slotGroups(seed: SeedFile): { open: SeedSlot[]; settled: SeedSlot[]; excluded: SeedSlot[] } {
   return {
-    open: seed.slots.filter(isOpen),
+    open: openQuestions(seed),
     settled: seed.slots.filter((s) => !isOpen(s) && s.decision === "include"),
     excluded: seed.slots.filter((s) => !isOpen(s) && s.decision !== "include"),
   };
@@ -111,7 +161,7 @@ export function describeEntry(entry: SeedEntry | null): string {
     `${when} ${formatTime(entry.start_time)}${end}`,
   ];
   if (entry.cancelled) parts.push("cancelled");
-  if (entry.weeks_of_month.length) parts.push(describeWeeks(entry.weeks_of_month));
+  if (entry.weeks_of_month.length) parts.push(describeWeeks(entry.weeks_of_month, entry.exclude_weeks));
   if (entry.season) parts.push(describeSeason(entry.season));
   if (entry.note) parts.push(entry.note);
   return parts.join(" · ");
@@ -140,7 +190,14 @@ export function resolveBulletin(seed: SeedFile, ref: string | null | undefined):
 
 /** A slot's entry as an editor row, so RowEditor can edit it. */
 export function toEditorRow(entry: SeedEntry, page: number | null): EditorRow {
-  return { ...entry, id: newId(), page_number: page, origin: "human", optional: null };
+  return {
+    ...entry,
+    exclude_weeks: entry.exclude_weeks ?? false,
+    id: newId(),
+    page_number: page,
+    origin: "human",
+    optional: null,
+  };
 }
 
 export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number | null } {
@@ -156,6 +213,7 @@ export function fromEditorRow(row: EditorRow): { entry: SeedEntry; page: number 
       end_time: row.end_time || null,
       cancelled: weekly ? false : row.cancelled,
       weeks_of_month: weekly ? row.weeks_of_month : [],
+      exclude_weeks: weekly && row.exclude_weeks,
       season: weekly ? row.season : null,
       note: row.note?.trim() ? row.note.trim() : null,
     },

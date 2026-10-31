@@ -1,0 +1,1449 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-divine-mercy-cicero",
+  "status": "approved",
+  "as_of": "2026-10-11T16:35:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:32:44Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:31:40Z",
+  "summary": "Two churches, Sacred Heart (Cicero) and Divine Mercy (Central Square). Weekend and weekday Masses and the Tuesday (SH) and Thursday (DM) 5:30-6:30 PM Adoration and Confession agree in all three bulletins; the newest's pages 1-6 are images, read by rendering them. Open: first-Friday and first-Saturday Mass, Adoration and Confession times that only the website gives (the Sept 27 bulletin confirms first-Friday and first-Saturday devotions exist but prints no times).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "5cbcf039e3d483eb40bb03b3d8f7a0325e30b5643f8a9977a02d2665285bac1c",
+      "fetched_at": "2026-10-11T16:35:54Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "927381e525ca5cb1b5fdb8791df0c089089722548cb9e47cb16f924d66a4cac4",
+      "fetched_at": "2026-10-04T14:38:07Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "f2cb3d5452e2fed9ada024bee98aba173de0b0147e3033a8f0cb81aeb90772c5",
+      "fetched_at": "2026-09-28T00:09:13Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Weekend Mass Saturday: 4:00 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Weekend Mass Saturday: 4:00 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Weekend Mass Saturday: 4:00 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Saturday 10/10 4:00 PM Mass DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Saturday 16:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Saturday 16:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Saturday 16:00 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read and in the intentions table; the website agrees (Saturday 4:00 PM Vigil).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Saturday: 5:15 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Saturday: 5:15 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Saturday: 5:15 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Saturday 10/10 5:15 PM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Saturday 17:15 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Saturday 17:15 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Saturday 17:15 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read and in the intentions table; the website agrees (Saturday 5:15 PM Vigil).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Sunday 10/11 7:00 AM Mass SH, 10:00 AM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Sunday 07:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Sunday 07:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Sunday 07:00 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Sunday: 7:00 AM at Sacred Heart ... 10:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Sunday 10/11 7:00 AM Mass SH, 10:00 AM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Sunday 10:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Sunday 10:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Sunday 10:00 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Sunday 10/11 8:30 AM Mass DM, 11:30 AM Mass DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Sunday 08:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Sunday 08:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Sunday 08:30 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Sunday: 8:30 AM at Divine Mercy ... 11:30 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Sunday 10/11 8:30 AM Mass DM, 11:30 AM Mass DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Sunday 11:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Sunday 11:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Sunday 11:30 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekend Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Monday 10/12 8:00 AM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Monday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Monday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Monday 08:00 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of the three bulletins read; the intentions table lists Monday 10/12 (Columbus Day) at 8:00 AM, so the weekly slot is confirmed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Monday 10/12 8:00 AM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Wednesday 08:00 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of the three bulletins read; the intentions table lists Monday 10/12 (Columbus Day) at 8:00 AM, so the weekly slot is confirmed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Weekday Mass Monday, Wednesday, Friday: 8:00 AM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Monday 10/12 8:00 AM Mass SH"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Friday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Friday 08:00 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Friday 08:00 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of the three bulletins read; the intentions table lists Monday 10/12 (Columbus Day) at 8:00 AM, so the weekly slot is confirmed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Tuesday 10/13 8:00 AM Mass DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Tuesday 08:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Tuesday 08:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Tuesday 08:00 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Tuesday, Thursday: 8:00 AM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 3,
+          "said": "Tuesday 10/13 8:00 AM Mass DM"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly mass Thursday 08:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly mass Thursday 08:00 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly mass Thursday 08:00 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Weekday Mass box of the three bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 4,
+          "said": "TUE 10/13 5:30 - 6:30 PM Adoration & Confession (SH)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly adoration Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly adoration Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly adoration Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the heading names both, the box gives one time, and the calendar lists 'Adoration & Confession' at 5:30-6:30; the website lists the same time for Eucharist Adoration and for Adoration & Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Confession & Adoration Tuesday: 5:30 - 6:30 PM at Sacred Heart"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 4,
+          "said": "TUE 10/13 5:30 - 6:30 PM Adoration & Confession (SH)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly confession Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly confession Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly confession Tuesday 17:30–18:30 sacred-heart-cicero",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the heading names both, the box gives one time, and the calendar lists 'Adoration & Confession' at 5:30-6:30; the website lists the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 4,
+          "said": "THU 10/15 5:30 - 6:30 PM Adoration & Confession (DM)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly adoration Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly adoration Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly adoration Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the heading names both, the box gives one time, and the calendar lists 'Adoration & Confession' at 5:30-6:30; the website lists the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "927381e5",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 1,
+          "said": "Confession & Adoration Thursday: 5:30 - 6:30 PM at Divine Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 4,
+          "said": "THU 10/15 5:30 - 6:30 PM Adoration & Confession (DM)"
+        },
+        {
+          "source": "history",
+          "bulletin": "5cbcf039e3d4",
+          "said": "weekly confession Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "927381e525ca",
+          "said": "weekly confession Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f2cb3d5452e2",
+          "said": "weekly confession Thursday 17:30–18:30 divine-mercy-central-square",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the heading names both, the box gives one time, and the calendar lists 'Adoration & Confession' at 5:30-6:30; the website lists the same time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sh-dm.org/mass-times",
+          "said": "Sacred Heart Adoration & Confession Schedule: First Friday (of each month) 8:30 - 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 2,
+          "said": "Join us for first Friday Mass and devotions this week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 4,
+          "said": "FRI 10/2 7:30 AM First Friday Devotions begin (SH)"
+        }
+      ],
+      "rationale": "R29: the newest bulletin's week holds no first Friday (R11), and only the website gives the Adoration and Confession time. The Sept 27 bulletin confirms first-Friday devotions at SH but prints no Adoration or Confession time and gives 7:30 AM for them. Leaning include per C9: the website lists the 2026 first-Friday dates and nothing in the bulletins contradicts it. The 8:00 AM first-Friday Mass is the regular Friday slot.",
+      "question": "Add a First Friday Adoration and Confession at Sacred Heart, 8:30-9:30 AM?",
+      "options": [
+        {
+          "label": "First Fridays 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "sacred-heart-cicero",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:12Z"
+      },
+      "group": "first-friday-sh"
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "sacred-heart-cicero",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sh-dm.org/mass-times",
+          "said": "Sacred Heart Adoration & Confession Schedule: First Friday (of each month) 8:30 - 9:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 2,
+          "said": "Join us for first Friday Mass and devotions this week."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 4,
+          "said": "FRI 10/2 7:30 AM First Friday Devotions begin (SH)"
+        }
+      ],
+      "rationale": "R29: the newest bulletin's week holds no first Friday (R11), and only the website gives the Adoration and Confession time. The Sept 27 bulletin confirms first-Friday devotions at SH but prints no Adoration or Confession time and gives 7:30 AM for them. Leaning include per C9: the website lists the 2026 first-Friday dates and nothing in the bulletins contradicts it. The 8:00 AM first-Friday Mass is the regular Friday slot.",
+      "question": "Add a First Friday Adoration and Confession at Sacred Heart, 8:30-9:30 AM?",
+      "options": [
+        {
+          "label": "First Fridays 8:30-9:30 AM",
+          "entry": {
+            "church_slug": "sacred-heart-cicero",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "09:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:12Z"
+      },
+      "group": "first-friday-sh"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sh-dm.org/mass-times",
+          "said": "Divine Mercy Mass Schedule: First Saturday (of each month) at 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 2,
+          "said": "There will not be first Saturday Mass and devotions due to our fall festival."
+        }
+      ],
+      "rationale": "R29: the newest bulletin's week holds no first Saturday (R11), and only the website gives the time. The Sept 27 bulletin confirms a first Saturday Mass exists (not held Oct 3) but prints no time or church. Leaning include per C9: bulletin and website agree it exists, and the Mass intentions table for Oct 3 lists no 9:00 AM Mass only because it was cancelled.",
+      "question": "Add a First Saturday 9:00 AM Mass at Divine Mercy?",
+      "options": [
+        {
+          "label": "First Saturdays 9:00 AM",
+          "entry": {
+            "church_slug": "divine-mercy-central-square",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:26Z"
+      }
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sh-dm.org/mass-times",
+          "said": "Divine Mercy Adoration & Confession Schedule: First Saturday (of each month) 7:45 - 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 2,
+          "said": "There will not be first Saturday Mass and devotions due to our fall festival."
+        }
+      ],
+      "rationale": "R29: the newest bulletin's week holds no first Saturday (R11), and only the website gives the Adoration and Confession time. The Sept 27 bulletin confirms first-Saturday devotions exist (not held Oct 3) but prints no time. Leaning include per C9.",
+      "question": "Add a First Saturday Adoration and Confession at Divine Mercy, 7:45-8:45 AM?",
+      "options": [
+        {
+          "label": "First Saturdays 7:45-8:45 AM",
+          "entry": {
+            "church_slug": "divine-mercy-central-square",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:45",
+            "end_time": "08:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:39Z"
+      },
+      "group": "first-saturday-dm"
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "divine-mercy-central-square",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.sh-dm.org/mass-times",
+          "said": "Divine Mercy Adoration & Confession Schedule: First Saturday (of each month) 7:45 - 8:45 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f2cb3d54",
+          "page": 2,
+          "said": "There will not be first Saturday Mass and devotions due to our fall festival."
+        }
+      ],
+      "rationale": "R29: the newest bulletin's week holds no first Saturday (R11), and only the website gives the Adoration and Confession time. The Sept 27 bulletin confirms first-Saturday devotions exist (not held Oct 3) but prints no time. Leaning include per C9.",
+      "question": "Add a First Saturday Adoration and Confession at Divine Mercy, 7:45-8:45 AM?",
+      "options": [
+        {
+          "label": "First Saturdays 7:45-8:45 AM",
+          "entry": {
+            "church_slug": "divine-mercy-central-square",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:45",
+            "end_time": "08:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:39Z"
+      },
+      "group": "first-saturday-dm"
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 1,
+          "said": "Chapels: Open 24/7 for prayer. Door code at Sacred Heart: 8229#. Door code at Divine Mercy: 1225#"
+        }
+      ],
+      "rationale": "R24, R26: the chapels are open for private prayer; the bulletin does not say the Blessed Sacrament is exposed, so no Adoration time is recorded (history left it out too).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5cbcf039",
+          "page": 4,
+          "said": "Relics of Saint Bernadette at Sacred Heart beginning at 1:30 PM, Saturday, October 24th ... vigil Mass ... Litany of Loreto at 7:45 PM"
+        }
+      ],
+      "rationale": "R26: the Oct 24 relics afternoon includes a vigil Mass with no time given (it is presumably the regular Saturday 5:15 PM Mass at Sacred Heart, POLICY, Weekly or dated rule 7), so no dated Mass is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

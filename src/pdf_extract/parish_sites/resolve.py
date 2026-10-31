@@ -18,11 +18,14 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from datetime import date
+from fnmatch import fnmatchcase
+from urllib.parse import unquote, urlsplit
 
 from pdf_extract.browser import PageLike, goto_with_retry, wait_for_selector_quietly
 from pdf_extract.parish_sites.choose import (
     CURRENT,
     FALLBACK_MAX_AGE_DAYS,
+    ONLY_LINK,
     Choice,
     OldBulletinOnly,
     choose,
@@ -34,6 +37,7 @@ from pdf_extract.parish_sites.collectors import (
     Collector,
     NoBulletin,
 )
+from pdf_extract.parish_sites.links import is_pdf_url
 from pdf_extract.parish_sites.locate import find_bulletin_page_urls, links_bulletin_pdf
 
 LOGGER = logging.getLogger(__name__)
@@ -51,12 +55,16 @@ class Recipe:
     It is kept in the parish's `provider_id` as text: the collector's name, the
     bulletin page's address, or both ("page-pdfs https://example.org/bulletins").
     A collector alone reads the parish's website as the bulletin page.
+    Add "filename=St-Annes-Bulletin*.pdf" to keep one publisher's files on a
+    page that serves several parishes.
     """
 
     page: str | None = None
     """The bulletin page; without it, found from the homepage."""
     collector: str | None = None
     """The one collector that reads `page`; without it, each is tried in turn."""
+    filename: str | None = None
+    """A case-insensitive glob for the bulletin's file name on a shared page."""
 
     def __post_init__(self) -> None:
         if self.collector is not None and self.collector not in COLLECTORS:
@@ -64,13 +72,28 @@ class Recipe:
                 f"Unknown collector {self.collector!r}; expected one of "
                 f"{', '.join(COLLECTORS)}"
             )
+        if self.filename is not None and (not self.filename or any(
+            char.isspace() for char in self.filename
+        )):
+            raise ValueError("Recipe filename must be a nonempty glob without whitespace")
+
+    def matches(self, url: str) -> bool:
+        if self.filename is None:
+            return True
+        name = unquote(urlsplit(url).path.rsplit("/", 1)[-1])
+        return fnmatchcase(name.casefold(), self.filename.casefold())
 
     @classmethod
     def parse(cls, text: str, *, website: str) -> Recipe:
         page: str | None = None
         collector: str | None = None
+        filename: str | None = None
         for token in text.split():
-            if token.startswith(("http://", "https://")):
+            if token.startswith("filename="):
+                if filename is not None:
+                    raise ValueError(f"Recipe {text!r} names two filename filters")
+                filename = token.removeprefix("filename=")
+            elif token.startswith(("http://", "https://")):
                 if page is not None:
                     raise ValueError(f"Recipe {text!r} names two pages")
                 page = token
@@ -80,12 +103,16 @@ class Recipe:
                 raise ValueError(f"Recipe {text!r} names two collectors")
         if collector is not None and page is None:
             page = website
-        return cls(page=page, collector=collector)
+        return cls(page=page, collector=collector, filename=filename)
 
     def text(self, *, website: str) -> str:
         """The recipe as `parse` reads it, leaving out a page that is the website."""
         page = None if self.page == website and self.collector else self.page
-        return " ".join(part for part in (self.collector, page) if part)
+        # parse splits on whitespace, so a page whose URL has spaces (eCatholic
+        # file names do) is written with them encoded.
+        page = page.replace(" ", "%20") if page else page
+        filename = f"filename={self.filename}" if self.filename is not None else None
+        return " ".join(part for part in (self.collector, page, filename) if part)
 
 
 @dataclass(frozen=True)
@@ -97,11 +124,12 @@ class Resolution:
     """The bulletin page as linked, before any redirect."""
     collector: str
     reason: str
+    filename: str | None = None
 
     @property
     def recipe(self) -> Recipe:
         """The recipe that reads this bulletin the way it was found here."""
-        return Recipe(page=self.page_url, collector=self.collector)
+        return Recipe(page=self.page_url, collector=self.collector, filename=self.filename)
 
     def describe(self) -> str:
         """One line for the run report: "page-pdfs on <page>: current".
@@ -124,12 +152,24 @@ def resolve_parish_site(
     *, homepage_url: str, reference_date: date, page: PageLike, recipe: Recipe | None = None,
 ) -> Resolution:
     recipe = recipe or Recipe()
+    # A parish with no site of its own can have only a PDF the diocese or the
+    # parish overwrites each week (rcdony.org/images/Harrisvillebulletin-1.pdf).
+    if is_pdf_url(recipe.page or homepage_url):
+        url = recipe.page or homepage_url
+        if not recipe.matches(url):
+            raise NoBulletin(f"Bulletin URL does not match filename {recipe.filename!r}: {url}")
+        return Resolution(
+            candidate=Candidate(source_url=url, fetch_url=url, parsed_date=None),
+            page_url=url, collector="redirected-pdf", reason=ONLY_LINK, filename=recipe.filename,
+        )
     collectors = (
-        [COLLECTORS[recipe.collector]] if recipe.collector else list(COLLECTORS.values())
+        [COLLECTORS[recipe.collector]] if recipe.collector
+        else [c for c in COLLECTORS.values() if c.automatic]
     )
     if recipe.page:
         return _resolve_bulletin_page(
             page=page, url=recipe.page, reference_date=reference_date, collectors=collectors,
+            filename=recipe.filename,
         )
 
     bulletin_page_urls = _locate_bulletin_pages(
@@ -151,6 +191,7 @@ def resolve_parish_site(
         try:
             collected = _collect_bulletin_page(
                 page=page, url=url, reference_date=reference_date, collectors=collectors,
+                filename=recipe.filename,
             )
             if index == 0:
                 first_page = collected
@@ -177,7 +218,7 @@ def _locate_bulletin_pages(
     urls = find_bulletin_page_urls(page=page, base_url=base_url, reference_date=reference_date)
     # Some homepages link this week's bulletin PDF itself, with no page for
     # it: read the homepage as the bulletin page, after any real one.
-    if links_bulletin_pdf(page=page, base_url=base_url):
+    if links_bulletin_pdf(page=page, base_url=base_url, reference_date=reference_date):
         urls.append(homepage_url)
     if not urls:
         raise NoBulletin(f"No bulletin page link found for other provider at {homepage_url}")
@@ -191,6 +232,7 @@ class _Collected:
     url: str
     candidates: list[Candidate]
     collector: Collector
+    filename: str | None = None
 
     def resolve(self, *, reference_date: date, max_age_days: int | None = None) -> Resolution:
         choice: Choice = choose(
@@ -198,23 +240,29 @@ class _Collected:
         )
         return Resolution(
             candidate=choice.candidate, page_url=self.url, collector=self.collector.name,
-            reason=choice.reason,
+            reason=choice.reason, filename=self.filename,
         )
 
 
 def _resolve_bulletin_page(
     *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
+    filename: str | None = None,
 ) -> Resolution:
     collected = _collect_bulletin_page(
         page=page, url=url, reference_date=reference_date, collectors=collectors,
+        filename=filename,
     )
     return collected.resolve(reference_date=reference_date)
 
 
 def _collect_bulletin_page(
     *, page: PageLike, url: str, reference_date: date, collectors: list[Collector],
+    filename: str | None = None,
 ) -> _Collected:
-    site = BulletinPage(page=page, requested_url=url, reference_date=reference_date)
+    recipe = Recipe(filename=filename)
+    site = BulletinPage(
+        page=page, requested_url=url, reference_date=reference_date, matches=recipe.matches,
+    )
     site.load()
     found: list[Candidate] = []
     used: Collector | None = None
@@ -222,9 +270,11 @@ def _collect_bulletin_page(
         if used is not None and used.final:
             break
         site.return_here()
-        more = collector.collect(site, found)
+        more = [c for c in collector.collect(site, found) if recipe.matches(c.source_url)]
         if more:
             found, used = more, collector
     if used is None:
+        if filename is not None:
+            raise NoBulletin(f"No PDF links matching filename {filename!r} on bulletin page: {url}")
         raise NoBulletin(f"No PDF links found on bulletin page: {url}")
-    return _Collected(url=url, candidates=found, collector=used)
+    return _Collected(url=url, candidates=found, collector=used, filename=filename)

@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-oxford",
+  "status": "approved",
+  "as_of": "2026-09-28T00:13:26Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:59:05Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Single-church parish with one stored bulletin, a stale issue dated Aug. 30, 2026. Saturday vigil 5:45 PM and Sunday 8:30 AM are in its heading and on the website. The vigil was suspended Aug. 29 and Sept. 5 for the pastor's vacation, both before as_of, so the weekly vigil stays. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7b56bf668799c33b3b54a0dc92f29ae81331979bbc6ee3ae7865b4b63782e01b",
+      "fetched_at": "2026-09-28T00:13:26Z",
+      "published_date": "2026-08-30",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7b56bf66",
+          "page": 1,
+          "said": "Saturday Vigil Mass 5:45 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephsoxfordny.com/",
+          "said": "Saturday Vigil Mass 5:45 PM,"
+        },
+        {
+          "source": "history",
+          "bulletin": "7b56bf668799",
+          "said": "weekly mass Saturday 17:45 st-joseph-oxford  “Vigil”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R6, R18: printed in the heading of page 1. The bulletin (issue Aug. 30, 2026; the only one stored) says there are no vigil Masses on Aug. 29 and Sept. 5 while Father Paul is on vacation, returning for Masses the weekend of Sept. 12-13. Both dates are before as_of (Sept. 28), so no cancellation is recorded (R16), and the suspension ended before as_of. The website, read Oct. 13, still gives the vigil.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oxford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7b56bf66",
+          "page": 1,
+          "said": "Sunday Mass 8:30 AM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjosephsoxfordny.com/",
+          "said": "Sunday Mass is at 8:30 AM."
+        },
+        {
+          "source": "history",
+          "bulletin": "7b56bf668799",
+          "said": "weekly mass Sunday 08:30 st-joseph-oxford",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R6: printed in the heading of page 1 and the calendar (Aug. 30 and Sept. 6 Mass 8:30 am); the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

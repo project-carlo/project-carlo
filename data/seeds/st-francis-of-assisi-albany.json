@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-francis-of-assisi-albany",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:24:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:25:23Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches: St. Francis (Delaware Ave.) and the South End Community. The Mass and Confessions box and the Comunidad Hispana box (Spanish Mass, Spanish confession, first-Saturday Holy Hour) agree in all five bulletins. The St. Mary's and Cathedral first-Friday hours are other parishes'. Open: whether the unlabeled Friday 7:30-8:30 PM First Friday hour at Delaware Ave. is Adoration and monthly.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6eefdc6a4787417dc4cefa6dc0350fa86a9a5ba196dc8c1421e90d98451c2af4",
+      "fetched_at": "2026-10-25T13:24:00Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "0d78491135fe16dd16156bd122989acea8d4ed965c0e4f65c306ea48c4455630",
+      "fetched_at": "2026-10-18T12:52:12Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "086833cff3085df2a69faf1e523efb6e5a04cb8c5dc3ddc4b507a8688aa9e4c9",
+      "fetched_at": "2026-10-11T16:38:19Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "b1d0dfe258d16945e6a63df9079f980b32d8bc9fc7023f93cf03e3a181347e7c",
+      "fetched_at": "2026-10-04T14:52:59Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "65b7e9662f017c9c588cd58b384a65a598d99466999de441bcb55b90b15471b5",
+      "fetched_at": "2026-09-28T22:02:57Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Sat.: Confession: 3:15--3:50 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Sat.: Confession: 3:15--3:50 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Sat.: Confession: 3:15--3:50 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Sat.: Confession: 3:15--3:50 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Sat.: Confession: 3:15--3:50 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly confession Saturday 15:15–15:50 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly confession Saturday 15:15–15:50 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly confession Saturday 15:15–15:50 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly confession Saturday 15:15–15:50 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly confession Saturday 15:15–15:50 st-francis-of-assisi-albany",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the Mass and Confessions Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Mass 4:00 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Mass 4:00 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Mass 4:00 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Mass 4:00 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Mass 4:00 pm St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly mass Saturday 16:00 st-francis-of-assisi-albany",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all five bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Sun.: Mass 9:00 am St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Sun.: Mass 9:00 am St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Sun.: Mass 9:00 am St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Sun.: Mass 9:00 am St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Sun.: Mass 9:00 am St. Francis (Del. Ave.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly mass Sunday 09:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly mass Sunday 09:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly mass Sunday 09:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly mass Sunday 09:00 st-francis-of-assisi-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly mass Sunday 09:00 st-francis-of-assisi-albany",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all five bulletins read and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (Del. Ave.); Comunidad Hispana, 391 Delaware Ave.: Santa Misa: Domingo 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (Del. Ave.); Comunidad Hispana, 391 Delaware Ave.: Santa Misa: Domingo 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (Del. Ave.); Comunidad Hispana, 391 Delaware Ave.: Santa Misa: Domingo 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (Del. Ave.); Comunidad Hispana, 391 Delaware Ave.: Santa Misa: Domingo 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (Del. Ave.); Comunidad Hispana, 391 Delaware Ave.: Santa Misa: Domingo 10:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://parishes.rcda.org/stfrancisofassisi/bulletin.php/",
+          "said": "10:30 AM: Spanish Mass (Delaware Ave. Community)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-albany  “Spanish; blessing for children on first Sundays”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the schedule box's 10:30 AM Mass at Del. Ave. is the Comunidad Hispana Santa Misa at 391 Delaware Ave. (same church, day and time, so one slot); the language is POLICY, Notes. The parish website confirms the Spanish Mass there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-south-end-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (South End)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (South End)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (South End)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (South End)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Mass 10:30 am St. Francis (South End)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-south-end-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-south-end-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-south-end-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-south-end-albany",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly mass Sunday 10:30 st-francis-of-assisi-south-end-albany",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: printed in the schedule box of all five bulletins read and in the Mass intentions (South End).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Comunidad Hispana, 391 Delaware Ave. St. Francis of Assisi: Confesiones: Domingo 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Comunidad Hispana, 391 Delaware Ave. St. Francis of Assisi: Confesiones: Domingo 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Comunidad Hispana, 391 Delaware Ave. St. Francis of Assisi: Confesiones: Domingo 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Comunidad Hispana, 391 Delaware Ave. St. Francis of Assisi: Confesiones: Domingo 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Comunidad Hispana, 391 Delaware Ave. St. Francis of Assisi: Confesiones: Domingo 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly confession Sunday 10:00 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "0d78491135fe",
+          "said": "weekly confession Sunday 10:00 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "086833cff308",
+          "said": "weekly confession Sunday 10:00 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly confession Sunday 10:00 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "weekly confession Sunday 10:00 st-francis-of-assisi-albany  “Spanish”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: the Comunidad Hispana box in all five bulletins gives Sunday confession at 10:00 AM at 391 Delaware Ave. (the Del. Ave. church); no end time is printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-francis-of-assisi-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hora Santa (Holy Hour), Spanish community"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 4,
+          "said": "Hora Santa: Todos los primeros Sabados de cada mes a las 5:15 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d784911",
+          "page": 4,
+          "said": "Hora Santa: Todos los primeros Sabados de cada mes a las 5:15 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "086833cf",
+          "page": 4,
+          "said": "Hora Santa: Todos los primeros Sabados de cada mes a las 5:15 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "b1d0dfe2",
+          "page": 4,
+          "said": "Hora Santa: Todos los primeros Sabados de cada mes a las 5:15 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 4,
+          "said": "Hora Santa: Todos los primeros Sabados de cada mes a las 5:15 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly adoration Saturday 17:15 st-francis-of-assisi-albany  “First Saturday”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "b1d0dfe258d1",
+          "said": "weekly adoration Saturday 17:15 st-francis-of-assisi-albany  “Spanish, first Saturday of the month”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "65b7e9662f01",
+          "said": "specific_date adoration 2026-10-03 17:15 st-francis-of-assisi-albany  “First Saturday Holy Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, POLICY, What to extract: a Holy Hour counts as Adoration; the Comunidad Hispana box for 391 Delaware Ave. names first Saturdays at 5:15 PM, so weekly with weeks_of_month first and no end time. The newest week holds no first Saturday (R11), but the box prints it, and the September 27 issue's week held October 3 and prints it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 2,
+          "said": "First Friday Schedule ... Thursday 6:30 pm-7:30 pm with The Most Holy Rosary at St. Mary's; Friday 8:00 am-12 pm at St. Mary's; 11:30 am-3:30 pm at Cathedral; Mass 12:05 At St. Mary's"
+        }
+      ],
+      "rationale": "R22: the first-Friday hours at St. Mary's (Historic St. Mary's, Capitol Hill) and at the Cathedral of the Immaculate Conception, and the 12:05 PM Mass at St. Mary's, are other parishes' churches. Their events belong to those parishes; the St. Francis--Delaware line is a separate question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 3,
+          "said": "Adoro Te Missionaries First Saturday Retreat, Blessed Sacrament Church in Albany on November 7th, 7:30am-2pm. Included: Adoration, Confession, Mass, Lunch"
+        }
+      ],
+      "rationale": "R22: a retreat at Blessed Sacrament Church, another parish's church, and it is a retreat day, not a schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6eefdc6a",
+          "page": 2,
+          "said": "First Friday Schedule: Thursday: 6:30 pm-7:30 pm with The Most Holy Rosary at St. Mary's. Friday: 8:00 am-12 pm at St. Mary's; 11:30 am-3:30 pm at Cathedral; 7:30 pm-8:30 pm at St. Francis--Delaware. Mass 12:05 At St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "65b7e966",
+          "page": 2,
+          "said": "no First Friday Schedule box (its week held Friday, October 2)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6eefdc6a4787",
+          "said": "weekly adoration Friday 19:30–20:30 st-francis-of-assisi-albany  “First Friday”",
+          "page": 2
+        }
+      ],
+      "rationale": "R30, R11: the box never says Adoration, Holy Hour or Exposition, only hours at three churches around a Rosary and a Mass, so the type is inferred. It is also printed once, only in the October 25 issue (for November 6); the September 27 issue, whose week held the October 2 first Friday, has no such box, so monthly recurrence is not shown. Leaning to leave out, since a wrong time is worse than a missing one.",
+      "question": "Is the 'First Friday Schedule' hour at St. Francis--Delaware (Friday 7:30-8:30 PM) a monthly Adoration?",
+      "options": [
+        {
+          "label": "First Fridays 7:30-8:30 PM Adoration at Del. Ave.",
+          "entry": {
+            "church_slug": "st-francis-of-assisi-albany",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "19:30",
+            "end_time": "20:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First Friday"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

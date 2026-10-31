@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joan-of-arc-menands",
+  "content_hash": "b94bac95cfbd95dc19ac0286e78a7feeeff2026ca97c641c0160f29a6accace2",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-joan-of-arc-menands/b94bac95cfbd.pdf",
+  "pdf_sha256": "f1f8e996b5d672b521211bedadb4fc2bdf0f0959f12c6f7376ad0809a83507fa",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 2,
+    "analyzed_page_count": 2,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 2645,
+        "image_count": 11,
+        "image_coverage_fraction_estimate": 0.16112107962797914,
+        "max_displayed_image_area_fraction_estimate": 0.05752840909090909,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1319,
+        "native_char_height_p10_pt": 5.43597412109375,
+        "native_char_height_median_pt": 7.548004150390625,
+        "native_char_height_p10_low_detail_px": 3.5141650883838382,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.1367946524064171,
+        "projection_line_count": 53,
+        "line_pitch_px": 17.5,
+        "line_pitch_low_detail_px": 8.145454545454545,
+        "connected_component_count": 1389,
+        "text_like_component_count": 1096,
+        "text_like_height_p10_px": 2.0,
+        "text_like_height_median_px": 10.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 4.654545454545454
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 2731,
+        "image_count": 4,
+        "image_coverage_fraction_estimate": 0.08542229422492903,
+        "max_displayed_image_area_fraction_estimate": 0.02718104946524062,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1618,
+        "native_char_height_p10_pt": 4.93389892578125,
+        "native_char_height_median_pt": 6.51885986328125,
+        "native_char_height_p10_low_detail_px": 3.189591224747475,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.11007379679144386,
+        "projection_line_count": 49,
+        "line_pitch_px": 16.25,
+        "line_pitch_low_detail_px": 7.5636363636363635,
+        "connected_component_count": 1085,
+        "text_like_component_count": 995,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 2,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 3.6249651000034646,
+  "resumed": false,
+  "walltime_seconds": 3.627787699995679
+}

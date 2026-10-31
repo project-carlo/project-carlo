@@ -123,10 +123,15 @@ export default defineConfig({
     },
   },
   build: {
+    // Never inline fonts into the stylesheet: an inlined font is downloaded
+    // with it on every page, where a linked one is fetched only when the page
+    // uses its unicode-range.
+    assetsInlineLimit: (filePath) =>
+      /\.woff2?$/.test(filePath) ? false : undefined,
     rollupOptions: {
       output: {
         manualChunks: {
-          map: ["leaflet", "react-leaflet"],
+          map: ["leaflet"],
           vendor: ["react", "react-dom", "react-dom/client", "react-router-dom"],
         },
       },

@@ -1,0 +1,123 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-paul-the-apostle-hancock",
+  "content_hash": "4498865861ce61f04a5090893104c69b73b04533e671295703159618567dd60c",
+  "source_url": "https://www.stpaulshancock.org/Bulletins/Bull_9_27_26.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 18476,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1434,
+    "reasoning_tokens": 925
+  },
+  "seconds": 43.767,
+  "response_id": "resp_09d8336b1d98ec2e016ac91376bc1887d2a4a2c8cc28e2877c",
+  "events": [
+    {
+      "church_slug": "st-paul-the-apostle-hancock",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-hancock",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-hancock",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "19:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "After the 6:30 PM Mass",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-hancock",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [
+        "first"
+      ],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-hancock",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "6:00 PM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "a83841a05a583776db1bce8b6fed575b828b41514ac92aeba2d1a13fe523f264"
+}

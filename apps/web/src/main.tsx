@@ -6,6 +6,7 @@ import { createAppRouter } from "./router";
 import { createQueryClient } from "./lib/queryClient";
 import { reloadOnStaleChunk } from "./lib/staleDeploy";
 import { startAnalytics } from "./lib/analytics";
+import { prefetchHomeStart } from "./lib/homeStartQueries";
 import "leaflet/dist/leaflet.css";
 import "./app.css";
 
@@ -14,6 +15,9 @@ startAnalytics();
 
 const queryClient = createQueryClient();
 const router = createAppRouter(queryClient);
+
+// The home map's startup data, fetched while its page chunk downloads.
+prefetchHomeStart(queryClient);
 
 // A chunk that fails on the way to another page reloads into that page.
 reloadOnStaleChunk(() => {

@@ -1,0 +1,121 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-mary-clinton",
+  "content_hash": "6331d54ffa90dff6f5388eb3ebd8dd2e9bf3d786e5c2dad0f553432bc267cdb4",
+  "source_url": "https://files.ecatholic.com/33641/bulletins/20260927.pdf?t=1790276934000",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 21572,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1276,
+    "reasoning_tokens": 813
+  },
+  "seconds": 15.202,
+  "response_id": "resp_0b472376e649da76016ac91287330c87d2923c36cb3738a1a2",
+  "events": [
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": "17:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:30 PM",
+        "end_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-clinton",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-01",
+      "start_time": "12:10",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": null,
+      "raw": {
+        "date": "2026-10-01",
+        "start_time": "12:10 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "d818cf37e9deaf5078e989d4915ee21f40cc3f684d53af9d13d1e48218570fd0"
+}

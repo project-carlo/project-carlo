@@ -12,7 +12,8 @@ every provider, and can be served from a prompt cache, while `CONTEXT_TEMPLATE`
 
 `flatten_events` turns a payload into the pipeline's flat event dicts, with the
 qualifiers in the flat form PR 22 uses (`weeks_of_month`, `season_start_month`,
-...); `labeling.bulletins.gemini_rows` reads that form into label rows.
+...) plus `exclude_weeks`; `labeling.bulletins.gemini_rows` reads that form into
+label rows.
 """
 
 from __future__ import annotations
@@ -24,7 +25,7 @@ from typing import Any, Literal
 from pydantic import BaseModel, ConfigDict, Field
 
 from pdf_extract.classifiers.schedule_policy import POLICY
-from pdf_extract.labeling.labels import DAYS_IN_MONTH, WEEKS_OF_MONTH
+from pdf_extract.labeling.labels import DAYS_IN_MONTH, WEEKS_OF_MONTH, canonical_weeks
 from pdf_extract.schedule_extraction import _normalize_published_date, _valid_str
 
 MONTHS = (
@@ -94,10 +95,18 @@ class WeeklySlot(BaseModel):
         description=(
             "Which occurrences of `day_of_week` within the month this slot falls on. "
             "`last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
-            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Only the "
-            "weeks the slot happens on: 'every Saturday except the first' is "
-            "`[\"second\", \"third\", \"fourth\", \"fifth\"]`. Leave empty when the "
-            "slot happens every week."
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. The "
+            "weeks the slot happens on, unless `exclude_weeks`: 'every Saturday except "
+            "the first' is `[\"second\", \"third\", \"fourth\", \"fifth\"]`. Leave "
+            "empty when the slot happens every week."
+        ),
+    )
+    exclude_weeks: bool = Field(
+        default=False,
+        description=(
+            "True when `weeks_of_month` lists the weeks the slot skips, for an "
+            "exclusion of the last week, which the remaining weeks can't say: 'every "
+            "Sunday except the last' is `[\"last\"]` with this true. False otherwise."
         ),
     )
     season: Season | None = Field(
@@ -116,7 +125,7 @@ class WeeklySlot(BaseModel):
             "Short phrase only when there is genuinely special context (language, "
             "location nuance, `Benediction`, etc.). Do not restate what "
             "`weeks_of_month` or `season` already say, and do not describe an "
-            "exclusion: list the weeks that remain in `weeks_of_month`."
+            "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
         ),
     )
 
@@ -280,6 +289,14 @@ def _weeks(value: Any) -> list[str]:
     return [w for w in WEEKS_OF_MONTH if w in wanted]
 
 
+def _week_fields(item: dict[str, Any]) -> dict[str, Any]:
+    """A weekly slot's `weeks_of_month` and `exclude_weeks`, in their canonical form."""
+    weeks, exclude = canonical_weeks(
+        _weeks(item.get("weeks_of_month")), item.get("exclude_weeks") is True,
+    )
+    return {"weeks_of_month": weeks, "exclude_weeks": exclude}
+
+
 def _season_fields(value: Any) -> dict[str, int | None]:
     """PR 22's flat season fields; all null unless both months are readable."""
     fields: dict[str, int | None] = dict.fromkeys(
@@ -336,7 +353,10 @@ def flatten_events(raw: QualifiedSchedulePayload | dict[str, Any]) -> dict[str, 
                     "cancelled": cancelled,
                     "page_number": page if isinstance(page, int) else None,
                     "note": note.strip() if isinstance(note, str) and note.strip() else None,
-                    "weeks_of_month": _weeks(item.get("weeks_of_month")) if weekly else [],
+                    **(
+                        _week_fields(item) if weekly
+                        else {"weeks_of_month": [], "exclude_weeks": False}
+                    ),
                     **_season_fields(item.get("season") if weekly else None),
                 })
 

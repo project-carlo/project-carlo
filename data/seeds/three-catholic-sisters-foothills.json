@@ -1,0 +1,1899 @@
+{
+  "schema_version": 1,
+  "parish_slug": "three-catholic-sisters-foothills",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:49Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T00:55:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (St. Pacificus Oratory is on the list but has no times). The cover prints only weekend Masses and Saturday Reconciliation; weekday Masses are weekly under R35 from the intentions lists of all five bulletins. First-Friday Adoration and the first-Saturday Mass are cited from older issues (R12). Open: the church for first-Saturday Confession, and whether SP's Tuesday Holy Face devotion is Adoration.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "90b957e787cd2dd7ee7f2bea1a7797733e33f863013bf71b1c1d08216f7b84fd",
+      "fetched_at": "2026-10-25T13:15:49Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "4b7487aedf2f8aba433575b0f4f6818a599cf48b16769492771b85550ed720d6",
+      "fetched_at": "2026-10-18T12:41:31Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "9e6946c39a165919fa631ae579d700b87935273dacfe913ac6cb0969e5c9e207",
+      "fetched_at": "2026-10-11T16:31:16Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c6e3a4be83d169c4cd6b87a408b457ffab85e1f0857944406d71879ef35b85b5",
+      "fetched_at": "2026-10-04T14:29:27Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "571dee4c8ee0b66364aa2832a83daffb9ebe24d2ddd2fbb777047c3ef46c0ff4",
+      "fetched_at": "2026-09-26T18:55:02Z",
+      "published_date": "2026-09-26",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SATURDAY: 4:00 p.m. - Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SATURDAY: 4:00 p.m. - Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SATURDAY: 4:00 p.m. - Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SATURDAY: 4:00 p.m. - Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SATURDAY: 4:00 p.m. - Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Saturday 16:00 our-lady-of-peace-salamanca",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family of Parishes Mass schedule on the cover of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SATURDAY: 5:30 p.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SATURDAY: 5:30 p.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SATURDAY: 5:30 p.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SATURDAY: 5:30 p.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SATURDAY: 5:30 p.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Saturday 17:30 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Saturday 17:30 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Saturday 17:30 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Saturday 17:30 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Saturday 17:30 holy-name-of-mary-ellicottville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SUNDAY: 8:15 a.m.- Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SUNDAY: 8:15 a.m.- Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SUNDAY: 8:15 a.m.- Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SUNDAY: 8:15 a.m.- Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SUNDAY: 8:15 a.m.- Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Sunday 08:15 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Sunday 08:15 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Sunday 08:15 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Sunday 08:15 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Sunday 08:15 our-lady-of-peace-salamanca",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SUNDAY: 9:45 a.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SUNDAY: 9:45 a.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SUNDAY: 9:45 a.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SUNDAY: 9:45 a.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SUNDAY: 9:45 a.m. - Holy Name of Mary, Ellicottville"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Sunday 09:45 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Sunday 09:45 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Sunday 09:45 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Sunday 09:45 holy-name-of-mary-ellicottville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Sunday 09:45 holy-name-of-mary-ellicottville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SUNDAY: 11:30 a.m. - Saint Philomena, Franklinville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SUNDAY: 11:30 a.m. - Saint Philomena, Franklinville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SUNDAY: 11:30 a.m. - Saint Philomena, Franklinville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SUNDAY: 11:30 a.m. - Saint Philomena, Franklinville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SUNDAY: 11:30 a.m. - Saint Philomena, Franklinville"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Sunday 11:30 st-philomena-franklinville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Sunday 11:30 st-philomena-franklinville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Sunday 11:30 st-philomena-franklinville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Sunday 11:30 st-philomena-franklinville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Sunday 11:30 st-philomena-franklinville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass schedule of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 1,
+          "said": "SATURDAY: 3:00 p.m.-3:45pm Sacrament of Reconciliation Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 1,
+          "said": "SATURDAY: 3:00 p.m.-3:45pm Sacrament of Reconciliation Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 1,
+          "said": "SATURDAY: 3:00 p.m.-3:45pm Sacrament of Reconciliation Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 1,
+          "said": "SATURDAY: 3:00 p.m.-3:45pm Sacrament of Reconciliation Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 1,
+          "said": "SATURDAY: 3:00 p.m.-3:45pm Sacrament of Reconciliation Our Lady of Peace, Salamanca"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Confessions: OLP - Saturday 3:00 pm-3:45 pm, and upon request"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-of-peace-salamanca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-of-peace-salamanca",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover schedule and the p3 box of all five bulletins read; the 'upon request' part has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Monday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Monday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Monday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Monday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Monday 8:30 AM HNM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Monday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Monday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Monday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Monday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Monday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the Mass intentions list shows it every Monday in all five bulletins read; the cover lists only weekend Masses, which does not disprove weekday Masses printed elsewhere.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Tuesday 9:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Tuesday 9:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Tuesday 9:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Tuesday 9:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Tuesday 9:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Tuesday 09:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Tuesday 09:00 st-philomena-franklinville  “Follows 8:30 AM Devotion to Holy Face”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Tuesday 09:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Tuesday 09:00 st-philomena-franklinville  “Preceded by Holy Face Devotion at 8:30 AM”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Tuesday 09:00 st-philomena-franklinville  “Follows 8:30 AM Devotion to Holy Face”",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Tuesday in all five bulletins; the Eucharistic Adoration box says 'followed by 9:00 am Mass' at SP.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Wednesday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Wednesday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Wednesday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Wednesday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Wednesday 8:30 AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Wednesday in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Wednesday 11:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Wednesday 11:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Wednesday 11:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Wednesday 11:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Wednesday 11:00 AM SP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Wednesday 11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Wednesday 11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Wednesday 11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Wednesday 11:00 st-philomena-franklinville  “Preceded by Adoration at 10:00 AM”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Wednesday 11:00 st-philomena-franklinville",
+          "page": 3
+        }
+      ],
+      "rationale": "R35, R18: the Wednesday 11:00 AM St. Philomena Mass is in the intentions list of all five bulletins and the Adoration box; the newest bulletin skips it only for Oct 28 ('No Mass'), recorded as a dated cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Wednesday, Oct. 28th Sts. Simon & Jude, Apostles ... 11:00 AM SP No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "specific_date mass 2026-10-28 11:00 st-philomena-franklinville  CANCELLED",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no Mass this date, on or after as_of. The Wednesday 10:00 Adoration is separately scheduled and is not called off (R36).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Thursday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Thursday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Thursday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Thursday 8:30 AM OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Thursday 8:30 AM OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Thursday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Thursday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Thursday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Thursday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Thursday 08:30 our-lady-of-peace-salamanca",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Thursday in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Thursday 12:00 noon HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Thursday 12:00 noon HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Thursday 12:00 noon HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Thursday 12:00 noon HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Thursday 12:00 noon HNM"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Thursday 12:00 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Thursday 12:00 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Thursday 12:00 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Thursday 12:00 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Thursday 12:00 holy-name-of-mary-ellicottville",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Thursday in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Friday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Friday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Friday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Friday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Friday 8:30 AM HNM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 2,
+          "said": "We are going back to having two Masses on Friday instead of one Mass and one communion service."
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Friday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Friday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Friday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Friday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Friday 08:30 holy-name-of-mary-ellicottville",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Friday in all five bulletins read; p2's worship-aid notes (a stale 2025 Advent column) also speak of two Masses on Friday in 2026.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Friday 12:00 Noon OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Friday 12:00 Noon OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Friday 12:00 Noon OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Friday 12:00 Noon OLP"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Friday 12:00 Noon OLP"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Friday 12:00 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly mass Friday 12:00 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Friday 12:00 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Friday 12:00 our-lady-of-peace-salamanca",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly mass Friday 12:00 our-lady-of-peace-salamanca",
+          "page": 3
+        }
+      ],
+      "rationale": "R35: the intentions list shows it every Friday in all five bulletins read; its 'Mother's Day Remembrance' line is a normal intention for a regular Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-ellicottville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction at 10:00 AM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Eucharistic Adoration First Fridays: HNM - after 8:30 am Mass; Benediction at 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Friday, Oct. 2nd First Friday 8:30 AM HNM ... Followed by Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly adoration Friday 09:00–10:00 holy-name-of-mary-ellicottville  “First Fridays; approximate start after Mass; includes Benediction”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly adoration Friday 09:00–10:00 holy-name-of-mary-ellicottville  “First Friday; benediction at 10:00 am”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly adoration Friday 08:30–10:00 holy-name-of-mary-ellicottville  “First Friday of the month; starts after 8:30 AM Mass”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "specific_date adoration 2026-10-02 08:30–10:00 holy-name-of-mary-ellicottville  “First Friday; begins after 8:30 AM Mass; Benediction at 10:00 AM”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R12, R10: named monthly service; the newest week holds no first Friday, so cited from 571dee4c (week of Oct 2) where it is printed. Starts 30 minutes after the 8:30 weekday Mass (9:00) and ends with Benediction at 10:00. History reads it as 8:30 or 9:00 starts (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With Divine Mercy Chaplet"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "OLP - after 12 pm Mass until 3:00 pm with Divine Mercy Chaplet."
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Friday, Oct. 2nd First Friday 12:00 Noon OLP ... Followed by Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly adoration Friday 12:30–15:00 our-lady-of-peace-salamanca  “First Fridays; approximate start after Mass; includes Divine Mercy Chaplet”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly adoration Friday 12:30–15:00 our-lady-of-peace-salamanca  “First Friday; with Divine Mercy Chaplet”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly adoration Friday 12:00–15:00 our-lady-of-peace-salamanca  “First Friday of the month; starts after 12:00 PM Mass”  (a different time)",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "specific_date adoration 2026-10-02 12:00–15:00 our-lady-of-peace-salamanca  “First Friday; begins after 12:00 PM Mass”  (a different time)",
+          "page": 3
+        }
+      ],
+      "rationale": "R12, R10: named monthly service; the newest week holds no first Friday, so cited from 571dee4c (week of Oct 2). Starts 30 minutes after the 12:00 weekday Mass and runs until the stated 3:00 PM. History's 12:00 start is the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Followed by 11:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "SP-Every Wednesday Adoration 10:00 am Followed by 11:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly adoration Wednesday 10:00–11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "weekly adoration Wednesday 10:00–11:00 st-philomena-franklinville  “Followed by 11:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly adoration Wednesday 10:00–11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly adoration Wednesday 10:00–11:00 st-philomena-franklinville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "weekly adoration Wednesday 10:00–11:00 st-philomena-franklinville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, POLICY (Times): a clock start with no end of its own that runs up to a Mass has no end_time. History ended it at 11:00; some such periods end earlier. The Oct 28 'No Mass' does not call off the Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-philomena-franklinville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First Saturday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "First Saturday Mass & Devotions Confession 8:30 am Mass @ 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly mass Saturday 09:00 st-philomena-franklinville  “First Saturday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly mass Saturday 09:00 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "specific_date mass 2026-10-03 09:00 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "specific_date mass 2026-10-03 09:00 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Saturday, Oct. 3rd First Saturday 9:00 AM SP All Souls Remembrance"
+        }
+      ],
+      "rationale": "R12: named monthly Mass; the newest week holds no first Saturday, so it is cited from 571dee4c (week of Sept 26-Oct 3, holding the first Saturday), whose intentions place the 9:00 AM First Saturday Mass at St. Philomena (c6e3a4be prints the same line; the box itself names no church). The 'first Saturday devotion and prayers at Our Lady of Peace will conclude' line is from a stale 2025 Advent column and concerns OLP devotions, not this Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "First Saturday Mass & Devotions Confession 8:30 am Mass @ 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Saturday, Oct. 3rd First Saturday 9:00 AM SP"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly confession Saturday 08:30 st-philomena-franklinville  “First Saturday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly confession Saturday 08:30–09:00 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "specific_date confession 2026-10-03 08:30 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "571dee4c8ee0",
+          "said": "specific_date confession 2026-10-03 08:30 st-philomena-franklinville  “First Saturday”",
+          "page": 3
+        }
+      ],
+      "rationale": "R32: the box gives Confession 8:30 and Mass 9:00 with no church; the Oct 3 intentions place the Mass at St. Philomena, so the Confession probably is there too, but the bulletin never says so.",
+      "question": "Add a first-Saturday 8:30 AM Confession at St. Philomena?",
+      "options": [
+        {
+          "label": "First Saturdays 8:30 AM at St. Philomena",
+          "entry": {
+            "church_slug": "st-philomena-franklinville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Eucharistic Adoration ... SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Eucharistic Adoration ... SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Eucharistic Adoration ... SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Eucharistic Adoration ... SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Eucharistic Adoration ... SP-Every Tuesday Devotion to Holy Face 8:30 am followed by 9:00 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "weekly adoration Tuesday 08:30–09:00 st-philomena-franklinville  “Devotion to Holy Face”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "weekly adoration Tuesday 08:30–09:00 st-philomena-franklinville  “Devotion to Holy Face”",
+          "page": 3
+        }
+      ],
+      "rationale": "R30: it sits under the 'Eucharistic Adoration' heading, but the bulletin calls it a 'Devotion', not Adoration or exposition; POLICY ignores devotions it does not call Adoration. Leaning out. History read it as Adoration in some bulletins.",
+      "question": "Add SP's Tuesday 8:30 AM Holy Face devotion as Adoration?",
+      "options": [
+        {
+          "label": "Tuesdays 8:30 AM Adoration (Holy Face devotion)",
+          "entry": {
+            "church_slug": "st-philomena-franklinville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Devotion to Holy Face; followed by 9:00 AM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Mass of Remembrance"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 4,
+          "said": "An Invitation to our Family of Parishes Mass of Remembrance ... Monday, November 2, 6PM at Our Lady of Peace church, Salamanca."
+        },
+        {
+          "source": "history",
+          "bulletin": "90b957e787cd",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-peace-salamanca  “Mass of Remembrance”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "4b7487aedf2f",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-peace-salamanca  “Mass of Remembrance”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "9e6946c39a16",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-peace-salamanca  “Mass of Remembrance”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "specific_date mass 2026-11-02 19:00 our-lady-of-peace-salamanca  “Annual Mass of Remembrance”  (a different time)",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: open invitation to the whole family of parishes, on or after as_of. The Oct 4 issue said 7pm (and 'Tuesday'); the newest, which names Monday, Nov 2, corrects it (R40, R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-peace-salamanca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Miraculous Novena Prayers & Rosary"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "Monday 11:30 AM OLP Miraculous Novena Prayers & Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4b7487ae",
+          "page": 3,
+          "said": "Monday 11:30 AM OLP Miraculous Novena Prayers & Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9e6946c3",
+          "page": 3,
+          "said": "Monday 11:30 AM OLP Miraculous Novena Prayers & Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6e3a4be",
+          "page": 3,
+          "said": "Monday 11:30 AM OLP Miraculous Novena Prayers & Rosary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "571dee4c",
+          "page": 3,
+          "said": "Monday 11:30 AM OLP Miraculous Novena Prayers & Rosary"
+        },
+        {
+          "source": "history",
+          "bulletin": "c6e3a4be83d1",
+          "said": "weekly mass Monday 11:30 our-lady-of-peace-salamanca  “Includes Miraculous Novena Prayers & Rosary”",
+          "page": 3
+        }
+      ],
+      "rationale": "R24, R39: the line has no intention and is labeled Novena Prayers and Rosary, a devotion; history's Mass reading is wrong (R7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 3,
+          "said": "HNM - Upon request; SP - Upon request"
+        }
+      ],
+      "rationale": "R26: confession upon request has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "90b957e7",
+          "page": 6,
+          "said": "ROSARY IN THE GARDEN Please join us for Rosary in the Garden every Friday through October at 7PM."
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

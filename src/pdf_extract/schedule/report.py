@@ -14,7 +14,11 @@ from typing import Any
 from pdf_extract.schedule.entries import Entry
 from pdf_extract.schedule.history import SUCCEEDED, CallPlace, parish_history
 from pdf_extract.schedule.policy import APPLIED, MASS_DELETE, REJECTED, STALE_BULLETIN
-from pdf_extract.schedule.qualifiers import describe_schedule_pattern, mask_to_weeks
+from pdf_extract.schedule.qualifiers import (
+    describe_schedule_pattern,
+    mask_excludes_weeks,
+    mask_to_weeks,
+)
 from pdf_extract.schedule.store import church_slugs, live_entries, load_entries, table_exists
 from pdf_extract.timeparse import minutes_to_time
 
@@ -34,8 +38,13 @@ def describe_entry(entry: Entry) -> str:
     ))
     pattern = describe_schedule_pattern(
         mask_to_weeks(entry.weeks_of_month), entry.season(), entry.day_of_week,
+        mask_excludes_weeks(entry.weeks_of_month),
     )
-    qualifiers = [part for part in (pattern, entry.note) if part]
+    qualifiers = [part for part in (
+        pattern, entry.note,
+        f"from {entry.valid_from}" if entry.valid_from else None,
+        f"through {entry.valid_until}" if entry.valid_until else None,
+    ) if part]
     return text + (f" ({'; '.join(qualifiers)})" if qualifiers else "")
 
 

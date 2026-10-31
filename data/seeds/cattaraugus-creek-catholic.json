@@ -1,0 +1,1528 @@
+{
+  "schema_version": 1,
+  "parish_slug": "cattaraugus-creek-catholic",
+  "status": "ready",
+  "as_of": "2026-10-25T13:15:06Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:48:52Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches, all with weekly Masses in a page-1 schedule box that is identical in all five bulletins read (Sep 27 to Oct 25). One Saturday 3:00 PM Confession at St. Aloysius. No Adoration, no cancellations. The Nov 7 4:00 PM Jubilee Mass at St. Aloysius is the regular Saturday Mass (POLICY, Weekly or dated rule 7) so is not recorded separately. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9be826d4b45812d940ad75c28a25899327b2cbd667da24e7d95a067191245c75",
+      "fetched_at": "2026-10-25T13:15:06Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "0434b282af70e7e640ee3fa951df7d9f68c79a2ed40e46c9264e186a8f8baf74",
+      "fetched_at": "2026-10-18T12:41:46Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "da07ae28e1f1e2e80da4335b116a204e65a363d96f9026075b83b819843fbc2e",
+      "fetched_at": "2026-10-11T16:32:31Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "9d406576867faa8cbc629e16c87de33f766d72b794c883cc47b52132c5abc979",
+      "fetched_at": "2026-10-04T14:23:11Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4cfe9fb86af6b08acc0c5606efbedb68413bf3c17c7d34d9eb0836dcf140ce1b",
+      "fetched_at": "2026-09-26T18:53:24Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:00 pm, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:00 pm, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:00 pm, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:00 pm, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKEND MASSES Saturday: 4:00 pm, St. Aloysius"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Saturday 16:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Saturday 16:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Saturday 16:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Saturday 16:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Saturday 16:00 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-east-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "7:00 pm, St. Mary, East Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "7:00 pm, St. Mary, East Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "7:00 pm, St. Mary, East Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "7:00 pm, St. Mary, East Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "7:00 pm, St. Mary, East Arcade"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Saturday 19:00 st-mary-east-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Saturday 19:00 st-mary-east-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Saturday 19:00 st-mary-east-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Saturday 19:00 st-mary-east-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Saturday 19:00 st-mary-east-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Sunday 08:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Sunday 08:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Sunday 08:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Sunday 08:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Sunday 08:00 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "Sunday: 8:00 am, St. Aloysius ... 10:30 am, St. Aloysius"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Sunday 10:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Sunday 10:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Sunday 10:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Sunday 10:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Sunday 10:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "9:00 am, St. Mary, Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "9:00 am, St. Mary, Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "9:00 am, St. Mary, Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "9:00 am, St. Mary, Arcade"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "9:00 am, St. Mary, Arcade"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Sunday 09:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Sunday 09:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Sunday 09:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Sunday 09:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Sunday 09:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-holland",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "11:00 am, St. Joseph, Holland"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "11:00 am, St. Joseph, Holland"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "11:00 am, St. Joseph, Holland"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "11:00 am, St. Joseph, Holland"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "11:00 am, St. Joseph, Holland"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Sunday 11:00 st-joseph-holland",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Sunday 11:00 st-joseph-holland",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Sunday 11:00 st-joseph-holland",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Sunday 11:00 st-joseph-holland",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Sunday 11:00 st-joseph-holland",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekend Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Monday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Monday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Monday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Monday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Monday 07:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Tuesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Tuesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Tuesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Tuesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Tuesday 07:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Wednesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Wednesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Wednesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Wednesday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Wednesday 07:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Thursday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Thursday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Thursday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Thursday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Thursday 07:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "WEEKDAY MASSES Monday: 7:30 am St. Aloysius (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Friday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Friday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Friday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Friday 07:30 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Friday 07:30 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Monday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Monday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Monday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Monday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Monday 08:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Tuesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Tuesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Tuesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Tuesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Tuesday 08:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Wednesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Wednesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Wednesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Wednesday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Wednesday 08:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Thursday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Thursday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Thursday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Thursday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Thursday 08:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-arcade",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "8:00 am St. Mary, Arcade (each weekday)"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly mass Friday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly mass Friday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly mass Friday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly mass Friday 08:00 st-mary-arcade",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly mass Friday 08:00 st-mary-arcade",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the weekday Mass box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-aloysius-springville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:00 pm at St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0434b282",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:00 pm at St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "da07ae28",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:00 pm at St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d406576",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:00 pm at St. Aloysius"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cfe9fb8",
+          "page": 1,
+          "said": "CONFESSIONS Saturday 3:00 pm at St. Aloysius"
+        },
+        {
+          "source": "history",
+          "bulletin": "9be826d4b458",
+          "said": "weekly confession Saturday 15:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0434b282af70",
+          "said": "weekly confession Saturday 15:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "da07ae28e1f1",
+          "said": "weekly confession Saturday 15:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "9d406576867f",
+          "said": "weekly confession Saturday 15:00 st-aloysius-springville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4cfe9fb86af6",
+          "said": "weekly confession Saturday 15:00 st-aloysius-springville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Confessions box of all five bulletins read; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9be826d4",
+          "page": 1,
+          "said": "or anytime by request"
+        }
+      ],
+      "rationale": "R26: Confession 'anytime by request' has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -5,10 +5,10 @@ stripped down to what the web app reads. It is gzipped JSON, written to
 apps/web/public/frontend.json.gz for Vite to serve as an opaque static asset;
 the app (apps/web/src/lib/snapshot.ts) decodes it into memory.
 
-Format (version 2). Each table is stored column by column, as parallel arrays:
+Format (version 3). Each table is stored column by column, as parallel arrays:
 
     {
-      "version": 2,
+      "version": 3,
       "churches": {"id": [...], "parish_id": [...], "slug": [...], ...},
       "events": {"id": {"deltas": [...]}, "church_id": [...], ...}
     }
@@ -28,7 +28,8 @@ church's `bulletin_url` and `bulletin_week` describe its parish's current
 bulletin, the one its events come from: `bulletin_week` is the ISO date of
 the Sunday of the week that bulletin is for (`bulletin_week.bulletin_week`),
 or null when the bulletin has no date at all. Churches retired from
-churches.csv are left out.
+churches.csv are left out, and so are the churches (and events) of fetch-only
+parishes, which are fetched but not yet processed.
 
 Each parish's events come from its own mode (docs/schedule-state-plan.md):
 
@@ -43,12 +44,21 @@ Version 2 added, after `note`: `weeks_of_month` (a list of "first" ...
 days null or a day of the month; all null for all year), and
 `cancels_event_id`: a cancelled dated row names the weekly row (same church,
 event type and start time, on the date's weekday) whose occurrence it cancels.
+The weekly row's weeks of the month, exclusions and season must include the date.
 A cancellation that matches no weekly row is left out, and so is every dated
 row before the build date. `read_snapshot` still reads version 1, as every
 week, no season and no cancellations, so a run can be checked against a
 version 1 snapshot.
 
+`exclude_weeks` was added to version 2 later, last: true when the row's
+`weeks_of_month` are the weeks it skips ("every Sunday except the last" is
+`["last"]` excluded). A snapshot written before it reads as null there, which
+the app takes as false.
+
 Bump SNAPSHOT_VERSION (and the app's) on any change the app would misread.
+Version 3 adds inclusive absolute valid_from/valid_until dates for weekly
+entries. They do not repeat annually. Older web readers must refuse version 3
+rather than advertise expired times; the new reader also accepts version 2.
 A new column needs no bump when its absence reads as null: list it in
 ADDED_COLUMNS, and the app and `read_snapshot` take a snapshot written before
 it (an older published run, or the live site's while a deploy is pending)
@@ -69,7 +79,12 @@ from typing import Any
 
 from pdf_extract.bulletin_week import parse_iso_date, week_order_sql
 from pdf_extract.labeling.labels import DAYS
-from pdf_extract.schedule.qualifiers import mask_to_weeks
+from pdf_extract.schedule.qualifiers import (
+    mask_excludes_weeks,
+    mask_to_weeks,
+    recurrence_includes_date,
+    weeks_to_mask,
+)
 from pdf_extract.storage import (
     DEFAULT_DB_PATH,
     configure_sqlite_connection,
@@ -82,9 +97,9 @@ ROOT = Path(__file__).resolve().parents[2]
 SOURCE_DB = DEFAULT_DB_PATH
 SNAPSHOT_NAME = "frontend.json.gz"
 DEST_SNAPSHOT = ROOT / "apps" / "web" / "public" / SNAPSHOT_NAME
-SNAPSHOT_VERSION = 2
-# Versions `read_snapshot` reads. The app reads only SNAPSHOT_VERSION.
-READABLE_VERSIONS = (1, 2)
+SNAPSHOT_VERSION = 3
+# Versions `read_snapshot` reads. The app accepts 2 and 3.
+READABLE_VERSIONS = (1, 2, 3)
 
 # The columns the SELECTs below produce, in order.
 CHURCH_COLUMNS = (
@@ -95,7 +110,8 @@ EVENT_COLUMNS = (
     "id", "church_id", "event_type", "event_kind", "day_of_week", "date", "start_time",
     "end_time", "cancelled", "page_number", "note",
     "weeks_of_month", "season_start_month", "season_start_day", "season_end_month",
-    "season_end_day", "cancels_event_id",
+    "season_end_day", "cancels_event_id", "exclude_weeks",
+    "valid_from", "valid_until",
 )
 # The columns version 2 added. A version 1 snapshot's rows read as every
 # week ([]), no season and no cancellation (None) in them.
@@ -105,7 +121,9 @@ _V2_DEFAULTS = frozenset({
 })
 # Columns added since version 1 shipped. A snapshot written before one was
 # added lacks it; readers take it as all nulls.
-ADDED_COLUMNS = {"churches": {"bulletin_week"}, "events": set()}
+ADDED_COLUMNS = {
+    "churches": {"bulletin_week"}, "events": {"exclude_weeks", "valid_from", "valid_until"},
+}
 # Strings that repeat across rows: a table of distinct values plus small
 # integers is smaller and faster for the browser to parse than the strings.
 _CODED_COLUMNS = {
@@ -230,7 +248,7 @@ def _extract_mode_events(conn: sqlite3.Connection, update_mode: set[int]) -> lis
         """
     ).fetchall()
     return [
-        (*row[:11], [], None, None, None, None, None)
+        (*row[:11], [], None, None, None, None, None, False, None, None)
         for row in rows if row[11] not in update_mode
     ]
 
@@ -241,12 +259,15 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
     The page is the entry's sighting in its parish's current bulletin, the one
     the church's `bulletin_url` opens.
     """
+    columns = {row[1] for row in conn.execute('PRAGMA table_info(schedule_entry)')}
+    bounds = ', '.join(f'e.{name}' if name in columns else 'NULL'
+                       for name in ('valid_from', 'valid_until'))
     rows = conn.execute(
         f"""
         SELECT e.id, e.church_id, e.event_type, e.event_kind, e.day_of_week, e.date,
                e.start_time, e.end_time, e.cancelled, sighting.page_number, e.note,
                e.weeks_of_month, e.season_start_month, e.season_start_day,
-               e.season_end_month, e.season_end_day
+               e.season_end_month, e.season_end_day, {bounds}
         FROM current_schedule s
         JOIN schedule_entry e ON e.id = s.entry_id
         LEFT JOIN ({_LATEST_BULLETIN}) latest ON latest.parish_id = s.parish_id AND latest.rn = 1
@@ -258,37 +279,70 @@ def _update_mode_events(conn: sqlite3.Connection) -> list[tuple]:
         """
     ).fetchall()
     return [
-        (-row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None) for row in rows
+        (
+            -row[0], *row[1:11], mask_to_weeks(row[11]), *row[12:16], None,
+            mask_excludes_weeks(row[11]),
+            *row[16:18],
+        )
+        for row in rows
     ]
+
+
+def _fetch_only_parish_ids(conn: sqlite3.Connection) -> set[int]:
+    """Parishes the site leaves out until their bulletins are processed (none before migration 7)."""
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
+    if "fetch_only" not in columns:
+        return set()
+    return {row[0] for row in conn.execute("SELECT id FROM parish WHERE fetch_only = 1")}
 
 
 _ID, _CHURCH, _TYPE, _KIND, _DAY, _DATE, _START = range(7)
 _CANCELLED = EVENT_COLUMNS.index("cancelled")
 _CANCELS = EVENT_COLUMNS.index("cancels_event_id")
+_WEEKS = EVENT_COLUMNS.index("weeks_of_month")
+_EXCLUDE_WEEKS = EVENT_COLUMNS.index("exclude_weeks")
+_VALID_FROM = EVENT_COLUMNS.index("valid_from")
+_VALID_UNTIL = EVENT_COLUMNS.index("valid_until")
+_SEASON = slice(EVENT_COLUMNS.index("season_start_month"), EVENT_COLUMNS.index("season_end_day") + 1)
 
 
 def finish_events(rows: list[tuple], build_date: date) -> list[tuple]:
     """Drop past dated rows, match each cancellation to the weekly row it cancels, sort by id.
 
     A cancelled dated row cancels the weekly row with the same church, event
-    type and start time on its date's weekday. One that matches nothing is
-    left out (cancelled rows are hidden anyway). In update mode the identity
-    rules allow at most one match; an extract-mode bulletin can repeat a slot,
-    and then the lowest id is named.
+    type and start time on its date's weekday, whose weeks of the month and
+    season include that date. One that matches nothing is left out (cancelled
+    rows are hidden anyway). In update mode the identity rules allow at most
+    one matching recurrence; an extract-mode bulletin can repeat a slot, and
+    then the lowest id is named.
     """
     today = build_date.isoformat()
-    rows = [r for r in rows if r[_KIND] != "specific_date" or (r[_DATE] or "") >= today]
-    weekly: dict[tuple, Any] = {}
+    rows = [r for r in rows if (
+        (r[_KIND] != "specific_date" or (r[_DATE] or "") >= today)
+        and (r[_VALID_UNTIL] is None or r[_VALID_UNTIL] >= today)
+    )]
+    weekly: dict[tuple, list[tuple]] = {}
     for row in sorted(rows, key=lambda r: r[_ID]):
         if row[_KIND] == "weekly":
-            weekly.setdefault((row[_CHURCH], row[_TYPE], row[_DAY], row[_START]), row[_ID])
+            weekly.setdefault((row[_CHURCH], row[_TYPE], row[_DAY], row[_START]), []).append(row)
     out = []
     for row in rows:
         if row[_CANCELLED] and row[_KIND] == "specific_date":
             day = parse_iso_date(row[_DATE])
-            match = None if day is None else weekly.get(
-                (row[_CHURCH], row[_TYPE], DAYS[day.weekday()], row[_START])
+            if day is None:
+                continue
+            candidates = weekly.get(
+                (row[_CHURCH], row[_TYPE], DAYS[day.weekday()], row[_START]), [],
             )
+            match = next((
+                candidate[_ID] for candidate in candidates
+                if recurrence_includes_date(
+                    day, weeks_to_mask(candidate[_WEEKS], candidate[_EXCLUDE_WEEKS]),
+                    *candidate[_SEASON],
+                )
+                and (candidate[_VALID_FROM] is None or candidate[_VALID_FROM] <= row[_DATE])
+                and (candidate[_VALID_UNTIL] is None or candidate[_VALID_UNTIL] >= row[_DATE])
+            ), None)
             if match is None:
                 continue
             row = (*row[:_CANCELS], match, *row[_CANCELS + 1:])
@@ -337,6 +391,11 @@ def extract(
             _extract_mode_events(src, update_mode) + _update_mode_events(src),
             build_date or date.today(),
         )
+        hidden = _fetch_only_parish_ids(src)
+        if hidden:
+            churches = [row for row in churches if row[1] not in hidden]
+            shown = {row[0] for row in churches}
+            events = [row for row in events if row[_CHURCH] in shown]
     finally:
         src.close()
 

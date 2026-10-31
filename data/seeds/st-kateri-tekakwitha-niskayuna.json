@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-kateri-tekakwitha-niskayuna",
+  "status": "approved",
+  "as_of": "2026-10-11T16:28:57Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:34:54Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Two churches (Union Street and Rosa Road). Weekend, weekday and Confession times are identical in all three bulletins and match history. Open: whether the All Souls Day evening service on Nov 2 counts as a Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3b1ada1610040a2e02f2bcec6a791df37e5ced3b22351b0a23693498aff8bac6",
+      "fetched_at": "2026-10-11T16:28:57Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "f049727c4894d60b8297c3a85927e547fd025523dcc43cb85b185ebfa8ef3dff",
+      "fetched_at": "2026-10-04T14:55:09Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "66399d43fcd7c176b6c50d59399d5010feb931bd144afa03847ce04c2f39e9b3",
+      "fetched_at": "2026-09-28T22:04:47Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Church at 1803 Union Street: Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Church at 1803 Union Street: Saturday: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Church at 1803 Union Street: Saturday: 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Saturday 17:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Saturday 17:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Saturday 17:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In-person & Livestream"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Sunday: 9:30am (In-person & Livestream)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Sunday: 9:30am (In-person & Livestream)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Sunday: 9:30am (In-person & Livestream)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Sunday 09:30 st-kateri-tekakwitha-union-street-niskayuna  “In-person & Livestream”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Sunday 09:30 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Sunday 09:30 st-kateri-tekakwitha-union-street-niskayuna  “In-person & livestream”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Monday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Monday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Monday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3. The Oct 5 'Canceled for Funeral Mass' in the Oct 4 bulletin is dated before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Monday & Tuesday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Tuesday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Tuesday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Tuesday 09:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3. The Oct 5 'Canceled for Funeral Mass' in the Oct 4 bulletin is dated before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "2216 Rosa Road: Sunday: 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "2216 Rosa Road: Sunday: 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "2216 Rosa Road: Sunday: 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Sunday 11:30 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Sunday 11:30 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Sunday 11:30 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Thursday: 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Thursday: 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Thursday: 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Thursday 18:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Thursday 18:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Thursday 18:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Friday: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Friday: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly mass Friday 09:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly mass Friday 09:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly mass Friday 09:00 st-kateri-tekakwitha-rosa-road-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharist box of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Reconciliation: Union St.: Saturday - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Reconciliation: Union St.: Saturday - 4pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Reconciliation: Union St.: Saturday - 4pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly confession Saturday 16:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly confession Saturday 16:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly confession Saturday 16:00 st-kateri-tekakwitha-union-street-niskayuna",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed under Sacraments in all three bulletins; history 3/3. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 1,
+          "said": "Rosa Rd.: Friday - following 9am Mass or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 1,
+          "said": "Rosa Rd.: Friday - following 9am Mass or by Appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 1,
+          "said": "Rosa Rd.: Friday - following 9am Mass or by Appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "weekly confession Friday 09:30 st-kateri-tekakwitha-rosa-road-schenectady  “Following 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f049727c4894",
+          "said": "weekly confession Friday 09:30 st-kateri-tekakwitha-rosa-road-schenectady  “Following 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "66399d43fcd7",
+          "said": "weekly confession Friday 09:30 st-kateri-tekakwitha-rosa-road-schenectady  “Following 9:00 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: 'following' the 9:00 AM Friday weekday Mass is 30 minutes after it starts; history 3/3 has 9:30.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At St. John the Evangelist"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 3,
+          "said": "WED 9:00am Mass at Saint John the Evangelist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f049727c",
+          "page": 3,
+          "said": "WED 9:00am Mass at Saint John the Evangelist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "66399d43",
+          "page": 3,
+          "said": "WED 9:00am Mass at Saint John the Evangelist"
+        }
+      ],
+      "rationale": "R22: the Wednesday Mass in the intentions is at St. John the Evangelist, another parish's church (st-john-the-evangelist-schenectady), so its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-18",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Health Care Professionals and Respect Life Month Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 3,
+          "said": "Health Care Professionals and Respect Life Month Mass with Bishop Mark O'Connell ... Sunday, October 18, 2026 at 5:00 PM at the Cathedral of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R22: held at the Cathedral of the Immaculate Conception, not one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Evening Service & Candle Ritual"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3b1ada16",
+          "page": 5,
+          "said": "All Souls Day Evening Service & Candle Ritual, Monday, November 2 at 6:00 p.m. In the 1803 Union Street Church ... a candle will be lit in a special ritual during the mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "3b1ada161004",
+          "said": "specific_date mass 2026-11-02 18:00 st-kateri-tekakwitha-union-street-niskayuna  “All Souls Day Evening Service & Candle Ritual”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: titled a 'Service' but the text says the candle ritual is 'during the mass', open to all parishioners; history recorded it as a Mass. Dated and on or after as_of (R16); leaning to include.\n\nReview 2026-10-22: Include Nov 2, 6 PM Mass at Union Street. The full notice explicitly says the ritual is “during the mass” and invites all parishioners.",
+      "question": "Add the All Souls Day Evening Service & Candle Ritual on Monday, November 2 at 6:00 PM as a Mass at Union Street?",
+      "options": [
+        {
+          "label": "Dated Mass, Nov 2 6:00 PM at Union Street",
+          "entry": {
+            "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls Day Evening Service & Candle Ritual"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    }
+  ]
+}

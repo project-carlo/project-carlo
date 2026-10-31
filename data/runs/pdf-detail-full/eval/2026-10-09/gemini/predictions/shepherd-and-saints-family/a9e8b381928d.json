@@ -1,0 +1,778 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "shepherd-and-saints-family",
+  "content_hash": "a9e8b381928dbee7126680f5840e7ec36f0f940124bee7197250dfdb72cca210",
+  "source_url": "https://parishesonline.com/publication-page/st-gregory-the-great-good-shepherd-st-pius-x?selectedPublication=https://container.parishesonline.com/bulletins/14/1019/20260927B.pdf",
+  "fetched_at": "2026-09-26T18:54:26Z",
+  "reference_date": "2026-09-26",
+  "churches": [
+    {
+      "slug": "good-shepherd-pendleton",
+      "name": "Good Shepherd Church",
+      "address": "5442 Tonawanda Creek Road, Pendleton, NY 14120"
+    },
+    {
+      "slug": "st-gregory-the-great-williamsville",
+      "name": "St. Gregory the Great Church",
+      "address": "200 St. Gregory Court, Williamsville, NY 14221"
+    },
+    {
+      "slug": "st-pius-x-getzville",
+      "name": "St. Pius X Church",
+      "address": "1700 North French Road, Getzville, NY 14068"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/a9e8b381928dbee7126680f5840e7ec36f0f940124bee7197250dfdb72cca210-4562a3718819.json",
+    "modified_at": "2026-09-26T17:25:20.871000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/shepherd-and-saints-family/a9e8b381928d.pdf",
+  "pdf_sha256": "a10fe2c12d832f51a704bf5aca5dcab3decd009c633cf6ca64220361cdd41c97",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "good-shepherd-pendleton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "good-shepherd-pendleton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "07:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "7:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "good-shepherd-pendleton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "good-shepherd-pendleton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "12:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "good-shepherd-pendleton",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "14:30",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "2:30 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "00:00",
+      "end_time": "23:59",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Open 24/7; access code needed 9:00 PM - 6:00 AM",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:00 AM",
+        "end_time": "11:59 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "12:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Adoration Chapel",
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM",
+        "end_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "12:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Adoration Chapel",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM",
+        "end_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "12:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Adoration Chapel",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM",
+        "end_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": "12:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Adoration Chapel",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM",
+        "end_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "19:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Healing Mass",
+      "raw": {
+        "date": "2026-09-28",
+        "start_time": "7:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-19",
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Charismatic Healing Mass",
+      "raw": {
+        "date": "2026-10-19",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-28",
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Before Healing Mass",
+      "raw": {
+        "date": "2026-09-28",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-pius-x-getzville",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-02",
+      "start_time": "12:00",
+      "end_time": "15:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "First Friday Adoration",
+      "raw": {
+        "date": "2026-10-02",
+        "start_time": "12:00 PM",
+        "end_time": "3:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-gregory-the-great-williamsville",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-04",
+      "start_time": "14:00",
+      "end_time": "15:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 5,
+      "note": "During Life Chain",
+      "raw": {
+        "date": "2026-10-04",
+        "start_time": "2:00 PM",
+        "end_time": "3:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5677,
+    "output_tokens": 2847
+  }
+}

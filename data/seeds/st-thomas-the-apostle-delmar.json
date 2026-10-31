@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-thomas-the-apostle-delmar",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:11Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Cover-page schedule (p1) and weekly calendar (p3) agree with each other and with all three bulletins of history: weekend Masses Sat 5:00 PM, Sun 7:30/10:30 AM and 5:00 PM, weekday Masses Mon/Tue/Thu/Fri, confessions Tue, Fri, Sat, and adoration Fridays plus last Mondays. Nothing in the bulletin is ambiguous; Anointing of the Sick, the Cathedral healthcare Mass and school events were left out as outside the policy.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e1b883a384449b83aa854bb570bd5e45a94a3c71fd555630cb71188d1d2df1e4",
+      "fetched_at": "2026-10-11T16:34:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "84e9b9c56bd634399de84beb8faa692a216966472d22827735d8767d7f2a5de6",
+      "fetched_at": "2026-10-04T14:59:25Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "c470937950551f0223ad98de71c37f02acd4c1df4ba1d56ff78f9fb15fa7a74c",
+      "fetched_at": "2026-09-28T22:09:20Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Saturday (Vigil): 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Saturday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Saturday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Saturday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Sunday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Sunday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Sunday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Sunday 10:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Sunday 10:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Sunday 10:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Sunday: 7:30am, 10:30am, 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Sunday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Sunday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Sunday 17:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Monday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Monday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Monday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Monday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Tuesday: 12:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Tuesday 12:15 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Tuesday 12:15 st-thomas-the-apostle-delmar  “Anointing of the sick following Mass on the first Tuesday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Tuesday 12:15 st-thomas-the-apostle-delmar  “First Tuesday of the month followed by Anointing of the Sick”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Thursday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Thursday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Thursday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Thursday 07:30 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Friday: 12:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly mass Friday 12:15 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly mass Friday 12:15 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly mass Friday 12:15 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:10",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Reconciliation Tuesday: 11:30am-12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly confession Tuesday 11:30–12:10 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly confession Tuesday 11:30–12:10 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly confession Tuesday 11:30–12:10 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "13:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Friday: 1:00-1:50pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly confession Friday 13:00–13:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly confession Friday 13:00–13:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly confession Friday 13:00–13:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Saturday: 4:00-4:50pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly confession Saturday 16:00–16:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly confession Saturday 16:00–16:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly confession Saturday 16:00–16:50 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Adoration Friday: 1:00-2:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly adoration Friday 13:00–14:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly adoration Friday 13:00–14:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly adoration Friday 13:00–14:00 st-thomas-the-apostle-delmar",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-thomas-the-apostle-delmar",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": "20:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "last"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e1b883a38444",
+          "page": 1,
+          "said": "Last Monday of Each Month: 7:30-8:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e1b883a38444",
+          "said": "weekly adoration Monday 19:30–20:30 st-thomas-the-apostle-delmar  “Last Monday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "84e9b9c56bd6",
+          "said": "weekly adoration Monday 19:30–20:30 st-thomas-the-apostle-delmar  “Last Monday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c47093795055",
+          "said": "weekly adoration Monday 19:30–20:30 st-thomas-the-apostle-delmar  “Last Monday of each month”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the newest bulletin's schedule; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

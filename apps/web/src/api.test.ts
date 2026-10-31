@@ -30,6 +30,7 @@ function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
     page_number: null,
     note: null,
     weeks_of_month: [],
+    exclude_weeks: false,
     season_start_month: null,
     season_start_day: null,
     season_end_month: null,
@@ -386,5 +387,18 @@ describe("city page lookups", () => {
 
   it("throws CityNotFoundError for a city with no churches", () => {
     expect(() => cityPageData(snapshot, "east-aurora-ny", {})).toThrow(CityNotFoundError);
+  });
+});
+
+describe("effective schedule versions on the map", () => {
+  const allTypes: ChurchFilters = { types: [] };
+  it("shows the upcoming winter time before its effective Saturday", () => {
+    const old = rawEvent({day_of_week: "Saturday", start_time: 1020, valid_until: "2026-10-30"});
+    const winter = rawEvent({day_of_week: "Saturday", start_time: 960, valid_from: "2026-10-31"});
+    const today = new Date(2026, 9, 26);
+    expect(eventMatchesFilters(old, allTypes, today)).toBe(false);
+    expect(eventMatchesFilters(winter, allTypes, today)).toBe(true);
+    expect(eventMatchesFilters(winter, allTypes, new Date(2026, 10, 2))).toBe(true);
+    expect(eventMatchesFilters(old, allTypes, new Date(2027, 9, 26))).toBe(false);
   });
 });

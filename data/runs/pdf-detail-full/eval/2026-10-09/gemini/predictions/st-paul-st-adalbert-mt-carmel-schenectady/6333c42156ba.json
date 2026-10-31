@@ -1,0 +1,158 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-paul-st-adalbert-mt-carmel-schenectady",
+  "content_hash": "6333c42156ba9068896c4cd753ee2b151cb8ac144129d250efee54df209f0461",
+  "source_url": "https://parishesonline.com/publication-page/st-paul-the-apostle-st-adalbert-and-our-lady-of-mt-carmel-church?selectedPublication=https://container.parishesonline.com/bulletins/03/0820/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:57:49Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "our-lady-of-mount-carmel-schenectady",
+      "name": "Our Lady of Mount Carmel",
+      "address": "1255 Pleasant St., Schenectady, NY 12303"
+    },
+    {
+      "slug": "st-adalbert-schenectady",
+      "name": "Church of St. Adalbert",
+      "address": "550 Lansing St., Schenectady, NY 12303"
+    },
+    {
+      "slug": "st-paul-the-apostle-schenectady",
+      "name": "St. Paul the Apostle",
+      "address": "2777 Albany St., Schenectady, NY 12304"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/6333c42156ba9068896c4cd753ee2b151cb8ac144129d250efee54df209f0461-6fcbbabeb8d8.json",
+    "modified_at": "2026-10-04T15:25:14.914000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-paul-st-adalbert-mt-carmel-schenectady/6333c42156ba.pdf",
+  "pdf_sha256": "0c18f4f3be25fcc5ead0457efc60e65b128125727c4e2a1fccb273849c792e66",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-paul-the-apostle-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-mount-carmel-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-adalbert-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-schenectady",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:00 PM",
+        "end_time": "3:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-paul-the-apostle-schenectady",
+      "event_type": "adoration",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-13",
+      "start_time": "18:00",
+      "end_time": "19:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 6,
+      "note": "Eucharistic Adoration",
+      "raw": {
+        "date": "2026-10-13",
+        "start_time": "6:00 PM",
+        "end_time": "7:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4635,
+    "output_tokens": 632
+  }
+}

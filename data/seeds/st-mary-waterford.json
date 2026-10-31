@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-waterford",
+  "status": "approved",
+  "as_of": "2026-10-11T16:38:52Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:05Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Single-church parish with a clear schedule box on page 1 of every bulletin read (all three identical): Sat 4 PM, Sun 8 AM and 10 AM, Saturday confession 3:00-3:30, and a First Friday 11 AM Mass with the school. One question: whether the First Friday school Mass is open to the public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "05d84baaa30cecf55caca48c4fc48db15629a47d883353490ddae25ef427abaa",
+      "fetched_at": "2026-10-11T16:38:52Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "21276c9f6d400dbe02675febebfc498b071493f81aea56c563139415d00f2a84",
+      "fetched_at": "2026-10-04T14:56:54Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a8f77703bc6e28ba438a7ae86d2595b4147120d31c61ca3efb7878857c5a4a62",
+      "fetched_at": "2026-09-28T22:06:45Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "Mass Schedule: Saturday at 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "Mass Schedule: Saturday at 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "Mass Schedule: Saturday at 4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "05d84baaa30c",
+          "said": "weekly mass Saturday 16:00 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21276c9f6d40",
+          "said": "weekly mass Saturday 16:00 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f77703bc6e",
+          "said": "weekly mass Saturday 16:00 st-mary-waterford",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Also livestreamed"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am; Livestream Mass: 8 a.m. Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am; Livestream Mass: 8 a.m. Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am; Livestream Mass: 8 a.m. Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "05d84baaa30c",
+          "said": "weekly mass Sunday 08:00 st-mary-waterford  “Also livestreamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21276c9f6d40",
+          "said": "weekly mass Sunday 08:00 st-mary-waterford  “Livestreamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f77703bc6e",
+          "said": "weekly mass Sunday 08:00 st-mary-waterford",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in all three bulletins; the 8 AM is livestreamed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "Sunday at 8:00 a.m. & 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "05d84baaa30c",
+          "said": "weekly mass Sunday 10:00 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21276c9f6d40",
+          "said": "weekly mass Sunday 10:00 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f77703bc6e",
+          "said": "weekly mass Sunday 10:00 st-mary-waterford",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday 3:00-3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday 3:00-3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday 3:00-3:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "05d84baaa30c",
+          "said": "weekly confession Saturday 15:00–15:30 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21276c9f6d40",
+          "said": "weekly confession Saturday 15:00–15:30 st-mary-waterford",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f77703bc6e",
+          "said": "weekly confession Saturday 15:00–15:30 st-mary-waterford",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under Sacramental Preparation in all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-waterford",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With St. Mary's School"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "First Friday: 11:00 a.m. w/ St. Mary's School"
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "First Friday: 11:00 a.m. w/ St. Mary's School"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "First Friday: 11:00 a.m. w/ St. Mary's School"
+        },
+        {
+          "source": "history",
+          "bulletin": "05d84baaa30c",
+          "said": "weekly mass Friday 11:00 st-mary-waterford  “First Friday only; with St. Mary's School”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "21276c9f6d40",
+          "said": "weekly mass Friday 11:00 st-mary-waterford  “First Friday only, with St. Mary's School”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f77703bc6e",
+          "said": "weekly mass Friday 11:00 st-mary-waterford  “First Friday of the month with school”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box, weekly by weeks_of_month. It is a Mass with the school; the bulletin does not say whether the public may attend. The policy leaves out Masses limited to a group such as students only. No other bulletin calendar says more.\n\nReview 2026-10-22: Include first-Friday 11 AM Mass with St. Mary’s School: POLICY explicitly says “with” a school is open unless restricted.",
+      "question": "Include the First Friday 11:00 AM Mass 'w/ St. Mary's School' as a public Mass?",
+      "options": [
+        {
+          "label": "First Fridays 11:00 AM Mass",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-waterford",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "With St. Mary's School"
+          }
+        },
+        {
+          "label": "Leave out (school-only Mass)",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "05d84baaa30c",
+          "page": 1,
+          "said": "Holy Days of Obligation- TBD; Open for private prayer from 7 am-11 am (M-F); Rosary daily 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "21276c9f6d40",
+          "page": 1,
+          "said": "Holy Days of Obligation- TBD; Open for private prayer from 7 am-11 am (M-F); Rosary daily 7:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a8f77703bc6e",
+          "page": 1,
+          "said": "Holy Days of Obligation- TBD; Open for private prayer from 7 am-11 am (M-F); Rosary daily 7:30 a.m."
+        }
+      ],
+      "rationale": "Holy day times are TBD, private prayer and the Rosary are not Mass, Confession or Adoration; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

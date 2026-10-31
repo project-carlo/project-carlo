@@ -16,8 +16,9 @@ from __future__ import annotations
 import logging
 import re
 from collections.abc import Callable
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import date
+from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
 from pdf_extract.browser import (
@@ -34,8 +35,10 @@ from pdf_extract.parish_sites.links import (
     GOOGLE_DRIVE_FILE_VIEW_URL_TEMPLATE,
     HTML_PDF_URL_PATTERN,
     PDF_EMBEDDER_VIEWER_CLASS,
+    decoded_base64_json,
     document_download_url,
     google_drive_folder_id,
+    is_image_url,
     is_publisher_listing,
     unwrap_pdf_viewer_url,
 )
@@ -58,6 +61,8 @@ class BulletinPage:
     page: PageLike
     requested_url: str
     reference_date: date
+    matches: Callable[[str], bool] | None = None
+    """An optional recipe constraint, applied before collection completeness checks."""
     url: str = field(init=False, default="")
 
     def load(self) -> None:
@@ -82,6 +87,9 @@ class Collector:
     """Candidates on the page, given those the collectors before it found."""
     final: bool = False
     """When it finds anything, no later collector runs."""
+    automatic: bool = True
+    """Tried on a site without a recipe. One that is not runs only when a
+    parish's recipe names it: it reads what most sites have for other uses."""
 
 
 # ── Shared reading ──────────────────────────────────────────────────────────
@@ -89,12 +97,15 @@ class Collector:
 _BULLETIN_TITLE_RE = re.compile(
     r"(?:(?:this week'?s|weekly|current|latest|parish|sunday)\s+)?bulletin"
 )
+_CURRENT_BULLETIN_TITLE_RE = re.compile(r"(?:this week'?s|current|latest)\s+bulletin")
 
 
 def page_pdf_candidates(
     *, page: PageLike, base_url: str, reference_date: date,
+    matches: Callable[[str], bool] | None = None,
 ) -> list[Candidate]:
     """Every PDF the page in the tab offers: its links, else its markup."""
+    base_url = document_base_url(_rendered_html(page), base_url)
     candidates: list[Candidate] = []
     for anchor in page.query_selector_all("a[href]"):
         href = anchor.get_attribute("href")
@@ -106,6 +117,8 @@ def page_pdf_candidates(
             fetch_url = document_download_url(absolute_href)
             if fetch_url is None:
                 continue
+        if matches is not None and not matches(absolute_href):
+            continue
         text = anchor_text(anchor)
         candidates.append(
             Candidate(
@@ -114,8 +127,14 @@ def page_pdf_candidates(
                 parsed_date=parse_date_from_texts([text, href, absolute_href], reference_date),
                 labelled="bulletin" in f"{text} {absolute_href}".lower(),
                 titled_bulletin=bool(_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())),
+                titled_current=bool(
+                    _CURRENT_BULLETIN_TITLE_RE.fullmatch(text.strip().lower())
+                ),
             )
         )
+    if any(c.parsed_date is None for c in candidates):
+        candidates = _dated_by_card(_rendered_html(page), base_url=base_url,
+                                    reference_date=reference_date, candidates=candidates)
     if is_convincing(candidates, reference_date):
         return candidates
 
@@ -124,15 +143,17 @@ def page_pdf_candidates(
     # PDF URL as JSON inside a <script> tag rather than a plain <a href="..pdf">,
     # or link a whole block to it by script (Divi). Scan the rendered HTML when
     # the page's links are no bulletin, after those links.
-    try:
-        html = page.content()
-    except Exception:
-        html = ""
+    html = _rendered_html(page)
     linked = {c.source_url for c in candidates}
     candidates += [
         c for c in _pdf_candidates_in_html(html, base_url=base_url, reference_date=reference_date)
-        if c.source_url not in linked
+        if c.source_url not in linked and (matches is None or matches(c.source_url))
     ]
+    # Cards a repeater rendered after its links were read (St. Joseph the
+    # Worker, Frackville) date their PDFs from this later look at the page.
+    candidates = _dated_by_card(
+        html, base_url=base_url, reference_date=reference_date, candidates=candidates,
+    )
     if candidates or PDF_EMBEDDER_VIEWER_CLASS not in html:
         return candidates
 
@@ -143,7 +164,102 @@ def page_pdf_candidates(
     except Exception as exc:
         LOGGER.info("Could not read the served page %s: %s", page.url or base_url, exc)
         return []
-    return _pdf_candidates_in_html(source, base_url=base_url, reference_date=reference_date)
+    return [c for c in _pdf_candidates_in_html(
+        source, base_url=base_url, reference_date=reference_date,
+    ) if matches is None or matches(c.source_url)]
+
+
+class _ListItemReader(HTMLParser):
+    """Each `role="listitem"` element's text pieces and the links inside it."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.items: list[tuple[list[str], list[str]]] = []
+        self._open: list[tuple[int, int]] = []  # open listitems: (depth, index in items)
+        self._depth = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in _VOID_TAGS:
+            self.handle_startendtag(tag, attrs)
+            return
+        self._depth += 1
+        values = dict(attrs)
+        if values.get("role") == "listitem":
+            self._open.append((self._depth, len(self.items)))
+            self.items.append(([], []))
+        if tag == "a" and self._open and values.get("href"):
+            self.items[self._open[-1][1]][1].append(values["href"] or "")
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        return None
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in _VOID_TAGS:
+            return
+        if self._open and self._open[-1][0] == self._depth:
+            self._open.pop()
+        self._depth = max(0, self._depth - 1)
+
+    def handle_data(self, data: str) -> None:
+        if self._open and data.strip():
+            self.items[self._open[-1][1]][0].append(data.strip())
+
+
+_VOID_TAGS = frozenset({
+    "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+    "param", "source", "track", "wbr",
+})
+
+
+_BASE_HREF_RE = re.compile(r"""<base\b[^>]*?\bhref\s*=\s*["']([^"']+)["']""", re.IGNORECASE)
+
+
+def document_base_url(html: str, page_url: str) -> str:
+    """The URL a page's relative links resolve against: its `<base href>`, else the page.
+
+    stjohneverettpa.org serves its bulletins at /Bulletins/ with links like
+    `gallery/Bulletin October 18 2026.pdf` under `<base href="http://stjohneverettpa.org/">`,
+    so the files are at /gallery/, not /Bulletins/gallery/.
+    """
+    match = _BASE_HREF_RE.search(html)
+    return urljoin(page_url, match.group(1).strip()) if match else page_url
+
+
+def _rendered_html(page: PageLike) -> str:
+    try:
+        return page.content()
+    except Exception:
+        return ""
+
+
+def _dated_by_card(
+    html: str, *, base_url: str, reference_date: date, candidates: list[Candidate],
+) -> list[Candidate]:
+    """Date undated PDF links by the one date written in their card.
+
+    Wix repeaters list each issue as a card (`role="listitem"`): a date, the
+    Sunday's name and a "View" button linking a hash-named PDF (St. Charles
+    Borromeo, Ashland). The link alone is undated, so a header PDF listed first
+    ("Coat of Arms") was picked. A card naming more than one date is left alone.
+    """
+    if 'role="listitem"' not in html or all(c.parsed_date for c in candidates):
+        return candidates
+    reader = _ListItemReader()
+    reader.feed(html)
+    reader.close()
+    card_dates: dict[str, date] = {}
+    for texts, hrefs in reader.items:
+        dates = {d for d in (parse_date(t, reference_date) for t in texts) if d is not None}
+        if len(dates) != 1:
+            continue
+        (card_date,) = dates
+        for href in hrefs:
+            card_dates.setdefault(unwrap_pdf_viewer_url(urljoin(base_url, href)), card_date)
+    return [
+        replace(c, parsed_date=card_dates[c.source_url])
+        if c.parsed_date is None and c.source_url in card_dates else c
+        for c in candidates
+    ]
 
 
 def _pdf_candidates_in_html(
@@ -152,8 +268,9 @@ def _pdf_candidates_in_html(
     if not html:
         return []
     # Unescape JSON-escaped slashes so URLs like "https:\/\/site\/file.pdf"
-    # (as embedded by flipbook/PDF-viewer plugins) match a plain URL regex.
-    normalized = html.replace("\\/", "/")
+    # (as embedded by flipbook/PDF-viewer plugins) match a plain URL regex. A
+    # viewer's settings can be base64 JSON; their PDFs come after the page's own.
+    normalized = "\n".join([html, *decoded_base64_json(html)]).replace("\\/", "/")
     candidates: list[Candidate] = []
     seen: set[str] = set()
     for raw in HTML_PDF_URL_PATTERN.findall(normalized):
@@ -178,10 +295,15 @@ def _candidates_on(site: BulletinPage, url: str) -> list[Candidate]:
     wait_for_selector_quietly(page=site.page, selector="a[href]", state="attached", source_label=url)
     return page_pdf_candidates(
         page=site.page, base_url=site.page.url or url, reference_date=site.reference_date,
+        matches=site.matches,
     )
 
 
 # ── Collectors ──────────────────────────────────────────────────────────────
+
+# How long a bulletin page whose first read found no bulletin gets for its
+# scripts to finish building it before it is read again.
+LATE_CONTENT_WAIT_MS = 3000
 
 # Each file in a shared folder's listing is a row carrying the file's id.
 GOOGLE_DRIVE_ITEM_SELECTOR = "[data-id]"
@@ -234,20 +356,42 @@ def collect_redirected_pdf(site: BulletinPage, found: list[Candidate]) -> list[C
 
 
 def collect_page_pdfs(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
-    """The PDFs the bulletin page links, or names in its markup."""
+    """The PDFs the bulletin page links, or names in its markup.
+
+    A list built by script after the page loads (a Wix repeater of dated cards:
+    St. Joseph the Worker, Frackville) can be missing from the first read, which
+    then finds only a header PDF. When that read is no bulletin, the page gets a
+    moment more and is read again.
+    """
     if found:
         return []
-    return page_pdf_candidates(
+    candidates = page_pdf_candidates(
         page=site.page, base_url=site.url, reference_date=site.reference_date,
+        matches=site.matches,
     )
+    if is_convincing(candidates, site.reference_date):
+        return candidates
+    site.page.wait_for_timeout(LATE_CONTENT_WAIT_MS)
+    later = page_pdf_candidates(
+        page=site.page, base_url=site.url, reference_date=site.reference_date,
+        matches=site.matches,
+    )
+    return later if is_convincing(later, site.reference_date) else candidates
 
 
 def collect_linked_issue_page(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
     """A page that links no PDF can still hand readers the issue elsewhere: a
     flipbook it embeds (this week's, while it lists only older ones), or a
-    publisher's listing of dated PDFs."""
+    publisher's listing of dated PDFs.
+
+    So can one whose PDFs are something else (a survey, a history) beside a
+    link to the publisher's listing: St. Agnes, Lake Placid's "recent bulletins".
+    """
     if found:
-        return []
+        if is_convincing(found, site.reference_date):
+            return []
+        listing_url = _publisher_listing_url(site)
+        return _candidates_on(site, listing_url) if listing_url is not None else []
     issue_page_url = _embedded_flipbook_url(site) or _publisher_listing_url(site)
     if issue_page_url is None:
         return []
@@ -346,6 +490,53 @@ def latest_bulletin_post(site: BulletinPage) -> tuple[date, str] | None:
     return max(posts, key=lambda pair: pair[0])
 
 
+# Where an <img> keeps its picture: Squarespace galleries load the full-size
+# file from data-image or data-src, after the page's script has run.
+_IMAGE_SOURCE_ATTRIBUTES = ("data-image", "data-src", "src")
+
+
+def collect_page_images(site: BulletinPage, found: list[Candidate]) -> list[Candidate]:
+    """Each issue posted as an image, not a PDF: St. Mary, Waymart's Squarespace
+    gallery shows each weekend's bulletin as one JPEG ("Bulletin 2026 October
+    10-11.jpg"). The download is wrapped in a PDF.
+
+    Only for a parish whose recipe names it: every site has images, and one
+    labelled "bulletin" (an icon) is no issue. A picture counts if its address
+    or text says "bulletin" or a date; once some are dated, the undated ones
+    (a cover template, a logo) are dropped.
+    """
+    if found:
+        return []
+    candidates: list[Candidate] = []
+    seen: set[str] = set()
+    for element in site.page.query_selector_all("img, a[href]"):
+        if element.get_attribute("href") is not None:
+            sources = [element.get_attribute("href")]
+            text = anchor_text(element)
+        else:
+            sources = [element.get_attribute(name) for name in _IMAGE_SOURCE_ATTRIBUTES]
+            text = element.get_attribute("alt") or ""
+        for source in sources:
+            if not source:
+                continue
+            url = urljoin(site.url, source)
+            if (not is_image_url(url) or url in seen
+                    or (site.matches is not None and not site.matches(url))):
+                continue
+            seen.add(url)
+            parsed_date = parse_date_from_texts([text, url], site.reference_date)
+            labelled = "bulletin" in f"{text} {url}".lower()
+            if parsed_date is None and not labelled:
+                continue
+            candidates.append(
+                Candidate(
+                    source_url=url, fetch_url=url, parsed_date=parsed_date, labelled=labelled,
+                )
+            )
+    dated = [c for c in candidates if c.parsed_date is not None]
+    return dated or candidates
+
+
 COLLECTORS: dict[str, Collector] = {
     c.name: c
     for c in (
@@ -354,5 +545,6 @@ COLLECTORS: dict[str, Collector] = {
         Collector("page-pdfs", collect_page_pdfs),
         Collector("linked-issue-page", collect_linked_issue_page, final=True),
         Collector("dated-post", collect_dated_post),
+        Collector("page-images", collect_page_images, automatic=False),
     )
 }

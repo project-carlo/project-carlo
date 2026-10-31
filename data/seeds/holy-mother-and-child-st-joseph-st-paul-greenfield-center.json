@@ -1,0 +1,857 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-mother-and-child-st-joseph-st-paul-greenfield-center",
+  "status": "ready",
+  "as_of": "2026-10-25T13:22:19Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:04:57Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three small churches, Holy Mother and Child (Corinth), St. Joseph's (Greenfield Center) and St. Paul's (Rock City Falls), all in one Mass-times box on the front page, identical in all five bulletins. Weekly Masses, the Saturday Confession and the 2nd-Monday St. Paul's Mass come from that box. Dated: two All Souls Masses on Nov 2 and a Nov 18 Holy Hour. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e6a102843c6e8cea55805d1ed84db6119f5211cfe8f479c55e3ce97fa2e67922",
+      "fetched_at": "2026-10-25T13:22:19Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "a41d2200756f3675007e737b129d8443730529981943c8cad2bda167bd8afa67",
+      "fetched_at": "2026-10-18T12:50:23Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "c609d468f6d0cd8b44e84dbd846402978f3bb181cf8028d6894c7faaa1fb160c",
+      "fetched_at": "2026-10-11T16:37:22Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "18937eac0f58840e516abfd475eeb222b14836170f49ad2f6e856f37b7e53770",
+      "fetched_at": "2026-10-04T14:47:40Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3066f5f0839d68b9b88b83402fa628bb64da1e885bf568f11ae252009bda1a1b",
+      "fetched_at": "2026-09-28T21:57:52Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-mother-and-child-corinth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: 8:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: 8:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: 8:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: 8:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: 8:30 am Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Sunday 08:30 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Sunday 08:30 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Sunday 08:30 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Sunday 08:30 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Sunday 08:30 holy-mother-and-child-corinth",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass-times box at the head of the newest bulletin and of all four older ones; the intentions table also lists Sun 10/25 at 8:30 am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-mother-and-child-corinth",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: Noon Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: Noon Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: Noon Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: Noon Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "Holy Mother & Child, Mass times: Noon Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 3,
+          "said": "Wed 10/28 Noon Mass at Holy Mother & Child"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Wednesday 12:00 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Wednesday 12:00 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Wednesday 12:00 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Wednesday 12:00 holy-mother-and-child-corinth",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Wednesday 12:00 holy-mother-and-child-corinth",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: in the Mass-times box of every bulletin read, and in the newest week's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenfield-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 4:00 pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 4:00 pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 4:00 pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 4:00 pm Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 4:00 pm Saturday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Saturday 16:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Saturday 16:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Saturday 16:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Saturday 16:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Saturday 16:00 st-joseph-greenfield-center",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: in the Mass-times box of every bulletin read; the box also names the 'Saturday 4 pm Vigil Mass' livestream.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenfield-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 10:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 10:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 10:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 10:30 am Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 10:30 am Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenfield-center",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: in the Mass-times box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenfield-center",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 9:00 am Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 9:00 am Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 9:00 am Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 9:00 am Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "St. Joseph's, Mass times: 9:00 am Wednesdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 3,
+          "said": "Wed 10/28 9:00 am Morning Mass at St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenfield-center",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenfield-center",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: in the Mass-times box of every bulletin read, and in the newest week's calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-rock-city-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "St. Paul's, Mass times: 12:30 pm Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "St. Paul's, Mass times: 12:30 pm Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "St. Paul's, Mass times: 12:30 pm Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "St. Paul's, Mass times: 12:30 pm Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "St. Paul's, Mass times: 12:30 pm Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Sunday 12:30 st-paul-rock-city-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Sunday 12:30 st-paul-rock-city-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Sunday 12:30 st-paul-rock-city-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Sunday 12:30 st-paul-rock-city-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Sunday 12:30 st-paul-rock-city-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: in the Mass-times box of every bulletin read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-rock-city-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 1,
+          "said": "St. Paul's, Mass times: ... 9:00 am 2nd Mondays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 1,
+          "said": "St. Paul's, Mass times: ... 9:00 am 2nd Mondays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "St. Paul's, Mass times: ... 9:00 am 2nd Mondays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "18937eac",
+          "page": 1,
+          "said": "St. Paul's, Mass times: ... 9:00 am 2nd Mondays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3066f5f0",
+          "page": 1,
+          "said": "St. Paul's, Mass times: ... 9:00 am 2nd Mondays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c609d468",
+          "page": 1,
+          "said": "Mon. 10/12 at 9:00 am No Morning Mass (St. Paul's)"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly mass Monday 09:00 st-paul-rock-city-falls  “Second Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly mass Monday 09:00 st-paul-rock-city-falls  “2nd Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly mass Monday 09:00 st-paul-rock-city-falls  “2nd Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly mass Monday 09:00 st-paul-rock-city-falls  “2nd Mondays of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly mass Monday 09:00 st-paul-rock-city-falls  “2nd Mondays”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R11: a named 2nd-Monday Mass printed in the newest bulletin's box, though the newest week holds no second Monday (Oct 26 is the fourth). The Oct 11 issue says 'No Morning Mass' on Mon Oct 12, the second Monday; that is a past one-date skip (R16, R40) and does not change the box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenfield-center",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 2,
+          "said": "Sacrament of Reconciliation every Saturday 3:15-3:45 pm at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 5,
+          "said": "Sacrament of Reconciliation every Saturday 3:15-3:45 pm at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 5,
+          "said": "Sacrament of Reconciliation every Saturday 3:15-3:45 pm at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a41d2200",
+          "page": 2,
+          "said": "Sacrament of Reconciliation: every Saturday 3:15-3:45 pm at St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-greenfield-center",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a41d2200756f",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-greenfield-center",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c609d468f6d0",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-greenfield-center",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "18937eac0f58",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-greenfield-center",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3066f5f0839d",
+          "said": "weekly confession Saturday 15:15–15:45 st-joseph-greenfield-center",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: stated weekly with a church and times, in the newest bulletin and the older ones.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-rock-city-falls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 3,
+          "said": "Mon 11/2 9:00 am All Souls Mass at St. Paul's"
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass at St. Paul's, after as_of. The Monday is a first Monday, so the weekly 2nd-Monday slot does not cover it (POLICY, Weekly or dated rule 7: outside the weekly schedule, so dated).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-mother-and-child-corinth",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 3,
+          "said": "Mon 11/2 Noon All Souls Mass at Holy Mother & Child"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "specific_date mass 2026-11-02 12:00 holy-mother-and-child-corinth  “All Souls Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass at Holy Mother and Child, after as_of; Monday is not a regular Mass day there.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-mother-and-child-corinth",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-18",
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e6a10284",
+          "page": 3,
+          "said": "Holy Hour / Adoration Wednesday, November 18, 5:00 - 6:00 pm at Holy Mother & Child"
+        },
+        {
+          "source": "history",
+          "bulletin": "e6a102843c6e",
+          "said": "specific_date adoration 2026-11-18 17:00–18:00 holy-mother-and-child-corinth  “Holy Hour / Adoration”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated Holy Hour with a day, time and church. It moves between churches (Oct 14 was at St. Paul's, per the Oct 11 calendar) and no bulletin says it is weekly or monthly, so it is dated only (R33).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

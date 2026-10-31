@@ -1,0 +1,906 @@
+{
+  "schema_version": 1,
+  "parish_slug": "annunciation-our-lady-queen-of-apostles-ilion",
+  "status": "approved",
+  "as_of": "2026-10-11T16:33:10Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:00:31Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Two churches, one shared bulletin. Page 1 of both bulletins prints a clear per-church schedule: Annunciation (Mon/Wed 7 AM Mass and 7:30-8 Confession, Sun 11:30 AM, Nov-Apr Saturday 4 PM vigil with 3-3:45 Confession) and Queen of Apostles (Tue/Thu 7 AM, Sun 8:30 AM, May-Oct Saturday 4 PM vigil), with Tuesday adoration at Queen of Apostles and Wednesday at Annunciation. The two bulletins agree and match history. Nothing to ask. The Oct 12 note (Mass at 7 AM at Annunciation) matches the regular Monday Mass, so no cancellation.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "663fee21f15a092c9366dd83e85dcf9024ea6ed2d43b9de4b34ae63ac0b95256",
+      "fetched_at": "2026-10-11T16:33:10Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "615ae4fa8ef8431f3258d9c57de635a30f2a200a7830ff3d65ab1e41a0271e3c",
+      "fetched_at": "2026-09-28T21:55:56Z",
+      "published_date": "2026-10-04",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation: Monday & Wednesday: 7 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation: Monday & Wednesday: 7 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Monday 07:00 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Monday 07:00 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Annunciation column of the schedule on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Monday & Wednesday: 7:30 am - 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Monday & Wednesday: 7:30 am - 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Monday 07:30–08:00 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Monday 07:30–08:00 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Annunciation column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation: Monday & Wednesday: 7 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation: Monday & Wednesday: 7 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Wednesday 07:00 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Wednesday 07:00 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Annunciation column of the schedule on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Monday & Wednesday: 7:30 am - 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Monday & Wednesday: 7:30 am - 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Wednesday 07:30–08:00 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Wednesday 07:30–08:00 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Annunciation column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Tuesday & Thursday: 7 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Tuesday & Thursday: 7 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Tuesday 07:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Tuesday 07:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Queen of Apostles column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Tuesday & Thursday: 7:30 am - 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Tuesday & Thursday: 7:30 am - 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Tuesday 07:30–08:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Tuesday 07:30–08:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Queen of Apostles column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Tuesday & Thursday: 7 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Tuesday & Thursday: 7 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Thursday 07:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Thursday 07:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Queen of Apostles column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Tuesday & Thursday: 7:30 am - 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Tuesday & Thursday: 7:30 am - 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Thursday 07:30–08:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Thursday 07:30–08:00 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Queen of Apostles column on page 1 of both bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation: Sunday: 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation: Sunday: 11:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Sunday 11:30 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Sunday 11:30 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Annunciation column of both bulletins; the Oct 11 intentions also list a Sunday 11:30 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Sunday: 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Sunday: 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Sunday 08:30 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Sunday 08:30 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Queen of Apostles column of both bulletins; the intentions also list a Sunday 8:30 am Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": null,
+          "end_month": 4,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation: Saturday Vigil: 4 pm (November - April)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation: Saturday Vigil: 4 pm (November - April)"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Saturday 16:00 annunciation-ilion  “November - April”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Saturday 16:00 annunciation-ilion  “November - April”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (Weekly qualifiers, season): printed in the Annunciation column with the months November - April. Out of season now, but the bulletin states the season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 11,
+          "start_day": null,
+          "end_month": 4,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Saturday: 3 pm - 3:45 pm (November - April)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Church of the Annunciation, Confession: Saturday: 3 pm - 3:45 pm (November - April)"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Saturday 15:00–15:45 annunciation-ilion  “November - April”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Saturday 15:00–15:45 annunciation-ilion  “November - April”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (season): as the Annunciation Saturday vigil, November - April.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Saturday Vigil: 4 pm (May - October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles: Saturday Vigil: 4 pm (May - October)"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-apostles-frankfort  “May - October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly mass Saturday 16:00 our-lady-queen-of-apostles-frankfort  “May - October”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (season): printed in the Queen of Apostles column with the months May - October. The Saturday 4 pm intentions in the Oct 10 and Oct 17 listings do not name a church; they fit this one while it is in season.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": {
+          "start_month": 5,
+          "start_day": null,
+          "end_month": 10,
+          "end_day": null
+        },
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Saturday: 3 pm - 3:45 pm (May - October)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Our Lady Queen of Apostles, Confession: Saturday: 3 pm - 3:45 pm (May - October)"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-apostles-frankfort  “May - October”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly confession Saturday 15:00–15:45 our-lady-queen-of-apostles-frankfort  “May - October”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY (season): as the Queen of Apostles Saturday vigil, May - October.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-apostles-frankfort",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Tuesdays 7:30 am - 7:30 pm at Our Lady Queen of Apostles"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Tuesdays 7:30 am - 7:30 pm at Our Lady Queen of Apostles"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly adoration Tuesday 07:30–19:30 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly adoration Tuesday 07:30–19:30 our-lady-queen-of-apostles-frankfort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Join Us For Adoration banner on page 1 of both bulletins names the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "annunciation-ilion",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Wednesdays 7:30 am - 7:30 pm at Church of the Annunciation"
+        },
+        {
+          "source": "agent",
+          "bulletin": "615ae4fa",
+          "page": 1,
+          "said": "Wednesdays 7:30 am - 7:30 pm at Church of the Annunciation"
+        },
+        {
+          "source": "history",
+          "bulletin": "663fee21f15a",
+          "said": "weekly adoration Wednesday 07:30–19:30 annunciation-ilion",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "615ae4fa8ef8",
+          "said": "weekly adoration Wednesday 07:30–19:30 annunciation-ilion",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Join Us For Adoration banner on page 1 of both bulletins names the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Rosary Saturday 3:25 pm; Sunday 10:55 am / 7:55 am; Monday & Wednesday / Tuesday & Thursday 7:30 am"
+        }
+      ],
+      "rationale": "R24: the Rosary is a devotion, not a Mass, Confession or Adoration. Not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 1,
+          "said": "Confession: Anytime by appointment"
+        }
+      ],
+      "rationale": "R26, R24: no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "663fee21",
+          "page": 3,
+          "said": "Friday, October 16 - St. Hedwig & St. Margaret Mary Alacoque: Mass offered privately Pro Populo"
+        }
+      ],
+      "rationale": "R24, POLICY (What to extract): a private Mass is closed to the public; there is no regular Friday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

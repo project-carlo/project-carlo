@@ -1,0 +1,2142 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-our-hope-boonville",
+  "status": "ready",
+  "as_of": "2026-10-25T13:22:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:56:38Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (St. Joseph, St. Patrick, St. Mary of the Snows). The two-page newest bulletin and four older ones agree on the Mass times box: weekend and weekday Masses, Confession, Mon-Fri 7:15 AM Exposition Holy Hour and Wednesday 5:30 PM Holy Hour. Wednesday's 8:30 Mass is at St. Patrick, not St. Joseph. The seasonal 11:15 Sunday Mass at St. Mary of the Snows (Memorial Day to Columbus Day) is left out as out of season. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "958948df87d63a717e2a15512d6664d3f91061521d8641a9026359a8ce10bf5e",
+      "fetched_at": "2026-10-25T13:22:54Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "7fb8b8a761439d1b5fc75a2025fd41fab06a586df1758112d4aebbce6053f003",
+      "fetched_at": "2026-10-18T12:53:38Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "0d4872102891e45367c72a6d9fe2306f651f414396f57e848c9b704c345c9666",
+      "fetched_at": "2026-10-11T16:29:48Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "1047fd4d9a55436c681109ea92434003e07713f4860dfe012b8148e472b10a77",
+      "fetched_at": "2026-10-04T14:33:23Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3e04cec625ea0aef47ced0b5e17532f642b835d08b9e1492fd32fece34e90efa",
+      "fetched_at": "2026-09-28T00:04:51Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sunday Mass: Vigil Saturday 4:00PM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sunday Mass: Vigil Saturday 4:00PM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sunday Mass: Vigil Saturday 4:00PM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sunday Mass: Vigil Saturday 4:00PM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sunday Mass: Vigil Saturday 4:00PM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Saturday October 31th 4:00PM- (St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Saturday 16:00 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Saturday 16:00 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Saturday 16:00 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Saturday 16:00 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Saturday 16:00 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Mass times box of all five bulletins and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Daily Mass ... Saturday 8:30AM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Daily Mass ... Saturday 8:30AM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Daily Mass ... Saturday 8:30AM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Daily Mass ... Saturday 8:30AM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Daily Mass ... Saturday 8:30AM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Saturday October 31th 8:30AM-(St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Saturday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Saturday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Saturday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Saturday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Saturday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin. The October 24 Mass was cancelled (Fr. Ward away) but that date is before as_of (R16), so only the weekly slot is kept.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sunday 9:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sunday 9:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sunday 9:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sunday 9:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sunday 9:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Sunday, November 1th 9:30AM- (St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Sunday 09:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Sunday 09:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Sunday 09:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Sunday 09:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Sunday 09:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-forestport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sunday 8AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sunday 8AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sunday 8AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sunday 8AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sunday 8AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Sunday, November 1th 8:00AM- (St.P)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Sunday 08:00 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Sunday 08:00 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Sunday 08:00 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Sunday 08:00 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Sunday 08:00 st-patrick-forestport",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin and in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Monday October 26th, Tuesday October 27th, Thursday October 29th, Friday October 30th 8:30AM-(St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Monday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Monday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Monday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Monday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Monday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin; the newest intentions list Monday, Tuesday, Thursday and Friday at St. J. Wednesday is separate (St. Patrick).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Monday October 26th, Tuesday October 27th, Thursday October 29th, Friday October 30th 8:30AM-(St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Tuesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Tuesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Tuesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Tuesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Tuesday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin; the newest intentions list Monday, Tuesday, Thursday and Friday at St. J. Wednesday is separate (St. Patrick).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Monday October 26th, Tuesday October 27th, Thursday October 29th, Friday October 30th 8:30AM-(St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Thursday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Thursday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Thursday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Thursday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Thursday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin; the newest intentions list Monday, Tuesday, Thursday and Friday at St. J. Wednesday is separate (St. Patrick).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Daily Mass Monday through Friday 8:30AM (SJ) Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Monday October 26th, Tuesday October 27th, Thursday October 29th, Friday October 30th 8:30AM-(St.J)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Friday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Friday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Friday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Friday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Friday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin; the newest intentions list Monday, Tuesday, Thursday and Friday at St. J. Wednesday is separate (St. Patrick).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-forestport",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Wednesday October 28th 8:30AM-(St.P) For Ambrose Bourgeois"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Wednesday 08:30 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly mass Wednesday 08:30 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Wednesday 08:30 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Wednesday 08:30 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Wednesday 08:30 st-patrick-forestport",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Mass times box in every bulletin; Wednesday intentions in every bulletin put the 8:30 Mass at St. Patrick.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Wednesday October 28th 7:30AM-(St.J) Holy Hour. 8:30AM-(St.P)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Monday through Friday 8:30AM (SJ) Boonville ... Wednesday 8:30AM (SP) Forestport"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Wednesday 08:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: the Mass times box moves Wednesday's 8:30 Mass to St. Patrick, and every Wednesday's intentions (Oct 7, 14, 21, 28) list only (St.P) at 8:30, with St. J holding a Holy Hour at 7:30. History put a Wednesday 8:30 Mass at St. Joseph in two of four bulletins; that misreads Monday through Friday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Monday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Monday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Monday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Monday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Monday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Tuesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Tuesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Tuesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Tuesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Tuesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Wednesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Wednesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Wednesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Wednesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Wednesday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Thursday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Thursday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Thursday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Thursday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Thursday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Sacrament of Reconciliation Monday-Friday 6PM-6:30PM (SJ)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Friday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Friday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Friday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Friday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Friday 18:00–18:30 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "3:00-3:45PM Saturdays at St Joseph's, Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "3:00-3:45PM Saturdays at St Joseph's, Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "3:00-3:45PM Saturdays at St Joseph's, Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "3:00-3:45PM Saturdays at St Joseph's, Boonville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "3:00-3:45PM Saturdays at St Joseph's, Boonville"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Saturday 15:00–15:45 st-joseph-boonville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-forestport",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "7:15-7:45AM Sunday at St Patrick's, Forestport; confessions from 7:15AM-7:45AM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "7:15-7:45AM Sunday at St Patrick's, Forestport; confessions from 7:15AM-7:45AM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "7:15-7:45AM Sunday at St Patrick's, Forestport; confessions from 7:15AM-7:45AM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "7:15-7:45AM Sunday at St Patrick's, Forestport; confessions from 7:15AM-7:45AM (SP)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "7:15-7:45AM Sunday at St Patrick's, Forestport; confessions from 7:15AM-7:45AM (SP)"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly confession Sunday 07:15–07:45 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly confession Sunday 07:15–07:45 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly confession Sunday 07:15–07:45 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly confession Sunday 07:15–07:45 st-patrick-forestport",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly confession Sunday 07:15–07:45 st-patrick-forestport",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Reconciliation box and Sunday Mass block in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and praying of the Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Monday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Monday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary during the Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Monday 07:15–08:15 st-joseph-boonville  “Includes exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Monday 07:15–08:15 st-joseph-boonville  “Exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Monday 07:15–08:15 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract: a Holy Hour is Adoration, and the bulletin says the Blessed Sacrament is exposed. Printed in the box of every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and praying of the Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Tuesday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Tuesday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary during the Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Tuesday 07:15–08:15 st-joseph-boonville  “Includes exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Tuesday 07:15–08:15 st-joseph-boonville  “Exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Tuesday 07:15–08:15 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract: a Holy Hour is Adoration, and the bulletin says the Blessed Sacrament is exposed. Printed in the box of every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and praying of the Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Wednesday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Wednesday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary during the Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Wednesday 07:15–08:15 st-joseph-boonville  “Includes exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Wednesday 07:15–08:15 st-joseph-boonville  “Exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Wednesday 07:15–08:15 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract: a Holy Hour is Adoration, and the bulletin says the Blessed Sacrament is exposed. Printed in the box of every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and praying of the Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Thursday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Thursday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary during the Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Thursday 07:15–08:15 st-joseph-boonville  “Includes exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Thursday 07:15–08:15 st-joseph-boonville  “Exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Thursday 07:15–08:15 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract: a Holy Hour is Adoration, and the bulletin says the Blessed Sacrament is exposed. Printed in the box of every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and praying of the Rosary"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Holy Hours Monday-Friday 7:15AM-8:15AM (SJ) Exposition and praying of the Rosary during the Holy Hour."
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Friday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Friday 07:15–08:15 st-joseph-boonville  “Exposition and praying of the Rosary during the Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Friday 07:15–08:15 st-joseph-boonville  “Includes exposition and praying of the Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Friday 07:15–08:15 st-joseph-boonville  “Exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Friday 07:15–08:15 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: POLICY, What to extract: a Holy Hour is Adoration, and the bulletin says the Blessed Sacrament is exposed. Printed in the box of every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Holy Hour on Wednesday evenings from 5:30PM-6:30PM at St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7fb8b8a7",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Holy Hour on Wednesday evenings from 5:30PM-6:30PM at St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Holy Hour on Wednesday evenings from 5:30PM-6:30PM at St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1047fd4d",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Holy Hour on Wednesday evenings from 5:30PM-6:30PM at St. Joseph's Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3e04cec6",
+          "page": 2,
+          "said": "Adoration of the Blessed Sacrament Holy Hour on Wednesday evenings from 5:30PM-6:30PM at St. Joseph's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "958948df87d6",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7fb8b8a76143",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-joseph-boonville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly adoration Wednesday 17:30–18:30 st-joseph-boonville  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Adoration box in every bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-boonville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Wednesday October 28th 7:30AM-(St.J) Holy Hour"
+        }
+      ],
+      "rationale": "R37: the Wednesday 7:30 AM Holy Hour in the intentions lies inside the 7:15-8:15 AM Adoration already recorded at St. Joseph for Monday-Friday; keep the longer period.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-snows-otter-lake",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "958948df",
+          "page": 1,
+          "said": "Sunday, November 1th 8:00AM- (St.P) 9:30AM- (St.J)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0d487210",
+          "page": 1,
+          "said": "Sunday, October 11th 11:15AM-(St. M) For Our Parishioners & Their Intentions."
+        },
+        {
+          "source": "website",
+          "url": "https://www.christourhoperc.org/about-us/schedule/",
+          "said": "Sunday, 11:15 AM - St Mary of the Snows (St. Mary of the Snows is open Memorial Day - Columbus Day)"
+        },
+        {
+          "source": "history",
+          "bulletin": "0d4872102891",
+          "said": "weekly mass Sunday 11:15 st-mary-of-the-snows-otter-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1047fd4d9a55",
+          "said": "weekly mass Sunday 11:15 st-mary-of-the-snows-otter-lake",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3e04cec625ea",
+          "said": "weekly mass Sunday 11:15 st-mary-of-the-snows-otter-lake",
+          "page": 1
+        }
+      ],
+      "rationale": "R33: the 11:15 Mass at St. Mary of the Snows is seasonal, Memorial Day to Columbus Day (the parish website; Columbus Day was October 12). It appears in intentions through Oct 11, is absent from the Oct 18 and Oct 25 bulletins, and is never in the Mass times box. Memorial Day and Columbus Day are not fixed dates, so the file cannot express the season, and it is out of season now. The website's weekday times conflict with the bulletins, so it is not used for any time. Update mode will see it return next year.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

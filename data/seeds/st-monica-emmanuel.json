@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-monica-emmanuel",
+  "status": "approved",
+  "as_of": "2026-10-11T16:26:51Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:07Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Seven weekly Masses at St. Monica (Tue/Thu 12:10, Wed/Fri 8:00, Sat 4:00 PM, Sun 10:15 and the 11:30 Emmanuel Church of the Deaf Mass) are printed on the front page and match history. The newest bulletin cancels all Tue-Fri weekday Masses for Oct 13-16 because Fr. Ray is in rehab; the previous three bulletins each cancelled the following week too, so weekday Masses have been suspended a month, though the bulletin still prints them as the regular schedule. Confession is by appointment only and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "044171c0a75092105b35598aabb57de11e0ae680b91e7810fb39e5c4460104c4",
+      "fetched_at": "2026-10-11T16:26:51Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "25123898eae73eb6369ebc954f503f64bd9d2f98983cb9d41fc0e67c6dadcf47",
+      "fetched_at": "2026-10-04T14:08:08Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "dcda615e58ce3c33100a8c00d654d1193278fcebc54e66de83cc5a3dbc20d61d",
+      "fetched_at": "2026-09-27T13:59:09Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "1fa3dc02bbd080d2e2c75bccc442850eec8a72ec319d020151f8f364ac1cf475",
+      "fetched_at": "2026-03-22T02:46:00Z",
+      "published_date": null,
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Daily Masses Tuesday & Thursday: 12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Tuesday 12:10 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Tuesday 12:10 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Tuesday 12:10 st-monica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Wednesday & Friday: 8am"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Wednesday 08:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Wednesday 08:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Wednesday 08:00 st-monica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Daily Masses Tuesday & Thursday: 12:10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Thursday 12:10 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Thursday 12:10 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Thursday 12:10 st-monica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Wednesday & Friday: 8am"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Friday 08:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Friday 08:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Friday 08:00 st-monica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Weekend Masses Saturday at 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Saturday 16:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Saturday 16:00 st-monica",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Saturday 16:00 st-monica",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Sunday at 10:15am + Livestream"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Sunday 10:15 st-monica  “Livestream available”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Sunday 10:15 st-monica  “Livestream”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Sunday 10:15 st-monica  “Livestream available”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page Mass schedule of all three stored bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Emmanuel Church of the Deaf"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 1,
+          "said": "Emmanuel Church of the Deaf: Sunday at 11:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "weekly mass Sunday 11:30 st-monica  “Emmanuel Church of the Deaf”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "25123898eae7",
+          "said": "weekly mass Sunday 11:30 st-monica  “Emmanuel Church of the Deaf”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "dcda615e58ce",
+          "said": "weekly mass Sunday 11:30 st-monica  “Emmanuel Church of the Deaf Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed on the front page; the weekly calendar (p2) lists it as 'ECD Mass, Church', so it is held at St. Monica church and is open to the public.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 2,
+          "said": "Tues. Oct. 13 No Mass or Communion Service; All weekday Masses (Tuesday-Friday) and communion services are canceled for next week"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "specific_date mass 2026-10-13 12:10 st-monica  CANCELLED; “All weekday Masses and communion services are canceled this week”",
+          "page": 2
+        }
+      ],
+      "rationale": "The newest bulletin's Mass intentions list and Fr. Ray update cancel the weekday Mass of this date (after as_of). Similar one-week cancellations appeared in each of the three previous bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 2,
+          "said": "Wed. Oct. 14 No Mass or Communion Service; All weekday Masses (Tuesday-Friday) and communion services are canceled for next week"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "specific_date mass 2026-10-14 08:00 st-monica  CANCELLED; “All weekday Masses and communion services are canceled this week”",
+          "page": 2
+        }
+      ],
+      "rationale": "The newest bulletin's Mass intentions list and Fr. Ray update cancel the weekday Mass of this date (after as_of). Similar one-week cancellations appeared in each of the three previous bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 2,
+          "said": "Thur. Oct. 15 No Mass or Communion Service; All weekday Masses (Tuesday-Friday) and communion services are canceled for next week"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "specific_date mass 2026-10-15 12:10 st-monica  CANCELLED; “All weekday Masses and communion services are canceled this week”",
+          "page": 2
+        }
+      ],
+      "rationale": "The newest bulletin's Mass intentions list and Fr. Ray update cancel the weekday Mass of this date (after as_of). Similar one-week cancellations appeared in each of the three previous bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-monica",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 2,
+          "said": "Fri. Oct. 16 No Mass or Communion Service; All weekday Masses (Tuesday-Friday) and communion services are canceled for next week"
+        },
+        {
+          "source": "history",
+          "bulletin": "044171c0a750",
+          "said": "specific_date mass 2026-10-16 08:00 st-monica  CANCELLED; “All weekday Masses and communion services are canceled this week”",
+          "page": 2
+        }
+      ],
+      "rationale": "The newest bulletin's Mass intentions list and Fr. Ray update cancel the weekday Mass of this date (after as_of). Similar one-week cancellations appeared in each of the three previous bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "044171c0",
+          "page": 2,
+          "said": "Confessions by appointment - call office at (585) 235-3340 to schedule."
+        }
+      ],
+      "rationale": "Confession by appointment only; no definite start time, so the policy skips it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -33,8 +33,13 @@ export interface EventSummary {
   note: string | null;
   /** Weekly slots only: the weeks of the month it keeps; empty for every week. */
   weeks_of_month: WeekOfMonth[];
+  /** Weekly slots only: `weeks_of_month` are the weeks it skips instead. */
+  exclude_weeks: boolean;
   /** Weekly slots only: the part of the year it runs; null for all year. */
   season: Season | null;
+  /** Inclusive absolute dates, distinct from an annually repeating season. */
+  valid_from?: string | null;
+  valid_until?: string | null;
 }
 
 /** The church fields every view reads. */
@@ -81,6 +86,8 @@ export interface RawEvent {
   note: string | null;
   /** Weekly rows only: the weeks of the month it keeps; empty for every week. */
   weeks_of_month: WeekOfMonth[];
+  /** Weekly rows only: `weeks_of_month` are the weeks it skips instead. */
+  exclude_weeks: boolean;
   /** Weekly rows only: the season (see `Season`); all four null for all year. */
   season_start_month: number | null;
   season_start_day: number | null;
@@ -91,4 +98,6 @@ export interface RawEvent {
    * `date` it cancels. Null on every other row.
    */
   cancels_event_id: number | null;
+  valid_from?: string | null;
+  valid_until?: string | null;
 }

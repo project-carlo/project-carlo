@@ -1,0 +1,1613 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-spirit-hamilton",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:16:21Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:25:11Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches. Weekend and weekday Masses, and the first-Friday Adoration at St. Bernard's, are in the newest schedule box. Tuesday 5:30 PM Holy Hour with Confession rotates between three churches by week of the month, taken from the parish website and matched against four bulletin calendars. Oct 27-29 Masses are replaced by Communion Services (cancellations recorded). Open: whether the stale-looking Colgate page's Sunday confession counts.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "0522fd421b84fd81d2efc524f518c855d74d12ea4d1595c5407fe5ff16702ddc",
+      "fetched_at": "2026-10-25T13:16:21Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "31043865e008bc5b2a8d65abc8ed80107de1108f47cd17c8ed48113301c5cd39",
+      "fetched_at": "2026-10-18T12:42:37Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "1dcb940f01265fbdd48f832bc9daf007b298979643dce084543014181f942dd1",
+      "fetched_at": "2026-10-11T16:31:54Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "ae483a3f24a12f5b9c0fa1a85b1acdc1be207f4bb6dcd1f169faf74c41c253b0",
+      "fetched_at": "2026-10-04T14:34:55Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "278cd03ba9f73c6012c34141c988f73d7a11b3d9f988800dc2dcc8ca64523969",
+      "fetched_at": "2026-09-28T00:06:18Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-morrisville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "4:00 pm Vigil Mass at St. Joan of Arc"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "4:00 pm Vigil Mass at St. Joan of Arc"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "4:00 pm Vigil Mass at St. Joan of Arc"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "4:00 pm Vigil Mass at St. Joan of Arc"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "4:00 pm Vigil Mass at St. Joan of Arc"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-morrisville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-morrisville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-morrisville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-morrisville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Saturday 16:00 st-joan-of-arc-morrisville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-oriskany-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "6:00 pm Vigil Mass at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "6:00 pm Vigil Mass at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "6:00 pm Vigil Mass at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "6:00 pm Vigil Mass at St. Joseph's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "6:00 pm Vigil Mass at St. Joseph's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Saturday 18:00 st-joseph-oriskany-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Saturday 18:00 st-joseph-oriskany-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Saturday 18:00 st-joseph-oriskany-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Saturday 18:00 st-joseph-oriskany-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Saturday 18:00 st-joseph-oriskany-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box in all five bulletins read. The pastor's note (p2) says the Presbyterial Council has recommended on St. Joseph's future and a decision will come after the holidays; no change is in effect, so the slot stands (R20).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "8:30 am Sunday Mass at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "8:30 am Sunday Mass at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "8:30 am Sunday Mass at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "8:30 am Sunday Mass at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "8:30 am Sunday Mass at St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Sunday 08:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Sunday 08:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Sunday 08:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Sunday 08:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Sunday 08:30 st-bernard-waterville  “Livestreamed”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box in all five bulletins read. The p5 flyer's 8:00 am for the Children's Liturgy of the Word is not the Mass time (see the excluded slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "11:00 am Sunday Mass at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "11:00 am Sunday Mass at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "11:00 am Sunday Mass at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "11:00 am Sunday Mass at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "11:00 am Sunday Mass at St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Sunday 11:00 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Sunday 11:00 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Sunday 11:00 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Sunday 11:00 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Sunday 11:00 st-mary-hamilton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Mass schedule box in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "colgate-memorial-chapel-hamilton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "20:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "When Colgate is in session"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "8:30 pm Sunday at Colgate Chapel when in session"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "8:30 pm Sunday at Colgate Chapel when in session"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "8:30 pm Sunday at Colgate Chapel when in session"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "8:30 pm Sunday at Colgate Chapel when in session"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "8:30 pm Sunday at Colgate Chapel when in session"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 4,
+          "said": "8:30pm Sun. Oct. 25th-Colgate Chapel People of the Parish; 8:30pm Sun. Nov. 1st-Colgate Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Sunday 20:30 colgate-memorial-chapel-hamilton  “When in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Sunday 20:30 colgate-memorial-chapel-hamilton  “When in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Sunday 20:30 colgate-memorial-chapel-hamilton  “When in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Sunday 20:30 colgate-memorial-chapel-hamilton  “When in session”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Sunday 20:30 colgate-memorial-chapel-hamilton  “When in session”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: schedule box in all five bulletins; the intentions list shows the Oct 25 and Nov 1 Masses, so it is in session now. The Oct 4 issue's 'No Mass, on break' for Oct 11 is a past date (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Monday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Monday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Monday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Monday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Monday 07:30 st-bernard-waterville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: weekday Mass box in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "7:30 am Monday & Wednesday at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Wed. 10/28 7:30am Communion Service-St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Wednesday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Wednesday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Wednesday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Wednesday 07:30 st-bernard-waterville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Wednesday 07:30 st-bernard-waterville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: weekday Mass box in all five bulletins. The newest bulletin replaces the Oct 28 Mass with a Communion Service because the pastor is at a convention (p2); the dated cancellation is recorded and the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Tue. 10/27 7:30am Communion Service-St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Tuesday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Tuesday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Tuesday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Tuesday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Tuesday 07:30 st-mary-hamilton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: weekday Mass box in all five bulletins. The Oct 27 Mass is replaced by a Communion Service (cancellation recorded); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "7:30 am Tuesday & Thursday at St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Thur. 10/29 7:30am Communion Service-St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly mass Thursday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly mass Thursday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly mass Thursday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly mass Thursday 07:30 st-mary-hamilton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly mass Thursday 07:30 st-mary-hamilton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: weekday Mass box in all five bulletins. The Oct 29 Mass is replaced by a Communion Service (cancellation recorded); the weekly slot stands.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Tue. 10/27 7:30am Communion Service-St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 2,
+          "said": "There will be Communion Services Tuesday-Thursday."
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "specific_date mass 2026-10-27 07:30 st-mary-hamilton  CANCELLED; “Communion Service”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Communion Service): the bulletin says a Communion Service takes the place of the Tuesday Mass on a date after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Wed. 10/28 7:30am Communion Service-St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 2,
+          "said": "There will be Communion Services Tuesday-Thursday."
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "specific_date mass 2026-10-28 07:30 st-bernard-waterville  CANCELLED; “Communion Service”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Communion Service): a Communion Service takes the place of the Wednesday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-29",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Thur. 10/29 7:30am Communion Service-St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 2,
+          "said": "There will be Communion Services Tuesday-Thursday."
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "specific_date mass 2026-10-29 07:30 st-mary-hamilton  CANCELLED; “Communion Service”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16, POLICY (Communion Service): a Communion Service takes the place of the Thursday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday 8am-8pm at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday 8am-8pm at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday 8am-8pm at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday 8am-8pm at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "Eucharistic Adoration First Friday 8am-8pm at St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "278cd03b",
+          "page": 1,
+          "said": "Fri. 10/2 8am First Friday All Day Adoration-St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly adoration Friday 08:00–20:00 st-bernard-waterville  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly adoration Friday 08:00–20:00 st-bernard-waterville  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly adoration Friday 08:00–20:00 st-bernard-waterville  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly adoration Friday 08:00–20:00 st-bernard-waterville  “First Friday”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "278cd03ba9f7",
+          "said": "weekly adoration Friday 08:00–20:00 st-bernard-waterville  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R12: named first-Friday service in the schedule box of the newest bulletin; the Sept 27 issue's week held Oct 2 and its calendar shows it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-morrisville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "Holy Hours take place every Tuesday at 5:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "Tue 10/6 5:30pm PCA Holy Hour with Confessions-St. Joan's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Holy Hour; Confessions Tuesdays @ 5:30 pm During the Parish Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly adoration Tuesday 17:30 st-joan-of-arc-morrisville  “PCA Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, R33: the box gives Tuesday 5:30 but no church; the parish website gives the monthly rotation by week, which the calendars bear out. The one-hour end time follows the Holy Hour and the site's 5:30-6:30pm Reconciliation hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "Holy Hours take place every Tuesday at 5:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "Tue 10/13 5:30pm PCA Holy Hour w/ Confessions-St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Tue. 10/27 5:30pm Holy Hour without Confessions-St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly adoration Tuesday 17:30 st-bernard-waterville  “Parish Holy Hour”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly adoration Tuesday 17:30 st-bernard-waterville  “Parish Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, R33: the box gives Tuesday 5:30 but no church; the website rotation puts the 2nd and 4th Tuesdays at St. Bernard's, confirmed by Oct 13 and Oct 27 in the calendars.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Parish Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "Holy Hours take place every Tuesday at 5:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "Tue 10/20 5:30pm PCA Holy Hour w/ Confessions-St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Holy Hour; Confessions Tuesdays @ 5:30 pm During the Parish Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly adoration Tuesday 17:30 st-mary-hamilton  “PCA Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, R33: the box gives Tuesday 5:30 but no church; the website rotation puts the 3rd Tuesday at St. Mary's, confirmed by Oct 20 in the calendar.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-morrisville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "The Sacrament of Reconciliation is offered every Tuesday from 5:30pm–6:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "ae483a3f",
+          "page": 1,
+          "said": "Tue 10/6 5:30pm PCA Holy Hour with Confessions-St. Joan's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Confessions Tuesdays @ 5:30 pm During the Parish Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "ae483a3f24a1",
+          "said": "weekly confession Tuesday 17:30 st-joan-of-arc-morrisville  “During the Parish Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, POLICY Times: Confession is offered during the Parish Holy Hour, so it takes the Holy Hour's hours; the website also gives 5:30pm-6:30pm and the rotation by week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "The Sacrament of Reconciliation is offered every Tuesday from 5:30pm–6:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "1dcb940f",
+          "page": 1,
+          "said": "Tue 10/13 5:30pm PCA Holy Hour w/ Confessions-St. Bernard's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Confessions Tuesdays @ 5:30 pm During the Parish Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "weekly confession Tuesday 17:30 st-bernard-waterville  “During Holy Hour”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "weekly confession Tuesday 17:30 st-bernard-waterville  “During the Parish Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, POLICY Times: Confession during the Holy Hour takes its hours. The newest bulletin's Oct 27 Holy Hour is 'without Confessions' (dated cancellation recorded separately).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-hamilton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/sacraments",
+          "said": "The Sacrament of Reconciliation is offered every Tuesday from 5:30pm–6:30pm : 1st Tuesday: St. Joan’s 2nd Tuesday: St. Bernard’s 3rd Tuesday: St. Mary’s 4th Tuesday: St. Bernard’s",
+          "schedule_check": {
+            "checked_at": "2026-10-27T00:54:00Z",
+            "current_because": "The sacraments page uses the current 'PCA Update' wording (the Parish Cluster Area, as the bulletin's 'PCA Holy Hour'), and its rotation matches the four bulletin Tuesdays read: Oct 6 St. Joan's, Oct 13 St. Bernard's, Oct 20 St. Mary's, Oct 27 St. Bernard's. It says times and places may change and to check the calendar, and the calendars agree.",
+            "bulletin": "0522fd42",
+            "fits_because": "The newest bulletin's schedule box says Confessions Tuesdays @ 5:30 pm during the Parish Holy Hour with no church; its calendar puts the Oct 27 Holy Hour at St. Bernard's (a 4th Tuesday), which fits the site's rotation."
+          }
+        },
+        {
+          "source": "agent",
+          "bulletin": "31043865",
+          "page": 1,
+          "said": "Tue 10/20 5:30pm PCA Holy Hour w/ Confessions-St. Mary's"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Confessions Tuesdays @ 5:30 pm During the Parish Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "weekly confession Tuesday 17:30 st-mary-hamilton  “During Parish Holy Hour”",
+          "page": 1
+        }
+      ],
+      "rationale": "R6, POLICY Times: Confession during the Holy Hour takes its hours; the website puts the 3rd Tuesday at St. Mary's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-bernard-waterville",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour without Confessions"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Tue. 10/27 5:30pm Holy Hour without Confessions-St. Bernard's"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "specific_date confession 2026-10-27 17:30 st-bernard-waterville  CANCELLED; “Holy Hour without Confessions”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R16: the bulletin says the Oct 27 (fourth Tuesday) Holy Hour at St. Bernard's has no Confessions; the Holy Hour itself still takes place.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joan-of-arc-morrisville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-10",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Remembrance Liturgy"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 2,
+          "said": "A remembrance Liturgy will be held, Tuesday, November 10, 6:30 pm at St. Joan of Arc Church. We will read the litany of the deceased ... lighting a candle"
+        },
+        {
+          "source": "history",
+          "bulletin": "0522fd421b84",
+          "said": "specific_date mass 2026-11-10 18:30 st-joan-of-arc-morrisville  “All Souls Remembrance Liturgy”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "31043865e008",
+          "said": "specific_date mass 2026-11-10 18:30 st-joan-of-arc-morrisville  “All Souls Remembrance Liturgy”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "1dcb940f0126",
+          "said": "specific_date mass 2026-11-10 18:30 st-joan-of-arc-morrisville  “All Souls Remembrance Liturgy”",
+          "page": 2
+        }
+      ],
+      "rationale": "R24, R7: a remembrance liturgy (litany and candles) that the bulletin does not call a Mass; history read it as a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 5,
+          "said": "Children's Liturgy of the Word, All Saints Day, Sunday, November 1: St. Bernard's 8:00 am, St. Mary's 11:00 am"
+        }
+      ],
+      "rationale": "R24: a Liturgy of the Word for children is not a Mass; the Sunday Masses stay at 8:30 am (St. Bernard's) and 11:00 am (St. Mary's) per p1 and p4, so the flyer's 8:00 am is not a Mass time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 2,
+          "said": "In November, we will resume the service on the first Wednesdays of the month. (Waterville Residential Care Center, Communion and Anointing service)"
+        }
+      ],
+      "rationale": "R22, R24: a Communion and Anointing service at a care center, which is not a listed church, and not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "0522fd42",
+          "page": 1,
+          "said": "Recitation of the Rosary-St. Bernard's, St. Joan of Arc, St. Joseph's (Sat/Sun); Rosary for Vocations-St. Mary's Wed 7pm"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://holyspiritrcparish.org/colgate-newman",
+          "said": "Beginning Sunday, August 29, Mass is celebrated at 8:30pm on Sunday evenings in Colgate's Memorial Chapel. Confession is available during the half hour before Mass."
+        }
+      ],
+      "rationale": "R6, R29: only the Colgate Newman page says it; no bulletin mentions it. The page looks old: August 29 was a Sunday in 2021, not 2026, so the Confession line may be stale even though the Mass time still matches. Leaning to leave out because a wrong time is worse than a missing one.",
+      "question": "Add Confession 8:00-8:30 PM before the Sunday Colgate Chapel Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Sundays 8:00-8:30 PM",
+          "entry": {
+            "church_slug": "colgate-memorial-chapel-hamilton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "20:00",
+            "end_time": "20:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 8:30 PM Mass"
+          }
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

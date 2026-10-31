@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-heart-of-mary-watervliet",
+  "status": "approved",
+  "as_of": "2026-10-04T14:48:54Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T13:09:10Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T20:34:56Z",
+  "summary": "One church. Weekend Masses (Sat 4:00 PM, Sun 7:30 and 11:00 AM), Tuesday 9:00 AM Mass and 9:30–10:30 Adoration are printed identically in both bulletins and match history. Wednesday/Thursday Masses are 'only if previously scheduled', so the one scheduled (Thu Oct 8, 9 AM) is seeded as dated, not weekly. No confession times are printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "96f468f2bf6b1f52b89be59f25688865b1c33008318d6f38be89b191094a847a",
+      "fetched_at": "2026-10-04T14:48:54Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d739eea371616eea7466253b85c08ad0b23bdd6b611428722048359f6e575db2",
+      "fetched_at": "2026-09-28T21:58:54Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "weekly Saturday 16:00"
+        }
+      ],
+      "rationale": "Printed the same in the page 1 schedule of both bulletins and in the weekend Mass note on page 2; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "weekly Sunday 07:30"
+        }
+      ],
+      "rationale": "Printed the same in the page 1 schedule of both bulletins and in the weekend Mass note on page 2; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 1,
+          "said": "Mass Schedule - Celebration of the Eucharist Saturday Vigil: 4:00 pm ~ Sunday: 7:30 am and 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "weekly Sunday 11:00"
+        }
+      ],
+      "rationale": "Printed the same in the page 1 schedule of both bulletins and in the weekend Mass note on page 2; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "Weekday Schedule Tuesday—9:00 am Mass, Adoration following from 9:30 to 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 2,
+          "said": "The Tuesday Mass will continue to be offered at 9am, followed by the Exposition of the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 1,
+          "said": "Weekday Schedule Tuesday—9:00 am Mass, Adoration following from 9:30 to 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "weekly Tuesday 09:00"
+        }
+      ],
+      "rationale": "The only regular weekday Mass, printed in the weekday schedule of both bulletins and confirmed by the page 2 notice; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "Weekday Schedule Tuesday—9:00 am Mass, Adoration following from 9:30 to 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 1,
+          "said": "Weekday Schedule Tuesday—9:00 am Mass, Adoration following from 9:30 to 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "weekly Tuesday 09:30–10:30 'Following 9:00 AM Mass'"
+        }
+      ],
+      "rationale": "Exposition after the Tuesday Mass, with its own clock times (9:30–10:30) in both bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-08",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 3,
+          "said": "MASS INTENTIONS ... Thurs., October 8--9am Anne & Sophie Sinko, req. by Nephew David"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "**Wednesday & Thursday Masses, only if previously scheduled**"
+        },
+        {
+          "source": "history",
+          "bulletin": "96f468f2bf6b",
+          "said": "specific_date mass 2026-10-08 09:00"
+        }
+      ],
+      "rationale": "Wednesday and Thursday Masses happen only when scheduled; the newest bulletin's intentions schedule one for Thursday, October 8 at 9 AM, so it is a dated Mass (the older bulletin likewise listed one on Thursday, October 1). Not made weekly, since the schedule box says these are only by arrangement.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-heart-of-mary-watervliet",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 1,
+          "said": "**Wednesday & Thursday Masses, only if previously scheduled**"
+        },
+        {
+          "source": "agent",
+          "bulletin": "96f468f2bf6b",
+          "page": 2,
+          "said": "We will no longer offer three weekday Masses, unless previously scheduled."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d739eea37161",
+          "page": 3,
+          "said": "Thurs., October 1—9am Karen Delduce (Bday), req. by Family"
+        }
+      ],
+      "rationale": "Left out as a weekly slot: the parish says Wednesday and Thursday Masses are offered only when previously scheduled, even though Thursday 9 AM intentions appear in both bulletins (Oct 1, Oct 8). The scheduled dates are seeded as dated Masses; update mode promotes one if it keeps recurring.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

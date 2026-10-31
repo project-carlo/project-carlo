@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { api } from "../api";
 import { navigate, seedHref } from "../lib/route";
+import { nextSeedToReview } from "../lib/seeds";
 import { SEED_STATUS_LABEL, SEED_STATUS_STYLE } from "../lib/seedStatus";
-import type { Config, SeedQueueRow } from "../types";
+import type { Config, SeedApprovalResult, SeedQueueRow } from "../types";
 
 interface Props {
   config: Config | null;
@@ -14,6 +15,9 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
   const [seeds, setSeeds] = useState<SeedQueueRow[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState("");
+  const [approving, setApproving] = useState(false);
+  const approvingRef = useRef(false);
+  const [approval, setApproval] = useState<SeedApprovalResult | null>(null);
 
   useEffect(() => {
     api
@@ -25,7 +29,27 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
   const shown = (seeds ?? []).filter((s) => !status || s.status === status);
   const counts = new Map<string, number>();
   for (const s of seeds ?? []) counts.set(s.status, (counts.get(s.status) ?? 0) + 1);
-  const nextToReview = (seeds ?? []).find((s) => s.status === "needs_review" || s.status === "ready");
+  const nextToReview = nextSeedToReview(seeds ?? []);
+  const readyCount = counts.get("ready") ?? 0;
+  const reviewer = labeler.trim();
+
+  const approveAllReady = async () => {
+    if (approvingRef.current || !reviewer || !readyCount) return;
+    approvingRef.current = true;
+    setApproving(true);
+    setError(null);
+    setApproval(null);
+    try {
+      const result = await api.approveReadySeeds(reviewer);
+      setSeeds(result.seeds);
+      setApproval(result);
+    } catch (e) {
+      setError(`Could not approve ready seeds: ${(e as Error).message}`);
+    } finally {
+      approvingRef.current = false;
+      setApproving(false);
+    }
+  };
 
   return (
     <div className="mx-auto flex h-full max-w-6xl flex-col p-6">
@@ -46,6 +70,7 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
           Reviewer
           <input
             value={labeler}
+            disabled={approving}
             onChange={(e) => onLabelerChange(e.target.value)}
             className="rounded border border-slate-300 bg-white px-2 py-1 text-sm"
             placeholder="Your name"
@@ -64,8 +89,17 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
         </select>
         <span className="text-sm text-slate-500">{shown.length} parishes</span>
         <button
-          className="btn-primary ml-auto"
-          disabled={!nextToReview}
+          className="btn ml-auto"
+          disabled={approving || !reviewer || readyCount === 0}
+          onClick={approveAllReady}
+          title={!reviewer ? "Type your name as the reviewer first" : "Approve all ready seeds, regardless of the status filter"}
+          data-testid="approve-ready-seeds"
+        >
+          {approving ? "Approving…" : `Approve all ready (${readyCount})`}
+        </button>
+        <button
+          className="btn-primary"
+          disabled={!nextToReview || approving}
           onClick={() => nextToReview && navigate(seedHref(nextToReview.parish_slug))}
           data-testid="next-seed"
         >
@@ -74,10 +108,30 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
       </div>
 
       {error && <div className="mb-3 rounded border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800">{error}</div>}
+      {approval && (
+        <div className="mb-3 rounded border border-slate-200 bg-white px-3 py-2 text-sm" role="status">
+          <p>
+            Approved {approval.approved.length} {approval.approved.length === 1 ? "seed" : "seeds"}.
+            {approval.failed.length > 0 && ` ${approval.failed.length} could not be approved; open them to fix the problems below.`}
+          </p>
+          {approval.failed.length > 0 && (
+            <ul className="mt-2 list-disc pl-5 text-red-800">
+              {approval.failed.map((failure) => (
+                <li key={failure.parish_slug}>
+                  <a href={seedHref(failure.parish_slug)} className="font-medium underline">
+                    {approval.seeds.find((s) => s.parish_slug === failure.parish_slug)?.parish_name ?? failure.parish_slug}
+                  </a>
+                  : {failure.error}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
       {!seeds && !error && <p className="text-slate-500">Loading…</p>}
       {seeds && seeds.length === 0 && (
         <p className="text-slate-500">
-          No seed files yet. An agent drafts them with the <code>seed-parishes</code> skill (<code>pnpm seed</code>).
+          No seed files yet. The onboarding factory's seed Runs draft them (<code>pnpm factory</code>).
         </p>
       )}
 
@@ -106,6 +160,11 @@ export function SeedsQueuePage({ config, labeler, onLabelerChange }: Props) {
                   <a href={seedHref(s.parish_slug)} className="font-medium text-slate-800 hover:underline">
                     {s.parish_name}
                   </a>
+                  {s.church_list_issues > 0 && (
+                    <span className="ml-2 text-xs text-slate-500" title="Churches or chapels the bulletins name that the church list lacks">
+                      {s.church_list_issues} for the church list
+                    </span>
+                  )}
                 </td>
                 <td className="px-3 py-1.5">
                   <span className={`rounded px-1.5 py-0.5 text-xs font-medium ${SEED_STATUS_STYLE[s.status]}`}>{SEED_STATUS_LABEL[s.status]}</span>

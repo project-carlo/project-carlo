@@ -1,0 +1,147 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-mary-nassau",
+  "content_hash": "e422b99a629dca04765373205afc256d2580fe0df1ff0b43015ffd7e9d91fb77",
+  "source_url": "https://parishes.rcda.org/St.MarysNassau/bulletins/2026/October_04.pdf",
+  "fetched_at": "2026-10-04T14:56:34Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-mary-nassau",
+      "name": "St. Mary's Church",
+      "address": "26 Church St., Nassau, NY 12123"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/e422b99a629dca04765373205afc256d2580fe0df1ff0b43015ffd7e9d91fb77-9dd492f281ea.json",
+    "modified_at": "2026-10-04T15:24:51.604000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-mary-nassau/e422b99a629d.pdf",
+  "pdf_sha256": "acd24b36efda5c1f0bfca056c4a7fb77f05866a1bae8c3d94584918af83d7368",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Followed by the Divine Mercy Chaplet",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Held in the rectory during winter months",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Held in the rectory during winter months",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "10:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Includes St. Anthony Novena; follows 9:30 AM Mass",
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "10:00 AM",
+        "end_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-mary-nassau",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "First Fridays",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 5576,
+    "output_tokens": 638
+  }
+}

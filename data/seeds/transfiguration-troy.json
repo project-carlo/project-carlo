@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "parish_slug": "transfiguration-troy",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:25:21Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-27T01:00:06Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two linked churches, one Sunday Mass at Schaghticoke (9:00) and one Saturday vigil at Speigletown (4:00), printed in the Liturgical Schedule box of all bulletins read; Tuesday and Thursday weekday services are Communion Services, left out. No Confession is printed. Open: whether the Nov. 2 Mass of Remembrance is public.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b5eb1494aec73c070b03c6153c879fb22a8cdcf0cc31eb81154d466add516bf8",
+      "fetched_at": "2026-10-25T13:25:21Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "d344b6900734612bd7bf9c2f91d8dab283a6006d47e8aa7b43c92950dd5b8795",
+      "fetched_at": "2026-10-18T12:54:16Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "4554464c462a5b521b92fe70c92820f01d85d35417ec15dcf9e0a11c58a3bae9",
+      "fetched_at": "2026-10-11T16:39:18Z",
+      "published_date": "2026-10-11",
+      "read": false
+    },
+    {
+      "content_hash": "ec43c584e01e70987b36c8a142424e20bd0209a0b1afa13ed29554830f854576",
+      "fetched_at": "2026-10-04T15:00:04Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b6e883c76ca82b4b8f5f02b363f4c91ef116de2973332aceec1b18672170b741",
+      "fetched_at": "2026-09-28T22:09:45Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-schaghticoke",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Schaghticoke: Sunday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Schaghticoke: Sunday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Schaghticoke: Sunday 9:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 2,
+          "said": "Sunday October 25th | 9:00 AM | Schaghticoke"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5eb1494aec7",
+          "said": "weekly mass Sunday 09:00 transfiguration-schaghticoke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d344b6900734",
+          "said": "weekly mass Sunday 09:00 transfiguration-schaghticoke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4554464c462a",
+          "said": "weekly mass Sunday 09:00 transfiguration-schaghticoke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec43c584e01e",
+          "said": "weekly mass Sunday 09:00 transfiguration-schaghticoke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly mass Sunday 09:00 transfiguration-schaghticoke",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of all three bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-speigletown-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Speigletown: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Speigletown: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Speigletown: Saturday 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 2,
+          "said": "Saturday October 24th | 4:00 PM | Speigletown"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5eb1494aec7",
+          "said": "weekly mass Saturday 16:00 transfiguration-speigletown-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d344b6900734",
+          "said": "weekly mass Saturday 16:00 transfiguration-speigletown-troy  “Livestream available”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4554464c462a",
+          "said": "weekly mass Saturday 16:00 transfiguration-speigletown-troy  “Livestream available”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ec43c584e01e",
+          "said": "weekly mass Saturday 16:00 transfiguration-speigletown-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly mass Saturday 16:00 transfiguration-speigletown-troy  “Livestream available”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Liturgical Schedule box of all three bulletins read, and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-schaghticoke",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Communion Service Tuesday 10:00AM (Schaghticoke); Communion Service Thursday 9:00 AM (Speigletown)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Communion Service Tuesday 10:00AM (Schaghticoke); Communion Service Thursday 9:00 AM (Speigletown)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Communion Service Tuesday 10:00AM (Schaghticoke)"
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly mass Tuesday 10:00 transfiguration-schaghticoke  “Communion Service”",
+          "page": 1
+        }
+      ],
+      "rationale": "POLICY, What to extract: a Communion Service is not a Mass. No Mass is cancelled by it; the weekly Tuesday and Thursday slots are Communion Services only (R25).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-schaghticoke",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "history",
+          "bulletin": "d344b6900734",
+          "said": "weekly confession Sunday 10:00 transfiguration-schaghticoke  “Following 9:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "4554464c462a",
+          "said": "weekly confession Sunday 10:00 transfiguration-schaghticoke  “Following 9:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly confession Sunday 10:00 transfiguration-schaghticoke  “Available after 9:00 AM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b5eb1494aec7",
+          "said": "weekly confession Sunday 09:00 transfiguration-schaghticoke  “Following Mass”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R7: history read a Confession after the Sunday Mass in some bulletins, but no page of the three bulletins read prints Confession; the pages are the Liturgical Schedule box, Mass intentions, news items and ads.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-speigletown-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Following 4:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Liturgical Schedule lists Masses and Communion Services only; no Confession time printed"
+        },
+        {
+          "source": "history",
+          "bulletin": "d344b6900734",
+          "said": "weekly confession Saturday 17:00 transfiguration-speigletown-troy  “Following 4:00 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "4554464c462a",
+          "said": "weekly confession Saturday 17:00 transfiguration-speigletown-troy  “Following 4:00 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly confession Saturday 17:00 transfiguration-speigletown-troy  “Available after 4:00 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b5eb1494aec7",
+          "said": "weekly confession Saturday 16:00 transfiguration-speigletown-troy  “Following Mass”  (a different time)",
+          "page": 5
+        }
+      ],
+      "rationale": "R7: history read a Confession after the Saturday Mass in some bulletins, but no page of the three bulletins read prints Confession.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 2,
+          "said": "November 2nd | 6:30 PM | Speigletown - Mass of Remembrance"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 2,
+          "said": "All families whose loved ones had funeral services this year here at Transfiguration Parish will receive an invitation to our annual Mass of Remembrance on November 2nd at 6:30 PM Speigletown Site."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 2,
+          "said": "Mass of Remembrance on November 2nd at 6:30 PM Speigletown Site"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 2,
+          "said": "Mass of Remembrance on November 2nd at 6:30 PM Speigletown Site"
+        },
+        {
+          "source": "history",
+          "bulletin": "b5eb1494aec7",
+          "said": "specific_date mass 2026-11-02 18:30 transfiguration-speigletown-troy  “Mass of Remembrance”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d344b6900734",
+          "said": "specific_date mass 2026-11-02 18:30 transfiguration-speigletown-troy  “All Souls Day Mass of Remembrance”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4554464c462a",
+          "said": "specific_date mass 2026-11-02 18:30 transfiguration-speigletown-troy  “Mass of Remembrance”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "ec43c584e01e",
+          "said": "specific_date mass 2026-11-02 18:30 transfiguration-speigletown-troy  “Mass of Remembrance”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "specific_date mass 2026-11-02 18:30 transfiguration-speigletown-troy  “All Souls Day Mass of Remembrance”",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: a dated parish-wide All Souls Mass listed with the Mass schedule (not for one person), but the bulletin says families of the year's funerals 'receive an invitation', which could read as by invitation (POLICY leaves out Mass by invitation). Leaning include: it is the parish's annual All Souls Mass and is listed publicly in the Mass schedule.",
+      "question": "Record the Nov. 2 Mass of Remembrance (All Souls) at Speigletown as a public Mass?",
+      "options": [
+        {
+          "label": "Include 2026-11-02 6:30 PM",
+          "entry": {
+            "church_slug": "transfiguration-speigletown-troy",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Mass of Remembrance (All Souls)"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-speigletown-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b5eb1494",
+          "page": 1,
+          "said": "Speigletown: Communion Service Thursday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d344b690",
+          "page": 1,
+          "said": "Speigletown: Communion Service Thursday 9:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ec43c584",
+          "page": 1,
+          "said": "Speigletown: Communion Service Thursday 9:00 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "b6e883c76ca8",
+          "said": "weekly mass Thursday 09:00 transfiguration-speigletown-troy  “Communion Service”",
+          "page": 1
+        }
+      ],
+      "rationale": "POLICY, What to extract: a Communion Service is not a Mass, so the Thursday 9:00 AM service is left out; no Mass is cancelled by it (R9, R25).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

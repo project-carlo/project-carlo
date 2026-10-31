@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-the-apostle-hancock",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:43Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:54:23Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "One-church parish with no open questions. All three bulletins give Saturday 6:30 PM and Sunday 8:00 AM Masses, Saturday Confession after the 6:30 Mass (7:30 PM by POLICY) and Wednesday 6-7 PM Adoration at the church. The first-Friday 9:00 AM Adoration is seen only in the Sep 27 bulletin (R12). The Oct 31 vigil is cancelled and the Nov 1 Sunday Mass moves from 8:00 to 10:30 AM for the Bishop's visit. The parish website could not be read.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "37534ebd6e0d88e82df2e7ed9ff97cec48532e2215e68fdfa8c4af57cf3cb53a",
+      "fetched_at": "2026-10-11T16:32:43Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7848c9b41da57e162c06253fd32eb2caffe7679c66bd13c737b005db55de0827",
+      "fetched_at": "2026-10-04T14:58:29Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4498865861ce61f04a5090893104c69b73b04533e671295703159618567dd60c",
+      "fetched_at": "2026-09-28T22:08:45Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 1,
+          "said": "Mass for The Sabbath: Saturday 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 1,
+          "said": "Mass for The Sabbath: Saturday 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44988658",
+          "page": 1,
+          "said": "Mass for The Sabbath: Saturday 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 10 ... 6:30 P.M. Otello & Louisa Pugliese Conte; SATURDAY, OCTOBER 17 6:30 P.M. Deceased Members of St. Paul's Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "weekly mass Saturday 18:30 st-paul-the-apostle-hancock",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "weekly mass Saturday 18:30 st-paul-the-apostle-hancock",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4498865861ce",
+          "said": "weekly mass Saturday 18:30 st-paul-the-apostle-hancock",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover schedule box of all three bulletins read, and in each week's Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 1,
+          "said": "Mass for The Sabbath: Sunday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 1,
+          "said": "Mass for The Sabbath: Sunday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44988658",
+          "page": 1,
+          "said": "Mass for The Sabbath: Sunday 8:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "SUNDAY, OCTOBER 11 8:00 A.M. Deceased Members of St. Paul's Parish"
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-hancock",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-hancock",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4498865861ce",
+          "said": "weekly mass Sunday 08:00 st-paul-the-apostle-hancock",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover schedule box of all three bulletins read, and in each week's Mass intentions. The 7:30 AM entry on Sundays is a Rosary, not a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "19:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:30 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday after 6:30 PM Mass. Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday after 6:30 PM Mass. Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "44988658",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday after 6:30 PM Mass. Other times by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "weekly confession Saturday 19:30 st-paul-the-apostle-hancock  “Following 6:30 PM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "weekly confession Saturday 19:15 st-paul-the-apostle-hancock  “Following 6:30 PM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4498865861ce",
+          "said": "weekly confession Saturday 19:15 st-paul-the-apostle-hancock  “Following 6:30 PM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R10: the bulletins time it only after the Saturday 6:30 PM vigil, with no clock time, so POLICY puts it an hour after the weekend Mass starts, 7:30 PM. History read 7:15 in two bulletins and 7:30 in one (R8); 7:30 is POLICY's time. 'Other times by appointment' has no time (R24).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 3,
+          "said": "THE WEEK AHEAD: Wednesday ... 6:00 - 7:00 PM Adoration - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 3,
+          "said": "THE WEEK AHEAD: Wednesday ... 6:00 - 7:00 PM Adoration - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44988658",
+          "page": 3,
+          "said": "THE WEEK AHEAD: Wednesday ... 6:00 - 7:00 PM Adoration - Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14 ... 6:00 P.M. Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "weekly adoration Wednesday 18:00–19:00 st-paul-the-apostle-hancock",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "weekly adoration Wednesday 18:00–19:00 st-paul-the-apostle-hancock",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4498865861ce",
+          "said": "weekly adoration Wednesday 18:00–19:00 st-paul-the-apostle-hancock",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: the week-ahead box prints 6:00-7:00 PM at the church in all three bulletins; the Mass intentions give the 6:00 PM start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44988658",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2 The Holy Guardian Angels - 9:00 A.M. Rosary/First Friday Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "4498865861ce",
+          "said": "specific_date adoration 2026-10-02 09:00 st-paul-the-apostle-hancock  “First Friday Adoration”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12: named by its week of the month; the newest bulletin's week (Oct 11-18) holds no first Friday, and neither does the Oct 4 one. The Sep 27 bulletin, whose week holds Oct 2, prints it in the Mass intentions at 9:00 AM with the Rosary. It gives no end time. History read the same 9:00 AM time (a dated entry, which POLICY, Weekly or dated, rule 2 makes weekly).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Bishop's visit"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "There will be no Saturday evening Mass on October 31 at 6:30 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 2,
+          "said": "There will be no Saturday evening Mass on October 31 at 6:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "specific_date mass 2026-10-31 18:30 st-paul-the-apostle-hancock  CANCELLED",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "specific_date mass 2026-10-31 18:30 st-paul-the-apostle-hancock  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says the Saturday vigil of Oct 31 is not held, a one-time change for the Bishop's visit; on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Moved to 10:30 AM for the Bishop's visit"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "the Sunday Mass will be celebrated at 10:30 AM instead of the usual 8:00 AM. Our regular Sunday Mass time of 8:00 AM will resume the following Sunday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 2,
+          "said": "the Sunday Mass will be celebrated at 10:30 AM instead of the usual 8:00 AM. Our regular Sunday Mass time of 8:00 AM will resume the following Sunday."
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "specific_date mass 2026-11-01 08:00 st-paul-the-apostle-hancock  CANCELLED; “Rescheduled for 10:30 AM Bishop's visit”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "specific_date mass 2026-11-01 08:00 st-paul-the-apostle-hancock  CANCELLED",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16 (POLICY, Weekly or dated): a moved event is a cancellation of the original date and time plus a single event at the new one; the bulletin calls it a one-time change.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-the-apostle-hancock",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass with Bishop Mark O'Connell"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "SAVE THE DATE: BISHOP MARK'S VISIT! ... Sunday, November 1, at 10:30 AM, when Bishop Mark O'Connell will visit St. Paul's ... Everyone is invited to a brunch in the Father Rausch Hall."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7848c9b4",
+          "page": 2,
+          "said": "SAVE THE DATE: BISHOP MARK'S VISIT! ... Sunday, November 1, at 10:30 AM, when Bishop Mark O'Connell will visit St. Paul's ... Everyone is invited to a brunch in the Father Rausch Hall."
+        },
+        {
+          "source": "history",
+          "bulletin": "37534ebd6e0d",
+          "said": "specific_date mass 2026-11-01 10:30 st-paul-the-apostle-hancock  “Mass with Bishop Mark O'Connell”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "7848c9b41da5",
+          "said": "specific_date mass 2026-11-01 10:30 st-paul-the-apostle-hancock  “Bishop Mark O’Connell visit”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the bulletin invites all parishioners, families and friends, so it is open to the public; it is at a time outside the weekly schedule, so it is dated (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15 St. Teresa of Jesus 9:00 A.M. Rosary/Communion Service"
+        }
+      ],
+      "rationale": "R25: a Thursday 9:00 AM Communion Service is not a Mass (POLICY, What to extract). No Mass is replaced by it, so there is no cancellation.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37534ebd",
+          "page": 2,
+          "said": "Saturday 6:00 P.M. Rosary; Sunday 7:30 A.M. Rosary; weekdays 9:00 A.M. Rosary (with Miraculous Medal Novena Tuesday, Morning Prayer Wednesday)"
+        }
+      ],
+      "rationale": "R24: the Rosary, Novena and Morning Prayer lines are devotions, not Mass, Confession or Adoration (POLICY, What to extract). No weekday Mass is printed in any of the three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

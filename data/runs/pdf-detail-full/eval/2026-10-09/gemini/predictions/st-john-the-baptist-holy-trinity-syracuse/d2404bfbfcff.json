@@ -1,0 +1,91 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
+  "content_hash": "d2404bfbfcff643bd3e7589b4a72182b8feb11af6a16182cf5068baaab8cf89e",
+  "source_url": "https://www.stjohnthebaptist-holytrinity.com/wp-content/uploads/sites/13/2026/10/october-4.pdf",
+  "fetched_at": "2026-10-04T14:41:38Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "name": "St. John the Baptist and Holy Trinity Church",
+      "address": "406 Court Street, Syracuse, NY 13208"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/d2404bfbfcff643bd3e7589b4a72182b8feb11af6a16182cf5068baaab8cf89e-e70f6de25763.json",
+    "modified_at": "2026-10-04T15:17:09.435000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-john-the-baptist-holy-trinity-syracuse/d2404bfbfcff.pdf",
+  "pdf_sha256": "e6e492104689100bf510a2c32855db3c5e31b76025d0ce95bb410463c23d1cdc",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": "17:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "4:00 PM",
+        "end_time": "5:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 1950,
+    "output_tokens": 408
+  }
+}

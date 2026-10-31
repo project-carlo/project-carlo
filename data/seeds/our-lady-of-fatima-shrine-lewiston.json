@@ -1,0 +1,2696 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-fatima-shrine-lewiston",
+  "status": "approved",
+  "as_of": "2026-10-11T16:28:59Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:11:13Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:29:34Z",
+  "summary": "Weekday, Saturday and Sunday Masses and 'Confessions 15 minutes before every Mass' come from the page 1 schedule box of all three usable bulletins, with Wed/Fri 12-4 chapel Adoration, First Saturday Adoration 12:15, Sunday 3 PM Rosary & Benediction, and a fourth-Sunday Tagalog Mass. Dated: Spanish Mass Oct 11 6:15 PM and Healing Mass Nov 1 6:30 PM. Open: confessions before the two special Masses, and an unlabeled 'To Jesus Through Mary' Saturday 5:30 PM devotion. The 2019 bulletin is a wrong bulletin.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6049701b35aceef5043700aba01902a31a9afb3eb32c911e6434e15c0b44ced2",
+      "fetched_at": "2026-10-11T16:28:59Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c2a4753ece122bb57d92112397d56cc51065df667c03674c49b543ad90fc12e3",
+      "fetched_at": "2026-10-04T14:26:47Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "0336b2ad7c493376f03bc59220a3c231f404d4a3d3ad1d87bedf740080778359",
+      "fetched_at": "2026-09-27T14:04:31Z",
+      "published_date": "2026-09-27",
+      "read": true
+    },
+    {
+      "content_hash": "da7cbd744020b4a954d9a54ec8d1ebfe033ad79c6f933dd752fd0a07cf47764e",
+      "fetched_at": "2026-09-26T18:54:19Z",
+      "published_date": "2019-05-15",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Monday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Monday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Monday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Monday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Monday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Monday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Tuesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Tuesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Tuesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Tuesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Tuesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Tuesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Wednesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Wednesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Wednesday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Wednesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Wednesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Wednesday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Thursday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Thursday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Thursday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Thursday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Thursday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Thursday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Friday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Friday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Friday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "MON thru FRI: 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Friday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Friday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Friday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Saturday 08:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Saturday 08:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Saturday 08:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Saturday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Saturday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Saturday 11:30 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SATURDAY: 8:00am, 11:30am & 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Saturday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Saturday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Saturday 16:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "specific_date mass 2026-10-03 16:00 our-lady-of-fatima-shrine-lewiston  “Polish Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Sunday 09:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Sunday 09:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Sunday 09:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Sunday 12:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Sunday 12:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Sunday 12:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "SUNDAY: 9:00am, 12:00pm & 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Sunday 17:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Sunday 17:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Sunday 17:00 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the MASSES box on page 1 of all three usable bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Monday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Monday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Monday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Monday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Monday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Monday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Tuesday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Tuesday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Tuesday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Tuesday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Tuesday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Tuesday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Wednesday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Wednesday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Wednesday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Wednesday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Wednesday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Wednesday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Thursday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Thursday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Thursday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Thursday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Thursday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Thursday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Friday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Friday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Friday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Friday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Friday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Friday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Saturday 07:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Saturday 07:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Saturday 07:45–08:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "11:15",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Saturday 11:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Saturday 11:15 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Saturday 11:15–11:30 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Saturday 15:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Saturday 15:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Saturday 15:45–16:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Sunday 08:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Sunday 08:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Sunday 08:45–09:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Sunday 11:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Sunday 11:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Sunday 11:45–12:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:45",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Sunday 16:45 our-lady-of-fatima-shrine-lewiston  “15 minutes before Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Sunday 16:45 our-lady-of-fatima-shrine-lewiston",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly confession Sunday 16:45–17:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before every Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Relative to the Mass with no clock time, so 15 minutes before it, ending when the Mass starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 2,
+          "said": "Wed. & Fri. 12:00 noon - 4:00pm in the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly adoration Wednesday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly adoration Wednesday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly adoration Wednesday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed twice in the newest bulletin; the chapel is part of the shrine.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Blessed Sacrament Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "Wednesdays & Fridays 12 - 4pm, Blessed Sacrament Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 2,
+          "said": "Wed. & Fri. 12:00 noon - 4:00pm in the Blessed Sacrament Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly adoration Friday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly adoration Friday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly adoration Friday 12:00–16:00 our-lady-of-fatima-shrine-lewiston  “Blessed Sacrament Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed twice in the newest bulletin; the chapel is part of the shrine.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "FIRST SATURDAY Rosary at 11:00 & 3:30 and Adoration 12:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "FIRST SATURDAY Rosary at 11:00 & 3:30 and Adoration 12:15"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "FIRST SATURDAY Rosary at 11:00 & 3:30 and Adoration 12:15"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly adoration Saturday 12:15 our-lady-of-fatima-shrine-lewiston  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly adoration Saturday 12:15 our-lady-of-fatima-shrine-lewiston  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly adoration Saturday 12:15 our-lady-of-fatima-shrine-lewiston  “Every First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "First Saturday adoration, weeks-of-the-month slot so weekly with weeks_of_month first; no end time printed. The First Saturday rosaries are not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "ROSARY & BENEDICTION Every Sunday at 3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "ROSARY & BENEDICTION Every Sunday at 3pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "ROSARY & BENEDICTION Every Sunday at 3pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly adoration Sunday 15:00 our-lady-of-fatima-shrine-lewiston  “Rosary & Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly adoration Sunday 15:00 our-lady-of-fatima-shrine-lewiston  “Rosary & Benediction”",
+          "page": 1
+        }
+      ],
+      "rationale": "Benediction implies Adoration under the policy; recorded as one Adoration event noted Benediction. Printed in all three bulletins (newest history missed it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Tagalog"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "Tagalog Mass @1:30 pm Every Fourth Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "Tagalog Mass @1:30 pm Every Fourth Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "Tagalog Mass @1:30 pm Every Fourth Sunday"
+        },
+        {
+          "source": "website",
+          "url": "https://fatimashrine.com",
+          "said": "Tagalog Mass listed for Oct 25, 1:30-5:00 pm (the fourth Sunday of October)"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly mass Sunday 13:30 our-lady-of-fatima-shrine-lewiston  “Tagalog; Every fourth Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly mass Sunday 13:30 our-lady-of-fatima-shrine-lewiston  “Tagalog; every fourth Sunday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0336b2ad7c49",
+          "said": "weekly mass Sunday 13:30 our-lady-of-fatima-shrine-lewiston  “Every Fourth Sunday; Tagalog Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed as a standing 'Every Fourth Sunday' Mass in all bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:15",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass; Tagalog Mass @1:30 pm Every Fourth Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "weekly confession Sunday 13:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Tagalog Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "weekly confession Sunday 13:15 our-lady-of-fatima-shrine-lewiston  “Every fourth Sunday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Tagalog Mass is a regular Mass in the same schedule box, so the 15-minutes-before-every-Mass rule applies.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-11",
+        "start_time": "18:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish Mass, in the Basilica after 5:30 PM Rosary"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "Spanish Mass Sunday, October 11: 5:30 pm Rosary in the Blessed Sacrament Chapel followed by a 6:15 Mass in the Basilica."
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "specific_date mass 2026-10-11 18:15 our-lady-of-fatima-shrine-lewiston  “Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "specific_date mass 2026-10-11 18:15 our-lady-of-fatima-shrine-lewiston  “Spanish Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Dated, on the bulletin's own issue date (as_of is that day); printed only with that date, not as a standing slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-11",
+        "start_time": "18:00",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the Spanish Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "CONFESSIONS 15 minutes before every Mass; Spanish Mass Sunday, October 11 ... 6:15 Mass in the Basilica."
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "specific_date confession 2026-10-11 18:00 our-lady-of-fatima-shrine-lewiston  “15 minutes before Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c2a4753ece12",
+          "said": "specific_date confession 2026-10-11 18:00 our-lady-of-fatima-shrine-lewiston  “Before Spanish Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "History recorded a 6:00 PM confession before this Spanish Mass, but the bulletin does not print one for it; it would be inferred from the general 'every Mass' line.",
+      "question": "Add a 6:00-6:15 PM confession on Oct 11 before the Spanish Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "6:00-6:15 PM Oct 11",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-shrine-lewiston",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-11",
+            "start_time": "18:00",
+            "end_time": "18:15",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "before the Spanish Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": "dropped",
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:55Z"
+      }
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Healing Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 6,
+          "said": "HEALING MASS November 1st with Fr. Bill Quilivan @ 6:30 pm in the Basilica"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "specific_date mass 2026-11-01 18:30 our-lady-of-fatima-shrine-lewiston  “Healing Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "Dated Mass in the Basilica. A Healing Mass was also held Oct 4 at 6:30 PM, so it may be monthly, but the bulletin gives only this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "18:15",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "before the Healing Mass"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 6,
+          "said": "HEALING MASS November 1st ... @ 6:30 pm in the Basilica"
+        },
+        {
+          "source": "history",
+          "bulletin": "6049701b35ac",
+          "said": "specific_date confession 2026-11-01 18:15 our-lady-of-fatima-shrine-lewiston  “15 minutes before Healing Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "History recorded a 6:15 PM confession before the Healing Mass, but the bulletin prints none for it.",
+      "question": "Add a 6:15-6:30 PM confession on Nov 1 before the Healing Mass?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "6:15-6:30 PM Nov 1",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-shrine-lewiston",
+            "event_type": "confession",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "18:15",
+            "end_time": "18:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "before the Healing Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:29:05Z"
+      }
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-fatima-shrine-lewiston",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "To Jesus Through Mary, in the Basilica"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6049701b",
+          "page": 1,
+          "said": "To Jesus Through Mary, Saturday Evenings 5:30 pm in the Basilica (with a monstrance icon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c2a4753e",
+          "page": 1,
+          "said": "To Jesus Through Mary, Saturday Evenings 5:30 pm in the Basilica (with a monstrance icon)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "0336b2ad",
+          "page": 1,
+          "said": "To Jesus Through Mary, Saturday Evenings 5:30 pm in the Basilica (with a monstrance icon)"
+        },
+        {
+          "source": "website",
+          "url": "https://fatimashrine.com",
+          "said": "Home page does not mention it; Adoration not listed there."
+        }
+      ],
+      "rationale": "The Upcoming Events box prints this devotion with a monstrance icon but never says whether it is Adoration, a Rosary or a Mass; it is not in the schedule box. Not enough to record a type.",
+      "question": "Is 'To Jesus Through Mary', Saturdays 5:30 PM in the Basilica, an Adoration?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Saturday 5:30 PM Adoration",
+          "entry": {
+            "church_slug": "our-lady-of-fatima-shrine-lewiston",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "To Jesus Through Mary, in the Basilica"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:29:11Z"
+      }
+    }
+  ]
+}

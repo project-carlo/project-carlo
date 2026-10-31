@@ -1,0 +1,107 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-bartholomew-norwich",
+  "content_hash": "51e3f0be0a20683cc4985ad807f85edc7c8be44dc0f1d25b926d47c30a0da3e6",
+  "source_url": "https://designrr.s3.amazonaws.com/kathy_at_thebestva.com_52279/kathythebestvacom_04October20261790696596.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 14892,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1201,
+    "reasoning_tokens": 743
+  },
+  "seconds": 11.613,
+  "response_id": "resp_02688c2bd11614ba016ac91078d9d887d29b40048c6af4bbe5",
+  "events": [
+    {
+      "church_slug": "st-bartholomew-norwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": {
+        "start_month": 10,
+        "start_day": null,
+        "end_month": 3,
+        "end_day": null
+      },
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bartholomew-norwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bartholomew-norwich",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-bartholomew-norwich",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "15:15",
+      "end_time": "15:45",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "3:15 PM",
+        "end_time": "3:45 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "35400bd1d986ffa46bd66d161344457667ebe119cebd3960d392803a076218fc"
+}

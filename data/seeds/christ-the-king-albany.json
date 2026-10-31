@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-the-king-albany",
+  "status": "approved",
+  "as_of": "2026-10-11T16:37:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T22:02:21Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Single-church parish with a clear schedule box on page 1 of the Oct 11 bulletin (Sat 4 PM; Sun 8 and 11 AM; Tue-Thu 9 AM Mass; Sat 3 PM Confession; Tuesday Adoration). The two older bulletins are worship aids with no schedule. Oct 13 has no Daily Mass (recorded as a cancellation). One question is open: whether Tuesday Adoration starts at 9:30 or 9:45.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4cc5dfaf11f6a13bc83d37063b0f179fd0dbf4a1a49af81b7ba529d2dbe7786a",
+      "fetched_at": "2026-10-11T16:37:14Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7b79816a32164799592f8658c8d720f5b5acfb1badec7a869b518458eca13f8e",
+      "fetched_at": "2026-10-04T14:46:43Z",
+      "published_date": null,
+      "read": true
+    },
+    {
+      "content_hash": "a02a10e4b09f8c9da2d19d7f1e35a5c7084be74eea268a393e10e11fab32203f",
+      "fetched_at": "2026-09-28T21:56:57Z",
+      "published_date": "2026-10-04",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Weekend Mass: Saturday | 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 3,
+          "said": "Saturday, October 17 | 4 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Saturday 16:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box on page 1 and in the Mass intentions; the website agrees. The two older bulletins are worship aids with no schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Sunday | 8:00am, 11:00am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Sunday 08:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box and in the calendar; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "ASL interpreted and livestreamed"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Sunday | 8:00am, 11:00am; Livestreamed & ASL interpreted at 11am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Sunday 11:00 christ-the-king-albany  “ASL interpreted and livestreamed”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box; the note is the box's own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturday | 3:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly confession Saturday 15:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box with no end time; the other Confession line there, 'By Appointment', has no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Daily Mass 9:00am Tuesday, Wednesday, Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 3,
+          "said": "Wednesday, October 14 | 9 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Wednesday 09:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Oct 14 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Daily Mass 9:00am Tuesday, Wednesday, Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 3,
+          "said": "Thursday, October 15 | 9 am"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Thursday 09:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and the Oct 15 intentions; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Daily Mass 9:00am Tuesday, Wednesday, Thursday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 3,
+          "said": "Tuesday, October 13 No Daily Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/mass-times",
+          "said": "Saturday | 4:00pm; Sunday | 8:00am, 11:00am; Tuesday - Wednesday - Thursday | 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly mass Tuesday 09:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R18: the schedule box confirms the weekly Tuesday Mass; this week's listing skips it with 'No Daily Mass' (see the dated cancellation).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 3,
+          "said": "Tuesday, October 13 No Daily Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13 No Daily Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "specific_date mass 2026-10-13 09:00 christ-the-king-albany  CANCELLED; “No Daily Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R16, R18: the bulletin says there is no Mass on Oct 13, a date after as_of (2026-10-11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday | 9:30am - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13: 9:45am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/",
+          "said": "Adoration of the Blessed Sacrament occurs every Tuesday from 9:30am-8:00pm at Christ the King."
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly adoration Tuesday 09:30–20:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "R28: the page 1 schedule box gives Tuesday 9:30 AM - 8:00 PM, and the website's news item agrees; the calendar on page 4 lists Adoration at 9:45 AM on Oct 13, the day with no Daily Mass. The older bulletins show nothing. Leaning toward the box's 9:30.\n\nReview 2026-10-22: Keep the regular Tuesday 9:30 AM–8 PM slot. Treat Oct 13’s 9:45 AM calendar start as a dated exception, rather than changing every Tuesday. That exception has passed.",
+      "question": "Tuesday Adoration: start at 9:30 AM or 9:45 AM?",
+      "options": [
+        {
+          "label": "Tuesdays 9:30 AM - 8:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "christ-the-king-albany",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Tuesdays 9:45 AM - 8:00 PM",
+          "entry": {
+            "church_slug": "christ-the-king-albany",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:45",
+            "end_time": "20:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ... Other | ByAppointment"
+        }
+      ],
+      "rationale": "R26: Confession by appointment has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Rosary Wednesday | 6:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Wednesday, October 14: 6:15pm Rosary"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Sunday, October 18 at 5 pm at the Cathedral of the Immaculate Conception. Health Care Professionals and Respect Life Month Mass with Bishop Mark"
+        }
+      ],
+      "rationale": "R22: a Mass at the Cathedral, another church (not in this parish).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-01",
+        "start_time": "13:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 5,
+          "said": "Sunday, November 1 at 12 noon, immediately following the 11 am Mass ... tailgate luncheon ... followed by Eucharistic Adoration"
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "specific_date adoration 2026-11-01 13:00 christ-the-king-albany  “Following 'To the Heights: Tailgate' event”",
+          "page": 5
+        }
+      ],
+      "rationale": "R24, R9: the bulletin gives Adoration only as coming after a noon luncheon, with no start time or length. History recorded it as 13:00, a time worked out by the extractor.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:30",
+        "end_time": "20:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration starts at 9:45 AM on October 13"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday | 9:30am - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13: 9:45am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/",
+          "said": "Adoration of the Blessed Sacrament occurs every Tuesday from 9:30am-8:00pm at Christ the King."
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly adoration Tuesday 09:30–20:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "Reviewer decision E1, 2026-10-22: retain Tuesday 9:30 AM as the regular schedule and apply the calendar’s 9:45 AM start only on October 13. Represent the reviewed move as a cancellation of 9:30 and a dated 9:45 occurrence.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "christ-the-king-albany",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "09:45",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration starts at 9:45 AM on October 13"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 1,
+          "said": "Eucharistic Adoration Tuesday | 9:30am - 8:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4cc5dfaf11f6",
+          "page": 4,
+          "said": "Tuesday, October 13: 9:45am Adoration"
+        },
+        {
+          "source": "website",
+          "url": "https://www.ctkparishny.org/",
+          "said": "Adoration of the Blessed Sacrament occurs every Tuesday from 9:30am-8:00pm at Christ the King."
+        },
+        {
+          "source": "history",
+          "bulletin": "4cc5dfaf11f6",
+          "said": "weekly adoration Tuesday 09:30–20:00 christ-the-king-albany",
+          "page": 1
+        }
+      ],
+      "rationale": "Reviewer decision E1, 2026-10-22: retain Tuesday 9:30 AM as the regular schedule and apply the calendar’s 9:45 AM start only on October 13. Represent the reviewed move as a cancellation of 9:30 and a dated 9:45 occurrence.",
+      "question": null,
+      "options": null,
+      "answer": {
+        "choice": "edited",
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    }
+  ]
+}

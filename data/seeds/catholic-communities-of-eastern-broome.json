@@ -1,0 +1,615 @@
+{
+  "schema_version": 1,
+  "parish_slug": "catholic-communities-of-eastern-broome",
+  "status": "ready",
+  "as_of": "2026-10-11T16:29:28Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:16:39Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches, each with one Sunday Mass (St. Mary's Kirkwood also Saturday 4:00 pm), listed on the front page of all three bulletins read. Also settled: Wednesday 12:10 pm Mass and 1st/3rd Saturday Reconciliation at St. Mary's, Tuesday noon Open Adoration at St. Joseph's Deposit, and a first-Wednesday 5:00 pm Holy Hour that the bulletin places in the Deposit box (the newest issue's week holds no first Wednesday, so it is cited from the Oct 4 issue). The newest bulletin is Oct 11. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "adc737fb2dd726ab340164d2f97c5f3a58e1d0e44b7d49b4df8b1a1f735e4354",
+      "fetched_at": "2026-10-11T16:29:28Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "bb9e1e34a00a37c9f9ece81a6e5c6a5216b0de8735ab21c365eedc588823bccb",
+      "fetched_at": "2026-10-04T14:33:06Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7c31810d8cfab0207392fef308e45b3d45fcca2711c2375fe729e92c35df0e53",
+      "fetched_at": "2026-09-28T00:04:32Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-kirkwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: Saturday 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: Saturday 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: Saturday 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Saturday 16:00 st-mary-kirkwood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Saturday 16:00 st-mary-kirkwood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Saturday 16:00 st-mary-kirkwood",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: front-page Mass time block in all three bulletins read; Mass intentions list Saturday 4:00 pm St. Mary's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-kirkwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: ... Sunday 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: ... Sunday 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 1,
+          "said": "St. Mary's Kirkwood Mass Times: ... Sunday 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Sunday 10:30 st-mary-kirkwood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Sunday 10:30 st-mary-kirkwood",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Sunday 10:30 st-mary-kirkwood",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: front-page Mass time block in all three bulletins read; Mass intentions list Sunday 10:30 am St. Mary's.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-sanitaria-springs",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 1,
+          "said": "St. Joseph's Sanitaria Springs Mass Time: Sunday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 1,
+          "said": "St. Joseph's Sanitaria Springs Mass Time: Sunday 8:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 1,
+          "said": "St. Joseph's Sanitaria Springs Mass Time: Sunday 8:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Sunday 08:30 st-joseph-sanitaria-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Sunday 08:30 st-joseph-sanitaria-springs",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Sunday 08:30 st-joseph-sanitaria-springs",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: front-page Mass time block in all three bulletins read; Mass intentions list 8:30 am St. Joseph's, SS.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-lourdes-windsor",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 1,
+          "said": "Our Lady of Lourdes Mass Time: Sunday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 1,
+          "said": "Our Lady of Lourdes Mass Time: Sunday 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 1,
+          "said": "Our Lady of Lourdes Mass Time: Sunday 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Sunday 09:00 our-lady-of-lourdes-windsor",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Sunday 09:00 our-lady-of-lourdes-windsor",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Sunday 09:00 our-lady-of-lourdes-windsor",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: front-page Mass time block in all three bulletins read; Mass intentions list 9:00 am OLOL.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-deposit",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 1,
+          "said": "St. Joseph's Deposit Mass Time: Sunday 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 1,
+          "said": "St. Joseph's Deposit Mass Time: Sunday 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 1,
+          "said": "St. Joseph's Deposit Mass Time: Sunday 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Sunday 11:00 st-joseph-deposit",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Sunday 11:00 st-joseph-deposit",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Sunday 11:00 st-joseph-deposit",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: front-page Mass time block in all three bulletins read; Mass intentions list 11:00 am St. Joseph's, Deposit.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-kirkwood",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 4,
+          "said": "Wednesday, October 14, 2026 12:10 pm -St. Mary's-Shirley Pike requested by Patrick & Rebecca Grace"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 3,
+          "said": "WEDNESDAY DAILY MASS 12:10 PM-ST. MARY'S, KIRKWOOD. Please join us every Wednesday at 12:10 pm for daily Mass at St. Mary's, Kirkwood. It will continue every Wednesday unless there is a funeral."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 3,
+          "said": "WEDNESDAY DAILY MASS 12:10 PM-ST. MARY'S, KIRKWOOD. Please join us every Wednesday at 12:10 pm for daily Mass at St. Mary's, Kirkwood. It will continue every Wednesday unless there is a funeral."
+        },
+        {
+          "source": "website",
+          "url": "https://www.broomecatholics.org/",
+          "said": "Wednesday daily Mass 12:10 pm St. Mary's, Kirkwood. Please join us every Wednesday at 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly mass Wednesday 12:10 st-mary-kirkwood",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly mass Wednesday 12:10 st-mary-kirkwood",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly mass Wednesday 12:10 st-mary-kirkwood",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: the newest bulletin lists the Oct 14 Mass in its intentions (page 4). The two earlier bulletins announce the weekly Wednesday Mass in a box on page 3 ('every Wednesday unless there is a funeral'). The Sep 30 Communion Service in the Sep 27 issue is before as_of (R16, R17). The website homepage carries the same notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-kirkwood",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first",
+          "third"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 6,
+          "said": "Reconciliation: The Sacrament is available on the 1st and 3rd Saturday of every month at St. Mary's from 3:30 pm - 4 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 6,
+          "said": "Reconciliation: The Sacrament is available on the 1st and 3rd Saturday of every month at St. Mary's from 3:30 pm - 4 pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 6,
+          "said": "Reconciliation: The Sacrament is available on the 1st and 3rd Saturday of every month at St. Mary's from 3:30 pm - 4 pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-kirkwood  “1st and 3rd Saturday of the month”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-kirkwood  “1st and 3rd Saturday of the month”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly confession Saturday 15:30–16:00 st-mary-kirkwood  “1st and 3rd Saturday of the month”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 2: named 1st and 3rd Saturdays, so weekly with weeks_of_month first and third. The newest bulletin's week holds Saturday Oct 17, a third Saturday, and page 6 prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-deposit",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Open Adoration"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 5,
+          "said": "ST. JOSEPH'S DEPOSIT OPEN ADORATION COME JOIN US ON TUESDAY'S FOR SILENT TIME WITH GOD NOON-1 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 5,
+          "said": "ST. JOSEPH'S DEPOSIT OPEN ADORATION COME JOIN US ON TUESDAY'S FOR SILENT TIME WITH GOD NOON-1 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 5,
+          "said": "ST. JOSEPH'S DEPOSIT OPEN ADORATION COME JOIN US ON TUESDAY'S FOR SILENT TIME WITH GOD NOON-1 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.broomecatholics.org/",
+          "said": "ST. JOSEPH'S, DEPOSIT OPEN ADORATION Come join us at St. Joseph's on Tuesday's for silent time with God from Noon-1 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "adc737fb2dd7",
+          "said": "weekly adoration Tuesday 12:00–13:00 st-joseph-deposit  “Silent time with God”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly adoration Tuesday 12:00–13:00 st-joseph-deposit",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "weekly adoration Tuesday 12:00–13:00 st-joseph-deposit  “Silent time with God”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: weekly Tuesday Open Adoration box, under the St. Joseph's Deposit heading, in all three bulletins (page 5 in the newest; page 4-5 in the older). The parish website homepage says the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-deposit",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "bb9e1e34",
+          "page": 5,
+          "said": "HOLY HOUR 1ST WEDNESDAY OF THE MONTH OCTOBER 7TH-5:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c31810d",
+          "page": 4,
+          "said": "HOLY HOUR 1ST WEDNESDAY OF THE MONTH OCTOBER 7TH-5:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "bb9e1e34a00a",
+          "said": "weekly adoration Wednesday 17:00 st-joseph-deposit  “1st Wednesday of the month; Holy Hour”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7c31810d8cfa",
+          "said": "specific_date adoration 2026-10-07 17:00 st-joseph-deposit  “Holy Hour”",
+          "page": 4
+        }
+      ],
+      "rationale": "R12, POLICY Weekly or dated rule 2 and Holy Hour is Adoration: named 1st Wednesday of the month, so weekly with weeks_of_month first. The newest bulletin's week (Oct 11-18) holds no first Wednesday and does not print it. The Oct 4 issue's week holds Wed Oct 7, so it is cited. Location: the Holy Hour sits inside the bordered St. Joseph's Deposit box, under the Open Adoration notice (R23, church-specific heading), and history read it as Deposit. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "adc737fb",
+          "page": 5,
+          "said": "THE RELIC OF SAINT BERNADETTE will be at Saints John and Andrew Church, 1263 Vestal Ave., Binghamton, NY on Friday, October 23rd, 2026. 9:00 am-Mass"
+        }
+      ],
+      "rationale": "R22: Mass at Saints John and Andrew Church in Binghamton, a church of another parish, not one of this parish's four churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

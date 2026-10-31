@@ -51,6 +51,11 @@ export interface LabelEvent {
   end_time: string | null;
   cancelled: boolean;
   weeks_of_month: WeekOfMonth[];
+  /**
+   * The listed weeks are the ones skipped: "every Sunday except the last" is
+   * `["last"]` excluded. Labels and seeds saved before this existed lack it.
+   */
+  exclude_weeks?: boolean;
   season: Season | null;
   page_number: number | null;
   note: string | null;
@@ -75,10 +80,11 @@ export interface Label {
 }
 
 /** A ground-truth row being edited: a label event that may still be incomplete. */
-export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time"> {
+export interface EditorRow extends Omit<LabelEvent, "church_slug" | "start_time" | "exclude_weeks"> {
   id: string;
   church_slug: string;
   start_time: string;
+  exclude_weeks: boolean;
   /** The Gemini row this came from, while this browser remembers it. */
   gemini_id?: string;
   /**
@@ -100,6 +106,7 @@ export interface GeminiRow {
   end_time: string | null;
   cancelled: boolean;
   weeks_of_month: WeekOfMonth[];
+  exclude_weeks: boolean;
   season: Season | null;
   page_number: number | null;
   note: string | null;
@@ -206,11 +213,18 @@ export interface SeedBulletin {
 }
 
 export interface SeedSource {
-  /** "agent", "history", or the id of one of the file's calls. */
+  /** "agent", "history", "website" (with its `url`), or the id of one of the file's calls. */
   source: string;
   bulletin?: string | null;
   page?: number | null;
+  url?: string | null;
   said: string;
+  schedule_check?: {
+    checked_at: string;
+    current_because: string;
+    bulletin: string;
+    fits_because: string;
+  };
 }
 
 export interface SeedOption {
@@ -236,6 +250,21 @@ export interface SeedSlot {
   question: string | null;
   options: SeedOption[] | null;
   answer: SeedAnswer | null;
+  /** Open questions sharing a group are one question, answered together. */
+  group?: string | null;
+  /** The agent's reason for retaining a weekly service after one silent issue. */
+  weekly_omission?: {
+    bulletin: string;
+    reason: string;
+  };
+}
+
+/** A church or chapel the bulletins name that the church list lacks or can't place. */
+export interface SeedChurchIssue {
+  church: string;
+  said: string;
+  bulletin?: string | null;
+  page?: number | null;
 }
 
 export interface SeedCall {
@@ -266,6 +295,7 @@ export interface SeedFile {
   bulletins: SeedBulletin[];
   calls: SeedCall[];
   slots: SeedSlot[];
+  church_list_issues?: SeedChurchIssue[];
 }
 
 export interface SeedQueueRow {
@@ -281,6 +311,7 @@ export interface SeedQueueRow {
   reviewer: string | null;
   summary: string;
   blocked_reason: string | null;
+  church_list_issues: number;
   problem: string | null;
   loaded: boolean;
 }
@@ -293,4 +324,10 @@ export interface SeedDetail {
   bulletins_in_db: string[];
   problems: string[];
   loaded: boolean;
+}
+
+export interface SeedApprovalResult {
+  approved: string[];
+  failed: { parish_slug: string; error: string }[];
+  seeds: SeedQueueRow[];
 }

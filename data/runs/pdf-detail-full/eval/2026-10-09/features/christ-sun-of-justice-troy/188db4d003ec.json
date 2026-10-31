@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-sun-of-justice-troy",
+  "content_hash": "188db4d003ec67065ffac5f34f7ceefdf5b73016667c8e8deaa547b7c047f9da",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/christ-sun-of-justice-troy/188db4d003ec.pdf",
+  "pdf_sha256": "2c0a45b9c526950da8ed9f7b1517cf06b9403a297628dcd914617d425f67854a",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 2,
+    "analyzed_page_count": 2,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 2878,
+        "image_count": 3,
+        "image_coverage_fraction_estimate": 0.01180161647992531,
+        "max_displayed_image_area_fraction_estimate": 0.0102890114379085,
+        "width_pt": 612.0,
+        "height_pt": 1008.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 2274,
+        "native_char_height_p10_pt": 6.552001953125,
+        "native_char_height_median_pt": 8.10003662109375,
+        "native_char_height_p10_low_detail_px": 3.328000992063492,
+        "render_width_px": 850,
+        "render_height_px": 1400,
+        "ink_density": 0.10434117647058823,
+        "projection_line_count": 64,
+        "line_pitch_px": 19.5,
+        "line_pitch_low_detail_px": 7.131428571428572,
+        "connected_component_count": 2172,
+        "text_like_component_count": 2160,
+        "text_like_height_p10_px": 8.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 3.2914285714285714
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 2915,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.00822920313958917,
+        "max_displayed_image_area_fraction_estimate": 0.00822920313958917,
+        "width_pt": 612.0,
+        "height_pt": 1008.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 2350,
+        "native_char_height_p10_pt": 6.552001953125,
+        "native_char_height_median_pt": 8.66400146484375,
+        "native_char_height_p10_low_detail_px": 3.328000992063492,
+        "render_width_px": 850,
+        "render_height_px": 1400,
+        "ink_density": 0.10366302521008404,
+        "projection_line_count": 61,
+        "line_pitch_px": 19.0,
+        "line_pitch_low_detail_px": 6.948571428571428,
+        "connected_component_count": 2332,
+        "text_like_component_count": 2286,
+        "text_like_height_p10_px": 2.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 3.2914285714285714
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 2,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 4.708755600004224,
+  "resumed": false,
+  "walltime_seconds": 4.709712700001546
+}

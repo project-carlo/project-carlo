@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-margaret-mattydale",
+  "status": "approved",
+  "as_of": "2026-10-11T16:36:33Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:06Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Small single-church parish with a clear schedule box on page 1: daily Mass Mon/Tue/Thu/Fri 8:15 AM in Hannon Chapel (same grounds), Saturday vigil 4:15 PM, Sunday 9:15 AM, Saturday confession 3:30-4:00 PM. The Monday Oct 12 daily Mass is cancelled for the holiday. No adoration printed.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c3592422e823cce566e8fdd35f67146da6492ad787d59fd8e17b2eb26c584688",
+      "fetched_at": "2026-10-11T16:36:33Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c82bdfecb419e28fa941167492f40442ba4ec8f028acd10c95d22f89d09171fe",
+      "fetched_at": "2026-10-04T14:42:30Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "353ee99a958a0c25d4f0a1d962bd15056cea9532956e579bdfe5db3352d6a7ac",
+      "fetched_at": "2026-09-28T00:13:45Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hannon Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Daily Mass: Monday, Tuesday, Thursday, & Friday 8:15am (Hannon Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmargaretmattydale.org",
+          "said": "Daily Mass (Hannon Chapel) Mon, Tue, Thu, Fri 8:15 am; park in the courtyard parking lot by the Chapel Doors"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Monday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Monday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Monday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box of all three bulletins. Hannon Chapel is entered on the same grounds (same parish address, courtyard parking by the Chapel Doors), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hannon Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Daily Mass: Monday, Tuesday, Thursday, & Friday 8:15am (Hannon Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmargaretmattydale.org",
+          "said": "Daily Mass (Hannon Chapel) Mon, Tue, Thu, Fri 8:15 am; park in the courtyard parking lot by the Chapel Doors"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Tuesday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Tuesday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Tuesday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box of all three bulletins. Hannon Chapel is entered on the same grounds (same parish address, courtyard parking by the Chapel Doors), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hannon Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Daily Mass: Monday, Tuesday, Thursday, & Friday 8:15am (Hannon Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmargaretmattydale.org",
+          "said": "Daily Mass (Hannon Chapel) Mon, Tue, Thu, Fri 8:15 am; park in the courtyard parking lot by the Chapel Doors"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Thursday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Thursday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Thursday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box of all three bulletins. Hannon Chapel is entered on the same grounds (same parish address, courtyard parking by the Chapel Doors), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Hannon Chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Daily Mass: Monday, Tuesday, Thursday, & Friday 8:15am (Hannon Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stmargaretmattydale.org",
+          "said": "Daily Mass (Hannon Chapel) Mon, Tue, Thu, Fri 8:15 am; park in the courtyard parking lot by the Chapel Doors"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Friday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Friday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Friday 08:15 st-margaret-mattydale  “Hannon Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box of all three bulletins. Hannon Chapel is entered on the same grounds (same parish address, courtyard parking by the Chapel Doors), so it belongs to the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Confessions: Saturdays 3:30 - 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly confession Saturday 15:30–16:00 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly confession Saturday 15:30–16:00 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly confession Saturday 15:30–16:00 st-margaret-mattydale",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Saturday Vigil 4:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Saturday 16:15 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Saturday 16:15 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Saturday 16:15 st-margaret-mattydale",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 1,
+          "said": "Sunday 9:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "weekly mass Sunday 09:15 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c82bdfecb419",
+          "said": "weekly mass Sunday 09:15 st-margaret-mattydale",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353ee99a958a",
+          "said": "weekly mass Sunday 09:15 st-margaret-mattydale",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass schedule box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-mattydale",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holiday"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c3592422e823",
+          "page": 2,
+          "said": "Mon Oct 12th - NO Daily Mass (Holiday); No Daily Mass on Monday October 12th"
+        },
+        {
+          "source": "history",
+          "bulletin": "c3592422e823",
+          "said": "specific_date mass 2026-10-12 08:15 st-margaret-mattydale  CANCELLED; “Holiday”",
+          "page": 2
+        }
+      ],
+      "rationale": "Newest bulletin cancels this one Monday daily Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

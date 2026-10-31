@@ -55,6 +55,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+        with:
+          persist-credentials: false
 
       - name: Check configuration
         env:
@@ -92,7 +94,7 @@ jobs:
           fi
 
       - name: Set up uv
-        uses: astral-sh/setup-uv@v10.2.0
+        uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
         with:
           enable-cache: true
 
@@ -187,9 +189,10 @@ jobs:
         if: steps.publish.outcome == 'success'
         env:
           GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           # The site bakes the snapshot in at build time, so a new publish needs a deploy.
-          gh workflow run deploy-web.yml --ref "${{ github.event.repository.default_branch }}" -f mode=deploy
+          gh workflow run deploy-web.yml --ref "$DEFAULT_BRANCH" -f mode=deploy
 
       - name: Close issues about earlier held or failed runs
         if: steps.publish.outcome == 'success'
@@ -268,8 +271,10 @@ jobs:
 
       - name: Fail the job unless published
         if: steps.pipeline.outputs.status != 'passed'
+        env:
+          STATUS: ${{ steps.pipeline.outputs.status || 'failed' }}
         run: |
-          echo "::error::Weekly run ${{ steps.pipeline.outputs.status || 'failed' }}; not published."
+          echo "::error::Weekly run ${STATUS}; not published."
           exit 1
 
       - name: Ping healthcheck

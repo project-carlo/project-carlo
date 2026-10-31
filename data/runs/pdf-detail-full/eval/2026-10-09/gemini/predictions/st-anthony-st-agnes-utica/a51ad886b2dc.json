@@ -1,0 +1,146 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-anthony-st-agnes-utica",
+  "content_hash": "a51ad886b2dc402aeb8fe6e07d99b3062dfef411c18222b1d2683756adaba6cd",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=ojtk2SPHor1k6KViOPo9CXT2Af7YOQFs9lTFy7r2Ok3wQ5cRsP%2Blbp0wgfzI9%2F1dVLP1TtdQpXqpvUJi%2FWDcnmZdSSiDPEX3uyhylo6ObmY%3D",
+  "fetched_at": "2026-09-28T00:10:34Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-anthony-st-agnes-utica",
+      "name": "St. Anthony & St. Agnes Church",
+      "address": "422 Tilden Ave., Utica, NY 13501"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/a51ad886b2dc402aeb8fe6e07d99b3062dfef411c18222b1d2683756adaba6cd-771852319da0.json",
+    "modified_at": "2026-09-28T00:22:10.374000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-anthony-st-agnes-utica/a51ad886b2dc.pdf",
+  "pdf_sha256": "79dd449204d64559a3da81c930ff2b5e42bfc626de00fd838087dfffb370ee76",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-26",
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Special feast Mass followed by candlelight procession and benediction",
+      "raw": {
+        "date": "2026-09-26",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-st-agnes-utica",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-27",
+      "start_time": "11:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Special feast Mass for pilgrims",
+      "raw": {
+        "date": "2026-09-27",
+        "start_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2463,
+    "output_tokens": 630
+  }
+}

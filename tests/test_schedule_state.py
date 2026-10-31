@@ -9,7 +9,9 @@ from pathlib import Path
 from types import SimpleNamespace
 from typing import Any
 
+import httpx
 import pytest
+from openai import APITimeoutError, InternalServerError, RateLimitError
 
 from pdf_extract import process
 from pdf_extract.blobstore import get_store
@@ -23,13 +25,14 @@ from pdf_extract.classifiers.schedule_update import (
     RawReply,
     parse_response,
 )
-from pdf_extract.db import create_db, ensure_db
+from pdf_extract.db import create_db, ensure_db, migrate
 from pdf_extract.extract_frontend_db import extract, read_snapshot
 from pdf_extract.labeling.bulletins import load_gemini_source
 from pdf_extract.report import build_report, diff_databases, render_markdown
 from pdf_extract.runs import parish_results, start_run
 from pdf_extract.schedule.edits import EditError, apply_proposals, edit_entry
 from pdf_extract.schedule.entries import (
+    ENTRY_COLUMNS,
     INVALID_ENTRY,
     UNKNOWN_CHURCH,
     EntryError,
@@ -56,13 +59,17 @@ from pdf_extract.schedule.qualifiers import (
     QualifierError,
     columns_to_season,
     describe_schedule_pattern,
+    mask_excludes_weeks,
     mask_to_weeks,
     season_to_columns,
     weeks_to_mask,
 )
+from pdf_extract.schedule.report import describe_entry
 from pdf_extract.schedule.store import (
     current_revision,
+    intern_entry,
     live_entries,
+    load_entries,
     parish_churches,
     rebuild_current_schedule,
     render_view,
@@ -73,7 +80,9 @@ from pdf_extract.schedule.update import (
     MAX_FAILED_CALLS,
     call_record_key,
     process_update_mode,
+    request_key,
 )
+from pdf_extract.seeding.files import revision_note
 from pdf_extract.storage import (
     CHURCHES_CSV_PATH,
     DEFAULT_DB_PATH,
@@ -186,7 +195,7 @@ class FakeUpdater(OpenAIScheduleUpdater):
         return RawReply(
             text=text, served_model="fake-model-001",
             usage={"prompt_tokens": 100, "cached_tokens": 10, "output_tokens": 20},
-            latency_ms=5,
+            latency_ms=5, service_tier="flex",
         )
 
 
@@ -238,6 +247,10 @@ def test_qualifiers_are_described_as_the_web_app_describes_them() -> None:
         "June 4 through September 10")
     assert describe_schedule_pattern(["first"], season(10, None, 6, None), "Friday") == (
         "First Friday of the month, October through June")
+    assert describe_schedule_pattern(["last"], None, "sunday", True) == (
+        "Every Sunday except the last")
+    assert describe_schedule_pattern(["first", "last"], None, None, True) == (
+        "Every week except the first and last")
 
 
 def test_weeks_and_seasons_convert_both_ways() -> None:
@@ -252,20 +265,75 @@ def test_weeks_and_seasons_convert_both_ways() -> None:
     assert columns_to_season(None, None, None, None) is None
     with pytest.raises(QualifierError):
         weeks_to_mask(["first", "first"])
+
+
+def test_excluded_weeks_are_stored_in_their_canonical_form() -> None:
+    # Every week except the last: the listed week plus the exclusion bit.
+    assert weeks_to_mask(["last"], True) == 0b1100000
+    assert (mask_to_weeks(0b1100000), mask_excludes_weeks(0b1100000)) == (["last"], True)
+    assert not mask_excludes_weeks(0b100001)
+    # An exclusion the remaining weeks can say is stored as them.
+    assert weeks_to_mask(["second"], True) == weeks_to_mask(["first", "third", "fourth", "fifth"])
+    # A fifth week is always the last, so excluding both is excluding the last.
+    assert weeks_to_mask(["fifth", "last"], True) == weeks_to_mask(["last"], True)
+    # Excluding nothing is every week.
+    assert weeks_to_mask([], True) == 0
+    for never in (["first", "second", "third", "fourth", "fifth"],
+                  ["first", "second", "third", "fourth", "last"]):
+        with pytest.raises(QualifierError):
+            weeks_to_mask(never, True)
+    with pytest.raises(QualifierError):
+        weeks_to_mask(["last"], "yes")
+
+
+def test_an_excluded_week_round_trips_through_the_database(conn: sqlite3.Connection) -> None:
+    churches = _churches(conn)
+    except_last = parse_entry({**SUN_9, "weeks_of_month": ["last"], "exclude_weeks": True},
+                              churches)
+    assert except_last.slot_key == parse_entry(SUN_9, churches).slot_key
+    assert except_last.identity_key != parse_entry(SUN_9, churches).identity_key
+    with conn:
+        entry_id = intern_entry(conn, except_last)
+    stored = load_entries(conn, [entry_id])[entry_id]
+    assert stored == except_last
+    form = stored.labels_form("test-church")
+    assert (form["weeks_of_month"], form["exclude_weeks"]) == (["last"], True)
+    assert describe_entry(stored).endswith("(Every Sunday except the last)")
+    # The same slot written as the weeks it keeps when it can be.
+    except_first = parse_entry({**SUN_9, "weeks_of_month": ["first"], "exclude_weeks": True},
+                               churches)
+    assert except_first.labels_form("")["weeks_of_month"] == [
+        "second", "third", "fourth", "fifth"]
+    assert except_first.labels_form("")["exclude_weeks"] is False
+
+
+def test_the_database_refuses_an_exclusion_of_no_weeks(conn: sqlite3.Connection) -> None:
+    entry = parse_entry(SUN_9, _churches(conn))
+    with pytest.raises(sqlite3.IntegrityError), conn:
+        conn.execute(
+            f"INSERT INTO schedule_entry (hash, identity_key, {', '.join(ENTRY_COLUMNS)}) "
+            f"VALUES (?, ?, {', '.join('?' * len(ENTRY_COLUMNS))})",
+            ("x", entry.identity_key,
+             *(64 if name == "weeks_of_month" else getattr(entry, name)
+               for name in ENTRY_COLUMNS)),
+        )
     with pytest.raises(QualifierError):
         season_to_columns({"start_month": 2, "start_day": 30, "end_month": 3, "end_day": None})
 
 
-def test_an_entry_is_read_and_its_identity_leaves_out_end_time_weeks_and_note(
+def test_an_entry_identity_includes_recurrence_but_leaves_out_end_time_and_note(
     conn: sqlite3.Connection,
 ) -> None:
     churches = _churches(conn)
     entry = parse_entry(CONFESSION, churches)
     assert (entry.start_time, entry.end_time, entry.weeks_of_month) == (900, 945, 1)
-    changed = parse_entry({**CONFESSION, "end_time": "4:00 PM", "weeks_of_month": [],
+    changed = parse_entry({**CONFESSION, "end_time": "4:00 PM",
                            "note": "chapel"}, churches)
     assert changed.identity_key == entry.identity_key
     assert changed.hash != entry.hash
+    requalified = parse_entry({**CONFESSION, "weeks_of_month": []}, churches)
+    assert requalified.identity_key != entry.identity_key
+    assert requalified.slot_key == entry.slot_key
     moved = parse_entry({**CONFESSION, "start_time": "3:30 PM"}, churches)
     assert moved.identity_key != entry.identity_key
 
@@ -282,6 +350,11 @@ def test_an_entry_is_read_and_its_identity_leaves_out_end_time_weeks_and_note(
          INVALID_ENTRY),
         ({"event_kind": "specific_date", "date": "2026-10-10", "weeks_of_month": ["first"]},
          INVALID_ENTRY),
+        ({"event_kind": "specific_date", "date": "2026-10-10", "weeks_of_month": ["last"],
+          "exclude_weeks": True}, INVALID_ENTRY),
+        ({"weeks_of_month": ["first", "second", "third", "fourth", "last"],
+          "exclude_weeks": True}, INVALID_ENTRY),
+        ({"weeks_of_month": ["last"], "exclude_weeks": "true"}, INVALID_ENTRY),
         ({"colour": "green"}, INVALID_ENTRY),
     ],
 )
@@ -353,6 +426,133 @@ def test_the_view_is_canonical_and_leaves_out_past_dated_entries(
     assert entries[3]["cancelled"] is True
     assert text == json.dumps(view, sort_keys=True, separators=(",", ":"))
     assert render_view(conn, _parish_id(conn), date(2026, 10, 10)) == (text, view_hash)
+
+
+def _reviewed_seed(conn, *, status="approved"):
+    seed = {
+        "parish_slug": "test-parish", "status": status, "reviewer": "Reviewer",
+        "as_of": SEED_AS_OF, "summary": "Stale draft summary: Friday is an open question.",
+        "slots": [
+            {"id": "s1", "status": "settled", "decision": "include", "entry": SUN_9},
+            {"id": "s2", "status": "settled", "decision": "include",
+             "entry": CONFESSION, "rationale": "Monthly service omitted by the routine panel."},
+            {"id": "s3", "status": "settled", "decision": "exclude",
+             "entry": {**SUN_9, "day_of_week": "Friday"},
+             "rationale": "Relocated to another church until January.",
+             "answer": {"choice": 1, "by": "Reviewer", "at": SEED_AS_OF}},
+        ],
+    }
+    Path("data/seeds").mkdir(parents=True)
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    with conn:
+        write_seed(conn, _parish_id(conn),
+                   [parse_entry(e, _churches(conn)) for e in (SUN_9, CONFESSION)],
+                   as_of=SEED_AS_OF, actor="Reviewer", note=revision_note(seed))
+    return seed
+
+
+def test_view_carries_resolved_exclusions_and_monthly_evidence_but_not_draft_summary(conn):
+    _reviewed_seed(conn)
+    text, _ = render_view(conn, _parish_id(conn), date(2026, 10, 18))
+    context = json.loads(text)["reviewed_seed_context"]
+    assert [d["id"] for d in context["decisions"]] == ["s2", "s3"]
+    assert context["decisions"][1]["decision"] == "exclude"
+    assert context["decisions"][1]["answer"]["choice"] == 1
+    assert "Stale draft summary" not in text
+    assert len(json.loads(text)["churches"][1]["entries"]) == 2
+
+
+def test_review_context_changes_invalidate_cached_questions_without_reseeding(conn):
+    seed = _reviewed_seed(conn)
+    today = date(2026, 10, 18)
+    entries = live_entries(conn, _parish_id(conn))
+    _, before = render_view(conn, _parish_id(conn), today)
+    seed["slots"][2]["rationale"] = "Now relocated until February."
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    _, after = render_view(conn, _parish_id(conn), today)
+    assert before != after
+    assert request_key("version", "pdf", before, today, "churches") != request_key(
+        "version", "pdf", after, today, "churches",
+    )
+    assert live_entries(conn, _parish_id(conn)) == entries
+
+
+@pytest.mark.parametrize("case", ["draft", "unimported", "newer_manual_seed"])
+def test_view_does_not_use_context_from_an_unapproved_or_superseded_seed(conn, case):
+    seed = _reviewed_seed(conn)
+    if case == "draft":
+        seed["status"] = "ready"
+    elif case == "unimported":
+        seed["slots"][0]["entry"] = SUN_11
+    else:
+        _seed(conn, [SUN_11], as_of="2026-10-17T00:00:00Z")
+    Path("data/seeds/test-parish.json").write_text(json.dumps(seed))
+    text, _ = render_view(conn, _parish_id(conn), date(2026, 10, 18))
+    assert "reviewed_seed_context" not in json.loads(text)
+
+
+@pytest.mark.parametrize("slug,church,event_type,day,time,weeks,op", [
+    ("all-saints-corning", "st-marys-corning", "mass", "Saturday", "4:00 PM", [], "add"),
+    ("st-edward-the-confessor-clifton-park", "st-edward-the-confessor-clifton-park",
+     "mass", "Friday", "9:00 AM", [], "add"),
+    ("holy-trinity-webster", "holy-trinity", "mass", "Saturday", "6:30 PM", ["first"], "delete"),
+    ("mary-mother-of-our-savior-utica", "our-lady-of-lourdes-utica", "mass", "Saturday",
+     "8:15 AM", ["first"], "delete"),
+    ("mary-mother-of-our-savior-utica", "our-lady-of-lourdes-utica", "confession", "Saturday",
+     "8:45 AM", ["first"], "delete"),
+])
+@pytest.mark.parametrize("later_review", [False, True])
+def test_weekly_repair_appends_inverse_changes_but_preserves_later_reviews(
+    conn, slug, church, event_type, day, time, weeks, op, later_review,
+):
+    parish_id = _parish_id(conn)
+    conn.execute("UPDATE parish SET slug=? WHERE id=?", (slug, parish_id))
+    conn.execute("UPDATE church SET slug=? WHERE slug='test-church'", (church,))
+    baseline = {**SUN_9, "church_slug": church}
+    target = {**baseline, "event_type": event_type, "day_of_week": day,
+              "start_time": time, "weeks_of_month": weeks}
+    _seed(conn, [baseline] + ([target] if op == "delete" else []), slug=slug)
+    target_id = next(iter(live_entries(conn, parish_id))) if op == "add" else next(
+        i for i, e in live_entries(conn, parish_id).items() if e.day_of_week == day
+    )
+    _bulletin(conn, "new", "2026-10-18T10:00:00Z", slug=slug)
+    run_id = "20261018T123547Z-gh39127931592"
+    start_run(conn, run_id, git_sha="test", trigger="test")
+    changes = [{"op": op, "entry": target} if op == "add" else
+               {"op": "delete", "entry_id": target_id}]
+    updater = FakeUpdater(_reply(published_date="2026-10-18", changes=changes))
+    result = process_update_mode(conn, slugs=[slug], updater=updater, run_id=run_id)
+    assert result["update_changes_applied"] == 1
+    target_id = intern_entry(conn, parse_entry(target, _churches(conn, slug)))
+    if later_review:
+        # Reaffirm the same final state as the bad proposal with new human edits.
+        # Content equality alone must not let the migration undo that later decision.
+        if op == "add":
+            edit_entry(conn, parish_id, "delete", target_entry_id=target_id, actor="Reviewer")
+            edit_entry(conn, parish_id, "add", entry=target, actor="Reviewer")
+        else:
+            edit_entry(conn, parish_id, "add", entry=target, actor="Reviewer")
+            edit_entry(conn, parish_id, "delete", target_entry_id=target_id, actor="Reviewer")
+    # An unrelated change after the faulty call must survive the repair too.
+    edit_entry(conn, parish_id, "add", entry={**baseline, "start_time": "11:00 AM"},
+               actor="Reviewer")
+    old_state = set(live_entries(conn, parish_id))
+    old_proposals = _proposals(conn)
+    conn.commit()
+    repair_sql = Path(__file__).resolve().parents[1] / "data/migrations/0008_repair_reviewed_weekly_slots.sql"
+    conn.executescript(repair_sql.read_text())
+    state = set(live_entries(conn, parish_id))
+    if later_review:
+        assert state == old_state
+    else:
+        assert state == (old_state - {target_id} if op == "add" else old_state | {target_id})
+        revision = conn.execute(
+            "SELECT * FROM schedule_revision WHERE actor='weekly-run-review'",
+        ).fetchone()
+        assert revision["source_kind"] == "human"
+    assert _proposals(conn) == old_proposals
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+    assert migrate(conn) == 0
 
 
 # ── Policy ──────────────────────────────────────────────────────────────────
@@ -442,6 +642,127 @@ def test_the_mark_starts_at_the_newest_dated_bulletin_in_the_seed(
 
 
 # ── The update stage ────────────────────────────────────────────────────────
+def test_a_bulletin_can_modify_one_recurrence_and_add_its_disjoint_sibling(conn):
+    first = {**SUN_9, "event_type": "adoration", "day_of_week": "Friday",
+             "start_time": "11:30 AM", "end_time": "4:00 PM", "weeks_of_month": ["first"]}
+    remaining = {**first, "weeks_of_month": ["second", "third", "fourth", "fifth"],
+                 "end_time": "1:00 PM"}
+    _seed(conn, [first])
+    first_id = next(iter(live_entries(conn, _parish_id(conn))))
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    updater = FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "note": "Benediction"}},
+        {"op": "add", "entry": remaining},
+        {"op": "add", "entry": {**remaining, "weeks_of_month": ["third"]}},
+    ]))
+    stats = _run(conn, updater)
+    assert stats["update_changes_applied"] == 2
+    assert [p[2:] for p in _proposals(conn)] == [
+        ("modify", APPLIED, AUTO), ("add", APPLIED, AUTO), ("add", REJECTED, DUPLICATE),
+    ]
+    live = live_entries(conn, _parish_id(conn))
+    assert {(e.weeks_of_month, e.end_time) for e in live.values()} == {(1, 960), (30, 780)}
+    assert first_id not in live
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def _friday_adoration() -> tuple[dict, dict]:
+    first = {**SUN_9, "event_type": "adoration", "day_of_week": "Friday",
+             "start_time": "11:30 AM", "weeks_of_month": ["first"]}
+    return first, {**first, "weeks_of_month": ["second", "third", "fourth", "fifth"]}
+
+
+def _revision_changes(conn: sqlite3.Connection, revision: int) -> list[tuple]:
+    """(op, seq) of a revision's changes in log order."""
+    return [
+        tuple(r) for r in conn.execute(
+            """SELECT c.op, p.seq FROM schedule_change c
+               JOIN proposed_change p ON p.id = c.proposed_change_id
+               WHERE c.revision = ? ORDER BY c.id""",
+            (revision,),
+        ).fetchall()
+    ]
+
+
+@pytest.mark.parametrize("modify_first", [True, False])
+def test_a_merge_of_disjoint_recurrences_is_applied_whole_in_either_order(conn, modify_first):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()}
+    first_id, remaining_id = ids[1], ids[30]
+    merge = {"op": "modify", "entry_id": first_id,
+             "entry": {**first, "weeks_of_month": None}}
+    delete = {"op": "delete", "entry_id": remaining_id}
+    changes = [merge, delete] if modify_first else [delete, merge]
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    stats = _run(conn, FakeUpdater(_reply(changes=[
+        *changes, {"op": "add", "entry": first},
+    ])))
+    assert stats["update_changes_applied"] == 2
+    # Stored in the model's order; the late add duplicates the merged slot.
+    assert [p[1:] for p in _proposals(conn)] == [
+        (1, changes[0]["op"], APPLIED, AUTO), (2, changes[1]["op"], APPLIED, AUTO),
+        (3, "add", REJECTED, DUPLICATE),
+    ]
+    # Logged (and folded) with the delete first, each change still tied to its proposal.
+    delete_seq = 2 if modify_first else 1
+    assert _revision_changes(conn, 2) == [("delete", delete_seq), ("modify", 3 - delete_seq)]
+    live = live_entries(conn, _parish_id(conn))
+    assert [e.weeks_of_month for e in live.values()] == [0]
+    assert first_id not in live and remaining_id not in live
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_merge_waiting_on_a_removal_that_fails_is_still_a_duplicate(conn):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()}
+    first_id, remaining_id = ids[1], ids[30]
+    _bulletin(conn, "new", "2026-10-10T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "weeks_of_month": None}},
+        {"op": "modify", "entry_id": remaining_id, "entry": {**remaining, "note": "Chapel"}},
+        # Already changed by the proposal before it: nothing is removed.
+        {"op": "delete", "entry_id": remaining_id},
+        {"op": "delete", "entry_id": 9999},
+    ])))
+    assert [p[2:] for p in _proposals(conn)] == [
+        ("modify", REJECTED, DUPLICATE), ("modify", APPLIED, AUTO),
+        ("delete", REJECTED, UNKNOWN_ITEM), ("delete", REJECTED, UNKNOWN_ITEM),
+    ]
+    live = live_entries(conn, _parish_id(conn))
+    assert first_id in live
+    assert sorted((e.weeks_of_month, e.note) for e in live.values()) == [
+        (1, None), (30, "Chapel")]
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
+def test_a_merge_in_a_rejected_call_can_be_applied_by_hand_in_either_order(conn):
+    first, remaining = _friday_adoration()
+    _seed(conn, [first, remaining, SUN_9, SUN_11, SAT_5])
+    ids = {e.weeks_of_month: i for i, e in live_entries(conn, _parish_id(conn)).items()
+           if e.event_type == "adoration"}
+    first_id, remaining_id = ids[1], ids[30]
+    others = [i for i in _ids(conn).values() if i not in (first_id, remaining_id)]
+    _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
+    _run(conn, FakeUpdater(_reply(changes=[
+        {"op": "modify", "entry_id": first_id, "entry": {**first, "weeks_of_month": None}},
+        *({"op": "delete", "entry_id": i} for i in others),
+        {"op": "delete", "entry_id": remaining_id},
+    ])))
+    call_id = conn.execute("SELECT id FROM llm_call").fetchone()[0]
+    assert {p[4] for p in _proposals(conn)} == {MASS_DELETE}
+
+    result = apply_proposals(conn, call_id, [1, 5], actor="luke", today=date(2026, 10, 10))
+
+    assert result.applied == [1, 5] and result.skipped == []
+    assert _revision_changes(conn, result.revision) == [("delete", 5), ("modify", 1)]
+    live = live_entries(conn, _parish_id(conn))
+    assert sorted(e.weeks_of_month for e in live.values() if e.event_type == "adoration") == [0]
+    assert len(live) == 4
+    assert rebuild_current_schedule(conn)["differing_rows"] == 0
+
+
 def test_a_bulletin_is_read_against_the_believed_schedule(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9, SAT_5, CONFESSION])
     ids = _ids(conn)
@@ -477,6 +798,7 @@ def test_a_bulletin_is_read_against_the_believed_schedule(conn: sqlite3.Connecti
     assert (call["status"], call["base_revision"], call["call_date"]) == (OK, 1, "2026-10-10")
     assert (call["served_model"], call["input_tokens"], call["output_tokens"]) == (
         "fake-model-001", 100, 20)
+    assert call["service_tier"] == "flex"
     assert call["response_key"] == call_record_key(call["request_key"])
     assert get_store().get(call["response_key"]) is not None
     assert {r[0] for r in conn.execute("SELECT kind FROM prompt_blob")} == {
@@ -573,6 +895,19 @@ def test_a_failed_call_is_retried_until_it_is_given_up(conn: sqlite3.Connection)
     assert (stats["update_calls"], stats["update_gave_up"]) == (0, 1)
 
 
+def test_a_failed_call_keeps_what_was_tried_before_it(conn: sqlite3.Connection) -> None:
+    _seed(conn, [SUN_9])
+    _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
+    error = RuntimeError("standard tier down")
+    error.add_note("asked at the standard tier after flex failed: flex full")
+    _run(conn, FakeUpdater(error))
+    [stored] = [r[0] for r in conn.execute("SELECT error FROM llm_call")]
+    assert stored == (
+        "RuntimeError: standard tier down; "
+        "asked at the standard tier after flex failed: flex full"
+    )
+
+
 def test_a_stored_reply_is_decided_without_calling_again(conn: sqlite3.Connection) -> None:
     _seed(conn, [SUN_9])
     _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
@@ -648,7 +983,9 @@ def test_the_process_stage_splits_parishes_by_mode(
 def test_an_update_mode_parish_is_snapshotted_from_its_believed_schedule(
     conn: sqlite3.Connection, tmp_path: Path,
 ) -> None:
-    _seed(conn, [SUN_9, CONFESSION])
+    _seed(conn, [
+        SUN_9, CONFESSION, {**SUN_11, "weeks_of_month": ["last"], "exclude_weeks": True},
+    ])
     ids = _ids(conn)
     _bulletin(conn, "b1", "2026-10-10T12:00:00Z")
     _run(conn, FakeUpdater(_reply(
@@ -671,6 +1008,9 @@ def test_an_update_mode_parish_is_snapshotted_from_its_believed_schedule(
     assert sun9["page_number"] == 2
     confession = events[-ids["confession Saturday 900"]]
     assert (confession["weeks_of_month"], confession["page_number"]) == (["first"], None)
+    assert confession["exclude_weeks"] is False
+    sun11 = events[-ids["mass Sunday 660"]]
+    assert (sun11["weeks_of_month"], sun11["exclude_weeks"]) == (["last"], True)
     [cancellation] = [e for e in events.values() if e["cancelled"]]
     assert cancellation["id"] < 0
     assert cancellation["cancels_event_id"] == sun9["id"]
@@ -811,6 +1151,23 @@ def test_replies_are_read_strictly_then_leniently() -> None:
     assert parse_response("[]").status == PARSE_FAILED
 
 
+def _fake_clients(create: Any) -> dict[str, Any]:
+    client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    return {"flex": client, "default": client}
+
+
+def _api_request() -> httpx.Request:
+    return httpx.Request("POST", "https://api.openai.com/v1/responses")
+
+
+def _completed(tier: str | None) -> SimpleNamespace:
+    return SimpleNamespace(
+        id="resp_2", status="completed", incomplete_details=None,
+        model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+        service_tier=tier, usage=None,
+    )
+
+
 def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     updater = OpenAIScheduleUpdater()
     calls: list[dict[str, Any]] = []
@@ -820,6 +1177,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
         return SimpleNamespace(
             id="resp_1", status="completed", incomplete_details=None,
             model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="flex",
             usage=SimpleNamespace(
                 input_tokens=3000,
                 input_tokens_details=SimpleNamespace(cached_tokens=1200, cache_write_tokens=0),
@@ -828,7 +1186,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
             ),
         )
 
-    updater._client = SimpleNamespace(responses=SimpleNamespace(create=create))
+    updater._clients = _fake_clients(create)
     reply = updater.call(b"%PDF-1.4", "the context")
 
     assert (updater.provider, updater.model) == ("openai", "gpt-6-luna")
@@ -837,6 +1195,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert request["reasoning"] == {"effort": "high"}
     assert request["text"]["format"]["strict"] is True
     assert request["store"] is False
+    assert request["service_tier"] == "flex"
     developer, user = request["input"]
     assert developer["role"] == "developer"
     assert developer["content"] == [{
@@ -847,6 +1206,7 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     assert user["content"][1]["detail"] == "low"
     assert reply.served_model == "gpt-6-luna-2026-09-01"
     assert reply.usage["reasoning_tokens"] == 600
+    assert reply.service_tier == "flex"
     assert parse_response(reply.text).status == OK
 
     # Strict decoding needs every field required and no defaults.
@@ -865,6 +1225,171 @@ def test_update_calls_run_on_gpt_6_luna_like_the_eval_classifier() -> None:
     for obj in objects(STRICT_SCHEMA):
         assert obj["additionalProperties"] is False
         assert set(obj["required"]) == set(obj["properties"])
+
+
+def test_an_update_call_falls_back_to_the_standard_tier_when_flex_is_full() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            request = httpx.Request("POST", "https://api.openai.com/v1/responses")
+            raise RateLimitError(
+                "Resource Unavailable", response=httpx.Response(429, request=request), body=None,
+            )
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+    assert parse_response(reply.text).status == OK
+
+
+def test_an_update_call_falls_back_when_flex_capacity_is_lost_after_acceptance() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            return SimpleNamespace(
+                id="resp_1", status="failed", incomplete_details=None,
+                error=SimpleNamespace(
+                    code="server_error",
+                    message="Flex processing is temporarily unavailable. Please try again later.",
+                ),
+                model="gpt-6-luna-2026-09-01", output_text="", service_tier="flex", usage=None,
+            )
+        return SimpleNamespace(
+            id="resp_2", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+    assert parse_response(reply.text).status == OK
+
+
+def test_an_update_call_falls_back_when_flex_keeps_failing_with_a_server_error() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            request = httpx.Request("POST", "https://api.openai.com/v1/responses")
+            raise InternalServerError(
+                "server error", response=httpx.Response(500, request=request), body=None,
+            )
+        return SimpleNamespace(
+            id="resp_1", status="completed", incomplete_details=None,
+            model="gpt-6-luna-2026-09-01", output_text=json.dumps(_reply()),
+            service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+
+
+def test_a_standard_tier_call_that_fails_is_not_asked_again() -> None:
+    updater = OpenAIScheduleUpdater(service_tier="default")
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        return SimpleNamespace(
+            id="resp_1", status="failed", incomplete_details=None,
+            error=SimpleNamespace(code="server_error", message="boom"),
+            model="gpt-6-luna-2026-09-01", output_text="", service_tier="default", usage=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["default"]
+    assert reply.text == ""
+
+
+def test_an_update_call_falls_back_when_flex_times_out() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        if kwargs["service_tier"] == "flex":
+            raise APITimeoutError(request=_api_request())
+        return _completed("default")
+
+    updater._clients = _fake_clients(create)
+    reply = updater.call(b"%PDF-1.4", "the context")
+
+    assert tiers == ["flex", "default"]
+    assert reply.service_tier == "default"
+
+
+def test_an_update_call_out_of_quota_is_not_asked_at_the_standard_tier() -> None:
+    updater = OpenAIScheduleUpdater()
+    tiers: list[str] = []
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        tiers.append(kwargs["service_tier"])
+        raise RateLimitError(
+            "You exceeded your current quota",
+            response=httpx.Response(429, request=_api_request()),
+            body={"code": "insufficient_quota", "message": "You exceeded your current quota"},
+        )
+
+    updater._clients = _fake_clients(create)
+    with pytest.raises(RateLimitError):
+        updater.call(b"%PDF-1.4", "the context")
+    assert tiers == ["flex"]
+
+
+def test_an_update_call_failing_at_both_tiers_says_flex_failed_first() -> None:
+    updater = OpenAIScheduleUpdater()
+
+    def create(**kwargs: Any) -> SimpleNamespace:
+        raise InternalServerError(
+            f"{kwargs['service_tier']} down",
+            response=httpx.Response(500, request=_api_request()), body=None,
+        )
+
+    updater._clients = _fake_clients(create)
+    with pytest.raises(InternalServerError, match="default down") as raised:
+        updater.call(b"%PDF-1.4", "the context")
+    [note] = raised.value.__notes__
+    assert "flex failed: InternalServerError: flex down" in note
+
+
+def test_an_update_call_takes_the_tier_asked_when_the_response_has_none() -> None:
+    updater = OpenAIScheduleUpdater()
+    updater._clients = _fake_clients(lambda **kwargs: _completed(None))
+    assert updater.call(b"%PDF-1.4", "the context").service_tier == "flex"
+
+
+def test_flex_calls_retry_less_and_wait_longer_than_standard_ones(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("OPENAI_API_KEY", "test-key")
+    updater = OpenAIScheduleUpdater()
+    flex, default = updater._openai("flex"), updater._openai("default")
+    assert (flex.max_retries, flex.timeout) == (2, 900.0)
+    assert (default.max_retries, default.timeout) == (5, 600.0)
+    assert updater._openai("flex") is flex
 
 
 def test_update_policy_carries_the_eval_policy_rules() -> None:

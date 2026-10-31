@@ -1,0 +1,4866 @@
+{
+  "schema_version": 1,
+  "parish_slug": "light-of-christ-kenmore",
+  "status": "ready",
+  "as_of": "2026-10-25T13:16:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:14:51Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Five churches (Blessed Sacrament, St. John the Baptist, St. Paul, St. Stephen, St. Timothy). The schedule and Adoration and Confession listings on p2 are identical in all five bulletins read, so all weekly slots are settled. Dated: Triduum for Life Masses at the St. John Neumann Shrine chapel (Oct 26-28), the Nov 2 Mass of Remembrance, the Nov 14 Mass for the Loss of a Child and the Nov 29 Memorial and Healing Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "ba7f2ea271558691dfbe5e256a659582801138f5585d0a0263355a76e054ece0",
+      "fetched_at": "2026-10-25T13:16:14Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "791225457c308e2c50eed3dc74074d6ba70c97322eb93928ce78bf3aa6a859a3",
+      "fetched_at": "2026-10-18T12:43:12Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "6fa016a5877b37d82cefa522e7774a8228db8ca65411d1781c629093d0c3019c",
+      "fetched_at": "2026-10-11T16:33:35Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "3cf26281a93923006e3dc7ba2a1cbaa1ac15d99685bea348cc5216ce331274c6",
+      "fetched_at": "2026-10-04T14:25:51Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "aff84ee136993d154d92631510a35cce5051b21407a23f5d57315f6899b2e36f",
+      "fetched_at": "2026-09-26T18:54:10Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "Blessed Sacrament Monday, October 26 8:00am; Thursday, October 29 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Weekly Mass Schedule on p2 is the same in all five bulletins read, and the newest intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Monday 8:00am: Blessed Sacrament & St. Stephen; Thursday 8:00am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "Blessed Sacrament Monday, October 26 8:00am; Thursday, October 29 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Weekly Mass Schedule on p2 is the same in all five bulletins read, and the newest intentions list both Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Wednesday 6:30pm: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Wednesday 6:30pm: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Wednesday 6:30pm: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Wednesday 6:30pm: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Weekly Mass Schedule: Wednesday 6:30pm: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "Blessed Sacrament Wednesday, October 28 6:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Wednesday 18:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Wednesday 18:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Wednesday 18:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Wednesday 18:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Wednesday 18:30 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the Weekly Mass Schedule is the same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "Blessed Sacrament Saturday, October 24 Vigil 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 16:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 16:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 16:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 16:00 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 16:00 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 9:30am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 9:30am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 9:30am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 9:30am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 9:30am: Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "Blessed Sacrament Sunday, October 25 9:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 09:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 09:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 09:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 09:30 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 09:30 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Mon-Fri 12:00 Noon intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Monday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Monday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Monday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Monday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Monday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the schedule lists 12 Noon at St. John the Baptist each weekday in all five bulletins; the newest intentions list all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Mon-Fri 12:00 Noon intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Tuesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Tuesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Tuesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Tuesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Tuesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the schedule lists 12 Noon at St. John the Baptist each weekday in all five bulletins; the newest intentions list all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Mon-Fri 12:00 Noon intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Wednesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Wednesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Wednesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Wednesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Wednesday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the schedule lists 12 Noon at St. John the Baptist each weekday in all five bulletins; the newest intentions list all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Mon-Fri 12:00 Noon intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Thursday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Thursday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Thursday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Thursday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Thursday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the schedule lists 12 Noon at St. John the Baptist each weekday in all five bulletins; the newest intentions list all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "12 Noon: St. John the Baptist (Monday through Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Mon-Fri 12:00 Noon intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Friday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Friday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Friday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Friday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Friday 12:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: the schedule lists 12 Noon at St. John the Baptist each weekday in all five bulletins; the newest intentions list all five.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday: 8:30am: St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday: 8:30am: St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday: 8:30am: St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday: 8:30am: St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday: 8:30am: St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Saturday, October 31 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 08:30 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 08:30 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 08:30 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 08:30 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 08:30 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:00pm: St. John the Baptist & Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Vigil 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Sunday, November 1 8:00am and 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 08:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 08:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 08:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 08:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 08:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Sunday, November 1 8:00am and 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 11:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 11:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 11:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 11:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 11:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Paul Tuesday, October 27 8:00am; Friday, October 30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Tuesday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Tuesday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Tuesday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Tuesday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Tuesday 08:00 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Tuesday 8:00am: St. Paul & St. Stephen; Friday 8:00am: St. Paul & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Paul Tuesday, October 27 8:00am; Friday, October 30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Friday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Friday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Friday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Friday 08:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Friday 08:00 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Paul Saturday, October 24 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 17:00 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Paul Sunday, October 25 10:00am and 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 10:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 10:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 10:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 10:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 10:00 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 10:00am: St. Paul & St. Timothy; 5:00pm: St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Paul Sunday, October 25 10:00am and 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 17:00 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 17:00 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Monday 10/26, Tuesday 10/27, Wednesday 10/28, Friday 10/30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Monday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Monday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Monday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Monday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Monday 08:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Monday 10/26, Tuesday 10/27, Wednesday 10/28, Friday 10/30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Tuesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Tuesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Tuesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Tuesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Tuesday 08:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Monday 10/26, Tuesday 10/27, Wednesday 10/28, Friday 10/30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Wednesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Wednesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Wednesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Wednesday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Wednesday 08:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "8:00am: Blessed Sacrament & St. Stephen (Mon); St. Paul & St. Stephen (Tue, Fri); St. Stephen (Wed)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Monday 10/26, Tuesday 10/27, Wednesday 10/28, Friday 10/30 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Friday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Friday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Friday 08:00 st-stephen-grand-island  “Anointing of the Sick on the last Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Friday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Friday 08:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Saturday, October 31 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 16:30 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 16:30 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 16:30 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 16:30 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 16:30 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Sunday, November 1 8:00am and 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 08:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 08:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 8:00am: St. John the Baptist & St. Stephen; 11:00am: St. John the Baptist & St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Stephen Sunday, November 1 8:00am and 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 11:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 11:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 11:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 11:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 11:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Tuesday, October 27, Thursday 10/29, Friday 10/30 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Tuesday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Tuesday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Tuesday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Tuesday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Tuesday 10:00 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Tuesday, October 27, Thursday 10/29, Friday 10/30 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Thursday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Thursday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Thursday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Thursday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Thursday 10:00 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "10:00am: St. Timothy (Tuesday, Thursday, Friday)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Tuesday, October 27, Thursday 10/29, Friday 10/30 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Friday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Friday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Friday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Friday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Friday 10:00 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list all three.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Saturday Evening/Sunday Vigil 4:30pm: St. Stephen & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Saturday, October 24 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Saturday 16:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Saturday 16:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Saturday 16:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Saturday 16:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Saturday 16:30 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Sunday, October 25 7:30am and 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 07:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 07:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 07:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 07:30 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 07:30 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Sunday 7:30am: St. Timothy; 10:00am: St. Paul & St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. Timothy Sunday, October 25 7:30am and 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly mass Sunday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly mass Sunday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly mass Sunday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly mass Sunday 10:00 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly mass Sunday 10:00 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins; the newest intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Confessions: Tuesday: 4-5pm— St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Confessions: Tuesday: 4-5pm— St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Confessions: Tuesday: 4-5pm— St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Confessions: Tuesday: 4-5pm— St. John the Baptist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Confessions: Tuesday: 4-5pm— St. John the Baptist"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly confession Tuesday 16:00–17:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly confession Tuesday 16:00–17:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly confession Tuesday 16:00–17:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly confession Tuesday 16:00–17:00 st-john-baptist-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly confession Tuesday 16:00–17:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:45",
+        "end_time": "18:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Confessions: Wednesday: 5:45-6:15pm— Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Confessions: Wednesday: 5:45-6:15pm— Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Confessions: Wednesday: 5:45-6:15pm— Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Confessions: Wednesday: 5:45-6:15pm— Blessed Sacrament"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Confessions: Wednesday: 5:45-6:15pm— Blessed Sacrament"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly confession Wednesday 17:45–18:15 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly confession Wednesday 17:45–18:15 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly confession Wednesday 17:45–18:15 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly confession Wednesday 17:45–18:15 blessed-sacrament-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly confession Wednesday 17:45–18:15 blessed-sacrament-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "09:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Confessions: Friday: 9:15-9:45am— St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Confessions: Friday: 9:15-9:45am— St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Confessions: Friday: 9:15-9:45am— St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Confessions: Friday: 9:15-9:45am— St. Timothy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Confessions: Friday: 9:15-9:45am— St. Timothy"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly confession Friday 09:15–09:45 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly confession Friday 09:15–09:45 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly confession Friday 09:15–09:45 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly confession Friday 09:15–09:45 st-timothy-tonawanda",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly confession Friday 09:15–09:45 st-timothy-tonawanda",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Confessions: Saturday: 3-4pm— St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Confessions: Saturday: 3-4pm— St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Confessions: Saturday: 3-4pm— St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Confessions: Saturday: 3-4pm— St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Confessions: Saturday: 3-4pm— St. Stephen"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly confession Saturday 15:00–16:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly confession Saturday 15:00–16:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly confession Saturday 15:00–16:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly confession Saturday 15:00–16:00 st-stephen-grand-island",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly confession Saturday 15:00–16:00 st-stephen-grand-island",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Confessions: Saturday: 4:15-4:45pm— St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Confessions: Saturday: 4:15-4:45pm— St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Confessions: Saturday: 4:15-4:45pm— St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Confessions: Saturday: 4:15-4:45pm— St. Paul"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Confessions: Saturday: 4:15-4:45pm— St. Paul"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-kenmore",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly confession Saturday 16:15–16:45 st-paul-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Monday 14:00–16:00 st-john-baptist-kenmore  “In the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Monday 14:00–16:00 st-john-baptist-kenmore  “In the Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Monday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Monday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Monday 14:00–16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the shrine chapel is on the St. John the Baptist grounds (the newest intentions list the Triduum Mass there under St. John the Baptist); the bulletins call it Eucharistic Adoration with hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Tuesday 14:00–16:00 st-john-baptist-kenmore  “In the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Tuesday 14:00–16:00 st-john-baptist-kenmore  “In the Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Tuesday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Tuesday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Tuesday 14:00–16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the shrine chapel is on the St. John the Baptist grounds (the newest intentions list the Triduum Mass there under St. John the Baptist); the bulletins call it Eucharistic Adoration with hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Wednesday 14:00–16:00 st-john-baptist-kenmore  “In the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Wednesday 14:00–16:00 st-john-baptist-kenmore  “In the Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Wednesday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Wednesday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Wednesday 14:00–16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the shrine chapel is on the St. John the Baptist grounds (the newest intentions list the Triduum Mass there under St. John the Baptist); the bulletins call it Eucharistic Adoration with hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Thursday 14:00–16:00 st-john-baptist-kenmore  “In the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Thursday 14:00–16:00 st-john-baptist-kenmore  “In the Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Thursday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Thursday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Thursday 14:00–16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the shrine chapel is on the St. John the Baptist grounds (the newest intentions list the Triduum Mass there under St. John the Baptist); the bulletins call it Eucharistic Adoration with hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. John the Baptist: Adoration in the Chapel—The Saint John Neumann Shrine is open for Eucharistic Adoration Monday through Friday from 2 to 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Friday 14:00–16:00 st-john-baptist-kenmore  “In the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Friday 14:00–16:00 st-john-baptist-kenmore  “In the Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Friday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Friday 14:00–16:00 st-john-baptist-kenmore  “Saint John Neumann Shrine”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Friday 14:00–16:00 st-john-baptist-kenmore",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: the shrine chapel is on the St. John the Baptist grounds (the newest intentions list the Triduum Mass there under St. John the Baptist); the bulletins call it Eucharistic Adoration with hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with Vespers, Saint John Neumann Shrine chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Holy Hour with Vespers is offered Sunday from 3 - 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Holy Hour with Vespers is offered Sunday from 3 - 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Holy Hour with Vespers is offered Sunday from 3 - 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Holy Hour with Vespers is offered Sunday from 3 - 4pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Holy Hour with Vespers is offered Sunday from 3 - 4pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Sunday 15:00–16:00 st-john-baptist-kenmore  “Holy Hour with Vespers”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Sunday 15:00–16:00 st-john-baptist-kenmore  “Holy Hour with Vespers”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Sunday 15:00–16:00 st-john-baptist-kenmore  “Holy Hour with Vespers”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Sunday 15:00–16:00 st-john-baptist-kenmore  “Holy Hour with Vespers”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Sunday 15:00–16:00 st-john-baptist-kenmore  “Holy Hour with Vespers”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, POLICY What to extract: a Holy Hour is Adoration even with other prayer; it is in the same Adoration paragraph as the shrine chapel hours.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of Divine Mercy; continues through Thursday 10pm"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Wednesday 09:00–23:59 blessed-sacrament-tonawanda  “In the Chapel of Divine Mercy, continuous through Thursday 10pm”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Wednesday 09:00–22:00 blessed-sacrament-tonawanda  “Adoration in the Chapel of Divine Mercy continues through Thursday 10:00 PM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Wednesday 09:00–23:59 blessed-sacrament-tonawanda  “In the Chapel of Divine Mercy; continues through Thursday 10:00 PM”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Wednesday 09:00 blessed-sacrament-tonawanda  “Continues through Thursday 10:00 PM in the Chapel of Divine Mercy”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Wednesday 09:00 blessed-sacrament-tonawanda  “Continuous through Thursday 10:00 PM”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R38: a continuous period from Wednesday 9:00 AM to Thursday 10:00 PM, written as Wednesday 9:00 AM to midnight plus Thursday midnight to 10:00 PM. The chapel is at Blessed Sacrament (the Sunday Chaplet is prayed there after the 9:30 Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "22:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Chapel of Divine Mercy; continued from Wednesday; includes the 6pm Heal our Land Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm; Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm; Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm; Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm; Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Blessed Sacrament: Adoration in the Chapel of Divine Mercy each Wednesday 9am through Thursday 10pm; Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Thursday 00:00–22:00 blessed-sacrament-tonawanda  “In the Chapel of Divine Mercy, continued from Wednesday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Thursday 00:00–22:00 blessed-sacrament-tonawanda  “In the Chapel of Divine Mercy”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, R37, R38: the Thursday part of the Wednesday-to-Thursday Adoration. The Thursday 6pm Holy Hour lies entirely inside it, so the longer period is kept and the Holy Hour is mentioned in the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Heal our Land Adoration Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Heal our Land Adoration Holy Hour – Thursdays at 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Thursday 18:00 blessed-sacrament-tonawanda  “Heal our Land Adoration Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Thursday 18:00–19:00 blessed-sacrament-tonawanda  “Heal our Land Adoration Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Thursday 18:00 blessed-sacrament-tonawanda  “Heal our Land Adoration Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Thursday 18:00–19:00 blessed-sacrament-tonawanda  “Heal our Land Adoration Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Thursday 18:00 blessed-sacrament-tonawanda  “Heal our Land Adoration Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R37, R9: the Holy Hour is entirely inside the Wednesday 9am - Thursday 10pm Adoration at the same church, so it is not a second slot; it is named in the Thursday slot's note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Flame of Love Rosary Holy Hour in the Chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour – Tuesdays at 6pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour – Tuesdays at 6pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour – Tuesdays at 6pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour – Tuesdays at 6pm in the Chapel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "Blessed Sacrament: Flame of Love Rosary Holy Hour – Tuesdays at 6pm in the Chapel"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  “Flame of Love Rosary Holy Hour in the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-tonawanda  “Flame of Love Rosary Holy Hour in the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  “Flame of Love Rosary Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-tonawanda  “Flame of Love Rosary Holy Hour in the Chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "weekly adoration Tuesday 18:00 blessed-sacrament-tonawanda  “Flame of Love Rosary Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35, POLICY What to extract: a Holy Hour is Adoration even when other prayer (a Rosary) goes with it, and the bulletin does not say the Blessed Sacrament is not exposed; it is listed under Eucharistic Adoration & Devotions. End 7:00 PM from the one-hour length.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-paul-kenmore",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows the 8:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. Paul: Prayers on the First Friday of the month 7 min. before the 8am Mass, With Adoration following the Mass until 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. Paul: Prayers on the First Friday of the month 7 min. before the 8am Mass, With Adoration following the Mass until 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. Paul: Prayers on the First Friday of the month 7 min. before the 8am Mass, With Adoration following the Mass until 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. Paul: Prayers on the First Friday of the month 7 min. before the 8am Mass, With Adoration following the Mass until 12 Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. Paul: Prayers on the First Friday of the month 7 min. before the 8am Mass, With Adoration following the Mass until 12 Noon"
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "specific_date adoration 2026-10-02 08:30–12:00 st-paul-kenmore  “First Friday Adoration following 8:00 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Friday 08:00–12:00 st-paul-kenmore  “First Friday of the month, follows 8am Mass”  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10, R35: named monthly service printed in all five bulletins. No clock start: after the weekday 8:00 AM Mass, so 8:30 (POLICY, Times); ends 12 Noon as printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-grand-island",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. Stephen: Eucharistic Adoration on the first Friday of the month (after the 8am Mass) from 8:30am—6pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. Stephen: Eucharistic Adoration on the first Friday of the month (after the 8am Mass) from 8:30am—6pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. Stephen: Eucharistic Adoration on the first Friday of the month (after the 8am Mass) from 8:30am—6pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. Stephen: Eucharistic Adoration on the first Friday of the month (after the 8am Mass) from 8:30am—6pm."
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. Stephen: Eucharistic Adoration on the first Friday of the month (after the 8am Mass) from 8:30am—6pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Friday 08:30–18:00 st-stephen-grand-island  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "aff84ee13699",
+          "said": "specific_date adoration 2026-10-02 08:30–18:00 st-stephen-grand-island  “First Friday Adoration”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R35: named monthly service, printed with clock times in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s50",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 2,
+          "said": "St. Timothy: Eucharistic Adoration Holy Hour: held on the 2nd Wednesday of every month from 6:30—7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 2,
+          "said": "St. Timothy: Eucharistic Adoration Holy Hour: held on the 2nd Wednesday of every month from 6:30—7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6fa016a5",
+          "page": 2,
+          "said": "St. Timothy: Eucharistic Adoration Holy Hour: held on the 2nd Wednesday of every month from 6:30—7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cf26281",
+          "page": 2,
+          "said": "St. Timothy: Eucharistic Adoration Holy Hour: held on the 2nd Wednesday of every month from 6:30—7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "aff84ee1",
+          "page": 2,
+          "said": "St. Timothy: Eucharistic Adoration Holy Hour: held on the 2nd Wednesday of every month from 6:30—7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 4,
+          "said": "Eucharistic Adoration is held on the 2nd Wednesday of every month at 6:30pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "weekly adoration Wednesday 18:30–19:30 st-timothy-tonawanda  “Second Wednesday of every month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "specific_date adoration 2026-10-14 18:30–19:30 st-timothy-tonawanda  “Adoration of the Cross”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "specific_date adoration 2026-10-14 18:30–19:30 st-timothy-tonawanda  “Second Wednesday Adoration Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: named monthly service printed in all five bulletins and again in the St. Timothy news.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s51",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-26",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Triduum for Life, Saint John Neumann Shrine chapel; Rosary at 6:30 PM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 5,
+          "said": "Triduum for Life ... Oct. 26, 27, and 28 - (Mon. Tues. Wed.) with the Rosary at 6:30pm followed by Mass at 7pm. It will be held in the St. John Neumann Shrine Chapel (Englewood & Belmont). All are welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Monday, October 26 7:00pm Chapel—Triduum for Life Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-10-26 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "specific_date mass 2026-10-26 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in the Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "specific_date mass 2026-10-26 19:00 st-john-baptist-kenmore  “Triduum for Life; St. John Neumann Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "specific_date mass 2026-10-26 19:00 st-john-baptist-kenmore  “Triduum for Life Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass, open to all, in the shrine chapel at St. John the Baptist (Englewood & Belmont), listed under that church's intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s52",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-27",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Triduum for Life, Saint John Neumann Shrine chapel; Rosary at 6:30 PM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 5,
+          "said": "Triduum for Life ... Oct. 26, 27, and 28 - (Mon. Tues. Wed.) with the Rosary at 6:30pm followed by Mass at 7pm. St. John Neumann Shrine Chapel (Englewood & Belmont). All are welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Tuesday, October 27 7:00pm Chapel—Triduum for Life Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-10-27 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "specific_date mass 2026-10-27 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in the Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "specific_date mass 2026-10-27 19:00 st-john-baptist-kenmore  “Triduum for Life; St. John Neumann Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "specific_date mass 2026-10-27 19:00 st-john-baptist-kenmore  “Triduum for Life Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: as the Oct 26 Triduum Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s53",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Triduum for Life, Saint John Neumann Shrine chapel; Rosary at 6:30 PM"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 5,
+          "said": "Triduum for Life ... Oct. 26, 27, and 28 - (Mon. Tues. Wed.) with the Rosary at 6:30pm followed by Mass at 7pm. St. John Neumann Shrine Chapel (Englewood & Belmont). All are welcome"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 3,
+          "said": "St. John the Baptist Wednesday, October 28 7:00pm Chapel—Triduum for Life Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-10-28 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "specific_date mass 2026-10-28 19:00 st-john-baptist-kenmore  “Triduum for Life Mass in the Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "specific_date mass 2026-10-28 19:00 st-john-baptist-kenmore  “Triduum for Life; St. John Neumann Shrine Chapel”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "3cf26281a939",
+          "said": "specific_date mass 2026-10-28 19:00 st-john-baptist-kenmore  “Triduum for Life Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: as the Oct 26 Triduum Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s54",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day Mass of Remembrance"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 4,
+          "said": "there will be a MASS OF REMEMBRANCE on November 2nd at 7 pm for all our loved ones who have gone home to the Lord since last November. ... we ask all our parishioners to come and support them in prayer."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-11-02 19:00 blessed-sacrament-tonawanda  “Mass of Remembrance”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "specific_date mass 2026-11-02 19:00 blessed-sacrament-tonawanda  “Mass of Remembrance”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: a dated All Souls Day Mass in the Blessed Sacrament news; open to all parishioners (families are invited to light a candle, but it is not limited to them).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s55",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-timothy-tonawanda",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-14",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Annual Mass for the Loss of a Child"
+      },
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 8,
+          "said": "You are invited to attend our annual Mass for the Loss of a Child. ... The Mass will be held on Saturday, November 14, at 12 Noon, and will be held this year at St. Timothy Church, 565 E Park, Tonawanda."
+        },
+        {
+          "source": "agent",
+          "bulletin": "79122545",
+          "page": 7,
+          "said": "Mass for the Loss of a Child ... Saturday, November 14, at 12 Noon ... St. Timothy Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-11-14 12:00 st-timothy-tonawanda  “Mass for the Loss of a Child”",
+          "page": 8
+        },
+        {
+          "source": "history",
+          "bulletin": "791225457c30",
+          "said": "specific_date mass 2026-11-14 12:00 st-timothy-tonawanda  “Mass for the Loss of a Child”",
+          "page": 7
+        },
+        {
+          "source": "history",
+          "bulletin": "6fa016a5877b",
+          "said": "specific_date mass 2026-11-14 12:00 st-timothy-tonawanda  “Mass for the Loss of a Child”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass, open to anyone grieving the loss of a child, at a listed church (565 E Park matches St. Timothy).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s56",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-baptist-kenmore",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "14:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Diocesan Union of Holy Name Societies Annual Memorial and Healing Mass; Anointing of the Sick follows"
+      },
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 9,
+          "said": "The Buffalo Diocesan Union of Holy Name Societies (DUHNS) will celebrate their Annual Memorial and Healing Mass on November 29, at 2pm at St. John the Baptist Church (Kenmore). ... All are most welcome."
+        },
+        {
+          "source": "history",
+          "bulletin": "ba7f2ea27155",
+          "said": "specific_date mass 2026-11-29 14:00 st-john-baptist-kenmore  “Annual Memorial and Healing Mass”",
+          "page": 9
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass at a listed church; the bulletin says all are most welcome, so it is not closed to a group.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s57",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 8,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 8,
+          "said": "Catholic Cemeteries of Buffalo: Saturday November 7th at 9:00 am at Mt. Olivet Cemetery in Kenmore for our monthly Mass of Remembrance"
+        }
+      ],
+      "rationale": "R22: held at a cemetery, not at one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s58",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 9,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 9,
+          "said": "St. Peter & Paul Church in Williamsville ... 190th Anniversary with a Mass at 4:30pm ... Saturday, November 7th"
+        }
+      ],
+      "rationale": "R22: another parish's church in Williamsville.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s59",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "ba7f2ea2",
+          "page": 6,
+          "said": "Memorial Mass November 15th Continental Breakfast"
+        }
+      ],
+      "rationale": "R26: St. Paul's Women's Sodality memorial Mass on Nov 15 is named with no start time or church detail (and may be a regular Sunday Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# The dispatcher's settings (docs/factory-spec.md). This machine's accounts and paths go
+# in data/factory/local.yaml, which is not committed (see factory/local.example.yaml).
+
+# Usage caps, in percent of each account's limit.
+five_hour_cap: 75
+weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
+
+max_workers: 1
+max_send_backs: 2
+lessons_before_integrate: 8
+
+# Seed Runs (§11).
+seed_ready_bulletins: 2
+seed_first_run_share: 0.8
+seed_follow_up_weeks: 6
+
+# Quota readings (docs/factory-spec.md, Usage). calibration_gap_seconds > 0 holds the
+# next job on an account that long after its last attempt, for calibration runs only.
+quota_settle_seconds: 150
+quota_sample_minutes: 15
+calibration_gap_seconds: 0
+
+# How often the dispatcher does each thing.
+tick_seconds: 60
+issue_poll_minutes: 10
+readiness_check_hours: 24
+backup_hour: 3          # local time; the nightly ledger backup to R2
+backup_prefix: factory/backups/
+
+base_branch: main
+remote: origin

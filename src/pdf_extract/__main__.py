@@ -19,6 +19,9 @@ import json
 import logging
 import os
 import sys
+from collections.abc import Collection
+from contextlib import nullcontext, redirect_stdout
+from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -44,12 +47,15 @@ from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
+from pdf_extract.dioceses import records as diocese_records
 from pdf_extract.dioceses.cli import add_diocese_parser
 from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
 from pdf_extract.extract_frontend_db import extract as extract_frontend_db
 from pdf_extract.extract_run import run as run_extract
+from pdf_extract.factory.cli import add_factory_parser
+from pdf_extract.factory.config import FactoryError
 from pdf_extract.fetch import FETCH_WORKERS, fetch_bulletins
 from pdf_extract.fetch_check import check_fetch
 from pdf_extract.geocode import run_backfill
@@ -86,6 +92,7 @@ def _configure_logging(level_name: str) -> None:
     logging.basicConfig(
         level=level,
         format="%(asctime)s %(levelname)s %(name)s - %(message)s",
+        stream=sys.stderr,
     )
 
 
@@ -156,12 +163,39 @@ def _cmd_fetch(args: argparse.Namespace) -> Result:
     return fetch_bulletins(parish_name=args.parish, workers=args.workers)
 
 
+def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dict[str, str]]:
+    """A diocese's parish rows before promotion: the rows `promote` would write."""
+    d = diocese_records.load(diocese)
+    if d.unreadable:
+        raise DioceseError("fix these files first; they do not parse:\n  "
+                           + "\n  ".join(d.unreadable))
+    no_bulletin = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
+    if no_bulletin:
+        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(no_bulletin)}")
+    rows, _ = diocese_records.export_rows(d)
+    return rows
+
+
 def _cmd_fetch_check(args: argparse.Namespace) -> Result:
+    if args.max_issue_age_days < 0:
+        raise DioceseError("--max-issue-age-days must be nonnegative")
+    if args.expected_identity is not None and not any(
+        c.isalnum() or c == "_" for c in args.expected_identity
+    ):
+        raise DioceseError("--expected-identity must contain a nonempty phrase")
+    slugs = _split_csv(args.parish)
     return check_fetch(
-        slugs=_split_csv(args.parish),
+        slugs=slugs,
         providers=_split_csv(args.provider),
         record_dir=args.record,
         download=not args.no_download,
+        # `is not None`: an empty --diocese (an unset shell variable) must fail, not fall back.
+        parishes=(None if args.diocese is None
+                  else _diocese_fetch_rows(args.diocese, slugs)),
+        expected_identity=args.expected_identity,
+        expected_issue_date=args.expected_issue_date,
+        max_issue_age_days=args.max_issue_age_days,
+        reference_date=args.reference_date,
     )
 
 
@@ -175,6 +209,7 @@ def _cmd_process(args: argparse.Namespace) -> Result:
     _ensure_db()
     return process_bulletins(
         parish_name=args.parish, model=args.model, concurrency=args.concurrency,
+        include_fetch_only=args.include_fetch_only,
     )
 
 
@@ -387,6 +422,26 @@ def _build_parser() -> argparse.ArgumentParser:
     fetch_check_parser.add_argument(
         "--no-download", action="store_true", help="Resolve links only; skip the PDF download",
     )
+    fetch_check_parser.add_argument(
+        "--diocese",
+        help="Read the parishes from data/dioceses/<diocese>/ instead of parishes.csv,"
+        " so rows can be checked before they are promoted",
+    )
+    fetch_check_parser.add_argument(
+        "--expected-identity", help="Expected masthead phrase in the selected PDF's first page",
+    )
+    fetch_check_parser.add_argument(
+        "--expected-issue-date", type=date.fromisoformat,
+        help="Expected YYYY-MM-DD issue date; compared with observed evidence",
+    )
+    fetch_check_parser.add_argument(
+        "--max-issue-age-days", type=int, default=14,
+        help="Inclusive freshness threshold in days (default: 14)",
+    )
+    fetch_check_parser.add_argument(
+        "--reference-date", type=date.fromisoformat,
+        help="Use YYYY-MM-DD instead of today for resolution and freshness",
+    )
     fetch_check_parser.set_defaults(handler=_cmd_fetch_check)
     _add_common_args(fetch_check_parser)
 
@@ -403,6 +458,10 @@ def _build_parser() -> argparse.ArgumentParser:
     process_parser.add_argument(
         "--concurrency", type=int, default=5,
         help="Number of parallel model calls (default: 5)",
+    )
+    process_parser.add_argument(
+        "--include-fetch-only", action="store_true",
+        help="Also process fetch-only parishes (fetch_only in parishes.csv), e.g. to try a few",
     )
     process_parser.set_defaults(handler=_cmd_process)
     _add_common_args(process_parser)
@@ -676,6 +735,9 @@ def _build_parser() -> argparse.ArgumentParser:
     # -- seed (the seeding agent's tools; quiet by default, text output) --
     add_seed_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
 
+    # -- factory (the onboarding factory's dispatcher; quiet by default, text output) --
+    add_factory_parser(subparsers, lambda p: _add_common_args(p, default_level="WARNING"))
+
     # -- db --
     db_parser = subparsers.add_parser("db", help="Database management commands")
     db_parser.set_defaults(help_parser=db_parser)
@@ -750,9 +812,15 @@ def main(argv: list[str] | None = None) -> int:
     _load_dotenv()
 
     try:
-        result = handler(args)
+        # Research commands are consumed by jq and agents. Incidental output from
+        # a scraper or browser is diagnostic, never part of their JSON document.
+        output = (redirect_stdout(sys.stderr) if args.command in ("diocese", "fetch-check")
+                  else nullcontext())
+        with output:
+            result = handler(args)
     except (
         DioceseError, RunScopeError, ClassifierOptionError, ScheduleCommandError, SeedError,
+        FactoryError,
     ) as e:
         # Bad input, not a crash: the message says what to fix, a traceback would bury it.
         print(f"Error: {e}", file=sys.stderr)
@@ -762,10 +830,16 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Error: {e}", file=sys.stderr)
         return 1
 
-    LOGGER.info("Command completed: %s", result)
+    if args.command in ("diocese", "fetch-check"):
+        LOGGER.info("%s completed", args.command)
+    else:
+        LOGGER.info("Command completed: %s", result)
     # A command for agents (`seed`) prints compact text unless --json is given.
     render = getattr(args, "render", None)
     if render is not None and not getattr(args, "json", False):
+        # The text has dashes and quotes; a Windows console or pipe would garble them.
+        if hasattr(sys.stdout, "reconfigure"):
+            sys.stdout.reconfigure(encoding="utf-8")
         print(render(result))
     else:
         print(json.dumps(result, indent=2))

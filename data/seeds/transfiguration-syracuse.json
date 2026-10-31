@@ -1,0 +1,2789 @@
+{
+  "schema_version": 1,
+  "parish_slug": "transfiguration-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-11T16:33:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:58:10Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-15T11:53:31Z",
+  "summary": "Traditional Latin Mass parish with one church. Sunday (8 and 10 AM with Confession and Adoration around each) and Saturday are fixed, but the website says weekday Masses vary, so only weekday slots printed in both bulletins are weekly and the rest of the Oct 12-16 calendar is dated. Three questions are open: Thursday morning Adoration's end time, the monthly 24-hour First Friday/Saturday Adoration, and a first-Friday 5:15 PM Mass with Confession.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "4711490a50710c3e856c4da4edd3b654100a46c59a9162fd8a8d9707eef98783",
+      "fetched_at": "2026-10-11T16:33:00Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "56b8a97432136bf8b20002a017a54c6bfe3fa23e41165c14c94ec47aa0e40730",
+      "fetched_at": "2026-09-28T00:17:10Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "SUNDAY 8:00am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "SUNDAY 8:00am Latin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/massconfession",
+          "said": "please note, our sunday mass schedule is fixed. ... Sunday 8:00 AM Latin Low Mass; 10:00 AM Latin Sung Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Sunday 08:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Sunday 08:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Sunday rows of both bulletins read (all four Sundays, Sept 27 to Oct 18); the website says the Sunday Mass schedule is fixed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "SUNDAY 10:00am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "SUNDAY 10:00am Latin"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/massconfession",
+          "said": "10:00 AM Latin Sung Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Sunday 10:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Sunday 10:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: printed in the Sunday rows of both bulletins read; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Sunday 8:00am Latin ... Confession 7:30am-7:45am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sunday 8:00am Latin ... Confession 7:30am-7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Sunday 07:30–07:45 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Sunday 07:30–07:45 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY Weekly or dated rule 4: the same Sunday Confession window is printed for all four Sundays in the two bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": "09:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Sunday 10:00am Latin ... Confession 9:15am-9:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sunday 10:00am Latin ... Confession 9:15am-9:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Sunday 09:15–09:50 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Sunday 09:15–09:50 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY rule 4: the same Sunday Confession window is printed for all four Sundays in the two bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Sunday ... Adoration 7am-7:55am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sunday ... Adoration 7am-7:55am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Sunday 07:00–07:55 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly adoration Sunday 07:00–07:55 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY rule 4: the same Sunday Adoration window is printed for all four Sundays in the two bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": "12:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Sunday ... Adoration 11:30am-12:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sunday ... Adoration 11:30am-12:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Sunday 11:30–12:30 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly adoration Sunday 11:30–12:30 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY rule 4: the same Sunday Adoration window is printed for all four Sundays in the two bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 10 / OCTOBER 17: 9am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 3: 9am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Saturday 09:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "specific_date mass 2026-10-03 09:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3: 9 AM Saturday Mass on Oct 3, 10 and 17. The Sept 26 Ember Saturday had an 8:00 AM Mass (7:35-7:50 Confession, 7-8 Adoration), a one-off before as_of, so it is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 10 / 17: Confession 8:15am-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 3: Confession 8:15am-8:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Saturday 08:15–08:50 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "specific_date confession 2026-10-03 08:15–08:50 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Oct 3, 10 and 17. Sept 26 (Ember Saturday) differed, 7:35-7:50.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 10 / 17: Adoration 7:30am-9am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "SATURDAY, OCTOBER 3: 24 hr adoration ends at 9 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Saturday 07:30–09:00 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "specific_date adoration 2026-09-26 07:00–08:00 transfiguration-syracuse  (a different time)",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, POLICY rule 4: printed 7:30-9 AM for both Saturdays of the newest bulletin, and Oct 3's 24-hour adoration also ended at 9. Sept 26 (Ember Saturday) was 7-8 AM.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "TUESDAY, OCTOBER 13: 6:30am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "TUESDAY, SEPTEMBER 29: 6:30am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Tuesday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Tuesday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: printed on Sept 29 and Oct 13. The website says weekday Masses vary from time to time, which is why only slots printed in both bulletins are weekly.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:10",
+        "end_time": "06:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 13: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sept 29: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Tuesday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Tuesday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Sept 29 and Oct 13.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14: 5:15pm Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "WEDNESDAY, SEPTEMBER 30: 5:15pm Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Wednesday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Wednesday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: printed on Sept 30 and Oct 14.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:40",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: Confession 4:40 pm - 5:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sept 30: Confession 4:40 pm - 5:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Wednesday 16:40–17:00 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Wednesday 16:40–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Sept 30 and Oct 14.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: Adoration 4pm-5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Sept 30: Adoration 4-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Wednesday 16:00–17:00 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly adoration Wednesday 16:00–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Sept 30 and Oct 14.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15: 6:30am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 1: 6:30am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Thursday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Thursday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: printed on Oct 1 and Oct 15.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:10",
+        "end_time": "06:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 15: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Oct 1: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Thursday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Thursday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Oct 1 and Oct 15.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16: 6:30am Latin"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2: 6:30am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Friday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Friday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: printed on Oct 2 (a first Friday) and Oct 16.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:10",
+        "end_time": "06:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 16: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "Oct 2: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Friday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Friday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R3, POLICY rule 4: the same window on Oct 2 and Oct 16.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "07:05",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15: Adoration 7:05am-8am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 1: Adoration 7:05am - 9am (6:30am and 9am Masses)"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Thursday 07:05–08:00 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly adoration Thursday 07:05–09:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R28/C8: both bulletins start Thursday morning Adoration at 7:05, but it ended at 9:00 on Oct 1 (a second Mass at 9 AM that day) and at 8:00 on Oct 15 (only the 6:30 Mass). Leaning toward the newest bulletin's 8:00 end.",
+      "question": "Thursday morning Adoration: which end time, or weekly at all?",
+      "options": [
+        {
+          "label": "Thursdays 7:05-8:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:05",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Thursdays 7:05-9:00 AM",
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "07:05",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Only this week, Oct 15, 7:05-8:00 AM",
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-15",
+            "start_time": "07:05",
+            "end_time": "08:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:52:26Z"
+      }
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration begins; continues overnight to 9:00 AM Saturday"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2: 7:05am 24 hr adoration begins ... adoration continues; SATURDAY, OCTOBER 3: 24 hr adoration ends at 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 4,
+          "said": "24-Hour Adoration will take place from First Friday, OCT 2 at 7:00am until First Saturday, OCT 3, at 9:00am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "FIRST FRIDAYS & FIRST SATURDAYS 24-Hour Adoration, Mass, & Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/first-fridays-first-saturdays",
+          "said": "24-Hour Perpetual Adoration is available on this weekend, usually from 7:00am on First Friday, thru 9:00am on First Saturday."
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Friday 07:05–08:00 transfiguration-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "specific_date adoration 2026-10-02 07:05 transfiguration-syracuse  “24-hour adoration begins”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12, R30: the newest bulletin's week (Oct 11-18) holds no first Friday or Saturday, so the slot rests on the Sept 27 bulletin, whose week holds Oct 2-3, and on the devotion box in both. It runs overnight, which one slot cannot hold, so it is split at midnight; the table says 7:05 AM and page 4 and the website say 7:00 AM. Leaning toward the table's 7:05, and an open end on Friday.",
+      "question": "Add the monthly First Friday / First Saturday 24-hour Adoration?",
+      "options": [
+        {
+          "label": "First Friday 7:05 AM through First Saturday 9:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "07:05",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "24-hour Adoration begins; continues overnight to 9:00 AM Saturday"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:13Z"
+      },
+      "group": "first-friday-24hr"
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "24-hour Adoration from Friday ends at 9:00 AM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2: 7:05am 24 hr adoration begins ... adoration continues; SATURDAY, OCTOBER 3: 24 hr adoration ends at 9 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 4,
+          "said": "24-Hour Adoration will take place from First Friday, OCT 2 at 7:00am until First Saturday, OCT 3, at 9:00am."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "FIRST FRIDAYS & FIRST SATURDAYS 24-Hour Adoration, Mass, & Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/first-fridays-first-saturdays",
+          "said": "24-Hour Perpetual Adoration is available on this weekend, usually from 7:00am on First Friday, thru 9:00am on First Saturday."
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "specific_date adoration 2026-10-03 00:00–09:00 transfiguration-syracuse  “24-hour adoration ends”",
+          "page": 2
+        }
+      ],
+      "rationale": "R12, R30: the newest bulletin's week (Oct 11-18) holds no first Friday or Saturday, so the slot rests on the Sept 27 bulletin, whose week holds Oct 2-3, and on the devotion box in both. It runs overnight, which one slot cannot hold, so it is split at midnight; the table says 7:05 AM and page 4 and the website say 7:00 AM. Leaning toward the table's 7:05, and an open end on Friday.",
+      "question": "Add the monthly First Friday / First Saturday 24-hour Adoration?",
+      "options": [
+        {
+          "label": "First Friday 7:05 AM through First Saturday 9:00 AM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "00:00",
+            "end_time": "09:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "24-hour Adoration from Friday ends at 9:00 AM"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:13Z"
+      },
+      "group": "first-friday-24hr"
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2: 5:15pm Latin Nancy Leamy + from Our Parish; Confession 4:30pm-5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16: only 6:30am Latin (no 5:15pm Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "FIRST FRIDAYS & FIRST SATURDAYS 24-Hour Adoration, Mass, & Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/first-fridays-first-saturdays",
+          "said": "At Transfiguration Church, we gather together for Mass on each First Friday & First Saturday of the month"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Friday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R11, R30: the 5:15 PM Friday Mass appears only on Oct 2, a first Friday, and not on Oct 16; the devotion box and the website say there is Mass on each First Friday, but give no time. The bulletin does not tie this time to the first Friday itself. Leaning toward first Fridays, since Oct 16 had none.",
+      "question": "Is there a first-Friday-only 5:15 PM Mass with Confession 4:30-5:00?",
+      "options": [
+        {
+          "label": "First Fridays 5:15 PM Mass, Confession 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:15",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:29Z"
+      },
+      "group": "first-friday-evening"
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 2: 5:15pm Latin Nancy Leamy + from Our Parish; Confession 4:30pm-5pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16: only 6:30am Latin (no 5:15pm Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "FIRST FRIDAYS & FIRST SATURDAYS 24-Hour Adoration, Mass, & Confessions"
+        },
+        {
+          "source": "website",
+          "url": "https://www.transfigurationsyr.com/first-fridays-first-saturdays",
+          "said": "At Transfiguration Church, we gather together for Mass on each First Friday & First Saturday of the month"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Friday 16:30–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R11, R30: the 5:15 PM Friday Mass appears only on Oct 2, a first Friday, and not on Oct 16; the devotion box and the website say there is Mass on each First Friday, but give no time. The bulletin does not tie this time to the first Friday itself. Leaning toward first Fridays, since Oct 16 had none.",
+      "question": "Is there a first-Friday-only 5:15 PM Mass with Confession 4:30-5:00?",
+      "options": [
+        {
+          "label": "First Fridays 5:15 PM Mass, Confession 4:30-5:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "transfiguration-syracuse",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "16:30",
+            "end_time": "17:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:53:29Z"
+      },
+      "group": "first-friday-evening"
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Requiem Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "MONDAY, OCTOBER 12 | Feria: 5:15pm Latin Requiem Mass"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Monday's 5:15 PM Mass is shown for Oct 12 only; the Sept 28 Monday Mass was at 12:10 PM (before as_of), so Monday has no regular time to confirm. Intention 'Requiem Mass' is an ordinary open Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "MONDAY, OCTOBER 12: Confession 4pm-5pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "MONDAY, OCTOBER 12: Adoration 4:30pm-5pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Our Lady of Fatima; Rosary procession follows"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "TUESDAY, OCTOBER 13: 5:15pm Latin, In honor of Our Lady of Fatima"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "Low Mass - 5:15pm; Rosary Procession - immediately after Mass"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: a special evening Mass for the Feast of Our Lady of Fatima, outside the regular schedule (the Sept 29 Tuesday had no evening Mass).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "TUESDAY, OCTOBER 13: Confession 4pm-5pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "TUESDAY, OCTOBER 13: Adoration 4:30pm-5pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-13",
+        "start_time": "07:05",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "TUESDAY, OCTOBER 13: Adoration 7:05am-8:30am"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14: 6:30am Latin"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Wednesday had only the 5:15 PM Mass on Sept 30, so the 6:30 AM Mass is dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "06:10",
+        "end_time": "06:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14: Confession 6:10am-6:25am"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "07:05",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14: Adoration 7:05am-8am"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-14",
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "WEDNESDAY, OCTOBER 14: Adoration 6pm-7pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Solemn High Mass; Fr. Brenden Foley's first"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15: 5:15pm Latin Solemn High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 4,
+          "said": "Thursday, OCT 15th - Feast of St. Teresa of Avila 5:15PM - Father Foley's First Solemn High Mass"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: a special Solemn High Mass outside the regular Thursday times (POLICY rule 7); it is open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "16:40",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15: Confession 4:40 pm - 5:00 pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-15",
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 15: Adoration 4:30pm-5pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "07:05",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16: Adoration 7:05am-8am"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Friday Oct 2's 7:05 start was the first-Friday 24-hour Adoration, so this slot is not confirmed as regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "16:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "FRIDAY, OCTOBER 16: Adoration 4pm-9pm"
+        }
+      ],
+      "rationale": "POLICY Weekly or dated rules 3 and 5, R16: Printed once, with a date, in the newest bulletin; the other bulletin does not show this slot, so it stays dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-23",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Latin Mass with Fr. Dennis Walker; Fr. Chris Alar visit"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 4,
+          "said": "Friday, OCT 23 - Father Chris Alar Visits ... 6:00PM Latin Mass w/ Father Dennis Walker; 7:00PM Father Alar Speaks"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 1,
+          "said": "FRIDAY, OCTOBER 23 Father Chris Alar Visits Transfiguration Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "specific_date mass 2026-10-23 18:00 transfiguration-syracuse  “Latin; Father Chris Alar Visit”",
+          "page": 4
+        }
+      ],
+      "rationale": "POLICY rule 3, R16: a dated evening Mass announced in the newest bulletin, at a time outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Eucharistic Procession after 10 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 1,
+          "said": "SUNDAY, OCTOBER 25: Feast of Christ the King - Eucharistic Procession - after 10AM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "specific_date adoration 2026-10-25 11:00 transfiguration-syracuse  “Eucharistic Procession after 10 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R24, R9: a procession is not called Adoration, Benediction or Holy Hour, and the bulletin gives no start time or length. Extract mode's history recorded it as 11:00 Adoration; POLICY does not count it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 3,
+          "said": "PRAYING THE ROSARY ON SUNDAY MORNINGS: Immediately after the 8:00am Mass; At 9:40, immediately before the 10:00am Mass; Rosary Procession immediately after the Oct 13 Mass"
+        }
+      ],
+      "rationale": "R24, R25: the Sunday Rosary and the Oct 13 Rosary procession are devotions, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s43",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 12: Confession 4pm-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Monday 16:00–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s44",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 12: Adoration 4:30pm-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Monday 16:30–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s45",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 12: 5:15pm Latin Requiem Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Monday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s46",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:05",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 13: Adoration 7:05am-8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Tuesday 07:05–08:30 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s47",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 13: Confession 4pm-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Tuesday 16:00–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s48",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 13: Adoration 4:30pm-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Tuesday 16:30–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s49",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 13: 5:15pm Latin, In honor of Our Lady of Fatima"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Tuesday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s50",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:10",
+        "end_time": "06:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: Confession 6:10am-6:25am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Wednesday 06:10–06:25 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s51",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "06:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: 6:30am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Wednesday 06:30 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s52",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:05",
+        "end_time": "08:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: Adoration 7:05am-8am"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Wednesday 07:05–08:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s53",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 14: Adoration 6pm-7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Wednesday 18:00–19:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s54",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 15: Adoration 4:30pm-5pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Thursday 16:30–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s55",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:40",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 15: Confession 4:40 pm - 5:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly confession Thursday 16:40–17:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s56",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 15: 5:15pm Latin Solemn High Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly mass Thursday 17:15 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s57",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "21:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "4711490a5071",
+          "page": 2,
+          "said": "Oct 16: Adoration 4pm-9pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "4711490a5071",
+          "said": "weekly adoration Friday 16:00–21:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9: history reads this as a weekly slot. It is printed once, with a date, in a week where weekday times vary (website: 'Daily Masses may vary'), so POLICY Weekly or dated rules 3 and 5 make it dated. It is recorded as the dated slot for that day; no weekly slot is created.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s58",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "MONDAY, SEPTEMBER 28: Adoration 11am -12pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly adoration Monday 11:00–12:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9, R16: history reads this as a weekly slot. It is printed once, with a date before as_of, in the older bulletin; the newest bulletin shows a different Monday (5:15 PM) or Thursday (no 9 AM Mass), so it is not a regular slot and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s59",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "MONDAY, SEPTEMBER 28: Confession 11:45am -12:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Monday 11:45–12:00 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9, R16: history reads this as a weekly slot. It is printed once, with a date before as_of, in the older bulletin; the newest bulletin shows a different Monday (5:15 PM) or Thursday (no 9 AM Mass), so it is not a regular slot and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s60",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "MONDAY, SEPTEMBER 28: 12:10pm Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Monday 12:10 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9, R16: history reads this as a weekly slot. It is printed once, with a date before as_of, in the older bulletin; the newest bulletin shows a different Monday (5:15 PM) or Thursday (no 9 AM Mass), so it is not a regular slot and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s61",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "08:55",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 1: Confession 8:45am-8:55am"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly confession Thursday 08:45–08:55 transfiguration-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9, R16: history reads this as a weekly slot. It is printed once, with a date before as_of, in the older bulletin; the newest bulletin shows a different Monday (5:15 PM) or Thursday (no 9 AM Mass), so it is not a regular slot and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s62",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "transfiguration-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "56b8a9743213",
+          "page": 2,
+          "said": "THURSDAY, OCTOBER 1: 9am Latin"
+        },
+        {
+          "source": "history",
+          "bulletin": "56b8a9743213",
+          "said": "weekly mass Thursday 09:00 transfiguration-syracuse  “Latin”",
+          "page": 2
+        }
+      ],
+      "rationale": "R7, R9, R16: history reads this as a weekly slot. It is printed once, with a date before as_of, in the older bulletin; the newest bulletin shows a different Monday (5:15 PM) or Thursday (no 9 AM Mass), so it is not a regular slot and is left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

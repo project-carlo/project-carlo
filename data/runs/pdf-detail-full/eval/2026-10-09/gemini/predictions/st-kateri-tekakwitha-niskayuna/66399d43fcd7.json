@@ -1,0 +1,208 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-kateri-tekakwitha-niskayuna",
+  "content_hash": "66399d43fcd7c176b6c50d59399d5010feb931bd144afa03847ce04c2f39e9b3",
+  "source_url": "https://bulletins.discovermass.com/download.php?bulletin=4ycXGKgq7bDqTZCgBYZIotCnDaJMOMN%2FCnx2nd%2FPuTvfBftaXVM5suzSNLsK1plJ3W0GygQ66PMQmWADqFGa%2BGl8V6Vw%2B3nIEMX6%2B10bZ%2FM%3D",
+  "fetched_at": "2026-09-28T22:04:47Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+      "name": "St. Kateri Tekakwitha Church (Rosa Road)",
+      "address": "2216 Rosa Rd., Schenectady, NY 12309"
+    },
+    {
+      "slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "name": "St. Kateri Tekakwitha Church (Union Street)",
+      "address": "1803 Union St., Schenectady, NY 12309"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/66399d43fcd7c176b6c50d59399d5010feb931bd144afa03847ce04c2f39e9b3-0688efccfd2d.json",
+    "modified_at": "2026-09-28T22:16:48.361000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-kateri-tekakwitha-niskayuna/66399d43fcd7.pdf",
+  "pdf_sha256": "b8eac5d1db1cbd8167f171c4cc7f0afc7da21aa9386e1cefe973f98e75959396",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "In-person & livestream",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-union-street-niskayuna",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-kateri-tekakwitha-rosa-road-schenectady",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "09:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Following 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "9:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4613,
+    "output_tokens": 905
+  }
+}

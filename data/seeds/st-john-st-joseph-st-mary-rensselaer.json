@@ -1,0 +1,1292 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-st-joseph-st-mary-rensselaer",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:04Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:30:58Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Two churches (St. John the Evangelist & St. Joseph, and St. Mary at Clinton Heights, both Rensselaer). The cover's Mass, Reconciliation and Adoration boxes agree in all three bulletins. Open: one grouped question on the First Friday (St. John & St. Joseph) and First Saturday (St. Mary) Mass, Adoration and Reconciliation, announced only in the Sept 26 bulletin.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "b49c24e6d8bf33b458a660fe53f12bf5e48828eb9dc69ef9447823512cd32bbd",
+      "fetched_at": "2026-10-11T16:34:04Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "0407237440ef701490aa599a45fd31ac7e043f3689ac5511c6197ad552e17e94",
+      "fetched_at": "2026-10-04T14:53:46Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "5c617240d240539c2b93ac66aa261be465e3183c6e49433c7c421b994c3f3873",
+      "fetched_at": "2026-09-28T22:03:23Z",
+      "published_date": "2026-09-26",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Saturday: 4:00 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read, and in the intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Sunday 08:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Sunday 08:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Sunday 08:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Sunday: 8:00 am/10:30 am - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Sunday 10:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Sunday 10:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Sunday 10:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Monday: 7:00 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Monday: 7:00 am - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Monday: 7:00 am - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Monday 07:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Monday 07:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Monday 07:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R18: printed on the cover of all three bulletins and in the newest bulletin's intentions (Mon. 10/12 7:00 AM); the office closure for Columbus Day does not cancel the Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Tuesday: 7:00 am - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Tuesday: 7:00 am - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Tuesday: 7:00 am - St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Tuesday 07:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Tuesday 07:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Tuesday 07:00 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Wednesday: 5:30 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Wednesday: 5:30 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Wednesday: 5:30 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Wednesday 17:30 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Wednesday 17:30 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Wednesday 17:30 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Thursday: 5:30 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Thursday: 5:30 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Thursday: 5:30 pm - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly mass Thursday 17:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly mass Thursday 17:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly mass Thursday 17:30 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Times box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "14:30",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Saturday - 2:30 pm - 3:45 pm at St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Saturday - 2:30 pm - 3:45 pm at St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Saturday - 2:30 pm - 3:45 pm at St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly confession Saturday 14:30–15:45 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly confession Saturday 14:30–15:45 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly confession Saturday 14:30–15:45 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly confession Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly confession Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly confession Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly confession Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly confession Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly confession Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Monday - 6:00 - 7:00 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Monday - 6:00 - 7:00 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Monday - 6:00 - 7:00 pm - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly adoration Monday 18:00–19:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly adoration Monday 18:00–19:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly adoration Monday 18:00–19:00 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Wednesday - 4:00 - 5:20 pm - St. John & St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly adoration Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly adoration Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly adoration Wednesday 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "04072374",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "Thursday - 4:00 - 5:20 pm - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "b49c24e6d8bf",
+          "said": "weekly adoration Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "0407237440ef",
+          "said": "weekly adoration Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "weekly adoration Thursday 16:00–17:20 st-mary-clinton-heights-rensselaer",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Adoration box on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Friday & Saturday Masses will begin in October (October 2 and 3rd). First Friday 5:30pm Mass - St. John the Evangelist & St. Joseph"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 2,
+          "said": "Fri. 10/02 (First Friday) 5:30 PM - St. John the Evangelist and St. Joseph"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date mass 2026-10-02 17:30 st-john-the-evangelist-st-joseph-rensselaer  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Friday ... With Adoration & Reconciliation from 4:00 - 5:20pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date adoration 2026-10-02 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:20",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:20",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Friday ... With Adoration & Reconciliation from 4:00 - 5:20pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date confession 2026-10-02 16:00–17:20 st-john-the-evangelist-st-joseph-rensselaer  “First Friday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-john-the-evangelist-st-joseph-rensselaer",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "17:20",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Saturday 8:00am Mass - St. Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 2,
+          "said": "Sat. 10/03 (First Saturday) 8:00 AM - St. Mary"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date mass 2026-10-03 08:00 st-mary-clinton-heights-rensselaer  “First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-mary-clinton-heights-rensselaer",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Saturday ... With Adoration & Reconciliation from 7:00 - 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date adoration 2026-10-03 07:00–07:45 st-mary-clinton-heights-rensselaer  “First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-mary-clinton-heights-rensselaer",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton-heights-rensselaer",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:45",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "5c617240",
+          "page": 1,
+          "said": "First Saturday ... With Adoration & Reconciliation from 7:00 - 7:45am"
+        },
+        {
+          "source": "history",
+          "bulletin": "5c617240d240",
+          "said": "specific_date confession 2026-10-03 07:00–07:45 st-mary-clinton-heights-rensselaer  “First Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12 would settle this, but the series was announced only in the Sept 26 bulletin ('will begin in October'); the Oct 4 and Oct 11 bulletins never repeat it, so it is unconfirmed that it continues. Leaning keep: the announcement is explicit and monthly, and the newest bulletin's week holds no first Friday or Saturday that would print it.\n\nReview 2026-10-22: Include the six first-Friday/first-Saturday Mass, Adoration and Confession slots under R12; “will begin in October” is an explicit monthly announcement, not a need for weekly reconfirmation.",
+      "question": "Keep the First Friday and First Saturday Mass, Adoration and Confession, announced only in the Sept 26 bulletin?",
+      "options": [
+        {
+          "label": "Keep monthly",
+          "entry": {
+            "church_slug": "st-mary-clinton-heights-rensselaer",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:00",
+            "end_time": "07:45",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      },
+      "group": "first-fri-sat"
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "b49c24e6",
+          "page": 2,
+          "said": "Perpetual Adoration Chapel. Adoration Chapel coming soon to St. Mary's."
+        }
+      ],
+      "rationale": "R26: the Adoration Chapel at St. Mary's is only a fundraising notice, with no times; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

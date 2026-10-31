@@ -3,28 +3,20 @@ import {
   memo,
   useCallback,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useRef,
   useState,
 } from "react";
 import type { ReactNode, Ref, RefObject } from "react";
 import { Link } from "react-router-dom";
-import {
-  MapContainer,
-  Marker,
-  Polygon,
-  Popup,
-  TileLayer,
-  useMap,
-  useMapEvents,
-} from "react-leaflet";
 import type {
   LeafletEventHandlerFnMap,
   Map as LeafletMap,
   Marker as LeafletMarker,
 } from "leaflet";
 import L from "leaflet";
+import { MapContainer, Marker, Polygon, Popup, TileLayer } from "./Leaflet";
+import { useMap, useMapEvents } from "../lib/leafletMap";
 import type { ChurchMapItem, EventSummary } from "../types";
 import type { MapView } from "../lib/mapView";
 import type { MapStart } from "../lib/mapStart";
@@ -175,7 +167,7 @@ interface ChurchMapProps {
   /** Extra layers and behaviors, rendered inside the map so they can `useMap`. */
   children?: ReactNode;
   /** Gets the Leaflet map, for controls laid over it (MapCornerControls). */
-  mapRef?: Ref<LeafletMap>;
+  mapRef?: Ref<LeafletMap | null>;
   /** On a church page's map, its church, whose pin is marked as the page's. */
   currentChurchId?: number;
   /** Church pins open a small card with only the church's name, for a map
@@ -464,11 +456,10 @@ function scheduleCaption(events: EventSummary[]): string {
 /**
  * Popup body for one church.
  *
- * Split out of `ChurchMarker` on purpose: react-leaflet renders a popup's
- * children only once Leaflet has opened it, so keeping this in its own
- * component means the rollup, the date formatting and ~20 elements per church
- * are built for the one open popup rather than for all ~130 pins on every
- * filter change.
+ * Split out of `ChurchMarker` on purpose: `Popup` renders its children only
+ * once Leaflet has opened it, so keeping this in its own component means the
+ * rollup, the date formatting and ~20 elements per church are built for the
+ * one open popup rather than for all ~130 pins on every filter change.
  */
 function ChurchPopupBody({ church }: { church: ChurchMapItem }) {
   const documentLinks = useDocumentLinks();
@@ -589,8 +580,8 @@ const SELECTED_MARKER_CLASS = "is-selected";
  * Marks the pin whose popup is open. Leaflet gives that marker no class of
  * its own, so along a city street the card could be pointing at any one of a
  * dozen pins; `.church-map-marker.is-selected` in app.css lifts and haloes
- * the right one. The handler object is memoized because react-leaflet
- * re-binds every listener when its identity changes.
+ * the right one. The handler object is memoized because `Marker` re-binds
+ * every listener when its identity changes.
  */
 function useSelectedMarkerClass(markerRef: RefObject<LeafletMarker | null>) {
   return useMemo(
@@ -639,36 +630,13 @@ const ChurchMarker = memo(function ChurchMarker({
     }
   }, [openPopupRequestId, onPopupRequestHandled]);
 
-  // react-leaflet reads a popup's options only as it creates it, so a popup
-  // switching between the two cards (the city map opening or closing over
-  // it) gets its new widths here. Set before any effect runs: react-leaflet
-  // lays an open popup out again in one as its body changes, and it then
-  // uses these, rather than laying the new card out to the old widths first.
-  useLayoutEffect(() => {
-    const popup = markerRef.current?.getPopup();
-    if (!popup) return;
-    popup.options.minWidth = compact
-      ? COMPACT_POPUP_MIN_WIDTH
-      : POPUP_MIN_WIDTH;
-    popup.options.maxWidth = compact
-      ? COMPACT_POPUP_MAX_WIDTH
-      : POPUP_MAX_WIDTH;
-  }, [compact]);
-
-  // A fresh array literal here would look like a moved marker to react-leaflet,
-  // which would call setLatLng (and re-project and re-transform the pin) on
-  // every render.
-  const position = useMemo<[number, number]>(
-    () => [church.latitude, church.longitude],
-    [church.latitude, church.longitude],
-  );
   const eventHandlers = useSelectedMarkerClass(markerRef);
 
   return (
     <Marker
       ref={markerRef}
       icon={current ? currentMarkerIcon : markerIcon}
-      position={position}
+      position={[church.latitude, church.longitude]}
       zIndexOffset={current ? CURRENT_CHURCH_Z_INDEX_OFFSET : 0}
       eventHandlers={eventHandlers}
     >
@@ -694,7 +662,7 @@ function hasCoords(church: ChurchMapItem): church is MappedChurch {
 }
 
 // One icon per count: `L.divIcon` options are plain data, and reusing the
-// same object keeps react-leaflet from calling setIcon on every re-render.
+// same object keeps `Marker` from calling setIcon on every re-render.
 const clusterIcons = new Map<number, L.DivIcon>();
 
 function clusterIcon(count: number): L.DivIcon {
@@ -721,10 +689,6 @@ const ClusterMarker = memo(function ClusterMarker({
   onSelect: (cluster: MapCluster) => void;
   onHover: (cluster: MapCluster | null) => void;
 }) {
-  const position = useMemo<[number, number]>(
-    () => [cluster.lat, cluster.lng],
-    [cluster.lat, cluster.lng],
-  );
   const eventHandlers = useMemo<LeafletEventHandlerFnMap>(
     () => ({
       click: () => onSelect(cluster),
@@ -736,7 +700,7 @@ const ClusterMarker = memo(function ClusterMarker({
   return (
     <Marker
       icon={clusterIcon(cluster.count)}
-      position={position}
+      position={[cluster.lat, cluster.lng]}
       title={`${cluster.count} ${cluster.count === 1 ? "church" : "churches"} — zoom in`}
       zIndexOffset={CLUSTER_Z_INDEX_OFFSET}
       eventHandlers={eventHandlers}
@@ -824,6 +788,28 @@ function ClusteredChurchMarkers({
     [index, viewport],
   );
 
+  // Pins and roundels fade in as a pan or zoom brings them in, but a filter
+  // change (dragging the time slider, say) shows its result at once: fading
+  // in on every step of a drag only blurs what the filter is doing. Any index
+  // but the one the map opened with means the filters (or the data) changed.
+  // The markers' own effects have added them to the map by the time this one
+  // runs, so their fade-ins can be skipped to the end; again on the next
+  // frame, for markers StrictMode removes and adds back after this effect.
+  const [firstIndex] = useState(index);
+  useEffect(() => {
+    if (index === firstIndex) return;
+    const pane = map.getPane("markerPane");
+    if (!pane || typeof pane.getAnimations !== "function") return;
+    const skipFadeIns = () => {
+      for (const animation of pane.getAnimations({ subtree: true })) {
+        if ("animationName" in animation) animation.finish();
+      }
+    };
+    skipFadeIns();
+    const frame = requestAnimationFrame(skipFadeIns);
+    return () => cancelAnimationFrame(frame);
+  }, [index, firstIndex, map]);
+
   const zoomInto = useCallback(
     (cluster: MapCluster) => {
       setHovered(null);
@@ -886,8 +872,6 @@ function ClusteredChurchMarkers({
   return (
     <>
       {coverage ? (
-        // Options as props, not `pathOptions`: react-leaflet applies those
-        // through setStyle, which ignores `className`.
         <Polygon
           positions={coverage}
           className="church-map-coverage"
@@ -1004,9 +988,8 @@ export const ChurchMap = memo(function ChurchMap({
     ? [initialView.lat, initialView.lng]
     : defaultCenter;
   const zoom = initialView?.zoom ?? 11;
-  // Leaflet calls it with the map as `this`.
-  function handleReady(this: LeafletMap) {
-    if (start) placeStart(this, start);
+  function handleReady(map: LeafletMap) {
+    if (start) placeStart(map, start);
   }
 
   // The last selection whose popup has been opened; see ChurchMarker.

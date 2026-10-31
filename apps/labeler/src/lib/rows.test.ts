@@ -50,6 +50,7 @@ function gemini(overrides: Partial<GeminiRow> = {}): GeminiRow {
     end_time: null,
     cancelled: false,
     weeks_of_month: [],
+    exclude_weeks: false,
     season: null,
     page_number: 2,
     note: null,
@@ -333,12 +334,19 @@ describe("saving", () => {
       end_time: null,
       cancelled: false,
       weeks_of_month: [],
+      exclude_weeks: false,
       season: null,
       page_number: 2,
       note: null,
       origin: "gemini",
       optional: null,
     });
+  });
+
+  it("reads a label saved before exclude_weeks as no exclusion", () => {
+    const older: LabelEvent = toLabelEvent(fromGemini(gemini()));
+    delete older.exclude_weeks;
+    expect(fromLabelEvent(older).exclude_weeks).toBe(false);
   });
 });
 

@@ -101,6 +101,18 @@ def get_parish_by_name(conn: sqlite3.Connection, name: str) -> sqlite3.Row | Non
     ).fetchone()
 
 
+def fetch_only_slugs(conn: sqlite3.Connection) -> set[str]:
+    """Slugs of the fetch-only parishes: fetched, but not processed or shown.
+
+    Empty for a database from before migration 7, which has no such parishes.
+    """
+    columns = {row[1] for row in conn.execute("PRAGMA table_info(parish)").fetchall()}
+    if "fetch_only" not in columns:
+        return set()
+    rows = conn.execute("SELECT slug FROM parish WHERE fetch_only = 1").fetchall()
+    return {row[0] for row in rows}
+
+
 def list_churches(conn: sqlite3.Connection, parish_id: int) -> list[sqlite3.Row]:
     """The parish's churches, retired ones (no longer in churches.csv) left out."""
     return conn.execute(

@@ -84,7 +84,7 @@ def load_or_start(
     if seed is not None:
         return seed
     bulletins = [
-        b for b in parish_bulletins(conn, parish_slug, cutoff=ctx.cutoff(parish_slug))
+        b for b in parish_bulletins(conn, parish_slug)
         if b["duplicate_of"] is None
     ]
     return new_seed(parish_slug, bulletins)
@@ -142,7 +142,7 @@ def run_extract(
 ) -> dict[str, Any]:
     """A full extraction of one bulletin with the eval policy, appended to the seed file."""
     classifier = extraction_classifier(model)
-    bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=ctx.cutoff(parish_slug))
+    bulletin = resolve_bulletin(conn, parish_slug, ref)
     seed = load_or_start(conn, ctx, parish_slug)
     churches = churches_for_parish(conn, parish_slug)
     result = load_cached_result(
@@ -202,7 +202,7 @@ def run_ask(
     if len(question) > MAX_QUESTION_CHARS:
         raise SeedError(f"Keep the question under {MAX_QUESTION_CHARS} characters")
     asker = SeedAsker(model)
-    bulletin = resolve_bulletin(conn, parish_slug, ref, cutoff=ctx.cutoff(parish_slug))
+    bulletin = resolve_bulletin(conn, parish_slug, ref)
     seed = load_or_start(conn, ctx, parish_slug)
     churches = churches_for_parish(conn, parish_slug)
     today = _today(bulletin)

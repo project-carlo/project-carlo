@@ -1,0 +1,151 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-cecilia-sacred-heart-fonda",
+  "content_hash": "3e2ab57d39dbb0a626c2142108a4b6de400ec41bc3a85210c5c09168d76a5403",
+  "source_url": "https://parishesonline.com/publication-page/st-cecilia-church-12068?selectedPublication=https://container.parishesonline.com/bulletins/03/1181/20260927B.pdf",
+  "fetched_at": "2026-09-28T22:02:21Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "sacred-heart-tribes-hill",
+      "name": "Sacred Heart Church",
+      "address": "111 3rd Ave., Tribes Hill, NY 12177"
+    },
+    {
+      "slug": "st-cecilia-fonda",
+      "name": "St. Cecilia Church",
+      "address": "26 Broadway, Fonda, NY 12068"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/3e2ab57d39dbb0a626c2142108a4b6de400ec41bc3a85210c5c09168d76a5403-738c0a56aa62.json",
+    "modified_at": "2026-09-28T22:14:33.981000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-cecilia-sacred-heart-fonda/3e2ab57d39db.pdf",
+  "pdf_sha256": "126516e8c1ed63139426298b4fb815e78d9e6f478d433699150be5e5533935bc",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "sacred-heart-tribes-hill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Tuesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Tuesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-tribes-hill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "sacred-heart-tribes-hill",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-cecilia-fonda",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-cecilia-fonda",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-cecilia-fonda",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2499,
+    "output_tokens": 587
+  }
+}

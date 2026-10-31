@@ -22,9 +22,11 @@ import logging
 import shutil
 import subprocess
 import tempfile
+import time
 from io import BytesIO
 from pathlib import Path
 
+from PIL import Image, UnidentifiedImageError
 from pypdf import PdfReader, PdfWriter
 
 from pdf_extract.pdf_truncate import MAX_BULLETIN_PAGES
@@ -85,6 +87,39 @@ def _ghostscript(data: bytes, pages: int) -> bytes | None:
             )
             return None
         return target.read_bytes() if target.is_file() else None
+
+
+# A bulletin posted as an image is stored as a one-page PDF at this resolution
+# (a 2100-pixel-wide spread becomes a 14-inch page).
+IMAGE_PDF_DPI = 150.0
+PDF_MAGIC = b"%PDF-"
+
+
+def image_as_pdf(data: bytes) -> bytes | None:
+    """An image bulletin (St. Mary, Waymart posts each week's as one JPEG) as a
+    one-page PDF, or None if `data` is not an image.
+
+    The PDF carries a fixed date, so the same image always makes the same PDF
+    and a re-fetched issue is recognised as one already stored.
+    """
+    try:
+        image = Image.open(BytesIO(data))
+        image.load()
+    except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError):
+        return None
+    out = BytesIO()
+    epoch = time.gmtime(0)
+    image.convert("RGB").save(
+        out, format="PDF", resolution=IMAGE_PDF_DPI, creationDate=epoch, modDate=epoch,
+    )
+    return out.getvalue()
+
+
+def as_bulletin_pdf(data: bytes) -> bytes:
+    """`data` as a PDF: a PDF as it is, an image wrapped in one, else unchanged."""
+    if data.startswith(PDF_MAGIC):
+        return data
+    return image_as_pdf(data) or data
 
 
 def compact_bulletin_pdf(data: bytes, *, max_pages: int = MAX_BULLETIN_PAGES) -> bytes:

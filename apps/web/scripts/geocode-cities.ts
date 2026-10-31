@@ -33,7 +33,7 @@ const SOURCES_PATH = resolve(WEB_DIR, "src", "data", "cityCenterSources.json");
 
 const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
 const USER_AGENT =
-  "project-carlo-city-geocoder/0.1 (+https://github.com/lyonsl2/project-carlo)";
+  "project-carlo-city-geocoder/0.1 (+https://github.com/project-carlo/project-carlo)";
 const PAUSE_MS = 1100;
 
 /**

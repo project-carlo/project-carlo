@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-baptist-holy-trinity-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-11T16:31:23Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:06Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Small one-church parish: Sunday 9:00 AM Mass, Thursday 4-5 PM Confession with Adoration during the same hour, all printed in the newest bulletin. One question: a dated Oct 20 evening of Adoration in the Convent Chapel at the sister parish OLP/SP, whose location is unclear.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3d5c45be8e4a4e6ac05903d4568e2a6f12dd2c8a447563a2a4e62e3ab5752572",
+      "fetched_at": "2026-10-11T16:31:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d2404bfbfcff643bd3e7589b4a72182b8feb11af6a16182cf5068baaab8cf89e",
+      "fetched_at": "2026-10-04T14:41:38Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "69f67244413f19dfd5f52300a6788f0fe89de91f38729615791cbb3423691feb",
+      "fetched_at": "2026-09-28T00:12:36Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 1,
+          "said": "Sunday Mass: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 3,
+          "said": "celebrate Sunday Mass, 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d5c45be8e4a",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2404bfbfcff",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "69f67244413f",
+          "said": "weekly mass Sunday 09:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the header of every bulletin; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 1,
+          "said": "Confession: Thursday 4:00-5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 3,
+          "said": "Confessions at SJB/HT Church are Thursdays from 4:00-5:00pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "3d5c45be8e4a",
+          "said": "weekly confession Thursday 16:00–17:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d2404bfbfcff",
+          "said": "weekly confession Thursday 16:00–17:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "69f67244413f",
+          "said": "weekly confession Thursday 16:00–17:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the header and in the Confession and Adoration box.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-baptist-holy-trinity-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 3,
+          "said": "we also offer Adoration of the Blessed Sacrament during this time [Thursdays 4:00-5:00pm]"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d2404bfbfcff",
+          "page": 3,
+          "said": "Same Confession and Adoration box"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d5c45be8e4a",
+          "said": "weekly adoration Thursday 16:00–17:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d2404bfbfcff",
+          "said": "weekly adoration Thursday 16:00–17:00 st-john-the-baptist-holy-trinity-syracuse",
+          "page": 3
+        }
+      ],
+      "rationale": "The box says Adoration is offered during the Thursday Confession hour at SJB/HT Church. The 9/27 bulletin does not print the box, but the two newest do.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-20",
+        "start_time": "17:45",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Convent Chapel; Benediction"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 3,
+          "said": "Special Evening of Recollection, Eucharistic Adoration Tuesday Oct 20th from 5:45-7pm in the Convent Chapel at OLP/SP ... start to a (hopefully) monthly endeavor"
+        }
+      ],
+      "rationale": "Held at the Convent Chapel of OLP/SP (Our Lady of Pompei / St. Peter, 301 Ash St, a different listed church), not at SJB/HT. It is unclear whether the convent chapel is on the OLP/SP grounds, and the monthly recurrence is only hoped for. Leaning to leave out.\n\nReview 2026-10-22: Exclude the Oct 20 OLP/SP convent event from this other parish’s seed under R22; do not attach it to St. John the Baptist. It has passed.",
+      "question": "Add the Oct 20 Adoration in the Convent Chapel at OLP/SP to Our Lady of Pompei / St. Peter?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Oct 20 5:45-7:00 PM at OLP/SP (Convent Chapel)",
+          "entry": {
+            "church_slug": "our-lady-of-pompei-st-peter-syracuse",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-20",
+            "start_time": "17:45",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Convent Chapel; Benediction"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d5c45be8e4a",
+          "page": 3,
+          "said": "There will be no 9:00am Mass at OLP/SP [Monday Oct 12]"
+        }
+      ],
+      "rationale": "A cancellation for another parish's Monday Mass (OLP/SP); nothing to record for SJB/HT, which has no weekday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

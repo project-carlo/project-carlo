@@ -1,0 +1,1233 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-madeleine-sophie-st-gabriel-schenectady",
+  "status": "approved",
+  "as_of": "2026-10-11T16:29:03Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:36:45Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Two churches, St. Madeleine Sophie and St. Gabriel the Archangel. The Network Mass Schedule on page 1 is identical in all three bulletins and matches history; Our Lady Queen of Peace and St. Margaret of Cortona entries in it belong to another parish and are excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a81677f3725015fdf31cf30d0e2cae607b43493c71e0f41fa15a229cedaf0e65",
+      "fetched_at": "2026-10-11T16:29:03Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "499bf2be6723953128439830d22cca11ca384342a63f6618d96bdc38c12e518d",
+      "fetched_at": "2026-10-04T14:55:25Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d47be6c1458d442e9b5c76e17f126f2d707db0b07c58969098bc6827de8dd5eb",
+      "fetched_at": "2026-09-28T22:05:34Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Saturday: St. Madeleine Sophie (SMS) 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Saturday: St. Madeleine Sophie (SMS) 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Saturday: St. Madeleine Sophie (SMS) 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Saturday 16:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Saturday 16:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Saturday 16:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Sunday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Sunday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Sunday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sunday Celebration: St. Madeleine Sophie 9:00 am; St. Madeleine Sophie 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Sunday 19:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Sunday 19:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Sunday 19:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Tuesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Tuesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Tuesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Wednesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Wednesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Wednesday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: SMS | T, W, F | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Friday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Friday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Friday 09:00 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Sunday 07:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Sunday 07:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Sunday 07:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sunday Celebration: St. Gabriel the Archangel (SG) 7:30 am; St. Gabriel the Archangel 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Sunday 10:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Sunday 10:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Sunday 10:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Monday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Monday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Monday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3. The Oct 12 Columbus Day note (p5) confirms the Monday Mass is still said at St. Gabriel's at 9am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: SG | M, Th | 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly mass Thursday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly mass Thursday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly mass Thursday 09:00 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network Mass Schedule of all three bulletins; history 3/3. The Oct 12 Columbus Day note (p5) confirms the Monday Mass is still said at St. Gabriel's at 9am.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly confession Saturday 15:00–15:45 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly confession Saturday 15:00–15:45 st-madeleine-sophie-schenectady",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly confession Saturday 15:00–15:45 st-madeleine-sophie-schenectady",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network schedule of all three bulletins and in the calendar (Sat 3:00 pm Reconciliation | SMS); history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-the-archangel-rotterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "SG | Sun | 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "SG | Sun | 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "SG | Sun | 11:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly confession Sunday 11:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly confession Sunday 11:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly confession Sunday 11:30 st-gabriel-the-archangel-rotterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Network schedule of all three bulletins and in the calendar (Sun 11:30am Reconciliation | SG); history 3/3. No end time printed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-madeleine-sophie-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Eucharistic Adoration: SMS | 2nd Monday | 6-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 4,
+          "said": "Monday, October 12: 6:00-8:00pm Eucharistic Adoration | SMS Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "SMS | 2nd Monday | 6-8:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "SMS | 2nd Monday | 6-8:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "a81677f37250",
+          "said": "weekly adoration Monday 18:00–20:00 st-madeleine-sophie-schenectady  “Second Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "499bf2be6723",
+          "said": "weekly adoration Monday 18:00–20:00 st-madeleine-sophie-schenectady  “2nd Monday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d47be6c1458d",
+          "said": "weekly adoration Monday 18:00–20:00 st-madeleine-sophie-schenectady  “2nd Monday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R11: named as 2nd Monday in all three bulletins; the newest week holds the second Monday (Oct 12) and prints it in the calendar; history 3/3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        }
+      ],
+      "rationale": "R22: Our Lady Queen of Peace is another parish's church (our-lady-queen-of-peace-rotterdam), listed in this bulletin's network schedule; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Our Lady Queen of Peace (OLQP) 8:30 am; Our Lady Queen of Peace 4:00 pm"
+        }
+      ],
+      "rationale": "R22: Our Lady Queen of Peace is another parish's church (our-lady-queen-of-peace-rotterdam), listed in this bulletin's network schedule; its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Our Lady Queen of Peace 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Our Lady Queen of Peace 8:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Our Lady Queen of Peace 8:00 am"
+        }
+      ],
+      "rationale": "R22: another parish's church (Our Lady Queen of Peace); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        }
+      ],
+      "rationale": "R22: another parish's church (Our Lady Queen of Peace); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        }
+      ],
+      "rationale": "R22: another parish's church (Our Lady Queen of Peace); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Weekday Mass: OLQP | M, T, W | 7:30 am"
+        }
+      ],
+      "rationale": "R22: another parish's church (Our Lady Queen of Peace); its events belong to that parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-queen-of-peace-rotterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: SMS, OLQP | Sat | 3-3:45 pm"
+        }
+      ],
+      "rationale": "R22: the OLQP half of the shared Saturday window is at another parish's church; the SMS half is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-margaret-of-cortona-rotterdam-junction",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 1,
+          "said": "St. Margaret of Cortona (SM) 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "499bf2be",
+          "page": 1,
+          "said": "St. Margaret of Cortona (SM) 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d47be6c1",
+          "page": 1,
+          "said": "St. Margaret of Cortona (SM) 10:00 am"
+        }
+      ],
+      "rationale": "R22: St. Margaret of Cortona (Rotterdam Junction) belongs to the Our Lady Queen of Peace parish on the church list, not to this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "cathedral-immaculate-conception-albany",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-18",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Health Care Professionals and Respect Life Month Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a81677f3",
+          "page": 5,
+          "said": "Health Care Professionals and Respect Life Month Mass with Bishop Mark O'Connell, Sunday, October 18 at 5:00 pm at the Cathedral of the Immaculate Conception"
+        }
+      ],
+      "rationale": "R22: held at the Cathedral in Albany, not one of this parish's churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

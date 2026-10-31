@@ -1,11 +1,13 @@
-"""The decision policy (v1): apply or reject each change a call proposes.
+"""The decision policy: apply or reject each change a call proposes.
 
 Every proposal is decided when its call is processed; nothing waits for a
 later bulletin or a person. The whole call is rejected, every proposal with the
 same reason, when the bulletin is the wrong one, older than the parish's
 high-water mark, or deletes most of the parish's weekly schedule. Otherwise
 each proposal is decided in `seq` order against the schedule as the proposals
-before it left it. See docs/schedule-state-plan.md, "Decision policy (v1)".
+before it left it, except that an add or modify which duplicates only entries
+a later proposal of the call removes waits for those removals (`check_in_order`).
+See docs/schedule-state-plan.md, "Decision policy (v1)".
 
 The per-proposal checks (`check_proposal`) are also what a hand edit must pass.
 """
@@ -26,7 +28,7 @@ from pdf_extract.schedule.entries import (
 )
 from pdf_extract.schedule.store import ADD, DELETE, MODIFY
 
-POLICY_VERSION = "1"
+POLICY_VERSION = "2"
 DECIDED_BY = f"policy@{POLICY_VERSION}"
 
 APPLIED = "applied"
@@ -78,6 +80,9 @@ class Decision:
     entry: Entry | None = None
     """add, modify: the new entry, when it could be read (stored even if rejected)."""
     detail: str | None = field(default=None, compare=False)
+    order: int | None = field(default=None, compare=False)
+    """applied: its position among the call's applied proposals, the order its change is logged
+    and folded in (a deferred add or modify comes after the removals it waited for)."""
 
 
 def whole_call_reason(
@@ -113,9 +118,16 @@ class Schedule:
     ids: dict[int, Entry]
     added: list[Entry] = field(default_factory=list)
 
-    def identities(self, *, excluding: int | None = None) -> set[str]:
-        keys = {e.identity_key for i, e in self.ids.items() if i != excluding}
-        return keys | {e.identity_key for e in self.added}
+    def conflicts(self, entry: Entry, *, excluding: int | None = None) -> bool:
+        return any(entry.conflicts_with(e) for i, e in self.ids.items() if i != excluding) \
+            or any(entry.conflicts_with(e) for e in self.added)
+
+    def conflicting_ids(self, entry: Entry, *, excluding: int | None = None) -> set[int] | None:
+        """The live ids `entry` conflicts with, or None when it conflicts with an added entry
+        (which no later proposal can name, so nothing can remove it)."""
+        if any(entry.conflicts_with(e) for e in self.added):
+            return None
+        return {i for i, e in self.ids.items() if i != excluding and entry.conflicts_with(e)}
 
     def apply(self, op: str, target: int | None, entry: Entry | None) -> None:
         if target is not None:
@@ -158,15 +170,101 @@ def check_proposal(
         != (target.church_id, target.event_type, target.event_kind)
     ):
         return entry, INVALID_MODIFY, "a modify can't change the church, event type or kind"
-    if entry is not None and entry.dated_before(today):
-        return entry, PAST_DATE, f"{entry.date} is before {today.isoformat()}"
+    # A modify may end a weekly entry in the past (a change already in effect); an
+    # add may not, as nothing would ever show it. The next revision retires it.
+    if entry is not None and (
+        entry.expired_before(today) if op == ADD else entry.dated_before(today)
+    ):
+        return entry, PAST_DATE, f"{entry.date or entry.valid_until} is before {today.isoformat()}"
     if op in (MODIFY, DELETE) and target is None:
         return entry, UNKNOWN_ITEM, f"entry {target_entry_id} is not in the current schedule"
-    if entry is not None and entry.identity_key in schedule.identities(excluding=target_entry_id):
+    if entry is not None and schedule.conflicts(entry, excluding=target_entry_id):
         return entry, DUPLICATE, "the schedule already has an entry for that slot"
     if op == MODIFY and entry == target:
         return entry, NO_CHANGE, "the new entry is the same as the old one"
     return entry, None, None
+
+
+@dataclass
+class Outcome:
+    """How one proposal of `check_in_order` came out."""
+
+    entry: Entry | None
+    reason: str | None
+    """None when applied."""
+    detail: str | None = None
+    order: int | None = None
+    """applied: its position in the order the changes were applied."""
+
+
+def check_in_order(
+    proposals: list[tuple[str, int | None, Any]],
+    *,
+    schedule: Schedule,
+    churches: dict[str, int],
+    today: date,
+    targetable: Collection[int] | None = None,
+) -> list[Outcome]:
+    """Check and apply (op, target, raw entry) proposals in the order given; one outcome each.
+
+    Each is checked against the schedule as the proposals before it left it, with
+    one exception, so that a merge the model lists in either order is kept
+    whole: an add or modify rejected only as a `duplicate` of live entries that later
+    proposals in the list modify or delete waits. It is checked again after each
+    later proposal is applied, applied as soon as it passes (after the removals it
+    waited for, before the proposals that follow), and rejected with its last
+    reason once none of what it duplicates can still be removed. Removals that are
+    rejected (unknown, not targetable) remove nothing, so a waiting proposal that
+    still duplicates is rejected as before. Waiting proposals are retried in list
+    order, so an earlier waiting proposal gets the first retry for the same slot.
+    Circular dependencies where no proposal can apply remain rejected.
+    """
+    outcomes: list[Outcome | None] = [None] * len(proposals)
+    waiting: dict[int, Outcome] = {}
+    applied = 0
+
+    def removable(position: int, index: int) -> set[int]:
+        """Entries that proposals after `position`, or other waiting ones, may still remove."""
+        return {
+            target for j, (op, target, _) in enumerate(proposals)
+            if target is not None and op in (MODIFY, DELETE) and j != index
+            and (j > position or j in waiting)
+        }
+
+    def attempt(index: int, position: int) -> bool:
+        """Check one proposal; apply it, reject it or leave it waiting. True when applied."""
+        nonlocal applied
+        op, target, raw = proposals[index]
+        entry, reason, detail = check_proposal(
+            op, target, raw, schedule=schedule, churches=churches, today=today,
+            targetable=targetable,
+        )
+        if reason is None:
+            schedule.apply(op, target, entry)
+            waiting.pop(index, None)
+            outcomes[index] = Outcome(entry, None, order=applied)
+            applied += 1
+            return True
+        if reason == DUPLICATE and entry is not None:
+            ids = schedule.conflicting_ids(entry, excluding=target)
+            if ids and ids <= removable(position, index):
+                waiting[index] = Outcome(entry, reason, detail)
+                return False
+        waiting.pop(index, None)
+        outcomes[index] = Outcome(entry, reason, detail)
+        return False
+
+    for position in range(len(proposals)):
+        changed = attempt(position, position)
+        while changed:
+            changed = False
+            for index in sorted(waiting):
+                if attempt(index, position):
+                    changed = True
+                    break
+    for index, outcome in waiting.items():
+        outcomes[index] = outcome
+    return [outcome for outcome in outcomes if outcome is not None]
 
 
 def decide(
@@ -178,23 +276,33 @@ def decide(
     whole_call: str | None,
     targetable: Collection[int] | None = None,
 ) -> list[Decision]:
-    """Decide every proposal of one call, in `seq` order.
+    """Decide every proposal of one call, in `seq` order (see `check_in_order`).
 
     `targetable`: the entry ids the call was shown. A target outside them
     (a dated entry already past, left out of the view) is `unknown_item`.
+    Decisions are returned in `seq` order; an applied one's `order` is where its
+    change goes in the revision.
     """
-    schedule = Schedule(ids=dict(live))
-    decisions: list[Decision] = []
-    for proposal in sorted(proposals, key=lambda p: p.seq):
-        entry, reason, detail = check_proposal(
-            proposal.op, proposal.target_entry_id, proposal.entry,
-            schedule=schedule, churches=churches, today=today, targetable=targetable,
-        )
-        if whole_call is not None:
-            reason, detail = whole_call, None
-        if reason is None:
-            schedule.apply(proposal.op, proposal.target_entry_id, entry)
-            decisions.append(Decision(proposal, APPLIED, AUTO, entry))
-        else:
-            decisions.append(Decision(proposal, REJECTED, reason, entry, detail))
-    return decisions
+    ordered = sorted(proposals, key=lambda p: p.seq)
+    if whole_call is not None:
+        schedule = Schedule(ids=dict(live))
+        return [
+            Decision(
+                p, REJECTED, whole_call,
+                check_proposal(
+                    p.op, p.target_entry_id, p.entry, schedule=schedule, churches=churches,
+                    today=today, targetable=targetable,
+                )[0],
+            )
+            for p in ordered
+        ]
+    outcomes = check_in_order(
+        [(p.op, p.target_entry_id, p.entry) for p in ordered],
+        schedule=Schedule(ids=dict(live)), churches=churches, today=today,
+        targetable=targetable,
+    )
+    return [
+        Decision(p, APPLIED, AUTO, o.entry, order=o.order) if o.reason is None
+        else Decision(p, REJECTED, o.reason, o.entry, o.detail)
+        for p, o in zip(ordered, outcomes, strict=True)
+    ]

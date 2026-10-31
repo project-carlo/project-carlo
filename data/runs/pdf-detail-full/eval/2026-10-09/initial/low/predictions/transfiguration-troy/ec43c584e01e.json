@@ -1,0 +1,120 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "transfiguration-troy",
+  "content_hash": "ec43c584e01e70987b36c8a142424e20bd0209a0b1afa13ed29554830f854576",
+  "source_url": "https://parishesonline.com/publication-page/transfiguration-parish?selectedPublication=https://container.parishesonline.com/bulletins/04/0527/20261004B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 10347,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1580,
+    "reasoning_tokens": 1078
+  },
+  "seconds": 15.307,
+  "response_id": "resp_042ad7a1dc6a2191016ac913ee09fc87d288596c823773b508",
+  "events": [
+    {
+      "church_slug": "transfiguration-schaghticoke",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "transfiguration-speigletown-troy",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "transfiguration-speigletown-troy",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "After the 4:00 PM Mass",
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "transfiguration-schaghticoke",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": "After the 9:00 AM Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "transfiguration-speigletown-troy",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-11-02",
+      "start_time": "18:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Mass of Remembrance",
+      "raw": {
+        "date": "2026-11-02",
+        "start_time": "6:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "a605b57061e364b7daa5e7104f077282bbcb38b6d8eb0d951ee14263afadc42e"
+}

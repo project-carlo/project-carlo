@@ -1,0 +1,536 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-the-evangelist-camden",
+  "status": "approved",
+  "as_of": "2026-10-11T16:30:46Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:32:58Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Two churches (St. John the Evangelist, Camden, and St. Mary of Mount Carmel Oratory, Florence); every printed time is at St. John, and the Oratory has no times. The cover's Mass, Exposition and Reconciliation lines agree in all three bulletins, which are image-only PDFs read as pages. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "64ad33eaa58c708a43ca5169244699dc9c0fe5300c907f18c2630269eeff521c",
+      "fetched_at": "2026-10-11T16:30:46Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "baa5f077489d531f4652924c2c3a561d22f6b7d56969ddf869d4960aa5ffcae3",
+      "fetched_at": "2026-10-04T14:41:41Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "30c1685f9bd4ca029b2fdaf09dbb15ae5e336f0d6ed9f9ef70debff4489d7afc",
+      "fetched_at": "2026-09-28T00:12:41Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Saturday Vigil 4:00 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Saturday Vigil Mass: 4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly mass Saturday 16:00 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins read; the website lists the schedule under St. John the Evangelist Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Live streamed"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Sunday Morning 9:00 a.m.; Live streamed Sundays @ 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Sunday Morning 9:00 a.m.; Live streamed Sundays @ 9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Sunday Morning 9:00 a.m.; Live streamed Sundays @ 9:00 a.m."
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Sunday: 9:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly mass Sunday 09:00 st-john-the-evangelist-camden  “Live streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly mass Sunday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly mass Sunday 09:00 st-john-the-evangelist-camden  “Live streamed”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 2,
+          "said": "Mass intentions: Wed. Oct 14, Thu. Oct 15 and Fri. Oct 16, 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Daily Mass: Wed. - Friday 9:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly mass Wednesday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly mass Wednesday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly mass Wednesday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins and in the newest intentions. The notice that daily Mass is cancelled for a funeral or school closure is conditional with no date, so nothing is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 2,
+          "said": "Mass intentions: Wed. Oct 14, Thu. Oct 15 and Fri. Oct 16, 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Daily Mass: Wed. - Friday 9:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly mass Thursday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly mass Thursday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly mass Thursday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins and in the newest intentions. The notice that daily Mass is cancelled for a funeral or school closure is conditional with no date, so nothing is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Wednesday, Thursday & Friday @9:00 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 2,
+          "said": "Mass intentions: Wed. Oct 14, Thu. Oct 15 and Fri. Oct 16, 9:00 am"
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Daily Mass: Wed. - Friday 9:00 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly mass Friday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly mass Friday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly mass Friday 09:00 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins and in the newest intentions. The notice that daily Mass is cancelled for a funeral or school closure is conditional with no date, so nothing is recorded (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Exposition of The Blessed Sacrament, Wednesday Morning @ 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Exposition of The Blessed Sacrament, Wednesday Morning @ 8:30 a.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Exposition of The Blessed Sacrament, Wednesday Morning @ 8:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly adoration Wednesday 08:30 st-john-the-evangelist-camden  “Exposition of The Blessed Sacrament”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly adoration Wednesday 08:30 st-john-the-evangelist-camden  “Exposition of the Blessed Sacrament”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly adoration Wednesday 08:30 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins read; no end time is printed, so none is recorded (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-the-evangelist-camden",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "Sacrament of Reconciliation, Saturdays: 3:15 p.m. - 3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "baa5f077",
+          "page": 1,
+          "said": "Sacrament of Reconciliation, Saturdays: 3:15 p.m. - 3:45 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "30c1685f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation, Saturdays: 3:15 p.m. - 3:45 p.m."
+        },
+        {
+          "source": "website",
+          "url": "https://stjohncamden.com/",
+          "said": "Saturday's 3:15 - 3:45 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "64ad33eaa58c",
+          "said": "weekly confession Saturday 15:15–15:45 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "baa5f077489d",
+          "said": "weekly confession Saturday 15:15–15:45 st-john-the-evangelist-camden",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "30c1685f9bd4",
+          "said": "weekly confession Saturday 15:15–15:45 st-john-the-evangelist-camden",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed on the cover of all three bulletins read. 'Call the Rectory for a private appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "64ad33ea",
+          "page": 1,
+          "said": "St. John the Evangelist Parish & St. Mary Mount Carmel Oratory (contact box only)"
+        }
+      ],
+      "rationale": "R26: St. Mary Mount Carmel Oratory is named in the masthead and contact box, but no bulletin gives it a Mass, Confession or Adoration time, so nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

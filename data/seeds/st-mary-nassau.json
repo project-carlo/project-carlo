@@ -1,0 +1,455 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-nassau",
+  "status": "approved",
+  "as_of": "2026-10-11T16:31:29Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:51:08Z",
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
+  "summary": "Small one-church parish. Sat 5:30 PM and Sun 10:00 AM Mass and first-Friday 6:00 PM Adoration are clear in the p2 list. Three questions: the Tuesday and Thursday 9:30 AM Masses move to the rectory in 'winter months' (unspecified), and the Tuesday Adoration after Mass has an end (10:30) but no printed start. Rosaries and the Divine Mercy Chaplet are not recorded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9d26108a310c70596db0ea6a2c0deffdcfc1dfd8a20dbb1418d8c8d4b783e00c",
+      "fetched_at": "2026-10-11T16:31:29Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "e422b99a629dca04765373205afc256d2580fe0df1ff0b43015ffd7e9d91fb77",
+      "fetched_at": "2026-10-04T14:56:34Z",
+      "published_date": "2026-10-04",
+      "read": false
+    },
+    {
+      "content_hash": "59f599d9006fcd056e4b324f14ea5a6ccce1fec9bbe56f104bad7aa61e4c8505",
+      "fetched_at": "2026-09-28T22:06:25Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "Saturday Vigil Mass 5:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly mass Saturday 17:30 st-mary-nassau",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly mass Saturday 17:30 st-mary-nassau",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly mass Saturday 17:30 st-mary-nassau",
+          "page": 2
+        }
+      ],
+      "rationale": "Parish Happenings list on p2 and Mass Intentions on p4, in all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "Mass followed by the Divine Mercy Chaplet - 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly mass Sunday 10:00 st-mary-nassau  “Followed by Divine Mercy Chaplet”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly mass Sunday 10:00 st-mary-nassau  “Followed by the Divine Mercy Chaplet”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly mass Sunday 10:00 st-mary-nassau",
+          "page": 2
+        }
+      ],
+      "rationale": "Parish Happenings on p2 and Mass Intentions on p4. The Divine Mercy Chaplet and Sunday faith formation are not Mass/Confession/Adoration and are not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "*Tuesday Morning Mass 9:30 am ... *During the winter months, weekday morning Masses will be in the rectory at 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 4,
+          "said": "Tuesday ... @ 9:30 am For the People of St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly mass Tuesday 09:30 st-mary-nassau  “In winter months, held in the rectory”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly mass Tuesday 09:30 st-mary-nassau  “Held in the rectory during winter months”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly mass Tuesday 09:30 st-mary-nassau  “Held in rectory during winter months”",
+          "page": 2
+        }
+      ],
+      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude this mapped weekly entry because the winter rectory location and transition dates remain unconfirmed. The Tuesday time is supported, but do not assume October is outside winter, guess a rectory address, omit the winter move, or invent seasonal bounds.",
+      "question": "Record the Tuesday 9:30 AM Mass at the church, and how to handle the winter move to the rectory?",
+      "options": [
+        {
+          "label": "Weekly at church with note about winter rectory",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In winter months, held in the rectory"
+          }
+        },
+        {
+          "label": "Weekly at church, no note",
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "*Thursday Morning Mass 9:30 am ... *During the winter months, weekday morning Masses will be in the rectory at 9:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 4,
+          "said": "Thursday ... @ 9:30 am For the People of St. Mary's"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly mass Thursday 09:30 st-mary-nassau  “In winter months, held in the rectory”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly mass Thursday 09:30 st-mary-nassau  “Held in the rectory during winter months”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly mass Thursday 09:30 st-mary-nassau  “Held in rectory during winter months”",
+          "page": 2
+        }
+      ],
+      "rationale": "The weekday Mass at 9:30 AM is printed in the Parish Happenings list (also in older bulletins) and in Mass Intentions. A footnote says that in winter months it moves to the rectory; no months are given and the rectory's address is not stated (p3 says the parish is selling the rectory). The church is the likely current location in October.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude this mapped weekly entry because the winter rectory location and transition dates remain unconfirmed. The Thursday time is supported, but do not assume October is outside winter, guess a rectory address, omit the winter move, or invent seasonal bounds.",
+      "question": "Record the Thursday 9:30 AM Mass at the church, and how to handle the winter move to the rectory?",
+      "options": [
+        {
+          "label": "Weekly at church with note about winter rectory",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "In winter months, held in the rectory"
+          }
+        },
+        {
+          "label": "Weekly at church, no note",
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "Friday Every 1st Friday, Adoration of the Blessed Sacrament 6:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly adoration Friday 18:00 st-mary-nassau  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly adoration Friday 18:00 st-mary-nassau  “First Fridays”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly adoration Friday 18:00 st-mary-nassau  “Every 1st Friday”",
+          "page": 2
+        }
+      ],
+      "rationale": "Weeks-of-the-month slot, so weekly with weeks_of_month first. Printed the same in all three bulletins; no end time. Location not named but it is the parish's own list. The bulletin's calendars (Oct 10-22) cover no first Friday, which does not affect it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-nassau",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "10:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Anthony Novena"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9d26108a310c",
+          "page": 2,
+          "said": "*Tuesday Morning Mass 9:30 am / St. Anthony Novena and Adoration until 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9d26108a310c",
+          "said": "weekly adoration Tuesday 10:00–10:30 st-mary-nassau  “Includes St. Anthony Novena”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e422b99a629d",
+          "said": "weekly adoration Tuesday 10:00–10:30 st-mary-nassau  “Includes St. Anthony Novena; follows 9:30 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "59f599d9006f",
+          "said": "weekly adoration Tuesday 09:30–10:30 st-mary-nassau  “Includes St. Anthony Novena; follows 9:30 AM Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "The bulletin gives only an end time (10:30 AM) for Adoration after the Tuesday 9:30 Mass; no start time. History stored 10:00-10:30 in two bulletins and 9:30-10:30 in one. A wrong time is worse than a missing one. Reviewer timing rule (2026-10-14): Adoration with no printed start follows the Tuesday 9:30 AM Mass, so it starts 30 minutes later at 10:00 AM; keep the printed 10:30 AM end.",
+      "question": "Add the Tuesday Adoration (St. Anthony Novena) that runs 'until 10:30 am', with what start time?",
+      "options": [
+        {
+          "label": "Leave out (no start time printed)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Tuesdays 10:00-10:30 AM",
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": "10:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Anthony Novena"
+          }
+        },
+        {
+          "label": "Tuesdays 9:30-10:30 AM",
+          "entry": {
+            "church_slug": "st-mary-nassau",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:30",
+            "end_time": "10:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "St. Anthony Novena; follows 9:30 AM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
+    }
+  ]
+}

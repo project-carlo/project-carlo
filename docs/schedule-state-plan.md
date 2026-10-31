@@ -132,7 +132,8 @@ CREATE TABLE llm_call (
     cost_usd REAL,
     latency_ms INTEGER,
     started_at TEXT NOT NULL,
-    finished_at TEXT
+    finished_at TEXT,
+    service_tier TEXT                 -- (migration 0006) flex | default, as the API reported it
 );
 CREATE INDEX idx_llm_call_bulletin ON llm_call(bulletin_id);
 CREATE INDEX idx_llm_call_parish ON llm_call(parish_id, id);
@@ -162,8 +163,11 @@ CREATE TABLE schedule_entry (
     end_time INTEGER CHECK (end_time IS NULL OR end_time BETWEEN 0 AND 1439),
     cancelled INTEGER NOT NULL DEFAULT 0 CHECK (cancelled IN (0, 1)),
     -- weeks of the month, as the labels' list: bit 0 first, 1 second, 2 third,
-    -- 3 fourth, 4 fifth, 5 last. 0 = every week.
-    weeks_of_month INTEGER NOT NULL DEFAULT 0 CHECK (weeks_of_month BETWEEN 0 AND 63),
+    -- 3 fourth, 4 fifth, 5 last. 0 = every week. Bit 6 (migration 0005, the
+    -- labels' `exclude_weeks`): the listed weeks are the ones skipped.
+    weeks_of_month INTEGER NOT NULL DEFAULT 0 CHECK (
+        weeks_of_month BETWEEN 0 AND 127 AND weeks_of_month <> 64
+    ),
     -- season, as the labels' object: months 1-12, days null or a day of that month
     season_start_month INTEGER CHECK (season_start_month BETWEEN 1 AND 12),
     season_start_day INTEGER CHECK (season_start_day BETWEEN 1 AND 31),
@@ -203,7 +207,7 @@ CREATE TABLE schedule_revision (
 CREATE TABLE proposed_change (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     llm_call_id INTEGER NOT NULL REFERENCES llm_call(id) ON DELETE CASCADE,
-    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order
+    seq INTEGER NOT NULL,             -- position in the model's answer; decided in this order (see Decision policy)
     op TEXT NOT NULL CHECK (op IN ('add', 'modify', 'delete')),
     raw_json TEXT NOT NULL,           -- the proposal as the model wrote it
     -- modify, delete: the entry id as the model gave it. Not a foreign key: it
@@ -286,15 +290,18 @@ of its modify rows.
 
 **Identity.** `identity_key` is computed in code from the entry:
 
-- weekly: church, event type, weekday, start time
+- weekly: church, event type, weekday, start time, weeks of month and season
 - specific_date: church, event type, date, start time
 
-End time, weeks of month, season, cancelled and note are not part of identity,
-so a change to any of them is a modify of the existing entry, and "every
-Saturday 3 PM" and "first Saturday 3 PM" can't both be believed at once. The
-`UNIQUE (parish_id, identity_key)` on `current_schedule` refuses a second live
-entry for a slot, and the policy rejects a proposal that would create one as
-`duplicate`.
+End time, cancelled and note are not part of identity. Different weekly patterns
+may share a start when their occurrences do not overlap: first-Friday Adoration
+can end at 4 PM while the other Fridays end at 1 PM. The database's
+`UNIQUE (parish_id, identity_key)` rejects identical patterns; shared writer and
+policy checks also reject overlapping patterns as `duplicate`. Thus "every
+Saturday 3 PM" and "first Saturday 3 PM" still cannot both be believed at once.
+Migration 0009 updates these derived identity keys without changing entry IDs,
+hashes, content or history. A modify identifies its target by entry ID and can
+still change its week or season qualifiers.
 
 A modify may change the start time, weekday or date as well, and so move the
 entry to another slot ("the 5 PM vigil moves to 4:30" is one modify). It may
@@ -303,9 +310,12 @@ not change the church, event type or kind: the policy rejects that as
 remove the weekly slot without counting as a delete.
 
 **Weeks of the month and season** are structured as in the labels
-(`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask
-and the season as four integer columns. The view, the model's output and the
-snapshot use the labels' forms: `["first", "third"]` and
+(`labeling/labels.py`). The database stores `weeks_of_month` as a 6-bit mask,
+plus a seventh bit for `exclude_weeks` ("every Sunday except the last" is
+`["last"]` excluded, which no list of remaining weeks can say), always in
+`labels.canonical_weeks`' form, and the season as four integer columns. The
+view, the model's output and the snapshot use the labels' forms:
+`["first", "third"]` with `exclude_weeks` false, and
 `{"start_month": 5, "start_day": null, "end_month": 10, "end_day": null}`.
 One converter, in one module, does the translation and is shared with the
 labels code. The columns' checks only bound the days at 31; the entry checks
@@ -340,10 +350,15 @@ and entry, and never on `schedule_entry`.
   the seed method knows its bulletin and page. A hand edit does not inherit the
   page of the entry it replaced: the edit may be because the bulletin changed.
 
-**Changes take effect immediately.** There is no `valid_from`/`valid_until`.
-The policy prompt says which changes to propose when (see
-[Prompt rules](#prompt-rules)). Effective dates can be added later as columns
-on `schedule_entry`.
+**Weekly entries may carry effective dates.** A weekly entry's optional
+`valid_from` and `valid_until` are inclusive absolute dates (not an annual
+season), so an announced change is stored as soon as it is printed: the old
+entry ends the day before, the new one starts that day (see
+[Prompt rules](#prompt-rules)). The view, the snapshot and the site honor them
+without another bulletin. A weekly entry whose `valid_until` has passed is left
+out of the view and the snapshot, ignored by the policy's checks, and deleted
+at the start of the parish's next revision, so it never blocks a new entry for
+its slot.
 
 ### Churches leaving the CSV
 
@@ -374,7 +389,7 @@ may name (`unknown_church`).
 ### Input: the view
 
 The canonical JSON of the parish's current schedule, with dated entries before
-the call date left out. Keys are sorted, entries ordered by church, kind,
+the call date, and weekly entries that ended before it, left out. Keys are sorted, entries ordered by church, kind,
 weekday or date, then time, and there is no whitespace, so the same schedule
 always hashes the same. `id` is the entry id:
 
@@ -430,10 +445,12 @@ The policy prompt tells the model:
   Propose a delete only when the bulletin says the entry is discontinued, or
   prints what is clearly the full schedule for that church and event type
   without it.
-- **Weekly changes wait until they are in effect.** Propose a change to a
-  weekly entry only when it is already in effect in the bulletin's week. An
-  announced future change ("from November 1 the vigil moves to 5 PM") waits
-  for a bulletin from a week where it is in effect.
+- **Weekly changes retain their effective dates.** End the old weekly entry
+  with inclusive `valid_until` the day before the change, and add the new weekly
+  entry with inclusive `valid_from`. These dates are absolute, unlike an annual
+  season. Retain other qualifiers and any existing end date; do not invent a
+  return date. Both versions are stored in the current schedule and exported.
+  The website selects applicable occurrences without another bulletin or build.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas,
   Holy Week, one-off events) and cancellations for any date from today on.
 - **Cancelling a weekly slot** is an add of a dated entry with
@@ -477,12 +494,27 @@ proposals before it left it, and is **rejected** when:
 | its entry names a church outside the parish | `unknown_church` |
 | its entry fails the entry checks (a weekly entry with a date, say) | `invalid_entry` |
 | it is a modify that changes its target's church, event type or kind | `invalid_modify` |
-| it is an add or modify of a dated entry before the call date | `past_date` |
+| it is an add or modify of a dated entry before the call date, or an add of a weekly entry that ended before it | `past_date` |
 | its target isn't a live entry of the parish (including one an earlier proposal in the call already changed) | `unknown_item` |
 | it would create a second live entry for a slot | `duplicate` |
 
 Every other proposal is **applied** (`auto`): adds, modifies and deletes,
 weekly or dated. A call with no applied proposals writes no revision.
+
+One exception to deciding strictly in `seq` order keeps a merge whole
+whichever order the model lists it in (say first-Friday Adoration modified to
+every Friday, and the other-Fridays entry at the same start deleted). An add or
+modify that is a `duplicate` only of live entries that later proposals in the
+call modify or delete **waits**: it is checked again after each later proposal
+is applied, applied as soon as it passes, and otherwise rejected as a
+`duplicate` once nothing it duplicates can still be removed. A removal that is
+itself rejected removes nothing, so it can't let a duplicate through, and a
+duplicate of an entry the call added never waits. Waiting proposals are retried
+in `seq` order, so an earlier waiting proposal gets the first retry for the same
+slot. Circular dependencies where no proposal can apply remain rejected. Proposals
+keep their `seq`; the revision logs applied changes in the order they were
+applied (a waiting one after the removals it waited for), which is the order
+they fold and replay in.
 
 ### Which week a bulletin is for
 
@@ -522,8 +554,9 @@ policy rejected or the report flagged:
 
 - **apply** a rejected call's proposals, all of them or chosen `seq`s. Each
   is checked against the current schedule with the per-proposal rules above
-  (the whole-call rules are what the person is overriding), and any that fail
-  are reported and skipped. The log rows carry the `proposed_change_id` they
+  (the whole-call rules are what the person is overriding), in `seq` order
+  with the same wait for later removals, and any that fail are reported and
+  skipped. The log rows carry the `proposed_change_id` they
   apply; the proposals' own decisions stay as the policy made them.
 - **add**, **modify** or **delete** entries directly, with the same checks.
 
@@ -624,9 +657,10 @@ so seeding parishes changes no frontend code. It is version 2 because a weekly r
   `season_end_month`, `season_end_day`, `cancels_event_id`.
 - **Dated entries** before the build date are left out.
 - **`cancels_event_id`:** a cancelled dated entry cancels the live weekly entry
-  with the same church, event type and start time on its date's weekday. The
-  builder matches them on every build and writes that entry's id. After the
-  identity rules there is at most one match. A cancellation that matches
+  with the same church, event type and start time on its date's weekday, whose
+  week pattern and season apply on that date. The builder matches them on every
+  build and writes that entry's id. Disjoint patterns allow at most one applicable
+  update-mode match. A cancellation that matches
   nothing is left out of the snapshot, as cancelled events are hidden today.
 - **Reading version 1:** `read_snapshot` also reads a version 1 snapshot, as
   every week, no season and no cancellations, so the first v2 run's
@@ -731,7 +765,6 @@ LEFT JOIN llm_call c ON c.id = (
 - Running a parish in both modes, or in update mode in shadow.
 - Validating the update calls (eval cases, replays of past bulletins). That
   is separate work.
-- Changes effective from a future date (`valid_from` / `valid_until`).
 - Holding doubtful changes for corroboration by a later bulletin or for a
   person's review. Everything applies or is rejected at once in v1.
 - Showing on the site that an entry isn't in this week's bulletin, or when it
@@ -775,6 +808,21 @@ code departs from it.
   chapels, weekly vs dated, dates, exclusions as the weeks that remain, times,
   notes and the final source checks), worded for changes, and the response
   schema's qualifier and note descriptions are the eval schema's.
+- **Update calls run at the flex tier.** Each call asks for
+  `service_tier: "flex"`, half the standard price. The trade-off is slower
+  replies (the client timeout is 15 minutes) and, at times, no flex capacity.
+  That shows up as a 429, a 5xx, a timeout, or a response that was accepted
+  and then ends `failed` with a `server_error` and no output. Once the flex
+  client's 2 retries are spent (the standard tier keeps 5), such a call is
+  asked again at the standard tier, so a busy week costs more instead of
+  failing. A 429 for `insufficient_quota` is not: the standard tier would
+  refuse it too. A call that fails at both tiers stores both errors.
+  The tier isn't in `params_json`: it changes neither the request's content
+  nor the reply, so leaving it out keeps request keys, and with them stored
+  replies, unchanged. The tier the response reports (or the one asked for,
+  when it reports none) is in the stored call record and in
+  `llm_call.service_tier`, and `cost_usd` uses that tier's price.
+  `latency_ms` is the call that answered, not the flex tries before it.
 
 ### Deciding
 
@@ -857,7 +905,9 @@ code departs from it.
   left out, and cancellations are matched to weekly rows, for extract-mode
   rows too. A cancellation matching nothing is left out in both modes; where an
   extract-mode bulletin repeats a weekly slot, the lowest id is named.
-- **`weeks_of_month`** is a plain list column in the snapshot.
+- **`weeks_of_month`** is a plain list column in the snapshot, and
+  **`exclude_weeks`** a boolean one, added later to version 2 (a snapshot
+  without it reads as false).
 - **The site shows the qualifiers as PR 22 did.** The web app follows PR 22
   (lyonsl2/project-carlo#22, and the PRD on its branch) for how the
   qualifiers are shown, in `apps/web/src/lib/schedulePattern.ts`:

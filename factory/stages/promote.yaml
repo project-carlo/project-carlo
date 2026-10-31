@@ -1,0 +1,9 @@
+# Code, not an agent: the dispatcher runs these in order and stops at the first failure.
+stage: promote
+kind: code
+gates:
+  - pnpm --silent diocese promote {diocese} --dry-run
+  - pnpm --silent diocese promote {diocese}
+  - uv run pytest -q
+  - uv run ruff check .
+limits: { max_minutes: 60 }

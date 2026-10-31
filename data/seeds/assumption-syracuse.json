@@ -1,0 +1,1087 @@
+{
+  "schema_version": 1,
+  "parish_slug": "assumption-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-04T14:32:23Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:13:40Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:22:13Z",
+  "summary": "Assumption (812 N Salina) prints the Saturday 4:00 PM vigil, Sunday 10:00 AM and Tue-Thu 8:30 AM Masses clearly; all confession, adoration and the daily 12:15 Mass are held at The Franciscan Place chapel at Destiny USA, which is not in the church list, so they are excluded and flagged. The regular Monday time (8:30 vs the printed Oct 12 9:00) and Friday/Saturday 8:30 weekday Masses (only in the older bulletin) are open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "402615eeacaf39207b589676c8351bca57d4823cb6c49cf7f92b2d607564c0d7",
+      "fetched_at": "2026-10-04T14:32:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "74635fdd22e1f9f654494bb6761ecd087ceae5b4c5b1811e388a4577b586522d",
+      "fetched_at": "2026-09-28T00:04:01Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "OCTOBER 17 & 18: 4:00 PM (VIGIL) +Philip & +Sharon Catalino"
+        },
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 3,
+          "said": "Join us for Mass: Sunday at 10:00 AM, Saturday at 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "4:00 PM (VIGIL) +Joseph Zirilli"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Saturday 16:00 assumption-syracuse",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Saturday 16:00 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "Vigil printed in both weekly calendars and the p3 website screenshot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "10:00 AM (SUNDAY) +Giuseppe Maggi"
+        },
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 3,
+          "said": "Sunday at 10:00 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "10:00 AM (SUNDAY) Alaina DaRin"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Sunday 10:00 assumption-syracuse",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Sunday 10:00 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "Sunday Mass in both bulletins; the Feast of St. Francis 10:00 Mass is the same weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "TUESDAY, OCTOBER 13 - 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "NO 8:30 AM MASS (that week's Tuesday/Wednesday, cancelled for the novena)"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Tuesday 08:30 assumption-syracuse",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Tuesday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "Weekday 8:30 AM Mass at the church printed in the newest weekly calendar; the 09-27 bulletin shows Thursday Oct 1 at 8:30 and cancels the 8:30 Mass on Tuesday and Wednesday, so the slot is regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "WEDNESDAY, OCTOBER 14 - 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "NO 8:30 AM MASS (that week's Tuesday/Wednesday, cancelled for the novena)"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Wednesday 08:30 assumption-syracuse",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Wednesday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "Weekday 8:30 AM Mass at the church printed in the newest weekly calendar; the 09-27 bulletin shows Thursday Oct 1 at 8:30 and cancels the 8:30 Mass on Tuesday and Wednesday, so the slot is regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "THURSDAY, OCTOBER 15 - 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "THURSDAY, OCTOBER 1 - 8:30 AM +Mary & +Julius Mix (Anniversary)"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Thursday 08:30 assumption-syracuse",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Thursday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "Weekday 8:30 AM Mass at the church printed in the newest weekly calendar; the 09-27 bulletin shows Thursday Oct 1 at 8:30 and cancels the 8:30 Mass on Tuesday and Wednesday, so the slot is regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Weekday Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "MONDAY, OCTOBER 12 - WEEKDAY 9:00 AM For The People"
+        }
+      ],
+      "rationale": "Dated in the newest calendar; it is later than as_of. Whether Monday's regular time is 9:00 or 8:30 is asked separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "MONDAY, OCTOBER 12 - WEEKDAY 9:00 AM For The People"
+        },
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "MONDAY, SEPTEMBER 28 - WEEKDAY NO 8:30 AM MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Monday 09:00 assumption-syracuse",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Monday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "The newest bulletin has a Monday 9:00 AM Mass (Oct 12) while the 09-27 bulletin implies a regular Monday 8:30 AM Mass (it cancels it on Sept 28). History has Monday 8:30 in one bulletin and 9:00 in the other. Only one Monday is printed in each bulletin, so the regular Monday time is unclear. The dated Oct 12 9:00 AM Mass is recorded separately.",
+      "question": "What is the regular weekly Monday Mass at Assumption?",
+      "options": [
+        {
+          "label": "Leave out; keep only the dated Oct 12 9:00 AM Mass",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Mondays 8:30 AM",
+          "entry": {
+            "church_slug": "assumption-syracuse",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Mondays 9:00 AM",
+          "entry": {
+            "church_slug": "assumption-syracuse",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:01Z"
+      }
+    },
+    {
+      "id": "s8",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "FRIDAY, OCTOBER 2 - THE HOLY GUARDIAN ANGELS 8:30 AM For The People"
+        },
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "The October 16 and 17 entries list no weekday Mass (only the Saturday 4:00 PM vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Friday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "The 09-27 bulletin prints a Friday 8:30 AM Mass for the week of Oct 2-3; the newest bulletin prints none for Friday, Oct 16. It could be a special or occasional Mass, or a regular one the newest calendar omits. History has it in 1 of 2 bulletins.",
+      "question": "Add a weekly Friday 8:30 AM Mass at Assumption?",
+      "options": [
+        {
+          "label": "Leave out (newest bulletin prints none)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Fridays 8:30 AM",
+          "entry": {
+            "church_slug": "assumption-syracuse",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:08Z"
+      }
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "74635fdd22e1",
+          "page": 4,
+          "said": "SATURDAY, OCTOBER 3 - WEEKDAY 8:30 AM For All Contributing to the Caritas Campaign"
+        },
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "The October 16 and 17 entries list no weekday Mass (only the Saturday 4:00 PM vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Saturday 08:30 assumption-syracuse",
+          "page": 4
+        }
+      ],
+      "rationale": "The 09-27 bulletin prints a Saturday 8:30 AM Mass for the week of Oct 2-3; the newest bulletin prints none for Saturday, Oct 17. It could be a special or occasional Mass, or a regular one the newest calendar omits. History has it in 1 of 2 bulletins.",
+      "question": "Add a weekly Saturday 8:30 AM Mass at Assumption?",
+      "options": [
+        {
+          "label": "Leave out (newest bulletin prints none)",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Saturdays 8:30 AM",
+          "entry": {
+            "church_slug": "assumption-syracuse",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:09Z"
+      }
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Monday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Monday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Tuesday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Tuesday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Wednesday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Wednesday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly mass Thursday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly mass Thursday 12:15 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly confession Monday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly confession Monday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly confession Tuesday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly confession Tuesday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly confession Wednesday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly confession Wednesday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "14:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly confession Thursday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly confession Thursday 14:00–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "15:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly confession Saturday 13:00–15:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly confession Saturday 13:00–15:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "assumption-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:45",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At The Franciscan Place chapel (Destiny USA)"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "402615eeacaf",
+          "said": "weekly adoration Wednesday 12:45–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "74635fdd22e1",
+          "said": "weekly adoration Wednesday 12:45–16:00 assumption-syracuse  “At The Franciscan Place (Destiny USA)”",
+          "page": 4
+        }
+      ],
+      "rationale": "Held at The Franciscan Place chapel in Destiny USA, a different address from Assumption Church (812 N Salina St) and not in data/churches.csv; the policy leaves out an unlisted chapel elsewhere. See the church-list question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "402615eeacaf",
+          "page": 4,
+          "said": "12:15 MASS - TFP (Mon-Thu); Confessions heard at The Franciscan Place chapel in Destiny USA, Monday through Thursday 2:00-4:00 PM and Saturday 1:00-3:00 PM; Blessed Sacrament exposed at The Franciscan Place chapel at Destiny USA on Wednesdays 12:45-4:00 PM"
+        },
+        {
+          "source": "website",
+          "url": "https://www.assumptionsyr.org/tfp",
+          "said": "The Franciscan Place: Mass Monday-Thursday 12:15 PM; Confession Monday-Thursday 2:00-4:00 PM, Saturday 1:00-3:00 PM"
+        }
+      ],
+      "rationale": "The Franciscan Place chapel at Destiny USA holds the parish's daily Mass (Mon-Thu 12:15), weekly confession and Wednesday adoration, but it is not in the church list and the bulletin gives no address beyond 'Destiny USA'. Following the policy, all of its times are excluded above, so the site would show only the Saturday vigil, Sunday Mass and Tue-Thu 8:30 Masses plus no Confession or Adoration for this parish.",
+      "question": "Should The Franciscan Place chapel (Destiny USA) be added to the church list so its Mass, Confession and Adoration can be recorded?",
+      "options": [
+        {
+          "label": "Leave out for now and flag the church list for review",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Leave out; no list change",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:22:12Z"
+      }
+    }
+  ]
+}

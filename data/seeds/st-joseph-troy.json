@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-troy",
+  "status": "approved",
+  "as_of": "2026-10-11T16:33:05Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:52:09Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Single-church Carmelite parish (St. Joseph, Troy). The schedule on page 1 of the newest bulletin is clear and matches history: Sun 9:00, 12:00 Latin and 3:00 PM Spanish; weekdays 8:00 plus Friday 12:00 Latin Mass; Sat 8:00 and 4:00 vigil; Friday 10:30-11:30 adoration; confessions Sat 3:00-3:30, Sun 11:00-12:00 and first Saturday 7:30. Young-adult events at Rensselaer and Sacred Heart are left out as other churches.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d03d582d191529938235678da9328dc79ce03132906f98f09b787ec7e3dc37b6",
+      "fetched_at": "2026-10-11T16:33:05Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d0d1c5ae8410836b477fc27778af3f93e26697b99d901ce7fcdf5c3ade30d741",
+      "fetched_at": "2026-09-28T22:04:29Z",
+      "published_date": "2026-09-13",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Sunday 9:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Sunday 9:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Sunday 09:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Sunday 09:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Carmelite Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Sunday 12:00 pm Carmelite Latin Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Sunday 12:00 pm Carmelite Latin Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Sunday 12:00 st-joseph-troy  “Carmelite Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Sunday 12:00 st-joseph-troy  “Carmelite Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "specific_date mass 2026-10-04 12:00 st-joseph-troy  “Carmelite Latin Mass following procession”",
+          "page": 4
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Sunday 3:00 pm (N. Ordo Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Sunday 3:00 pm (N. Ordo Spanish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Sunday 15:00 st-joseph-troy  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Sunday 15:00 st-joseph-troy  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Monday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Monday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Tuesday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Tuesday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Wednesday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Wednesday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Thursday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Thursday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Monday-Friday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Friday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Friday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Carmelite Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Fridays 12:00 pm Carmelite Latin Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Fridays 12:00 pm Carmelite Latin Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Friday 12:00 st-joseph-troy  “Carmelite Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Friday 12:00 st-joseph-troy  “Carmelite Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Saturday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Saturday 8:00 am (N. Ordo Eng.)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Saturday 08:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Saturday 08:00 st-joseph-troy  “English”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "specific_date mass 2026-10-03 08:00 st-joseph-troy  “First Saturday Devotion”",
+          "page": 5
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Saturday 4:00 pm Vigil Mass-Anticipated Sunday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Saturday 4:00 pm Vigil Mass-Anticipated Sunday"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly mass Saturday 16:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly mass Saturday 16:00 st-joseph-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Exposition and Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Eucharistic Adoration with Exposition & Benediction of the Blessed Sacrament 10:30-11:30 am Fridays."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Eucharistic Adoration with Exposition & Benediction of the Blessed Sacrament 10:30-11:30 am Fridays."
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly adoration Friday 10:30–11:30 st-joseph-troy  “With Exposition & Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly adoration Friday 10:30–11:30 st-joseph-troy  “Exposition and Benediction”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the schedule on page 1 and as 'One hour of Eucharistic Adoration, every Friday 10:30 AM' on page 2 of the newest bulletin; Benediction is the policy's note. History agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Confession: 3:00-3:30 pm Saturdays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Confession: 3:00-3:30 pm Saturdays"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Confession: 11:00 am-12:00 pm Sundays"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Confession: 11:00 am-12:00 pm Sundays"
+        },
+        {
+          "source": "history",
+          "bulletin": "d03d582d1915",
+          "said": "weekly confession Sunday 11:00–12:00 st-joseph-troy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "weekly confession Sunday 11:00–12:00 st-joseph-troy",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Schedule on page 1 of the newest bulletin and the Sept 13 bulletin; history agrees in both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-troy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 8:00 AM First Saturday Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Confession: 7:30 am before First Saturday Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 2,
+          "said": "Next First Saturday: November 7th. Reconciliation before Mass 7:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 7,
+          "said": "Confessions are offered every First Saturday Morning at 7:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 1,
+          "said": "Confession: 7:30 am before First Saturday Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d0d1c5ae8410",
+          "said": "specific_date confession 2026-10-03 07:30 st-joseph-troy  “First Saturday”",
+          "page": 5
+        }
+      ],
+      "rationale": "A clock time that runs up to a Mass keeps no end time. Policy rule 2 makes first-Saturday slots weekly with weeks_of_month (history had it only as a dated Oct 3 entry, which is before as_of).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Confession ... & by appointment"
+        }
+      ],
+      "rationale": "'By appointment' has no definite start time, so it is not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 1,
+          "said": "Holy Days and Feast Days: Vigil Mass 5:30 pm evening before (N. Ordo Eng.); 8:00 am day of; 5:30 pm day of, Carmelite Latin Mass"
+        }
+      ],
+      "rationale": "Holy-day Masses are a general rule with no named day in the newest bulletin, so they are not weekly or dated; no holy day falls in the covered week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 7,
+          "said": "Friday, November 6, First Friday: Ardens Fidelis ... reconciliation and Adoration 4:00 to 5:20 PM at St. John's/St. Joseph's in Rensselaer and Mass at 5:30 PM, then Game Night at St. Mary's Clinton Heights"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 2,
+          "said": "Ardens Fidelis ... events on First Fridays at St. Joseph's in Rensselaer, adoration 4:00 to 5:20, with mass at 5:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d0d1c5ae",
+          "page": 5,
+          "said": "Fourth Thursday ... Adoration 5:00 PM ... ALL AT SACRED HEART IN TROY"
+        }
+      ],
+      "rationale": "Young-adult group events held at other parishes' churches (St. John/St. Joseph in Rensselaer, Sacred Heart in Troy); not at this St. Joseph (Troy) and not this parish's schedule, so left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 7,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d03d582d",
+          "page": 7,
+          "said": "First Saturday: Devotions begin following the First Saturday Mass at 8:00 AM"
+        }
+      ],
+      "rationale": "The First Saturday devotion after the 8:00 AM Mass has no stated type or time of its own (not named as Adoration or Mass); the 8:00 Mass and 7:30 Confession are recorded. History had a dated Oct 3 'First Saturday Devotion' Mass at 8:00, which duplicates the weekly Saturday 8:00 Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

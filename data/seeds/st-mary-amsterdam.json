@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-amsterdam",
+  "status": "approved",
+  "as_of": "2026-10-04T14:55:46Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:51:50Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:26:18Z",
+  "summary": "St. Mary's, Amsterdam. The newest bulletin (Oct 4) is the installation issue with no schedule box, so its Mass intentions confirm the weekday 8:00, Saturday 4:00 and Sunday 10:00 Masses; the Sept 27 box and the website supply First Saturday Mass, Thursday Adoration and Confession, Saturday Confession and the Sunday noon Spanish Mass, which are asked (R29), plus the Oct 4 Installation Mass as a dated Mass. Saturday Confession ends 3:45 in the bulletin but 4:00 on the website.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "9ecb79c895e121bf08d765986f815244170f65e0629911135434d218ebf79760",
+      "fetched_at": "2026-10-04T14:55:46Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "7a8cb1054fc99c3209644098ddcd8ff7db9192010287a8ad9bf632c1815f5377",
+      "fetched_at": "2026-09-28T22:05:40Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Monday, October 5, 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Daily Mass – Monday-Friday 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Monday 08:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Monday 08:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass intentions list an 8:00 am Mass on this weekday; the Sept 27 schedule box (Daily Mass Monday-Friday 8 am) agrees. The Rosary group also meets 'after the weekday 8 am Masses' (page 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Tuesday, October 6, 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Daily Mass – Monday-Friday 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Tuesday 08:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Tuesday 08:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass intentions list an 8:00 am Mass on this weekday; the Sept 27 schedule box (Daily Mass Monday-Friday 8 am) agrees. The Rosary group also meets 'after the weekday 8 am Masses' (page 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Wednesday, October 7, 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Daily Mass – Monday-Friday 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Wednesday 08:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Wednesday 08:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass intentions list an 8:00 am Mass on this weekday; the Sept 27 schedule box (Daily Mass Monday-Friday 8 am) agrees. The Rosary group also meets 'after the weekday 8 am Masses' (page 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Thursday, October 8, 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Daily Mass – Monday-Friday 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Thursday 08:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Thursday 08:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass intentions list an 8:00 am Mass on this weekday; the Sept 27 schedule box (Daily Mass Monday-Friday 8 am) agrees. The Rosary group also meets 'after the weekday 8 am Masses' (page 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Friday, October 9, 8:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Daily Mass – Monday-Friday 8 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Friday 08:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Friday 08:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass intentions list an 8:00 am Mass on this weekday; the Sept 27 schedule box (Daily Mass Monday-Friday 8 am) agrees. The Rosary group also meets 'after the weekday 8 am Masses' (page 2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Saturday, October 10, 4:00 pm Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Saturday Vigil Mass – 4 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Saturday 16:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Saturday 16:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's intentions list a Saturday 4:00 pm Vigil Mass (Oct 3 and Oct 10); the Sept 27 schedule box agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Sunday, October 11, 10:00 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Sunday Mass – 10 am & 12 pm Spanish"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "weekly mass Sunday 10:00 st-mary-amsterdam",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Sunday 10:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's intentions list a Sunday 10:00 am Mass (Oct 4 and Oct 11); the Sept 27 schedule box agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "First Saturday Mass – 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 3,
+          "said": "First Saturday, October 3, 8:00 am Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/first-saturday-mass-4/20261003",
+          "said": "Saturday, October 3, 2026, 8:00 AM - 8:30 AM Repeats every first Saturday of the month. Location: St. Mary's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Saturday 08:00 st-mary-amsterdam  “First Saturday of the month only”",
+          "page": 1
+        }
+      ],
+      "rationale": "R12: named by its week of the month. The newest bulletin's week (Oct 4-11) holds no first Saturday; the Sept 27 bulletin's week holds Oct 3 and prints it, so that is the newest bulletin that would show it. The website (R6) confirms it is monthly, at the church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-04",
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Installation of Fr. Nathaniel Resila as pastor"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 2,
+          "said": "Holy Mass of Installation of Rev. Nathaniel James Resila as Pastor ... Sunday, October 4th, 3pm, St. Mary's church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 1,
+          "said": "Sunday, the 4th of October 2026, 3 o'clock pm, Historic St. Mary's Church, Amsterdam, NY"
+        },
+        {
+          "source": "history",
+          "bulletin": "9ecb79c895e1",
+          "said": "specific_date mass 2026-10-04 15:00 st-mary-amsterdam  “Mass of Installation”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "specific_date mass 2026-10-04 15:00 st-mary-amsterdam  “Mass of Installation for Rev. Nathaniel James Resila”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: a special Mass with the Bishop at a time outside the weekly schedule, so dated (POLICY, Weekly or dated, rule 7); it is open to everyone (only the reception asks for an RSVP), and its date is on as_of's date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Communion Service"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Communion Service --Saturday 8 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 3,
+          "said": "Saturday, September 26, 8:00 am Communion Service"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Saturday 08:00 st-mary-amsterdam  “First Saturday of the month only”",
+          "page": 1
+        }
+      ],
+      "rationale": "R25, POLICY, What to extract: a Communion Service is not a Mass. The newest bulletin does not print it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Confessions – Weekdays by Request"
+        }
+      ],
+      "rationale": "R24, R26: 'weekdays by request' has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-hagaman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "St. Stephen's Church, Hagaman: Saturday 5:30 pm"
+        }
+      ],
+      "rationale": "R22: St. Stephen's, Hagaman (51 Pawling St.) is a different church with its own parish entry in data/churches.csv (seed church); its times belong to that parish. The newest bulletin does not print them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-hagaman",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "St. Stephen's Church, Hagaman: Sunday 8 am"
+        }
+      ],
+      "rationale": "R22: St. Stephen's, Hagaman (51 Pawling St.) is a different church with its own parish entry in data/churches.csv (seed church); its times belong to that parish. The newest bulletin does not print them.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 2,
+          "said": "FIRST FRIDAY MASSES October 2nd at 8 AM St. Mary's Church; 12 PM at St. Mary's Hospital Chapel"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/first-friday-mass-5/20261002",
+          "said": "First Friday Mass, Friday, October 2, 2026, 12:00 PM - 12:30 PM Repeats every first Friday of the month. Location: St. Mary's Hospital Chapel, St. Mary's Healthcare, 427 Guy Park Ave., Amsterdam, NY"
+        }
+      ],
+      "rationale": "R22, R23: the first-Friday noon Mass is at the hospital chapel (427 Guy Park Ave.), another address and not in data/churches.csv (seed church found nothing), so it is left out and listed in church_list_issues. The 8 AM first-Friday Mass is the regular Friday 8:00 Mass, which stays weekly (POLICY rule 7). Oct 2 is also before as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction at 6:00 PM"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "All Day Adoration – Thursday, Following 8 am Mass; Benediction – Thursday 6 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/adoration-1/20261008",
+          "said": "Thursday, October 8, 2026, 8:30 AM - 6:00 PM Repeats every Thursday. Location: St. Mary's Chapel. Silent Adoration available in our St. Mary's Chapel."
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Thursday, October 8, 8:00 am Mass (no adoration line; this issue has no schedule box)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly adoration Thursday 08:30–18:00 st-mary-amsterdam  “Starts following 8:00 AM Mass; Benediction at 6:00 PM”",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: the Oct 4 bulletin is a special installation issue with no schedule box, so only the Sept 27 box prints Thursday adoration. Start is 'following 8 am Mass', so 8:30 by R10 (and the website says 8:30). The only end the bulletin gives is Benediction at 6 pm; the website's end is 6:00 PM. It is held in 'St. Mary's Chapel', which the bulletin's sanctuary-light notice (page 3) treats as part of St. Mary's Church, but no address is given. Leaning include, per the website and the Sept 27 box.",
+      "question": "Add Thursday Adoration 8:30 AM to 6:00 PM (Benediction at 6 PM) at St. Mary's?",
+      "options": [
+        {
+          "label": "Thursdays 8:30 AM-6:00 PM, Benediction",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction at 6:00 PM"
+          }
+        },
+        {
+          "label": "Thursdays from 8:30 AM, no end time",
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "08:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction at 6:00 PM"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:25:46Z"
+      }
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Confessions – Weekdays by Request; Thursday 5-6 pm; Saturday 3-3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/confessions/20261008",
+          "said": "Thursday, October 8, 2026, 5:00 PM - 6:00 PM Repeats every Thursday. Location: St. Mary's Church. Confessions heard in confessional."
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly confession Thursday 17:00–18:00 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: the newest bulletin has no schedule box and prints no confession times; only the Sept 27 box does. The website agrees. Leaning include.",
+      "question": "Add Thursday Confession 5:00-6:00 PM at St. Mary's?",
+      "options": [
+        {
+          "label": "Thursdays 5:00-6:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:25:55Z"
+      }
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Confessions ... Saturday 3-3:45 pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/confessions-1/20261010",
+          "said": "Saturday, October 10, 2026, 3:00 PM - 4:00 PM Repeats every Saturday. Location: St. Mary's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-amsterdam",
+          "page": 1
+        }
+      ],
+      "rationale": "R28, R29: the newest bulletin prints no confession times. The Sept 27 box says 3-3:45 pm; the website says 3:00-4:00 PM (the vigil Mass is at 4:00). The website never outweighs a bulletin (R6), so leaning on 3:00-3:45.",
+      "question": "Saturday Confession: 3:00-3:45 PM (bulletin) or 3:00-4:00 PM (website)?",
+      "options": [
+        {
+          "label": "Saturdays 3:00-3:45 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "15:45",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Saturdays 3:00-4:00 PM",
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "15:00",
+            "end_time": "16:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:26:04Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-amsterdam",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 1,
+          "said": "Sunday Mass – 10 am & 12 pm Spanish"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a8cb1054fc9",
+          "page": 3,
+          "said": "12:00 Noon Spanish Mass (listed after the Sunday 10:00 am intentions for Sept 27 and Oct 4)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "9ecb79c895e1",
+          "page": 3,
+          "said": "Sunday, October 4 10:00 am Mass; Sunday, October 11, 10:00 am Mass (no 12:00 Spanish Mass line)"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarysamsterdam.org/events/27th-sunday-in-ordinary-time-spanish-mass",
+          "said": "27th Sunday in Ordinary Time Spanish Mass, Sunday, October 4, 2026, 12:00 PM - 1:00 PM. Location: St. Mary's Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a8cb1054fc9",
+          "said": "weekly mass Sunday 12:00 st-mary-amsterdam  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: the Sept 27 box and intentions print a Sunday 12:00 Spanish Mass and the website lists one for Oct 4, but the newest bulletin's intentions omit it for both Sundays (it has no schedule box and was the installation issue). Nothing says it ended. Leaning include.",
+      "question": "Add the Sunday 12:00 PM Spanish Mass at St. Mary's?",
+      "options": [
+        {
+          "label": "Sundays 12:00 PM, Spanish",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-amsterdam",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Spanish"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:26:16Z"
+      }
+    }
+  ],
+  "church_list_issues": [
+    {
+      "church": "St. Mary's Hospital Chapel, 427 Guy Park Ave., Amsterdam (St. Mary's Healthcare)",
+      "said": "First Friday Mass 12 PM (website: repeats every first Friday of the month)",
+      "bulletin": "7a8cb1054fc9",
+      "page": 2
+    }
+  ]
+}

@@ -14,6 +14,17 @@ an explicit prompt-cache breakpoint, then the per-bulletin context
 the response schema enforced by strict decoding. Reasoning effort is high and
 the PDF is read at low detail.
 
+Calls ask for the flex service tier, billed at half the standard rate in
+exchange for slower replies and, at times, no capacity: a 429, a 5xx, a
+timeout, or a response that was accepted and then ends `failed` with a
+`server_error`. Once the client's (fewer) flex retries are spent, such a call
+is asked again at the standard tier, so a busy week costs more but no parish
+is held back. An account out of quota is not retried that way: the standard
+tier would refuse it too. The tier changes neither the request nor the reply,
+so it is left out of `params` (and so of `version` and the request key,
+keeping stored replies reusable); the tier that served each call is recorded
+with it and prices it.
+
 Every call is stored (`llm_call`) with the hashes of the policy, the response
 schema and the context template, its parameters, and `version`, a digest of all
 of them with the provider and model. `parse_response` reads a reply strictly,
@@ -30,7 +41,7 @@ from datetime import date
 from hashlib import sha256
 from typing import Any, Literal
 
-from openai import OpenAI
+from openai import APIConnectionError, InternalServerError, OpenAI, RateLimitError
 from openai.lib._pydantic import to_strict_json_schema
 from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
@@ -61,6 +72,7 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 
 - Only Mass, Confession (Reconciliation, Penance), and Adoration (Exposition, Holy Hour) events. Ignore every other kind of event or activity in the bulletin.
 - Benediction implies Adoration: record Benediction as an Adoration entry with the note `Benediction`. "Adoration and Benediction" or "Holy Hour with Benediction" is one Adoration entry with that note, not two entries.
+- If a Holy Hour is entirely inside an Adoration period already recorded at the same church on the same days, keep the longer period and mention the Holy Hour in a note when useful. Do not add a second overlapping Adoration entry for the same availability.
 - A Communion Service (a Liturgy of the Word with Communion, led by a deacon or lay minister) is not a Mass: never record one as a Mass. When the bulletin says a Communion Service replaces a Mass on a date, that Mass is cancelled on that date.
 - Leave out a Mass that is closed to the public: a private Mass, or one the bulletin limits to a group (a school Mass for students only, a Mass for residents only, a Mass by invitation).
 - Leave out anything without a definite start time, such as "Confession by appointment" or "call the office".
@@ -71,6 +83,7 @@ You keep a Catholic parish's Mass, Confession, and Adoration schedule up to date
 - Only record events held at one of those churches. Leave out an event held anywhere else, such as another parish, a retreat house, a cemetery, a hospital, or a school or hall at another address.
 - An event in a chapel or room of a listed church itself ("in the chapel", "Blessed Sacrament Chapel", "in the church hall") belongs to that church; say where in a short `note`.
 - A parish adoration chapel belongs to the church it is at. When it is at the same location as a listed church (inside it, attached to it, or on the same grounds), record its times at that church and name the chapel in a short `note`. Leave it out when it is somewhere else you would need to drive to, or when it is unclear where it is.
+- When the parish identifies an on-site Eucharistic chapel's hours as Adoration, those hours can include prayer before the reserved Blessed Sacrament. Do not claim exposition unless the source says so. A church or chapel merely being open for prayer does not establish an Adoration schedule.
 - An event at a separate chapel at another address (a convent, school, hospital, nursing home or mission chapel), or one whose location is unclear, is left out unless the known-churches list includes that chapel or its address. If you leave out such a chapel that clearly has its own Mass, Confession or Adoration times, or a listed church's name or address is obviously wrong, set `church_list_needs_review` to true.
 
 # Entries: weekly or dated
@@ -99,7 +112,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 # Weekly qualifiers
 
 - `weeks_of_month`: for slots that only happen on some occurrences of the weekday in a month, such as `["first"]` for "First Friday Adoration" or `["first", "third"]` for "1st and 3rd Saturdays"; "last" is not "fourth". Leave it empty (`[]`) for every week.
-- `weeks_of_month` lists only the weeks a slot does happen on; it cannot express an exclusion. Write an exclusion as the weeks that remain: "every Saturday except the first" is `["second", "third", "fourth", "fifth"]`. Do not describe the exclusion in the `note`.
+- `exclude_weeks`: false, except for an exclusion the remaining weeks can't say. Write an exclusion as the weeks that remain: "every Saturday except the first" is `["second", "third", "fourth", "fifth"]`. An exclusion of the last week can't be written that way, since the last is the fourth in some months and the fifth in others: list the weeks the slot skips in `weeks_of_month` and set `exclude_weeks` to true, so "every Sunday except the last" is `["last"]` and "every Sunday except the first and last" is `["first", "last"]`. Do not describe the exclusion in the `note`.
 - `season`: for slots the bulletin limits to part of the year ("October through June", "summer schedule"), with the months it gives; null for a slot that runs all year. Give a day only where the bulletin dates the boundary ("June 4 through September 10"); never invent the 1st or the 30th. A half-stated season ("runs from October", no end) is no season. A start later in the year than the end wraps the new year.
 
 # Times
@@ -114,7 +127,7 @@ Never project dates in any other way: do not work a date out from a weeks-of-the
 
 # Notes
 
-Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month` or `season` already say.
+Only add a `note` when there is genuinely special context worth surfacing: language, location within the church or the adoration chapel's name, `Benediction`, a relative timing you converted ("after the 4:00 PM Mass"), the occasion of a dated special service. Do not write 'Vigil Mass', and do not repeat what `weeks_of_month`, `exclude_weeks` or `season` already say.
 
 # Changes
 
@@ -126,13 +139,20 @@ Answer with the changes the bulletin calls for, each with the bulletin page it i
 
 Rules:
 
-- **Silence is not a change.** An entry the bulletin doesn't mention stays. Propose a delete only when the bulletin says the entry is discontinued, or prints what is clearly the full schedule for that church and event type without it.
-- **Weekly changes wait until they are in effect.** Propose a change to a weekly entry only when it is already in effect in the bulletin's week. An announced future change ("from November 1 the vigil moves to 5 PM") waits for a bulletin from a week where it is in effect.
+- **Silence is not a change.** An entry the bulletin doesn't mention stays. Delete a weekly entry only when the bulletin explicitly discontinues it or explicitly establishes an ongoing replacement for that service. Omission from a schedule panel, even one headed "Full Schedule" or repeated in several bulletins, is not evidence of permanent discontinuation. Routine panels may omit monthly, seasonal, language-specific or other occasional services. Require an explicit discontinuation or replacement that addresses the service and any qualifying pattern. A calendar that does not cover the entry's next occurrence is no evidence that it stopped.
+- **Prefer dated cancellations to uncertain weekly removals.** "No Mass" on a date, a priest's absence, a temporary closure, or a suspension of unclear duration cancels only the occurrences whose dates the bulletin pins down. Keep the weekly entry; add dated cancellations rather than deleting it. If duration or permanence is uncertain, choose dated exceptions. Do not invent cancellations from a panel's silence or project dates the bulletin does not establish. Repeated dated cancellations still remain dated: a separate future history-based policy may promote them. Do not both remove a weekly slot and cancel its dated occurrence in the same response.
+- **Reviewed decisions.** The view may include `reviewed_seed_context`: historical slot-level decisions, evidence and reviewer answers. Its `decision` and `answer` describe the resolved review; the draft rationale may discuss alternatives the reviewer rejected or uncertain explanations. An excluded slot's `entry`, including its venue and note, is a rejected candidate, not an approved fact or a live service. Honor an exclusion until the bulletin supplies new, service-specific evidence that resolves its recorded reason. Repetition of intentions, attendance counts or generic panels already considered in that review is not new evidence. A general statement such as "all Masses are in the gym" plus repeated intentions does not resolve the venue/public-access conflict of an explicitly excluded service. Require clarification that actually identifies that service's public venue or explicitly adds it to the regular schedule. If reversing a reviewed exclusion, the rationale must identify what changed since the review and cite that clarification. Do not invent a venue from a speculative explanation. This context is not another current schedule: do not restore old included entries just because they appear there, and let explicit later changes supersede historical evidence.
+- **Retain announced future weekly changes.** Use inclusive absolute `valid_from` / `valid_until` dates, not an invented annual season. For an ongoing change starting November 1, modify the old weekly entry to end October 31 and add its replacement with `valid_from` November 1, using the actual year. Preserve all other fields and any existing bounds. This applies to times, weekdays, end times and location notes. A future discontinuation ends the old entry; a future new service adds a bounded entry. Do not leave the old slot unbounded or implement an ongoing change as just one dated exception. Never invent a return date. If an end date already applies, retain it on the replacement. A bounded entry is still weekly. Do not restore an expired version from old seed context. If the effective date is unclear, leave the weekly entry unchanged.
 - **Dated entries don't wait.** Propose dated entries (holy days, Christmas, Holy Week, one-off events) and cancellations for any date from today on. Never propose a dated entry before today.
 - **Cancelling a weekly slot** on one date is an `add` of a dated entry with `cancelled: true` for the same church, event type and start time on that date. Cancelling a dated entry is a `modify` of it with `cancelled: true`.
+- **Dependent services.** When Confession or Adoration is explicitly offered only before or after a particular Mass (for example, "15 minutes before weekday Masses"), cancellation of that Mass also cancels that dependent occurrence unless the bulletin says it still takes place. Keep its weekly slot and add the dated cancellation. Do not cancel an independently scheduled service merely because a nearby Mass is cancelled.
+- **Closing services.** If the bulletin moves an explicitly closing Holy Hour or Benediction, update the enclosing Adoration period's end as well as its note. A closing Holy Hour moving from 8–9 PM to 7–8 PM makes Adoration end at 8 PM. Moving an ordinary embedded Holy Hour does not by itself change the longer period's hours. Keep one enclosing interval, not overlapping duplicate entries.
+- **Building reopening is not a service schedule.** A chapel closing until June 1 establishes the closure's end, not that its services return there on June 1 at unchanged times. Record the announced move to the main church with an open end unless the bulletin explicitly dates the services' return. Do not end the replacement services or invent a later chapel schedule from the building reopening alone.
+- **Scope of reviewed exclusions.** Read the reason: rejecting a weekly interpretation does not reject the service. If the review records a service as dated because its times vary, add its newly printed dated occurrence and any separately timed Confession. Do not demand a new standing schedule to record a new calendar date. Off-site, private-access and unresolved-time exclusions still require evidence resolving that specific reason.
 - **Seasons.** Put a `season` on both sets of entries only when the bulletin gives both schedules with their date ranges ("Summer, June-August: ...; September-May: ..."). Otherwise replace the weekly entries outright, and replace them back when the regular schedule returns.
 - **Modify, not delete + add,** for a change to an existing entry (time, end time, weeks, season, note). Delete + add only when one entry is replaced by a different one. A modify never changes an entry's church, event type or kind.
-- Never add an entry for a slot the believed schedule already has (same church, event type, weekday or date, and start time): modify that entry instead.
+- A blank Mass intention or generic "Morning Liturgy" label alone proves neither a Mass cancellation nor replacement by a Communion Service. Read the headings, surrounding entries and schedule before proposing a change.
+- Never add an entry that duplicates an existing occurrence: compare church, event type, weekday or date, start time, and recurrence qualifiers. Weekly entries at the same start time may coexist when their weeks or seasons do not overlap (for example, first Fridays and other Fridays with different end times). Modify the appropriate existing entry when its schedule changes; add a separate entry for a newly established disjoint pattern.
 - Refer to existing entries only by the `id`s in the believed schedule. Each entry may be changed at most once.
 
 # Seen
@@ -145,10 +165,14 @@ List in `seen` every entry from the believed schedule that the bulletin prints a
 - Set `wrong_bulletin` to true only if the attached PDF is clearly not a current bulletin for this parish (wrong parish, wrong year, not a bulletin at all, etc.). Then propose no changes.
 
 Read the whole bulletin, including calendars, sidebars and the back page, and carefully find every event it lists.
+After comparing the regular schedule, make a separate pass through each dated calendar and announcement. For every Mass, Confession and Adoration there, check the exact church, date/weekday and time against the believed schedule; add a supported uncovered event. Preserving an existing monthly service does not cover a different dated service, even when their start times match.
 
 # Final source checks
 
+- A sister church's service listed alongside a local intention is a separate service, even at the same time. Before cancelling for relocation, find evidence that the specific local occurrence moved or was cancelled, and check for another local intentions line and minister assignments. An off-site line alone is not relocation evidence.
+- Copy unusual printed AM/PM times faithfully, never silently flip them.
 - Keep church-specific schedule headings separate: an unlisted church's times must not be assigned to a similar-named listed church. A parish-wide heading, parish-office address, or photograph caption is not a different church-specific schedule heading.
+- Cross-check a generic regular schedule against dated intentions and venue notices before adding a weekly slot. An explicit "at [another church]" or relocation notice overrides a generic schedule panel for that occurrence. Do not add a weekly slot at the listed church from boilerplate when the bulletin places that service at another church; an omitted slot may reflect a previously reviewed relocation. If the believed schedule already contains the weekly slot, cancel its explicitly moved occurrence at the original church. Record the replacement only if its venue is a known church. Never attach an off-site service to a listed church just to preserve its time.
 - Preserve a dated Mass with an explicit known church and time even when another church has a usual weekly Mass at that time. Different churches are not duplicates; the dated venue overrides a conflicting standing schedule for that date.
 - An event that includes Confession or Adoration does not establish those components' start/end times. Do not copy the larger event's full hours onto its components; record a component only with its own definite timing or a permitted relative-to-Mass anchor.
 - Apply the off-site rules to Mass-intentions entries too, resolving venue abbreviations from the bulletin's own context.
@@ -168,7 +192,7 @@ CONTEXT_TEMPLATE = """\
 
 # Believed schedule
 
-The schedule we currently believe, by church. Dated entries before today are left out. Refer to entries by `id`.
+The schedule we currently believe, by church, with historical reviewed seed context when available. Only `churches[].entries` are live entries; the context explains earlier decisions. Dated entries before today are left out. Refer to entries by `id`.
 
 ```json
 {view_json}
@@ -234,6 +258,12 @@ class ScheduleEntry(BaseModel):
     church_slug: str = Field(description="Exactly a `slug` from the known-churches list.")
     event_type: Literal["mass", "confession", "adoration"]
     event_kind: Literal["weekly", "specific_date"]
+    valid_from: str | None = Field(
+        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD start, if stated.",
+    )
+    valid_until: str | None = Field(
+        default=None, description="Weekly only: inclusive absolute YYYY-MM-DD end, if stated.",
+    )
     day_of_week: str | None = Field(
         default=None, description="weekly only: full English weekday name, e.g. `Sunday`.",
     )
@@ -248,9 +278,19 @@ class ScheduleEntry(BaseModel):
         description=(
             "weekly only: which occurrences of `day_of_week` within the month the entry "
             "falls on. `last` is not `fourth`. Examples: `[\"first\"]` for First Friday "
-            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. Only the "
-            "weeks it happens on: 'every Saturday except the first' is "
-            "`[\"second\", \"third\", \"fourth\", \"fifth\"]`. Empty for every week."
+            "devotions; `[\"first\", \"third\"]` for 1st and 3rd Saturdays. The "
+            "weeks it happens on, unless `exclude_weeks`: 'every Saturday except the "
+            "first' is `[\"second\", \"third\", \"fourth\", \"fifth\"]`. Empty for "
+            "every week."
+        ),
+    )
+    exclude_weeks: bool = Field(
+        default=False,
+        description=(
+            "weekly only: true when `weeks_of_month` lists the weeks the entry skips, "
+            "for an exclusion of the last week, which the remaining weeks can't say: "
+            "'every Sunday except the last' is `[\"last\"]` with this true. False "
+            "otherwise."
         ),
     )
     season: Season | None = Field(
@@ -268,7 +308,7 @@ class ScheduleEntry(BaseModel):
             "Short phrase only when there is genuinely special context (language, "
             "location nuance, `Benediction`, etc.). Do not restate what "
             "`weeks_of_month` or `season` already say, and do not describe an "
-            "exclusion: list the weeks that remain in `weeks_of_month`."
+            "exclusion: say it with `weeks_of_month` and `exclude_weeks`."
         ),
     )
 
@@ -437,12 +477,21 @@ class RawReply:
     served_model: str | None
     usage: dict[str, int]
     latency_ms: int
+    service_tier: str | None = None
+    """The tier that served the call, as the response reports it."""
 
 
 # The model and settings every update call runs with.
 UPDATE_MODEL = "gpt-6-luna"
 UPDATE_REASONING_EFFORT: ReasoningEffort = "high"
 UPDATE_FILE_DETAIL: ImageDetail = "low"
+UPDATE_SERVICE_TIER = "flex"
+
+# Flex replies are slower; OpenAI suggests raising the 10-minute default to 15.
+FLEX_TIMEOUT_SECONDS = 900.0
+# Fewer retries at flex than at the standard tier: a timed-out flex call costs
+# 15 minutes a try, and once these are spent the call moves to the standard tier.
+FLEX_MAX_RETRIES = 2
 
 # What strict decoding is given: every field required, no defaults.
 STRICT_SCHEMA = _without_defaults(to_strict_json_schema(ScheduleUpdatePayload))
@@ -459,6 +508,7 @@ class OpenAIScheduleUpdater:
         model: str = UPDATE_MODEL,
         reasoning_effort: ReasoningEffort = UPDATE_REASONING_EFFORT,
         file_detail: ImageDetail = UPDATE_FILE_DETAIL,
+        service_tier: str = UPDATE_SERVICE_TIER,
         max_retries: int = 5,
     ) -> None:
         if reasoning_effort not in REASONING_EFFORTS:
@@ -471,8 +521,9 @@ class OpenAIScheduleUpdater:
             "reasoning_effort": reasoning_effort,
             "strict": True,
         }
+        self.service_tier = service_tier
         self._max_retries = max_retries
-        self._client: OpenAI | None = None
+        self._clients: dict[str, OpenAI] = {}
 
     @property
     def params_json(self) -> str:
@@ -483,11 +534,15 @@ class OpenAIScheduleUpdater:
         """A digest of everything that shapes the output but the bulletin and its context."""
         return version_digest(self.provider, self.model, self.params_json)
 
-    def _openai(self) -> OpenAI:
+    def _openai(self, tier: str) -> OpenAI:
         # Built on first use, so a run with no update-mode parish needs no API key.
-        if self._client is None:
-            self._client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
-        return self._client
+        if tier not in self._clients:
+            if tier == "flex":
+                client = OpenAI(max_retries=FLEX_MAX_RETRIES, timeout=FLEX_TIMEOUT_SECONDS)
+            else:
+                client = OpenAI(max_retries=self._max_retries, timeout=REQUEST_TIMEOUT_SECONDS)
+            self._clients[tier] = client
+        return self._clients[tier]
 
     def request(self, pdf_bytes: bytes, context: str) -> dict[str, Any]:
         """The keyword arguments for `responses.create`, for one bulletin."""
@@ -527,12 +582,41 @@ class OpenAIScheduleUpdater:
                 },
             },
             "prompt_cache_options": {"mode": "explicit"},
+            "service_tier": self.service_tier,
             "store": False,
         }
 
     def call(self, pdf_bytes: bytes, context: str) -> RawReply:
+        request = self.request(pdf_bytes, context)
+        tier = self.service_tier
         started = time.monotonic()
-        response = self._openai().responses.create(**self.request(pdf_bytes, context))
+        if tier != "flex":
+            response = self._openai(tier).responses.create(**request)
+        else:
+            try:
+                response = self._openai(tier).responses.create(**request)
+            except (RateLimitError, InternalServerError, APIConnectionError) as exc:
+                # The client has already backed off and retried; flex is still full or slow.
+                if getattr(exc, "code", None) == "insufficient_quota":
+                    raise
+                no_capacity: str | None = f"{type(exc).__name__}: {exc}"
+            else:
+                no_capacity = _flex_capacity_lost(response)
+            if no_capacity is not None:
+                LOGGER.warning(
+                    "%s has no flex capacity after %.0fs (%s); asking at the standard tier",
+                    self.model, time.monotonic() - started, no_capacity,
+                )
+                # The latency recorded is the call that answered, not the flex tries.
+                tier = "default"
+                started = time.monotonic()
+                try:
+                    response = self._openai(tier).responses.create(
+                        **{**request, "service_tier": tier},
+                    )
+                except Exception as exc:
+                    exc.add_note(f"asked at the standard tier after flex failed: {no_capacity}")
+                    raise
         if response.status != "completed":
             LOGGER.warning(
                 "%s response %s is %s (%s)",
@@ -543,7 +627,28 @@ class OpenAIScheduleUpdater:
             served_model=getattr(response, "model", None),
             usage=_usage(response),
             latency_ms=int((time.monotonic() - started) * 1000),
+            # The tier asked for, when the response doesn't say.
+            service_tier=getattr(response, "service_tier", None) or tier,
         )
+
+
+def _flex_capacity_lost(response: Any) -> str | None:
+    """Why a flex response that was accepted then lost its capacity failed, or None.
+
+    Flex capacity can run out after a request is accepted. The reply is then no
+    429 but a `failed` response with a `server_error` ("Flex processing is
+    temporarily unavailable"), no output and no usage.
+    """
+    if response.status != "failed":
+        return None
+    error = getattr(response, "error", None)
+    if getattr(error, "code", None) != "server_error":
+        return None
+    message = getattr(error, "message", None) or "server_error"
+    usage = _usage(response)
+    # Flex reports none on such a failure; should that change, the log shows it.
+    billed = f", usage {usage}" if any(usage.values()) else ""
+    return f"response {response.id}: {message}{billed}"
 
 
 def _sha(text: str) -> str:

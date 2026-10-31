@@ -2,8 +2,10 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from datetime import date
+from urllib.parse import unquote, urlsplit
 
 # A bulletin dated within this many days of today is taken as the current one.
 CURRENT_WINDOW_DAYS = 7
@@ -11,6 +13,9 @@ CURRENT_WINDOW_DAYS = 7
 # current one: a fallback page's pick that old is refused, and a first-listed
 # PDF that old gives way to a recent one listed after it.
 FALLBACK_MAX_AGE_DAYS = 45
+# Recent dated PDFs that make a page's list a series of issues, so that an
+# undated, unlabelled one listed first is something else.
+MIN_RECENT_SERIES = 2
 
 
 @dataclass(frozen=True)
@@ -24,6 +29,8 @@ class Candidate:
     labelled: bool = False
     # The link's whole text names the bulletin ("Bulletin", "Weekly Bulletin").
     titled_bulletin: bool = False
+    # ...and says it is this week's ("This Week's Bulletin", "Current Bulletin").
+    titled_current: bool = False
 
 
 # Why a candidate was chosen, most to least sure. Every reason but CURRENT
@@ -61,6 +68,18 @@ def _age_days(candidate: Candidate, reference_date: date) -> int:
     return (reference_date - (candidate.parsed_date or reference_date)).days
 
 
+def _bare_month_day(candidate: Candidate) -> bool:
+    filename = unquote(urlsplit(candidate.source_url).path.rsplit("/", 1)[-1])
+    numbers = re.findall(r"\d+", filename)
+    parsed = candidate.parsed_date
+    return (
+        parsed is not None
+        and len(numbers) == 2
+        and [int(n) for n in numbers] == [parsed.month, parsed.day]
+        and re.search(r"(?<!\d)\d{1,2}[-/.]\d{1,2}(?!\d)", filename) is not None
+    )
+
+
 def choose(
     candidates: list[Candidate], *, reference_date: date, max_age_days: int | None = None,
 ) -> Choice:
@@ -71,28 +90,57 @@ def choose(
       dated within that, when one is listed: a listing oldest first (St.
       Joseph, Troy) or a parish a few weeks behind;
     - a link whose whole text is "Bulletin" beats a first one that is not
-      dated (St. Mary's, Glens Falls lists a Confirmation PDF first).
+      dated (St. Mary's, Glens Falls lists a Confirmation PDF first), and one
+      titled "This Week's Bulletin" beats a bare "Bulletin" (St. Ignatius,
+      Orrtanna's site header links a 2018 issue as "Bulletin");
+    - a first one neither dated nor labelled "bulletin" gives way to the
+      newest recent one when the page lists a dated series of them (Our Lady
+      of Peace, Hazleton lists a "Parish Consolidation" PDF above its weekly
+      issues, which can be a week or two late).
+    Unlabelled bare M-D filenames dated on weekdays yield to a recent series
+    with fuller dates: the pair may instead name a flyer's month and year.
     With `max_age_days`, a pick dated further than that from today is refused
     with OldBulletinOnly.
     """
+    # A bare M-D can also mean month-year on a flyer. An unlabelled weekday
+    # needs corroboration when the page has a recent series with fuller dates.
+    series = [
+        c for c in candidates
+        if c.parsed_date is not None and not _bare_month_day(c)
+        and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
+    ]
+    if len(series) >= MIN_RECENT_SERIES:
+        candidates = [
+            c for c in candidates
+            if not (not c.labelled and _bare_month_day(c)
+                    and c.parsed_date is not None and c.parsed_date.weekday() < 5)
+        ]
     current = [c for c in candidates if is_current(c.parsed_date, reference_date)]
     if current:
         return Choice(max(current, key=lambda c: c.parsed_date or date.min), CURRENT)
 
     first = candidates[0]
+    recent = [
+        c for c in candidates
+        if c.parsed_date is not None
+        and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
+    ]
+
+    def newest_recent() -> Choice:
+        return Choice(max(recent, key=lambda c: c.parsed_date or date.min), NEWEST_RECENT)
+
     if first.parsed_date is not None and _age_days(first, reference_date) > FALLBACK_MAX_AGE_DAYS:
-        recent = [
-            c for c in candidates
-            if c.parsed_date is not None
-            and -CURRENT_WINDOW_DAYS <= _age_days(c, reference_date) <= FALLBACK_MAX_AGE_DAYS
-        ]
         if recent:
-            return Choice(max(recent, key=lambda c: c.parsed_date or date.min), NEWEST_RECENT)
+            return newest_recent()
     reason = FIRST_LISTED
     if first.parsed_date is None:
-        titled = next((c for c in candidates if c.titled_bulletin), None)
+        titled = next((c for c in candidates if c.titled_current), None) or next(
+            (c for c in candidates if c.titled_bulletin), None
+        )
         if titled is not None:
             first, reason = titled, TITLED
+        elif not first.labelled and len(recent) >= MIN_RECENT_SERIES:
+            return newest_recent()
     if (
         max_age_days is not None
         and first.parsed_date is not None

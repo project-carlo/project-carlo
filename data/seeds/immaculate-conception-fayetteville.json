@@ -1,0 +1,987 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-fayetteville",
+  "status": "approved",
+  "as_of": "2026-10-11T16:35:30Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:53:19Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:28:51Z",
+  "summary": "Single-church parish with a stable Mon-Fri 7:30 AM and Sunday 7:30, 9:00 and 11:30 AM Mass schedule in all three bulletins and on the website. Three open questions: whether 'Daily' includes a Saturday 7:30 Mass (leaning no), whether Saturday 4:00-4:30 Confession (older bulletins and website, dropped from the newest box) stays (leaning yes), and whether a once-printed, apparently stale Monday evening Exposition with Reconciliation is current (leaning leave out).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "347c7cea5de21ee1f59d1b3f39ea33903e607340cf72b7eaa7acbf1388936df4",
+      "fetched_at": "2026-10-11T16:35:30Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "3cfa3bc27d656ce1cb522b19dfe5e03ea2c0f1adce0d4f7f381e33b9da82e593",
+      "fetched_at": "2026-10-04T14:35:17Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "026f506b705a459ed9ed1cb34798708bef6269d71d9be97b6ef7a2b794f99f64",
+      "fetched_at": "2026-09-28T00:07:13Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS: Monday 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Monday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Monday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Monday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass Schedule box says Daily 7:30 am, its Mass intentions list a 7:30 am Mass every Monday to Friday, and the older bulletins and the website agree. (Whether 'Daily' also means Saturday is asked separately.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS: Tuesday 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Tuesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Tuesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Tuesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass Schedule box says Daily 7:30 am, its Mass intentions list a 7:30 am Mass every Monday to Friday, and the older bulletins and the website agree. (Whether 'Daily' also means Saturday is asked separately.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS: Wednesday 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Wednesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Wednesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Wednesday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass Schedule box says Daily 7:30 am, its Mass intentions list a 7:30 am Mass every Monday to Friday, and the older bulletins and the website agree. (Whether 'Daily' also means Saturday is asked separately.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS: Thursday 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Thursday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Thursday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Thursday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass Schedule box says Daily 7:30 am, its Mass intentions list a 7:30 am Mass every Monday to Friday, and the older bulletins and the website agree. (Whether 'Daily' also means Saturday is asked separately.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS: Friday 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Daily: 7:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Friday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Friday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Friday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the newest bulletin's Mass Schedule box says Daily 7:30 am, its Mass intentions list a 7:30 am Mass every Monday to Friday, and the older bulletins and the website agree. (Whether 'Daily' also means Saturday is asked separately.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:00 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Sunday Morning: 7:30am, 9:00am (live streamed) and 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Sunday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Sunday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Sunday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box on page 1 of all three bulletins and the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:00 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Sunday Morning: 7:30am, 9:00am (live streamed) and 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-fayetteville  “Live-streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-fayetteville  “Live-streamed”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Sunday 09:00 immaculate-conception-fayetteville  “Live-streamed”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box on page 1 of all three bulletins and the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "Sunday: 7:30, 9:00 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Sunday: 7:30 am, 9:00 am & 11:30 am"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Sunday Morning: 7:30am, 9:00am (live streamed) and 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "347c7cea5de2",
+          "said": "weekly mass Sunday 11:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Sunday 11:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Sunday 11:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the Mass Schedule box on page 1 of all three bulletins and the website.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule — Daily: 7:30 am; Sunday: 7:30, 9:00 & 11:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 2,
+          "said": "MASS INTENTIONS list Monday-Friday and Sunday; no Saturday"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 2,
+          "said": "MASS INTENTIONS: Monday-Friday and Sunday only"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Mass Schedule Monday-Friday: 7:30am"
+        },
+        {
+          "source": "history",
+          "said": "extract mode read 'Daily: 7:30 am' as including Saturday 7:30 in 2 of 3 bulletins"
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly mass Saturday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly mass Saturday 07:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R30: 'Daily' could include Saturday, but the Mass intentions never list a Saturday Mass in any of the three bulletins and the website says Monday-Friday 7:30am. Leaning to leave it out: history's Saturday reading comes from the word 'Daily' alone (R7).",
+      "question": "Is there a Saturday 7:30 AM Mass at Immaculate Conception? (The bulletin says 'Daily: 7:30 am'.)",
+      "options": [
+        {
+          "label": "Leave out Saturday Mass",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Saturday 7:30 AM Mass",
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "mass",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "07:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:24Z"
+      }
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 1,
+          "said": "Sacrament of Reconciliation — Saturdays: 4:00-4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 1,
+          "said": "Sacrament of Reconciliation — Saturdays: 4:00-4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 1,
+          "said": "New Mass Schedule box lists Masses only; no Reconciliation line"
+        },
+        {
+          "source": "website",
+          "url": "https://icfayetteville.org/",
+          "said": "Reconciliation Saturdays 4:00pm – 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-fayetteville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026f506b705a",
+          "said": "weekly confession Saturday 16:00–16:30 immaculate-conception-fayetteville",
+          "page": 1
+        }
+      ],
+      "rationale": "R29: Saturday 4:00-4:30 PM Reconciliation is in the page 1 box of the two older bulletins and on the website, but the newest bulletin's box drops it with no reason given. Leaning include: nothing says it ended and the website still lists it.",
+      "question": "Include Saturday 4:00-4:30 PM Confession? (Printed in the two older bulletins and on the website; missing from the newest bulletin.)",
+      "options": [
+        {
+          "label": "Saturdays 4:00-4:30 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "16:00",
+            "end_time": "16:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:34Z"
+      }
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Reflective prayer"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 6,
+          "said": "EXPOSITION of The BLESSED SACRAMENT and RECONCILIATION ... POSTPONED until Monday, September 14th due to the Labor Day holiday. Please join us from 6:30-7:30 pm in the Church. The Sacrament of Reconciliation is available for the first half hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 6,
+          "said": "read in full; no Exposition or Reconciliation notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 6,
+          "said": "read: no Exposition notice (grep)"
+        },
+        {
+          "source": "history",
+          "said": "extract mode read this notice in the Oct 4 bulletin as weekly Monday Adoration 6:30-7:30 PM and Confession 6:30-7:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly adoration Monday 18:30–19:30 immaculate-conception-fayetteville  “Includes reflective prayer”",
+          "page": 6
+        }
+      ],
+      "rationale": "R29, R30: printed in one bulletin only (Oct 4, an apparently stale September notice), never in the newest or on the website. It never says weekly or monthly; a postponement to Monday Sept 14 for Labor Day (Sept 7) hints at a first-Monday event, but that is a guess. Leaning leave out: no current confirmation and no stated recurrence.",
+      "question": "Include Monday evening Exposition of the Blessed Sacrament (6:30-7:30 PM, with Reconciliation in the first half hour)? It appeared once, in a notice that postponed it to September 14.",
+      "options": [
+        {
+          "label": "First Mondays, 6:30 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Reflective prayer"
+          }
+        },
+        {
+          "label": "Every Monday, 6:30 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:30",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Reflective prayer"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:49Z"
+      },
+      "group": "monday-exposition"
+    },
+    {
+      "id": "s12",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-fayetteville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "First half hour of Exposition"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3cfa3bc2",
+          "page": 6,
+          "said": "EXPOSITION of The BLESSED SACRAMENT and RECONCILIATION ... POSTPONED until Monday, September 14th due to the Labor Day holiday. Please join us from 6:30-7:30 pm in the Church. The Sacrament of Reconciliation is available for the first half hour."
+        },
+        {
+          "source": "agent",
+          "bulletin": "347c7cea",
+          "page": 6,
+          "said": "read in full; no Exposition or Reconciliation notice"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026f506b",
+          "page": 6,
+          "said": "read: no Exposition notice (grep)"
+        },
+        {
+          "source": "history",
+          "said": "extract mode read this notice in the Oct 4 bulletin as weekly Monday Adoration 6:30-7:30 PM and Confession 6:30-7:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "3cfa3bc27d65",
+          "said": "weekly confession Monday 18:30–19:00 immaculate-conception-fayetteville  “First half hour of Adoration”",
+          "page": 6
+        }
+      ],
+      "rationale": "R29, R30: printed in one bulletin only (Oct 4, an apparently stale September notice), never in the newest or on the website. It never says weekly or monthly; a postponement to Monday Sept 14 for Labor Day (Sept 7) hints at a first-Monday event, but that is a guess. Leaning leave out: no current confirmation and no stated recurrence.",
+      "question": "Include Monday evening Exposition of the Blessed Sacrament (6:30-7:30 PM, with Reconciliation in the first half hour)? It appeared once, in a notice that postponed it to September 14.",
+      "options": [
+        {
+          "label": "First Mondays, 6:30 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First half hour of Exposition"
+          }
+        },
+        {
+          "label": "Every Monday, 6:30 PM",
+          "entry": {
+            "church_slug": "immaculate-conception-fayetteville",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": "19:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "First half hour of Exposition"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:28:49Z"
+      },
+      "group": "monday-exposition"
+    }
+  ]
+}

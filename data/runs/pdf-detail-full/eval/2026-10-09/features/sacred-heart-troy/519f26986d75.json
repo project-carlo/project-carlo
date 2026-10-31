@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "parish_slug": "sacred-heart-troy",
+  "content_hash": "519f26986d75d05a91ba0dbbb70a3a1fff52d6510e9252ecef9db4a1f2005c04",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/sacred-heart-troy/519f26986d75.pdf",
+  "pdf_sha256": "e9ea5000bad5290e3f9ab0b41d590d895bc6d1e35a70f45b20faeedd027c9fe2",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 3,
+    "analyzed_page_count": 3,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 2482,
+        "image_count": 2,
+        "image_coverage_fraction_estimate": 0.26083394298375917,
+        "max_displayed_image_area_fraction_estimate": 0.26083394298375917,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1904,
+        "native_char_height_p10_pt": 4.8106689453125,
+        "native_char_height_median_pt": 5.97601318359375,
+        "native_char_height_p10_low_detail_px": 3.109927398989899,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.32432941176470587,
+        "projection_line_count": 41,
+        "line_pitch_px": 16.75,
+        "line_pitch_low_detail_px": 7.796363636363636,
+        "connected_component_count": 1171,
+        "text_like_component_count": 1126,
+        "text_like_height_p10_px": 4.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 4254,
+        "image_count": 6,
+        "image_coverage_fraction_estimate": 0.09372064523296694,
+        "max_displayed_image_area_fraction_estimate": 0.04371136012906847,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 3075,
+        "native_char_height_p10_pt": 4.66253662109375,
+        "native_char_height_median_pt": 5.5411376953125,
+        "native_char_height_p10_low_detail_px": 3.0141650883838382,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.15426951871657754,
+        "projection_line_count": 64,
+        "line_pitch_px": 16.0,
+        "line_pitch_low_detail_px": 7.447272727272727,
+        "connected_component_count": 2238,
+        "text_like_component_count": 2063,
+        "text_like_height_p10_px": 6.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      },
+      {
+        "page_number": 3,
+        "errors": [],
+        "text_chars": 418,
+        "image_count": 5,
+        "image_coverage_fraction_estimate": 0.719564363405295,
+        "max_displayed_image_area_fraction_estimate": 0.16614850155971483,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 341,
+        "native_char_height_p10_pt": 3.9315643310546875,
+        "native_char_height_median_pt": 5.2501220703125,
+        "native_char_height_p10_low_detail_px": 2.541617345328283,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.3332192513368984,
+        "projection_line_count": 40,
+        "line_pitch_px": 15.0,
+        "line_pitch_low_detail_px": 6.9818181818181815,
+        "connected_component_count": 1311,
+        "text_like_component_count": 1044,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 10.0,
+        "text_like_width_median_px": 10.0,
+        "text_like_height_median_low_detail_px": 4.654545454545454
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 3,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 3,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 4.088824999998906,
+  "resumed": false,
+  "walltime_seconds": 4.092593900000793
+}

@@ -1,6 +1,6 @@
 ---
 name: parish-site-access
-description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster, and a renderer for bulletin pages that are only images. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when WebFetch/curl get a 403 "Just a moment..." page.
+description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster, and a renderer for bulletin pages that are only images. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when probe get/WebFetch get a 403 "Just a moment..." page.
 ---
 
 # Seeing parish sites the probes can't
@@ -121,14 +121,17 @@ uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pa
 Many bulletins are scanned images, in whole or in part: in Syracuse, about one in five
 (ParishesOnline, Discover Mass and self-hosted alike). `probe pdf` lists those pages under
 `pages_without_text`. The sandbox has no pdftoppm, PIL or tesseract, so `render.py` draws
-the pages with pdf.js in Chrome and writes PNGs you can look at with the Read tool:
+the pages with pdf.js in Chrome and writes JPEGs (`<prefix>-p<N>.jpg`, a few hundred KB
+each) you can look at with the Read tool:
 
 ```bash
 uv run python .claude/skills/parish-site-access/scripts/render.py \
     https://container.parishesonline.com/bulletins/03/1424/20260920B.pdf /tmp/ccsssp --pages 1-2
 ```
 
-`--pages` takes numbers and ranges (`1,3-5`); without it every page is drawn.
+`--pages` takes numbers and ranges (`1,3-5`); without it every page is drawn. `--png` writes
+PNGs instead, for fine print JPEG blurs; a scanned page as PNG can pass 1 MB, so render just
+the pages you need.
 
 Cite the PDF's URL as usual, and say in the evidence `note` that the page is an image, so
 the auditor knows `recheck` can't find the quote in its text. Record in the parish's
@@ -187,6 +190,21 @@ one: its Plus Code is on the building.
 - **A spam word on a parish page is not a squat:** `probe url` and `visit.py` say
   SPAM-SQUAT only for two spam terms, three hits, or a page without parish vocabulary. A
   Schenectady parish's news mentioned "Rivers Casino".
+
+## Other bulletin hosts seen in Ogdensburg
+
+- **Weekly-overwritten PDFs:** `cvrchparish.org/files/bulletin.pdf`,
+  `mwcatholics.org/files/bulletin.pdf`, and the diocese's own
+  `rcdony.org/images/<parish>bulletin.pdf`. Record the PDF (or the page linking it) as the
+  `other` website. `fetch` downloads a known address again each week and keeps a new
+  issue, told apart by its content. A PDF evidence quote from one of these is only good
+  until the next Sunday, so say which issue in the `note`.
+- **church-bulletin.org linked directly** (`church-bulletin.org/?id=4047`, "recent
+  bulletins"), not through a jppc.net template. The resolver follows it when the page's own
+  PDFs are something else.
+- **nny360.com (Watertown Daily Times):** paywalled articles keep their text ROT47-scrambled
+  in the served HTML. `visit.py --text` shows it, but `recheck` can't, so quote the headline
+  or subhead where you can.
 
 ## Evidence from blocked pages
 

@@ -1,0 +1,192 @@
+{
+  "schema_version": 1,
+  "parish_slug": "our-lady-of-the-americas-albany",
+  "status": "approved",
+  "as_of": "2026-10-11T16:31:46Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:47:58Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:09:25Z",
+  "summary": "One church with a Sunday-only schedule: 9 AM English and 11 AM Spanish Masses, read from two weeks of Mass intentions in each of two bulletins, plus Spanish confessions Sundays at 10:15. No weekday Masses, Saturday vigil or adoration are printed; the newest bulletin is the 4 Oct issue (fetched 11 Oct).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a8f89cae9f23c32b749e270f9976eaf3bc0bdfd3c2e9bb6709281952090fe0b3",
+      "fetched_at": "2026-10-11T16:31:46Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "3449965a536fd9c5ccbd85cf162d65141109eee7ff813557d20ce93d8fc14ae3",
+      "fetched_at": "2026-09-28T22:00:09Z",
+      "published_date": "2026-09-13",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-americas-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a8f89cae",
+          "page": 1,
+          "said": "October 4: 9:00 am English Mass; October 11: 9:00 am English Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3449965a",
+          "page": 1,
+          "said": "September 13 / September 20: 9:00 am English Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f89cae",
+          "said": "weekly Sunday 09:00 English"
+        }
+      ],
+      "rationale": "The only schedule printed is the Mass intentions, which show the same Sunday 9 AM English Mass in each of two weeks in both bulletins (rule 4).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-americas-albany",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a8f89cae",
+          "page": 1,
+          "said": "October 4 / October 11: 11:00 am Misa en español"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3449965a",
+          "page": 1,
+          "said": "September 13 / September 20: 11:00 am Misa en español"
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f89cae",
+          "said": "weekly Sunday 11:00 Spanish"
+        }
+      ],
+      "rationale": "Same as the 9 AM: Sunday 11 AM Spanish Mass in both weeks of both bulletins' intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-americas-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a8f89cae",
+          "page": 2,
+          "said": "Confesiones en español disponibles: Domingos 10:15 en el Santuario"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3449965a",
+          "page": 2,
+          "said": "Domingos 10:15 en el Santuario"
+        },
+        {
+          "source": "history",
+          "bulletin": "a8f89cae",
+          "said": "weekly Sunday confession 10:15 Spanish"
+        }
+      ],
+      "rationale": "Directory of both bulletins: Spanish confessions Sundays 10:15 at the Shrine. No end time given (it runs until the 11 AM Mass at most, but the policy leaves end_time null).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-americas-albany",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:30",
+        "end_time": "13:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a8f89cae",
+          "page": 2,
+          "said": "Martes en el Santísimo Sacramento 12:30-13:30, y Miércoles en Mater Christi, 16:30-17:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3449965a",
+          "page": 2,
+          "said": "same directory line"
+        }
+      ],
+      "rationale": "Off-site: Tuesday (Blessed Sacrament) and Wednesday 4:30-5:30 PM (Mater Christi) Spanish confessions are at other parishes' churches, not the Shrine.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

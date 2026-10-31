@@ -208,6 +208,22 @@ describe("computeNextOccurrence for weekly slots that skip weeks", () => {
     );
   });
 
+  it("skips only the last week when the last is excluded", () => {
+    const exceptLast: Partial<OccurrenceInput> = {
+      weeks_of_month: ["last"],
+      exclude_weeks: true,
+    };
+    expect(next("sunday", exceptLast)).toBe(on(2026, 6, 14));
+    // June 28 is June's last Sunday; July 5 is the next one kept.
+    expect(next("sunday", exceptLast, undefined, new Date(2026, 5, 22))).toBe(
+      on(2026, 7, 5),
+    );
+    // August 2026 has five Sundays: the fourth (23rd) is kept.
+    expect(next("sunday", exceptLast, undefined, new Date(2026, 7, 17))).toBe(
+      on(2026, 8, 23),
+    );
+  });
+
   it("skips months without a fifth week", () => {
     // June 2026 has five Tuesdays (the 30th).
     expect(next("tuesday", { weeks_of_month: ["fifth"] })).toBe(on(2026, 6, 30));
@@ -607,5 +623,29 @@ describe("parseIsoDateLocal", () => {
 
   it("returns null for an unparseable string", () => {
     expect(parseIsoDateLocal("not-a-date")).toBeNull();
+  });
+});
+
+describe("absolute effective dates", () => {
+  it("changes Saturday Mass without another snapshot or annual repetition", () => {
+    const old = weeklyOccurrence("Saturday", 17 * 60, { valid_until: "2026-10-30" });
+    const winter = weeklyOccurrence("Saturday", 16 * 60, { valid_from: "2026-10-31" });
+    expect(computeNextOccurrence(old, new Date(2026, 9, 25))).toBeNull();
+    expect(new Date(computeNextOccurrence(winter, new Date(2026, 9, 25))!))
+      .toEqual(new Date(2026, 9, 31, 16));
+    expect(new Date(computeNextOccurrence(winter, new Date(2026, 10, 1))!))
+      .toEqual(new Date(2026, 10, 7, 16));
+    expect(computeNextOccurrence(old, new Date(2027, 9, 25))).toBeNull();
+  });
+
+  it("includes both boundaries and preserves monthly and annual qualifiers", () => {
+    const e = weeklyOccurrence("Friday", 9 * 60, {
+      weeks_of_month: ["first"], valid_from: "2026-11-01", valid_until: "2026-12-04",
+    });
+    expect(new Date(computeNextOccurrence(e, new Date(2026, 10, 1))!))
+      .toEqual(new Date(2026, 10, 6, 9));
+    expect(new Date(computeNextOccurrence(e, new Date(2026, 11, 4))!))
+      .toEqual(new Date(2026, 11, 4, 9));
+    expect(computeNextOccurrence(e, new Date(2026, 11, 5))).toBeNull();
   });
 });

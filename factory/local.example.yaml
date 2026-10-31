@@ -1,0 +1,19 @@
+# Copy to data/factory/local.yaml in the dispatcher's checkout and fill in.
+
+# Each account is signed in once: CLAUDE_CONFIG_DIR=<config_dir> claude /login
+# `plan:` (pro, max...) is only read when the login's .credentials.json doesn't say.
+accounts:
+  - name: first
+    config_dir: ~/.claude
+  - name: second
+    config_dir: ~/.claude_2
+
+# The GitHub login whose issue comments count as answers.
+owner: your-github-login
+
+# Where Run worktrees go (default data/factory/worktrees). Keep it on the Linux
+# filesystem, not under /mnt/c.
+# worktrees_dir: ~/carlo-factory/worktrees
+
+# Commands run once in a new Run worktree, before its first job.
+# setup: ["uv sync --group dev"]

@@ -1,0 +1,1100 @@
+{
+  "schema_version": 1,
+  "parish_slug": "blessed-sacrament-st-vincent-de-paul-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:58Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:59:56Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Two linked Syracuse churches. Blessed Sacrament's schedule box (Mon-Fri 8, Sat 5:15 PM, Sun 7:30 and 9:15, Saturday confession 4:00-4:45, Thursday 6-7 PM adoration) and St. Vincent de Paul's (Mon-Wed noon, Sat 4, Sun 10:30) are the same in all three bulletins and match history. Thanksgiving Day Mass is dated and included; one question asks which church holds the November 2 All Souls Liturgy of Remembrance at 6 PM.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7191d43846a4a48a47b64a6a678c76f04431449f5f955ee1ee5176270745e3da",
+      "fetched_at": "2026-10-11T16:34:58Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "2e88717049b3598626cf84e42a105aff88f667b45f5f874782767c1a22bc36cb",
+      "fetched_at": "2026-10-04T14:32:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "a43633ed2d73c4f58c2a66fd81a6ad8592318a2827a705b1a3b552f750f9aeab",
+      "fetched_at": "2026-09-28T00:04:16Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Monday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Tuesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Tuesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Tuesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Wednesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Wednesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Wednesday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Thursday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Monday-Friday 8:00AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Friday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Friday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Friday 08:00 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Saturday 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Saturday 5:15 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Saturday 5:15 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Saturday 17:15 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Saturday 17:15 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Saturday 17:15 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Sunday 07:30 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Sunday 07:30 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Sunday 07:30 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "Mass Times: Sunday 7:30AM and 9:15AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Sunday 09:15 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Sunday 09:15 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Sunday 09:15 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament Mass Times box on page 2 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays 4:00PM - 4:45PM and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays 4:00PM - 4:45PM and by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays 4:00PM - 4:45PM and by appointment"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly confession Saturday 16:00–16:45 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly confession Saturday 16:00–16:45 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly confession Saturday 16:00–16:45 blessed-sacrament-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: Blessed Sacrament box on page 2 of all three bulletins read; the 'by appointment' part has no time (R26, separate slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "An Hour with Jesus"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "An Hour with Jesus: Adoration of the Blessed Sacrament is every Thursday at Blessed Sacrament Church from 6PM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 2,
+          "said": "An Hour with Jesus: Adoration of the Blessed Sacrament is every Thursday at Blessed Sacrament Church from 6PM-7PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a43633ed2d73",
+          "page": 2,
+          "said": "An Hour with Jesus: Adoration of the Blessed Sacrament is every Thursday at Blessed Sacrament Church from 6PM-7PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly adoration Thursday 18:00–19:00 blessed-sacrament-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly adoration Thursday 18:00–19:00 blessed-sacrament-syracuse",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly adoration Thursday 18:00–19:00 blessed-sacrament-syracuse",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: page 2 box in the newest bulletin; the same notice is in the other two (pages 5).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "St. Vincent de Paul Mass Times: Monday-Wednesday 12:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Monday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Monday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Monday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: St. Vincent de Paul Mass Times box on page 2 (set as an image beside the church photo); the intentions list Noon Masses Mon-Wed. History has it in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "St. Vincent de Paul Mass Times: Monday-Wednesday 12:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Tuesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Tuesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Tuesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: St. Vincent de Paul Mass Times box on page 2 (set as an image beside the church photo); the intentions list Noon Masses Mon-Wed. History has it in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "St. Vincent de Paul Mass Times: Monday-Wednesday 12:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Wednesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Wednesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Wednesday 12:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: St. Vincent de Paul Mass Times box on page 2 (set as an image beside the church photo); the intentions list Noon Masses Mon-Wed. History has it in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Saturday 4:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Saturday 16:00 st-vincent-de-paul-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: St. Vincent de Paul Mass Times box on page 2 (image); intentions list Saturday 4 pm. History has it in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-vincent-de-paul-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "Sunday 10:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "weekly mass Sunday 10:30 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "weekly mass Sunday 10:30 st-vincent-de-paul-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "a43633ed2d73",
+          "said": "weekly mass Sunday 10:30 st-vincent-de-paul-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: St. Vincent de Paul Mass Times box on page 2 (image); intentions list Sunday 10:30 am. History has it in 3/3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-26",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Thanksgiving Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 4,
+          "said": "The Thanksgiving Day Mass will be at Blessed Sacrament Church at 9AM on November 26, 2026."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 5,
+          "said": "The Thanksgiving Day Mass will be at Blessed Sacrament Church at 9AM on November 26, 2026."
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-syracuse  “Thanksgiving Day Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "2e88717049b3",
+          "said": "specific_date mass 2026-11-26 09:00 blessed-sacrament-syracuse  “Thanksgiving Day Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: dated holiday Mass at a time outside the weekly schedule (POLICY, Weekly or dated 7), on or after as_of. It does not cancel the usual 8:00 AM Thursday Mass, since the bulletin does not say so (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Liturgy of Remembrance"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 4,
+          "said": "REQUIESCANT IN PACE: The annual All Souls Liturgy of Remembrance will be held on Monday, November 2 at 6PM. ... At the end of Mass, a family member may take a candle home"
+        },
+        {
+          "source": "history",
+          "bulletin": "7191d43846a4",
+          "said": "specific_date mass 2026-11-02 18:00 blessed-sacrament-syracuse  “All Souls Liturgy of Remembrance”",
+          "page": 4
+        }
+      ],
+      "rationale": "R32: the notice names no church; it sits in the right-hand (Blessed Sacrament) column of the events page, and history also reads it at Blessed Sacrament, but the text says 'from the parish' and does not say outright that it is a Mass. Printed in only one bulletin and dated after as_of. Leaning Blessed Sacrament 6 PM Mass.\n\nReview 2026-10-22: Include Nov 2, 6 PM Mass at Blessed Sacrament. The actual page has a Blessed Sacrament column heading, and the notice says “At the end of Mass.” This is stronger venue evidence than the draft suggests.",
+      "question": "Is the All Souls Liturgy of Remembrance on Monday, November 2 at 6 PM a Mass, and at which church?",
+      "options": [
+        {
+          "label": "Blessed Sacrament, Mon Nov 2 6:00 PM Mass",
+          "entry": {
+            "church_slug": "blessed-sacrament-syracuse",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls Liturgy of Remembrance"
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Vincent de Paul, Mon Nov 2 6:00 PM Mass",
+          "entry": {
+            "church_slug": "st-vincent-de-paul-syracuse",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls Liturgy of Remembrance"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s18",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 3,
+          "said": "ALL SOULS DAY MASS AT ST. VINCENT'S will be celebrated on November 7, 2026 at 4 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "2e88717049b3",
+          "page": 3,
+          "said": "ALL SOULS DAY MASS AT ST. VINCENT'S will be celebrated on November 7, 2026 at 4 p.m."
+        }
+      ],
+      "rationale": "R25, POLICY Weekly or dated 7: a special occasion celebrated at the regular Saturday 4:00 PM Mass at St. Vincent de Paul, so only the weekly slot is recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 4,
+          "said": "PRAY THE ROSARY WITH US: ... join us in praying the rosary before our weekend Masses."
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7191d43846a4",
+          "page": 2,
+          "said": "CONFESSIONS Saturdays 4:00PM - 4:45PM and by appointment"
+        }
+      ],
+      "rationale": "R26: confession 'by appointment' has no definite time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

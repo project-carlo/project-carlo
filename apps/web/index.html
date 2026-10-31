@@ -12,15 +12,17 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <!-- The map's tiles; the first ones are usually the largest paint. -->
+    <link rel="preconnect" href="https://tile.openstreetmap.org" />
     <link rel="canonical" href="https://projectcarlo.com/" />
-    <title>Mass, Confession &amp; Adoration Times Near You · Project Carlo</title>
+    <title>Project Carlo · Mass, Confession &amp; Adoration Times</title>
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Project Carlo" />
     <meta property="og:locale" content="en_US" />
     <meta
       property="og:title"
-      content="Mass, Confession &amp; Adoration Times Near You · Project Carlo"
+      content="Project Carlo · Mass, Confession &amp; Adoration Times"
     />
     <meta
       property="og:description"
@@ -38,7 +40,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Mass, Confession &amp; Adoration Times Near You · Project Carlo"
+      content="Project Carlo · Mass, Confession &amp; Adoration Times"
     />
     <meta
       name="twitter:description"
@@ -48,7 +50,28 @@
     <!-- WebSite/Organization JSON-LD is injected at build time from src/lib/seo.ts (see vite.config.ts). -->
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Until the app's code has loaded, the home map shows a static copy
+           of MapLoadingIndicator (src/components/MapLoadingIndicator.tsx);
+           keep the two in step. React replaces it when it first renders. Like
+           the router's first-load copy, its text skips the web font, which
+           would otherwise download ahead of the app's code. -->
+      <main id="boot-map-loading" class="fixed inset-x-0 top-0 h-dvh bg-paper" hidden>
+        <div class="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center">
+          <div class="pointer-events-auto flex items-center gap-3 border border-rule-strong bg-paper/95 px-5 py-3 shadow-missal-loading">
+            <span class="h-2 w-2 animate-pulse rounded-full bg-rubric" aria-hidden="true"></span>
+            <span class="text-sm text-ink-soft" style="font-family: &quot;Iowan Old Style&quot;, Georgia, serif">Loading map…</span>
+          </div>
+        </div>
+      </main>
+      <script>
+        // Only the home map: the other pages served from this shell
+        // (landing.html, about.html, 404.html) load without it.
+        if (location.pathname === "/") {
+          document.getElementById("boot-map-loading").hidden = false;
+        }
+      </script>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

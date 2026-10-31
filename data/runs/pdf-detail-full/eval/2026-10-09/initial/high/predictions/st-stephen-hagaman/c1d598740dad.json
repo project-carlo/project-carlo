@@ -1,0 +1,63 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-stephen-hagaman",
+  "content_hash": "c1d598740dade557f9b1228618b680283fd277d9b7770f607fff77de39bae4b8",
+  "source_url": "https://parishesonline.com/publication-page/st-stephen-church-12086?selectedPublication=https://container.parishesonline.com/bulletins/03/1004/20260927B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 17373,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 722,
+    "reasoning_tokens": 455
+  },
+  "seconds": 9.784,
+  "response_id": "resp_01074275943d1d02016ac913c5ac7887d2b9a1c1158d51c05e",
+  "events": [
+    {
+      "church_slug": "st-stephen-hagaman",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-stephen-hagaman",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "63bdc2bc1db9b67d86959c5d95b24975314679328b0a8940fed1641c30da0bc6"
+}

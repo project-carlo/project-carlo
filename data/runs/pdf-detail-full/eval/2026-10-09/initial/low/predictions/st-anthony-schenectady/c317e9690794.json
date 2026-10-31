@@ -1,0 +1,102 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-anthony-schenectady",
+  "content_hash": "c317e9690794a1fb4e688ccd48e72f9474fc08032fc2402f22a458221f0747dc",
+  "source_url": "https://stanthonyschurch.net/bulletin/09-27-26.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 14609,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 971,
+    "reasoning_tokens": 547
+  },
+  "seconds": 12.595,
+  "response_id": "resp_0994bc5c52f90ac3016ac91053cc5487d2af17516fd3c974a8",
+  "events": [
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:45",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:45 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-anthony-schenectady",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "10:00 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "932a115ec3de287bbf42c635c234928f2e26e98b3d2dd5daa6706b6913745fcc"
+}

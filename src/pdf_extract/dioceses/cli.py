@@ -9,11 +9,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import json
+import sys
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses import records, report, rosters, web
+from pdf_extract.dioceses import batches, records, report, rosters, web
 from pdf_extract.dioceses.records import EXCLUSION_REASONS, KINDS, PARISH, DioceseError
 
 Handler = Callable[[argparse.Namespace], dict[str, Any]]
@@ -173,6 +175,18 @@ def _date(value: str) -> dt.date:
         raise argparse.ArgumentTypeError(f"not a date like 2026-09-06: {value!r}") from None
 
 
+def _write_record(args: argparse.Namespace) -> dict[str, Any]:
+    def invalid_constant(value: str) -> None:
+        raise ValueError(f"non-finite JSON value {value!r}")
+
+    try:
+        text = sys.stdin.read() if args.file == "-" else Path(args.file).read_text(encoding="utf-8")
+        payload = json.loads(text, parse_constant=invalid_constant)
+    except (OSError, ValueError) as exc:
+        raise DioceseError(f"cannot read record JSON: {exc}") from None
+    return records.write_record(args.diocese, args.kind, args.slug, payload, create=args.create)
+
+
 HANDLERS: dict[str, Handler] = {
     "list": lambda a: records.list_dioceses(),
     "init": lambda a: records.init_diocese(a.diocese, name=a.name, state=a.state or "",
@@ -180,6 +194,8 @@ HANDLERS: dict[str, Handler] = {
     "show": lambda a: records.show_diocese(a.diocese),
     "todo": lambda a: report.todo(a.diocese),
     "validate": lambda a: records.validate(a.diocese),
+    "write": _write_record,
+    "batches-validate": lambda a: batches.validate(a.diocese, Path(a.file) if a.file else None),
     "search": lambda a: records.search(" ".join(a.query), diocese=a.diocese, kinds=a.kind,
                                        limit=a.limit),
     "merge": lambda a: records.merge_parishes(a.diocese, a.parishes, a.into, note=a.note or ""),
@@ -205,6 +221,7 @@ HANDLERS: dict[str, Handler] = {
         pages=a.pages, chars=a.chars),
     "probe-po": lambda a: {"results": [web.parishes_online_org(k, issues=a.issues)
                                        for k in a.keys]},
+    "probe-get": lambda a: web.get(a.url, out=Path(a.out) if a.out else None, chars=a.chars),
     "probe-pdf": lambda a: web.pdf_text(a.url, pages=a.pages, chars=a.chars, grep=a.grep or ()),
     "recheck": _recheck,
     "export": lambda a: records.export_csv(a.diocese, Path(a.out_dir)),
@@ -255,6 +272,20 @@ def add_diocese_parser(
     p = leaf("validate", "validate", "Check one diocese (or all); exits 1 on errors")
     p.add_argument("diocese", nargs="?")
     p.set_defaults(fail_on_verification_error=True)
+
+    batch_commands = group("batches", "Validate scout batch coverage against local rosters")
+    p = leaf("validate", "batches-validate", "Check a batch manifest; exits 1 on errors",
+             parent=batch_commands)
+    p.add_argument("diocese")
+    p.add_argument("--file", help="JSON manifest; defaults to data/dioceses/<diocese>/batches.json")
+    p.set_defaults(fail_on_verification_error=True)
+
+    p = leaf("write", "write", "Patch a record from JSON, validate, then atomically write it")
+    p.add_argument("diocese")
+    p.add_argument("kind", choices=list(KINDS))
+    p.add_argument("slug")
+    p.add_argument("--file", required=True, help="JSON fields plus optional body; '-' reads stdin")
+    p.add_argument("--create", action="store_true", help="create a new record; refuse overwrites")
 
     p = leaf("search", "search",
              "Search every diocese and the live CSVs (diocese 'live'); run it before adding")
@@ -347,7 +378,7 @@ def add_diocese_parser(
     p.add_argument("--fetch", action="store_true",
                    help="also read each undecided row's website for the publication ids it embeds")
 
-    probe = group("probe", "Look things up on the web (nothing is written)")
+    probe = group("probe", "Look things up on the web (no records are written)")
     p = leaf("url", "probe-url",
              "Is a website alive, whose is it now, which bulletin does it embed?", probe)
     p.add_argument("urls", nargs="+")
@@ -369,6 +400,12 @@ def add_diocese_parser(
              "publication ids and latest bulletins", probe)
     p.add_argument("keys", nargs="+", help="org slug, LPi publicationWidget id, or org URL")
     p.add_argument("--issues", type=int, default=6, help="how many recent issues to list")
+    p = leaf("get", "probe-get",
+             "Fetch one URL (a page, PDF or JSON API) with the probes' own client; use it "
+             "instead of curl", probe)
+    p.add_argument("url")
+    p.add_argument("--out", help="save the body here as fetched, instead of printing its text")
+    p.add_argument("--chars", type=int, default=20000, help="text to print (without --out)")
     p = leaf("pdf", "probe-pdf", "Text of a bulletin PDF, and where given words occur", probe)
     p.add_argument("url")
     p.add_argument("--pages", type=int, default=3, help="readable pages to include")

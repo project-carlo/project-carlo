@@ -9,8 +9,9 @@ import {
 import { useLocation, useNavigation, useSearchParams } from "react-router-dom";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import type { Map as LeafletMap } from "leaflet";
-import { fetchAllChurchesForSearch, fetchChurches } from "../api";
+import { fetchChurches } from "../api";
 import { ChurchMap } from "../components/ChurchMap";
+import { MapLoadingIndicator } from "../components/MapLoadingIndicator";
 import {
   FULL_WINDOW_CORNER_CLASS,
   MapCornerControls,
@@ -31,10 +32,15 @@ import {
   encodeMapViewToParams,
   type MapView,
 } from "../lib/mapView";
-import { fetchApproximateLocation } from "../lib/approximateLocation";
+import {
+  approximateLocationQuery,
+  churchSearchIndexQuery,
+  isFirstVisitStart,
+} from "../lib/homeStartQueries";
 import { firstVisitStart, type MapStart } from "../lib/mapStart";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { useMapSelection } from "../hooks/useMapSelection";
+import { useChurchesInView } from "../hooks/useChurchesInView";
 import { currentLocationPlace } from "../placeSearch";
 import { FINDING_YOUR_LOCATION, USE_MY_LOCATION } from "../copy";
 import { HOME_DESCRIPTION, HOME_TITLE, canonicalForPath } from "../lib/seo";
@@ -137,26 +143,16 @@ export function HomePage() {
   // because the estimate can be well off, or else on the whole area the site
   // covers. The map waits for the estimate, which is capped at a short
   // timeout, rather than jump once it arrives.
-  const [wantsFirstVisitStart] = useState(
-    () =>
-      urlMapView == null &&
-      !(location.state as HomeNavState | null)?.centerOn,
+  const [wantsFirstVisitStart] = useState(() =>
+    isFirstVisitStart(window.location.search, location.state),
   );
   const { data: approximateLocation, isPending: approximatePending } =
-    useQuery({
-      queryKey: ["approximate-location"],
-      queryFn: ({ signal }) => fetchApproximateLocation(signal),
-      enabled: wantsFirstVisitStart,
-      staleTime: Infinity,
-      retry: false,
-    });
+    useQuery({ ...approximateLocationQuery, enabled: wantsFirstVisitStart });
   const approximateSettled = !wantsFirstVisitStart || !approximatePending;
   // Every church, not just the ones the filters leave: the start mustn't
   // depend on the filters in a link. The search box shares this query.
   const { data: allChurches } = useQuery({
-    queryKey: ["church-search-index"],
-    queryFn: fetchAllChurchesForSearch,
-    staleTime: 5 * 60 * 1000,
+    ...churchSearchIndexQuery,
     enabled: wantsFirstVisitStart,
   });
   const mapViewTimerRef = useRef<number | null>(null);
@@ -196,7 +192,7 @@ export function HomePage() {
     [],
   );
 
-  // On the way to another page (a link from the map, say "All churches"), a
+  // On the way to another page (a link from the map, say "Church list"), a
   // view still waiting on the debounce goes into this page's history entry
   // at once, around the router: through it, it would cancel the page change.
   // Back then returns to the map as it was left.
@@ -286,15 +282,6 @@ export function HomePage() {
     }
   }, [mapStart, allChurches, approximateSettled, approximateLocation, isDesktop]);
 
-  // Churches without coordinates aren't on the map, so they don't count.
-  const mappedChurchCount = useMemo(
-    () =>
-      data?.filter(
-        (church) => church.latitude !== null && church.longitude !== null,
-      ).length,
-    [data],
-  );
-
   // Filters apply as they change on every viewport, so the panel never shows
   // a selection the map isn't using.
   const handleFiltersChange = useCallback((next: FilterState) => {
@@ -316,6 +303,13 @@ export function HomePage() {
       ({ lat, lng }) => handlePlaceSelect(currentLocationPlace(lat, lng)),
       [handlePlaceSelect],
     ),
+  );
+
+  // The phone's filter sheet counts only the churches it will show.
+  const churchesInView = useChurchesInView(
+    map,
+    data,
+    filterPanelOpen && !isDesktop,
   );
 
   const pinnedPlaceTitle = centerOn?.placeTitle;
@@ -346,19 +340,7 @@ export function HomePage() {
       </div>
 
       {/* Initial load only — filter changes keep the map mounted via placeholderData */}
-      {!mapReady && !error ? (
-        <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center">
-          <div className="pointer-events-auto flex items-center gap-3 border border-rule-strong bg-paper/95 px-5 py-3 shadow-missal-loading">
-            <span
-              className="h-2 w-2 animate-pulse rounded-full bg-rubric"
-              aria-hidden
-            />
-            <span className="font-serif text-sm text-ink-soft">
-              Loading map…
-            </span>
-          </div>
-        </div>
-      ) : null}
+      {!mapReady && !error ? <MapLoadingIndicator /> : null}
       {error ? (
         <div className="pointer-events-none absolute inset-0 z-[800] flex items-center justify-center p-4">
           <div className="pointer-events-auto max-w-sm border border-rule-strong bg-paper/95 px-6 py-5 shadow-missal-overlay">
@@ -379,7 +361,7 @@ export function HomePage() {
         filters={filters}
         appliedFilters={appliedFilters}
         onFiltersChange={handleFiltersChange}
-        resultCount={mappedChurchCount}
+        resultCount={churchesInView}
         filterPanelOpen={filterPanelOpen}
         onFilterPanelOpenChange={setFilterPanelOpen}
         onChurchSelect={handleChurchSelect}

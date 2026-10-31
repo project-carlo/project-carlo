@@ -16,8 +16,8 @@ import { computeNextOccurrence } from "./schedule";
  */
 export const SNAPSHOT_FILE = "frontend.json.gz";
 
-/** The format version this code reads; must match the pipeline's SNAPSHOT_VERSION. */
-export const SNAPSHOT_VERSION = 2;
+/** Latest format; must match the pipeline. The reader also accepts format 2. */
+export const SNAPSHOT_VERSION = 3;
 
 type Column<T> =
   | T[]
@@ -40,11 +40,20 @@ type Columns<Row> = { [K in keyof Row]: Row[K][] };
  */
 type AddedChurchColumns = "bulletin_week";
 
+/** Older snapshots have no exclusions or absolute date bounds. */
+type AddedEventColumns = "exclude_weeks" | "valid_from" | "valid_until";
+
+/** An event row's columns as stored, the added ones possibly missing. */
+type EventTable = Table<Omit<EventRow, AddedEventColumns>> &
+  Partial<Table<Pick<EventRow, AddedEventColumns>>>;
+type EventColumns = Columns<Omit<EventRow, AddedEventColumns>> &
+  Partial<Columns<Pick<EventRow, AddedEventColumns>>>;
+
 interface SnapshotDocument {
   version: number;
   churches: Table<Omit<ChurchDetail, AddedChurchColumns>> &
     Partial<Table<Pick<ChurchDetail, AddedChurchColumns>>>;
-  events: Table<EventRow>;
+  events: EventTable;
 }
 
 function decodeColumn<T>(column: Column<T>): T[] {
@@ -74,7 +83,7 @@ const NO_CANCELLED_DATES: ReadonlySet<string> = new Set();
  * Which dates each weekly event is cancelled on: the `date` of every
  * cancelled row, under the `cancels_event_id` it names.
  */
-function cancelledDatesByEvent(columns: Columns<EventRow>): CancelledDates {
+function cancelledDatesByEvent(columns: EventColumns): CancelledDates {
   const byEvent: CancelledDates = new Map();
   columns.cancels_event_id.forEach((eventId, row) => {
     const date = columns.date[row];
@@ -104,16 +113,19 @@ class SnapshotEvent implements RawEvent {
   page_number: number | null;
   note: string | null;
   weeks_of_month: WeekOfMonth[];
+  exclude_weeks: boolean;
   season_start_month: number | null;
   season_start_day: number | null;
   season_end_month: number | null;
   season_end_day: number | null;
   cancels_event_id: number | null;
+  valid_from: string | null;
+  valid_until: string | null;
   private readonly cancelledDates: CancelledDates;
   private nextOccurrence: string | null | undefined = undefined;
 
   constructor(
-    columns: Columns<EventRow>,
+    columns: EventColumns,
     row: number,
     cancelledDates: CancelledDates,
   ) {
@@ -129,11 +141,14 @@ class SnapshotEvent implements RawEvent {
     this.page_number = columns.page_number[row];
     this.note = columns.note[row];
     this.weeks_of_month = columns.weeks_of_month[row];
+    this.exclude_weeks = columns.exclude_weeks?.[row] ?? false;
     this.season_start_month = columns.season_start_month[row];
     this.season_start_day = columns.season_start_day[row];
     this.season_end_month = columns.season_end_month[row];
     this.season_end_day = columns.season_end_day[row];
     this.cancels_event_id = columns.cancels_event_id[row];
+    this.valid_from = columns.valid_from?.[row] ?? null;
+    this.valid_until = columns.valid_until?.[row] ?? null;
     this.cancelledDates = cancelledDates;
   }
 
@@ -171,7 +186,7 @@ export class SnapshotVersionError extends Error {
 /** Decode the (already gunzipped) snapshot JSON. */
 export function parseSnapshot(json: string): Snapshot {
   const document = JSON.parse(json) as SnapshotDocument;
-  if (document?.version !== SNAPSHOT_VERSION) {
+  if (![2, SNAPSHOT_VERSION].includes(document?.version)) {
     throw new SnapshotVersionError(
       `${SNAPSHOT_FILE} is format version ${String(document?.version)}, but this ` +
         `code reads version ${SNAPSHOT_VERSION}. Rebuild it with the pipeline ` +
@@ -203,7 +218,7 @@ export function parseSnapshot(json: string): Snapshot {
     bulletin_week: bulletinWeeks,
   } = c;
 
-  const e = decodeTable(document.events);
+  const e = decodeTable(document.events) as EventColumns;
   const cancelled = cancelledDatesByEvent(e);
   const events: RawEvent[] = e.id.map(
     (_, row) => new SnapshotEvent(e, row, cancelled),

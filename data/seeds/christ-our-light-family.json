@@ -1,0 +1,2936 @@
+{
+  "schema_version": 1,
+  "parish_slug": "christ-our-light-family",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:40Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:11:14Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches (Holy Family Belmont, Immaculate Conception Wellsville, Our Lady of the Angels Cuba, St. Jude Alfred). Masses, Saturday and St. Jude confessions, 24/7 Adoration at Immaculate Conception and Thursday Adoration at Cuba agree across the five bulletins read; Oct 28 and All Souls (Nov 2) are dated. Open: which church holds the Nov 1 3:00 PM Confirmation Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e0b8b2949d8598aa501f96439c7ae435c0ebac6f598040424b778935c3406989",
+      "fetched_at": "2026-10-25T13:15:40Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "d6827cb8a178a04d81c1c0b35a81ad99307f9c9fdef39ba0943c3f930318f21d",
+      "fetched_at": "2026-10-18T12:42:16Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "026abfd7ac0b97c0c9a6d162e86f3633bc8c806024bf481fbd3b34928b9714f3",
+      "fetched_at": "2026-10-11T16:33:09Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "57ead4eadbcf89c498853bb929077bab9f3fa27d576e981d15baf265f3073668",
+      "fetched_at": "2026-10-04T14:24:16Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "17e6d67d97f5c7c4428a00f6851e02dbe152d73ff56308be23997b56cd09ddb6",
+      "fetched_at": "2026-09-26T18:53:32Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-belmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Holy Family: Mass: Sundays 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Holy Family: Mass: Sundays 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Holy Family: Mass: Sundays 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Holy Family: Mass: Sundays 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Holy Family: Mass: Sundays 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Sunday 10:30 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Sunday 10:30 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Sunday 10:30 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Sunday 10:30 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Sunday 10:30 holy-family-belmont",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed in the cover parish-site box of all five bulletins read; the website's Mass Times page agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-belmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Monday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Monday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Monday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Monday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Monday 12:05 holy-family-belmont",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; the website's weekday schedule agrees. The Oct 26 and Oct 30 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-family-belmont",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Holy Family: Mon. & Fri. 12:05pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Friday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Friday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Friday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Friday 12:05 holy-family-belmont",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Friday 12:05 holy-family-belmont",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; the website's weekday schedule agrees. The Oct 26 and Oct 30 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Immaculate Conception: Mass: Saturdays 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Immaculate Conception: Mass: Saturdays 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Immaculate Conception: Mass: Saturdays 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Immaculate Conception: Mass: Saturdays 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Immaculate Conception: Mass: Saturdays 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Saturday 17:00 immaculate-conception-wellsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Immaculate Conception: Sundays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Immaculate Conception: Sundays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Immaculate Conception: Sundays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Immaculate Conception: Sundays 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Immaculate Conception: Sundays 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Sunday 08:00 immaculate-conception-wellsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Monday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Monday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Monday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Monday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Monday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees. The Oct 28 feast of St. Jude changes only the St. Jude 12:05 Mass; the 8:30 Wednesday Mass at Immaculate Conception stays (intentions list it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Wednesday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Wednesday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Wednesday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Wednesday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Wednesday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees. The Oct 28 feast of St. Jude changes only the St. Jude 12:05 Mass; the 8:30 Wednesday Mass at Immaculate Conception stays (intentions list it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Immaculate Conception: Mon./Wed./Fri. 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Friday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Friday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Friday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Friday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Friday 08:30 immaculate-conception-wellsville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees. The Oct 28 feast of St. Jude changes only the St. Jude 12:05 Mass; the 8:30 Wednesday Mass at Immaculate Conception stays (intentions list it).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Our Lady of the Angels: Mass: Saturdays 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Our Lady of the Angels: Mass: Saturdays 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Our Lady of the Angels: Mass: Saturdays 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Our Lady of the Angels: Mass: Saturdays 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Our Lady of the Angels: Mass: Saturdays 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Saturday 16:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Our Lady of the Angels: Sundays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Our Lady of the Angels: Sundays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Our Lady of the Angels: Sundays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Our Lady of the Angels: Sundays 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Our Lady of the Angels: Sundays 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Sunday 08:30 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Sunday 08:30 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Sunday 08:30 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Sunday 08:30 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Sunday 08:30 our-lady-of-the-angels-cuba",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Tuesday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "Our Lady of the Angels: Tue. & Thu. 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Thursday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Thursday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Thursday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Thursday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Thursday 09:00 our-lady-of-the-angels-cuba",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Sunday 09:45 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Sunday 09:45 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Sunday 09:45 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Sunday 09:45 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Sunday 09:45 st-jude-alfred",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; every Sunday's intentions list SJ 9:45am and 7:00pm. The website lists only the 9:45 AM Sunday Mass and omits the evening Mass; a missing mention is not a conflict (R6), and the bulletins print it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "St. Jude Chapel: Mass: Sundays 9:45am, 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Sunday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Sunday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Sunday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Sunday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Sunday 19:00 st-jude-alfred",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: printed on the cover of all five bulletins; every Sunday's intentions list SJ 9:45am and 7:00pm. The website lists only the 9:45 AM Sunday Mass and omits the evening Mass; a missing mention is not a conflict (R6), and the bulletins print it every week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 7,
+          "said": "Wed. 9/30 SJ 12:05pm All Living & Deceased Mothers"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Wednesday 12:05 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Wednesday 12:05 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Wednesday 12:05 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Wednesday 12:05 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "specific_date mass 2026-09-30 12:05 st-jude-alfred",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R35, R3: the four newest covers print Wed 12:05; the website's weekday schedule agrees. The Sept 27 cover misprints this as Thur. 12:05pm, but that issue's own intentions list Wed 9/30 SJ 12:05pm and Thu 10/1 SJ 7:00pm, so it was a typo. Oct 28 is cancelled separately (see the dated slot).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "St. Jude Chapel: Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "St. Jude Chapel: Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "St. Jude Chapel: Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "St. Jude Chapel: Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 7,
+          "said": "Thu. 10/1 SJ 7:00pm Divine Mercy Intentions"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly mass Thursday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly mass Thursday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly mass Thursday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly mass Thursday 19:00 st-jude-alfred",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "specific_date mass 2026-10-01 19:00 st-jude-alfred  “Divine Mercy Intentions”",
+          "page": 7
+        }
+      ],
+      "rationale": "R1, R35, R3: the four newest covers print Thur. 7:00pm; the Sept 27 intentions list it too (its cover misprints Thur. 12:05pm). The website's weekday list omits it; a missing mention is not a conflict (R6).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Our Lady of the Angels: Saturday 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Our Lady of the Angels: Saturday 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Our Lady of the Angels: Saturday 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Our Lady of the Angels: Saturday 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Our Lady of the Angels: Saturday 3:15pm"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/confession-times",
+          "said": "Confession Times Saturday 3:15 PM to 4:00 PM Our Lady of the Angels",
+          "schedule_check": {
+            "checked_at": "2026-10-26T12:14:20Z",
+            "current_because": "Parish's own site, branded Christ Our Light Family; its Mass Times page matches the bulletin cover for every church it lists, and the 3:15 start matches the bulletin.",
+            "bulletin": "e0b8b294",
+            "fits_because": "The bulletin prints only the 3:15pm start; the site's window 3:15-4:00 PM ends just before the 4:00 PM Saturday Mass at Our Lady of the Angels."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly confession Saturday 15:15 our-lady-of-the-angels-cuba",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly confession Saturday 15:15 our-lady-of-the-angels-cuba",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly confession Saturday 15:15 our-lady-of-the-angels-cuba",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly confession Saturday 15:15 our-lady-of-the-angels-cuba",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly confession Saturday 15:15 our-lady-of-the-angels-cuba",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R6: the start is printed in all five bulletins; the end time comes from the parish website, which agrees on the start (POLICY, Times: give end_time when a source gives one).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday 4:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception: Saturday 4:15pm"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/confession-times",
+          "said": "Confession Times 4:15 PM to 5:00 PM Immaculate Conception (Before Mass or by Appointment)",
+          "schedule_check": {
+            "checked_at": "2026-10-26T12:14:20Z",
+            "current_because": "Parish's own site, branded Christ Our Light Family; its Mass Times page matches the bulletin cover for every church it lists, and the 4:15 start matches the bulletin.",
+            "bulletin": "e0b8b294",
+            "fits_because": "The bulletin prints only the 4:15pm start; the site's window 4:15-5:00 PM ends when the 5:00 PM Saturday Mass at Immaculate Conception starts."
+          }
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly confession Saturday 16:15 immaculate-conception-wellsville",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R6: the start is printed in all five bulletins; the end time comes from the parish website, which agrees on the start.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly confession Sunday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly confession Sunday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly confession Sunday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly confession Sunday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly confession Sunday 18:00 st-jude-alfred",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confessions box of all five bulletins; no end time is given. The website's confession page lists only the Saturday times, which is a missing mention, not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly confession Wednesday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly confession Wednesday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly confession Wednesday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly confession Wednesday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly confession Wednesday 18:00 st-jude-alfred",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confessions box of all five bulletins; no end time is given. The website's confession page lists only the Saturday times, which is a missing mention, not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "St. Jude: Sun., Wed., Thur. 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly confession Thursday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly confession Thursday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly confession Thursday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly confession Thursday 18:00 st-jude-alfred",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly confession Thursday 18:00 st-jude-alfred",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R35: printed in the Confessions box of all five bulletins; no end time is given. The website's confession page lists only the Saturday times, which is a missing mention, not a conflict.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly adoration Monday 00:00 immaculate-conception-wellsville  “24/7 perpetual adoration; call office for chapel code”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Monday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Monday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Monday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Tuesday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Tuesday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Tuesday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Wednesday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Wednesday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Wednesday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Thursday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Thursday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Thursday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Friday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Friday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Friday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Saturday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Saturday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Saturday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-wellsville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": "23:59",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Adoration chapel, 24/7; call the parish office for the access code"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Immaculate Conception—Adoration 24/7 (call office for code to Chapel)"
+        },
+        {
+          "source": "website",
+          "url": "https://icc-ics.com/",
+          "said": "Adoration Times Perpetual. For Immaculate Conception Church ONLY: Contact Parish Office during business hours to assist you in accessing the Chapel after normal business hours"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly adoration Sunday 00:00 immaculate-conception-wellsville  “24/7 Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Sunday 00:00 immaculate-conception-wellsville  “24/7 Perpetual Adoration; call office for code to chapel”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Sunday 00:00–23:59 immaculate-conception-wellsville  “24/7 Perpetual Adoration”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Sunday 00:00–23:59 immaculate-conception-wellsville  “24/7 Adoration in the Chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R38: the parish names Immaculate Conception's chapel Adoration 24/7 in all five bulletins and its website says Perpetual for Immaculate Conception Church only. Seven daily slots, 00:00-23:59, as is done elsewhere for round-the-clock Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Our Lady of the Angels: Adoration after Thursday Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 2,
+          "said": "Our Lady of the Angels: Adoration after Thursday Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 2,
+          "said": "Our Lady of the Angels: Adoration after Thursday Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 2,
+          "said": "Our Lady of the Angels: Adoration after Thursday Morning Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 2,
+          "said": "Our Lady of the Angels: Adoration after Thursday Morning Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "weekly adoration Thursday 09:30 our-lady-of-the-angels-cuba  “After Thursday Morning Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "weekly adoration Thursday 09:30 our-lady-of-the-angels-cuba  “Following 9:00 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "weekly adoration Thursday 09:30 our-lady-of-the-angels-cuba  “Following 9:00 AM Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "57ead4eadbcf",
+          "said": "weekly adoration Thursday 09:30 our-lady-of-the-angels-cuba  “Following Thursday Morning Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly adoration Thursday 09:30 our-lady-of-the-angels-cuba  “After Thursday Morning Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R10: no clock time; the Thursday Mass is at 9:00 AM, so POLICY (Times) puts it 30 minutes after the weekday Mass starts, 9:30, with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of St. Jude"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 3,
+          "said": "There will be NO 12:05 Mass on Wed. Oct. 28th"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 7,
+          "said": "Wed. 10/28 SJ NO 12:05 NO 12:05 Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "specific_date mass 2026-10-28 12:05 st-jude-alfred  CANCELLED",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "specific_date mass 2026-10-28 12:05 st-jude-alfred  CANCELLED; “Cancelled for Feast of St. Jude evening Mass”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says the weekly Wednesday 12:05 PM Mass at St. Jude is cancelled on Oct 28 (the feast Mass is that evening).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-28",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Feast of St. Jude"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 3,
+          "said": "Wednesday, Oct. 28th Mass at 7:00pm St. Jude Chapel - Alfred"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Wed. Oct. 28 7:00pm Feast of St. Jude Mass @ St. Jude"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 7,
+          "said": "Wed. 10/28 SJ 7:00pm +Herb Zuschin"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "specific_date mass 2026-10-28 19:00 st-jude-alfred  “Feast of St. Jude”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "specific_date mass 2026-10-28 19:00 st-jude-alfred  “Feast of St. Jude”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "specific_date mass 2026-10-28 19:00 st-jude-alfred  “Feast of St. Jude”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: a dated special Mass outside the weekly schedule (POLICY, Weekly or dated, rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-the-angels-cuba",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day; lighting of candles and names read"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 2ND ALL SOULS' DAY 6:00pm - Our Lady of the Angels"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Mon. Nov. 2 See page 3 All Souls Day Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-the-angels-cuba  “All Souls Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-the-angels-cuba  “All Souls Day Mass”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "specific_date mass 2026-11-02 18:00 our-lady-of-the-angels-cuba  “All Souls Day”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Day Mass; Our Lady of the Angels has no regular Monday Mass. An earlier history read it at the same time (18:00).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day; lighting of candles and names read"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 3,
+          "said": "MONDAY, NOVEMBER 2ND ALL SOULS' DAY 7:00pm - St. Jude"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Mon. Nov. 2 See page 3 All Souls Day Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "specific_date mass 2026-11-02 19:00 st-jude-alfred  “All Souls Day Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "specific_date mass 2026-11-02 19:00 st-jude-alfred  “All Souls Day Mass”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "026abfd7ac0b",
+          "said": "specific_date mass 2026-11-02 19:00 st-jude-alfred  “All Souls Day”",
+          "page": 6
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Day Mass; St. Jude has no regular Monday Mass. The same page's 8:30am Immaculate Conception and 12:05pm Holy Family Masses are the regular Monday weekly slots (POLICY, Weekly or dated, rule 6), so they are not duplicated as dated entries.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Sun. Nov. 1 3:00pm CONFIRMATION; Join us for Confirmation! Sunday - November 1st ~ 3:00pm Come support our Candidates as Bishop Fisher confers this beautiful Sacrament. Attending this Mass fulfills your Sunday Obligation."
+        },
+        {
+          "source": "history",
+          "bulletin": "e0b8b2949d85",
+          "said": "specific_date mass 2026-11-01 15:00 immaculate-conception-wellsville  “Confirmation Mass”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d6827cb8a178",
+          "said": "specific_date mass 2026-11-01 15:00 immaculate-conception-wellsville  “Confirmation Mass fulfills Sunday obligation”",
+          "page": 5
+        }
+      ],
+      "rationale": "R32: a public Mass at 3:00 PM on Nov 1, but neither the bulletins nor the website name the church. I lean Immaculate Conception because the parish office, religious ed and OCIA are there (ICC/ICS) and it is the largest church, but that is a guess. The Nov 1 intentions list no 3:00 PM Mass.",
+      "question": "Which church holds the Nov 1, 3:00 PM Confirmation Mass?",
+      "options": [
+        {
+          "label": "Immaculate Conception, Wellsville",
+          "entry": {
+            "church_slug": "immaculate-conception-wellsville",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass with Bishop Fisher"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Our Lady of the Angels, Cuba",
+          "entry": {
+            "church_slug": "our-lady-of-the-angels-cuba",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass with Bishop Fisher"
+          }
+        },
+        {
+          "label": "Holy Family, Belmont",
+          "entry": {
+            "church_slug": "holy-family-belmont",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass with Bishop Fisher"
+          }
+        },
+        {
+          "label": "St. Jude, Alfred",
+          "entry": {
+            "church_slug": "st-jude-alfred",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-01",
+            "start_time": "15:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Confirmation Mass with Bishop Fisher"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 2,
+          "said": "Rosary - 1st Saturday at 4:30pm Our Lady of the Angels; Rosary begins 30 Minutes before every Mass"
+        }
+      ],
+      "rationale": "R24: a Rosary is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-jude-alfred",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "17e6d67d",
+          "page": 1,
+          "said": "St. Jude Chapel Mass: Sundays 9:45am, 7:00pm, Thur. 12:05pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "57ead4ea",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm; Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d6827cb8",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm; Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "026abfd7",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm; Thur. 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e0b8b294",
+          "page": 1,
+          "said": "St. Jude Chapel: Wed. 12:05pm; Thur. 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "17e6d67d97f5",
+          "said": "weekly mass Thursday 12:05 st-jude-alfred",
+          "page": 1
+        }
+      ],
+      "rationale": "R7, R9, R3: only the Sept 27 cover prints Thur. 12:05pm. That issue's own intentions list Wed 9/30 SJ 12:05pm and Thu 10/1 SJ 7:00pm, the four later covers and the website print Wed 12:05, so it is a cover misprint.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-high+prompt-409460690c58",
+  "parish_slug": "st-kateri-latin-mass-community",
+  "content_hash": "d96fe7be88f3ee5fac8c8267e26a4a9294b51098f4fc0cca6b7f86059669c6bc",
+  "source_url": "https://www.skt-lmc.org/wp-content/uploads/2026/10/2026-10-04_19thaftPent_Web.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-10-04",
+  "from_cache": false,
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "church_list_needs_review": false,
+  "usage": {
+    "input_tokens": 18515,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 1304,
+    "reasoning_tokens": 954
+  },
+  "seconds": 43.308,
+  "response_id": "resp_03c48136ae268a69016ac911baf00487d2bc679305a114122c",
+  "events": [
+    {
+      "church_slug": "st-thomas-apostle",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 10,
+      "note": "English",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-thomas-apostle",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "11:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 10,
+      "note": "Latin",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "11:15 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-thomas-apostle",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "12:15",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 10,
+      "note": "After the 11:15 AM Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:15 PM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "75a86e84ba3c5aceefdc5c094b450675ccf131f414f8a93301682076765954e3"
+}

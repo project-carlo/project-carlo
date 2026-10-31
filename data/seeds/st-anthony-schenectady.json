@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-schenectady",
+  "status": "approved",
+  "as_of": "2026-10-11T16:31:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T20:45:21Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-11T21:09:57Z",
+  "summary": "One church, no daily Mass. Sunday Masses 8:30, 11:45 (Spanish) and 4:00 PM plus a Saturday 10-11 AM Exposition Holy Hour, identical across all three bulletins and in history. Confession is by appointment only; the weekday Mass box lists other parishes' Masses, left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7c0e5d32621f689949455f5f32bd0ea3ba0fce13f5c975212687423beb3a94d6",
+      "fetched_at": "2026-10-11T16:31:50Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "7eae83d91c6b37f43600c020bc20e971be574f61f307a188e6af1fb69803631f",
+      "fetched_at": "2026-10-04T14:52:01Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "c317e9690794a1fb4e688ccd48e72f9474fc08032fc2402f22a458221f0747dc",
+      "fetched_at": "2026-09-28T22:02:07Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7eae83d91c6b",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c317e9690794",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c0e5d32621f",
+          "said": "weekly Sunday 08:30"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7eae83d91c6b",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c317e9690794",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c0e5d32621f",
+          "said": "weekly Sunday 11:45"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of all three bulletins; history agrees. Page 4's flyer says the first Sunday's 11:45 is a Children's Mass (Misa de Niños): a special occasion at the regular Mass, so no separate slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7eae83d91c6b",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c317e9690794",
+          "page": 1,
+          "said": "SUNDAY MASS CELEBRATED AT 8:30 AM & 11:45 AM (SPANISH), & 4:00 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c0e5d32621f",
+          "said": "weekly Sunday 16:00"
+        }
+      ],
+      "rationale": "Printed in the Mass Schedule box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 3,
+          "said": "St. Anthony's Exposition of the Blessed Sacrament Holy Hour Saturdays-10 AM to 11 AM-Bro. Ron"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7eae83d91c6b",
+          "page": 3,
+          "said": "St. Anthony's Exposition of the Blessed Sacrament Holy Hour Saturdays-10 AM to 11 AM-Bro. Ron"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c317e9690794",
+          "page": 3,
+          "said": "St. Anthony's Exposition of the Blessed Sacrament Holy Hour Saturdays-10 AM to 11 AM-Bro. Ron"
+        },
+        {
+          "source": "history",
+          "bulletin": "7c0e5d32621f",
+          "said": "weekly Saturday 10:00-11:00 adoration"
+        }
+      ],
+      "rationale": "Weekly Saturday Exposition Holy Hour at St. Anthony's, printed in all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 1,
+          "said": "RECONCILIATION call 518-374-4591 Ext. 9 for an appointment by the Wednesday before."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 2,
+          "said": "Fr. Carlino will be hearing Confessions by Appointment only."
+        }
+      ],
+      "rationale": "Confession is by appointment only, with no time: left out per policy.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-schenectady",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "season": null,
+        "note": "St. Kateri (Union Street)"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 2,
+          "said": "Week Day Masses: Monday, October 12 9:00 AM St. Kateri, (Union Street) ... Thursday 9:00 AM St. John The Evangelist, 6:00 PM St. Kateri (Rosa Road) ... Saturday 4:00 PM Mass St. John the Evangelist, 5:00 PM Mass St. Kateri"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7c0e5d32621f",
+          "page": 1,
+          "said": "NO DAILY MASS"
+        }
+      ],
+      "rationale": "The 'Week Day Masses' box and the Sunday intentions list Masses at St. Kateri Tekakwitha (Union Street and Rosa Road) and St. John the Evangelist, other parishes. St. Anthony's itself has no daily Mass. All of that column is left out; this entry stands for it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

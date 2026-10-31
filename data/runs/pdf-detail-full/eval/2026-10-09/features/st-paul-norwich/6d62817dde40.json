@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-paul-norwich",
+  "content_hash": "6d62817dde408442d40ce3cd34b0490d762b80dce64f49496b2c02dcdf056f4a",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-paul-norwich/6d62817dde40.pdf",
+  "pdf_sha256": "2207140330b34cafff894f4115bd3ab795fddcee6aa77fc9a81d3faa0f79be23",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 3,
+    "analyzed_page_count": 3,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 2347,
+        "image_count": 2,
+        "image_coverage_fraction_estimate": 0.8738302139037433,
+        "max_displayed_image_area_fraction_estimate": 0.8738302139037433,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1945,
+        "native_char_height_p10_pt": 5.1002349853515625,
+        "native_char_height_median_pt": 6.787689208984375,
+        "native_char_height_p10_low_detail_px": 3.297121606691919,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.8113508021390374,
+        "projection_line_count": 1,
+        "line_pitch_px": null,
+        "line_pitch_low_detail_px": null,
+        "connected_component_count": 43,
+        "text_like_component_count": 14,
+        "text_like_height_p10_px": 2.0,
+        "text_like_height_median_px": 4.0,
+        "text_like_width_median_px": 5.0,
+        "text_like_height_median_low_detail_px": 1.8618181818181818
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 3774,
+        "image_count": 5,
+        "image_coverage_fraction_estimate": 0.09830554892491088,
+        "max_displayed_image_area_fraction_estimate": 0.06437475,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 2629,
+        "native_char_height_p10_pt": 4.842002868652344,
+        "native_char_height_median_pt": 6.542999267578125,
+        "native_char_height_p10_low_detail_px": 3.1301836726641414,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.13265347593582888,
+        "projection_line_count": 73,
+        "line_pitch_px": 12.25,
+        "line_pitch_low_detail_px": 5.701818181818182,
+        "connected_component_count": 1869,
+        "text_like_component_count": 1762,
+        "text_like_height_p10_px": 4.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      },
+      {
+        "page_number": 3,
+        "errors": [],
+        "text_chars": 5294,
+        "image_count": 6,
+        "image_coverage_fraction_estimate": 0.12091765152134092,
+        "max_displayed_image_area_fraction_estimate": 0.08816248032407412,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 4229,
+        "native_char_height_p10_pt": 4.30401611328125,
+        "native_char_height_median_pt": 5.30743408203125,
+        "native_char_height_p10_low_detail_px": 2.782394255050505,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.3136663101604278,
+        "projection_line_count": 34,
+        "line_pitch_px": 16.5,
+        "line_pitch_low_detail_px": 7.68,
+        "connected_component_count": 1375,
+        "text_like_component_count": 1203,
+        "text_like_height_p10_px": 7.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 10.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 3,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 3,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 7.251885700003186,
+  "resumed": false,
+  "walltime_seconds": 7.253712899997481
+}

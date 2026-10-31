@@ -1,0 +1,94 @@
+{
+  "run_id": "20261018T123547Z-gh39127931592",
+  "cases": [
+    {
+      "parish": "holy-trinity-webster",
+      "calls": [
+        20,
+        29
+      ],
+      "retain_entry_ids": [
+        155
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "date": "2026-10-25",
+          "start_time": 1110
+        }
+      ]
+    },
+    {
+      "parish": "mary-mother-of-our-savior-utica",
+      "calls": [
+        34,
+        39
+      ],
+      "retain_entry_ids": [
+        190,
+        195
+      ]
+    },
+    {
+      "parish": "st-edward-the-confessor-clifton-park",
+      "calls": [
+        81
+      ],
+      "absent": [
+        {
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Friday",
+          "start_time": 540
+        }
+      ]
+    },
+    {
+      "parish": "all-saints-corning",
+      "calls": [
+        19
+      ],
+      "absent": [
+        {
+          "event_type": "mass",
+          "event_kind": "weekly",
+          "day_of_week": "Saturday",
+          "start_time": 960
+        }
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "date": "2026-10-22",
+          "start_time": 510
+        }
+      ]
+    },
+    {
+      "parish": "corpus-christi-round-lake",
+      "calls": [
+        21
+      ],
+      "retain_entry_ids": [
+        69,
+        77
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "event_kind": "specific_date",
+          "date": "2026-10-22",
+          "start_time": 1080,
+          "cancelled": 1
+        },
+        {
+          "event_type": "confession",
+          "event_kind": "specific_date",
+          "date": "2026-10-22",
+          "start_time": 1065,
+          "cancelled": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1620 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-family-schuylerville",
+  "status": "ready",
+  "as_of": "2026-10-25T13:12:44Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T18:56:55Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Two churches, Notre Dame-Visitation and St. Joseph's. The Mass and Reconciliation box and the Adoration notice agree in all five bulletins read. Reconciliation at St. Joseph's is 'after Masses' with no clock time, so those times follow POLICY. The dated All Souls Mass at NDV on Nov 2 is included, and the cemetery Mass is left out. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "44631f9a61200d6021b42c55f2ba4bbb414cf06b5aeaf3555e6fb296cb9c6a3b",
+      "fetched_at": "2026-10-25T13:12:44Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "91891a678ad76f3617b901e07c0084026c123177a91347101ddf880fbfb3eac2",
+      "fetched_at": "2026-10-18T12:38:50Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "7efaf73d559c6ceebafaed0c9c606b2dfd200161363d62b1f3d399f8797dc939",
+      "fetched_at": "2026-10-11T16:28:21Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "8e1c9757af57a2a242cc0b189e9ad4319ce268d9b3942c4d1ec3949bb13b60bd",
+      "fetched_at": "2026-10-04T14:47:35Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b41b6bbc04ca7d8982b3cfbb358478cef11edde42789f799cc508ef82e3e64fc",
+      "fetched_at": "2026-09-28T21:57:45Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Notre Dame-Visitation: Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Notre Dame-Visitation: Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Notre Dame-Visitation: Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Notre Dame-Visitation: Saturday 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Notre Dame-Visitation: Saturday 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Saturday 16:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Saturday 16:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Saturday 16:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Saturday 16:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Saturday 16:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Sunday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Sunday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Sunday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Sunday 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Sunday 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Sunday 08:30 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Sunday 08:30 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Sunday 08:30 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Sunday 08:30 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Sunday 08:30 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass & Reconciliation box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Spanish Mass 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Spanish Mass 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Spanish Mass 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Spanish Mass 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Spanish Mass 3:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Sunday 15:00 notre-dame-visitation-schuylerville  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Sunday 15:00 notre-dame-visitation-schuylerville  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Sunday 15:00 notre-dame-visitation-schuylerville  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Sunday 15:00 notre-dame-visitation-schuylerville  “Spanish Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Sunday 15:00 notre-dame-visitation-schuylerville  “Spanish Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read; the Spanish Mass is open to all.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Tuesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Tuesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Tuesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Tuesday 6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Tuesday 6:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Tuesday 18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Tuesday 18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Tuesday 18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Tuesday 18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Tuesday 18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Thursday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Thursday 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Thursday 09:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Thursday 09:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Thursday 09:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Thursday 09:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Thursday 09:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "First Saturday Devotion Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "First Saturday Devotion Mass 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Saturday 09:00 notre-dame-visitation-schuylerville  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Saturday 09:00 notre-dame-visitation-schuylerville  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Saturday 09:00 notre-dame-visitation-schuylerville  “First Saturday of the month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "specific_date mass 2026-10-03 09:00 notre-dame-visitation-schuylerville  “First Saturday Devotion”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: the newest bulletin names the First Saturday Devotion Mass; R11/R12: the September 27 issue's week (Oct 3 is a first Saturday) prints it too.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour after the 9:00 AM Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "NDV - First Saturday Devotion Mass @ 9:00am followed by 30-minutes of Holy Hour"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 3,
+          "said": "NDV - First Saturday Devotion Mass @ 9:00am followed by 30-minutes of Holy Hour"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly adoration Saturday 09:30–10:00 notre-dame-visitation-schuylerville  “First Saturday of the month; follows 9:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly adoration Saturday 09:30–10:00 notre-dame-visitation-schuylerville  “First Saturday of the month; follows 9:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly adoration Saturday 09:30–10:00 notre-dame-visitation-schuylerville  “First Saturday of the month; follows 9:00 AM Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "specific_date adoration 2026-10-03 09:30–10:00 notre-dame-visitation-schuylerville  “First Saturday; follows 9:00am Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R10, POLICY Times: a Holy Hour is Adoration; it follows the 9:00 AM Saturday (not vigil) Mass, so it starts 30 minutes after the Mass starts and lasts the 30 minutes given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Reconciliation Sat 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Reconciliation Sat 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Reconciliation Sat 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Reconciliation Sat 3:15pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Reconciliation Sat 3:15pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly confession Saturday 15:15 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly confession Saturday 15:15 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly confession Saturday 15:15 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly confession Saturday 15:15 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly confession Saturday 15:15 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read; start only, no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Reconciliation Tues 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Reconciliation Tues 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Reconciliation Tues 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Reconciliation Tues 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Reconciliation Tues 5:00-6:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 3,
+          "said": "Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 3,
+          "said": "Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 3,
+          "said": "Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 3,
+          "said": "Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly confession Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly confession Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly confession Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly confession Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly confession Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box and the Adoration notice of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "-Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 3,
+          "said": "-Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 3,
+          "said": "-Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 3,
+          "said": "-Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 3,
+          "said": "-Tuesdays 5:00-6:00pm Holy Hour & Confession followed by Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly adoration Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly adoration Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly adoration Tuesday 17:00–18:00 notre-dame-visitation-schuylerville  “Holy Hour”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly adoration Tuesday 17:00–18:00 notre-dame-visitation-schuylerville  “Holy Hour”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly adoration Tuesday 17:00–18:00 notre-dame-visitation-schuylerville",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, POLICY What to extract: a Holy Hour is Adoration; printed in the Adoration notice of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "St. Joseph's Church: Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "St. Joseph's Church: Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "St. Joseph's Church: Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "St. Joseph's Church: Sunday 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "St. Joseph's Church: Sunday 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Sunday 10:30 st-joseph-greenwich",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Wednesday 09:00 st-joseph-greenwich",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Wed & Fri 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly mass Friday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly mass Friday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly mass Friday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly mass Friday 09:00 st-joseph-greenwich",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly mass Friday 09:00 st-joseph-greenwich",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "St. Joseph's - Wednesdays 8:00-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 3,
+          "said": "St. Joseph's - Wednesdays 8:00-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 3,
+          "said": "St. Joseph's - Wednesdays 8:00-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 3,
+          "said": "St. Joseph's - Wednesdays 8:00-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 3,
+          "said": "St. Joseph's - Wednesdays 8:00-8:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Adoration Wed (Chapel) 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Adoration Wed (Chapel) 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Adoration Wed (Chapel) 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Adoration Wed (Chapel) 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Adoration Wed (Chapel) 8:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly adoration Wednesday 08:00–08:50 st-joseph-greenwich  “In the Chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly adoration Wednesday 08:00–08:50 st-joseph-greenwich  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly adoration Wednesday 08:00–08:50 st-joseph-greenwich  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly adoration Wednesday 08:00–08:50 st-joseph-greenwich  “In the chapel”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly adoration Wednesday 08:00–08:50 st-joseph-greenwich  “In the chapel”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1: the box and the Adoration notice give Wednesday adoration in the chapel under St. Joseph's Church (POLICY: a chapel of a listed church belongs to it); end time from the notice.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly confession Wednesday 09:00 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly confession Wednesday 09:00 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly confession Wednesday 09:00 st-joseph-greenwich  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly confession Wednesday 09:45 st-joseph-greenwich  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly confession Wednesday 09:45 st-joseph-greenwich  “After 9:00am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R10: St. Joseph's box says Reconciliation after Masses with no clock time; after a weekday Mass is 30 minutes after it starts. History's 9:00 and 9:45 are other readings of the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 9:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly confession Friday 09:00 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly confession Friday 09:00 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly confession Friday 09:00 st-joseph-greenwich  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly confession Friday 09:45 st-joseph-greenwich  “Following Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly confession Friday 09:45 st-joseph-greenwich  “After 9:00am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R10: St. Joseph's box says Reconciliation after Masses with no clock time; after a weekday Mass is 30 minutes after it starts. History's 9:00 and 9:45 are other readings of the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 10:30 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "91891a67",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7efaf73d",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "8e1c9757",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b41b6bbc",
+          "page": 1,
+          "said": "Reconciliation after Masses"
+        },
+        {
+          "source": "history",
+          "bulletin": "8e1c9757af57",
+          "said": "weekly confession Sunday 11:30 st-joseph-greenwich  “Following Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b41b6bbc04ca",
+          "said": "weekly confession Sunday 11:30 st-joseph-greenwich  “After 10:30am Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "weekly confession Sunday 10:30 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "91891a678ad7",
+          "said": "weekly confession Sunday 10:30 st-joseph-greenwich  “After Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "7efaf73d559c",
+          "said": "weekly confession Sunday 10:30 st-joseph-greenwich  “Following Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R10: St. Joseph's box says Reconciliation after Masses with no clock time; after a weekend Mass is an hour after it starts. History's 10:30 is another reading of the same line (R8).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "notre-dame-visitation-schuylerville",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "All Souls Day - November 2nd ... 5:00pm Mass at NDV Church"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "specific_date mass 2026-11-02 17:00 notre-dame-visitation-schuylerville",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: dated All Souls Mass at a listed church, on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-greenwich",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "At St. Joseph's Cemetery (weather permitting)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "9:00am Mass at St. Joseph's Cemetery (weather permitting)"
+        },
+        {
+          "source": "history",
+          "bulletin": "44631f9a6120",
+          "said": "specific_date mass 2026-11-02 09:00 st-joseph-greenwich  “At St. Joseph's Cemetery (weather permitting)”",
+          "page": 3
+        }
+      ],
+      "rationale": "R22, POLICY Churches: the Mass is at a cemetery, not at a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "44631f9a",
+          "page": 3,
+          "said": "Solemnity of All Saints - November 1st ... Remembrance Service - 9:30am at Joseph's"
+        }
+      ],
+      "rationale": "R24: a Remembrance Service is not a Mass, Confession or Adoration; the bulletin says weekend Masses are the normal routine at both churches.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

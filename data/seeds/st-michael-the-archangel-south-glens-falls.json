@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-the-archangel-south-glens-falls",
+  "status": "approved",
+  "as_of": "2026-10-11T16:38:59Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:35:02Z",
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
+  "summary": "Two churches: St. Michael's (Tue-Sat 8:30 AM, Saturday 3:00-3:45 Reconciliation and 4:00 PM vigil, Sunday 8, 11 and 5:30) and St. Therese Mission Chapel (Sunday 9:30). All three bulletins agree on the weekly schedule. Open: whether a 9:00 AM Columbus Day Mass was held on Oct 12 (the bulletin contradicts itself) and which church holds the Nov 2 All Souls Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7a683b410224af5fd9f3e062ec5459cf9fdd22abbf8e68841bc01460c04954a8",
+      "fetched_at": "2026-10-11T16:38:59Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "6ebba735c958123803587a755b9792d6148cd16035f7c8f0b392fbebf4cda0e8",
+      "fetched_at": "2026-10-04T14:57:28Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "020a18c91cd4a6121ecf537ab76dfebf2f2afea07daa95bb85482cef7eba2b78",
+      "fetched_at": "2026-09-28T22:07:51Z",
+      "published_date": "2026-09-27",
+      "read": false
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Weekdays: Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ebba735",
+          "page": 1,
+          "said": "Weekdays Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Tuesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Tuesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Tuesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin; the 10/4 bulletin and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Weekdays: Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ebba735",
+          "page": 1,
+          "said": "Weekdays Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Wednesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Wednesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Wednesday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin; the 10/4 bulletin and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Weekdays: Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ebba735",
+          "page": 1,
+          "said": "Weekdays Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Thursday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Thursday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Thursday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin; the 10/4 bulletin and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Weekdays: Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ebba735",
+          "page": 1,
+          "said": "Weekdays Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Friday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Friday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Friday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin; the 10/4 bulletin and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Weekdays: Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6ebba735",
+          "page": 1,
+          "said": "Weekdays Tuesday - Saturday 8:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Saturday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Saturday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Saturday 08:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass schedule box of the newest bulletin; the 10/4 bulletin and history agree.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 pm (Reconciliation 3:00-3:45 pm)"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly confession Saturday 15:00–15:45 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly confession Saturday 15:00–15:45 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly confession Saturday 15:00–15:45 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed with the Saturday vigil in the schedule box; history has it in all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Saturday Vigil: 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Saturday 16:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box; also in the Mass intentions as 4:00 PM VIGIL.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Sunday 08:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Sunday 08:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Sunday 08:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Sunday 11:00 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Sunday 11:00 st-michael-the-archangel-south-glens-falls  “Includes Children's Liturgy of the Word”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Sunday 11:00 st-michael-the-archangel-south-glens-falls  “Children's Liturgy of the Word”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "Sunday: 8:00 AM, 11:00 AM & 5:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Sunday 17:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Sunday 17:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Sunday 17:30 st-michael-the-archangel-south-glens-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box and in the Mass intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-therese-gansevoort",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 1,
+          "said": "ST. THERESE MISSION CHAPEL ... Mass Time: Sunday 9:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "weekly mass Sunday 09:30 st-therese-gansevoort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6ebba735c958",
+          "said": "weekly mass Sunday 09:30 st-therese-gansevoort",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "020a18c91cd4",
+          "said": "weekly mass Sunday 09:30 st-therese-gansevoort",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the mission chapel is on the church list under this parish, and the schedule box prints its Sunday Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-the-archangel-south-glens-falls",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day/Indigenous Peoples' Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 2,
+          "said": "Monday is a national holiday ... Please join us for Mass at 9:00 am to mark this holiday."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 4,
+          "said": "Monday (10/12/26) COLUMBUS/INDIGENOUS PEOPLES' DAY NO DAILY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "specific_date mass 2026-10-12 09:00 st-michael-the-archangel-south-glens-falls  “Columbus Day/Indigenous Peoples' Day Mass”",
+          "page": 2
+        }
+      ],
+      "rationale": "R28: the pastor's letter invites everyone to a 9:00 AM Mass; the intentions page prints NO DAILY MASS (the same line every Monday, when there is no regular Mass). Leaning per C3: the specific dated listing. History has the 9:00 AM Mass.\n\nReview 2026-10-22: Include the specifically invited Oct 12, 9 AM holiday Mass over the generic NO DAILY MASS line, following candidate C3. The date has passed; promote C3 only by an owner decision.",
+      "question": "Was there a 9:00 AM Mass at St. Michael's on Monday, October 12 (Columbus Day)?",
+      "options": [
+        {
+          "label": "Add dated 9:00 AM Mass on 2026-10-12",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-south-glens-falls",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-12",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Columbus Day/Indigenous Peoples' Day"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7a683b41",
+          "page": 6,
+          "said": "2 ALL SOULS' DAY MASS OF REMEMBRANCE - 7:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "7a683b410224",
+          "said": "specific_date mass 2026-11-02 19:00 st-michael-the-archangel-south-glens-falls  “All Souls' Day Mass of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "R32: the parish calendar gives no church. Leaning St. Michael's: the calendar is the parish church's, and the chapel's only Mass is Sunday 9:30 AM. History has it at St. Michael's.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Exclude the November 2 remembrance Mass from the mapped schedule because neither the bulletin nor the follow-up review establishes St. Michael or St. Therese as its venue. Ordinary Sunday chapel hours do not rule out a special Monday event, and extracted history is not venue confirmation.",
+      "question": "Which church is the All Souls' Day Mass of Remembrance on Monday, November 2 at 7:00 PM?",
+      "options": [
+        {
+          "label": "St. Michael's, 7:00 PM",
+          "entry": {
+            "church_slug": "st-michael-the-archangel-south-glens-falls",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls' Day Mass of Remembrance"
+          },
+          "leaning": true
+        },
+        {
+          "label": "St. Therese Mission Chapel, 7:00 PM",
+          "entry": {
+            "church_slug": "st-therese-gansevoort",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-02",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "All Souls' Day Mass of Remembrance"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 2,
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      }
+    }
+  ]
+}

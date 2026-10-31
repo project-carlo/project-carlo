@@ -8,7 +8,7 @@ export interface Crumb {
   to?: string;
 }
 
-/** A trail of links ending in the current page, e.g. "All churches › East Aurora, NY › St. Mary". */
+/** A trail of links ending in the current page, e.g. "Church list › East Aurora, NY › St. Mary". */
 export function Breadcrumbs({
   crumbs,
   className,

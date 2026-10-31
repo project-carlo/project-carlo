@@ -1,0 +1,934 @@
+{
+  "schema_version": 1,
+  "parish_slug": "holy-trinity-st-stephen-fulton",
+  "status": "approved",
+  "as_of": "2026-10-11T16:35:23Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-14T01:30:49Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Two churches, Holy Trinity (Fulton) and St. Stephen (Phoenix). The page 1 schedule box and the Mass intentions agree in all three bulletins. First-Friday and first-Saturday Masses and the first-Saturday Confession are weeks-of-the-month slots. October 12 has a dated cancellation. Open: whether a blank Friday October 16 9 AM line at Holy Trinity is a Mass. Monday Adoration has no time anywhere and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "353cdbff7303d8357ce7ea004331fe7384eb361064106e542eca5b1d09228026",
+      "fetched_at": "2026-10-11T16:35:23Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "870273834109bf7888f49529fb91cafcd681a62fa20c45c308aeb9261f51cf3c",
+      "fetched_at": "2026-10-04T14:35:00Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "73b019d660fe425944f994c96a1fc5c47e508296d587ca628d60fa9772e8b47c",
+      "fetched_at": "2026-09-28T00:06:26Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Weekend Masses, Saturday 4:00 p.m. at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Saturday, October 17 4:00 p.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Saturday 4:00 p.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Saturday 4:00 p.m. (HT)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Saturday 16:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "specific_date mass 2026-10-31 16:00 holy-trinity-fulton  “Mass in Holy Trinity's Jubilee Hall”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Saturday 16:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Saturday 16:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "specific_date mass 2026-10-31 16:00 holy-trinity-fulton  “Mass in Jubilee Hall”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Sunday 8:30 a.m. at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Sunday 8:30 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Sunday 8:30 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Sunday 8:30 a.m. (HT)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Sunday 08:30 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Sunday 08:30 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Sunday 08:30 holy-trinity-fulton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Sunday 10:30 a.m. at St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Sunday 10:30 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Sunday 10:30 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Sunday 10:30 a.m. (SS)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Sunday 10:30 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Sunday 10:30 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Sunday 10:30 st-stephen-phoenix",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Weekday Masses, Monday and Thursday 9:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Monday 09:00 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Monday 09:00 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Monday 09:00 st-stephen-phoenix",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read. The Monday October 12 cancellation is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Weekday Masses, Monday and Thursday 9:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Monday / Thursday 9:00 a.m. (SS)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Thursday 09:00 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Thursday 09:00 st-stephen-phoenix",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Thursday 09:00 st-stephen-phoenix",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read. The Monday October 12 cancellation is its own slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Tuesday and Wednesday 9:00 a.m. at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Tuesday 09:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Tuesday 09:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Tuesday 09:00 holy-trinity-fulton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Tuesday and Wednesday 9:00 a.m. at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Tuesday / Wednesday 9:00 a.m. (HT)"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Wednesday 09:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Wednesday 09:00 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Wednesday 09:00 holy-trinity-fulton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1 and in the Mass intentions of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "First Monthly Masses, First Friday of Each Month 9:00 a.m. at Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Friday, October 2 First Friday Mass 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Friday, October 9 No Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Friday 09:00 holy-trinity-fulton  “First Friday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Friday 09:00 holy-trinity-fulton  “First Friday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Friday 09:00 holy-trinity-fulton  “First Friday of each month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: the schedule box names the first Friday. The newest bulletin's week holds only a third Friday, and the October 4 bulletin says 'No Mass' on the second Friday, so the Mass is monthly (R11). The website's Mass Times page says the same.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "First Monthly Masses, First Saturday of Each Month 9:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holytrinity-ststephen.org/mass-schedule",
+          "said": "First Saturday of Each Month 9:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly mass Saturday 09:00 st-stephen-phoenix  “First Saturday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly mass Saturday 09:00 st-stephen-phoenix  “First Saturday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly mass Saturday 09:00 st-stephen-phoenix  “First Saturday of each month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R6: the schedule box names the first Saturday, and the website says the same. The newest bulletin's week holds no first Saturday, and no other bulletin read prints one.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Confession, Every Saturday 3:00-3:30 p.m. at Holy Trinity"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holytrinity-ststephen.org/mass-schedule",
+          "said": "Every Saturday 3:00-3:30 p.m. at Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly confession Saturday 15:00–15:30 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly confession Saturday 15:00–15:30 holy-trinity-fulton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly confession Saturday 15:00–15:30 holy-trinity-fulton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1; the website agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": "10:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 1,
+          "said": "Confession, Every First Saturday 9:30-10:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "website",
+          "url": "https://www.holytrinity-ststephen.org/mass-schedule",
+          "said": "Every First Saturday 9:30-10:00 a.m. at St. Stephen"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "weekly confession Saturday 09:30–10:00 st-stephen-phoenix  “First Saturday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "870273834109",
+          "said": "weekly confession Saturday 09:30–10:00 st-stephen-phoenix  “First Saturday of each month”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "weekly confession Saturday 09:30–10:00 st-stephen-phoenix  “Every first Saturday”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the schedule box on page 1; the website agrees. Weeks-of-the-month slot, with no first Saturday in the newest bulletin's week (R11).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-stephen-phoenix",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Indigenous Peoples' Day"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Monday, October 12 Indigenous Peoples' Day, 9:00 a.m. (SS) No Morning Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "specific_date mass 2026-10-12 09:00 st-stephen-phoenix  CANCELLED; “Indigenous Peoples' Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin says there is no Monday Mass on October 12, a date after as_of; the weekly Monday Mass is confirmed by the schedule box (R18).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-31",
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass in Holy Trinity's Jubilee Hall"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 5,
+          "said": "Father Scardella's 45th Ordination Anniversary Celebration, Saturday, October 31, 2026, immediately following the 4:00 p.m. Mass in Holy Trinity's Jubilee Hall. Dinner will be served at 5:30 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 5,
+          "said": "Saturday, October 31, 2026 Immediately following the 4:00 p.m. Mass in Jubilee Hall"
+        },
+        {
+          "source": "history",
+          "bulletin": "353cdbff7303",
+          "said": "specific_date mass 2026-10-31 16:00 holy-trinity-fulton  “Mass in Holy Trinity's Jubilee Hall”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "73b019d660fe",
+          "said": "specific_date mass 2026-10-31 16:00 holy-trinity-fulton  “Mass in Jubilee Hall”",
+          "page": 5
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated, rule 7: the 4:00 p.m. Mass is the regular Saturday vigil at Holy Trinity, which is already a weekly slot; the dinner follows it. History read it as a dated Mass in the Jubilee Hall.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 3,
+          "said": "Monday, October 12 Parish Offices Closed/ No Adoration"
+        },
+        {
+          "source": "agent",
+          "bulletin": "73b019d6",
+          "page": 2,
+          "said": "Monday, September 28 Adoration"
+        }
+      ],
+      "rationale": "R26: Monday Adoration is mentioned in the calendar and the intentions heading, but no time or place is given in any bulletin read, and the website Mass Times page does not list it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-fulton",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-16",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "353cdbff",
+          "page": 2,
+          "said": "Friday, October 16 9:00 a.m. (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "87027383",
+          "page": 2,
+          "said": "Friday, October 9 No Mass 9:00 a.m. (HT)"
+        }
+      ],
+      "rationale": "R28: the intentions list a 9:00 a.m. (HT) line for Friday, October 16 with no intention and no 'No Mass' note, but the schedule box gives Friday Mass only on the first Friday. The October 9 bulletin printed the same blank line under 'No Mass'. Leaning to leave it out as an empty template line.\n\nReview 2026-10-22: Exclude the Oct 16, 9 AM blank template line on this evidence. Do not make missing intentions a universal exclusion rule. The date has passed.",
+      "question": "Add a dated 9:00 AM Mass at Holy Trinity on Friday, October 16?",
+      "options": [
+        {
+          "label": "Leave out",
+          "entry": null,
+          "leaning": true
+        },
+        {
+          "label": "Friday Oct 16, 9:00 AM",
+          "entry": {
+            "church_slug": "holy-trinity-fulton",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-16",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    }
+  ]
+}

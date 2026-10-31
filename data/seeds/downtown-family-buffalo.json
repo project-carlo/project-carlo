@@ -1,0 +1,2986 @@
+{
+  "schema_version": 1,
+  "parish_slug": "downtown-family-buffalo",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:15:45Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-25T19:02:07Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Three churches (St. Louis, Blessed Sacrament, St. Michael's) in the Downtown Family; the front-page Mass box, confession list and Adoration hours are identical in all five bulletins. St. Joseph's Cathedral and the Oratory of St. Anthony share the box but are other parishes' churches (left out). St. Michael's morning Confession is worked out at 7:15-8:30 AM after the 6:45 Mass. One grouped question: whether the blanket 'confession on request after any Mass' line should become Confession slots after each Mass (leaning include, per C5).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "372055540a2948996127068cd72dc3ebd47cac1050b3055f0af04162f4883b8c",
+      "fetched_at": "2026-10-25T13:15:45Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "3a077445d5ab7608708b891887e234351eb79a7e70c0a53d5ae1e0842a90c207",
+      "fetched_at": "2026-10-18T12:42:22Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "62f7c7ff9aaf20205986ddaac56b1afefb915d3b705b2ee09dfc6963c686d6d2",
+      "fetched_at": "2026-10-11T16:33:14Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c6b7df71a962bd378214f8f296e470535d79237cdec1af0a44ce2bbb7129a32f",
+      "fetched_at": "2026-10-04T14:24:35Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4287ed0527a99f94b78b4ba7d83809988554af6a4ad3fee6a47bda9ddbdb2449",
+      "fetched_at": "2026-09-26T18:53:35Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "SATURDAY VIGILS St. Louis Parish 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 4:00 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 4:00 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 4:00 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 4:00 pm (Saturday Vigils)"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Saturday 16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Saturday 16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Saturday 16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Saturday 16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Saturday 16:00 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box on the front page of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "Sundays St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Sunday 09:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Sunday 09:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Sunday 09:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Sunday 09:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Sunday 09:00 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "Sundays St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 9:00 & 11:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Sunday 11:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Sunday 11:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Sunday 11:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "specific_date mass 2026-11-29 11:00 st-louis-buffalo  “German Mass with traditional carols starting at 10:15 AM”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Sunday 11:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Sunday 11:00 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Monday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Monday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Monday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Monday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Monday 12:05 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2). No Wednesday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Tuesday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Tuesday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Tuesday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Tuesday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Tuesday 12:05 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2). No Wednesday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Thursday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Thursday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Thursday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Thursday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Thursday 12:05 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2). No Wednesday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:05",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis Parish 12:05 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Friday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Friday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Friday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Friday 12:05 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Friday 12:05 st-louis-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2). No Wednesday Mass is listed.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION ... St. Louis: Saturday 3:15-4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Louis: Saturdays 3:15-4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Louis: Saturdays 3:15-4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Louis: Saturdays 3:15-4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Louis: Saturdays 3:15-4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Saturday 15:15–16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Saturday 15:15–16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Saturday 15:15–16:00 st-louis-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly confession Saturday 15:15–16:00 st-louis-buffalo  “Also on request after any Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Saturday 15:15–16:00 st-louis-buffalo",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the confession list of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "SATURDAY VIGILS Blessed Sacrament 4:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "Blessed Sacrament 4:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "Blessed Sacrament 4:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "Blessed Sacrament 4:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "Blessed Sacrament 4:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Saturday 16:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Saturday 16:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Saturday 16:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Saturday 16:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Saturday 16:30 blessed-sacrament-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "Sundays Blessed Sacrament 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "Blessed Sacrament 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "Blessed Sacrament 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "Blessed Sacrament 10:30 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "Blessed Sacrament 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Sunday 10:30 blessed-sacrament-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "With Rosary and Devotion to the Holy Face"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 2,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Blessed Sacrament Tuesdays 6pm to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 6,
+          "said": "Adoration with the Rosary and Devotion to the Holy Face will occur Tuesday Evenings at 6:00 pm at Blessed Sacrament Church, Delaware Ave. All are invited to come and spend time in prayer and reflection before our Lord in the Blessed Sacrament."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 6,
+          "said": "Adoration with Rosary and Devotion to the Holy Face, Tuesday evenings at 6:00 pm at Blessed Sacrament Church"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 2,
+          "said": "Blessed Sacrament: Tuesdays 6pm to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 2,
+          "said": "Blessed Sacrament: Tuesdays 6pm to 7pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 2,
+          "said": "Blessed Sacrament: Tuesdays 6pm to 7pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-buffalo  “With Rosary and Devotion to the Holy Face”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-buffalo  “Adoration with Rosary and Devotion to the Holy Face”",
+          "page": 6
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-buffalo  “With Rosary and Devotion to the Holy Face”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-buffalo  “Includes Rosary and Devotion to the Holy Face”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly adoration Tuesday 18:00–19:00 blessed-sacrament-buffalo  “Includes Rosary and Devotion to the Holy Face”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the staff page gives 6pm to 7pm in all the bulletins read, and the news page gives the 6:00 pm start at Blessed Sacrament Church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "SATURDAY VIGILS St. Michael's 5:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 5:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 5:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 5:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 5:30 pm (Saturday Vigils)"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Saturday 17:30 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Saturday 17:30 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Saturday 17:30 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Saturday 17:30 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Saturday 17:30 st-michael-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "Sundays St. Michael's 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 12:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 12:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Sunday 12:00 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Sunday 12:00 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Sunday 12:00 st-michael-buffalo  “Communal anointing last Sunday of the month after Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Sunday 12:00 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Sunday 12:00 st-michael-buffalo  “Confession available on request; communal anointing after Mass on the last Sunday of the month”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Monday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Monday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Monday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Monday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Monday 06:45 st-michael-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Tuesday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Tuesday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Tuesday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Tuesday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Tuesday 06:45 st-michael-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Thursday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Thursday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Thursday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Thursday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Thursday 06:45 st-michael-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "WEEKDAYS: MONDAY, TUESDAY, THURSDAY, FRIDAY St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's 6:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly mass Friday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly mass Friday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly mass Friday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly mass Friday 06:45 st-michael-buffalo",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly mass Friday 06:45 st-michael-buffalo  “Confession available on request after Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Family Mass Times box of all five bulletins read, and listed each of those weekdays in the Mass intentions (p2).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:45 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Michael's: After 6:45 am daily until 8:30 am or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly confession Monday 07:15–08:30 st-michael-buffalo  “Approximate start following 6:45 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “Starting after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “After 6:45 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “Following 6:45 am Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “After 6:45 AM daily Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the line gives no clock start, only 'after 6:45 am daily' (the weekday Mass), so POLICY (Times) starts it 30 minutes after the Mass starts, 7:15 AM, and the bulletin's own 8:30 AM end. 'Daily' is read as the days that have the 6:45 Mass (Mon, Tue, Thu, Fri); St. Michael's has no weekday Mass on Wednesday and no morning Mass on the weekend. History reads the start as 6:45 or 7:15 (R8). 'Or by appt.' is an extra option.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:45 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Michael's: After 6:45 am daily until 8:30 am or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly confession Tuesday 07:15–08:30 st-michael-buffalo  “Approximate start following 6:45 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Tuesday 06:45–08:30 st-michael-buffalo  “Starting after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Tuesday 06:45–08:30 st-michael-buffalo  “After 6:45 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Tuesday 06:45–08:30 st-michael-buffalo  “After 6:45 AM daily Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Tuesday 06:45–08:30 st-michael-buffalo  “Following 6:45 am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the line gives no clock start, only 'after 6:45 am daily' (the weekday Mass), so POLICY (Times) starts it 30 minutes after the Mass starts, 7:15 AM, and the bulletin's own 8:30 AM end. 'Daily' is read as the days that have the 6:45 Mass (Mon, Tue, Thu, Fri); St. Michael's has no weekday Mass on Wednesday and no morning Mass on the weekend. History reads the start as 6:45 or 7:15 (R8). 'Or by appt.' is an extra option.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:45 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Michael's: After 6:45 am daily until 8:30 am or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly confession Thursday 07:15–08:30 st-michael-buffalo  “Approximate start following 6:45 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Thursday 06:45–08:30 st-michael-buffalo  “Starting after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Thursday 06:45–08:30 st-michael-buffalo  “After 6:45 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Thursday 06:45–08:30 st-michael-buffalo  “After 6:45 AM daily Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Thursday 06:45–08:30 st-michael-buffalo  “Following 6:45 am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the line gives no clock start, only 'after 6:45 am daily' (the weekday Mass), so POLICY (Times) starts it 30 minutes after the Mass starts, 7:15 AM, and the bulletin's own 8:30 AM end. 'Daily' is read as the days that have the 6:45 Mass (Mon, Tue, Thu, Fri); St. Michael's has no weekday Mass on Wednesday and no morning Mass on the weekend. History reads the start as 6:45 or 7:15 (R8). 'Or by appt.' is an extra option.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:15",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 6:45 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Michael's: After 6:45 am daily until 8:30 am or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "St. Michael's: after 6:45 am daily until 8:30 am, or by appt."
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly confession Friday 07:15–08:30 st-michael-buffalo  “Approximate start following 6:45 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Friday 06:45–08:30 st-michael-buffalo  “Starting after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Friday 06:45–08:30 st-michael-buffalo  “After 6:45 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Friday 06:45–08:30 st-michael-buffalo  “After 6:45 AM daily Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Friday 06:45–08:30 st-michael-buffalo  “Following 6:45 am Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: the line gives no clock start, only 'after 6:45 am daily' (the weekday Mass), so POLICY (Times) starts it 30 minutes after the Mass starts, 7:15 AM, and the bulletin's own 8:30 AM end. 'Daily' is read as the days that have the 6:45 Mass (Mon, Tue, Thu, Fri); St. Michael's has no weekday Mass on Wednesday and no morning Mass on the weekend. History reads the start as 6:45 or 7:15 (R8). 'Or by appt.' is an extra option.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour with exposition"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 5,
+          "said": "Holy Hour: Join us Sundays for a Holy Hour starting at 1 pm, featuring exposition, adoration, rosary, and silent prayer until 2 pm at which time the church will close."
+        },
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 2,
+          "said": "ADORATION OF THE BLESSED SACRAMENT Saint Michael's Sundays 1pm to 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 5,
+          "said": "Holy Hour: Join us Sundays for a Holy Hour starting at 1pm, featuring exposition, adoration, rosary, and silent prayer until 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 5,
+          "said": "Holy Hour: Join us Sundays for a Holy Hour starting at 1pm, featuring exposition, adoration, rosary, and silent prayer until 2pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 5,
+          "said": "Holy Hour: Join us Sundays for a Holy Hour starting at 1pm, featuring exposition, adoration, rosary, and silent prayer until 2pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly adoration Sunday 13:00–14:00 st-michael-buffalo  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly adoration Sunday 13:00–14:00 st-michael-buffalo  “Holy Hour featuring exposition, adoration, rosary, and silent prayer”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly adoration Sunday 13:00–14:00 st-michael-buffalo  “Holy Hour featuring exposition, rosary, and silent prayer”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "c6b7df71a962",
+          "said": "weekly adoration Sunday 13:00–14:00 st-michael-buffalo  “Holy Hour including exposition and Rosary”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly adoration Sunday 13:00–14:00 st-michael-buffalo  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: the St. Michael's information box and the staff page give Sundays 1 pm to 2 pm; the Holy Hour includes exposition.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "08:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Centering Prayer Group"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 6,
+          "said": "CENTERING PRAYER GROUP ... every Friday morning at Blessed Sacrament Church at 8:30 am for this twenty minute prayer time"
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly adoration Friday 08:30–08:50 blessed-sacrament-buffalo  “Centering Prayer Group”",
+          "page": 6
+        }
+      ],
+      "rationale": "R24/POLICY: a Centering Prayer group is not Adoration; the bulletin does not say the Blessed Sacrament is exposed or that it is Adoration. Not in the newest bulletin; history read it once as Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-louis-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-29",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "German Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 6,
+          "said": "GERMAN MASS ... Sunday, November 29, 2026 ... A pre-Mass concert of traditional carols ... begins at 10:15 am. At 11:00 am Fr. Daniel Jamros, S.J from Canisius University will celebrate Mass."
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "specific_date mass 2026-11-29 11:00 st-louis-buffalo  “German Mass with traditional carols starting at 10:15 AM”",
+          "page": 6
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 7: a special occasion at the regular Sunday 11:00 AM Mass; the church is not stated, and the St. Louis Sunday 11:00 weekly slot already covers it. Announced in older bulletins only (R19 applies only to a time outside the weekly schedule).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 6,
+          "said": "The Mass [for the Loss of a Child] will be held on Saturday, November 14, at noon, at St. Timothy Church, 565 East Park Drive, Tonawanda"
+        }
+      ],
+      "rationale": "R22: held at another parish's church in Tonawanda.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "ST. JOSEPH'S CATHEDRAL Saturday vigil 4:30 pm, Sunday 10:30 am, weekdays 12:10 pm (M/W/Th/Fr) and 5:15 pm Tuesday; Confession Wed & Sat 11:45 am, Saturday 4:00 pm"
+        }
+      ],
+      "rationale": "R22: St. Joseph's Cathedral is a separate church (st-joseph-cathedral-buffalo) belonging to its own parish, not one of this parish's listed churches; its Masses and Confessions are left out. Shared reason for all its times.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Anthony's: 30 min before all Masses"
+        }
+      ],
+      "rationale": "R22: the Oratory of St. Anthony of Padua (st-anthony-of-padua-buffalo) is another parish's church; its confession times are left out.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "ANOINTING OF THE SICK ... Communal anointing takes place the last Sunday of the month after the Noon Mass at St. Michael's"
+        }
+      ],
+      "rationale": "R24: Anointing of the Sick is not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 4:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s30",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "10:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 9:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 11:00 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s32",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Monday 00:00 st-louis-buffalo  “On request after any Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Monday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:05 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s33",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:05 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s34",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:05 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s35",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-louis-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:35",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:05 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s36",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "blessed-sacrament-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 4:30 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s37",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "blessed-sacrament-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 10:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s38",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-michael-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 5:30 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s39",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4287ed05",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c6b7df71",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "62f7c7ff",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3a077445",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        }
+      ],
+      "rationale": "Leaning per C5: a blanket 'on request after any Mass' line (printed in all five bulletins) has no clock time. C5 leans toward including it at the time POLICY works out (R10): an hour after a weekend Mass, 30 minutes after a weekday Mass, no end time. One answer decides all of these slots (R27). St. Michael's weekday Masses are already covered by its settled morning Confession.",
+      "question": "Add 'confession on request after any Mass' as a Confession after each Mass (time worked out per POLICY)?",
+      "options": [
+        {
+          "label": "Include after each Mass",
+          "entry": {
+            "church_slug": "st-michael-buffalo",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Sunday",
+            "date": null,
+            "start_time": "13:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "On request after the 12:00 PM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null,
+      "group": "after-mass-request"
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "blessed-sacrament-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "history",
+          "said": "weekly confession Monday 00:00 'On request after any Mass'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Monday 00:00 blessed-sacrament-buffalo  “On request after any Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R9, R26: history's Monday 00:00 reading is an artifact of the generic 'on request after any Mass' line, which has no day or time. The real decision is the grouped after-Mass question; Blessed Sacrament's Saturday and Sunday options are in it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "00:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "history",
+          "said": "weekly confession Monday 00:00 'On request after any Mass'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "CONFESSION: ON REQUEST AFTER ANY MASS"
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Monday 00:00 st-michael-buffalo  “On request after any Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R9, R26: history's Monday 00:00 reading is an artifact of the generic 'on request after any Mass' line, which has no day or time. St. Michael's weekday mornings are covered by its settled 7:15-8:30 Confession; its weekend options are in the grouped after-Mass question.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "06:45",
+        "end_time": "08:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "History's reading of the start (the Mass time)"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "37205554",
+          "page": 1,
+          "said": "St. Michael's: After 6:45 am daily until 8:30 am or by appt."
+        },
+        {
+          "source": "history",
+          "bulletin": "372055540a29",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “Starting after Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "3a077445d5ab",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “After 6:45 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "62f7c7ff9aaf",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “After 6:45 AM daily Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4287ed0527a9",
+          "said": "weekly confession Monday 06:45–08:30 st-michael-buffalo  “Following 6:45 am Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R9: history reads the Monday start as 6:45 AM, the time of the Mass, in several bulletins. POLICY (Times) puts 'after the weekday 6:45 Mass' at 7:15 AM, which is the included Monday slot (s18); this entry only records the 6:45 reading so seed diff can match it. Tuesday, Thursday and Friday readings are matched to their own slots.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

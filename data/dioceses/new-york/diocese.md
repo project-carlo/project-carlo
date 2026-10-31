@@ -7,7 +7,7 @@ gcatholic: newy0
 city_aliases:
   Southeast: Brewster
   Town of Southeast: Brewster
-promoted: 2026-10-11
+promoted: 2026-10-31
 ---
 
 Opened for one requested parish in September 2026; expanded into an archdiocese-wide

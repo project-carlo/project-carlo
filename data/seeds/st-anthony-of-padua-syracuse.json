@@ -1,0 +1,744 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-anthony-of-padua-syracuse",
+  "status": "approved",
+  "as_of": "2026-10-04T14:39:40Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:51:49Z",
+  "reviewer": "Codex (authorized by lyonsl2)",
+  "approved_at": "2026-10-23T01:33:35Z",
+  "summary": "Two bulletins (Oct 4 and Sep 27) and the website agree: Sunday 9 AM English and 11 AM Spanish Masses, a Monday 6 PM Holy Hour and a Wednesday 6 PM Adoration with 6:30 PM Mass in the basement chapel. Both bulletins cancel individual evening events (Monday Oct 5 and 12, Wednesday Oct 7, Saturday Oct 10, for Fr. Brendan's retreat), recorded as dated cancellations. One question: whether the hedged Saturday 12-1 PM Holy Hour and Confession is a regular weekly slot. The Wednesday 7-8 PM Confession is at Holy Cross, DeWitt (another parish) and is left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "e47a210c115c5e81cd9dcfab328322f71f739c1fbd0092477c10caab8d806947",
+      "fetched_at": "2026-10-04T14:39:40Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "4299fce4fad75e87be792b9ed4a1a66d1376879470a781f6ba0a85b2ee50817b",
+      "fetched_at": "2026-09-28T00:10:29Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 9am (English) 11am (Espanol)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 1,
+          "said": "Sunday 9am (English) 11am (Espanol)"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly mass Sunday 09:00 st-anthony-of-padua-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly mass Sunday 09:00 st-anthony-of-padua-syracuse  “English”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass Schedule box of both bulletins read. The Oct 25 9am Alumni remembrance Mass is a special occasion at this regular Mass (POLICY, Weekly or dated, rule 7), so it has no slot of its own.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 1,
+          "said": "Mass Schedule: Sunday 9am (English) 11am (Espanol)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 1,
+          "said": "Sunday 9am (English) 11am (Espanol)"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly mass Sunday 11:00 st-anthony-of-padua-syracuse  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly mass Sunday 11:00 st-anthony-of-padua-syracuse  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the cover Mass Schedule box of both bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "6:00 Holy Hour, Adoracion al Santisimo (struck through) ... NO HOLY HOUR TOMORROW (Or next Monday sorry!--Fr. Brendan away for retreat)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 2,
+          "said": "Monday 28: 6:00 Holy Hour, Adoracion al Santisimo (struck through); NO HOLY HOUR TOMORROW (This week is the Clergy Convocation, sorry!)"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "Adoration of the Blessed Sacrament on Monday evenings (Format: Exposition and silent adoration from 6:00-6:35, ... Benediction 6:55pm.) Not October 5 or 12; Yes October 19; Yes October 26"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly adoration Monday 18:00 st-anthony-of-padua-syracuse  “Holy Hour”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly adoration Monday 18:00 st-anthony-of-padua-syracuse  “Holy Hour”",
+          "page": 2
+        }
+      ],
+      "rationale": "R18: the newest bulletin skips the Monday 6:00 Holy Hour for a reason it gives (Fr. Brendan's retreat); the Sep 27 bulletin skips it for the Clergy Convocation, and the website calls it a Monday-evening adoration with Oct 19 and 26 back on (R6 backs the reading). Only the start time is printed in the bulletins, so no end_time or Benediction note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-05",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "6:00 Holy Hour struck through on Monday Oct 5; NO HOLY HOUR TOMORROW -- Fr. Brendan away for retreat"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "specific_date adoration 2026-10-05 18:00 st-anthony-of-padua-syracuse  CANCELLED; “Fr. Brendan away for retreat”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin (issued Oct 4) says there is no Holy Hour Oct 5 or the next Monday, Oct 12; both are on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "6:00 Holy Hour struck through on Monday Oct 5; (Or next Monday sorry!) -- Fr. Brendan away for retreat"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "specific_date adoration 2026-10-12 18:00 st-anthony-of-padua-syracuse  CANCELLED; “Fr. Brendan away for retreat”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1, R16, R18: the bulletin (issued Oct 4) says there is no Holy Hour Oct 5 or the next Monday, Oct 12; both are on or after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Basement chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Wednesday Oct 7: No hay Adoracion ni Misa, lo siento!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 2,
+          "said": "Wednesday 30: Si hay adoracion al Santisimo 6pm y Misa del Dia a las 6:30 en la capilla abajo!"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "Wednesdays 6:00pm Adoration and 6:30pm Mass of the Day (in Basement Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly adoration Wednesday 18:00 st-anthony-of-padua-syracuse  “Downstairs chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R18: the newest bulletin skips the Wednesday Adoration and Mass only for the retreat week (Oct 7, 'No hay Adoracion ni Misa'); the Sep 27 bulletin prints both and the website lists them as the regular Wednesday schedule in the basement chapel (R6). The downstairs chapel is in St. Anthony's own church (POLICY, Churches and chapels), hence the note.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Basement chapel"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Wednesday Oct 7: No hay Adoracion ni Misa, lo siento!"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 2,
+          "said": "Wednesday 30: Si hay adoracion al Santisimo 6pm y Misa del Dia a las 6:30 en la capilla abajo!"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "Wednesdays 6:00pm Adoration and 6:30pm Mass of the Day (in Basement Chapel)"
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly mass Wednesday 18:30 st-anthony-of-padua-syracuse  “Downstairs chapel”",
+          "page": 2
+        }
+      ],
+      "rationale": "R18: same as the Wednesday Adoration; Mass of the Day at 6:30 PM in the basement chapel, skipped only on Oct 7.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-07",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Wednesday | Miercoles 7 de Octubre: No hay Adoracion ni Misa, lo siento!"
+        }
+      ],
+      "rationale": "R1, R16, R18: the newest bulletin says there is no Adoration or Mass on Wed Oct 7 (on or after as_of). The retreat is named in the notice for Monday and in the website, not on the Wednesday line.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-07",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Wednesday | Miercoles 7 de Octubre: No hay Adoracion ni Misa, lo siento!"
+        }
+      ],
+      "rationale": "R1, R16, R18: the newest bulletin says there is no Mass on Wed Oct 7.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration. Check bulletin/social media for Saturday availability; subject to change due to funerals/parish commitments."
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 1,
+          "said": "Reconciliation | Check Social Media for Saturday Option: *Saturday* 12pm & by appointment"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Saturday | Sabado 10 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones (struck through)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 2,
+          "said": "Saturday 3 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "On Saturdays Reconciliation is offered during a Holy Hour 12-1pm. *This is subject to change due to Funerals/Parish Commitments*"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly confession Saturday 12:00–13:00 st-anthony-of-padua-syracuse",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly confession Saturday 12:00–13:00 st-anthony-of-padua-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: every Saturday source hedges. The cover box says 'Check Social Media for Saturday Option: Saturday 12pm & by appointment', and the website says 'Saturdays Reconciliation is offered during a Holy Hour 12-1pm. *This is subject to change due to Funerals/Parish Commitments*'. The dated 12-1pm line is printed (Oct 3, Sep 27 bulletin) and struck through for Oct 10 (newest). Leaning to include it weekly, since the cover and the website both give it as the Saturday schedule; the end time is from the calendar line and the website. This slot is the Confession; its time is the Holy Hour's (POLICY, Times).\n\nDelegated review (owner authorized best judgment on 2026-10-22): Accept the explicitly conditional Saturday Confession pattern with the bulletin/social-media and funerals/parish-commitments caveats visible. Preserve the separately settled October 10 cancellation; do not imply every future Saturday is assured.",
+      "question": "Include the Saturday 12-1 PM Holy Hour and Confession as weekly slots?",
+      "options": [
+        {
+          "label": "Weekly, Saturdays 12:00-1:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-anthony-of-padua-syracuse",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": "edited",
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      },
+      "group": "saturday-holy-hour"
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour. Check bulletin/social media for Saturday availability; subject to change due to funerals/parish commitments."
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Saturday | Sabado 10 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones (struck through)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4299fce4",
+          "page": 2,
+          "said": "Saturday 3 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "On Saturdays Reconciliation is offered during a Holy Hour 12-1pm. *This is subject to change due to Funerals/Parish Commitments*"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly adoration Saturday 12:00–13:00 st-anthony-of-padua-syracuse",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "4299fce4fad7",
+          "said": "weekly adoration Saturday 12:00–13:00 st-anthony-of-padua-syracuse",
+          "page": 2
+        }
+      ],
+      "rationale": "R30: every Saturday source hedges. The cover box says 'Check Social Media for Saturday Option: Saturday 12pm & by appointment', and the website says 'Saturdays Reconciliation is offered during a Holy Hour 12-1pm. *This is subject to change due to Funerals/Parish Commitments*'. The dated 12-1pm line is printed (Oct 3, Sep 27 bulletin) and struck through for Oct 10 (newest). Leaning to include it weekly, since the cover and the website both give it as the Saturday schedule; the end time is from the calendar line and the website. This slot is the Adoration.\n\nDelegated review (owner authorized best judgment on 2026-10-22): Accept the explicitly conditional Saturday Holy Hour pattern with the bulletin/social-media and funerals/parish-commitments caveats visible. Preserve the separately settled October 10 cancellation; do not imply every future Saturday is assured.",
+      "question": "Include the Saturday 12-1 PM Holy Hour and Confession as weekly slots?",
+      "options": [
+        {
+          "label": "Weekly, Saturdays 12:00-1:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-anthony-of-padua-syracuse",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "13:00",
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Holy Hour"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": "edited",
+        "by": "Codex (authorized by lyonsl2)",
+        "at": "2026-10-23T01:33:35Z"
+      },
+      "group": "saturday-holy-hour"
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-10",
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Saturday | Sabado 10 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones (struck through)"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "Father is on his annual Silent Retreat ... Monday Holy Hour, Wednesday Adoration and Mass of the Day and Saturday Holy Hour/Confessions are all suspended"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin strikes the Saturday Oct 10 12-1pm line through, the same way it strikes the Monday Holy Hour that it says is cancelled; the website confirms the Saturday Holy Hour/Confessions are suspended during the retreat. On or after as_of. This stands whatever the reviewer answers about the weekly Saturday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "confession",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-10",
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Fr. Brendan away for retreat"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 2,
+          "said": "Saturday | Sabado 10 de Octubre: 12-1pm Adoracion al Santisimo, Confesiones (struck through)"
+        },
+        {
+          "source": "website",
+          "url": "https://stanthonysyr.org/",
+          "said": "Father is on his annual Silent Retreat ... Monday Holy Hour, Wednesday Adoration and Mass of the Day and Saturday Holy Hour/Confessions are all suspended"
+        }
+      ],
+      "rationale": "R1, R16: the newest bulletin strikes the Saturday Oct 10 12-1pm line through, the same way it strikes the Monday Holy Hour that it says is cancelled; the website confirms the Saturday Holy Hour/Confessions are suspended during the retreat. On or after as_of. This stands whatever the reviewer answers about the weekly Saturday slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-anthony-of-padua-syracuse",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "20:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 1,
+          "said": "Wednesday 7pm-8pm @ Holy Cross"
+        },
+        {
+          "source": "history",
+          "bulletin": "e47a210c115c",
+          "said": "weekly confession Wednesday 19:00–20:00 st-anthony-of-padua-syracuse  “at Holy Cross Church”",
+          "page": 1
+        }
+      ],
+      "rationale": "R22: the Wednesday 7-8 PM Reconciliation is at Holy Cross Church, 4112 E Genesee St, DeWitt, which data/churches.csv lists as another parish's church (holy-cross-dewitt), not one of this parish's. History attached it to St. Anthony, so the excluded entry keeps that slug so it matches; the event is held at holy-cross-dewitt.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 3,
+          "said": "Santo Rosario todos los Domingo de octubre antes de la Misa en Espanol. Comenzaremos a las 10:30am"
+        }
+      ],
+      "rationale": "R24, R26: a Rosary before the Spanish Mass every Sunday in October is a devotion, not a Mass, Confession or Adoration (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "e47a210c",
+          "page": 3,
+          "said": "Cantata a Maria: Primer Sagrario - Santo Rosario, Lecturas, Reflexiones, Meditaciones y Canciones - Jueves 22 de Octubre 6-7:30pm"
+        }
+      ],
+      "rationale": "R24, R26: Thursday Oct 22 'Cantata a Maria' is a night of Rosary, readings and songs; no Mass, Confession or Adoration is named.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

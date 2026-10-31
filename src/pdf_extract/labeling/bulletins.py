@@ -31,6 +31,7 @@ from pdf_extract.labeling.labels import (
     EVENT_KINDS,
     EVENT_TYPES,
     WEEKS_OF_MONTH,
+    canonical_weeks,
     is_valid_hash,
     label_statuses,
 )
@@ -222,6 +223,9 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
         event_type = ev.get("type", ev.get("event_type"))
         kind = ev.get("kind", ev.get("event_kind"))
         weekly = kind == "weekly"
+        weeks, exclude_weeks = canonical_weeks(
+            _weeks(ev.get("weeks_of_month")), ev.get("exclude_weeks") is True,
+        ) if weekly else ([], False)
         row = {
             "id": f"g{i}",
             "church_slug": ev.get("church_slug") if isinstance(ev.get("church_slug"), str) else "",
@@ -232,7 +236,8 @@ def gemini_rows(events: list[Any]) -> list[dict[str, Any]]:
             "start_time": _hhmm(ev.get("start_time")),
             "end_time": _hhmm(ev.get("end_time")),
             "cancelled": bool(ev.get("cancelled", False)),
-            "weeks_of_month": _weeks(ev.get("weeks_of_month")) if weekly else [],
+            "weeks_of_month": weeks,
+            "exclude_weeks": exclude_weeks,
             "season": _season(ev) if weekly else None,
             "page_number": ev.get("page_number") if isinstance(ev.get("page_number"), int) else None,
             "note": ev.get("note") if isinstance(ev.get("note"), str) and ev["note"].strip() else None,

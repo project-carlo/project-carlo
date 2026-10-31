@@ -1,0 +1,711 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-john-xxiii-west-seneca",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:12Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:50:11Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:32:12Z",
+  "summary": "One-church parish: Sat 4:00 PM, Sun 8:30 and 10:30 AM, Mon/Wed/Fri 8:30 AM Masses and Saturday 3:00 PM Reconciliation, all in the header of the newest bulletin; plus the dated Nov 4 7:00 PM All Souls Mass. Three questions: the Oct 17 5:00 PM Anointing of the Sick, another parish's Oct 21 healing Mass, and whether Friday Adoration seen only on Oct 2 is a monthly First Friday slot.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "3d12a1661a2f648b8adf23fecc00229491aba4bc26d629a2bc30a28b8d8bc052",
+      "fetched_at": "2026-10-11T16:34:12Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "bb2ee1016c8a92b39800898084d48b5cb28f487adafe0a32e67393842f39641b",
+      "fetched_at": "2026-10-04T14:27:57Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "35b2da922bf27e9a2423513e84ac4445b1c11ecc37d5a0237ff66ad71c7b3863",
+      "fetched_at": "2026-09-26T18:54:35Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Sat. 4:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Sat. 4:00pm (Vigil)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Sat. 4:00pm (Vigil)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Saturday 16:00 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Saturday 16:00 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Saturday 16:00 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Sun. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Sun. 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Sun. 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Sunday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Sunday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Sunday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Sun. 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Sun. 10:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Sun. 10:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Sunday 10:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Sunday 10:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Sunday 10:30 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F); Monday Oct 12 8:30am in the liturgical schedule"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F); Monday Oct 12 8:30am in the liturgical schedule"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F); Monday Oct 12 8:30am in the liturgical schedule"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Monday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Monday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Monday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees. The week's liturgical schedule on p4 lists Mon, Wed, Fri 8:30am only. The website says Monday-Friday, but the bulletin and history say M-W-F, so Tuesday and Thursday are not recorded.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Wednesday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Wednesday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Wednesday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees. Same M-W-F note as Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Weekday: 8:30am (M-W-F)"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly mass Friday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly mass Friday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly mass Friday 08:30 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins; history agrees. Same M-W-F note as Monday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 1,
+          "said": "Reconciliation: Sat. 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bb2ee1016c8a",
+          "page": 1,
+          "said": "Reconciliation: Sat. 3:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 1,
+          "said": "Reconciliation: Sat. 3:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "weekly confession Saturday 15:00 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "bb2ee1016c8a",
+          "said": "weekly confession Saturday 15:00 st-john-xxiii-west-seneca",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "weekly confession Saturday 15:00 st-john-xxiii-west-seneca",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the front-page header of all three bulletins with no end time; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-04",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day Mass"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 4,
+          "said": "ALL SOULS MASS WED. NOVEMBER 4TH 7:00 P.M. (graphic)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 2,
+          "said": "mark your calendar for our All Souls' Day Mass on Wednesday, November 4th"
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "specific_date mass 2026-11-04 19:00 st-john-xxiii-west-seneca  “All Souls' Day Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "Special Mass at a time outside the weekly schedule, with a printed date and time (time is in the p4 graphic), so dated.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-17",
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 4,
+          "said": "Saturday, Oct. 17 ... 5:00pm. Anointing of the Sick; This Week: Anointing of the Sick. Saturday at 5:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "3d12a1661a2f",
+          "said": "specific_date mass 2026-10-17 17:00 st-john-xxiii-west-seneca  “Anointing of the Sick”",
+          "page": 4
+        }
+      ],
+      "rationale": "Listed in the liturgical schedule right after the 4:00 PM Mass, but never called a Mass; Anointing is a sacrament, not a Mass, Confession or Adoration. History recorded it as a Mass. Leaning to leave out.",
+      "question": "Is the Saturday Oct 17 5:00 PM Anointing of the Sick a public Mass to record?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Mass Oct 17 5:00 PM (Anointing of the Sick)",
+          "entry": {
+            "church_slug": "st-john-xxiii-west-seneca",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-17",
+            "start_time": "17:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Anointing of the Sick"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:52Z"
+      }
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "fourteen-holy-helpers-west-seneca",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-21",
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Anointing of the Sick Healing Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "3d12a1661a2f",
+          "page": 2,
+          "said": "FRIENDS OF ST. PEREGRINE. 'Anointing of the Sick Healing Mass' will take place on Wednesday, October 21, at 7:00pm at Fourteen Holy Helpers Church, West Seneca."
+        }
+      ],
+      "rationale": "A Friends of St. Peregrine Mass at Fourteen Holy Helpers, another parish's church (listed under its own slug), not at St. John XXIII. Leaning to leave out as another parish's event.",
+      "question": "Record the Oct 21 7:00 PM Anointing of the Sick Healing Mass at Fourteen Holy Helpers?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Mass Oct 21 7:00 PM at Fourteen Holy Helpers",
+          "entry": {
+            "church_slug": "fourteen-holy-helpers-west-seneca",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-21",
+            "start_time": "19:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Anointing of the Sick Healing Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:31:54Z"
+      }
+    },
+    {
+      "id": "s11",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-john-xxiii-west-seneca",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "35b2da922bf2",
+          "page": 2,
+          "said": "Eucharistic Adoration is this Friday morning; p4 'Eucharistic Adoration. Friday at 9:00 a.m.' (Friday Oct 2, a first Friday)"
+        },
+        {
+          "source": "website",
+          "url": "https://www.stjohn23.com",
+          "said": "The page lists no times for Adoration or First Friday Adoration."
+        },
+        {
+          "source": "history",
+          "bulletin": "35b2da922bf2",
+          "said": "specific_date adoration 2026-10-02 09:00 st-john-xxiii-west-seneca  “First Friday Adoration”",
+          "page": 4
+        }
+      ],
+      "rationale": "Only the 9/27 bulletin prints it, for Friday Oct 2 (a first Friday); the 10/4 and 10/11 bulletins do not, and neither covers a first Friday. It could be a monthly First Friday slot or a one-off. The newest bulletin does not print it. Leaning to leave out.",
+      "question": "Add a First Friday 9:00 AM Eucharistic Adoration?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "First Fridays 9:00 AM",
+          "entry": {
+            "church_slug": "st-john-xxiii-west-seneca",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": null
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-14T21:32:09Z"
+      }
+    }
+  ]
+}

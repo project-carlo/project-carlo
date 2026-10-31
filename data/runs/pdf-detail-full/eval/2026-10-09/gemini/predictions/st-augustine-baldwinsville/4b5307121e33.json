@@ -1,0 +1,90 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-augustine-baldwinsville",
+  "content_hash": "4b5307121e332693b6c7ddd524b4e8724f1fdb8c0bac8f33c4eef39b3981792a",
+  "source_url": "https://parishesonline.com/publication-page/st-augustines-parish?selectedPublication=https://container.parishesonline.com/bulletins/04/0667/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:39:51Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-augustine-baldwinsville",
+      "name": "St. Augustine's Church",
+      "address": "7333 O'Brien Rd., Baldwinsville, NY 13027"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/4b5307121e332693b6c7ddd524b4e8724f1fdb8c0bac8f33c4eef39b3981792a-e910c8ae2109.json",
+    "modified_at": "2026-10-04T15:16:33.884000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-augustine-baldwinsville/4b5307121e33.pdf",
+  "pdf_sha256": "4b5307121e332693b6c7ddd524b4e8724f1fdb8c0bac8f33c4eef39b3981792a",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "confession",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": "11:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Every other Wednesday",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:30 AM",
+        "end_time": "11:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4545,
+    "output_tokens": 241
+  }
+}

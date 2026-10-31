@@ -222,6 +222,7 @@ export function GeminiPanel({
                   g.event_kind === "weekly" &&
                   g.weeks_of_month.length === 1 &&
                   g.weeks_of_month[0] === "first" &&
+                  !g.exclude_weeks &&
                   !g.note?.trim();
                 return (
                   <div
@@ -241,7 +242,7 @@ export function GeminiPanel({
                     </span>
                     <span className="tabular-nums">{describe(g)}</span>
                     {g.cancelled && <span className="rounded bg-red-100 px-1 text-xs text-red-700 no-underline">cancelled</span>}
-                    {g.weeks_of_month.length > 0 && <span className="text-xs text-sky-700">{describeWeeks(g.weeks_of_month)}</span>}
+                    {g.weeks_of_month.length > 0 && <span className="text-xs text-sky-700">{describeWeeks(g.weeks_of_month, g.exclude_weeks)}</span>}
                     {g.season && <span className="text-xs text-sky-700">{describeSeason(g.season)}</span>}
                     {g.note && <span className="truncate text-xs text-slate-500 italic">{g.note}</span>}
                     {g.problems.length > 0 && (

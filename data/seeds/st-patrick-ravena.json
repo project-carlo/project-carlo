@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-patrick-ravena",
+  "status": "approved",
+  "as_of": "2026-09-28T22:08:00Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:59:24Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "One bulletin (issue Sept 19-20, 2026), a Hudson Valley Vicariate West network bulletin that lists nine churches; only St. Patrick's, Ravena is this parish's church. Clear in the newest bulletin: Sat 4:30 PM and Sun 9:30 AM Masses, Mass on 2nd and 4th Tuesdays 9 AM, and Confession on 2nd and 4th Thursdays 5:30-6:30 PM. The other churches' times belong to their own parishes and are excluded. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "7dba34a40f0e42150914ed2a7be7808e2b8d0171503d5436498e3e50d7dd2c85",
+      "fetched_at": "2026-09-28T22:08:00Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 1,
+          "said": "St. Patrick's Ravena, 21 Main Street - Mass Times: Saturday 4:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dba34a40f0e",
+          "said": "weekly mass Saturday 16:30 st-patrick-ravena",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Ravena box of the vicariate's Mass-times page; the Mass intentions on p3 also list Saturday 4:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 1,
+          "said": "St. Patrick's Ravena, 21 Main Street - Mass Times: Sunday 9:30 AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dba34a40f0e",
+          "said": "weekly mass Sunday 09:30 st-patrick-ravena",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Ravena box of the vicariate's Mass-times page; the Mass intentions on p3 also list Sunday 9:30 a.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 4,
+          "said": "We have Weekday Mass on the 2nd and 4th Tuesday of each month, at 9am."
+        },
+        {
+          "source": "history",
+          "bulletin": "7dba34a40f0e",
+          "said": "weekly mass Tuesday 09:00 st-patrick-ravena  “2nd & 4th Tuesday of each month”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1: p4 Weekday Mass Schedule names the weeks. The newest bulletin's week holds a fourth Tuesday (Sept 22), and the p3 Mass intentions list Tuesday, September 22 9:00 a.m. (R11 satisfied).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-ravena",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second",
+          "fourth"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 2,
+          "said": "Reconciliation: St. Patrick's in Ravena 2nd & 4th Thursday 5:30 - 6:30 PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "7dba34a40f0e",
+          "said": "weekly confession Thursday 17:30–18:30 st-patrick-ravena  “2nd & 4th Thursday of each month”",
+          "page": 2
+        }
+      ],
+      "rationale": "R1: p2 Reconciliation list names the weeks. The newest bulletin's week holds a fourth Thursday (Sept 24) (R11 satisfied).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 1,
+          "said": "Mass Times boxes for St. Patrick's Catskill, St. Patrick's Athens, St. Mary's Coxsackie, Sacred Heart Cairo, St. John the Baptist Greenville, Our Lady of Knock East Durham, St. Theresa's Windham, Immaculate Conception Haines Falls, Sacred Heart Palenville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 2,
+          "said": "Reconciliation at St. Mary's Coxsackie, St. Patrick's Athens, Our Lady of Knock, St. Theresa's Windham, St. Patrick's Catskill, St. John's Greenville"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7dba34a40f0e",
+          "page": 4,
+          "said": "Other Weekday Masses in the area: 1st and 3rd Tuesday 9am at St. Mary's; Wednesday 8:30am St. Patrick's Catskill; Wednesday noon St. John's Greenville; Thursday 8:30am St. Patrick's Athens"
+        }
+      ],
+      "rationale": "R22, R25: these are other churches in the vicariate network. `seed church` places them in other parishes (Catskill, Athens, Coxsackie, Haines Falls and Palenville under hudson-valley-vicariate-west-catskill; Cairo, East Durham and Greenville under st-john-the-baptist-greenville; Windham under st-theresa-windham), so their events belong to those parishes. Only St. Patrick's Ravena is this parish's church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

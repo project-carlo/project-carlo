@@ -1,0 +1,122 @@
+{
+  "classifier": "gpt-6-luna",
+  "classifier_version": "gpt-6-luna+strict+reasoning-high+detail-low+prompt-409460690c58",
+  "parish_slug": "st-augustine-baldwinsville",
+  "content_hash": "ed89f2a9d283af640aedbdf0733fadc46ec30cb18c138fb8b62d67142a5831d6",
+  "source_url": "https://parishesonline.com/publication-page/st-augustines-parish?selectedPublication=https://container.parishesonline.com/bulletins/04/0667/20260927B.pdf",
+  "label_status": "unlabeled",
+  "today": "2026-09-28",
+  "from_cache": false,
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "church_list_needs_review": true,
+  "usage": {
+    "input_tokens": 12146,
+    "cached_tokens": 4007,
+    "cache_write_tokens": 0,
+    "output_tokens": 2826,
+    "reasoning_tokens": 2339
+  },
+  "seconds": 35.131,
+  "response_id": "resp_02a2a35a358e1707016ac910656ab487d28143e4b6fc3b13fe",
+  "events": [
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-14",
+      "start_time": "10:30",
+      "end_time": "11:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "date": "2026-10-14",
+        "start_time": "10:30 AM",
+        "end_time": "11:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Priest Convocation",
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-augustine-baldwinsville",
+      "event_type": "confession",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "10:30",
+      "end_time": "11:30",
+      "cancelled": true,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 3,
+      "note": "Priest Convocation",
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "10:30 AM",
+        "end_time": "11:30 AM"
+      },
+      "problems": []
+    }
+  ],
+  "pdf_sha256": "ed89f2a9d283af640aedbdf0733fadc46ec30cb18c138fb8b62d67142a5831d6"
+}

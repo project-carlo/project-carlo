@@ -1,0 +1,842 @@
+{
+  "schema_version": 1,
+  "parish_slug": "immaculate-conception-hoosick-falls",
+  "status": "ready",
+  "as_of": "2026-10-25T13:19:14Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T17:20:13Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "One parish of three churches (Immaculate Conception Hoosick Falls, Holy Cross Salem, St. Patrick's Cambridge). Weekend and weekday Masses, Saturday confession and the first-Monday Adoration are printed identically in all five bulletins; the Adoration has no clock time, so it is set at 9:30 AM by POLICY's rule for after a weekday Mass. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "873bec5dd7ac01fd9638a1a4711ce7f3079f5a97fbe1628a0e5b52dd72d46076",
+      "fetched_at": "2026-10-25T13:19:14Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "c944e0179fa3ebc6582a2bd401d7cab703baae22040d90390ac81b9123bfbe3f",
+      "fetched_at": "2026-10-18T12:46:17Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "e376e9cfed68dd55406a7bf0bce354987d00557702a696b6f9b865add6501280",
+      "fetched_at": "2026-10-11T16:33:33Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "d189e2ddd9c347c384d7259294fa67c8e68cbd60d47b2204dba4993ed435731a",
+      "fetched_at": "2026-10-04T14:48:49Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "cb87fae374f3981b3dfdf0ac7c90c9f437e4c57580ef74df4cee49e11b36a1f4",
+      "fetched_at": "2026-09-28T21:58:48Z",
+      "published_date": "2026-09-26",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-hoosick-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Immaculate Conception Mass Schedule: Saturday, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Immaculate Conception Mass Schedule: Saturday, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Immaculate Conception Mass Schedule: Saturday, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Immaculate Conception Mass Schedule: Saturday, 4:00 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Immaculate Conception Mass Schedule: Saturday, 4:00 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Saturday 16:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read, and as 4:00 pm Mass in each liturgy schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-hoosick-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Sunday, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Sunday, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Sunday, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Sunday, 10:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Sunday, 10:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Sunday 10:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Sunday 10:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "specific_date mass 2026-11-01 10:00 immaculate-conception-hoosick-falls  “All Saints Day Mass and All Souls Remembrance Service”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Sunday 10:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Sunday 10:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Sunday 10:00 immaculate-conception-hoosick-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read. The November 1 All Saints Mass is this regular 10:00 Mass (POLICY, Weekly or dated, rule 7), so it is not recorded separately.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-hoosick-falls",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In the chapel"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Monday, 9:00 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Monday, 9:00 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Monday, 9:00 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Monday, 9:00 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Monday, 9:00 am (Chapel)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 2,
+          "said": "Monday, October 26 9:00 am Mass Immaculate Conception, Hoosick Falls"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Monday 09:00 immaculate-conception-hoosick-falls  “Held in the Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Monday 09:00 immaculate-conception-hoosick-falls  “In the chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Monday 09:00 immaculate-conception-hoosick-falls  “In the Chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Monday 09:00 immaculate-conception-hoosick-falls  “In the chapel”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Monday 09:00 immaculate-conception-hoosick-falls  “In the Chapel”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins; the liturgy schedule places the Monday Mass at Immaculate Conception, so the chapel is that church's (POLICY, Churches and chapels). The October 12 and 19 cancellations are before as_of (R16).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-salem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Holy Cross, Salem Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Holy Cross, Salem Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Holy Cross, Salem Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Holy Cross, Salem Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Holy Cross, Salem Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 2,
+          "said": "Tuesday, October 27 9:00 am Mass Holy Cross, Salem"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Tuesday 09:00 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Tuesday 09:00 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Tuesday 09:00 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Tuesday 09:00 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Tuesday 09:00 holy-cross-salem",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Cross is one of the parish's churches on the church list; its times are in the Battenkill Network box on page 1 of all five bulletins and in the liturgy schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-cross-salem",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Holy Cross, Salem, 518-854-7626 Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Holy Cross, Salem, 518-854-7626 Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Holy Cross, Salem, 518-854-7626 Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Holy Cross, Salem, 518-854-7626 Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Holy Cross, Salem, 518-854-7626 Mass - Sun. 8:15 am; Tues. 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Sunday 08:15 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Sunday 08:15 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Sunday 08:15 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Sunday 08:15 holy-cross-salem",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Sunday 08:15 holy-cross-salem",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Holy Cross is one of the parish's churches on the church list; the time is in the Battenkill Network box on page 1 of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-cambridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 2,
+          "said": "Wednesday, October 28 9:00 am Mass St. Patrick's, Cambridge"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Wednesday 09:00 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Wednesday 09:00 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Wednesday 09:00 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Wednesday 09:00 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Wednesday 09:00 st-patrick-cambridge",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: St. Patrick's is one of the parish's churches on the church list; its times are in the Battenkill Network box on page 1 of all five bulletins and in the liturgy schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-patrick-cambridge",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge, 518-677-2757 Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge, 518-677-2757 Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge, 518-677-2757 Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge, 518-677-2757 Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "St. Patrick's Church, Cambridge, 518-677-2757 Mass - Sun. 11:30 am; Wed. 9:00 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly mass Sunday 11:30 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly mass Sunday 11:30 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly mass Sunday 11:30 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly mass Sunday 11:30 st-patrick-cambridge",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly mass Sunday 11:30 st-patrick-cambridge",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: St. Patrick's is one of the parish's churches on the church list; the time is in the Battenkill Network box on page 1 of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-hoosick-falls",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays, 3:00-3:45 pm; Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c944e017",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays, 3:00-3:45 pm; Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "e376e9cf",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays, 3:00-3:45 pm; Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays, 3:00-3:45 pm; Other times by appointment."
+        },
+        {
+          "source": "agent",
+          "bulletin": "cb87fae3",
+          "page": 1,
+          "said": "Sacrament of Reconciliation: Saturdays, 3:00-3:45 pm; Other times by appointment."
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly confession Saturday 15:00–15:45 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly confession Saturday 15:00–15:45 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly confession Saturday 15:00–15:45 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "weekly confession Saturday 15:00–15:45 immaculate-conception-hoosick-falls",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly confession Saturday 15:00–15:45 immaculate-conception-hoosick-falls",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Sacraments section of all five bulletins; 'other times by appointment' has no time (R26).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "immaculate-conception-hoosick-falls",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Immediately after the 9:00 AM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d189e2dd",
+          "page": 1,
+          "said": "Eucharistic Adoration: immediately after Mass on the first Monday of the month."
+        },
+        {
+          "source": "history",
+          "bulletin": "873bec5dd7ac",
+          "said": "weekly adoration Monday 09:30 immaculate-conception-hoosick-falls  “First Monday of the month; follows 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "e376e9cfed68",
+          "said": "weekly adoration Monday 09:30 immaculate-conception-hoosick-falls  “First Monday of the month; immediately after 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "cb87fae374f3",
+          "said": "weekly adoration Monday 09:30 immaculate-conception-hoosick-falls  “First Monday of the month; immediately after 9:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c944e0179fa3",
+          "said": "weekly adoration Monday 09:00 immaculate-conception-hoosick-falls  “First Monday of the month; immediately following 9:00 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "d189e2ddd9c3",
+          "said": "specific_date adoration 2026-10-05 09:45 immaculate-conception-hoosick-falls  “Immediately after 9:00 AM Mass; first Monday of the month”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R12, R10: a first-Monday service; the newest bulletin's week (Oct 25-Nov 1) holds no first Monday, so the newest issue whose week holds one (Oct 4, Monday Oct 5) is cited; all five bulletins print the same line on page 1. No clock time is given, so POLICY works it out as 30 minutes after the weekday 9:00 AM Mass (9:30). History read 9:00, 9:30 and a dated 9:45 (R8); 9:30 follows POLICY. No end time is given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "873bec5d",
+          "page": 1,
+          "said": "Rosary for World Peace and Unity: Thursdays, 10 am (Mercy Chapel); The Divine Mercy Prayers: Fridays, 3 pm (Mercy Chapel)"
+        }
+      ],
+      "rationale": "R24: a Rosary and Divine Mercy prayers are not a Mass, Confession or Adoration (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

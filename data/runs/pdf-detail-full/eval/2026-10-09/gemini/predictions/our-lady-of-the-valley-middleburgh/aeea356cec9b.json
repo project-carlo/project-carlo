@@ -1,0 +1,109 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-of-the-valley-middleburgh",
+  "content_hash": "aeea356cec9b5a7792f400613e651e710eae14998414de5c5fa67e129f77643c",
+  "source_url": "https://parishes.rcda.org/olvchurch/bulletins/2026/October_04.pdf",
+  "fetched_at": "2026-10-04T14:50:32Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "our-lady-of-the-valley-middleburgh",
+      "name": "Our Lady of the Valley",
+      "address": "Main St. & Wells Ave., Middleburgh, NY 12122"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/aeea356cec9b5a7792f400613e651e710eae14998414de5c5fa67e129f77643c-ba6af17841cf.json",
+    "modified_at": "2026-10-04T15:21:28.921000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-the-valley-middleburgh/aeea356cec9b.pdf",
+  "pdf_sha256": "05a5838665bd63a60a1df0403c8a35fc75f83a19348f5dc57655da4ac7c88393",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-of-the-valley-middleburgh",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-valley-middleburgh",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "18:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "6:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-valley-middleburgh",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-the-valley-middleburgh",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Monday",
+      "date": null,
+      "start_time": "17:30",
+      "end_time": "18:30",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Monday",
+        "start_time": "5:30 PM",
+        "end_time": "6:30 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2463,
+    "output_tokens": 463
+  }
+}

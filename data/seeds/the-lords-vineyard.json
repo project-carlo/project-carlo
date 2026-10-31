@@ -1,0 +1,2682 @@
+{
+  "schema_version": 1,
+  "parish_slug": "the-lords-vineyard",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:17:24Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:55:43Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Four churches in Dunkirk and Silver Creek, one family of parishes. The p1 schedule box (weekend Masses, Confessions, Adoration) and the weekday Masses in the Mass intentions agree in all five bulletins; Friday Adoration at St. Elizabeth Ann Seton is 8:45-noon (an old box line said 7:30). All Souls Mass is Monday November 2 at 6 PM at St. Hyacinth. Open: the Thanksgiving Mass at Holy Trinity (9 AM; the bulletin does not print the date).",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c298e12b1a7428415653cdf99fa4c051add96e8ca3f4c05dffbd897bad15737e",
+      "fetched_at": "2026-10-25T13:17:24Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "eff1ba6a9d2d193f92bc9e705ae7dd8964424eeafda89ff472f073d6728c0254",
+      "fetched_at": "2026-10-18T12:44:36Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "38402794a056ef4c52c0ed3e43f5907c2563ec83fd52ec29a8477ac73c1ab8a2",
+      "fetched_at": "2026-10-11T16:34:24Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "4a8ed41a259ebeaaa22bcc99c4680fcce25580ff412ec212cff755309d78366b",
+      "fetched_at": "2026-10-04T14:28:48Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "5430561ccbb5da38dd2758db729a80c1b6aaf27ba188ee1480f9dc75500db8d8",
+      "fetched_at": "2026-09-26T18:55:01Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm Holy Trinity (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm Holy Trinity (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm Holy Trinity (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm Holy Trinity (HT)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm Holy Trinity (HT)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Saturday 16:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Saturday 16:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Saturday 16:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Saturday 16:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Saturday 16:00 holy-trinity-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm St. Hyacinth (HYA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm St. Hyacinth (HYA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm St. Hyacinth (HYA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm St. Hyacinth (HYA)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:00 pm St. Hyacinth (HYA)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Saturday 16:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Saturday 16:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Saturday 16:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Saturday 16:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Saturday 16:00 st-hyacinth-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins. St. Hyacinth is also called Blessed Mary Angela, Church of St. Hyacinth.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:30 pm Our Lady of Mt. Carmel (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:30 pm Our Lady of Mt. Carmel (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:30 pm Our Lady of Mt. Carmel (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:30 pm Our Lady of Mt. Carmel (OLMC)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SATURDAY VIGIL 4:30 pm Our Lady of Mt. Carmel (OLMC)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 7:00 am St. Hyacinth"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 7:00 am St. Hyacinth"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 7:00 am St. Hyacinth"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 7:00 am St. Hyacinth"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 7:00 am St. Hyacinth"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 07:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 07:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 07:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 07:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 07:00 st-hyacinth-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 08:30 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 08:30 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 08:30 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 08:30 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 08:30 holy-trinity-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 8:30 am Holy Trinity; 11:00 am Holy Trinity"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 11:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 11:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 11:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 11:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 11:00 holy-trinity-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 9:00 am Our Lady of Mt. Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 9:00 am Our Lady of Mt. Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 9:00 am Our Lady of Mt. Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 9:00 am Our Lady of Mt. Carmel"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 9:00 am Our Lady of Mt. Carmel"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 09:00 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 09:00 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 09:00 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 09:00 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 09:00 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 10:00 am St. Elizabeth Ann Seton (SEAS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 10:00 am St. Elizabeth Ann Seton (SEAS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 10:00 am St. Elizabeth Ann Seton (SEAS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 10:00 am St. Elizabeth Ann Seton (SEAS)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 10:00 am St. Elizabeth Ann Seton (SEAS)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 10:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 10:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 10:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 10:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 10:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Spanish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "SUNDAY 11:30 am St. Elizabeth Ann Seton (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "SUNDAY 11:30 am St. Elizabeth Ann Seton (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "SUNDAY 11:30 am St. Elizabeth Ann Seton (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "SUNDAY 11:30 am St. Elizabeth Ann Seton (Spanish)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "SUNDAY 11:30 am St. Elizabeth Ann Seton (Spanish)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Sunday 11:30 st-elizabeth-ann-seton-dunkirk  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Sunday 11:30 st-elizabeth-ann-seton-dunkirk  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Sunday 11:30 st-elizabeth-ann-seton-dunkirk  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Sunday 11:30 st-elizabeth-ann-seton-dunkirk  “Spanish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Sunday 11:30 st-elizabeth-ann-seton-dunkirk  “Spanish”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Mass schedule box (p1) of all five bulletins; POLICY, Notes: language.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "MONDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "MONDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "MONDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "MONDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "MONDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Monday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Monday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Monday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Monday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Monday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: weekday Masses are printed only in the Mass intentions (p3); the weekend-only schedule box does not disprove them. Same weekday, church and time in each of the five weeks.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "TUESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "TUESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "TUESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "TUESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "TUESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Tuesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "TUESDAY 12:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Tuesday 12:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Tuesday 12:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Tuesday 12:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Tuesday 12:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Tuesday 12:00 holy-trinity-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "TUESDAY 6:30 pm HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "TUESDAY 6:30 pm HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "TUESDAY 6:30 pm HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "TUESDAY 6:30 pm HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "TUESDAY 6:30 pm HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Tuesday 18:30 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Tuesday 18:30 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Tuesday 18:30 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Tuesday 18:30 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "specific_date mass 2026-09-29 18:30 st-hyacinth-dunkirk  “Special Mass for Sister Rachel Mikolajczak”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 am HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 am HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 am HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 am HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "WEDNESDAY 8:00 am HYA ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Wednesday 08:00 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Wednesday 08:00 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Wednesday 08:00 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Wednesday 08:00 st-hyacinth-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Wednesday 08:00 st-hyacinth-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "WEDNESDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Wednesday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "WEDNESDAY 7:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "WEDNESDAY 7:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "WEDNESDAY 7:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "WEDNESDAY 7:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "WEDNESDAY 7:00 pm HT ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Wednesday 19:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Wednesday 19:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Wednesday 19:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Wednesday 19:00 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Wednesday 19:00 holy-trinity-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week. The Wednesday Adoration and Confession (6-7 pm) lead into it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "THURSDAY 7:00 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "THURSDAY 7:00 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "THURSDAY 7:00 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "THURSDAY 7:00 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "THURSDAY 7:00 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Thursday 07:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Thursday 07:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Thursday 07:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Thursday 07:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Thursday 07:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "THURSDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "THURSDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "THURSDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "THURSDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "THURSDAY 8:15 am HT ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Thursday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Thursday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Thursday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Thursday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Thursday 08:15 holy-trinity-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "THURSDAY 8:30 am OLMC ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Thursday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Thursday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Thursday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Thursday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Thursday 08:30 our-lady-of-mt-carmel-silver-creek",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "FRIDAY 8:15 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 3,
+          "said": "FRIDAY 8:15 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 3,
+          "said": "FRIDAY 8:15 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "FRIDAY 8:15 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "FRIDAY 8:15 am SEAS ~ (Mass intentions)"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly mass Friday 08:15 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly mass Friday 08:15 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly mass Friday 08:15 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly mass Friday 08:15 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly mass Friday 08:15 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R35: Mass intentions of all five bulletins; same weekday, church and time each week.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "CONFESSIONS Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Confessions box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "Thursday | HYA 5 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "Thursday | HYA 5 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "Thursday | HYA 5 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "Thursday | HYA 5 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "Thursday | HYA 5 pm - 6 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Thursday 17:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Thursday 17:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Thursday 17:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Thursday 17:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Thursday 17:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Confessions box (p1) of all five bulletins. It sits inside the 4-6 pm Adoration but has its own printed times, so both are kept (POLICY, Final source checks).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "Saturday | HT 3 pm - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "Saturday | HT 3 pm - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "Saturday | HT 3 pm - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "Saturday | HT 3 pm - 3:45 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "Saturday | HT 3 pm - 3:45 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Saturday 15:00–15:45 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Saturday 15:00–15:45 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Saturday 15:00–15:45 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Saturday 15:00–15:45 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Saturday 15:00–15:45 holy-trinity-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Confessions box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "HYA 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "HYA 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "HYA 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "HYA 3:30 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "HYA 3:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Saturday 15:30 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Saturday 15:30 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Saturday 15:30 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Saturday 15:30 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Saturday 15:30 st-hyacinth-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Confessions box (p1) of all five bulletins; no end time printed (POLICY, Times).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mt-carmel-silver-creek",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:45",
+        "end_time": "16:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "OLMC 3:45 pm - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "OLMC 3:45 pm - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "OLMC 3:45 pm - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "OLMC 3:45 pm - 4:15 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "OLMC 3:45 pm - 4:15 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Saturday 15:45–16:15 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Saturday 15:45–16:15 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Saturday 15:45–16:15 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Saturday 15:45–16:15 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Saturday 15:45–16:15 our-lady-of-mt-carmel-silver-creek",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Confessions box (p1) of all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 10:00 AM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "Sunday | SEAS after 10 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "Sunday | SEAS after 10 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "Sunday | SEAS after 10 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "Sunday | SEAS after 10 am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "Sunday | SEAS after 10 am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly confession Sunday 11:00 st-elizabeth-ann-seton-dunkirk  “After 10:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly confession Sunday 11:00 st-elizabeth-ann-seton-dunkirk  “After 10:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly confession Sunday 11:00 st-elizabeth-ann-seton-dunkirk  “After 10:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly confession Sunday 11:00 st-elizabeth-ann-seton-dunkirk  “After 10:00 AM Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly confession Sunday 11:00 st-elizabeth-ann-seton-dunkirk  “After 10:00 AM Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: no clock time, so one hour after the weekend 10:00 AM Mass starts (POLICY, Times). Printed in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-trinity-dunkirk",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "EUCHARISITC ADORATION Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "EUCHARISITC ADORATION Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "EUCHARISITC ADORATION Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "EUCHARISITC ADORATION Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "EUCHARISITC ADORATION Wednesday | HT 6 pm - 7 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "Wednesdays at HT from 6 pm - 7 pm during Confessions & prior to Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly adoration Wednesday 18:00–19:00 holy-trinity-dunkirk  “Prior to Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly adoration Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly adoration Wednesday 18:00–19:00 holy-trinity-dunkirk  “During Confessions & prior to Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly adoration Wednesday 18:00–19:00 holy-trinity-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly adoration Wednesday 18:00–19:00 holy-trinity-dunkirk  “During Confessions and prior to Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Adoration box (p1) and the p3 reminder in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "Thursday | HYA 4 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "Thursday | HYA 4 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "Thursday | HYA 4 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 1,
+          "said": "Thursday | HYA 4 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 1,
+          "said": "Thursday | HYA 4 pm - 6 pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 4,
+          "said": "29th - Eucharistic Adoration HYA 4pm-6pm; Nov 5th, 12th"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly adoration Thursday 16:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly adoration Thursday 16:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly adoration Thursday 16:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly adoration Thursday 16:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly adoration Thursday 16:00–18:00 st-hyacinth-dunkirk",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R35: Adoration box (p1) in all five bulletins; the calendar lists it each Thursday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-hyacinth-dunkirk",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "All Souls' Day"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 4,
+          "said": "ALL SOULS MASS. This year we will have one All Souls Mass on Monday, November 2nd at 6pm at St. Hyacinth Church. Invitations were mailed to family members of those who have died since last November."
+        },
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 5,
+          "said": "November 2 - All Souls remembrance mass will be held at St. Hyacinth's at 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 4,
+          "said": "2nd - All Souls Mass HYA 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "specific_date mass 2026-11-02 18:00 st-hyacinth-dunkirk  “All Souls Mass”",
+          "page": 4
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "specific_date mass 2026-11-02 18:00 st-hyacinth-dunkirk  “All Souls Mass”",
+          "page": 4
+        }
+      ],
+      "rationale": "R1, R16: dated and pinned in the newest bulletin; November 2 is after as_of. It says everyone is invited to this one Mass; the notice does not cancel any regular weekday Mass, so none is cancelled (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 5,
+          "said": "Thanksgiving Mass at Holy Trinity at 9am. Rehearsal will be held on Monday, Nov. 23 at Holy Trinity at 6pm."
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "specific_date mass 2026-11-26 09:00 holy-trinity-dunkirk  “Thanksgiving Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R30: church and time are clear but the bulletin prints no date. Thanksgiving Day 2026 is Thursday, November 26 (POLICY, Dates asks for a day the bulletin pins down); the Monday Nov. 23 rehearsal in the same item supports that week. Leaning include. Not a first-appearance doubt: history also read it as 2026-11-26.",
+      "question": "Add a Thanksgiving Mass at Holy Trinity on November 26, 9:00 AM?",
+      "options": [
+        {
+          "label": "Thursday, Nov 26, 9:00 AM at Holy Trinity",
+          "entry": {
+            "church_slug": "holy-trinity-dunkirk",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-11-26",
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Thanksgiving Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 3,
+          "said": "THURSDAY 6:30 am SEAS ~ Rosary; FRIDAY 7:45 am SEAS ~ Rosary"
+        }
+      ],
+      "rationale": "R24: a Rosary is not a Mass, Confession or Adoration (POLICY, What to extract).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-elizabeth-ann-seton-dunkirk",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:45",
+        "end_time": "12:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 1,
+          "said": "Friday | SEAS 8:45 am - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "eff1ba6a",
+          "page": 1,
+          "said": "Friday | SEAS 8:45 am - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "38402794",
+          "page": 1,
+          "said": "Friday | SEAS 8:45 am - Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "4a8ed41a",
+          "page": 3,
+          "said": "Fridays at SEAS from 8:45 am to Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "5430561c",
+          "page": 3,
+          "said": "Fridays at SEAS from 8:45 am to Noon"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c298e12b",
+          "page": 4,
+          "said": "30th - Eucharistic Adoration SEAS 8:45am-Noon; Nov 6th, 13th"
+        },
+        {
+          "source": "history",
+          "bulletin": "c298e12b1a74",
+          "said": "weekly adoration Friday 08:45–12:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "eff1ba6a9d2d",
+          "said": "weekly adoration Friday 08:45–12:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "38402794a056",
+          "said": "weekly adoration Friday 08:45–12:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "4a8ed41a259e",
+          "said": "weekly adoration Friday 08:45–12:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "5430561ccbb5",
+          "said": "weekly adoration Friday 08:45–12:00 st-elizabeth-ann-seton-dunkirk",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R3, R7: the three newest boxes (10/11, 10/18, 10/25) print 8:45 am to noon, as does the p3 footer and calendar of every bulletin read. The 9/27 and 10/4 boxes said 7:30 am, but each of those issues' own p3 footer said 8:45, so the box line was stale.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

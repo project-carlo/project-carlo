@@ -1,0 +1,1923 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-of-the-assumption-oswego",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:50Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:51:22Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-15T11:49:11Z",
+  "summary": "Latin Rite shrine with a clear schedule in all three bulletins: Sunday 9 and 11, a 7:30 AM Low Mass Mon-Wed/Fri/Sat, Thursday 12:10, English Masses Tue/Wed 12:10 and Saturday 4:00, a first-Friday 6:00 PM Mass, plus adoration Thursday 6 PM and Friday noon. Confessions are 30 minutes before each Latin Mass (recorded as the policy's relative rule, 30 minutes ending at Mass). Open questions: confession during adoration (Thu, Fri), first-Friday confession, and an unspecified Oct 25 Benediction; the Oct 24 relic veneration, Oct 12 and Oct 25 specials and the Nov 5 cemetery Mass are left out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "d00936ce72a7c324847256d3cb609911eded3d9a0e802ddb43ee522c6d152ffd",
+      "fetched_at": "2026-10-11T16:32:50Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "a3ab516d71e8da5e49b186b821bba0ea7c812ba94c24af8ccf687ccfad390727",
+      "fetched_at": "2026-10-04T14:43:23Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ecc212f8c9e0feeb7717116ffc03f13a3fe7b3b09f5d6db03570837a6068eae5",
+      "fetched_at": "2026-09-28T00:14:56Z",
+      "published_date": "2026-09-20",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Sunday: 9:00 a.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Sunday 09:00 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "High Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "11:00 a.m. High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "11:00 a.m. High Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "11:00 a.m. High Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-oswego  “High Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-oswego  “High Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Sunday 11:00 st-mary-of-the-assumption-oswego  “Latin High Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "specific_date mass 2026-10-25 11:00 st-mary-of-the-assumption-oswego  “High Mass; Feast of Christ the King”",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Monday 07:30 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Monday 07:30 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Monday 07:30 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "specific_date mass 2026-10-12 07:30 st-mary-of-the-assumption-oswego  “Mass for the Purgatorian Society”",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Tuesday 07:30 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Tuesday 07:30 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Tuesday 07:30 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Wednesday 07:30 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Wednesday 07:30 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Wednesday 07:30 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Friday 07:30 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Friday 07:30 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Friday 07:30 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 2,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass; Masses This Week calendar lists Saturday 7:30 a.m. in all three bulletins (Sep 26, Oct 10, Oct 17)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 2,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass; Masses This Week calendar lists Saturday 7:30 a.m. in all three bulletins (Sep 26, Oct 10, Oct 17)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 2,
+          "said": "Weekdays (except Thursday): 7:30 a.m. Low Mass; Masses This Week calendar lists Saturday 7:30 a.m. in all three bulletins (Sep 26, Oct 10, Oct 17)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Saturday 07:30 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Saturday 07:30 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Saturday 07:30 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Saturday is not named in the Mass Times box ('Weekdays except Thursday'), but the weekly calendar prints a Saturday 7:30 AM Mass in each of the three bulletins (Sep 26, Oct 10, Oct 17), so the same slot appears in several weeks and is recorded weekly; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Thursday: 12:10 p.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Thursday: 12:10 p.m. Low Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Thursday: 12:10 p.m. Low Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-assumption-oswego  “Low Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-assumption-oswego  “Low Mass (Latin)”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Thursday 12:10 st-mary-of-the-assumption-oswego  “Latin Low Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Tuesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "English Mass Schedule: Tues. & Wed. 12:10 p.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Wednesday 12:10 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "English"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Saturday Vigil Mass: 4:00 p.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Saturday 16:00 st-mary-of-the-assumption-oswego  “English Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Additional First Friday Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly mass Friday 18:00 st-mary-of-the-assumption-oswego  “First Fridays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly mass Friday 18:00 st-mary-of-the-assumption-oswego  “Low Mass (Latin); First Fridays only”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly mass Friday 18:00 st-mary-of-the-assumption-oswego  “First Fridays only; Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Mass Times box on page 1 of all three bulletins; history agrees. A first-Friday slot is weekly with weeks_of_month; no calendar in these bulletins covers a first Friday (Oct 2 fell before the Oct 4 issue's week).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Adoration: Thursdays: 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Adoration: Thursdays: 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Adoration: Thursdays: 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly adoration Thursday 18:00 st-mary-of-the-assumption-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly adoration Thursday 18:00 st-mary-of-the-assumption-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly adoration Thursday 18:00 st-mary-of-the-assumption-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Adoration box on page 1 of all three bulletins; no end time given.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Adoration: Fridays: 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Adoration: Fridays: 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Adoration: Fridays: 12:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly adoration Friday 12:00–13:00 st-mary-of-the-assumption-oswego",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly adoration Friday 12:00 st-mary-of-the-assumption-oswego",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly adoration Friday 12:00 st-mary-of-the-assumption-oswego",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed in the Adoration box on page 1 of all three bulletins; no end time given (one history extraction gave 12:00-1:00 PM, but the bulletin prints none; page 3 only says the Oct 23 cleaning is at 1:00 PM 'after Friday Adoration').",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Monday 07:00–07:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Monday 07:00–07:30 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Monday 07:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Tuesday 07:00–07:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Tuesday 07:00–07:30 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Tuesday 07:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Wednesday 07:00–07:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Wednesday 07:00–07:30 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Wednesday 07:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Friday 07:00–07:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Friday 07:00–07:30 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Friday 07:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "07:00",
+        "end_time": "07:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 7:30 AM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (7:30 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Saturday 07:00–07:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Saturday 07:00–07:30 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Saturday 07:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:40",
+        "end_time": "12:10",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 12:10 PM Latin Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Thursday 12:10 p.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Thursday 12:10 p.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Thursday 12:10 p.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Thursday 11:40–12:10 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Thursday 11:40–12:10 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Thursday 11:40 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "09:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 9:00 AM Low Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 9:00 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 9:00 a.m. Low Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 9:00 a.m. Low Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Sunday 08:30–09:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Sunday 08:30–09:00 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Sunday 08:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": "11:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 11:00 AM High Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 11:00 a.m. High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 11:00 a.m. High Mass)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses (Sunday 11:00 a.m. High Mass)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Sunday 10:30–11:00 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Sunday 10:30–11:00 st-mary-of-the-assumption-oswego  “30 minutes before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Sunday 10:30 st-mary-of-the-assumption-oswego  “Before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The Confessions box says confession is 30 minutes before all Latin Masses; page 4 adds that it is every day and ends about 5 minutes before Mass. Per the policy a relative-to-Mass time with no clock time runs 30 minutes before the Mass and ends when it starts.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Sung Requiem for All Souls Day (Purgatorian Society)"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 3,
+          "said": "Monday, November 2nd at 6:00 p.m. (Sung Requiem for All Souls Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 3,
+          "said": "Monday, November 2nd at 6:00 p.m. (Sung Requiem for All Souls Day)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 3,
+          "said": "Monday, November 2nd at 6:00 p.m. (Sung Requiem for All Souls Day)"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "specific_date mass 2026-11-02 18:00 st-mary-of-the-assumption-oswego  “Sung Requiem for All Souls Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "specific_date mass 2026-11-02 18:00 st-mary-of-the-assumption-oswego  “Sung Requiem for All Souls Day”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "specific_date mass 2026-11-02 18:00 st-mary-of-the-assumption-oswego  “Sung Requiem Mass for All Souls Day”",
+          "page": 2
+        }
+      ],
+      "rationale": "A dated special Mass at a time outside the weekly schedule, open to the public; printed in all three bulletins; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Thursdays 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Thursdays 6:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Thursdays 6:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Thursday 18:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Thursday 18:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Thursday 18:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        }
+      ],
+      "rationale": "Confession is offered during adoration, which starts at 6:00 PM, but the bulletin gives no confession start or end of its own. Policy says an event including confession does not establish the component's times; the start borrowed from adoration is a judgment call. History has it in 3/3 bulletins.",
+      "question": "Record Thursday confession during Adoration, starting 6:00 PM with no end time?",
+      "options": [
+        {
+          "label": "Thursday 18:00 (during Adoration, no end time)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-oswego",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Thursday",
+            "date": null,
+            "start_time": "18:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": false,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:48:58Z"
+      }
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "During Adoration"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Fridays 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Fridays 12:00 p.m."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: ... During Thursday and Friday Adoration. / Adoration: Fridays 12:00 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Friday 12:00–13:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Friday 12:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Friday 12:00 st-mary-of-the-assumption-oswego  “During Adoration”",
+          "page": 1
+        }
+      ],
+      "rationale": "Confession is offered during adoration, which starts at 12:00 PM, but the bulletin gives no confession start or end of its own. Same judgment call as Thursday; history has it in 3/3 bulletins.",
+      "question": "Record Friday confession during Adoration, starting 12:00 PM with no end time?",
+      "options": [
+        {
+          "label": "Friday 12:00 (during Adoration, no end time)",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-oswego",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "During Adoration"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": false,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:02Z"
+      }
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Before the 6:00 PM Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses; First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "a3ab516d71e8",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses; First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ecc212f8c9e0",
+          "page": 1,
+          "said": "Confessions: 30 minutes before all Latin Masses; First Fridays: additional 6:00 p.m. Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "d00936ce72a7",
+          "said": "weekly confession Friday 17:30–18:00 st-mary-of-the-assumption-oswego  “First Fridays”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "weekly confession Friday 17:30–18:00 st-mary-of-the-assumption-oswego  “First Fridays only; before Latin Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "weekly confession Friday 17:30 st-mary-of-the-assumption-oswego  “First Fridays; before Latin Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "The bulletin does not say whether the first-Friday 6:00 PM Mass is a Latin Mass, so it is unclear that the 'before all Latin Masses' confession applies. The parish is a Latin Rite shrine and one history run recorded 5:30-6:00 PM, so the leaning is to include.",
+      "question": "Add first-Friday confession 5:30-6:00 PM before the additional 6:00 PM Mass?",
+      "options": [
+        {
+          "label": "First Fridays 5:30-6:00 PM",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-oswego",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "17:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Before the 6:00 PM Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": false,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2",
+        "at": "2026-10-15T11:49:09Z"
+      }
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "adoration",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction after the 11:00 AM High Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 3,
+          "said": "Sunday, October 25th ... 9:00 a.m. Low Mass, 11:00 High Mass featuring the \"Missa Brevis\" of Mariano Garau & Benediction of the Blessed Sacrament"
+        }
+      ],
+      "rationale": "Benediction of the Blessed Sacrament is announced for the Feast of Christ the King on Oct 25 but with no start time; it is part of the 11:00 High Mass announcement. Policy treats Benediction as Adoration, and a relative 'after' a weekend Mass would be one hour after the Mass starts (12:00 PM), a guess. Left out as the leaning because there is no definite time. Reviewer timing rule (2026-10-14), confirmed by the user pointing out this parish: record the Benediction associated with the 11:00 AM Sunday High Mass one hour after Mass starts, at 12:00 PM. No end time is stated.",
+      "question": "Add an Oct 25 Benediction (Adoration) at 12:00 PM, one hour after the 11:00 AM High Mass?",
+      "options": [
+        {
+          "label": "Oct 25 12:00 PM Benediction",
+          "leaning": false,
+          "entry": {
+            "church_slug": "st-mary-of-the-assumption-oswego",
+            "event_type": "adoration",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-25",
+            "start_time": "12:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Benediction after the 11:00 AM High Mass"
+          }
+        },
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:18:44Z"
+      }
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 2,
+          "said": "Monday, October 12th, Purgatorian Society Requiem Mass 7:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "specific_date mass 2026-10-12 07:30 st-mary-of-the-assumption-oswego  “Mass for the Purgatorian Society”",
+          "page": 2
+        }
+      ],
+      "rationale": "It is the regular Monday 7:30 AM Mass, offered for the Purgatorian Society; a special occasion at a regular weekly Mass is recorded only as the weekly slot.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "High Mass; Feast of Christ the King"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 3,
+          "said": "Sunday, October 25th ... 9:00 a.m. Low Mass, 11:00 High Mass (Feast of Christ the King, plenary indulgence)"
+        },
+        {
+          "source": "history",
+          "bulletin": "ecc212f8c9e0",
+          "said": "specific_date mass 2026-10-25 11:00 st-mary-of-the-assumption-oswego  “High Mass; Feast of Christ the King”",
+          "page": 3
+        }
+      ],
+      "rationale": "The Feast of Christ the King is celebrated at the regular Sunday 9:00 and 11:00 Masses; only the weekly slots are recorded (policy rule 7).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-of-the-assumption-oswego",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-05",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "High Mass at Saint Peter's Cemetery"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "d00936ce72a7",
+          "page": 3,
+          "said": "High Mass at Saint Peter's Cemetery on Thursday, November 5th at 9:30 a.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "a3ab516d71e8",
+          "said": "specific_date mass 2026-11-05 09:30 st-mary-of-the-assumption-oswego  “High Mass at Saint Peter's Cemetery”",
+          "page": 3
+        }
+      ],
+      "rationale": "Held at a cemetery, not at a listed church, so out of scope.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

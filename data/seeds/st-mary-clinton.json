@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-clinton",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:16Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-13T21:51:46Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Single-church parish (St. Mary's, Clinton). The page 1 box gives Saturday 5:30 PM and Sunday 9:00 AM Masses and Thursday 4:30-5:30 PM Confession. Wednesday and Friday 12:10 PM Masses appear only in the weekly intentions, in all three bulletins, and are settled as weekly by POLICY rule 4 and the website's Daily Mass Schedule. One question: a website-only Saturday confession after the vigil, leaning leave out.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "09798cb5b3ab945f001df5a8b9d3256c68f1f832272d4eb3b3e7d6f43df94e47",
+      "fetched_at": "2026-10-11T16:32:16Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "b75162f934312be374639433d5cee1c0293dd45fd5e00cd815d2d76fddf5429f",
+      "fetched_at": "2026-10-04T14:42:35Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "6331d54ffa90dff6f5388eb3ebd8dd2e9bf3d786e5c2dad0f553432bc267cdb4",
+      "fetched_at": "2026-09-28T00:14:21Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 1,
+          "said": "Weekend Mass: Saturday Vigil 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b75162f9",
+          "page": 1,
+          "said": "Weekend Mass: Saturday Vigil 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6331d54f",
+          "page": 1,
+          "said": "Weekend Mass: Saturday Vigil 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "09798cb5b3ab",
+          "said": "weekly mass Saturday 17:30 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b75162f93431",
+          "said": "weekly mass Saturday 17:30 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6331d54ffa90",
+          "said": "weekly mass Saturday 17:30 st-mary-clinton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box on page 1 of all three bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 1,
+          "said": "Weekend Mass: Sunday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b75162f9",
+          "page": 1,
+          "said": "Weekend Mass: Sunday 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6331d54f",
+          "page": 1,
+          "said": "Weekend Mass: Sunday 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "09798cb5b3ab",
+          "said": "weekly mass Sunday 09:00 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b75162f93431",
+          "said": "weekly mass Sunday 09:00 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6331d54ffa90",
+          "said": "weekly mass Sunday 09:00 st-mary-clinton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the Eucharistic Liturgies box on page 1 of all three bulletins read. The website's 7:00 AM 'early riser' Mass ran only July 6 to September 7, 2026, and no bulletin read prints it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": "17:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ** Thursday 4:30pm -5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b75162f9",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ** Thursday 4:30pm -5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6331d54f",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ** Thursday 4:30pm -5:30pm"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-clinton.com/",
+          "said": "Confession Times Thursday : 4:30 PM to 5:30 PM Fr. Caruso will be hearing confessions."
+        },
+        {
+          "source": "history",
+          "bulletin": "09798cb5b3ab",
+          "said": "weekly confession Thursday 16:30–17:30 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "b75162f93431",
+          "said": "weekly confession Thursday 16:30–17:30 st-mary-clinton",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "6331d54ffa90",
+          "said": "weekly confession Thursday 16:30–17:30 st-mary-clinton",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: printed in the page 1 box of all three bulletins; R6: the website's Mass Times page agrees. The '**' after the heading has no footnote anywhere in the bulletin.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 5,
+          "said": "Wed Oct 14th 12:10pm All Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b75162f9",
+          "page": 5,
+          "said": "Wed Oct7th 12:10pm All Parishioners"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6331d54f",
+          "page": 5,
+          "said": "Wed Sep 30th 12:10pm Rev. Canon John Mikalajunas"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-clinton.com/",
+          "said": "Daily Mass Schedule Wednesday 12:10 PM English"
+        },
+        {
+          "source": "history",
+          "bulletin": "09798cb5b3ab",
+          "said": "weekly mass Wednesday 12:10 st-mary-clinton",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b75162f93431",
+          "said": "specific_date mass 2026-10-07 12:10 st-mary-clinton",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "6331d54ffa90",
+          "said": "specific_date mass 2026-09-30 12:10 st-mary-clinton",
+          "page": 5
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 4: the Mass intentions on page 5 list a Wednesday 12:10 PM Mass in each of the three weeks read, none marked special; R6: the website's Daily Mass Schedule gives the same slot, so C1 (a Mass only in the intentions) does not apply. The schedule box on page 1 lists only weekend Masses. History stored these as dated; R7: the repeat across weeks makes them weekly. (The September 27 bulletin prints 'Fri Oct 1st'; October 1, 2026 is a Thursday, so it is the Friday of that week.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 5,
+          "said": "Fri Oct 16th 12:10pm Mary Harrigan"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b75162f9",
+          "page": 5,
+          "said": "Fri Oct 9th 12:10pm Robert Mickler"
+        },
+        {
+          "source": "agent",
+          "bulletin": "6331d54f",
+          "page": 5,
+          "said": "Fri Oct 1st 12:10pm Those buried in the Parish Cemetery"
+        },
+        {
+          "source": "website",
+          "url": "https://stmarys-clinton.com/",
+          "said": "Daily Mass Schedule Friday 12:10 PM English"
+        },
+        {
+          "source": "history",
+          "bulletin": "09798cb5b3ab",
+          "said": "specific_date mass 2026-10-16 12:10 st-mary-clinton",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "b75162f93431",
+          "said": "specific_date mass 2026-10-09 12:10 st-mary-clinton",
+          "page": 5
+        }
+      ],
+      "rationale": "POLICY, Weekly or dated rule 4: the Mass intentions on page 5 list a Friday 12:10 PM Mass in each of the three weeks read, none marked special; R6: the website's Daily Mass Schedule gives the same slot, so C1 (a Mass only in the intentions) does not apply. The schedule box on page 1 lists only weekend Masses. History stored these as dated; R7: the repeat across weeks makes them weekly. (The September 27 bulletin prints 'Fri Oct 1st'; October 1, 2026 is a Thursday, so it is the Friday of that week.)",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-clinton",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:30 PM Mass"
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://stmarys-clinton.com/special-masses-and-confession-schedule",
+          "said": "Confessions will be heard after Mass on Saturday evenings."
+        },
+        {
+          "source": "agent",
+          "bulletin": "09798cb5",
+          "page": 1,
+          "said": "Sacrament of Reconciliation ** Thursday 4:30pm -5:30pm (no Saturday confession printed)"
+        }
+      ],
+      "rationale": "R29: found only on the website's Special Masses and Confession Schedule page; none of the three bulletins prints it, and the same website's Mass Times page lists only Thursday 4:30-5:30 PM. If included, R10 puts it an hour after the 5:30 PM vigil starts, 6:30 PM. Leaning toward leaving it out: it has no time of its own, the page looks like older generic text, and the newest bulletin and the Mass Times page agree on Thursday only.\n\nReview 2026-10-22: Exclude website-only after-vigil confession: the specific Mass Times page and bulletins agree on Thursday only.",
+      "question": "Add Saturday Confession after the 5:30 PM vigil (website only)?",
+      "options": [
+        {
+          "label": "Leave out",
+          "leaning": true,
+          "entry": null
+        },
+        {
+          "label": "Saturdays 6:30 PM (after the vigil)",
+          "entry": {
+            "church_slug": "st-mary-clinton",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Saturday",
+            "date": null,
+            "start_time": "18:30",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 5:30 PM Mass"
+          }
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    }
+  ]
+}

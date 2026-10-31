@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-jerome",
+  "content_hash": "5c70701c5c9297de471f9d1754b69a40f8e63247915a00a357166c60a6fbe778",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-jerome/5c70701c5c92.pdf",
+  "pdf_sha256": "6347f40b46348cc967306e134752bc3a3b227080a9de715d9674bfa331988285",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 3,
+    "analyzed_page_count": 3,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 1623,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.3205237113784908,
+        "max_displayed_image_area_fraction_estimate": 0.3205237113784908,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 1357,
+        "native_char_height_p10_pt": 4.97698974609375,
+        "native_char_height_median_pt": 6.525001525878906,
+        "native_char_height_p10_low_detail_px": 3.2174479166666665,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.4421475935828877,
+        "projection_line_count": 4,
+        "line_pitch_px": 326.5,
+        "line_pitch_low_detail_px": 151.9709090909091,
+        "connected_component_count": 868,
+        "text_like_component_count": 818,
+        "text_like_height_p10_px": 4.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 7.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 3242,
+        "image_count": 2,
+        "image_coverage_fraction_estimate": 0.1511345068330362,
+        "max_displayed_image_area_fraction_estimate": 0.12708890374331547,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 2545,
+        "native_char_height_p10_pt": 5.20062255859375,
+        "native_char_height_median_pt": 6.69598388671875,
+        "native_char_height_p10_low_detail_px": 3.3620186237373737,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.20201069518716577,
+        "projection_line_count": 46,
+        "line_pitch_px": 14.5,
+        "line_pitch_low_detail_px": 6.749090909090909,
+        "connected_component_count": 2466,
+        "text_like_component_count": 2189,
+        "text_like_height_p10_px": 7.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 7.0,
+        "text_like_height_median_low_detail_px": 4.189090909090909
+      },
+      {
+        "page_number": 3,
+        "errors": [],
+        "text_chars": 4031,
+        "image_count": 1,
+        "image_coverage_fraction_estimate": 0.13248871991978609,
+        "max_displayed_image_area_fraction_estimate": 0.13248871991978609,
+        "width_pt": 612.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 3342,
+        "native_char_height_p10_pt": 4.97711181640625,
+        "native_char_height_median_pt": 5.6172027587890625,
+        "native_char_height_p10_low_detail_px": 3.217526830808081,
+        "render_width_px": 850,
+        "render_height_px": 1100,
+        "ink_density": 0.31778609625668447,
+        "projection_line_count": 2,
+        "line_pitch_px": 510.5,
+        "line_pitch_low_detail_px": 237.61454545454546,
+        "connected_component_count": 1900,
+        "text_like_component_count": 1777,
+        "text_like_height_p10_px": 7.0,
+        "text_like_height_median_px": 8.0,
+        "text_like_width_median_px": 7.0,
+        "text_like_height_median_low_detail_px": 3.7236363636363636
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 3,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 3,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 4.730025999997451,
+  "resumed": false,
+  "walltime_seconds": 4.762712600000668
+}

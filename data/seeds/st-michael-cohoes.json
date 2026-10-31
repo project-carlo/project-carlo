@@ -1,0 +1,891 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-michael-cohoes",
+  "status": "approved",
+  "as_of": "2026-10-11T16:32:42Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:12:51Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "St. Michael's lists its own schedule and Holy Trinity's (a separate known church with its own seed) in one page 1 box; only the St. Michael's lines are included, 13 weekly slots matching history in all three bulletins. Nothing is in doubt; the box's text layer is scrambled, so it was read from the page image.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "6002b7dc5fd6c9aed4dde8ccfa9d3d40f36fb4addeec5e4b42a8fab2cf52bd27",
+      "fetched_at": "2026-10-11T16:32:42Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c9575eadf6d853ba0bb5cf55c1247431621b1b84f64804ed38e68c72010f628f",
+      "fetched_at": "2026-10-04T14:57:12Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ad088bbe1f9a54a9253e9da4b8b322b42a7587c8f96c3636541bdb55bab64de3",
+      "fetched_at": "2026-09-28T22:07:18Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Monday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Monday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Monday 09:00 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Tuesday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Tuesday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Tuesday 09:00 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Monday, Tuesday, and Wednesday: St. Michael's Church 9:00 AM - Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Wednesday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Wednesday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Wednesday 09:00 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": "17:25",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Thursday St. Michael's Church 5:00-5:25 PM - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Thursday St. Michael's Church 5:00-5:25 PM - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Thursday St. Michael's Church 5:00-5:25 PM - Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly confession Thursday 17:00–17:25 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly confession Thursday 17:00–17:25 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly confession Thursday 17:00–17:25 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Thursday 5:30 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Thursday 5:30 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Thursday 5:30 PM - Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Thursday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Thursday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Thursday 17:30 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly adoration Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly adoration Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly adoration Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "19:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Thursday 6:00-7:00 PM - Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly confession Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly confession Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly confession Thursday 18:00–19:00 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly adoration Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly adoration Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly adoration Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "16:15",
+        "end_time": "17:15",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Friday St. Michael's Church 4:15-5:15 PM - Adoration and Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly confession Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly confession Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly confession Friday 16:15–17:15 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Friday St. Michael's Church 5:30 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Friday St. Michael's Church 5:30 PM - Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Friday St. Michael's Church 5:30 PM - Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Friday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Friday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Friday 17:30 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Saturday St. Michael's Church 5:30 PM - Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Saturday St. Michael's Church 5:30 PM - Vigil Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Saturday St. Michael's Church 5:30 PM - Vigil Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Saturday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Saturday 17:30 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Saturday 17:30 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:15",
+        "end_time": "08:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 8:15-8:45 AM - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 8:15-8:45 AM - Confession"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 8:15-8:45 AM - Confession"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly confession Sunday 08:15–08:45 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly confession Sunday 08:15–08:45 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly confession Sunday 08:15–08:45 st-michael-cohoes",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-michael-cohoes",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Some Polish"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 9:00 AM Mass; page 4 '(some Polish)'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 9:00 AM Mass; page 4 '(some Polish)'"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Sunday St. Michael's Church 9:00 AM Mass; page 4 '(some Polish)'"
+        },
+        {
+          "source": "history",
+          "bulletin": "6002b7dc5fd6",
+          "said": "weekly mass Sunday 09:00 st-michael-cohoes  “Some Polish”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "c9575eadf6d8",
+          "said": "weekly mass Sunday 09:00 st-michael-cohoes",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ad088bbe1f9a",
+          "said": "weekly mass Sunday 09:00 st-michael-cohoes  “Some Polish”",
+          "page": 1
+        }
+      ],
+      "rationale": "Printed under St. Michael's Church in the page 1 schedule box of all three bulletins (the text layer is scrambled; read from the rendered page); history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Church of the Holy Trinity: Mon-Wed 4:15-5:15 PM Adoration and Confession, 5:30 PM Mass; Fri 9:00 AM Mass; Sat 9:00 AM Mass, 2:45-3:45 PM Confession, 4:00 PM Vigil Mass; Sun 10:30 AM and 6:30 PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c9575eadf6d8",
+          "page": 1,
+          "said": "Church of the Holy Trinity: Mon-Wed 4:15-5:15 PM Adoration and Confession, 5:30 PM Mass; Fri 9:00 AM Mass; Sat 9:00 AM Mass, 2:45-3:45 PM Confession, 4:00 PM Vigil Mass; Sun 10:30 AM and 6:30 PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ad088bbe1f9a",
+          "page": 1,
+          "said": "Church of the Holy Trinity: Mon-Wed 4:15-5:15 PM Adoration and Confession, 5:30 PM Mass; Fri 9:00 AM Mass; Sat 9:00 AM Mass, 2:45-3:45 PM Confession, 4:00 PM Vigil Mass; Sun 10:30 AM and 6:30 PM Mass"
+        }
+      ],
+      "rationale": "The shared schedule box lists these under 'Church of the Holy Trinity', a separate known church (holy-trinity-cohoes, 122 Vliet Blvd) that has its own approved seed with the same slots. They are not St. Michael's; history has none of them for this parish.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "6002b7dc5fd6",
+          "page": 1,
+          "said": "Anointing of the Sick after weekend Masses on the second weekend of the month; Prayers to Our Lady of Fatima Oct 13 6pm; Rosary before 9am Mass; Church open hours"
+        }
+      ],
+      "rationale": "Anointing, Fatima prayers, Rosary and open-church hours are not Mass, Confession or Adoration with a defined time; nothing to record.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

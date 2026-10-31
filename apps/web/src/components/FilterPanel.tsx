@@ -32,7 +32,7 @@ interface FilterPanelProps {
   onClose: () => void;
   filters: FilterState;
   onChange: (filters: FilterState) => void;
-  /** Mapped churches matching the current filters, shown on the mobile close button. */
+  /** Churches matching the current filters within the map's view, shown on the mobile close button. */
   resultCount?: number;
 }
 
@@ -253,6 +253,9 @@ export function FilterPanel({
   if (isDesktop) {
     return (
       <section className="rise-in h-fit w-full overflow-hidden border border-rule-strong bg-paper/96 shadow-missal-panel backdrop-blur-sm">
+        {/* Names the panel, as the phone sheet's title does, and gives its
+         *  section headings an h2 to sit under. */}
+        <h2 className="sr-only">Filters</h2>
         <ScrollArea className="max-h-[calc(100svh-12rem)]">
           {panelBody}
         </ScrollArea>

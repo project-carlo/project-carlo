@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "churches": {
     "id": [7, 3],
     "parish_id": [1, 1],
@@ -28,11 +28,14 @@
     "cancelled": [false, false, true, false],
     "page_number": [null, 2, null, 3],
     "note": {"values": ["Midnight"], "codes": [null, null, 0, 0]},
-    "weeks_of_month": [["fourth", "last"], [], [], []],
+    "weeks_of_month": [["fourth", "last"], ["last"], [], []],
     "season_start_month": [10, null, null, null],
     "season_start_day": [null, null, null, null],
     "season_end_month": [6, null, null, null],
     "season_end_day": [15, null, null, null],
-    "cancels_event_id": [null, null, -118, null]
+    "cancels_event_id": [null, null, -118, null],
+    "exclude_weeks": [false, true, false, false],
+    "valid_from": [null, null, null, null],
+    "valid_until": [null, null, null, null]
   }
 }

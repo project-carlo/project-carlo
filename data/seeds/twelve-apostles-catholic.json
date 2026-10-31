@@ -1,0 +1,3271 @@
+{
+  "schema_version": 1,
+  "parish_slug": "twelve-apostles-catholic",
+  "status": "needs_review",
+  "as_of": "2026-10-25T13:17:41Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T01:53:53Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "Six churches in a family of parishes around LeRoy and Batavia. The p1 Mass and Confession boxes agree in all five bulletins read, and the weekday intentions match them. Included: Thursday Adoration at Our Lady of Mercy, a First Friday 10 AM Mass at Holy Name of Mary, a Nov 9 Brigid Mass and one-off Oct 25 7:30 AM Masses at Holy Name and St. Cecilia. Open: Tuesday Confession at Holy Name, given only as before and after Mass.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "c662ea9b1f34b206449fc6bb11c0f65b567c0b01b73bdbc08ba6bb067f57fd4c",
+      "fetched_at": "2026-10-25T13:17:41Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "970fd1ee9e866fe891fdebf1dca02cd03874481deb5b55174494086f745c6f6c",
+      "fetched_at": "2026-10-18T12:44:54Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "f088965da9015889a3354ffb110d65da45d29c146ac6f2fc75420f3f39075433",
+      "fetched_at": "2026-10-11T16:34:40Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "029fbee3e577ae423c924f697abc965e2f4a496d27c6a16af9096960443a98a7",
+      "fetched_at": "2026-10-04T14:30:35Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "ab7e027f3cba090d28bd193733d369c2b9ec7ca381e6fe3808a681004cf64116",
+      "fetched_at": "2026-09-26T18:55:09Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Monday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Monday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Monday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Monday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Monday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p3 intentions list a 7:30 a.m. Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Tuesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p3 intentions list a 7:30 a.m. Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Wednesday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p3 intentions list a 7:30 a.m. Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Thursday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Thursday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Thursday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Thursday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Thursday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p3 intentions list a 7:30 a.m. Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Daily Mass Monday-Friday 7:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Friday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Friday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Friday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Friday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Friday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p3 intentions list a 7:30 a.m. Mass each weekday.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Salve Mass"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Daily Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Daily Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Daily Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Daily Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Daily Mass 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 6,
+          "said": "9:00 am - Saturday Salve Mass in Honor of Our Holy Mother."
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Saturday 09:00 our-lady-of-mercy-leroy  “Salve Mass”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Saturday 09:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Saturday 09:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Saturday 09:00 our-lady-of-mercy-leroy  “Salve Mass in Honor of Our Holy Mother”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Saturday 09:00 our-lady-of-mercy-leroy  “Saturday Daily Mass”",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Saturday Vigil Mass: 4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Saturday 16:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 07:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; p3 intentions of Nov 1 list 7:30, 9:30 and 5:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 09:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; p3 intentions of Nov 1 list 7:30, 9:30 and 5:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish: Sunday Masses: 7:30am, 9:30am and 5:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 17:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 17:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 17:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 17:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 17:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; p3 intentions of Nov 1 list 7:30, 9:30 and 5:30 p.m.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Brigid Parish: Thursday Daily Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Brigid Parish: Thursday Daily Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Brigid Parish: Thursday Daily Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Brigid Parish: Thursday Daily Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Brigid Parish: Thursday Daily Mass 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Thursday 08:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Thursday 08:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Thursday 08:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Thursday 08:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Thursday 08:30 st-brigid-bergen",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-bergen",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "17:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Brigid Parish: Saturday Vigil Mass: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Brigid Parish: Saturday Vigil Mass: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Brigid Parish: Saturday Vigil Mass: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Brigid Parish: Saturday Vigil Mass: 5:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Brigid Parish: Saturday Vigil Mass: 5:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Saturday 17:00 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Saturday 17:00 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Saturday 17:00 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Saturday 17:00 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Saturday 17:00 st-brigid-bergen",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "[8:00 a.m. regular daily Mass at St. Joseph's site, Batavia]"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Monday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Monday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Monday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Monday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Monday 08:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p4 Nov 2 notice also calls the 8:00 a.m. Mass at St. Joseph regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "[8:00 a.m. regular daily Mass at St. Joseph's site, Batavia]"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Tuesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Tuesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Tuesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Tuesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Tuesday 08:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p4 Nov 2 notice also calls the 8:00 a.m. Mass at St. Joseph regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "[8:00 a.m. regular daily Mass at St. Joseph's site, Batavia]"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Wednesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Wednesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Wednesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Wednesday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Wednesday 08:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p4 Nov 2 notice also calls the 8:00 a.m. Mass at St. Joseph regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "[8:00 a.m. regular daily Mass at St. Joseph's site, Batavia]"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Thursday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Thursday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Thursday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Thursday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Thursday 08:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p4 Nov 2 notice also calls the 8:00 a.m. Mass at St. Joseph regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish, St. Joseph Site: Daily Mass Monday-Friday 8:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "[8:00 a.m. regular daily Mass at St. Joseph's site, Batavia]"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Friday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Friday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Friday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Friday 08:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Friday 08:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read; the p4 Nov 2 notice also calls the 8:00 a.m. Mass at St. Joseph regular.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Joseph Site: Saturday Vigil Mass: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Joseph Site: Saturday Vigil Mass: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Joseph Site: Saturday Vigil Mass: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Joseph Site: Saturday Vigil Mass: 4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Joseph Site: Saturday Vigil Mass: 4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Saturday 16:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Saturday 16:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Saturday 16:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Saturday 16:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Saturday 16:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 07:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 07:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 07:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 07:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 07:30 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Joseph Site: Sunday Masses: 7:30am and 10:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 10:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 10:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 10:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 10:00 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 10:00 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-oakfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Cecilia Site: Wednesday Daily Mass 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Cecilia Site: Wednesday Daily Mass 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Cecilia Site: Wednesday Daily Mass 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Cecilia Site: Wednesday Daily Mass 7:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Cecilia Site: Wednesday Daily Mass 7:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Wednesday 19:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Wednesday 19:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Wednesday 19:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Wednesday 19:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Wednesday 19:00 st-cecilia-oakfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-oakfield",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Cecilia Site: Sunday Mass: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Cecilia Site: Sunday Mass: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Cecilia Site: Sunday Mass: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Cecilia Site: Sunday Mass: 9:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Cecilia Site: Sunday Mass: 9:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 09:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 09:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 09:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 09:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 09:00 st-cecilia-oakfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read. Oct 18 and Oct 25 are one-off 7:30 a.m. exceptions (separate dated slot); Nov 1 returns to 9:00 on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-east-pembroke",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Tuesday Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Tuesday Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Tuesday Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Tuesday Mass 8:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Tuesday Mass 8:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Tuesday 08:30 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Tuesday 08:30 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Tuesday 08:30 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Tuesday 08:30 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Tuesday 08:30 holy-name-of-mary-east-pembroke",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-east-pembroke",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Sunday Mass: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Sunday Mass: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Sunday Mass: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Sunday Mass: 11:00am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Holy Name of Mary Site: Sunday Mass: 11:00am"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 11:00 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 11:00 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 11:00 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 11:00 holy-name-of-mary-east-pembroke",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 11:00 holy-name-of-mary-east-pembroke",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read. Oct 18 and Oct 25 are one-off 7:30 a.m. exceptions (separate dated slot); Nov 1 returns to 11:00 on p3.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "ascension-batavia",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Ascension Parish: Sunday Mass: 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Ascension Parish: Sunday Mass: 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Ascension Parish: Sunday Mass: 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Ascension Parish: Sunday Mass: 12:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Ascension Parish: Sunday Mass: 12:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly mass Sunday 12:00 ascension-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly mass Sunday 12:00 ascension-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly mass Sunday 12:00 ascension-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly mass Sunday 12:00 ascension-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly mass Sunday 12:00 ascension-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Family Mass Schedule box on p1, same in all five bulletins read. The p1 heading gives the parish office address (19 Sumner St.); the parish's church is Ascension Church, 135 Swan St (website, church list), the only listed Ascension church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "16:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Confessions: Our Lady of Mercy Parish - Saturday: 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Confessions: Our Lady of Mercy Parish - Saturday: 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Confessions: Our Lady of Mercy Parish - Saturday: 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Confessions: Our Lady of Mercy Parish - Saturday: 3:00-4:00pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Confessions: Our Lady of Mercy Parish - Saturday: 3:00-4:00pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Saturday 15:00–16:00 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "19:00",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Tuesday: 7:00-7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Tuesday: 7:00-7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Tuesday: 7:00-7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Tuesday: 7:00-7:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Tuesday: 7:00-7:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Tuesday 19:00–19:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Tuesday 19:00–19:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Tuesday 19:00–19:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Tuesday 19:00–19:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Tuesday 19:00–19:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Thursday: 6:00-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Thursday: 6:00-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Thursday: 6:00-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Thursday: 6:00-6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Our Lady of Mercy Parish - Thursday: 6:00-6:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Thursday 18:00–18:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Thursday 18:00–18:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Thursday 18:00–18:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Thursday 18:00–18:30 our-lady-of-mercy-leroy",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Thursday 18:00–18:30 our-lady-of-mercy-leroy",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-bergen",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": "16:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Brigid's Parish - Saturday: 4:00-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Brigid's Parish - Saturday: 4:00-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Brigid's Parish - Saturday: 4:00-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Brigid's Parish - Saturday: 4:00-4:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Brigid's Parish - Saturday: 4:00-4:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Saturday 16:00–16:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Saturday 16:00–16:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Saturday 16:00–16:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Saturday 16:00–16:30 st-brigid-bergen",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Saturday 16:00–16:30 st-brigid-bergen",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s30",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish at: St. Joseph site: Saturday: 3:00-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish at: St. Joseph site: Saturday: 3:00-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish at: St. Joseph site: Saturday: 3:00-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish at: St. Joseph site: Saturday: 3:00-3:30"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish at: St. Joseph site: Saturday: 3:00-3:30"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-batavia",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Saturday 15:00–15:30 st-joseph-batavia",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1, same in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s31",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-oakfield",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "St. Cecilia site: Wednesdays: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "St. Cecilia site: Wednesdays: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "St. Cecilia site: Wednesdays: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "St. Cecilia site: Wednesdays: 6:30pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "St. Cecilia site: Wednesdays: 6:30pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Wednesday 18:30 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Wednesday 18:30 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Wednesday 18:30 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Wednesday 18:30–19:00 st-cecilia-oakfield",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Wednesday 18:30 st-cecilia-oakfield",
+          "page": 1
+        }
+      ],
+      "rationale": "R1: Confessions box on p1; no end time printed (history's 6:30-7:00 reading in one bulletin is not in the text).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s32",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": "18:30",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Benediction"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "ADORATION: Thursdays at Our Lady of Mercy after 7:30am Daily Mass concluding at 6:30pm, with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "ADORATION: Thursdays at Our Lady of Mercy after 7:30am Daily Mass concluding at 6:30pm, with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "ADORATION: Thursdays at Our Lady of Mercy after 7:30am Daily Mass concluding at 6:30pm, with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "ADORATION: Thursdays at Our Lady of Mercy after 7:30am Daily Mass concluding at 6:30pm, with Benediction."
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "ADORATION: Thursdays at Our Lady of Mercy after 7:30am Daily Mass concluding at 6:30pm, with Benediction."
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly adoration Thursday 08:00–18:30 our-lady-of-mercy-leroy  “After 7:30 AM Mass, concluding with Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly adoration Thursday 08:00–18:30 our-lady-of-mercy-leroy  “After 7:30 AM Mass; concludes with Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly adoration Thursday 08:00–18:30 our-lady-of-mercy-leroy  “After 7:30 AM Mass; concludes with Benediction”",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly adoration Thursday 07:30–18:30 our-lady-of-mercy-leroy  “Begins after 7:30 AM Mass, ends with Benediction”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly adoration Thursday 07:30–18:30 our-lady-of-mercy-leroy  “Starts after 7:30am Mass; concludes with Benediction”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R1, R10: begins after the 7:30 AM weekday Mass with no clock time, so 8:00 AM (30 minutes after it starts, POLICY Times); the 6:30 PM end is printed. Benediction note per POLICY.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s33",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-east-pembroke",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "Next FIRST FRIDAY DEVOTION: Nov. 6 at Holy Name of Mary (E. Pembroke)-10am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "First Fridays: 10:00am Holy Name of Mary"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 3,
+          "said": "Holy Name of Mary site Friday, October 2 - First Friday 10:00 a.m. † George W. & Lorraine K. Parry By Estate"
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "specific_date mass 2026-10-02 10:00 holy-name-of-mary-east-pembroke  “First Friday Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R11, R12: a named First Friday service. The newest bulletin gives the 10:00 AM time and place but calls it a devotion; the Sept 27 bulletin (whose week held the Oct 2 first Friday) lists a Mass intention at 10:00 a.m. under HNM, so it is a Mass.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s34",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "First Fridays: 10:00am Holy Name of Mary, 6:30pm at Our Lady of Mercy"
+        },
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "Next FIRST FRIDAY DEVOTION: Nov. 6 at ... 10am and 6:30pm at Our Lady of Mercy (LeRoy)"
+        }
+      ],
+      "rationale": "R24: the 6:30 PM First Friday devotion at Our Lady of Mercy is listed under Rosary & Devotions and called a devotion; the Sept 27 intentions for Oct 2 show no 6:30 PM Mass at Our Lady of Mercy, so it is not a Mass, Confession or Adoration the bulletin names.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s35",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-bergen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-09",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "In memory of deceased members of the Ladies of Charity"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 5,
+          "said": "There will be a Mass in memory of deceased members of the Ladies of Charity at St. Brigid's Church on Monday, Nov. 9 at 6:30pm. All are welcome to attend"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "specific_date mass 2026-11-09 18:30 st-brigid-bergen  “In memory of deceased members of the Ladies of Charity”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass at a listed church, open to all ('All are welcome'), outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s36",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "holy-name-of-mary-east-pembroke",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 3,
+          "said": "Holy Name of Mary site Sunday, October 25 7:30 a.m. † Todd Egloff By Sheila"
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "specific_date mass 2026-10-25 07:30 holy-name-of-mary-east-pembroke",
+          "page": 3
+        }
+      ],
+      "rationale": "R19, R40: the Oct 18 bulletin lists a 7:30 a.m. Sunday Mass at HNM on Oct 25 (Oct 18 also read 7:30 in the Oct 11 bulletin); the newest bulletin starts its intentions on Oct 26 and does not contradict it. The standing 11:00 AM Sunday Mass stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s37",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-cecilia-oakfield",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-25",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 3,
+          "said": "Saint Cecilia site Sunday, October 25 7:30 a.m. † Richard Yunker By Estate"
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "specific_date mass 2026-10-25 07:30 st-cecilia-oakfield",
+          "page": 3
+        }
+      ],
+      "rationale": "R19, R40: the Oct 18 bulletin lists a 7:30 a.m. Sunday Mass at St. Cecilia on Oct 25 (Oct 18 also read 7:30 in the Oct 11 bulletin); the newest bulletin starts its intentions on Oct 26 and does not contradict it. The standing 9:00 AM Sunday Mass stays (R17).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s38",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "our-lady-of-mercy-leroy",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "07:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Daily Mass at St. Francis Cemetery, LeRoy"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "Monday, November 2: 7:30 a.m. Daily Mass at St. Francis Cemetery, LeRoy"
+        }
+      ],
+      "rationale": "R22, POLICY Churches: held at a cemetery, not a listed church (shared reason with the two other All Souls cemetery Masses).",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s39",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-brigid-bergen",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "08:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass at St. Brigid Cemetery, Bergen"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "8:30a.m. Mass at St. Brigid Cemetery, Bergen"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "specific_date mass 2026-11-02 08:30 st-brigid-bergen  “At St. Brigid Cemetery, Bergen”",
+          "page": 4
+        }
+      ],
+      "rationale": "R22, POLICY Churches: held at a cemetery, not a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s40",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-02",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "St. Joseph's Cemetery/Fr. Kelly Mausoleum"
+      },
+      "page": 4,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 4,
+          "said": "9:00a.m. at St. Joseph's Cemetery/Fr. Kelly Mausoleum, Batavia"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "specific_date mass 2026-11-02 09:00 st-joseph-batavia  “At St. Joseph’s Cemetery, Batavia”",
+          "page": 4
+        }
+      ],
+      "rationale": "R22, POLICY Churches: held at a cemetery, not a listed church.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s41",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-batavia",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:30",
+        "end_time": "13:00",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": null,
+      "sources": [
+        {
+          "source": "website",
+          "url": "https://www.the12apostles.org/mass-times",
+          "said": "Resurrection Parish at St. Joseph site: TUESDAY: after 8:00am Mass concluding at 1:00pm"
+        },
+        {
+          "source": "website",
+          "url": "https://www.the12apostles.org/adoration",
+          "said": "ST. JOSEPH SITE Check back for information on upcoming Adoration."
+        }
+      ],
+      "rationale": "R6, R25: the website's Mass-times page lists a Tuesday St. Joseph adoration, but its own Adoration page says to check back for upcoming Adoration, and none of the five bulletins lists it (the bulletin's ADORATION line names only Our Lady of Mercy), so it is not a current schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s42",
+      "decision": null,
+      "status": "needs_human",
+      "entry": null,
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "c662ea9b",
+          "page": 1,
+          "said": "Resurrection Parish at: Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "970fd1ee",
+          "page": 1,
+          "said": "Resurrection Parish at: Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f088965d",
+          "page": 1,
+          "said": "Resurrection Parish at: Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "029fbee3",
+          "page": 1,
+          "said": "Resurrection Parish at: Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "ab7e027f",
+          "page": 1,
+          "said": "Resurrection Parish at: Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "website",
+          "url": "https://www.the12apostles.org/reconciliation",
+          "said": "Holy Name of Mary site: Tuesdays: before and after Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "c662ea9b1f34",
+          "said": "weekly confession Tuesday 08:30 holy-name-of-mary-east-pembroke  “Before and after 8:30 AM Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "970fd1ee9e86",
+          "said": "weekly confession Tuesday 08:30 holy-name-of-mary-east-pembroke  “Before and after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "f088965da901",
+          "said": "weekly confession Tuesday 08:30 holy-name-of-mary-east-pembroke  “Before and after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "029fbee3e577",
+          "said": "weekly confession Tuesday 08:30 holy-name-of-mary-east-pembroke  “Before and after Mass”  (a different time)",
+          "page": 1
+        },
+        {
+          "source": "history",
+          "bulletin": "ab7e027f3cba",
+          "said": "weekly confession Tuesday 08:00 holy-name-of-mary-east-pembroke  “Before and after 8:30 AM Mass”  (a different time)",
+          "page": 1
+        }
+      ],
+      "rationale": "R33, R30: no clock time. POLICY (Times) works out only 'after' a weekday Mass (30 minutes after the 8:30 start = 9:00); 'before' gives no number of minutes, so one entry can only capture the after part. Leaning to include the 9:00 AM time per C5 (relative-to-Mass Confession is included at the time POLICY works out). History read 8:30 (and 8:00 once).",
+      "question": "Add a Tuesday Confession at Holy Name of Mary? The bulletin gives only 'before and after Mass' (the Tuesday Mass is 8:30 AM).",
+      "options": [
+        {
+          "label": "Tuesdays 9:00 AM, after the Mass",
+          "entry": {
+            "church_slug": "holy-name-of-mary-east-pembroke",
+            "event_type": "confession",
+            "event_kind": "weekly",
+            "day_of_week": "Tuesday",
+            "date": null,
+            "start_time": "09:00",
+            "end_time": null,
+            "cancelled": false,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "After the 8:30 AM Mass"
+          },
+          "leaning": true
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": null
+    }
+  ]
+}

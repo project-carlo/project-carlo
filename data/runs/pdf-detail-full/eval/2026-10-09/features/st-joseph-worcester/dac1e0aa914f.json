@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-worcester",
+  "content_hash": "dac1e0aa914f6fd33a6476f495bc93472a9fa1b5fb25788c4e7ffc38e8d0178f",
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-joseph-worcester/dac1e0aa914f.pdf",
+  "pdf_sha256": "34dd08be6cf6d72d72928aa0defdf4b84ef16541fc30e16c2556425217b9d739",
+  "settings": {
+    "dpi": 100.0,
+    "max_render_pixels": 2000000,
+    "max_pages": null
+  },
+  "status": "ok",
+  "features": {
+    "schema_version": 1,
+    "page_count": 2,
+    "analyzed_page_count": 2,
+    "truncated": false,
+    "settings": {
+      "dpi": 100.0,
+      "low_detail_max_side": 512,
+      "ink_threshold": 200,
+      "max_render_pixels": 2000000
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "errors": [],
+        "text_chars": 6702,
+        "image_count": 7,
+        "image_coverage_fraction_estimate": 0.029415975350935836,
+        "max_displayed_image_area_fraction_estimate": 0.012530010068000271,
+        "width_pt": 1224.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 5230,
+        "native_char_height_p10_pt": 5.14459228515625,
+        "native_char_height_median_pt": 5.8800048828125,
+        "native_char_height_p10_low_detail_px": 2.151986315359477,
+        "render_width_px": 1700,
+        "render_height_px": 1100,
+        "ink_density": 0.14655561497326203,
+        "projection_line_count": 95,
+        "line_pitch_px": 8.5,
+        "line_pitch_low_detail_px": 2.5599999999999996,
+        "connected_component_count": 3984,
+        "text_like_component_count": 3877,
+        "text_like_height_p10_px": 3.0,
+        "text_like_height_median_px": 9.0,
+        "text_like_width_median_px": 7.0,
+        "text_like_height_median_low_detail_px": 2.7105882352941175
+      },
+      {
+        "page_number": 2,
+        "errors": [],
+        "text_chars": 5928,
+        "image_count": 7,
+        "image_coverage_fraction_estimate": 0.16382045066510642,
+        "max_displayed_image_area_fraction_estimate": 0.08273886865835589,
+        "width_pt": 1224.0,
+        "height_pt": 792.0,
+        "render_dpi": 100.0,
+        "native_height_sample_count": 4835,
+        "native_char_height_p10_pt": 4.9315185546875,
+        "native_char_height_median_pt": 5.60400390625,
+        "native_char_height_p10_low_detail_px": 2.062857434640523,
+        "render_width_px": 1700,
+        "render_height_px": 1100,
+        "ink_density": 0.2446614973262032,
+        "projection_line_count": 40,
+        "line_pitch_px": 9.0,
+        "line_pitch_low_detail_px": 2.7105882352941175,
+        "connected_component_count": 3379,
+        "text_like_component_count": 3117,
+        "text_like_height_p10_px": 5.0,
+        "text_like_height_median_px": 8.0,
+        "text_like_width_median_px": 8.0,
+        "text_like_height_median_low_detail_px": 2.409411764705882
+      }
+    ]
+  },
+  "scan_risk_routing": {
+    "detail": "low",
+    "reasons": [],
+    "scan_small_page_numbers": [],
+    "scan_page_numbers": [],
+    "early_scan_small_page_numbers": [],
+    "error_page_numbers": [],
+    "analyzed_page_count": 2,
+    "thresholds": {
+      "first_pages": 3,
+      "min_scan_coverage": 0.7,
+      "text_poor_chars": 80,
+      "min_text_like_components": 100,
+      "min_ink_density": 0.015,
+      "max_ink_density": 0.35,
+      "max_component_height_low_detail_px": 6.0,
+      "max_line_pitch_low_detail_px": 12.0
+    },
+    "pages": [
+      {
+        "page_number": 1,
+        "scan_small_text": false,
+        "reasons": []
+      },
+      {
+        "page_number": 2,
+        "scan_small_text": false,
+        "reasons": []
+      }
+    ]
+  },
+  "extraction_walltime_seconds": 4.348464000002423,
+  "resumed": false,
+  "walltime_seconds": 4.4121957999959704
+}

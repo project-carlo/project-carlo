@@ -1,0 +1,1169 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-mary-ballston-spa",
+  "status": "ready",
+  "as_of": "2026-10-25T13:24:28Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-26T12:02:44Z",
+  "reviewer": null,
+  "approved_at": null,
+  "summary": "St. Mary's Ballston Spa and its Galway mission share one bulletin whose page 5 schedule box is the same in all five issues read. Weekend, weekday, Confession, the second-Wednesday Holy Hour and the Galway Sunday Mass are settled from it, plus the November 7 Memorial Mass. The 12:10 PM weekday time during Lent and Advent is not expressible and left to update mode. No open questions.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "a095ae8486145f273a3e78ddbf1c51deb44c8a06ea7197cff0383e3e37d237a5",
+      "fetched_at": "2026-10-25T13:24:28Z",
+      "published_date": "2026-10-25",
+      "read": true
+    },
+    {
+      "content_hash": "67d1f99d9b3ec67badf805a01b427db2625c772fa64b126e3f08786c618456fb",
+      "fetched_at": "2026-10-18T12:52:45Z",
+      "published_date": "2026-10-18",
+      "read": true
+    },
+    {
+      "content_hash": "7d87ae5eab2414216592a9e004fd71e391a2eb58de7a715bba30051b9e52e4d7",
+      "fetched_at": "2026-10-11T16:38:38Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "f7ea450283195d58436d056e3c9f7d904fb05a342a9b4fa296ff6865054aef6e",
+      "fetched_at": "2026-10-04T14:55:53Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "bf31631d0b4e4af5ff7285d62f0436b41d11e90230ed25c83164824684252302",
+      "fetched_at": "2026-09-28T22:05:53Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Sat. Vigil 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Sat. Vigil 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Sat. Vigil 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Sat. Vigil 4:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Sat. Vigil 4:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Saturday 16:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Saturday 16:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Saturday 16:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Saturday 16:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Saturday 16:00 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Sunday 08:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Sunday 08:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Sunday 08:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Sunday 08:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Sunday 08:00 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read; the intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Sunday 10:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Sunday 10:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Sunday 10:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Sunday 10:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Sunday 10:00 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read; the intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Sunday 8:00AM, 10:00AM, 12:00PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Sunday 12:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Sunday 12:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Sunday 12:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Sunday 12:00 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Sunday 12:00 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read; the intentions list the same three Sunday Masses.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Monday 07:45 st-mary-ballston-spa  “12:10 PM during Lent and Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Monday 07:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Monday 07:45 st-mary-ballston-spa  “12:10 PM during Lent & Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Monday 07:45 st-mary-ballston-spa  “During Lent and Advent at 12:10 PM”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Monday 07:45 st-mary-ballston-spa  “Rosary after Mass; 12:10 PM during Lent and Advent”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R20, R33: 7:45 AM is the current time in all five bulletins and the intentions for Oct 26, 28 and 29. The box also moves these Masses to 12:10 PM during Lent and Advent. Those seasons float and no dates are printed yet (Advent starts Nov 29), so the file cannot say them: the 12:10 PM change is left out and update mode will read the bulletins that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Wednesday 07:45 st-mary-ballston-spa  “12:10 PM during Lent and Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Wednesday 07:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Wednesday 07:45 st-mary-ballston-spa  “12:10 PM during Lent & Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Wednesday 07:45 st-mary-ballston-spa  “During Lent and Advent at 12:10 PM”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Wednesday 07:45 st-mary-ballston-spa  “Rosary after Mass; 12:10 PM during Lent and Advent”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R20, R33: 7:45 AM is the current time in all five bulletins and the intentions for Oct 26, 28 and 29. The box also moves these Masses to 12:10 PM during Lent and Advent. Those seasons float and no dates are printed yet (Advent starts Nov 29), so the file cannot say them: the 12:10 PM change is left out and update mode will read the bulletins that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Mon., Wed. & Thurs.. 7:45AM (during Lent & Advent 12:10PM)"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Thursday 07:45 st-mary-ballston-spa  “12:10 PM during Lent and Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Thursday 07:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Thursday 07:45 st-mary-ballston-spa  “12:10 PM during Lent & Advent”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Thursday 07:45 st-mary-ballston-spa  “During Lent and Advent at 12:10 PM”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Thursday 07:45 st-mary-ballston-spa  “Rosary after Mass; 12:10 PM during Lent and Advent”",
+          "page": 5
+        }
+      ],
+      "rationale": "R1, R20, R33: 7:45 AM is the current time in all five bulletins and the intentions for Oct 26, 28 and 29. The box also moves these Masses to 12:10 PM during Lent and Advent. Those seasons float and no dates are printed yet (Advent starts Nov 29), so the file cannot say them: the 12:10 PM change is left out and update mode will read the bulletins that show it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Tues. 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Tues. 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Tues. 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Tues. 5:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Tues. 5:30PM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Tuesday 17:30 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Tuesday 17:30 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Tuesday 17:30 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Tuesday 17:30 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Tuesday 17:30 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Mass Schedule box of all five bulletins read; Tue Oct 27 5:30 PM is in the newest intentions.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-galway",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "ST. MARY'S MISSION, GALWAY, NY SUNDAY MASS 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "ST. MARY'S MISSION, GALWAY, NY SUNDAY MASS 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "ST. MARY'S MISSION, GALWAY, NY SUNDAY MASS 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "ST. MARY'S MISSION, GALWAY, NY SUNDAY MASS 9:30AM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "ST. MARY'S MISSION, GALWAY, NY SUNDAY MASS 9:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly mass Sunday 09:30 st-mary-galway",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly mass Sunday 09:30 st-mary-galway",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly mass Sunday 09:30 st-mary-galway",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly mass Sunday 09:30 st-mary-galway",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly mass Sunday 09:30 st-mary-galway",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: the mission church is on the church list; its Sunday Mass is printed in all five bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "After the 5:30 PM Mass"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Reconciliation (Confession) Tues. after 5:30PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Reconciliation (Confession) Tues. after 5:30PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Reconciliation (Confession) Tues. after 5:30PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Reconciliation (Confession) Tues. after 5:30PM Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Reconciliation (Confession) Tues. after 5:30PM Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly confession Tuesday 18:00 st-mary-ballston-spa  “Following 5:30 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly confession Tuesday 18:00 st-mary-ballston-spa  “Following 5:30 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly confession Tuesday 18:00 st-mary-ballston-spa  “After 5:30 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly confession Tuesday 18:00 st-mary-ballston-spa  “After 5:30 PM Mass”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly confession Tuesday 18:00 st-mary-ballston-spa  “Following 5:30 PM Mass”",
+          "page": 5
+        }
+      ],
+      "rationale": "R10, POLICY Times: no clock time is given, so it starts 30 minutes after the weekday Mass starts (6:00 PM) with no end time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:00",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Sat. 3:00-3:45PM, or by apt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Sat. 3:00-3:45PM, or by apt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Sat. 3:00-3:45PM, or by apt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Sat. 3:00-3:45PM, or by apt."
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Sat. 3:00-3:45PM, or by apt."
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-ballston-spa",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "bf31631d0b4e",
+          "said": "weekly confession Saturday 15:00–15:45 st-mary-ballston-spa",
+          "page": 5
+        }
+      ],
+      "rationale": "R1: printed in the Reconciliation line of all five bulletins; 'or by apt.' adds no time.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "18:30",
+        "end_time": "19:30",
+        "cancelled": false,
+        "weeks_of_month": [
+          "second"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Holy Hour"
+      },
+      "page": 5,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 5,
+          "said": "Holy Hour 2nd Wednesday of the month 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 5,
+          "said": "Holy Hour 2nd Wednesday of the month 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 5,
+          "said": "Holy Hour 2nd Wednesday of the month 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 5,
+          "said": "Holy Hour 2nd Wednesday of the month 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "bf31631d",
+          "page": 5,
+          "said": "Holy Hour 2nd Wednesday of the month 6:30PM"
+        },
+        {
+          "source": "agent",
+          "bulletin": "7d87ae5e",
+          "page": 3,
+          "said": "Holy Hour 2nd Wed. of the month Oct. 14 6:30 - 7:30PM Join us as we adore Jesus in the Holy Sacrament of the Eucharist"
+        },
+        {
+          "source": "agent",
+          "bulletin": "f7ea4502",
+          "page": 3,
+          "said": "Holy Hour 2nd Wed. of the month Oct. 14 6:30 - 7:30PM Join us as we adore Jesus in the Holy Sacrament of the Eucharist"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "weekly adoration Wednesday 18:30 st-mary-ballston-spa  “2nd Wednesday of the month”",
+          "page": 5
+        },
+        {
+          "source": "history",
+          "bulletin": "7d87ae5eab24",
+          "said": "weekly adoration Wednesday 18:30–19:30 st-mary-ballston-spa  “2nd Wednesday of the month”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "f7ea45028319",
+          "said": "specific_date adoration 2026-10-14 18:30–19:30 st-mary-ballston-spa  “Holy Hour”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R11, POLICY (Holy Hour is Adoration): the newest box prints the named monthly service; the newest week holds no 2nd Wednesday (Oct 28 is the last), but the Oct 11 and Oct 4 issues announce Oct 14, a 2nd Wednesday, with the 6:30-7:30 PM hours. The box does not name the church; it is the parish's own monthly Holy Hour in Ballston Spa.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-mary-ballston-spa",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-07",
+        "start_time": "09:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Memorial Mass"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 3,
+          "said": "2026 MEMORIAL MASS Sat., November 7 at 9:30AM St. Mary's Church, Ballston Spa. All parishioners who have lost a loved one are invited to attend this Holy Sacrifice of the Mass."
+        },
+        {
+          "source": "agent",
+          "bulletin": "67d1f99d",
+          "page": 3,
+          "said": "The Funeral Ministry/Bereavement Support Team will be honoring all who have died this year at a Memorial Mass Sat., November 7 at 9:30AM"
+        },
+        {
+          "source": "history",
+          "bulletin": "a095ae848614",
+          "said": "specific_date mass 2026-11-07 09:30 st-mary-ballston-spa  “Memorial Mass”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "67d1f99d9b3e",
+          "said": "specific_date mass 2026-11-07 09:30 st-mary-ballston-spa  “Memorial Mass”",
+          "page": 3
+        }
+      ],
+      "rationale": "R1, R16: a dated Mass on or after as_of at a listed church. It is a parish-wide memorial for all who have died this year with an invitation to every bereaved parishioner, not one person's memorial, so POLICY does not close it.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 2,
+          "said": "Rosary prayer after Mass Mon., Wed., & Thurs."
+        }
+      ],
+      "rationale": "R24: a Rosary after Mass is a devotion, not Mass, Confession or Adoration.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": null,
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "a095ae84",
+          "page": 2,
+          "said": "Fri., Oct. 31 No Mass; Saturday, Nov. 1, Vigil Mass 4:00 PM; Sunday, Nov. 2, All Saints 8:00 AM, 10:00 AM, 12 Noon"
+        }
+      ],
+      "rationale": "R17, R39: the intentions page labels its last days Oct 31, Nov 1 and Nov 2, but 2026 weekdays do not match (Oct 31 is a Saturday, All Saints is Sunday Nov 1), so it reused another year's calendar. 'Fri No Mass' matches the usual schedule, which has no Friday Mass. The Saturday vigil and three Sunday Masses are at the regular times, so they add nothing beyond the weekly slots, and no dated entries or cancellations are made.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -27,6 +27,7 @@
     "schedule": "uv run python -m pdf_extract schedule",
     "diocese": "uv run python -m pdf_extract diocese",
     "seed": "uv run python -m pdf_extract seed",
+    "factory": "uv run --group factory python -m pdf_extract factory",
     "test": "uv run pytest",
     "lint": "uv run ruff check .",
     "extract:web": "uv run python -m pdf_extract extract-frontend-db",

@@ -1,0 +1,90 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "our-lady-of-hope-copake-falls",
+  "content_hash": "70c2c6529fb5b97ba8a95b1dc803c002be14207d5d085a08ff89c564caca6714",
+  "source_url": "https://parishesonline.com/publication-page/our-lady-of-hope-12517?selectedPublication=https://container.parishesonline.com/bulletins/04/0813/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:49:47Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "our-lady-of-hope-copake-falls",
+      "name": "Our Lady of Hope",
+      "address": "8074 State Rte. 22, Copake Falls, NY 12517"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/70c2c6529fb5b97ba8a95b1dc803c002be14207d5d085a08ff89c564caca6714-75c40a03f4de.json",
+    "modified_at": "2026-10-04T15:20:44.586000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/our-lady-of-hope-copake-falls/70c2c6529fb5.pdf",
+  "pdf_sha256": "b0bf62fbec0b3fd6dc7cf2a02940e2d90a9972fdf91e02ce0e77e96c5482edfe",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "5:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "our-lady-of-hope-copake-falls",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "17:00",
+      "end_time": "18:00",
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 2,
+      "note": "Bilingual (English and Spanish)",
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "5:00 PM",
+        "end_time": "6:00 PM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2468,
+    "output_tokens": 393
+  }
+}

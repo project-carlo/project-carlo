@@ -1,0 +1,202 @@
+{
+  "cases": [
+    {
+      "parish": "st-vincent-de-paul-blessed-sacrament-vestal",
+      "calls": [
+        342
+      ],
+      "retain_entry_ids": [
+        1845
+      ],
+      "absent": [
+        {
+          "event_type": "mass",
+          "date": "2026-10-31",
+          "start_time": 960,
+          "cancelled": 1
+        }
+      ]
+    },
+    {
+      "parish": "holy-spirit-st-josephs",
+      "calls": [
+        161
+      ],
+      "present": [
+        {
+          "event_type": "adoration",
+          "day_of_week": "Friday",
+          "start_time": 600,
+          "end_time": 1200
+        }
+      ]
+    },
+    {
+      "parish": "transfiguration-syracuse",
+      "calls": [
+        346
+      ],
+      "retain_entry_ids": [
+        1901,
+        1905
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "date": "2026-10-28",
+          "start_time": 390
+        },
+        {
+          "event_type": "confession",
+          "date": "2026-10-28",
+          "start_time": 370,
+          "end_time": 385
+        }
+      ],
+      "absent": [
+        {
+          "event_type": "mass",
+          "date": "2026-10-29",
+          "start_time": 390,
+          "cancelled": 1
+        },
+        {
+          "event_type": "mass",
+          "date": "2026-10-30",
+          "start_time": 390,
+          "cancelled": 1
+        }
+      ]
+    },
+    {
+      "parish": "st-michael-the-archangel-south-glens-falls",
+      "calls": [
+        302
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "date": "2026-11-02",
+          "start_time": 1140
+        }
+      ],
+      "required": false,
+      "purpose": "Recall control: a source-specific data repair is implemented; prompt-only recall is not claimed fixed."
+    },
+    {
+      "parish": "catholic-community-st-stephen-st-patrick-whitney-point",
+      "calls": [
+        148
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "day_of_week": "Saturday",
+          "start_time": 960,
+          "valid_from": "2026-10-31"
+        },
+        {
+          "event_type": "mass",
+          "day_of_week": "Saturday",
+          "start_time": 1020,
+          "valid_until": "2026-10-30"
+        },
+        {
+          "event_type": "confession",
+          "day_of_week": "Saturday",
+          "start_time": 900,
+          "end_time": 945,
+          "valid_from": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "parish": "sacred-heart-lake-george",
+      "calls": [
+        114
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "day_of_week": "Wednesday",
+          "valid_from": "2026-11-01",
+          "valid_until": null
+        },
+        {
+          "event_type": "mass",
+          "day_of_week": "Friday",
+          "valid_from": "2026-11-01",
+          "valid_until": null
+        },
+        {
+          "event_type": "adoration",
+          "day_of_week": "Wednesday",
+          "valid_from": "2026-11-01",
+          "valid_until": null
+        }
+      ],
+      "absent": [
+        {
+          "valid_from": "2027-06-01"
+        }
+      ]
+    },
+    {
+      "parish": "st-bartholomew-norwich",
+      "calls": [
+        123
+      ],
+      "present": [
+        {
+          "event_type": "mass",
+          "day_of_week": "Monday",
+          "start_time": 540,
+          "valid_from": "2026-11-02"
+        },
+        {
+          "event_type": "mass",
+          "day_of_week": "Tuesday",
+          "start_time": 540,
+          "valid_until": "2026-11-01"
+        }
+      ]
+    },
+    {
+      "parish": "sacred-heart-divine-mercy-cicero",
+      "calls": [
+        186
+      ],
+      "absent": [
+        {
+          "event_type": "confession",
+          "date": "2026-11-15",
+          "start_time": 840
+        }
+      ],
+      "present": [
+        {
+          "event_type": "confession",
+          "date": "2026-11-15",
+          "start_time": 120
+        }
+      ],
+      "purpose": "Copies the printed 2 AM faithfully rather than guessing 2 PM."
+    },
+    {
+      "parish": "st-jerome",
+      "calls": [
+        207
+      ],
+      "retain_entry_ids": [
+        1996
+      ],
+      "absent": [
+        {
+          "event_type": "adoration",
+          "date": "2026-10-31",
+          "start_time": 900
+        }
+      ]
+    }
+  ]
+}

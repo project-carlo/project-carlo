@@ -1,0 +1,108 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "st-john-the-evangelist-schenectady",
+  "content_hash": "eff15d7e78a5b863882c3c170ba7b574ea8bdad5d1a72daa0e37d9458dcb55e1",
+  "source_url": "https://sjechurch.com/bulletin/09-27-26.pdf",
+  "fetched_at": "2026-09-28T22:03:37Z",
+  "reference_date": "2026-09-28",
+  "churches": [
+    {
+      "slug": "st-john-the-evangelist-schenectady",
+      "name": "St. John the Evangelist",
+      "address": "812 Union St., Schenectady, NY 12308"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/eff15d7e78a5b863882c3c170ba7b574ea8bdad5d1a72daa0e37d9458dcb55e1-afa27e86597e.json",
+    "modified_at": "2026-09-28T22:15:42.720000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/st-john-the-evangelist-schenectady/eff15d7e78a5.pdf",
+  "pdf_sha256": "84701c67c7ee0152b61a3bac58e8e4bc9c030751df998584754237f5911d8ff1",
+  "label_status": "unlabeled",
+  "published_date": "2026-09-27",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-john-the-evangelist-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-evangelist-schenectady",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Children’s Liturgy of the Word; monthly Children's Mass",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-evangelist-schenectady",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-09-30",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-09-30",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-evangelist-schenectady",
+      "event_type": "mass",
+      "event_kind": "specific_date",
+      "day_of_week": null,
+      "date": "2026-10-01",
+      "start_time": "09:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 4,
+      "note": null,
+      "raw": {
+        "date": "2026-10-01",
+        "start_time": "9:00 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4042,
+    "output_tokens": 484
+  }
+}

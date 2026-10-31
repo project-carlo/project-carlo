@@ -1,0 +1,579 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-joseph-cathedral-buffalo",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:16Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-11T21:49:05Z",
+  "reviewer": "lyonsl2",
+  "approved_at": "2026-10-14T21:06:16Z",
+  "summary": "Small single-church parish (the Cathedral). The page 3 sidebar of the newest bulletin gives a clean weekly Mass and Reconciliation schedule that matches history in all 3 bulletins; the Oct 12 Columbus Day 12:10 Mass is cancelled. Holy days are 'as announced', so none are recorded.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "462f1abfcc61d5203bad179f4f54ccefd1c009ae0a8ed06547da96ab93b968f9",
+      "fetched_at": "2026-10-11T16:34:16Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "c2d93959b3e587dd16ee1ba26b37aff2dd1081cf61b4444a7b5132d58b35817d",
+      "fetched_at": "2026-10-04T14:28:07Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "d8657ffc344e01f7c1c9bdbe6387364ca1ec8d4f4baba26086adde2531c7e923",
+      "fetched_at": "2026-09-26T18:54:37Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Saturday (Vigil Mass) 4:30 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Saturday 16:30 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Saturday 16:30 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Saturday 16:30 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Choir"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Sunday (Choir) 10:30 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Sunday 10:30 st-joseph-cathedral-buffalo  “Choir”",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Sunday 10:30 st-joseph-cathedral-buffalo  “Choir”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Sunday 10:30 st-joseph-cathedral-buffalo  “With Cathedral Choir; streamed on YouTube”",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Monday / Wednesday-Thursday-Friday at 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Monday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Monday 12:10 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Monday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Monday / Wednesday-Thursday-Friday at 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Wednesday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Wednesday 12:10 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Wednesday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Monday / Wednesday-Thursday-Friday at 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Thursday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Thursday 12:10 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Thursday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Monday / Wednesday-Thursday-Friday at 12:10 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Friday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Friday 12:10 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Friday 12:10 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "17:15",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Tuesday at 5:15 pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly mass Tuesday 17:15 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly mass Tuesday 17:15 st-joseph-cathedral-buffalo",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly mass Tuesday 17:15 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Reconciliation Wednesday & Friday at 11:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly confession Wednesday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly confession Wednesday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly confession Wednesday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:45",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Reconciliation Wednesday & Friday at 11:45 am"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly confession Friday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly confession Friday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly confession Friday 11:45 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 3,
+          "said": "Reconciliation Saturday at 4 pm (or by appointment)"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "weekly confession Saturday 16:00 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "c2d93959b3e5",
+          "said": "weekly confession Saturday 16:00 st-joseph-cathedral-buffalo",
+          "page": 3
+        },
+        {
+          "source": "history",
+          "bulletin": "d8657ffc344e",
+          "said": "weekly confession Saturday 16:00 st-joseph-cathedral-buffalo",
+          "page": 3
+        }
+      ],
+      "rationale": "Printed in the Cathedral Masses/Reconciliation sidebar on page 3 of the newest bulletin; history agrees in all 3 bulletins. The 'or by appointment' alternative is not recorded; only the 4 pm time is.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-joseph-cathedral-buffalo",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "12:10",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day / Indigenous Peoples' Day"
+      },
+      "page": 1,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 1,
+          "said": "Monday, October 12th Columbus Day/Indigenous Peoples' Day. No 12:10 pm Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "462f1abf",
+          "page": 2,
+          "said": "Holiday observed Oct 12th: there will be no 12:10 pm Mass and our office will be closed"
+        },
+        {
+          "source": "history",
+          "bulletin": "462f1abfcc61",
+          "said": "specific_date mass 2026-10-12 12:10 st-joseph-cathedral-buffalo  CANCELLED; “Columbus Day / Indigenous Peoples' Day”",
+          "page": 1
+        }
+      ],
+      "rationale": "Newest bulletin cancels the weekly Monday 12:10 Mass for Oct 12, after as_of.",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

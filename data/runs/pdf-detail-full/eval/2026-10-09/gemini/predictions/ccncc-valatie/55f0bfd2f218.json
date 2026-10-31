@@ -1,0 +1,194 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "ccncc-valatie",
+  "content_hash": "55f0bfd2f21820efe68593270182c9d11db543055eef9b10086eb64b488bbc39",
+  "source_url": "https://parishesonline.com/publication-page/st-john-the-baptist-st-james-and-st-joseph-churches?selectedPublication=https://container.parishesonline.com/bulletins/03/0063/20261004B.pdf",
+  "fetched_at": "2026-10-04T14:46:14Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "st-james-chatham",
+      "name": "St. James",
+      "address": "117 Hudson Ave., Chatham, NY 12037"
+    },
+    {
+      "slug": "st-john-the-baptist-valatie",
+      "name": "St. John the Baptist",
+      "address": "1025 Kinderhook St., Valatie, NY 12184"
+    },
+    {
+      "slug": "st-joseph-stuyvesant",
+      "name": "Church of St. Joseph",
+      "address": "1820 Route 9, Stuyvesant, NY 12173"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/55f0bfd2f21820efe68593270182c9d11db543055eef9b10086eb64b488bbc39-f0f8f7fb09a1.json",
+    "modified_at": "2026-10-04T15:19:24.867000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/ccncc-valatie/55f0bfd2f218.pdf",
+  "pdf_sha256": "07ebcfc23a0c9c1a9aab82757f52e701743c113e268b44e9ea395cf0b848f4de",
+  "label_status": "unlabeled",
+  "published_date": "2026-10-04",
+  "wrong_bulletin": false,
+  "events": [
+    {
+      "church_slug": "st-joseph-stuyvesant",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Saturday",
+      "date": null,
+      "start_time": "16:00",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Saturday",
+        "start_time": "4:00 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-valatie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "08:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "8:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-chatham",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-stuyvesant",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Sunday",
+      "date": null,
+      "start_time": "12:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Spanish",
+      "raw": {
+        "day_of_week": "Sunday",
+        "start_time": "12:30 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-stuyvesant",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:05",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:05 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-john-the-baptist-valatie",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Thursday",
+      "date": null,
+      "start_time": "12:05",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Thursday",
+        "start_time": "12:05 PM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-james-chatham",
+      "event_type": "mass",
+      "event_kind": "weekly",
+      "day_of_week": "Friday",
+      "date": null,
+      "start_time": "10:30",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": null,
+      "raw": {
+        "day_of_week": "Friday",
+        "start_time": "10:30 AM"
+      },
+      "problems": []
+    },
+    {
+      "church_slug": "st-joseph-stuyvesant",
+      "event_type": "adoration",
+      "event_kind": "weekly",
+      "day_of_week": "Wednesday",
+      "date": null,
+      "start_time": "10:05",
+      "end_time": null,
+      "cancelled": false,
+      "weeks_of_month": [],
+      "season": null,
+      "page_number": 1,
+      "note": "Mass followed by Adoration",
+      "raw": {
+        "day_of_week": "Wednesday",
+        "start_time": "10:05 AM"
+      },
+      "problems": []
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 4631,
+    "output_tokens": 758
+  }
+}

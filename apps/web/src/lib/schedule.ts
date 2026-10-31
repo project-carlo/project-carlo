@@ -34,11 +34,15 @@ export interface OccurrenceInput {
   date: string | null;
   /** Weekly only; missing or empty for every week (see `WeekOfMonth`). */
   weeks_of_month?: readonly WeekOfMonth[];
+  /** Weekly only: `weeks_of_month` are the weeks skipped; missing or null for false. */
+  exclude_weeks?: boolean | null;
   /** Weekly only; all missing or null for all year (see `Season`). */
   season_start_month?: number | null;
   season_start_day?: number | null;
   season_end_month?: number | null;
   season_end_day?: number | null;
+  valid_from?: string | null;
+  valid_until?: string | null;
 }
 
 export interface CompareInput {
@@ -103,17 +107,23 @@ function nextForWeekly(
   if (jsDay < 0) return null;
   const pattern = {
     weeks_of_month: event.weeks_of_month ?? [],
+    exclude_weeks: event.exclude_weeks ?? false,
     season: seasonOf(event),
+    valid_from: event.valid_from,
+    valid_until: event.valid_until,
   };
   const hours = Math.floor(event.start_time / 60);
   const minutes = event.start_time % 60;
-  const firstDaysAhead = (jsDay - today.getDay() + 7) % 7;
+  const from = event.valid_from ? parseIsoDateLocal(event.valid_from) : null;
+  const anchor = from && from > today ? from : today;
+  const firstDaysAhead = (jsDay - anchor.getDay() + 7) % 7;
   // A slot qualified by week of the month or by season skips most of the
   // weekdays it nominally falls on, so walk forward a week at a time until one
   // of them is an occurrence the slot actually keeps.
   for (let week = 0; week < MAX_LOOKAHEAD_WEEKS; week += 1) {
-    const target = new Date(today);
+    const target = new Date(anchor);
     target.setDate(target.getDate() + firstDaysAhead + week * 7);
+    if (event.valid_until && isoDateLocal(target) > event.valid_until) return null;
     if (
       dateMatchesPattern(target, pattern) &&
       !cancelledDates.has(isoDateLocal(target))

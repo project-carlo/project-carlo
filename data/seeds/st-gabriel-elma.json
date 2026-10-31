@@ -1,0 +1,1829 @@
+{
+  "schema_version": 1,
+  "parish_slug": "st-gabriel-elma",
+  "status": "approved",
+  "as_of": "2026-10-11T16:34:08Z",
+  "drafted_by": "claude-code/seed-parishes",
+  "drafted_at": "2026-10-12T17:14:54Z",
+  "reviewer": "lyonsl2 (via Codex)",
+  "approved_at": "2026-10-22T20:42:31Z",
+  "summary": "Weekday (8:00 and 11:30), Saturday (8:00, 4:00 and 6:00 PM) and Sunday (6, 8, 10 and 12) Masses, weekday and Saturday confession times, and First Friday confession and adoration are all in the page 2 box of every bulletin. First Friday adoration starts 'immediately following' the 11:30 Mass with no clock time, so it is set to 12:00 by policy. Oct 12 Columbus Day: 11:30 explicitly cancelled, 9:00 added, and one open question on whether the 8:00 is also cancelled; Nov 3 Mass of Remembrance included.",
+  "blocked_reason": null,
+  "bulletins": [
+    {
+      "content_hash": "83e42346e36eacc721587412bbfc111b03737db3471e2461d6d08d8e2769e12a",
+      "fetched_at": "2026-10-11T16:34:08Z",
+      "published_date": "2026-10-11",
+      "read": true
+    },
+    {
+      "content_hash": "48563a8587a5892ab42f6d17589bf111e8eacab71be04cf5d37747281202b1f8",
+      "fetched_at": "2026-10-04T14:27:43Z",
+      "published_date": "2026-10-04",
+      "read": true
+    },
+    {
+      "content_hash": "b701bcb6e35ebebe8723550e74c069ea11da95d0c3f1679fb4c7d8177ffd2307",
+      "fetched_at": "2026-09-26T18:54:33Z",
+      "published_date": "2026-09-27",
+      "read": true
+    }
+  ],
+  "calls": [],
+  "slots": [
+    {
+      "id": "s1",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Monday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Monday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Monday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s2",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Monday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Monday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Monday 11:30 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s3",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Tuesday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Tuesday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Tuesday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s4",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Tuesday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Tuesday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Tuesday 11:30 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s5",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Wednesday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Wednesday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Wednesday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s6",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Wednesday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Wednesday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Wednesday 11:30 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s7",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Thursday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Thursday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Thursday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s8",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Thursday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Thursday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Thursday 11:30 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s9",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Friday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Friday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Friday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s10",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Monday-Friday 8am & 11:30am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Friday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Friday 11:30 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Friday 11:30 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed in the MASS SCHEDULE box on page 2 of all three bulletins; Mass intentions on page 3 agree; history agrees.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s11",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Saturday 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Saturday 8am Mass"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Saturday 8am Mass"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Saturday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Saturday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Saturday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s12",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "16:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Saturday 16:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Saturday 16:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Saturday 16:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s13",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "18:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Saturday Evening Vigil 4pm & 6pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Saturday 18:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Saturday 18:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Saturday 18:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list both.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s14",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "06:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Sunday 06:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Sunday 06:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Sunday 06:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s15",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Sunday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Sunday 08:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Sunday 08:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s16",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "10:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Sunday 10:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Sunday 10:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Sunday 10:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s17",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "weekly",
+        "day_of_week": "Sunday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "Sunday 6am, 8am, 10am & 12pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly mass Sunday 12:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly mass Sunday 12:00 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly mass Sunday 12:00 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Page 2 schedule box, all three bulletins; page 3 intentions list all four.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s18",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Monday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Monday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Monday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Monday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time in the RECONCILIATION box on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s19",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Tuesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Tuesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Tuesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Tuesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time in the RECONCILIATION box on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s20",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Wednesday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Wednesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Wednesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Wednesday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time in the RECONCILIATION box on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s21",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Thursday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Thursday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Thursday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Thursday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time in the RECONCILIATION box on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s22",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "07:30",
+        "end_time": "07:50",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Monday - Friday: 7:30am - 7:50am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Friday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Friday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Friday 07:30–07:50 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time in the RECONCILIATION box on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s23",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "11:00",
+        "end_time": "11:15",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION First Friday: 11am - 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION First Friday: 11am - 11:15am"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION First Friday: 11am - 11:15am"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Friday 11:00–11:15 st-gabriel-elma  “First Friday”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Friday 11:00–11:15 st-gabriel-elma  “First Friday of the month”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Friday 11:00–11:15 st-gabriel-elma  “First Friday of the month”",
+          "page": 2
+        }
+      ],
+      "rationale": "First-Friday slot: weekly with weeks_of_month first.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s24",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "confession",
+        "event_kind": "weekly",
+        "day_of_week": "Saturday",
+        "date": null,
+        "start_time": "15:15",
+        "end_time": "15:45",
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": null
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "RECONCILIATION Saturday: 3:15pm - 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "RECONCILIATION Saturday: 3:15pm - 3:45pm"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "RECONCILIATION Saturday: 3:15pm - 3:45pm"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly confession Saturday 15:15–15:45 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly confession Saturday 15:15–15:45 st-gabriel-elma",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly confession Saturday 15:15–15:45 st-gabriel-elma",
+          "page": 2
+        }
+      ],
+      "rationale": "Printed clock time on page 2 of all three bulletins.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s25",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "adoration",
+        "event_kind": "weekly",
+        "day_of_week": "Friday",
+        "date": null,
+        "start_time": "12:00",
+        "end_time": "18:00",
+        "cancelled": false,
+        "weeks_of_month": [
+          "first"
+        ],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Follows 11:30 AM Mass; ends with Benediction"
+      },
+      "page": 2,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 2,
+          "said": "ADORATION (First Friday of the Month) Immediately following the 11:30am Mass through 6pm Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "48563a85",
+          "page": 2,
+          "said": "ADORATION (First Friday of the Month) Immediately following the 11:30am Mass through 6pm Benediction"
+        },
+        {
+          "source": "agent",
+          "bulletin": "b701bcb6",
+          "page": 2,
+          "said": "ADORATION (First Friday of the Month) Immediately following the 11:30am Mass through 6pm Benediction"
+        },
+        {
+          "source": "history",
+          "bulletin": "b701bcb6e35e",
+          "said": "weekly adoration Friday 12:00–18:00 st-gabriel-elma  “First Friday of the month; follows 11:30 AM Mass; concludes with Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "weekly adoration Friday 12:15–18:00 st-gabriel-elma  “First Friday of the month; begins after 11:30 AM Mass; ends with Benediction”",
+          "page": 2
+        },
+        {
+          "source": "history",
+          "bulletin": "48563a8587a5",
+          "said": "weekly adoration Friday 11:30–18:00 st-gabriel-elma  “First Friday of the month; includes benediction”",
+          "page": 2
+        }
+      ],
+      "rationale": "No clock start is printed ('immediately following the 11:30am Mass through 6pm Benediction'). Policy puts an adoration after a weekday Mass 30 minutes after it starts (12:00); history read 11:30, 12:00 and 12:15 on different runs. End 6 PM is printed. Reviewer timing rule (2026-10-14): Adoration with no printed start follows the 11:30 AM weekday Mass, so it starts 30 minutes later at 12:00 PM; keep the printed 6:00 PM Benediction end.",
+      "question": "First Friday adoration start time?",
+      "options": [
+        {
+          "label": "12:00 PM-6:00 PM (30 min after Mass starts)",
+          "entry": {
+            "church_slug": "st-gabriel-elma",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:00",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Follows 11:30 AM Mass; ends with Benediction"
+          },
+          "leaning": true
+        },
+        {
+          "label": "11:30 AM-6:00 PM (right after Mass starts)",
+          "entry": {
+            "church_slug": "st-gabriel-elma",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "11:30",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Follows 11:30 AM Mass; ends with Benediction"
+          }
+        },
+        {
+          "label": "12:15 PM-6:00 PM",
+          "entry": {
+            "church_slug": "st-gabriel-elma",
+            "event_type": "adoration",
+            "event_kind": "weekly",
+            "day_of_week": "Friday",
+            "date": null,
+            "start_time": "12:15",
+            "end_time": "18:00",
+            "cancelled": false,
+            "weeks_of_month": [
+              "first"
+            ],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Follows 11:30 AM Mass; ends with Benediction"
+          }
+        },
+        {
+          "label": "Leave out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 0,
+        "by": "codex/user-timing-rules",
+        "at": "2026-10-14T21:10:25Z"
+      }
+    },
+    {
+      "id": "s26",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "11:30",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 3,
+          "said": "Monday, October 12, 2026 COLUMBUS DAY 9:00AM ... Please note there is NO 11:30AM Mass Today"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "specific_date mass 2026-10-12 11:30 st-gabriel-elma  CANCELLED; “Columbus Day”",
+          "page": 3
+        }
+      ],
+      "rationale": "The newest bulletin explicitly cancels the 11:30 AM Mass on this date.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s27",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "09:00",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 3,
+          "said": "Monday, October 12, 2026 COLUMBUS DAY 9:00AM Charlotte Kosowski and Stanley A. Sluberski by Sophie Osika and Family"
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "specific_date mass 2026-10-12 09:00 st-gabriel-elma  “Columbus Day”",
+          "page": 3
+        }
+      ],
+      "rationale": "A dated 9:00 AM Mass at a time outside the weekly schedule.",
+      "question": null,
+      "options": null,
+      "answer": null
+    },
+    {
+      "id": "s28",
+      "decision": "exclude",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-10-12",
+        "start_time": "08:00",
+        "end_time": null,
+        "cancelled": true,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Columbus Day; moved to 9:00 AM"
+      },
+      "page": 3,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 3,
+          "said": "Monday, October 12, 2026 COLUMBUS DAY 9:00AM ... NO 11:30AM Mass Today (no 8:00AM Mass listed)"
+        }
+      ],
+      "rationale": "The Columbus Day listing shows only a 9:00 AM Mass and says the 11:30 is cancelled, but never says the usual 8:00 AM Mass is cancelled; it looks moved to 9:00. The Monday 7:30 AM confession is also not mentioned and is left alone.\n\nReview 2026-10-22: Do not infer an Oct 12 cancellation of the 8 AM Mass. The bulletin explicitly cancels 11:30 only. R17 applies; the date has passed.",
+      "question": "Is the regular 8:00 AM Mass cancelled on Monday, Oct 12 (replaced by 9:00 AM)?",
+      "options": [
+        {
+          "label": "Cancel the 8:00 AM Mass on Oct 12",
+          "leaning": true,
+          "entry": {
+            "church_slug": "st-gabriel-elma",
+            "event_type": "mass",
+            "event_kind": "specific_date",
+            "day_of_week": null,
+            "date": "2026-10-12",
+            "start_time": "08:00",
+            "end_time": null,
+            "cancelled": true,
+            "weeks_of_month": [],
+            "exclude_weeks": false,
+            "season": null,
+            "note": "Columbus Day; moved to 9:00 AM"
+          }
+        },
+        {
+          "label": "Leave it out",
+          "entry": null
+        }
+      ],
+      "answer": {
+        "choice": 1,
+        "by": "lyonsl2 (via Codex)",
+        "at": "2026-10-22T20:42:31Z"
+      }
+    },
+    {
+      "id": "s29",
+      "decision": "include",
+      "status": "settled",
+      "entry": {
+        "church_slug": "st-gabriel-elma",
+        "event_type": "mass",
+        "event_kind": "specific_date",
+        "day_of_week": null,
+        "date": "2026-11-03",
+        "start_time": "18:30",
+        "end_time": null,
+        "cancelled": false,
+        "weeks_of_month": [],
+        "exclude_weeks": false,
+        "season": null,
+        "note": "Mass of Remembrance"
+      },
+      "page": 6,
+      "sources": [
+        {
+          "source": "agent",
+          "bulletin": "83e42346",
+          "page": 6,
+          "said": "St. Gabriel's will have their Mass of Remembrance on November 3 at 6:30 p.m."
+        },
+        {
+          "source": "history",
+          "bulletin": "83e42346e36e",
+          "said": "specific_date mass 2026-11-03 18:30 st-gabriel-elma  “Mass of Remembrance”",
+          "page": 6
+        }
+      ],
+      "rationale": "Dated special Mass at St. Gabriel's, named separately from the other Blessed Family 7 churches' Masses of Remembrance (left out: 14 Holy Helpers, St. John Vianney, Queen of Heaven).",
+      "question": null,
+      "options": null,
+      "answer": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "classifier": "latest-recorded-gemini",
+  "parish_slug": "christ-the-king-albany",
+  "content_hash": "7b79816a32164799592f8658c8d720f5b5acfb1badec7a869b518458eca13f8e",
+  "source_url": "https://parishesonline.com/publication-page/christ-the-king-church-12203?selectedPublication=https://container.parishesonline.com/bulletins/03/0863/20261011S.pdf",
+  "fetched_at": "2026-10-04T14:46:43Z",
+  "reference_date": "2026-10-04",
+  "churches": [
+    {
+      "slug": "christ-the-king-albany",
+      "name": "Christ the King Church",
+      "address": "20 Sumter Avenue, Albany, NY 12203"
+    }
+  ],
+  "gemini_source": {
+    "key": "runs/gemini-flash/cache/gemini-3-flash-preview_prompt-3543fd56515b-0c5e4cc0eb21/7b79816a32164799592f8658c8d720f5b5acfb1badec7a869b518458eca13f8e-bd826d99c592.json",
+    "modified_at": "2026-10-04T15:19:12.786000+00:00",
+    "kind": "remote_raw_cache"
+  },
+  "gemini_church_context_matches": true,
+  "pdf_path": "data/out/pdf-detail-followup/2026-10-09/pdfs/christ-the-king-albany/7b79816a3216.pdf",
+  "pdf_sha256": "f51953186d67614f1c7a2ea724564819f66ab9a2eb7e755bec55126e3a1b938e",
+  "label_status": "unlabeled",
+  "published_date": null,
+  "wrong_bulletin": true,
+  "events": [],
+  "usage": {
+    "prompt_tokens": 2456,
+    "output_tokens": 75
+  }
+}

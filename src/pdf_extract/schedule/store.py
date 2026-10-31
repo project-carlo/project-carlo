@@ -135,7 +135,8 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
     """Entry id -> content of every entry the parish's current schedule holds.
 
     Dated entries in the past are still live: they expire from the view and the
-    snapshot, never from the schedule.
+    snapshot, never from the schedule. Weekly entries that have ended stay live
+    until the next revision retires them (`retire_ended`).
     """
     rows = conn.execute(
         f"""SELECT e.id, {", ".join(f"e.{c}" for c in ENTRY_COLUMNS)}
@@ -144,6 +145,19 @@ def live_entries(conn: sqlite3.Connection, parish_id: int) -> dict[int, Entry]:
         (parish_id,),
     ).fetchall()
     return {row["id"]: entry_from_row(row) for row in rows}
+
+
+def retire_ended(live: dict[int, Entry], today: date) -> list[Change]:
+    """Deletes for the weekly entries whose `valid_until` is before `today`, taken out of `live`.
+
+    An ended entry is hidden from the view, the snapshot and the model, so it
+    must not count toward the checks or block a new entry for its slot. A
+    revision written on `today` starts with these deletes.
+    """
+    ended = sorted(i for i, e in live.items() if e.weekly and e.expired_before(today))
+    for entry_id in ended:
+        del live[entry_id]
+    return [Change(DELETE, before_entry_id=entry_id) for entry_id in ended]
 
 
 def current_revision(conn: sqlite3.Connection, parish_id: int) -> int:
@@ -171,12 +185,15 @@ def render_view(
     church (every non-retired church is listed, even with no entries), then
     ordered weekly before dated, by weekday or date, then time.
     """
+    # Imported here because seed-file helpers share this module's JSON/hash helpers.
+    from pdf_extract.schedule.context import reviewed_seed_context
+
     live = live_entries(conn, parish_id)
     churches = parish_churches(conn, parish_id)
     slugs = church_slugs(conn, [e.church_id for e in live.values()])
     by_church: dict[str, list[tuple[tuple, dict[str, Any]]]] = {slug: [] for slug in churches}
     for entry_id, entry in live.items():
-        if entry.dated_before(call_date):
+        if entry.expired_before(call_date):
             continue
         slug = slugs[entry.church_id]
         by_church.setdefault(slug, []).append((_view_order(entry, slug), entry.view(entry_id)))
@@ -186,6 +203,9 @@ def render_view(
             for slug, items in sorted(by_church.items())
         ]
     }
+    context = reviewed_seed_context(conn, parish_id)
+    if context is not None:
+        view["reviewed_seed_context"] = context
     text = canonical_json(view)
     return text, sha256_text(text)
 
@@ -293,6 +313,9 @@ def _fold_change(
                 f"{row['before_entry_id']}, which is not in its current schedule"
             )
     if row["after_entry_id"] is not None:
+        entry = load_entries(conn, [row["after_entry_id"]])[row["after_entry_id"]]
+        if any(entry.conflicts_with(other) for other in live_entries(conn, parish_id).values()):
+            raise ValueError(f"the schedule already has an entry for that slot: {entry.slot_key}")
         conn.execute(
             """INSERT INTO current_schedule (parish_id, entry_id, identity_key, since_revision)
                SELECT ?, id, identity_key, ? FROM schedule_entry WHERE id = ?""",
@@ -373,20 +396,40 @@ def replace_sightings(
 def seed_changes(
     conn: sqlite3.Connection, live: dict[int, Entry], entries: list[Entry],
 ) -> list[Change]:
-    """The adds, modifies and deletes that turn `live` into exactly `entries`."""
+    """The adds, modifies and deletes that turn `live` into exactly `entries`.
+
+    Match recurrence identities first. A single unmatched old/new pair at an
+    unqualified slot is a qualifier modify. Ambiguous splits/merges use deletes
+    and adds, with deletions first so no temporary overlap enters the fold.
+    """
     by_identity: dict[str, Entry] = {}
     for entry in entries:
-        if entry.identity_key in by_identity:
-            raise ValueError(f"two seed entries are the same slot: {entry.identity_key}")
+        if any(entry.conflicts_with(other) for other in by_identity.values()):
+            raise ValueError(f"two seed entries are the same slot: {entry.slot_key}")
         by_identity[entry.identity_key] = entry
     live_by_identity = {entry.identity_key: entry_id for entry_id, entry in live.items()}
+    matched = {identity: live_by_identity[identity]
+               for identity in by_identity.keys() & live_by_identity.keys()}
+    old_by_slot: dict[str, list[int]] = {}
+    new_by_slot: dict[str, list[str]] = {}
+    for entry_id, entry in live.items():
+        if entry.identity_key not in matched:
+            old_by_slot.setdefault(entry.slot_key, []).append(entry_id)
+    for identity, entry in by_identity.items():
+        if identity not in matched:
+            new_by_slot.setdefault(entry.slot_key, []).append(identity)
+    for slot, identities in new_by_slot.items():
+        old_ids = old_by_slot.get(slot, [])
+        if len(identities) == len(old_ids) == 1:
+            matched[identities[0]] = old_ids[0]
+    retained = set(matched.values())
     changes: list[Change] = []
-    for identity, entry_id in sorted(live_by_identity.items()):
-        if identity not in by_identity:
+    for entry_id in sorted(live):
+        if entry_id not in retained:
             changes.append(Change(DELETE, before_entry_id=entry_id))
     for identity, entry in sorted(by_identity.items()):
         new_id = intern_entry(conn, entry)
-        old_id = live_by_identity.get(identity)
+        old_id = matched.get(identity)
         if old_id is None:
             changes.append(Change(ADD, after_entry_id=new_id))
         elif old_id != new_id:
