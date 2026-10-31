@@ -195,7 +195,10 @@ Each tick:
    A rate-limit error from the SDK is the backstop: that job becomes `waiting_usage`
    whatever the endpoint said. If no account is eligible, it waits for the earliest reset.
    If the endpoint errors or its response doesn't parse, the dispatcher pauses and says
-   why; `pnpm factory resume` starts it again. `pnpm factory pause` and `resume` also
+   why; `pnpm factory resume` starts it again. A 429 Too Many Requests doesn't pause it:
+   it waits 30 minutes, reading nothing, then the next usage check tries again (another
+   429 waits another 30 minutes). `pnpm factory status` shows the cooldown's reason and
+   next retry, and `resume` retries at once. `pnpm factory pause` and `resume` also
    override the caps.
 
    **Accounts.** Each account has its own config directory (`CLAUDE_CONFIG_DIR`), which

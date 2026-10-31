@@ -82,6 +82,7 @@ def _pause(args: argparse.Namespace) -> Result:
 def _resume(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
     ledger.set("paused", None)
+    ledger.set("usage_cooldown", None)  # the next usage check tries the endpoint at once
     ledger.set("override_caps", bool(args.override_caps))
     return {"paused": False, "override_caps": bool(args.override_caps)}
 

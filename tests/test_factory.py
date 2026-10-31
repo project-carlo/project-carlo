@@ -1491,11 +1491,14 @@ class Meter:
 
     def __init__(self) -> None:
         self.five, self.week, self.fail = 10.0, 20.0, 0
+        self.status: int | None = None  # the HTTP status a failing call reports
+        self.calls = 0
 
     def __call__(self, account: Account) -> Usage:
+        self.calls += 1
         if self.fail:
             self.fail -= 1
-            raise UsageError("endpoint down")
+            raise UsageError("endpoint down", status=self.status)
         return Usage(self.five, FIVE_RESETS, self.week, WEEK_RESETS,
                      raw={"five_hour": {"utilization": self.five}})
 
@@ -1602,6 +1605,114 @@ def test_a_failed_after_reading_does_not_stop_the_job(env: Env) -> None:
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
     assert not env.ledger.all("SELECT * FROM usage WHERE source = 'after'")
     assert quota_of(env, 1).label in (SHARED, MISSING)
+
+
+def failing_usage_check(env: Env, status: int, fail: int = 1) -> Meter:
+    """An endpoint failing the next job's usage check (the periodic reading already taken)."""
+    meter, _ = metered(env)
+    meter.fail, meter.status = fail, status
+    env.ledger.set("quota_sampled", env.now.isoformat())
+    return meter
+
+
+def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None:
+    meter = failing_usage_check(env, 429, 2)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    first = d.tick()
+    assert first.action == "waiting" and "cooldown" in first.detail
+    assert first.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert env.ledger.get("paused") is None
+    since = env.ledger.get("usage_cooldown")["since"]
+    status = report.text_status(report.status(env.ledger))
+    assert "USAGE CHECK COOLDOWN: usage check failed: endpoint down" in status
+    assert f"next retry {first.wait_until.isoformat()[:16]}" in status
+    # Nothing reads the endpoint during the cooldown.
+    calls = meter.calls
+    env.now += timedelta(minutes=29)
+    assert d.tick().action == "waiting"
+    assert meter.calls == calls
+    # After 30 minutes it tries again; another 429 waits another 30 minutes.
+    env.now += timedelta(minutes=1)
+    second = d.tick()
+    assert second.action == "waiting" and meter.calls == calls + 1
+    assert second.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert env.ledger.get("usage_cooldown")["since"] == since
+    assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] != DONE
+    # The next check succeeds: the cooldown clears and queued work resumes.
+    env.now = second.wait_until
+    assert d.tick().action == "ran"
+    assert env.ledger.get("usage_cooldown") is None
+    assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
+    assert "COOLDOWN" not in report.text_status(report.status(env.ledger))
+
+
+def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
+    meter = failing_usage_check(env, 429, 1)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    assert d.tick().action == "waiting"
+    meter.five = env.config.five_hour_cap + 5  # over the 5-hour cap once it answers
+    env.now += dispatcher_mod.USAGE_COOLDOWN
+    out = d.tick()
+    assert out.action == "waiting" and "no account under its caps" in out.detail
+    assert env.ledger.get("usage_cooldown") is None
+    survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
+    assert survey["status"] == WAITING_USAGE and not env.ledger.all("SELECT * FROM attempt")
+
+
+def test_a_cooldown_never_lifts_the_owners_pause(env: Env) -> None:
+    meter = failing_usage_check(env, 429, 1)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    assert d.tick().action == "waiting"
+    env.ledger.set("paused", {"reason": "paused by the owner", "at": "now"})
+    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    calls = meter.calls
+    out = d.tick()
+    assert (out.action, out.detail) == ("paused", "paused by the owner")
+    assert meter.calls == calls
+    assert env.ledger.get("paused")["reason"] == "paused by the owner"
+
+
+def test_resume_retries_the_usage_check_at_once(env: Env,
+                                               monkeypatch: pytest.MonkeyPatch) -> None:
+    import argparse
+
+    from pdf_extract.factory import cli
+
+    meter = failing_usage_check(env, 429)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    assert d.tick().action == "waiting"
+    monkeypatch.setattr(cli, "_ledger", lambda args: env.ledger)
+    cli._resume(argparse.Namespace(override_caps=False))
+    assert env.ledger.get("usage_cooldown") is None
+    assert d.tick().action == "ran"
+
+
+def test_other_usage_check_failures_still_pause(env: Env) -> None:
+    meter = failing_usage_check(env, 500, 1)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    assert d.tick().action == "paused"
+    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    assert d.tick().action == "paused"
+    assert env.ledger.get("usage_cooldown") is None
+    assert "endpoint down" in env.ledger.get("paused")["reason"]
+
+
+def test_fetch_usage_reports_the_http_status(tmp_path: Path,
+                                            monkeypatch: pytest.MonkeyPatch) -> None:
+    import urllib.error
+
+    from pdf_extract.factory import usage as usage_mod
+
+    def too_many(request: Any, timeout: int) -> Any:
+        raise urllib.error.HTTPError(usage_mod.USAGE_URL, 429, "Too Many Requests", {}, None)
+
+    monkeypatch.setattr(usage_mod, "_token", lambda account: "t")
+    monkeypatch.setattr(usage_mod.urllib.request, "urlopen", too_many)
+    with pytest.raises(UsageError) as caught:
+        usage_mod.fetch_usage(Account("second", tmp_path, "pro"))
+    assert caught.value.status == 429
+    assert str(caught.value) == ("second: usage endpoint failed: HTTP Error 429: "
+                                 "Too Many Requests")
 
 
 def test_backfill_recovers_tokens_and_lists_gaps(tmp_path: Path) -> None:
