@@ -18,11 +18,6 @@ browser. On Syracuse's 75 parish websites, `probe url` found the bulletin publis
 WebFetch hits the same walls. These tools fill the gaps, and they report ids in the
 `scheme:value` form that `publication` takes.
 
-## Setup
-
-On the factory's host the browser is ready. In a Claude Code cloud sandbox, no browser
-starts until you run the one-time setup in [cloud-sandbox.md](cloud-sandbox.md).
-
 ## `visit.py`: probe url in a real browser
 
 ```bash
@@ -112,7 +107,7 @@ uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pa
 
 Many bulletins are scanned images, in whole or in part: in Syracuse, about one in five
 (ParishesOnline, Discover Mass and self-hosted alike). `probe pdf` lists those pages under
-`pages_without_text`. The cloud sandbox has no pdftoppm, PIL or tesseract, so `render.py` draws
+`pages_without_text`. `render.py` draws
 the pages with pdf.js in Chrome and writes JPEGs (`<prefix>-p<N>.jpg`, a few hundred KB
 each) you can look at with the Read tool:
 

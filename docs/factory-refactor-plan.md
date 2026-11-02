@@ -345,6 +345,8 @@ Built in the PR after #185. Where it differs from the bullets below:
   `diocese.md` counted as read whole before: ~21.8k tokens of instructions before,
   ~15.1k after, the skills counted in full both times. That is above the ~10–14k
   expected, mostly because of the two extra README sections and the inlined playbook.
+- The cloud sandbox setup is deleted, not moved: `setup_browser.sh` and the cloud notes in
+  `parish-site-access` are gone, since no factory or diocese work runs in the cloud.
 - `deny:` takes Claude Code permission rules as written (`Bash(pnpm seed extract:*)`),
   for both `pnpm seed` and `uv run python -m pdf_extract seed`.
 - The README's *Method* stays where it is; no stage reads it now. Moving it out is left

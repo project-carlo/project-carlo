@@ -12,7 +12,7 @@ job's lessons, as written, one bullet each, to the `## New lessons` section of
    already knows; don't copy it.
 2. For each new lesson, decide where it belongs:
    - **A publisher's method** (how to read its sites, where its issues are when a site
-     blocks the sandbox, an id pattern, a download cap): merge it into *Bulletin
+     blocks the browser, an id pattern, a download cap): merge it into *Bulletin
      publishers here*, into the existing bullet for that publisher when there is one.
    - **A decision for more than one record** (how this diocese's campus chapels, shrines
      or family bulletins are treated): add it to *Rules settled*, saying who decided it

@@ -566,9 +566,8 @@ recipe in `data/parishes.csv` as it is now. After changing `fetch.py` or
    coverage change.
 
 Run `fetch:check` in a headed browser (under `xvfb-run` on a server); Cloudflare
-turns headless browsers away. In a Claude Code cloud sandbox, set up Chrome first
-with `.claude/skills/parish-site-access/scripts/setup_browser.sh` and set
-`PLAYWRIGHT_BROWSER_CHANNEL=chrome`.
+turns headless browsers away. Set `PLAYWRIGHT_BROWSER_CHANNEL=chrome` to use the
+installed Chrome.
 
 ### From Python
 

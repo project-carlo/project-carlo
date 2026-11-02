@@ -7,11 +7,10 @@ shells), and no publications for bulletins that sit in an iframe widget or one
 click deep. This opens the page in the pipeline's own stealth browser
 (pdf_extract.browser.launch_stealth_browser) with real Chrome, headed under
 xvfb, and reports the same fields `probe url` does, read from the rendered page
-and its iframes. In a cloud sandbox, run scripts/setup_browser.sh once first.
+and its iframes.
 
-Cloudflare decides per request whether to challenge, and in a Claude Code sandbox
-the challenge can never be solved (brunhild.challenges.cloudflare.com is denied
-by the egress policy), so a challenged load is simply retried with backoff.
+Cloudflare decides per request whether to challenge, and no clearance cookie is
+kept between loads, so a challenged load is simply retried with backoff.
 
 Usage (from the repo root; re-runs itself under xvfb-run when there is no display):
   uv run python .claude/skills/parish-site-access/scripts/visit.py URL [URL ...] [options]
