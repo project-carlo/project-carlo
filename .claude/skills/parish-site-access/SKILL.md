@@ -1,6 +1,6 @@
 ---
 name: parish-site-access
-description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese from a Claude Code cloud sandbox. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster, and a renderer for bulletin pages that are only images. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when probe get/WebFetch get a 403 "Just a moment..." page.
+description: See parish websites and bulletins that `pnpm diocese probe url` can't, while exploring a new diocese. A real Chrome (the pipeline's stealth browser, headed under xvfb) that gets past Cloudflare most of the time, renders JavaScript sites and iframe widgets, follows a site's bulletin links, and reports the same verdicts and publication ids `probe url` does, plus a `probe container` equivalent for eCatholic and Discover Mass bulletins, and a reader that turns a diocese's eCatholic parish-finder map into a roster, and a renderer for bulletin pages that are only images. Use when probe url says HTTP4XX or NO-PARISH-WORDS, or finds no publications, or when probe get/WebFetch get a 403 "Just a moment..." page.
 ---
 
 # Seeing parish sites the probes can't
@@ -17,19 +17,6 @@ browser. On Syracuse's 75 parish websites, `probe url` found the bulletin publis
 
 WebFetch hits the same walls. These tools fill the gaps, and they report ids in the
 `scheme:value` form that `publication` takes.
-
-## Setup, once per sandbox (~1 min)
-
-```bash
-.claude/skills/parish-site-access/scripts/setup_browser.sh
-```
-
-This installs Google Chrome and trusts the agent proxy's TLS certificate in Chrome's store.
-Before it runs, no browser starts at all:
-
-- The venv's Playwright wants a newer Chromium than the image ships, and
-  `playwright install` is blocked.
-- The proxy re-terminates TLS, so every page fails with `ERR_CERT_AUTHORITY_INVALID`.
 
 ## `visit.py`: probe url in a real browser
 
@@ -120,7 +107,7 @@ uv run python $I discovermass discovermass:st-patrick-victor-ny [--issues 6 --pa
 
 Many bulletins are scanned images, in whole or in part: in Syracuse, about one in five
 (ParishesOnline, Discover Mass and self-hosted alike). `probe pdf` lists those pages under
-`pages_without_text`. The sandbox has no pdftoppm, PIL or tesseract, so `render.py` draws
+`pages_without_text`. `render.py` draws
 the pages with pdf.js in Chrome and writes JPEGs (`<prefix>-p<N>.jpg`, a few hundred KB
 each) you can look at with the Read tool:
 
@@ -221,12 +208,8 @@ twelve weeks). When a quote can only come from a blocked
 page, say so in the item's `note`, e.g. "behind Cloudflare; read in a browser
 (parish-site-access visit.py)", so the auditor knows to open it the same way.
 
-## How Cloudflare behaves in the sandbox (measured 2026-09-25)
+## How Cloudflare behaves (measured 2026-09-25)
 
-- **The challenge can't be solved here.** Its "Verify you are human" step needs
-  `brunhild.challenges.cloudflare.com`, which the environment's egress policy denies
-  (`connect_rejected` in `curl -sS "$HTTPS_PROXY/__agentproxy/status"`). Don't route around
-  it. The user can add that host in the environment's network settings.
 - **Cloudflare decides per request, so retrying works for most sites.** Headed Chrome
   sometimes gets the real page with no challenge at all. No clearance cookie is ever set, so
   every load rolls again. `visit.py` reloads with backoff (2s, 4s, 8s, then 15s, up to
@@ -237,6 +220,3 @@ page, say so in the item's `note`, e.g. "behind Cloudflare; read in a browser
     runs. `holyfamilyendwell.com` never loaded.
 - **Headless never passes:** 0 of 23 loads. Keep the browser headed: `visit.py` re-runs
   itself under `xvfb-run`, so don't set `PLAYWRIGHT_HEADLESS=1`.
-- The egress IP rotates across a pool, and the IP doesn't predict the outcome.
-- **`probe url`'s DEAD-DNS is real here.** The domains it flagged don't resolve, and the
-  proxy can't reach them either.

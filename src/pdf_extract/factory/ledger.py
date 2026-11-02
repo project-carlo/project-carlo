@@ -8,13 +8,13 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.factory.config import LEDGER_PATH
+from pdf_extract.factory.config import LEDGER_PATH, FactoryError
 
 # Run states and kinds.
 ACTIVE, BLOCKED, IN_REVIEW, MERGED = "active", "blocked", "in_review", "merged"
@@ -30,6 +30,20 @@ UNFINISHED = (QUEUED, RUNNING, GATING, WAITING_USAGE, SENT_BACK)
 # settled (answered and acted on, or an advisory flag a later job settled), or listed
 # (advisory, for the PR).
 OPEN, ANSWERED, SETTLED, LISTED = "open", "answered", "settled", "listed"
+
+
+def pending(kind: str, prompt: str | None = None) -> str:
+    """A job's pending prompt, as the ledger stores it: what its next attempt is told.
+
+    - `start`, `fresh`: no prompt pending; the first message (`render.next_prompt` decides
+      which, from the job's attempts and session).
+    - `send_back`: the gates' or a reviewer's problems.
+    - `continue`: after a partial end, a usage limit or a timeout, in the same session.
+    - `resume`: after a crash or a lost result (the dispatcher restarted, git failed, the
+      owner retried the job).
+    - `answer`: the owner's answer to the job's blocking flag.
+    """
+    return json.dumps({"kind": kind, "prompt": prompt})
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS run (
@@ -244,6 +258,11 @@ def now() -> str:
     return datetime.now(UTC).isoformat(timespec="microseconds")
 
 
+def stamp(clock: Callable[[], datetime]) -> str:
+    """`now()` from an injected clock (the dispatcher's, which tests move)."""
+    return clock().isoformat(timespec="microseconds")
+
+
 def when(value: Any) -> datetime | None:
     """An ISO time from the ledger, a transcript or an API (`Z` allowed); None if empty or
     unreadable."""
@@ -258,9 +277,17 @@ def when(value: Any) -> datetime | None:
 class Ledger:
     """A connection to the ledger, with the queries the dispatcher and reports share."""
 
-    def __init__(self, path: Path = LEDGER_PATH) -> None:
-        path.parent.mkdir(parents=True, exist_ok=True)
+    def __init__(self, path: Path = LEDGER_PATH, *, read_only: bool = False) -> None:
         self.path = path
+        if read_only:
+            # For previews: SQLite refuses any write, and nothing is created or migrated.
+            if not path.exists():
+                raise FactoryError(f"no ledger at {path}")
+            self.conn = sqlite3.connect(f"{path.resolve().as_uri()}?mode=ro", uri=True,
+                                        isolation_level=None, timeout=30)
+            self.conn.row_factory = sqlite3.Row
+            return
+        path.parent.mkdir(parents=True, exist_ok=True)
         self.conn = sqlite3.connect(path, isolation_level=None, timeout=30)
         self.conn.row_factory = sqlite3.Row
         self.conn.execute("PRAGMA journal_mode = WAL")
@@ -306,6 +333,14 @@ class Ledger:
     def set(self, key: str, value: Any) -> None:
         self.run_sql("INSERT INTO kv (key, value) VALUES (?, ?) ON CONFLICT (key) "
                      "DO UPDATE SET value = excluded.value", key, json.dumps(value))
+
+    def due(self, key: str, every: timedelta, at: datetime) -> bool:
+        """True, and marked done at `at`, if `key` last ran `every` or more ago (or never)."""
+        last = self.get(key)
+        if last and at - datetime.fromisoformat(last) < every:
+            return False
+        self.set(key, at.isoformat())
+        return True
 
     # ── Runs ────────────────────────────────────────────────────────────────
     def run(self, run_id: str) -> sqlite3.Row:

@@ -7,5 +7,8 @@ skills: [explore-diocese]
 tools: [Bash, Read, Write]
 writes:
   - scratch/{run}/{job}/**
+reads:
+  - data/dioceses/README.md#Batch plans
+  - data/dioceses/README.md#Sources
 gates: []
 limits: { max_turns: 80, max_minutes: 45 }

@@ -14,6 +14,7 @@ import asyncio
 import importlib.metadata
 import json
 import os
+import re
 import shutil
 import tempfile
 from collections.abc import Callable
@@ -25,7 +26,7 @@ from typing import Any, Protocol
 from pdf_extract.factory.config import Account
 from pdf_extract.factory.sandbox import Backend, HostBackend, Launch, SandboxError
 from pdf_extract.factory.secrets import NO_DOTENV
-from pdf_extract.factory.stages import StageSpec, fill
+from pdf_extract.factory.spec import StageSpec, fill
 
 # How an attempt ended. SANDBOX: the sandbox couldn't start it, so no worker ran.
 OK, CRASH, USAGE, TIMEOUT, PARTIAL = "ok", "crash", "usage", "timeout", "partial"
@@ -116,7 +117,10 @@ def prompt_body(worktree: Path, path: str | None) -> str:
     """A stage's prompt file without its frontmatter (an agent file's model, tools...)."""
     if not path:
         return ""
-    text = (worktree / path).read_text(encoding="utf-8")
+    return strip_frontmatter((worktree / path).read_text(encoding="utf-8"))
+
+
+def strip_frontmatter(text: str) -> str:
     if text.startswith("---\n"):
         end = text.find("\n---\n", 4)
         if end != -1:
@@ -124,9 +128,23 @@ def prompt_body(worktree: Path, path: str | None) -> str:
     return text.strip()
 
 
-def worker_env(account: Account | None, secrets: dict[str, str] | None = None) -> dict[str, str]:
+# A `deny:` rule only stops a command that starts with its prefix: `pnpm --silent seed
+# approve` gets past `Bash(pnpm seed approve:*)`. So the seed CLI also refuses the seed
+# commands a stage denies, named in this variable (read by `pdf_extract.seeding.cli`).
+SEED_REFUSE_ENV = "CARLO_SEED_REFUSE"
+_SEED_RULE = re.compile(r"Bash\((?:pnpm|uv run python -m pdf_extract) seed ([\w-]+):\*\)")
+
+
+def seed_refusals(deny: list[str]) -> list[str]:
+    """The seed commands a stage's `deny:` rules name (`Bash(pnpm seed approve:*)`)."""
+    return sorted({m.group(1) for rule in deny if (m := _SEED_RULE.fullmatch(rule))})
+
+
+def worker_env(account: Account | None, secrets: dict[str, str] | None = None,
+               deny: list[str] | None = None) -> dict[str, str]:
     """No GitHub token, no git credentials, the account's Claude login, not an API key,
-    and the stage's secrets. All a worker gets, with the launcher's HOST_PASS."""
+    the stage's secrets, and the seed commands the stage denies refused by the CLI too.
+    All a worker gets, with the launcher's HOST_PASS."""
     empty = Path(tempfile.gettempdir()) / "carlo-factory-empty-gh"
     empty.mkdir(exist_ok=True)
     env = {
@@ -137,6 +155,8 @@ def worker_env(account: Account | None, secrets: dict[str, str] | None = None) -
     }
     if account is not None:
         env["CLAUDE_CONFIG_DIR"] = str(account.config_dir)
+    if refused := seed_refusals(deny or []):
+        env[SEED_REFUSE_ENV] = " ".join(refused)
     return (secrets or {}) | env
 
 
@@ -167,7 +187,7 @@ def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
         effort=spec.effort,
         permission_mode="bypassPermissions" if launch.container else "auto",
         tools=tools,
-        disallowed_tools=DENIED,
+        disallowed_tools=DENIED + list(spec.deny),
         system_prompt={"type": "preset", "preset": "claude_code",
                        "append": request.system_append},
         setting_sources=["project"],
@@ -197,7 +217,8 @@ class SdkWorker:
         self._start(request.session_id)
         launch: Launch | None = None
         try:
-            launch = self.backend.launch(request, worker_env(request.account, request.secrets))
+            launch = self.backend.launch(request, worker_env(request.account, request.secrets,
+                                                             request.spec.deny))
             result = asyncio.run(asyncio.wait_for(
                 self._run(request, launch), timeout=request.spec.max_minutes * 60))
         except SandboxError as exc:  # nothing started; never run it on the host instead

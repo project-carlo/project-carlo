@@ -8,12 +8,17 @@
   pause [REASON]               stop starting jobs (the running one finishes)
   resume [--override-caps]     start again; --override-caps ignores the usage caps
   retry <job>                  run a blocked or failed job again from where it stopped
-  inspect <job> [--prompt]     everything about a job, for a foreman review
+  inspect <job> [--prompt [--attempt N]]
+                               everything about a job, for a foreman review; --prompt
+                               prints what an attempt was given, with sizes
   inspect --stage S [--last N] a stage's recent jobs, with their quota
+  prompt <stage> [--run R] [--input JSON]
+                               preview what a stage's next job would be given (the
+                               system prompt, first message, skills and reads, with
+                               sizes), without running anything or changing the ledger
   quota [--by K] [--tz ZONE]   quota points per unit of work, by stage, or within stages by
                                model, effort, mode, account, plan, date or hour
   quota --windows              each account's five-hour and weekly windows over time
-  quota backfill               tokens and metadata for attempts from before quota tracking
   cost [--stage]               cost by Run, or by stage (API-price dollars: a diagnostic)
   backup                       back the ledger up to R2 now
   clones [--apply]             the dispatcher's checkout and Run worktrees that are still
@@ -22,7 +27,7 @@
 
 A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). `--stub` on the
 other commands reads the stub runs' ledger. Run it from the dispatcher's own checkout;
-see docs/factory-spec.md.
+see docs/factory.md.
 """
 
 from __future__ import annotations
@@ -36,7 +41,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.factory import report
+from pdf_extract.factory import git, report
 from pdf_extract.factory.backup import backup_ledger
 from pdf_extract.factory.config import (
     LEDGER_PATH,
@@ -55,15 +60,19 @@ from pdf_extract.factory.ledger import (
     SETTLED,
     Ledger,
     now,
+    pending,
 )
+from pdf_extract.factory.metrics import report as metrics
 from pdf_extract.factory.secrets import load_secrets, pick
+from pdf_extract.factory.spec import STAGES
 
 Result = dict[str, Any]
 
 
-def _ledger(args: argparse.Namespace) -> Ledger:
+def _ledger(args: argparse.Namespace, *, read_only: bool = False) -> Ledger:
     """The real ledger, or the stub runs' (`--stub`), so a stub Run never reaches the real one."""
-    return Ledger(STUB_DATA / LEDGER_PATH.name if args.stub else LEDGER_PATH)
+    return Ledger(STUB_DATA / LEDGER_PATH.name if args.stub else LEDGER_PATH,
+                  read_only=read_only)
 
 
 def _status(args: argparse.Namespace) -> Result:
@@ -71,7 +80,7 @@ def _status(args: argparse.Namespace) -> Result:
 
 
 def _queue(args: argparse.Namespace) -> Result:
-    from pdf_extract.factory.dispatcher import main_queue
+    from pdf_extract.factory.engine import main_queue
 
     return report.queue(_ledger(args), main_queue(_repo(), load_config().upstream))
 
@@ -102,7 +111,7 @@ def _retry(args: argparse.Namespace) -> Result:
                            "are retried")
     ledger.clear_actions(job["id"])
     ledger.set_job(job["id"], status=QUEUED, send_backs=0, continues=0, crashes=0,
-                   finished_at=None, pending_prompt=json.dumps({"kind": "resume", "prompt": None}))
+                   finished_at=None, pending_prompt=pending("resume"))
     for flag in ledger.all("SELECT * FROM flag WHERE job_id = ? AND status = ?", job["id"], OPEN):
         ledger.run_sql("UPDATE flag SET status = ?, answer = ? WHERE id = ?", SETTLED,
                        "retried by the owner", flag["id"])
@@ -117,8 +126,8 @@ def _inspect(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
     settle = load_config().quota_settle_seconds
     if args.stage:
-        args.render = report.text_recent
-        return report.recent(ledger, args.stage, args.last, settle)
+        args.render = metrics.text_recent
+        return metrics.recent(ledger, args.stage, args.last, settle)
     if not args.job:
         raise FactoryError("name a job, or --stage")
     try:
@@ -126,29 +135,49 @@ def _inspect(args: argparse.Namespace) -> Result:
     except KeyError:
         raise FactoryError(f"no job {args.job}") from None
     if args.prompt:
-        first = ledger.one("SELECT prompt FROM attempt WHERE job_id = ? ORDER BY n LIMIT 1",
-                           job["id"])
-        args.render = lambda r: r["prompt"]
-        return {"prompt": first["prompt"] if first else None}
+        args.render = report.text_attempt_prompt
+        return report.attempt_prompt(ledger, job, args.attempt,
+                                     _text_at([Path(ledger.run(job["run_id"])["worktree"]),
+                                               _repo()]))
     return report.inspect(ledger, job, STUB_DATA / RUNS_DIR.name if args.stub else RUNS_DIR,
                           settle)
 
 
-def _quota(args: argparse.Namespace) -> Result:
-    ledger, config = _ledger(args), load_config()
-    if args.action == "backfill":
-        from pdf_extract.factory.backfill import backfill, git_show
+def _text_at(roots: list[Path]) -> Callable[[str, str], str | None]:
+    """A file as a commit has it, from the first of `roots` that has the commit (a Run's
+    worktree, else this checkout, which shares or fetches its objects)."""
+    def text_at(sha: str, path: str) -> str | None:
+        for root in roots:
+            if (root / ".git").exists():
+                try:
+                    return git.git(root, "show", f"{sha}:{path}")
+                except FactoryError:
+                    continue
+        return None
+    return text_at
 
-        args.render = _text
-        return backfill(ledger, config, git_show(_repo()))
+
+def _prompt(args: argparse.Namespace) -> Result:
+    """Preview what a stage's next job would be given, without running anything."""
+    try:
+        inputs = json.loads(args.input) if args.input else None
+    except ValueError as exc:
+        raise FactoryError(f"--input isn't JSON: {exc}") from None
+    return report.preview(_ledger(args, read_only=True), args.stage, args.run, repo=_repo(),
+                          lessons_before_integrate=load_config().lessons_before_integrate,
+                          inputs=inputs)
+
+
+def _quota(args: argparse.Namespace) -> Result:
+    ledger, settle = _ledger(args), load_config().quota_settle_seconds
     if args.windows:
-        args.render = report.text_windows
-        return report.windows(ledger, config.quota_settle_seconds)
-    return report.quota(ledger, args.by, args.tz, config.quota_settle_seconds)
+        args.render = metrics.text_windows
+        return metrics.windows(ledger, settle)
+    return metrics.quota(ledger, args.by, args.tz, settle)
 
 
 def _cost(args: argparse.Namespace) -> Result:
-    return report.cost(_ledger(args), args.stage)
+    return metrics.cost(_ledger(args), args.stage)
 
 
 def _backup(args: argparse.Namespace) -> Result:
@@ -242,7 +271,7 @@ def add_factory_parser(
     add_common_args: Callable[[argparse.ArgumentParser], None],
 ) -> None:
     parser = subparsers.add_parser(
-        "factory", help="The onboarding factory (docs/factory-spec.md)",
+        "factory", help="The onboarding factory (docs/factory.md)",
         description=__doc__, usage="%(prog)s <command> ...",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -274,16 +303,21 @@ def add_factory_parser(
     p.add_argument("job")
     p = leaf("inspect", _inspect, report.text_inspect)
     p.add_argument("job", nargs="?")
-    p.add_argument("--prompt", action="store_true", help="Print the job input it started from")
+    p.add_argument("--prompt", action="store_true",
+                   help="Print what an attempt was given (its first, or --attempt), with sizes")
+    p.add_argument("--attempt", type=int, default=1, metavar="N")
     p.add_argument("--stage", help="List a stage's recent jobs instead")
     p.add_argument("--last", type=int, default=10)
-    p = leaf("quota", _quota, report.text_quota)
-    p.add_argument("action", nargs="?", choices=["backfill"],
-                   help="backfill: tokens and metadata for older attempts, from transcripts")
-    p.add_argument("--by", choices=report.BY, default="stage")
+    p = leaf("prompt", _prompt, report.text_preview)
+    p.add_argument("stage", choices=[s for s in STAGES if s not in ("promote", "pr")])
+    p.add_argument("--run", help="The Run (default: the active one)")
+    p.add_argument("--input", help="The job's input as JSON, e.g. '{\"batch\": \"b3\"}' "
+                   "(default: what the plan would give it)")
+    p = leaf("quota", _quota, metrics.text_quota)
+    p.add_argument("--by", choices=metrics.BY, default="stage")
     p.add_argument("--tz", help="Time zone for --by date or hour (default: this machine's)")
     p.add_argument("--windows", action="store_true", help="Account and window totals instead")
-    p = leaf("cost", _cost, report.text_cost)
+    p = leaf("cost", _cost, metrics.text_cost)
     p.add_argument("--stage", action="store_true", help="By stage instead of by Run")
     leaf("backup", _backup)
     p = leaf("clones", _clones)

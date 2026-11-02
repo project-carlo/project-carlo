@@ -1,4 +1,4 @@
-"""GitHub: an issue for each blocking flag, reading your answers back, and the Run's PR (§7).
+"""GitHub: an issue for each blocking flag, reading your answers back, and the Run's PR.
 
 Only the dispatcher talks to GitHub, through `gh` with your login. Its own comments carry
 a marker, so they are never read back as your answer.

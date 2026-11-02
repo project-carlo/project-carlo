@@ -152,7 +152,7 @@ def get(url: str, *, out: Path | None = None, chars: int = 20000) -> dict[str, A
 
     Use it where you'd reach for curl. Its headers are the ones every probe
     sends, and it verifies TLS; curl with a browser user agent or `-k` is
-    refused, inconsistently, by the sandbox's safety check. `out` saves the body
+    refused, inconsistently, by auto mode's safety check. `out` saves the body
     as fetched; otherwise the text of a page (JSON or plain text as is) is
     returned, up to `chars`, and a PDF's first pages as `probe pdf` reads them.
     A bot check is retried once (GCatholic's passes in a moment); a block is

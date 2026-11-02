@@ -36,6 +36,12 @@ class StageSpec:
     tools: list[str] = field(default_factory=list)
     writes: list[str] = field(default_factory=list)
     gates: list[str] = field(default_factory=list)
+    # Files the worker must read first, repo-relative: a whole file (`path`), or one section
+    # (`path#Heading`), which the dispatcher copies into the job's scratch folder.
+    # `deny` adds permission rules (`Bash(pnpm seed extract:*)`) to the workers' own; the
+    # seed CLI also refuses a seed command one names, however it is spelled (workers.py).
+    reads: list[str] = field(default_factory=list)
+    deny: list[str] = field(default_factory=list)
     # `.env` entries (names or globs) its workers get, and its gate commands get.
     secrets: list[str] = field(default_factory=list)
     gate_secrets: list[str] = field(default_factory=list)
@@ -47,12 +53,22 @@ class StageSpec:
         return self.kind in (AGENT, REVIEWER)
 
 
+def spec_path(stage: str) -> str:
+    return (STAGES_DIR / f"{stage}.yaml").as_posix()
+
+
 def load_stage(stage: str, root: Path) -> StageSpec:
-    path = root / STAGES_DIR / f"{stage}.yaml"
+    path = root / spec_path(stage)
     try:
-        raw: dict[str, Any] = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+        text = path.read_text(encoding="utf-8")
     except OSError as exc:
         raise FactoryError(f"no stage spec for {stage}: {exc}") from None
+    return parse_stage(stage, text, path)
+
+
+def parse_stage(stage: str, text: str, path: Path | str) -> StageSpec:
+    """A stage spec from its YAML (`path` names it in errors)."""
+    raw: dict[str, Any] = yaml.safe_load(text) or {}
     limits = raw.pop("limits", None) or {}
     if raw.get("stage") != stage:
         raise FactoryError(f"{path}: stage must be {stage!r}")

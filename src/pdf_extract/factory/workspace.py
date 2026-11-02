@@ -26,7 +26,7 @@ from pathlib import Path
 from pdf_extract.factory import git
 from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.sandbox import SandboxError
-from pdf_extract.factory.stages import in_scope
+from pdf_extract.factory.spec import in_scope
 
 # Never copied in, never looked at, never brought back.
 EXCLUDED = (".git", ".venv", "node_modules/", "/data/factory/")

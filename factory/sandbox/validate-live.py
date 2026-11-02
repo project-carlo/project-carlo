@@ -23,7 +23,7 @@ import yaml
 
 from pdf_extract.factory import sandbox, workers, workspace
 from pdf_extract.factory.config import Account
-from pdf_extract.factory.stages import StageSpec
+from pdf_extract.factory.spec import StageSpec
 
 ROOT = Path(__file__).resolve().parents[2]
 

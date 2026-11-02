@@ -341,8 +341,8 @@ clones for `~/carlo-factory` and Run worktrees (with a migration for live Runs).
 **Phase 5: verification and real jobs** (§5), then switch the live factory to
 `sandbox`.
 
-**Phase 6: docs.** `docs/factory-spec.md` (§5 Worker setup, Running it, Future
-enhancements: the Bash-sandbox item changes), `factory/local.example.yaml`, the systemd
+**Phase 6: docs.** `docs/factory.md` (Workers and the sandbox, Running it, Not built
+yet; this was `docs/factory-spec.md`), `factory/local.example.yaml`, the systemd
 unit (the dispatcher no longer needs `xvfb-run`), and machine setup.
 
 ### Full-image smoke test (2026-10-31)

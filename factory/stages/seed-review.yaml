@@ -7,10 +7,21 @@ skills: [draft-parish-seed]
 tools: [Bash, Read, Write]
 writes:
   - scratch/{run}/{job}/**
-# What its workers get from the dispatcher's .env: bulletins from R2, and the model keys
-# `seed ask` and `seed extract` call. Scoped keys are a follow-up (factory-sandbox-plan.md).
-secrets: [R2_*, GEMINI_API_KEY, OPENAI_API_KEY]
-# `seed check` reads bulletins from R2.
+reads:
+  - .claude/skills/draft-parish-seed/rules.md
+# Paid or irreversible: the dispatcher approves, with the reviewer's answers. The seed
+# CLI refuses these too, so `pnpm --silent seed approve` doesn't get past them.
+deny:
+  - Bash(pnpm seed extract:*)
+  - Bash(pnpm seed ask:*)
+  - Bash(pnpm seed approve:*)
+  - Bash(uv run python -m pdf_extract seed extract:*)
+  - Bash(uv run python -m pdf_extract seed ask:*)
+  - Bash(uv run python -m pdf_extract seed approve:*)
+# What its workers get from the dispatcher's .env: bulletins from R2. No model keys: it
+# can't run `seed ask` or `seed extract`. Scoped keys are a follow-up (factory-sandbox-plan.md).
+secrets: [R2_*]
+# `seed check`, and the dispatcher's `seed approve`, read bulletins from R2.
 gate_secrets: [R2_*]
 # Run after the dispatcher approves the seeds the reviewer approved.
 gates:

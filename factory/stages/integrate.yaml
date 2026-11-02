@@ -1,13 +1,15 @@
 stage: integrate
 kind: agent
 model: claude-opus-5-5
-effort: high
+effort: medium
 prompt: factory/prompts/integrate.md
 skills: [explore-diocese]
 tools: [Bash, Read, Edit, Write]
 writes:
   - data/dioceses/{diocese}/diocese.md
   - scratch/{run}/{job}/**
+reads:
+  - data/dioceses/README.md#Traps
 gates:
   - pnpm --silent diocese validate {diocese}
 limits: { max_turns: 60, max_minutes: 30 }

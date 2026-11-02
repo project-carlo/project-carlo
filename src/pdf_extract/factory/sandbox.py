@@ -27,7 +27,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Protocol
 
 from pdf_extract.factory.config import DATA, FactoryError
-from pdf_extract.factory.stages import fill
+from pdf_extract.factory.spec import fill
 
 if TYPE_CHECKING:
     from pdf_extract.factory.workers import WorkerRequest

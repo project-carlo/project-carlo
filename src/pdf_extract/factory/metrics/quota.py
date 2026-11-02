@@ -20,8 +20,6 @@ attribution is uncertain.
 
 from __future__ import annotations
 
-import hashlib
-import json
 from bisect import bisect_left, bisect_right, insort
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
@@ -425,27 +423,3 @@ def combine(measures: list[Measure]) -> dict[str, Any]:
     return {"label": label, "low": low, "high": high, "text": range_text(low, high),
             "outside_use": any(m.outside_use for m in measures),
             "approximate": any(m.approximate for m in measures)}
-
-
-# ── Work units and the prompt/context version ───────────────────────────────
-def work_units(stage: str, inputs: dict[str, Any],
-               batches: list[dict[str, Any]] | None = None) -> int | None:
-    """What a job completes: map, the batch's roster entries; seed and seed-review, their
-    parishes; anything else (survey, its review, integrate...) 1. None if unknown."""
-    if stage == "map":
-        entries = inputs.get("entries")
-        if not entries and batches is not None:
-            entries = next((b.get("entries") for b in batches
-                            if b.get("id") == inputs.get("batch")), None)
-        return len(entries) if entries else None
-    if stage in ("seed", "seed-review"):
-        parishes = inputs.get("parishes") or ([inputs["parish"]] if inputs.get("parish")
-                                              else [])
-        return len(parishes) or 1
-    return 1
-
-
-def fingerprint(spec_text: str, prompt_text: str, skills: list[str]) -> str:
-    """The stage's prompt and context configuration: its spec, prompt file and skills."""
-    blob = json.dumps([spec_text, prompt_text, sorted(skills)])
-    return hashlib.sha256(blob.encode()).hexdigest()[:12]

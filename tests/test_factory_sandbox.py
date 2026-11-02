@@ -24,7 +24,7 @@ from pdf_extract.factory.config import Account, FactoryError
 from pdf_extract.factory.dispatcher import run_command
 from pdf_extract.factory.sandbox import LAUNCHER, HostBackend, Launch
 from pdf_extract.factory.secrets import check_patterns, command_env, pick
-from pdf_extract.factory.stages import StageSpec, load_stage
+from pdf_extract.factory.spec import StageSpec, load_stage
 from pdf_extract.factory.workers import WorkerRequest, sdk_options, worker_env
 
 ROOT = Path(__file__).resolve().parents[1]
