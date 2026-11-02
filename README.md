@@ -152,6 +152,7 @@ prints its result as JSON on success.
 | `pnpm perf:web` | Benchmark the web app's UI |
 | `pnpm geocode:cities` | Look up the centre of each city page's city |
 | `pnpm dev:labeler` | The labeler's Vite dev server ([docs/labeling-and-evals.md](docs/labeling-and-evals.md)) |
+| `pnpm check:core` / `pnpm lint:core` / `pnpm test:core` | Type check, lint and test the shared `@carlo/core` package |
 | `pnpm install:web` | Same as `pnpm install` |
 | **Other** | |
 | `pnpm analytics` | Report on site visits ([docs/analytics.md](docs/analytics.md)) |
@@ -359,6 +360,8 @@ CSV edits show up in previews and go live on merge.
   - `evals/`, `extract_run.py`, `compare.py`, `replay_gates.py` - scoring and comparing classifiers, replaying checks
 - `apps/web/` - the website (React, TypeScript, Vite, Cloudflare Workers)
 - `apps/labeler/` - the local labeling UI (never deployed)
+- `packages/core/` - `@carlo/core`: snapshot decoding, schedules and their formatting,
+  shared by the website and the planned mobile app ([docs/mobile-port-plan.md](docs/mobile-port-plan.md))
 - `factory/` - the factory's settings, stage specs, prompts and diocese queue
 - `data/` - committed: `parishes.csv`, `churches.csv`, `migrations/`, `dioceses/`,
   `labels/`, `seeds/`, eval results under `runs/<classifier>/eval/`. Untracked: the
