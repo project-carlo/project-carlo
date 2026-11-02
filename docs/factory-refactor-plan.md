@@ -429,8 +429,9 @@ Built in the PR after #188. Where it differs from the bullets below:
   `accounts.py`, and `_record_meta` in `attempts.py`, until Phase 5 moves them.
 - `Outcome` is in `outcome.py`, so the parts don't import each other in a circle.
   `Ledger.due` replaces `_due`, which the quota sampling and housekeeping both use.
-- The dispatcher writes every pending prompt through `attempts.pending()`, whose
-  docstring lists the kinds.
+- Every pending prompt is written through `ledger.pending()`, whose docstring lists the
+  kinds (`pnpm factory retry` included). It lives in the ledger, not `attempts`, so
+  `answers` doesn't import the attempt machinery.
 - Tests call the parts (`d.answers.poll_issues()`, `d.engine._seed_verdicts(...)`)
   instead of forwarding methods on `Dispatcher`. The suite already drives a whole seed
   Run (`test_seed_run_reviews_approves_and_records_decisions`), so no scenario was added.

@@ -13,7 +13,6 @@ from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import render
-from pdf_extract.factory.attempts import pending
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.handoff import BLOCKING, PARKING_STAGES
@@ -28,6 +27,7 @@ from pdf_extract.factory.ledger import (
     SETTLED,
     Ledger,
     now,
+    pending,
 )
 
 LOGGER = logging.getLogger(__name__)

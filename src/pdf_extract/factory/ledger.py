@@ -31,6 +31,20 @@ UNFINISHED = (QUEUED, RUNNING, GATING, WAITING_USAGE, SENT_BACK)
 # (advisory, for the PR).
 OPEN, ANSWERED, SETTLED, LISTED = "open", "answered", "settled", "listed"
 
+
+def pending(kind: str, prompt: str | None = None) -> str:
+    """A job's pending prompt, as the ledger stores it: what its next attempt is told.
+
+    - `start`, `fresh`: no prompt pending; the first message (`render.next_prompt` decides
+      which, from the job's attempts and session).
+    - `send_back`: the gates' or a reviewer's problems.
+    - `continue`: after a partial end, a usage limit or a timeout, in the same session.
+    - `resume`: after a crash or a lost result (the dispatcher restarted, git failed, the
+      owner retried the job).
+    - `answer`: the owner's answer to the job's blocking flag.
+    """
+    return json.dumps({"kind": kind, "prompt": prompt})
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS run (
     id TEXT PRIMARY KEY,            -- wilmington-map-1

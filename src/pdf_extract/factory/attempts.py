@@ -1,13 +1,7 @@
 """One attempt of a job: start a worker on it, record what came back (§5).
 
-What the next attempt is told is the job's pending prompt, `{"kind", "prompt"}`:
-
-- `start`, `fresh`: no prompt pending; the first message (`render.next_prompt` decides
-  which, from the job's attempts and session).
-- `send_back`: the gates' or a reviewer's problems.
-- `continue`: after a partial end, a usage limit or a timeout, in the same session.
-- `resume`: after a crash or a lost result (the dispatcher restarted, git failed).
-- `answer`: the owner's answer to the job's blocking flag.
+What the next attempt is told is the job's pending prompt (`ledger.pending` lists the
+kinds).
 
 An attempt that hits a usage limit or crashes is settled here. The engine acts on the
 rest: a crash past `max_crashes` blocks the Run, a partial end continues or is exhausted,
@@ -28,7 +22,7 @@ from pdf_extract.factory import git, render
 from pdf_extract.factory.accounts import Accounts, stamp
 from pdf_extract.factory.config import Account, Config, FactoryError
 from pdf_extract.factory.handoff import handoff_path
-from pdf_extract.factory.ledger import QUEUED, RUNNING, WAITING_USAGE, Ledger, now
+from pdf_extract.factory.ledger import QUEUED, RUNNING, WAITING_USAGE, Ledger, now, pending
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.plan import ordered_batches
 from pdf_extract.factory.quota import fingerprint, work_units
@@ -48,11 +42,6 @@ from pdf_extract.factory.workers import (
 )
 
 LOGGER = logging.getLogger(__name__)
-
-
-def pending(kind: str, prompt: str | None = None) -> str:
-    """A job's pending prompt, as the ledger stores it."""
-    return json.dumps({"kind": kind, "prompt": prompt})
 
 
 def code_commit() -> str | None:

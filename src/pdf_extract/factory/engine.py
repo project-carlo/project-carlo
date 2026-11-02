@@ -20,7 +20,7 @@ from typing import Any
 
 from pdf_extract.factory import git, playbook, render, report
 from pdf_extract.factory.answers import Answers
-from pdf_extract.factory.attempts import Attempts, Ended, pending
+from pdf_extract.factory.attempts import Attempts, Ended
 from pdf_extract.factory.backup import copy_database
 from pdf_extract.factory.config import QUEUE_PATH, Config, FactoryError
 from pdf_extract.factory.forge import Forge
@@ -60,6 +60,7 @@ from pdf_extract.factory.ledger import (
     WAITING_USAGE,
     Ledger,
     now,
+    pending,
 )
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.plan import diocese_dir, next_job, read_seed, seed_status

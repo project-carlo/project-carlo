@@ -60,8 +60,8 @@ class Accounts:
             return None, None, Outcome("paused", str(exc))
         if self.ledger.get("usage_cooldown"):
             self.ledger.set("usage_cooldown", None)
-        stamp = self._stamp()
-        ids = {s.account.name: self.ledger.add_usage(s.account.name, stamp, s.usage, "select")
+        taken = self._stamp()
+        ids = {s.account.name: self.ledger.add_usage(s.account.name, taken, s.usage, "select")
                for s in rows}
         rows = [s for s in rows if s.account.name not in held]
         if override:
