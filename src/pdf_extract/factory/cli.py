@@ -19,13 +19,12 @@
   quota [--by K] [--tz ZONE]   quota points per unit of work, by stage, or within stages by
                                model, effort, mode, account, plan, date or hour
   quota --windows              each account's five-hour and weekly windows over time
-  quota backfill               tokens and metadata for attempts from before quota tracking
   cost [--stage]               cost by Run, or by stage (API-price dollars: a diagnostic)
   backup                       back the ledger up to R2 now
 
 A job is its number or `<run>/<name>` (`wilmington-map-1/004-map`). `--stub` on the
 other commands reads the stub runs' ledger. Run it from the dispatcher's own checkout;
-see docs/factory-spec.md.
+see docs/factory.md.
 """
 
 from __future__ import annotations
@@ -60,6 +59,7 @@ from pdf_extract.factory.ledger import (
     now,
     pending,
 )
+from pdf_extract.factory.metrics import report as metrics
 from pdf_extract.factory.spec import STAGES
 
 Result = dict[str, Any]
@@ -122,8 +122,8 @@ def _inspect(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
     settle = load_config().quota_settle_seconds
     if args.stage:
-        args.render = report.text_recent
-        return report.recent(ledger, args.stage, args.last, settle)
+        args.render = metrics.text_recent
+        return metrics.recent(ledger, args.stage, args.last, settle)
     if not args.job:
         raise FactoryError("name a job, or --stage")
     try:
@@ -165,20 +165,15 @@ def _prompt(args: argparse.Namespace) -> Result:
 
 
 def _quota(args: argparse.Namespace) -> Result:
-    ledger, config = _ledger(args), load_config()
-    if args.action == "backfill":
-        from pdf_extract.factory.backfill import backfill, git_show
-
-        args.render = _text
-        return backfill(ledger, config, git_show(_repo()))
+    ledger, settle = _ledger(args), load_config().quota_settle_seconds
     if args.windows:
-        args.render = report.text_windows
-        return report.windows(ledger, config.quota_settle_seconds)
-    return report.quota(ledger, args.by, args.tz, config.quota_settle_seconds)
+        args.render = metrics.text_windows
+        return metrics.windows(ledger, settle)
+    return metrics.quota(ledger, args.by, args.tz, settle)
 
 
 def _cost(args: argparse.Namespace) -> Result:
-    return report.cost(_ledger(args), args.stage)
+    return metrics.cost(_ledger(args), args.stage)
 
 
 def _backup(args: argparse.Namespace) -> Result:
@@ -248,7 +243,7 @@ def add_factory_parser(
     add_common_args: Callable[[argparse.ArgumentParser], None],
 ) -> None:
     parser = subparsers.add_parser(
-        "factory", help="The onboarding factory (docs/factory-spec.md)",
+        "factory", help="The onboarding factory (docs/factory.md)",
         description=__doc__, usage="%(prog)s <command> ...",
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -290,12 +285,10 @@ def add_factory_parser(
     p.add_argument("--run", help="The Run (default: the active one)")
     p.add_argument("--input", help="The job's input as JSON, e.g. '{\"batch\": \"b3\"}' "
                    "(default: what the plan would give it)")
-    p = leaf("quota", _quota, report.text_quota)
-    p.add_argument("action", nargs="?", choices=["backfill"],
-                   help="backfill: tokens and metadata for older attempts, from transcripts")
-    p.add_argument("--by", choices=report.BY, default="stage")
+    p = leaf("quota", _quota, metrics.text_quota)
+    p.add_argument("--by", choices=metrics.BY, default="stage")
     p.add_argument("--tz", help="Time zone for --by date or hour (default: this machine's)")
     p.add_argument("--windows", action="store_true", help="Account and window totals instead")
-    p = leaf("cost", _cost, report.text_cost)
+    p = leaf("cost", _cost, metrics.text_cost)
     p.add_argument("--stage", action="store_true", help="By stage instead of by Run")
     leaf("backup", _backup)

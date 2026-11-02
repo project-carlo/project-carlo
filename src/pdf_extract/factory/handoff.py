@@ -1,4 +1,4 @@
-"""The handoff: the JSON a worker writes at the end of its job (docs/factory-spec.md §4).
+"""The handoff: the JSON a worker writes at the end of its job (docs/factory.md).
 
 `scratch/<run>/<job>/handoff.json`, about 300 tokens. Reviewers add their verdicts. The
 dispatcher takes the changed paths from git, never from the handoff.

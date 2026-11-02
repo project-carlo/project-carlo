@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
-from collections.abc import Iterator
+from collections.abc import Callable, Iterator
 from contextlib import contextmanager
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -254,6 +254,11 @@ COLUMNS = {
 
 def now() -> str:
     return datetime.now(UTC).isoformat(timespec="microseconds")
+
+
+def stamp(clock: Callable[[], datetime]) -> str:
+    """`now()` from an injected clock (the dispatcher's, which tests move)."""
+    return clock().isoformat(timespec="microseconds")
 
 
 def when(value: Any) -> datetime | None:

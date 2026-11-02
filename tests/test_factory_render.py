@@ -23,7 +23,7 @@ import pytest
 from pdf_extract.factory import render
 from pdf_extract.factory.config import FactoryError
 from pdf_extract.factory.ledger import MAP, SEED, Ledger
-from pdf_extract.factory.quota import fingerprint
+from pdf_extract.factory.metrics.attempt_meta import fingerprint
 from pdf_extract.factory.spec import STAGES, StageSpec, load_stage
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -318,7 +318,7 @@ def test_context_hashes_change_with_a_skill_or_a_read(tmp_path: Path) -> None:
 
 def test_the_fingerprint_without_code_hashes_as_before() -> None:
     old = hashlib.sha256(json.dumps(["spec", "prompt", ["a", "b"]]).encode()).hexdigest()[:12]
-    assert fingerprint("spec", "prompt", ["b", "a"]) == old  # backfilled attempts match
+    assert fingerprint("spec", "prompt", ["b", "a"]) == old  # older attempts match
     code = {"render": "1", "skills": {}, "reads": {}, "dispatcher": "abc"}
     assert fingerprint("spec", "prompt", ["a", "b"], code) != old
     assert fingerprint("spec", "prompt", ["a", "b"], code | {"dispatcher": "def"}) != \

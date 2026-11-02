@@ -16,22 +16,22 @@ from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import git, readiness
-from pdf_extract.factory.accounts import Accounts
 from pdf_extract.factory.answers import Answers
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.ledger import IN_REVIEW, MERGED, PENDING, SEED, Ledger, now
+from pdf_extract.factory.metrics.readings import Readings
 
 LOGGER = logging.getLogger(__name__)
 
 
 class Housekeeping:
     def __init__(self, ledger: Ledger, config: Config, *, repo: Path, forge: Forge,
-                 accounts: Accounts, answers: Answers, clock: Callable[[], datetime],
+                 readings: Readings, answers: Answers, clock: Callable[[], datetime],
                  db_path: Path, runs_dir: Path, pull_data: Callable[[], None] | None,
                  backup: Callable[[], str] | None) -> None:
         self.ledger, self.config, self.repo, self.forge = ledger, config, repo, forge
-        self.accounts, self.answers, self.clock = accounts, answers, clock
+        self.readings, self.answers, self.clock = readings, answers, clock
         self.db_path, self.runs_dir = db_path, runs_dir
         self.pull_data, self.backup = pull_data, backup
 
@@ -39,7 +39,7 @@ class Housekeeping:
         at = self.clock()
         if not self.ledger.get("usage_cooldown"):
             # After a 429, the next job's usage check is what tries the endpoint again.
-            self._safely("quota", self.accounts.sample_quota)
+            self._safely("quota", self.readings.sample)
         if self.ledger.due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes),
                            at):
             self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),

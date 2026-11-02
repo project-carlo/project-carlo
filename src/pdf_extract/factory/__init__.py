@@ -1,5 +1,6 @@
 """The onboarding factory: agent jobs, scheduled by code, that take a diocese from nothing
-to seeded parishes. The design is docs/factory-spec.md.
+to seeded parishes. How it works and where a
+change goes: docs/factory.md.
 
 - `config`: the caps and limits (`factory/config.yaml`) and this machine's accounts and
   paths (`data/factory/local.yaml`).
@@ -14,12 +15,14 @@ to seeded parishes. The design is docs/factory-spec.md.
 - `dispatcher`: the loop, built from:
   - `engine`: one job, from picking it to its gates and what follows them;
   - `attempts`: one attempt: starting its worker, recording what came back;
-  - `accounts`: the account each attempt runs on, and the quota readings;
+  - `accounts`: the account each attempt runs on, against the caps;
   - `answers`: issues for blocking flags, and what the owner's answers do;
   - `housekeeping`: merged Runs, seed readiness and backups, between jobs.
-- `usage`, `quota`, `tokens`: the accounts' limits, and what each attempt used.
+- `usage`: the accounts' usage endpoint, and which account is under its caps.
+- `metrics/`: what each attempt used: quota readings and attribution, tokens, attempt
+  metadata, and the `quota` and `cost` reports (docs/factory-quota.md).
 - `forge`: GitHub: issues for blocking flags, answers, and PRs.
 - `readiness`: which mapped parishes are ready to seed.
-- `report`: `status`, `inspect`, `prompt`, `cost` and the PR summary.
+- `report`: `status`, `queue`, `inspect`, `prompt` and the PR summary.
 - `cli`: `pnpm factory`.
 """
