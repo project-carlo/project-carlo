@@ -263,6 +263,29 @@ def test_read_files_copies_each_files_sections_in_order() -> None:
             render.read_files(StageSpec(stage="map", kind="agent", reads=bad), text_of, "r", "j")
 
 
+def test_given_sizes_a_file_read_whole_once() -> None:
+    def text_of(path: str) -> str | None:
+        return {"rules.md": "## Rules\n\nR.\n"}.get(path)
+
+    spec = StageSpec(stage="map", kind="agent", reads=["rules.md#Rules", "rules.md"])
+    reads = [p["source"] for p in render.given(spec, "m", text_of) if p["part"] == "read"]
+    assert reads == ["rules.md"]
+
+
+def test_the_map_playbook_keeps_lessons_whole(tmp_path: Path) -> None:
+    meta = tmp_path / "data" / "dioceses" / "d" / "diocese.md"
+    meta.parent.mkdir(parents=True)
+    meta.write_text("# D\n\n## New lessons\n\nIntro for the next integrate.\n\n"
+                    "- Discover Mass caps downloads;\n  retry after 00:00 UTC.\n"
+                    "  - Not on weekends.\n\n## Rules settled for this diocese\n")
+    text = render._playbook(tmp_path, "d")
+    assert ("### New lessons\n\n- Discover Mass caps downloads;\n  retry after 00:00 UTC.\n"
+            "  - Not on weekends.\n") in text and "Intro" not in text
+    assert text.count("(none yet)") == 2  # publishers and rules: one marker for empty
+    meta.unlink()
+    assert render._playbook(tmp_path, "d").count("(none yet)") == 3
+
+
 def test_every_stage_reads_files_that_exist_on_main() -> None:
     for stage in STAGES:
         spec = load_stage(stage, ROOT)

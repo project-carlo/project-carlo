@@ -9,7 +9,8 @@ writes:
   - scratch/{run}/{job}/**
 reads:
   - .claude/skills/draft-parish-seed/rules.md
-# Paid or irreversible: the dispatcher approves, with the reviewer's answers.
+# Paid or irreversible: the dispatcher approves, with the reviewer's answers. The seed
+# CLI refuses these too, so `pnpm --silent seed approve` doesn't get past them.
 deny:
   - Bash(pnpm seed extract:*)
   - Bash(pnpm seed ask:*)

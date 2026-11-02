@@ -529,6 +529,11 @@ class Dispatcher:
                 # Its session can only be resumed from the account that stores it.
                 self.ledger.set_job(job["id"], account=original["account"])
                 job = self.ledger.job(job["id"])
+        # What a first message points to, read before the usage check so a missing one costs
+        # no reading. A missing read is a FactoryError: the job waits and tries again
+        # (merging main again, until it has started), so a fix to the spec on main heals it;
+        # after a few failures the Run blocks.
+        reads = render.read_files(spec, render.worktree_text(worktree), run["id"], job["name"])
         account, reading, waiting = self._account(job)
         if waiting is not None:
             return waiting
@@ -537,12 +542,7 @@ class Dispatcher:
         pending = json.loads(job["pending_prompt"] or "null") or {}
         kind, prompt, session = render.next_prompt(self.ledger, run, job, spec, values)
         if kind in ("start", "fresh"):
-            # What the first message points to. A missing read is a FactoryError: the job
-            # waits and tries again (merging main again, until it has started), so a fix to
-            # the spec on main heals it; after a few failures the Run blocks.
-            files = render.read_files(spec, render.worktree_text(worktree), run["id"],
-                                      job["name"])
-            files |= render.input_files(self.ledger, run, job)
+            files = reads | render.input_files(self.ledger, run, job)
             for rel, text in files.items():
                 (worktree / rel).parent.mkdir(parents=True, exist_ok=True)
                 (worktree / rel).write_text(text, encoding="utf-8")

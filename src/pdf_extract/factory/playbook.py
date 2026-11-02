@@ -26,20 +26,29 @@ _INTROS = {
 _BEFORE = {NEW_LESSONS: (RULES, LOG), PRECEDENTS: (LOG,), RULES: (LOG,)}
 
 
-def _level(line: str) -> int:
-    m = re.match(r"(#+)\s", line)
-    return len(m.group(1)) if m else 0
+def headings(lines: list[str]) -> dict[int, tuple[int, str]]:
+    """Each Markdown heading's line: its level and title. A `#` line in a fenced code block
+    (an example record's `## Publisher`, a shell comment) isn't one."""
+    found, fence = {}, None
+    for i, line in enumerate(lines):
+        if m := re.match(r"\s*(`{3,}|~{3,})", line):
+            if fence is None:
+                fence = m.group(1)
+            elif m.group(1).startswith(fence):
+                fence = None
+        elif fence is None and (m := re.fullmatch(r"(#+)\s+(.*?)\s*", line)):
+            found[i] = (len(m.group(1)), m.group(2))
+    return found
 
 
 def _span(lines: list[str], heading: str) -> tuple[int, int] | None:
     """The section's lines after its heading, up to the next heading of its level or above."""
-    try:
-        start = next(i for i, line in enumerate(lines) if line.strip() == heading)
-    except StopIteration:
+    found = headings(lines)
+    level, title = len(heading) - len(heading.lstrip("#")), heading.lstrip("#").strip()
+    start = next((i for i, h in found.items() if h == (level, title)), None)
+    if start is None:
         return None
-    level = _level(heading)
-    end = next((i for i in range(start + 1, len(lines))
-                if 0 < _level(lines[i]) <= level), len(lines))
+    end = next((i for i, (lv, _) in found.items() if i > start and lv <= level), len(lines))
     return start + 1, end
 
 

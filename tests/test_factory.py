@@ -1012,17 +1012,20 @@ def test_a_job_finds_the_sections_it_reads_in_its_scratch_folder(env: Env) -> No
 
 
 def test_a_missing_read_fails_the_job_before_its_worker_starts(env: Env) -> None:
-    d = env.dispatcher(map_script())
+    meter, _ = metered(env)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
     d.tick()  # survey
     spec = env.repo / "factory" / "stages" / "survey-review.yaml"
     good = spec.read_text()
     env.commit_main({"factory/stages/survey-review.yaml": good.replace(
         "README.md#Sources", "README.md#No such heading")}, "a bad read")
+    readings = len(env.ledger.all("SELECT * FROM usage"))
     outcome = d.tick()
     assert outcome.action == "waiting" and "no heading 'No such heading'" in outcome.detail
     review = env.ledger.jobs(map_run(env)["id"], "survey-review")[0]
     assert review["status"] == QUEUED
     assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", review["id"])
+    assert len(env.ledger.all("SELECT * FROM usage")) == readings  # no usage check spent
     env.commit_main({"factory/stages/survey-review.yaml": good}, "fix the read")
     env.now += timedelta(hours=1)
     d.tick()  # merges main again, since the job never started
@@ -1510,6 +1513,18 @@ def test_playbook_appends_once_under_its_heading(tmp_path: Path) -> None:
     assert playbook.bullets(meta, playbook.PUBLISHERS) == ["Parishes Online prints most bulletins."]
 
 
+def test_playbook_sections_skip_fenced_code(tmp_path: Path) -> None:
+    meta = tmp_path / "diocese.md"
+    meta.write_text(META.replace(
+        "- Parishes Online prints most bulletins.\n",
+        "- Parishes Online prints most bulletins.\n\n```bash\n# caps reset at midnight\n"
+        "## not a heading\n```\n\n- Discover Mass caps downloads.\n"))
+    assert playbook.bullets(meta, playbook.PUBLISHERS) == [
+        "Parishes Online prints most bulletins.", "Discover Mass caps downloads."]
+    playbook.append(meta, playbook.PUBLISHERS, ["Solutio needs the parish page."])
+    assert playbook.bullets(meta, playbook.PUBLISHERS)[-1] == "Solutio needs the parish page."
+
+
 def test_handoff_validation(tmp_path: Path) -> None:
     path = tmp_path / "h.json"
     path.write_text(json.dumps({"status": "done", "summary": "s", "extra": 1}))
@@ -1578,6 +1593,45 @@ def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
     assert loaded.deny == ["Bash(pnpm seed extract:*)"]
     (tmp_path / "factory" / "stages" / "map.yaml").write_text("stage: map\nkind: agent\n")
     assert load_stage("map", tmp_path).reads == [] and load_stage("map", tmp_path).deny == []
+
+
+def test_deny_reaches_the_sdk_and_the_seed_cli(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+        capsys: pytest.CaptureFixture[str]) -> None:
+    import asyncio
+    import sys
+    import types
+
+    from pdf_extract.__main__ import main
+    from pdf_extract.factory.workers import SEED_REFUSE_ENV, SdkWorker
+    from pdf_extract.seeding.cli import REFUSE_ENV
+
+    seen: dict[str, Any] = {}
+    sdk = types.ModuleType("claude_agent_sdk")
+    for name in ("AssistantMessage", "RateLimitEvent", "ResultMessage", "SystemMessage",
+                 "TextBlock", "ToolUseBlock"):
+        setattr(sdk, name, type(name, (), {}))
+    sdk.ClaudeAgentOptions = lambda **kw: kw
+
+    async def query(prompt: str, options: dict[str, Any]):
+        seen.update(options)
+        return
+        yield
+
+    sdk.query = query
+    monkeypatch.setitem(sys.modules, "claude_agent_sdk", sdk)
+    spec = load_stage("seed-review", ROOT)
+    request = WorkerRequest(1, "r", "002-seed-review", "seed-review", spec, tmp_path, None,
+                            "go", "", {})
+    asyncio.run(SdkWorker()._run(request))
+    assert set(spec.deny) <= set(seen["disallowed_tools"])
+    assert seen["env"][SEED_REFUSE_ENV] == "approve ask extract"
+    assert REFUSE_ENV == SEED_REFUSE_ENV
+
+    # However it is spelled, the CLI refuses a denied command before touching anything.
+    monkeypatch.setenv(REFUSE_ENV, seen["env"][SEED_REFUSE_ENV])
+    assert main(["seed", "approve", "x", "--reviewer", "agent:r@abc"]) == 1
+    assert "`seed approve` is refused" in capsys.readouterr().err
 
 
 def test_the_committed_config_is_the_defaults(tmp_path: Path) -> None:

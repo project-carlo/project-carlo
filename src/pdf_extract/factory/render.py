@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -296,11 +295,15 @@ def _playbook(worktree: Path, diocese: str) -> str:
     meta = diocese_dir(worktree, diocese) / "diocese.md"
     parts = []
     for heading in PLAYBOOK:
-        if heading == playbook.NEW_LESSONS:  # the bullets, without the section's intro
-            body = _lines(playbook.bullets(meta, heading)) if meta.exists() else ""
-        else:
-            body = (playbook.section(meta, heading) if meta.exists() else "") or "(none yet)"
-        parts.append(f"### {heading.lstrip('# ')}\n\n{body}\n")
+        body = playbook.section(meta, heading) if meta.exists() else ""
+        if heading == playbook.NEW_LESSONS:
+            # From the first bullet, so without the section's intro; a lesson that wraps,
+            # or has sub-bullets, stays whole.
+            lines = body.splitlines()
+            first = next((i for i, line in enumerate(lines) if line.startswith("- ")),
+                         len(lines))
+            body = "\n".join(lines[first:])
+        parts.append(f"### {heading.lstrip('# ')}\n\n{body or '(none yet)'}\n")
     return "\n".join(parts)
 
 
@@ -440,28 +443,13 @@ def read_entry(text_of: TextOf, entry: str) -> str:
     if not heading:
         return text
     lines = text.splitlines()
-    headings = _headings(lines)
+    headings = playbook.headings(lines)
     start = next((i for i, (_, title) in headings.items() if title == heading.strip()), None)
     if start is None:
         raise FactoryError(f"reads: {path} has no heading {heading!r}")
     level = headings[start][0]
     end = next((i for i, (lv, _) in headings.items() if i > start and lv <= level), len(lines))
     return "\n".join(lines[start:end]).strip() + "\n"
-
-
-def _headings(lines: list[str]) -> dict[int, tuple[int, str]]:
-    """Each Markdown heading's line: its level and title. A `#` line in a fenced code block
-    (an example record's `## Publisher`) isn't one."""
-    found, fence = {}, None
-    for i, line in enumerate(lines):
-        if m := re.match(r"\s*(`{3,}|~{3,})", line):
-            if fence is None:
-                fence = m.group(1)
-            elif m.group(1).startswith(fence):
-                fence = None
-        elif fence is None and (m := re.fullmatch(r"(#+)\s+(.*?)\s*", line)):
-            found[i] = (len(m.group(1)), m.group(2))
-    return found
 
 
 def _reads_by_file(spec: StageSpec) -> dict[str, list[str] | None]:
@@ -512,7 +500,12 @@ def given(spec: StageSpec, message: str, text_of: TextOf, label: str = "first me
              part(label, None, message)]
     for name in spec.skills:
         parts.append(part("skill", skill_path(name), text_of(skill_path(name)), name=name))
-    for entry in spec.reads:
+    # As the worker is given them: a section of a file it reads whole adds nothing.
+    whole = {path for path, headings in _reads_by_file(spec).items() if headings is None}
+    for entry in dict.fromkeys(spec.reads):
+        path, _, heading = entry.partition("#")
+        if heading and path in whole:
+            continue
         try:
             parts.append(part("read", entry, read_entry(text_of, entry)))
         except FactoryError as exc:

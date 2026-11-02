@@ -11,6 +11,7 @@ import asyncio
 import importlib.metadata
 import json
 import os
+import re
 import shutil
 import tempfile
 from collections.abc import Callable
@@ -116,8 +117,21 @@ def strip_frontmatter(text: str) -> str:
     return text.strip()
 
 
-def worker_env(account: Account | None) -> dict[str, str]:
-    """No GitHub token, no git credentials, the account's Claude login, not an API key."""
+# A `deny:` rule only stops a command that starts with its prefix: `pnpm --silent seed
+# approve` gets past `Bash(pnpm seed approve:*)`. So the seed CLI also refuses the seed
+# commands a stage denies, named in this variable (read by `pdf_extract.seeding.cli`).
+SEED_REFUSE_ENV = "CARLO_SEED_REFUSE"
+_SEED_RULE = re.compile(r"Bash\((?:pnpm|uv run python -m pdf_extract) seed ([\w-]+):\*\)")
+
+
+def seed_refusals(deny: list[str]) -> list[str]:
+    """The seed commands a stage's `deny:` rules name (`Bash(pnpm seed approve:*)`)."""
+    return sorted({m.group(1) for rule in deny if (m := _SEED_RULE.fullmatch(rule))})
+
+
+def worker_env(account: Account | None, deny: list[str] | None = None) -> dict[str, str]:
+    """No GitHub token, no git credentials, the account's Claude login, not an API key, and
+    the seed commands the stage denies refused by the CLI too."""
     empty = Path(tempfile.gettempdir()) / "carlo-factory-empty-gh"
     empty.mkdir(exist_ok=True)
     env = {
@@ -128,6 +142,8 @@ def worker_env(account: Account | None) -> dict[str, str]:
     }
     if account is not None:
         env["CLAUDE_CONFIG_DIR"] = str(account.config_dir)
+    if refused := seed_refusals(deny or []):
+        env[SEED_REFUSE_ENV] = " ".join(refused)
     return env
 
 
@@ -199,7 +215,7 @@ class SdkWorker:
             skills=list(spec.skills) or None,
             max_turns=spec.max_turns,
             resume=request.session_id,
-            env=worker_env(request.account),
+            env=worker_env(request.account, spec.deny),
             max_buffer_size=MAX_MESSAGE_BYTES,
         )
         result = WorkerResult(CRASH, session_id=request.session_id, error="no result")

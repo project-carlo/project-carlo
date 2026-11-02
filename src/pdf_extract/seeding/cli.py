@@ -727,6 +727,20 @@ def _text_diff(r: Result) -> str:
 
 
 # ── Parser ──────────────────────────────────────────────────────────────────
+# The seed commands a factory stage denies its worker (`deny:` in its spec), set by
+# `pdf_extract.factory.workers.worker_env`: refused here too, however the command is spelled.
+REFUSE_ENV = "CARLO_SEED_REFUSE"
+
+
+def _refusable(name: str, handler: Callable[[argparse.Namespace], Any]):
+    def run(args: argparse.Namespace) -> Any:
+        if name in os.environ.get(REFUSE_ENV, "").split():
+            raise SeedError(f"`seed {name}` is refused in this factory stage; the dispatcher "
+                            "runs it")
+        return handler(args)
+    return run
+
+
 def add_seed_parser(
     subparsers: argparse._SubParsersAction,
     add_common_args: Callable[[argparse.ArgumentParser], None],
@@ -746,6 +760,8 @@ def add_seed_parser(
         p = (under or sub).add_parser(name, help=help_text if listed else None,
                                       description=help_text,
                                       prog=f"{prog or parser.prog} {name}")
+        if under is None:
+            handler = _refusable(name, handler)
         p.set_defaults(handler=handler, render=render)
         p.add_argument("--json", action="store_true", help="Print the JSON result")
         add_common_args(p)
