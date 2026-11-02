@@ -44,7 +44,7 @@ The run's status decides what happens next:
 | Status | Exit code | Meaning |
 | :-- | :-: | :-- |
 | `passed` | 0 | Every publishing check passed; safe to publish. |
-| `held` | 10 | A check failed: church count changed, total events moved more than 10%, less than 90% of weekly slots survived, a parish dropped to zero events, a parish or church was removed from the CSVs, or more than half of the parishes failed to fetch. A person decides. |
+| `held` | 10 | A check failed: church count changed, total events moved more than 10%, less than 90% of weekly slots survived, a parish dropped to zero events, a parish lost more than half (and at least 3) of its dates in the coming weeks, a parish or church was removed from the CSVs, or more than half of the parishes failed to fetch. A person decides. |
 | `failed` | 1 | A stage crashed. |
 
 A local run never publishes anything.
@@ -186,7 +186,7 @@ Where each kind of data lives is in the README's
 
 Everything under `pipeline/runs/` is written once and never changed, and a
 rollback is just moving the pointer. After each publish the weekly workflow
-prunes old runs (`pnpm data:prune`), keeping the last 8 weeks and, for a
+prunes old runs (`pnpm data:prune`), keeping the 8 most recent runs and, for a
 year, each month's last run that passed or was published; those are the runs
 you can roll back to.
 
@@ -194,9 +194,10 @@ Locally, `data/` doubles as a cache of the bucket: a PDF or cached extraction
 is downloaded the first time a command needs it and kept. With no R2
 credentials the pipeline runs purely on local files.
 
-Writes to R2 are opt-in (`CARLO_REMOTE_WRITE=1`) and only the weekly workflow
-has write keys. Anyone else pulling data uses read-only keys, so nothing run
-outside the workflow can change shared data, even `fetch` or `process`.
+Writes to R2 are opt-in (`CARLO_REMOTE_WRITE=1`) and only the weekly and
+Publish Data Run workflows have write keys. Anyone else pulling data uses
+read-only keys, so nothing run outside the workflows can change shared data,
+even `fetch` or `process`.
 
 `pnpm data:pull --run-id <id>` pulls a specific run instead of the published one, e.g. a held one
 you want to inspect. The database you replace is kept as

@@ -46,8 +46,9 @@ These steps work on macOS and Linux (including WSL).
 
 You need [uv](https://docs.astral.sh/uv/) (it installs the right Python, 3.13,
 for you), [Node.js](https://nodejs.org/) 22 with pnpm, and Ghostscript, which
-shrinks bulletin PDFs. On Linux, `xvfb` also lets fetches run in a headed
-browser, which Cloudflare blocks less often than a headless one.
+shrinks bulletin PDFs. Fetches open a headed browser, which Cloudflare blocks less
+often than a headless one. On Linux without a display, run them under
+`xvfb-run -a` (from `xvfb`), or set `PLAYWRIGHT_HEADLESS=1`.
 
 macOS ([Homebrew](https://brew.sh)):
 
@@ -61,7 +62,7 @@ Linux (Debian or Ubuntu):
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-sudo apt-get install -y ghostscript xvfb
+sudo apt-get update && sudo apt-get install -y ghostscript xvfb
 ```
 
 Then install Node 22 ([nodejs.org](https://nodejs.org/en/download) has commands
@@ -79,7 +80,7 @@ uv run playwright install chromium   # on Linux: add --with-deps
 ```
 
 `pnpm install` installs the web app and labeler (see `pnpm-workspace.yaml`). The
-Playwright browser is only needed to fetch bulletins.
+Playwright browser is needed to fetch bulletins.
 
 ### 3. Get the data
 
@@ -138,14 +139,20 @@ prints its result as JSON on success.
 | `pnpm geocode` / `pnpm geocode:apply` | Look up church coordinates from addresses / write them to the CSV |
 | `pnpm diocese <subcommand>` | Research a new diocese ([data/dioceses/README.md](data/dioceses/README.md)) |
 | **Schedules and seeding** | |
-| `pnpm schedule <show\|apply\|modify\|seed>` | Inspect and hand-edit believed schedules |
+| `pnpm schedule <subcommand>` | Inspect and hand-edit believed schedules |
 | `pnpm seed <subcommand>` | Draft, check and approve parish seeds |
-| `pnpm factory <run\|status\|inspect>` | The onboarding factory |
+| `pnpm factory <subcommand>` | The onboarding factory |
 | **Labels and evals** | |
 | `pnpm label [--demo]` | The labeler, at http://localhost:8766/ |
 | `pnpm eval --classifier C` / `pnpm eval:report --classifier C` | Run a classifier over the labeled bulletins / score it |
-| `pnpm extract` / `pnpm compare` | Run an experimental classifier over fetched bulletins / compare runs |
+| `pnpm extract --classifier C` / `pnpm compare C1 C2 ...` | Run an experimental classifier over fetched bulletins / compare runs |
 | `uv run python -m pdf_extract replay-gates` | Replay the publishing checks over archived runs (no pnpm script) |
+| **Web app and labeler** | |
+| `pnpm dev:web` / `pnpm build:web` / `pnpm preview:web` | Run the web app's dev server / build it / build and serve it with wrangler |
+| `pnpm perf:web` | Benchmark the web app's UI |
+| `pnpm geocode:cities` | Look up the centre of each city page's city |
+| `pnpm dev:labeler` | The labeler's Vite dev server ([docs/labeling-and-evals.md](docs/labeling-and-evals.md)) |
+| `pnpm install:web` | Same as `pnpm install` |
 | **Other** | |
 | `pnpm analytics` | Report on site visits ([docs/analytics.md](docs/analytics.md)) |
 
@@ -195,11 +202,12 @@ Everything the pipeline observes lives in Cloudflare R2 and is pulled on demand:
 | Extraction results | R2 `runs/<classifier>/cache/<version>/<sha256>.json` | `process`, `extract` |
 | Bulletins, events, recurrence history, run records | the SQLite database, published per run to R2 `pipeline/runs/<run_id>/` | the pipeline |
 | Website snapshot (gzipped JSON) | R2 `pipeline/runs/<run_id>/frontend.json.gz` | `weekly` |
-| Which run is live | R2 `pipeline/latest.json` | the weekly workflow |
+| Which run is live | R2 `pipeline/latest.json` | the weekly and Publish Data Run workflows |
 
 Published runs are never changed, so a rollback only moves the pointer. Locally,
 `data/` doubles as a cache of the bucket, and with no R2 credentials the pipeline
-runs on local files only. Only the weekly workflow can write to R2.
+runs on local files only. Only the weekly and Publish Data Run workflows can write
+to R2.
 
 Every pipeline command first brings the local database up to date: it applies new
 migrations and re-seeds the `parish` and `church` tables from the CSVs. A parish
@@ -266,6 +274,7 @@ pnpm factory run --stub scenario.json          # canned workers: no usage, no Gi
 pnpm factory run                               # the dispatcher (or factory/carlo-factory.service)
 pnpm factory status                            # Runs, the running job, usage, open issues
 pnpm factory inspect wilmington-map-1/004-map  # one job in full; the `foreman` skill starts here
+pnpm seed approve <parish> --reviewer agent:seed-review@<commit> --answers answers.json
 ```
 
 ## Labels and evals
@@ -293,7 +302,8 @@ variables already set).
 - `R2_ENDPOINT_URL`: only for a bucket in a jurisdiction (e.g.
   `https://<account>.eu.r2.cloudflarestorage.com`); otherwise derived from
   `R2_ACCOUNT_ID`.
-- `CARLO_REMOTE_WRITE=1`: let commands write to R2. Set only by the weekly workflow.
+- `CARLO_REMOTE_WRITE=1`: let commands write to R2. Set only by the weekly and
+  Publish Data Run workflows.
 - `PLAYWRIGHT_HEADLESS=1`: force a headless browser. `PLAYWRIGHT_BROWSER_CHANNEL=chrome`:
   use the installed Chrome instead of Playwright's Chromium.
 
