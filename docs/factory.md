@@ -117,11 +117,20 @@ answer can't fix.
 
 Each account is a Claude Code config directory signed in with `claude /login`; workers
 use that subscription, not an API key. Before each attempt the dispatcher reads every
-account's usage from the endpoint Claude Code uses. An account can take a job while it is
-below `five_hour_cap` and below the paced weekly cap, `weekly_cap × (days into the week +
-1) ÷ 7`. The job goes to the eligible account whose weekly window resets soonest, and
-stays on it, since its session can only be resumed there. With none eligible, it waits
-for the soonest one. A failing usage check pauses the factory; a 429 waits
+account's usage from the endpoint Claude Code uses. An account can take a job only if its
+usage plus what the job is expected to use stays below `five_hour_cap` and below the paced
+weekly cap, `weekly_cap × (days into the week + 1) ÷ 7`.
+
+What a job is expected to use is its stage's `job_usage` in `factory/config.yaml`, points
+of each window set from past jobs, so a survey needs much more room than a map batch.
+Jobs already running on the account add their own `job_usage`, so jobs in parallel don't
+count the same room twice. A job expected to use the whole cap or more starts only from
+an unused window. The estimate only decides when a job starts: one that runs past the
+cap is not stopped.
+
+The job goes to the eligible account whose weekly window resets soonest, and stays on
+it, since its session can only be resumed there. With none eligible, it waits for the
+soonest one. A failing usage check pauses the factory; a 429 waits
 `usage_cooldown_minutes` and tries again. `pnpm factory resume --override-caps` ignores
 the caps until the next pause or resume; a worker's rate-limit error still makes its job
 wait.

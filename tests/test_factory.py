@@ -25,7 +25,7 @@ from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import git as git_mod
 from pdf_extract.factory import playbook, readiness, render, report
-from pdf_extract.factory.config import Account, Config, FactoryError, load_config
+from pdf_extract.factory.config import Account, Config, FactoryError, JobUsage, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
 from pdf_extract.factory.forge import LocalForge
 from pdf_extract.factory.handoff import read_handoff
@@ -55,6 +55,7 @@ from pdf_extract.factory.usage import (
     choose,
     parse_usage,
     standing,
+    standings,
 )
 from pdf_extract.factory.workers import (
     CRASH,
@@ -1507,6 +1508,60 @@ def test_an_unused_usage_window_has_no_reset_time() -> None:
     assert standing(Account("a", Path("/x")), usage, Config(), at).eligible
 
 
+def test_a_job_needs_room_for_what_its_stage_is_expected_to_use() -> None:
+    config = Config(five_hour_cap=85, weekly_cap=70)
+    account = Account("a", Path("/x"))
+    resets = datetime(2026, 11, 7, tzinfo=UTC)
+    at = resets - timedelta(days=7) + timedelta(hours=1)  # day 0 of the week: cap 10%
+    five_resets = at + timedelta(hours=2)
+    survey, mapping = JobUsage(40, 3), JobUsage(10, 1)
+
+    def s(five: float, week: float, need: JobUsage, when: datetime = at) -> Standing:
+        return standing(account, Usage(five, five_resets, week, resets), config, when, need)
+
+    assert s(74, 1, mapping).eligible and not s(75, 1, mapping).eligible
+    assert s(44, 1, survey).eligible
+    assert not s(50, 1, survey).eligible and s(50, 1, survey).eligible_at == five_resets
+    # The paced weekly cap counts the need too: room again tomorrow.
+    assert not s(10, 7.5, survey).eligible
+    assert s(10, 7.5, survey).eligible_at == resets - timedelta(days=6)
+    # On the last day, a need that doesn't fit under the full cap waits for the reset.
+    late = resets - timedelta(hours=1)
+    assert s(10, 68, survey, late).eligible_at == resets
+    # A job needing the whole cap or more starts only from an unused window.
+    assert s(0, 1, JobUsage(200, 0)).eligible and not s(1, 1, JobUsage(200, 0)).eligible
+    # Jobs already running on an account count against it.
+    config.accounts = [account, Account("b", Path("/y"))]
+    rows = standings(config, lambda a: Usage(30, five_resets, 1, resets), at, survey,
+                     {"b": JobUsage(20, 1)})
+    assert [r.eligible for r in rows] == [True, False]
+
+
+def test_the_repository_config_sets_every_agent_stages_usage(tmp_path: Path) -> None:
+    config = load_config(local_path=tmp_path / "absent.yaml")
+    for stage in ("survey", "survey-review", "map", "integrate", "reconcile", "seed",
+                  "seed-review"):
+        assert config.job_usage_for(stage).five_hour > 0, stage
+    assert config.job_usage_for("survey").five_hour > config.job_usage_for("map").five_hour
+    assert config.job_usage_for("pr") == JobUsage()
+
+
+def test_a_survey_waits_for_more_room_than_a_map_job_would(env: Env) -> None:
+    env.config.accounts = [Account("a", Path("/x"))]
+    env.config.five_hour_cap = 85
+    env.config.job_usage = {"survey": JobUsage(40, 0), "map": JobUsage(10, 0)}
+    week = env.now + timedelta(days=3)
+    usage = {"five_hour": 60.0}  # room for a map job (below 75), not a survey (below 45)
+    d = env.dispatcher(map_script(), fetch_usage=lambda a: Usage(
+        usage["five_hour"], env.now + timedelta(hours=1), 1, week))
+    out = d.tick()
+    assert out.action == "waiting" and "survey" in out.detail
+    assert out.wait_until == env.now + timedelta(hours=1)
+    usage["five_hour"] = 44.0
+    env.now += timedelta(hours=2)
+    assert d.tick().action == "ran"
+
+
 def test_a_job_that_waited_on_usage_merges_main_first(env: Env) -> None:
     env.config.accounts = [Account("a", Path("/x"))]
     week = env.now + timedelta(days=3)
@@ -1936,7 +1991,7 @@ def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
     meter.five = env.config.five_hour_cap + 5  # over the 5-hour cap once it answers
     env.now += COOLDOWN
     out = d.tick()
-    assert out.action == "waiting" and "no account under its caps" in out.detail
+    assert out.action == "waiting" and "no account has room" in out.detail
     assert env.ledger.get("usage_cooldown") is None
     survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
     assert survey["status"] == WAITING_USAGE and not env.ledger.all("SELECT * FROM attempt")

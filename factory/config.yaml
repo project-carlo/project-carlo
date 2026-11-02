@@ -1,9 +1,23 @@
 # The dispatcher's settings (docs/factory.md). This machine's accounts and paths go
 # in data/factory/local.yaml, which is not committed (see factory/local.example.yaml).
 
-# Usage caps, in percent of each account's limit.
-five_hour_cap: 75
+# Usage caps, in percent of each account's limit. A job starts on an account only if its
+# usage plus the job's expected usage (job_usage), plus that of any jobs already running
+# on it, stays under both caps.
+five_hour_cap: 95
 weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
+
+# What one attempt of a stage's job is expected to use, in points of each window: about
+# the 75th percentile of past jobs (`pnpm factory quota`; one five-hour point ≈ $0.14 of
+# the API-price cost). A stage not listed counts as 0. Map: a job starts below 85% five-hour.
+job_usage:
+  survey:        { five_hour: 40, weekly: 3 }
+  survey-review: { five_hour: 8, weekly: 1 }
+  map:           { five_hour: 10, weekly: 1 }
+  integrate:     { five_hour: 5, weekly: 1 }
+  reconcile:     { five_hour: 25, weekly: 2 }
+  seed:          { five_hour: 10, weekly: 1 }   # no history yet: like map
+  seed-review:   { five_hour: 15, weekly: 1 }   # no history yet: an Opus reviewer
 
 max_send_backs: 2
 lessons_before_integrate: 15   # integrate runs once more after the last batch
