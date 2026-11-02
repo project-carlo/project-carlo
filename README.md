@@ -147,9 +147,11 @@ prints its result as JSON on success.
 | `pnpm eval --classifier C` / `pnpm eval:report --classifier C` | Run a classifier over the labeled bulletins / score it |
 | `pnpm extract --classifier C` / `pnpm compare C1 C2 ...` | Run an experimental classifier over fetched bulletins / compare runs |
 | `uv run python -m pdf_extract replay-gates` | Replay the publishing checks over archived runs (no pnpm script) |
-| **Web app and labeler** | |
+| **Web app, mobile app and labeler** | |
 | `pnpm dev:web` / `pnpm build:web` / `pnpm preview:web` | Run the web app's dev server / build it / build and serve it with wrangler |
 | `pnpm perf:web` | Benchmark the web app's UI |
+| `pnpm dev:mobile` | Start the mobile app's Expo dev server |
+| `pnpm check:mobile` / `pnpm lint:mobile` / `pnpm bundle:mobile` | Type check, lint and Metro-bundle the mobile app for iOS and Android |
 | `pnpm geocode:cities` | Look up the centre of each city page's city |
 | `pnpm dev:labeler` | The labeler's Vite dev server ([docs/labeling-and-evals.md](docs/labeling-and-evals.md)) |
 | `pnpm check:core` / `pnpm lint:core` / `pnpm test:core` | Type check, lint and test the shared `@carlo/core` package |
@@ -360,8 +362,10 @@ CSV edits show up in previews and go live on merge.
   - `evals/`, `extract_run.py`, `compare.py`, `replay_gates.py` - scoring and comparing classifiers, replaying checks
 - `apps/web/` - the website (React, TypeScript, Vite, Cloudflare Workers)
 - `apps/labeler/` - the local labeling UI (never deployed)
+- `apps/mobile/` - the iOS and Android app (Expo, React Native), in early development
+  ([docs/mobile-port-plan.md](docs/mobile-port-plan.md))
 - `packages/core/` - `@carlo/core`: snapshot decoding, schedules and their formatting,
-  shared by the website and the planned mobile app ([docs/mobile-port-plan.md](docs/mobile-port-plan.md))
+  shared by the website and the mobile app ([docs/mobile-port-plan.md](docs/mobile-port-plan.md))
 - `factory/` - the factory's settings, stage specs, prompts and diocese queue
 - `data/` - committed: `parishes.csv`, `churches.csv`, `migrations/`, `dioceses/`,
   `labels/`, `seeds/`, eval results under `runs/<classifier>/eval/`. Untracked: the
@@ -379,6 +383,7 @@ CSV edits show up in previews and go live on merge.
 pnpm test && pnpm lint                                   # Python: pytest and ruff
 pnpm lint:core && pnpm check:core && pnpm test:core      # @carlo/core: lint, types, unit tests
 pnpm lint:web && pnpm check:web && pnpm --filter web test   # web app: lint, types, unit tests
+pnpm lint:mobile && pnpm check:mobile && pnpm bundle:mobile  # mobile app: lint, types, Metro bundle
 pnpm lint:labeler && pnpm check:labeler && pnpm test:labeler && pnpm build:labeler
 ```
 
