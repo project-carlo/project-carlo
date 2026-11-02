@@ -203,6 +203,8 @@ output in `scratch/metuchen-map-1/001-survey/`), and the map batches since:
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Discover Mass rows: fetch:check downloads the church page's 'Current Bulletin' link but reports issue date and freshness `unknown` (the tokenised URL has no date); confirm currency from the date the church page lists for that link.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
