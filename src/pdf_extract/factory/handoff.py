@@ -1,4 +1,4 @@
-"""The handoff: the JSON a worker writes at the end of its job (docs/factory-spec.md §4).
+"""The handoff: the JSON a worker writes at the end of its job (docs/factory.md).
 
 `scratch/<run>/<job>/handoff.json`, about 300 tokens. Reviewers add their verdicts. The
 dispatcher takes the changed paths from git, never from the handoff.
@@ -67,6 +67,16 @@ class Reconcile(Handoff):
         return v
 
 
+class RuleChange(_Strict):
+    was: list[str] = Field(min_length=1)  # the rules it replaces, as they stood
+    now: str = Field(min_length=1)  # the rule that replaces them
+
+
+class Integrate(Handoff):
+    # Each *Rules settled* rule merged or reworded, for the owner to check in the PR.
+    rules_changed: list[RuleChange] = []
+
+
 class SurveyReview(Handoff):
     verdict: Literal["approve", "send_back"]
     problems: list[str] = []
@@ -95,7 +105,7 @@ class SeedReview(Handoff):
 
 
 MODELS: dict[str, type[Handoff]] = {"survey-review": SurveyReview, "seed-review": SeedReview,
-                                     "reconcile": Reconcile}
+                                     "reconcile": Reconcile, "integrate": Integrate}
 # Only these stages can set a parish aside: answering requeues the parish's own job.
 PARKING_STAGES = ("map", "seed")
 
@@ -145,34 +155,3 @@ def read_handoff(path: Path, stage: str) -> tuple[Handoff | None, list[str]]:
                                 "an answer, or `advisory`")
     return (None, problems) if problems else (handoff, [])
 
-
-def schema_text(stage: str) -> str:
-    """The handoff format, as the job input shows it to a worker."""
-    base = {
-        "status": "done | partial | blocked",
-        "summary": "one or two sentences",
-        "flags": [{
-            "severity": "blocking | advisory", "scope": "parish | run",
-            "subject": "roster:id or parish slug", "question": "what needs deciding",
-            "evidence": ["path#section or URL with date"],
-            "suggestion": "what you would do",
-        }],
-        "leads": [{"touches": "batch id or roster:id", "note": "..."}],
-        "lessons": ["reusable publisher or rule lesson"],
-    }
-    if stage == "survey-review":
-        base |= {"verdict": "approve | send_back", "problems": ["..."],
-                 "rules": ["each proposed rule you accept, as written"]}
-    if stage == "reconcile":
-        base |= {"settled": [{"flag": "the id from your input, e.g. 12",
-                              "how": "what you did, or what settled it, in one line"}]}
-    if stage == "seed-review":
-        base |= {"seeds": [{
-            "parish": "slug", "verdict": "approve | send_back",
-            "answers": [{"slot": "slot id", "question": "...",
-                         "choice": "option index | dropped | edited",
-                         "entry": "only for edited", "basis": "rule | precedent | judgment",
-                         "why": "..."}],
-            "problems": ["..."],
-        }]}
-    return json.dumps(base, indent=1)

@@ -1,4 +1,4 @@
-"""The onboarding factory's dispatcher, end to end with stub workers (docs/factory-spec.md).
+"""The onboarding factory's dispatcher, end to end with stub workers (docs/factory.md).
 
 Each test builds a git repo with a bare `origin`, so worktrees, commits, pushes and
 merges are real. Workers are stubs, GitHub is files (`LocalForge`), and the commands a
@@ -22,11 +22,10 @@ from typing import Any
 import pytest
 
 from pdf_extract.blobstore import BlobStoreError
-from pdf_extract.factory import dispatcher as dispatcher_mod
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import inputs, playbook, readiness, report
-from pdf_extract.factory.backfill import backfill
-from pdf_extract.factory.config import Account, Config, FactoryError, load_config
+from pdf_extract.factory import git as git_mod
+from pdf_extract.factory import playbook, readiness, render, report
+from pdf_extract.factory.config import Account, Config, FactoryError, JobUsage, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
 from pdf_extract.factory.forge import LocalForge
 from pdf_extract.factory.handoff import read_handoff
@@ -38,37 +37,30 @@ from pdf_extract.factory.ledger import (
     MAP,
     MERGED,
     PENDING,
+    QUEUED,
     RUNNING,
     SEED,
     WAITING_USAGE,
     Ledger,
 )
-from pdf_extract.factory.quota import (
-    IMMEDIATE,
-    INCONSISTENT,
-    MISSING,
-    RESET,
-    SETTLED,
-    SHARED,
-    Analysis,
-    Measure,
-    Reading,
-    Span,
-    combine,
-)
-from pdf_extract.factory.stages import in_scope
-from pdf_extract.factory.tokens import from_result, parse_transcript
+from pdf_extract.factory.metrics import readings as readings_mod
+from pdf_extract.factory.metrics import report as metrics
+from pdf_extract.factory.metrics.attempt_meta import account_plan
+from pdf_extract.factory.metrics.quota import MISSING, SETTLED, SHARED, Measure
+from pdf_extract.factory.spec import in_scope, load_stage
 from pdf_extract.factory.usage import (
     Standing,
     Usage,
     UsageError,
-    account_plan,
     choose,
     parse_usage,
     standing,
+    standings,
 )
 from pdf_extract.factory.workers import (
+    CRASH,
     OK,
+    SANDBOX,
     USAGE,
     StubAction,
     StubWorker,
@@ -149,12 +141,15 @@ class Env:
         self.now = datetime(2026, 11, 2, 12, tzinfo=UTC)
         self.commands_run: list[str] = []
         self.failing: dict[str, int] = {}  # command substring -> failures left
+        self.command_secrets: dict[str, dict[str, str]] = {}
 
     def clock(self) -> datetime:
         return self.now
 
-    def commands(self, command: str, cwd: Path) -> tuple[bool, str]:
+    def commands(self, command: str, cwd: Path,
+                 secrets: dict[str, str] | None = None) -> tuple[bool, str]:
         self.commands_run.append(command)
+        self.command_secrets[command] = secrets or {}
         for needle, left in list(self.failing.items()):
             if needle in command and left > 0:
                 self.failing[needle] = left - 1
@@ -208,9 +203,12 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
     git(e.repo, "config", "user.email", "factory@example.com")
     git(e.repo, "config", "user.name", "Factory")
     shutil.copytree(ROOT / "factory", e.repo / "factory")
+    for rel in _read_files():  # what the stage specs' `reads:` name
+        (e.repo / rel).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(ROOT / rel, e.repo / rel)
     (e.repo / "factory" / "queue.json").write_text(json.dumps([{"diocese": D, "notes": "Test"}]))
     (e.repo / ".gitignore").write_text("scratch/\ndata/factory/\n")
-    (e.repo / "data").mkdir()
+    (e.repo / "data").mkdir(exist_ok=True)
     (e.repo / "data" / "parishes.csv").write_text("slug\n")
     git(e.repo, "add", "-A")
     git(e.repo, "commit", "-qm", "init")
@@ -224,6 +222,13 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
     monkeypatch.setenv("GIT_COMMITTER_EMAIL", "factory@example.com")
     monkeypatch.chdir(e.repo)
     return e
+
+
+def _read_files() -> set[str]:
+    from pdf_extract.factory.spec import STAGES, load_stage
+
+    return {entry.partition("#")[0] for stage in STAGES
+            for entry in load_stage(stage, ROOT).reads}
 
 
 def drive(d: Dispatcher, limit: int = 60) -> list[str]:
@@ -267,12 +272,14 @@ def test_map_run_end_to_end(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == IN_REVIEW
     stages = [j["stage"] for j in env.ledger.jobs(run["id"])]
-    assert stages == ["survey", "survey-review", "map", "map", "reconcile", "promote", "pr"]
+    # Under the threshold, the lessons still get a last integrate before reconcile.
+    assert stages == ["survey", "survey-review", "map", "map", "integrate", "reconcile",
+                      "promote", "pr"]
     # first_batch first, then the file's order.
     maps = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "map")]
     assert maps == ["b2", "b1"]
     # Every job committed and pushed with its trailer.
-    log = git(env.repo, "log", f"origin/{run['branch']}", "--format=%B")
+    log = git(env.remote, "log", run["branch"], "--format=%B")
     assert f"Factory-Job: {run['id']}/001-survey" in log
     assert f"Factory-Job: {run['id']}/003-map" in log
     meta = Path(run["worktree"]) / "data" / "dioceses" / D / "diocese.md"
@@ -287,8 +294,140 @@ def test_map_run_end_to_end(env: Env) -> None:
     assert any("diocese promote testd" in c for c in env.commands_run)
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
     assert "Directory: 3/3 (100%) accounted for" in pr
+    assert "## Playbook" in pr and "2 new lessons not folded in" in pr  # the stub kept them
     assert run["pr_url"] and run["head_sha"] == git(Path(run["worktree"]), "rev-parse",
                                                     "HEAD").strip()
+
+
+def _lead_owners(env: Env) -> dict[str, int | None]:
+    return {r["note"]: r["used_by"] for r in env.ledger.all("SELECT * FROM lead ORDER BY id")}
+
+
+def test_a_fresh_attempt_gets_the_leads_its_first_attempt_claimed_and_newer_ones(
+        env: Env) -> None:
+    base = map_script()
+    seen: list[str] = []
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        if req.job_name != "004-map":
+            return base(req, attempt)
+        seen.append(req.prompt)
+        if attempt == 1:
+            # Claimed when the first attempt started, so b1's lead is this job's now.
+            assert set(_lead_owners(env).values()) == {req.job_id}
+            return StubAction(outcome=CRASH)
+        if attempt == 2:  # a resume that can't start: the next attempt is a fresh worker
+            env.ledger.run_sql("INSERT INTO lead (run_id, touches, note) VALUES (?,?,?)",
+                               req.run_id, "directory:2", "St. Bede moved its site")
+            return StubAction(outcome=CRASH)
+        return StubAction(handoff=done())
+
+    d = env.dispatcher(map_script(map=mapping))
+    drive(d)
+    b1 = env.ledger.jobs(map_run(env)["id"], "map")[1]
+    kinds = [a["kind"] for a in env.ledger.all(
+        "SELECT kind FROM attempt WHERE job_id = ? ORDER BY n", b1["id"])]
+    assert kinds == ["start", "resume", "fresh"]
+    assert "St. Ann may share" in seen[0] and "St. Bede moved" not in seen[0]
+    assert "St. Ann may share" in seen[2] and "St. Bede moved" in seen[2]
+    assert _lead_owners(env) == {"St. Ann may share St. Bede's": b1["id"],
+                                 "St. Bede moved its site": b1["id"]}
+
+
+def test_a_job_that_fails_before_its_first_attempt_claims_no_leads(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    d = env.dispatcher(map_script())
+    for _ in range(20):  # until the first map job is done; b1's job is next
+        d.tick()
+        if env.ledger.one("SELECT 1 FROM job WHERE stage = 'map' AND status = ?", DONE):
+            break
+    real, armed = git_mod.head, [True]
+
+    def head(cwd: Path) -> str:  # git fails once, between the input and the attempt
+        if armed:
+            armed.clear()
+            raise FactoryError("git rev-parse HEAD: failed on purpose")
+        return real(cwd)
+
+    monkeypatch.setattr(git_mod, "head", head)
+    assert d.tick().action == "waiting"
+    b1 = env.ledger.jobs(map_run(env)["id"], "map")[1]
+    assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", b1["id"])
+    assert _lead_owners(env) == {"St. Ann may share St. Bede's": None}
+    env.now += timedelta(hours=1)
+    drive(d)
+    first = env.ledger.one("SELECT * FROM lead ORDER BY id LIMIT 1")
+    assert (first["job_id"], first["used_by"]) == (env.ledger.jobs(
+        map_run(env)["id"], "map")[0]["id"], b1["id"])
+
+
+def _dump(ledger: Ledger) -> list[str]:
+    return list(ledger.conn.iterdump())
+
+
+def test_prompt_previews_the_next_job_without_changing_the_ledger(env: Env) -> None:
+    env.commit_main({".claude/skills/explore-diocese/SKILL.md": "# Explore\n\nThe method.\n"},
+                    "a skill")
+    d = env.dispatcher(map_script())
+    for _ in range(20):  # until the first map job is done: b1's job is next, not yet added
+        d.tick()
+        if env.ledger.one("SELECT 1 FROM job WHERE stage = 'map' AND status = ?", DONE):
+            break
+    run = map_run(env)
+    before = _dump(env.ledger)
+    ro = Ledger(env.ledger.path, read_only=True)
+    with pytest.raises(sqlite3.OperationalError):
+        ro.set("paused", {"reason": "a preview mustn't write"})
+    preview = report.preview(ro, "map", None, repo=env.repo, lessons_before_integrate=8)
+    assert (preview["job"], preview["kind"], preview["existing"]) == ("004-map", "start", False)
+    assert preview["input"] == {"batch": "b1"}
+    assert "St. Ann may share" in preview["first_message"]  # shown, but not claimed
+    assert preview["system_prompt"].startswith(
+        (Path(run["worktree"]) / "factory" / "prompts" / "map.md").read_text().strip()[:200])
+    parts = {(p["part"], p["source"]): p for p in preview["parts"]}
+    assert not parts[("system prompt", "factory/prompts/map.md")]["missing"]
+    assert parts[("skill", ".claude/skills/explore-diocese/SKILL.md")]["tokens"] > 0
+    assert parts[("skill", ".claude/skills/parish-site-access/SKILL.md")]["missing"]
+    assert preview["tokens"] == sum(p["tokens"] for p in preview["parts"])
+    assert "## First message" in report.text_preview(preview)
+    # Even integrate due first, the map preview shows the next batch.
+    assert report.preview(ro, "map", run["id"], repo=env.repo,
+                          lessons_before_integrate=0)["input"] == {"batch": "b1"}
+    assert _dump(env.ledger) == before
+
+    drive(d)
+    b1 = env.ledger.jobs(run["id"], "map")[1]
+    first = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 1", b1["id"])
+    assert first["prompt"] == preview["first_message"]  # what the job then got
+
+
+def test_inspect_prompt_sizes_what_an_attempt_was_given(env: Env) -> None:
+    d = env.dispatcher(map_script())
+    drive(d)
+    run = map_run(env)
+    job = env.ledger.jobs(run["id"], "map")[0]
+    worktree = Path(run["worktree"])
+
+    def text_at(sha: str, path: str) -> str | None:
+        try:
+            return git(worktree, "show", f"{sha}:{path}")
+        except subprocess.CalledProcessError:
+            return None
+
+    r = report.attempt_prompt(env.ledger, job, 1, text_at)
+    first = env.ledger.one("SELECT * FROM attempt WHERE job_id = ? AND n = 1", job["id"])
+    assert (r["kind"], r["commit"], r["prompt"]) == ("start", first["commit_sha"],
+                                                     first["prompt"])
+    assert [(p["part"], p["source"]) for p in r["parts"]] == [
+        ("system prompt", "factory/prompts/map.md"), ("first message", None),
+        ("skill", ".claude/skills/explore-diocese/SKILL.md"),
+        ("skill", ".claude/skills/parish-site-access/SKILL.md"),
+        *[("read", e) for e in load_stage("map", ROOT).reads]]
+    assert not any(p["missing"] for p in r["parts"] if p["part"] == "read")
+    assert r["parts"][1]["chars"] == len(first["prompt"])
+    text = report.text_attempt_prompt(r)
+    assert "first message" in text and text.endswith(first["prompt"])
+    assert report.attempt_prompt(env.ledger, job, 9, text_at)["prompt"] is None
 
 
 def test_integrate_runs_when_new_lessons_pass_the_threshold(env: Env) -> None:
@@ -309,6 +448,75 @@ def test_integrate_runs_when_new_lessons_pass_the_threshold(env: Env) -> None:
     stages = [j["stage"] for j in env.ledger.jobs(map_run(env)["id"])]
     assert stages == ["survey", "survey-review", "map", "integrate", "map", "integrate",
                       "reconcile", "promote", "pr"]
+
+
+def test_no_last_integrate_without_new_lessons(env: Env) -> None:
+    quiet = map_script()
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        action = quiet(req, attempt)
+        action.handoff["lessons"] = []
+        return action
+
+    drive(env.dispatcher(map_script(map=mapping)))
+    assert [j["stage"] for j in env.ledger.jobs(map_run(env)["id"])] == [
+        "survey", "survey-review", "map", "map", "reconcile", "promote", "pr"]
+
+
+def test_integrate_lists_every_rule_it_reworded(env: Env) -> None:
+    def integrating(req: WorkerRequest, attempt: int) -> StubAction:
+        # As the job started: a send-back finds its first attempt's edits on disk.
+        text = git(req.worktree, "show", f"HEAD:data/dioceses/{D}/diocese.md")
+        rule = playbook.items(playbook.section_of(text, playbook.RULES))[0]
+        reworded = rule.replace("left out.", "left out, wherever they are held.")
+        text = text.replace(rule, reworded)
+        text = "\n".join(line for line in text.splitlines() if not line.startswith("- Lesson"))
+        # The first attempt doesn't list the change; the second does.
+        changed = [{"was": [rule], "now": reworded}] if attempt > 1 else []
+        return StubAction(files={"data/dioceses/{diocese}/diocese.md": text + "\n"},
+                          handoff=done("15 lessons", rules_changed=changed))
+
+    drive(env.dispatcher(map_script(integrate=integrating)))
+    run = map_run(env)
+    job = env.ledger.jobs(run["id"], "integrate")[0]
+    assert job["status"] == "done" and job["send_backs"] == 1
+    sent = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2", job["id"])
+    assert "rules_changed: this rule is gone from *Rules settled*" in sent["prompt"]
+    sizes = env.ledger.action_result(job["id"], "playbook")
+    assert (sizes["before"]["lessons"], sizes["after"]["lessons"]) == (2, 0)
+    assert sizes["after"]["rules"] > sizes["before"]["rules"]
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    assert f"- `{job['name']}`, 2 lessons: publishers" in pr
+    assert "### Rules integrate merged or reworded" in pr
+    assert f"- **Now** (`{job['name']}`): Campus Masses are left out, wherever they are held." in pr
+    assert "  - was: Campus Masses are left out. (accepted by survey-review" in pr
+
+
+def test_integrate_quotes_rules_as_they_stood(env: Env) -> None:
+    def integrating(req: WorkerRequest, attempt: int) -> StubAction:
+        changed = [{"was": ["A rule nobody wrote"], "now": "Nor this one"}]
+        return StubAction(handoff=done(rules_changed=changed if attempt == 1 else []))
+
+    drive(env.dispatcher(map_script(integrate=integrating)))
+    job = env.ledger.jobs(map_run(env)["id"], "integrate")[0]
+    sent = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2", job["id"])
+    assert "this matches none: A rule nobody wrote" in sent["prompt"]
+    assert "this `now` isn't a rule in *Rules settled*" in sent["prompt"]
+
+
+def test_playbook_items_are_whole_bullets() -> None:
+    body = ("Decisions that apply to more than one record.\n\n"
+            "- **One** rule,\n  wrapped. (survey-review)\n"
+            "- Two, with a lazy\ncontinuation.\n\n"
+            "  And a second paragraph.\n"
+            "- Three\n  - a sub-bullet\n\n"
+            "A closing paragraph.\n")
+    assert playbook.items(body) == ["**One** rule, wrapped. (survey-review)",
+                                    "Two, with a lazy continuation. And a second paragraph.",
+                                    "Three - a sub-bullet"]
+    assert playbook.rule_key("**One** rule,\n wrapped.") == "One rule, wrapped."
+    text = "# D\n\n### Bulletin publishers here\n\n- é\n\n## New lessons\n\n- a\n- b\n"
+    assert playbook.sizes(text) == {"publishers": 4, "rules": 0, "lessons": 2}
 
 
 # ── Send-backs, scope, retries ───────────────────────────────────────────────
@@ -341,6 +549,27 @@ def test_out_of_scope_changes_are_reverted_and_sent_back(env: Env) -> None:
                           "ORDER BY id LIMIT 1", first["id"])
     assert not gate["passed"] and "data/parishes.csv" in gate["output"]
     assert (Path(run["worktree"]) / "data" / "parishes.csv").read_text() == "slug\n"
+
+
+def test_changes_a_sandbox_refused_are_recorded_and_sent_back(env: Env) -> None:
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        refused = ["data/parishes.csv (outside your write boundaries)"] if attempt == 1 else []
+        return StubAction(files={"data/dioceses/{diocese}/parishes/p.md": parish_record("x:1")},
+                          handoff=done(), refused=refused)
+
+    d = env.dispatcher(map_script(map=mapping))
+    drive(d)
+    first = env.ledger.jobs(map_run(env)["id"], "map")[0]
+    assert first["send_backs"] == 1
+    attempt = env.ledger.one("SELECT * FROM attempt WHERE job_id = ? ORDER BY n LIMIT 1",
+                             first["id"])
+    assert json.loads(attempt["refused"]) == ["data/parishes.csv (outside your write boundaries)"]
+    gate = env.ledger.one("SELECT * FROM gate WHERE job_id = ? AND name = 'diff-scope' "
+                          "ORDER BY id LIMIT 1", first["id"])
+    assert not gate["passed"] and "data/parishes.csv" in gate["output"]
+    prompt = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2",
+                            first["id"])["prompt"]
+    assert "were not kept" in prompt
 
 
 def test_past_its_send_backs_a_job_blocks_the_run(env: Env) -> None:
@@ -380,6 +609,18 @@ def test_partial_is_continued_once(env: Env) -> None:
     assert kinds == ["start", "continue"] and survey["continues"] == 1
 
 
+def test_the_number_of_continues_is_a_setting(env: Env) -> None:
+    def surveying(req: WorkerRequest, attempt: int) -> StubAction:
+        status = "partial" if attempt < 3 else "done"
+        return StubAction(files=survey_files(), handoff={"status": status, "summary": "s"})
+
+    env.config.max_continues = 2
+    d = env.dispatcher(map_script(survey=surveying))
+    drive(d)
+    survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
+    assert survey["continues"] == 2 and survey["status"] == DONE
+
+
 def test_a_crash_resumes_the_session_and_a_restart_resumes_a_running_job(env: Env) -> None:
     def surveying(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
@@ -396,7 +637,7 @@ def test_a_crash_resumes_the_session_and_a_restart_resumes_a_running_job(env: En
     review = env.ledger.add_job(survey["run_id"], "survey-review", {"survey_job": survey["id"]})
     env.ledger.set_job(review, status=RUNNING, session_id="lost-session")
     d2 = env.dispatcher(map_script())
-    d2._recover()
+    d2.attempts.recover()
     drive(d2)
     assert env.ledger.job(review)["status"] == DONE
     assert env.worker.calls[0].session_id == "lost-session"
@@ -471,11 +712,11 @@ def test_answers_while_the_run_is_active_requeue_the_job(env: Env) -> None:
         d.tick()
     run = map_run(env)
     env.answer(1, None)  # closed with no answer: reopened, nothing changes
-    d.poll_issues()
+    d.answers.poll_issues()
     issue = env.forge.issue(1)
     assert issue.state == "OPEN" and "without an answer" in issue.comments[-1].body
     env.answer(1, "/accept")
-    d.poll_issues()
+    d.answers.poll_issues()
     requeued = env.ledger.jobs(run["id"], "map")[-1]
     data = json.loads(requeued["input"])
     assert data["answer"] == "Exclude it as closed." and data["entries"] == ["directory:3"]
@@ -507,13 +748,13 @@ def test_answers_after_the_pr_opened_go_to_a_follow_up_run(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "It is open; map it.")
-    d.poll_issues()
+    d.answers.poll_issues()
     follow = next(r for r in env.ledger.runs() if r["follow_up_of"] == run["id"])
     assert follow["status"] == PENDING and follow["id"] == f"{D}-map-2"
     assert drive(d)[-1].startswith("idle")  # waits for the first PR to merge
     git(Path(run["worktree"]), "push", "-q", "origin", "HEAD:main")
     git(env.repo, "fetch", "-q", "origin")
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == MERGED
     # Its worktree and local branch are gone; its scratch was kept for foreman reviews.
     assert not Path(run["worktree"]).exists()
@@ -533,10 +774,10 @@ def test_a_squash_merged_pr_counts_as_merged(env: Env) -> None:
     d = env.dispatcher(map_script())
     drive(d)
     run = map_run(env)
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     env.forge.merge_pr(run["pr_url"])  # squashed: the Run's commits aren't in main
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == MERGED
 
 
@@ -575,7 +816,7 @@ def test_github_failing_again_and_again_blocks_the_run(env: Env) -> None:
     # Once it's fixed and the issue closed, the job carries on where it stopped.
     env.forge.open_pr = open_pr  # type: ignore[method-assign]
     env.answer(1, "Signed in to gh again.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert map_run(env)["status"] == IN_REVIEW
     assert len(env.ledger.jobs(map_run(env)["id"], "pr")) == 1
@@ -615,7 +856,9 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
 
     def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
-            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", req.prompt))
+            listed = (req.worktree / render.flags_rel(req.run_id, req.job_name)).read_text()
+            assert render.flags_rel(req.run_id, req.job_name) in req.prompt
+            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", listed))
             return StubAction(handoff=done(settled=[{"flag": 999, "how": "?"}]))
         return StubAction(handoff=done(
             settled=[{"flag": shown[0], "how": "Merged;\none masthead."}],
@@ -634,7 +877,7 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
     assert second["status"] == "listed"
     # A fresh input (after a resume or a retry) leaves out the flags it raised itself,
     # which it can't settle.
-    again = inputs.stage_input(env.ledger, run, reconcile, {})
+    again = "".join(render.input_files(env.ledger, run, reconcile).values())
     assert f"[#{second['id']}]" in again and f"[#{own['id']}]" not in again
 
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
@@ -661,7 +904,7 @@ def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
@@ -684,10 +927,10 @@ def test_every_answer_to_a_jobs_run_level_flags_reaches_it(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     assert env.ledger.run(run["id"])["status"] == BLOCKED  # the other issue is still open
     env.answer(2, "Yes, Lewes.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
@@ -709,13 +952,13 @@ def test_a_run_level_flag_raised_again_after_its_answer_is_asked_again(env: Env)
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     # The same question again is a new issue, not a Run blocked with nothing to answer.
     assert env.ledger.run(run["id"])["status"] == BLOCKED
     assert [f["issue_number"] for f in env.ledger.flags(run["id"], "open")] == [2]
     env.answer(2, "Still b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     assert len(env.ledger.jobs(run["id"], "reconcile")) == 1
@@ -735,7 +978,7 @@ def test_an_answered_job_needs_a_new_handoff(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
     assert reconcile["send_backs"] == 1  # the first handoff didn't count again
@@ -759,7 +1002,7 @@ def test_an_issue_github_refused_is_opened_on_a_later_poll(env: Env) -> None:
     assert run["status"] == BLOCKED
     flag = env.ledger.flags(run["id"], "open")[0]
     assert flag["issue_number"] is None
-    d.poll_issues()
+    d.answers.poll_issues()
     assert env.ledger.flags(run["id"], "open")[0]["issue_number"] == 1
 
 
@@ -774,7 +1017,7 @@ def test_crashes_count_again_once_the_owner_unblocks_the_job(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED and "crashed 3 times" in run["blocked_reason"]
     env.answer(1, "The SDK is fixed; go again.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     survey = env.ledger.jobs(run["id"], "survey")[0]
     assert survey["status"] == DONE
@@ -794,7 +1037,7 @@ def test_a_failed_worktree_setup_runs_again(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED
     env.answer(1, "Fixed the lockfile.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.commands_run.count("uv sync") == 2
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
@@ -819,6 +1062,60 @@ def test_main_is_merged_at_the_start_of_each_stage(env: Env) -> None:
     d.tick()  # survey-review: a new stage, so main is merged first
     run = map_run(env)
     assert (Path(run["worktree"]) / "README.md").read_text() == "new spec\n"
+
+
+def test_a_stage_runs_with_the_spec_main_had_when_it_started(env: Env) -> None:
+    d = env.dispatcher(map_script())
+    d.tick()  # survey
+    spec = env.repo / "factory" / "stages" / "survey-review.yaml"
+    text = spec.read_text().replace("max_turns: 80", "max_turns: 7")
+    env.commit_main({"factory/stages/survey-review.yaml": text + "deny: [Bash(x:*)]\n"},
+                    "spec change")
+    d.tick()  # survey-review: main is merged before its spec is read
+    request = env.worker.calls[-1]
+    assert request.stage == "survey-review"
+    assert request.spec.max_turns == 7 and request.spec.deny == ["Bash(x:*)"]
+
+
+def test_a_job_finds_the_sections_it_reads_in_its_scratch_folder(env: Env) -> None:
+    seen: dict[str, str] = {}
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        rel = render.reads_rel(req.run_id, req.job_name, "data/dioceses/README.md")
+        seen.setdefault("prompt", req.prompt)
+        seen.setdefault("copy", (req.worktree / rel).read_text())
+        return map_script()(req, attempt)
+
+    drive(env.dispatcher(map_script(map=mapping)))
+    run = map_run(env)
+    rel = render.reads_rel(run["id"], "003-map", "data/dioceses/README.md")
+    assert f"`{rel}`: *The model*, *Fields*" in seen["prompt"]
+    copy = seen["copy"]
+    assert copy.startswith("## The model\n") and "### Fields" in copy and "## Traps" in copy
+    assert "## Method" not in copy and "## Commands" not in copy
+    # Each section in full: an example record's `## Publisher` doesn't end *Fields*.
+    assert render.read_entry(render.worktree_text(ROOT), "data/dioceses/README.md#Fields") in copy
+
+
+def test_a_missing_read_fails_the_job_before_its_worker_starts(env: Env) -> None:
+    meter, _ = metered(env)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    d.tick()  # survey
+    spec = env.repo / "factory" / "stages" / "survey-review.yaml"
+    good = spec.read_text()
+    env.commit_main({"factory/stages/survey-review.yaml": good.replace(
+        "README.md#Sources", "README.md#No such heading")}, "a bad read")
+    readings = len(env.ledger.all("SELECT * FROM usage"))
+    outcome = d.tick()
+    assert outcome.action == "waiting" and "no heading 'No such heading'" in outcome.detail
+    review = env.ledger.jobs(map_run(env)["id"], "survey-review")[0]
+    assert review["status"] == QUEUED
+    assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", review["id"])
+    assert len(env.ledger.all("SELECT * FROM usage")) == readings  # no usage check spent
+    env.commit_main({"factory/stages/survey-review.yaml": good}, "fix the read")
+    env.now += timedelta(hours=1)
+    d.tick()  # merges main again, since the job never started
+    assert env.worker.calls[-1].stage == "survey-review"
 
 
 def test_a_merge_conflict_blocks_the_run(env: Env) -> None:
@@ -918,6 +1215,60 @@ def test_seed_run_reviews_approves_and_records_decisions(env: Env) -> None:
     assert answers[0]["slot"] == "s1" and answers[0]["choice"] == 1
 
 
+def test_each_stage_gets_only_the_secrets_its_spec_names(env: Env) -> None:
+    secrets = {"R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o",
+               "CLOUDFLARE_API_TOKEN": "cf", "GH_TOKEN": "gh", "OTHER": "x"}
+    run = seed_env(env)
+    d = env.dispatcher(seed_script, secrets=secrets)
+    drive(d)
+    seen = {r.stage: r.secrets for r in env.worker.calls}
+    assert seen["seed"] == {
+        "R2_ACCESS_KEY_ID": "r2", "GEMINI_API_KEY": "g", "OPENAI_API_KEY": "o"}
+    # The reviewer can't run `seed ask` or `seed extract`, so it gets no model keys.
+    assert seen["seed-review"] == {"R2_ACCESS_KEY_ID": "r2"}
+    check = next(c for c in env.command_secrets if c.startswith("pnpm seed check"))
+    assert env.command_secrets[check] == {"R2_ACCESS_KEY_ID": "r2"}
+    approve = next(c for c in env.command_secrets if c.startswith("pnpm seed approve"))
+    assert env.command_secrets[approve] == {"R2_ACCESS_KEY_ID": "r2"}
+    assert env.ledger.run(run["id"])["status"] == IN_REVIEW
+
+
+def test_map_stages_get_no_secrets(env: Env) -> None:
+    d = env.dispatcher(map_script(), secrets={"R2_ACCESS_KEY_ID": "r2", "OPENAI_API_KEY": "o"})
+    drive(d)
+    assert env.worker.calls and all(r.secrets == {} for r in env.worker.calls)
+    assert all(not s for s in env.command_secrets.values())
+
+
+def test_a_sandbox_failure_waits_then_blocks_the_run_without_counting_a_crash(
+        env: Env) -> None:
+    def broken(req: WorkerRequest, attempt: int) -> StubAction:
+        return StubAction(outcome=SANDBOX)
+
+    d = env.dispatcher(map_script(survey=broken))
+    outcome = d.tick()
+    assert outcome.action == "waiting" and "sandbox failed" in outcome.detail
+    job = env.ledger.jobs(map_run(env)["id"])[0]
+    assert job["status"] == "queued" and job["crashes"] == 0 and job["wait_until"]
+    assert d.tick().action == "waiting" and len(env.worker.calls) == 1  # waits it out
+    for _ in range(2):
+        env.now += timedelta(minutes=11)
+        outcome = d.tick()
+    assert outcome.action == "blocked" and "sandbox failed 3 times" in outcome.detail
+    assert map_run(env)["status"] == BLOCKED and len(env.worker.calls) == 3
+    assert env.ledger.job(job["id"])["crashes"] == 0
+
+
+def test_restart_removes_leftover_containers_before_resuming(env: Env) -> None:
+    seen: list[str] = []
+    d = env.dispatcher(map_script(), cleanup=lambda: seen.append("cleanup"))
+    d.tick()
+    env.ledger.set_job(env.ledger.jobs(map_run(env)["id"])[-1]["id"], status=RUNNING)
+    d.attempts.recover()
+    assert seen == ["cleanup"]
+    assert env.ledger.jobs(map_run(env)["id"])[-1]["status"] == "queued"
+
+
 def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
     run = seed_env(env)
     d = env.dispatcher(seed_script)
@@ -927,7 +1278,7 @@ def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
                               / "handoff.json", "seed-review")
     approvals = len([c for c in env.commands_run if c.startswith("pnpm seed approve")])
     # A resumed review, a retry or a restart applies them again.
-    assert d._seed_verdicts(env.ledger.run(run["id"]), review, Path(run["worktree"]),
+    assert d.engine._seed_verdicts(env.ledger.run(run["id"]), review, Path(run["worktree"]),
                             handoff) == ["st-clare"]
     assert len([c for c in env.commands_run if c.startswith("pnpm seed approve")]) == approvals
     clare = env.ledger.jobs(run["id"], "seed")[0]
@@ -1041,7 +1392,7 @@ def test_approvals_that_fail_their_check_are_kept_for_the_resumed_review(env: En
     assert "approvals, check failing" in git(wt, "log", "-1", "--format=%s")
     assert not git(wt, "status", "--porcelain")
     env.answer(1, "Fixed the seed by hand.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     review = env.ledger.jobs(run["id"], "seed-review")[0]
     assert env.ledger.job(review["id"])["send_backs"] == 0  # not blamed for the approvals
@@ -1062,7 +1413,7 @@ def test_an_approved_seed_is_not_drafted_again(env: Env) -> None:
     assert parishes == {"st-ann"}
 
 
-# ── Readiness (§11) ──────────────────────────────────────────────────────────
+# ── Readiness ────────────────────────────────────────────────────────────────
 def make_db(path: Path, counts: dict[str, int]) -> None:
     conn = sqlite3.connect(path)
     conn.execute("CREATE TABLE parish (id INTEGER PRIMARY KEY, slug TEXT)")
@@ -1133,8 +1484,8 @@ def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env)
                        parishes=[])
     make_db(env.tmp / "parish_events.db", {"a": 2, "b": 0})
     d = env.dispatcher(seed_script)
-    d.check_readiness()
-    d.check_readiness()
+    d.housekeeping.check_readiness()
+    d.housekeeping.check_readiness()
     seed_runs = [r for r in env.ledger.runs(PENDING) if r["kind"] == SEED]
     assert len(seed_runs) == 1 and json.loads(seed_runs[0]["parishes"]) == ["a"]
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
@@ -1149,7 +1500,7 @@ def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(en
                        parishes=[])
     make_db(env.tmp / "parish_events.db", {"a": 2, "b": 2, "g": 0})
     d = env.dispatcher(seed_script)
-    d.check_readiness()
+    d.housekeeping.check_readiness()
     run = next(r for r in env.ledger.runs(PENDING) if r["kind"] == SEED)
     assert json.loads(run["parishes"]) == ["a", "b"]
     assert "1 wait on a collector" in run["notes"]
@@ -1236,6 +1587,60 @@ def test_an_unused_usage_window_has_no_reset_time() -> None:
     assert standing(Account("a", Path("/x")), usage, Config(), at).eligible
 
 
+def test_a_job_needs_room_for_what_its_stage_is_expected_to_use() -> None:
+    config = Config(five_hour_cap=85, weekly_cap=70)
+    account = Account("a", Path("/x"))
+    resets = datetime(2026, 11, 7, tzinfo=UTC)
+    at = resets - timedelta(days=7) + timedelta(hours=1)  # day 0 of the week: cap 10%
+    five_resets = at + timedelta(hours=2)
+    survey, mapping = JobUsage(40, 3), JobUsage(10, 1)
+
+    def s(five: float, week: float, need: JobUsage, when: datetime = at) -> Standing:
+        return standing(account, Usage(five, five_resets, week, resets), config, when, need)
+
+    assert s(74, 1, mapping).eligible and not s(75, 1, mapping).eligible
+    assert s(44, 1, survey).eligible
+    assert not s(50, 1, survey).eligible and s(50, 1, survey).eligible_at == five_resets
+    # The paced weekly cap counts the need too: room again tomorrow.
+    assert not s(10, 7.5, survey).eligible
+    assert s(10, 7.5, survey).eligible_at == resets - timedelta(days=6)
+    # On the last day, a need that doesn't fit under the full cap waits for the reset.
+    late = resets - timedelta(hours=1)
+    assert s(10, 68, survey, late).eligible_at == resets
+    # A job needing the whole cap or more starts only from an unused window.
+    assert s(0, 1, JobUsage(200, 0)).eligible and not s(1, 1, JobUsage(200, 0)).eligible
+    # Jobs already running on an account count against it.
+    config.accounts = [account, Account("b", Path("/y"))]
+    rows = standings(config, lambda a: Usage(30, five_resets, 1, resets), at, survey,
+                     {"b": JobUsage(20, 1)})
+    assert [r.eligible for r in rows] == [True, False]
+
+
+def test_the_repository_config_sets_every_agent_stages_usage(tmp_path: Path) -> None:
+    config = load_config(local_path=tmp_path / "absent.yaml")
+    for stage in ("survey", "survey-review", "map", "integrate", "reconcile", "seed",
+                  "seed-review"):
+        assert config.job_usage_for(stage).five_hour > 0, stage
+    assert config.job_usage_for("survey").five_hour > config.job_usage_for("map").five_hour
+    assert config.job_usage_for("pr") == JobUsage()
+
+
+def test_a_survey_waits_for_more_room_than_a_map_job_would(env: Env) -> None:
+    env.config.accounts = [Account("a", Path("/x"))]
+    env.config.five_hour_cap = 85
+    env.config.job_usage = {"survey": JobUsage(40, 0), "map": JobUsage(10, 0)}
+    week = env.now + timedelta(days=3)
+    usage = {"five_hour": 60.0}  # room for a map job (below 75), not a survey (below 45)
+    d = env.dispatcher(map_script(), fetch_usage=lambda a: Usage(
+        usage["five_hour"], env.now + timedelta(hours=1), 1, week))
+    out = d.tick()
+    assert out.action == "waiting" and "survey" in out.detail
+    assert out.wait_until == env.now + timedelta(hours=1)
+    usage["five_hour"] = 44.0
+    env.now += timedelta(hours=2)
+    assert d.tick().action == "ran"
+
+
 def test_a_job_that_waited_on_usage_merges_main_first(env: Env) -> None:
     env.config.accounts = [Account("a", Path("/x"))]
     week = env.now + timedelta(days=3)
@@ -1266,7 +1671,7 @@ def test_a_usage_limit_without_a_session_keeps_what_the_job_was_told(env: Env) -
 
     env.failing["diocese validate"] = 1  # attempt 1 is sent back
     d = env.dispatcher(map_script(survey=surveying))
-    d.worker = env.worker = NoSession(map_script(survey=surveying))
+    d.attempts.worker = env.worker = NoSession(map_script(survey=surveying))
     drive(d)
     env.now += timedelta(hours=2)
     drive(d)
@@ -1300,6 +1705,18 @@ def test_playbook_appends_once_under_its_heading(tmp_path: Path) -> None:
         < meta.read_text().index("## Log")
     # Bulletin publishers' bullet stays put.
     assert playbook.bullets(meta, playbook.PUBLISHERS) == ["Parishes Online prints most bulletins."]
+
+
+def test_playbook_sections_skip_fenced_code(tmp_path: Path) -> None:
+    meta = tmp_path / "diocese.md"
+    meta.write_text(META.replace(
+        "- Parishes Online prints most bulletins.\n",
+        "- Parishes Online prints most bulletins.\n\n```bash\n# caps reset at midnight\n"
+        "## not a heading\n```\n\n- Discover Mass caps downloads.\n"))
+    assert playbook.bullets(meta, playbook.PUBLISHERS) == [
+        "Parishes Online prints most bulletins.", "Discover Mass caps downloads."]
+    playbook.append(meta, playbook.PUBLISHERS, ["Solutio needs the parish page."])
+    assert playbook.bullets(meta, playbook.PUBLISHERS)[-1] == "Solutio needs the parish page."
 
 
 def test_handoff_validation(tmp_path: Path) -> None:
@@ -1349,13 +1766,69 @@ def test_write_globs() -> None:
 
 
 def test_stage_specs_load_and_cover_every_stage() -> None:
-    from pdf_extract.factory.stages import STAGES, load_stage
+    from pdf_extract.factory.spec import STAGES, load_stage
 
     for stage in STAGES:
         spec = load_stage(stage, ROOT)
         if spec.is_agent:
             assert (ROOT / spec.prompt).exists(), spec.prompt
             assert spec.writes and spec.model
+
+
+def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
+    from pdf_extract.factory.spec import load_stage
+
+    (tmp_path / "factory" / "stages").mkdir(parents=True)
+    (tmp_path / "factory" / "stages" / "map.yaml").write_text(
+        "stage: map\nkind: agent\nreads: [data/dioceses/README.md#Fields]\n"
+        "deny: [Bash(pnpm seed extract:*)]\n")
+    loaded = load_stage("map", tmp_path)
+    assert loaded.reads == ["data/dioceses/README.md#Fields"]
+    assert loaded.deny == ["Bash(pnpm seed extract:*)"]
+    (tmp_path / "factory" / "stages" / "map.yaml").write_text("stage: map\nkind: agent\n")
+    assert load_stage("map", tmp_path).reads == [] and load_stage("map", tmp_path).deny == []
+
+
+def test_deny_reaches_the_sdk_and_the_seed_cli(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+        capsys: pytest.CaptureFixture[str]) -> None:
+    import sys
+    import types
+
+    from pdf_extract.__main__ import main
+    from pdf_extract.factory.workers import SEED_REFUSE_ENV, SdkWorker
+    from pdf_extract.seeding.cli import REFUSE_ENV
+
+    seen: dict[str, Any] = {}
+    sdk = types.ModuleType("claude_agent_sdk")
+    for name in ("AssistantMessage", "RateLimitEvent", "ResultMessage", "SystemMessage",
+                 "TextBlock", "ToolUseBlock"):
+        setattr(sdk, name, type(name, (), {}))
+    sdk.ClaudeAgentOptions = lambda **kw: kw
+
+    async def query(prompt: str, options: dict[str, Any]):
+        seen.update(options)
+        return
+        yield
+
+    sdk.query = query
+    monkeypatch.setitem(sys.modules, "claude_agent_sdk", sdk)
+    spec = load_stage("seed-review", ROOT)
+    request = WorkerRequest(1, "r", "002-seed-review", "seed-review", spec, tmp_path, None,
+                            "go", "", {})
+    SdkWorker().run(request)  # through the launcher's environment, as a real attempt
+    assert set(spec.deny) <= set(seen["disallowed_tools"])
+    assert seen["env"][SEED_REFUSE_ENV] == "approve ask extract"
+    assert REFUSE_ENV == SEED_REFUSE_ENV
+
+    # However it is spelled, the CLI refuses a denied command before touching anything.
+    monkeypatch.setenv(REFUSE_ENV, seen["env"][SEED_REFUSE_ENV])
+    assert main(["seed", "approve", "x", "--reviewer", "agent:r@abc"]) == 1
+    assert "`seed approve` is refused" in capsys.readouterr().err
+
+
+def test_the_committed_config_is_the_defaults(tmp_path: Path) -> None:
+    assert load_config(ROOT / "factory" / "config.yaml", tmp_path / "none.yaml") == Config()
 
 
 def test_inspect_shows_attempts_gates_and_reviews(env: Env) -> None:
@@ -1369,7 +1842,7 @@ def test_inspect_shows_attempts_gates_and_reviews(env: Env) -> None:
     assert any(not g["passed"] for g in r["gates"])
     assert r["reviewed_by"][0]["verdict"] == "approve"
     assert "send_back" in report.text_inspect(r)
-    assert report.cost(env.ledger, by_stage=True)["rows"]
+    assert metrics.cost(env.ledger, by_stage=True)["rows"]
     assert "testd-map-1" in report.text_status(report.status(env.ledger))
 
 
@@ -1377,153 +1850,10 @@ def test_stub_worker_ok_constant() -> None:
     assert OK == "ok"
 
 
-# ── Quota: attribution, tokens, readings, backfill ───────────────────────────
+# ── Quota readings (attribution and tokens: test_factory_metrics.py) ─────────
 T0 = datetime(2026, 11, 2, 12, tzinfo=UTC)
 FIVE_RESETS = T0 + timedelta(hours=4)
 WEEK_RESETS = T0 + timedelta(days=3)
-SETTLE = timedelta(seconds=150)
-
-
-def reading(rid: int, minutes: float, five: float, week: float = 20, *,
-            five_resets: datetime = FIVE_RESETS, account: str = "a") -> Reading:
-    return Reading(rid, account, T0 + timedelta(minutes=minutes),
-                   {"five_hour": five, "seven_day": week},
-                   {"five_hour": five_resets, "seven_day": WEEK_RESETS})
-
-
-def span(sid: int, start: float, end: float | None, account: str = "a") -> Span:
-    return Span(sid, sid, account, T0 + timedelta(minutes=start),
-                None if end is None else T0 + timedelta(minutes=end))
-
-
-def test_back_to_back_attempts_share_their_measurement() -> None:
-    # B starts 5 s after A ends, and the meter rises during B: no exact share for either.
-    spans = [span(1, 0, 10), span(2, 10.1, 20)]
-    reads = [reading(1, -0.01, 10), reading(2, 10.05, 12), reading(3, 24, 21)]
-    an = Analysis(spans, reads, SETTLE)
-    a, b = an.measure(spans[0], "five_hour"), an.measure(spans[1], "five_hour")
-    assert a.label == b.label == SHARED and a.group == b.group == [1, 2]
-    assert (a.group_low, a.group_high) == (10, 12)  # 21 - 10 ± 1, settled
-    assert a.low == 1 and a.high == 12  # A's early reading: at least 12 - 10 - 1
-    assert b.low == 0 and b.high == 12
-    # One job running both: the group's upper bound counts once, not once per attempt.
-    job = combine([a, b])
-    assert (job["label"], job["low"], job["high"]) == (SHARED, 1, 12)
-    totals = {(w["window"]): w for w in an.window_totals()}
-    assert totals["five_hour"]["shared"] == 11 and totals["five_hour"]["unexplained"] == 10
-
-
-def test_an_idle_gap_gives_a_settled_range_and_zero_is_below_one() -> None:
-    spans = [span(1, 0, 10)]
-    an = Analysis(spans, [reading(1, 0, 10, 20), reading(2, 13, 15, 20)], SETTLE)
-    five, week = an.measure(spans[0], "five_hour"), an.measure(spans[0], "seven_day")
-    assert (five.label, five.low, five.high) == (SETTLED, 4, 6)
-    assert (week.label, week.low, week.high) == (SETTLED, 0, 1) and week.as_dict()["text"] == "<1"
-    # Read sooner than the meter settles: a minimum only.
-    early = Analysis(spans, [reading(1, 0, 10), reading(2, 10.5, 15)], SETTLE)
-    m = early.measure(spans[0], "five_hour")
-    assert (m.label, m.low, m.high) == (IMMEDIATE, 4, None)
-    assert combine([m])["text"] == "≥4"
-
-
-def test_a_reset_during_a_job_is_a_minimum_and_jitter_is_not_a_reset() -> None:
-    spans = [span(1, 0, 10)]
-    before = reading(1, 0, 70, five_resets=T0 + timedelta(minutes=5))
-    after = reading(2, 13, 4, five_resets=T0 + timedelta(hours=5, minutes=5))
-    m = Analysis(spans, [before, after], SETTLE).measure(spans[0], "five_hour")
-    assert (m.label, m.low, m.high) == (RESET, 3, None)
-    jitter = reading(2, 13, 72, five_resets=FIVE_RESETS + timedelta(seconds=0.6))
-    m = Analysis(spans, [reading(1, 0, 70), jitter], SETTLE).measure(spans[0], "five_hour")
-    assert (m.label, m.low, m.high) == (SETTLED, 1, 3)
-
-
-def test_missing_or_inconsistent_readings_give_no_number() -> None:
-    spans = [span(1, 0, 10)]
-    for reads in ([reading(2, 13, 15)], [reading(1, 0, 10)]):
-        m = Analysis(spans, reads, SETTLE).measure(spans[0], "five_hour")
-        assert m.label == MISSING and m.low is None and m.high is None
-    fell = Analysis(spans, [reading(1, 0, 10), reading(2, 13, 8)], SETTLE)
-    m = fell.measure(spans[0], "five_hour")
-    assert m.label == INCONSISTENT and m.low is None
-    assert combine([m])["low"] is None
-
-
-def test_a_meter_rising_while_idle_flags_nearby_attempts() -> None:
-    spans = [span(1, 0, 10)]
-    reads = [reading(1, -60, 5), reading(2, -30, 9), reading(3, 0, 9), reading(4, 13, 12)]
-    an = Analysis(spans, reads, SETTLE)
-    assert an.measure(spans[0], "five_hour").outside_use
-    assert an.rises[0]["points"] == 4
-    quiet = Analysis(spans, [reading(1, -60, 9), reading(3, 0, 9), reading(4, 13, 12)], SETTLE)
-    assert not quiet.measure(spans[0], "five_hour").outside_use
-
-
-def test_historical_readings_are_a_minimum_at_best() -> None:
-    spans = [span(1, 0, 10)]
-    reads = [reading(1, 0, 10), reading(2, 13, 15)]
-    m = Analysis(spans, reads, SETTLE, approximate={1}).measure(spans[0], "five_hour")
-    assert (m.label, m.low, m.high, m.approximate) == (IMMEDIATE, 4, None, True)
-
-
-def assistant(mid: str, at: str, model: str = "claude-opus-5-5", out: int = 100,
-              thinking: int = 40, five: int = 0, hour: int = 50) -> str:
-    return json.dumps({"type": "assistant", "timestamp": at, "version": "2.1.310",
-                       "entrypoint": "sdk-py", "sessionId": "s1", "message": {
-                           "id": mid, "model": model, "usage": {
-                               "input_tokens": 3, "output_tokens": out,
-                               "output_tokens_details": {"thinking_tokens": thinking},
-                               "cache_read_input_tokens": 1000,
-                               "cache_creation_input_tokens": five + hour,
-                               "cache_creation": {"ephemeral_5m_input_tokens": five,
-                                                  "ephemeral_1h_input_tokens": hour}}}})
-
-
-def cost_state(start: datetime) -> str:
-    return json.dumps({"type": "cost-state", "startTime": start.timestamp() * 1000,
-                       "modelUsage": {"claude-haiku-5-5": {
-                           "inputTokens": 2000, "outputTokens": 20, "thinkingTokens": 0,
-                           "cacheReadInputTokens": 0, "cacheCreationInputTokens": 0}}})
-
-
-TRANSCRIPT = [
-    # Attempt 1 (12:00): m1 recorded three times, m2 once, and its cost-state.
-    assistant("m1", "2026-11-02T12:00:05Z"), assistant("m1", "2026-11-02T12:00:05Z"),
-    assistant("m1", "2026-11-02T12:00:06Z"), assistant("m2", "2026-11-02T12:01:00Z", five=7),
-    cost_state(T0), "not json",
-    # Attempt 2 (13:00), resuming the session in the same file.
-    assistant("m3", "2026-11-02T13:00:05Z", out=10, thinking=0, hour=0),
-    assistant("m3", "2026-11-02T13:00:05Z", out=10, thinking=0, hour=0),
-]
-
-
-def test_transcript_tokens_count_each_message_once() -> None:
-    first = parse_transcript(TRANSCRIPT, since=T0)
-    assert first.messages == 3 and first.duplicates == 3  # m1, m2, m3
-    one = parse_transcript(TRANSCRIPT[:6], since=T0)
-    assert (one.messages, one.duplicates) == (2, 2)
-    assert one.output == 200 + 20 and one.thinking == 80  # thinking not added to output
-    assert (one.cache_write_5m, one.cache_write_1h) == (7, 100)
-    assert one.per_model["claude-haiku-5-5"]["input"] == 2000  # the side call
-    assert one.input == 6 + 2000 and one.model == "claude-opus-5-5"
-    assert one.cli_version == "2.1.310" and one.entrypoint == "sdk-py"
-    # The resumed attempt counts only its own messages, by time or by ids already counted.
-    later = parse_transcript(TRANSCRIPT, since=T0 + timedelta(hours=1))
-    assert (later.messages, later.output, later.cache_write_1h) == (1, 10, 0)
-    assert "claude-haiku-5-5" not in later.per_model  # attempt 1's cost-state
-    again = parse_transcript(TRANSCRIPT, seen=one.message_ids)
-    assert again.messages == 1 and again.per_model["claude-opus-5-5"]["output"] == 10
-
-
-def test_result_tokens_keep_the_cache_ttl_and_side_models() -> None:
-    t = from_result(
-        {"input_tokens": 5, "output_tokens": 90, "cache_creation_input_tokens": 30,
-         "cache_creation": {"ephemeral_5m_input_tokens": 10, "ephemeral_1h_input_tokens": 20},
-         "output_tokens_details": {"thinking_tokens": 40}},
-        {"claude-opus-5-5": {"inputTokens": 5, "outputTokens": 90,
-                             "cacheCreationInputTokens": 30, "cacheReadInputTokens": 9},
-         "claude-haiku-5-5": {"inputTokens": 100, "outputTokens": 2}})
-    assert (t.output, t.thinking, t.cache_write_5m, t.cache_write_1h) == (92, 40, 10, 20)
-    assert t.input == 105 and t.model == "claude-opus-5-5" and not t.gaps
 
 
 def test_raw_usage_is_kept_without_credentials(tmp_path: Path) -> None:
@@ -1602,7 +1932,7 @@ def metered(env: Env, gap: int = 0) -> tuple[Meter, Callable[..., Any]]:
 
 
 def quota_of(env: Env, attempt_id: int, window: str = "five_hour") -> Measure:
-    an, spans = report.analysis(env.ledger)
+    an, spans = metrics.analysis(env.ledger)
     return an.measure(spans[attempt_id], window)
 
 
@@ -1634,7 +1964,7 @@ def test_readings_before_after_and_settled_are_linked_to_attempts(env: Env) -> N
     assert len(env.ledger.all("SELECT * FROM usage WHERE source = 'settled'")) == 1
     first = quota_of(env, 1)
     assert (first.group_low, first.group_high) == (7, 9) and first.low == 4
-    meta = report.attempt_meta(env.ledger, 1)
+    meta = metrics.attempt_meta(env.ledger, 1)
     assert meta["requested_model"] and meta["effort"] and meta["config_hash"]
     assert (meta["output_tokens"], meta["thinking_tokens"], meta["plan"]) == (50, 20, "pro")
     assert meta["work_units"] == 1 and meta["source"] == "live"
@@ -1646,16 +1976,16 @@ def test_readings_before_after_and_settled_are_linked_to_attempts(env: Env) -> N
     text = report.text_inspect(r)
     assert "shared" in text and "utilization 0.81" in text and "before #" in text
     maps = [m for m in env.ledger.jobs(map_run(env)["id"], "map")]
-    units = [report.attempt_meta(env.ledger, env.ledger.one(
+    units = [metrics.attempt_meta(env.ledger, env.ledger.one(
         "SELECT id FROM attempt WHERE job_id = ?", m["id"])["id"])["work_units"] for m in maps]
     assert units == [1, 2]  # b2 (first_batch) has one entry, b1 two
-    q = report.quota(env.ledger)
+    q = metrics.quota(env.ledger)
     row = next(x for x in q["rows"] if x["key"] == "survey")
     assert row["five_hour"]["samples"] == 0 and row["five_hour"]["uncertain"]["jobs"] == 1
-    assert "diagnostic" in report.text_quota(q)
-    assert report.quota(env.ledger, by="model", tz="America/New_York")["rows"]
-    assert "5h shared" in report.text_recent(report.recent(env.ledger, "survey", 5))
-    w = report.windows(env.ledger)
+    assert "diagnostic" in metrics.text_quota(q)
+    assert metrics.quota(env.ledger, by="model", tz="America/New_York")["rows"]
+    assert "5h shared" in metrics.text_recent(metrics.recent(env.ledger, "survey", 5))
+    w = metrics.windows(env.ledger)
     assert any(x["window"] == "five_hour" and x["shared"] == 8 for x in w["windows"])
 
 
@@ -1674,7 +2004,7 @@ def test_a_calibration_gap_holds_the_next_job_for_a_settled_reading(env: Env) ->
     assert settled["attempt_id"] == 1 and settled["five_hour"] == 15
     m = quota_of(env, 1)
     assert (m.label, m.low, m.high) == (SETTLED, 4, 6)
-    q = report.quota(env.ledger)
+    q = metrics.quota(env.ledger)
     row = next(x for x in q["rows"] if x["key"] == "survey")
     assert row["five_hour"]["samples"] == 1 and row["five_hour"]["per_unit"]["median"] == 5
 
@@ -1698,12 +2028,15 @@ def failing_usage_check(env: Env, status: int, fail: int = 1) -> Meter:
     return meter
 
 
+COOLDOWN = timedelta(minutes=Config().usage_cooldown_minutes)
+
+
 def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None:
     meter = failing_usage_check(env, 429, 2)
     d = env.dispatcher(map_script(), fetch_usage=meter)
     first = d.tick()
     assert first.action == "waiting" and "cooldown" in first.detail
-    assert first.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert first.wait_until == env.now + COOLDOWN
     assert env.ledger.get("paused") is None
     since = env.ledger.get("usage_cooldown")["since"]
     status = report.text_status(report.status(env.ledger))
@@ -1718,7 +2051,7 @@ def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None
     env.now += timedelta(minutes=1)
     second = d.tick()
     assert second.action == "waiting" and meter.calls == calls + 1
-    assert second.wait_until == env.now + dispatcher_mod.USAGE_COOLDOWN
+    assert second.wait_until == env.now + COOLDOWN
     assert env.ledger.get("usage_cooldown")["since"] == since
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] != DONE
     # The next check succeeds: the cooldown clears and queued work resumes.
@@ -1734,9 +2067,9 @@ def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "waiting"
     meter.five = env.config.five_hour_cap + 5  # over the 5-hour cap once it answers
-    env.now += dispatcher_mod.USAGE_COOLDOWN
+    env.now += COOLDOWN
     out = d.tick()
-    assert out.action == "waiting" and "no account under its caps" in out.detail
+    assert out.action == "waiting" and "no account has room" in out.detail
     assert env.ledger.get("usage_cooldown") is None
     survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
     assert survey["status"] == WAITING_USAGE and not env.ledger.all("SELECT * FROM attempt")
@@ -1747,7 +2080,7 @@ def test_a_cooldown_never_lifts_the_owners_pause(env: Env) -> None:
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "waiting"
     env.ledger.set("paused", {"reason": "paused by the owner", "at": "now"})
-    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    env.now += COOLDOWN * 3
     calls = meter.calls
     out = d.tick()
     assert (out.action, out.detail) == ("paused", "paused by the owner")
@@ -1774,7 +2107,7 @@ def test_other_usage_check_failures_still_pause(env: Env) -> None:
     meter = failing_usage_check(env, 500, 1)
     d = env.dispatcher(map_script(), fetch_usage=meter)
     assert d.tick().action == "paused"
-    env.now += dispatcher_mod.USAGE_COOLDOWN * 3
+    env.now += COOLDOWN * 3
     assert d.tick().action == "paused"
     assert env.ledger.get("usage_cooldown") is None
     assert "endpoint down" in env.ledger.get("paused")["reason"]
@@ -1796,73 +2129,6 @@ def test_fetch_usage_reports_the_http_status(tmp_path: Path,
     assert caught.value.status == 429
     assert str(caught.value) == ("second: usage endpoint failed: HTTP Error 429: "
                                  "Too Many Requests")
-
-
-def test_backfill_recovers_tokens_and_lists_gaps(tmp_path: Path) -> None:
-    ledger = Ledger(tmp_path / "factory.db")
-    run_id = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path)
-    job = ledger.add_job(run_id, "map", {"batch": "b1"})
-    ledger.set_job(job, status=DONE, account="a")
-    rel = "data/factory/runs/x/003-map/s1.jsonl"
-    (tmp_path / rel).parent.mkdir(parents=True)
-    (tmp_path / rel).write_text("\n".join(TRANSCRIPT[:6]) + "\n")
-    attempt = ledger.add_attempt(job, "start", "p", "a", "abc", at=T0.isoformat())
-    ledger.finish_attempt(attempt, outcome="ok", session_id="s1", transcript=rel,
-                          finished_at=(T0 + timedelta(minutes=10)).isoformat())
-    ledger.add_step(attempt, 1, "rate_limit", "five_hour", "allowed")
-    for minutes, five in ((-0.01, 10), (10.2, 14), (20, 16)):
-        ledger.add_usage("a", (T0 + timedelta(minutes=minutes)).isoformat(),
-                         Usage(five, FIVE_RESETS, 20, WEEK_RESETS), "select")
-    files = {"abc:factory/stages/map.yaml": "stage: map\nmodel: claude-sonnet-5-5\neffort: "
-             "high\nprompt: factory/prompts/map.md\nskills: [explore-diocese]\n",
-             "abc:factory/prompts/map.md": "Map.",
-             f"abc:data/dioceses/{D}/batches.json": json.dumps(BATCHES)}
-    config = Config(accounts=[Account("a", tmp_path / "acct", "pro")])
-    r = backfill(ledger, config, files.get, root=tmp_path)
-    assert len(r["attempts"]) == 1 and r["linked"] == 2
-    meta = report.attempt_meta(ledger, attempt)
-    assert meta["source"] == "backfill" and meta["approximate"] == 1
-    assert (meta["requested_model"], meta["effort"]) == ("claude-sonnet-5-5", "high")
-    assert meta["output_tokens"] == 220 and meta["messages"] == 2
-    assert meta["duplicate_records"] == 2 and meta["work_units"] == 2
-    assert meta["cli_version"] == "2.1.310" and meta["config_hash"]
-    gaps = " ".join(meta["gaps"])
-    assert "SDK version" in gaps and "rate-limit events" in gaps and "plan read" in gaps
-    assert "no settled reading" not in gaps  # the reading at 20 min came after idling
-    sources = [r["source"] for r in ledger.all("SELECT source FROM usage ORDER BY id")]
-    assert sources == ["before", "after", "select"]
-    # Never settled from historical readings: a minimum, marked approximate.
-    m = Analysis([Span.from_row(ledger.one("SELECT * FROM attempt"))],
-                 [Reading.from_row(x) for x in ledger.all("SELECT * FROM usage")], SETTLE,
-                 approximate={attempt}).measure(span(attempt, 0, 10), "five_hour")
-    assert (m.label, m.low, m.high) == (IMMEDIATE, 5, None)
-    again = backfill(ledger, config, files.get, root=tmp_path)
-    assert again == {"attempts": [], "linked": 0}
-    # Without its spec or transcript, it says so.
-    other = ledger.add_attempt(job, "resume", "p", "a", "zzz", at=T0.isoformat())
-    ledger.finish_attempt(other, outcome="crash", finished_at=T0.isoformat())
-    backfill(ledger, config, files.get, root=tmp_path)
-    gaps = " ".join(report.attempt_meta(ledger, other)["gaps"])
-    assert "no transcript" in gaps and "stage spec" in gaps
-
-
-def test_backfill_gives_a_resumed_session_each_attempt_its_own_tokens(tmp_path: Path) -> None:
-    ledger = Ledger(tmp_path / "factory.db")
-    run_id = ledger.add_run(diocese=D, kind=MAP, worktrees_dir=tmp_path)
-    job = ledger.add_job(run_id, "survey", {})
-    rel = "s1.jsonl"
-    (tmp_path / rel).write_text("\n".join(TRANSCRIPT) + "\n")
-    ids = []
-    for kind, start in (("start", T0), ("resume", T0 + timedelta(hours=1))):
-        a = ledger.add_attempt(job, kind, "p", "a", None, at=start.isoformat())
-        ledger.finish_attempt(a, outcome="ok", session_id="s1", transcript=rel,
-                              finished_at=(start + timedelta(minutes=10)).isoformat())
-        ids.append(a)
-    backfill(ledger, Config(accounts=[Account("a", tmp_path / "acct")]), {}.get, root=tmp_path)
-    first, second = (report.attempt_meta(ledger, a) for a in ids)
-    assert (first["messages"], first["output_tokens"]) == (2, 220)  # m1, m2 only
-    assert (second["messages"], second["output_tokens"]) == (1, 10)  # m3
-    assert second["resumed_from"] == ids[0]
 
 
 def test_a_calibration_gap_ends_the_wait_when_the_other_account_is_over_its_caps(
@@ -1909,7 +2175,7 @@ def test_rate_limit_events_are_scrubbed_and_never_stop_the_attempt(
 
 def test_a_slow_after_reading_does_not_hold_up_the_gates(
         env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(dispatcher_mod, "AFTER_READING_WAIT", 0.2)
+    monkeypatch.setattr(readings_mod, "AFTER_READING_WAIT", 0.2)
     meter, spend = metered(env)
     release = threading.Event()
 
@@ -1925,8 +2191,3 @@ def test_a_slow_after_reading_does_not_hold_up_the_gates(
     release.set()
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
     assert not env.ledger.all("SELECT * FROM usage WHERE source = 'after'")
-
-
-def test_an_unknown_time_zone_is_a_clear_error(tmp_path: Path) -> None:
-    with pytest.raises(FactoryError, match="unknown time zone 'US/Eastrn'"):
-        report.quota(Ledger(tmp_path / "l.db"), by="hour", tz="US/Eastrn")

@@ -1,7 +1,8 @@
-"""Which job a Run needs next. The stage order is here, in code (§3).
+"""Which job a Run needs next. The stage order is here, in code.
 
 Map Run:  survey, survey-review, map × each batch (integrate whenever *New lessons*
-          passes the threshold), reconcile, promote, pr.
+          passes the threshold, and once more after the last batch if any wait),
+          reconcile, promote, pr.
 Seed Run: for each batch, seed × each parish, then seed-review; then pr.
 Follow-up Runs (parked parishes answered after the PR opened) start with their jobs
 queued, then go map → promote → pr, or seed → seed-review → pr.
@@ -176,15 +177,20 @@ def _next_map(ledger: Ledger, run: Any, threshold: int) -> Next | None:
                     if _handoff(j).get("verdict") == APPROVE]
         if not approved or approved[-1]["finished_at"] < surveys[-1]["finished_at"]:
             return Next("survey-review", {"survey_job": surveys[-1]["id"]})
-        meta = diocese_dir(worktree, diocese) / "diocese.md"
-        if (meta.exists() and len(playbook.bullets(meta, playbook.NEW_LESSONS)) > threshold
-                and (last is None or last["stage"] != "integrate")):
-            return Next("integrate", {})
         mapped = {json.loads(j["input"]).get("batch") for j in _done(ledger, run_id, "map")}
-        for batch in ordered_batches(worktree, diocese):
-            if batch["id"] not in mapped:
-                return Next("map", {"batch": batch["id"]})
-        if not _done(ledger, run_id, "reconcile"):
+        unmapped = [b["id"] for b in ordered_batches(worktree, diocese) if b["id"] not in mapped]
+        reconciled = bool(_done(ledger, run_id, "reconcile"))
+        meta = diocese_dir(worktree, diocese) / "diocese.md"
+        lessons = len(playbook.bullets(meta, playbook.NEW_LESSONS)) if meta.exists() else 0
+        # Past the threshold, and once more before reconcile, so the playbook the PR
+        # carries has every lesson folded in. Never twice in a row, so lessons an
+        # integrate left can't loop it.
+        due = lessons > threshold or (lessons > 0 and not unmapped and not reconciled)
+        if due and (last is None or last["stage"] != "integrate"):
+            return Next("integrate", {})
+        if unmapped:
+            return Next("map", {"batch": unmapped[0]})
+        if not reconciled:
             return Next("reconcile", {})
     if not _done(ledger, run_id, "promote"):
         return Next("promote", {})

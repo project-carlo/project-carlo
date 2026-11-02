@@ -1,4 +1,4 @@
-"""GitHub: an issue for each blocking flag, reading your answers back, and the Run's PR (§7).
+"""GitHub: an issue for each blocking flag, reading your answers back, and the Run's PR.
 
 Only the dispatcher talks to GitHub, through `gh` with your login. Its own comments carry
 a marker, so they are never read back as your answer.
@@ -7,12 +7,14 @@ a marker, so they are never read back as your answer.
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import urllib.parse
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Protocol
 
+from pdf_extract.factory import git
 from pdf_extract.factory.config import FactoryError
 
 MARKER = "<!-- factory -->"
@@ -83,7 +85,8 @@ def issue_body(flag: Any, run: Any, job: Any | None) -> str:
 
 
 def _gh(*args: str, cwd: Path | None = None, input: str | None = None) -> str:
-    proc = subprocess.run(["gh", *args], cwd=cwd, capture_output=True, text=True, input=input)
+    proc = subprocess.run(["gh", *args], cwd=cwd, capture_output=True, text=True, input=input,
+                          env={**os.environ, **git.SAFE_ENV})
     if proc.returncode != 0:
         raise FactoryError(f"gh {' '.join(args[:2])}: {(proc.stderr or proc.stdout).strip()}")
     return proc.stdout

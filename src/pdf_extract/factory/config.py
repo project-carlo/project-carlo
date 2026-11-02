@@ -24,10 +24,6 @@ RUNS_DIR = DATA / "runs"
 STUB_DATA = DATA / "stub"
 
 
-# How long after an attempt the usage meter has caught up (docs/factory-spec.md, Usage).
-QUOTA_SETTLE_SECONDS = 150
-
-
 class FactoryError(RuntimeError):
     """Something the dispatcher can't do; the message says what to fix."""
 
@@ -37,15 +33,56 @@ class Account:
     name: str
     config_dir: Path
     plan: str | None = None  # if its login doesn't say (pro, max...)
+    # Its `claude setup-token` token, for sandboxed workers (docs/factory-sandbox-plan.md
+    # §3.5): never refreshed, so a worker can't rotate the login the dispatcher reads.
+    worker_token_file: Path | None = None
+
+
+@dataclass(frozen=True)
+class JobUsage:
+    """Points of each usage window, in percent of the account's limit."""
+
+    five_hour: float = 0
+    weekly: float = 0
+
+    def __add__(self, other: JobUsage) -> JobUsage:
+        return JobUsage(self.five_hour + other.five_hour, self.weekly + other.weekly)
+
+
+# About the 75th percentile of past jobs (`pnpm factory quota`, factory/config.yaml).
+JOB_USAGE = {
+    "survey": JobUsage(40, 3),
+    "survey-review": JobUsage(8, 1),
+    "map": JobUsage(10, 1),
+    "integrate": JobUsage(5, 1),
+    "reconcile": JobUsage(25, 2),
+    "seed": JobUsage(10, 1),
+    "seed-review": JobUsage(15, 1),
+}
 
 
 @dataclass
 class Config:
-    five_hour_cap: float = 75
+    # A job starts only if its account's usage, plus what the job is expected to use, plus
+    # what jobs already running on the account are expected to use, stays under both caps.
+    five_hour_cap: float = 95
     weekly_cap: float = 100
-    max_workers: int = 1
+    # What a stage's job is expected to use (`job_usage_for`); a stage not listed, nothing.
+    job_usage: dict[str, JobUsage] = field(default_factory=lambda: dict(JOB_USAGE))
     max_send_backs: int = 2
-    lessons_before_integrate: int = 8
+    # A job's attempts: crashes before its Run blocks, "continue"s after a partial session,
+    # and git or GitHub failing on it tick after tick, retried this often.
+    max_crashes: int = 3
+    max_continues: int = 1
+    max_failures: int = 3
+    failure_retry_minutes: int = 5
+    # The sandbox failing to start a worker (no image, Podman or proxy): the job tries
+    # again this often, and the Run blocks after this many in a row. Never a crash.
+    max_sandbox_failures: int = 3
+    sandbox_retry_minutes: int = 10
+    # How long the usage check waits after the endpoint answers 429 Too Many Requests.
+    usage_cooldown_minutes: int = 30
+    lessons_before_integrate: int = 15
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
     seed_follow_up_weeks: int = 6
@@ -57,10 +94,10 @@ class Config:
     base_branch: str = "main"
     remote: str = "origin"
     branch_prefix: str = "factory/"  # a Run's branch is <prefix><run>
-    # Quota readings (docs/factory-spec.md, Usage): a settled reading once an account has
+    # Quota readings (docs/factory-quota.md): a settled reading once an account has
     # been idle this long after an attempt, one of every account this often, and an
     # optional idle gap between attempts on an account so each gets a settled reading.
-    quota_settle_seconds: int = QUOTA_SETTLE_SECONDS
+    quota_settle_seconds: int = 150
     quota_sample_minutes: int = 15
     calibration_gap_seconds: int = 0
     # This machine's, from local.yaml.
@@ -68,6 +105,15 @@ class Config:
     owner: str = ""
     worktrees_dir: Path = DATA / "worktrees"
     setup: list[str] = field(default_factory=lambda: ["uv sync --group dev"])
+    # Where workers run (docs/factory-sandbox-plan.md): `host`, or `sandbox` (a rootless
+    # Podman container per attempt, never falling back to the host), and its limits.
+    worker_backend: str = "host"
+    sandbox_memory: str = "6g"
+    sandbox_cpus: str = "4"
+    sandbox_pids: int = 2048
+
+    def job_usage_for(self, stage: str) -> JobUsage:
+        return self.job_usage.get(stage, JobUsage())
 
     @property
     def upstream(self) -> str:
@@ -84,16 +130,33 @@ def _read(path: Path) -> dict[str, Any]:
 
 
 def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) -> Config:
-    raw = {**_read(config_path), **_read(local_path)}
+    shared, local = _read(config_path), _read(local_path)
+    raw = {**shared, **local}
+    # local.yaml can change one stage's job_usage without dropping the others.
+    raw["job_usage"] = {**JOB_USAGE, **(shared.get("job_usage") or {}),
+                        **(local.get("job_usage") or {})}
     known = {f.name for f in fields(Config)}
     unknown = sorted(set(raw) - known)
     if unknown:
         raise FactoryError(f"unknown factory settings: {', '.join(unknown)}")
     accounts = [
         Account(str(a["name"]), Path(str(a["config_dir"])).expanduser(),
-                str(a["plan"]) if a.get("plan") else None)
+                str(a["plan"]) if a.get("plan") else None,
+                Path(str(a["worker_token_file"])).expanduser()
+                if a.get("worker_token_file") else None)
         for a in raw.pop("accounts", None) or []
     ]
+    try:
+        raw["job_usage"] = {str(stage): v if isinstance(v, JobUsage) else JobUsage(**(v or {}))
+                            for stage, v in raw["job_usage"].items()}
+    except TypeError as exc:
+        raise FactoryError(f"job_usage: {exc}") from None
     if "worktrees_dir" in raw:
         raw["worktrees_dir"] = Path(str(raw["worktrees_dir"])).expanduser()
+    for key in ("sandbox_memory", "sandbox_cpus"):  # `4` in YAML is still podman's "4"
+        if key in raw:
+            raw[key] = str(raw[key])
+    if raw.get("worker_backend", "host") not in ("host", "sandbox"):
+        raise FactoryError(f"worker_backend must be host or sandbox, not "
+                           f"{raw['worker_backend']!r}")
     return Config(**raw, accounts=accounts)

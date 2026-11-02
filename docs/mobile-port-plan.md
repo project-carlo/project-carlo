@@ -1,8 +1,10 @@
 # Project Carlo: Expo port to iOS and Android
 
-Planning baseline: October 5, 2026. This document proposes implementation; it does not add a mobile app.
+Planning baseline: October 5, 2026. Revised November 2, 2026 for the development environment, device testing, and Android-first ordering. This document proposes implementation; it does not add a mobile app.
 
 Build a new Expo React Native application in `apps/mobile`, keep the Vite website, and extract their shared data and schedule logic into `packages/core`. Use native navigation, controls, and maps while preserving Project Carlo's typography, colors, and schedule presentation. Keep the Python extraction pipeline and static snapshot distribution.
+
+Development happens on Windows with WSL and no Mac. Android is developed and tested locally and ships first; iOS is tested on a shared physical iPhone and on macOS CI runners (see [Development environment and device testing](#development-environment-and-device-testing)).
 
 The confirmed first-release scope is the current public church-finder features plus offline access to previously downloaded schedules. Favorites and reminders are separate follow-ups. The internal bulletin labeler and Python administration tools remain desktop tools.
 
@@ -11,8 +13,8 @@ The confirmed first-release scope is the current public church-finder features p
 | Existing code | Porting implication |
 | --- | --- |
 | `apps/web/src/api.ts` | Despite its name, this downloads one snapshot and queries it locally. Extract the query functions; replace its browser download implementation. |
-| `src/pdf_extract/extract_frontend_db.py`, `apps/web/src/lib/snapshot.ts` | Shared column-oriented JSON format, currently version 1. Reuse the decoder with stronger runtime validation at the download boundary. |
-| `lib/schedule.ts`, `lib/eventRollup.ts`, `types.ts`, `constants/*`, `src/utils.ts` | Mostly reusable TypeScript, with clock and timezone behavior to make explicit. |
+| `src/pdf_extract/extract_frontend_db.py`, `packages/core/src/snapshot.ts` | Shared column-oriented JSON format, currently version 1. Reuse the decoder with stronger runtime validation at the download boundary. |
+| `packages/core/src/`: `schedule.ts`, `eventRollup.ts`, `types.ts`, `constants/*`, `utils.ts` | Mostly reusable TypeScript, with clock and timezone behavior to make explicit. |
 | `components/filterState.ts`, `lib/mapView.ts`, `lib/currentLocationQuery.ts` | Reuse filter semantics, link parameters, and current-location query recognition. Move these out of UI directories where appropriate. |
 | `lib/mapClusters.ts` | Pure clustering algorithm worth sharing. Native viewport, zoom, camera, and marker integration need an adapter. |
 | `components/SearchTypeahead.tsx`, `placeSearch.ts` | Extract Fuse search configuration and Geoapify request/result logic; rebuild the search UI and inject configuration. |
@@ -62,7 +64,7 @@ Python extraction -> validated static snapshots on projectcarlo.com
 | Concern | Initial choice |
 | --- | --- |
 | Runtime/navigation | Stable Expo SDK selected and pinned at implementation kickoff, TypeScript, Expo Router, development builds, Continuous Native Generation. |
-| Maps | `react-native-maps`, with Apple Maps on iOS and Google Maps on Android. Validate the selected versions in a real build before developing the full map. |
+| Maps | **Undecided.** `react-native-maps` (Apple Maps on iOS, Google Maps on Android) or MapLibre (`@maplibre/maplibre-react-native`, one renderer on both). Decide in the phase 1 spike; see [Map library decision](#map-library-decision). Validate the selected versions in a real build before developing the full map. |
 | UI | React Native `StyleSheet`, shared tokens, `react-native-safe-area-context`, `react-native-svg` for ornaments/icons, and an Expo-compatible bottom-sheet library such as `@gorhom/bottom-sheet`. |
 | Gestures | Expo-compatible React Native Gesture Handler and Reanimated versions; verify sheet/map/slider gesture interaction early. |
 | Fonts | `expo-font` with bundled, appropriately licensed Cardo and EB Garamond font files. Prefer tested static weights initially; web Fontsource CSS is not a native font loader. |
@@ -70,7 +72,8 @@ Python extraction -> validated static snapshots on projectcarlo.com
 | Storage | `expo-file-system` document storage for the snapshot; AsyncStorage for small preferences. Use a recoverable file-and-metadata commit protocol. |
 | Decompression | A React Native-compatible gzip library such as `fflate`, verified on Hermes. The current `DecompressionStream`/`Blob.stream()` path is browser-specific. |
 | Device integrations | `expo-location` for foreground location; `expo-web-browser` for web content; React Native Linking and Share for external actions. |
-| Builds/releases | EAS Build and Submit; introduce EAS Update only with runtime-version policy and separate preview/production channels. |
+| Builds/releases | EAS Build and Submit; local Gradle builds for Android development; macOS CI runners for iOS simulator builds. Introduce EAS Update only with runtime-version policy and separate preview/production channels. |
+| Native projects | Continuous Native Generation is a hard rule, not a preference: `ios/` and `android/` are generated and never committed or hand-edited. Without a Mac nobody can open Xcode, so every native change goes through app config or a config plugin. |
 
 Select exact package versions through the chosen Expo SDK's compatibility guidance and `expo install`; run Expo Doctor and inspect native-library compatibility. Do not independently choose the newest React/React Native versions. Keep React a peer dependency if any future shared package contains hooks, and prevent multiple React copies in a single app's dependency graph.
 
@@ -108,11 +111,11 @@ Recompute derived schedules on foregrounding and at the church-local date bounda
 
 ## Native integrations that need explicit work
 
-**Map:** reuse clustering and viewport culling, not Leaflet components. Convert native camera/region information into the shared algorithm's bounds and zoom convention; verify cluster expansion, padding for the results sheet, and selection persistence on both providers. Native zoom values and screen density cannot be assumed to match Leaflet. Start with simple image markers and cluster counts, then add branding after profiling. Keep map attributions visible.
+**Map:** reuse clustering and viewport culling, not Leaflet components. Convert native camera/region information into the shared algorithm's bounds and zoom convention; verify cluster expansion, padding for the results sheet, and selection persistence on each platform. Start with simple image markers and cluster counts, then add branding after profiling. Keep map attributions visible. The library is not chosen yet; see [Map library decision](#map-library-decision).
 
 **Search and location:** inject Geoapify configuration instead of reading `import.meta.env`. Preserve debounce, request cancellation, country restriction, ZIP handling, and local Fuse ranking. Review the current Rochester proximity bias for broader coverage. Request foreground location only after the user taps the action; support denial, approximate location, timeout, and disabled services with manual search. No background-location permission is needed.
 
-**API configuration:** Expo public environment variables are bundled into the application. Confirm Geoapify's supported mobile-client restrictions, attribution, and quota configuration. If the browser-only key policy does not support native clients, use a small rate-limited proxy for place search. Google Maps Android configuration requires a restricted key and build-variant signing fingerprints. Keep R2 credentials and extraction-service keys out of the app.
+**API configuration:** Expo public environment variables are bundled into the application. Confirm Geoapify's supported mobile-client restrictions, attribution, and quota configuration. If the browser-only key policy does not support native clients, use a small rate-limited proxy for place search. If `react-native-maps` is chosen, Google Maps Android configuration requires a restricted key and build-variant signing fingerprints; if MapLibre is chosen, the tile source needs its own key and usage terms. Keep R2 credentials and extraction-service keys out of the app.
 
 **Feedback and bulletin links:** open the hosted Tally form in the system browser surface with the existing `page_path`, `full_url`, `church_slug`, and `church_name` parameters. Construct context from the route and canonical website URL rather than `window.location`. Preserve visible bulletin page numbers; external PDF viewers may ignore `#page=`, so do not promise automatic navigation to that page. Test external links on Android and iOS.
 
@@ -120,33 +123,113 @@ Recompute derived schedules on foregrounding and at the church-local date bounda
 
 **Accessibility and visual design:** retain the paper/ink/rubric palette, serif hierarchy, ornaments, and clear schedule grouping. Adapt to safe areas, Android edge-to-edge behavior, keyboard overlap, text scaling, screen readers, reduced motion, and platform-sized touch targets. Provide accessible time inputs as well as any slider. Keep the list fully usable without manipulating the map.
 
+### Map library decision
+
+Not yet decided. Build the same small map (real churches, clusters, selection, results-sheet padding) with both candidates in the phase 1 spike, on the Android emulator and the iPhone, then record the choice here.
+
+| | `react-native-maps` | MapLibre (`@maplibre/maplibre-react-native`) |
+| --- | --- | --- |
+| Rendering | Apple Maps on iOS, Google Maps on Android: two engines with different zoom values, gestures, and camera behavior. | One engine on both platforms. A map bug found on the Android emulator very likely reproduces on iOS. |
+| Look | Native platform basemaps; no tile service to run. | Same style on both platforms, and it can match the website. Loses the native Apple/Google look. |
+| Shared clustering | Needs an adapter from each provider's region/zoom to the shared algorithm's convention. | Uses Web Mercator zoom levels like Leaflet, offset by a fixed one level (512-pixel rather than 256-pixel tiles), so the web clustering carries over with a single conversion on both platforms. Native GeoJSON clustering is also available. |
+| Keys and setup | Google Maps Android key restricted by package and per-variant signing fingerprints. Google Maps also needs an emulator image with Google APIs. | No Google key. Works on any emulator image. |
+| Tiles | Provided by Apple and Google. | Needs a tile source. The website loads `tile.openstreetmap.org` directly, and the OpenStreetMap tile usage policy does not suit app traffic. Options: a Protomaps PMTiles file on the existing Cloudflare/R2 hosting, or a hosted provider such as MapTiler. |
+| Later features | No offline basemap. | Offline map regions become possible. |
+| Testing without a Mac | iOS map behavior can only be checked on the iPhone or CI. | Most map behavior is covered by Android testing. |
+
+Also check each library's support for the React Native New Architecture in the pinned Expo SDK.
+
+## Development environment and device testing
+
+The development machine is a Windows laptop running WSL2, with no Mac. Coding agents run in WSL and need to test on devices without a person in the loop where possible.
+
+### Android first
+
+Develop and release Android first, keeping iOS working throughout rather than porting it at the end.
+
+- **The whole loop runs locally.** Emulator, Gradle builds, Metro, Maestro, and agents all run on the development machine. iOS needs a borrowed phone or a CI round trip.
+- **Agents can test unattended.** They can drive an emulator; they cannot drive a physical iPhone from WSL.
+- **Lower cost to start.** Android development builds need no account. Google Play Console is a one-time fee (US$25) and is needed only for Play testing tracks. The Apple Developer Program is a yearly fee (US$99) and is needed before the iPhone can run any build.
+- **Google Play's testing requirement takes calendar time.** New personal Play developer accounts must run a closed test with a minimum number of opted-in testers for a minimum number of consecutive days before they can publish to production (12 testers for 14 days at the time of writing; check the current rules). Organization accounts are exempt. Starting the Android beta early starts that clock while iOS work continues.
+- **Apple account setup runs in parallel.** Enrollment, identity verification, and the individual/organization decision don't block Android work.
+
+To keep iOS from drifting: run the iOS simulator CI workflow from phase 1, check milestones on the iPhone, keep platform-specific code small and isolated, and treat an iOS CI failure as a blocking bug.
+
+### Android: local emulator
+
+- **Emulator inside WSL (default for agents).** WSL2 exposes KVM (`/dev/kvm`); add the user to the `kvm` group. Install a Linux Android SDK (command-line tools, platform-tools, emulator, an x86_64 system image) and JDK 17 in WSL. Run the emulator headless (`-no-window -gpu swiftshader_indirect`). Everything then lives in one OS, with no cross-OS networking. Software rendering makes the map slower but is fine for functional tests.
+- **Emulator on Windows (optional, for watching and GPU rendering).** The Windows Android SDK can run an emulator with hardware graphics in a visible window. WSL then needs mirrored networking (`networkingMode=mirrored` in `.wslconfig`), and the Windows and WSL platform-tools must be the same version so the two adb servers don't keep restarting each other.
+- **Builds.** `expo run:android` builds the development build locally with Gradle in WSL, so agents don't spend EAS build credits. Rebuild only when native dependencies or native config change; JavaScript changes reload through Metro.
+- **Metro.** Run it from WSL with the repository on the Linux filesystem, never under `/mnt/c`, so file watching works. `adb reverse tcp:<port> tcp:<port>` connects the emulator to it.
+- **Memory.** WSL currently has about 15 GB. An emulator needs about 3 GB and a Gradle build several more. Raise the WSL memory limit in `.wslconfig` if the host allows.
+- **A physical Android phone** is optional during development (wireless debugging) and needed for phase 5 performance profiling on a named mid-range device.
+
+### iOS: a shared iPhone and macOS CI
+
+**Shared iPhone.** A family member's iPhone is available some of the time for hands-on sessions.
+
+- Register it to the project's Apple developer team by device ID (`eas device:create`), and turn on Developer Mode (Settings > Privacy & Security, then restart). The phone stays signed into its owner's Apple account; the project needs no access to that account or its data.
+- **Development build** (EAS cloud build, ad hoc provisioning): loads JavaScript live from Metro in WSL over Wi-Fi. The phone must reach Metro, which WSL's default NAT networking blocks: use mirrored networking plus an inbound Windows firewall rule for the Metro port. `expo start --tunnel` is a slower fallback.
+- **Preview build** (JavaScript bundled, internal distribution or TestFlight): for everyday use between sessions, without Metro.
+- Batch native-dependency changes: each one needs a new iOS cloud build.
+- Plan iOS-sensitive work for when the phone is available. A physical device is needed or far more convincing for: map and sheet gestures, scrolling feel, keyboard overlap, real GPS and permission prompts, universal links (which need real signing), the share sheet, opening directions in Apple Maps, external links, safe areas, text scaling, VoiceOver, and real performance.
+- Agents can't drive the iPhone. Sessions are hands-on, with agents changing code while a person tests and reports.
+
+**macOS CI.** GitHub-hosted macOS runners are free for this public repository and can run the iOS simulator.
+
+- Add an `ios-simulator` workflow: generate the native project, build a simulator app, boot a simulator, install, run the Maestro flows against fixture data, and upload screenshots and a recording as artifacts.
+- Cache the native build keyed on `@expo/fingerprint`, so JavaScript-only changes skip the slow Xcode build.
+- Trigger it on pull requests that touch `apps/mobile/` or `packages/`, and by `workflow_dispatch` so agents can run it ad hoc (`gh workflow run`, then `gh run download` to read the screenshots).
+- Simulator builds need no Apple Developer account, so this can start in phase 1.
+
+**No Mac for now.** CI covers regressions and the iPhone covers feel. Revisit a Mac (for example a used Mac mini as a remote simulator host) only if iOS-only bugs become frequent.
+
+**Performance caveat.** If the shared iPhone is a recent model, it does not stand in for the "older supported iPhone" in the performance targets, and simulators don't measure performance. Borrow an older device before release or record the gap.
+
+### Agent testing tooling
+
+- **T3 Code Device panel.** Lets agents open and drive simulators and emulators while the owner watches. Turn on "Agent device access" in T3 Code (Settings > Integrations > Devices; it applies to new sessions). Whether it detects the WSL or the Windows emulator decides which one is the default.
+- **Maestro.** The CLI runs on Linux and drives Android through adb. Keep flows in `apps/mobile/.maestro/`; the same flows run on the iOS simulator in CI.
+- **Fixture mode.** A public environment variable (for example `EXPO_PUBLIC_SNAPSHOT_URL`) points the app at a locally served copy of `snapshot.fixture.json`, so flows are deterministic and run offline.
+- **Stable selectors.** Give every interactive element a `testID` and an accessibility label. This serves Maestro, agents, and screen readers.
+- **Parallel worktrees.** Each worktree's Metro needs its own port, and each emulator costs memory, so share one or two emulators. Add a `pnpm mobile:device` script that picks a free port, starts Metro, runs `adb reverse`, and opens the development build at that Metro URL through its deep link.
+- **A mobile testing skill.** Add a skill in `.claude/skills/` (as for the factory) covering how to start the emulator, start Metro, run Maestro, take a screenshot, and trigger and read the iOS CI run. Point to it from `AGENTS.md`.
+
+### Accounts
+
+- **Apple: a dedicated project Apple Account, not a family member's.** Two-factor codes would otherwise go to someone else's devices on every sign-in, and the account owns the app, its signing certificates, the store listing, and the payment agreements. A trusted phone number receiving text-message codes satisfies two-factor sign-in without owning an Apple device. Enrollment may ask for an Apple device for identity verification depending on the country; the Apple Developer app can be signed into the project account on the shared iPhone without affecting the phone's own sign-in. Check the current enrollment steps when signing up.
+- **Individual or organization enrollment.** Decide before the first App Store release. An individual account lists the owner's legal name as the seller; an organization account shows "Project Carlo" but needs a legal entity and a D-U-N-S number, which can take days to weeks. Converting later goes through Apple support. TestFlight and test builds work the same under either. Google Play makes the same distinction, and its organization accounts skip the closed-testing requirement above.
+- **App Store Connect API key for EAS.** Builds and submissions then run in CI and agent sessions without two-factor prompts or stored passwords. Keep it in EAS/GitHub secrets.
+- The Apple account is needed for any build on the iPhone, TestFlight, and the App Store, but not for iOS simulator CI.
+
 ## Implementation sequence and estimates
 
-Estimates assume one engineer experienced with React/TypeScript, access to both platforms for testing, the scope above, and no account system or notification service. These are planning ranges, not commitments; revise them after the map/build spike.
+Estimates assume one engineer experienced with React/TypeScript, the development environment above (local Android, a part-time iPhone, iOS simulator CI), the scope above, and no account system or notification service. iOS feedback is slower than Android feedback, which makes iOS-heavy work harder to estimate. These are planning ranges, not commitments; revise them after the map/build spike.
 
 | Phase | Work and dependency | Exit condition | Engineering days |
 | --- | --- | --- | --- |
-| 1. Native feasibility | Create Expo shell, workspace wiring and EAS profiles. Prove snapshot decoding, native map, fonts, and location in development builds. Start developer-account/signing setup. | iPhone and Android builds show real churches, load the same fixture, and handle denied location; package/provider choices recorded. | 2–3 |
+| 1. Native feasibility | Create Expo shell, workspace wiring and EAS profiles. Set up the local Android environment, the iOS simulator CI workflow, fixture mode, and the agent testing skill. Prove snapshot decoding, fonts, and location in development builds. Build the map with both candidate libraries and choose one. Start Apple and Google account setup. | The Android emulator build shows real churches, loads the fixture, and handles denied location; the iOS simulator CI run passes with screenshots; an agent can run a Maestro flow unattended; the map library choice is recorded. The iPhone development build shows the same, once the Apple account is ready. | 3–5 |
 | 2. Shared core | Extract types, queries, schedule, filters, search configuration, clustering, and tokens. Move tests; separate browser transport and configuration. | Web unit tests, typecheck, and prerender/build pass with shared packages; mobile imports no DOM/Vite modules. | 3–5 |
 | 3. Data lifecycle | Versioned static publication, validation, persistent storage, refresh, clock/timezone handling, and failure recovery. Depends on the data interfaces from phase 2. | Offline restart, interrupted download, incompatible schema, midnight/resume, and old-client compatibility cases pass. | 4–6 |
-| 4. Product flows | Explore map/list, filter sheet, local/place search, church detail, external actions, feedback, About/settings, and deep links. Depends on shared core; use fixture data while phase 3 settles. | The first-release flows work on both platforms, including back navigation, missing data, and accessible list use. | 6–9 |
-| 5. Beta and release | Device profiling, accessibility fixes, native E2E tests, signing/link verification, store assets/privacy disclosures, TestFlight and Play testing, release workflow. | Release checklist passes; installable production candidates and store submissions are ready. | 5–7 |
+| 4. Product flows | Explore map/list, filter sheet, local/place search, church detail, external actions, feedback, About/settings, and deep links. Depends on shared core; use fixture data while phase 3 settles. Develop on Android; check on iOS through CI on every change and on the iPhone at milestones. | The first-release flows work on Android and pass iOS CI and an iPhone session, including back navigation, missing data, and accessible list use. | 6–9 |
+| 5a. Android beta and release | Device profiling, accessibility fixes, App Links verification, Play store assets and Data Safety answers, Play closed testing, release workflow. Start the closed test as early as the build allows. | The Play closed-testing requirement is met; the Android release checklist passes; the production candidate is submitted. | 3–4 |
+| 5b. iOS beta and release | iPhone profiling and accessibility fixes, universal links on real signing, App Store assets and privacy answers, TestFlight, release workflow. Overlaps with the Play closed-test period. | The iOS release checklist passes; the production candidate is submitted. | 3–4 |
 
-Total: **20–30 engineering days**, roughly **4–6 focused weeks**. Allow **5–7 calendar weeks** for beta feedback and coordination; store review, account verification, and any account-specific testing requirements can extend this. A build/map proof of concept should be available in the first week.
+Total: **22–33 engineering days**, roughly **5–7 focused weeks**. Allow **6–8 calendar weeks** for beta feedback and coordination; store review, account verification, and Google Play's closed-testing period can extend this. Android can ship before iOS. A build/map proof of concept should be available in the first week.
 
-Use small reviewable changes: Expo spike; shared domain extraction; data contract/storage; Explore/search; church detail/links; release hardening. Avoid combining the web refactor and complete native UI into one change. This is an implementation order, not authorization to create or publish releases now.
+Use small reviewable changes: Expo spike with the Android environment and iOS CI; shared domain extraction; data contract/storage; Explore/search; church detail/links; release hardening. Avoid combining the web refactor and complete native UI into one change. This is an implementation order, not authorization to create or publish releases now.
 
 ## Validation and release gates
 
 - **Shared behavior:** retain existing Vitest coverage for filtering, weekday mapping, schedule ordering, rollups, clustering, and snapshot fixtures. Add meaningful regressions for explicit timezone/reference-time behavior, expired events, malformed payloads, and revision invalidation. Keep Python exporter/TypeScript decoder agreement tested.
 - **Web regression:** run `pnpm --filter web test`, `pnpm check:web`, `pnpm lint:web`, and `pnpm build:web`, plus existing home/landing/not-found Playwright flows when shared behavior changes. Supply a valid snapshot for prerendering. Update `deploy-web.yml` path filters to include shared packages so core changes actually deploy.
 - **Native component tests:** use React Native Testing Library with an Expo-compatible test setup for filter application, denied location, offline status, error recovery, and navigation state. Unit tests cannot validate real map/provider behavior.
-- **Native E2E:** use Maestro against development/release-like builds on both platforms for launch, search, filters, detail/back, deep links, and cached offline restart. Use controlled fixtures for deterministic flows and separate live-service smoke checks.
+- **Native E2E:** use Maestro against development/release-like builds for launch, search, filters, detail/back, deep links, and cached offline restart: locally on the Android emulator, and on the iOS simulator in macOS CI. Use fixture mode for deterministic flows and separate live-service smoke checks. Universal links and real-device behavior are checked by hand on the iPhone.
 - **Lifecycle/data matrix:** first launch online/offline; airplane-mode restart with saved data; network recovery; corrupt cache; interrupted replacement; manifest referencing missing data; unsupported schema; app suspension across midnight/DST; device timezone different from church; same-day schedules and cancellations.
-- **Performance:** profile release builds on a named mid-range Android device and an older supported iPhone, with current and expanded fixtures. Initial goals: cached Explore usable within two seconds, settled filter changes reflected within 100 ms at current scale, and smooth map/sheet interaction without rendering the whole dataset as markers. Treat these as targets to verify in phase 1/5, not measured results.
-- **CI:** add core/mobile typecheck, lint, and unit jobs. Keep build checks for shared-package consumers. Run native simulator/emulator smoke tests on suitable runners and EAS builds for release candidates; do not require full signed store builds for every documentation change.
-- **Store readiness:** stable bundle/package IDs and signing ownership; production map keys; app/adaptive icons and splash; phone screenshots; support and privacy URLs; location purpose strings; accurate Apple privacy/Google Data Safety answers covering maps, geocoding, and feedback. Finish About copy. Start Apple Developer and Google Play account work early.
-- **Delivery environment:** Windows can run Metro and the Android emulator. EAS supplies cloud iOS builds; physical iPhone development builds require appropriate signing/provisioning. Local iOS simulator or Xcode debugging requires macOS, so arrange Mac or hosted macOS test access.
+- **Performance:** profile release builds on a named mid-range Android device and an older supported iPhone, with current and expanded fixtures. Initial goals: cached Explore usable within two seconds, settled filter changes reflected within 100 ms at current scale, and smooth map/sheet interaction without rendering the whole dataset as markers. Treat these as targets to verify in phase 1/5, not measured results. See the performance caveat about the shared iPhone above.
+- **CI:** add core/mobile typecheck, lint, and unit jobs. Keep build checks for shared-package consumers. Run the iOS simulator Maestro workflow on macOS runners for pull requests that touch `apps/mobile/` or `packages/`, with a manual trigger for ad hoc runs; add an Android emulator smoke job on Linux runners if local runs prove insufficient. Use EAS builds for release candidates; do not require full signed store builds for every documentation change.
+- **Store readiness:** stable bundle/package IDs and signing ownership; production map or tile keys; app/adaptive icons and splash; phone screenshots; support and privacy URLs; location purpose strings; accurate Apple privacy/Google Data Safety answers covering maps, geocoding, and feedback. Finish About copy. Start Apple Developer and Google Play account work early; see [Accounts](#accounts).
+- **Delivery environment:** see [Development environment and device testing](#development-environment-and-device-testing).
 - **Release/rollback:** separate development, preview, and production configuration. Verify both store candidates on devices. If adopting EAS Update, pin runtime compatibility and test rollback; native module/config changes require a new binary. Data refreshes remain independent of app updates and must preserve old-client compatibility.
 
 ## Follow-ups after the first release
@@ -155,7 +238,7 @@ Favorites can start as local church slugs without accounts, with migration/remov
 
 Revisit regional snapshot downloads only when measured load/memory/refresh costs justify them. Consider offline base maps only with a provider and download policy that support that feature. Cross-device sync/accounts are a separate product/backend decision.
 
-The current-features-plus-offline scope is confirmed. Before implementation, establish access to both store accounts and devices, minimum OS/device support, and whether identical map appearance across platforms is a requirement. The plan otherwise assumes native Apple/Google basemaps and one mobile codebase serving both platforms.
+The current-features-plus-offline scope is confirmed, as are Android-first delivery and the device setup above. Still open before or during phase 1: the map library, minimum OS/device support, individual or organization store accounts, and whether an older iPhone is available for performance testing. The plan assumes one mobile codebase serving both platforms.
 
 ## Implementation reference points
 
