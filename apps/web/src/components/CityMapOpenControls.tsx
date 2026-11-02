@@ -12,7 +12,7 @@ import type { useMapSelection } from "@/hooks/useMapSelection";
 import { CITY_MAP_CHIP_CLASS } from "@/lib/cityMap";
 import { cn } from "@/lib/utils";
 import { currentLocationPlace } from "../placeSearch";
-import type { ChurchMapItem } from "../types";
+import type { ChurchMapItem } from "@carlo/core";
 
 const noop = () => {};
 

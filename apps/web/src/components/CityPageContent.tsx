@@ -1,9 +1,14 @@
 import { Fragment, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import type { CityChurchEntry, CityPageData } from "../api";
-import { EVENT_TYPE_LABELS } from "../constants/eventTypes";
-import type { EventSummary, EventType } from "../types";
-import { formatAddress } from "../utils";
+import {
+  EVENT_TYPE_LABELS,
+  type EventSummary,
+  type EventType,
+  formatAddress,
+  type ScheduleRollupRow,
+  weeklyScheduleRows,
+} from "@carlo/core";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CityMapPreview } from "@/components/CityMapPreview";
 import { Fleuron } from "@/components/Fleuron";
@@ -11,8 +16,6 @@ import { MapPinIcon } from "@/components/icons";
 import { SiteHeader } from "@/components/SiteHeader";
 import { cityPath, formatMiles } from "@/lib/cities";
 import type { CityMapConfig } from "@/lib/cityMap";
-import type { ScheduleRollupRow } from "@/lib/eventRollup";
-import { weeklyScheduleRows } from "@/lib/scheduleSummary";
 import { CHURCH_INDEX_PATH, churchPath } from "@/lib/seo";
 import { CHURCH_LIST, DISCLAIMER, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";
 

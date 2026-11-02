@@ -11,9 +11,8 @@ import {
   resetMapItemCache,
   type ChurchFilters,
 } from "./api";
-import { parseSnapshot } from "./lib/snapshot";
-import fixture from "./lib/snapshot.fixture.json";
-import type { ChurchBase, RawEvent } from "./types";
+import { type ChurchBase, parseSnapshot, type RawEvent } from "@carlo/core";
+import fixture from "@carlo/core/snapshot.fixture.json";
 
 function rawEvent(overrides: Partial<RawEvent> = {}): RawEvent {
   return {

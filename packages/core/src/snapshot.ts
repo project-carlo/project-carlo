@@ -4,7 +4,7 @@ import type {
   EventType,
   RawEvent,
   WeekOfMonth,
-} from "../types";
+} from "./types";
 import { computeNextOccurrence } from "./schedule";
 
 /**

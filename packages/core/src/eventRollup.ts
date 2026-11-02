@@ -1,5 +1,5 @@
-import type { EventSummary } from "../types";
-import { formatMinutesMissal, titleCase } from "../utils";
+import type { EventSummary } from "./types";
+import { formatMinutesMissal, titleCase } from "./utils";
 import { describeSchedulePattern, patternKey } from "./schedulePattern";
 
 /**

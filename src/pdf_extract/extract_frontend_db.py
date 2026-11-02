@@ -3,7 +3,7 @@
 The snapshot is every church and event the website shows, with columns
 stripped down to what the web app reads. It is gzipped JSON, written to
 apps/web/public/frontend.json.gz for Vite to serve as an opaque static asset;
-the app (apps/web/src/lib/snapshot.ts) decodes it into memory.
+the app (packages/core/src/snapshot.ts) decodes it into memory.
 
 Format (version 3). Each table is stored column by column, as parallel arrays:
 

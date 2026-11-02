@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { formatMinutesMissal } from "../utils";
+import { formatMinutesMissal } from "@carlo/core";
 import {
   minutesFromPointerDelta,
   rangeSelectionStyle,

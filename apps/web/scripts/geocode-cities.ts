@@ -23,7 +23,7 @@ import { gunzipSync } from "node:zlib";
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { parseArgs } from "node:util";
-import { parseSnapshot, SNAPSHOT_FILE } from "../src/lib/snapshot";
+import { parseSnapshot, SNAPSHOT_FILE } from "@carlo/core";
 import { buildCityIndex, distanceMiles, type City } from "../src/lib/cities";
 
 const WEB_DIR = resolve(import.meta.dirname, "..");
