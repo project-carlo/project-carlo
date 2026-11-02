@@ -49,6 +49,7 @@ from pdf_extract.detect import run_detection
 from pdf_extract.dioceses import DioceseError
 from pdf_extract.dioceses import records as diocese_records
 from pdf_extract.dioceses.cli import add_diocese_parser
+from pdf_extract.dotenv import read_dotenv
 from pdf_extract.evals.report import write_report as write_eval_report
 from pdf_extract.evals.run import DEFAULT_STATUSES as EVAL_DEFAULT_STATUSES
 from pdf_extract.evals.run import run as run_eval
@@ -103,19 +104,14 @@ def _load_dotenv(path: Path = Path(".env")) -> None:
     """Read KEY=VALUE lines from .env into the environment, without overriding.
 
     So GEMINI_API_KEY and the R2_* credentials can live in one local file for
-    every command, however it is launched.
+    every command, however it is launched. Not for `factory`: the dispatcher
+    reads .env itself and hands each key only to what needs it. Nor when
+    CARLO_NO_DOTENV is set: the dispatcher sets it for its gates and workers,
+    which get their keys passed in, never from a .env a worker could write.
     """
-    if not path.is_file():
+    if os.environ.get("CARLO_NO_DOTENV"):
         return
-    for line in path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        key = key.removeprefix("export ").strip()
-        value = value.strip()
-        if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
-            value = value[1:-1]
+    for key, value in read_dotenv(path).items():
         os.environ.setdefault(key, value)
 
 
@@ -846,7 +842,8 @@ def main(argv: list[str] | None = None) -> int:
         return 1
 
     _configure_logging(args.log_level)
-    _load_dotenv()
+    if args.command != "factory":  # its workers mustn't inherit every key (factory/cli.py)
+        _load_dotenv()
 
     try:
         # Research commands are consumed by jq and agents. Incidental output from

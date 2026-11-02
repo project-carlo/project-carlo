@@ -15,6 +15,7 @@ from typing import Any
 import yaml
 
 from pdf_extract.factory.config import STAGES_DIR, FactoryError
+from pdf_extract.factory.secrets import check_patterns
 
 AGENT, REVIEWER, CODE = "agent", "reviewer", "code"
 MAP_STAGES = ("survey", "survey-review", "map", "integrate", "reconcile", "promote", "pr")
@@ -41,6 +42,9 @@ class StageSpec:
     # seed CLI also refuses a seed command one names, however it is spelled (workers.py).
     reads: list[str] = field(default_factory=list)
     deny: list[str] = field(default_factory=list)
+    # `.env` entries (names or globs) its workers get, and its gate commands get.
+    secrets: list[str] = field(default_factory=list)
+    gate_secrets: list[str] = field(default_factory=list)
     max_turns: int = 150
     max_minutes: int = 90
 
@@ -70,6 +74,8 @@ def parse_stage(stage: str, text: str, path: Path | str) -> StageSpec:
         raise FactoryError(f"{path}: stage must be {stage!r}")
     if raw.get("kind") not in (AGENT, REVIEWER, CODE):
         raise FactoryError(f"{path}: kind must be agent, reviewer or code")
+    for key in ("secrets", "gate_secrets"):
+        check_patterns(list(raw.get(key) or []), f"{path} {key}")
     try:
         return StageSpec(**raw, **{k: v for k, v in limits.items() if k in
                                    ("max_turns", "max_minutes")})

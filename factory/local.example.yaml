@@ -2,11 +2,15 @@
 
 # Each account is signed in once: CLAUDE_CONFIG_DIR=<config_dir> claude /login
 # `plan:` (pro, max...) is only read when the login's .credentials.json doesn't say.
+# `worker_token_file:` is for sandboxed workers: the account's long-lived token from
+# `CLAUDE_CONFIG_DIR=<config_dir> claude setup-token`, saved to a file only you can read.
 accounts:
   - name: first
     config_dir: ~/.claude
+    # worker_token_file: ~/.config/carlo-factory/first.token
   - name: second
     config_dir: ~/.claude_2
+    # worker_token_file: ~/.config/carlo-factory/second.token
 
 # The GitHub login whose issue comments count as answers.
 owner: your-github-login
@@ -17,3 +21,11 @@ owner: your-github-login
 
 # Commands run once in a new Run worktree, before its first job.
 # setup: ["uv sync --group dev"]
+
+# Where workers run (docs/factory-sandbox-plan.md): `host` (the default for now), or
+# `sandbox`, a rootless Podman container per attempt that never falls back to the host.
+# Sandboxed workers need Podman and each account's worker_token_file.
+# worker_backend: sandbox
+# sandbox_memory: 6g
+# sandbox_cpus: "4"
+# sandbox_pids: 2048

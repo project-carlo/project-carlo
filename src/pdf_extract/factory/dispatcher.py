@@ -31,16 +31,20 @@ from pdf_extract.factory.housekeeping import Housekeeping
 from pdf_extract.factory.ledger import Ledger
 from pdf_extract.factory.metrics.readings import Readings
 from pdf_extract.factory.outcome import Outcome
+from pdf_extract.factory.secrets import Secrets, command_env
 from pdf_extract.factory.usage import Fetch, fetch_usage
 from pdf_extract.factory.workers import Worker
 
 LOGGER = logging.getLogger(__name__)
 
 
-def run_command(command: str, cwd: Path, timeout: int = 3600) -> tuple[bool, str]:
+def run_command(command: str, cwd: Path, secrets: dict[str, str] | None = None,
+                timeout: int = 3600) -> tuple[bool, str]:
+    """A shell command, with the dispatcher's environment scrubbed of secrets plus
+    `secrets`, and without reading a `.env` (secrets.command_env)."""
     try:
         proc = subprocess.run(command, shell=True, cwd=cwd, capture_output=True, text=True,
-                              timeout=timeout)
+                              timeout=timeout, env=command_env(secrets))
     except subprocess.TimeoutExpired:
         return False, f"timed out after {timeout}s"
     return proc.returncode == 0, (proc.stdout + proc.stderr)[-6000:]
@@ -57,27 +61,35 @@ class Dispatcher:
         forge: Forge,
         fetch_usage: Fetch = fetch_usage,
         clock: Callable[[], datetime] = lambda: datetime.now(UTC),
-        commands: Callable[[str, Path], tuple[bool, str]] = run_command,
+        commands: Callable[..., tuple[bool, str]] = run_command,
+        secrets: Secrets | None = None,
         db_path: Path = Path("data") / "parish_events.db",
         runs_dir: Path = RUNS_DIR,
         queue_path: Path | None = None,
         pull_data: Callable[[], None] | None = None,
         backup: Callable[[], str] | None = None,
+        cleanup: Callable[[], None] | None = None,
+        sandbox_dir: Path | None = None,
         push: bool = True,
     ) -> None:
         self.ledger, self.config, self.clock = ledger, config, clock
         self.accounts = Accounts(ledger, config, fetch_usage, clock)
         self.readings = Readings(ledger, config, fetch_usage, clock)
         self.answers = Answers(ledger, config, forge)
+        secrets = secrets or {}
         self.attempts = Attempts(ledger, config, worker=worker, accounts=self.accounts,
-                                 readings=self.readings, clock=clock, runs_dir=runs_dir)
+                                 readings=self.readings, clock=clock, runs_dir=runs_dir,
+                                 secrets=secrets, cleanup=cleanup)
         self.engine = Engine(ledger, config, repo=repo, forge=forge, attempts=self.attempts,
                              answers=self.answers, clock=clock, commands=commands,
-                             db_path=db_path, queue_path=queue_path, push=push)
+                             secrets=secrets, db_path=db_path, queue_path=queue_path,
+                             push=push)
+        # Sandboxed workers' workspaces, one per Run, go when the Run is retired.
         self.housekeeping = Housekeeping(ledger, config, repo=repo, forge=forge,
                                          readings=self.readings, answers=self.answers,
                                          clock=clock, db_path=db_path, runs_dir=runs_dir,
-                                         pull_data=pull_data, backup=backup)
+                                         pull_data=pull_data, backup=backup,
+                                         sandbox_dir=sandbox_dir)
 
     def run_forever(self) -> None:
         self.attempts.recover()

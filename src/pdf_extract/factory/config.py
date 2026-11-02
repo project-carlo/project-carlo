@@ -33,6 +33,9 @@ class Account:
     name: str
     config_dir: Path
     plan: str | None = None  # if its login doesn't say (pro, max...)
+    # Its `claude setup-token` token, for sandboxed workers (docs/factory-sandbox-plan.md
+    # §3.5): never refreshed, so a worker can't rotate the login the dispatcher reads.
+    worker_token_file: Path | None = None
 
 
 @dataclass(frozen=True)
@@ -73,6 +76,10 @@ class Config:
     max_continues: int = 1
     max_failures: int = 3
     failure_retry_minutes: int = 5
+    # The sandbox failing to start a worker (no image, Podman or proxy): the job tries
+    # again this often, and the Run blocks after this many in a row. Never a crash.
+    max_sandbox_failures: int = 3
+    sandbox_retry_minutes: int = 10
     # How long the usage check waits after the endpoint answers 429 Too Many Requests.
     usage_cooldown_minutes: int = 30
     lessons_before_integrate: int = 15
@@ -98,6 +105,12 @@ class Config:
     owner: str = ""
     worktrees_dir: Path = DATA / "worktrees"
     setup: list[str] = field(default_factory=lambda: ["uv sync --group dev"])
+    # Where workers run (docs/factory-sandbox-plan.md): `host`, or `sandbox` (a rootless
+    # Podman container per attempt, never falling back to the host), and its limits.
+    worker_backend: str = "host"
+    sandbox_memory: str = "6g"
+    sandbox_cpus: str = "4"
+    sandbox_pids: int = 2048
 
     def job_usage_for(self, stage: str) -> JobUsage:
         return self.job_usage.get(stage, JobUsage())
@@ -128,7 +141,9 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
         raise FactoryError(f"unknown factory settings: {', '.join(unknown)}")
     accounts = [
         Account(str(a["name"]), Path(str(a["config_dir"])).expanduser(),
-                str(a["plan"]) if a.get("plan") else None)
+                str(a["plan"]) if a.get("plan") else None,
+                Path(str(a["worker_token_file"])).expanduser()
+                if a.get("worker_token_file") else None)
         for a in raw.pop("accounts", None) or []
     ]
     try:
@@ -138,4 +153,10 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
         raise FactoryError(f"job_usage: {exc}") from None
     if "worktrees_dir" in raw:
         raw["worktrees_dir"] = Path(str(raw["worktrees_dir"])).expanduser()
+    for key in ("sandbox_memory", "sandbox_cpus"):  # `4` in YAML is still podman's "4"
+        if key in raw:
+            raw[key] = str(raw[key])
+    if raw.get("worker_backend", "host") not in ("host", "sandbox"):
+        raise FactoryError(f"worker_backend must be host or sandbox, not "
+                           f"{raw['worker_backend']!r}")
     return Config(**raw, accounts=accounts)

@@ -18,7 +18,7 @@ prompts, the queue and settings are in `factory/`. How quota is measured is in
 
 | Term | Meaning |
 |---|---|
-| **Run** | One pass of one diocese through the pipeline, map or seed: one branch, one worktree, one PR. |
+| **Run** | One pass of one diocese through the pipeline, map or seed: one branch, one checkout, one PR. |
 | **Stage** | A kind of work (`survey`, `map`, `seed`...), defined by its stage spec `factory/stages/<stage>.yaml` and prompt `factory/prompts/<stage>.md`. |
 | **Job** | One run of a stage on one input ("map batch 3", "seed St. Paul"), named `<seq>-<stage>` in its Run (`wilmington-map-1/004-map`). |
 | **Attempt** | One worker session on a job: the first, or a send-back, resume, continue or answer. |
@@ -72,12 +72,13 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
    the spec and prompt of one commit. A conflict blocks the Run, except in
    `parishes.csv` and `churches.csv`, where main's side wins and promote runs again.
 2. **Choose an account** under its caps (below).
-3. **Start the worker** in the Run's worktree. The stage prompt is appended to Claude
+3. **Start the worker** on the Run's checkout, on the host or in a sandbox (below). The stage prompt is appended to Claude
    Code's system prompt; the first message is built in code (`render.py`): the folders,
    write boundaries, gates, the files in `reads:`, the handoff path and schema, then the
    stage's input. `pnpm factory prompt <stage>` previews it with sizes.
 4. **Gate it**: the handoff exists and parses; every changed path matches the spec's
-   `writes` (out-of-scope changes are reverted); HEAD didn't move; then the spec's gates.
+   `writes` (out-of-scope changes are reverted, and a sandboxed worker's changes that
+   weren't brought back fail it the same way); HEAD didn't move; then the spec's gates.
 5. **Then:**
    - all pass: commit with a `Factory-Job` trailer, push, act on the handoff (leads,
      lessons, verdicts, flags), and the next job follows;
@@ -87,10 +88,14 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
    - a crash: it resumes, or a fresh worker gets the files and what it was told; the
      Run blocks after `max_crashes`;
    - a session ending early (turns, minutes): "continue" `max_continues` times, then a
-     seed parks its parish and anything else blocks the Run.
+     seed parks its parish and anything else blocks the Run;
+   - the sandbox failing to start it (`sandbox`): no worker ran, so it isn't a crash; the
+     job tries again every `sandbox_retry_minutes`, and the Run blocks after
+     `max_sandbox_failures` in a row.
 
    Each step after the gates is recorded as it completes, so a restarted dispatcher
-   doesn't commit or append twice. A job still `running` at startup counts as a crash.
+   doesn't commit or append twice. At startup it removes any worker container left
+   behind, and a job still `running` counts as a crash.
 
 Reviewers write only their handoff; the dispatcher acts on it. `survey-review`'s accepted
 rules go into *Rules settled*. `seed-review` answers every open question by a rule, a
@@ -109,11 +114,49 @@ answer can't fix.
   flags, parked parishes, the playbook's sizes and every rule `integrate` changed. A seed
   Run's lists every decision `seed-review` made, answers against the drafter's lean
   first. Fix what's wrong, then **merge with a merge commit** so main keeps the Run's
-  history. Merged Runs are noticed after the next fetch, and their worktrees removed.
+  history. Merged Runs are noticed after the next fetch, and their checkouts and sandbox
+  workspaces removed.
 - **Rules stay yours.** The factory never edits `rules.md`; turning a precedent or a
   decision into a rule is your own PR.
 - **Reviews.** The `foreman` skill starts from `pnpm factory inspect <job>` and suggests
   changes to the stage spec; it changes nothing unless you ask.
+
+## Workers and the sandbox
+
+The design, and what was verified live, are in
+[factory-sandbox-plan.md](factory-sandbox-plan.md) and
+[factory-sandbox-validation.md](factory-sandbox-validation.md).
+
+- **Checkouts.** The dispatcher works in its own clone, and each Run in a standalone
+  clone on its branch with its own database copy and `.venv`. None shares git metadata
+  with your checkout or with each other.
+- **The boundary is the CLI.** The Agent SDK stays in the dispatcher and starts
+  `factory/sandbox/claude-in-box` as its CLI, which starts the real CLI on the host or in
+  a container and keeps only the environment the dispatcher names. The dispatcher's
+  `ClaudeAgentOptions` must never set `hooks`, `can_use_tool` or in-process MCP servers,
+  which would run tools outside the sandbox; a test checks it.
+- **Environment.** A worker gets no `.env` keys but its stage's `secrets:`, no GitHub,
+  Cloudflare or SSH, and its own Xvfb. `pnpm factory` reads `.env` into a dict, not its
+  own environment; gate commands, and the dispatcher's `seed approve`, get its
+  environment without secrets plus the stage's `gate_secrets:`.
+- **`worker_backend: sandbox`** runs each attempt in a fresh rootless Podman container: no
+  capabilities, a read-only root, memory, CPU and process limits, and an internal network
+  whose only way out is an egress proxy (smokescreen) that refuses private, host and
+  metadata addresses. The worker edits a private copy of the Run's files
+  (`data/factory/sandbox/<run>/work`, no `.git`), its tools read-only. Afterwards the
+  dispatcher copies back only ordinary files inside `writes`; links, `.git` paths, files
+  over 50 MB and more than 2,000 files are refused and recorded on the attempt. Sessions
+  are per Run, in `data/factory/sessions/<run>/`. The image is built from `origin/main`'s
+  `factory/sandbox/Containerfile` and lockfiles, so a Run can't change what its workers
+  run in. If Podman, the image or the proxy fails, the attempt ends as `sandbox`; it
+  never runs on the host instead.
+- **`worker_backend: host`** (the default until the live checks pass) runs the CLI on the
+  host. `pnpm factory status` says so.
+- **Login and permissions.** Host workers use the account's config folder and auto mode.
+  Sandboxed workers use the account's `claude setup-token` token (`worker_token_file:`),
+  which never refreshes, so a worker can't rotate the login the dispatcher reads usage
+  with; they bypass permission checks, since the container, proxy, deny rules and the
+  copy-back enforce their boundaries.
 
 ## Usage and accounts
 
@@ -169,9 +212,11 @@ Every change lands mid-Run, so:
 
 ## Running it
 
-1. Make the dispatcher its own checkout: `git worktree add ~/carlo-factory origin/main
-   --detach`, and run `pnpm factory` from there. Its ledger, transcripts and Run
-   worktrees live in its `data/factory/` (gitignored, on the Linux filesystem).
+1. Make the dispatcher its own clone: `git clone <origin url> ~/carlo-factory`, and run
+   `pnpm factory` from there. Its ledger, transcripts and Run checkouts live in its
+   `data/factory/` (gitignored, on the Linux filesystem). A checkout made earlier as a
+   linked worktree: stop the dispatcher, then `pnpm factory clones --apply` turns it and
+   its Run worktrees into standalone clones in place.
 2. `uv sync --group dev --group factory`, `pnpm data:pull`, and R2 keys that can write in
    `.env` for the nightly ledger backup.
 3. Sign each account in: `CLAUDE_CONFIG_DIR=<dir> claude /login`. List them, your GitHub
@@ -180,7 +225,12 @@ Every change lands mid-Run, so:
 4. Try it without usage: `pnpm factory run --stub scenario.json` plays canned workers
    with its own ledger, worktrees, issues and PRs under `data/factory/stub/`, branches
    `factory-stub/<run>`, and no pushes. `--stub` on the other commands reads that ledger.
-5. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
+5. To sandbox workers: `sudo apt install podman` (rootless; check `podman info` as
+   yourself). For each account, `CLAUDE_CONFIG_DIR=<dir> claude setup-token`, save the
+   token to a file only you can read (`chmod 600`) and name it as that account's
+   `worker_token_file:`. Then set `worker_backend: sandbox`. The first attempt builds the
+   worker image and starts the egress proxy.
+6. Start it: `pnpm factory run`, or the systemd unit `factory/carlo-factory.service`.
 
 ```
 pnpm factory status                      Runs, the running job, usage, what waits on you
@@ -193,12 +243,16 @@ pnpm factory prompt <stage> [--run R]    what the stage's next job would be give
 pnpm factory quota [--by K] [--windows]  quota points per unit of work (factory-quota.md)
 pnpm factory cost [--stage]              API-price dollars by Run or stage: a diagnostic
 pnpm factory backup                      back the ledger up to R2 now
+pnpm factory clones [--apply]            linked worktrees to turn into standalone clones
 ```
 
 ## Not built yet
 
 - A dashboard; until then, `pnpm factory status`.
-- Sandboxed workers instead of auto mode (#168).
+- Sandbox next steps: make `sandbox` the default once the live checks pass, and refuse
+  `host` for real Runs unless `allow_host_workers: true`; scoped keys for seed stages (a
+  read-only R2 token, model keys with spend caps); gVisor or a microVM if host-kernel
+  exploits become a concern.
 - Several Runs or workers at once.
 - An agent that tries to settle a blocking flag before it becomes an issue.
 - Recording your corrections to reviewer decisions, and auto-merge once they're rare.

@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import forge as forge_mod
-from pdf_extract.factory import git, readiness
+from pdf_extract.factory import git, readiness, workspace
 from pdf_extract.factory.answers import Answers
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.forge import Forge
@@ -29,11 +29,12 @@ class Housekeeping:
     def __init__(self, ledger: Ledger, config: Config, *, repo: Path, forge: Forge,
                  readings: Readings, answers: Answers, clock: Callable[[], datetime],
                  db_path: Path, runs_dir: Path, pull_data: Callable[[], None] | None,
-                 backup: Callable[[], str] | None) -> None:
+                 backup: Callable[[], str] | None, sandbox_dir: Path | None = None) -> None:
         self.ledger, self.config, self.repo, self.forge = ledger, config, repo, forge
         self.readings, self.answers, self.clock = readings, answers, clock
         self.db_path, self.runs_dir = db_path, runs_dir
         self.pull_data, self.backup = pull_data, backup
+        self.sandbox_dir = sandbox_dir  # sandboxed workers' workspaces, one per Run
 
     def run(self) -> None:
         at = self.clock()
@@ -84,6 +85,8 @@ class Housekeeping:
             git.remove_worktree(self.repo, path, run["branch"])
         except FactoryError as exc:
             LOGGER.warning("couldn't remove %s: %s", path, exc)
+        if self.sandbox_dir is not None:
+            workspace.remove(self.sandbox_dir, run["id"])
 
     def check_readiness(self) -> None:
         dioceses = readiness.dioceses_to_check(self.ledger)

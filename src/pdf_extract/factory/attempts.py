@@ -4,14 +4,16 @@
 What the next attempt is told is the job's pending prompt (`ledger.pending` lists the
 kinds).
 
-An attempt that hits a usage limit or crashes is settled here. The engine acts on the
-rest: a crash past `max_crashes` blocks the Run, a partial end continues or is exhausted,
-and a finished attempt goes to the gates.
+An attempt that hits a usage limit, crashes, or whose sandbox fails is settled here. The
+engine acts on the rest: a crash past `max_crashes` or a sandbox failure past
+`max_sandbox_failures` blocks the Run, a partial end continues or is exhausted, and a
+finished attempt goes to the gates.
 """
 
 from __future__ import annotations
 
 import json
+import logging
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timedelta
@@ -34,10 +36,12 @@ from pdf_extract.factory.ledger import (
 from pdf_extract.factory.metrics import attempt_meta
 from pdf_extract.factory.metrics.readings import Readings
 from pdf_extract.factory.outcome import Outcome
+from pdf_extract.factory.secrets import Secrets, pick
 from pdf_extract.factory.spec import StageSpec
 from pdf_extract.factory.workers import (
     CRASH,
     PARTIAL,
+    SANDBOX,
     TIMEOUT,
     USAGE,
     Worker,
@@ -46,11 +50,14 @@ from pdf_extract.factory.workers import (
     prompt_body,
 )
 
+LOGGER = logging.getLogger(__name__)
+
 
 @dataclass
 class Ended:
     """An attempt the engine acts on next. `outcome` is CRASH (past `max_crashes`),
-    PARTIAL, TIMEOUT or OK; `why` says why for the first three."""
+    SANDBOX (past `max_sandbox_failures`), PARTIAL, TIMEOUT or OK; `why` says why for all
+    but OK."""
 
     job: Any
     outcome: str
@@ -59,14 +66,24 @@ class Ended:
 
 class Attempts:
     def __init__(self, ledger: Ledger, config: Config, *, worker: Worker, accounts: Accounts,
-                 readings: Readings, clock: Callable[[], datetime], runs_dir: Path) -> None:
+                 readings: Readings, clock: Callable[[], datetime], runs_dir: Path,
+                 secrets: Secrets | None = None,
+                 cleanup: Callable[[], None] | None = None) -> None:
         self.ledger, self.config, self.worker = ledger, config, worker
         self.accounts, self.readings = accounts, readings
         self.clock, self.runs_dir = clock, runs_dir
+        self.secrets = secrets or {}  # the dispatcher's .env; a stage's `secrets:` pick
+        self.cleanup = cleanup  # removes leftover worker containers
         attempt_meta.code_commit()  # the commit this code was loaded from, read at start
 
     def recover(self) -> None:
-        """A job still marked running when the dispatcher starts crashed with it."""
+        """A job still marked running when the dispatcher starts crashed with it. Its
+        worker's container, if any, goes first (`cleanup`)."""
+        if self.cleanup is not None:
+            try:
+                self.cleanup()
+            except Exception:  # a broken Podman fails the next attempt as SANDBOX
+                LOGGER.exception("removing leftover worker containers failed")
         for row in self.ledger.all("SELECT id FROM job WHERE status = ?", RUNNING):
             self.ledger.set_job(row["id"], status=QUEUED, pending_prompt=pending("resume"))
 
@@ -116,6 +133,7 @@ class Attempts:
             job_id=job["id"], run_id=run["id"], job_name=job["name"], stage=job["stage"],
             spec=spec, worktree=worktree, account=account, prompt=prompt,
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
+            attempt_id=attempt_id, secrets=pick(self.secrets, spec.secrets),
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
             on_rate_limit=lambda info: self.readings.rate_limit(attempt_id, info),
@@ -127,7 +145,8 @@ class Attempts:
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
                                    session_id=result.session_id, finished_at=finished,
-                                   transcript=str(transcript) if transcript else None)
+                                   transcript=str(transcript) if transcript else None,
+                                   refused=json.dumps(result.refused) if result.refused else None)
         attempt_meta.record(self.ledger, attempt_id, run, job, spec, worktree, account, result,
                             transcript, session, started, finished)
         after(attempt_id, job["id"])
@@ -136,6 +155,11 @@ class Attempts:
                             turns=job["turns"] + result.turns,
                             session_id=result.session_id or job["session_id"])
         job = self.ledger.job(job["id"])
+        key = f"sandbox_failures:{run['id']}"
+        if result.outcome == SANDBOX:
+            return self._sandbox_failed(job, key, result.error)
+        if self.ledger.get(key):
+            self.ledger.set(key, 0)
         if result.outcome == USAGE:
             until = result.resets_at or self.clock() + timedelta(minutes=30)
             # With a session, it continues where it stopped. Without one, the next attempt
@@ -160,6 +184,21 @@ class Attempts:
         if result.outcome in (PARTIAL, TIMEOUT):
             return Ended(job, result.outcome, f"the session ended early ({result.outcome})")
         return Ended(job, result.outcome)
+
+    def _sandbox_failed(self, job: Any, key: str, error: str | None) -> Outcome | Ended:
+        """No worker ran: the job waits as it was (same prompt, same session) and tries
+        again; after `max_sandbox_failures` in a row the Run blocks on an issue."""
+        failures = (self.ledger.get(key) or 0) + 1
+        self.ledger.set(key, failures)
+        if failures >= self.config.max_sandbox_failures:
+            self.ledger.set(key, 0)
+            self.ledger.set_job(job["id"], status=QUEUED)
+            return Ended(self.ledger.job(job["id"]), SANDBOX,
+                         f"The worker sandbox failed {failures} times in a row: {error}")
+        until = self.clock() + timedelta(minutes=self.config.sandbox_retry_minutes)
+        self.ledger.set_job(job["id"], status=QUEUED, wait_until=until.isoformat())
+        return Outcome("waiting", f"job {job['id']}: sandbox failed ({error}); trying again",
+                       until)
 
     def _claim_leads(self, run: Any, job: Any) -> None:
         """The leads the attempt's input shows become the job's when the attempt starts: a

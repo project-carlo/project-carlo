@@ -29,6 +29,10 @@ max_crashes: 3
 max_continues: 1
 max_failures: 3
 failure_retry_minutes: 5
+# The worker sandbox failing to start a worker: retried every sandbox_retry_minutes, and
+# the Run blocks after max_sandbox_failures in a row.
+max_sandbox_failures: 3
+sandbox_retry_minutes: 10
 # How long the usage check waits after the endpoint answers 429 Too Many Requests.
 usage_cooldown_minutes: 30
 

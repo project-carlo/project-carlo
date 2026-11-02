@@ -64,8 +64,9 @@ from pdf_extract.factory.ledger import (
 )
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.plan import diocese_dir, next_job, read_seed, seed_status
+from pdf_extract.factory.secrets import Secrets, pick
 from pdf_extract.factory.spec import CODE, StageSpec, fill, in_scope, load_stage, placeholders
-from pdf_extract.factory.workers import CRASH, OK, PARTIAL, TIMEOUT
+from pdf_extract.factory.workers import CRASH, OK, PARTIAL, SANDBOX, TIMEOUT
 
 LOGGER = logging.getLogger(__name__)
 # What a git, gh or command call raises when it fails; a job's tick waits and tries again.
@@ -85,18 +86,20 @@ def main_queue(repo: Path, upstream: str) -> list[dict[str, Any]]:
 class Engine:
     def __init__(self, ledger: Ledger, config: Config, *, repo: Path, forge: Forge,
                  attempts: Attempts, answers: Answers, clock: Callable[[], datetime],
-                 commands: Callable[[str, Path], tuple[bool, str]], db_path: Path,
-                 queue_path: Path | None, push: bool) -> None:
+                 commands: Callable[..., tuple[bool, str]], secrets: Secrets,
+                 db_path: Path, queue_path: Path | None, push: bool) -> None:
         self.ledger, self.config, self.repo, self.forge = ledger, config, repo, forge
         self.attempts, self.answers = attempts, answers
         self.clock, self.commands = clock, commands
+        self.secrets = secrets  # the dispatcher's .env; a stage's `gate_secrets:` pick
         self.db_path, self.queue_path, self.push_enabled = db_path, queue_path, push
 
     def run_job(self, job: Any) -> Outcome:
-        """Take the job one step on: a job waiting on usage waits, and a git or GitHub
-        failure is retried after `failure_retry_minutes`."""
-        if job["status"] == WAITING_USAGE and job["wait_until"] \
-                and not self.ledger.get("override_caps", False):
+        """Take the job one step on: a job waiting on usage or a sandbox retry waits, and a
+        git or GitHub failure is retried after `failure_retry_minutes`."""
+        # A usage wait (which --override-caps skips), or a sandbox retry.
+        if job["wait_until"] and (job["status"] == QUEUED or (
+                job["status"] == WAITING_USAGE and not self.ledger.get("override_caps", False))):
             until = datetime.fromisoformat(job["wait_until"])
             if until > self.clock():
                 return Outcome("waiting", f"job {job['id']} until {job['wait_until']}", until)
@@ -248,6 +251,11 @@ class Engine:
         job = ended.job
         if ended.outcome == CRASH:
             return self._block_run(run, job, ended.why)
+        if ended.outcome == SANDBOX:
+            return self._block_run(run, job, ended.why, suggestion="Fix the sandbox (Podman, "
+                                   "the worker image or the egress proxy; see "
+                                   "docs/factory.md), then close this issue. Workers never "
+                                   "run on the host instead.")
         if ended.outcome in (PARTIAL, TIMEOUT):
             return self._partial(run, job, ended.why)
         assert ended.outcome == OK
@@ -307,11 +315,15 @@ class Engine:
                              "\n".join(handoff_problems) or "ok")
         problems += handoff_problems
         outside = self._revert_outside(worktree, spec, values)
-        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside,
-                             "\n".join(outside) or "ok")
+        # A sandboxed worker's changes that were never brought back (workspace.py).
+        refused = json.loads(attempts[-1]["refused"] or "[]") if attempts else []
+        self.ledger.add_gate(job["id"], attempt, "diff-scope", not outside and not refused,
+                             "\n".join(outside + refused) or "ok")
         if outside:
             problems.append("You changed files outside your write boundaries; they were "
                             "reverted: " + ", ".join(outside))
+        if refused:
+            problems.append("Some of your changes were not kept: " + ", ".join(refused))
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
             problems += self._settled_problems(run, job, handoff)
@@ -401,7 +413,8 @@ class Engine:
             if any(not values.get(name) for name in placeholders(gate)):
                 continue  # e.g. no approved seeds to check
             command = fill(gate, values)
-            ok, out = self.commands(command, worktree)
+            ok, out = self.commands(command, worktree,
+                                    secrets=pick(self.secrets, spec.gate_secrets))
             self.ledger.add_gate(job["id"], attempt, command, ok, out)
             if not ok:
                 problems.append(f"`{command}` failed:\n\n```\n{out[-2500:]}\n```")
@@ -617,9 +630,12 @@ class Engine:
                     path = scratch / f"answers-{verdict.parish}.json"
                     path.parent.mkdir(parents=True, exist_ok=True)
                     path.write_text(json.dumps(answers, indent=1), encoding="utf-8")
+                    # It checks the seed as the stage's gates do, with their secrets.
                     ok, out = self.commands(
                         f"pnpm seed approve {verdict.parish} --reviewer {reviewer} --answers "
-                        f"{path.relative_to(worktree).as_posix()}", worktree)
+                        f"{path.relative_to(worktree).as_posix()}", worktree,
+                        secrets=pick(self.secrets,
+                                     load_stage(job["stage"], worktree).gate_secrets))
                 if ok:
                     approved.append(verdict.parish)
                     self._decisions(run, job, worktree, verdict, seed)
