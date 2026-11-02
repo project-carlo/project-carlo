@@ -57,8 +57,10 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
   pr pushes, opens the PR and writes its summary from the ledger.
 - **Seed Runs** use the map Run's batches. A parish is ready once the database has
   `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`). The
-  first seed Run starts at `seed_first_run_share` of the diocese ready, a follow-up seeds
-  the rest, and after `seed_follow_up_weeks` each parish still not ready gets an issue.
+  first seed Run starts once `seed_first_run_share` of the diocese is ready, or
+  `seed_follow_up_weeks` after the map Run merged with whatever is ready. A follow-up
+  seeds the rest when they are all ready or at that deadline, and each parish still not
+  ready then gets an issue.
 - **After the PR opens** the Run doesn't change. A parked parish answered later goes to a
   small follow-up Run of the same kind (`map → promote → pr` or `seed → seed-review →
   pr`) once the PR is merged.
@@ -84,8 +86,8 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
    - a usage limit: the job waits for the reset and resumes its session;
    - a crash: it resumes, or a fresh worker gets the files and what it was told; the
      Run blocks after `max_crashes`;
-   - a session ending early (turns, minutes): "continue" `max_continues` times, then the
-     Run blocks.
+   - a session ending early (turns, minutes): "continue" `max_continues` times, then a
+     seed parks its parish and anything else blocks the Run.
 
    Each step after the gates is recorded as it completes, so a restarted dispatcher
    doesn't commit or append twice. A job still `running` at startup counts as a crash.
@@ -130,8 +132,10 @@ cap is not stopped.
 
 The job goes to the eligible account whose weekly window resets soonest, and stays on
 it, since its session can only be resumed there. With none eligible, it waits for the
-soonest one. A failing usage check pauses the factory; a 429 waits
-`usage_cooldown_minutes` and tries again. `pnpm factory resume --override-caps` ignores
+soonest one. A failing usage check (an expired login that `claude auth status` can't
+refresh, say) pauses the factory: fix it, then `pnpm factory resume`. A 429 waits
+`usage_cooldown_minutes` and tries again; `status` shows the cooldown and its next try,
+and `resume` tries at once. `pnpm factory resume --override-caps` ignores
 the caps until the next pause or resume; a worker's rate-limit error still makes its job
 wait.
 
@@ -151,7 +155,8 @@ wait.
 | Retry, crash, gate or resume mechanics | `engine.py`, `attempts.py` | pull, restart |
 | How quota and tokens are measured | `metrics/` | pull, restart |
 
-The first five reach a Run when it merges main; the rest when the dispatcher restarts.
+The first four reach a Run when it merges main, the queue is read from `origin/main`
+after each fetch, and the rest take effect when the dispatcher restarts.
 Every change lands mid-Run, so:
 
 - **Deploying Python:** `pnpm factory pause`, wait for the running job, merge, pull

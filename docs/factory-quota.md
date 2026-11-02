@@ -14,7 +14,8 @@ like a credential removed.
 
 | Source | When |
 |---|---|
-| `select` | Each usage check, every account. The chosen account's becomes the attempt's `before`. |
+| `select` | Each usage check, every account. |
+| `before` | The chosen account's `select` reading, relabelled when its attempt starts. |
 | `after` | Started in the background as soon as the worker returns. The gates wait for it at most 10 seconds; a late or failed one is logged and dropped. |
 | `settled` | Once per attempt, when its account has been idle `quota_settle_seconds` (default 150) after it, since the meter lags a minute or two. |
 | `periodic` | Every account each `quota_sample_minutes` (default 15). |
