@@ -77,7 +77,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Check for web, labeler and shared package changes
+      - name: Check for web, mobile, labeler and shared package changes
         id: changes
         env:
           GH_TOKEN: ${{ github.token }}
@@ -90,7 +90,7 @@ jobs:
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
-            echo "No web, labeler or shared package changes; skipping their checks." >> "$GITHUB_STEP_SUMMARY"
+            echo "No web, mobile, labeler or shared package changes; skipping their checks." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Checkout
@@ -143,6 +143,20 @@ jobs:
       - name: Run web unit tests
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
         run: pnpm --filter web test
+
+      - name: Lint mobile app
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: pnpm lint:mobile
+
+      - name: Type check mobile app
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: pnpm check:mobile
+
+      # Metro, not tsc, resolves the app's imports on a device, so bundle both
+      # platforms to catch a workspace package Metro can't load under pnpm.
+      - name: Bundle mobile app
+        if: ${{ !cancelled() && steps.install.outcome == 'success' }}
+        run: pnpm bundle:mobile
 
       - name: Lint labeler
         if: ${{ !cancelled() && steps.install.outcome == 'success' }}
