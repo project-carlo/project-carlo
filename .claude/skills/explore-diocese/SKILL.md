@@ -9,7 +9,7 @@ Read `data/dioceses/README.md` before your first write. It has the rules, the fi
 the explanation standard, which sources to trust, and the traps. This page is the short
 version. A factory job reads the README sections its header lists instead.
 
-A whole new diocese is mapped by the onboarding factory (`docs/factory-spec.md`): add it to
+A whole new diocese is mapped by the onboarding factory (`docs/factory.md`): add it to
 `factory/queue.json`. Its survey, map, reconcile and integrate jobs follow this page.
 
 ## The three rules

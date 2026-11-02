@@ -5,7 +5,7 @@ description: Review an onboarding-factory job, a stage's recent jobs, or a whole
 
 # Reviewing factory work
 
-The factory (`docs/factory-spec.md`) runs each job as a fresh worker on one stage spec:
+The factory (`docs/factory.md`) runs each job as a fresh worker on one stage spec:
 `factory/stages/<stage>.yaml`, the prompt and skills it names, and the CLIs they call. You
 find where a job went wrong and which part of that spec, or something else, caused it.
 You change nothing unless the owner asks.

@@ -3,8 +3,7 @@
 Thinking tokens are a part of output tokens, never added to them again. Cache writes keep
 their TTL (5 minutes or 1 hour). A transcript repeats an assistant message once per
 content block, so messages are counted once by id; a resumed session appends to the same
-file, so only the messages from the attempt's start to its finish (and not seen before)
-count.
+file, so only the messages from the attempt's start to its finish count.
 """
 
 from __future__ import annotations
@@ -35,7 +34,6 @@ class Tokens:
     per_model: dict[str, dict[str, int]] = field(default_factory=dict)
     messages: int = 0
     duplicates: int = 0
-    message_ids: set[str] = field(default_factory=set)
     cli_version: str | None = None
     entrypoint: str | None = None
     gaps: list[str] = field(default_factory=list)
@@ -97,14 +95,12 @@ def model_counts(usage: dict[str, Any]) -> dict[str, int]:
 
 
 def parse_transcript(lines: Iterable[str], since: datetime | None = None,
-                     seen: set[str] | None = None, until: datetime | None = None) -> Tokens:
+                     until: datetime | None = None) -> Tokens:
     """The tokens of one attempt in a session transcript: assistant messages from `since`
-    to `until`, each counted once by id, skipping ids an earlier attempt already counted
-    (`seen`). A resumed session appends later attempts to the same file: `until` keeps
-    them out.
+    to `until`, each counted once by id. A resumed session appends its attempts to the same
+    file: `since` and `until` keep the others out.
     Side calls (a small model summarising) appear only in the session's cost-state record:
     a model there with no assistant message is added from it."""
-    seen = seen or set()
     last: dict[str, dict[str, Any]] = {}
     records = 0
     cost_state: dict[str, Any] | None = None
@@ -131,7 +127,7 @@ def parse_transcript(lines: Iterable[str], since: datetime | None = None,
             continue
         message = r["message"]
         mid = message.get("id") or r.get("uuid")
-        if not mid or mid in seen or not isinstance(message.get("usage"), dict):
+        if not mid or not isinstance(message.get("usage"), dict):
             continue
         records += 1
         last[mid] = message  # repeats carry the same usage; the last is the final one
@@ -140,7 +136,6 @@ def parse_transcript(lines: Iterable[str], since: datetime | None = None,
     for mid, message in last.items():
         tokens.add(str(message.get("model") or "unknown"), api_counts(message["usage"]))
     tokens.messages, tokens.duplicates = len(last), records - len(last)
-    tokens.message_ids = set(last)
     if cost_state:
         for model, usage in (cost_state.get("modelUsage") or {}).items():
             if model not in tokens.per_model and isinstance(usage, dict):

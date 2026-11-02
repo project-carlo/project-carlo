@@ -1,4 +1,4 @@
-# The dispatcher as a systemd user service (docs/factory-spec.md §5).
+# The dispatcher as a systemd user service (docs/factory.md, Running it).
 #
 #   cp factory/carlo-factory.service ~/.config/systemd/user/
 #   # set WorkingDirectory to the dispatcher's own checkout, then:

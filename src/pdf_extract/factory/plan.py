@@ -1,4 +1,4 @@
-"""Which job a Run needs next. The stage order is here, in code (§3).
+"""Which job a Run needs next. The stage order is here, in code.
 
 Map Run:  survey, survey-review, map × each batch (integrate whenever *New lessons*
           passes the threshold, and once more after the last batch if any wait),

@@ -261,7 +261,7 @@ How update mode then keeps each schedule current is in
 
 The factory takes a diocese from nothing to seeded parishes without a person in the
 loop, apart from merging its PRs and answering its GitHub issues
-([docs/factory-spec.md](docs/factory-spec.md)). A dispatcher runs small agent jobs
+([docs/factory.md](docs/factory.md)). A dispatcher runs small agent jobs
 one at a time: a map Run (survey, batches of parishes, reconcile, promote, PR) for
 each diocese in `factory/queue.json`, then seed Runs once the mapped parishes have
 bulletins. Stage specs and prompts are in `factory/`. The ledger, transcripts and
@@ -364,8 +364,8 @@ CSV edits show up in previews and go live on merge.
   `labels/`, `seeds/`, eval results under `runs/<classifier>/eval/`. Untracked: the
   local database, the bulletin cache and run outputs
 - `docs/` - guides (`weekly-pipeline.md`, `fetching.md`, `believed-schedules.md`,
-  `labeling-and-evals.md`, `data-setup.md`, `analytics.md`) and design plans
-  (`*-plan.md`, `factory-spec.md`)
+  `labeling-and-evals.md`, `factory.md`, `factory-quota.md`, `data-setup.md`,
+  `analytics.md`) and design plans (`*-plan.md`)
 - `tests/` - pytest suite, with recorded parish sites under `tests/fixtures/fetch/`
 - `.github/workflows/` - CI, the weekly run, publishing and deploys
 - `.claude/skills/` - skills for agents working on dioceses, seeds and the factory

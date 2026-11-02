@@ -454,6 +454,29 @@ their per-stage `secrets:` key added to `StageSpec` one PR before any spec uses 
 
 ### Phase 5: metrics package and docs
 
+Built in the PR after #191. Where it differs from the bullets below:
+
+- `metrics/` is `quota.py` (attribution), `tokens.py`, `readings.py`, `attempt_meta.py`
+  and `report.py`. `readings.Readings` is a part the dispatcher builds (the after,
+  settled and periodic readings and rate-limit events); `attempts` and `housekeeping`
+  use it instead of `accounts`. `attempt_meta.record` was `_record_meta`, with
+  `work_units`, `fingerprint`, `account_plan` and `code_commit` beside it. `report.py`
+  has `quota`, `windows`, `cost`, `inspect --stage` and the quota lines of `inspect`.
+- The `select` reading stays in `accounts`: it is how an account is chosen. `usage.py`
+  stays outside too: it is the caps. `stamp` moved to the ledger, so `metrics` imports
+  no part of the dispatcher.
+- Nothing in `metrics` raises into a job: `record` and the after reading's recorder catch
+  their own failures, so `attempts` no longer wraps them.
+- `parse_transcript` lost `seen`, which only backfill used. The ledger's backfilled rows
+  stay readable (source `backfill`, `approximate`).
+- The measurement unit tests moved to `tests/test_factory_metrics.py`; the reading
+  tests that drive the dispatcher stay in `test_factory.py`.
+- `docs/factory.md` is ~190 lines, not 150: it keeps the owner-facing rules that have no
+  other home (answering issues, merging, deploying). It names no stage's model (the
+  spec is the one home; the old table was stale). The old *Implementation decisions*
+  are left to the module docstrings, and code no longer cites `§N` of the old spec.
+- The sandbox docs aren't in it: #184 hadn't merged. It adds its section when it lands.
+
 - Move `quota.py`, `tokens.py`, the usage readings, `_record_meta`, `sample_quota` and the
   quota reports into `metrics/`. Delete `backfill.py` and its CLI command.
 - One docs rewrite, together with the sandbox plan's docs phase: replace

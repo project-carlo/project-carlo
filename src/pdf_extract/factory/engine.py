@@ -1,4 +1,4 @@
-"""The engine: one job, from picking it to its gates and what follows them (§5).
+"""The engine: one job, from picking it to its gates and what follows them.
 
 One Run is active at a time, and one job runs at a time within it. Everything after a
 job's gates is recorded in the ledger as it completes, so a dispatcher restarted partway
@@ -135,7 +135,7 @@ class Engine:
         until = self.clock() + timedelta(minutes=self.config.failure_retry_minutes)
         return Outcome("waiting", f"job {job['id']} failed ({exc}); trying again", until)
 
-    # ── Picking (§3) ────────────────────────────────────────────────────────
+    # ── Picking ─────────────────────────────────────────────────────────────
     def pick(self) -> Any | None:
         for _ in range(4):
             active = self.ledger.runs(ACTIVE)
@@ -255,7 +255,7 @@ class Engine:
         return self._gate(run, self.ledger.job(job["id"]), spec, worktree)
 
     def _merge_main(self, run: Any, job: Any, worktree: Path) -> Outcome | None:
-        """At the start of a stage, merge main into the Run branch if it has moved (§10)."""
+        """At the start of a stage, merge main into the Run branch if it has moved."""
         if job["stage"] == "pr":
             return None
         done = [j for j in self.ledger.jobs(run["id"]) if j["status"] == DONE]
@@ -554,7 +554,7 @@ class Engine:
                                    "AND issue_number IS NULL", job["id"], BLOCKING):
             self.answers.open_issue(run, job, row["id"])
 
-    # ── Reviewer verdicts (§8) ───────────────────────────────────────────────
+    # ── Reviewer verdicts ────────────────────────────────────────────────────
     def _verdicts(self, run: Any, job: Any, worktree: Path, handoff: Handoff) -> Any:
         if isinstance(handoff, SurveyReview):
             return self._survey_verdict(run, job, worktree, handoff)

@@ -1,4 +1,4 @@
-"""Which mapped parishes are ready to seed, and when a seed Run starts (§11).
+"""Which mapped parishes are ready to seed, and when a seed Run starts.
 
 A parish from a merged map Run is ready once the database has at least 2 of its
 bulletins. Only parishes promoted with a bulletin source count, and not one waiting on a
