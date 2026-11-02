@@ -35,10 +35,37 @@ class Account:
     plan: str | None = None  # if its login doesn't say (pro, max...)
 
 
+@dataclass(frozen=True)
+class JobUsage:
+    """Points of each usage window, in percent of the account's limit."""
+
+    five_hour: float = 0
+    weekly: float = 0
+
+    def __add__(self, other: JobUsage) -> JobUsage:
+        return JobUsage(self.five_hour + other.five_hour, self.weekly + other.weekly)
+
+
+# About the 75th percentile of past jobs (`pnpm factory quota`, factory/config.yaml).
+JOB_USAGE = {
+    "survey": JobUsage(40, 3),
+    "survey-review": JobUsage(8, 1),
+    "map": JobUsage(10, 1),
+    "integrate": JobUsage(5, 1),
+    "reconcile": JobUsage(25, 2),
+    "seed": JobUsage(10, 1),
+    "seed-review": JobUsage(15, 1),
+}
+
+
 @dataclass
 class Config:
-    five_hour_cap: float = 75
+    # A job starts only if its account's usage, plus what the job is expected to use, plus
+    # what jobs already running on the account are expected to use, stays under both caps.
+    five_hour_cap: float = 85
     weekly_cap: float = 100
+    # What a stage's job is expected to use (`job_usage_for`); a stage not listed, nothing.
+    job_usage: dict[str, JobUsage] = field(default_factory=lambda: dict(JOB_USAGE))
     max_send_backs: int = 2
     # A job's attempts: crashes before its Run blocks, "continue"s after a partial session,
     # and git or GitHub failing on it tick after tick, retried this often.
@@ -72,6 +99,9 @@ class Config:
     worktrees_dir: Path = DATA / "worktrees"
     setup: list[str] = field(default_factory=lambda: ["uv sync --group dev"])
 
+    def job_usage_for(self, stage: str) -> JobUsage:
+        return self.job_usage.get(stage, JobUsage())
+
     @property
     def upstream(self) -> str:
         return f"{self.remote}/{self.base_branch}"
@@ -87,7 +117,11 @@ def _read(path: Path) -> dict[str, Any]:
 
 
 def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) -> Config:
-    raw = {**_read(config_path), **_read(local_path)}
+    shared, local = _read(config_path), _read(local_path)
+    raw = {**shared, **local}
+    # local.yaml can change one stage's job_usage without dropping the others.
+    raw["job_usage"] = {**JOB_USAGE, **(shared.get("job_usage") or {}),
+                        **(local.get("job_usage") or {})}
     known = {f.name for f in fields(Config)}
     unknown = sorted(set(raw) - known)
     if unknown:
@@ -97,6 +131,11 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
                 str(a["plan"]) if a.get("plan") else None)
         for a in raw.pop("accounts", None) or []
     ]
+    try:
+        raw["job_usage"] = {str(stage): v if isinstance(v, JobUsage) else JobUsage(**(v or {}))
+                            for stage, v in raw["job_usage"].items()}
+    except TypeError as exc:
+        raise FactoryError(f"job_usage: {exc}") from None
     if "worktrees_dir" in raw:
         raw["worktrees_dir"] = Path(str(raw["worktrees_dir"])).expanduser()
     return Config(**raw, accounts=accounts)

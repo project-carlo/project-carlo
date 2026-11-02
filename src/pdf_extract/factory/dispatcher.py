@@ -22,7 +22,14 @@ from typing import Any
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import git, playbook, readiness, render, report
 from pdf_extract.factory.backup import copy_database
-from pdf_extract.factory.config import QUEUE_PATH, RUNS_DIR, Account, Config, FactoryError
+from pdf_extract.factory.config import (
+    QUEUE_PATH,
+    RUNS_DIR,
+    Account,
+    Config,
+    FactoryError,
+    JobUsage,
+)
 from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.handoff import (
     APPROVE,
@@ -397,7 +404,8 @@ class Dispatcher:
         if not open_ and until is not None:
             return None, None, Outcome("waiting", f"calibration gap until {until}", until)
         try:
-            rows = standings(self.config, self.fetch_usage, self.clock())
+            rows = standings(self.config, self.fetch_usage, self.clock(),
+                             self.config.job_usage_for(job["stage"]), self._reserved(job))
         except UsageError as exc:
             if exc.status == 429:
                 return None, None, self._cool_down(exc)
@@ -418,9 +426,20 @@ class Dispatcher:
             soonest = [t for t in (next_eligible(rows, only=only), until) if t is not None]
             until = min(soonest, default=self.clock() + timedelta(minutes=30))
             self.ledger.set_job(job["id"], status=WAITING_USAGE, wait_until=until.isoformat())
-            return None, None, Outcome("waiting", f"no account under its caps until {until}",
-                                       until)
+            return None, None, Outcome("waiting", f"no account has room for a {job['stage']} "
+                                       f"job under its caps until {until}", until)
         return pick.account, ids[pick.account.name], None
+
+    def _reserved(self, job: Any) -> dict[str, JobUsage]:
+        """What the other jobs running on each account are expected to use, so jobs run in
+        parallel don't all count the same room. The meter already shows part of it, so
+        this errs on the safe side. With one job at a time, nothing else is running."""
+        out: dict[str, JobUsage] = {}
+        for row in self.ledger.all("SELECT stage, account FROM job WHERE status = ? AND "
+                                   "account IS NOT NULL AND id != ?", RUNNING, job["id"]):
+            out[row["account"]] = (out.get(row["account"], JobUsage())
+                                   + self.config.job_usage_for(row["stage"]))
+        return out
 
     def _cool_down(self, exc: UsageError) -> Outcome:
         """The endpoint is rate limiting the factory: wait `usage_cooldown_minutes`, then try

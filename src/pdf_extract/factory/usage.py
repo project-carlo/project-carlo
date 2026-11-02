@@ -21,7 +21,7 @@ from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.factory.config import Account, Config
+from pdf_extract.factory.config import Account, Config, JobUsage
 
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 WEEK = timedelta(days=7)
@@ -143,20 +143,32 @@ def fetch_usage(account: Account) -> Usage:
     return parse_usage(body)
 
 
-def standing(account: Account, usage: Usage, config: Config, at: datetime) -> Standing:
+def _threshold(cap: float, need: float) -> float:
+    """The usage below which a job needing `need` points can start under `cap`. A job
+    needing the whole cap or more starts only from an unused window."""
+    return max(cap - need, min(cap, 1))
+
+
+def standing(account: Account, usage: Usage, config: Config, at: datetime,
+             need: JobUsage = JobUsage()) -> Standing:
+    """Whether the account can take a job expected to use `need` (with what jobs already
+    running on it are expected to use) and stay under both caps, and if not, when to look
+    again."""
     week_start = usage.seven_day_resets - WEEK
     days_in = max(0, min(6, math.floor((at - week_start) / timedelta(days=1))))
     weekly_allowed = config.weekly_cap * (days_in + 1) / 7
-    five_ok = usage.five_hour < config.five_hour_cap
-    week_ok = usage.seven_day < weekly_allowed
-    headroom = min(config.five_hour_cap - usage.five_hour, weekly_allowed - usage.seven_day)
+    five_below = _threshold(config.five_hour_cap, need.five_hour)
+    week_below = _threshold(weekly_allowed, need.weekly)
+    five_ok = usage.five_hour < five_below
+    week_ok = usage.seven_day < week_below
+    headroom = min(five_below - usage.five_hour, week_below - usage.seven_day)
     waits = [at]
     if not five_ok:
         waits.append(usage.five_hour_resets)
     if not week_ok:
         # The paced cap rises each day; past the full cap, only the reset helps.
         next_day = week_start + timedelta(days=days_in + 1)
-        full = usage.seven_day >= config.weekly_cap
+        full = usage.seven_day >= _threshold(config.weekly_cap, need.weekly)
         waits.append(usage.seven_day_resets if full or days_in >= 6 else next_day)
     return Standing(account, usage, config.five_hour_cap, weekly_allowed, five_ok and week_ok,
                     headroom, max(waits))
@@ -165,10 +177,15 @@ def standing(account: Account, usage: Usage, config: Config, at: datetime) -> St
 Fetch = Callable[[Account], Usage]
 
 
-def standings(config: Config, fetch: Fetch = fetch_usage,
-              at: datetime | None = None) -> list[Standing]:
+def standings(config: Config, fetch: Fetch = fetch_usage, at: datetime | None = None,
+              need: JobUsage = JobUsage(),
+              reserved: dict[str, JobUsage] | None = None) -> list[Standing]:
+    """Each account's standing for a job expected to use `need`, with `reserved` what jobs
+    already running on each account are expected to use still."""
     at = at or datetime.now(UTC)
-    return [standing(a, fetch(a), config, at) for a in config.accounts]
+    reserved = reserved or {}
+    return [standing(a, fetch(a), config, at, need + reserved.get(a.name, JobUsage()))
+            for a in config.accounts]
 
 
 def choose(rows: list[Standing], *, only: str | None = None) -> Standing | None:
