@@ -1,13 +1,15 @@
-"""The dispatcher: the loop that runs the factory, and what it is made of (§5).
+"""The dispatcher: the loop that runs the factory, and what it is made of (docs/factory.md).
 
 Each tick checks the pause and the usage cooldown, does the housekeeping, then takes one
 job a step on. The parts, each in its own module:
 
 - `engine`: one job, from picking it to its gates, send-backs and what follows them.
 - `attempts`: one attempt of a job: starting its worker and recording what came back.
-- `accounts`: the account each attempt runs on, and the quota readings.
+- `accounts`: the account each attempt runs on, against the caps.
 - `answers`: issues for blocking flags, and what the owner's answers do.
 - `housekeeping`: readings, issues, merged Runs, seed readiness and backups between jobs.
+- `metrics.readings`: the quota readings for measuring. The rest of `metrics` (tokens,
+  attempt metadata, the reports) is called from these parts, never the other way round.
 """
 
 from __future__ import annotations
@@ -27,6 +29,7 @@ from pdf_extract.factory.engine import Engine
 from pdf_extract.factory.forge import Forge
 from pdf_extract.factory.housekeeping import Housekeeping
 from pdf_extract.factory.ledger import Ledger
+from pdf_extract.factory.metrics.readings import Readings
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.usage import Fetch, fetch_usage
 from pdf_extract.factory.workers import Worker
@@ -64,14 +67,15 @@ class Dispatcher:
     ) -> None:
         self.ledger, self.config, self.clock = ledger, config, clock
         self.accounts = Accounts(ledger, config, fetch_usage, clock)
+        self.readings = Readings(ledger, config, fetch_usage, clock)
         self.answers = Answers(ledger, config, forge)
         self.attempts = Attempts(ledger, config, worker=worker, accounts=self.accounts,
-                                 clock=clock, runs_dir=runs_dir)
+                                 readings=self.readings, clock=clock, runs_dir=runs_dir)
         self.engine = Engine(ledger, config, repo=repo, forge=forge, attempts=self.attempts,
                              answers=self.answers, clock=clock, commands=commands,
                              db_path=db_path, queue_path=queue_path, push=push)
         self.housekeeping = Housekeeping(ledger, config, repo=repo, forge=forge,
-                                         accounts=self.accounts, answers=self.answers,
+                                         readings=self.readings, answers=self.answers,
                                          clock=clock, db_path=db_path, runs_dir=runs_dir,
                                          pull_data=pull_data, backup=backup)
 

@@ -49,8 +49,8 @@ Paid calls: cached, recorded in the file's `calls`, CARLO_SEED_CALL_LIMIT per pa
 A bulletin is `latest` or a prefix of its content hash; M is gpt-6.1-sol or
 gemini-3-flash-preview. Output is compact text, or the JSON result with `--json`.
 Drafters run `finalize`, which checks; the factory's gates run `check`. `approve` is
-the factory's seed-review agent's (docs/factory-spec.md); the owner changes an answer
-in the labeler. Workflow: docs/factory-spec.md (seed Runs) and
+the factory's seed-review agent's (docs/factory.md); the owner changes an answer
+in the labeler. Workflow: docs/factory.md (seed Runs) and
 .claude/skills/draft-parish-seed/ (drafting; rules.md holds the decision rules).
 """
 

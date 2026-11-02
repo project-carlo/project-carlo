@@ -754,7 +754,7 @@ pnpm seed questions --answered --by person   # the owner's changed answers, to f
 
 The factory takes a diocese from nothing to seeded parishes without a person in the loop,
 apart from merging its PRs and answering its GitHub issues
-([docs/factory-spec.md](docs/factory-spec.md)). A dispatcher runs small agent jobs one at a
+([docs/factory.md](docs/factory.md)). A dispatcher runs small agent jobs one at a
 time: a map Run (survey, batches of parishes, reconcile, promote, PR) for each diocese in
 `factory/queue.json`, then seed Runs once the mapped parishes have bulletins. Stage specs
 and prompts are in `factory/`; the ledger, transcripts and Run worktrees are in

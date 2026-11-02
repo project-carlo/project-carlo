@@ -1,4 +1,4 @@
-"""Blocking flags become GitHub issues; the owner's answers come back as work (§7).
+"""Blocking flags become GitHub issues; the owner's answers come back as work.
 
 An answer to a Run-level flag, or to a flag of a job that isn't parked, resumes the job
 with the answer. An answer to a parked parish requeues it as a new job, in a follow-up
@@ -112,7 +112,7 @@ class Answers:
                             pending_prompt=pending("answer", prompt))
 
     def _follow_up(self, run: Any, subject: str) -> Any:
-        """The pending follow-up Run of the same kind that takes this parish (§3)."""
+        """The pending follow-up Run of the same kind that takes this parish."""
         for other in self.ledger.runs(PENDING):
             if other["follow_up_of"] == run["id"]:
                 parishes = json.loads(other["parishes"] or "[]")

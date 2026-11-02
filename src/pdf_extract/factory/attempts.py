@@ -1,4 +1,5 @@
-"""One attempt of a job: start a worker on it, record what came back (§5).
+"""One attempt of a job: start a worker on it, record what came back. What it used
+(tokens, quota readings) goes to `metrics`, which never stops a job.
 
 What the next attempt is told is the job's pending prompt (`ledger.pending` lists the
 kinds).
@@ -11,7 +12,6 @@ and a finished attempt goes to the gates.
 from __future__ import annotations
 
 import json
-import logging
 from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timedelta
@@ -19,16 +19,22 @@ from pathlib import Path
 from typing import Any
 
 from pdf_extract.factory import git, render
-from pdf_extract.factory.accounts import Accounts, stamp
-from pdf_extract.factory.config import Account, Config, FactoryError
+from pdf_extract.factory.accounts import Accounts
+from pdf_extract.factory.config import Config
 from pdf_extract.factory.handoff import handoff_path
-from pdf_extract.factory.ledger import QUEUED, RUNNING, WAITING_USAGE, Ledger, now, pending
+from pdf_extract.factory.ledger import (
+    QUEUED,
+    RUNNING,
+    WAITING_USAGE,
+    Ledger,
+    now,
+    pending,
+    stamp,
+)
+from pdf_extract.factory.metrics import attempt_meta
+from pdf_extract.factory.metrics.readings import Readings
 from pdf_extract.factory.outcome import Outcome
-from pdf_extract.factory.plan import ordered_batches
-from pdf_extract.factory.quota import fingerprint, work_units
-from pdf_extract.factory.spec import StageSpec, spec_path
-from pdf_extract.factory.tokens import Tokens, from_result, parse_transcript
-from pdf_extract.factory.usage import account_plan
+from pdf_extract.factory.spec import StageSpec
 from pdf_extract.factory.workers import (
     CRASH,
     PARTIAL,
@@ -36,20 +42,9 @@ from pdf_extract.factory.workers import (
     USAGE,
     Worker,
     WorkerRequest,
-    WorkerResult,
     copy_transcript,
     prompt_body,
 )
-
-LOGGER = logging.getLogger(__name__)
-
-
-def code_commit() -> str | None:
-    """The commit of the checkout this dispatcher's code was loaded from, if it is one."""
-    try:
-        return git.head(Path(__file__).resolve().parent)
-    except (FactoryError, OSError):
-        return None
 
 
 @dataclass
@@ -64,10 +59,11 @@ class Ended:
 
 class Attempts:
     def __init__(self, ledger: Ledger, config: Config, *, worker: Worker, accounts: Accounts,
-                 clock: Callable[[], datetime], runs_dir: Path) -> None:
-        self.ledger, self.config, self.worker, self.accounts = ledger, config, worker, accounts
+                 readings: Readings, clock: Callable[[], datetime], runs_dir: Path) -> None:
+        self.ledger, self.config, self.worker = ledger, config, worker
+        self.accounts, self.readings = accounts, readings
         self.clock, self.runs_dir = clock, runs_dir
-        self.code_commit = code_commit()
+        attempt_meta.code_commit()  # the commit this code was loaded from, read at start
 
     def recover(self) -> None:
         """A job still marked running when the dispatcher starts crashed with it."""
@@ -122,26 +118,19 @@ class Attempts:
             system_append=prompt_body(worktree, spec.prompt), values=values, session_id=session,
             on_step=lambda k, name, detail: self.ledger.add_step(attempt_id, next(steps), k,
                                                                  name, detail),
-            on_rate_limit=lambda info: self.accounts.rate_limit(attempt_id, info),
+            on_rate_limit=lambda info: self.readings.rate_limit(attempt_id, info),
         )
         result = self.worker.run(request)
         finished = stamp(self.clock)
-        after = self.accounts.after_reading(account) if account is not None else None
+        after = self.readings.after(account)
         transcript = copy_transcript(result, self.runs_dir / run["id"] / job["name"])
         self.ledger.finish_attempt(attempt_id, outcome=result.outcome, error=result.error,
                                    cost_usd=result.cost_usd, turns=result.turns,
                                    session_id=result.session_id, finished_at=finished,
                                    transcript=str(transcript) if transcript else None)
-        try:
-            self._record_meta(attempt_id, run, job, spec, worktree, account, result,
-                              transcript, session, started, finished)
-        except Exception:  # metadata never stops a job
-            LOGGER.exception("attempt %s: recording its metadata failed", attempt_id)
-        if after is not None:
-            try:
-                after(attempt_id, job["id"])
-            except Exception:  # nor does a reading
-                LOGGER.exception("attempt %s: recording its after reading failed", attempt_id)
+        attempt_meta.record(self.ledger, attempt_id, run, job, spec, worktree, account, result,
+                            transcript, session, started, finished)
+        after(attempt_id, job["id"])
         job = self.ledger.job(job["id"])
         self.ledger.set_job(job["id"], cost_usd=job["cost_usd"] + result.cost_usd,
                             turns=job["turns"] + result.turns,
@@ -177,43 +166,3 @@ class Attempts:
         later job's input leaves them out, and reconcile lists only those no job took."""
         for lead in render.leads_shown(self.ledger, run, job):
             self.ledger.run_sql("UPDATE lead SET used_by = ? WHERE id = ?", job["id"], lead["id"])
-
-    def _record_meta(self, attempt_id: int, run: Any, job: Any, spec: StageSpec,
-                     worktree: Path, account: Account | None, result: WorkerResult,
-                     transcript: Path | None, session: str | None, started: str,
-                     finished: str) -> None:
-        """How the attempt ran and its tokens: from the ResultMessage, else (a crash, a
-        timeout) from its transcript."""
-        info, gaps = result.info, []
-        if result.usage or result.model_usage:
-            source = "live"
-            tokens = from_result(result.usage, result.model_usage, info.get("messages", 0),
-                                 info.get("duplicates", 0))
-        elif transcript is not None:
-            source = "transcript"
-            with transcript.open(encoding="utf-8") as f:
-                tokens = parse_transcript(f, since=datetime.fromisoformat(started),
-                                          until=datetime.fromisoformat(finished))
-        else:
-            source, tokens = "live", Tokens()
-            gaps.append("no token usage reported")
-        prompt = (worktree / spec.prompt).read_text(encoding="utf-8") \
-            if spec.prompt and (worktree / spec.prompt).exists() else ""
-        spec_file = worktree / spec_path(job["stage"])
-        spec_text = spec_file.read_text(encoding="utf-8") if spec_file.exists() else ""
-        models = sorted(set(tokens.per_model) | set(info.get("models") or []))
-        self.ledger.set_attempt_meta(
-            attempt_id, source=source, approximate=0, requested_model=spec.model,
-            effort=spec.effort, sdk_version=info.get("sdk_version"),
-            cli_version=info.get("cli_version") or tokens.cli_version,
-            entrypoint=info.get("entrypoint") or tokens.entrypoint,
-            plan=account_plan(account) if account else None,
-            config_hash=fingerprint(spec_text, prompt, list(spec.skills),
-                                    render.context_hashes(worktree, spec)
-                                    | {"dispatcher": self.code_commit}),
-            resumed_from=self.ledger.previous_in_session(session, attempt_id),
-            work_units=work_units(job["stage"], json.loads(job["input"]),
-                                  ordered_batches(worktree, run["diocese"])),
-            gaps=gaps + tokens.gaps,
-            **(tokens.columns() | {"models": models,
-                                   "model": tokens.model or info.get("model")}))

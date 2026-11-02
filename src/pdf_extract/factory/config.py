@@ -60,7 +60,7 @@ class Config:
     base_branch: str = "main"
     remote: str = "origin"
     branch_prefix: str = "factory/"  # a Run's branch is <prefix><run>
-    # Quota readings (docs/factory-spec.md, Usage): a settled reading once an account has
+    # Quota readings (docs/factory-quota.md): a settled reading once an account has
     # been idle this long after an attempt, one of every account this often, and an
     # optional idle gap between attempts on an account so each gets a settled reading.
     quota_settle_seconds: int = 150

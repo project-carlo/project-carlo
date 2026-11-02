@@ -1,4 +1,5 @@
-"""The accounts' usage: which can take a new job, and when one next can (§5, step 1).
+"""The accounts' usage: which can take a new job, and when one next can (docs/factory.md,
+Usage).
 
 Each account is a Claude Code config directory signed in with `claude /login`. Its usage
 comes from the endpoint Claude Code reads, with that login's OAuth token. A rate-limit
@@ -92,17 +93,6 @@ def parse_usage(body: Any, at: datetime | None = None) -> Usage:
                      raw=scrub(body))
     except (KeyError, TypeError, ValueError) as exc:
         raise UsageError(f"unexpected usage response: {exc!r}") from None
-
-
-def account_plan(account: Account) -> str | None:
-    """The account's plan: its login's subscription and rate-limit tier, else local.yaml's."""
-    try:
-        oauth = json.loads((account.config_dir / ".credentials.json").read_text(
-            encoding="utf-8"))["claudeAiOauth"]
-        parts = [str(oauth[k]) for k in ("subscriptionType", "rateLimitTier") if oauth.get(k)]
-    except (OSError, ValueError, KeyError, TypeError):
-        parts = []
-    return "/".join(parts) or account.plan
 
 
 def _token(account: Account) -> str:
