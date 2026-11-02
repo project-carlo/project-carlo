@@ -46,7 +46,7 @@ EVENTS = [
 ]
 
 
-WEB_FIXTURE = Path(__file__).resolve().parents[1] / "apps/web/src/lib/snapshot.fixture.json"
+SNAPSHOT_FIXTURE = Path(__file__).resolve().parents[1] / "packages/core/src/snapshot.fixture.json"
 # Nulls, strings that repeat, and a gap in the event ids.
 CHURCH_ROWS = [
     (7, 1, "b", "B", None, None, "Rochester", "NY", None, 43.1, -77.6, None, None, "2026-09-20"),
@@ -339,12 +339,12 @@ def test_encoded_columns_round_trip() -> None:
     ]
 
 
-def test_encoded_format_matches_the_web_apps_fixture() -> None:
-    # apps/web/src/lib/snapshot.test.ts decodes the same file, so the writer and
+def test_encoded_format_matches_the_shared_fixture() -> None:
+    # packages/core/src/snapshot.test.ts decodes the same file, so the writer and
     # the app's reader can't drift apart unnoticed.
     written = json.loads(gzip.decompress(encode_snapshot(CHURCH_ROWS, EVENT_ROWS)))
-    assert written == json.loads(WEB_FIXTURE.read_text(encoding="utf-8")), (
-        f"The snapshot format changed: update {WEB_FIXTURE} and snapshot.test.ts to match"
+    assert written == json.loads(SNAPSHOT_FIXTURE.read_text(encoding="utf-8")), (
+        f"The snapshot format changed: update {SNAPSHOT_FIXTURE} and snapshot.test.ts to match"
     )
 
 

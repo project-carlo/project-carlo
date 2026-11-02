@@ -954,7 +954,7 @@ code departs from it.
   without it reads as false).
 - **The site shows the qualifiers as PR 22 did.** The web app follows PR 22
   (lyonsl2/project-carlo#22, and the PRD on its branch) for how the
-  qualifiers are shown, in `apps/web/src/lib/schedulePattern.ts`:
+  qualifiers are shown, in `packages/core/src/schedulePattern.ts`:
   - The copy is long form, at the grain the bulletin gave: "First Friday of
     the month", "Second and fourth Saturdays of the month", "October through
     June", "June 4 through September 10", joined with a comma when a slot has

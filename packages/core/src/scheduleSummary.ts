@@ -1,6 +1,6 @@
-import { DAY_ORDER, jsDayFor } from "../constants/days";
-import type { EventSummary } from "../types";
-import { formatMinutesMissal, titleCase } from "../utils";
+import { DAY_ORDER, jsDayFor } from "./constants/days";
+import type { EventSummary } from "./types";
+import { formatMinutesMissal, titleCase } from "./utils";
 import type { ScheduleRollupRow } from "./eventRollup";
 import {
   describeSchedulePattern,

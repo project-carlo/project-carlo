@@ -11,8 +11,8 @@ The confirmed first-release scope is the current public church-finder features p
 | Existing code | Porting implication |
 | --- | --- |
 | `apps/web/src/api.ts` | Despite its name, this downloads one snapshot and queries it locally. Extract the query functions; replace its browser download implementation. |
-| `src/pdf_extract/extract_frontend_db.py`, `apps/web/src/lib/snapshot.ts` | Shared column-oriented JSON format, currently version 1. Reuse the decoder with stronger runtime validation at the download boundary. |
-| `lib/schedule.ts`, `lib/eventRollup.ts`, `types.ts`, `constants/*`, `src/utils.ts` | Mostly reusable TypeScript, with clock and timezone behavior to make explicit. |
+| `src/pdf_extract/extract_frontend_db.py`, `packages/core/src/snapshot.ts` | Shared column-oriented JSON format, currently version 1. Reuse the decoder with stronger runtime validation at the download boundary. |
+| `packages/core/src/`: `schedule.ts`, `eventRollup.ts`, `types.ts`, `constants/*`, `utils.ts` | Mostly reusable TypeScript, with clock and timezone behavior to make explicit. |
 | `components/filterState.ts`, `lib/mapView.ts`, `lib/currentLocationQuery.ts` | Reuse filter semantics, link parameters, and current-location query recognition. Move these out of UI directories where appropriate. |
 | `lib/mapClusters.ts` | Pure clustering algorithm worth sharing. Native viewport, zoom, camera, and marker integration need an adapter. |
 | `components/SearchTypeahead.tsx`, `placeSearch.ts` | Extract Fuse search configuration and Geoapify request/result logic; rebuild the search UI and inject configuration. |

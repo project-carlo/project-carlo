@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { rollUpEventsByDay } from "./eventRollup";
-import type { EventSummary } from "../types";
+import type { EventSummary } from "./types";
 
 let nextId = 1;
 

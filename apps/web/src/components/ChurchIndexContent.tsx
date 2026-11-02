@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import type { ChurchBase } from "../types";
+import type { ChurchBase } from "@carlo/core";
 import { cityPath, citySlugFor, type City } from "@/lib/cities";
 import { churchPath } from "@/lib/seo";
 import { CHURCH_LIST, SOURCE_PHRASE, UNNAMED_CHURCH } from "@/copy";

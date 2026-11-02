@@ -1,5 +1,5 @@
-import { DAY_ORDER, jsDayFor } from "../constants/days";
-import type { Season, WeekOfMonth } from "../types";
+import { DAY_ORDER, jsDayFor } from "./constants/days";
+import type { Season, WeekOfMonth } from "./types";
 import { dateMatchesPattern } from "./schedulePattern";
 
 /**

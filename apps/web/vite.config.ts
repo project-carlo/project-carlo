@@ -8,7 +8,10 @@ import type { Plugin } from "vite";
 import { cloudflare } from "@cloudflare/vite-plugin";
 
 import { SITE_ORIGIN, serializeJsonLd, websiteJsonLd } from "./src/lib/seo";
-import { SNAPSHOT_FILE } from "./src/lib/snapshot";
+// A relative path, not "@carlo/core": Vite loads this config with Node and
+// leaves package imports to Node, which can't resolve the package's
+// extensionless TypeScript imports. A relative import is bundled instead.
+import { SNAPSHOT_FILE } from "../../packages/core/src/snapshot";
 import {
   ANALYTICS_ENTRY,
   CHURCH_INDEX_ENTRY,

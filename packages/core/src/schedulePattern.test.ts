@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { WeekOfMonth } from "../types";
+import type { WeekOfMonth } from "./types";
 import {
   dateMatchesPattern,
   dateMatchesWeeks,

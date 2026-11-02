@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { EventSummary } from "../types";
+import type { EventSummary } from "./types";
 import { weeklyScheduleRows } from "./scheduleSummary";
 
 let nextId = 1;

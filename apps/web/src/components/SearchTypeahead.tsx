@@ -13,7 +13,7 @@ import { useQuery } from "@tanstack/react-query";
 import type FuseType from "fuse.js";
 import type { ChurchSearchResult } from "../api";
 import { churchSearchIndexQuery } from "../lib/homeStartQueries";
-import { formatAddress } from "../utils";
+import { formatAddress } from "@carlo/core";
 import { wantsCurrentLocation } from "../lib/currentLocationQuery";
 import { useBrowserLocation } from "../hooks/useBrowserLocation";
 import { track } from "../lib/analytics";

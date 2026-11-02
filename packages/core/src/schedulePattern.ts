@@ -1,4 +1,4 @@
-import type { Season, WeekOfMonth } from "../types";
+import type { Season, WeekOfMonth } from "./types";
 
 /**
  * The shape of a recurring slot: which weeks of the month it falls on, and

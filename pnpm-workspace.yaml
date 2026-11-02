@@ -1,5 +1,6 @@
 packages:
   - "apps/*"
+  - "packages/*"
 
 # pnpm 12 fails the install until every dependency build script is allowed or denied.
 allowBuilds:

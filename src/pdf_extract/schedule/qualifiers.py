@@ -13,7 +13,7 @@ between the two.
 
 `describe_schedule_pattern` words the qualifiers for people ("First Friday of
 the month, October through June"), as the web app's
-`apps/web/src/lib/schedulePattern.ts` does.
+`packages/core/src/schedulePattern.ts` does.
 """
 
 from __future__ import annotations

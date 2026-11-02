@@ -233,7 +233,7 @@ def test_migration_adds_the_schedule_tables(conn: sqlite3.Connection) -> None:
 
 # ── Qualifiers and entries ──────────────────────────────────────────────────
 def test_qualifiers_are_described_as_the_web_app_describes_them() -> None:
-    # The display table of PR 22's PRD, which apps/web/src/lib/schedulePattern.ts follows.
+    # The display table of PR 22's PRD, which packages/core/src/schedulePattern.ts follows.
     def season(start_month, start_day, end_month, end_day):
         return columns_to_season(start_month, start_day, end_month, end_day)
 
