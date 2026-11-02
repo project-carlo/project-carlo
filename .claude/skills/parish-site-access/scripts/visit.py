@@ -7,7 +7,7 @@ shells), and no publications for bulletins that sit in an iframe widget or one
 click deep. This opens the page in the pipeline's own stealth browser
 (pdf_extract.browser.launch_stealth_browser) with real Chrome, headed under
 xvfb, and reports the same fields `probe url` does, read from the rendered page
-and its iframes. Run scripts/setup_browser.sh once per sandbox first.
+and its iframes. In a cloud sandbox, run scripts/setup_browser.sh once first.
 
 Cloudflare decides per request whether to challenge, and in a Claude Code sandbox
 the challenge can never be solved (brunhild.challenges.cloudflare.com is denied

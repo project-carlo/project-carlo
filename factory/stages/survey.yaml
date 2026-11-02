@@ -8,6 +8,10 @@ tools: [Bash, Read, Edit, Write]
 writes:
   - data/dioceses/{diocese}/**
   - scratch/{run}/**
+reads:
+  - data/dioceses/README.md#The model
+  - data/dioceses/README.md#Batch plans
+  - data/dioceses/README.md#Sources
 gates:
   - pnpm --silent diocese batches validate {diocese}
   - pnpm --silent diocese validate {diocese}

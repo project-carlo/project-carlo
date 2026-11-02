@@ -96,7 +96,8 @@ What a map job learns reaches later batches in three ways:
 - **Leads** go through code. A handoff lead names the batch or roster entry it touches,
   and the dispatcher adds it to that batch's job input.
 - **Lessons** are appended by the dispatcher, as written, to *New lessons* in
-  `diocese.md`, which every later map job reads. When the list passes 8 entries, the next
+  `diocese.md`, which every later map job's input includes, with *Bulletin publishers
+  here* and *Rules settled*. When the list passes 8 entries, the next
   job is `integrate`, which merges them into *Bulletin publishers here* and *Rules
   settled*, keeps only what's reusable, and empties the list.
 - **Fixes across batches** (a merge, a church that belongs to another parish) are raised
@@ -125,10 +126,20 @@ tools: [Bash, Read, Edit, Write]
 writes:                        # globs, checked by the diff-scope gate
   - data/dioceses/{diocese}/**
   - scratch/{run}/{job}/**
+  - scratch/{run}/tools/**
+reads:                         # the worker reads these first: a file, or a file's section
+  - data/dioceses/README.md#Fields
+  - data/dioceses/README.md#Traps
+deny: []                       # permission rules added to the workers' own
 gates:
   - pnpm --silent diocese validate {diocese}
 limits: { max_turns: 300, max_minutes: 90 }
 ```
+
+The header lists `reads:`. A whole file is listed by its path; for a file's sections, the
+dispatcher writes them, in order, to `scratch/<run>/<job>/reads/<path>` when the job
+starts, and the header lists that copy. A missing file or heading fails the job before
+its worker starts.
 
 Every job records the commit it ran at. That identifies the stage spec, skills, prompts
 and CLI it ran with.
@@ -487,7 +498,9 @@ Where the implementation had to decide something this spec left open.
   `scratch/<run>/tools/`.
 - **Job input.** The stage's prompt file, frontmatter stripped, is appended to Claude
   Code's system prompt. The first message is built in code (`render.py`): a header with the
-  write boundaries, the gates, the handoff path and schema, then the stage's input.
+  folders, the write boundaries, the gates, the files to read first and the handoff path
+  and schema, then the stage's input. Bulky input goes in a file in the job's scratch
+  folder instead (reconcile's flags and leads, `flags.md`).
   Resumed attempts get only the problems, your answer, or "continue". `pnpm factory prompt
   <stage>` previews what the next job of a stage would be given, with sizes, without
   changing the ledger; `inspect <job> --prompt` shows the same for a past attempt.

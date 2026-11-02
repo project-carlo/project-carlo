@@ -68,7 +68,9 @@ BATCHES = {"version": 1, "diocese": D, "first_batch": "b2", "batches": [
 ]}
 SPEC = StageSpec(stage="any", kind="agent",
                  writes=["data/dioceses/{diocese}/**", "scratch/{run}/{job}/**"],
-                 gates=["pnpm --silent diocese check {diocese}"])
+                 gates=["pnpm --silent diocese check {diocese}"],
+                 reads=["data/dioceses/README.md#Fields", "data/dioceses/README.md#Traps",
+                        ".claude/skills/s/rules.md"])
 
 
 def check(case: str, text: str) -> None:
@@ -170,6 +172,14 @@ def test_first_message(fx: Fixture, kind: str, name: str) -> None:
     check(f"input-{name}", render.job_input(fx.ledger, run, job, SPEC, values(run, job)))
 
 
+def test_reconciles_flags_and_leads_file(fx: Fixture) -> None:
+    job = fx.job(fx.map, "007-reconcile")
+    files = render.input_files(fx.ledger, fx.map, job)
+    assert list(files) == [render.flags_rel(fx.map["id"], "007-reconcile")]
+    check("file-007-reconcile-flags", next(iter(files.values())))
+    assert render.input_files(fx.ledger, fx.map, fx.job(fx.map, "004-map")) == {}
+
+
 @pytest.mark.parametrize("stage", [s for s in STAGES if s not in ("promote", "pr")])
 def test_handoff_schema(stage: str) -> None:
     check(f"schema-{stage}", render.schema_text(stage) + "\n")
@@ -228,9 +238,35 @@ def test_a_read_is_a_whole_file_or_one_section() -> None:
     assert "no heading" in parts[-1]["error"]
 
 
+def test_a_heading_in_a_code_block_is_not_a_section() -> None:
+    text = ("## Files\n\nLayout.\n\n```markdown\n---\nname: x\n---\n\n## Publisher\n```\n\n"
+            "### Fields\n\nThe fields.\n\n## Next\n")
+    files = render.read_entry(lambda p: text, "R.md#Files")
+    assert files.endswith("### Fields\n\nThe fields.\n") and "## Next" not in files
+    with pytest.raises(FactoryError, match="no heading 'Publisher'"):
+        render.read_entry(lambda p: text, "R.md#Publisher")
+
+
+def test_read_files_copies_each_files_sections_in_order() -> None:
+    def text_of(path: str) -> str | None:
+        return {"data/dioceses/README.md": README, "rules.md": "Rules."}.get(path)
+
+    spec = StageSpec(stage="map", kind="agent", reads=[
+        "data/dioceses/README.md#Traps", "rules.md", "data/dioceses/README.md#Dates"])
+    assert render.read_files(spec, text_of, "r", "001-map") == {
+        "scratch/r/001-map/reads/data/dioceses/README.md":
+            "## Traps\n\nDon't guess.\n\n### Dates\n\nUse ISO dates.\n"}
+    whole = StageSpec(stage="map", kind="agent", reads=["rules.md#Rules", "rules.md"])
+    assert render.read_files(whole, text_of, "r", "001-map") == {}  # read where it is
+    for bad in (["data/dioceses/README.md#Method"], ["missing.md"]):
+        with pytest.raises(FactoryError):
+            render.read_files(StageSpec(stage="map", kind="agent", reads=bad), text_of, "r", "j")
+
+
 def test_every_stage_reads_files_that_exist_on_main() -> None:
     for stage in STAGES:
         spec = load_stage(stage, ROOT)
+        render.read_files(spec, render.worktree_text(ROOT), "r", "j")
         for entry in spec.reads:
             render.read_entry(render.worktree_text(ROOT), entry)
         for name in spec.skills:

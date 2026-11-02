@@ -192,7 +192,7 @@ class SdkWorker:
             effort=spec.effort,
             permission_mode="auto",
             tools=tools,
-            disallowed_tools=DENIED,
+            disallowed_tools=DENIED + list(spec.deny),
             system_prompt={"type": "preset", "preset": "claude_code",
                            "append": request.system_append},
             setting_sources=["project"],

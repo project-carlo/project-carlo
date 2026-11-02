@@ -7,7 +7,7 @@ description: The method for researching a diocese in data/dioceses/<diocese>/ wi
 
 Read `data/dioceses/README.md` before your first write. It has the rules, the file format,
 the explanation standard, which sources to trust, and the traps. This page is the short
-version.
+version. A factory job reads the README sections its header lists instead.
 
 A whole new diocese is mapped by the onboarding factory (`docs/factory-spec.md`): add it to
 `factory/queue.json`. Its survey, map, reconcile and integrate jobs follow this page.
@@ -68,8 +68,8 @@ Then, cheapest first:
 7. **Audit structure every session:** `pnpm diocese audit <d> [--fetch]`. Read its candidate
    scope and limitations; coverage and distinct URLs can't establish separate documents.
 8. **Check the fetch:** `pnpm fetch:check --diocese <d> --parish <slug>` resolves and
-   downloads a row's bulletin before it is promoted (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome
-   xvfb-run -a` in the cloud sandbox). Review transport, document type, parish identity and
+   downloads a row's bulletin before it is promoted (run it headed:
+   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check ...`). Review transport, document type, parish identity and
    freshness separately; successful transport alone isn't a verified current bulletin.
 9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`).
    A change to a mapped diocese also gets a dated line in `diocese.md`'s *Log*.

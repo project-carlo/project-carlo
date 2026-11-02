@@ -7,7 +7,7 @@ the pages with pdf.js (from cdn.jsdelivr.net) in the installed Chrome. Look at
 the images with the Read tool. What you read off an image is evidence like any
 quote: cite the PDF's URL and say in the `note` that the page is an image.
 
-Usage (from the repo root; run setup_browser.sh once first):
+Usage (from the repo root; in a cloud sandbox, run setup_browser.sh once first):
   uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
       [--pages 1,3-5] [--scale 1.6] [--png]
 

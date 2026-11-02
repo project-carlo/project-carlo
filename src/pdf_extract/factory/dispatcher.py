@@ -223,9 +223,10 @@ class Dispatcher:
         return outcome
 
     def _work_failed(self, job: Any, key: str, exc: Exception) -> Outcome:
-        """git or GitHub failed partway through a job (a network blip, an expired login).
-        Each step after the gates runs once, so trying the job again picks up where it
-        stopped; after a few failures in a row the Run blocks on an issue instead."""
+        """git or GitHub failed partway through a job (a network blip, an expired login), or a
+        file the stage reads is missing. Each step after the gates runs once, so trying the
+        job again picks up where it stopped; after a few failures in a row the Run blocks on
+        an issue instead."""
         LOGGER.warning("job %s failed: %s", job["id"], exc)
         failures = (self.ledger.get(key) or 0) + 1
         self.ledger.set(key, failures)
@@ -242,8 +243,9 @@ class Dispatcher:
             return self._block_run(self.ledger.run(job["run_id"]), None,
                                    f"Job {job['name']} ({job['stage']}) failed {failures} "
                                    f"times in a row: {exc}",
-                                   suggestion="Fix what failed (git, GitHub or the network), "
-                                   "then close this issue to try the job again.")
+                                   suggestion="Fix what failed (git, GitHub, the network, or "
+                                   "a stage spec's `reads:` on main), then close this issue "
+                                   "to try the job again.")
         until = self.clock() + timedelta(minutes=self.config.failure_retry_minutes)
         return Outcome("waiting", f"job {job['id']} failed ({exc}); trying again", until)
 
@@ -534,6 +536,16 @@ class Dispatcher:
         values = self.values(run, job)
         pending = json.loads(job["pending_prompt"] or "null") or {}
         kind, prompt, session = render.next_prompt(self.ledger, run, job, spec, values)
+        if kind in ("start", "fresh"):
+            # What the first message points to. A missing read is a FactoryError: the job
+            # waits and tries again (merging main again, until it has started), so a fix to
+            # the spec on main heals it; after a few failures the Run blocks.
+            files = render.read_files(spec, render.worktree_text(worktree), run["id"],
+                                      job["name"])
+            files |= render.input_files(self.ledger, run, job)
+            for rel, text in files.items():
+                (worktree / rel).parent.mkdir(parents=True, exist_ok=True)
+                (worktree / rel).write_text(text, encoding="utf-8")
         if pending.get("kind") not in ("resume", "continue"):
             # A send-back or an answer needs a new handoff: the old one mustn't pass again.
             handoff_path(worktree, run["id"], job["name"]).unlink(missing_ok=True)

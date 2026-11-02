@@ -17,7 +17,7 @@ Each entry: id (the finder's site id), name, kind ("closed" when the name says
 "(Closed)", else ""), line1, city, state, postal_code, latitude, longitude
 (coordinates_from diocese-directory), website, url, address (verbatim, for the
 evidence quote), phone, mailing. With URL, the page is loaded in the stealth
-browser the way visit.py loads it (run setup_browser.sh first).
+browser the way visit.py loads it (in a cloud sandbox, run setup_browser.sh first).
 """
 
 from __future__ import annotations
