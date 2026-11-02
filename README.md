@@ -377,6 +377,7 @@ CSV edits show up in previews and go live on merge.
 
 ```bash
 pnpm test && pnpm lint                                   # Python: pytest and ruff
+pnpm lint:core && pnpm check:core && pnpm test:core      # @carlo/core: lint, types, unit tests
 pnpm lint:web && pnpm check:web && pnpm --filter web test   # web app: lint, types, unit tests
 pnpm lint:labeler && pnpm check:labeler && pnpm test:labeler && pnpm build:labeler
 ```

@@ -1,7 +1,8 @@
 import js from "@eslint/js";
 import tseslint from "typescript-eslint";
 
-// No browser globals: this package must run in React Native as well as the web.
+// No browser globals here; the real guard is the type check (tsconfig.json has
+// no DOM lib), since typescript-eslint turns off no-undef for TypeScript.
 export default tseslint.config(
   { ignores: ["dist"] },
   {

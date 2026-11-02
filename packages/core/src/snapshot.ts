@@ -11,8 +11,9 @@ import { computeNextOccurrence } from "./schedule";
  * The data snapshot (`frontend.json.gz`): every church and event the site
  * shows, as gzipped column-oriented JSON written by
  * src/pdf_extract/extract_frontend_db.py, whose docstring describes the
- * format. Decoded once into objects, shared by the SPA (api.ts) and the
- * prerenderer (scripts/prerender.ts). Pure; no DOM or React dependencies.
+ * format. Decoded once into objects, shared by the SPA (apps/web/src/api.ts)
+ * and the prerenderer (apps/web/scripts/prerender.ts). Pure; no DOM or React
+ * dependencies.
  */
 export const SNAPSHOT_FILE = "frontend.json.gz";
 
