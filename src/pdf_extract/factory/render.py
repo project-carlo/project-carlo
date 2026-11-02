@@ -25,7 +25,7 @@ from pdf_extract.factory.config import FactoryError
 from pdf_extract.factory.handoff import PARKING_STAGES
 from pdf_extract.factory.ledger import LISTED, Ledger
 from pdf_extract.factory.plan import describe_entry, diocese_dir, ordered_batches
-from pdf_extract.factory.stages import StageSpec, fill
+from pdf_extract.factory.spec import StageSpec, fill
 from pdf_extract.factory.workers import strip_frontmatter
 
 SKILLS_DIR = Path(".claude") / "skills"

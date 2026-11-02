@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Any, Protocol
 
 from pdf_extract.factory.config import Account
-from pdf_extract.factory.stages import StageSpec, fill
+from pdf_extract.factory.spec import StageSpec, fill
 
 # How an attempt ended.
 OK, CRASH, USAGE, TIMEOUT, PARTIAL = "ok", "crash", "usage", "timeout", "partial"
