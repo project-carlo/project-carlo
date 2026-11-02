@@ -380,6 +380,25 @@ Built in the PR after #185. Where it differs from the bullets below:
 
 ### Phase 3: keep the playbook short (changes integrate and map)
 
+Built in the PR after #187. Where it differs from the bullets below:
+
+- The dispatcher checks `rules_changed` rather than trusting it: comparing *Rules
+  settled* at HEAD with the worktree, a rule gone from the section and not quoted in a
+  `was`, a `was` that matches no earlier rule, or a `now` not in the section sends the
+  job back. Rules compare whole (wrapped lines joined), ignoring whitespace and `*`.
+- Reconcile doesn't report the sizes: it no longer touches the playbook. The PR measures
+  them from `diocese.md` and shows each integrate's before → after, recorded when it
+  finishes (its `playbook` action in the ledger).
+- The targets are constants (`playbook.TARGETS`), not `config.yaml` settings: only the
+  text of integrate's input and the PR uses them. A hard gate would move them to config.
+- Map's guidance also says most batches have one or two lessons, or none.
+- The PR cuts each rule's text to 300 characters when the whole list passes 30,000, to
+  stay under GitHub's body limit; the integrate commits' diffs have them whole.
+- Follow-up Runs still get no integrate: their lessons land in *New lessons* on main, as
+  before.
+- Sizes when it was built: Philadelphia's publishers 38.2 KB and rules 10.0 KB, Trenton's
+  24.5 and 11.1, Metuchen's 6.1 and 1.5 with 8 lessons waiting.
+
 - Rewrite integrate's brief: the playbook is a guide, not a log; one parish's detail is
   dropped (it is in the records); it may condense *Rules settled* as decided in §1, and
   its handoff lists each rule it merged or reworded, which the Run's PR shows.

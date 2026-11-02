@@ -279,7 +279,9 @@ def test_map_run_end_to_end(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == IN_REVIEW
     stages = [j["stage"] for j in env.ledger.jobs(run["id"])]
-    assert stages == ["survey", "survey-review", "map", "map", "reconcile", "promote", "pr"]
+    # Under the threshold, the lessons still get a last integrate before reconcile.
+    assert stages == ["survey", "survey-review", "map", "map", "integrate", "reconcile",
+                      "promote", "pr"]
     # first_batch first, then the file's order.
     maps = [json.loads(j["input"])["batch"] for j in env.ledger.jobs(run["id"], "map")]
     assert maps == ["b2", "b1"]
@@ -299,6 +301,7 @@ def test_map_run_end_to_end(env: Env) -> None:
     assert any("diocese promote testd" in c for c in env.commands_run)
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
     assert "Directory: 3/3 (100%) accounted for" in pr
+    assert "## Playbook" in pr and "2 new lessons not folded in" in pr  # the stub kept them
     assert run["pr_url"] and run["head_sha"] == git(Path(run["worktree"]), "rev-parse",
                                                     "HEAD").strip()
 
@@ -452,6 +455,75 @@ def test_integrate_runs_when_new_lessons_pass_the_threshold(env: Env) -> None:
     stages = [j["stage"] for j in env.ledger.jobs(map_run(env)["id"])]
     assert stages == ["survey", "survey-review", "map", "integrate", "map", "integrate",
                       "reconcile", "promote", "pr"]
+
+
+def test_no_last_integrate_without_new_lessons(env: Env) -> None:
+    quiet = map_script()
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        action = quiet(req, attempt)
+        action.handoff["lessons"] = []
+        return action
+
+    drive(env.dispatcher(map_script(map=mapping)))
+    assert [j["stage"] for j in env.ledger.jobs(map_run(env)["id"])] == [
+        "survey", "survey-review", "map", "map", "reconcile", "promote", "pr"]
+
+
+def test_integrate_lists_every_rule_it_reworded(env: Env) -> None:
+    def integrating(req: WorkerRequest, attempt: int) -> StubAction:
+        # As the job started: a send-back finds its first attempt's edits on disk.
+        text = git(req.worktree, "show", f"HEAD:data/dioceses/{D}/diocese.md")
+        rule = playbook.items(playbook.section_of(text, playbook.RULES))[0]
+        reworded = rule.replace("left out.", "left out, wherever they are held.")
+        text = text.replace(rule, reworded)
+        text = "\n".join(line for line in text.splitlines() if not line.startswith("- Lesson"))
+        # The first attempt doesn't list the change; the second does.
+        changed = [{"was": [rule], "now": reworded}] if attempt > 1 else []
+        return StubAction(files={"data/dioceses/{diocese}/diocese.md": text + "\n"},
+                          handoff=done("15 lessons", rules_changed=changed))
+
+    drive(env.dispatcher(map_script(integrate=integrating)))
+    run = map_run(env)
+    job = env.ledger.jobs(run["id"], "integrate")[0]
+    assert job["status"] == "done" and job["send_backs"] == 1
+    sent = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2", job["id"])
+    assert "rules_changed: this rule is gone from *Rules settled*" in sent["prompt"]
+    sizes = env.ledger.action_result(job["id"], "playbook")
+    assert (sizes["before"]["lessons"], sizes["after"]["lessons"]) == (2, 0)
+    assert sizes["after"]["rules"] > sizes["before"]["rules"]
+    pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
+    assert f"- `{job['name']}`, 2 lessons: publishers" in pr
+    assert "### Rules integrate merged or reworded" in pr
+    assert f"- **Now** (`{job['name']}`): Campus Masses are left out, wherever they are held." in pr
+    assert "  - was: Campus Masses are left out. (accepted by survey-review" in pr
+
+
+def test_integrate_quotes_rules_as_they_stood(env: Env) -> None:
+    def integrating(req: WorkerRequest, attempt: int) -> StubAction:
+        changed = [{"was": ["A rule nobody wrote"], "now": "Nor this one"}]
+        return StubAction(handoff=done(rules_changed=changed if attempt == 1 else []))
+
+    drive(env.dispatcher(map_script(integrate=integrating)))
+    job = env.ledger.jobs(map_run(env)["id"], "integrate")[0]
+    sent = env.ledger.one("SELECT prompt FROM attempt WHERE job_id = ? AND n = 2", job["id"])
+    assert "this matches none: A rule nobody wrote" in sent["prompt"]
+    assert "this `now` isn't a rule in *Rules settled*" in sent["prompt"]
+
+
+def test_playbook_items_are_whole_bullets() -> None:
+    body = ("Decisions that apply to more than one record.\n\n"
+            "- **One** rule,\n  wrapped. (survey-review)\n"
+            "- Two, with a lazy\ncontinuation.\n\n"
+            "  And a second paragraph.\n"
+            "- Three\n  - a sub-bullet\n\n"
+            "A closing paragraph.\n")
+    assert playbook.items(body) == ["**One** rule, wrapped. (survey-review)",
+                                    "Two, with a lazy continuation. And a second paragraph.",
+                                    "Three - a sub-bullet"]
+    assert playbook.rule_key("**One** rule,\n wrapped.") == "One rule, wrapped."
+    text = "# D\n\n### Bulletin publishers here\n\n- é\n\n## New lessons\n\n- a\n- b\n"
+    assert playbook.sizes(text) == {"publishers": 4, "rules": 0, "lessons": 2}
 
 
 # ── Send-backs, scope, retries ───────────────────────────────────────────────

@@ -32,7 +32,8 @@ Before you end, write `scratch/testd-map-1/006-integrate/handoff.json`, about 30
  "summary": "one or two sentences",
  "flags": [{"severity": "blocking | advisory", "scope": "parish | run", "subject": "roster:id or parish slug", "question": "what needs deciding", "evidence": ["path#section or URL with date"], "suggestion": "what you would do"}],
  "leads": [{"touches": "batch id or roster:id", "note": "..."}],
- "lessons": ["reusable publisher or rule lesson"]
+ "lessons": ["reusable publisher or rule lesson"],
+ "rules_changed": [{"was": ["each rule it replaces, word for word"], "now": "the rule that replaces them"}]
 }
 ```
 
@@ -47,4 +48,9 @@ Before you end, write `scratch/testd-map-1/006-integrate/handoff.json`, about 30
 
 ## Your job: integrate 2 new lessons
 
-`data/dioceses/testd/diocese.md` has 2 entries under *New lessons*.
+The playbook in `data/dioceses/testd/diocese.md` now, by section (bytes of the text
+under each heading, as `wc -c` counts them), and the size to keep each near:
+
+- *Bulletin publishers here*: 0.0 KB (target 8.0 KB)
+- *Rules settled for this diocese*: 0.0 KB (target 6.0 KB)
+- *New lessons*: 2 entries, 0.1 KB, all to fold in or drop

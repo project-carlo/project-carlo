@@ -144,6 +144,9 @@ def schema_text(stage: str) -> str:
     if stage == "survey-review":
         base |= {"verdict": "approve | send_back", "problems": ["..."],
                  "rules": ["each proposed rule you accept, as written"]}
+    if stage == "integrate":
+        base |= {"rules_changed": [{"was": ["each rule it replaces, word for word"],
+                                    "now": "the rule that replaces them"}]}
     if stage == "reconcile":
         base |= {"settled": [{"flag": "the id from your input, e.g. 12",
                               "how": "what you did, or what settled it, in one line"}]}
@@ -193,13 +196,7 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
     if stage == "map":
         return _map_input(ledger, run, job, inputs)
     if stage == "integrate":
-        meta = diocese_dir(worktree, diocese) / "diocese.md"
-        n = len(playbook.bullets(meta, playbook.NEW_LESSONS))
-        return f"""\
-## Your job: integrate {n} new lessons
-
-`data/dioceses/{diocese}/diocese.md` has {n} entries under *New lessons*.
-"""
+        return _integrate_input(worktree, diocese)
     if stage == "reconcile":
         advisory, leads = _reconcile_lists(ledger, run, job)
         parked = [f"{f['subject']}: {f['question']}" for f in ledger.parked(run_id)]
@@ -223,6 +220,28 @@ Draft `data/seeds/{inputs['parish']}.json`.
     if stage == "seed-review":
         return _seed_review_input(ledger, run, inputs, values)
     return ""
+
+
+def _integrate_input(worktree: Path, diocese: str) -> str:
+    meta = diocese_dir(worktree, diocese) / "diocese.md"
+    text = meta.read_text(encoding="utf-8") if meta.exists() else ""
+    n = playbook.sizes(text)["lessons"]
+    rows = []
+    for heading, target in playbook.TARGETS.items():
+        now = playbook.size(text, heading)
+        over = f", {playbook.kb(now - target)} over" if now > target else ""
+        rows.append(f"*{heading.lstrip('# ')}*: {playbook.kb(now)} (target "
+                    f"{playbook.kb(target)}{over})")
+    rows.append(f"*New lessons*: {n} entries, "
+                f"{playbook.kb(playbook.size(text, playbook.NEW_LESSONS))}, all to fold in or drop")
+    return f"""\
+## Your job: integrate {n} new lessons
+
+The playbook in `data/dioceses/{diocese}/diocese.md` now, by section (bytes of the text
+under each heading, as `wc -c` counts them), and the size to keep each near:
+
+{_lines(rows)}
+"""
 
 
 def _answer(inputs: dict[str, Any]) -> str:

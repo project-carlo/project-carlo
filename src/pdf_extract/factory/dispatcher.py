@@ -30,6 +30,7 @@ from pdf_extract.factory.handoff import (
     PARKING_STAGES,
     SEND_BACK,
     Handoff,
+    Integrate,
     Reconcile,
     SeedReview,
     SurveyReview,
@@ -707,6 +708,7 @@ class Dispatcher:
         if handoff is not None and not problems:
             problems += self._coverage_problems(job, handoff)
             problems += self._settled_problems(run, job, handoff)
+            problems += self._rules_problems(run, worktree, handoff)
         if handoff is not None and not problems and handoff.status == HANDOFF_PARTIAL:
             return self._partial(run, job, "the handoff says partial")
         run_blocked = handoff is not None and any(
@@ -744,6 +746,35 @@ class Dispatcher:
                     or row["job_id"] == job["id"]):
                 problems.append(f"settled: flag {s.flag} is not one of the advisory flags in "
                                 "your input; use the ids shown there, as in `[#12]`")
+        return problems
+
+    def _playbooks(self, run: Any, worktree: Path) -> tuple[str, str]:
+        """`diocese.md` before the job (HEAD: the dispatcher hasn't committed it yet) and now."""
+        rel = f"data/dioceses/{run['diocese']}/diocese.md"
+        now = worktree / rel
+        return (git.git(worktree, "show", f"HEAD:{rel}", check=False),
+                now.read_text(encoding="utf-8") if now.exists() else "")
+
+    def _rules_problems(self, run: Any, worktree: Path, handoff: Handoff) -> list[str]:
+        """Integrate lists every *Rules settled* rule it merged or reworded, word for word,
+        so the PR shows the owner each change; a rule can't leave the section unlisted."""
+        if not isinstance(handoff, Integrate):
+            return []
+        before, after = ({playbook.rule_key(r): r for r in
+                          playbook.items(playbook.section_of(text, playbook.RULES))}
+                         for text in self._playbooks(run, worktree))
+        listed = {playbook.rule_key(w) for c in handoff.rules_changed for w in c.was}
+        problems = [f"rules_changed: this rule is gone from *Rules settled*, but no `was` lists "
+                    f"it. List it word for word with the rule that replaces it, or put it "
+                    f"back: {_clip(rule)}" for key, rule in before.items()
+                    if key not in after and key not in listed]
+        problems += [f"rules_changed: each `was` quotes a rule as *Rules settled* had it before "
+                     f"your job, word for word; this matches none: {_clip(w)}"
+                     for c in handoff.rules_changed for w in c.was
+                     if playbook.rule_key(w) not in before]
+        problems += [f"rules_changed: this `now` isn't a rule in *Rules settled*; copy it as you "
+                     f"wrote it there: {_clip(c.now)}" for c in handoff.rules_changed
+                     if playbook.rule_key(c.now) not in after]
         return problems
 
     def _revert_outside(self, worktree: Path, spec: StageSpec,
@@ -849,6 +880,11 @@ class Dispatcher:
                 handoff: Handoff) -> Outcome:
         self.ledger.set_job(job["id"], handoff=handoff.model_dump_json())
         job = self.ledger.job(job["id"])
+        if isinstance(handoff, Integrate):
+            # Before the commit, so HEAD is still the playbook the job started from.
+            self._once(job, "playbook", lambda: dict(zip(
+                ("before", "after"), map(playbook.sizes, self._playbooks(run, worktree)),
+                strict=True)))
         self._once(job, "verdicts", lambda: self._verdicts(run, job, worktree, handoff))
         if job["stage"] == "seed-review":
             values = self.values(run, job)
@@ -1250,3 +1286,7 @@ class Dispatcher:
 
 def _trailers(run: Any, job: Any) -> dict[str, str]:
     return {"Factory-Job": f"{run['id']}/{job['name']}", "Factory-Stage": job["stage"]}
+
+
+def _clip(text: str, n: int = 160) -> str:
+    return text if len(text) <= n else text[:n].rstrip() + "…"
