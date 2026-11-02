@@ -202,6 +202,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A finder-listed old domain can redirect to a new eCatholic site (stbartseb.com to stbartseb.org, ecatholic:22610; bulletins at files.ecatholic.com/22610/bulletins/<YYYYMMDD>.pdf, all-image PDFs).
 - Bon Venture also serves Spotswood (sponsors.bonventure.net/?page=2152, pdfs/2152/<date>.pdf, page 1 an image); its eCatholic site only links it.
 - A self-hosted bulletin list can contain unfinished uploads (Milltown: '.crdownload' files); check that the newest entries are real PDFs.
+- `probe url` answered DEAD-DNS for every host in one job (even church-bulletin.org and discovermass.com) while `probe get` fetched them: if probe url says DEAD-DNS for a live site, retry with probe get before treating the domain as dead.
+- On a Wix bulletin archive (Nativity, Monroe) each date label follows its PDF link in the HTML, so the label above a link belongs to the previous link; confirm an issue's date from its PDF text. Wix _files answers HTTP 429 after a few rapid downloads; wait and retry.
+- A parish's own site can keep a frozen 'This Week' bulletin.pdf (St. James the Less, Jamesburg: June 2025) while John Patrick (church-bulletin.org id from the old site's jppc.net template link) posts the current issue; check the newest issue date before recording the parish-hosted file.
+- A parish with no website at all (Holy Trinity, Helmetta) gets no_bulletin with its Discover Mass church page as `website`, since the record needs a URL.
 
 
 ## Rules settled for this diocese
