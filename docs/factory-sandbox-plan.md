@@ -4,7 +4,11 @@ Status: written 2026-10-31 from the code at `01926ac2` and the live factory in
 `~/carlo-factory`. Phases 0, 2, 3, 4 and 6 are built, with unit tests and container tests
 that skip without Podman. Podman is now installed and rootless. The proxy and full worker
 images build; the ten container isolation tests and the full-image smoke test pass here.
-Cloudflare parish access, token/account spikes and Phase 5 live jobs remain unverified. Where the build differs from
+Cloudflare parish access and token/account authentication/resume were verified in
+isolated pre-merge checks on 2026-11-02; see `docs/factory-sandbox-validation.md`.
+Controlled proxy redirect/rebinding checks and representative workspace refresh
+timing also passed on that date.
+Phase 5 live jobs remain unverified. Where the build differs from
 this plan, the section says so ("Built:").
 
 ## 1. Decision
