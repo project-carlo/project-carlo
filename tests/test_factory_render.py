@@ -24,7 +24,7 @@ from pdf_extract.factory import render
 from pdf_extract.factory.config import FactoryError
 from pdf_extract.factory.ledger import MAP, SEED, Ledger
 from pdf_extract.factory.quota import fingerprint
-from pdf_extract.factory.stages import STAGES, StageSpec, load_stage
+from pdf_extract.factory.spec import STAGES, StageSpec, load_stage
 
 ROOT = Path(__file__).resolve().parents[1]
 GOLDEN = Path(__file__).parent / "golden" / "factory"

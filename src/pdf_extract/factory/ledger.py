@@ -10,7 +10,7 @@ import json
 import sqlite3
 from collections.abc import Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -30,6 +30,20 @@ UNFINISHED = (QUEUED, RUNNING, GATING, WAITING_USAGE, SENT_BACK)
 # settled (answered and acted on, or an advisory flag a later job settled), or listed
 # (advisory, for the PR).
 OPEN, ANSWERED, SETTLED, LISTED = "open", "answered", "settled", "listed"
+
+
+def pending(kind: str, prompt: str | None = None) -> str:
+    """A job's pending prompt, as the ledger stores it: what its next attempt is told.
+
+    - `start`, `fresh`: no prompt pending; the first message (`render.next_prompt` decides
+      which, from the job's attempts and session).
+    - `send_back`: the gates' or a reviewer's problems.
+    - `continue`: after a partial end, a usage limit or a timeout, in the same session.
+    - `resume`: after a crash or a lost result (the dispatcher restarted, git failed, the
+      owner retried the job).
+    - `answer`: the owner's answer to the job's blocking flag.
+    """
+    return json.dumps({"kind": kind, "prompt": prompt})
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS run (
@@ -312,6 +326,14 @@ class Ledger:
     def set(self, key: str, value: Any) -> None:
         self.run_sql("INSERT INTO kv (key, value) VALUES (?, ?) ON CONFLICT (key) "
                      "DO UPDATE SET value = excluded.value", key, json.dumps(value))
+
+    def due(self, key: str, every: timedelta, at: datetime) -> bool:
+        """True, and marked done at `at`, if `key` last ran `every` or more ago (or never)."""
+        last = self.get(key)
+        if last and at - datetime.fromisoformat(last) < every:
+            return False
+        self.set(key, at.isoformat())
+        return True
 
     # ── Runs ────────────────────────────────────────────────────────────────
     def run(self, run_id: str) -> sqlite3.Row:

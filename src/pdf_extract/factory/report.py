@@ -41,7 +41,7 @@ from pdf_extract.factory.quota import (
     range_text,
     work_units,
 )
-from pdf_extract.factory.stages import load_stage, parse_stage, spec_path
+from pdf_extract.factory.spec import load_stage, parse_stage, spec_path
 from pdf_extract.factory.workers import strip_frontmatter
 
 Commands = Callable[[str, Path], tuple[bool, str]]
