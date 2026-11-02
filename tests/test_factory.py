@@ -22,8 +22,9 @@ from typing import Any
 import pytest
 
 from pdf_extract.blobstore import BlobStoreError
-from pdf_extract.factory import dispatcher as dispatcher_mod
+from pdf_extract.factory import accounts as accounts_mod
 from pdf_extract.factory import forge as forge_mod
+from pdf_extract.factory import git as git_mod
 from pdf_extract.factory import playbook, readiness, render, report
 from pdf_extract.factory.backfill import backfill
 from pdf_extract.factory.config import Account, Config, FactoryError, load_config
@@ -57,7 +58,7 @@ from pdf_extract.factory.quota import (
     Span,
     combine,
 )
-from pdf_extract.factory.stages import in_scope, load_stage
+from pdf_extract.factory.spec import in_scope, load_stage
 from pdf_extract.factory.tokens import from_result, parse_transcript
 from pdf_extract.factory.usage import (
     Standing,
@@ -232,7 +233,7 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
 
 
 def _read_files() -> set[str]:
-    from pdf_extract.factory.stages import STAGES, load_stage
+    from pdf_extract.factory.spec import STAGES, load_stage
 
     return {entry.partition("#")[0] for stage in STAGES
             for entry in load_stage(stage, ROOT).reads}
@@ -348,7 +349,7 @@ def test_a_job_that_fails_before_its_first_attempt_claims_no_leads(
         d.tick()
         if env.ledger.one("SELECT 1 FROM job WHERE stage = 'map' AND status = ?", DONE):
             break
-    real, armed = dispatcher_mod.git.head, [True]
+    real, armed = git_mod.head, [True]
 
     def head(cwd: Path) -> str:  # git fails once, between the input and the attempt
         if armed:
@@ -356,7 +357,7 @@ def test_a_job_that_fails_before_its_first_attempt_claims_no_leads(
             raise FactoryError("git rev-parse HEAD: failed on purpose")
         return real(cwd)
 
-    monkeypatch.setattr(dispatcher_mod.git, "head", head)
+    monkeypatch.setattr(git_mod, "head", head)
     assert d.tick().action == "waiting"
     b1 = env.ledger.jobs(map_run(env)["id"], "map")[1]
     assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", b1["id"])
@@ -623,7 +624,7 @@ def test_a_crash_resumes_the_session_and_a_restart_resumes_a_running_job(env: En
     review = env.ledger.add_job(survey["run_id"], "survey-review", {"survey_job": survey["id"]})
     env.ledger.set_job(review, status=RUNNING, session_id="lost-session")
     d2 = env.dispatcher(map_script())
-    d2._recover()
+    d2.attempts.recover()
     drive(d2)
     assert env.ledger.job(review)["status"] == DONE
     assert env.worker.calls[0].session_id == "lost-session"
@@ -698,11 +699,11 @@ def test_answers_while_the_run_is_active_requeue_the_job(env: Env) -> None:
         d.tick()
     run = map_run(env)
     env.answer(1, None)  # closed with no answer: reopened, nothing changes
-    d.poll_issues()
+    d.answers.poll_issues()
     issue = env.forge.issue(1)
     assert issue.state == "OPEN" and "without an answer" in issue.comments[-1].body
     env.answer(1, "/accept")
-    d.poll_issues()
+    d.answers.poll_issues()
     requeued = env.ledger.jobs(run["id"], "map")[-1]
     data = json.loads(requeued["input"])
     assert data["answer"] == "Exclude it as closed." and data["entries"] == ["directory:3"]
@@ -734,13 +735,13 @@ def test_answers_after_the_pr_opened_go_to_a_follow_up_run(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "It is open; map it.")
-    d.poll_issues()
+    d.answers.poll_issues()
     follow = next(r for r in env.ledger.runs() if r["follow_up_of"] == run["id"])
     assert follow["status"] == PENDING and follow["id"] == f"{D}-map-2"
     assert drive(d)[-1].startswith("idle")  # waits for the first PR to merge
     git(Path(run["worktree"]), "push", "-q", "origin", "HEAD:main")
     git(env.repo, "fetch", "-q", "origin")
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == MERGED
     # Its worktree and local branch are gone; its scratch was kept for foreman reviews.
     assert not Path(run["worktree"]).exists()
@@ -760,10 +761,10 @@ def test_a_squash_merged_pr_counts_as_merged(env: Env) -> None:
     d = env.dispatcher(map_script())
     drive(d)
     run = map_run(env)
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     env.forge.merge_pr(run["pr_url"])  # squashed: the Run's commits aren't in main
-    d.check_merged()
+    d.housekeeping.check_merged()
     assert env.ledger.run(run["id"])["status"] == MERGED
 
 
@@ -802,7 +803,7 @@ def test_github_failing_again_and_again_blocks_the_run(env: Env) -> None:
     # Once it's fixed and the issue closed, the job carries on where it stopped.
     env.forge.open_pr = open_pr  # type: ignore[method-assign]
     env.answer(1, "Signed in to gh again.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert map_run(env)["status"] == IN_REVIEW
     assert len(env.ledger.jobs(map_run(env)["id"], "pr")) == 1
@@ -890,7 +891,7 @@ def test_a_run_level_flag_blocks_until_answered(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
@@ -913,10 +914,10 @@ def test_every_answer_to_a_jobs_run_level_flags_reaches_it(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     assert env.ledger.run(run["id"])["status"] == BLOCKED  # the other issue is still open
     env.answer(2, "Yes, Lewes.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
@@ -938,13 +939,13 @@ def test_a_run_level_flag_raised_again_after_its_answer_is_asked_again(env: Env)
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     # The same question again is a new issue, not a Run blocked with nothing to answer.
     assert env.ledger.run(run["id"])["status"] == BLOCKED
     assert [f["issue_number"] for f in env.ledger.flags(run["id"], "open")] == [2]
     env.answer(2, "Still b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
     assert len(env.ledger.jobs(run["id"], "reconcile")) == 1
@@ -964,7 +965,7 @@ def test_an_answered_job_needs_a_new_handoff(env: Env) -> None:
     drive(d)
     run = map_run(env)
     env.answer(1, "St. Bede belongs to b1.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     reconcile = env.ledger.jobs(run["id"], "reconcile")[0]
     assert reconcile["send_backs"] == 1  # the first handoff didn't count again
@@ -988,7 +989,7 @@ def test_an_issue_github_refused_is_opened_on_a_later_poll(env: Env) -> None:
     assert run["status"] == BLOCKED
     flag = env.ledger.flags(run["id"], "open")[0]
     assert flag["issue_number"] is None
-    d.poll_issues()
+    d.answers.poll_issues()
     assert env.ledger.flags(run["id"], "open")[0]["issue_number"] == 1
 
 
@@ -1003,7 +1004,7 @@ def test_crashes_count_again_once_the_owner_unblocks_the_job(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED and "crashed 3 times" in run["blocked_reason"]
     env.answer(1, "The SDK is fixed; go again.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     survey = env.ledger.jobs(run["id"], "survey")[0]
     assert survey["status"] == DONE
@@ -1023,7 +1024,7 @@ def test_a_failed_worktree_setup_runs_again(env: Env) -> None:
     run = map_run(env)
     assert run["status"] == BLOCKED
     env.answer(1, "Fixed the lockfile.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     assert env.commands_run.count("uv sync") == 2
     assert env.ledger.run(run["id"])["status"] == IN_REVIEW
@@ -1210,7 +1211,7 @@ def test_seed_verdicts_applied_again_keep_their_approvals(env: Env) -> None:
                               / "handoff.json", "seed-review")
     approvals = len([c for c in env.commands_run if c.startswith("pnpm seed approve")])
     # A resumed review, a retry or a restart applies them again.
-    assert d._seed_verdicts(env.ledger.run(run["id"]), review, Path(run["worktree"]),
+    assert d.engine._seed_verdicts(env.ledger.run(run["id"]), review, Path(run["worktree"]),
                             handoff) == ["st-clare"]
     assert len([c for c in env.commands_run if c.startswith("pnpm seed approve")]) == approvals
     clare = env.ledger.jobs(run["id"], "seed")[0]
@@ -1324,7 +1325,7 @@ def test_approvals_that_fail_their_check_are_kept_for_the_resumed_review(env: En
     assert "approvals, check failing" in git(wt, "log", "-1", "--format=%s")
     assert not git(wt, "status", "--porcelain")
     env.answer(1, "Fixed the seed by hand.")
-    d.poll_issues()
+    d.answers.poll_issues()
     drive(d)
     review = env.ledger.jobs(run["id"], "seed-review")[0]
     assert env.ledger.job(review["id"])["send_backs"] == 0  # not blamed for the approvals
@@ -1416,8 +1417,8 @@ def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env)
                        parishes=[])
     make_db(env.tmp / "parish_events.db", {"a": 2, "b": 0})
     d = env.dispatcher(seed_script)
-    d.check_readiness()
-    d.check_readiness()
+    d.housekeeping.check_readiness()
+    d.housekeeping.check_readiness()
     seed_runs = [r for r in env.ledger.runs(PENDING) if r["kind"] == SEED]
     assert len(seed_runs) == 1 and json.loads(seed_runs[0]["parishes"]) == ["a"]
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
@@ -1432,7 +1433,7 @@ def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(en
                        parishes=[])
     make_db(env.tmp / "parish_events.db", {"a": 2, "b": 2, "g": 0})
     d = env.dispatcher(seed_script)
-    d.check_readiness()
+    d.housekeeping.check_readiness()
     run = next(r for r in env.ledger.runs(PENDING) if r["kind"] == SEED)
     assert json.loads(run["parishes"]) == ["a", "b"]
     assert "1 wait on a collector" in run["notes"]
@@ -1549,7 +1550,7 @@ def test_a_usage_limit_without_a_session_keeps_what_the_job_was_told(env: Env) -
 
     env.failing["diocese validate"] = 1  # attempt 1 is sent back
     d = env.dispatcher(map_script(survey=surveying))
-    d.worker = env.worker = NoSession(map_script(survey=surveying))
+    d.attempts.worker = env.worker = NoSession(map_script(survey=surveying))
     drive(d)
     env.now += timedelta(hours=2)
     drive(d)
@@ -1644,7 +1645,7 @@ def test_write_globs() -> None:
 
 
 def test_stage_specs_load_and_cover_every_stage() -> None:
-    from pdf_extract.factory.stages import STAGES, load_stage
+    from pdf_extract.factory.spec import STAGES, load_stage
 
     for stage in STAGES:
         spec = load_stage(stage, ROOT)
@@ -1654,7 +1655,7 @@ def test_stage_specs_load_and_cover_every_stage() -> None:
 
 
 def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
-    from pdf_extract.factory.stages import load_stage
+    from pdf_extract.factory.spec import load_stage
 
     (tmp_path / "factory" / "stages").mkdir(parents=True)
     (tmp_path / "factory" / "stages" / "map.yaml").write_text(
@@ -2264,7 +2265,7 @@ def test_rate_limit_events_are_scrubbed_and_never_stop_the_attempt(
 
 def test_a_slow_after_reading_does_not_hold_up_the_gates(
         env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(dispatcher_mod, "AFTER_READING_WAIT", 0.2)
+    monkeypatch.setattr(accounts_mod, "AFTER_READING_WAIT", 0.2)
     meter, spend = metered(env)
     release = threading.Event()
 

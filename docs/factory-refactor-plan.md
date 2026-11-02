@@ -154,11 +154,13 @@ factory/                       # unchanged places; read from the Run's worktree
   prompts/<stage>.md
 
 src/pdf_extract/factory/
-  engine.py                    # tick, pick, attempt, gates, send-back, block; no stage names
+  dispatcher.py                # the loop and the wiring of the parts below
+  engine.py                    # pick, one job, gates, send-back, block; no stage names
   attempts.py                  # pending prompts: start, fresh, send-back, continue, resume, answer
   accounts.py                  # choosing an account against the caps, cooldowns
   answers.py                   # issues → answers → requeue, follow-up Runs
   housekeeping.py              # merged Runs, retire, readiness, backups
+  outcome.py                   # what a tick did
   render.py                    # every piece of worker-facing text code builds
   spec.py                      # stage spec loading (today's stages.py)
   stages/                      # later, one stage at a time (§3.2)
@@ -412,6 +414,29 @@ Built in the PR after #187. Where it differs from the bullets below:
 - After the next full Run: decide on a hard budget gate from its sizes.
 
 ### Phase 4: the engine split (no worker-visible change)
+
+Built in the PR after #188. Where it differs from the bullets below:
+
+- The parts are objects with one-way dependencies, not one class split over five files:
+  `accounts` and `answers` depend on no other part, `housekeeping` on those two,
+  `attempts` on `accounts`, and `engine` on `attempts` and `answers`. An attempt whose end
+  needs the engine (a crash past `max_crashes`, a partial end, a finished attempt to gate)
+  returns `attempts.Ended`, and the engine acts on it.
+- `dispatcher.py` keeps the loop (pause, usage cooldown, housekeeping, one job) and builds
+  the parts; `Engine` has no `tick`. `Engine.run_job` takes one job a step: the usage
+  wait, then the work, with git and GitHub failures retried.
+- The quota readings (`sample_quota`, the after reading, rate-limit events) are in
+  `accounts.py`, and `_record_meta` in `attempts.py`, until Phase 5 moves them.
+- `Outcome` is in `outcome.py`, so the parts don't import each other in a circle.
+  `Ledger.due` replaces `_due`, which the quota sampling and housekeeping both use.
+- The dispatcher writes every pending prompt through `attempts.pending()`, whose
+  docstring lists the kinds.
+- Tests call the parts (`d.answers.poll_issues()`, `d.engine._seed_verdicts(...)`)
+  instead of forwarding methods on `Dispatcher`. The suite already drives a whole seed
+  Run (`test_seed_run_reviews_approves_and_records_decisions`), so no scenario was added.
+  The `USAGE_COOLDOWN` reach-ins were already gone (Phase 0 moved it to config).
+- Log lines now name the part (`pdf_extract.factory.engine`, `.accounts`...), not
+  `pdf_extract.factory.dispatcher`.
 
 - Mechanical moves only: split `dispatcher.py` into `engine.py`, `attempts.py`,
   `accounts.py`, `answers.py` and `housekeeping.py`; rename `stages.py` to `spec.py`.

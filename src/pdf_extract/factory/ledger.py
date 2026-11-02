@@ -10,7 +10,7 @@ import json
 import sqlite3
 from collections.abc import Iterator
 from contextlib import contextmanager
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -312,6 +312,14 @@ class Ledger:
     def set(self, key: str, value: Any) -> None:
         self.run_sql("INSERT INTO kv (key, value) VALUES (?, ?) ON CONFLICT (key) "
                      "DO UPDATE SET value = excluded.value", key, json.dumps(value))
+
+    def due(self, key: str, every: timedelta, at: datetime) -> bool:
+        """True, and marked done at `at`, if `key` last ran `every` or more ago (or never)."""
+        last = self.get(key)
+        if last and at - datetime.fromisoformat(last) < every:
+            return False
+        self.set(key, at.isoformat())
+        return True
 
     # ── Runs ────────────────────────────────────────────────────────────────
     def run(self, run_id: str) -> sqlite3.Row:

@@ -59,7 +59,7 @@ from pdf_extract.factory.ledger import (
     Ledger,
     now,
 )
-from pdf_extract.factory.stages import STAGES
+from pdf_extract.factory.spec import STAGES
 
 Result = dict[str, Any]
 
@@ -75,7 +75,7 @@ def _status(args: argparse.Namespace) -> Result:
 
 
 def _queue(args: argparse.Namespace) -> Result:
-    from pdf_extract.factory.dispatcher import main_queue
+    from pdf_extract.factory.engine import main_queue
 
     return report.queue(_ledger(args), main_queue(_repo(), load_config().upstream))
 
