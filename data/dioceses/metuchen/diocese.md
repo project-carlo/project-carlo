@@ -206,6 +206,12 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - On a Wix bulletin archive (Nativity, Monroe) each date label follows its PDF link in the HTML, so the label above a link belongs to the previous link; confirm an issue's date from its PDF text. Wix _files answers HTTP 429 after a few rapid downloads; wait and retry.
 - A parish's own site can keep a frozen 'This Week' bulletin.pdf (St. James the Less, Jamesburg: June 2025) while John Patrick (church-bulletin.org id from the old site's jppc.net template link) posts the current issue; check the newest issue date before recording the parish-hosted file.
 - A parish with no website at all (Holy Trinity, Helmetta) gets no_bulletin with its Discover Mass church page as `website`, since the record needs a URL.
+- A parish site that links `/about-us/bulletin/<n>-<title>/file` (Joomla, Queenship of Mary) answers 403 to probe get and fetch:check finds no PDFs; a fetch() inside the real Chrome page returns the PDF (tools/browser_get.py). Record fetch_gap joomla-file-endpoint.
+- SermonCloud embeds (St. Charles Borromeo, Skillman) hold bulletins as media.notes S3 PDF URLs in api.sermoncloud.com/<account>/sermons; find the API with tools/net_log.py. Record fetch_gap sermoncloud-api-embed.
+- A parish can host its eCatholic bulletin and have the same file on a ParishesOnline container (St. Augustine, Kendall Park: container 03/4080); compare pdftotext output, record the parish-hosted copy and list both ids.
+- The finder's old domain can be taken over by spam (staugustinenj.org, still printed in the bulletin); the live site was parish.staugustinenj.org, found with ddg.sh.
+- Several sites in one batch can all report DEAD-DNS from probe url while probe get gets 403 and visit.py loads them: use the browser rather than treating the domains as dead.
+- A Bonventure account number identifies one parish; different accounts on sponsors.bonventure.net are not a shared bulletin (record separate publication_reviews from the mastheads).
 
 
 ## Rules settled for this diocese
