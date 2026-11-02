@@ -375,7 +375,8 @@ CSV edits show up in previews and go live on merge.
   `analytics.md`) and design plans (`*-plan.md`)
 - `tests/` - pytest suite, with recorded parish sites under `tests/fixtures/fetch/`
 - `.github/workflows/` - CI, the weekly run, publishing and deploys
-- `.claude/skills/` - skills for agents working on dioceses, seeds and the factory
+- `.claude/skills/` - skills for agents working on dioceses, seeds, the factory and the
+  mobile app on the Android emulator
 
 ## Development
 

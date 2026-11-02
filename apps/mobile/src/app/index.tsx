@@ -9,15 +9,16 @@ const snapshot = parseSnapshot(JSON.stringify(fixture));
 export default function ExploreScreen() {
   return (
     <FlatList
+      testID="church-list"
       data={snapshot.churches}
       keyExtractor={(church) => church.slug}
       ListHeaderComponent={
-        <Text style={styles.header}>
+        <Text testID="church-count" style={styles.header}>
           {snapshot.churches.length} churches, {snapshot.events.length} events
         </Text>
       }
       renderItem={({ item }) => (
-        <View style={styles.row}>
+        <View testID={`church-row-${item.slug}`} style={styles.row}>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.city}>
             {item.city}, {item.state}
