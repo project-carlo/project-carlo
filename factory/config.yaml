@@ -4,12 +4,12 @@
 # Usage caps, in percent of each account's limit. A job starts on an account only if its
 # usage plus the job's expected usage (job_usage), plus that of any jobs already running
 # on it, stays under both caps.
-five_hour_cap: 85
+five_hour_cap: 95
 weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
 
 # What one attempt of a stage's job is expected to use, in points of each window: about
 # the 75th percentile of past jobs (`pnpm factory quota`; one five-hour point ≈ $0.14 of
-# the API-price cost). A stage not listed counts as 0. Map: a job starts below 75% five-hour.
+# the API-price cost). A stage not listed counts as 0. Map: a job starts below 85% five-hour.
 job_usage:
   survey:        { five_hour: 40, weekly: 3 }
   survey-review: { five_hour: 8, weekly: 1 }

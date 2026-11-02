@@ -62,7 +62,7 @@ JOB_USAGE = {
 class Config:
     # A job starts only if its account's usage, plus what the job is expected to use, plus
     # what jobs already running on the account are expected to use, stays under both caps.
-    five_hour_cap: float = 85
+    five_hour_cap: float = 95
     weekly_cap: float = 100
     # What a stage's job is expected to use (`job_usage_for`); a stage not listed, nothing.
     job_usage: dict[str, JobUsage] = field(default_factory=lambda: dict(JOB_USAGE))

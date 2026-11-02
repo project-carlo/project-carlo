@@ -207,7 +207,7 @@ Each tick:
    `GET https://api.anthropic.com/api/oauth/usage` with that account's Claude Code login
    token, the call T3 Code makes. An account can take a new job only if its usage plus
    what the job is expected to use stays under both of its limits:
-   - **5-hour:** below `five_hour_cap` (default 85%);
+   - **5-hour:** below `five_hour_cap` (default 95%);
    - **weekly, paced:** below `weekly_cap × (days into the week + 1) ÷ 7` (default cap
      100%): 1/7 of the weekly allowance on day 1, 2/7 on day 2, up to 7/7 on day 7.
      Days start at the account's weekly reset time, so the factory can use the full weekly
@@ -216,7 +216,7 @@ Each tick:
    What a job is expected to use is its stage's `job_usage` in `factory/config.yaml`,
    points of each window set from past jobs, so a survey (about 40 five-hour points)
    needs much more room than a map batch (about 10): with the default caps, a map job
-   starts below 75% five-hour and a survey below 45%. Jobs already running on the account
+   starts below 85% five-hour and a survey below 55%. Jobs already running on the account
    add their own `job_usage`, so jobs run in parallel don't count the same room twice.
    A job expected to use the whole cap or more starts only from an unused window. The
    estimate only decides when to start: a job that runs past the cap is not stopped.
