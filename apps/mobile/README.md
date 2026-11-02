@@ -86,6 +86,16 @@ One-time setup (the root steps need sudo; the rest installs under your home):
    PATH="$HOME/.maestro/maestro/bin:$JAVA_HOME/bin:$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
    ```
 
+7. **T3 Code's Device panel** (optional). To watch and drive the emulator from
+   T3 Code, turn on device support in T3 Code and put an `ffmpeg` built with
+   the libx264 encoder on `PATH`, since the panel streams the screen as H.264.
+   Without it, opening the emulator fails with "Android emulator video needs
+   working ffmpeg with the libx264 encoder". Ubuntu's `ffmpeg` package works;
+   without sudo, unpack a static GPL build such as
+   [BtbN's](https://github.com/BtbN/FFmpeg-Builds/releases) to
+   `~/.local/opt/ffmpeg` and link `bin/ffmpeg` into `~/.local/bin`.
+   `ffmpeg -hide_banner -encoders | grep libx264` should list it.
+
 Day to day:
 
 ```bash
@@ -98,8 +108,8 @@ pnpm e2e:mobile -e METRO_URL=http://127.0.0.1:<port>
 
 `pnpm build:android` runs Gradle at low CPU priority and stops the Gradle and
 Kotlin daemons when it finishes (they hold about 4 GB while idle), so a running
-emulator survives the build. Drop `-no-window` to watch the emulator in a window
-(needs WSLg). `pnpm device:mobile`
+emulator survives the build. To watch the emulator, open it in T3 Code's Device
+panel (step 7), or drop `-no-window` for a window (needs WSLg). `pnpm device:mobile`
 picks a free Metro port per worktree, so several worktrees can share one
 emulator, though only one of them drives the app at a time. With several devices
 attached, set `ANDROID_SERIAL`. The first Gradle build takes several minutes;

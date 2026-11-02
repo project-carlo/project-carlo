@@ -11,6 +11,27 @@ if `adb`, `emulator` or `maestro` is missing, point the owner there rather than
 installing system packages yourself. Run commands from the repository root of your
 worktree.
 
+## In T3 Code: use the Device panel
+
+If you have T3 Code's device tools (`device_list`, `device_open`), use them so the
+owner can watch the emulator in the Device panel:
+
+- `device_open` with the `carlo-api36` AVD boots it if needed (skip step 1) and
+  returns an `agent-device` command bound to it. If it fails with "needs working
+  ffmpeg with the libx264 encoder", point the owner to step 7 of the README setup.
+- Build, Metro and Maestro work as below (steps 2 to 4). For your own launches,
+  taps, scrolls and screenshots, use `agent-device` and `device_screenshot`
+  rather than `adb shell am start`, `adb shell input` or `adb exec-out screencap`.
+  To open the app at your Metro, run `pnpm device:mobile --no-open`, then
+  `<agent-device> open com.projectcarlo.app --relaunch --metro-port <port>`. On a
+  busy emulator it can fail with "remained foreground after close"; run it again.
+- Check the screen through its accessibility tree: `<agent-device> snapshot -i`
+  lists `testID`s such as `church-list`, and `<agent-device> wait 'id=church-count'`
+  waits for one.
+- After a cold boot Android often shows "System UI isn't responding".
+  `agent-device` won't tap that dialog's buttons; `<agent-device> alert dismiss`
+  closes it.
+
 ## 1. Make sure an emulator is running
 
 ```bash
@@ -79,7 +100,8 @@ Screenshots, logs and failure artifacts go to `apps/mobile/.maestro/output/`
 possible, and give every new interactive element a `testID` and an accessibility
 label. Add or extend a flow for user-visible behavior you change.
 
-**Screenshot** of the current screen, then read the PNG to look at it:
+**Screenshot** of the current screen (in T3 Code, `device_screenshot` instead),
+then read the PNG to look at it:
 
 ```bash
 adb exec-out screencap -p > /tmp/carlo-screen.png

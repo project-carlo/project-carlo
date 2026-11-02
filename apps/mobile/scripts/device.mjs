@@ -29,8 +29,12 @@ const { values: args } = parseArgs({
   },
 });
 
+// Set once Metro starts, so a later failure doesn't leave it running.
+let metro = null;
+
 function fail(message) {
   console.error(`device: ${message}`);
+  metro?.kill("SIGTERM");
   process.exit(1);
 }
 
@@ -123,7 +127,7 @@ if (!isInstalled()) {
 const port = await pickPort();
 const metroUrl = `http://127.0.0.1:${port}`;
 
-const metro = spawn("pnpm", ["exec", "expo", "start", "--dev-client", "--port", String(port)], {
+metro = spawn("pnpm", ["exec", "expo", "start", "--dev-client", "--port", String(port)], {
   cwd: appDir,
   stdio: "inherit",
 });
@@ -151,14 +155,19 @@ metro.on("exit", (code) => {
 });
 
 await waitForMetro(port, metro);
-adb("reverse", `tcp:${port}`, `tcp:${port}`);
 
 // disableAutoLaunch skips the development client's onboarding and its menu at launch.
 const devClientUrl =
   `${devClientScheme}://expo-development-client/` +
   `?url=${encodeURIComponent(metroUrl)}&disableAutoLaunch=1`;
-if (!args["no-open"]) {
-  adb("shell", "am", "start", "-a", "android.intent.action.VIEW", "-d", `'${devClientUrl}'`, packageName);
+try {
+  adb("reverse", `tcp:${port}`, `tcp:${port}`);
+  if (!args["no-open"]) {
+    adb("shell", "am", "start", "-a", "android.intent.action.VIEW", "-d", `'${devClientUrl}'`, packageName);
+  }
+} catch (error) {
+  cleanUp();
+  fail(`adb failed: ${error.stderr?.trim() || error.message}`);
 }
 
 console.log(`
