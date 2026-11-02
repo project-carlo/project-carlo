@@ -6,7 +6,7 @@ five_hour_cap: 75
 weekly_cap: 100   # paced: below weekly_cap × (days into the week + 1) ÷ 7
 
 max_send_backs: 2
-lessons_before_integrate: 8
+lessons_before_integrate: 15   # integrate runs once more after the last batch
 
 # A job's attempts. The Run blocks after max_crashes worker crashes, or after
 # max_failures git or GitHub failures in a row (retried every failure_retry_minutes).

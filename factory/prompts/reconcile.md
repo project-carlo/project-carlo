@@ -46,10 +46,6 @@ parishes.
    structured `research`, never a guess.
 7. **Log.** A dated line at the top of `diocese.md`'s *Log*: the coverage numbers, how many
    batches ran and their usual size, and what you merged or moved.
-8. **Last integrate.** Merge `## New lessons` into `### Bulletin publishers here` (a
-   publisher's method) and `## Rules settled for this diocese` (a decision for more than
-   one record, with who made it and when). Drop parish detail, which is in the records,
-   and anything already said. Leave the *New lessons* heading with nothing under it.
 
 ## Write boundaries
 

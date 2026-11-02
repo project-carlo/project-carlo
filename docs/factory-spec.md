@@ -50,7 +50,8 @@ skill) in a separate PR. The factory never changes `rules.md`.
 
 ```
 survey ─▶ survey-review ─▶ map × each batch ─▶ reconcile ─▶ promote ─▶ PR ─▶ (you merge)
-                           integrate whenever New lessons passes 8 entries
+                           integrate whenever New lessons passes 15 entries,
+                           and once more before reconcile if any wait
 ```
 
 **Seed Run**, once enough parishes have 2 bulletins (§11)
@@ -82,8 +83,8 @@ for each batch: seed × each parish ─▶ seed-review ──▶ PR ─▶ (you 
 | survey | map | agent | Opus, high | `init`, rosters, `diocese.md` intro and sources, `batches.json` | `batches validate`, `diocese validate` |
 | survey-review | map | reviewer | Opus | Checks grouping, exclusion reasons and proposed rules | none |
 | map | map | agent | Sonnet, high | Maps about 4 parishes: bulletin source, churches, exclusions and open records | `diocese validate` |
-| integrate | map | agent | Opus | Merges *New lessons* into the playbook in `diocese.md` | `diocese validate` |
-| reconcile | map | agent | Opus | `coverage --link`, `audit --fetch`, peer `publication_reviews`, merges across batches, `fetch:check --diocese`, a last integrate | `batches validate`, `diocese validate` |
+| integrate | map | agent | Opus | Folds *New lessons* into the playbook in `diocese.md` and keeps it near its target sizes; may condense *Rules settled*, listing each rule it merged or reworded | `diocese validate`; every rule gone from *Rules settled* is in its `rules_changed` |
+| reconcile | map | agent | Opus | `coverage --link`, `audit --fetch`, peer `publication_reviews`, merges across batches, `fetch:check --diocese` | `batches validate`, `diocese validate` |
 | promote | map | code | none | `promote --dry-run`, `promote`, `uv run pytest`, lint, commit | its own exit codes |
 | seed | seed | agent | Sonnet, high | Drafts one parish's seed | `seed check` |
 | seed-review | seed | reviewer | Opus | Answers every open question in the batch (by a rule, the diocese's precedents or its own judgment) and approves each seed; sends a seed back only for an error an answer can't fix (§8) | `seed check` on approved files |
@@ -97,9 +98,14 @@ What a map job learns reaches later batches in three ways:
   and the dispatcher adds it to that batch's job input.
 - **Lessons** are appended by the dispatcher, as written, to *New lessons* in
   `diocese.md`, which every later map job's input includes, with *Bulletin publishers
-  here* and *Rules settled*. When the list passes 8 entries, the next
-  job is `integrate`, which merges them into *Bulletin publishers here* and *Rules
-  settled*, keeps only what's reusable, and empties the list.
+  here* and *Rules settled*. When the list passes 15 entries, and once more after the
+  last batch, the next job is `integrate`, which folds them into *Bulletin publishers
+  here* and *Rules settled*, drops one parish's detail (it is in the records), and empties
+  the list. Its input gives each section's size and a target (publishers 8 KB, rules
+  6 KB, `playbook.TARGETS`). It may condense *Rules settled*, never changing what a rule
+  decides; its handoff's `rules_changed` lists every rule it merged or reworded, word for
+  word, the dispatcher sends it back if a rule left the section unlisted, and the PR
+  shows the list.
 - **Fixes across batches** (a merge, a church that belongs to another parish) are raised
   as advisory flags and handled by `reconcile`, which names each flag it settles so the PR
   stops listing it as open (§7).
@@ -387,7 +393,9 @@ a stage's recent jobs, or a Run, and it tells you what went wrong and how to imp
 - The `pr` code step writes the PR summary from the ledger and the CLIs:
   - **map Run:** coverage numbers, the `open/` records with what would settle each, the
     fetch gaps by kind, advisory flags still open, the flags settled during the Run
-    (collapsed), parked parishes, and `reconcile`'s lessons for every diocese;
+    (collapsed), parked parishes, the playbook's sizes (final and after each
+    `integrate`) with every rule `integrate` merged or reworded, and `reconcile`'s
+    lessons for every diocese;
   - **seed Run:** seeds by status, advisory flags, parked parishes, and **every decision
     `seed-review` made**, by judgment, by precedent and by a rule, each with the parish
     and slot, the drafter's lean, the choice and why. Answers against the lean come first.

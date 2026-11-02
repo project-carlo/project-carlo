@@ -27,8 +27,13 @@ gives an owner's answer instead, you map only the entries it names, following th
   a wrong roster entry) is a lead, with `touches` set to its batch id or `roster:id`. A fix
   across batches (a merge, a church that belongs to another batch's row) is an advisory
   flag; `reconcile` settles those once every batch is mapped.
-- A reusable lesson goes in your handoff's `lessons`, not in `diocese.md`: the dispatcher
-  adds it to *New lessons*, and `integrate` merges those into the playbook.
+- A lesson is for the batches after yours: a publisher's method (how to recognise its
+  sites, read its issues or record them; an id pattern; a download cap) or a decision
+  that applies to several records. Never one parish's detail (its URL, masthead, address,
+  closure, or which publisher prints it): that is in its records, and no later batch maps
+  that parish. Nor what the playbook or the README already says. Most batches have one
+  or two lessons, or none. They go in your handoff's `lessons`, not in `diocese.md`: the
+  dispatcher adds them to *New lessons*, and `integrate` folds those into the playbook.
 - A script the next map job could use goes in the tools folder, with one line in its
   `README.md`: what it does and how to run it.
 

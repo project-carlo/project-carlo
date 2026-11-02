@@ -67,6 +67,16 @@ class Reconcile(Handoff):
         return v
 
 
+class RuleChange(_Strict):
+    was: list[str] = Field(min_length=1)  # the rules it replaces, as they stood
+    now: str = Field(min_length=1)  # the rule that replaces them
+
+
+class Integrate(Handoff):
+    # Each *Rules settled* rule merged or reworded, for the owner to check in the PR.
+    rules_changed: list[RuleChange] = []
+
+
 class SurveyReview(Handoff):
     verdict: Literal["approve", "send_back"]
     problems: list[str] = []
@@ -95,7 +105,7 @@ class SeedReview(Handoff):
 
 
 MODELS: dict[str, type[Handoff]] = {"survey-review": SurveyReview, "seed-review": SeedReview,
-                                     "reconcile": Reconcile}
+                                     "reconcile": Reconcile, "integrate": Integrate}
 # Only these stages can set a parish aside: answering requeues the parish's own job.
 PARKING_STAGES = ("map", "seed")
 

@@ -13,7 +13,7 @@ from typing import Any
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 from pdf_extract.dioceses.records import parse_file
-from pdf_extract.factory import git, render
+from pdf_extract.factory import git, playbook, render
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.ledger import (
     ACTIVE,
@@ -579,6 +579,51 @@ def _flag_lines(rows: list[Any]) -> list[str]:
             + (f" (#{f['issue_number']})" if f["issue_number"] else "") for f in rows] or ["- none"]
 
 
+# Past this, the rules integrate changed are cut short, to keep the PR under GitHub's
+# 65,536-character limit; the integrate commits' diffs of `diocese.md` have them whole.
+RULE_CHANGES_CHARS = 30_000
+
+
+def _playbook_lines(ledger: Ledger, jobs: list[Any], worktree: Path, diocese: str) -> list[str]:
+    """The playbook's sizes as the PR leaves it and after each integrate, and every rule
+    integrate merged or reworded, for the owner to check it still decides the same."""
+    kb, targets = playbook.kb, playbook.TARGETS
+    meta = diocese_dir(worktree, diocese) / "diocese.md"
+    final = playbook.sizes(meta.read_text(encoding="utf-8") if meta.exists() else "")
+    lines = [f"*Bulletin publishers here* {kb(final['publishers'])} (target "
+             f"{kb(targets[playbook.PUBLISHERS])}), *Rules settled* {kb(final['rules'])} "
+             f"(target {kb(targets[playbook.RULES])})"
+             + (f"; {final['lessons']} new lessons not folded in." if final["lessons"] else ".")]
+    integrates = [j for j in jobs if j["stage"] == "integrate" and j["status"] == "done"]
+    steps = []
+    for j in integrates:
+        if sizes := ledger.action_result(j["id"], "playbook"):
+            b, a = sizes["before"], sizes["after"]
+            steps.append(f"- `{j['name']}`, {b['lessons']} lessons: publishers "
+                         f"{kb(b['publishers'])} → {kb(a['publishers'])}, rules "
+                         f"{kb(b['rules'])} → {kb(a['rules'])}")
+    if steps:
+        lines += ["", "Each integrate, before → after:", "", *steps]
+    changes = [(j["name"], c) for j in integrates
+               for c in json.loads(j["handoff"] or "{}").get("rules_changed") or []]
+    if not changes:
+        return lines
+    cut = sum(len(c["now"]) + sum(map(len, c["was"])) for _, c in changes) > RULE_CHANGES_CHARS
+
+    def text(t: str) -> str:
+        t = _one_line(t)
+        return t[:300].rstrip() + "…" if cut and len(t) > 300 else t
+
+    lines += ["", "### Rules integrate merged or reworded", "",
+              "Each should decide what the rules it replaced did; fix any that doesn't."
+              + (" Cut short to fit: the integrate commits' diffs of `diocese.md` have them "
+                 "whole." if cut else ""), ""]
+    for name, c in changes:
+        lines.append(f"- **Now** (`{name}`): {text(c['now'])}")
+        lines += [f"  - was: {text(w)}" for w in c["was"]]
+    return lines
+
+
 def _decision_line(d: Any) -> str:
     against = "**against the lean** " if d["against_lean"] else ""
     return (f"- {against}`{d['parish']}` {d['slot']}: {d['question']} Lean: {d['lean'] or '-'}. "
@@ -615,6 +660,7 @@ def pr_text(ledger: Ledger, run: Any, worktree: Path, commands: Commands) -> tup
                   "", "## Advisory flags", "", *_flag_lines(advisory),
                   *_settled_lines(settled, {j["id"]: j["name"] for j in jobs}),
                   "", "## Parked parishes", "", *_flag_lines(parked),
+                  "", "## Playbook", "", *_playbook_lines(ledger, jobs, worktree, diocese),
                   "", "## Lessons for every diocese", "",
                   *([f"- {r['text']}" for r in lessons] or ["- none"])]
     else:

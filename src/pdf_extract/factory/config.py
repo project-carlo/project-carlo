@@ -48,7 +48,7 @@ class Config:
     failure_retry_minutes: int = 5
     # How long the usage check waits after the endpoint answers 429 Too Many Requests.
     usage_cooldown_minutes: int = 30
-    lessons_before_integrate: int = 8
+    lessons_before_integrate: int = 15
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
     seed_follow_up_weeks: int = 6
