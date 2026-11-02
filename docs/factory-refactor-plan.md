@@ -324,6 +324,34 @@ Built in the PR after #183. Where it differs from the bullets below:
 
 ### Phase 2: prompt diet (changes what workers read)
 
+Built in the PR after #185. Where it differs from the bullets below:
+
+- Map and reconcile also read *The model* (the exclusion reasons and the settled policy,
+  which nothing else gives) and *What to flag* (which their prompts and the header used
+  to restate). Survey reads *The model*, *Batch plans* and *Sources*; survey-review
+  *Batch plans* and *Sources*; integrate *Traps*; seed-review `rules.md` whole. Seed gets
+  none: its skill says what to read.
+- `reads:` names repo files only, without placeholders, so the test can check every entry
+  on main. Per-Run files (`diocese.md`, `survey.json`) stay in the prose.
+- A missing file or heading fails the job before its attempt is recorded, as a transient
+  failure: the job keeps merging main on each retry, so a fix on main heals it, and the
+  Run blocks after `max_failures`. Headings inside fenced code blocks don't count (the
+  README's example record has a `## Publisher`).
+- The playbook inlined in map's input is the three sections as they stand, including
+  *New lessons*. Metuchen's is ~2.3k tokens; Philadelphia's would be ~12k, which is
+  Phase 3's problem.
+- *Keep your context small* moved into the header, said once for every stage.
+- Measured on Metuchen's next map job (`monroe-jamesburg`), with the README and
+  `diocese.md` counted as read whole before: ~21.8k tokens of instructions before,
+  ~15.1k after, the skills counted in full both times. That is above the ~10–14k
+  expected, mostly because of the two extra README sections and the inlined playbook.
+- The cloud sandbox setup is deleted, not moved: `setup_browser.sh` and the cloud notes in
+  `parish-site-access` are gone, since no factory or diocese work runs in the cloud.
+- `deny:` takes Claude Code permission rules as written (`Bash(pnpm seed extract:*)`),
+  for both `pnpm seed` and `uv run python -m pdf_extract seed`.
+- The README's *Method* stays where it is; no stage reads it now. Moving it out is left
+  for the docs rewrite (Phase 5).
+
 - Use the `reads:` and `deny:` keys Phase 0 added: section reads as in §3.4, and `deny:`
   passed to `disallowed_tools` alongside `DENIED`.
 - Map reads only the README's *Fields*, *Structured writes and bounded research*, *Traps*

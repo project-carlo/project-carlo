@@ -38,6 +38,7 @@ from pdf_extract.factory.ledger import (
     MAP,
     MERGED,
     PENDING,
+    QUEUED,
     RUNNING,
     SEED,
     WAITING_USAGE,
@@ -56,7 +57,7 @@ from pdf_extract.factory.quota import (
     Span,
     combine,
 )
-from pdf_extract.factory.stages import in_scope
+from pdf_extract.factory.stages import in_scope, load_stage
 from pdf_extract.factory.tokens import from_result, parse_transcript
 from pdf_extract.factory.usage import (
     Standing,
@@ -209,9 +210,12 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
     git(e.repo, "config", "user.email", "factory@example.com")
     git(e.repo, "config", "user.name", "Factory")
     shutil.copytree(ROOT / "factory", e.repo / "factory")
+    for rel in _read_files():  # what the stage specs' `reads:` name
+        (e.repo / rel).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(ROOT / rel, e.repo / rel)
     (e.repo / "factory" / "queue.json").write_text(json.dumps([{"diocese": D, "notes": "Test"}]))
     (e.repo / ".gitignore").write_text("scratch/\ndata/factory/\n")
-    (e.repo / "data").mkdir()
+    (e.repo / "data").mkdir(exist_ok=True)
     (e.repo / "data" / "parishes.csv").write_text("slug\n")
     git(e.repo, "add", "-A")
     git(e.repo, "commit", "-qm", "init")
@@ -225,6 +229,13 @@ def env(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Env:
     monkeypatch.setenv("GIT_COMMITTER_EMAIL", "factory@example.com")
     monkeypatch.chdir(e.repo)
     return e
+
+
+def _read_files() -> set[str]:
+    from pdf_extract.factory.stages import STAGES, load_stage
+
+    return {entry.partition("#")[0] for stage in STAGES
+            for entry in load_stage(stage, ROOT).reads}
 
 
 def drive(d: Dispatcher, limit: int = 60) -> list[str]:
@@ -414,7 +425,9 @@ def test_inspect_prompt_sizes_what_an_attempt_was_given(env: Env) -> None:
     assert [(p["part"], p["source"]) for p in r["parts"]] == [
         ("system prompt", "factory/prompts/map.md"), ("first message", None),
         ("skill", ".claude/skills/explore-diocese/SKILL.md"),
-        ("skill", ".claude/skills/parish-site-access/SKILL.md")]
+        ("skill", ".claude/skills/parish-site-access/SKILL.md"),
+        *[("read", e) for e in load_stage("map", ROOT).reads]]
+    assert not any(p["missing"] for p in r["parts"] if p["part"] == "read")
     assert r["parts"][1]["chars"] == len(first["prompt"])
     text = report.text_attempt_prompt(r)
     assert "first message" in text and text.endswith(first["prompt"])
@@ -757,7 +770,9 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
 
     def reconciling(req: WorkerRequest, attempt: int) -> StubAction:
         if attempt == 1:
-            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", req.prompt))
+            listed = (req.worktree / render.flags_rel(req.run_id, req.job_name)).read_text()
+            assert render.flags_rel(req.run_id, req.job_name) in req.prompt
+            shown.extend(int(i) for i in re.findall(r"\[#(\d+)\]", listed))
             return StubAction(handoff=done(settled=[{"flag": 999, "how": "?"}]))
         return StubAction(handoff=done(
             settled=[{"flag": shown[0], "how": "Merged;\none masthead."}],
@@ -776,7 +791,7 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
     assert second["status"] == "listed"
     # A fresh input (after a resume or a retry) leaves out the flags it raised itself,
     # which it can't settle.
-    again = render.stage_input(env.ledger, run, reconcile, {})
+    again = "".join(render.input_files(env.ledger, run, reconcile).values())
     assert f"[#{second['id']}]" in again and f"[#{own['id']}]" not in again
 
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
@@ -968,12 +983,53 @@ def test_a_stage_runs_with_the_spec_main_had_when_it_started(env: Env) -> None:
     d.tick()  # survey
     spec = env.repo / "factory" / "stages" / "survey-review.yaml"
     text = spec.read_text().replace("max_turns: 80", "max_turns: 7")
-    env.commit_main({"factory/stages/survey-review.yaml": text + "reads: [README.md]\n"},
+    env.commit_main({"factory/stages/survey-review.yaml": text + "deny: [Bash(x:*)]\n"},
                     "spec change")
     d.tick()  # survey-review: main is merged before its spec is read
     request = env.worker.calls[-1]
     assert request.stage == "survey-review"
-    assert request.spec.max_turns == 7 and request.spec.reads == ["README.md"]
+    assert request.spec.max_turns == 7 and request.spec.deny == ["Bash(x:*)"]
+
+
+def test_a_job_finds_the_sections_it_reads_in_its_scratch_folder(env: Env) -> None:
+    seen: dict[str, str] = {}
+
+    def mapping(req: WorkerRequest, attempt: int) -> StubAction:
+        rel = render.reads_rel(req.run_id, req.job_name, "data/dioceses/README.md")
+        seen.setdefault("prompt", req.prompt)
+        seen.setdefault("copy", (req.worktree / rel).read_text())
+        return map_script()(req, attempt)
+
+    drive(env.dispatcher(map_script(map=mapping)))
+    run = map_run(env)
+    rel = render.reads_rel(run["id"], "003-map", "data/dioceses/README.md")
+    assert f"`{rel}`: *The model*, *Fields*" in seen["prompt"]
+    copy = seen["copy"]
+    assert copy.startswith("## The model\n") and "### Fields" in copy and "## Traps" in copy
+    assert "## Method" not in copy and "## Commands" not in copy
+    # Each section in full: an example record's `## Publisher` doesn't end *Fields*.
+    assert render.read_entry(render.worktree_text(ROOT), "data/dioceses/README.md#Fields") in copy
+
+
+def test_a_missing_read_fails_the_job_before_its_worker_starts(env: Env) -> None:
+    meter, _ = metered(env)
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    d.tick()  # survey
+    spec = env.repo / "factory" / "stages" / "survey-review.yaml"
+    good = spec.read_text()
+    env.commit_main({"factory/stages/survey-review.yaml": good.replace(
+        "README.md#Sources", "README.md#No such heading")}, "a bad read")
+    readings = len(env.ledger.all("SELECT * FROM usage"))
+    outcome = d.tick()
+    assert outcome.action == "waiting" and "no heading 'No such heading'" in outcome.detail
+    review = env.ledger.jobs(map_run(env)["id"], "survey-review")[0]
+    assert review["status"] == QUEUED
+    assert not env.ledger.all("SELECT * FROM attempt WHERE job_id = ?", review["id"])
+    assert len(env.ledger.all("SELECT * FROM usage")) == readings  # no usage check spent
+    env.commit_main({"factory/stages/survey-review.yaml": good}, "fix the read")
+    env.now += timedelta(hours=1)
+    d.tick()  # merges main again, since the job never started
+    assert env.worker.calls[-1].stage == "survey-review"
 
 
 def test_a_merge_conflict_blocks_the_run(env: Env) -> None:
@@ -1457,6 +1513,18 @@ def test_playbook_appends_once_under_its_heading(tmp_path: Path) -> None:
     assert playbook.bullets(meta, playbook.PUBLISHERS) == ["Parishes Online prints most bulletins."]
 
 
+def test_playbook_sections_skip_fenced_code(tmp_path: Path) -> None:
+    meta = tmp_path / "diocese.md"
+    meta.write_text(META.replace(
+        "- Parishes Online prints most bulletins.\n",
+        "- Parishes Online prints most bulletins.\n\n```bash\n# caps reset at midnight\n"
+        "## not a heading\n```\n\n- Discover Mass caps downloads.\n"))
+    assert playbook.bullets(meta, playbook.PUBLISHERS) == [
+        "Parishes Online prints most bulletins.", "Discover Mass caps downloads."]
+    playbook.append(meta, playbook.PUBLISHERS, ["Solutio needs the parish page."])
+    assert playbook.bullets(meta, playbook.PUBLISHERS)[-1] == "Solutio needs the parish page."
+
+
 def test_handoff_validation(tmp_path: Path) -> None:
     path = tmp_path / "h.json"
     path.write_text(json.dumps({"status": "done", "summary": "s", "extra": 1}))
@@ -1517,13 +1585,53 @@ def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
     from pdf_extract.factory.stages import load_stage
 
     (tmp_path / "factory" / "stages").mkdir(parents=True)
-    spec = (ROOT / "factory" / "stages" / "map.yaml").read_text()
     (tmp_path / "factory" / "stages" / "map.yaml").write_text(
-        spec + "reads: [data/dioceses/README.md#Fields]\ndeny: [Bash(pnpm seed extract:*)]\n")
+        "stage: map\nkind: agent\nreads: [data/dioceses/README.md#Fields]\n"
+        "deny: [Bash(pnpm seed extract:*)]\n")
     loaded = load_stage("map", tmp_path)
     assert loaded.reads == ["data/dioceses/README.md#Fields"]
     assert loaded.deny == ["Bash(pnpm seed extract:*)"]
-    assert load_stage("map", ROOT).reads == [] and load_stage("map", ROOT).deny == []
+    (tmp_path / "factory" / "stages" / "map.yaml").write_text("stage: map\nkind: agent\n")
+    assert load_stage("map", tmp_path).reads == [] and load_stage("map", tmp_path).deny == []
+
+
+def test_deny_reaches_the_sdk_and_the_seed_cli(
+        tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+        capsys: pytest.CaptureFixture[str]) -> None:
+    import asyncio
+    import sys
+    import types
+
+    from pdf_extract.__main__ import main
+    from pdf_extract.factory.workers import SEED_REFUSE_ENV, SdkWorker
+    from pdf_extract.seeding.cli import REFUSE_ENV
+
+    seen: dict[str, Any] = {}
+    sdk = types.ModuleType("claude_agent_sdk")
+    for name in ("AssistantMessage", "RateLimitEvent", "ResultMessage", "SystemMessage",
+                 "TextBlock", "ToolUseBlock"):
+        setattr(sdk, name, type(name, (), {}))
+    sdk.ClaudeAgentOptions = lambda **kw: kw
+
+    async def query(prompt: str, options: dict[str, Any]):
+        seen.update(options)
+        return
+        yield
+
+    sdk.query = query
+    monkeypatch.setitem(sys.modules, "claude_agent_sdk", sdk)
+    spec = load_stage("seed-review", ROOT)
+    request = WorkerRequest(1, "r", "002-seed-review", "seed-review", spec, tmp_path, None,
+                            "go", "", {})
+    asyncio.run(SdkWorker()._run(request))
+    assert set(spec.deny) <= set(seen["disallowed_tools"])
+    assert seen["env"][SEED_REFUSE_ENV] == "approve ask extract"
+    assert REFUSE_ENV == SEED_REFUSE_ENV
+
+    # However it is spelled, the CLI refuses a denied command before touching anything.
+    monkeypatch.setenv(REFUSE_ENV, seen["env"][SEED_REFUSE_ENV])
+    assert main(["seed", "approve", "x", "--reviewer", "agent:r@abc"]) == 1
+    assert "`seed approve` is refused" in capsys.readouterr().err
 
 
 def test_the_committed_config_is_the_defaults(tmp_path: Path) -> None:

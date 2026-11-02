@@ -8,11 +8,11 @@ job's lessons, as written, one bullet each, to the `## New lessons` section of
 ## Your job
 
 1. Read `diocese.md`'s `### Bulletin publishers here`, `## Rules settled for this
-   diocese` and `## New lessons`. Skim the README's *Traps* so you don't copy what every
-   diocese already knows.
+   diocese` and `## New lessons`. Your read of the README's *Traps* is what every diocese
+   already knows; don't copy it.
 2. For each new lesson, decide where it belongs:
    - **A publisher's method** (how to read its sites, where its issues are when a site
-     blocks the sandbox, an id pattern, a download cap): merge it into *Bulletin
+     blocks the browser, an id pattern, a download cap): merge it into *Bulletin
      publishers here*, into the existing bullet for that publisher when there is one.
    - **A decision for more than one record** (how this diocese's campus chapels, shrines
      or family bulletins are treated): add it to *Rules settled*, saying who decided it

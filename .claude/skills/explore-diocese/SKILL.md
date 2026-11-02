@@ -7,7 +7,7 @@ description: The method for researching a diocese in data/dioceses/<diocese>/ wi
 
 Read `data/dioceses/README.md` before your first write. It has the rules, the file format,
 the explanation standard, which sources to trust, and the traps. This page is the short
-version.
+version. A factory job reads the README sections its header lists instead.
 
 A whole new diocese is mapped by the onboarding factory (`docs/factory-spec.md`): add it to
 `factory/queue.json`. Its survey, map, reconcile and integrate jobs follow this page.
@@ -68,8 +68,8 @@ Then, cheapest first:
 7. **Audit structure every session:** `pnpm diocese audit <d> [--fetch]`. Read its candidate
    scope and limitations; coverage and distinct URLs can't establish separate documents.
 8. **Check the fetch:** `pnpm fetch:check --diocese <d> --parish <slug>` resolves and
-   downloads a row's bulletin before it is promoted (headed: `PLAYWRIGHT_BROWSER_CHANNEL=chrome
-   xvfb-run -a` in the cloud sandbox). Review transport, document type, parish identity and
+   downloads a row's bulletin before it is promoted (run it headed:
+   `PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check ...`). Review transport, document type, parish identity and
    freshness separately; successful transport alone isn't a verified current bulletin.
 9. **Finish:** `pnpm diocese validate <d>` (and `uv run pytest tests/test_dioceses.py`).
    A change to a mapped diocese also gets a dated line in `diocese.md`'s *Log*.
@@ -102,9 +102,9 @@ fixed request budget that sacrifices evidence or turn a blocked search into cert
 - Don't set `name_verified` / `address_verified` true without two independent sources.
 - Don't quote from a summarizing fetch tool. Read the page itself (`probe pdf`, `probe get`);
   the quote has to be findable by `pnpm diocese recheck`.
-- Don't fetch with curl and a browser user agent (`-A "Mozilla/5.0 ..."`) or `-k`. The
-  sandbox's safety check refuses them, as bot-check circumvention and TLS weakening, though
-  not every time: in Wilmington it let about 70 through and stopped 4. Use `pnpm diocese
+- Don't fetch with curl and a browser user agent (`-A "Mozilla/5.0 ..."`) or `-k`. Auto
+  mode's safety check refuses them, as bot-check circumvention and TLS weakening, though not
+  every time: in Wilmington it let about 70 through and stopped 4. Use `pnpm diocese
   probe get <url>` (`--out <file>` to save a PDF or page): the probes' own client, which
   verifies TLS. It handles pages, PDFs and JSON APIs such as WordPress's `/wp-json/`. When it
   reports a bot check or a 403, open the page with parish-site-access's `visit.py`; when the

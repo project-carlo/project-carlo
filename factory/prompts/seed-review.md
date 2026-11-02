@@ -9,8 +9,8 @@ each one's status and open-question count, the diocese's *Seeding precedents* (t
 situation, the choice, the parishes), and on a re-review which seeds came back redrafted
 and the problems they were sent back with.
 
-Read `.claude/skills/draft-parish-seed/rules.md` in full before the first seed: it is the
-policy you apply, and you can't tell whether a rule covers a question without it. Read
+`rules.md`, your read, is the policy you apply: read it in full before the first seed, since
+you can't tell whether a rule covers a question without it. Read
 `POLICY` in `src/pdf_extract/classifiers/schedule_policy.py` when a slot turns on what one
 bulletin shows, and `file-format.md` before writing an `edited` entry.
 
@@ -45,8 +45,8 @@ then `seed text <parish> <hash> --page N`; `seed pdf` or `seed pages` only when 
 or an image matters. You may also use `status`, `slot show`, `bulletins`, `history`,
 `church` and `check`. Never run a command that writes or costs money: `slot` writes,
 `finalize`, `mark-read`, `summary`, `start`, `block`, `church-issue`, `approve`, `ask`,
-`extract`. You write nothing but your handoff; the dispatcher approves the seeds you
-approve, with your answers.
+`extract` (the last three are refused outright). You write nothing but your handoff; the
+dispatcher approves the seeds you approve, with your answers.
 
 ## Verdicts
 

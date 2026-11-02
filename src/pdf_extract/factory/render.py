@@ -6,15 +6,16 @@ attempts get a short message instead: the problems a send-back found, your answe
 issue, or "continue".
 
 Rendering is pure: it reads the ledger and the Run's files and writes nothing, so
-`pnpm factory prompt` can preview a job that hasn't run. The leads a map input shows are
-claimed by the dispatcher when the attempt starts (`leads_shown`).
+`pnpm factory prompt` can preview a job that hasn't run. The dispatcher does the writing
+when the attempt starts: it claims the leads a map input shows (`leads_shown`), and puts
+the sections the stage reads (`read_files`) and any bulky input (`input_files`) in the
+job's scratch folder, where the first message points.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
-import re
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -30,8 +31,22 @@ from pdf_extract.factory.workers import strip_frontmatter
 SKILLS_DIR = Path(".claude") / "skills"
 
 
+def scratch_rel(run_id: str, job_name: str) -> str:
+    return f"scratch/{run_id}/{job_name}/"
+
+
 def handoff_rel(run_id: str, job_name: str) -> str:
-    return f"scratch/{run_id}/{job_name}/handoff.json"
+    return f"{scratch_rel(run_id, job_name)}handoff.json"
+
+
+def reads_rel(run_id: str, job_name: str, path: str) -> str:
+    """Where the dispatcher writes the sections a job reads of `path`."""
+    return f"{scratch_rel(run_id, job_name)}reads/{path}"
+
+
+def flags_rel(run_id: str, job_name: str) -> str:
+    """Reconcile's list of the flags and leads it may settle."""
+    return f"{scratch_rel(run_id, job_name)}flags.md"
 
 
 def job_values(ledger: Ledger, run: Any, job: Any) -> dict[str, str]:
@@ -51,18 +66,21 @@ def header(run: Any, job: Any, spec: StageSpec, values: dict[str, str]) -> str:
     return f"""\
 # Factory job {run['id']}/{job['name']}: {job['stage']}
 
-You are a worker in the onboarding factory (docs/factory-spec.md): one fresh session that
-runs one job and ends. Code scheduled you, and no person is watching.
+You are a worker in the onboarding factory: one fresh session that runs one job and ends.
+Code scheduled you, and no person is watching.
 
 - Diocese: `{run['diocese']}`. This directory is the Run's worktree, on branch `{run['branch']}`.
-- Your scratch folder is `scratch/{run['id']}/{job['name']}/`; the Run's shared tools folder
-  is `scratch/{run['id']}/tools/` (read its README.md before writing a script).
+- Your scratch folder is `{scratch_rel(run['id'], job['name'])}`; the Run's shared tools
+  folder is `scratch/{run['id']}/tools/` (read its README.md before writing a script).
 - You may change only {writes}. Any other change is reverted and the job sent back.
 - You can't commit, push, use `gh` or start agents. When you finish, the dispatcher runs
   its gates ({gates}), then commits your work.
 - Nobody answers questions during the job. A decision you can't make becomes a flag in
   your handoff, which is all the dispatcher reads.
-
+- Keep your context small: everything you read is read again on every later step. Send
+  long output to a file in your scratch folder and read only the part you need (`jq`,
+  `grep`, `head`); grep a long document before reading it.
+{_reads_list(run['id'], job['name'], spec)}
 ## Handoff
 
 Before you end, write `{handoff_rel(run['id'], job['name'])}`, about 300 tokens:
@@ -80,23 +98,33 @@ Before you end, write `{handoff_rel(run['id'], job['name'])}`, about 300 tokens:
 """
 
 
+def _reads_list(run_id: str, job_name: str, spec: StageSpec) -> str:
+    """What the stage's `reads:` asks for: a whole file by its own path, a file's sections
+    by the copy the dispatcher writes in the job's scratch folder."""
+    if not spec.reads:
+        return ""
+    items = []
+    for path, headings in _reads_by_file(spec).items():
+        if headings is None:
+            items.append(f"- `{path}`")
+        else:
+            names = ", ".join(f"*{h}*" for h in headings)
+            items.append(f"- `{reads_rel(run_id, job_name, path)}`: {names} from `{path}`")
+    return ("\n## Read first\n\nRead these in full before you start; they are the rules "
+            "this job is held to.\n\n" + "\n".join(items) + "\n")
+
+
 def _flags_help(stage: str) -> str:
     if stage in PARKING_STAGES:
         return """\
-- `flags`: `blocking` sets a parish aside (`scope: parish`, subject `roster:id` or the
-  parish slug) until the owner answers an issue, while the rest of the Run carries on; a
-  blocking flag with `scope: run` stops the Run. `advisory` is listed in the PR: leave
-  that parish open or excluded with a reason. Give evidence and what you would do. Don't
-  flag what the records already carry (README, *What to flag*): a church left in `open/`,
-  a bulletin `fetch` can't collect (`fetch_gap`), a check blocked for now (`research`
-  with a retry trigger), or an address you chose between sources."""
+- `flags`: a `blocking` flag with `scope: parish` (subject `roster:id` or the parish slug)
+  sets that parish aside until the owner answers an issue, while the rest of the Run
+  carries on; with `scope: run` it stops the Run. An `advisory` flag is listed in the PR.
+  Give evidence and what you would do."""
     return """\
 - `flags`: a `blocking` flag (`scope: run`) stops the Run until the owner answers an
-  issue; this stage can't set a single parish aside. `advisory` is listed in the PR.
-  Give evidence and what you would do. Don't flag what the records already carry
-  (README, *What to flag*): a church left in `open/`, a bulletin `fetch` can't collect
-  (`fetch_gap`), a check blocked for now (`research` with a retry trigger), or an address
-  you chose between sources."""
+  issue; this stage can't set a single parish aside. An `advisory` flag is listed in the
+  PR. Give evidence and what you would do."""
 
 
 def schema_text(stage: str) -> str:
@@ -128,7 +156,9 @@ def schema_text(stage: str) -> str:
                          "why": "..."}],
             "problems": ["..."],
         }]}
-    return json.dumps(base, indent=1)
+    # One line a field: the shape is what matters, and it stays valid JSON.
+    return "{\n" + ",\n".join(f" {json.dumps(k)}: {json.dumps(v)}"
+                               for k, v in base.items()) + "\n}"
 
 
 def _lines(items: list[str]) -> str:
@@ -139,15 +169,13 @@ def stage_input(ledger: Ledger, run: Any, job: Any, values: dict[str, str]) -> s
     worktree, diocese, run_id = Path(run["worktree"]), run["diocese"], run["id"]
     inputs = json.loads(job["input"])
     stage = job["stage"]
-    tools = f"scratch/{run_id}/tools/"
     if stage == "survey":
         return f"""\
 ## Your job: survey `{diocese}`
 
 {run['notes'] or 'No notes from the queue.'}
 
-The Run's scratch folder is `scratch/{run_id}/`: write your manifest
-`scratch/{run_id}/survey.json` there, and use `{tools}` as the tools folder.
+Write your manifest to `scratch/{run_id}/survey.json`.
 """
     if stage == "survey-review":
         earlier = [json.loads(r["problems"]) for r in ledger.all(
@@ -173,25 +201,15 @@ The survey was job {inputs.get('survey_job')}. Read `data/dioceses/{diocese}/dio
 `data/dioceses/{diocese}/diocese.md` has {n} entries under *New lessons*.
 """
     if stage == "reconcile":
-        raised_by = {j["id"]: j["name"] for j in ledger.jobs(run_id)}
-        # Not its own: a fresh input after a resume or retry can't settle what it raised.
-        advisory = [f"[#{f['id']}] {f['subject']} ({raised_by.get(f['job_id'], '?')}): "
-                    f"{f['question']} (suggestion: {f['suggestion'] or '-'})"
-                    for f in ledger.flags(run_id, LISTED) if f["job_id"] != job["id"]]
-        leads = [f"{r['touches']}: {r['note']}" for r in ledger.all(
-            "SELECT * FROM lead WHERE run_id = ? AND used_by IS NULL", run_id)]
+        advisory, leads = _reconcile_lists(ledger, run, job)
         parked = [f"{f['subject']}: {f['question']}" for f in ledger.parked(run_id)]
         return f"""\
 ## Your job: reconcile `{diocese}`
 
-Every batch is mapped. Use `{tools}` as the tools folder.
-
-Advisory flags from earlier jobs, mostly the batches. Put each one you settle in your
-handoff's `settled`, by its `[#id]`; the PR lists the rest as still open:
-{_lines(advisory)}
-
-Leads no batch took:
-{_lines(leads)}
+Every batch is mapped. `{flags_rel(run_id, job['name'])}` lists, one a line, the
+{len(advisory)} advisory flags earlier jobs raised and the {len(leads)} leads no batch took.
+Put each flag you settle in your handoff's `settled`, by its `[#id]`; the PR lists the
+rest as still open.
 
 Parked parishes (an issue waits for the owner; leave their records alone):
 {_lines(parked)}
@@ -200,8 +218,7 @@ Parked parishes (an issue waits for the owner; leave their records alone):
         return f"""\
 ## Your job: seed `{inputs['parish']}`
 
-Draft `data/seeds/{inputs['parish']}.json`, with `scratch/{run_id}/{job['name']}/` as
-your scratch folder.
+Draft `data/seeds/{inputs['parish']}.json`.
 """
     if stage == "seed-review":
         return _seed_review_input(ledger, run, inputs, values)
@@ -235,8 +252,63 @@ def leads_shown(ledger: Ledger, run: Any, job: Any) -> list[Any]:
     return [r for r in leads if r["touches"] in touches]
 
 
+def _reconcile_lists(ledger: Ledger, run: Any, job: Any) -> tuple[list[str], list[str]]:
+    """The advisory flags reconcile may settle and the leads no batch took, one line each."""
+    raised_by = {j["id"]: j["name"] for j in ledger.jobs(run["id"])}
+    # Not its own: a fresh input after a resume or retry can't settle what it raised.
+    advisory = [f"[#{f['id']}] {f['subject']} ({raised_by.get(f['job_id'], '?')}): "
+                f"{_one_line(f['question'])} (suggestion: {_one_line(f['suggestion']) or '-'})"
+                for f in ledger.flags(run["id"], LISTED) if f["job_id"] != job["id"]]
+    leads = [f"{r['touches']}: {_one_line(r['note'])}" for r in ledger.all(
+        "SELECT * FROM lead WHERE run_id = ? AND used_by IS NULL ORDER BY id", run["id"])]
+    return advisory, leads
+
+
+def _one_line(text: str | None) -> str:
+    return " ".join((text or "").split())
+
+
+def input_files(ledger: Ledger, run: Any, job: Any) -> dict[str, str]:
+    """Bulky input the dispatcher writes to the job's scratch folder instead of the first
+    message, by repo-relative path. Only reconcile has any."""
+    if job["stage"] != "reconcile":
+        return {}
+    advisory, leads = _reconcile_lists(ledger, run, job)
+    return {flags_rel(run["id"], job["name"]): f"""\
+# Advisory flags and leads for {run['id']}/{job['name']}
+
+## Advisory flags from earlier jobs, mostly the batches
+
+{_lines(advisory)}
+
+## Leads no batch took
+
+{_lines(leads)}
+"""}
+
+
+PLAYBOOK = (playbook.PUBLISHERS, playbook.RULES, playbook.NEW_LESSONS)
+
+
+def _playbook(worktree: Path, diocese: str) -> str:
+    """The sections of `diocese.md` every map job follows, as they stand."""
+    meta = diocese_dir(worktree, diocese) / "diocese.md"
+    parts = []
+    for heading in PLAYBOOK:
+        body = playbook.section(meta, heading) if meta.exists() else ""
+        if heading == playbook.NEW_LESSONS:
+            # From the first bullet, so without the section's intro; a lesson that wraps,
+            # or has sub-bullets, stays whole.
+            lines = body.splitlines()
+            first = next((i for i, line in enumerate(lines) if line.startswith("- ")),
+                         len(lines))
+            body = "\n".join(lines[first:])
+        parts.append(f"### {heading.lstrip('# ')}\n\n{body or '(none yet)'}\n")
+    return "\n".join(parts)
+
+
 def _map_input(ledger: Ledger, run: Any, job: Any, inputs: dict[str, Any]) -> str:
-    worktree, diocese, run_id = Path(run["worktree"]), run["diocese"], run["id"]
+    worktree, diocese = Path(run["worktree"]), run["diocese"]
     batch = next((b for b in ordered_batches(worktree, diocese)
                   if b["id"] == inputs.get("batch")), {})
     entries = inputs.get("entries") or batch.get("entries") or []
@@ -251,12 +323,16 @@ def _map_input(ledger: Ledger, run: Any, job: Any, inputs: dict[str, Any]) -> st
 Roster entries:
 {_lines([describe_entry(worktree, diocese, e) for e in entries])}
 
-Use `scratch/{run_id}/{job['name']}/` as your scratch folder and `scratch/{run_id}/tools/`
-as the tools folder.
-
 Leads from earlier jobs:
 {_lines([f"{r['touches']}: {r['note']}" for r in mine])}
-"""
+
+## The playbook
+
+From `data/dioceses/{diocese}/diocese.md`, as earlier jobs of this Run left it. Its other
+sections (the intro, *Sources*, the *Log*) describe the diocese and its lists; grep them
+when you need one.
+
+{_playbook(worktree, diocese)}"""
 
 
 def _seed_review_input(ledger: Ledger, run: Any, inputs: dict[str, Any],
@@ -367,15 +443,41 @@ def read_entry(text_of: TextOf, entry: str) -> str:
     if not heading:
         return text
     lines = text.splitlines()
-    start = next((i for i, line in enumerate(lines)
-                  if re.fullmatch(r"#+\s+" + re.escape(heading.strip()) + r"\s*", line)), None)
+    headings = playbook.headings(lines)
+    start = next((i for i, (_, title) in headings.items() if title == heading.strip()), None)
     if start is None:
         raise FactoryError(f"reads: {path} has no heading {heading!r}")
-    level = len(lines[start]) - len(lines[start].lstrip("#"))
-    end = next((i for i in range(start + 1, len(lines))
-                if (m := re.match(r"(#+)\s", lines[i])) and len(m.group(1)) <= level),
-               len(lines))
+    level = headings[start][0]
+    end = next((i for i, (lv, _) in headings.items() if i > start and lv <= level), len(lines))
     return "\n".join(lines[start:end]).strip() + "\n"
+
+
+def _reads_by_file(spec: StageSpec) -> dict[str, list[str] | None]:
+    """The stage's reads by file, in order: the headings it names, or None for the whole
+    file (which a section of the same file adds nothing to)."""
+    files: dict[str, list[str] | None] = {}
+    for entry in spec.reads:
+        path, _, heading = entry.partition("#")
+        if not heading:
+            files[path] = None
+        elif (headings := files.setdefault(path, [])) is not None:
+            headings.append(heading.strip())
+    return files
+
+
+def read_files(spec: StageSpec, text_of: TextOf, run_id: str,
+               job_name: str) -> dict[str, str]:
+    """The files the dispatcher writes in the job's scratch folder before its worker starts:
+    for each file the stage reads sections of, those sections in order. Raises FactoryError
+    when a file or heading is missing, so the job fails before its worker starts."""
+    out = {}
+    for path, headings in _reads_by_file(spec).items():
+        if headings is None:
+            read_entry(text_of, path)  # it must exist
+            continue
+        out[reads_rel(run_id, job_name, path)] = "\n".join(
+            read_entry(text_of, f"{path}#{h}") for h in headings)
+    return out
 
 
 def message_label(kind: str) -> str:
@@ -383,10 +485,11 @@ def message_label(kind: str) -> str:
     return "first message" if kind in ("start", "fresh") else f"{kind} message"
 
 
-def given(spec: StageSpec, message: str, text_of: TextOf,
-          label: str = "first message") -> list[dict[str, Any]]:
+def given(spec: StageSpec, message: str, text_of: TextOf, label: str = "first message",
+          files: dict[str, str] | None = None) -> list[dict[str, Any]]:
     """Each part of what a worker is given, with its size: the appended system prompt, the
-    attempt's message, each skill it may load and each file it must read."""
+    attempt's message, each skill it may load, each file it must read, and the input
+    files its message points to (`input_files`)."""
     def part(kind: str, source: str | None, text: str | None, **extra: Any) -> dict[str, Any]:
         return {"part": kind, "source": source, "missing": text is None,
                 "chars": len(text or ""), "tokens": tokens(text or ""), **extra}
@@ -397,11 +500,18 @@ def given(spec: StageSpec, message: str, text_of: TextOf,
              part(label, None, message)]
     for name in spec.skills:
         parts.append(part("skill", skill_path(name), text_of(skill_path(name)), name=name))
-    for entry in spec.reads:
+    # As the worker is given them: a section of a file it reads whole adds nothing.
+    whole = {path for path, headings in _reads_by_file(spec).items() if headings is None}
+    for entry in dict.fromkeys(spec.reads):
+        path, _, heading = entry.partition("#")
+        if heading and path in whole:
+            continue
         try:
             parts.append(part("read", entry, read_entry(text_of, entry)))
         except FactoryError as exc:
             parts.append(part("read", entry, None, error=str(exc)))
+    for path, text in (files or {}).items():
+        parts.append(part("input file", path, text))
     return parts
 
 

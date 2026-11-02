@@ -2,12 +2,12 @@
 
 Many bulletins are scanned images: `probe pdf` lists them under
 `pages_without_text`, and a masthead or Mass schedule on such a page is
-invisible to it. The sandbox has no pdftoppm, PIL or tesseract, so this renders
-the pages with pdf.js (from cdn.jsdelivr.net) in the installed Chrome. Look at
+invisible to it. This renders the pages with pdf.js (from cdn.jsdelivr.net) in
+the installed Chrome. Look at
 the images with the Read tool. What you read off an image is evidence like any
 quote: cite the PDF's URL and say in the `note` that the page is an image.
 
-Usage (from the repo root; run setup_browser.sh once first):
+Usage (from the repo root):
   uv run python .claude/skills/parish-site-access/scripts/render.py URL|FILE OUT_PREFIX \
       [--pages 1,3-5] [--scale 1.6] [--png]
 

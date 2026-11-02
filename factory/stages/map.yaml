@@ -7,7 +7,16 @@ skills: [explore-diocese, parish-site-access]
 tools: [Bash, Read, Edit, Write]
 writes:
   - data/dioceses/{diocese}/**
-  - scratch/{run}/**
+  - scratch/{run}/{job}/**
+  - scratch/{run}/tools/**
+# The playbook (diocese.md's publishers, rules and new lessons) is in the job input.
+reads:
+  - data/dioceses/README.md#The model
+  - data/dioceses/README.md#Fields
+  - data/dioceses/README.md#Structured writes and bounded research
+  - data/dioceses/README.md#What to flag
+  - data/dioceses/README.md#The explanation
+  - data/dioceses/README.md#Traps
 gates:
   - pnpm --silent diocese validate {diocese}
 limits: { max_turns: 300, max_minutes: 90 }

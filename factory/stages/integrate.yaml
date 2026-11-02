@@ -8,6 +8,8 @@ tools: [Bash, Read, Edit, Write]
 writes:
   - data/dioceses/{diocese}/diocese.md
   - scratch/{run}/{job}/**
+reads:
+  - data/dioceses/README.md#Traps
 gates:
   - pnpm --silent diocese validate {diocese}
 limits: { max_turns: 60, max_minutes: 30 }

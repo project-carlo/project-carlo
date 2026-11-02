@@ -692,10 +692,11 @@ def preview(ledger: Ledger, stage: str, run_id: str | None, *, repo: Path,
         commit = None
     text_of = render.worktree_text(root)
     system = text_of(spec.prompt) if spec.prompt else ""
+    files = render.input_files(ledger, run, job) if kind in ("start", "fresh") else {}
     return {"run": run["id"], "job": job["name"], "stage": stage, "existing": existing,
             "kind": kind, "input": json.loads(job["input"]), "files": str(root),
-            "commit": commit,
-            **_sizes(render.given(spec, prompt, text_of, render.message_label(kind))),
+            "commit": commit, "deny": list(spec.deny),
+            **_sizes(render.given(spec, prompt, text_of, render.message_label(kind), files)),
             "system_prompt": strip_frontmatter(system or ""), "first_message": prompt}
 
 
@@ -737,6 +738,8 @@ def text_preview(r: dict[str, Any]) -> str:
     lines = [f"{r['run']}/{r['job']}: {r['stage']}, {what} ({r['kind']}); files from "
              f"{r['files']} at {(r['commit'] or '-')[:12]}",
              f"input: {json.dumps(r['input'])}", "", *_size_table(r["parts"], r["tokens"])]
+    if r.get("deny"):
+        lines += ["", "denied besides the workers' own: " + ", ".join(r["deny"])]
     return "\n".join(lines + ["", "## Appended system prompt", "", r["system_prompt"], "",
                               f"## {render.message_label(r['kind']).capitalize()}", "",
                               r["first_message"]])
