@@ -137,6 +137,7 @@ def test_sdk_options_never_run_tools_in_the_dispatcher(tmp_path: Path) -> None:
     assert options.can_use_tool is None
     assert not options.mcp_servers
     assert options.cli_path == str(BOX)
+    assert options.permission_mode == "auto"
     assert "CARLO_BOX" in options.env and options.env["R2_ACCESS_KEY_ID"] == "k"
 
 
@@ -320,6 +321,22 @@ def test_the_container_is_locked_down(tmp_path: Path) -> None:
         assert f"--env {name}" not in joined
     assert argv[-3:] == ["xvfb-run", "-a", "claude"]
     assert ("rm", "--force", "carlo-job-42") in fake.calls  # a leftover goes first
+
+
+def test_only_container_workers_bypass_permission_checks(tmp_path: Path) -> None:
+    pytest.importorskip("claude_agent_sdk")
+    wt = tmp_path / "wt"
+    wt.mkdir()
+    req = boxed_request(tmp_path, wt)
+    launch = podman_backend(tmp_path, FakePodman()).launch(req, worker_env(req.account))
+    options = sdk_options(req, launch)
+    assert options.permission_mode == "bypassPermissions"
+    assert options.tools == req.spec.tools
+    assert "Agent" in options.disallowed_tools
+    assert "Bash(git push:*)" in options.disallowed_tools
+    assert not options.hooks and options.can_use_tool is None and not options.mcp_servers
+    # A workspace path alone must not select bypass mode for a host launch.
+    assert sdk_options(req, Launch("claude", {}, work=wt)).permission_mode == "auto"
 
 
 def test_the_sandbox_launcher_gives_podman_only_what_it_names(tmp_path: Path) -> None:

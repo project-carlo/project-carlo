@@ -157,6 +157,7 @@ def main() -> int:
                                                             names[-1]).returncode != 0}
             report['accounts'].append(entry)
             save()
+            assert result.info.get('permission_mode') == 'bypassPermissions', result.info
             try:
                 entry['account_usage'] = account_usage(account)
                 entry['account_windows_match'] = windows_match(events, entry['account_usage'])
@@ -177,6 +178,7 @@ def main() -> int:
             names.append(f'carlo-job-{resume.job_id}')
             print(f'{account.name}: resume in fresh container', flush=True)
             resumed = workers.SdkWorker(backend).run(resume)
+            assert resumed.info.get('permission_mode') == 'bypassPermissions', resumed.info
             replies = [s[2] or '' for s in steps if s[0] in ('text', 'result')]
             entry.update(resume=dataclasses.asdict(resumed), resume_rate_limits=list(events),
                          resume_steps=list(steps), nonce_recalled=any(nonce in s for s in replies),

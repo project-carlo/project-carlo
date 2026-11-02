@@ -1,6 +1,7 @@
 """Workers: a fresh Agent SDK session per job, or a stub that writes canned handoffs.
 
-A worker runs in the Run's worktree in auto mode, on one account's Claude login, without
+A host worker runs in auto mode; container workers bypass permission checks inside
+their sandbox. Each uses one account's Claude login, without
 GitHub or git credentials, and can't start other agents. Its CLI starts through
 `factory/sandbox/claude-in-box` with only the environment named here (sandbox.py). It
 ends with a handoff file; everything else about the attempt (steps, cost, how it ended)
@@ -164,7 +165,7 @@ def sdk_options(request: WorkerRequest, launch: Launch) -> Any:
         cli_path=launch.cli_path,
         model=spec.model,
         effort=spec.effort,
-        permission_mode="auto",
+        permission_mode="bypassPermissions" if launch.container else "auto",
         tools=tools,
         disallowed_tools=DENIED,
         system_prompt={"type": "preset", "preset": "claude_code",

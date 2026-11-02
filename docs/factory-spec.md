@@ -288,9 +288,10 @@ See `docs/factory-sandbox-plan.md` for the design and what is still to verify li
 - **Claude login.** Host workers use the account's config folder. Sandboxed workers get
   the account's `claude setup-token` token (`worker_token_file:`), which never refreshes,
   so a worker can't rotate the login the dispatcher reads usage with.
-- **Permissions.** Workers run in auto mode, where a classifier checks each action
-  instead of a person. The SDK starts in `default` mode, so the dispatcher sets
-  `permission_mode="auto"` explicitly.
+- **Permissions.** Host workers use `permission_mode="auto"`, where a classifier
+  checks each action instead of a person. Container workers use
+  `permission_mode="bypassPermissions"`; the container, proxy, tool deny rules and
+  validated sync-back enforce their boundaries without the auto-mode classifier.
 - **Only the dispatcher commits, pushes and opens PRs.** Workers start without
   `GH_TOKEN` or git credentials in their environment, and with deny rules for `git
   commit`, `git push` and `gh`. The diff-scope gate checks files git tracks or would
@@ -697,9 +698,7 @@ usage endpoint (`quota.py`):
 - **Triage.** An agent that tries to settle blocking flags itself (an existing rule, a
   retry later) before opening an issue. Worth adding if there are too many issues.
 - **Sandbox, next steps.** Once the live checks pass and `sandbox` is the default: refuse
-  `host` for real Runs unless `allow_host_workers: true`. Then bypass permissions inside
-  the container instead of auto mode, to save the classifier's usage and its false
-  blocks, now that the container is the boundary. Scoped keys for seed stages (a
+  `host` for real Runs unless `allow_host_workers: true`. Scoped keys for seed stages (a
   read-only R2 token, model keys with spend caps). gVisor or a microVM if host-kernel
   exploits become a concern.
 - **More at once.** Several Runs, or several workers, in parallel.

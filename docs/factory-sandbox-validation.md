@@ -154,3 +154,13 @@ uv run python factory/sandbox/validate-refresh.py \
 
 Ruff and `git diff --check` passed. Live clone migration, real map/seed/seed-review
 jobs, production send-backs, and switching the live backend remain open.
+
+## Container permission mode
+
+Sandboxed workers now select `bypassPermissions`; host workers keep `auto`.
+An isolated authenticated rerun with this change confirmed `bypassPermissions` in
+the CLI's init message for both accounts, on both the initial attempt and a
+fresh-container resume. Both accounts wrote their output, returned usage and cost,
+and recalled the nonce after resume. Artifacts:
+`/tmp/carlo-pr184-validation-rdqrvbk9/`. The harness now asserts this permission mode.
+The earlier validation above predates the mode change and used `auto`.

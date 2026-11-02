@@ -91,6 +91,11 @@ condition: **the host-side SDK must never run tools**. That means no `hooks`,
 it. Running the whole Python worker in the container was considered too. It would need a
 second RPC layer for steps and events, and it adds nothing as long as that condition holds.
 
+Container workers use `permission_mode="bypassPermissions"`, bypassing Claude Code's
+auto-mode permission classifier inside the container. Host workers keep
+`permission_mode="auto"`. Stage tool restrictions, denied tools, container/network
+restrictions and validated sync-back still apply.
+
 The launcher:
 
 - receives no inherited environment. It builds the container's environment from an
