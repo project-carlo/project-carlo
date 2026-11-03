@@ -156,6 +156,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - GCatholic lists a parish's Korean community (website …kcc.org) as a second entry with the same Plus Code as the parish church; when the parish's schedule includes the Korean Masses, link both entries to the one church row.
 - A John Patrick parish's self-hosted bulletin archive can stop months before its church-bulletin.org listing does (St. John, Bergenfield: site last 30 Aug, listing current): take the id from the last-page footer '<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing' and pin page-pdfs https://church-bulletin.org/<id>.
 - When an LPi footer gives only a container ('<Parish> | 04-0064') and guessed ParishesOnline slugs fail, run visit.py on the parish's bulletin page: it reported po-org:saint-joseph-roman-catholic-church (no zip suffix), which probe get and publisher_fingerprint.sh missed.
+- An eCatholic parish site whose Bulletin page only links a jppc.net/onlinebulletins/<id>template.pdf (Annunciation, Paramus) has no files.ecatholic.com bulletins: record provider other with page-pdfs https://church-bulletin.org/<id> and leave the eCatholic id out of publication.
 
 
 ## Rules settled for this diocese
