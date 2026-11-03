@@ -168,23 +168,25 @@ def fetch_usage(account: Account) -> Usage:
 
 
 def retry_after(headers: Any, at: datetime | None = None) -> float | None:
-    """A Retry-After header in seconds: either seconds or an HTTP date. None if absent or
-    unreadable."""
+    """A Retry-After header in seconds: either seconds or an HTTP date, at most a week (a
+    cooldown past datetime's range would crash the tick). None if absent or unreadable."""
     value = headers.get("Retry-After") if headers is not None else None
     if value is None:
         return None
     value = str(value).strip()
     try:
-        return max(0.0, float(value))
+        seconds = float(value)
     except ValueError:
-        pass
-    try:
-        when = email.utils.parsedate_to_datetime(value)
-    except (TypeError, ValueError):
+        try:
+            when = email.utils.parsedate_to_datetime(value)
+        except (TypeError, ValueError):
+            return None
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=UTC)
+        seconds = (when - (at or datetime.now(UTC))).total_seconds()
+    if not math.isfinite(seconds):
         return None
-    if when.tzinfo is None:
-        when = when.replace(tzinfo=UTC)
-    return max(0.0, (when - (at or datetime.now(UTC))).total_seconds())
+    return min(max(0.0, seconds), WEEK.total_seconds())
 
 
 COOLDOWNS = "usage_cooldowns"  # the ledger key: account -> {reason, since, until}

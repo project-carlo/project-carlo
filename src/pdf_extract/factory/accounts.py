@@ -66,8 +66,8 @@ class Accounts:
             return pick.account, ids[pick.account.name], None
         if cooling and not rows:
             # Every account is cooling down (or in its gap): no reading says when to look
-            # again but the cooldowns themselves.
-            until = min([*cooling.values(), *held.values()])
+            # again but the cooldowns themselves, and the job's own accounts' gaps.
+            until = min([*cooling.values(), *([until] if until is not None else [])])
             what = ", ".join(f"{name} until {t.isoformat()}" for name, t in cooling.items())
             return None, None, Outcome("waiting", f"usage check cooldown: {what}", until)
         # The soonest of an account under its caps again, a calibration gap or a cooldown
@@ -89,13 +89,24 @@ class Accounts:
             if only is not None and account.name != only:
                 continue
             try:
-                read.append((account, self.poller.read(account)))
+                read.append((account, self.poller.read(account, since=self._since(account))))
             except Cooldown as exc:
                 cooling[account.name] = exc.until
             except UsageError as exc:
                 self.ledger.set("paused", {"reason": f"usage check failed: {exc}", "at": now()})
                 return None, Outcome("paused", str(exc))
         return read, cooling
+
+    def _since(self, account: Account) -> datetime | None:
+        """How old a shared reading may be: never from before the account settled after its
+        last attempt, if it has. That reading becomes the next attempt's `before`, which must
+        be an idle one, and is the last attempt's settled reading too (metrics/quota.py)."""
+        last = self._last_finished(account.name)
+        at = self.clock()
+        if last is None:
+            return None
+        settled = last + timedelta(seconds=self.config.quota_settle_seconds)
+        return max(settled, at - self.poller.interval) if settled <= at else None
 
     def _reserved(self, job: Any) -> dict[str, JobUsage]:
         """What the other jobs running on each account are expected to use, so jobs run in

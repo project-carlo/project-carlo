@@ -2022,6 +2022,35 @@ def test_a_calibration_gap_holds_the_next_job_for_a_settled_reading(env: Env) ->
     assert row["five_hour"]["samples"] == 1 and row["five_hour"]["per_unit"]["median"] == 5
 
 
+def test_a_reading_from_before_the_account_settled_is_never_the_next_before(
+        env: Env) -> None:
+    """A periodic reading taken while the account settles, shared with the next job's
+    usage check, would leave the attempt unsettled and the next one with no idle before."""
+    settle = timedelta(seconds=env.config.quota_settle_seconds)
+    meter, spend = metered(env, gap=env.config.quota_settle_seconds)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=meter)
+    slept: list[float] = []
+
+    def sleep(seconds: float) -> None:
+        slept.append(seconds)
+        env.now += timedelta(seconds=seconds)
+    d.usage.sleep = sleep
+    assert drive(d)[-1].startswith("waiting: calibration gap")
+    finished = datetime.fromisoformat(
+        env.ledger.one("SELECT finished_at FROM attempt WHERE id = 1")["finished_at"])
+    env.now = finished + settle - timedelta(seconds=30)
+    env.ledger.set("quota_sampled", None)
+    assert d.tick().action == "waiting"  # a periodic reading, still in the gap
+    env.now = finished + settle
+    assert d.tick().action == "ran"
+    assert slept == [30]  # the interval since the periodic reading, then a new one
+    before = env.ledger.one("SELECT at FROM usage WHERE source = 'before' AND "
+                            "attempt_id = 2")
+    assert datetime.fromisoformat(before["at"]) >= finished + settle
+    assert quota_of(env, 1).label == SETTLED
+
+
 def test_a_failed_after_reading_does_not_stop_the_job(env: Env) -> None:
     meter, spend = metered(env)
     survey = StubAction(files=survey_files(), handoff=done("surveyed"))
@@ -2234,6 +2263,36 @@ def test_retry_after_reads_seconds_or_a_date() -> None:
     assert usage_mod.retry_after({"Retry-After": "Tue, 03 Nov 2026 00:20:00 GMT"}, at) == 0
     assert usage_mod.retry_after({"Retry-After": "soon"}, at) is None
     assert usage_mod.retry_after({}, at) is None
+    # Nothing a datetime can't add: "inf" is unreadable, and a week is the longest wait.
+    assert usage_mod.retry_after({"Retry-After": "inf"}, at) is None
+    assert usage_mod.retry_after({"Retry-After": "nan"}, at) is None
+    week = usage_mod.WEEK.total_seconds()
+    assert usage_mod.retry_after({"Retry-After": "1e300"}, at) == week
+    assert usage_mod.retry_after({"Retry-After": "Fri, 31 Dec 9999 23:59:59 GMT"}, at) == week
+
+
+def test_a_huge_retry_after_cools_down_without_crashing_the_tick(env: Env) -> None:
+    meter = failing_usage_check(env, 429, 1)
+    meter.retry_after = usage_mod.retry_after({"Retry-After": "1e300"})
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    out = d.tick()
+    assert out.action == "waiting" and out.wait_until == env.now + usage_mod.WEEK
+
+
+def test_a_pinned_job_waits_for_its_own_accounts_cooldown_only(
+        env: Env, monkeypatch: pytest.MonkeyPatch) -> None:
+    """Another account's calibration gap doesn't end the wait of a job pinned to one
+    cooling down."""
+    a, b, fetch = two_accounts(env)
+    a.fail, a.status = 1, 429
+    d = env.dispatcher(map_script(), fetch_usage=fetch)
+    with pytest.raises(usage_mod.Cooldown) as caught:
+        d.usage.read(env.config.accounts[0])
+    monkeypatch.setattr(d.accounts, "_calibration_holds",
+                        lambda: {"b": env.now + timedelta(minutes=1)})
+    _, _, out = d.accounts.pick({"id": 0, "account": "a", "stage": "survey"})
+    assert out is not None and out.action == "waiting"
+    assert out.wait_until == caught.value.until
 
 
 def test_fetch_usage_reports_the_http_status(tmp_path: Path,
