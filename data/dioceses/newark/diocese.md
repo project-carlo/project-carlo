@@ -138,6 +138,14 @@ other mapped dioceses' notes.
   saintnicholaschurch.org answers with 499 bytes and stjosephroselle.com with a "Temporarily
   Unavailable" page; christthekingjerseycity.org and holyrosarychurch.com returned nothing.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- John Patrick parishes may self-host copies named <jppc id><MMDDYY>.pdf (Holy Trinity Hackensack: Squarespace /s/6004102526.pdf); the prefix is the id, and church-bulletin.org/?id=<id> is often a week ahead, so pin `page-pdfs https://church-bulletin.org/<id>` instead.
+- `page-pdfs https://church-bulletin.org/<id>` resolves current issues in Newark too (ids 597, 6004 checked 2026-11-03); many JPP and LPi issues here are image-only, so read page 1 with render.py.
+
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them. None yet; the survey's
