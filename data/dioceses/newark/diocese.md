@@ -170,6 +170,8 @@ County) and Allentown's and other mapped dioceses' notes.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
 - Sitelio/mywebsitebuilder parish sites (components.mywebsitebuilder.com/sitelio) build their text and links with JavaScript, so probe get and publisher_fingerprint.sh show nothing; visit.py --text --links reveals the bulletin link (St. Joseph, Lodi linked parishesonline.com/find/<org>). Cite such pages by note, since recheck can't see the text.
+- When a parish site is down, the Wayback availability API (probe get http://archive.org/wayback/available?url=<domain>) answers when web.archive.org/web/... gives HTTP 429, and an id_ snapshot shows the site's bulletin menu and Mass times; snapshot fetches hit 429 again after one or two requests, so get the page you need first.
+- An LPi bulletin's text layer can carry a stray template date (e.g. 'March 15, 2026') next to the issue date, so fetch:check reports issue_date conflict and freshness unknown even when the pick is current; check the file name and the issue's own date line before treating it as stale.
 
 
 ## Rules settled for this diocese
