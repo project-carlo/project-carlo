@@ -180,6 +180,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Duda parish sites can have a /bulletin page that lists dated PDFs newest first (irp.cdn-website.com/<id>/files/uploaded/November+1-+2026.pdf). page-pdfs on that page picks the current issue and reads its date, so freshness is known.
 - When the directory lists no website, try likely domains with probe get (e.g. sjb<town>.org). Confirm the masthead address before using a hit: stjohnfairview.org was a UCC church in Illinois.
 - Newark LPi org slugs follow <name>-church-<zip> (st-cecilia-church-07631, st-john-the-evangelist-church-07605): when a self-hosted bulletin's footer gives only the container, probe po on that slug finds the org and lpi id.
+- A parish site's own bulletin archive can be years stale while LPi prints the current issue (OLQP Maywood's Weebly page stops Feb 2023; org our-lady-queen-of-peace-church-07607 is current): probe po <name>-church-<zip> whenever a site's newest bulletin is old.
 
 
 ## Rules settled for this diocese
