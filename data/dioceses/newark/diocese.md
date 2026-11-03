@@ -149,6 +149,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Bon Venture-printed bulletins may be self-hosted by the parish with no sponsors.bonventure.net link (Presentation, Upper Saddle River): the ad-page footer '<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture Services' identifies them; read the parish's own bulletin page with page-pdfs.
 - eCatholic-hosted bulletins here are often image-only too (Most Blessed Sacrament 14258, OLPH Oakland 2310 are John Patrick layouts with no text layer): render page 1-2 with render.py and cite them by note, since recheck can't find quotes in them.
 - fetch:check run headed reads eCatholic rows whose parish site answers probe get with 403 (Cloudflare); no fetch_gap is needed for them.
+- A Wix parish homepage with a 'WEEKEND BULLETIN' button and no bulletin page can be read with `page-pdfs <homepage>` (fetch:check 'first-listed'), but the ugd file name carries no date so freshness reads 'unknown': confirm the pick is the bulletin, not a letter linked on the same page.
 
 
 ## Rules settled for this diocese
