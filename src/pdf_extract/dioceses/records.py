@@ -49,11 +49,17 @@ META_FILE = "diocese.md"
 ROSTERS_DIR = "rosters"
 LIVE = "live"  # how `search` labels rows of data/parishes.csv and data/churches.csv
 
-# Every value a parish record may use. `fetch` reads the first four; `no_bulletin`
-# rows stay out of data/parishes.csv (see `unpublished`).
+# Every value a parish record may use. `fetch` reads the first five. The last two keep a
+# parish and its churches in the records but out of data/parishes.csv (see `unpublished`):
+# `no_bulletin`, no bulletin was found; `unsupported`, a bulletin is published but no
+# collector reads it yet (its `fetch_gap` says what fails). Setting a real provider puts
+# the row back; nothing does that by itself when a collector lands.
 NO_BULLETIN = "no_bulletin"
+UNSUPPORTED = "unsupported"
+OFF_SITE_PROVIDERS = frozenset({NO_BULLETIN, UNSUPPORTED})
 KNOWN_BULLETIN_PROVIDERS = frozenset(
-    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive", NO_BULLETIN}
+    {"parishes_online", "ecatholic", "discover_mass", "other", "google_drive",
+     *OFF_SITE_PROVIDERS}
 )
 # Providers `fetch` looks up by account id rather than by the parish website.
 PROVIDERS_NEEDING_ID = frozenset({"parishes_online", "discover_mass"})
@@ -693,6 +699,23 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         )
     if not provider:
         p.incomplete.append(f"{label}: bulletin_provider not identified yet")
+    gap = r.get("fetch_gap")
+    if provider == UNSUPPORTED:
+        if gap is None:
+            p.errors.append(f"{label}: bulletin_provider unsupported needs a fetch_gap: what "
+                            "fails and where the bulletin is (README, fetch_gap)")
+        if r.get("bulletin_status") in ("not-found", "not-published"):
+            p.warnings.append(f"{label}: unsupported is for a bulletin that is published; "
+                              f"bulletin_status {r['bulletin_status']} says none was found, "
+                              "which is no_bulletin")
+    elif provider == NO_BULLETIN and gap is not None:
+        p.warnings.append(f"{label}: no_bulletin with a fetch_gap: a published bulletin that "
+                          "fetch can't collect is bulletin_provider unsupported (off the site "
+                          "the same way, and listed as waiting on a collector)")
+    elif provider and gap is not None:
+        p.warnings.append(f"{label}: fetch_gap on a {provider} row, which goes live although "
+                          "fetch can't collect its bulletin; bulletin_provider unsupported "
+                          "keeps it off the site until a collector reads it")
     if provider in PROVIDERS_NEEDING_ID and not r.get("provider_id"):
         p.incomplete.append(f"{label}: {provider} needs a provider_id for fetch to find it")
     if provider in PROVIDERS_TAKING_RECIPE and r.get("provider_id"):
@@ -704,7 +727,7 @@ def _check_parish(label: str, r: Mapping[str, Any], p: Problems) -> None:
         problem = publication_problem(str(pub))
         if problem:
             p.errors.append(f"{label}: publication {pub!r}: {problem}")
-    if not r.get("publication") and provider != NO_BULLETIN:
+    if not r.get("publication") and provider != NO_BULLETIN:  # unsupported keeps its ids
         p.warnings.append(
             f"{label}: no publication id recorded, so nothing can check that no other "
             "row publishes the same bulletin"
@@ -944,12 +967,14 @@ def problems(d: Diocese, *, owners: _Owners | None = None,
 def unpublished(d: Diocese) -> tuple[set[str], set[str]]:
     """Parishes and churches kept in the records but left off the site.
 
-    A `no_bulletin` parish publishes nothing the pipeline can read, so its
-    churches would only ever show an empty schedule. Its records stay, with
-    their evidence and revisit date, and go live when a bulletin turns up.
+    A `no_bulletin` parish publishes nothing the pipeline can read, and an
+    `unsupported` one publishes a bulletin no collector reads yet, so their
+    churches would only ever show an empty schedule. Their records stay, with
+    their evidence, fetch gap and revisit date, and go live when the parish is
+    set to a provider `fetch` reads.
     """
     parishes = {slug for slug, r in d.of(PARISH).items()
-                if r.get("bulletin_provider") == NO_BULLETIN}
+                if r.get("bulletin_provider") in OFF_SITE_PROVIDERS}
     churches = {slug for slug, r in d.of(CHURCH).items() if r.get("parish") in parishes}
     return parishes, churches
 
@@ -1000,9 +1025,12 @@ def _check_drift(d: Diocese, owners: _Owners, p: Problems) -> None:
     for kind, off_site, live in zip((PARISH, CHURCH), unpublished(d),
                                     (owners.live_parish, owners.live_church), strict=True):
         for slug in sorted(off_site & live.keys()):
-            if d.of(kind)[slug].get("promoted"):
-                p.warnings.append(f"{_label(kind, slug)}: no_bulletin, but still in "
-                                  f"data/{kind.dir}.csv; run `diocese promote` to take it off")
+            record = d.of(kind)[slug]
+            if record.get("promoted"):
+                parish = record if kind is PARISH else d.of(PARISH).get(record.get("parish"), {})
+                p.warnings.append(f"{_label(kind, slug)}: {parish.get('bulletin_provider')}, "
+                                  f"but still in data/{kind.dir}.csv; run `diocese promote` to "
+                                  "take it off")
     parishes, churches = export_rows(d)
     for kind, rows, live in ((PARISH, parishes, owners.live_parish),
                              (CHURCH, churches, owners.live_church)):
@@ -1486,7 +1514,7 @@ def promote(diocese: str, *, dry_run: bool = False) -> dict[str, Any]:
     New rows are appended and promoted rows updated in place. Live rows the
     diocese has retired are deleted: slugs in a record's `replaces` (merged or
     renamed away), promoted churches that are now in excluded/ or open/, and `no_bulletin`
-    parishes with their churches (see `unpublished`). A record
+    and `unsupported` parishes with their churches (see `unpublished`). A record
     that is blank where the live row has a value (coordinates from `geocode`,
     flags from `verify`) takes the live value instead of erasing it. Every
     promoted record is stamped `promoted: <date>`, which is what lets it share

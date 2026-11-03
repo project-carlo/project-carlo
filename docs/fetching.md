@@ -124,7 +124,10 @@ no file matches, the fetch fails. Use a page that lists the newest issue first
 so the fallback also keeps the latest matching bulletin when uploads are late.
 
 When a site needs something new, add a collector rather than a branch inside
-an existing one, and record the site (below).
+an existing one, and record the site (below). The parishes waiting on one are
+`bulletin_provider: unsupported` with a `fetch_gap` (`pnpm diocese gaps` lists
+them by kind). A new collector doesn't put them live: set each one's provider,
+check it with `fetch:check`, then clear its gap (data/dioceses/README.md).
 
 ### Recorded sites
 
