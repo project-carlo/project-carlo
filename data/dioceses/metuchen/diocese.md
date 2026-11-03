@@ -223,6 +223,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site can post its own Bon Venture issues under file names that don't match the issue date (St. Ann's 'BulletinOctober4.pdf' held 25 October): date issues from the PDF text, and pin page-pdfs to a list ordered newest first ('This Week' first); fetch:check then reports date unknown.
 - Bon Venture sponsors.bonventure.net/?page=<n> ids don't follow the G-codes, and many ids are empty; tools/bonventure_scan.sh scans an id range for a town name (about 4 s per id).
 - pnpm diocese probe get --out resolves a relative path against the worktree root, not the shell's directory: give it a path under your scratch folder from the root (scratch/<run>/<job>/...).
+- Catholic Web Company sites (footer thecatholicwebcompany.com) have no /bulletin page: the bulletin list is the 'Events & Bulletin' page at /event, linking /uploads/docs/bulletins/<YYYYMMDD>.pdf; page-pdfs on /event picks the newest issue.
 
 ## Rules settled for this diocese
 
