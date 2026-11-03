@@ -119,116 +119,88 @@ Oxford, Iselin/Woodbridge, Frenchtown/Milford), and (c) among the three Raritan 
 
 From the survey's probes of the finder websites (2026-10-30) and the map batches since:
 
-- **eCatholic** hosts most parish sites (34 distinct site ids on the probed sites). They
-  answer `probe url` directly. **A site id is the website's, not proof the bulletin is there:** a Bulletin page
-  can embed an LPi id as well (St. Matthew, Edison), say only "Click Here" to a ParishesOnline
-  org, or link only a John Patrick template; follow the link with `visit.py --links` and record
-  the publisher it reaches. **`ecatholic:21916` is the diocese's own site:** don't record it.
-  Read issues with `issues.py ecatholic` at `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`;
-  it answers 403 for a site that doesn't name its files by the Sunday date, so read the real
-  file names with `visit.py --links` on the Bulletin page. A Bulletin page can be a frozen archive
-  while the menu's "Bulletin" item points to the live publisher: check the newest file's date and
-  don't record a stale id. Many eCatholic bulletins are all-image PDFs; see *Image-only pages*.
+- **eCatholic** hosts most parish sites; they answer `probe url` directly. **A site id is the
+  website's, not proof the bulletin is there:** a Bulletin page can embed an LPi id (St. Matthew,
+  Edison), say only "Click Here" to a ParishesOnline org, or link only a John Patrick template;
+  follow the link with `visit.py --links` and record the publisher it reaches. **`ecatholic:21916`
+  is the diocese's own site:** don't record it. Read issues with `issues.py ecatholic` at
+  `files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf`; it answers 403 for a site that doesn't name
+  its files by the Sunday date, so read the real names with `visit.py --links`. A Bulletin page
+  can be a frozen archive while the menu's "Bulletin" item points to the live publisher: check
+  the newest file's date and don't record a stale id.
 - **ParishesOnline / LPi:** containers can sit behind a `/wordpress/` redirect, and a parish
   WordPress can post LPi-named files (`20261011B-3.pdf`): look for its container. A container can
-  carry the same file the parish hosts on eCatholic; compare `pdftotext` output (see *Rules
-  settled*). When a parish site only links a container, `probe po <name>-church-<zip>`
-  (`st-catherine-of-siena-church-08867`) usually finds the org slug and LPi id.
+  carry the file the parish hosts on eCatholic (see *Rules settled*). To find a container, `probe
+  po <name>-church-<zip>` (`st-catherine-of-siena-church-08867`); a merged parish's container can
+  sit under its old member churches' slugs, so try each and record every org's ids on the one
+  row. If slugs fail, search for the parish's LPi WeConnect site
+  (`<name>-<aa>-<bbbb>.weconnectonline.com`): it embeds the LPi id, and `probe po <id>` gives the slug.
 - **John Patrick Publishing** (church-bulletin.org): parish sites link
-  `jppc.net/onlinebulletins/<id>template.pdf`, which returns HTML, so `probe pdf` can't read it;
-  `church-bulletin.org/?id=<id>` redirects to the listing. Record provider `other` with
-  `page-pdfs https://church-bulletin.org/<id>`; `fetch:check` picks the
-  newest issue, and because the listing posts the coming Sunday's issue about two days early it
-  reports freshness `future`. It also carries copies of parish-hosted eCatholic bulletins with
-  extra ad pages (see *Rules settled*); conversely a parish site can keep a frozen "This Week"
-  `bulletin.pdf` while John Patrick posts the current issue, so check the newest date. Some
-  issues are image-only (render page 1; take the Mass schedule from the parish site). It answers
-  406 to a bare "Mozilla/5.0" user agent.
-- **Bonventure** (`sponsors.bonventure.net/?page=<n>`, http only; files at
-  `pdfs/<n>/<date>.pdf`, page 1 often an image): parishes' eCatholic sites only link it. Record
-  provider `other` with `page-pdfs http://sponsors.bonventure.net/?page=<n>`;
-  the listing posts the coming Sunday early. Each account number is one parish: different
-  accounts are not a shared bulletin, so record separate `publication_reviews` from the
-  mastheads. A parish site can leave its listing unlinked (the "Bulletin" menu item going to an
-  HTML events page), or post its own Bon Venture issues on Weebly as
-  `/uploads/…/<YYYY-MM-DD>-<code>web.pdf` (ad-page line `<code> - <parish> … Bon Venture
-  Services`) with no listing link: search the parish name with "bulletin" for a
-  `sponsors.bonventure.net/?page=<n>` listing before recording no PDF bulletin. `page-pdfs` reads
-  such a Weebly page, but these can skip weeks, so check the newest date.
+  `jppc.net/onlinebulletins/<id>template.pdf`, which returns HTML (`probe pdf` can't read it).
+  Record provider `other` with `page-pdfs https://church-bulletin.org/<id>`; the listing posts the
+  coming Sunday about two days early, so `fetch:check` reports freshness `future`. A parish site
+  can keep a frozen "This Week" `bulletin.pdf` while John Patrick posts the current issue: check
+  the newest date. It answers 406 to a bare "Mozilla/5.0" user agent.
+- **Bonventure** (`sponsors.bonventure.net/?page=<n>`, http only; files at `pdfs/<n>/<date>.pdf`):
+  parishes' eCatholic sites only link it. Record provider `other` with `page-pdfs
+  http://sponsors.bonventure.net/?page=<n>`; it posts the coming Sunday early. Each account
+  number is one parish, so different accounts are separate `publication_reviews`, decided from
+  mastheads. Listing ids don't follow the ad-page G-codes and many are empty;
+  `tools/bonventure_scan.sh` scans an id range for a town name (about 4 s per id). A parish can
+  leave its listing unlinked or post its own issues (Weebly
+  `/uploads/…/<YYYY-MM-DD>-<code>web.pdf`, or names that don't match the date, such as
+  `BulletinOctober4.pdf` holding 25 October): search or scan for a listing before recording no
+  PDF bulletin. Parish copies can skip weeks: date them from the PDF text, and pin `page-pdfs` to
+  a newest-first list ("This Week" first); `fetch:check` then reports date `unknown`.
 - **Discover Mass** (`discovermass:<slug>`) caps downloads per IP per day (a 134-byte "Maximum
-  number of files downloaded today" reply, which `fetch:check` reports as `not_pdf`), so cite
-  the church page and the issue date, not a tokenised download link. `fetch:check` fetches the
-  church page's "Current Bulletin" link but reports issue date and freshness `unknown` (the
-  token has no date): confirm currency from the date the church page lists for that link. Its church page is also
-  the `website` for a parish with no site of its own (see *Rules settled*).
-- **Self-hosted PDFs** (dated paths such as `/assets/PDF/<yyyy>/<yyyy-mm-dd>.pdf` or
-  `/uploads/docs/bulletins/<YYYYMMDD>.pdf`, Wix `_files/ugd/` hashes, Weebly, plain
-  `/Bulletins.html` pages): `page-pdfs` on the Bulletin page works, and parishes that post the
-  next Sunday early report freshness `future`. Check the newest entries are real PDFs (one list
-  held unfinished `.crdownload` uploads). On a Wix archive each date label follows its PDF link
-  in the HTML, so the label above a link belongs to the previous link: take the date from the
-  PDF text; Wix answers 429 after a few rapid downloads, so wait and retry. Google Sites parish
-  pages can embed the John Patrick template link, so check their links for `jppc.net` before
-  looking for a Drive folder. Squarespace sites post `/s/<name>.pdf` and can link flyers above
-  the issues: pin `page-pdfs` with a filename glob on the issues' common prefix. A self-hosted
-  archive can date a worship site gone from the current Mass page: grep one issue per half-year
-  for the church name to find the notice that ended its Masses ("no Masses scheduled at …").
+  number of files downloaded today" reply, `not_pdf` in `fetch:check`), so cite the church page
+  and the issue date, not a tokenised link. `fetch:check` reports date and freshness `unknown`:
+  confirm currency from the date the church page lists. Its church page is also the `website`
+  for a parish with no site (see *Rules settled*).
+- **Self-hosted PDFs** (dated paths, Wix `_files/ugd/` hashes, Weebly, plain `/Bulletins.html`):
+  `page-pdfs` on the Bulletin page works; check the newest entries are real PDFs (one list held
+  `.crdownload` uploads). On Wix each date label follows its PDF link, so take the date from the
+  PDF text; Wix answers 429 after a few rapid downloads. Google Sites can embed the John Patrick
+  template, so check for `jppc.net` first. Squarespace posts `/s/<name>.pdf`: pin a filename glob
+  on the issues' common prefix; a Bulletin page linking one PDF can stop updating, so if its
+  date is stale record research with a revisit, not a recipe. A self-hosted archive can date a
+  worship site gone from the Mass page: grep one issue per half-year for the church name.
+- **Catholic Web Company** (footer `thecatholicwebcompany.com`): no `/bulletin` page; `page-pdfs`
+  on the "Events & Bulletin" page `/event` picks the newest `/uploads/docs/bulletins/<YYYYMMDD>.pdf`.
 - **OSV/Duda sites** (footer `editor.osvwebsites.com`) post
-  `irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf`, the suffix varying
-  (`+Final`, `print`, `a`); `page-pdfs` on the site's `/bulletin` page picks the newest issue.
-- **Immaculate Motherhood LLC sites** (footer "Website by Immaculate Motherhood LLC") link only
-  HTML viewer pages (`bulletin-view?f=<name>`) wrapping the PDF at `/bulletins/file/<name>`.
-  `fetch:check` guesses the wrong edition, and no pinned recipe (`page-pdfs`,
-  `linked-issue-page`, `dated-post`, `redirected-pdf`) reads it: confirm the bulletin from the
-  file path in the viewer page's HTML and record the row `unsupported-format` until a collector
-  exists.
-- **Joomla file endpoints** (`/about-us/bulletin/<n>-<title>/file`) answer 403 to `probe get`,
-  and `fetch:check` finds no PDFs; a `fetch()` inside the real Chrome page
-  (`tools/browser_get.py`) returns the PDF. Record `fetch_gap` `joomla-file-endpoint`.
-- **SermonCloud embeds** hold bulletins as `media.notes` S3 PDF URLs in
-  `api.sermoncloud.com/<account>/sermons`; find the API call with `tools/net_log.py`. Record
+  `irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf`; `page-pdfs` on `/bulletin`
+  picks the newest.
+- **GoDaddy site builder** (PDFs at `storage.googleapis.com/production-sitebuilder-v1-0-9/…/<hash>?fileName=<name>`):
+  a `filename=` glob matches the hash, not `fileName`, and a name like `Nov 7.21.pdf` parses as
+  the coming 7 November; record `fetch_gap` `filename-date-misread`, not a recipe.
+- **Immaculate Motherhood LLC sites** link only HTML viewers (`bulletin-view?f=<name>`) around
+  `/bulletins/file/<name>`; no recipe reads them. Confirm the bulletin from the viewer's HTML and
+  record `unsupported-format`.
+- **Joomla file endpoints** (`/about-us/bulletin/<n>-<title>/file`) answer 403 to `probe get`; a
+  `fetch()` in Chrome (`tools/browser_get.py`) returns the PDF. Record `fetch_gap`
+  `joomla-file-endpoint`.
+- **SermonCloud embeds** keep bulletins as `media.notes` S3 URLs in
+  `api.sermoncloud.com/<account>/sermons` (find the call with `tools/net_log.py`). Record
   `fetch_gap` `sermoncloud-api-embed`.
-- **HTML-only bulletins:** a parish can publish its bulletin as a web page with no PDF;
-  `fetch:check` reports "No PDF links found". Record it `unsupported-format`.
-- **Image-only pages** (eCatholic, John Patrick, Bonventure and self-hosted alike): when page 1
-  is an image, `probe pdf --grep` only reaches the text pages. Render page 1 (`pdftoppm -r 70
-  -jpeg -f 1 -l 1`) to read the masthead, and for recheck quote a text page (often the
-  publisher's code line on an ad page) or the parish website. A text layer can also be garbage:
-  some Bon Venture PDFs use an unmapped font, but their ad-page code line (`<code> (CK) ·
-  <parish> • <town>`) stays readable to quote; a self-hosted PDF can use a shifted encoding
-  (`Parish` as `3DULVK`, each character 29 below), and `fetch:check` then reports issue date and
-  freshness `unknown`. Render page 1 for the masthead and take the Mass schedule from the parish
-  site.
-- **`probe url` DEAD-DNS is unreliable here:** in two batches it said DEAD-DNS for every host,
-  live ones included (church-bulletin.org, discovermass.com), while `probe get` fetched them or
-  answered 403 and `visit.py` loaded them. Before treating a domain as dead, retry with `probe
-  get` and the browser.
-- **Finder websites that don't resolve or redirect:** an old finder domain can redirect to a new
-  eCatholic site (read the target and its id), or be taken by spam while the bulletin still
-  prints it. Find the live site with a search (`tools/ddg.sh` now gets DuckDuckGo's
-  bot challenge, HTTP 202 with no results; `visit.py
-  'https://duckduckgo.com/?q=<words>&ia=web' --links` still works) and confirm it by the
-  address and URL on the bulletin's masthead.
-- **The probes' SPAM-SQUAT verdict needs a look:** it can come from one stray word (a parish
-  "Casino Trip" event). Read the page's title, links and bulletin before
-  treating a live parish site as squatted.
-- **The parish finder's details are leads:** its clergy lines were wrong for two of six mastheads
-  checked, so take the pastor from each parish's own masthead; and a finder pin or GCatholic
-  address can be the rectory, not the church, so check the parish Contact page and the masthead.
+- **HTML-only bulletins** ("No PDF links found"): record `unsupported-format`.
+- **Image-only pages** (any publisher): `probe pdf --grep` reaches only text pages. Render page 1
+  (`pdftoppm -r 70 -jpeg -f 1 -l 1`) for the masthead, take the Mass schedule from the parish
+  site, and for recheck quote a text page (often the ad-page code line). A text layer can be
+  garbage: Bon Venture's unmapped font still leaves the code line (`<code> (CK) · <parish> •
+  <town>`) readable; a shifted encoding (`Parish` as `3DULVK`) leaves `fetch:check` date `unknown`.
+- **Probe quirks:** `probe url` DEAD-DNS is unreliable here (it said so for live hosts); retry
+  with `probe get` and the browser. Its SPAM-SQUAT verdict can come from one word (a "Casino
+  Trip"): read the page first. `probe get --out` resolves a relative path from the worktree root,
+  so give `scratch/<run>/<job>/…`. `tools/ddg.sh` gets DuckDuckGo's bot challenge; `visit.py
+  'https://duckduckgo.com/?q=<words>&ia=web' --links` works.
+- **Finder websites and details:** a dead finder domain can redirect to a new site (read its
+  id) or be spam while the bulletin still prints it; find the live site by search and confirm it
+  by the masthead's address and URL. A finder pin or GCatholic address can be the rectory: check
+  the Contact page and masthead.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- A parish site can post its own Bon Venture issues under file names that don't match the issue date (St. Ann's 'BulletinOctober4.pdf' held 25 October): date issues from the PDF text, and pin page-pdfs to a list ordered newest first ('This Week' first); fetch:check then reports date unknown.
-- Bon Venture sponsors.bonventure.net/?page=<n> ids don't follow the G-codes, and many ids are empty; tools/bonventure_scan.sh scans an id range for a town name (about 4 s per id).
-- pnpm diocese probe get --out resolves a relative path against the worktree root, not the shell's directory: give it a path under your scratch folder from the root (scratch/<run>/<job>/...).
-- Catholic Web Company sites (footer thecatholicwebcompany.com) have no /bulletin page: the bulletin list is the 'Events & Bulletin' page at /event, linking /uploads/docs/bulletins/<YYYYMMDD>.pdf; page-pdfs on /event picks the newest issue.
-- When probe po slug guesses fail for a ParishesOnline container, LPi's WeConnect site <name>-<aa>-<bbbb>.weconnectonline.com (found by a search on the parish name) embeds the 18-character LPi id; probe po <id> then gives the org slug.
-- GoDaddy site-builder sites (PDFs at storage.googleapis.com/production-sitebuilder-v1-0-9/.../<hash>?fileName=<name>) defeat page-pdfs: a recipe's filename= glob matches the hash path, not the fileName query, and an archived name like 'Nov 7.21.pdf' parses as the coming 7 November, so record fetch_gap filename-date-misread rather than a recipe.
-- A merged parish's ParishesOnline container can sit under its old member churches' org slugs (<church>-church-<zip>) when no slug for the merged parish exists: try each member church, and record every org's ids on the one row.
-- A parish Squarespace site can link only one bulletin PDF at a time from its Bulletin page and stop updating it: check the issue date before pinning page-pdfs; if stale, record research with a revisit, not a recipe.
-- Perth Amboy's 2015 suspensions (Holy Spirit, La Asuncion, St. Mary; effective 14 Sep 2015) are dated in a 29 Oct 2015 MyCentralJersey article that visit.py reads (probe get gets a 402). A suspended church can hold Mass again, as La Asuncion does, so check the current bulletin before recording one closed.
 
 ## Rules settled for this diocese
 
