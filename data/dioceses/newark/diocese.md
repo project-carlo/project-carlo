@@ -181,6 +181,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When the directory lists no website, try likely domains with probe get (e.g. sjb<town>.org). Confirm the masthead address before using a hit: stjohnfairview.org was a UCC church in Illinois.
 - Newark LPi org slugs follow <name>-church-<zip> (st-cecilia-church-07631, st-john-the-evangelist-church-07605): when a self-hosted bulletin's footer gives only the container, probe po on that slug finds the org and lpi id.
 - A parish site's own bulletin archive can be years stale while LPi prints the current issue (OLQP Maywood's Weebly page stops Feb 2023; org our-lady-queen-of-peace-church-07607 is current): probe po <name>-church-<zip> whenever a site's newest bulletin is old.
+- Diocesan (Discover Mass) bulletins can be reposted on a parish's eCatholic site under files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf (page 2 'View this bulletin online at www.DiscoverMass.com', footer '©2026 Diocesan'): record provider ecatholic to avoid Discover Mass's download cap, and list both ecatholic: and discovermass: ids in publication.
+- Wix parish sites that post John Patrick issues as undated _files/ugd/ copies: read the page-8 footer for the id and pin page-pdfs https://church-bulletin.org/<id>, which gives dated file names.
 
 
 ## Rules settled for this diocese
