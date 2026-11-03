@@ -49,7 +49,9 @@ Then, cheapest first:
    Discover Mass issues the way `probe container` reads ParishesOnline ones.
 3. **Write records:** `uv run python -m pdf_extract diocese write <d> <kind> <slug>
    --file record.json` patches flat fields plus `body`; lists replace existing lists.
-   Add `--create` only for explicit new records; `--file -` reads stdin. It validates and
+   Add `--create` only for explicit new records; `--file -` reads stdin. Quote the heredoc
+   (`<<'JSON'`) and write URLs out in full: record bodies use backticks, and an unquoted
+   heredoc runs each one as a command. It validates and
    writes atomically, returning slug, path and validation counts. See the README's payload
    example. Existing `new` and `merge` remain supported; `new church --from gcatholic:<id>`
    can prefill address, coordinates and evidence before a structured update. Replace TODOs
