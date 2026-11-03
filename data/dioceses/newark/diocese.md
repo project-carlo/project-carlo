@@ -105,32 +105,49 @@ in the territory.
 
 No mapped diocese borders Newark except New York, whose record covers one parish and names no
 publishers. These lines come from a 26-site sample on 2026-11-03, the first map batches (Bergen
-County) and Allentown's and other mapped dioceses' notes.
+and Hudson Counties) and Allentown's and other mapped dioceses' notes.
 
 - **`probe url` says DEAD-DNS for every parish site in this sandbox.** It resolves names
   itself, and the sandbox reaches the web only through a proxy. `probe get` and
   `parish-site-access`'s `visit.py` work; `scratch/newark-map-1/tools/publisher_fingerprint.sh`
   lists the publishers a homepage mentions, but `visit.py` finds some it misses (a
   ParishesOnline org linked only from the bulletin page).
+- **Finding a site the directory doesn't list:** try likely domains with `probe get`
+  (`sjb<town>.org`, `<name><town>nj.org`) and confirm the masthead address before using a hit
+  (one guess was a UCC church in Illinois). A guess answering 403 with 0 bytes can be a live
+  eCatholic site behind Cloudflare: open it with `visit.py` before discarding it. DuckDuckGo's
+  html search answers a bot check here; for a parish run by a religious order, the order's
+  WordPress search (`<order site>/wp-json/wp/v2/search?search=<town>`) finds parish news and
+  addresses.
+- **A site that is down:** the Wayback availability API (`probe get
+  http://archive.org/wayback/available?url=<domain>`) answers when `web.archive.org/web/…`
+  gives 429, and an `id_` snapshot shows the bulletin menu and Mass times. Snapshots hit 429
+  again after one or two requests, so fetch the page you need first.
 - **Image-only issues are common here** (John Patrick, LPi and eCatholic-hosted alike): read
   pages 1–2 with `render.py` and cite the masthead by note, since recheck can't find quotes
   in them.
 - **The publisher's code on the ad or last page identifies a self-hosted bulletin.** Parishes
   here often post their printer's PDF on their own site; read the footer before deciding the
-  publisher (formats below).
+  publisher (formats below). A parish's own archive can be months or years stale while the
+  publisher's listing is current: when its newest issue is old, look for the publisher's
+  listing before recording it.
 - **A publisher's widget on a parish site isn't its bulletin.** An eCatholic site can be only
   the website while the bulletin is printed elsewhere: if `issues.py` finds no
   files.ecatholic.com bulletins and the Bulletins menu links ParishesOnline, a
   church-bulletin.org/jppc.net file or sponsors.bonventure.net, record that publisher and
-  leave the eCatholic id out of `publication`.
+  leave the eCatholic id out of `publication`. The same holds when the eCatholic files are
+  reposts of an LPi bulletin, under `/bulletins/` (often stopped weeks behind ParishesOnline;
+  compare newest dates) or only under `documents/<yyyy>/<m>/<yyyymmdd>B.pdf` (the LPi file
+  name): read the ad-page footer for the container and record `parishes_online`.
 - **John Patrick Publishing** is the most common publisher. Pin
   `page-pdfs https://church-bulletin.org/<id>` (checked in Newark with several ids,
   2026-11-03); `church-bulletin.org/?id=<id>` is often a week ahead of the current issue, so
   don't pin it. A link to `jppc.net/onlinebulletins/<id>template.pdf` gives the id; so does
-  the last-page footer `<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing`, and a
-  self-hosted copy's file name `<id><MMDDYY>.pdf` (the prefix is the id). A parish's own
-  archive can stop months before the listing does, so prefer the listing. In Allentown the
-  site answered 406 to a bare "Mozilla/5.0" user agent; plain curl worked.
+  the last-page footer (page 8) `<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing`,
+  and a self-hosted copy's file name `<id><MMDDYY>.pdf` (the prefix is the id). Prefer the
+  listing to a parish's copies: it gives dated file names where Wix `_files/ugd/` copies
+  have none. In Allentown the site answered 406 to a bare "Mozilla/5.0" user agent; plain
+  curl worked.
 - **Bon Venture Services:** parish sites link `sponsors.bonventure.net/?page=<id>` from a
   Bulletins menu item or image. Record provider `other` with
   `page-pdfs http://sponsors.bonventure.net/?page=<id>` and `publication: url:` that page, as
@@ -139,25 +156,44 @@ County) and Allentown's and other mapped dioceses' notes.
   carry the ad-page footer `<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture
   Services`; read the parish's own bulletin page with `page-pdfs`. Codes like `142E` have no
   `?page=` listing (it redirects to bonventure.net).
-- **ParishesOnline / LPi:** a self-hosted LPi bulletin's ad-page footer names the container
-  (`<Parish>, <Town>, NJ 03-0374` or `<Parish> | 04-0064` = `po-container:03/0374`);
-  `probe container` confirms it with no org slug. When guessed org slugs fail, run `visit.py`
-  on the parish's bulletin page: it reports `po-org:<slug>` (some have no zip suffix).
-  Parishes elsewhere keep empty orgs from old accounts, so read the latest issue before using
-  one.
+- **ParishesOnline / LPi:** org slugs here follow `<name>-church-<zip>`
+  (`st-cecilia-church-07631`); `probe po <slug>` gives the org, LPi id and container, and the
+  org's website field names the parish site. Try it before recording `no_bulletin` for a site
+  with no bulletin link, and whenever a site's own bulletins are old. A self-hosted LPi
+  bulletin's ad-page footer names the container (`<Parish>, <Town>, NJ 03-0374` or
+  `<Parish> | 04-0064` = `po-container:03/0374`); `probe container` confirms it with no org
+  slug. LPi WeConnect (Duda) sites embed `parishesonline.com/publicationWidget?type=bulletin&id=<18-char
+  id>` on `/bulletin`, and `probe po <id>` returns the org and container. When guessed slugs
+  fail, run `visit.py` on the parish's bulletin page: it reports `po-org:<slug>` (some have
+  no zip suffix). Parishes elsewhere keep empty orgs from old accounts, so read the latest
+  issue before using one. An LPi text layer can carry a stray template date ("March 15,
+  2026") beside the issue date, so fetch:check reports an issue_date conflict and freshness
+  `unknown` on a current pick: check the file name and the issue's own date line before
+  calling it stale.
 - **eCatholic behind Cloudflare** answers `probe get` with 403; `visit.py` loads it, and
   fetch:check runs headed and reads these rows, so no `fetch_gap` is needed.
+- **Discover Mass** (diocesan) bulletins can be reposted on a parish's eCatholic site under
+  `files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf` (page 2 "View this bulletin online at
+  www.DiscoverMass.com", footer "©2026 Diocesan"): record provider `ecatholic` and list both
+  `ecatholic:` and `discovermass:` ids in `publication`. Discover Mass caps downloads per IP
+  per day (a 134-byte "Maximum number of files" reply in Altoona-Johnstown and Harrisburg).
 - **Trinity Publishing** sites (footer "Powered by Trinity Publishing Company") link one fixed
   `/images/pdf/bulletin.pdf` the parish overwrites; it can be months stale, so read the date
   on page 1 before recording it.
-- **Wix and Duda parish sites** often have no bulletin page (Wix: a "WEEKEND BULLETIN" button;
-  Duda, irp.cdn-website.com: an empty Google viewer) but link the PDF from the homepage:
-  `page-pdfs <homepage>` (fetch:check `first-listed`) picks it. Wix `_files/ugd/` and Duda
-  names carry no date, so freshness reads `unknown`: confirm the pick is the bulletin, not a
-  letter linked on the same page. Other self-hosted sites (Squarespace, `/images/bulletins/
-  bulletinMMDDYY.pdf`) read with `page-pdfs` on the bulletin page.
-- **Discover Mass** didn't appear in the sample. Where it does, it caps downloads per IP
-  per day (a 134-byte "Maximum number of files" reply in Altoona-Johnstown and Harrisburg).
+- **Wix and Duda parish sites:** a Duda (irp.cdn-website.com) `/bulletin` page listing dated
+  PDFs newest first (`…/files/uploaded/November+1-+2026.pdf`) reads with `page-pdfs` on that
+  page, freshness known. Others have no bulletin page (Wix: a "WEEKEND BULLETIN" button;
+  Duda: an empty Google viewer) but link the PDF from the homepage: `page-pdfs <homepage>`
+  (fetch:check `first-listed`) picks it. Wix `_files/ugd/` and those Duda names carry no
+  date, so freshness reads `unknown`: confirm the pick is the bulletin, not a letter linked
+  on the same page.
+- **Sitelio / mywebsitebuilder sites** (components.mywebsitebuilder.com/sitelio) build text
+  and links in JavaScript, so `probe get` and the fingerprint script see nothing: `visit.py
+  --text --links` shows the bulletin link. Cite such pages by note; recheck can't see them.
+- **Other self-hosted sites** (Squarespace, Weebly, `/images/bulletins/bulletinMMDDYY.pdf`)
+  read with `page-pdfs` on the bulletin page. Where that page also lists flyers named
+  "*Bulletin*", filter on the issue file names; a filter on a two-digit year prefix
+  (`26-*.pdf`) must change each January, so set `revisit_after` in late December.
 - **Languages:** 83 parishes are tagged Spanish. Korean, Polish, Portuguese (Ironbound) and
   Italian communities may print bulletins in their own language.
 - **Lost domains** (survey, not yet mapped): stfxp.com (St. Francis Xavier, Newark) redirects
@@ -168,23 +204,6 @@ County) and Allentown's and other mapped dioceses' notes.
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- Sitelio/mywebsitebuilder parish sites (components.mywebsitebuilder.com/sitelio) build their text and links with JavaScript, so probe get and publisher_fingerprint.sh show nothing; visit.py --text --links reveals the bulletin link (St. Joseph, Lodi linked parishesonline.com/find/<org>). Cite such pages by note, since recheck can't see the text.
-- When a parish site is down, the Wayback availability API (probe get http://archive.org/wayback/available?url=<domain>) answers when web.archive.org/web/... gives HTTP 429, and an id_ snapshot shows the site's bulletin menu and Mass times; snapshot fetches hit 429 again after one or two requests, so get the page you need first.
-- An LPi bulletin's text layer can carry a stray template date (e.g. 'March 15, 2026') next to the issue date, so fetch:check reports issue_date conflict and freshness unknown even when the pick is current; check the file name and the issue's own date line before treating it as stale.
-- An eCatholic parish site can repost its LPi bulletin under files.ecatholic.com/<id>/documents/<yyyy>/<m>/<yyyymmdd>B.pdf (the LPi file name) with nothing under /bulletins/: read the ad-page footer for the container and record parishes_online, leaving the eCatholic id out of publication.
-- A self-hosted bulletin page that also lists flyers named '*Bulletin*' needs a filename filter on the issue names; a filter on a two-digit year prefix (26-*.pdf) must be updated each January, so set revisit_after late December.
-- A parish site with no bulletin link (St. Joseph, East Rutherford's JavaScript site) can still have a live ParishesOnline org: try probe po <name>-church-<zip> before recording no_bulletin. The org's website field names the parish site.
-- LPi WeConnect (Duda) parish sites embed parishesonline.com/publicationWidget?type=bulletin&id=<18-char LPi id> on /bulletin; probe po <id> returns the org slug and container directly.
-- An eCatholic parish site's /bulletins listing can be a stale repost of its LPi bulletin (Holy Trinity, Fort Lee stopped at 20 Sep while ParishesOnline was current): compare newest dates and record parishes_online, leaving the eCatholic id out of publication.
-- Duda parish sites can have a /bulletin page that lists dated PDFs newest first (irp.cdn-website.com/<id>/files/uploaded/November+1-+2026.pdf). page-pdfs on that page picks the current issue and reads its date, so freshness is known.
-- When the directory lists no website, try likely domains with probe get (e.g. sjb<town>.org). Confirm the masthead address before using a hit: stjohnfairview.org was a UCC church in Illinois.
-- Newark LPi org slugs follow <name>-church-<zip> (st-cecilia-church-07631, st-john-the-evangelist-church-07605): when a self-hosted bulletin's footer gives only the container, probe po on that slug finds the org and lpi id.
-- A parish site's own bulletin archive can be years stale while LPi prints the current issue (OLQP Maywood's Weebly page stops Feb 2023; org our-lady-queen-of-peace-church-07607 is current): probe po <name>-church-<zip> whenever a site's newest bulletin is old.
-- Diocesan (Discover Mass) bulletins can be reposted on a parish's eCatholic site under files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf (page 2 'View this bulletin online at www.DiscoverMass.com', footer '©2026 Diocesan'): record provider ecatholic to avoid Discover Mass's download cap, and list both ecatholic: and discovermass: ids in publication.
-- Wix parish sites that post John Patrick issues as undated _files/ugd/ copies: read the page-8 footer for the id and pin page-pdfs https://church-bulletin.org/<id>, which gives dated file names.
-- A guessed parish domain that answers probe get with 403 and 0 bytes can be a live eCatholic site behind Cloudflare (holyfamilyunioncitynj.org): open it with visit.py before discarding the guess; <name><town>nj.org is worth trying when the directory lists no website.
-- Web search (DuckDuckGo html) answers a bot check in this sandbox; for parishes run by a religious order, the order's WordPress search (agustinosrecoletos.org/wp-json/wp/v2/search?search=<town>) finds parish news and the community's address.
 
 
 ## Rules settled for this diocese
