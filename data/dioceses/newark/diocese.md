@@ -157,6 +157,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick parish's self-hosted bulletin archive can stop months before its church-bulletin.org listing does (St. John, Bergenfield: site last 30 Aug, listing current): take the id from the last-page footer '<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing' and pin page-pdfs https://church-bulletin.org/<id>.
 - When an LPi footer gives only a container ('<Parish> | 04-0064') and guessed ParishesOnline slugs fail, run visit.py on the parish's bulletin page: it reported po-org:saint-joseph-roman-catholic-church (no zip suffix), which probe get and publisher_fingerprint.sh missed.
 - An eCatholic parish site whose Bulletin page only links a jppc.net/onlinebulletins/<id>template.pdf (Annunciation, Paramus) has no files.ecatholic.com bulletins: record provider other with page-pdfs https://church-bulletin.org/<id> and leave the eCatholic id out of publication.
+- Duda parish sites (irp.cdn-website.com) may show the bulletin page as an empty Google viewer while the homepage links the PDF from a button: page-pdfs <homepage> picks it, but names like 142e_2026_11_01+web+copy.pdf leave the issue date 'unknown'. Bon Venture self-hosted codes like '142E' have no sponsors.bonventure.net/?page=<n> listing (it redirects to bonventure.net).
 
 
 ## Rules settled for this diocese
