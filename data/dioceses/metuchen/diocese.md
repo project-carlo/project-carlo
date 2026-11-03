@@ -224,6 +224,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Bon Venture sponsors.bonventure.net/?page=<n> ids don't follow the G-codes, and many ids are empty; tools/bonventure_scan.sh scans an id range for a town name (about 4 s per id).
 - pnpm diocese probe get --out resolves a relative path against the worktree root, not the shell's directory: give it a path under your scratch folder from the root (scratch/<run>/<job>/...).
 - Catholic Web Company sites (footer thecatholicwebcompany.com) have no /bulletin page: the bulletin list is the 'Events & Bulletin' page at /event, linking /uploads/docs/bulletins/<YYYYMMDD>.pdf; page-pdfs on /event picks the newest issue.
+- When probe po slug guesses fail for a ParishesOnline container, LPi's WeConnect site <name>-<aa>-<bbbb>.weconnectonline.com (found by a search on the parish name) embeds the 18-character LPi id; probe po <id> then gives the org slug.
 
 ## Rules settled for this diocese
 
