@@ -10,7 +10,7 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses.records import parse_file
+from pdf_extract.dioceses.records import NO_BULLETIN, UNSUPPORTED, parse_file
 from pdf_extract.factory import git, playbook, render
 from pdf_extract.factory.config import Config, FactoryError
 from pdf_extract.factory.ledger import (
@@ -258,21 +258,29 @@ def _left_open(worktree: Path, diocese: str) -> list[str]:
     return lines or ["- none"]
 
 
+def _gap_row_status(provider: Any) -> str:
+    """How a fetch-gap row stands on the site: off it says nothing, live names its provider."""
+    if provider in (UNSUPPORTED, NO_BULLETIN):
+        return ""
+    return f" (live as {provider})" if provider else " (no bulletin_provider yet)"
+
+
 def _fetch_gaps(worktree: Path, diocese: str) -> list[str]:
     """Parishes whose bulletin `fetch` can't collect yet, by kind, as `pnpm diocese gaps`
     groups them. Read from the files: that command's JSON outgrows a command's output."""
     groups: dict[str, list[tuple[str, str]]] = {}
     for path in sorted((diocese_dir(worktree, diocese) / "parishes").glob("*.md")):
         try:
-            gap = parse_file(path)[0].get("fetch_gap")
+            front = parse_file(path)[0]
+            gap = front.get("fetch_gap")
         except Exception:
             continue  # the validate gate reports it
         if isinstance(gap, dict):
             groups.setdefault(str(gap.get("kind") or "?"), []).append(
-                (path.stem, _one_line(gap.get("note"))))
+                (path.stem, _one_line(gap.get("note")), front.get("bulletin_provider")))
     lines = []
     for kind, entries in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0])):
-        parishes = ", ".join(f"`{p}`" for p, _ in entries)
+        parishes = ", ".join(f"`{p}`" + _gap_row_status(provider) for p, _, provider in entries)
         lines.append(f"- `{kind}` ({len(entries)}): {parishes}. {entries[0][1]}".rstrip())
     return lines or ["- none"]
 

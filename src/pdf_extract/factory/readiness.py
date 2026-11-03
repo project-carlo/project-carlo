@@ -2,7 +2,8 @@
 
 A parish from a merged map Run is ready once the database has at least 2 of its
 bulletins. Only parishes promoted with a bulletin source count, and not one waiting on a
-collector (`fetch_gap`): it counts once the gap is cleared on main. The first seed Run
+collector (`unsupported`, or a `fetch_gap`): it counts once main sets its provider and
+clears the gap. The first seed Run
 starts once 80% are ready; a follow-up seeds the rest once they are all ready. 6 weeks
 after the map Run merged, whatever is ready is seeded (even short of 80%, for the first
 Run), and each parish still not ready gets an issue.

@@ -56,7 +56,8 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
 - **Promote and pr are code**: promote runs `factory/stages/promote.yaml`'s commands;
   pr pushes, opens the PR and writes its summary from the ledger.
 - **Seed Runs** use the map Run's batches. A parish is ready once the database has
-  `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`). The
+  `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`);
+  `no_bulletin` and `unsupported` parishes and any with a `fetch_gap` aren't counted. The
   first seed Run starts once `seed_first_run_share` of the diocese is ready, or
   `seed_follow_up_weeks` after the map Run merged with whatever is ready. A follow-up
   seeds the rest when they are all ready or at that deadline, and each parish still not
@@ -156,7 +157,16 @@ The design, and what was verified live, are in
   run in. Its build fails if any tool in the Containerfile's `REQUIRED_TOOLS` (`jq`,
   `file`, poppler, `pnpm`, `claude`, `uv` and the rest) or the zone data is missing;
   add a tool a worker needs there and to the `apt-get install` line. If Podman, the image or the proxy fails, the attempt ends as `sandbox`; it
-  never runs on the host instead.
+  never runs on the host instead. The container has no DNS of its own: anything that
+  looks a host up itself fails for every host. `probe url` (and `audit --fetch`) ask the
+  proxy instead, and call a site `DEAD-DNS` only when the proxy's resolver says the name
+  doesn't exist; a destination the proxy refuses is `PROXY-REFUSED`, a sandbox limit.
+  `factory/sandbox/smoke-worker.py` checks both.
+- **`grep` in Bash.** Claude Code replaces Bash's `grep` with its bundled ugrep unless
+  the Grep or Glob tool is on the launch list, and ugrep refuses common patterns such as
+  `.{0,100}bulletin.{0,100}` ("exceeds complexity limits"). So every stage with `Bash`
+  also lists `Grep` (a test enforces it), and Bash's `grep` is GNU grep.
+  `validate-live.py` checks it in a real worker.
 - **`worker_backend: host`** (the default until the live checks pass) runs the CLI on the
   host. `pnpm factory status` says so.
 - **Login and permissions.** Host workers use the account's config folder and auto mode.
