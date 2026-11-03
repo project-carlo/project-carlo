@@ -107,11 +107,12 @@ No mapped diocese borders Newark except New York, whose record covers one parish
 publishers. These lines come from a 26-site sample on 2026-11-03, the first map batches (Bergen
 and Hudson Counties) and Allentown's and other mapped dioceses' notes.
 
-- **`probe url` says DEAD-DNS for every parish site in this sandbox.** It resolves names
-  itself, and the sandbox reaches the web only through a proxy. `probe get` and
-  `parish-site-access`'s `visit.py` work; `scratch/newark-map-1/tools/publisher_fingerprint.sh`
-  lists the publishers a homepage mentions, but `visit.py` finds some it misses (a
-  ParishesOnline org linked only from the bulletin page).
+- **`probe url` works in this sandbox** since 2026-11-03 (PR #205): it fetches through the
+  egress proxy and lists the bulletin publishers a page links and its site builder, so it
+  replaces `scratch/newark-map-1/tools/publisher_fingerprint.sh`. Start a site with it, and
+  open `parish-site-access`'s `visit.py` when it says HTTP4XX or NO-PARISH-WORDS or finds
+  no publications (a ParishesOnline org linked only from the bulletin page). Before that
+  date it reported DEAD-DNS for every site.
 - **Finding a site the directory doesn't list:** try likely domains with `probe get`
   (`sjb<town>.org`, `<name><town>nj.org`) and confirm the masthead address before using a hit
   (one guess was a UCC church in Illinois). A guess answering 403 with 0 bytes can be a live
@@ -218,7 +219,7 @@ proposals are in `scratch/newark-map-1/survey.json` for `survey-review`.
 - Eastern Catholic churches GCatholic lists in the territory (Ruthenian: Eparchy of Passaic; Ukrainian: Archeparchy of Philadelphia; Melkite: Eparchy of Newton; Syro-Malabar, Syro-Malankara, Syriac) are excluded as `other-jurisdiction`, as in Allentown, Scranton, Syracuse and Rochester. (accepted by survey-review, 002-survey-review, 2026-11-03)
 - A church with a decreed future closure stays a church row, with `revisit_after` the day after its announced last Mass, and is excluded as `closed` only once that date has passed and a source confirms it (St. Anthony, East Newark: closes 2026-11-23). (accepted by survey-review, 002-survey-review, 2026-11-03)
 - Campus chapels (Newman Center Chapel, Montclair State; Seton Hall's Immaculate Conception Chapel) and convent or monastery chapels (Rosary Shrine, Summit; Carmelite chapel, Paramus; St. Cloud) are church rows only when a current schedule shows Mass open to the public; otherwise `no-public-mass`. A campus ministry that posts its own bulletin is its own parish row. (accepted by survey-review, 002-survey-review, 2026-11-03)
-- In this sandbox `probe url`'s DEAD-DNS verdict is not evidence that a domain is dead; confirm with `probe get` or `visit.py` before recording a lost site. (accepted by survey-review, 002-survey-review, 2026-11-03)
+- A DEAD-DNS verdict from `probe url` before 2026-11-03's PR #205 is not evidence that a domain is dead; confirm with `probe get` or `visit.py` before recording a lost site. Since that PR, DEAD-DNS means the proxy's resolver found no such host. (accepted by survey-review, 002-survey-review, 2026-11-03; updated by the owner for PR #205, 2026-11-03)
 - A parish's Korean (or other language) community that GCatholic lists as a second entry with the same Plus Code as the parish church is linked to that one church row when the parish's schedule includes the community's Masses (GCatholic 18377/18378, St. Joseph, Demarest). (map batch `b-cresskill`, 2026-11-03)
 
 ## Log
