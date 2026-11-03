@@ -205,6 +205,8 @@ and Hudson Counties) and Allentown's and other mapped dioceses' notes.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish can move to a new domain while the directory and GCatholic keep the old one: when a site's own bulletins are stale, read the current issue's masthead website line and the ParishesOnline org's website field (St. Joseph of the Palisades: sjpwny.org, not saintjosephpalisades.com).
+
 
 ## Rules settled for this diocese
 
