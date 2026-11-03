@@ -152,6 +152,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Wix parish homepage with a 'WEEKEND BULLETIN' button and no bulletin page can be read with `page-pdfs <homepage>` (fetch:check 'first-listed'), but the ugd file name carries no date so freshness reads 'unknown': confirm the pick is the bulletin, not a letter linked on the same page.
 - An eCatholic parish site can be only the website while the bulletin is on ParishesOnline (St. Andrew, Westwood): visit.py reports both ecatholic:<id> and po-org:<slug>. If issues.py finds no files.ecatholic.com bulletins and the Bulletins menu links the PO org, record parishes_online with the org slug and leave the eCatholic id out of publication.
 - An eCatholic parish site whose Bulletins page is only an image linking sponsors.bonventure.net/?page=<id> (St. Anthony, Northvale) has no files.ecatholic.com bulletins: record provider other with page-pdfs on that page and leave the eCatholic id out of publication. Bon Venture file names may carry a double dot (2026-11-08..pdf); fetch still reads the date.
+- Trinity Publishing parish sites (footer 'Powered by Trinity Publishing Company') link one fixed /images/pdf/bulletin.pdf that the parish overwrites; it can go stale for months, so read the date on page 1 before recording it.
+- GCatholic lists a parish's Korean community (website …kcc.org) as a second entry with the same Plus Code as the parish church; when the parish's schedule includes the Korean Masses, link both entries to the one church row.
 
 
 ## Rules settled for this diocese
