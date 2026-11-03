@@ -175,6 +175,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic parish site can repost its LPi bulletin under files.ecatholic.com/<id>/documents/<yyyy>/<m>/<yyyymmdd>B.pdf (the LPi file name) with nothing under /bulletins/: read the ad-page footer for the container and record parishes_online, leaving the eCatholic id out of publication.
 - A self-hosted bulletin page that also lists flyers named '*Bulletin*' needs a filename filter on the issue names; a filter on a two-digit year prefix (26-*.pdf) must be updated each January, so set revisit_after late December.
 - A parish site with no bulletin link (St. Joseph, East Rutherford's JavaScript site) can still have a live ParishesOnline org: try probe po <name>-church-<zip> before recording no_bulletin. The org's website field names the parish site.
+- LPi WeConnect (Duda) parish sites embed parishesonline.com/publicationWidget?type=bulletin&id=<18-char LPi id> on /bulletin; probe po <id> returns the org slug and container directly.
+- An eCatholic parish site's /bulletins listing can be a stale repost of its LPi bulletin (Holy Trinity, Fort Lee stopped at 20 Sep while ParishesOnline was current): compare newest dates and record parishes_online, leaving the eCatholic id out of publication.
 
 
 ## Rules settled for this diocese
