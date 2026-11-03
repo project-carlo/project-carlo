@@ -205,6 +205,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - Discover Mass rows: fetch:check downloads the church page's 'Current Bulletin' link but reports issue date and freshness `unknown` (the tokenised URL has no date); confirm currency from the date the church page lists for that link.
 - Before applying the parish-hosted-copy rule to an eCatholic + ParishesOnline pair, compare the newest dates on both: the eCatholic page can lag the container by a week or more.
+- OSV/Duda parish sites (footer editor.osvwebsites.com) post bulletins as irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf with varying suffixes ('+Final', 'print', 'a'); page-pdfs on the site's /bulletin page picks the newest issue.
+- A Latin church sold to an Eastern Catholic community that now holds Mass there is excluded other-jurisdiction, not closed; a merged parish's own Parish History page can date such sales and closures.
 
 ## Rules settled for this diocese
 
