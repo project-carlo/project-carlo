@@ -177,6 +177,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site with no bulletin link (St. Joseph, East Rutherford's JavaScript site) can still have a live ParishesOnline org: try probe po <name>-church-<zip> before recording no_bulletin. The org's website field names the parish site.
 - LPi WeConnect (Duda) parish sites embed parishesonline.com/publicationWidget?type=bulletin&id=<18-char LPi id> on /bulletin; probe po <id> returns the org slug and container directly.
 - An eCatholic parish site's /bulletins listing can be a stale repost of its LPi bulletin (Holy Trinity, Fort Lee stopped at 20 Sep while ParishesOnline was current): compare newest dates and record parishes_online, leaving the eCatholic id out of publication.
+- Duda parish sites can have a /bulletin page that lists dated PDFs newest first (irp.cdn-website.com/<id>/files/uploaded/November+1-+2026.pdf). page-pdfs on that page picks the current issue and reads its date, so freshness is known.
+- When the directory lists no website, try likely domains with probe get (e.g. sjb<town>.org). Confirm the masthead address before using a hit: stjohnfairview.org was a UCC church in Illinois.
 
 
 ## Rules settled for this diocese
