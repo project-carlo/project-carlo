@@ -169,6 +169,8 @@ County) and Allentown's and other mapped dioceses' notes.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Sitelio/mywebsitebuilder parish sites (components.mywebsitebuilder.com/sitelio) build their text and links with JavaScript, so probe get and publisher_fingerprint.sh show nothing; visit.py --text --links reveals the bulletin link (St. Joseph, Lodi linked parishesonline.com/find/<org>). Cite such pages by note, since recheck can't see the text.
+
 
 ## Rules settled for this diocese
 
