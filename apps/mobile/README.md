@@ -58,6 +58,22 @@ One-time setup (the root steps need sudo; the rest installs under your home):
    yes | sdkmanager --licenses
    sdkmanager "platform-tools" "emulator" "system-images;android-36;google_apis;x86_64"
    echo no | avdmanager create avd -n carlo-api36 -k "system-images;android-36;google_apis;x86_64" -d pixel_7
+   sed -i -e 's/^hw.ramSize=.*/hw.ramSize=4096M/' \
+     -e 's/^hw.lcd.width=.*/hw.lcd.width=720/' -e 's/^hw.lcd.height=.*/hw.lcd.height=1600/' \
+     -e 's/^hw.lcd.density=.*/hw.lcd.density=320/' ~/.android/avd/carlo-api36.avd/config.ini
+   ```
+
+   The `sed` gives the emulator 4 GB of RAM and a 720×1600 screen. With the
+   default 2 GB, Android 16 swaps constantly and System UI stops responding.
+   With no GPU in WSL, the CPU draws every frame, so the smaller screen saves
+   work. Together they took a cold boot to 43s, the Maestro flow from 13–18s to
+   9s, and the idle emulator from 41% to 27% of a core. After the first boot,
+   turn off animations, which also speeds up flows:
+
+   ```bash
+   for s in window_animation_scale transition_animation_scale animator_duration_scale; do
+     adb shell settings put global $s 0
+   done
    ```
 
    Gradle installs the SDK platform, build tools and NDK it needs on the first
@@ -65,8 +81,8 @@ One-time setup (the root steps need sudo; the rest installs under your home):
 4. **Maestro.** Unpack `maestro.zip` from the
    [Maestro CLI releases](https://github.com/mobile-dev-inc/maestro/releases) to
    `~/.maestro/`.
-5. **Memory.** WSL gets half the host's RAM by default. The emulator, Metro,
-   Gradle and its Kotlin daemon together need most of 16 GB, and when WSL runs
+5. **Memory.** WSL gets half the host's RAM by default. The emulator (about
+   5 GB), Metro, Gradle and its Kotlin daemon together need most of 16 GB, and when WSL runs
    short the emulator stalls and its watchdog kills it. On a 32 GB host, raise
    the limit in `%UserProfile%\.wslconfig` and run `wsl --shutdown`:
 

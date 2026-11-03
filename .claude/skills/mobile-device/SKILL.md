@@ -47,8 +47,8 @@ emulator -avd carlo-api36 -no-window -no-audio -no-boot-anim -gpu swiftshader_in
 adb wait-for-device shell 'while [ "$(getprop sys.boot_completed)" != 1 ]; do sleep 1; done'
 ```
 
-A cold boot takes a minute or two. If `emulator -accel-check` says KVM isn't usable,
-stop and tell the owner (see the README's KVM step). An emulator costs about 3 GB of
+A cold boot takes under a minute. If `emulator -accel-check` says KVM isn't usable,
+stop and tell the owner (see the README's KVM step). An emulator costs about 5 GB of
 memory; don't start a second one when one is already running.
 
 If the emulator disappears from `adb devices`, check `/tmp/carlo-emulator.log` for
@@ -94,6 +94,11 @@ from whoever had it.
 pnpm e2e:mobile -e METRO_URL=http://127.0.0.1:<port>
 pnpm e2e:mobile -e METRO_URL=http://127.0.0.1:<port> .maestro/explore-list.yaml   # one flow
 ```
+
+Android allows one UI automation client at a time. If `agent-device` has taken a
+snapshot, Maestro fails at once with `DeviceServerDiedException`. Stop the helper
+first with `adb shell am force-stop com.callstack.agentdevice.snapshothelper`;
+`agent-device` restarts it on its next snapshot.
 
 Screenshots, logs and failure artifacts go to `apps/mobile/.maestro/output/`
 (ignored by git). Select elements by `id:` (a `testID`) rather than by text where
