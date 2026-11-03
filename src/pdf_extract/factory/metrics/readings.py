@@ -5,6 +5,11 @@ rest are here: an `after` reading once the worker returns, a `settled` one once 
 account has been idle `quota_settle_seconds`, a `periodic` one of every account each
 `quota_sample_minutes`, and the SDK's rate-limit events. A failing reading is logged and
 never stops a job.
+
+All of them go through the usage check's `usage.Poller`: a periodic reading shares a
+reading taken in the last interval, and an after or settled reading, which must be newer
+than the attempt, is skipped rather than asking an account again within the interval or
+during its cooldown.
 """
 
 from __future__ import annotations
@@ -17,7 +22,7 @@ from typing import Any
 
 from pdf_extract.factory.config import Account, Config
 from pdf_extract.factory.ledger import Ledger, stamp
-from pdf_extract.factory.usage import Fetch, UsageError, scrub
+from pdf_extract.factory.usage import Cooldown, Poller, TooSoon, UsageError, scrub, taken
 
 LOGGER = logging.getLogger(__name__)
 # How long an attempt's gates wait for its after reading (seconds); usually under one.
@@ -27,10 +32,10 @@ Record = Callable[[int, int], None]
 
 
 class Readings:
-    def __init__(self, ledger: Ledger, config: Config, fetch_usage: Fetch,
+    def __init__(self, ledger: Ledger, config: Config, poller: Poller,
                  clock: Callable[[], datetime]) -> None:
         self.ledger, self.config = ledger, config
-        self.fetch_usage, self.clock = fetch_usage, clock
+        self.poller, self.clock = poller, clock
 
     def after(self, account: Account | None) -> Record:
         """Start the reading after an attempt in the background, so a slow endpoint or an
@@ -40,11 +45,12 @@ class Readings:
         if account is None:
             return lambda attempt_id, job_id: None
         got: dict[str, Any] = {}
+        finished = self.clock()
 
         def fetch() -> None:
             try:
-                got["usage"] = self.fetch_usage(account)
-                got["at"] = stamp(self.clock)
+                got["usage"] = self.poller.read(account, since=finished, wait=False)
+                got["at"] = taken(got["usage"], self.clock)
             except Exception as exc:  # recorded as a warning below
                 got["error"] = exc
 
@@ -58,8 +64,10 @@ class Readings:
                 LOGGER.warning("after quota reading of %s took over %ss: skipped",
                                account.name, AFTER_READING_WAIT)
             elif "error" in got:
-                LOGGER.warning("after quota reading of %s failed: %s", account.name,
-                               got["error"])
+                skipped = isinstance(got["error"], (TooSoon, Cooldown))
+                LOGGER.log(logging.INFO if skipped else logging.WARNING,
+                           "after quota reading of %s %s: %s", account.name,
+                           "skipped" if skipped else "failed", got["error"])
             else:
                 try:
                     self.ledger.add_usage(account.name, got["at"], got["usage"], "after",
@@ -78,14 +86,17 @@ class Readings:
             LOGGER.exception("attempt %s: recording a rate-limit event failed", attempt_id)
 
     def _reading(self, account: Account, source: str, attempt_id: int | None = None,
-                 job_id: int | None = None) -> None:
+                 job_id: int | None = None, since: datetime | None = None) -> None:
         try:
-            usage = self.fetch_usage(account)
+            usage = self.poller.read(account, since=since, wait=False)
+        except (TooSoon, Cooldown) as exc:
+            LOGGER.info("%s quota reading of %s skipped: %s", source, account.name, exc)
+            return
         except (UsageError, OSError) as exc:
             LOGGER.warning("%s quota reading of %s failed: %s", source, account.name, exc)
             return
-        self.ledger.add_usage(account.name, stamp(self.clock), usage, source, attempt_id,
-                              job_id)
+        self.ledger.add_usage(account.name, taken(usage, self.clock), usage, source,
+                              attempt_id, job_id)
 
     def sample(self) -> None:
         """A settled reading of each account idle `quota_settle_seconds` since its last
@@ -106,7 +117,7 @@ class Readings:
                 continue
             if not self.ledger.one("SELECT 1 FROM usage WHERE source = 'settled' AND "
                                    "attempt_id = ?", last["id"]):
-                self._reading(a, "settled", last["id"], last["job_id"])
+                self._reading(a, "settled", last["id"], last["job_id"], since=finished + settle)
         if self.ledger.due("quota_sampled", timedelta(minutes=self.config.quota_sample_minutes),
                            at):
             for a in self.config.accounts:

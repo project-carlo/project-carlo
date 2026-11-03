@@ -37,6 +37,7 @@ import json
 import logging
 import os
 import subprocess
+import time
 from collections.abc import Callable
 from pathlib import Path
 from typing import Any
@@ -65,6 +66,7 @@ from pdf_extract.factory.ledger import (
 from pdf_extract.factory.metrics import report as metrics
 from pdf_extract.factory.secrets import load_secrets, pick
 from pdf_extract.factory.spec import STAGES
+from pdf_extract.factory.usage import COOLDOWNS
 
 Result = dict[str, Any]
 
@@ -95,7 +97,7 @@ def _pause(args: argparse.Namespace) -> Result:
 def _resume(args: argparse.Namespace) -> Result:
     ledger = _ledger(args)
     ledger.set("paused", None)
-    ledger.set("usage_cooldown", None)  # the next usage check tries the endpoint at once
+    ledger.set(COOLDOWNS, None)  # the next usage check tries every account at once
     ledger.set("override_caps", bool(args.override_caps))
     return {"paused": False, "override_caps": bool(args.override_caps)}
 
@@ -217,6 +219,10 @@ def _run(args: argparse.Namespace) -> Result:
     # Each Run worktree has its own .venv; `uv run` would warn about this one's.
     os.environ.pop("VIRTUAL_ENV", None)
     config = load_config()
+    # One explicit zone for "today": the dispatcher's own clock and every gate and setup
+    # command it runs (they inherit its environment); the workers get it from `backend`.
+    os.environ["TZ"] = config.timezone
+    time.tzset()
     ledger = _ledger(args)
     secrets = load_secrets()  # .env, kept out of os.environ (secrets.py)
     stub = args.stub is not None
@@ -233,7 +239,8 @@ def _run(args: argparse.Namespace) -> Result:
             raise FactoryError("no accounts: list them in data/factory/local.yaml "
                                "(factory/local.example.yaml)")
         box = backend(config.worker_backend, _repo(), config.upstream,
-                      Limits(config.sandbox_memory, config.sandbox_cpus, config.sandbox_pids))
+                      Limits(config.sandbox_memory, config.sandbox_cpus, config.sandbox_pids),
+                      timezone=config.timezone)
         worker = SdkWorker(box)
         ledger.set("worker_backend", box.name)
         the_forge = forge.GhForge(Path.cwd())
