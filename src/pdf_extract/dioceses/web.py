@@ -32,7 +32,7 @@ from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin, urlsplit
-from urllib.request import Request, urlopen
+from urllib.request import Request, getproxies, proxy_bypass, urlopen
 
 from pdf_extract.parish_sites.links import registrable_domain, url_host
 
@@ -46,6 +46,12 @@ TIMEOUT = 30
 MAX_BYTES = 250_000_000
 
 PO_CONTAINER_BASE = "https://container.parishesonline.com/bulletins"
+
+
+# The factory's sandbox reaches the web only through an egress proxy (smokescreen),
+# and has no DNS of its own. The proxy names its own refusals in this header, so a 502
+# from the proxy is not mistaken for the site's.
+PROXY_ERROR_HEADER = "X-Smokescreen-Error"
 
 
 @dataclass
@@ -84,6 +90,10 @@ def fetch(url: str, *, method: str = "GET", timeout: int = TIMEOUT,
                 return Response(url, resp.status, resp.geturl(),
                                 resp.headers.get("Content-Type", ""), body, truncated=truncated)
         except HTTPError as e:
+            if proxy_error := (e.headers or {}).get(PROXY_ERROR_HEADER):
+                # The proxy answered for a site it couldn't reach (an http:// URL; an
+                # https:// one fails in the tunnel instead): no status from the site.
+                return Response(url, error=f"egress proxy: {proxy_error}")
             return Response(url, e.code, e.geturl() or url, error=f"HTTP {e.code}")
         except (URLError, OSError, ValueError) as e:
             reason = getattr(e, "reason", e)
@@ -169,6 +179,13 @@ def get(url: str, *, out: Path | None = None, chars: int = 20000) -> dict[str, A
     if resp.truncated:
         result["truncated"] = True
     blocked = is_bot_check(resp) or resp.status in (403, 503)
+    if resp.status is None and (proxy := proxy_for(url)):
+        # Through the sandbox's proxy, a failed tunnel says only "502 Bad gateway":
+        # ask the proxy what went wrong.
+        port = 80 if url.lower().startswith("http:") else 443
+        lookup = proxy_lookup(url_host(url), proxy, port=port)
+        if lookup.state != "ok":
+            result["note"] = f"{PROXY_NOTES[lookup.state]}: {lookup.detail}"
     if resp.status == 429:
         result["note"] = ("rate limited: wait a minute and try again; a browser won't help")
     elif blocked:
@@ -350,6 +367,9 @@ def looks_squatted(text: str) -> bool:
 VERDICT_NOTES = {
     "DEAD-DNS": "the domain does not resolve (checked twice, with and without www.)",
     "UNREACHABLE": "resolves but did not answer: often an IPv6-only host; check in a browser",
+    "PROXY-REFUSED": "the sandbox's egress proxy refuses this destination (it resolves to a "
+                     "private or local address): a limit of the sandbox, not a verdict on "
+                     "the site; check it outside the factory",
     "SPAM-SQUAT": "the domain has been taken over by spam; the parish has moved or folded in",
     "REDIRECT-OFFSITE": "redirects to another site: read the target. A family site means the "
                         "parish may have folded in; anything else may be a squat",
@@ -370,6 +390,144 @@ def _resolves(host: str) -> bool:
     return False
 
 
+# ── Through an egress proxy ─────────────────────────────────────────────────
+# With HTTP(S)_PROXY set (the factory's sandbox), the machine has no DNS of its own:
+# a local lookup fails for every host, while the proxy resolves and fetches them. Ask
+# the proxy instead, and call a host dead only when the proxy's resolver says it doesn't
+# exist; a refusal or a failure of the proxy itself says nothing about the site.
+PROXY_NOTES = {
+    "no-such-host": "the egress proxy's DNS says the host does not exist",
+    "refused": "the egress proxy refuses this destination by design (a private or local "
+               "address); that says nothing about the site",
+    "failed": "the egress proxy could not reach the site",
+    "proxy-unreachable": "the egress proxy did not answer, so nothing is known about the "
+                         "site; retry",
+}
+
+
+@dataclass
+class ProxyLookup:
+    state: str  # ok, or one of PROXY_NOTES
+    detail: str = ""
+
+
+def proxy_for(url: str) -> str | None:
+    """The proxy urllib sends `url` through (HTTP(S)_PROXY, less NO_PROXY), if any."""
+    try:
+        parts = urlsplit(url)
+        host = parts.hostname
+    except ValueError:
+        return None
+    if not host:
+        return None
+    proxy = getproxies().get(parts.scheme.lower())
+    if not proxy or proxy_bypass(host):
+        return None
+    return proxy
+
+
+def proxy_lookup(host: str, proxy: str, *, port: int = 443,
+                 timeout: int = TIMEOUT) -> ProxyLookup:
+    """Ask the proxy to open a tunnel to host:port, and read why it won't.
+
+    urllib reports a failed tunnel only as "502 Bad gateway"; the proxy's reply says
+    whether the name didn't resolve, the destination is refused, or the site didn't
+    answer (smokescreen's `X-Smokescreen-Error`). Nothing is sent through the tunnel.
+    """
+    try:
+        parts = urlsplit(proxy if "://" in proxy else f"http://{proxy}")
+        scheme, proxy_host, proxy_port = parts.scheme, parts.hostname, parts.port or 80
+    except ValueError:
+        scheme, proxy_host, proxy_port = "", None, 0
+    if scheme != "http" or not proxy_host:
+        return ProxyLookup("proxy-unreachable", f"can't use the proxy {proxy!r}")
+    head = b""
+    try:
+        with socket.create_connection((proxy_host, proxy_port), timeout=timeout) as sock:
+            sock.sendall(f"CONNECT {host}:{port} HTTP/1.1\r\nHost: {host}:{port}\r\n\r\n"
+                         .encode("ascii", "replace"))
+            while b"\r\n\r\n" not in head and len(head) < 65536:
+                chunk = sock.recv(4096)
+                if not chunk:
+                    break
+                head += chunk
+    except OSError as exc:
+        return ProxyLookup("proxy-unreachable", f"{type(exc).__name__}: {exc}")
+    lines = head.split(b"\r\n\r\n", 1)[0].decode("latin-1").split("\r\n")
+    status = re.match(r"HTTP/\d(?:\.\d)?\s+(\d{3})", lines[0])
+    if not status:
+        return ProxyLookup("proxy-unreachable", f"unexpected reply {lines[0][:80]!r}")
+    code = int(status.group(1))
+    if 200 <= code < 300:
+        return ProxyLookup("ok")
+    reason = next((line.split(":", 1)[1].strip() for line in lines[1:]
+                   if line.lower().startswith(PROXY_ERROR_HEADER.lower() + ":")),
+                  lines[0].strip())
+    if code == 407:
+        return ProxyLookup("refused", reason)
+    if "no such host" in reason.lower():
+        return ProxyLookup("no-such-host", reason)
+    return ProxyLookup("failed", reason)
+
+
+def _lookup_twice(host: str, proxy: str, port: int) -> ProxyLookup:
+    """A host the proxy can't find is asked about once more, as `_resolves` does."""
+    lookup = proxy_lookup(host, proxy, port=port)
+    return proxy_lookup(host, proxy, port=port) if lookup.state == "no-such-host" else lookup
+
+
+# ── Publisher fingerprints ──────────────────────────────────────────────────
+# Hosts of bulletin publishers, which serve many parishes each. A link to one says who
+# prints a parish's bulletin (a lead for the publishers' own probes), not which bulletin
+# it is; `audit` doesn't pair rows by these hosts for the same reason.
+BULLETIN_PUBLISHERS = {
+    "parishesonline.com": "LPi (ParishesOnline)",
+    "4lpi.com": "LPi",
+    "lpi.com": "LPi",
+    "ecatholic.com": "eCatholic",
+    "ecatholiccdn.com": "eCatholic",
+    "discovermass.com": "Discover Mass",
+    "jppc.net": "John Patrick Publishing",
+    "church-bulletin.org": "John Patrick Publishing (church-bulletin.org)",
+    "bonventure.net": "Bon Venture",
+    "e-churchbulletins.com": "e-churchbulletins",
+    "diocesanweb.org": "Diocesan",
+}
+# Site builders worth knowing before reading a page: Wix and Squarespace render most of
+# their content with JavaScript, so `probe url` sees little of it.
+SITE_PLATFORMS = {
+    "wixstatic.com": "wix", "wix.com": "wix", "squarespace.com": "squarespace",
+    "squarespace-cdn.com": "squarespace", "wp-content/": "wordpress",
+    "ecatholic.com": "ecatholic", "diocesanweb.org": "diocesan",
+}
+_HOST_RE = re.compile(r"(?:https?:)?//([a-z0-9.-]+\.[a-z]{2,})", re.I)
+
+
+def _registered_publisher(host: str) -> str:
+    host = host.lower().rstrip(".")
+    return next((domain for domain in BULLETIN_PUBLISHERS
+                 if host == domain or host.endswith(f".{domain}")), "")
+
+
+def publisher_hosts(page: str) -> dict[str, int]:
+    """How often the page links or embeds each bulletin publisher's hosts."""
+    found: dict[str, int] = {}
+    for host in _HOST_RE.findall(page):
+        if domain := _registered_publisher(host):
+            found[domain] = found.get(domain, 0) + 1
+    return dict(sorted(found.items(), key=lambda kv: -kv[1]))
+
+
+def site_platform(page: str) -> str:
+    """The site builder the page is made with, when it shows; "" when unknown."""
+    low = page.lower()
+    counts = {}
+    for marker, platform in SITE_PLATFORMS.items():
+        if (n := low.count(marker)) > 0:
+            counts[platform] = counts.get(platform, 0) + n
+    return max(counts, key=lambda k: counts[k]) if counts else ""
+
+
 def probe_url(url: str) -> dict[str, Any]:
     """What is at a parish website now, and which bulletin does it embed?"""
     out: dict[str, Any] = {"url": url}
@@ -381,8 +539,9 @@ def probe_url(url: str) -> dict[str, Any]:
     host = url_host(url) if urlsplit(url).netloc else ""
     if not host:
         return {**out, "verdict": "BAD-URL"}
-    if not _resolves(host):
-        alt = host[4:] if host.startswith("www.") else f"www.{host}"
+    alt = host[4:] if host.startswith("www.") else f"www.{host}"
+    proxy = proxy_for(url)
+    if proxy is None and not _resolves(host):
         if _resolves(alt):
             out["note"] = f"{host} does not resolve but {alt} does; use that"
             url = url.replace(host, alt, 1)
@@ -390,12 +549,36 @@ def probe_url(url: str) -> dict[str, Any]:
         else:
             return {**out, "verdict": "DEAD-DNS", "detail": VERDICT_NOTES["DEAD-DNS"]}
     resp = fetch(url, max_bytes=3_000_000)
+    unreachable = VERDICT_NOTES["UNREACHABLE"]
+    if proxy is not None and resp.status is None:
+        out["via_proxy"] = True
+        port = 80 if url.lower().startswith("http:") else 443
+        lookup = _lookup_twice(host, proxy, port)
+        if lookup.state == "no-such-host":
+            alt_lookup = _lookup_twice(alt, proxy, port)
+            if alt_lookup.state == "no-such-host":
+                return {**out, "verdict": "DEAD-DNS", "detail": (
+                    f"{VERDICT_NOTES['DEAD-DNS']}, by the egress proxy's resolver: "
+                    f"{lookup.detail}")}
+            # From here on the verdict is about the other name. Only a tunnel the proxy
+            # opened, or a resolved site that didn't answer, says that name exists.
+            lookup = alt_lookup
+            if lookup.state in ("ok", "failed"):
+                out["note"] = f"{host} does not resolve but {alt} does; use that"
+                url = url.replace(host, alt, 1)
+                out["url_tried"] = url
+                resp = fetch(url, max_bytes=3_000_000)
+            host = alt
+        if lookup.state == "refused":
+            return {**out, "verdict": "PROXY-REFUSED",
+                    "detail": f"{host}: {lookup.detail}; {VERDICT_NOTES['PROXY-REFUSED']}"}
+        if lookup.state != "ok":
+            unreachable = f"{PROXY_NOTES[lookup.state]}: {lookup.detail}"
     out["status"] = resp.status
     if resp.final_url and resp.final_url.rstrip("/") != url.rstrip("/"):
         out["final_url"] = resp.final_url
     if resp.status is None:
-        return {**out, "verdict": "UNREACHABLE", "detail": f"{resp.error}; "
-                f"{VERDICT_NOTES['UNREACHABLE']}"}
+        return {**out, "verdict": "UNREACHABLE", "detail": f"{resp.error}; {unreachable}"}
     page = resp.text()
     low = page.lower()
     title = re.search(r"<title[^>]*>(.*?)</title>", page, flags=re.S | re.I)
@@ -404,6 +587,9 @@ def probe_url(url: str) -> dict[str, Any]:
     spam = spam_terms(page)
     words = [w for w in PARISH_WORDS if w in low]
     out["publications"] = find_publications(page)
+    out["publishers"] = publisher_hosts(page)
+    if platform := site_platform(page):
+        out["platform"] = platform
     out["bulletin_links"] = bulletin_links(page, resp.final_url or url)
     if spam:
         out["spam_terms"] = spam

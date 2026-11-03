@@ -207,7 +207,8 @@ def coverage(diocese: str, roster: str | None = None, *, link: bool = False,
         rep["counts"] = counts
         rep["accounted_for"] = f"{accounted}/{unique}" + (
             f" ({accounted / unique:.0%})" if unique else "")
-        # Churches of a `no_bulletin` parish are accounted for, but not on the site.
+        # Churches of a `no_bulletin` or `unsupported` parish are accounted for, but not
+        # on the site.
         live, shown = unique - counts["excluded"], counts["church"] - counts["off_site"]
         rep["modelled"] = f"{shown}/{live}" + (
             f" ({shown / live:.0%}) of the entries not excluded, as churches on the site"
@@ -328,7 +329,8 @@ def todo(diocese: str, *, limit: int = 40) -> dict[str, Any]:
         out["churches_in_no_roster"] = cov.get("churches_in_no_roster", [])
     else:
         out["coverage"] = "no rosters yet: fetch or import the diocese's own list first"
-    out["fetch_gaps"] = [{"parish": e["parish"], "kind": k["kind"], "note": e["note"]}
+    out["fetch_gaps"] = [{"parish": e["parish"], "kind": k["kind"],
+                          "bulletin_provider": e["bulletin_provider"], "note": e["note"]}
                          for k in gaps(diocese)["kinds"] for e in k["entries"]]
     out["incomplete"] = p.incomplete[:limit]
     out["warnings"] = len(p.warnings)
@@ -350,6 +352,7 @@ def gaps(diocese: str | None = None, kind: str | None = None) -> dict[str, Any]:
                 "diocese": slug, "parish": parish, "name": r.get("name", ""),
                 "website": r.get("website", ""),
                 "bulletin_provider": r.get("bulletin_provider", ""),
+                "on_site": r.get("bulletin_provider") not in records.OFF_SITE_PROVIDERS,
                 "bulletin_status": r.get("bulletin_status", ""),
                 "url": gap.get("url", ""), "seen": gap.get("seen", ""),
                 "note": gap.get("note", ""),

@@ -886,7 +886,7 @@ def test_reconcile_settles_earlier_flags_and_the_pr_lists_the_rest(env: Env) -> 
     pr = next((env.forge.folder / "prs").glob("*.md")).read_text()
     open_section = pr.split("## Left open")[1].split("##")[0]
     assert "- `chapel-003-map` Chapel: Ask the parish office (after 2027-01-31)" in open_section
-    assert "`solutio-file-403` (1): `p-003-map`. Solutio /file links answer 403." in pr
+    assert "`solutio-file-403` (1): `p-003-map` (live as parishes_online). Solutio /file links answer 403." in pr
     flags = pr.split("## Advisory flags")[1].split("## Parked")[0]
     listed, collapsed = flags.split("<details>")
     assert "Merge p-004-map into St. Ann?" in listed and "p-003-map" not in listed
@@ -1494,6 +1494,41 @@ def test_check_readiness_creates_a_pending_seed_run_and_overdue_issues(env: Env)
     assert len(list((env.forge.folder / "issues").glob("*.json"))) == 1
 
 
+def test_unsupported_parishes_wait_on_a_collector_until_their_provider_is_set(
+        tmp_path: Path) -> None:
+    from pdf_extract.factory import plan
+
+    folder = tmp_path / "data" / "dioceses" / D / "parishes"
+    folder.mkdir(parents=True)
+    (folder / "live.md").write_text(parish_record("directory:1"))
+    (folder / "gap.md").write_text(parish_record("directory:2").replace(
+        "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
+    # No fetch_gap (validate refuses that): still never seeded, still waiting.
+    (folder / "bare.md").write_text(parish_record("directory:3").replace(
+        "parishes_online", "unsupported"))
+    (folder / "none.md").write_text(parish_record("directory:4").replace(
+        "parishes_online", "no_bulletin"))
+    assert plan.seedable_parishes(tmp_path, D) == ["live"]
+    assert plan.fetch_gap_parishes(tmp_path, D) == ["bare", "gap"]
+    # Flipping the provider and clearing the gap seeds it like any other.
+    (folder / "gap.md").write_text(parish_record("directory:2"))
+    assert plan.seedable_parishes(tmp_path, D) == ["gap", "live"]
+
+
+def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
+    folder = tmp_path / "data" / "dioceses" / D / "parishes"
+    folder.mkdir(parents=True)
+    (folder / "kept.md").write_text(parish_record("directory:1").replace(
+        "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
+    (folder / "live.md").write_text(parish_record("directory:2").replace(
+        "---\nNotes", GAP + "---\nNotes"))
+    (folder / "new.md").write_text(parish_record("directory:3").replace(
+        "bulletin_provider: parishes_online\n", "").replace("---\nNotes", GAP + "---\nNotes"))
+    [line] = report._fetch_gaps(tmp_path, D)
+    assert line.startswith("- `solutio-file-403` (3): `kept`, `live` (live as parishes_online), "
+                           "`new` (no bulletin_provider yet).")
+
+
 def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
     merged_map(env, ["a", "b"], env.now - timedelta(weeks=7))
     path = f"data/dioceses/{D}/parishes/g.md"
@@ -1776,6 +1811,19 @@ def test_stage_specs_load_and_cover_every_stage() -> None:
         if spec.is_agent:
             assert (ROOT / spec.prompt).exists(), spec.prompt
             assert spec.writes and spec.model
+
+
+def test_every_stage_with_bash_lists_grep() -> None:
+    """Claude Code replaces Bash's `grep` with its bundled ugrep unless the Grep (or Glob)
+    tool is on the launch list, and ugrep refuses common patterns such as
+    `.{0,100}bulletin.{0,100}` ("exceeds complexity limits"). Listing Grep keeps GNU grep
+    in Bash and gives workers the Grep tool too."""
+    from pdf_extract.factory.spec import STAGES, load_stage
+
+    for stage in STAGES:
+        spec = load_stage(stage, ROOT)
+        if "Bash" in spec.tools:
+            assert "Grep" in spec.tools, stage
 
 
 def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
