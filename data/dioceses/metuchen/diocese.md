@@ -211,6 +211,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - tools/ddg.sh now gets DuckDuckGo's bot challenge (HTTP 202, no results); searching through the browser, `visit.py 'https://duckduckgo.com/?q=<words>&ia=web' --links`, still returns results.
 - A parish site can leave its Bon Venture listing unlinked (its 'Bulletin' menu item goes to an HTML events page): search the parish name with 'bulletin' for a sponsors.bonventure.net/?page=<n> listing before recording no PDF bulletin.
 - Date evidence 'seen'/'checked' by US Eastern time (`TZ=America/New_York date`), not the UTC shell date: in the evening UTC is a day ahead and the dispatcher's validate rejects it as in the future.
+- Parishes staffed by one religious community (the Raritan Oratory) can each print the same combined Mass schedule for all its churches: decide rows from mastheads and Bon Venture account codes, and give each church to the row whose masthead it is; the community's own site (raritanoratory.org) links each parish's current site when finder/GCatholic URLs are stale.
 
 ## Rules settled for this diocese
 
