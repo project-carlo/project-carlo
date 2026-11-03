@@ -217,6 +217,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Squarespace parish sites post bulletins as /s/<name>.pdf on a Bulletins page that can link flyers above the issues: pin page-pdfs with a filename glob on the issues' common prefix.
 - The parish-hosted-copy rule also fits Discover Mass and Bon Venture copies: here both were byte-identical to the parish's eCatholic file (same size and pdftotext). Record ecatholic and list discovermass:<slug> or url:http://sponsors.bonventure.net/?page=<n> alongside it.
 - Monastery chapels with public daily Mass can appear in no roster (found via a web search for the parish bulletin); apply the shrine/chapel no-bulletin rule to them.
+- A self-hosted bulletin's text layer can use a shifted font encoding (pdftotext prints 'Parish' as '3DULVK', each character 29 below): render page 1 for the masthead and quote the parish site; fetch:check then reports issue date and freshness `unknown`.
+- When a parish site links only a ParishesOnline container, `probe po <name>-church-<zip>` (e.g. st-catherine-of-siena-church-08867) usually finds the org slug and LPi id.
 
 ## Rules settled for this diocese
 
