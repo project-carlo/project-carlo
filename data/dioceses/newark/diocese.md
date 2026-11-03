@@ -154,6 +154,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic parish site whose Bulletins page is only an image linking sponsors.bonventure.net/?page=<id> (St. Anthony, Northvale) has no files.ecatholic.com bulletins: record provider other with page-pdfs on that page and leave the eCatholic id out of publication. Bon Venture file names may carry a double dot (2026-11-08..pdf); fetch still reads the date.
 - Trinity Publishing parish sites (footer 'Powered by Trinity Publishing Company') link one fixed /images/pdf/bulletin.pdf that the parish overwrites; it can go stale for months, so read the date on page 1 before recording it.
 - GCatholic lists a parish's Korean community (website …kcc.org) as a second entry with the same Plus Code as the parish church; when the parish's schedule includes the Korean Masses, link both entries to the one church row.
+- A John Patrick parish's self-hosted bulletin archive can stop months before its church-bulletin.org listing does (St. John, Bergenfield: site last 30 Aug, listing current): take the id from the last-page footer '<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing' and pin page-pdfs https://church-bulletin.org/<id>.
+- When an LPi footer gives only a container ('<Parish> | 04-0064') and guessed ParishesOnline slugs fail, run visit.py on the parish's bulletin page: it reported po-org:saint-joseph-roman-catholic-church (no zip suffix), which probe get and publisher_fingerprint.sh missed.
 
 
 ## Rules settled for this diocese
