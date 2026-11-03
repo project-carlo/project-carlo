@@ -208,6 +208,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - OSV/Duda parish sites (footer editor.osvwebsites.com) post bulletins as irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf with varying suffixes ('+Final', 'print', 'a'); page-pdfs on the site's /bulletin page picks the newest issue.
 - A Latin church sold to an Eastern Catholic community that now holds Mass there is excluded other-jurisdiction, not closed; a merged parish's own Parish History page can date such sales and closures.
 - A parish can post its own Bon Venture-printed bulletin (ad-page line '<code> - <parish> … Bon Venture Services') on a Weebly site as /uploads/…/<YYYY-MM-DD>-<code>web.pdf without linking any sponsors.bonventure.net listing; page-pdfs on its Bulletins page picks the newest issue, but such pages can skip weeks, so check the newest date.
+- tools/ddg.sh now gets DuckDuckGo's bot challenge (HTTP 202, no results); searching through the browser, `visit.py 'https://duckduckgo.com/?q=<words>&ia=web' --links`, still returns results.
+- A parish site can leave its Bon Venture listing unlinked (its 'Bulletin' menu item goes to an HTML events page): search the parish name with 'bulletin' for a sponsors.bonventure.net/?page=<n> listing before recording no PDF bulletin.
+- Date evidence 'seen'/'checked' by US Eastern time (`TZ=America/New_York date`), not the UTC shell date: in the evening UTC is a day ahead and the dispatcher's validate rejects it as in the future.
 
 ## Rules settled for this diocese
 
