@@ -108,6 +108,32 @@ publication_reviews:
       Road, Three Bridges alone, with its own Mass times and pastor Very Rev. Thomas J. Serafin. Bon Venture
       account 1485 is a separate account from St. Cecilia, Monmouth Junction's (?page=2137); the shared
       host is a hosting account, not a shared bulletin.
+- parish: st-john-paul-ii-perth-amboy
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1485/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Saint Elizabeth Ann Seton Roman Catholic Church, 105 Summer Road,
+      Three Bridges alone, with its own Mass times; Bon Venture account 1485.
+    quote: 105 Summer Road + Three Bridges, NJ 08887
+  - url: http://sponsors.bonventure.net/pdfs/2153/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names Saint John Paul II Parish, Perth Amboy, with its own churches
+      alone, with its own Mass times; Bon Venture account 2153.
+    quote: OUR LADY OF THE ROSARY
+- parish: st-mary-alpha
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/1485/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Saint Elizabeth Ann Seton Roman Catholic Church, 105 Summer Road,
+      Three Bridges alone, with its own Mass times; Bon Venture account 1485.
+    quote: 105 Summer Road + Three Bridges, NJ 08887
+  - url: http://sponsors.bonventure.net/pdfs/3250/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Mary Roman Catholic Church, Alpha alone, with its own Mass
+      times; Bon Venture account 3250.
+    quote: St. Mary Roman Catholic Church
 ---
 
 ## Publisher

@@ -43,6 +43,32 @@ publication_reviews:
       its own Mass times and pastor Rev. Charles T. O’Connor. Bonventure account 2137 is a separate account
       from Immaculate Conception, Spotswood's (?page=2152); the shared host is a hosting account, not
       a shared bulletin.
+- parish: st-john-paul-ii-perth-amboy
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2137/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Cecilia, 10 Kingston Lane, Monmouth Junction alone, with its
+      own Mass times; Bon Venture account 2137.
+    quote: 10 KINGSTON LANE • MONMOUTH JUNCTION, NJ 08852
+  - url: http://sponsors.bonventure.net/pdfs/2153/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names Saint John Paul II Parish, Perth Amboy, with its own churches
+      alone, with its own Mass times; Bon Venture account 2153.
+    quote: OUR LADY OF THE ROSARY
+- parish: st-mary-alpha
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2137/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Cecilia, 10 Kingston Lane, Monmouth Junction alone, with its
+      own Mass times; Bon Venture account 2137.
+    quote: 10 KINGSTON LANE • MONMOUTH JUNCTION, NJ 08852
+  - url: http://sponsors.bonventure.net/pdfs/3250/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Mary Roman Catholic Church, Alpha alone, with its own Mass
+      times; Bon Venture account 3250.
+    quote: St. Mary Roman Catholic Church
 ---
 
 ## Publisher

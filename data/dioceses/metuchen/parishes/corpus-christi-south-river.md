@@ -32,7 +32,23 @@ research:
   next_action: Add a collector that follows bulletin-view?f=<name> to /bulletins/file/<name>, or pin a
     recipe once one exists; then run fetch:check and set provider to other
   retry_when: The resolver learns viewer-wrapped PDFs, or the site links /bulletins/file/*.pdf directly
+- method: 'reconcile: visit.py --links on /bulletins; probe get of /bulletins/file/2026-11-01-en.pdf'
+  url: https://corpuschristisouthriver.org/bulletins
+  checked: '2026-11-03'
+  outcome: unsupported-format
+  next_action: Write a collector for viewer-wrapped PDFs (fetch_gap viewer-wrapped-pdf), then pin it,
+    run fetch:check and set provider other
+  retry_when: pnpm diocese gaps shows a collector for viewer-wrapped-pdf, or the site links /bulletins/file/*.pdf
+    directly
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: viewer-wrapped-pdf
+  seen: 2026-11-03
+  url: https://corpuschristisouthriver.org/bulletins/file/2026-10-25-en.pdf
+  note: Self-hosted site (Immaculate Motherhood LLC). /bulletins links only HTML viewer pages bulletin-view?f=<YYYY-MM-DD>-<en|pt>.pdf;
+    the PDF itself is at /bulletins/file/<same name>. fetch:check finds no PDF link. On 2026-11-03 the
+    page listed November 1, 2026 (Portuguese posted, English not yet) and 25 October in both languages.
+    A collector would follow the viewer to /bulletins/file/ and prefer -en.
 publication_reviews:
 - parish: st-mary-of-ostrabrama-south-river
   decision: separate
@@ -70,7 +86,7 @@ The bulletin's text names Corpus Christi Parish and gives its Mass intentions, g
 
 ## Worship sites
 
-The church at 100 James St is the parish's main site (directory:24546, gcatholic:18597). The parish's Traditional Latin Mass on Wednesday 6:15 pm and First Friday 7:00 pm is held in the St. Mark's Christian Academy conference room (former convent), corner of David and Kamm Ave, not in the church; see `open/` for that place. First Saturday and Holy Day Latin Masses are in the church.
+The church at 100 James St is the parish's main site (directory:24546, gcatholic:18597). The parish's Traditional Latin Mass on Wednesday 6:15 pm and First Friday 7:00 pm is held in the St. Mark's Christian Academy conference room (former convent), corner of David and Kamm Ave (80 David Street), not in the church; that room is the church record `corpus-christi-latin-mass-convent-south-river` (reconcile, 2026-11-03). First Saturday and Holy Day Latin Masses are in the church.
 
 ## Website and bulletin provider
 

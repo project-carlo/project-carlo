@@ -1,9 +1,9 @@
 ---
 name: St. Andrew
 website: https://www.standrewparish.com
-bulletin_provider: ecatholic
-provider_id: ''
-publication: ['ecatholic:22662', 'po-container:04/1116']
+bulletin_provider: parishes_online
+provider_id: st-andrew-church-07001
+publication: ['ecatholic:22662', 'po-org:st-andrew-church-07001', 'lpi:0018000000Qc09rAAB', 'po-container:04/1116']
 group: ''
 evidence:
 - url: https://files.ecatholic.com/22662/bulletins/20261025.pdf
@@ -26,9 +26,18 @@ evidence:
     page lists files.ecatholic.com/22662/bulletins/<YYYYMMDD>.pdf; newest 25 October 2026 on 2026-11-02
     (the 1 November issue was not yet posted there). Upload stamps show issues posted in batches (4, 11
     October and 27 September all stamped 10 October).
-revisit: Check whether the eCatholic Bulletin page is still behind ParishesOnline container 04/1116; if
-  so, switch the row to parishes_online with the org slug.
-revisit_after: 2026-11-16
+- url: https://parishesonline.com/organization/st-andrew-church-07001
+  seen: 2026-11-03
+  quote: St. Andrew Church
+  note: 'ParishesOnline org st-andrew-church-07001 (probe po, 2026-11-03): 244 Avenel St, Avenel, LPi
+    id 0018000000Qc09rAAB, container 04/1116; latest listed issue 1 November 2026, and 20261108B.pdf (6.3
+    MB) already downloads. The same day files.ecatholic.com/22662/bulletins/20261101.pdf and 20261108.pdf
+    answered 403, so the eCatholic page was still at 25 October.'
+research:
+- method: pnpm fetch:check --parish st-andrew-avenel after switching to parishes_online
+  url: https://container.parishesonline.com/bulletins/04/1116/20261101B.pdf
+  checked: '2026-11-03'
+  outcome: found
 bulletin_status: available
 ---
 
@@ -42,12 +51,12 @@ One church, 244 Avenel Street (directory:24465, gcatholic:18634). Saturday Vigil
 
 ## Website and bulletin provider
 
-Website https://www.standrewparish.com (finder, GCatholic and the masthead agree), eCatholic site 22662. Under the diocese's rule for a bulletin carried both on the parish's eCatholic site and in a ParishesOnline container, this is one publication recorded on the parish-hosted copy: provider `ecatholic`, with `ecatholic:22662` and `po-container:04/1116` both listed. I compared the two 25 October 2026 files with `pdftotext`: identical. No ParishesOnline org slug or LPi id was looked up. The eCatholic page lags the container: on 2026-11-02 it had 25 October as its newest issue while the container already had 1 November, and its upload stamps show issues posted several at a time. If `fetch` keeps picking a stale issue, switching the row to `parishes_online` would be the fix (see *Not yet confirmed*).
+Website https://www.standrewparish.com (finder, GCatholic and the masthead agree), eCatholic site 22662. Under the diocese's rule for a bulletin carried both on the parish's eCatholic site and in a ParishesOnline container, this is one publication recorded on the parish-hosted copy: provider `ecatholic`, with `ecatholic:22662` and `po-container:04/1116` both listed. I compared the two 25 October 2026 files with `pdftotext`: identical. No ParishesOnline org slug or LPi id was looked up. The eCatholic page lags the container: on 2026-11-02 it had 25 October as its newest issue while the container already had 1 November, and its upload stamps show issues posted several at a time. On 2026-11-03 (reconcile) the gap had grown to two issues: container 04/1116 had 1 and 8 November, while eCatholic 22662 still had 25 October as its newest. So the row now reads the container: provider `parishes_online`, org `st-andrew-church-07001` (`probe po`, 2026-11-03, address 244 Avenel St), with every id of the one publication listed (`ecatholic:22662`, `po-org`, `lpi`, `po-container:04/1116`). The 1 November container issue's page 1 reads 'St. Andrew Church, Avenel NJ' with the same Mass schedule.
 
 ## Fetch check
 
-`pnpm fetch:check` on 2026-11-02 picked https://files.ecatholic.com/22662/bulletins/20261025.pdf (the 25 October 2026 issue, the newest the eCatholic page had): transport ok, PDF, issue date inferred from the file name, freshness fresh (8 days, within the 14-day limit), identity unverified by the tool; I read that issue myself (evidence above). It is a week behind the container's 1 November issue.
+`pnpm fetch:check` on 2026-11-02 and again in the reconcile run on 2026-11-03 picked the eCatholic 25 October 2026 issue (fresh at 8–9 days, but a week behind the container). After the switch to `parishes_online`, see the fetch check recorded in `research`.
 
 ## Not yet confirmed
 
-Whether the eCatholic page keeps up. Check again after 2026-11-16: if the eCatholic Bulletin page is still more than a week behind container 04/1116, find the ParishesOnline org slug (`probe po`) and record the row as `parishes_online`.
+Nothing structural. If the parish stops sending its bulletin to LPi (the container goes silent while eCatholic keeps posting), switch back to `ecatholic`.

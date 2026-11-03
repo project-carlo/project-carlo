@@ -94,8 +94,11 @@ Oxford, Iselin/Woodbridge, Frenchtown/Milford), and (c) among the three Raritan 
   no family or cluster list was found on diometuchen.org. The finder's own clergy lines are the
   only diocese-wide shared-pastor source.
   - The finder gives one pastor to St. Patrick, Belvidere and St. Rose of Lima, Oxford (Rev.
-    David J. Pekola; one website, stpatrickrose.org). It names him for Our Lady of Victories,
-    Sayreville too, which is probably stale.
+    David J. Pekola; one website, stpatrickrose.org), and names him for Our Lady of Victories,
+    Sayreville too. The Belvidere/Oxford line is the stale one: Our Lady of Victories' 25 October
+    2026 masthead names "Rev. David J. Pekola, Pastor", while the 1 November 2026 St. Patrick and
+    St. Rose of Lima masthead (container 04/0870) names "Reverend Charles A. Sabella Pastor"
+    (map batches `sayreville-parlin` and `belvidere-oxford-blairstown`).
   - St. Cecelia, Iselin and St. James, Woodbridge (Rev. Thomas Naduviledathu, SDV).
   - Our Lady of Victories, Frenchtown and St. Edward the Confessor, Milford (Fr. Bede Kim).
   - St. Ann and St. Joseph, Raritan and Holy Trinity, Bridgewater are staffed by the Raritan
@@ -175,14 +178,15 @@ From the survey's probes of the finder websites (2026-10-30) and the map batches
   the coming 7 November; record `fetch_gap` `filename-date-misread`, not a recipe.
 - **Immaculate Motherhood LLC sites** link only HTML viewers (`bulletin-view?f=<name>`) around
   `/bulletins/file/<name>`; no recipe reads them. Confirm the bulletin from the viewer's HTML and
-  record `unsupported-format`.
+  record `unsupported-format` and `fetch_gap` kind `viewer-wrapped-pdf`.
 - **Joomla file endpoints** (`/about-us/bulletin/<n>-<title>/file`) answer 403 to `probe get`; a
   `fetch()` in Chrome (`tools/browser_get.py`) returns the PDF. Record `fetch_gap`
   `joomla-file-endpoint`.
 - **SermonCloud embeds** keep bulletins as `media.notes` S3 URLs in
   `api.sermoncloud.com/<account>/sermons` (find the call with `tools/net_log.py`). Record
   `fetch_gap` `sermoncloud-api-embed`.
-- **HTML-only bulletins** ("No PDF links found"): record `unsupported-format`.
+- **HTML-only bulletins** ("No PDF links found"): record `unsupported-format` and `fetch_gap` kind
+  `html-only-bulletin` when the page is kept current (St. Stephen, South River).
 - **Image-only pages** (any publisher): `probe pdf --grep` reaches only text pages. Render page 1
   (`pdftoppm -r 70 -jpeg -f 1 -l 1`) for the masthead, take the Mass schedule from the parish
   site, and for recheck quote a text page (often the ad-page code line). A text layer can be
@@ -210,7 +214,7 @@ Decisions that apply to more than one record, and who made them.
 - A pastor the parish finder lists for two parishes is a lead, not evidence of a shared pastor or a shared bulletin: whether rows share a bulletin is decided from the current bulletins. (accepted by survey-review, 003-survey-review, 2026-10-30)
 - A GCatholic church of a merged parish that neither the finder's worship-site list nor the parish's current bulletin names goes to `open/` unless a dated source says it closed; absence from the finder alone is not a closure. (accepted by survey-review, 003-survey-review, 2026-10-30)
 - A shrine or shrine chapel with public Mass but no parish of its own and no bulletin is excluded `no-bulletin`, as in Allentown (the Padre Pio Centre, Barto); one that publishes a bulletin or a schedule the pipeline can read gets a parish row. (accepted by survey-review, 003-survey-review, 2026-10-30)
-- One bulletin posted both on the parish's own site (eCatholic) and on a publisher's (church-bulletin.org, a ParishesOnline container, Discover Mass or Bon Venture) is one publication: record only the parish-hosted copy, after comparing page-1 renders or `pdftotext` output and the newest dates on both (the parish page can lag the publisher by a week or more), and list both ids (`discovermass:<slug>`, `url:http://sponsors.bonventure.net/?page=<n>`). A parish whose own site only links John Patrick is recorded on John Patrick. (map batches `sayreville-parlin` and `south-amboy-matawan`, 2026-10-30; ParishesOnline added by map batch `plainsboro-south-brunswick`, 2026-11-02; date check by map batch `woodbridge-iselin`, 2026-11-02; Discover Mass and Bon Venture added by map batch `warren-watchung-martinsville`, 2026-11-03)
+- One bulletin posted both on the parish's own site (eCatholic) and on a publisher's (church-bulletin.org, a ParishesOnline container, Discover Mass or Bon Venture) is one publication: record only the parish-hosted copy, after comparing page-1 renders or `pdftotext` output and the newest dates on both (the parish page can lag the publisher by a week or more), and list both ids (`discovermass:<slug>`, `url:http://sponsors.bonventure.net/?page=<n>`). A parish whose own site only links John Patrick is recorded on John Patrick. (map batches `sayreville-parlin` and `south-amboy-matawan`, 2026-10-30; ParishesOnline added by map batch `plainsboro-south-brunswick`, 2026-11-02; date check by map batch `woodbridge-iselin`, 2026-11-02; Discover Mass and Bon Venture added by map batch `warren-watchung-martinsville`, 2026-11-03) When the parish copy is still more than a week behind the publisher's at a later check, read the publisher instead and keep every id on the row: St. Andrew, Avenel moved to `parishes_online` when its eCatholic page still had 25 October while container 04/1116 had 1 and 8 November. (reconcile, 2026-11-03)
 - A parish with no website of its own gets `no_bulletin` with its Discover Mass church page as `website`, since the record needs a URL. (map batch `monroe-jamesburg`, 2026-11-02)
 - A Latin church sold to an Eastern Catholic community that now holds Mass there is excluded `other-jurisdiction`, not closed; the merged parish's own history page can date the sale. (map batch `carteret-port-reading`, 2026-11-03)
 - A monastery chapel with public daily Mass but no bulletin is excluded `no-bulletin` under the shrine rule above, even when it is in no roster. (map batch `flemington-readington`, 2026-11-03)
@@ -220,6 +224,16 @@ Decisions that apply to more than one record, and who made them.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-03: Reconcile (factory Run metuchen-map-1), after 29 map batches of usually 6 to 8
+  roster entries (5 to 16). Coverage: directory 91/91 accounted for (87 modelled; 4 off the site
+  as `no_bulletin`), gcatholic 123/123 (96/100 modelled, 23 excluded), worship-sites 25/25
+  (23/23). Records: 88 parishes, 103 churches, 24 excluded, 0 open. No merges. St. Andrew,
+  Avenel moved from its lagging eCatholic copy to ParishesOnline; the former Corpus Christi
+  convent room (Latin Masses) became a church of Corpus Christi; Corpus Christi and St. Stephen,
+  South River got `fetch_gap`s. Wrote `separate` reviews for the 56 Bon Venture-host pairs from
+  recorded mastheads; audit: 85 candidate pairs, all separate. fetch:check: 82 of 84 rows fetched,
+  2 known gaps (Joomla, SermonCloud).
 
 - 2026-10-30: Survey (factory Run metuchen-map-1). Rosters: directory 91 (90 parishes),
   gcatholic 123 (107 Latin, 16 Eastern), worship-sites 25. 29 batches in `batches.json`, first

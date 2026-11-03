@@ -37,6 +37,33 @@ evidence:
   note: Discover Mass church page for Our Lady of the Rosary of Fatima (188 Wayne St.) carries no bulletins,
     so it is not a publication id.
 bulletin_status: available
+publication_reviews:
+- parish: st-mary-alpha
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2153/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names Saint John Paul II Parish, Perth Amboy, with its own churches
+      alone, with its own Mass times; Bon Venture account 2153.
+    quote: OUR LADY OF THE ROSARY
+  - url: http://sponsors.bonventure.net/pdfs/3250/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Mary Roman Catholic Church, Alpha alone, with its own Mass
+      times; Bon Venture account 3250.
+    quote: St. Mary Roman Catholic Church
+- parish: visitation-new-brunswick
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2153/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names Saint John Paul II Parish, Perth Amboy, with its own churches
+      alone, with its own Mass times; Bon Venture account 2153.
+    quote: OUR LADY OF THE ROSARY
+  - url: http://sponsors.bonventure.net/pdfs/6555/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names the Parish of the Visitation, New Brunswick alone, with its own
+      Mass times; Bon Venture account 6555.
+    quote: ST. THERESA OF THE INFANT JESUS CHURCH
 ---
 
 ## Publisher

@@ -26,7 +26,21 @@ research:
   next_action: Ask whether an HTML bulletin page is acceptable to the pipeline or write a collector for
     it; fetch:check on ?page_id=17 failed with "No PDF links found on bulletin page" (2026-10-30)
   retry_when: The parish posts a PDF, or the pipeline reads weekly HTML bulletin pages
+- method: 'reconcile: probe get of ?page_id=17 for the current week'
+  url: https://ststephennj.com/?page_id=17
+  checked: '2026-11-03'
+  outcome: unsupported-format
+  next_action: Write a collector for weekly HTML bulletin pages (fetch_gap html-only-bulletin), then set
+    provider other
+  retry_when: pnpm diocese gaps shows a collector for html-only-bulletin, or the parish posts a PDF
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: html-only-bulletin
+  seen: 2026-11-03
+  url: https://ststephennj.com/?page_id=17
+  note: The weekly bulletin is the text of the WordPress page ?page_id=17 (English and Spanish), with
+    no PDF; fetch:check found "No PDF links found on bulletin page" (2026-10-30). On 2026-11-03 the page
+    carried the week of 2 to 8 November 2026, so it is kept current.
 publication_reviews:
 - parish: corpus-christi-south-river
   decision: separate

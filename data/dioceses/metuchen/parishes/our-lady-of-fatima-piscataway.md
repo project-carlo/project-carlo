@@ -25,6 +25,72 @@ evidence:
     site's 'Bulletin' menu item goes to an HTML 'Bulletin Events & Announcements' page (/event) and links
     no PDF or Bon Venture page.
 bulletin_status: available
+publication_reviews:
+- parish: our-lady-of-mount-virgin-middlesex
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2127/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Fatima Church, 501 New Market Road, Piscataway alone,
+      with its own Mass times; Bon Venture account 2127.
+    quote: 'Physical Address/Church: 501 New Market Road, Piscataway, New Jersey 08854'
+  - url: http://sponsors.bonventure.net/pdfs/6519/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Mount Virgin Parish, 600 Harris Avenue, Middlesex
+      alone, with its own Mass times; Bon Venture account 6519.
+    quote: Rev. David V. Skoblow, Ch.M., KGCHS, Pastor
+- parish: st-bernard-of-clairvaux-bridgewater
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2127/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Fatima Church, 501 New Market Road, Piscataway alone,
+      with its own Mass times; Bon Venture account 2127.
+    quote: 'Physical Address/Church: 501 New Market Road, Piscataway, New Jersey 08854'
+  - url: http://sponsors.bonventure.net/pdfs/6502/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names the Roman Catholic Community of St. Bernard of Clairvaux, Bridgewater
+      alone, with its own Mass times; Bon Venture account 6502.
+    quote: 500 Route 22 East - Bridgewater, New Jersey 08807
+- parish: st-cecilia-monmouth-junction
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2127/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Fatima Church, 501 New Market Road, Piscataway alone,
+      with its own Mass times; Bon Venture account 2127.
+    quote: 'Physical Address/Church: 501 New Market Road, Piscataway, New Jersey 08854'
+  - url: http://sponsors.bonventure.net/pdfs/2137/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Cecilia, 10 Kingston Lane, Monmouth Junction alone, with its
+      own Mass times; Bon Venture account 2137.
+    quote: 10 KINGSTON LANE • MONMOUTH JUNCTION, NJ 08852
+- parish: st-john-paul-ii-perth-amboy
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2127/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Fatima Church, 501 New Market Road, Piscataway alone,
+      with its own Mass times; Bon Venture account 2127.
+    quote: 'Physical Address/Church: 501 New Market Road, Piscataway, New Jersey 08854'
+  - url: http://sponsors.bonventure.net/pdfs/2153/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 2026-11-01 masthead names Saint John Paul II Parish, Perth Amboy, with its own churches
+      alone, with its own Mass times; Bon Venture account 2153.
+    quote: OUR LADY OF THE ROSARY
+- parish: st-mary-alpha
+  decision: separate
+  evidence:
+  - url: http://sponsors.bonventure.net/pdfs/2127/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names Our Lady of Fatima Church, 501 New Market Road, Piscataway alone,
+      with its own Mass times; Bon Venture account 2127.
+    quote: 'Physical Address/Church: 501 New Market Road, Piscataway, New Jersey 08854'
+  - url: http://sponsors.bonventure.net/pdfs/3250/2026-11-01.pdf
+    seen: 2026-11-02
+    note: The 2026-11-01 masthead names St. Mary Roman Catholic Church, Alpha alone, with its own Mass
+      times; Bon Venture account 3250.
+    quote: St. Mary Roman Catholic Church
 ---
 
 ## Publisher
