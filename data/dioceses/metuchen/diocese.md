@@ -207,6 +207,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Before applying the parish-hosted-copy rule to an eCatholic + ParishesOnline pair, compare the newest dates on both: the eCatholic page can lag the container by a week or more.
 - OSV/Duda parish sites (footer editor.osvwebsites.com) post bulletins as irp.cdn-website.com/<site>/files/uploaded/<MM.DD.YYYY><suffix>.pdf with varying suffixes ('+Final', 'print', 'a'); page-pdfs on the site's /bulletin page picks the newest issue.
 - A Latin church sold to an Eastern Catholic community that now holds Mass there is excluded other-jurisdiction, not closed; a merged parish's own Parish History page can date such sales and closures.
+- A parish can post its own Bon Venture-printed bulletin (ad-page line '<code> - <parish> … Bon Venture Services') on a Weebly site as /uploads/…/<YYYY-MM-DD>-<code>web.pdf without linking any sponsors.bonventure.net listing; page-pdfs on its Bulletins page picks the newest issue, but such pages can skip weeks, so check the newest date.
 
 ## Rules settled for this diocese
 
