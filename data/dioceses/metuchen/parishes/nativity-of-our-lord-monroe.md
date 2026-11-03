@@ -30,6 +30,7 @@ evidence:
     read as a 60-dpi render): cover ''Blessed are you Saints of Heaven & Earth'' over ''Nativity of Our
     Lord, Monroe Township, New Jersey, www.nativitymonroe.org''. Page 1 has no text layer, so only the
     code line can be rechecked by quote.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

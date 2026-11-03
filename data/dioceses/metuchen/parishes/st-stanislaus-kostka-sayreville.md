@@ -28,6 +28,7 @@ evidence:
   note: John Patrick Publishing listing for this parish, one issue per Sunday. Its 2026-11-01 PDF has
     the same page-1 masthead as the eCatholic file (I rendered both); so the same bulletin is posted in
     two places. Not a separate publisher.
+promoted: 2026-11-03
 ---
 
 ## Publisher

@@ -37,6 +37,7 @@ evidence:
   note: Bishop's decree of 30 May 2025 merging Saint Luke and Saint Joseph parishes 'effective July 1,
     2025'; it says St. Luke parishioners 'will continue to have opportunities to worship in the church'.
     Read by the survey (001-survey/nplf_merger.json).
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

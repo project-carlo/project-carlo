@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-02
   note: GCatholic 'St. Elizabeth', 34 Peapack Rd., Peapack, New Jersey 07931, Plus Code 87G7M9P6+83 (40.68581,
     -74.63981), founded 1902.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

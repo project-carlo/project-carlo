@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   quote: 15 Fox Rd., Edison, New Jersey 08817
   note: GCatholic 'St. Theresa', Church of the Parish of the Visitation, Plus Code 87G7GH2Q+28.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   note: The parish's Google Sites Church Bulletin page (olmsbb.org redirects to sites.google.com/view/olmsbbnj/home)
     links https://www.jppc.net/onlinebulletins/593template.pdf.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

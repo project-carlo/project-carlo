@@ -24,6 +24,7 @@ evidence:
   quote: 620 Amboy Ave.
   note: 'Contact page: ''PHYSICAL LOCATION 620 Amboy Ave. Edison, NJ 08837'', ''MAILING ADDRESS P.O. Box
     69 Fords, NJ 08863-0069'', ''PARISH OFFICES 26 Maple Avenue Edison, NJ 08837''.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

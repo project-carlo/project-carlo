@@ -33,6 +33,7 @@ evidence:
   note: OSM way 609063065, amenity=place_of_worship, centre 40.60332, -74.56632. OSM house 1890 Washington
     Valley Road is at 40.60351, -74.56546 and 852 Newmans Lane at 40.60314, -74.56824, either side of
     the church.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

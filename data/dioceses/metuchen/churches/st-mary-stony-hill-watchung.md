@@ -32,6 +32,7 @@ evidence:
   quote: 225 Mountain Blvd., Watchung, NJ
   note: 1 November 2026 bulletin masthead gives the church address; page 3 announces the 4 pm Mass on
     Saturday, November 14th.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

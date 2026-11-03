@@ -31,6 +31,7 @@ evidence:
   quote: Mary Mother of God • Hillsborough, NJ
   note: 'Page 1 (image) of the 1 November 2026 bulletin: ''Mary Mother of God Church, 157 S. Triangle
     Rd., Hillsborough, New Jersey''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

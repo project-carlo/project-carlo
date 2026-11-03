@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   quote: 56 Throop Ave., New Brunswick, New Jersey 08901
   note: GCatholic 'Sacred Heart', Church, founded 1883, Plus Code 87G7FHP4+JR.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

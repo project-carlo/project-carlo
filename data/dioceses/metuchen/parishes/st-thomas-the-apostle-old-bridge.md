@@ -18,6 +18,7 @@ evidence:
   quote: Bulletin Downloads (PDF)
   note: The parish's Bulletin page lists /uploads/docs/bulletins/20261101.pdf, 20261025.pdf, 20261018.pdf,
     20261011.pdf, 20261004.pdf, 20260927.pdf, newest first.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

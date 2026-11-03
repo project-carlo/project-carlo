@@ -31,6 +31,7 @@ evidence:
   quote: SAT—5PM | SUN—8AM, 10AM, 12NOON, 5PM
   note: 'Page 18 of the 1 November 2026 bulletin: Mass schedule; the cover image reads ''45 Henderson
     Road, Kendall Park, NJ 08824''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

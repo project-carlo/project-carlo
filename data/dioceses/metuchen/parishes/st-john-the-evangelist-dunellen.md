@@ -18,6 +18,7 @@ evidence:
   note: The parish's Weebly Bulletins page lists 2026 issues as /uploads/8/7/9/4/87942936/<YYYY-MM-DD>-164bweb.pdf;
     newest November 1, 2026; no October 2026 issues are posted (the one before is September 20, with a
     September 27 label). Older years are on /bulletin-archive.html.
+promoted: 2026-11-03
 research:
 - method: 'Looked for a Bon Venture sponsors listing: links on the parish home and Bulletins pages; DuckDuckGo
     search ''bonventure St. John the Evangelist Dunellen bulletin'''

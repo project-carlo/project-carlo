@@ -30,6 +30,7 @@ evidence:
 - url: https://saintmarysa.org/bulletin
   seen: 2026-10-30
   note: Parish website page title 'St. Mary Church - Bulletin - South Amboy, NJ'.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

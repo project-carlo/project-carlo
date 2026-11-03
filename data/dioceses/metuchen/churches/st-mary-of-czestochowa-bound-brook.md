@@ -29,6 +29,7 @@ evidence:
     masthead ''St. Mary of Czestochowa Church, 201 Vosseller Avenue, Bound Brook, New Jersey 08805'';
     Saturday eve 5:00 p.m. (English); Sunday 9:00 a.m. (English) and 11:00 a.m. (Polish); weekday Mass
     8:30 a.m. (English).'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

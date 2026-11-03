@@ -27,6 +27,7 @@ evidence:
   note: 'The diocese''s finder lists Ss. Peter and Paul, 360 U.S. Highway 46, Great Meadows, NJ 07838-0156,
     website http://www.peterpaulgm.com, ''Administrator: Rev. Grzegorz Podsiadlo, SDS'', matching the
     masthead.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

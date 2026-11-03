@@ -27,6 +27,7 @@ evidence:
   quote: January 29, 2023
   note: 'The site''s eCatholic Bulletin page is a frozen archive: its newest file is files.ecatholic.com/22680/bulletins/20230129.pdf.
     The eCatholic id is the website''s, not the current bulletin''s, so it is not recorded as a publication.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

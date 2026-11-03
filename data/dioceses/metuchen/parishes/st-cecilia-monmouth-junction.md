@@ -23,6 +23,7 @@ evidence:
   quote: pdfs/2137/2026-11-01.pdf
   note: 'Bonventure listing for account 2137 (HTML source): links pdfs/2137/2026-11-01.pdf, 2026-10-25,
     2026-10-18, 2026-10-11 ... one per Sunday, newest first.'
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: most-holy-redeemer-matawan

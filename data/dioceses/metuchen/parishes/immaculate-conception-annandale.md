@@ -28,6 +28,7 @@ evidence:
   note: eCatholic site 22614, read with visit.py (probe url said DEAD-DNS for every host on 2026-11-02;
     the survey's probe url loaded it on 2026-10-30). The Bulletins page lists files.ecatholic.com/22614/bulletins/<YYYYMMDD>.pdf
     weekly from 24 May to 1 November 2026 and links no other publisher.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

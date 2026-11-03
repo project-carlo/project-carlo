@@ -30,6 +30,7 @@ evidence:
   note: 'The diocese''s finder lists St. Joseph, 200 Carlton Avenue, Washington, NJ 07882, website http://www.stjosephwashingtonnj.org,
     ''Pastor: Rev. Guy W. Selvester'', which the 1 November 2026 masthead (Rev. James A. Kyrpczak, Pastor)
     contradicts; the masthead is followed.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

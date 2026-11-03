@@ -27,6 +27,7 @@ evidence:
   note: 'Parish home page: 200 Carlton Avenue, Washington, NJ 07882; Sunday 7:30 AM; 9:00 AM (Spanish);
     11:00 AM; Monday - Friday 9:00 AM. The 1 November 2026 bulletin masthead (container 03/1421, page
     1 image) gives the same times.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

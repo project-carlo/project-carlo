@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   quote: 436 Port Reading Ave., Port Reading, New Jersey 07064
   note: 'GCatholic: St. Anthony of Padua, Plus Code 87G7HP8W+4G, history 1904.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

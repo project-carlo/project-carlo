@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: Finder entry for Most Holy Name of Jesus lists the worship site 'Our Lady of Hungary Church |
     697 Cortlandt Street, Perth Amboy, NJ 08861-2844'.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

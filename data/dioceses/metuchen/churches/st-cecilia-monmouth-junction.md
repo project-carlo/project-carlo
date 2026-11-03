@@ -26,6 +26,7 @@ evidence:
   quote: 10 KINGSTON LANE • MONMOUTH JUNCTION, NJ 08852
   note: 'Page 1 of the 1 November 2026 bulletin: Mass Schedule ''Saturday 5:00 pm; Sunday 8:30 & 11:00
     am; Weekdays Monday, Wednesday, Thursday & Friday 8:00 am; Tuesday 7:00 pm''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

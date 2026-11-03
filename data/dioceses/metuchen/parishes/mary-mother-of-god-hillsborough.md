@@ -33,6 +33,7 @@ evidence:
   note: 'Mass Times page: ''SATURDAY: 5:00 PM L, 6:30 PM L - Spanish; SUNDAY: 7:30 AM, 9:00 AM, 10:30
     AM ... 4th Sunday ASL (Signed Mass), 12:00 PM; TUE-SAT: 8:30 AM''. One church; the only other place
     named is ''HSH'', an overflow venue for one Christmas Eve Mass, not a weekly worship site.'
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: most-holy-redeemer-matawan

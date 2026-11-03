@@ -28,6 +28,7 @@ evidence:
   quote: Saint Francis of Assisi Cathedral
   note: OSM way 155917374, place_of_worship 'Saint Francis of Assisi Cathedral, 548, Main Street, Metuchen
     ... 08840', centre 40.54559, -74.36334.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

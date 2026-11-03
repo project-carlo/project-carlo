@@ -28,6 +28,7 @@ evidence:
   note: '1 November 2026 issue: page 1 masthead (image, rendered) gives Church of the Annunciation, 80
     Main Street, Bloomsbury, New Jersey 08804; page 2 lists Mass intentions Saturday 31 October 4:30PM,
     Sunday 1 November 9:00AM and 11:30AM, weekdays 9:00AM, Saturday 7 November 9:00AM and 4:30PM.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

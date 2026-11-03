@@ -26,6 +26,7 @@ evidence:
   note: 'Bonventure listing for page 2238 (over http://; https fails certificate verification): links
     pdfs/2238/2026-11-01.pdf as the newest issue. The 25 October and 1 November PDFs both download (3.8
     MB and 9.4 MB).'
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-fatima-piscataway

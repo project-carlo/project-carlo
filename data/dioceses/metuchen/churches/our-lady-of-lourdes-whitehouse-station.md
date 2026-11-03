@@ -26,6 +26,7 @@ evidence:
   quote: Saturday Vigil | 4:30 pm
   note: '1 November 2026 bulletin, page 1: ''Our Lady of Lourdes Catholic Church Whitehouse Station, New
     Jersey'', ''390 County Road 523 Whitehouse Station, NJ 08889''; Sunday 8:30 and 10:30 am.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

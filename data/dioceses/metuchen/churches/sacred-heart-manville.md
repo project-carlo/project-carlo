@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-02
   note: '1 November 2026 masthead (page 1, rendered image): ''Sacred Heart - Worship Site, 98 South 2nd
     Ave., Manville''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

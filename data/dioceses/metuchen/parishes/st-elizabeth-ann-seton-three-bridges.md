@@ -25,6 +25,7 @@ evidence:
   note: The parish's WordPress Bulletins page (read with visit.py; probe url said DEAD-DNS for every host
     on 2026-11-02) hosts no PDFs and links only sponsors.bonventure.net/?page=1485 (through a urldefense
     redirect).
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: blessed-sacrament-martinsville

@@ -26,6 +26,7 @@ evidence:
   note: The parish's WordPress site (transfiguration-parish.com redirects here with a meta refresh) links
     bulletins at container.parishesonline.com/bulletins/04/1001/20261011B.pdf and 20261018B.pdf; it embeds
     no other bulletin.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

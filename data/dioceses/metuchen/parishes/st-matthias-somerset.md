@@ -26,6 +26,7 @@ evidence:
   note: 'John Patrick listing (church-bulletin.org/668 redirects here); newest issue 2026-11-01.pdf. Its
     1 November 2026 file has the same 16 pages and byte-identical pdftotext output (md5 0fb8a5da…) as
     the eCatholic file: one publication, recorded on the parish-hosted copy.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

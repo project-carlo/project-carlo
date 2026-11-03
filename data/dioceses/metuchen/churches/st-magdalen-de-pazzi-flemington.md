@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 bulletin, page 1: ''ST. MAGDALEN DE PAZZI CATHOLIC CHURCH'', ''105 Mine Street
     Flemington, NJ 08822''; ''Saturday | 4:00 p.m. (Vigil)'', Sunday also ''12 Noon (Spanish)''; weekday
     Masses 8:00 a.m. Monday-Friday.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

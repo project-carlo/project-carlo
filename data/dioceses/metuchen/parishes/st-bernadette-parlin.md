@@ -20,6 +20,7 @@ evidence:
   seen: 2026-10-30
   quote: 20 Villanova Rd Parlin, NJ 08859
   note: Parish's own Bulletin page embeds the ParishesOnline widget for id 0018000000QxA3PAAV.
+promoted: 2026-11-03
 ---
 
 ## Publisher

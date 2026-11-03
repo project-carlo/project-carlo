@@ -22,6 +22,7 @@ evidence:
     verdict SPAM-SQUAT, though the title is 'The Catholic Church of St. Ann - Raritan, NJ' and the pages
     are parish pages). The Bulletin page lists weekly files at files.ecatholic.com/22511/bulletins/<YYYYMMDD>.pdf,
     newest 1 November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-raritan

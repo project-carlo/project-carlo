@@ -21,6 +21,7 @@ evidence:
   quote: November 1 , 2026
   note: Bulletin archive of the parish's eCatholic site, listing every Sunday from 5 January 2025 to 1
     November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: corpus-christi-south-river

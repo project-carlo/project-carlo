@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 bulletin masthead: ''St. John Vianney Church, 420 Inman Avenue – Colonia, New
     Jersey 07067''. Page 2 Mass Schedule: Monday-Friday 7am and 8:30am; Saturday 8am and 5pm; Sunday 8am,
     10am, 12pm.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic: St. John the Evangelist, 44 Bridge St., Lambertville 08530, founded 1843, Plus Code
     87G79384+97.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

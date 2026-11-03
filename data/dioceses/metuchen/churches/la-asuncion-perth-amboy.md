@@ -34,6 +34,7 @@ evidence:
   note: 'Diocese of Metuchen parish finder: Most Holy Name of Jesus, 777 Cortlandt Street, Perth Amboy,
     NJ 08861-2844 (directory:24524); its Mass list places Spanish Masses at ''La Asuncion'', though its
     Worship Sites line names only Holy Trinity and Our Lady of Hungary.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

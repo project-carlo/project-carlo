@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-03
   quote: 188 Wayne St., Perth Amboy, NJ 08861
   note: 'Discover Mass church page (MassTimes.org data): Sunday 9:30am (Portuguese); no bulletins.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

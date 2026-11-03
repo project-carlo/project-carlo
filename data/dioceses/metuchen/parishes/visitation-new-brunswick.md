@@ -30,6 +30,7 @@ evidence:
   note: The parish's eCatholic site (ecatholic:23109; probe get answers 403, read with visit.py) Bulletins
     page links only http://sponsors.bonventure.net/?page=6555; it hosts no bulletin files of its own,
     so the eCatholic id is the website's, not a publication.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: blessed-sacrament-martinsville

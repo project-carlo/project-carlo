@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-02
   note: The parish's eCatholic site (site id 21774) links 'Bulletins' to https://sponsors.bonventure.net/?page=6519;
     olmv.net/bulletins answered 403 to probe get.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-bernard-of-clairvaux-bridgewater

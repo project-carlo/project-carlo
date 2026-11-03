@@ -27,6 +27,7 @@ evidence:
   note: eCatholic site 22346 (read with visit.py; probe get got a bot check). Its Bulletin page lists
     files.ecatholic.com/22346/bulletins/<YYYYMMDD>.pdf from 2019, newest 20261101.pdf; no other publisher's
     link. Its Get Directions link points to 35 Mountain Avenue, Somerville, 08876.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

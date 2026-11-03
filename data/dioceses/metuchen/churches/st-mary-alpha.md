@@ -31,6 +31,7 @@ evidence:
   note: 'Parish site header (read with parish-site-access visit.py; the site answers 403 to probe get):
     ''St. Mary Catholic Church 830 Fifth Avenue, Alpha, New Jersey 08865''; Sunday Mass Schedule Saturday
     5:00 PM; daily Mass 8:00 AM.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

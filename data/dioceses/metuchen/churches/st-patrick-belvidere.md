@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 masthead (page 1, an image, rendered 2026-11-03): ''St. Patrick Church, 327 Greenwich
     St. Belvidere, NJ'', Saturday 4:00pm, Sunday 8:00am and 11:00am, Weekday Mon-Sat 9:00am, Confessions
     Saturday 3:00-3:30pm.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

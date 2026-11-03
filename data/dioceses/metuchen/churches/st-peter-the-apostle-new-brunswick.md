@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Parish finder: St. Peter the Apostle University and Community Parish, 94 Somerset Street, New
     Brunswick, NJ 08901-1220.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

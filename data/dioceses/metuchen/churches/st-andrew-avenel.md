@@ -26,6 +26,7 @@ evidence:
   quote: 'SATURDAY VIGIL: 4:00PM'
   note: '25 October 2026 bulletin, page 1: ''St. Andrew Church, Avenel NJ'', Saturday Vigil 4:00 PM, Sunday
     8:00 AM, 10:00 AM & 11:30 AM; weekday Mass intentions at 8:00 AM.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -32,6 +32,7 @@ evidence:
   quote: '| St. Mary of Ostrabrama | 30 Jackson Street | South River, NJ 08882'
   note: Footer of the parish's eCatholic site gives the address; its Mass Times page lists the same Masses
     as the bulletin.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -16,6 +16,7 @@ evidence:
   seen: 2026-10-30
   quote: Click here to access current and past bulletins.
   note: Parish's own Bulletin page links https://www.parishesonline.com/find/st-lawrence-church-08879.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

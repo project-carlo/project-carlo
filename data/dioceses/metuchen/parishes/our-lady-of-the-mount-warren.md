@@ -24,6 +24,7 @@ evidence:
   note: 'Discover Mass church page carries the same bulletin: a current link plus dated issues back to
     16 August 2026. Its 25 October 2026 download (4,131,767 bytes, 16 pages) is byte-for-byte the same
     size, page count and page-1 text as the eCatholic file 20261025.pdf, so they are one publication.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

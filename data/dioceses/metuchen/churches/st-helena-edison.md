@@ -26,6 +26,7 @@ evidence:
   quote: 'Sunday: 8:00 & 10:30 AM, 12:00 PM'
   note: 'Page 1 of the 1 November 2026 bulletin: ''CHURCH OF ST. HELENA 950 GROVE AVENUE, EDISON, NEW
     JERSEY 08820'', ''Saturday: 4:00 PM''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

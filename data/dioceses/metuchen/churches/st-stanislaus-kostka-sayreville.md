@@ -28,6 +28,7 @@ evidence:
 - url: https://files.ecatholic.com/38428/bulletins/20261101.pdf
   seen: 2026-10-30
   note: 1 Nov 2026 bulletin (image-only); masthead on page 1 gives the same address and phone (732) 254-0212.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

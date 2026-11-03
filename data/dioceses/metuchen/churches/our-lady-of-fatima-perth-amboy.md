@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: Finder entry 'Our Lady of Fatima', 380 Smith Street, Perth Amboy, NJ 08861-3922, pin 40.5118766,
     -74.2790482.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

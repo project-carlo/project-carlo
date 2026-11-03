@@ -28,6 +28,7 @@ evidence:
     OF MOUNT VIRGIN PARISH, 600 HARRIS AVENUE, MIDDLESEX, NEW JERSEY, 08846''; MASS SCHEDULE Saturdays
     8:00 am and 5:00 pm (Sunday Vigil Mass), Sundays 8:00 am, 10:00 am, 1:30 pm (Misa en Español), weekdays
     7:00 am (M, W, F) and 12:00 Noon (Tue, Thu).'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

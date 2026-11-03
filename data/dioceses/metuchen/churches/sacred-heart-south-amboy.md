@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   note: 'Search result for the parish''s own contact page: ''Address: 531 Washington Avenue South Amboy,
     NJ 08879'', phone (732) 721-0040. Read as a search snippet, not fetched.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

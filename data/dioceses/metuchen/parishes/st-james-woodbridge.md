@@ -26,6 +26,7 @@ evidence:
   quote: November 1, 2026
   note: Bulletin page lists weekly files at files.ecatholic.com/27749/bulletins/<YYYYMMDD>.pdf, newest
     1 November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

@@ -28,6 +28,7 @@ evidence:
     Raritan, NJ 08869''; schedule ''Sunday: 7:30 am St. Ann Church … 10:30 am St. Ann Church … 12:00 pm
     St. Ann Church … 5:00 pm St. Ann Church'', weekdays Monday through Friday 8:00 am and Saturday 9:00
     am St. Ann Church.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

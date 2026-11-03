@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-02
   note: GCatholic 'St. Brigid', 129 Main St., Peapack, New Jersey 07977, Plus Code 87G7P87R+FF (40.71369,
     -74.65881).
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

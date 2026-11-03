@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic: Our Lady of Victories, 1005 Route 519, Baptistown NJ 08803, founded 1945, Plus Code
     87G6GX9V+W7.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

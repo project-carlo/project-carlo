@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   quote: Somerset St. & Maple St., New Brunswick, New Jersey 08901
   note: GCatholic 'St. Joseph', Church, founded 1924, Plus Code 87G7FGVV+47 (40.49281, -74.45681).
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: 5:15 pm - Mass; Church (live-streamed & recorded)
   note: '1 November 2026 masthead ''500 Route 22 East - Bridgewater, New Jersey 08807''; calendar for
     7-8 November: Saturday 5:15 pm and Sunday 7:30, 9:00, 10:30 am and 12:00 pm Masses in the Church.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

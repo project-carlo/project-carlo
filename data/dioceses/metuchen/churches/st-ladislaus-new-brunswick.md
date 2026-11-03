@@ -33,6 +33,7 @@ evidence:
   seen: 2026-10-30
   quote: 40 Plum St., New Brunswick, New Jersey 08901
   note: GCatholic 'St. Ladislaus', Church, founded 1904, Plus Code 87G7FGVW+WW (40.49481, -74.45269).
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

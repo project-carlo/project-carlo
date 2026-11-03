@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   quote: 133 Amboy Rd., Matawan, New Jersey 07747
   note: GCatholic names it 'Holy Redeemer', kind Church, founded 1893, Plus Code 87G7CP7M+GW.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

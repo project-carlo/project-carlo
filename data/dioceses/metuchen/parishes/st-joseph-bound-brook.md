@@ -25,6 +25,7 @@ evidence:
 - url: https://www.dreamsofstjoseph.org/news-and-contacts/weekly-bulletin/
   seen: 2026-10-30
   note: The parish's own Weekly Bulletin page links https://church-bulletin.org/?id=557.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

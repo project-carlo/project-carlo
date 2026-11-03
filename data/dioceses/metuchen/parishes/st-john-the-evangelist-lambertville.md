@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-02
   note: Redirects to the John Patrick listing saint-john-the-evangelist-parish-lambertville-nj-08530,
     weekly issues 2026-10-11 through 2026-11-01.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

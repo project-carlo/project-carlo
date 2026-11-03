@@ -36,6 +36,7 @@ evidence:
   note: GCatholic lists this building as 'St. Lucy Filippini', type 'National Shrine , Parish', grouped
     'Church of St. Mary of Mount Virgin', founded 1904, phone (732) 545-5090 (the Visitation office),
     website stmaryofmountvirgin.org, Plus Code 87G7FHM2+85.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

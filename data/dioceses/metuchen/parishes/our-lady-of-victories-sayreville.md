@@ -23,6 +23,7 @@ evidence:
   quote: 42 Main Street, Sayreville New Jersey 08872
   note: Bulletin page of the parish's eCatholic site; links files.ecatholic.com/29529/bulletins/<YYYYMMDD>.pdf,
     newest 20261025.
+promoted: 2026-11-03
 ---
 
 ## Publisher

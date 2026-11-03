@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   quote: 267 E Smith St., Woodbridge Township, New Jersey 07095
   note: 'GCatholic: Our Lady of Mount Carmel, Plus Code 87G7HP2C+76, website saintanthonypadua.org.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

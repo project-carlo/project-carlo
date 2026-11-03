@@ -33,6 +33,7 @@ evidence:
     id 0018000000Qc09rAAB, container 04/1116; latest listed issue 1 November 2026, and 20261108B.pdf (6.3
     MB) already downloads. The same day files.ecatholic.com/22662/bulletins/20261101.pdf and 20261108.pdf
     answered 403, so the eCatholic page was still at 25 October.'
+promoted: 2026-11-03
 research:
 - method: pnpm fetch:check --parish st-andrew-avenel after switching to parishes_online
   url: https://container.parishesonline.com/bulletins/04/1116/20261101B.pdf

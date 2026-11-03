@@ -35,6 +35,7 @@ evidence:
 revisit: Check that files.ecatholic.com/25544/bulletins/20261101.pdf has been posted; if eCatholic still
   lags ParishesOnline by more than a week, switch to parishes_online (good-shepherd-parish-08861).
 revisit_after: 2026-11-17
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

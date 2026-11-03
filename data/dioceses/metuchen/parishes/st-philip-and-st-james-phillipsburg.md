@@ -32,6 +32,7 @@ evidence:
   note: 'The diocese''s finder lists St. Philip and St. James, 430 South Main Street, Phillipsburg, website
     http://spsj.org, ''Pastor: Rev. John Barbella'' (stale: the 1 November 2026 masthead names Fr. Antony
     Arockiadoss as pastor).'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

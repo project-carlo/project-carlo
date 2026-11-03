@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-02
   quote: Sunday 9:00am, 11:00am, 1:00pm (Spanish), 5:30pm
   note: Parish site Mass schedule page, same times as the bulletin.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

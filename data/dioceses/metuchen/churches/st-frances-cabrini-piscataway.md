@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic roster entry: St. Frances Cabrini, 208 Bound Brook Ave., Piscataway Township 08854,
     founded 1961, Plus Code 87G7GGR3+8F.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

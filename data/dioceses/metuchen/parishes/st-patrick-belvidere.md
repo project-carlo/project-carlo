@@ -35,6 +35,7 @@ evidence:
     J. Pekola'' (stale: the 1 November 2026 masthead names Rev. Charles A. Sabella).'
 revisit: Check whether www.stpatrickrose.org is back up and whether it hosts the bulletin itself.
 revisit_after: 2027-01-15
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

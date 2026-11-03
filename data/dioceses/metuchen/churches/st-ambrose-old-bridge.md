@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   quote: Saturday  Vigil Mass Sunday Mass 8:00AM, 10:00AM and 12:00NOON
   note: Parish home page Mass schedule.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

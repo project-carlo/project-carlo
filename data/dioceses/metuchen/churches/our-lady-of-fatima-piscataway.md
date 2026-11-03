@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic roster entry: Our Lady of Fatima, 501 New Market Rd., Piscataway Township 08854, founded
     1948, Plus Code 87G7HGHR+CC.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

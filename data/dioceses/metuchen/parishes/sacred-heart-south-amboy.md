@@ -24,6 +24,7 @@ evidence:
     the same page-1 text as the eCatholic 20261025.pdf (same Mass schedule and staff block) with extra
     advertising pages, so it is a second copy of the same bulletin, not a second publisher; only the parish-hosted
     copy is recorded.
+promoted: 2026-11-03
 research:
 - method: probe url on the finder/GCatholic website http://www.sacredheartchurchsa.com
   url: http://www.sacredheartchurchsa.com

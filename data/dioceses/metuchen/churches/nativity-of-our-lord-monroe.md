@@ -32,6 +32,7 @@ evidence:
   quote: H60641 (PK) - Nativity, Monroe Township
   note: The 1 November 2026 issue, the newest on the parish's archive page; cover reads 'Nativity of Our
     Lord, Monroe Township, New Jersey', and its page 2 lists Mass intentions for 2 to 8 November.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   note: 'probe po: organization ''Our Lady of Peace Church'', 277 Washington Pl, North Brunswick; ids
     po-org:our-lady-of-peace-church-08902, lpi:0018000000QxA3xAAF, po-container:03/4082; latest issue
     2026-11-01, weekly issues back to 2026-09-27 in the listing.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

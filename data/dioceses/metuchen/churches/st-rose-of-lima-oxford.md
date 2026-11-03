@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 masthead (page 1, an image, rendered 2026-11-03): ''St. Rose of Lima Church,
     85 Academy St. Oxford, NJ Sunday: 9:30am''; the devotions box adds ''Daily Rosary: St. Rose of Lima
     Church: Sun 8:45am''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

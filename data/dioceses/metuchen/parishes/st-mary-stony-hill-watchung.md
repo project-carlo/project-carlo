@@ -24,6 +24,7 @@ evidence:
   note: eCatholic site 12504, loaded with visit.py (probe url said DEAD-DNS and probe get 403). The Bulletin
     page lists files.ecatholic.com/12504/bulletins/<YYYYMMDD>.pdf weekly from 2 August to 1 November 2026,
     and a 'Our Bulletin Sponsors!' link to parishesonline.com/find/st-mary-of-stony-hill-church.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

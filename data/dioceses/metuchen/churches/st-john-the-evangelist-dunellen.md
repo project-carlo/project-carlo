@@ -26,6 +26,7 @@ evidence:
   note: 'Page 1 of the 1 November 2026 bulletin: masthead ''Saint John the Evangelist ROMAN CATHOLIC CHURCH'',
     317 First Street, Dunellen; Saturday Vigil 5:00 pm, weekdays 8:00 am (Chapel), Tuesday 7:00 pm Spanish,
     second Sunday 3:30 pm Kiswahili.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

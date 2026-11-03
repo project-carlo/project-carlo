@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic roster entry: St. Catherine of Siena, 2 White Bridge Rd., Pittstown 08867, Plus Code
     87G7H2QX+5P.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

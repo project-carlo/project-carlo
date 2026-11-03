@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-02
   note: Self-hosted Bulletin page listing ../UploadFiles/Bulletins/<YYYY-MM-DD>.pdf from 2014-02-02 to
     2026-11-01 (newest).
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

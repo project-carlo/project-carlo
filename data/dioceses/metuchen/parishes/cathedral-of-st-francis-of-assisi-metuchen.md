@@ -24,6 +24,7 @@ evidence:
   quote: https://discovermass.com/church/st-francis-of-assisi-cathedral-metuchen-nj/
   note: The cathedral's own site (Thrillshare/Apptegy, not eCatholic) has a 'Bulletin' button linking
     to the Discover Mass church page.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

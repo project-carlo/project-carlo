@@ -27,6 +27,7 @@ evidence:
   note: 'Parish site: 302 High Street, Hackettstown, NJ 07840; daily Monday-Saturday 8:00 am, Friday 7
     pm Spanish, Saturday Vigil 4:30 pm and 7:00 pm (Spanish), Sunday 8:00 am & 10:00 am, matching the
     1 November 2026 bulletin masthead (church-bulletin.org, account 6011).'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

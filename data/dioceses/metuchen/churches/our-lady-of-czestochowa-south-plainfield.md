@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-02
   note: 'GCatholic roster entry: Our Lady of Czestochowa, ''120 Kosciousko Ave.'', South Plainfield 07080,
     founded 1943, Plus Code 87G7HHFM+F8.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

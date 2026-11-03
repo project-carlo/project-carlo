@@ -29,6 +29,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18660
   seen: 2026-11-02
   note: 'GCatholic: St. Agnes, ''Main St.'', Stockton 08559, Plus Code 87G7C23G+V6.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

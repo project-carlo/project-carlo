@@ -19,6 +19,7 @@ evidence:
   note: 'Read with the browser (visit.py --links): the parish''s Bulletin page links https://www.jppc.net/onlinebulletins/537template.pdf
     under ''Current Bulletin''. John Patrick Publishing id 537; church-bulletin.org/?id=537 redirects
     to the listing for ''Saint Mary, Star of the Sea Church, South Amboy, NJ 08879'', newest issue 2026-11-01.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

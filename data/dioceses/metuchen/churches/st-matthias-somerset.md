@@ -26,6 +26,7 @@ evidence:
   quote: 168 JFK Boulevard, Somerset, NJ 08873
   note: 1 November 2026 masthead; Mass Schedule 'Saturday - 5:00 PM, Sunday - 8:00 AM, 10:00 AM & 12 noon,
     Monday-Friday at 8:15 AM', all in 'Church' per the page 2 calendar.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

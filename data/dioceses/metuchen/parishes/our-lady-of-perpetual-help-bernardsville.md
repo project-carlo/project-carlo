@@ -30,6 +30,7 @@ evidence:
     places a 9:30 AM Mass at 'Sacred Heart Chapel'. Clergy line names Rev. Juan Carlos Gaviria (parochial
     vicar) and Rev. Michael Tidd, OSB (weekend assistant), where the masthead has Rev. Joe Illes and Rev.
     Edward Fittin, O.S.B.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

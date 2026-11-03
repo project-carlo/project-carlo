@@ -31,6 +31,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18647
   seen: 2026-11-02
   note: 'GCatholic: St. Edward the Confessor, 61 Mill St., Milford 08848, founded 1944, Plus Code 87G6HWC4+42.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -25,6 +25,7 @@ evidence:
   quote: Sunday | 8:30am, 10:00am, 11:30am
   note: '25 October 2026 bulletin: Parish Office 20 Villanova Road, Parlin; Saturday 5:00pm vigil; Sunday
     8:30, 10:00, 11:30; weekdays 8:30am.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-02
   quote: Reflections - After 10:00am Mass at St. Luke
   note: Page 2 of the 25 October 2026 issue.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

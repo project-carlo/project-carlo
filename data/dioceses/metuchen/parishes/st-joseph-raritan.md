@@ -28,6 +28,7 @@ evidence:
     as 'ST. JOSEPH RARITAN' from https://www.raritanoratory.org. Its Bulletin page lists weekly files
     at files.ecatholic.com/22569/bulletins/<YYYYMMDD>.pdf, newest 1 November 2026; footer 'Church of St.
     Joseph, 16 E. Somerset Street, Raritan, NJ 08869-2102'.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-ann-raritan

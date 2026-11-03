@@ -26,6 +26,7 @@ evidence:
     Week'' (BulletinOctober4.pdf); ''Mass Schedule: Vigil Mass: Saturdays at 4:00 PM; Sunday Mass: 8:00
     AM, 9:30 AM, and 11:00 AM; Daily Mass: 8:00 AM Monday through Friday''. Title ''The Church of Saint
     Ann – Rev. Fr. Michael C. Saharic, Pastor''.'
+promoted: 2026-11-03
 research:
 - method: Searched DuckDuckGo (via visit.py) for St. Ann Hampton bulletin Bon Venture and for sponsors.bonventure.net
     'Hampton, NJ'; then fetched sponsors.bonventure.net/?page=<n> for n in 1450-1600, 2100-2260 and 6480-6560

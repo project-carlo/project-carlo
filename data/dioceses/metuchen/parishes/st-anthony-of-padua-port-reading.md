@@ -25,6 +25,7 @@ evidence:
     ''Worship Sites: St. Anthony of Padua Church, 436 Port Reading Avenue ... Our Lady of Mount Carmel
     Church, 267 Smith Street, Woodbridge'', ''Pastor: Rev. William J. Smith'' (the bulletin now names
     him Pastor Emeritus and Fr. Cyril Offiong, SDV, Administrator).'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

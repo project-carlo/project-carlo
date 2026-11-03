@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-02
   note: GCatholic 'St. Joseph', 59 Main St., High Bridge, New Jersey 08829, Plus Code 87G7M493+FP (40.66869,
     -74.89569), founded 1880.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

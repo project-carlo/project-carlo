@@ -26,6 +26,7 @@ evidence:
   quote: 45 Wilus Way, Iselin, NJ 08830
   note: '1 November 2026 bulletin masthead (page 1), with ''GPS—Use 51 Vernam St''. Page 11: weekday Masses
     7:00 and 9:15 am, Saturday 8:00 am and 4:30 pm Vigil, Sunday 7:30, 9:30, 11:30 am and 1:30 pm (Spanish).'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: 'Saturday Vigil: 4:00pm'
   note: '25 October 2026 bulletin: Saturday vigil 4:00pm, Sunday 8:00am, 10:00am and 12:00 Noon, weekdays
     8:00am and 12:15pm.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

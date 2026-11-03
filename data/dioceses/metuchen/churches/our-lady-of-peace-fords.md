@@ -36,6 +36,7 @@ evidence:
   seen: 2026-11-03
   note: OSM node 357738262 'Our Lady of Peace Church' (place_of_worship) at 40.5297026, -74.3170166, 'Fords,
     Edison, Middlesex County'.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   quote: 140 Emerson St, Carteret, New Jersey 07008
   note: 'GCatholic: Holy Family, Divine Mercy Parish, Plus Code 87G7HQHH+C9, ''parish 2010''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

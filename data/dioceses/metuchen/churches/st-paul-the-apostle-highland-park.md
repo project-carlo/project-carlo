@@ -28,6 +28,7 @@ evidence:
   note: 'Parish finder, Transfiguration of the Lord worship sites: ''St. Paul the Apostle Church | Corner
     of Sixth and Raritan Avenues | Highland Park, NJ 08904-2604''; the parish itself at 23 South Fifth
     Avenue.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

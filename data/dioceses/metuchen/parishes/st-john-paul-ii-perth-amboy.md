@@ -36,6 +36,7 @@ evidence:
   quote: There are currently no bulletins available
   note: Discover Mass church page for Our Lady of the Rosary of Fatima (188 Wayne St.) carries no bulletins,
     so it is not a publication id.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-alpha

@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   note: Linked from the parish home page as the bulletin (probe url, visit.py). It returns HTML; church-bulletin.org/601
     redirects to the listing 'Saint Ambrose Parish, Old Bridge, NJ 08857', latest edition 2026-11-01.
+promoted: 2026-11-03
 research:
 - method: Rendered page 1 of the 2026-10-25 church-bulletin.org PDF; pdftotext on all pages
   url: https://www.church-bulletin.org/bulletin/saint-ambrose-parish-old-bridge-nj-08857/2026-10-25.pdf

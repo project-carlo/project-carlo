@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   quote: 55 High St., Carteret, New Jersey 07008
   note: 'GCatholic: St. Joseph, Plus Code 87G7HQFH+R7, history 1893.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

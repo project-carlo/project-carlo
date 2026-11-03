@@ -28,6 +28,7 @@ evidence:
   note: 1 November 2026 masthead (page 1). Page 2 lists Mass intentions at St. Jude for Saturday 31 October
     5:00 PM, Sunday 1 November 8:15 and 10:30 AM, weekdays 9:00 AM and Sunday 8 November 8:15 and 10:30
     AM.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

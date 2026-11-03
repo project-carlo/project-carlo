@@ -26,6 +26,7 @@ evidence:
   quote: 34 Yorktown Road
   note: '8 November 2026 masthead: ''Address: 34 Yorktown Road Hillsborough, NJ 08844''; Mass schedule
     Saturday Vigil 4:45 PM, Sunday 8:00 AM, 9:30 AM, 11:30 AM, Monday-Friday 8:35 AM.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   quote: 277 Washington Place, North Brunswick, New Jersey 08902
   note: GCatholic gives the rectory's address (founded 1969, Plus Code 87G7CGRH+V4; coordinates about
     25 m from the finder's).
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

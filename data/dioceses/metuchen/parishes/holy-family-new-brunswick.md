@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-03
   quote: Masses are held in Sacred Heart Church (56 Throop Ave.), St. Ladislaus Church (213 Somerset St.),
     and St. Joseph Church (293 Somerset St.)
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

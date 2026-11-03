@@ -28,6 +28,7 @@ evidence:
 revisit: Check whether /fatima-sample links an issue newer than 6 September 2026; if so run fetch:check
   and record its recipe.
 revisit_after: 2026-11-17
+promoted: 2026-11-03
 research:
 - method: Read the Bulletin page /fatima-sample and the home page (probe get and visit.py); tried /s/Sunday-<Month>-<d>-2026.pdf
     for every Sunday 13 September-1 November 2026 and variants (Bulletin-Sunday-…, -01-, -1 suffix), all

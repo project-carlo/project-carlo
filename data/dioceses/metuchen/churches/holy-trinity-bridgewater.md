@@ -27,6 +27,7 @@ evidence:
   note: '1 November 2026 bulletin page 1: Saturday ''5:00 pm … Holy Trinity'', Sunday ''10:30 am … Holy
     Trinity'', ''Friday, 7:00 pm … Holy Trinity''; cover header ''60 MAPLE STREET • BRIDGEWATER, NEW JERSEY
     08807''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

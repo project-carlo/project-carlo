@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-02
   note: The parish site's Bulletin category posts each Sunday (newest 'November 1, 2026 All Saints Day')
     linking container.parishesonline.com/bulletins/04/0866/<date>B.pdf.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

@@ -24,6 +24,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18596
   seen: 2026-11-02
   note: 'GCatholic roster entry: Sacred Heart, 149 S Plainfield Ave., 07080, founded 1905, Plus Code 87G7HHJR+9H.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

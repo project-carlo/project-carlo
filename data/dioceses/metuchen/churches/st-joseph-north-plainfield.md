@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-02
   quote: 41 Manning Ave, North Plainfield 07060
   note: 'Page 3 of the 25 October 2026 issue: the parish mailing address.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

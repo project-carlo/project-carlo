@@ -26,6 +26,7 @@ evidence:
   quote: 16 East Somerset Street, Raritan, NJ 08869
   note: '1 November 2026 masthead (page 1). Its schedule: ''Saturday…..…St. Joseph 4 pm English'', Sunday
     ''St. Joseph 7:30 am Spanish'', ''St. Joseph 9 am English'', ''St. Joseph 12:00 pm Spanish''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

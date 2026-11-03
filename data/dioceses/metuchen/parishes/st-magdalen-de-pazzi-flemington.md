@@ -21,6 +21,7 @@ evidence:
     on 2026-11-02; the survey's probe url on 2026-10-30 loaded it). The Bulletin page lists files.ecatholic.com/32978/bulletins/<YYYYMMDD>.pdf
     weekly from 2 August to 1 November 2026, and links no other publisher (no church-bulletin.org, ParishesOnline,
     Bon Venture or Discover Mass link).
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

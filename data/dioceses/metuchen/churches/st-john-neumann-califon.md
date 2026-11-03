@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-02
   note: OSM way 603910686 'St John Neumann Church', Raritan River Road, Lebanon Township 07830; Nominatim
     centre 40.71516, -74.85295.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

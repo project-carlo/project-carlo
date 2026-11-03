@@ -28,6 +28,7 @@ evidence:
   note: eCatholic site 23107, loaded with visit.py (probe url said DEAD-DNS and probe get 403). The 'Bulletin
     Archives' page lists files.ecatholic.com/23107/bulletins/<YYYYMMDD>.pdf weekly through 1 November
     2026; the menu's 'Current Bulletins' item links sponsors.bonventure.net/?page=1569.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: church-of-the-sacred-heart-south-plainfield

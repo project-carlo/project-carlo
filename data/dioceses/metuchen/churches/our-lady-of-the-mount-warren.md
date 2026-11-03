@@ -27,6 +27,7 @@ evidence:
   quote: 170 MT BETHEL RD| WARREN, NJ
   note: '1 November 2026 bulletin, page 1: ''Saturday Vigil– 5:00 PM Church'', ''Sunday – 8:00 | 10:00
     | 11:30 AM Church'', daily Mass Monday-Saturday 9:15 AM in the Chapel.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

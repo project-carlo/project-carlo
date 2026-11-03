@@ -26,6 +26,7 @@ evidence:
   quote: 316 Old Allerton Road
   note: '1 November 2026 bulletin, page 1: ''Immaculate Conception Roman Catholic Church'', ''Annandale,
     NJ 08801''; ''Saturday: 9:00am, 4:30pm Vigil'', ''Sunday: 8:00am, 10:00am, 12:00pm, 5:00pm''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

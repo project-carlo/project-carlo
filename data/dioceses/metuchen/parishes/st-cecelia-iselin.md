@@ -26,6 +26,7 @@ evidence:
   note: eCatholic site 22597 (loaded with visit.py; probe url said DEAD-DNS and probe get 403). Its Bulletin
     page lists weekly files named by Sunday date at files.ecatholic.com/22597/bulletins/<YYYYMMDD>.pdf,
     newest 1 November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

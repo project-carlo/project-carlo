@@ -25,6 +25,7 @@ evidence:
     --links). Lists storage.googleapis.com/wzukusers/user-12949076/documents/<hash>/<YYYY-MM-DD>bulletin.pdf
     weekly from 2026-08-09 to 2026-11-01, plus older files named 2017-10-15.pdf and 2026-08-02.pdf without
     the 'bulletin' suffix.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-high-bridge

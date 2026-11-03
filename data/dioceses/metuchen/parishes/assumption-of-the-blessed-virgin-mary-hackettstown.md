@@ -32,6 +32,7 @@ evidence:
   seen: 2026-10-30
   note: 'The finder lists Assumption of the Blessed Virgin Mary, 302 High Street, Hackettstown, NJ 07840-1909,
     no website, ''Pastor: Rev. Leopoldo Salvania'' (the masthead''s Rev. Leo Salvania).'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

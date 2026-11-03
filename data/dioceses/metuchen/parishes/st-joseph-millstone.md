@@ -25,6 +25,7 @@ evidence:
   quote: 34 Yorktown Road • Millstone Borough Hillsborough, NJ 08844
   note: Footer of the parish site, '© 2026, St. Joseph Parish'. The finder's website http://www.stjosephsparish.com
     redirects here.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

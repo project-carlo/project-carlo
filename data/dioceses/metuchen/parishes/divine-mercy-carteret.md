@@ -37,6 +37,7 @@ evidence:
   seen: 2026-10-30
   note: 'Finder: Divine Mercy, 213 Pershing Avenue, Carteret, (732) 541-5768, website divinemercycarteret.org,
     ''Worship Site: Holy Family Church, 140 Emerson Street'', ''Pastor: Rev. Edmund J. Shallow''.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-10-30
   quote: 233 N Main St., Milltown, New Jersey 08850
   note: 'GCatholic: Church, founded 1921, Plus Code 87G7FH44+P5; coordinates about 20 m from the finder''s.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: 105 Summer Road + Three Bridges, NJ 08887
   note: '1 November 2026 bulletin, page 1: ''Saint Elizabeth Ann Seton Roman Catholic Church''; ''Regular
     Weekend Mass Schedule Saturday: 5:00 PM Sunday: 8:00 AM, 9:30 AM, 11:30 AM''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

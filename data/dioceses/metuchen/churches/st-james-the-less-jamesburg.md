@@ -32,6 +32,7 @@ evidence:
   quote: Saturday 4 pm
   note: 'Parish Mass Times page: Saturday 4 pm; Sunday 8 am, 10 am, 2 pm in Spanish, 5 pm; Monday to Friday
     8:30 am.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

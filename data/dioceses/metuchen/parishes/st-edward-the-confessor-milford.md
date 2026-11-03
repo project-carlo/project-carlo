@@ -24,6 +24,7 @@ evidence:
   quote: 1005 County Road 519, Frenchtown, NJ 08825 Mass Schedule Saturday at 5:15 PM
   note: The joint site's footer reads '© 2026 The Parishes of St. Edward the Confessor and Our Lady of
     Victories'.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

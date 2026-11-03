@@ -24,6 +24,7 @@ evidence:
   note: The parish's Bulletin page (read with visit.py; probe url said DEAD-DNS for every host on 2026-11-02)
     embeds the ParishesOnline viewer for container 03/1054 (issues 11 October to 1 November 2026) and
     links 'View Past Bulletins' to the org page. No other publisher is linked.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

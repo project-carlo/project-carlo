@@ -28,6 +28,7 @@ evidence:
   note: eCatholic site 22534 (loaded with visit.py; probe url said DEAD-DNS and probe get 403). Its Bulletin
     page lists weekly files at files.ecatholic.com/22534/bulletins/<YYYYMMDD>.pdf, newest 1 November 2026;
     footer 'Church of the Holy Trinity, 60 Maple Street | Bridgewater, NJ 08807'.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-ann-raritan

@@ -35,6 +35,7 @@ evidence:
   seen: 2026-11-02
   note: OSM way 701135349 "Saint Ann's Catholic Church", Church Street, Hampton 08827; Nominatim centre
     40.70828, -74.95287.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

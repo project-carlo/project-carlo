@@ -29,6 +29,7 @@ evidence:
   note: eCatholic site 26980 ('SHRINE CHAPEL OF THE BLESSED SACRAMENT RARITAN, NJ'), linked as 'SHRINE
     CHAPEL RARITAN' from https://www.raritanoratory.org. Its Bulletin page lists weekly files at files.ecatholic.com/26980/bulletins/<YYYYMMDD>.pdf,
     newest 1 November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-ann-raritan

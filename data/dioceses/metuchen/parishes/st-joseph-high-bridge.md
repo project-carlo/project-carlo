@@ -28,6 +28,7 @@ evidence:
   quote: 'Tuesday, Wednesday &amp; Thursday: Chapel at 8 am'
   note: 'Mass Times page: ''Saturday: 4 pm Vigil Mass'', ''Sunday: 8 am & 11 am Mass'', contact ''59 Main
     Street, High Bridge, NJ 08829''.'
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-john-neumann-califon

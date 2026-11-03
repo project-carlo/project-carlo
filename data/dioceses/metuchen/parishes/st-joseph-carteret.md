@@ -24,6 +24,7 @@ evidence:
   note: 'Finder: St. Joseph, 55 High Street, Carteret, (732) 541-8946, website stjosephparishfamily.com
     (does not resolve; probe get 502 on 2026-11-02), ''Pastor: Rev. James W. McGuffey'', no worship-site
     list. The bulletin names Msgr. John B. Gordon as pastor, so the finder''s clergy line is stale.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

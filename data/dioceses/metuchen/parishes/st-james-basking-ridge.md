@@ -31,6 +31,7 @@ evidence:
     8:00 AM; Confession Saturday 8:30 AM (Chapel), 4:00 PM (Church); a ''Sanctuary Refurbishment Project''
     is under way. Address ''The Church of Saint James, 184 South Finley Avenue | P.O. Box 310, Basking
     Ridge, NJ 07920-1429''.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

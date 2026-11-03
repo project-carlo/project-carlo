@@ -31,6 +31,7 @@ evidence:
   quote: 470 Ryders Ln., East Brunswick, New Jersey 08816
   note: 'GCatholic: Church, founded 1959, Plus Code 87G7CHMG+2X; coordinates 40.43256, -74.42256, about
     45 m from the finder''s.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

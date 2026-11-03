@@ -28,6 +28,7 @@ evidence:
   seen: 2026-10-30
   note: 'Diocese of Metuchen parish finder: St. John Paul II, 490 State Street (directory:24526); Worship
     Sites ''St. Stephen Church | 490 State Street | Perth Amboy, NJ 08861-3541''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

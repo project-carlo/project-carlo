@@ -18,6 +18,7 @@ evidence:
   note: 'Parish WordPress ''BULLETIN'' page: embeds and links Bulletin-template-11-01-26.pdf, plus two
     non-bulletin PDFs (Breakfast-Flyer-2026.pdf, a scanned doc0273…pdf), hence the filename filter. ''Previous
     Bulletins'' (/previous-bulletins/) lists Bulletin-template-10-04-26 through 10-25-26.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

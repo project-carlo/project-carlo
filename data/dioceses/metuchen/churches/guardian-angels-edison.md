@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Parish finder, Transfiguration of the Lord worship sites: ''Guardian Angels Church | 37 Plainfield
     Avenue | Edison, NJ 08818-1216''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

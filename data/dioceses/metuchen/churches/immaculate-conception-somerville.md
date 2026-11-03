@@ -26,6 +26,7 @@ evidence:
   quote: 9:00 am Mass, Church
   note: '1 November 2026 bulletin calendar: Saturday 5:00 pm Vigil, Sunday 7:30, 9:00, 11:00 am and 1:00
     pm Spanish Mass, all in the Church; weekday Masses in the Chapel.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

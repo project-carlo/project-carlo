@@ -25,6 +25,7 @@ evidence:
   note: 'Current Bulletins page, a self-hosted file list: ''October 25, 2026 (pdf)'' and ''October 18,
     2026 (pdf)'' are PDFs; ''October 11, 2026.crdownload'' and ''October 4, 2026.crdownload'' are unfinished
     browser-download uploads, not readable PDFs.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

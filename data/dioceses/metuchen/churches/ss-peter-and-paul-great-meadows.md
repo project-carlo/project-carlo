@@ -27,6 +27,7 @@ evidence:
   quote: 360 US HWY 46 - GREAT MEADOWS, NEW JERSEY 07838
   note: '1 November 2026 masthead (page 1): Saints Peter & Paul Church, Masses Saturday Evening 5:00 pm,
     Sundays 7:30 am, 10:00 am (Eng), 11:30 am (Pol), weekdays (including Sat.) 8:30 am.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: Finder entry for Most Holy Name of Jesus lists the worship site 'Holy Trinity Church | 315 Lawrie
     Street, Perth Amboy, NJ 08861'.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

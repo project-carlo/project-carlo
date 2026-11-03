@@ -28,6 +28,7 @@ evidence:
   note: 'Parish home page address (also the bulletin masthead''s) and Mass Times: Saturday 4:30 PM; Sunday
     7:30 AM, 10:00 AM, 12:00 PM, 5:30 PM Spanish; Mon-Fri 12:10 PM; Saturday 9:00 AM. Its map embed pins
     ''149 Grove St'' at 40.55245, -74.28261.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

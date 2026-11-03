@@ -23,6 +23,7 @@ evidence:
   seen: 2026-10-30
   quote: Sunday Mass Schedule
   note: 'Mass Times page: Saturday 5:00 PM; Sunday 7:00, 9:00, 11:00 AM; daily 7:00 AM and 9:30 AM.'
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: mary-mother-of-god-hillsborough

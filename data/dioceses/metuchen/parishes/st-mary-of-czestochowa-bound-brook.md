@@ -23,6 +23,7 @@ evidence:
   quote: '2026-10-25'
   note: The parish's own Bulletin page lists one PDF per Sunday (to 2026-11-01, newest first) at ../UploadFiles/Bulletins/<YYYY-MM-DD>.pdf,
     back to 2023.
+promoted: 2026-11-03
 research:
 - method: fetch:check page-pdfs on the parish Bulletin page, plus probe pdf and a rendered page 1
   url: http://www.stmarys-boundbrook.com/UploadFiles/Bulletins/2026-10-25.pdf

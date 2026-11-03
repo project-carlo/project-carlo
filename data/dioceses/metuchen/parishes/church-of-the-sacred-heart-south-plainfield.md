@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-02
   note: Parish WordPress site (www. redirects here); its bulletin link is http://sponsors.bonventure.net/?page=2141.
     No other publisher's link found on the home page.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: immaculate-conception-spotswood

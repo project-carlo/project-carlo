@@ -28,6 +28,7 @@ evidence:
   note: Mass Times page of the parish's eCatholic site (id 22672; read in the browser, 403 to probe get);
     its Bulletin page (parish.staugustinenj.org/bulletins) lists files.ecatholic.com/22672/bulletins/20261101.pdf
     and earlier Sundays back to 20260802.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

@@ -20,6 +20,7 @@ evidence:
   quote: November 1, 2026
   note: eCatholic site 12481 (loaded with visit.py; probe url said DEAD-DNS and probe get 403). Bulletin
     page lists files.ecatholic.com/12481/bulletins/<YYYYMMDD>.pdf weekly, newest 1 November 2026.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

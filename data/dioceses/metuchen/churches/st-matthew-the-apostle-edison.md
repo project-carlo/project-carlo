@@ -30,6 +30,7 @@ evidence:
   quote: 1:30 PM Spanish
   note: 'Mass Times page: ''SATURDAY: 5:00 PM SUNDAY: 7:30 AM 9:00 AM 10:30 AM 12:00 PM Noon 1:30 PM Spanish
     MON-SAT 8:30 AM''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

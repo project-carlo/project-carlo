@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   note: 'The diocese''s finder lists St. Mary, 830 Fifth Avenue, Alpha, website http://www.stmaryrc.org,
     ''Administrator: Rev. Dawid Wejnerowski''.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

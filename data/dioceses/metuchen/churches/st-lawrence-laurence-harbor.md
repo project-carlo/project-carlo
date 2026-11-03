@@ -25,6 +25,7 @@ evidence:
   quote: 'Saturday Vigil: 4:30 PM'
   note: '25 October 2026 bulletin: vigil 4:30 PM, Sunday 8:00 AM and 11:00 AM, weekdays and Saturdays
     8:00 AM; 109 Laurence Parkway, Laurence Harbor.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

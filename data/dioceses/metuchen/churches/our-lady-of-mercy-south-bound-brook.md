@@ -28,6 +28,7 @@ evidence:
   note: 'Page 1 of the 25 October 2026 bulletin: masthead ''THE CHURCH OF OUR LADY OF MERCY, 122 High
     Street, South Bound Brook, NJ 08880''; Saturday evening 4:00 PM (English); weekday Masses ''In the
     Chapel''.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

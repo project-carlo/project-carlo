@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   note: 'The diocese''s finder lists St. Jude, 7 Eisenhower Road, Blairstown, NJ 07825, website http://www.stjudech.org,
     ''Pastor: Rev. Ronald L. Jandernoa'', matching the masthead.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

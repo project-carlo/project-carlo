@@ -29,6 +29,7 @@ evidence:
   quote: call the parish office at 732-257-0077
   note: 25 October 2026 bulletin; its page 1 masthead (an image I read) gives the same address and Mass
     times Saturday 5:00 pm, Sunday 7:30, 9:30, 11:30 am.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

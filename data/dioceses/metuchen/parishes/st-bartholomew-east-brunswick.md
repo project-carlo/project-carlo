@@ -27,6 +27,7 @@ evidence:
   seen: 2026-10-30
   note: The address GCatholic gives for the website; probe url follows it to https://www.stbartseb.org/
     (eCatholic 22610). The diocesan finder lists no website.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

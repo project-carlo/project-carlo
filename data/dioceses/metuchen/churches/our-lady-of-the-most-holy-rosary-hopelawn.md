@@ -32,6 +32,7 @@ evidence:
   note: 'Parish finder: Good Shepherd, 625 Florida Grove Road, Hopelawn, NJ 08861-1505 (directory:24498);
     ''Worship Site: | Our Lady of the Most Holy Rosary Church | 625 Florida Grove Road''. Its pin (40.52176,
     -74.29016) is about 1.6 km south of the building.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

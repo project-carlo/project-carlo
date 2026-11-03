@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-02
   quote: 52 West Somerset St., Raritan, NJ 08869
   note: The shrine site's footer gives the office address, 52 West Somerset St.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

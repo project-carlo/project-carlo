@@ -28,6 +28,7 @@ evidence:
     only 'BonVenture site for St. Bernard of Clairvaux weekly bulletins' at http://sponsors.bonventure.net/?page=6502,
     whose list runs to 'November 01, 2026' (pdfs/6502/2026-11-01.pdf). issues.py found no Sunday-dated
     bulletin on files.ecatholic.com/22552 (403 for 12 Sundays to 8 November 2026).
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: st-cecilia-monmouth-junction

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-02
   note: GCatholic 'Our Lady of Perpetual Help', 111 Claremont Rd., Bernardsville, New Jersey 07924, Plus
     Code 87G7PCFH+M6 (40.72419, -74.57194), founded 1898.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

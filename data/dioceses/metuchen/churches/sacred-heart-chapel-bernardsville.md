@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-02
   note: 'OSM house node/way 11770577: ''50, Bernards Avenue, Blaziers Corner, Bernardsville … 07924'',
     40.71352, -74.57184. OSM names no chapel there.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

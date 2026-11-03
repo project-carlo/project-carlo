@@ -43,6 +43,7 @@ evidence:
   quote: There are currently no bulletins available for St. James the Less Church.
   note: 'Discover Mass church page: gives the parish site https://stjamesthelessrc.org/, Mass times Saturday
     4:00pm, Sunday 8:00am, 10:00am, 2:00pm (Spanish), 5:00pm, weekdays 8:30am, and no bulletins.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

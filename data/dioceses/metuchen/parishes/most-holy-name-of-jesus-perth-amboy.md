@@ -31,6 +31,7 @@ evidence:
     Trinity Church; Monday-Wednesday 7:00 PM La Asuncion; Thursday and Friday 7:00 PM Our Lady of Hungary;
     Saturday 8:00 AM OLH. Footer: ''Most Holy Name of Jesus Parish 777 Cortlandt St., Perth Amboy, NJ
     08861''.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

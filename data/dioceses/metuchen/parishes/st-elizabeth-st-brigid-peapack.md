@@ -32,6 +32,7 @@ evidence:
     Worship Site)'', 129 Main Street, Peapack, and directory:25192 ''(St. Elizabeth Worship Site)'', 34
     Peapack Road, Far Hills; both list ''Worship Sites: St. Elizabeth Church … St. Brigid Church'' and
     website sainteb.org. Clergy line ''Pastor: Rev. Msgr. Edward C. Puleo'' differs from the masthead.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

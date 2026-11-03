@@ -25,6 +25,7 @@ evidence:
   seen: 2026-10-30
   note: 'The diocese''s finder lists Annunciation, 80 Main Street, Bloomsbury, website https://www.annunciationrcc.org,
     ''Pastor: Rev. Roberto D. Coruña'' (stale: the 1 November 2026 masthead names Rev. James McGuffey).'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

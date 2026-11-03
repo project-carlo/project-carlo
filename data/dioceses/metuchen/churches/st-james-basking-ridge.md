@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-02
   note: GCatholic 'St. James', 184 S Finley Ave., Basking Ridge, New Jersey 07920, Plus Code 87G7PF22+4X
     (40.70031, -74.54756), founded 1864.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

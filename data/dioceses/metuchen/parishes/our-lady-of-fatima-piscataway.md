@@ -24,6 +24,7 @@ evidence:
   note: Parish site (Catholic Web Company) Divine Worship Times page; it agrees with the bulletin. The
     site's 'Bulletin' menu item goes to an HTML 'Bulletin Events & Announcements' page (/event) and links
     no PDF or Bon Venture page.
+promoted: 2026-11-03
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-mount-virgin-middlesex

@@ -2,7 +2,7 @@
 name: Roman Catholic Diocese of Metuchen
 state: NJ
 website: https://diometuchen.org
-status: exploring
+status: promoted
 gcatholic: metu0
 city_aliases:
   Woodbridge Township: Woodbridge
@@ -11,6 +11,7 @@ city_aliases:
   Piscataway Township: Piscataway
   Plainsboro Township: Plainsboro
   Oxford Township: Oxford
+promoted: 2026-11-03
 ---
 
 Four counties of central and northwestern New Jersey: Middlesex (New Brunswick, Perth Amboy,

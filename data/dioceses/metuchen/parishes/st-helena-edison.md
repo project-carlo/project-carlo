@@ -24,6 +24,7 @@ evidence:
   note: 'probe container 04/0302: the 1 November 2026 issue has 8 pages and page-1 text identical to the
     eCatholic file (same masthead, clergy, Mass times, date line). One publication posted twice; recorded
     on the parish-hosted eCatholic copy per the diocese rule.'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

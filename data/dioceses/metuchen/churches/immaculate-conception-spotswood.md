@@ -29,6 +29,7 @@ evidence:
   seen: 2026-10-30
   quote: 18 South St., Spotswood, New Jersey 08884
   note: 'GCatholic: Church, founded 1946, Plus Code 87G79JQ4+7W; coordinates about 140 m from the finder''s.'
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

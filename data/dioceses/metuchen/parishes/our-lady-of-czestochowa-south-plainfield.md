@@ -27,6 +27,7 @@ evidence:
   quote: this site is temporarily unavailable
   note: The website GCatholic, Discover Mass and the bulletin masthead print; it no longer serves the
     parish site.
+promoted: 2026-11-03
 bulletin_status: available
 ---
 

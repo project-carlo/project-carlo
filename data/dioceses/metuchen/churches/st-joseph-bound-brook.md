@@ -30,6 +30,7 @@ evidence:
   seen: 2026-10-30
   quote: 557 St. Joseph, Bound Brook, NJ
   note: Publisher code line in the bulletin; names the parish and town but gives no street address.
+promoted: 2026-11-03
 ---
 
 ## Holds Mass

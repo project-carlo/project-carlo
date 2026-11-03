@@ -26,6 +26,7 @@ evidence:
     Brunswick; ''The Catholic Center at Rutgers University | Pastor: Rev. Msgr. Joseph G. Celano''. The
     bulletin names Rev. Michael Tabernero as pastor; Msgr. Celano is named pastor by Immaculate Conception,
     Somerville''s own bulletin (lead from an earlier batch).'
+promoted: 2026-11-03
 bulletin_status: available
 ---
 
