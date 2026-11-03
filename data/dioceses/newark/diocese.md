@@ -183,6 +183,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site's own bulletin archive can be years stale while LPi prints the current issue (OLQP Maywood's Weebly page stops Feb 2023; org our-lady-queen-of-peace-church-07607 is current): probe po <name>-church-<zip> whenever a site's newest bulletin is old.
 - Diocesan (Discover Mass) bulletins can be reposted on a parish's eCatholic site under files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf (page 2 'View this bulletin online at www.DiscoverMass.com', footer '©2026 Diocesan'): record provider ecatholic to avoid Discover Mass's download cap, and list both ecatholic: and discovermass: ids in publication.
 - Wix parish sites that post John Patrick issues as undated _files/ugd/ copies: read the page-8 footer for the id and pin page-pdfs https://church-bulletin.org/<id>, which gives dated file names.
+- A guessed parish domain that answers probe get with 403 and 0 bytes can be a live eCatholic site behind Cloudflare (holyfamilyunioncitynj.org): open it with visit.py before discarding the guess; <name><town>nj.org is worth trying when the directory lists no website.
+- Web search (DuckDuckGo html) answers a bot check in this sandbox; for parishes run by a religious order, the order's WordPress search (agustinosrecoletos.org/wp-json/wp/v2/search?search=<town>) finds parish news and the community's address.
 
 
 ## Rules settled for this diocese
