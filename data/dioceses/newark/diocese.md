@@ -143,6 +143,11 @@ other mapped dioceses' notes.
 Decisions that apply to more than one record, and who made them. None yet; the survey's
 proposals are in `scratch/newark-map-1/survey.json` for `survey-review`.
 
+- Eastern Catholic churches GCatholic lists in the territory (Ruthenian: Eparchy of Passaic; Ukrainian: Archeparchy of Philadelphia; Melkite: Eparchy of Newton; Syro-Malabar, Syro-Malankara, Syriac) are excluded as `other-jurisdiction`, as in Allentown, Scranton, Syracuse and Rochester. (accepted by survey-review, 002-survey-review, 2026-11-03)
+- A church with a decreed future closure stays a church row, with `revisit_after` the day after its announced last Mass, and is excluded as `closed` only once that date has passed and a source confirms it (St. Anthony, East Newark: closes 2026-11-23). (accepted by survey-review, 002-survey-review, 2026-11-03)
+- Campus chapels (Newman Center Chapel, Montclair State; Seton Hall's Immaculate Conception Chapel) and convent or monastery chapels (Rosary Shrine, Summit; Carmelite chapel, Paramus; St. Cloud) are church rows only when a current schedule shows Mass open to the public; otherwise `no-public-mass`. A campus ministry that posts its own bulletin is its own parish row. (accepted by survey-review, 002-survey-review, 2026-11-03)
+- In this sandbox `probe url`'s DEAD-DNS verdict is not evidence that a domain is dead; confirm with `probe get` or `visit.py` before recording a lost site. (accepted by survey-review, 002-survey-review, 2026-11-03)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
