@@ -560,14 +560,19 @@ def probe_url(url: str) -> dict[str, Any]:
                 return {**out, "verdict": "DEAD-DNS", "detail": (
                     f"{VERDICT_NOTES['DEAD-DNS']}, by the egress proxy's resolver: "
                     f"{lookup.detail}")}
-            out["note"] = f"{host} does not resolve but {alt} does; use that"
-            url = url.replace(host, alt, 1)
-            out["url_tried"] = url
-            resp = fetch(url, max_bytes=3_000_000)
-        elif lookup.state == "refused":
+            # From here on the verdict is about the other name. Only a tunnel the proxy
+            # opened, or a resolved site that didn't answer, says that name exists.
+            lookup = alt_lookup
+            if lookup.state in ("ok", "failed"):
+                out["note"] = f"{host} does not resolve but {alt} does; use that"
+                url = url.replace(host, alt, 1)
+                out["url_tried"] = url
+                resp = fetch(url, max_bytes=3_000_000)
+            host = alt
+        if lookup.state == "refused":
             return {**out, "verdict": "PROXY-REFUSED",
-                    "detail": f"{lookup.detail}; {VERDICT_NOTES['PROXY-REFUSED']}"}
-        elif lookup.state != "ok":
+                    "detail": f"{host}: {lookup.detail}; {VERDICT_NOTES['PROXY-REFUSED']}"}
+        if lookup.state != "ok":
             unreachable = f"{PROXY_NOTES[lookup.state]}: {lookup.detail}"
     out["status"] = resp.status
     if resp.final_url and resp.final_url.rstrip("/") != url.rstrip("/"):

@@ -78,6 +78,22 @@ def test_behind_a_proxy_www_is_tried_when_the_bare_host_does_not_exist(monkeypat
 
 
 @pytest.mark.parametrize("state, verdict", [
+    ("refused", "PROXY-REFUSED"), ("proxy-unreachable", "UNREACHABLE"),
+])
+def test_behind_a_proxy_www_is_only_used_when_the_proxy_finds_it(monkeypatch, state, verdict):
+    nx = web.ProxyLookup("no-such-host", "no such host")
+    FakeProxy(monkeypatch, {"stann.org": nx, "www.stann.org": web.ProxyLookup(state, "why")})
+    fetched = []
+    monkeypatch.setattr(web, "fetch", lambda url, **kw: fetched.append(url) or web.Response(
+        url, error="OSError: Tunnel connection failed: 502 Bad gateway"))
+    out = web.probe_url("https://stann.org/")
+    assert out["verdict"] == verdict and "note" not in out and "url_tried" not in out
+    assert fetched == ["https://stann.org/"]
+    if state == "proxy-unreachable":
+        assert web.PROXY_NOTES[state] in out["detail"]
+
+
+@pytest.mark.parametrize("state, verdict", [
     ("refused", "PROXY-REFUSED"), ("failed", "UNREACHABLE"),
     ("proxy-unreachable", "UNREACHABLE"), ("ok", "UNREACHABLE"),
 ])

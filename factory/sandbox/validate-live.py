@@ -11,6 +11,7 @@ from __future__ import annotations
 import dataclasses
 import json
 import os
+import re
 import secrets
 import shutil
 import subprocess
@@ -50,7 +51,9 @@ def windows_match(events: list[dict], usage: dict) -> bool:
 
 def _gnu_grep(path: Path) -> bool:
     text = path.read_text() if path.exists() else ''
-    return 'grep is /usr/bin/grep' in text and 'AUTH_OK' in text and 'ugrep' not in text
+    # `type grep` says "grep is /usr/bin/grep", or "hashed (/usr/bin/grep)" once it has run.
+    return (re.search(r'^grep is (hashed \()?(/usr)?/bin/grep\b', text, re.M) is not None
+            and 'AUTH_OK' in text and 'ugrep' not in text)
 
 
 BROWSER_PROBE = r'''
