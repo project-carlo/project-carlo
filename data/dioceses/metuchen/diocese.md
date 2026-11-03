@@ -227,6 +227,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When probe po slug guesses fail for a ParishesOnline container, LPi's WeConnect site <name>-<aa>-<bbbb>.weconnectonline.com (found by a search on the parish name) embeds the 18-character LPi id; probe po <id> then gives the org slug.
 - GoDaddy site-builder sites (PDFs at storage.googleapis.com/production-sitebuilder-v1-0-9/.../<hash>?fileName=<name>) defeat page-pdfs: a recipe's filename= glob matches the hash path, not the fileName query, and an archived name like 'Nov 7.21.pdf' parses as the coming 7 November, so record fetch_gap filename-date-misread rather than a recipe.
 - A merged parish's ParishesOnline container can sit under its old member churches' org slugs (<church>-church-<zip>) when no slug for the merged parish exists: try each member church, and record every org's ids on the one row.
+- A parish Squarespace site can link only one bulletin PDF at a time from its Bulletin page and stop updating it: check the issue date before pinning page-pdfs; if stale, record research with a revisit, not a recipe.
 
 ## Rules settled for this diocese
 
