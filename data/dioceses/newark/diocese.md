@@ -104,60 +104,70 @@ in the territory.
 ### Bulletin publishers here
 
 No mapped diocese borders Newark except New York, whose record covers one parish and names no
-publishers. These lines come from a 26-site sample on 2026-11-03 (`probe get` and `visit.py`) and from Allentown's and
-other mapped dioceses' notes.
+publishers. These lines come from a 26-site sample on 2026-11-03, the first map batches (Bergen
+County) and Allentown's and other mapped dioceses' notes.
 
 - **`probe url` says DEAD-DNS for every parish site in this sandbox.** It resolves names
   itself, and the sandbox reaches the web only through a proxy. `probe get` and
   `parish-site-access`'s `visit.py` work; `scratch/newark-map-1/tools/publisher_fingerprint.sh`
-  lists the publishers a homepage mentions.
-- **John Patrick Publishing** is the most common publisher in the sample: St. Joseph
-  (Bogota), St. Rocco (Union City), Holy Redeemer (West New York, template 6041), St. Michael
-  (Newark, 6052), Immaculate Heart of Mary (Scotch Plains), Immaculate Conception
-  (Hackensack, 597), St. Cecilia (Kearny), and church-bulletin.org links on St. John Paul II
-  (Bayonne) and Our Lady of Mount Carmel (Jersey City). In Allentown, `jppc.net/onlinebulletins/<id>template.pdf`
-  redirected to the dated listing at `church-bulletin.org/<slug>` (also `/?id=<id>`), which
-  rows read with a pinned `page-pdfs` recipe. It answered 406 to a bare "Mozilla/5.0" user
-  agent; plain curl worked.
-- **eCatholic behind Cloudflare:** Guardian Angel, Allendale (11383), St. Therese, Cresskill
-  (10734) and Annunciation, Paramus (20359) answer `probe get` with 403; `visit.py` loaded
-  all three on the first try.
-- **ParishesOnline / LPi:** Blessed Miriam Teresa (Bayonne), St. Mary of the Assumption
-  (Elizabeth), St. Paul the Apostle (Jersey City). Elsewhere, parishes keep empty
-  ParishesOnline orgs from old accounts, so read the latest issue before using one.
-- **Self-hosted:** Our Lady of Mount Carmel, Ridgewood (`/images/bulletins/bulletinMMDDYY.pdf`),
-  the Cathedral Basilica (Squarespace, "Monumental Faith", English/Spanish), St. Mary,
-  Plainfield (newest seen 13 September 2026), Holy Redeemer's Wix `_files/ugd/` PDFs (the
-  name changes weekly: read the page with `page-pdfs`).
+  lists the publishers a homepage mentions, but `visit.py` finds some it misses (a
+  ParishesOnline org linked only from the bulletin page).
+- **Image-only issues are common here** (John Patrick, LPi and eCatholic-hosted alike): read
+  pages 1–2 with `render.py` and cite the masthead by note, since recheck can't find quotes
+  in them.
+- **The publisher's code on the ad or last page identifies a self-hosted bulletin.** Parishes
+  here often post their printer's PDF on their own site; read the footer before deciding the
+  publisher (formats below).
+- **A publisher's widget on a parish site isn't its bulletin.** An eCatholic site can be only
+  the website while the bulletin is printed elsewhere: if `issues.py` finds no
+  files.ecatholic.com bulletins and the Bulletins menu links ParishesOnline, a
+  church-bulletin.org/jppc.net file or sponsors.bonventure.net, record that publisher and
+  leave the eCatholic id out of `publication`.
+- **John Patrick Publishing** is the most common publisher. Pin
+  `page-pdfs https://church-bulletin.org/<id>` (checked in Newark with several ids,
+  2026-11-03); `church-bulletin.org/?id=<id>` is often a week ahead of the current issue, so
+  don't pin it. A link to `jppc.net/onlinebulletins/<id>template.pdf` gives the id; so does
+  the last-page footer `<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing`, and a
+  self-hosted copy's file name `<id><MMDDYY>.pdf` (the prefix is the id). A parish's own
+  archive can stop months before the listing does, so prefer the listing. In Allentown the
+  site answered 406 to a bare "Mozilla/5.0" user agent; plain curl worked.
+- **Bon Venture Services:** parish sites link `sponsors.bonventure.net/?page=<id>` from a
+  Bulletins menu item or image. Record provider `other` with
+  `page-pdfs http://sponsors.bonventure.net/?page=<id>` and `publication: url:` that page, as
+  in Scranton; it answers plain `probe get`. File names may carry a double dot
+  (`2026-11-08..pdf`); fetch still reads the date. Self-hosted copies with no sponsors link
+  carry the ad-page footer `<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture
+  Services`; read the parish's own bulletin page with `page-pdfs`. Codes like `142E` have no
+  `?page=` listing (it redirects to bonventure.net).
+- **ParishesOnline / LPi:** a self-hosted LPi bulletin's ad-page footer names the container
+  (`<Parish>, <Town>, NJ 03-0374` or `<Parish> | 04-0064` = `po-container:03/0374`);
+  `probe container` confirms it with no org slug. When guessed org slugs fail, run `visit.py`
+  on the parish's bulletin page: it reports `po-org:<slug>` (some have no zip suffix).
+  Parishes elsewhere keep empty orgs from old accounts, so read the latest issue before using
+  one.
+- **eCatholic behind Cloudflare** answers `probe get` with 403; `visit.py` loads it, and
+  fetch:check runs headed and reads these rows, so no `fetch_gap` is needed.
+- **Trinity Publishing** sites (footer "Powered by Trinity Publishing Company") link one fixed
+  `/images/pdf/bulletin.pdf` the parish overwrites; it can be months stale, so read the date
+  on page 1 before recording it.
+- **Wix and Duda parish sites** often have no bulletin page (Wix: a "WEEKEND BULLETIN" button;
+  Duda, irp.cdn-website.com: an empty Google viewer) but link the PDF from the homepage:
+  `page-pdfs <homepage>` (fetch:check `first-listed`) picks it. Wix `_files/ugd/` and Duda
+  names carry no date, so freshness reads `unknown`: confirm the pick is the bulletin, not a
+  letter linked on the same page. Other self-hosted sites (Squarespace, `/images/bulletins/
+  bulletinMMDDYY.pdf`) read with `page-pdfs` on the bulletin page.
 - **Discover Mass** didn't appear in the sample. Where it does, it caps downloads per IP
   per day (a 134-byte "Maximum number of files" reply in Altoona-Johnstown and Harrisburg).
-- **Languages:** 83 parishes are tagged Spanish. Korean (Madonna, Fort Lee; St. Andrew Kim,
-  Maplewood; Korean Martyrs, Saddle Brook), Polish, Portuguese (Ironbound) and Italian
-  communities may print bulletins in their own language.
-- **Lost domains:** stfxp.com (St. Francis Xavier, Newark) redirects to nabatara.org (HTTP 522).
-  saintnicholaschurch.org answers with 499 bytes and stjosephroselle.com with a "Temporarily
-  Unavailable" page; christthekingjerseycity.org and holyrosarychurch.com returned nothing.
+- **Languages:** 83 parishes are tagged Spanish. Korean, Polish, Portuguese (Ironbound) and
+  Italian communities may print bulletins in their own language.
+- **Lost domains** (survey, not yet mapped): stfxp.com (St. Francis Xavier, Newark) redirects
+  to nabatara.org (HTTP 522); saintnicholaschurch.org answers with 499 bytes and
+  stjosephroselle.com with a "Temporarily Unavailable" page; christthekingjerseycity.org and
+  holyrosarychurch.com returned nothing.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- John Patrick parishes may self-host copies named <jppc id><MMDDYY>.pdf (Holy Trinity Hackensack: Squarespace /s/6004102526.pdf); the prefix is the id, and church-bulletin.org/?id=<id> is often a week ahead, so pin `page-pdfs https://church-bulletin.org/<id>` instead.
-- `page-pdfs https://church-bulletin.org/<id>` resolves current issues in Newark too (ids 597, 6004 checked 2026-11-03); many JPP and LPi issues here are image-only, so read page 1 with render.py.
-- Bon Venture Services (sponsors.bonventure.net/?page=<id>) prints bulletins here too (St. Luke, Ho-Ho-Kus): parish sites link that listing from a 'Bulletins' menu item; record provider other with `page-pdfs http://sponsors.bonventure.net/?page=<id>` and `publication: url:` that page, as in Scranton. It answers plain `probe get`.
-- LPi bulletins self-hosted by the parish carry the ParishesOnline container on the ad-page footer ('<Parish>, <Town>, NJ 03-0374' = po-container:03/0374); `probe container` confirms it even when no org slug is known.
-- Bon Venture-printed bulletins may be self-hosted by the parish with no sponsors.bonventure.net link (Presentation, Upper Saddle River): the ad-page footer '<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture Services' identifies them; read the parish's own bulletin page with page-pdfs.
-- eCatholic-hosted bulletins here are often image-only too (Most Blessed Sacrament 14258, OLPH Oakland 2310 are John Patrick layouts with no text layer): render page 1-2 with render.py and cite them by note, since recheck can't find quotes in them.
-- fetch:check run headed reads eCatholic rows whose parish site answers probe get with 403 (Cloudflare); no fetch_gap is needed for them.
-- A Wix parish homepage with a 'WEEKEND BULLETIN' button and no bulletin page can be read with `page-pdfs <homepage>` (fetch:check 'first-listed'), but the ugd file name carries no date so freshness reads 'unknown': confirm the pick is the bulletin, not a letter linked on the same page.
-- An eCatholic parish site can be only the website while the bulletin is on ParishesOnline (St. Andrew, Westwood): visit.py reports both ecatholic:<id> and po-org:<slug>. If issues.py finds no files.ecatholic.com bulletins and the Bulletins menu links the PO org, record parishes_online with the org slug and leave the eCatholic id out of publication.
-- An eCatholic parish site whose Bulletins page is only an image linking sponsors.bonventure.net/?page=<id> (St. Anthony, Northvale) has no files.ecatholic.com bulletins: record provider other with page-pdfs on that page and leave the eCatholic id out of publication. Bon Venture file names may carry a double dot (2026-11-08..pdf); fetch still reads the date.
-- Trinity Publishing parish sites (footer 'Powered by Trinity Publishing Company') link one fixed /images/pdf/bulletin.pdf that the parish overwrites; it can go stale for months, so read the date on page 1 before recording it.
-- GCatholic lists a parish's Korean community (website …kcc.org) as a second entry with the same Plus Code as the parish church; when the parish's schedule includes the Korean Masses, link both entries to the one church row.
-- A John Patrick parish's self-hosted bulletin archive can stop months before its church-bulletin.org listing does (St. John, Bergenfield: site last 30 Aug, listing current): take the id from the last-page footer '<id> <Parish>, <Town>, NJ (B) … John Patrick Publishing' and pin page-pdfs https://church-bulletin.org/<id>.
-- When an LPi footer gives only a container ('<Parish> | 04-0064') and guessed ParishesOnline slugs fail, run visit.py on the parish's bulletin page: it reported po-org:saint-joseph-roman-catholic-church (no zip suffix), which probe get and publisher_fingerprint.sh missed.
-- An eCatholic parish site whose Bulletin page only links a jppc.net/onlinebulletins/<id>template.pdf (Annunciation, Paramus) has no files.ecatholic.com bulletins: record provider other with page-pdfs https://church-bulletin.org/<id> and leave the eCatholic id out of publication.
-- Duda parish sites (irp.cdn-website.com) may show the bulletin page as an empty Google viewer while the homepage links the PDF from a button: page-pdfs <homepage> picks it, but names like 142e_2026_11_01+web+copy.pdf leave the issue date 'unknown'. Bon Venture self-hosted codes like '142E' have no sponsors.bonventure.net/?page=<n> listing (it redirects to bonventure.net).
 
 
 ## Rules settled for this diocese
@@ -169,6 +179,7 @@ proposals are in `scratch/newark-map-1/survey.json` for `survey-review`.
 - A church with a decreed future closure stays a church row, with `revisit_after` the day after its announced last Mass, and is excluded as `closed` only once that date has passed and a source confirms it (St. Anthony, East Newark: closes 2026-11-23). (accepted by survey-review, 002-survey-review, 2026-11-03)
 - Campus chapels (Newman Center Chapel, Montclair State; Seton Hall's Immaculate Conception Chapel) and convent or monastery chapels (Rosary Shrine, Summit; Carmelite chapel, Paramus; St. Cloud) are church rows only when a current schedule shows Mass open to the public; otherwise `no-public-mass`. A campus ministry that posts its own bulletin is its own parish row. (accepted by survey-review, 002-survey-review, 2026-11-03)
 - In this sandbox `probe url`'s DEAD-DNS verdict is not evidence that a domain is dead; confirm with `probe get` or `visit.py` before recording a lost site. (accepted by survey-review, 002-survey-review, 2026-11-03)
+- A parish's Korean (or other language) community that GCatholic lists as a second entry with the same Plus Code as the parish church is linked to that one church row when the parish's schedule includes the community's Masses (GCatholic 18377/18378, St. Joseph, Demarest). (map batch `b-cresskill`, 2026-11-03)
 
 ## Log
 
