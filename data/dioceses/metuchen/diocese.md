@@ -212,6 +212,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site can leave its Bon Venture listing unlinked (its 'Bulletin' menu item goes to an HTML events page): search the parish name with 'bulletin' for a sponsors.bonventure.net/?page=<n> listing before recording no PDF bulletin.
 - Date evidence 'seen'/'checked' by US Eastern time (`TZ=America/New_York date`), not the UTC shell date: in the evening UTC is a day ahead and the dispatcher's validate rejects it as in the future.
 - Parishes staffed by one religious community (the Raritan Oratory) can each print the same combined Mass schedule for all its churches: decide rows from mastheads and Bon Venture account codes, and give each church to the row whose masthead it is; the community's own site (raritanoratory.org) links each parish's current site when finder/GCatholic URLs are stale.
+- A finder worship site missing from the parish's current Mass page can be dated from its self-hosted bulletin archive: grep one issue per half-year for the church name to find the notice that ended its Masses (e.g. 'no Masses scheduled at …').
 
 ## Rules settled for this diocese
 
