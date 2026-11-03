@@ -168,9 +168,15 @@ def _diocese_fetch_rows(diocese: str, slugs: Collection[str] | None) -> list[dic
     if d.unreadable:
         raise DioceseError("fix these files first; they do not parse:\n  "
                            + "\n  ".join(d.unreadable))
-    no_bulletin = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
-    if no_bulletin:
-        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(no_bulletin)}")
+    off_site = sorted(set(slugs or ()) & diocese_records.unpublished(d)[0])
+    parishes = d.of(diocese_records.PARISH)
+    if none := [s for s in off_site
+                if parishes[s].get("bulletin_provider") == diocese_records.NO_BULLETIN]:
+        raise DioceseError(f"no_bulletin, so there is nothing to fetch: {', '.join(none)}")
+    if off_site:
+        raise DioceseError(
+            f"unsupported, so fetch has no collector for it: {', '.join(off_site)}. To check "
+            "one that may read it now, set its bulletin_provider (and provider_id) first")
     rows, _ = diocese_records.export_rows(d)
     return rows
 

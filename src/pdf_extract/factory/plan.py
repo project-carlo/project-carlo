@@ -19,7 +19,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-from pdf_extract.dioceses.records import NO_BULLETIN, parse_file
+from pdf_extract.dioceses.records import NO_BULLETIN, OFF_SITE_PROVIDERS, UNSUPPORTED, parse_file
 from pdf_extract.factory import git, playbook
 from pdf_extract.factory.handoff import APPROVE
 from pdf_extract.factory.ledger import DONE, MAP, Ledger
@@ -81,15 +81,17 @@ def _with_source(worktree: Path, diocese: str) -> dict[str, dict[str, Any]]:
 
 def seedable_parishes(worktree: Path, diocese: str) -> list[str]:
     """Parishes the map Run promoted with a bulletin source; excluded and open ones never,
-    nor one whose bulletin `fetch` can't collect yet (`fetch_gap`): it has no bulletins to
-    seed from until its collector lands and the gap is cleared."""
+    nor one whose bulletin `fetch` can't collect yet (`unsupported`, or a `fetch_gap`): it
+    has no bulletins to seed from until its collector lands, its provider is set and the
+    gap is cleared."""
     return [slug for slug, r in _with_source(worktree, diocese).items()
-            if not r.get("fetch_gap")]
+            if not r.get("fetch_gap") and r.get("bulletin_provider") not in OFF_SITE_PROVIDERS]
 
 
 def fetch_gap_parishes(worktree: Path, diocese: str) -> list[str]:
-    """Parishes with a bulletin source that wait on a collector (`fetch_gap`)."""
-    return [slug for slug, r in _with_source(worktree, diocese).items() if r.get("fetch_gap")]
+    """Parishes with a bulletin that wait on a collector (`unsupported` or `fetch_gap`)."""
+    return [slug for slug, r in _with_source(worktree, diocese).items()
+            if r.get("fetch_gap") or r.get("bulletin_provider") == UNSUPPORTED]
 
 
 def _on_main(repo: Path, ref: str, diocese: str,

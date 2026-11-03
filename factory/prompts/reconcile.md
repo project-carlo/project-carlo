@@ -21,7 +21,7 @@ parishes.
    your `summary` count. A flag is settled when you've made the change, when the records
    already answer it (another batch or `integrate` did the work, a rule now covers it), or
    when it asks about something the records carry instead (README, *What to flag*): put
-   the church in `open/`, set the `fetch_gap`, choose the address. Put each
+   the church in `open/`, set `unsupported` and the `fetch_gap`, choose the address. Put each
    settled flag in your handoff's `settled` with its id and how it was settled. A flag you
    leave stays listed in the PR in its own words; don't raise it again.
 3. **Open records.** For each `open/` record, try once more what its `research` hasn't
@@ -38,7 +38,8 @@ parishes.
    only at the rows that aren't this week's issue of the right parish, judging each as
    the skill's step 8 says. Record a blocked check in the row's `research` with the next action
    and a retry trigger (a known daily download cap justifies a retry after the reset). A
-   row whose bulletin is published but that no recipe collects gets a `fetch_gap`: use one
+   row whose bulletin is published but that no recipe collects gets `bulletin_provider:
+   unsupported`, its publication ids kept, and a `fetch_gap`: use one
    `kind` per problem across the batches, reusing the kinds `pnpm diocese gaps` lists for
    other dioceses.
 6. **Validate.** `pnpm --silent diocese validate <d>` and `pnpm diocese todo <d>`. Fix

@@ -82,7 +82,9 @@ needs no factory flag (README, *What to flag*), nor does a bulletin `fetch` can'
 parish's and the diocese's own, and say why). A
 promoted church with no current Mass found and no source saying it closed: `pnpm diocese
 question <d> <church> --revisit "..."`, which takes it off the site until it is settled.
-A `no_bulletin` parish is kept in the records but left off the site. Optional
+A `no_bulletin` parish (no bulletin found) and an `unsupported` one (a bulletin `fetch`
+can't collect yet, with its `fetch_gap`) are kept in the records but left off the site;
+setting a real provider puts them back. Optional
 `bulletin_status` records availability independently; it doesn't control promotion.
 
 ## Bounded research

@@ -56,7 +56,8 @@ seed Run  for each batch: seed × each parish ─▶ seed-review ─▶ pr ─�
 - **Promote and pr are code**: promote runs `factory/stages/promote.yaml`'s commands;
   pr pushes, opens the PR and writes its summary from the ledger.
 - **Seed Runs** use the map Run's batches. A parish is ready once the database has
-  `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`). The
+  `seed_ready_bulletins` of its bulletins (counted daily after `pnpm data:pull`);
+  `no_bulletin` and `unsupported` parishes and any with a `fetch_gap` aren't counted. The
   first seed Run starts once `seed_first_run_share` of the diocese is ready, or
   `seed_follow_up_weeks` after the map Run merged with whatever is ready. A follow-up
   seeds the rest when they are all ready or at that deadline, and each parish still not

@@ -147,8 +147,14 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   live CSV rows and other-diocese claims still block sharing. The exception survives
   promotion and import; the database identifies parishes by slug, not website.
 - `bulletin_provider`: `parishes_online`, `ecatholic`, `discover_mass`, `other`,
-  `google_drive` or `no_bulletin` (kept in the records, left off the site: Settled policy
-  4). `fetch` reads ParishesOnline and DiscoverMass by
+  `google_drive`, `no_bulletin` or `unsupported`. The last two are kept in the records and
+  left off the site with their churches (Settled policy 4: the site shows only places it
+  can give a schedule for): `no_bulletin` when no bulletin was found, `unsupported` when
+  the parish publishes one that no collector reads yet. An `unsupported` row needs a
+  `fetch_gap` (below) and keeps its `website`, `publication` ids, evidence and `research`,
+  so audit still compares it with other rows. When a collector lands, set the provider
+  (and `provider_id`) it uses, run `fetch:check`, and clear the gap once it picks this
+  week's issue; promote then puts the row live. Nothing flips it by itself. `fetch` reads ParishesOnline and DiscoverMass by
   `provider_id` (the org slug from `parishesonline.com/organization/<slug>`, the church slug
   from `discovermass.com/church/<slug>/`). It reads eCatholic, `other` and `google_drive`
   from `website`, so for eCatholic the website has to be the eCatholic-hosted site, and for
@@ -172,14 +178,17 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   account/site evidence in `evidence`. Peer reviews never waive publication-id uniqueness.
 - `bulletin_status` (optional): `available`, `not-found`, `access-blocked`,
   `unsupported-format` or `not-published`. This describes research availability independently
-  of `bulletin_provider`; legacy `no_bulletin` still controls promotion (Settled policy 4).
+  of `bulletin_provider`; only `bulletin_provider` (`no_bulletin`, `unsupported`) controls
+  promotion (Settled policy 4).
 - `fetch_gap` (optional): the parish publishes a bulletin that `fetch` can't collect yet
   (*What to flag*, below): `{kind, seen, note, url}`. `kind` is a slug naming the problem,
   the same for every parish that has it (`solutio-file-403`, `joomla-weblink-redirect`);
   reuse one that `pnpm diocese gaps` already lists. `seen` is the date you checked, `note`
   says what fails and where the bulletin is, and the optional `url` is an example issue or
-  the bulletin page. It doesn't change promotion. Remove it (`"fetch_gap": null`) once
-  `fetch:check` picks this week's issue.
+  the bulletin page. It doesn't change promotion by itself: a row whose bulletin no
+  collector reads is `bulletin_provider: unsupported`, which keeps it off the site, and
+  `validate` warns about a gap on a row that would go live (or on a `no_bulletin` one).
+  Remove it (`"fetch_gap": null`) once `fetch:check` picks this week's issue.
 - `publication_reviews` (optional): supported peer decisions, independent of URL ids:
   `[{parish: peer-slug, decision: separate|shared, evidence: [{url, seen, quote?, note?}]}]`.
   Use dated content evidence; different URLs alone don't support `separate`. A `shared`
@@ -287,7 +296,7 @@ A factory flag asks the owner for a decision. These need none, so record them in
   Joomla `weblink.go`, Squarespace `/file`), it is HTML only (an emailed newsletter, a
   page of announcements), it sits in an embedded viewer (Drive `/preview`), or `fetch`
   picks the right file and misreads it (a date taken from a file name). Set the parish's
-  `fetch_gap`. `pnpm diocese gaps` lists them across every diocese by kind, which is the
+  `bulletin_provider` to `unsupported` and its `fetch_gap`, keeping its publication ids. `pnpm diocese gaps` lists them across every diocese by kind, which is the
   work list for new collectors. A bulletin not found at all is `research`, not a gap.
 - **A check blocked for now.** A block a retry may clear (a daily download cap, a site
   that is down) is `research` with a retry trigger, not a gap and not a flag.
@@ -479,7 +488,7 @@ command seeds the new rows into the database. New parish rows go in with `fetch_
 the weekly run fetches their bulletins but doesn't process them or show their churches until
 the flag is cleared (README, "Fetch-only parishes").
 Promotion appends new rows, updates promoted ones, and deletes live rows the diocese has
-retired (merged, renamed, excluded, moved to open/, or `no_bulletin`). Retiring a church deletes its events, and retiring a
+retired (merged, renamed, excluded, moved to open/, `no_bulletin` or `unsupported`). Retiring a church deletes its events, and retiring a
 parish deletes its bulletins and the events read from them, even for churches moved to another
 parish. The dry run lists the churches that would lose events (`removed_rows_with_events`).
 Removals don't go live on merge: deploys keep serving the published data, and the next weekly
