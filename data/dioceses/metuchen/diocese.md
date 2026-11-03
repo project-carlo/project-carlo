@@ -220,6 +220,10 @@ From the survey's probes of the finder websites (2026-10-30) and the map batches
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A parish site can post its own Bon Venture issues under file names that don't match the issue date (St. Ann's 'BulletinOctober4.pdf' held 25 October): date issues from the PDF text, and pin page-pdfs to a list ordered newest first ('This Week' first); fetch:check then reports date unknown.
+- Bon Venture sponsors.bonventure.net/?page=<n> ids don't follow the G-codes, and many ids are empty; tools/bonventure_scan.sh scans an id range for a town name (about 4 s per id).
+- pnpm diocese probe get --out resolves a relative path against the worktree root, not the shell's directory: give it a path under your scratch folder from the root (scratch/<run>/<job>/...).
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
