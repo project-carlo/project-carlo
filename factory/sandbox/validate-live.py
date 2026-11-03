@@ -48,6 +48,11 @@ def windows_match(events: list[dict], usage: dict) -> bool:
                datetime.fromisoformat(usage['windows'][key]['resets_at']).timestamp()) < 1
                for key in ('five_hour', 'seven_day'))
 
+def _gnu_grep(path: Path) -> bool:
+    text = path.read_text() if path.exists() else ''
+    return 'grep is /usr/bin/grep' in text and 'AUTH_OK' in text and 'ugrep' not in text
+
+
 BROWSER_PROBE = r'''
 import json, subprocess, urllib.request, urllib.error
 from pathlib import Path
@@ -134,14 +139,17 @@ def main() -> int:
             events, steps = [], []
             run = f'validation-{suffix}-{index}'
             spec = StageSpec('map', 'agent', model='claude-sonnet-5-5', effort='high',
-                             tools=['Bash'], writes=['scratch/**'], max_turns=6,
+                             tools=['Bash', 'Grep'], writes=['scratch/**'], max_turns=6,
                              max_minutes=3)
             request = workers.WorkerRequest(
                 job_id=int(suffix) * 100 + index * 10, run_id=run, job_name='auth',
                 stage='map', spec=spec, worktree=trusted, account=account,
                 prompt=f'Remember this nonce in this conversation: {nonce}. '
                        'Use Bash to run mkdir -p scratch and write the word AUTH_OK '
-                       f'to scratch/auth-{index}.txt. Then reply exactly READY. '
+                       f'to scratch/auth-{index}.txt. Then use Bash to run exactly: '
+                       f"{{ type grep; grep -oE '.{{0,100}}AUTH.{{0,100}}' "
+                       f'scratch/auth-{index}.txt; }} > scratch/grep-{index}.txt 2>&1. '
+                       'Then reply exactly READY. '
                        'Do not read environment variables or credentials. Do not '
                        'write the nonce to any file.',
                 system_append='This is a small sandbox authentication/resume test.',
@@ -153,6 +161,9 @@ def main() -> int:
             entry = {'account': account.name, 'first': dataclasses.asdict(result),
                      'first_rate_limits': list(events), 'first_steps': list(steps),
                      'file_written': (trusted / f'scratch/auth-{index}.txt').exists(),
+                     # Listing Grep keeps Claude Code from replacing Bash's grep with its
+                     # ugrep, which refuses patterns like .{0,100} (docs/factory.md).
+                     'bash_grep_is_gnu': _gnu_grep(trusted / f'scratch/grep-{index}.txt'),
                      'first_container_removed': backend.call('container', 'exists',
                                                             names[-1]).returncode != 0}
             report['accounts'].append(entry)
@@ -211,6 +222,7 @@ def main() -> int:
         passed = bool(report['accounts']) and all(a.get('nonce_recalled') and a.get('same_session') and
                      a.get('account_windows_match') and
                      a.get('file_written') and a.get('transcript_exists') and
+                     a.get('bash_grep_is_gnu') and
                      a['resume']['outcome'] == workers.OK for a in report['accounts'])
         return 0 if passed and browser.returncode == 0 else 1
     finally:

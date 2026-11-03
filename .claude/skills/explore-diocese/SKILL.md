@@ -41,7 +41,7 @@ Then, cheapest first:
 1. **Structure before parishes.** Find the diocese's family/cluster list and its bulletins
    first. Settle "one bulletin or several" per group before creating rows.
 2. **Find each bulletin:** `probe url <site>` (alive? redirected? squatted? which ids does
-   it embed?), `probe po <org slug | LPi id>` (a ParishesOnline org's address, ids and
+   it embed, which publishers does it link, what is it built with?), `probe po <org slug | LPi id>` (a ParishesOnline org's address, ids and
    latest issues), `probe container <a/b> --pages 3` (latest masthead; `--all --step 4` for
    a monthly changelog), `probe pdf <url> --grep <name>` (any bulletin's text; date closures
    this way). When `probe url` says HTTP4XX or NO-PARISH-WORDS, or finds no ids, the

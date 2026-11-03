@@ -92,6 +92,16 @@ command('uv', 'run', 'python', '.claude/skills/parish-site-access/scripts/render
         'scratch/probe.pdf', 'scratch/rendered', '--pages', '1')
 assert Path('scratch/rendered-p1.jpg').stat().st_size > 0
 
+# The sandbox has no DNS of its own: `probe url` must ask the egress proxy, so a live
+# site is not DEAD-DNS and a made-up one is (docs/factory-sandbox-plan.md).
+probe = subprocess.run(['uv', 'run', 'python', '-m', 'pdf_extract', 'diocese', 'probe', 'url',
+                        'https://example.com/', 'https://no-such-parish-carlo-smoke.org/'],
+                       capture_output=True, text=True, timeout=180)
+assert probe.returncode == 0, probe.stderr
+verdicts = [r['verdict'] for r in json.loads(probe.stdout)['results']]
+assert verdicts == ['NO-PARISH-WORDS', 'DEAD-DNS'], probe.stdout
+print(json.dumps({'probe_url': verdicts}), flush=True)
+
 '''
 
 

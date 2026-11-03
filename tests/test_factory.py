@@ -1778,6 +1778,19 @@ def test_stage_specs_load_and_cover_every_stage() -> None:
             assert spec.writes and spec.model
 
 
+def test_every_stage_with_bash_lists_grep() -> None:
+    """Claude Code replaces Bash's `grep` with its bundled ugrep unless the Grep (or Glob)
+    tool is on the launch list, and ugrep refuses common patterns such as
+    `.{0,100}bulletin.{0,100}` ("exceeds complexity limits"). Listing Grep keeps GNU grep
+    in Bash and gives workers the Grep tool too."""
+    from pdf_extract.factory.spec import STAGES, load_stage
+
+    for stage in STAGES:
+        spec = load_stage(stage, ROOT)
+        if "Bash" in spec.tools:
+            assert "Grep" in spec.tools, stage
+
+
 def test_stage_specs_accept_reads_and_deny(tmp_path: Path) -> None:
     from pdf_extract.factory.spec import load_stage
 
