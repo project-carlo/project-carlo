@@ -261,3 +261,41 @@ def test_fetch_gaps_are_written_listed_by_kind_and_cleared(root):
     records.new_record("test", "parish", {"name": "St. Edith", "fetch_gap": _gap(),
                                           "website": "https://example.org/edith"})
     assert records.load("test").of(records.PARISH)["st-edith"]["fetch_gap"] == _gap()
+
+
+def test_a_field_on_the_wrong_kind_says_where_it_goes(root):
+    payload = {**_payload(), "roster": ["directory:24513"], "city": "Town"}
+    with pytest.raises(DioceseError) as error:
+        _write(payload=payload, create=True)
+    message = str(error.value)
+    assert "parish has no writable fields: city, roster" in message
+    assert "roster links name places, so they go on the parish's churches" in message
+    assert "addresses and coordinates go on the parish's churches" in message
+    assert "parish fields: name, website," in message and "diocese write --help" in message
+    assert not (root / "parishes/anne.md").exists()
+    with pytest.raises(DioceseError, match="bulletin fields go on the parish record"):
+        records.write_record("test", "church", "anne-town", {"website": "https://x.org"},
+                             create=True)
+
+
+def test_write_help_lists_each_kinds_fields_and_a_copyable_example(capsys):
+    with pytest.raises(SystemExit):
+        main(["diocese", "write", "--help"])
+    out = capsys.readouterr().out
+    assert "  parish: name (text)" in out and "roster ([text])" in out
+    assert "never on a parish" in out
+    example = out[out.index("<<'JSON'") + len("<<'JSON'"):out.rindex("JSON")]
+    assert json.loads(example)["roster"] == ["directory:24527", "gcatholic:18685"]
+
+
+def test_new_takes_the_slug_as_an_argument_or_a_flag(root, capsys):
+    _write(create=True)
+    assert main(["diocese", "new", "church", "test", "anne-church", "--parish", "anne",
+                 "--name", "St. Anne Church"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-church.md"
+    assert main(["diocese", "new", "church", "test", "--slug", "anne-chapel", "--parish",
+                 "anne", "--name", "St. Anne Chapel"]) == 0
+    assert json.loads(capsys.readouterr().out)["created"] == "churches/anne-chapel.md"
+    assert main(["diocese", "new", "church", "test", "one", "--slug", "two", "--parish",
+                 "anne", "--name", "X"]) == 1
+    assert "two slugs given" in capsys.readouterr().err

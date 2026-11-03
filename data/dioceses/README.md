@@ -192,6 +192,8 @@ and retry triggers before making requests. Legacy records need no mass backfill.
   "need to check" in the same sentence. `write` and `validate` warn about a review audit
   won't count, and say why.
 - `group`: the diocese's grouping, e.g. `Family #31`.
+- No `roster` and no address: a parish row is a bulletin, not a place. Its roster
+  entries and addresses go on its churches (or its `excluded/` and `open/` records).
 - `replaces`: slugs of rows merged or renamed into this one. Maintained by `merge` and
   `rename`; `promote` deletes those live rows. A promoted successor retains ownership of
   its retired slugs while their CSV rows await deletion, so merging or renaming a shared-site
@@ -539,11 +541,12 @@ pnpm diocese gaps [--diocese d] [--kind k]   # bulletins fetch can't collect yet
 pnpm diocese init <d> --name "..." --state NY [--website URL] [--gcatholic key]
 pnpm diocese search <words> [--diocese d|live] [--kind parish|church|excluded|open]
 pnpm --silent diocese write <d> <kind> <slug> --file record.json [--create]  # --file -: stdin
+                                       # --help: every kind's fields, JSON types, an example
 
-pnpm diocese new parish   <d> --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
-pnpm diocese new church   <d> --parish <p> [--from roster:id ...] [--name ... --line1 ... --city ... ...]
-pnpm diocese new excluded <d> --reason <r> [--from roster:id] [--name ... --city ... --last-mass date]
-pnpm diocese new open     <d> --name ... --revisit "next step" [--revisit-after date] [--from roster:id]
+pnpm diocese new parish   <d> [slug] --name ... --website ... [--bulletin-provider p --provider-id id --publication x:y --group g]
+pnpm diocese new church   <d> [slug] --parish <p> [--from roster:id ...] [--name ... --line1 ... --city ... ...]
+pnpm diocese new excluded <d> [slug] --reason <r> [--from roster:id] [--name ... --city ... --last-mass date]
+pnpm diocese new open     <d> [slug] --name ... --revisit "next step" [--revisit-after date] [--from roster:id]
 pnpm diocese merge   <d> <parish>... --into <parish> [--note "why"]
 pnpm diocese rename  <d> <kind> <old> <new>
 pnpm diocese exclude <d> <church> --reason <r> [--last-mass date]
@@ -555,7 +558,7 @@ pnpm diocese roster list <d> | show <d> <roster:id>
 pnpm diocese coverage <d> [--roster name] [--link] [--show-matched]
 pnpm diocese audit <d> [--fetch]
 
-pnpm diocese probe url <url>...
+pnpm diocese probe url <url>...           # also: publishers its page links, its platform
 pnpm diocese probe sites <d> [--all]
 pnpm diocese probe po <org slug | LPi id>... [--issues N]
 pnpm diocese probe container <a/b> [--weeks N --from date --step N --all --pages N]
