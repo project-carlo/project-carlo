@@ -9,6 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field, fields
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
 import yaml
 
@@ -22,6 +23,8 @@ LEDGER_PATH = DATA / "factory.db"
 RUNS_DIR = DATA / "runs"
 # A stub run's ledger, worktrees, issues and PRs, apart from the real ones.
 STUB_DATA = DATA / "stub"
+# The owner's zone: what "today" means to the dispatcher, its gates and its workers.
+DEFAULT_TIMEZONE = "America/New_York"
 
 
 class FactoryError(RuntimeError):
@@ -80,8 +83,14 @@ class Config:
     # again this often, and the Run blocks after this many in a row. Never a crash.
     max_sandbox_failures: int = 3
     sandbox_retry_minutes: int = 10
-    # How long the usage check waits after the endpoint answers 429 Too Many Requests.
+    # Usage readings (usage.Poller): an account's usage endpoint is asked at most once in
+    # this many seconds, and a reading that recent is shared. A 429 cools down only that
+    # account, for its Retry-After, or usage_cooldown_minutes without one.
+    usage_min_interval_seconds: int = 60
     usage_cooldown_minutes: int = 30
+    # The zone "today" is in for the dispatcher, its gates and every worker, host or
+    # sandboxed, so a date a worker writes is never "in the future" to a gate.
+    timezone: str = DEFAULT_TIMEZONE
     lessons_before_integrate: int = 15
     seed_ready_bulletins: int = 2
     seed_first_run_share: float = 0.8
@@ -156,6 +165,12 @@ def load_config(config_path: Path = CONFIG_PATH, local_path: Path = LOCAL_PATH) 
     for key in ("sandbox_memory", "sandbox_cpus"):  # `4` in YAML is still podman's "4"
         if key in raw:
             raw[key] = str(raw[key])
+    if "timezone" in raw:
+        try:
+            ZoneInfo(str(raw["timezone"]))
+        except (ZoneInfoNotFoundError, ValueError) as exc:
+            raise FactoryError(f"timezone: no such zone {raw['timezone']!r} ({exc})") from None
+        raw["timezone"] = str(raw["timezone"])
     if raw.get("worker_backend", "host") not in ("host", "sandbox"):
         raise FactoryError(f"worker_backend must be host or sandbox, not "
                            f"{raw['worker_backend']!r}")

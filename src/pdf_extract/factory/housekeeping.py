@@ -38,9 +38,7 @@ class Housekeeping:
 
     def run(self) -> None:
         at = self.clock()
-        if not self.ledger.get("usage_cooldown"):
-            # After a 429, the next job's usage check is what tries the endpoint again.
-            self._safely("quota", self.readings.sample)
+        self._safely("quota", self.readings.sample)  # skips accounts cooling down
         if self.ledger.due("issues_polled", timedelta(minutes=self.config.issue_poll_minutes),
                            at):
             self._safely("issues", lambda: (git.fetch(self.repo, self.config.remote),

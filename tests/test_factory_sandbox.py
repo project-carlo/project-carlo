@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import shutil
 import signal
 import subprocess
@@ -359,6 +360,34 @@ def test_the_sandbox_launcher_gives_podman_only_what_it_names(tmp_path: Path) ->
     for name in ("CANARY_SECRET", "GH_TOKEN", "R2_ACCESS_KEY_ID", "CLOUDFLARE_API_TOKEN",
                  "SSH_AUTH_SOCK", "DISPLAY", "CLAUDE_CONFIG_DIR"):
         assert env.get(name) in (None, ""), name
+
+
+def test_workers_get_the_dispatchers_timezone_not_the_containers(tmp_path: Path) -> None:
+    """A container is in UTC: after 7 p.m. Eastern its "today" was the gates' tomorrow."""
+    env = worker_env(None) | {"TZ": "UTC"}  # whatever the dispatcher's own was
+    host = HostBackend(BOX, claude="claude", xvfb="", timezone="America/New_York")
+    assert host.launch(request(tmp_path), env).env["TZ"] == "America/New_York"
+    (tmp_path / "wt").mkdir()
+    req = boxed_request(tmp_path, tmp_path / "wt")
+    backend = podman_backend(tmp_path, FakePodman())
+    backend.timezone = "America/Chicago"
+    plan = json.loads(backend.launch(req, env).env["CARLO_BOX"])
+    argv = plan["argv"]
+    pairs = [argv[i + 1] for i, arg in enumerate(argv) if arg == "--env"]
+    assert "TZ=America/Chicago" in pairs and "TZ" not in pairs
+
+
+def test_the_worker_image_has_and_checks_the_tools_workers_use() -> None:
+    text = (ROOT / "factory" / "sandbox" / "Containerfile").read_text()
+    install = re.search(r"apt-get install[^&]*", text, re.S)
+    assert install is not None
+    for package in ("jq", "file", "tzdata"):
+        assert re.search(rf"\b{package}\b", install.group(0)), package
+    required = re.search(r'ARG REQUIRED_TOOLS="([^"]*)"', text)
+    assert required is not None
+    tools = required.group(1).replace("\\\n", " ").split()
+    assert {"jq", "file", "curl", "pdftotext", "pnpm", "claude", "uv", "python"} <= set(tools)
+    assert "worker image is missing" in text
 
 
 @pytest.mark.parametrize(("fake", "podman", "says"), [

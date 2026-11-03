@@ -1,11 +1,13 @@
 """The dispatcher: the loop that runs the factory, and what it is made of (docs/factory.md).
 
-Each tick checks the pause and the usage cooldown, does the housekeeping, then takes one
-job a step on. The parts, each in its own module:
+Each tick checks the pause, does the housekeeping, then takes one job a step on. An
+account whose usage endpoint answered 429 cools down on its own (`usage.Poller`); the
+others keep working. The parts, each in its own module:
 
 - `engine`: one job, from picking it to its gates, send-backs and what follows them.
 - `attempts`: one attempt of a job: starting its worker and recording what came back.
 - `accounts`: the account each attempt runs on, against the caps.
+- `usage.Poller`: every usage reading, shared, spaced and cooled down per account.
 - `answers`: issues for blocking flags, and what the owner's answers do.
 - `housekeeping`: readings, issues, merged Runs, seed readiness and backups between jobs.
 - `metrics.readings`: the quota readings for measuring. The rest of `metrics` (tokens,
@@ -32,7 +34,7 @@ from pdf_extract.factory.ledger import Ledger
 from pdf_extract.factory.metrics.readings import Readings
 from pdf_extract.factory.outcome import Outcome
 from pdf_extract.factory.secrets import Secrets, command_env
-from pdf_extract.factory.usage import Fetch, fetch_usage
+from pdf_extract.factory.usage import Fetch, Poller, fetch_usage
 from pdf_extract.factory.workers import Worker
 
 LOGGER = logging.getLogger(__name__)
@@ -73,8 +75,9 @@ class Dispatcher:
         push: bool = True,
     ) -> None:
         self.ledger, self.config, self.clock = ledger, config, clock
-        self.accounts = Accounts(ledger, config, fetch_usage, clock)
-        self.readings = Readings(ledger, config, fetch_usage, clock)
+        self.usage = Poller(ledger, config, fetch_usage, clock)
+        self.accounts = Accounts(ledger, config, self.usage, clock)
+        self.readings = Readings(ledger, config, self.usage, clock)
         self.answers = Answers(ledger, config, forge)
         secrets = secrets or {}
         self.attempts = Attempts(ledger, config, worker=worker, accounts=self.accounts,
@@ -107,18 +110,13 @@ class Dispatcher:
         paused = self.ledger.get("paused")
         if paused:
             return Outcome("paused", paused.get("reason", ""))
-        cooldown = self.ledger.get("usage_cooldown")
-        if cooldown:
-            # Nothing reads the endpoint until the cooldown ends, housekeeping's readings
-            # included; then the next job's usage check tries it again.
-            until = datetime.fromisoformat(cooldown["until"])
-            if until > self.clock():
-                return Outcome("waiting", f"usage check cooldown until {cooldown['until']}: "
-                                          f"{cooldown.get('reason', '')}", until)
-        self.housekeeping.run()
-        job = self.engine.pick()
-        if job is None:
-            if cooldown:  # no usage check to retry: the periodic readings take over again
-                self.ledger.set("usage_cooldown", None)
-            return Outcome("idle")
-        return self.engine.run_job(job)
+        # Cooldowns the last tick's background readings started, and any `resume` cleared.
+        self.usage.sync()
+        try:
+            self.housekeeping.run()
+            job = self.engine.pick()
+            if job is None:
+                return Outcome("idle")
+            return self.engine.run_job(job)
+        finally:
+            self.usage.sync()
