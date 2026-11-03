@@ -258,6 +258,13 @@ def _left_open(worktree: Path, diocese: str) -> list[str]:
     return lines or ["- none"]
 
 
+def _gap_row_status(provider: Any) -> str:
+    """How a fetch-gap row stands on the site: off it says nothing, live names its provider."""
+    if provider in (UNSUPPORTED, NO_BULLETIN):
+        return ""
+    return f" (live as {provider})" if provider else " (no bulletin_provider yet)"
+
+
 def _fetch_gaps(worktree: Path, diocese: str) -> list[str]:
     """Parishes whose bulletin `fetch` can't collect yet, by kind, as `pnpm diocese gaps`
     groups them. Read from the files: that command's JSON outgrows a command's output."""
@@ -273,9 +280,7 @@ def _fetch_gaps(worktree: Path, diocese: str) -> list[str]:
                 (path.stem, _one_line(gap.get("note")), front.get("bulletin_provider")))
     lines = []
     for kind, entries in sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0])):
-        parishes = ", ".join(f"`{p}`" + ("" if provider in (UNSUPPORTED, NO_BULLETIN)
-                                         else f" (live as {provider})")
-                             for p, _, provider in entries)
+        parishes = ", ".join(f"`{p}`" + _gap_row_status(provider) for p, _, provider in entries)
         lines.append(f"- `{kind}` ({len(entries)}): {parishes}. {entries[0][1]}".rstrip())
     return lines or ["- none"]
 

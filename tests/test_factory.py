@@ -1522,8 +1522,11 @@ def test_the_pr_says_which_fetch_gap_rows_go_live(tmp_path: Path) -> None:
         "parishes_online", "unsupported").replace("---\nNotes", GAP + "---\nNotes"))
     (folder / "live.md").write_text(parish_record("directory:2").replace(
         "---\nNotes", GAP + "---\nNotes"))
+    (folder / "new.md").write_text(parish_record("directory:3").replace(
+        "bulletin_provider: parishes_online\n", "").replace("---\nNotes", GAP + "---\nNotes"))
     [line] = report._fetch_gaps(tmp_path, D)
-    assert line.startswith("- `solutio-file-403` (2): `kept`, `live` (live as parishes_online).")
+    assert line.startswith("- `solutio-file-403` (3): `kept`, `live` (live as parishes_online), "
+                           "`new` (no bulletin_provider yet).")
 
 
 def test_a_parish_waiting_on_a_collector_isnt_seeded_until_its_gap_is_cleared(env: Env) -> None:
