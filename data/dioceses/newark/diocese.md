@@ -146,6 +146,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - `page-pdfs https://church-bulletin.org/<id>` resolves current issues in Newark too (ids 597, 6004 checked 2026-11-03); many JPP and LPi issues here are image-only, so read page 1 with render.py.
 - Bon Venture Services (sponsors.bonventure.net/?page=<id>) prints bulletins here too (St. Luke, Ho-Ho-Kus): parish sites link that listing from a 'Bulletins' menu item; record provider other with `page-pdfs http://sponsors.bonventure.net/?page=<id>` and `publication: url:` that page, as in Scranton. It answers plain `probe get`.
 - LPi bulletins self-hosted by the parish carry the ParishesOnline container on the ad-page footer ('<Parish>, <Town>, NJ 03-0374' = po-container:03/0374); `probe container` confirms it even when no org slug is known.
+- Bon Venture-printed bulletins may be self-hosted by the parish with no sponsors.bonventure.net link (Presentation, Upper Saddle River): the ad-page footer '<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture Services' identifies them; read the parish's own bulletin page with page-pdfs.
 
 
 ## Rules settled for this diocese
