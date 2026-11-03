@@ -65,8 +65,8 @@ One-time setup (the root steps need sudo; the rest installs under your home):
 
    The `sed` gives the emulator 4 GB of RAM and a 720×1600 screen. With the
    default 2 GB, Android 16 swaps constantly and System UI stops responding.
-   With no GPU in WSL, the CPU draws every frame, so the smaller screen saves
-   work. Together they took a cold boot to 43s, the Maestro flow from 13–18s to
+   The emulator renders in software (SwiftShader) by default, so the CPU draws
+   every frame and the smaller screen saves work. Together they took a cold boot to 43s, the Maestro flow from 13–18s to
    9s, and the idle emulator from 41% to 27% of a core. After the first boot,
    turn off animations, which also speeds up flows:
 
@@ -78,6 +78,22 @@ One-time setup (the root steps need sudo; the rest installs under your home):
 
    Gradle installs the SDK platform, build tools and NDK it needs on the first
    build.
+
+   **GPU rendering** is possible but not faster yet. WSL exposes the Windows GPU
+   through Mesa's d3d12 driver, which the emulator only uses when forced:
+
+   ```bash
+   GALLIUM_DRIVER=d3d12 MESA_D3D12_DEFAULT_ADAPTER_NAME=NVIDIA \
+     emulator -avd carlo-api36 -no-window -no-audio -no-boot-anim -gpu host &
+   ```
+
+   Without the variables, `-gpu host` gets Mesa's llvmpipe, which is also
+   software. With them, `adb shell dumpsys SurfaceFlinger | grep GLES` names the
+   GPU. On the church list, a GTX 1650 was slightly slower than SwiftShader
+   (Maestro flow 11–12s against 9–10s), probably because copying frames back
+   from the GPU costs more than drawing a simple screen. Measure again once the
+   app has a map. T3 Code boots the emulator with `-gpu auto` (software), but it attaches
+   to one that is already running.
 4. **Maestro.** Unpack `maestro.zip` from the
    [Maestro CLI releases](https://github.com/mobile-dev-inc/maestro/releases) to
    `~/.maestro/`.
