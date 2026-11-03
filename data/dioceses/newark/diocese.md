@@ -206,6 +206,7 @@ and Hudson Counties) and Allentown's and other mapped dioceses' notes.
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
 - A parish can move to a new domain while the directory and GCatholic keep the old one: when a site's own bulletins are stale, read the current issue's masthead website line and the ParishesOnline org's website field (St. Joseph of the Palisades: sjpwny.org, not saintjosephpalisades.com).
+- John Patrick: one account can carry several bulletins as listings with a letter suffix (church-bulletin.org/6051O and /6051A, slugs ending -o and -a), while the bare id shows an empty page and the footer names every parish on the account. Pin the suffixed listing a site links, try other suffix letters when a shared pastor or a two-parish footer suggests a second bulletin, and read each masthead.
 
 
 ## Rules settled for this diocese
