@@ -26,7 +26,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING, Protocol
 
-from pdf_extract.factory.config import DATA, FactoryError
+from pdf_extract.factory.config import DATA, DEFAULT_TIMEZONE, FactoryError
 from pdf_extract.factory.spec import fill
 
 if TYPE_CHECKING:
@@ -123,13 +123,16 @@ class HostBackend:
     name = "host"
 
     def __init__(self, launcher: Path = LAUNCHER, claude: str | None = None,
-                 xvfb: str | None = None) -> None:
+                 xvfb: str | None = None, timezone: str | None = None) -> None:
         self.launcher = launcher.resolve()
         self.claude = claude or shutil.which("claude") or "claude"
         self.xvfb = shutil.which("xvfb-run") if xvfb is None else xvfb
+        self.timezone = timezone
 
     def launch(self, request: WorkerRequest, env: dict[str, str]) -> Launch:
         argv = ([self.xvfb, "-a"] if self.xvfb else []) + [self.claude]
+        if self.timezone:
+            env = env | {"TZ": self.timezone}
         keep = [*HOST_PASS, *SDK_ENV, "PWD", *env]
         return Launch(str(self.launcher), plan_env(env, argv, keep))
 
@@ -269,14 +272,15 @@ def run_argv(podman: str, box: Box) -> list[str]:
     return argv + [box.image, *box.command]
 
 
-def container_env(workdir: Path) -> dict[str, str]:
-    """What every worker container gets besides its own environment: the proxy, and the
-    Run's src/ for the image's /opt/venv."""
+def container_env(workdir: Path, timezone: str = DEFAULT_TIMEZONE) -> dict[str, str]:
+    """What every worker container gets besides its own environment: the proxy, the
+    Run's src/ for the image's /opt/venv, and the dispatcher's timezone, so the dates a
+    worker writes are the dates its gates check (a container is in UTC otherwise)."""
     no_proxy = "localhost,127.0.0.1,::1"
     return {"HOME": "/home/worker", "PYTHONPATH": str(workdir / "src"),
             "HTTP_PROXY": PROXY_URL, "HTTPS_PROXY": PROXY_URL, "http_proxy": PROXY_URL,
             "https_proxy": PROXY_URL, "NO_PROXY": no_proxy, "no_proxy": no_proxy,
-            "LANG": "C.UTF-8"}
+            "LANG": "C.UTF-8", "TZ": timezone}
 
 
 def worker_token(request: WorkerRequest) -> str:
@@ -308,8 +312,10 @@ class PodmanBackend:
     def __init__(self, repo: Path, upstream: str, *, launcher: Path = LAUNCHER,
                  podman: str | None = None, limits: Limits | None = None,
                  call: PodmanCall | None = None, sandbox_dir: Path = DATA / "sandbox",
-                 sessions_dir: Path = DATA / "sessions") -> None:
+                 sessions_dir: Path = DATA / "sessions",
+                 timezone: str = DEFAULT_TIMEZONE) -> None:
         self.repo, self.upstream, self.sandbox_dir = repo, upstream, sandbox_dir
+        self.timezone = timezone
         self.sessions_dir = sessions_dir
         self.launcher = launcher.resolve()
         self.podman = (shutil.which("podman") or "") if podman is None else podman
@@ -396,10 +402,11 @@ class PodmanBackend:
         sessions.mkdir(parents=True, exist_ok=True)
         mounts = [Mount(path, path, ro) for path, ro in workspace.mounts(work)]
         mounts.append(Mount(sessions, WORKER_PROJECTS))
-        passed = {k: v for k, v in env.items() if k not in HOST_ONLY}
+        # TZ is the container's own (container_env), never the dispatcher's host value.
+        passed = {k: v for k, v in env.items() if k not in HOST_ONLY and k != "TZ"}
         passed["CLAUDE_CODE_OAUTH_TOKEN"] = token
         box = Box(name=name, image=image, workdir=work, mounts=mounts,
-                  env=container_env(work), pass_env=[*passed, *SDK_ENV, "PWD"],
+                  env=container_env(work, self.timezone), pass_env=[*passed, *SDK_ENV, "PWD"],
                   limits=self.limits)
         keep = [*PODMAN_PASS, *SDK_ENV, "PWD", *passed]
         return Launch(str(self.launcher), plan_env(passed, run_argv(self.podman, box), keep,
@@ -439,9 +446,10 @@ class PodmanBackend:
             self.call("rm", "--force", "--time", "0", *ids)
 
 
-def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None) -> Backend:
+def backend(name: str, repo: Path, upstream: str, limits: Limits | None = None,
+            timezone: str = DEFAULT_TIMEZONE) -> Backend:
     if name == "host":
-        return HostBackend()
+        return HostBackend(timezone=timezone)
     if name == "sandbox":
-        return PodmanBackend(repo, upstream, limits=limits)
+        return PodmanBackend(repo, upstream, limits=limits, timezone=timezone)
     raise FactoryError(f"worker_backend must be host or sandbox, not {name!r}")

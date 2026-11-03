@@ -33,8 +33,14 @@ failure_retry_minutes: 5
 # the Run blocks after max_sandbox_failures in a row.
 max_sandbox_failures: 3
 sandbox_retry_minutes: 10
-# How long the usage check waits after the endpoint answers 429 Too Many Requests.
+# Usage readings. An account's usage endpoint is asked at most once a minute, and a reading
+# that recent is shared by the usage check and the quota readings. A 429 cools down only
+# that account, for as long as its Retry-After says, or usage_cooldown_minutes without one.
+usage_min_interval_seconds: 60
 usage_cooldown_minutes: 30
+
+# What "today" is for the dispatcher, its gates and every worker, host or sandboxed.
+timezone: America/New_York
 
 # Seed Runs (docs/factory.md, The pipeline).
 seed_ready_bulletins: 2

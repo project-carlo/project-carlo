@@ -21,9 +21,11 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PLAYWRIGHT_BROWSERS_PATH=/opt/ms-playwright \
     PATH=/opt/node/bin:/opt/venv/bin:$PATH
 
+# jq and file: workers reach for them to read JSON and identify downloads. tzdata: the
+# dispatcher sets TZ to its own zone (config `timezone`), which needs the zone files.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl xz-utils xvfb xauth \
-        ghostscript poppler-utils fonts-liberation \
+        ghostscript poppler-utils fonts-liberation jq file tzdata \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -47,6 +49,17 @@ RUN useradd --uid 1000 --user-group --create-home --shell /bin/bash worker
 
 USER worker
 WORKDIR /home/worker
+# Every tool a worker is expected to have, checked as the worker: the build fails
+# rather than a worker spending turns on "command not found".
+ARG REQUIRED_TOOLS="bash curl jq file gs pdftotext pdftoppm xvfb-run xauth node npm pnpm \
+claude uv python"
+RUN missing=""; for tool in $REQUIRED_TOOLS; do \
+        command -v "$tool" >/dev/null 2>&1 || missing="$missing $tool"; \
+    done; \
+    if [ -n "$missing" ]; then echo "worker image is missing:$missing" >&2; exit 1; fi; \
+    [ "$(TZ=America/New_York date -d @0 +%Z)" = EST ] \
+        || { echo "worker image has no zone data (tzdata)" >&2; exit 1; }
+
 # pnpm scripts only invoke Python: never auto-install the web workspace dependencies.
 # Chromium must keep its own namespace/seccomp sandbox inside the container.
 ENV HOME=/home/worker \

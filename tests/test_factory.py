@@ -16,6 +16,7 @@ import threading
 import time
 from collections.abc import Callable
 from datetime import UTC, datetime, timedelta
+from email.message import Message
 from pathlib import Path
 from typing import Any
 
@@ -25,6 +26,7 @@ from pdf_extract.blobstore import BlobStoreError
 from pdf_extract.factory import forge as forge_mod
 from pdf_extract.factory import git as git_mod
 from pdf_extract.factory import playbook, readiness, render, report
+from pdf_extract.factory import usage as usage_mod
 from pdf_extract.factory.config import Account, Config, FactoryError, JobUsage, load_config
 from pdf_extract.factory.dispatcher import Dispatcher
 from pdf_extract.factory.forge import LocalForge
@@ -49,6 +51,7 @@ from pdf_extract.factory.metrics.attempt_meta import account_plan
 from pdf_extract.factory.metrics.quota import MISSING, SETTLED, SHARED, Measure
 from pdf_extract.factory.spec import in_scope, load_stage
 from pdf_extract.factory.usage import (
+    Poller,
     Standing,
     Usage,
     UsageError,
@@ -1883,6 +1886,15 @@ def test_raw_usage_is_kept_without_credentials(tmp_path: Path) -> None:
     assert config.quota_settle_seconds == 150
 
 
+def test_a_timezone_must_be_a_real_zone(tmp_path: Path) -> None:
+    local = tmp_path / "local.yaml"
+    local.write_text("timezone: America/Chicago\n")
+    assert load_config(tmp_path / "none.yaml", local).timezone == "America/Chicago"
+    local.write_text("timezone: Eastern\n")
+    with pytest.raises(FactoryError, match="timezone"):
+        load_config(tmp_path / "none.yaml", local)
+
+
 def test_an_old_ledger_gains_the_quota_columns(tmp_path: Path) -> None:
     path = tmp_path / "old.db"
     conn = sqlite3.connect(path)
@@ -1905,13 +1917,14 @@ class Meter:
     def __init__(self) -> None:
         self.five, self.week, self.fail = 10.0, 20.0, 0
         self.status: int | None = None  # the HTTP status a failing call reports
+        self.retry_after: float | None = None  # and its Retry-After
         self.calls = 0
 
     def __call__(self, account: Account) -> Usage:
         self.calls += 1
         if self.fail:
             self.fail -= 1
-            raise UsageError("endpoint down", status=self.status)
+            raise UsageError("endpoint down", status=self.status, retry_after=self.retry_after)
         return Usage(self.five, FIVE_RESETS, self.week, WEEK_RESETS,
                      raw={"five_hour": {"utilization": self.five}})
 
@@ -2031,6 +2044,10 @@ def failing_usage_check(env: Env, status: int, fail: int = 1) -> Meter:
 COOLDOWN = timedelta(minutes=Config().usage_cooldown_minutes)
 
 
+def cooldown(env: Env, account: str = "a") -> dict[str, str] | None:
+    return (env.ledger.get(usage_mod.COOLDOWNS) or {}).get(account)
+
+
 def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None:
     meter = failing_usage_check(env, 429, 2)
     d = env.dispatcher(map_script(), fetch_usage=meter)
@@ -2038,9 +2055,9 @@ def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None
     assert first.action == "waiting" and "cooldown" in first.detail
     assert first.wait_until == env.now + COOLDOWN
     assert env.ledger.get("paused") is None
-    since = env.ledger.get("usage_cooldown")["since"]
+    since = cooldown(env)["since"]
     status = report.text_status(report.status(env.ledger))
-    assert "USAGE CHECK COOLDOWN: usage check failed: endpoint down" in status
+    assert "USAGE CHECK COOLDOWN, account a: endpoint down" in status
     assert f"next retry {first.wait_until.isoformat()[:16]}" in status
     # Nothing reads the endpoint during the cooldown.
     calls = meter.calls
@@ -2052,14 +2069,110 @@ def test_a_usage_check_429_cools_down_then_retries_and_resumes(env: Env) -> None
     second = d.tick()
     assert second.action == "waiting" and meter.calls == calls + 1
     assert second.wait_until == env.now + COOLDOWN
-    assert env.ledger.get("usage_cooldown")["since"] == since
+    assert cooldown(env)["since"] == since
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] != DONE
     # The next check succeeds: the cooldown clears and queued work resumes.
     env.now = second.wait_until
     assert d.tick().action == "ran"
-    assert env.ledger.get("usage_cooldown") is None
+    assert cooldown(env) is None
     assert env.ledger.jobs(map_run(env)["id"], "survey")[0]["status"] == DONE
     assert "COOLDOWN" not in report.text_status(report.status(env.ledger))
+
+
+def test_a_429_waits_what_its_retry_after_says(env: Env) -> None:
+    meter = failing_usage_check(env, 429, 1)
+    meter.retry_after = 300
+    d = env.dispatcher(map_script(), fetch_usage=meter)
+    out = d.tick()
+    assert out.action == "waiting" and out.wait_until == env.now + timedelta(seconds=300)
+    env.now += timedelta(seconds=300)
+    assert d.tick().action == "ran" and cooldown(env) is None
+    # A Retry-After of 0 still waits the minimum interval between requests.
+    meter.fail, meter.retry_after = 1, 0
+    env.now += timedelta(minutes=5)
+    usage = Poller(env.ledger, env.config, meter, env.clock)
+    with pytest.raises(usage_mod.Cooldown) as caught:
+        usage.read(env.config.accounts[0])
+    assert caught.value.until == env.now + timedelta(
+        seconds=env.config.usage_min_interval_seconds)
+
+
+def two_accounts(env: Env) -> tuple[Meter, Meter, Callable[[Account], Usage]]:
+    env.config.accounts = [Account("a", env.tmp / "a", "pro"), Account("b", env.tmp / "b")]
+    a, b = Meter(), Meter()
+    a.week = 10  # a resets with b but has more room: chosen first
+    return a, b, lambda account: (a if account.name == "a" else b)(account)
+
+
+def test_a_429_cools_down_only_its_account_and_the_others_keep_working(env: Env) -> None:
+    a, b, fetch = two_accounts(env)
+    env.ledger.set("quota_sampled", env.now.isoformat())
+    a.fail, a.status = 1, 429
+    d = env.dispatcher(map_script(), fetch_usage=fetch)
+    assert d.tick().action == "ran"
+    attempt = env.ledger.one("SELECT account FROM attempt WHERE id = 1")
+    assert attempt["account"] == "b" and env.ledger.get("paused") is None
+    assert cooldown(env, "a") is not None and cooldown(env, "b") is None
+    status = report.text_status(report.status(env.ledger))
+    assert "COOLDOWN, account a" in status and "COOLDOWN, account b" not in status
+    # While a cools down nothing asks it, and b keeps taking jobs.
+    calls = a.calls
+    env.now += timedelta(minutes=5)
+    assert d.tick().action == "ran" and a.calls == calls
+
+
+def test_a_429_on_the_after_reading_cools_down_that_account(env: Env) -> None:
+    """The 2026-11-02 stall: an after reading's 429 stopped every account for 30 minutes."""
+    a, b, fetch = two_accounts(env)
+    env.ledger.set("quota_sampled", env.now.isoformat())
+
+    def survey(req: WorkerRequest, attempt: int) -> StubAction:
+        env.now += timedelta(minutes=10)
+        a.fail, a.status = 1, 429  # the after reading
+        return StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=survey), fetch_usage=fetch)
+    assert d.tick().action == "ran"
+    assert env.ledger.one("SELECT account FROM attempt WHERE id = 1")["account"] == "a"
+    assert cooldown(env, "a") is not None
+    # The review that follows goes to b at once.
+    assert d.tick().action == "ran"
+    assert env.ledger.one("SELECT account FROM attempt WHERE id = 2")["account"] == "b"
+
+
+def test_readings_within_the_interval_are_shared_and_requests_spaced(env: Env) -> None:
+    meter, _ = metered(env)
+    account = env.config.accounts[0]
+    slept: list[float] = []
+    usage = Poller(env.ledger, env.config, meter, env.clock, sleep=slept.append)
+    first = usage.read(account)
+    env.now += timedelta(seconds=30)
+    assert usage.read(account) is first and meter.calls == 1  # shared
+    # Newer than the last reading: a reading that doesn't wait is too soon...
+    with pytest.raises(usage_mod.TooSoon):
+        usage.read(account, since=env.now, wait=False)
+    # ...and one that waits sleeps out the interval first.
+    usage.read(account, since=env.now)
+    assert slept == [30] and meter.calls == 2
+    env.now += timedelta(seconds=61)
+    usage.read(account)
+    assert meter.calls == 3 and slept == [30]
+
+
+def test_a_tick_asks_each_account_at_most_once(env: Env) -> None:
+    """The periodic, settled and select readings of one tick share one request."""
+    meter, spend = metered(env)
+    survey = StubAction(files=survey_files(), handoff=done("surveyed"))
+    d = env.dispatcher(map_script(survey=spend(5, 10, survey)), fetch_usage=meter)
+    assert d.tick().action == "ran"  # periodic, select, and after 10 minutes on
+    assert meter.calls == 2
+    env.now += timedelta(seconds=env.config.quota_settle_seconds)
+    env.ledger.set("quota_sampled", None)  # periodic due again, with the settled reading
+    calls = meter.calls
+    d.tick()
+    assert meter.calls == calls + 1
+    sources = [r["source"] for r in env.ledger.all(
+        "SELECT source FROM usage WHERE id > 2 ORDER BY id")]
+    assert {"settled", "periodic"} <= set(sources)
 
 
 def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
@@ -2070,7 +2183,7 @@ def test_after_a_usage_check_cooldown_the_caps_still_hold(env: Env) -> None:
     env.now += COOLDOWN
     out = d.tick()
     assert out.action == "waiting" and "no account has room" in out.detail
-    assert env.ledger.get("usage_cooldown") is None
+    assert cooldown(env) is None
     survey = env.ledger.jobs(map_run(env)["id"], "survey")[0]
     assert survey["status"] == WAITING_USAGE and not env.ledger.all("SELECT * FROM attempt")
 
@@ -2099,7 +2212,8 @@ def test_resume_retries_the_usage_check_at_once(env: Env,
     assert d.tick().action == "waiting"
     monkeypatch.setattr(cli, "_ledger", lambda args: env.ledger)
     cli._resume(argparse.Namespace(override_caps=False))
-    assert env.ledger.get("usage_cooldown") is None
+    assert cooldown(env) is None
+    env.now += timedelta(seconds=env.config.usage_min_interval_seconds)
     assert d.tick().action == "ran"
 
 
@@ -2109,24 +2223,35 @@ def test_other_usage_check_failures_still_pause(env: Env) -> None:
     assert d.tick().action == "paused"
     env.now += COOLDOWN * 3
     assert d.tick().action == "paused"
-    assert env.ledger.get("usage_cooldown") is None
+    assert cooldown(env) is None
     assert "endpoint down" in env.ledger.get("paused")["reason"]
+
+
+def test_retry_after_reads_seconds_or_a_date() -> None:
+    at = datetime(2026, 11, 3, 0, 25, tzinfo=UTC)
+    assert usage_mod.retry_after({"Retry-After": "120"}, at) == 120
+    assert usage_mod.retry_after({"Retry-After": "Tue, 03 Nov 2026 00:30:00 GMT"}, at) == 300
+    assert usage_mod.retry_after({"Retry-After": "Tue, 03 Nov 2026 00:20:00 GMT"}, at) == 0
+    assert usage_mod.retry_after({"Retry-After": "soon"}, at) is None
+    assert usage_mod.retry_after({}, at) is None
 
 
 def test_fetch_usage_reports_the_http_status(tmp_path: Path,
                                             monkeypatch: pytest.MonkeyPatch) -> None:
     import urllib.error
 
-    from pdf_extract.factory import usage as usage_mod
+    headers = Message()
+    headers["Retry-After"] = "90"
 
     def too_many(request: Any, timeout: int) -> Any:
-        raise urllib.error.HTTPError(usage_mod.USAGE_URL, 429, "Too Many Requests", {}, None)
+        raise urllib.error.HTTPError(usage_mod.USAGE_URL, 429, "Too Many Requests", headers,
+                                     None)
 
     monkeypatch.setattr(usage_mod, "_token", lambda account: "t")
     monkeypatch.setattr(usage_mod.urllib.request, "urlopen", too_many)
     with pytest.raises(UsageError) as caught:
         usage_mod.fetch_usage(Account("second", tmp_path, "pro"))
-    assert caught.value.status == 429
+    assert caught.value.status == 429 and caught.value.retry_after == 90
     assert str(caught.value) == ("second: usage endpoint failed: HTTP Error 429: "
                                  "Too Many Requests")
 

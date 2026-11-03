@@ -139,6 +139,11 @@ The design, and what was verified live, are in
   Cloudflare or SSH, and its own Xvfb. `pnpm factory` reads `.env` into a dict, not its
   own environment; gate commands, and the dispatcher's `seed approve`, get its
   environment without secrets plus the stage's `gate_secrets:`.
+- **Timezone.** The dispatcher sets `TZ` to `timezone` in `factory/config.yaml`
+  (default `America/New_York`) for itself, its gates and setup commands, and passes the
+  same `TZ` to every worker, host or sandboxed. A container would otherwise be in UTC,
+  so after 7 p.m. Eastern a worker's "today" was its gates' tomorrow and dated evidence
+  failed validation as "in the future".
 - **`worker_backend: sandbox`** runs each attempt in a fresh rootless Podman container: no
   capabilities, a read-only root, memory, CPU and process limits, and an internal network
   whose only way out is an egress proxy (smokescreen) that refuses private, host and
@@ -148,7 +153,9 @@ The design, and what was verified live, are in
   over 50 MB and more than 2,000 files are refused and recorded on the attempt. Sessions
   are per Run, in `data/factory/sessions/<run>/`. The image is built from `origin/main`'s
   `factory/sandbox/Containerfile` and lockfiles, so a Run can't change what its workers
-  run in. If Podman, the image or the proxy fails, the attempt ends as `sandbox`; it
+  run in. Its build fails if any tool in the Containerfile's `REQUIRED_TOOLS` (`jq`,
+  `file`, poppler, `pnpm`, `claude`, `uv` and the rest) or the zone data is missing;
+  add a tool a worker needs there and to the `apt-get install` line. If Podman, the image or the proxy fails, the attempt ends as `sandbox`; it
   never runs on the host instead.
 - **`worker_backend: host`** (the default until the live checks pass) runs the CLI on the
   host. `pnpm factory status` says so.
@@ -176,9 +183,17 @@ cap is not stopped.
 The job goes to the eligible account whose weekly window resets soonest, and stays on
 it, since its session can only be resumed there. With none eligible, it waits for the
 soonest one. A failing usage check (an expired login that `claude auth status` can't
-refresh, say) pauses the factory: fix it, then `pnpm factory resume`. A 429 waits
-`usage_cooldown_minutes` and tries again; `status` shows the cooldown and its next try,
-and `resume` tries at once. `pnpm factory resume --override-caps` ignores
+refresh, say) pauses the factory: fix it, then `pnpm factory resume`.
+
+Every reading, the usage check's and the quota readings', goes through one poller
+(`usage.Poller`). It asks an account's endpoint at most once per
+`usage_min_interval_seconds` (60) and hands a reading that recent to whoever asks next,
+so a tick's periodic, settled and select readings, or one attempt's after reading and the
+next one's before, are one request. A 429 cools down only the account it came from, for
+as long as its `Retry-After` says (at least the interval), or `usage_cooldown_minutes`
+without one; meanwhile the other accounts keep taking jobs, and a job pinned to the
+cooling account, or with no other account, waits for the cooldown to end. `status` shows
+each account's cooldown and its next try, and `resume` clears them all. `pnpm factory resume --override-caps` ignores
 the caps until the next pause or resume; a worker's rate-limit error still makes its job
 wait.
 

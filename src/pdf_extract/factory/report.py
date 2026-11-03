@@ -27,6 +27,7 @@ from pdf_extract.factory.metrics import report as mreport
 from pdf_extract.factory.metrics.quota import WINDOWS, combine
 from pdf_extract.factory.plan import diocese_dir, next_job, read_seed
 from pdf_extract.factory.spec import load_stage, parse_stage, spec_path
+from pdf_extract.factory.usage import COOLDOWNS
 from pdf_extract.factory.workers import strip_frontmatter
 
 Commands = Callable[[str, Path], tuple[bool, str]]
@@ -57,7 +58,7 @@ def status(ledger: Ledger) -> dict[str, Any]:
     usage = [dict(r) for r in ledger.all(
         "SELECT u.* FROM usage u JOIN (SELECT account, MAX(id) AS id FROM usage GROUP BY "
         "account) last ON last.id = u.id ORDER BY u.account")]
-    return {"paused": ledger.get("paused"), "usage_cooldown": ledger.get("usage_cooldown"),
+    return {"paused": ledger.get("paused"), "usage_cooldowns": ledger.get(COOLDOWNS) or {},
             "override_caps": ledger.get("override_caps", False),
             "runs": runs, "usage": usage, "last_backup": ledger.get("backed_up"),
             "workers": ledger.get("worker_backend")}
@@ -67,10 +68,9 @@ def text_status(r: dict[str, Any]) -> str:
     lines = []
     if r["paused"]:
         lines.append(f"PAUSED: {r['paused'].get('reason')}")
-    if r.get("usage_cooldown"):
-        c = r["usage_cooldown"]
-        lines.append(f"USAGE CHECK COOLDOWN: {c.get('reason')}; next retry {c['until'][:16]} "
-                     f"(since {c.get('since', '')[:16]})")
+    for name, c in sorted((r.get("usage_cooldowns") or {}).items()):
+        lines.append(f"USAGE CHECK COOLDOWN, account {name}: {c.get('reason')}; next retry "
+                     f"{c['until'][:16]} (since {c.get('since', '')[:16]})")
     if r["override_caps"]:
         lines.append("Caps overridden (`pnpm factory pause` or `resume` to restore)")
     if r.get("workers") == "host":

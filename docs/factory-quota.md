@@ -20,7 +20,12 @@ like a credential removed.
 | `settled` | Once per attempt, when its account has been idle `quota_settle_seconds` (default 150) after it, since the meter lags a minute or two. |
 | `periodic` | Every account each `quota_sample_minutes` (default 15). |
 
-None of these run without accounts (stub Runs), or during a usage-check cooldown. Each
+They all share the usage check's poller (docs/factory.md, Usage and accounts): a
+`select` or `periodic` reading may be one taken up to `usage_min_interval_seconds`
+earlier, recorded with that reading's own time. An `after` or `settled` reading must be
+newer than its attempt, so it is skipped (logged) rather than asking an account again
+within that interval. None of them run without accounts (stub Runs), or for an account
+during its usage-check cooldown. Each
 SDK rate-limit event is kept in full in `rate_limit_event` (type, status, utilization,
 reset time, overage, raw), besides its `rate_limit` step.
 
