@@ -192,8 +192,8 @@ To keep iOS from drifting: run the iOS simulator CI workflow from phase 1, check
 - **Maestro.** The CLI runs on Linux and drives Android through adb. Keep flows in `apps/mobile/.maestro/`; the same flows run on the iOS simulator in CI.
 - **Fixture mode.** A public environment variable (for example `EXPO_PUBLIC_SNAPSHOT_URL`) points the app at a locally served copy of `snapshot.fixture.json`, so flows are deterministic and run offline.
 - **Stable selectors.** Give every interactive element a `testID` and an accessibility label. This serves Maestro, agents, and screen readers.
-- **Parallel worktrees.** Each worktree's Metro needs its own port, and each emulator costs memory, so share one or two emulators. Add a `pnpm mobile:device` script that picks a free port, starts Metro, runs `adb reverse`, and opens the development build at that Metro URL through its deep link.
-- **A mobile testing skill.** Add a skill in `.claude/skills/` (as for the factory) covering how to start the emulator, start Metro, run Maestro, take a screenshot, and trigger and read the iOS CI run. Point to it from `AGENTS.md`.
+- **Parallel worktrees.** Each worktree's Metro needs its own port, and each emulator costs memory, so share one or two emulators. Add a `pnpm device:mobile` script that picks a free port, starts Metro, runs `adb reverse`, and opens the development build at that Metro URL through its deep link.
+- **A mobile testing skill.** `.claude/skills/mobile-device/` (as for the factory) covers starting the emulator, building the development build, starting Metro, running Maestro, taking a screenshot and reading logs. Add triggering and reading the iOS CI run when that workflow exists.
 
 ### Accounts
 
