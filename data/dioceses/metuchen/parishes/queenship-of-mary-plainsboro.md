@@ -1,7 +1,7 @@
 ---
 name: Queenship of Mary
 website: https://www.qomchurch.org
-bulletin_provider: other
+bulletin_provider: unsupported
 provider_id: page-pdfs https://www.qomchurch.org/about-us/bulletin
 publication: ['url:https://www.qomchurch.org/about-us/bulletin']
 group: ''
@@ -19,7 +19,6 @@ evidence:
   note: The parish site's Bulletin page (Joomla; read in the browser) lists issues newest first as 154
     Solemnity of All Saints, 153 30th Sunday October 25 2026, 152 ... down to 142 16th Sunday July 19
     2026, each linked as /about-us/bulletin/<n>-<title>/file.
-promoted: 2026-11-03
 research:
 - method: probe url, probe get, visit.py --bulletin, then a fetch() inside the browser page for the newest
     /file link

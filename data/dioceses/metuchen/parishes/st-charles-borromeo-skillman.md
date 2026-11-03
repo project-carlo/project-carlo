@@ -1,7 +1,7 @@
 ---
 name: St. Charles Borromeo
 website: http://borromeo.org
-bulletin_provider: other
+bulletin_provider: unsupported
 provider_id: page-pdfs http://borromeo.org/sermons/
 publication: ['url:https://embeds.sermoncloud.com/saint-charles-borromeo/sermons']
 group: ''
@@ -27,7 +27,6 @@ evidence:
     button.'
   note: The parish site's 'Bulletins/ Homilies' page (WordPress) is an iframe of embeds.sermoncloud.com/saint-charles-borromeo/sermons;
     the home page menu item 'Bulletins/ Homilies' goes here.
-promoted: 2026-11-03
 research:
 - method: visit.py on the embed, a network log of the page's requests, probe get on the API and probe
     pdf on the newest media.notes file; also issues.py discovermass (no bulletins listed) and probe get

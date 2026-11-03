@@ -1,7 +1,7 @@
 ---
 name: St. Stephen Protomartyr
 website: https://ststephennj.com/?page_id=17
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://ststephennj.com/?page_id=17#st-stephen-protomartyr-south-river']
 group: ''

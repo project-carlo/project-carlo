@@ -1,7 +1,7 @@
 ---
 name: Corpus Christi
 website: https://corpuschristisouthriver.org/bulletins
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://corpuschristisouthriver.org/bulletins#corpus-christi-south-river']
 group: ''

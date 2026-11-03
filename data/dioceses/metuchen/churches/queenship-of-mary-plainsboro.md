@@ -27,7 +27,6 @@ evidence:
   note: 'Page 1 of the 1 November 2026 bulletin (browser download; the host answers 403 to other clients):
     ''Queenship of Mary Church, 16 Dey Road, Plainsboro, NJ 08536''; ''Weekend Celebration Saturday 5:00pm
     Sunday 8:30am and 10:30am''; weekday Masses Monday 7:00pm, Tuesday to Saturday 8:00am.'
-promoted: 2026-11-03
 ---
 
 ## Holds Mass

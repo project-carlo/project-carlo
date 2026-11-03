@@ -26,7 +26,6 @@ evidence:
   quote: 'GPS Church location: 47 Skillman Road, Skillman, NJ 08558'
   note: 'Page 2 of the 1 November 2026 bulletin: ''Saturday Vigil: 5:00 PM; Sunday: 8:30, 10:00 and 11:30
     AM; DAILY MASS Monday ... Friday: 9:00 AM''; mailing address 376 Burnt Hill Road.'
-promoted: 2026-11-03
 ---
 
 ## Holds Mass

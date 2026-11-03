@@ -1,7 +1,7 @@
 ---
 name: St. Theodore
 website: https://sttheodorenj.org/bulletins
-bulletin_provider: other
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://sttheodorenj.org/bulletins']
 group: ''
@@ -29,7 +29,6 @@ evidence:
   note: 'The finder lists St. Theodore, 855 Route 57, Port Murray, NJ 07865, mailing P. O. Box 146, website
     http://www.sttheodorenj.com (which answered HTTP 502 on 2026-11-03), ''Administrator: Rev. Damian
     Tomiczek SDS''.'
-promoted: 2026-11-03
 research:
 - method: DuckDuckGo search (visit.py) for sponsors.bonventure.net and St. Theodore, Port Murray
   checked: '2026-11-03'

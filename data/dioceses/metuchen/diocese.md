@@ -226,6 +226,13 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-03: Owner review: the five parishes with a `fetch_gap` are now `bulletin_provider:
+  unsupported` (a published bulletin no collector reads yet), which keeps them and their
+  churches off the site. Queenship of Mary, St. Charles Borromeo and St. Theodore were `other`
+  and came out of the live CSVs; Corpus Christi and St. Stephen, South River were
+  `no_bulletin`. Coverage: directory 91/91 accounted for (84 modelled), gcatholic 123/123
+  (93/100 modelled), worship-sites 25/25 (23/23).
+
 - 2026-11-03: Reconcile (factory Run metuchen-map-1), after 29 map batches of usually 6 to 8
   roster entries (5 to 16). Coverage: directory 91/91 accounted for (87 modelled; 4 off the site
   as `no_bulletin`), gcatholic 123/123 (96/100 modelled, 23 excluded), worship-sites 25/25

@@ -26,7 +26,6 @@ evidence:
   quote: Post Office Box 146, 855 Route 57
   note: '1 November 2026 masthead (page 1): Saint Theodore Roman Catholic Church, Port Murray, New Jersey
     07865; Saturday 5:00 PM, Sunday 8:00 AM and 10:30 AM, weekdays 8:45 AM.'
-promoted: 2026-11-03
 ---
 
 ## Holds Mass
