@@ -79,9 +79,11 @@ One `attempt_meta` row per attempt (`metrics/attempt_meta.py`):
 - work units: a map job's batch entries, a seed or seed-review job's parishes, 1 for any
   other stage;
 - gaps (what couldn't be recorded), and its `source`: `live` (the ResultMessage) or
-  `transcript` (a crash or timeout, parsed from its transcript, counting messages once by
-  id from the attempt's start to its finish, so a resumed session's other attempts stay
-  out).
+  `transcript` (a crash, a timeout or a resumed session, parsed from its transcript,
+  counting messages once by id from the attempt's start to its finish, so a resumed
+  session's other attempts stay out). A resumed session's ResultMessage counts the whole
+  session, so its tokens come from the transcript, and its cost is the reported total
+  less what the session's earlier attempts recorded.
 
 Rows with source `backfill` and `approximate = 1` are attempts from before quota tracking
 (October 2026), filled in once from their transcripts by a command since removed. Their

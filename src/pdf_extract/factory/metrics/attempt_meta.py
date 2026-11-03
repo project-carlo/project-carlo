@@ -79,7 +79,8 @@ def record(ledger: Ledger, attempt_id: int, run: Any, job: Any, spec: StageSpec,
            transcript: Path | None, session: str | None, started: str,
            finished: str) -> None:
     """How the attempt ran and its tokens: from the ResultMessage, else (a crash, a
-    timeout) from its transcript. A failure is logged, never raised."""
+    timeout, or a resumed session, whose ResultMessage counts the whole session) from its
+    part of the transcript. A failure is logged, never raised."""
     try:
         _record(ledger, attempt_id, run, job, spec, worktree, account, result, transcript,
                 session, started, finished)
@@ -92,10 +93,13 @@ def _record(ledger: Ledger, attempt_id: int, run: Any, job: Any, spec: StageSpec
             transcript: Path | None, session: str | None, started: str,
             finished: str) -> None:
     info, gaps = result.info, []
-    if result.usage or result.model_usage:
+    resumed = ledger.previous_in_session(session, attempt_id)
+    if (result.usage or result.model_usage) and (resumed is None or transcript is None):
         source = "live"
         tokens = from_result(result.usage, result.model_usage, info.get("messages", 0),
                              info.get("duplicates", 0))
+        if resumed is not None:
+            gaps.append("a resumed session's totals: earlier attempts' tokens included")
     elif transcript is not None:
         source = "transcript"
         with transcript.open(encoding="utf-8") as f:
@@ -118,7 +122,7 @@ def _record(ledger: Ledger, attempt_id: int, run: Any, job: Any, spec: StageSpec
         config_hash=fingerprint(spec_text, prompt, list(spec.skills),
                                 render.context_hashes(worktree, spec)
                                 | {"dispatcher": code_commit()}),
-        resumed_from=ledger.previous_in_session(session, attempt_id),
+        resumed_from=resumed,
         work_units=work_units(job["stage"], json.loads(job["input"]),
                               ordered_batches(worktree, run["diocese"])),
         gaps=gaps + tokens.gaps,
