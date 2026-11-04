@@ -213,6 +213,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick self-hosted copies can zero-pad the id in the file name (St. Henry: 0667bulletin<MM-DD-YYYY>.pdf for account 667); strip the leading zero before pinning church-bulletin.org/<id>.
 - When visit.py hangs on a page with no output (an eCatholic homepage that never settles, while a 404 on the same host loads at once), scratch/newark-map-1/tools/quick_snap.py loads it with hard time limits and saves text, links and a screenshot.
 - A PDF on a host the probe proxy can't reach can still be read: open it with visit.py --screenshot, adding '#page=N&zoom=50' to the URL to see more of a page in Chrome's PDF viewer.
+- A Wix page can list a coat-of-arms or logo PDF before the bulletins, so page-pdfs first-listed picks the wrong file and undated _files/ugd names leave no glob: set the row unsupported with fetch_gap kind first-pdf-not-bulletin.
+- When a parish domain is lost, its Wayback copy opens in the browser (quick_snap.py or visit.py on web.archive.org/web/<year>/<url>) when the id_ API answers 429; the copy's HTML gives the eCatholic site id (files.ecatholic.com/<id>) for issues.py.
 
 
 ## Rules settled for this diocese
