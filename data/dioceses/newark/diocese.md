@@ -209,6 +209,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish can move to a new domain while the directory and GCatholic keep the old one: when a site's own bulletins are stale, read the current issue's masthead website line and the ParishesOnline org's website field (St. Joseph of the Palisades: sjpwny.org, not saintjosephpalisades.com).
 - John Patrick: one account can carry several bulletins as listings with a letter suffix (church-bulletin.org/6051O and /6051A, slugs ending -o and -a), while the bare id shows an empty page and the footer names every parish on the account. Pin the suffixed listing a site links, try other suffix letters when a shared pastor or a two-parish footer suggests a second bulletin, and read each masthead.
 - A parish can change printer without changing its site's links: when an LPi container stops while the parish still says 'take a bulletin', look for a John Patrick listing. scratch/newark-map-1/tools/jp_scan.sh lists the church-bulletin.org ids that redirect to a parish listing (Newark-area ids found so far are in 400-799 and 6000-6060); grep its output for the town or zip.
+- When a web search is needed, the Wikipedia API (en.wikipedia.org/w/api.php?action=query&list=search&srsearch=…, then prop=extracts&explaintext=1) answers through probe get and gives parish merger histories; Bing via probe get searches only the first word, and DuckDuckGo answers a bot check.
+- John Patrick self-hosted copies can zero-pad the id in the file name (St. Henry: 0667bulletin<MM-DD-YYYY>.pdf for account 667); strip the leading zero before pinning church-bulletin.org/<id>.
 
 
 ## Rules settled for this diocese
