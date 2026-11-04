@@ -199,6 +199,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - On a WordPress parish site, probe get <site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=20 lists every uploaded PDF with its date: a quick way to tell a weekly bulletin from sporadic uploads before choosing other or no_bulletin.
 - Korean parishes' WordPress MangBoard boards (/jubo/?vid=<n>) post each issue as JPEG pages in a weekly post, often a Korean and an English edition of one bulletin: one row, unsupported with fetch_gap board-post-images (page-images on the board page finds nothing).
 - Campus ministries can hold an empty John Patrick listing (Seton Hall 673, Montclair Newman 624): grep the jp scans for the campus before deciding no-bulletin, and keep the listing in the exclusion's revisit.
+- A parish site 'Designed and Hosted by John Patrick Publishing' can lapse into cgi-sys/suspendedpage.cgi (Wayback CDX shows when) and then a bare 'Index of /', while its JP listing keeps only the weekly readings: no_bulletin with research, read the last full Wayback capture for the schedule.
 
 ## Rules settled for this diocese
 
