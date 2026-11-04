@@ -216,6 +216,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Wix page can list a coat-of-arms or logo PDF before the bulletins, so page-pdfs first-listed picks the wrong file and undated _files/ugd names leave no glob: set the row unsupported with fetch_gap kind first-pdf-not-bulletin.
 - When a parish domain is lost, its Wayback copy opens in the browser (quick_snap.py or visit.py on web.archive.org/web/<year>/<url>) when the id_ API answers 429; the copy's HTML gives the eCatholic site id (files.ecatholic.com/<id>) for issues.py.
 - An LPi container that is current but whose ParishesOnline org slug can't be found (probe po guesses fail; the PO API's search endpoints ignore filters) can't be read by the parishes_online collector: record it unsupported with fetch_gap kind po-org-unknown, keep po-container in publication, and add research to find the slug.
+- John Patrick can keep a listing for a parish that posts no issues (church-bulletin.org/<id> shows only the week's readings; ?id= and the jppc.net template give the same page): record no_bulletin with research to recheck the listing, not a fetch_gap.
+- Before running jp_scan.sh, grep earlier batches' saved scans (scratch/newark-map-1/029-map/jp-400-799.tsv, jp-6000-6200.tsv) for the town or zip: a parish site can post its own copy of a John Patrick bulletin without linking the listing, and the listing has the dated issues to pin.
 
 
 ## Rules settled for this diocese
