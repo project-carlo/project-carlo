@@ -107,6 +107,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - eCatholic sites here can keep a stale bulletins/<YYYYMMDD>.pdf archive (2018-2023 in this batch) while the current bulletin is elsewhere: a Bon Venture link at the top of /bulletins, or PDFs in files.ecatholic.com/<id>/documents/<y>/<m>/ listed on a custom page (/parish-bulletins, /parish-updates). Read the /bulletins page first links before running issues.py; for documents-folder bulletins use a page-pdfs recipe on the listing page.
 - page-pdfs dates eCatholic documents-folder links only by their label, not by the URL-encoded file name (Month%20D%20YYYY.pdf), so an undated label makes it pick an older issue: check the date of the pick in fetch:check (fetch_gap kind undated-link-label).
 - Bon Venture PDFs here often have a garbled text layer or an image-only masthead page: render page 1 with render.py to read the masthead; fetch:check then reports identity unverified, which is expected.
+- ParishesOnline prints here too: an eCatholic site's bulletin page (e.g. /bulletins-1) can embed parishesonline.com/publication-page/<org slug> issues. Record po-org/lpi/po-container from probe po, not the eCatholic site id. Their pages can be image-only, so render page 1 to read the masthead.
 
 
 ## Rules settled for this diocese
