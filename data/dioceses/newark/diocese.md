@@ -197,6 +197,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - An LPi WeConnect site that answers only 'Unfortunately, this site is temporarily unavailable.' has lapsed. The Wayback CDX (probe get http://web.archive.org/cdx/search/cdx?url=<host>&matchType=prefix&fl=timestamp,statuscode,length) answers when the availability API gives 429; ~930-byte captures date the lapse, and the last larger capture (id_ URL) shows the old site.
 - On a WordPress parish site, probe get <site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=20 lists every uploaded PDF with its date: a quick way to tell a weekly bulletin from sporadic uploads before choosing other or no_bulletin.
+- Korean parishes' WordPress MangBoard boards (/jubo/?vid=<n>) post each issue as JPEG pages in a weekly post, often a Korean and an English edition of one bulletin: one row, unsupported with fetch_gap board-post-images (page-images on the board page finds nothing).
+- Campus ministries can hold an empty John Patrick listing (Seton Hall 673, Montclair Newman 624): grep the jp scans for the campus before deciding no-bulletin, and keep the listing in the exclusion's revisit.
 
 ## Rules settled for this diocese
 
