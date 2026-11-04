@@ -208,6 +208,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - On self-hosted pages, page-pdfs can pick an old file whose link text carries a current date (Squarespace /s/ links labelled '2026' that point to 2025 files): filter on the current file-name prefix, and make sure the picked file's name gives the issue date.
 - A directory entry in no other list can be a parish's office across a town line (Newark/Belleville): grep the jp scans by zip, read the listing's website link and masthead, and run diocese search on the name before creating a row.
 - catholicchurch.directory listings carry old parish website domains that no roster has (olgc-ic.org); worth checking, with Wayback CDX, when a parish has no website.
+- A parish can send its own bulletin PDF only as a link inside its Constant Contact newsletter (files.constantcontact.com/<acct>/<uuid>.pdf): follow the conta.cc links on its site to the newest email, and date the channel by the newest newsletter listed.
 
 ## Rules settled for this diocese
 
