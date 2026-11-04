@@ -110,6 +110,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - ParishesOnline prints here too: an eCatholic site's bulletin page (e.g. /bulletins-1) can embed parishesonline.com/publication-page/<org slug> issues. Record po-org/lpi/po-container from probe po, not the eCatholic site id. Their pages can be image-only, so render page 1 to read the masthead.
 - John Patrick Publishing here: an eCatholic /bulletins page links jppc.net/onlinebulletins/<customer>template.pdf, which redirects (HTML, not a PDF) to a church-bulletin.org/<parish-slug> listing of bulletin/<slug>/<YYYY-MM-DD>.pdf issues. Record url:<listing> and use page-pdfs on the church-bulletin.org listing; fetch:check dates the pick from the file name.
 - A Bon Venture ad footer (e.g. '150C (PK) - <parish> ... Bon Venture Services') also appears in bulletins the parish posts on eCatholic; it doesn't mean Bon Venture hosts the issue. Record the host the site's bulletin page links (eCatholic bulletins/ files or a sponsors.bonventure.net/?page=<n> link).
+- page-pdfs on a monthly newsletter listing (labels like 'November 2026') picks the right issue as first-listed, but fetch:check reports date and freshness unknown: check the pick by hand.
 
 
 ## Rules settled for this diocese
