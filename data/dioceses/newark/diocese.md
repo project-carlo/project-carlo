@@ -195,6 +195,9 @@ sample, the map batches and other dioceses' notes. Tools named here are in
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- An LPi WeConnect site that answers only 'Unfortunately, this site is temporarily unavailable.' has lapsed. The Wayback CDX (probe get http://web.archive.org/cdx/search/cdx?url=<host>&matchType=prefix&fl=timestamp,statuscode,length) answers when the availability API gives 429; ~930-byte captures date the lapse, and the last larger capture (id_ URL) shows the old site.
+- On a WordPress parish site, probe get <site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=20 lists every uploaded PDF with its date: a quick way to tell a weekly bulletin from sporadic uploads before choosing other or no_bulletin.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them. None yet; the survey's
