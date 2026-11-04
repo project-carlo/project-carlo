@@ -203,6 +203,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - ParishesOnline org slugs for NJ parishes can drop the zip's leading zero (our-lady-of-fatima-church-7105, not -07105): try both forms before giving up on probe po.
 - DuckDuckGo answers probe get with a bot check, but its html endpoint (https://html.duckduckgo.com/html/?q=...) opened with parish-site-access visit.py --text returns results: it found a chapel's own site and a parish workbook that no roster linked.
 - A Wix site whose whole content is one embedded filesusr.com/html/<id>.html app (paths like /bulletins 404): probe get that embed URL; its HTML holds the schedule and bulletin links (here Drive folders, read with google_drive and provider_id 'drive-folder <folder URL>').
+- Wix sites that replace one homepage 'Download Bulletin' _files/ugd PDF each issue: the Wayback CDX for <host>/_files/ugd/ (matchType=prefix) shows how many distinct uploads there have been, which tells a lagging weekly bulletin from an abandoned one.
 
 ## Rules settled for this diocese
 
