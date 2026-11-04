@@ -204,6 +204,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - DuckDuckGo answers probe get with a bot check, but its html endpoint (https://html.duckduckgo.com/html/?q=...) opened with parish-site-access visit.py --text returns results: it found a chapel's own site and a parish workbook that no roster linked.
 - A Wix site whose whole content is one embedded filesusr.com/html/<id>.html app (paths like /bulletins 404): probe get that embed URL; its HTML holds the schedule and bulletin links (here Drive folders, read with google_drive and provider_id 'drive-folder <folder URL>').
 - Wix sites that replace one homepage 'Download Bulletin' _files/ugd PDF each issue: the Wayback CDX for <host>/_files/ugd/ (matchType=prefix) shows how many distinct uploads there have been, which tells a lagging weekly bulletin from an abandoned one.
+- A bulletin page whose 'This Week's Bulletin' links a Canva design (canva.com/design/<id>/.../view) is updated in place each week: visit.py --text on the view URL reads page 1 and appending #N reads page N. fetch can't read it, so record unsupported with fetch_gap canva-design-viewer and publication url:https://www.canva.com/design/<id>.
+- On self-hosted pages, page-pdfs can pick an old file whose link text carries a current date (Squarespace /s/ links labelled '2026' that point to 2025 files): filter on the current file-name prefix, and make sure the picked file's name gives the issue date.
 
 ## Rules settled for this diocese
 
