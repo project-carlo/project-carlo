@@ -221,6 +221,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Self-hosted Weebly bulletins (uploads/<n>/<n>/<n>/<n>/<name>.pdf on the homepage) can sit after a monthly ministers' schedule PDF and have hand-typed names with no date: page-pdfs on the homepage with a filename glob on what the issue names share (e.g. filename=*_-_*.pdf) picks the issue, with freshness unknown; add research to recheck the glob.
 - A WordPress parish site whose bulletin archive lists one post per issue (each post embedding that week's PDF, none linked from the list) reads with the dated-post collector: provider_id 'dated-post <archive URL>' (St. Mary, Nutley).
 - Self-hosted bulletins with undated hash file names (/uploads/<32 hex>.pdf) listed after another PDF on the same page can be isolated with a filename glob of 32 '?' plus .pdf on page-pdfs; freshness reads unknown.
+- A Joomla site whose bulletin page links issues only via weblink.go redirects (index.php/component/weblinks/weblink/<n>-<slug>?…&task=weblink.go) defeats page-pdfs, which picks another PDF on the page: probe get one link to reach the PDF to read, and record the row unsupported with fetch_gap kind joomla-weblink-redirect.
+- Institute of Christ the King oratories post their own bulletins on institute-christ-king.org/bulletins-<city> (dated /images/<city>/bulletins/<yyyy>/<MMDDYYYY>.pdf, newest first): provider other with page-pdfs on that page, website <city>-home, as in Pittsburgh.
 
 
 ## Rules settled for this diocese
