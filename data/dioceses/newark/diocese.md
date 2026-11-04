@@ -200,6 +200,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Korean parishes' WordPress MangBoard boards (/jubo/?vid=<n>) post each issue as JPEG pages in a weekly post, often a Korean and an English edition of one bulletin: one row, unsupported with fetch_gap board-post-images (page-images on the board page finds nothing).
 - Campus ministries can hold an empty John Patrick listing (Seton Hall 673, Montclair Newman 624): grep the jp scans for the campus before deciding no-bulletin, and keep the listing in the exclusion's revisit.
 - A parish site 'Designed and Hosted by John Patrick Publishing' can lapse into cgi-sys/suspendedpage.cgi (Wayback CDX shows when) and then a bare 'Index of /', while its JP listing keeps only the weekly readings: no_bulletin with research, read the last full Wayback capture for the schedule.
+- ParishesOnline org slugs for NJ parishes can drop the zip's leading zero (our-lady-of-fatima-church-7105, not -07105): try both forms before giving up on probe po.
+- DuckDuckGo answers probe get with a bot check, but its html endpoint (https://html.duckduckgo.com/html/?q=...) opened with parish-site-access visit.py --text returns results: it found a chapel's own site and a parish workbook that no roster linked.
 
 ## Rules settled for this diocese
 
