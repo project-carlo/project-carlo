@@ -218,6 +218,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An LPi container that is current but whose ParishesOnline org slug can't be found (probe po guesses fail; the PO API's search endpoints ignore filters) can't be read by the parishes_online collector: record it unsupported with fetch_gap kind po-org-unknown, keep po-container in publication, and add research to find the slug.
 - John Patrick can keep a listing for a parish that posts no issues (church-bulletin.org/<id> shows only the week's readings; ?id= and the jppc.net template give the same page): record no_bulletin with research to recheck the listing, not a fetch_gap.
 - Before running jp_scan.sh, grep earlier batches' saved scans (scratch/newark-map-1/029-map/jp-400-799.tsv, jp-6000-6200.tsv) for the town or zip: a parish site can post its own copy of a John Patrick bulletin without linking the listing, and the listing has the dated issues to pin.
+- Self-hosted Weebly bulletins (uploads/<n>/<n>/<n>/<n>/<name>.pdf on the homepage) can sit after a monthly ministers' schedule PDF and have hand-typed names with no date: page-pdfs on the homepage with a filename glob on what the issue names share (e.g. filename=*_-_*.pdf) picks the issue, with freshness unknown; add research to recheck the glob.
 
 
 ## Rules settled for this diocese
