@@ -192,12 +192,14 @@ cap is not stopped.
 
 The job goes to the eligible account whose weekly window resets soonest, and stays on
 it, since its session can only be resumed there. With none eligible, it waits for the
-soonest one. A failing usage check (an expired login that `claude auth status` can't
+soonest one, looking again 15 seconds after a window's reset (the endpoint's reset times
+move by a second or so). A failing usage check (an expired login that `claude auth status` can't
 refresh, say) pauses the factory: fix it, then `pnpm factory resume`.
 
 Every reading, the usage check's and the quota readings', goes through one poller
 (`usage.Poller`). It asks an account's endpoint at most once per
 `usage_min_interval_seconds` (60) and hands a reading that recent to whoever asks next,
+unless one of its windows has reset since,
 so a tick's periodic, settled and select readings, or one attempt's after reading and the
 next one's before, are one request. A 429 cools down only the account it came from, for
 as long as its `Retry-After` says (at least the interval), or `usage_cooldown_minutes`

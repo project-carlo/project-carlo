@@ -38,6 +38,9 @@ if TYPE_CHECKING:
 USAGE_URL = "https://api.anthropic.com/api/oauth/usage"
 WEEK = timedelta(days=7)
 FIVE_HOURS = timedelta(hours=5)
+# The endpoint's reset times move by a second or so between readings. A job waiting for a
+# reset looks again this long after it, so the reading it takes then is past the reset.
+RESET_GRACE = timedelta(seconds=15)
 
 
 class UsageError(RuntimeError):
@@ -75,6 +78,10 @@ class Usage:
     raw: dict[str, Any] | None = field(default=None, compare=False)
     # When it was read (set by the Poller), so a shared reading keeps its own time.
     at: datetime | None = field(default=None, compare=False)
+
+    def reset_by(self, at: datetime) -> bool:
+        """Whether a window has reset since this reading: its numbers no longer hold."""
+        return min(self.five_hour_resets, self.seven_day_resets) <= at
 
 
 @dataclass(frozen=True)
@@ -243,7 +250,8 @@ class Poller:
     def read(self, account: Account, *, since: datetime | None = None,
              wait: bool = True) -> Usage:
         """A reading of `account` taken at or after `since` (by default, one interval ago):
-        the last one if it is recent enough, else a new request. A request within an
+        the last one if it is recent enough and no window has reset since, else a new
+        request. A request within an
         interval of the last one waits the rest of it, or with `wait` False raises
         TooSoon. An account cooling down raises Cooldown without asking."""
         with self._lock:
@@ -255,7 +263,8 @@ class Poller:
             at = self.clock()
             since = at - self.interval if since is None else since
             last = self._last.get(account.name)
-            if last is not None and last.at is not None and last.at >= since:
+            if (last is not None and last.at is not None and last.at >= since
+                    and not last.reset_by(at)):
                 return last
             asked = self._asked.get(account.name)
             if asked is not None and at - asked < self.interval:
@@ -322,12 +331,13 @@ def standing(account: Account, usage: Usage, config: Config, at: datetime,
     headroom = min(five_below - usage.five_hour, week_below - usage.seven_day)
     waits = [at]
     if not five_ok:
-        waits.append(usage.five_hour_resets)
+        waits.append(usage.five_hour_resets + RESET_GRACE)
     if not week_ok:
         # The paced cap rises each day; past the full cap, only the reset helps.
         next_day = week_start + timedelta(days=days_in + 1)
         full = usage.seven_day >= _threshold(config.weekly_cap, need.weekly)
-        waits.append(usage.seven_day_resets if full or days_in >= 6 else next_day)
+        waits.append(usage.seven_day_resets + RESET_GRACE if full or days_in >= 6
+                     else next_day)
     return Standing(account, usage, config.five_hour_cap, weekly_allowed, five_ok and week_ok,
                     headroom, max(waits))
 

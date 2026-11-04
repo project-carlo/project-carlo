@@ -325,6 +325,9 @@ class StubAction:
     rate_limits: list[dict[str, Any]] = field(default_factory=list)
     usage: dict[str, Any] | None = None
     model_usage: dict[str, Any] | None = None
+    cost_usd: float = 0.0  # total_cost_usd: in a resumed session, the session's so far
+    # Lines added to the session's transcript, one file per stub session.
+    transcript: list[str] = field(default_factory=list)
     # What a sandbox would have refused to bring back (workspace.py).
     refused: list[str] = field(default_factory=list)
 
@@ -362,9 +365,16 @@ class StubWorker:
             path = request.worktree / "scratch" / request.run_id / request.job_name / "handoff.json"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(action.handoff), encoding="utf-8")
-        return WorkerResult(action.outcome, session_id=f"stub-{request.job_id}",
+        session, transcript = f"stub-{request.job_id}", None
+        if action.transcript:
+            transcript = request.worktree.parent / "stub-sessions" / f"{session}.jsonl"
+            transcript.parent.mkdir(parents=True, exist_ok=True)
+            with transcript.open("a", encoding="utf-8") as f:
+                f.writelines(line + "\n" for line in action.transcript)
+        return WorkerResult(action.outcome, session_id=session, cost_usd=action.cost_usd,
                             resets_at=action.resets_at, usage=action.usage,
-                            model_usage=action.model_usage, refused=list(action.refused))
+                            model_usage=action.model_usage, transcript=transcript,
+                            refused=list(action.refused))
 
 
 def scenario_script(path: Path) -> Script:
