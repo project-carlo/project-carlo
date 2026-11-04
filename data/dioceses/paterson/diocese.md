@@ -104,6 +104,9 @@ From the survey's sample (2026-11-04): `probe url` on all 116 finder websites, a
 
 Decisions that apply to more than one record, and who made them.
 
+- Eastern Catholic churches (Ruthenian: Eparchy of Passaic; Ukrainian: Archeparchy of Philadelphia; Melkite: Eparchy of Newton; Armenian: Eparchy of Our Lady of Nareg) and St. George, Paterson, now the Syro-Malabar parish (Eparchy of Chicago), are excluded as other-jurisdiction. (accepted by survey-review, 002-survey-review, 2026-11-04)
+- A merged parish whose bulletin still lists Mass at both former parish churches is one parish row with both churches (Padre Pio: St. Bonaventure and Our Lady of Pompei). (accepted by survey-review, 002-survey-review, 2026-11-04)
+
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
