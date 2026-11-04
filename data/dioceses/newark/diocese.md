@@ -202,6 +202,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish site 'Designed and Hosted by John Patrick Publishing' can lapse into cgi-sys/suspendedpage.cgi (Wayback CDX shows when) and then a bare 'Index of /', while its JP listing keeps only the weekly readings: no_bulletin with research, read the last full Wayback capture for the schedule.
 - ParishesOnline org slugs for NJ parishes can drop the zip's leading zero (our-lady-of-fatima-church-7105, not -07105): try both forms before giving up on probe po.
 - DuckDuckGo answers probe get with a bot check, but its html endpoint (https://html.duckduckgo.com/html/?q=...) opened with parish-site-access visit.py --text returns results: it found a chapel's own site and a parish workbook that no roster linked.
+- A Wix site whose whole content is one embedded filesusr.com/html/<id>.html app (paths like /bulletins 404): probe get that embed URL; its HTML holds the schedule and bulletin links (here Drive folders, read with google_drive and provider_id 'drive-folder <folder URL>').
 
 ## Rules settled for this diocese
 
