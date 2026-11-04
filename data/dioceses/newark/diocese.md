@@ -219,6 +219,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick can keep a listing for a parish that posts no issues (church-bulletin.org/<id> shows only the week's readings; ?id= and the jppc.net template give the same page): record no_bulletin with research to recheck the listing, not a fetch_gap.
 - Before running jp_scan.sh, grep earlier batches' saved scans (scratch/newark-map-1/029-map/jp-400-799.tsv, jp-6000-6200.tsv) for the town or zip: a parish site can post its own copy of a John Patrick bulletin without linking the listing, and the listing has the dated issues to pin.
 - Self-hosted Weebly bulletins (uploads/<n>/<n>/<n>/<n>/<name>.pdf on the homepage) can sit after a monthly ministers' schedule PDF and have hand-typed names with no date: page-pdfs on the homepage with a filename glob on what the issue names share (e.g. filename=*_-_*.pdf) picks the issue, with freshness unknown; add research to recheck the glob.
+- A WordPress parish site whose bulletin archive lists one post per issue (each post embedding that week's PDF, none linked from the list) reads with the dated-post collector: provider_id 'dated-post <archive URL>' (St. Mary, Nutley).
+- Self-hosted bulletins with undated hash file names (/uploads/<32 hex>.pdf) listed after another PDF on the same page can be isolated with a filename glob of 32 '?' plus .pdf on page-pdfs; freshness reads unknown.
 
 
 ## Rules settled for this diocese
