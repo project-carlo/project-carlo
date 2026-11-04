@@ -211,6 +211,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish can change printer without changing its site's links: when an LPi container stops while the parish still says 'take a bulletin', look for a John Patrick listing. scratch/newark-map-1/tools/jp_scan.sh lists the church-bulletin.org ids that redirect to a parish listing (Newark-area ids found so far are in 400-799 and 6000-6060); grep its output for the town or zip.
 - When a web search is needed, the Wikipedia API (en.wikipedia.org/w/api.php?action=query&list=search&srsearch=…, then prop=extracts&explaintext=1) answers through probe get and gives parish merger histories; Bing via probe get searches only the first word, and DuckDuckGo answers a bot check.
 - John Patrick self-hosted copies can zero-pad the id in the file name (St. Henry: 0667bulletin<MM-DD-YYYY>.pdf for account 667); strip the leading zero before pinning church-bulletin.org/<id>.
+- When visit.py hangs on a page with no output (an eCatholic homepage that never settles, while a 404 on the same host loads at once), scratch/newark-map-1/tools/quick_snap.py loads it with hard time limits and saves text, links and a screenshot.
+- A PDF on a host the probe proxy can't reach can still be read: open it with visit.py --screenshot, adding '#page=N&zoom=50' to the URL to see more of a page in Chrome's PDF viewer.
 
 
 ## Rules settled for this diocese
