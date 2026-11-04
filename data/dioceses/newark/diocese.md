@@ -206,6 +206,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Wix sites that replace one homepage 'Download Bulletin' _files/ugd PDF each issue: the Wayback CDX for <host>/_files/ugd/ (matchType=prefix) shows how many distinct uploads there have been, which tells a lagging weekly bulletin from an abandoned one.
 - A bulletin page whose 'This Week's Bulletin' links a Canva design (canva.com/design/<id>/.../view) is updated in place each week: visit.py --text on the view URL reads page 1 and appending #N reads page N. fetch can't read it, so record unsupported with fetch_gap canva-design-viewer and publication url:https://www.canva.com/design/<id>.
 - On self-hosted pages, page-pdfs can pick an old file whose link text carries a current date (Squarespace /s/ links labelled '2026' that point to 2025 files): filter on the current file-name prefix, and make sure the picked file's name gives the issue date.
+- A directory entry in no other list can be a parish's office across a town line (Newark/Belleville): grep the jp scans by zip, read the listing's website link and masthead, and run diocese search on the name before creating a row.
+- catholicchurch.directory listings carry old parish website domains that no roster has (olgc-ic.org); worth checking, with Wayback CDX, when a parish has no website.
 
 ## Rules settled for this diocese
 
