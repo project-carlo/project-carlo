@@ -215,6 +215,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A PDF on a host the probe proxy can't reach can still be read: open it with visit.py --screenshot, adding '#page=N&zoom=50' to the URL to see more of a page in Chrome's PDF viewer.
 - A Wix page can list a coat-of-arms or logo PDF before the bulletins, so page-pdfs first-listed picks the wrong file and undated _files/ugd names leave no glob: set the row unsupported with fetch_gap kind first-pdf-not-bulletin.
 - When a parish domain is lost, its Wayback copy opens in the browser (quick_snap.py or visit.py on web.archive.org/web/<year>/<url>) when the id_ API answers 429; the copy's HTML gives the eCatholic site id (files.ecatholic.com/<id>) for issues.py.
+- An LPi container that is current but whose ParishesOnline org slug can't be found (probe po guesses fail; the PO API's search endpoints ignore filters) can't be read by the parishes_online collector: record it unsupported with fetch_gap kind po-org-unknown, keep po-container in publication, and add research to find the slug.
 
 
 ## Rules settled for this diocese
