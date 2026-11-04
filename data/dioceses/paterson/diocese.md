@@ -108,6 +108,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - page-pdfs dates eCatholic documents-folder links only by their label, not by the URL-encoded file name (Month%20D%20YYYY.pdf), so an undated label makes it pick an older issue: check the date of the pick in fetch:check (fetch_gap kind undated-link-label).
 - Bon Venture PDFs here often have a garbled text layer or an image-only masthead page: render page 1 with render.py to read the masthead; fetch:check then reports identity unverified, which is expected.
 - ParishesOnline prints here too: an eCatholic site's bulletin page (e.g. /bulletins-1) can embed parishesonline.com/publication-page/<org slug> issues. Record po-org/lpi/po-container from probe po, not the eCatholic site id. Their pages can be image-only, so render page 1 to read the masthead.
+- John Patrick Publishing here: an eCatholic /bulletins page links jppc.net/onlinebulletins/<customer>template.pdf, which redirects (HTML, not a PDF) to a church-bulletin.org/<parish-slug> listing of bulletin/<slug>/<YYYY-MM-DD>.pdf issues. Record url:<listing> and use page-pdfs on the church-bulletin.org listing; fetch:check dates the pick from the file name.
 
 
 ## Rules settled for this diocese
