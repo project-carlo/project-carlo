@@ -85,23 +85,42 @@ page links, not the printer.
 
 - **eCatholic hosts nearly every parish site,** behind Cloudflare: 95 of 116 sites answer
   `probe url` with 403; `visit.py` loads them. The finder pin id is usually the site id.
-  - **Read the `/bulletins` page's first links before running `issues.py`.** The
-    `files.ecatholic.com/<site id>/bulletins/<YYYYMMDD>.pdf` archive (`issues.py ecatholic`,
-    no Cloudflare) can be stale (2018–2023 in one batch) while the current bulletin is a Bon
-    Venture link at the top of `/bulletins`, an embedded ParishesOnline publication, a JPP
-    template link, or PDFs under `files.ecatholic.com/<id>/documents/<y>/<m>/` listed on a
-    custom page (`/parish-bulletins`, `/parish-updates`). Some sites post no Sunday-dated
-    file at all (St. Brendan & St. George 11777 found nothing for 25 Oct–8 Nov): read the
-    real file names.
+  - **visit.py faults:** a Cloudflare "502: Bad gateway" (HTTP5XX) is transient; retry
+    minutes later. visit.py can also hang with no output (past 500 s) on a home page while
+    the site's `/bulletins` loads at once: visit the bulletin page URL directly, not
+    `--follow` from home.
+  - **Read the site's menu and the `/bulletins` page's first links before running
+    `issues.py`.** The `files.ecatholic.com/<site id>/bulletins/<YYYYMMDD>.pdf` archive
+    (`issues.py ecatholic`, no Cloudflare) can be stale (2018–2023 in one batch) while the
+    current bulletin is a Bon Venture link at the top of `/bulletins`, an embedded
+    ParishesOnline publication, a JPP template link, or PDFs under
+    `files.ecatholic.com/<id>/documents/<y>/<m>/` listed on a custom page
+    (`/parish-bulletins`, `/parish-updates`). A page titled "Bulletins (up to 2023)" is a
+    frozen archive; the top-menu "Bulletins" item may point to a Bon Venture sponsor page
+    instead, or there may be no `/bulletins` page at all (then `--follow /bulletins` fails:
+    read `--links`). Some sites post no Sunday-dated file: read the real file names.
+  - **An archive file never posted answers 403, not 404.** When `/bulletins` stops weeks
+    ago, `probe get` on the next Sundays' names confirms the parish hasn't posted.
+  - **Empty `/bulletins`** (only "Bulletin" and "Archive" headings, no links): the parish
+    posts nothing there. Confirm with `issues.py` (Sunday, `--day sat`; 403 = not posted)
+    and `probe po <name>-church-<zip>` (an org can exist with no publications; its ids are
+    the ones to use if issues appear), then record no_bulletin with a revisit.
+  - **One bulletin per language** can be posted each week as separate dated files (one
+    parish: Friday English, Saturday Polish, Sunday Spanish): run `issues.py` with `--day
+    fri` and `--day sat` too, and read each file's language before picking a recipe.
+  - **A parish can post on two of its own site ids,** and move between them (and back-fill
+    one): compare the `?t=` upload stamps on each site's `/bulletins` links to see which is
+    posting now, record every site id carrying issues in publication, and set a revisit.
   - **Documents-folder bulletins:** use a page-pdfs recipe on the listing page. It dates links
     only by their label, not the URL-encoded file name (`Month%20D%20YYYY.pdf`), so an
     undated label makes it pick an older issue (fetch_gap `undated-link-label`): check the
     pick's date. On a monthly newsletter listing ("November 2026") the first-listed pick is
     right but fetch:check reports date and freshness unknown: check by hand.
-  - **Garbled text layers:** some issues' text is shifted by 29 code points (`0$66(6` for
-    MASSES, digits dropped) or is broken font encoding (Padre Pio Parish, 1 November):
-    `probe pdf` can't give Mass times, so render page 1 with `render.py`; fetch:check then
-    reports identity unverified, which is expected.
+  - **No usable text layer:** some issues are scanned images (no extractable text), some
+    shifted by 29 code points (`0$66(6` for MASSES, digits dropped), some broken font
+    encoding. `probe pdf` can't give Mass times: render page 1 with `render.py`;
+    fetch:check's identity unverified is then expected. The same holds for Bon Venture,
+    LPi and John Patrick PDFs below.
   - **One-off covers:** a cover with a non-Sunday date (a pastor's birthday) gives a
     fetch:check issue-date conflict; check page 2 and the previous issue's page 1 before
     calling the pick stale.
@@ -110,15 +129,14 @@ page links, not the printer.
 - **Bon Venture** (`sponsors.bonventure.net/?page=<n>`, use `http://`; see Scranton and
   Allentown). Its ad footer ("150C (PK) - <parish> ... Bon Venture Services") also appears in
   issues the parish posts as eCatholic `bulletins/` files; that doesn't make Bon Venture the
-  host. Its PDFs often have a garbled text layer or an image-only masthead page: render page 1
-  (identity unverified is expected). Seasonal covers (All Saints/All Souls) replace the
-  masthead on page 1, on eCatholic-hosted copies too: read address and Mass times from the
-  previous week's page 1 or the schedule on page 2.
+  host. The footer code (`021C (JA)`) doesn't map to a `?page=<n>` id, and bonventure.net has
+  no parish list or search: a sponsor page is found only where a site links it. Seasonal
+  covers (All Saints/All Souls) replace the masthead on page 1, on eCatholic-hosted copies
+  too: read address and Mass times from the previous week's page 1 or the schedule on page 2.
 - **LPi / ParishesOnline:** an eCatholic bulletin page (e.g. `/bulletins-1`) can embed
   `parishesonline.com/publication-page/<org slug>`; record po-org/lpi/po-container from
-  `probe po`, not the eCatholic site id, and render page 1 (pages can be image-only).
-  LPi copies carry an ad footer "<parish>, <town>, NJ 04-NNNN" (or "<parish> | 03-NNNN"),
-  which gives the container.
+  `probe po`, not the eCatholic site id. LPi copies carry an ad footer "<parish>, <town>,
+  NJ 04-NNNN" (or "<parish> | 03-NNNN"), which gives the container.
   - **Copies on a parish site** (eCatholic `bulletins/`, Squarespace `/s/<YYYYMMDD>B.pdf`):
     try `probe po` on `<name>-church-<zip>` for the org and record parishes_online, not the
     copies. If no org slug is found, keep provider ecatholic and record po-container as a
@@ -128,7 +146,13 @@ page links, not the printer.
   `jppc.net/onlinebulletins/<customer>template.pdf`, which redirects (HTML, not a PDF) to a
   `church-bulletin.org/<parish-slug>` listing of `bulletin/<slug>/<YYYY-MM-DD>.pdf` issues.
   Record `url:<listing>` and use page-pdfs on it; fetch:check dates the pick from the file
-  name.
+  name. Where the site links only eCatholic copies, the customer number in the footer ("6059
+  <parish>, Paterson, NJ John Patrick Publishing") opens the listing via
+  `https://church-bulletin.org/?id=<n>`; a guessed slug returns a generic 200 page, not 404.
+- **WordPress parish sites** can post one `/bulletin/<month>-<day>-<year>/` post per issue
+  with the PDF inside: fetch's dated-post recipe on the listing page picks the current
+  issue. `/wp-json/wp/v2/media?mime_type=application/pdf` lists every uploaded issue with
+  its upload date, which shows how often the parish posts.
 - **A fixed Dropbox file** (`dropbox.com/s/<id>/Bulletin.pdf?dl=0`, seen on a Wix site): page-pdfs
   gets Dropbox's HTML preview (not_pdf). Pin `redirected-pdf <same URL>?dl=1`; fetch:check
   then reports date and freshness unknown, so check the masthead date by hand.
@@ -141,24 +165,6 @@ page links, not the printer.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- One parish can have two finder pins when two domains serve the same eCatholic site (scobp.org and stcatherineofbologna.org both load site 33389): the pin with no address carries the site id. Link both to one church.
-- When a Nominatim name search finds no church, a Nominatim reverse lookup (zoom=18) at the GCatholic Plus Code coordinates often returns the named place_of_worship node or way; Overpass via probe get failed here.
-- A second finder pin with only a P.O. Box address and an old schedule in its notes (Fatima directory:5707) is a legacy entry for the same parish, and its pin is not the church (1.45 km off there): link it to the one church and take coordinates from the Plus Code.
-- Some eCatholic parishes here post whole issues as scanned images (sites 6889, 11776): probe pdf reports no extractable text, so render page 1 with render.py for masthead and Mass times; fetch:check's identity unverified is then expected.
-- visit.py can get a transient Cloudflare '502: Bad gateway' (verdict HTTP5XX) from an eCatholic site; a retry minutes later loads it (stjudehamburg.org, 2026-11-04).
-- files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf answers 403 (not 404) for an issue never posted: when /bulletins stops weeks ago, probe get on the next Sundays' file names confirms the parish simply hasn't posted (stale archive, not a fetch fault).
-- An eCatholic site's 'Bulletins' menu item can link straight to sponsors.bonventure.net/?page=<n> with no /bulletins page: visit.py --follow /bulletins then fails, so read its --links for the Bon Venture page.
-- A parish can move its bulletin between its own eCatholic site ids (Our Lady of Consolation: 11364 to Jan 2026, 700 to Nov 2026, then all 2026 issues back-filled onto 11364): compare the ?t= upload stamps on each site's /bulletins links to see which site is posting now, record every site id carrying the issues in publication, and set a revisit.
-- John Patrick church-bulletin.org issues can be image-only (St. Paul Prospect Park, JPPC 6012): probe pdf finds no text, so render page 1 for masthead and Mass times; fetch:check dates the pick from the file name but reports identity unverified.
-- visit.py can hang with no output (past 500 s) on an eCatholic site's home page while the same site's /bulletins page loads at once (stgerardmajella.org, stgerardschool.org, 2026-11-04): visit the bulletin page URL directly rather than --follow from the home page.
-- An eCatholic /bulletins page that shows only the 'Bulletin' and 'Archive' headings, with no file links, means the parish posts nothing there; confirm with issues.py (Sunday and --day sat names, 403 = not posted) and record no_bulletin with a revisit (four Paterson parishes so far).
-- An eCatholic parish can post one bulletin per language each week as separate dated files (St. Stephen Paterson 33773: Friday-dated English, Saturday-dated Polish, Sunday-dated Spanish): the Sunday file isn't the English edition, so read each file's language before picking a recipe, and run issues.py with --day fri and --day sat as well.
-- The John Patrick customer number in a bulletin's footer ('6059 Our Lady of Lourdes, Paterson, NJ John Patrick Publishing') opens its church-bulletin.org listing via https://church-bulletin.org/?id=<n> even when the parish site links only eCatholic copies. Guessed church-bulletin.org slugs return a generic 200 page, not a 404.
-- Before recording no_bulletin for an eCatholic parish with an empty /bulletins page, run probe po <name>-church-<zip>: a ParishesOnline org can exist with no publications (Blessed Sacrament Paterson). It confirms nothing is published there, and its ids are the ones to use if issues appear.
-- An eCatholic /bulletins page titled 'Bulletins (up to 2023)' is a frozen archive: the site's top-menu 'Bulletins' item can point to a Bon Venture sponsor page instead (St. Brendan & St. George, 11777), so read the menu links, not just the page's file list.
-- Bon Venture codes in the ad footer ('021C (JA) - St. John Kanty', '139B (JR) - St. Philip') don't map to sponsors.bonventure.net ?page=<n> ids, and bonventure.net has no parish list or search: the sponsor page can only be found where a site links it.
-- WordPress parish sites here can post one /bulletin/<month>-<day>-<year>/ post per issue with the PDF inside (stphilip.org): fetch's dated-post recipe on the listing page picks the current issue; a WordPress /wp-json/wp/v2/media?mime_type=application/pdf query lists every uploaded issue with its upload date, which shows how often a parish posts.
-
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
@@ -166,6 +172,7 @@ Decisions that apply to more than one record, and who made them.
 - Eastern Catholic churches (Ruthenian: Eparchy of Passaic; Ukrainian: Archeparchy of Philadelphia; Melkite: Eparchy of Newton; Armenian: Eparchy of Our Lady of Nareg) and St. George, Paterson, now the Syro-Malabar parish (Eparchy of Chicago), are excluded as other-jurisdiction. (accepted by survey-review, 002-survey-review, 2026-11-04)
 - A merged parish whose bulletin still lists Mass at both former parish churches is one parish row with both churches (Padre Pio: St. Bonaventure and Our Lady of Pompei). (accepted by survey-review, 002-survey-review, 2026-11-04)
 - Church addresses and pins: the finder's and GCatholic's address can be the parish office, and a finder pin the office or a street geocode (one 2.7 km off). Take the church's address from the bulletin masthead, and its location from the OSM building or the GCatholic Plus Code once OSM confirms it. (map batches `randolph-succasunna` and `mount-olive-netcong`, 2026-11-04)
+- Two finder pins for one parish are linked to one church: a pin with no address beside one with an address (two domains loading the same eCatholic site; the addressless pin carries the site id), or a pin with only a P.O. Box and an old schedule in its notes (a legacy entry, whose pin is not the church; take coordinates from the Plus Code). Where a Nominatim name search finds no church, a reverse lookup (zoom=18) at the Plus Code coordinates often returns the place_of_worship; Overpass via `probe get` failed. (map batches `northern-passaic` and `west-milford-vernon`, 2026-11-04)
 
 ## Log
 
