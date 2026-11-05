@@ -209,6 +209,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - GoDaddy Website Builder sites (img1.wsimg.com/blobby/... PDFs named 'November 1, 2026.pdf') can repost an LPi bulletin: grep the last page for the '<Parish>, <Town>, NJ 03-xxxx' footer and record the ParishesOnline org, not the copies.
 - A monastery or convent chapel with public Mass but no bulletin (the Rosary Shrine in Summit) becomes a church row under its own no_bulletin parish row, so it stays in the records while promote leaves it off the site.
 - pnpm diocese probe get --out resolves a relative path from the worktree root, not the shell's directory: always pass an absolute path into your scratch folder.
+- A John Patrick listing page (church-bulletin.org/<id>) shows the parish's website as its 'Visit Parish Website' link. When that domain and GCatholic's are dead and the directory gives none, use the listing as the row's website with page-pdfs on it.
 
 ## Rules settled for this diocese
 
