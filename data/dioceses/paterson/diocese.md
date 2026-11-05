@@ -113,6 +113,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - page-pdfs on a monthly newsletter listing (labels like 'November 2026') picks the right issue as first-listed, but fetch:check reports date and freshness unknown: check the pick by hand.
 - Some eCatholic bulletins here have a text layer shifted by 29 code points (e.g. '0$66(6' for 'MASSES', digits dropped): probe pdf text can't give Mass times, so render page 1 with render.py; fetch:check reports identity unverified.
 - Finder and GCatholic addresses here can be the parish office rather than the church (finder pin on the office too): take the church address from the bulletin masthead and check it against the OSM building or the GCatholic Plus Code.
+- fetch:check can report an issue-date conflict when an eCatholic issue has a one-off cover with a non-Sunday date (e.g. a pastor's birthday): check the date on page 2 and the previous issue's page 1 before deciding the pick is stale.
+- Finder pins here can be a street geocode rather than the church building (one 2.7 km off, another on the road way about 230 m away): prefer the GCatholic Plus Code once OSM confirms it.
 
 
 ## Rules settled for this diocese
