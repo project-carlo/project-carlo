@@ -155,6 +155,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An eCatholic parish can post one bulletin per language each week as separate dated files (St. Stephen Paterson 33773: Friday-dated English, Saturday-dated Polish, Sunday-dated Spanish): the Sunday file isn't the English edition, so read each file's language before picking a recipe, and run issues.py with --day fri and --day sat as well.
 - The John Patrick customer number in a bulletin's footer ('6059 Our Lady of Lourdes, Paterson, NJ John Patrick Publishing') opens its church-bulletin.org listing via https://church-bulletin.org/?id=<n> even when the parish site links only eCatholic copies. Guessed church-bulletin.org slugs return a generic 200 page, not a 404.
 - Before recording no_bulletin for an eCatholic parish with an empty /bulletins page, run probe po <name>-church-<zip>: a ParishesOnline org can exist with no publications (Blessed Sacrament Paterson). It confirms nothing is published there, and its ids are the ones to use if issues appear.
+- An eCatholic /bulletins page titled 'Bulletins (up to 2023)' is a frozen archive: the site's top-menu 'Bulletins' item can point to a Bon Venture sponsor page instead (St. Brendan & St. George, 11777), so read the menu links, not just the page's file list.
 
 ## Rules settled for this diocese
 
