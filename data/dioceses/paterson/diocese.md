@@ -145,6 +145,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - When a Nominatim name search finds no church, a Nominatim reverse lookup (zoom=18) at the GCatholic Plus Code coordinates often returns the named place_of_worship node or way; Overpass via probe get failed here.
 - A second finder pin with only a P.O. Box address and an old schedule in its notes (Fatima directory:5707) is a legacy entry for the same parish, and its pin is not the church (1.45 km off there): link it to the one church and take coordinates from the Plus Code.
 - Some eCatholic parishes here post whole issues as scanned images (sites 6889, 11776): probe pdf reports no extractable text, so render page 1 with render.py for masthead and Mass times; fetch:check's identity unverified is then expected.
+- visit.py can get a transient Cloudflare '502: Bad gateway' (verdict HTTP5XX) from an eCatholic site; a retry minutes later loads it (stjudehamburg.org, 2026-11-04).
 
 ## Rules settled for this diocese
 
