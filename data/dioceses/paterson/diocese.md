@@ -148,6 +148,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - visit.py can get a transient Cloudflare '502: Bad gateway' (verdict HTTP5XX) from an eCatholic site; a retry minutes later loads it (stjudehamburg.org, 2026-11-04).
 - files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf answers 403 (not 404) for an issue never posted: when /bulletins stops weeks ago, probe get on the next Sundays' file names confirms the parish simply hasn't posted (stale archive, not a fetch fault).
 - An eCatholic site's 'Bulletins' menu item can link straight to sponsors.bonventure.net/?page=<n> with no /bulletins page: visit.py --follow /bulletins then fails, so read its --links for the Bon Venture page.
+- A parish can move its bulletin between its own eCatholic site ids (Our Lady of Consolation: 11364 to Jan 2026, 700 to Nov 2026, then all 2026 issues back-filled onto 11364): compare the ?t= upload stamps on each site's /bulletins links to see which site is posting now, record every site id carrying the issues in publication, and set a revisit.
 
 ## Rules settled for this diocese
 
