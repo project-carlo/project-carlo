@@ -146,6 +146,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A second finder pin with only a P.O. Box address and an old schedule in its notes (Fatima directory:5707) is a legacy entry for the same parish, and its pin is not the church (1.45 km off there): link it to the one church and take coordinates from the Plus Code.
 - Some eCatholic parishes here post whole issues as scanned images (sites 6889, 11776): probe pdf reports no extractable text, so render page 1 with render.py for masthead and Mass times; fetch:check's identity unverified is then expected.
 - visit.py can get a transient Cloudflare '502: Bad gateway' (verdict HTTP5XX) from an eCatholic site; a retry minutes later loads it (stjudehamburg.org, 2026-11-04).
+- files.ecatholic.com/<id>/bulletins/<YYYYMMDD>.pdf answers 403 (not 404) for an issue never posted: when /bulletins stops weeks ago, probe get on the next Sundays' file names confirms the parish simply hasn't posted (stale archive, not a fetch fault).
 
 ## Rules settled for this diocese
 
