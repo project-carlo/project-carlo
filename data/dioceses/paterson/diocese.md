@@ -115,6 +115,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Finder and GCatholic addresses here can be the parish office rather than the church (finder pin on the office too): take the church address from the bulletin masthead and check it against the OSM building or the GCatholic Plus Code.
 - fetch:check can report an issue-date conflict when an eCatholic issue has a one-off cover with a non-Sunday date (e.g. a pastor's birthday): check the date on page 2 and the previous issue's page 1 before deciding the pick is stale.
 - Finder pins here can be a street geocode rather than the church building (one 2.7 km off, another on the road way about 230 m away): prefer the GCatholic Plus Code once OSM confirms it.
+- Parishes here often post next Sunday's issue mid-week: fetch:check then reports freshness 'future' (age -4 days) for the newest file, which is the correct pick; confirm the masthead date rather than treating it as an error.
 
 
 ## Rules settled for this diocese
