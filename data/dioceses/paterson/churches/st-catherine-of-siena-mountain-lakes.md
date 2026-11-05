@@ -28,6 +28,7 @@ evidence:
   quote: Saturday evening ----- 4:30 pm Sunday ------- 7:30, 9:30, 11:30 am
   note: Page 1 of the 1 November 2026 bulletin, under MASSES; masthead address 10 North Pocono Road, Mountain
     Lakes.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

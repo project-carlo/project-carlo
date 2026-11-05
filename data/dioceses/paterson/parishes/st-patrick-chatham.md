@@ -23,6 +23,7 @@ evidence:
     403 to probe get and was read in headed Chrome with visit.py). Its Bulletins page links "Bulletins"
     to http://sponsors.bonventure.net/?page=1643; the eCatholic archive below it ends at files.ecatholic.com/11878/bulletins/20190317.pdf
     (17 March 2019).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

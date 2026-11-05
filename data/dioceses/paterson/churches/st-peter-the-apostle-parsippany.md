@@ -28,6 +28,7 @@ evidence:
   quote: 179 Baldwin Road
   note: Page 1 masthead of the 1 November 2026 bulletin; page 3 Mass intentions for November 2-8 give
     the weekday and weekend Mass times.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic page (site id 6893) linking
     parishesonline.com/publication-page/st-mary-church-07801 issues 03/1188/20261108B.pdf back to 20261018B.pdf
     and 'View Past Bulletins' at the organization page.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -38,6 +38,7 @@ evidence:
   quote: both churches are remaining open with adjusted Mass schedules
   note: The Beacon, 16 April 2026, on the 12 April merger of St. Bonaventure and Our Lady of Pompei into
     St. Pio (Padre Pio) Parish.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

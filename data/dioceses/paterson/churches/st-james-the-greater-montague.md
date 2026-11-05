@@ -33,6 +33,7 @@ evidence:
   note: OSM way 138613490, an unnamed building tagged '79, River Road, Montague Township 07827', centre
     41.34420, -74.71568, about 15 m from the Plus Code. A Nominatim name search for St. James in Montague
     found nothing.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-04
   quote: Main St., Chester, New Jersey 07930
   note: GCatholic 19018 'St. Lawrence the Martyr', Church, Plus Code 87G7Q8Q7+7R; '1950; parish 1957'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

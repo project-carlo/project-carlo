@@ -19,6 +19,7 @@ evidence:
   note: 'eCatholic site 34204 (read with visit.py): Bulletin archive newest November 1, 2026, then October
     25, 18, 11; footer Our Lady of Mount Carmel, 10 St. Francis Way, Passaic, NJ 07055. issues.py: 8 November
     not yet posted (403).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

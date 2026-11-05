@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-04
   quote: 230 Mendham Rd., Morristown, New Jersey 07960
   note: GCatholic 39120 'St. Mary', Abbey (Monastery), founded 1857, Plus Code 87G7QFPC+Q4.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

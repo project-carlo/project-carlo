@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=216+Comly+Road,+Lincoln+Park,+NJ&format=json
   seen: 2026-11-04
   note: OSM node 357740705, place_of_worship 'Saint Joseph's Church', 216 Comly Road, at 40.92668, -74.30252.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

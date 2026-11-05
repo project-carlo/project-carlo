@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: 'Page 1 (rendered image) of the 8 November 2026 bulletin: Saint Patrick Parish, 41 Oliver Street,
     Chatham, NJ 07928; Saturday Vigil 5:00 PM, Sunday 8:00, 9:30, 11:00 AM, Monday-Friday 8:15 AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

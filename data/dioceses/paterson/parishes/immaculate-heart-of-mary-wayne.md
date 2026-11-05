@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-04
   note: Finder pin directory:11350 'Immaculate Heart of Mary, Wayne', 580 Ratzer Road, website ihmwaynenj.org;
     Saturday 5:00 PM, Sunday 8:00, 10:30 AM and 12:00 PM, Mon-Fri 8:30 AM.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

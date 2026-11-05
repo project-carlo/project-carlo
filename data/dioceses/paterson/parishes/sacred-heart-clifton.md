@@ -25,6 +25,7 @@ evidence:
   note: 'Read with visit.py. eCatholic site 11647, title ''Sacred Heart Church - Clifton, NJ''; lists
     files.ecatholic.com/11647/bulletins/ issues newest first: ''November 1, 2026'' (20261101.pdf), ''October
     25, 2026'', ''October 18, 2026'' ..., weekly.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

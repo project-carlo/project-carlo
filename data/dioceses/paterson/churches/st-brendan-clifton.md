@@ -32,6 +32,7 @@ evidence:
   note: OSM node 357728390 'Saint Brendan School', 154 East 1st Street, at 40.89200, -74.13864, about
     60 m east of the Plus Code. No OSM place_of_worship for the church was found by name; a reverse lookup
     at the Plus Code returns house way 52627744, '525, Lakeview Avenue'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

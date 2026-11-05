@@ -29,6 +29,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=17+Mount+Olive+Road,+Budd+Lake,+NJ&format=json
   seen: 2026-11-04
   note: OSM way 758280575, place_of_worship 'St. Jude Parish', 17 Mount Olive Road, at 40.86884, -74.73247.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

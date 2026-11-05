@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 228771159, place_of_worship 'St Mary's Roman Catholic Church', 17 Pompton Avenue, at 41.00209,
     -74.28979.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

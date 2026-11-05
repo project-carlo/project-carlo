@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: 335 Dover-Chester Rd., Randolph, New Jersey 07869
   note: GCatholic 19024 'St. Matthew the Apostle', Church, Plus Code 87G7R9GM+R6.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

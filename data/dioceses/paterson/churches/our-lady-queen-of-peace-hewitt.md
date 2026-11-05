@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM node 357742365, place_of_worship 'Our Lady Queen of Peace Church', Union Valley Road, West
     Milford, at 41.15482, -74.35460, about 15 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

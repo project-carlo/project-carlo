@@ -20,6 +20,7 @@ evidence:
 - url: http://sponsors.bonventure.net/?page=1481
   seen: 2026-11-04
   note: Bon Venture sponsor page; probe url finds the bulletin link http://sponsors.bonventure.net/pdfs/1481/2026-11-08.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

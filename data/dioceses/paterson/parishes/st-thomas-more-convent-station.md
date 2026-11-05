@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-04
   note: Bulletins page (read with parish-site-access visit.py) lists files.ecatholic.com/11361/bulletins/<YYYYMMDD>.pdf
     weekly from 20260726 to 20261101.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

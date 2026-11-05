@@ -17,6 +17,7 @@ evidence:
   note: The parish's eCatholic site (site id 11637, behind Cloudflare; read in headed Chrome with visit.py).
     Its Bulletins page lists files.ecatholic.com/11637/bulletins/<YYYYMMDD>.pdf weekly, newest 'November
     1, 2026' (20261101.pdf), back to May 31, 2026 and earlier.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

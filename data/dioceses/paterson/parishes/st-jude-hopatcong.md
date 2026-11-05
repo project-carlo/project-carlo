@@ -26,6 +26,7 @@ evidence:
     Parish 40 Maxim Dr. Hopatcong NJ 07843'', ''Welcome to St Jude'', Holiday Craft Fair, Diocesan Ministries
     Appeal): the trigger is the parish fundraiser headline ''Casino Night 2026''. It also embeds ecatholic:5303,
     the diocese''s own site, which is not recorded.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

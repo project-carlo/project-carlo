@@ -21,6 +21,7 @@ evidence:
   note: The parish's eCatholic site (site id 11974, behind Cloudflare; read in headed Chrome with visit.py).
     Its Bulletin page embeds the ParishesOnline issues of container 03/1248 (20261101B.pdf back to 20261011B.pdf)
     and links 'View Past Bulletins' to parishesonline.com/organization/st-ann-church-07054.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

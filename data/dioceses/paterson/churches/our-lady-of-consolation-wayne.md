@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 503834248 'Our Lady of Consolation Church', amenity=place_of_worship, 1799 Paterson-Hamburg
     Turnpike, centre 40.97251, -74.26521, about 30 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   quote: 6 New St., Mendham, New Jersey 07945
   note: GCatholic 19017 'St. Joseph', Church, Plus Code 87G7Q9FW+VX.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

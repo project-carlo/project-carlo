@@ -31,6 +31,7 @@ evidence:
   quote: 154 Mt. Pleasant Avenue
   note: Homepage (read with visit.py) gives the church as 'St. Clement Pope & Martyr Church' and says
     daily Mass is held in our Chapel Monday, Tuesday, Thursday and Friday at 9:00am.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

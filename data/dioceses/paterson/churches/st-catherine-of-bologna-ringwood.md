@@ -33,6 +33,7 @@ evidence:
   note: OSM node 357742378, place_of_worship 'Saint Catherine Catholic Church', Erskine Road, Ringwood
     07456, at 41.09204, -74.26570, about 50 m from the Plus Code. OSM's address point for 112 Erskine
     Road (way 11730932) is at 41.09327, -74.26351.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

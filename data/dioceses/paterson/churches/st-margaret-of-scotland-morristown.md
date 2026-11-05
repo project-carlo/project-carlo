@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-04
   quote: 6 Sussex Ave., Morristown, New Jersey 07960
   note: GCatholic 19019 'St. Margaret of Scotland', Church, Plus Code 87G7RG38+CV.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

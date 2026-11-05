@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: Finder pin directory:11877 'St. Anthony of Padua, Paterson', 138 Beech Street, 07501, at 40.9099762,
     -74.1647723 (about 20 m from the Plus Code).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

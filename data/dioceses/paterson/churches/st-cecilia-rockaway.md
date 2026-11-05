@@ -31,6 +31,7 @@ evidence:
   note: OSM has no St. Cecilia place of worship; 90 Church Street (40.90408, -74.51113) and 70 Church
     Street (40.90364, -74.51165) are interpolated on address way 453413559, about 50 m apart, with the
     Plus Code between them.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

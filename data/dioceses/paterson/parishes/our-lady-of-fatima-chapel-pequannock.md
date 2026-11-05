@@ -19,6 +19,7 @@ evidence:
     its one bulletin link is https://www.dropbox.com/s/49svgl5o1cp6wbg/Bulletin.pdf?dl=0.'
 revisit: Check the Dropbox Bulletin.pdf is a current issue (masthead date within two weeks)
 revisit_after: 2026-12-04
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

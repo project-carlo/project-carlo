@@ -23,6 +23,7 @@ evidence:
     Box 785, McAfee, NJ. 07428'', ''Rev. Chris Barkhausen, Pastor'', ''Thirtieth Sunday in Ordinary Time
     October 25, 2026''. Weekend Masses: Saturday (Vigil) English 5:00 PM, Spanish 7:00 PM; Sunday 8:00
     AM, 10:00 AM, 12:00 PM; weekday Monday through Saturday 8:30 AM. No other worship site named.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

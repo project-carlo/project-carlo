@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: OSM node 357747307, place_of_worship 'Saint Thomas The Apostle Roman Catholic Church', Berkshire
     Valley Road, Milton, Jefferson Township 07438, at 41.02750, -74.51278, about 60 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

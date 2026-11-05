@@ -35,6 +35,7 @@ evidence:
   quote: St. Nicholas R.C. Church
   note: '12 June 2022 issue, page 1 sidebar: St. Nicholas R.C. Church, 153 Washington Pl.; Office: Our
     Lady of Fatima R.C. Church, 32 Exchange Place; same weekend schedule as today.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

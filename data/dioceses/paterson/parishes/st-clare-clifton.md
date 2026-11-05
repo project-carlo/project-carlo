@@ -19,6 +19,7 @@ evidence:
   note: 'Read with visit.py (probe url gets 403). eCatholic site 11620, title ''St. Clare Church, Clifton
     | Clifton, NJ''; lists files.ecatholic.com/11620/bulletins/ issues newest first: ''November 8, 2026''
     (20261108.pdf), ''November 1, 2026'', ''October 25, 2026'' ..., weekly through 2026.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

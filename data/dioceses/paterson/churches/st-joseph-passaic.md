@@ -31,6 +31,7 @@ evidence:
   note: OSM node 357742315, place_of_worship Saint Joseph Roman Catholic Church, Monroe Street, Passaic,
     at 40.8677039, -74.1201641. A reverse lookup at the Plus Code returns 2 Parker Avenue, the house beside
     it.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   note: 'probe url: status 200, title ''St. Thomas the Apostle, Oak Ridge (Milton) | Oak Ridge, NJ'',
     publications ecatholic:6889 and ecatholic:5303 (the diocese''s own site, not recorded). Finder pins
     directory:6889 and directory:5676 both give this website.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

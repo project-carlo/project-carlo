@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: 'visit.py: verdict ok, title ''Immaculate Conception, Franklin - Franklin, NJ'', publications
     ecatholic:11776 (the finder pin id).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

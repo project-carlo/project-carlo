@@ -35,6 +35,7 @@ evidence:
     m west. A reverse lookup at the GCatholic Plus Code returns a residential way (20 Alden Terrace),
     about 200 m north-west; Nominatim's geocode of 501 West Broadway is 40.929381, -74.189441, also off
     the building.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

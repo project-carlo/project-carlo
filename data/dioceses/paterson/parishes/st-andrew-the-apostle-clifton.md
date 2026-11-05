@@ -19,6 +19,7 @@ evidence:
   note: The Bulletin link on the parish's Wix site (probe url). It redirects to https://www.church-bulletin.org/saint-andrew-the-apostle-roman-catholic-church-clifton-nj-07012,
     titled 'Saint Andrew the Apostle Roman Catholic Church Bulletin', which lists weekly bulletin/<slug>/<YYYY-MM-DD>.pdf
     issues up to 2026-11-01 (10-25, 10-18, 10-11 ...).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

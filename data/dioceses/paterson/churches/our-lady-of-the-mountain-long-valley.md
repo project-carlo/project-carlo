@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   quote: 2 E Springtown Rd., Long Valley, New Jersey 07853
   note: GCatholic 19020 'Our Lady of the Mountain', Church, Plus Code 87G7Q6W2+2W; '1954; parish 1969'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

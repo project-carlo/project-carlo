@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: OSM node 357740545 Holy Rosary Church, Myrtle Avenue, Dover 07801, at 40.88677, -74.55238 (about
     20 m from the Plus Code).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

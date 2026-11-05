@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 80736946, place_of_worship 'St Jude's Church', 40 Maxim Drive, Hopatcong 07843, at 40.9512822,
     -74.6472750.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

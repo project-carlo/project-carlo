@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: 'Sunday | Domingo: 7:15 AM | 9 AM* | 10:30AM* | 12 PM | 5 PM*'
   note: Page 3 of the 1 November 2026 bulletin; page 1 gives 26 GREEN VILLAGE RD, MADISON, NJ 07940.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

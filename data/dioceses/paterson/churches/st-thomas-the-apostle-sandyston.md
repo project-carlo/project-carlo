@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 1368194529, an unnamed amenity=place_of_worship on US 206 / CR 521, Tuttles Corner, Sandyston
     Township 07826, centre 41.23401, -74.79964, about 25 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: Parish site (not eCatholic; probe-free load in visit.py, verdict ok, no publication ids). Its
     menu link 'BULLETINS' goes to http://sponsors.bonventure.net/?page=1461.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

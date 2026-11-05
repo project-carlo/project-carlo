@@ -19,6 +19,7 @@ evidence:
   note: 'eCatholic site 13525 (read with visit.py): Bulletin archive newest November 1, 2026, then October
     25, 18, 11, back to 2016; footer Saint Anthony of Padua RC Church, 101-103 Myrtle Avenue, Passaic.
     issues.py: 8 November not yet posted (403).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

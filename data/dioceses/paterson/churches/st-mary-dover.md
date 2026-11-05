@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 258038316 Saint Mary's Catholic Church, South Main Street, Wharton 07885, at 40.88653,
     -74.57915.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

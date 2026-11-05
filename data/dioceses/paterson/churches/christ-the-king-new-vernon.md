@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: Blue Mill Rd., New Vernon, New Jersey 07976
   note: GCatholic 19008 'Christ the King', Church, Plus Code 87G7PGW4+8G.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

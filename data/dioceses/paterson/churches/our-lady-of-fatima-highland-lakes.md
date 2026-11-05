@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 1197775002, place_of_worship 'Our Lady of Fatima R.C. Church', Breakneck Road, Highland
     Lakes 07422, centre 41.18301, -74.45783, about 30 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

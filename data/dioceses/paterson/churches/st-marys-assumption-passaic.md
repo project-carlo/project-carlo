@@ -31,6 +31,7 @@ evidence:
   note: OSM way 584175474, building 63 Monroe Street, Passaic, at 40.868192, -74.117377. OSM node 357742356,
     place_of_worship 'Slavonian Catholic Church of the Assumption', Monroe Street, is 20 m west (40.8680849,
     -74.1175724).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

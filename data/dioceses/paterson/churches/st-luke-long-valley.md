@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   quote: 265 W Mill Rd., Long Valley, New Jersey 07853
   note: GCatholic 19021 'St. Luke', Church, Plus Code 87G7Q58V+XV; '1982'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

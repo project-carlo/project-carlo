@@ -23,6 +23,7 @@ evidence:
   note: 'Page 3 schedule: ''Regular 9:00 AM Daily Mass from Monday to Saturday''; ''Saturday Evening Mass
     5:00PM (Mass in the Church)''; Sunday 8:00AM, 9:00AM (Polish), 11:00AM, all ''in the Church''. No
     other worship site named.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 268697329, place_of_worship 'Holy Spirit Roman Catholic Church', Newark-Pompton Turnpike,
     at 40.95244, -74.29235; the school (way 268697327) is just north.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

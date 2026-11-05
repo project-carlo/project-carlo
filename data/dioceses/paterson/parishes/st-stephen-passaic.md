@@ -26,6 +26,7 @@ evidence:
 revisit: Open https://ststephenspassaic.com/bulletins/; when a 2027 year page lists the first 2027 issue,
   repin provider_id to page-pdfs on that page and rerun fetch:check.
 revisit_after: 2027-01-04
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

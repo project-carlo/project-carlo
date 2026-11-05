@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: OSM building way 307541311 addressed '218, Ackerman Avenue', centre 40.87632, -74.12919, about
     30 m west of the Plus Code. No OSM place_of_worship named for the church was found (name search).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

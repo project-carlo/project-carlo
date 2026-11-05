@@ -19,6 +19,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site 11332, 'Parish Bulletins'
     page listing PDFs newest first under date labels ('November 8, 2026', 'November 1, 2026', ...), files
     under files.ecatholic.com/11332/documents/<y>/<m>/<MMDDYY>.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

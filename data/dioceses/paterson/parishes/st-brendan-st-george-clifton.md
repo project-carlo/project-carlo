@@ -24,6 +24,7 @@ evidence:
   note: Read with visit.py. eCatholic site 11777. The menu item 'Bulletins' links https://sponsors.bonventure.net/?page=1455;
     this page is titled 'Bulletins (up to 2023)' and lists files.ecatholic.com/11777/bulletins/ issues
     only to 'July 16, 2023' (20230716.pdf).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

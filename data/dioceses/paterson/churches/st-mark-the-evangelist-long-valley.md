@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: 59 Spring Ln., Long Valley, New Jersey 07853
   note: GCatholic 19023 'St. Mark the Evangelist', Church, Plus Code 87G7R6G2+4R; '1986; parish 1988'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

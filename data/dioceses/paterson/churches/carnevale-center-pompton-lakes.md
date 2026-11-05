@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 228771175, building=church 'Carnevale Center', 10 Lenox Avenue, Pompton Lakes 07442, at
     41.00274, -74.29061, about 100 m north-west of St. Mary's church.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

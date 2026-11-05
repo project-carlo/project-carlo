@@ -23,6 +23,7 @@ evidence:
   note: The parish's eCatholic site (site id 12451; /bulletins read in headed Chrome with visit.py). Its
     Bulletins page links "Bulletins" to https://www.jppc.net/onlinebulletins/662template.pdf; the eCatholic
     archive below it ends at files.ecatholic.com/12451/bulletins/20260628.pdf (28 June 2026).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

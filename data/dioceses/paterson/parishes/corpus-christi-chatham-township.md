@@ -13,6 +13,7 @@ evidence:
     Saints" with the Mass schedule (Saturday 5:00pm; Sunday 7:30am, 8:45am, 11:00am, 6:00pm; Monday-Friday
     7:30am); page 2 gives 234 Southern Boulevard, Chatham, New Jersey 07928, pastor Rev. T. Kevin Corcoran.
     Twelve pages; a grep for Chapel, Mission and St. Patrick finds no other worship site.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

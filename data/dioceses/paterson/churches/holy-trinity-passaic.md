@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: OSM way 1037855417, place_of_worship Holy Trinity Roman Catholic Church, Harrison Street, Passaic,
     at 40.8702274, -74.1251084.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

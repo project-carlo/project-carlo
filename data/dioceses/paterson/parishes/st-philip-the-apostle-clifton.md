@@ -22,6 +22,7 @@ evidence:
   note: 'The site''s Bulletins page lists one post per weekly issue, newest first: /bulletin/november-1-2026/,
     /bulletin/october-25-2026/, /bulletin/october-18-2026/, /bulletin/october-11-2026/ ..., back to 2021.
     The page itself links no PDF.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
 revisit: Check /monthly-bulletin lists a December 2026 issue; the newsletter skipped months before October
   2026.
 revisit_after: 2026-12-15
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

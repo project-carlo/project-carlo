@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: Listed in Diocese of Paterson parish finder (eCatholic map) as 'Our Lady of Mercy, Whippany',
     9 Parsippany Road, Whippany, NJ, 07981
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

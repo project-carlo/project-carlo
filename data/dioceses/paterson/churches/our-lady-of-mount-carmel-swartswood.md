@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: Returns only Swartswood Road (way 11766022) about 50 m south; no building or place_of_worship.
     A bounded search for 'Mount Carmel' around Swartswood found nothing.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

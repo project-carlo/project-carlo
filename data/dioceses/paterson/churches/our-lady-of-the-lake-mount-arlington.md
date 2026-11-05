@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 311861307, place_of_worship 'Our Lady of the Lake Church', 8 Windermere Avenue, Mount
     Arlington 07856, at 40.9286301, -74.6359321.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

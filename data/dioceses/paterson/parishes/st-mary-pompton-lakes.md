@@ -23,6 +23,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site 21395; the page lists
     files.ecatholic.com/21395/bulletins/<YYYYMMDD>.pdf copies, newest 20261101.pdf (1 November 2026),
     the same LPi issue as the container's 20261101B.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

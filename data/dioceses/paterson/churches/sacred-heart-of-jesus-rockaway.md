@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-04
   note: Diocese of Paterson finder pin 11380 'Sacred Heart of Jesus, Rockaway', 63 East Main Street, Rockaway,
     NJ 07866; Masses Saturday 5:00 PM, Sunday 8:30, 10:00 AM, 5:00 PM.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

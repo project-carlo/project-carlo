@@ -19,6 +19,7 @@ evidence:
   note: Bulletin page of the parish's eCatholic site (read with parish-site-access visit.py; probe url
     gets 403) links 'Weekly Bulletins' to http://sponsors.bonventure.net/?page=1489 and lists no eCatholic
     bulletin files. probe url on the sponsor page on 2026-11-04 found http://sponsors.bonventure.net/pdfs/1489/2026-11-08.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

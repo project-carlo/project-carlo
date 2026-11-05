@@ -23,6 +23,7 @@ evidence:
   note: The finder's link; in parish-site-access visit.py it redirects to https://stlukelv.org/, an eCatholic
     site (ecatholic:13158) whose bulletin links go to parishesonline.com/publication-page/st-luke-church-07853?selectedPublication=https://container.parishesonline.com/bulletins/03/1439/20261108B.pdf
     (and 1 Nov, 25 Oct, 18 Oct).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

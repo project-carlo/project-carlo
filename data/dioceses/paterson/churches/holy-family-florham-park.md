@@ -27,6 +27,7 @@ evidence:
   quote: Sunday 7:30 am, 10:00 am, 12:00 pm
   note: Page 1 of the 1 November 2026 bulletin; also Saturday 5:30 pm and Monday-Saturday 8:15 am; rectory
     1 Lloyd Ave., Florham Park, NJ 07932, school 17 Lloyd Ave.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

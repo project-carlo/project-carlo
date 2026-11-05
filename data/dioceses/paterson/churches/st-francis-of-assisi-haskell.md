@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 264215689, place_of_worship 'Saint Francis of Assisi Church', Ringwood Avenue, Haskell,
     at 41.03776, -74.29355.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

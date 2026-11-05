@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: OSM node 357742307, place_of_worship Holy Rosary Roman Catholic Church, Wall Street, Passaic,
     at 40.8641848, -74.1109586.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

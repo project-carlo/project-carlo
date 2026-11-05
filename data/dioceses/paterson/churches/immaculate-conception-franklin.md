@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 1349283123, place_of_worship 'Immaculate Conception Church', Church Street, centre 41.11680,
     -74.59205, about 20 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

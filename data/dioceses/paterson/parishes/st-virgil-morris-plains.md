@@ -20,6 +20,7 @@ evidence:
   note: The parish's eCatholic site (site id 21425, behind Cloudflare; read in headed Chrome with visit.py).
     Its Bulletins page links "Current Bulletin" to http://sponsors.bonventure.net/?page=6392; the eCatholic
     archive below it ends at files.ecatholic.com/21425/bulletins/20230521.pdf (21 May 2023).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -21,6 +21,7 @@ evidence:
   note: 'Parish bulletin page (read with parish-site-access visit.py; probe url gets 403): ''Read the
     latest bulletin: November 1, 2026 · PDF'' linking files.ecatholic.com/17644/bulletins/20261101.pdf,
     then weekly 2026 issues back to July 19, 2026.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

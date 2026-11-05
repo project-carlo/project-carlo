@@ -37,6 +37,7 @@ evidence:
   note: OSM way 1346094517 'Saint James Roman Catholic Church', amenity=place_of_worship, St James Place,
     Totowa, centre 40.90511, -74.21256, about 30 m from the Plus Code; OSM's address point '410, Totowa
     Road' (way 1384500459) is at 40.90484, -74.21241, at the church way's south edge.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

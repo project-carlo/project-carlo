@@ -50,6 +50,7 @@ evidence:
   note: 'Former Our Lady of Pompei eCatholic site (ecatholic:22616, the finder website of directory:22616),
     read with visit.py: newest issue ''April 5, 2026'' (20260405.pdf); files for 25 October, 1 and 8 November
     2026 answer 403.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

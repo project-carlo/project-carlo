@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-05
   note: OSM way 1490236800, place_of_worship Saint Stephen's Roman Catholic Church, Morris Street, Passaic,
     at 40.8694344, -74.1167614; a reverse lookup at the Plus Code returns the same building.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

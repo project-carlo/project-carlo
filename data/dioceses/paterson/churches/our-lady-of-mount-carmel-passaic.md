@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: OSM node 357742313, place_of_worship Our Lady of Mount Carmel Church, Saint Francis Way, Passaic,
     at 40.8590404, -74.1226235.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

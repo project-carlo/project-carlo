@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-04
   note: 'Read with parish-site-access visit.py (probe url gets 403). Lists files.ecatholic.com/11896/bulletins/
     PDFs newest first: November 1, 2026, October 25, 2026, October 18, 2026 ...'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

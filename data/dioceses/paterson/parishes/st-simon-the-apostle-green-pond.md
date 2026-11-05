@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-04
   note: Read with parish-site-access visit.py (probe url gets 403). Lists weekly files.ecatholic.com/11628/bulletins/<YYYYMMDD>.pdf
     issues, newest 20261101.pdf, back to 2 August 2026.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -2,8 +2,9 @@
 name: Roman Catholic Diocese of Paterson
 state: NJ
 website: https://rcdop.org
-status: exploring
+status: promoted
 gcatholic: pate0
+promoted: 2026-11-05
 ---
 
 Three counties of northern New Jersey: Passaic (Paterson, Passaic, Clifton, Wayne, West

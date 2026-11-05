@@ -26,6 +26,7 @@ evidence:
   note: Read with visit.py (probe url gets 403). eCatholic site 11956, title 'St. Paul, Prospect Park
     - Prospect Park, NJ' on the home page; /bulletins links only 'Bulletins' to the jppc.net template
     and lists no eCatholic bulletin files.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

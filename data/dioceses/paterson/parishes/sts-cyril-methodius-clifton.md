@@ -29,6 +29,7 @@ evidence:
 revisit: Check the 1 November 2026 issue was posted (issues.py ecatholic ecatholic:14179); on 5 November
   the newest was 25 October.
 revisit_after: 2026-11-09
+promoted: 2026-11-05
 research:
 - method: Reconcile fetch:check (headed Chrome) and probe get of the Sunday-dated eCatholic files 18 October-8
     November (newest posted 25 October, uploaded 22 October; 31 October, 1 and 8 November answer 403)

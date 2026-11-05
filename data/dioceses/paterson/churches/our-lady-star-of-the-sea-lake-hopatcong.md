@@ -39,6 +39,7 @@ evidence:
   note: OSM has no place_of_worship here (amenity search in the viewbox -74.625,40.960,-74.605,40.945
     returned nothing); its address points for 237 Espanong Road (40.95211, -74.61615) and 204 Espanong
     Road (40.95264, -74.61546) are both on the same stretch of road.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

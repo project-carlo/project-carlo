@@ -49,6 +49,7 @@ evidence:
 revisit: Check that olcparish.org/bulletins (site 11364) still has the newest issue; if only yq5da.sites.ecatholic.com
   (site 700) has it, switch the website
 revisit_after: 2026-12-15
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

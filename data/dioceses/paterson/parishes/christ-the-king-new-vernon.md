@@ -19,6 +19,7 @@ evidence:
   note: Bulletins page (read with parish-site-access visit.py; probe url gets 403) lists files.ecatholic.com/12066/bulletins/<YYYYMMDD>.pdf
     weekly, newest November 1, 2026; it also links an eBULLETIN Mailchimp archive (us1.campaign-archive.com),
     not used.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

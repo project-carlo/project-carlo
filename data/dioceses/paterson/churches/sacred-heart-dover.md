@@ -35,6 +35,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 11698002 at 4 Richards Avenue, Dover 07801, 40.88583, -74.55653 (about 40 m from the Plus
     Code).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

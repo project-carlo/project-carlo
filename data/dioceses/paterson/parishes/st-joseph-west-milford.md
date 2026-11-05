@@ -23,6 +23,7 @@ evidence:
     Milford, NJ 07480''. Page 2: ''Fr. Jakub Grzybowski, Pastor''; MASS TIMES: Monday, Wednesday & Friday
     6:00pm; Tuesday & Thursday 9:00am; Saturday 9:00am, 5:00pm (Vigil Mass); Sunday 8:00am, 10:00am, 12:00
     pm. No other worship site named.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

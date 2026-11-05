@@ -33,6 +33,7 @@ evidence:
   note: OSM way 603955866 'Saint Paul Roman Catholic Church', amenity=place_of_worship, Union Avenue,
     Clifton 07011, centre 40.87662, -74.14410; its bounding box (40.87635-40.87688, -74.14443 to -74.14386)
     contains the Plus Code point.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 275847569, place_of_worship 'St. Anthony's Roman Catholic Church', Bartholdi Avenue, Butler,
     at 40.99625, -74.34169.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

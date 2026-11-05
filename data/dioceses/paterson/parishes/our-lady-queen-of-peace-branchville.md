@@ -30,6 +30,7 @@ evidence:
 revisit: Check /bulletins for an issue newer than 11 October 2026; the parish posted none for 18 October-1
   November.
 revisit_after: 2026-11-11
+promoted: 2026-11-05
 research:
 - method: visit.py on /bulletins and probe get of the next four Sunday-dated eCatholic files
   url: https://olqpbranchville.org/bulletins

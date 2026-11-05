@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: 'eCatholic site 14062 (read with visit.py): Bulletins newest November 8, 2026, then November 1,
     October 25, 18, weekly back to January 2026.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

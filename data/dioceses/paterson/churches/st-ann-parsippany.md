@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-04
   note: 'Page 1 (image, rendered) of the 8 November 2026 bulletin: SAINT ANN PARISH, 781 Smith Road, Parsippany;
     Saturday Evening 5:00 PM, Sunday 8:00 AM, 10:30 AM, Monday to Friday 8:30 AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

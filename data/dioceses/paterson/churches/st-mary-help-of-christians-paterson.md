@@ -32,6 +32,7 @@ evidence:
   note: OSM node 379381283 'Saint Mary's Roman Catholic Church, Albion Avenue, Paterson' at 40.9210285,
     -74.1850121, about 20 m from the Plus Code (the church stands at Union and Albion Avenues). A reverse
     lookup at the Plus Code returned a shop at 398 Union Avenue.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

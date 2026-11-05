@@ -22,6 +22,7 @@ evidence:
   note: 'probe url: redirects to https://www.olmc.church/ (Squarespace), titled ''Our Lady of Mount Carmel'',
     whose footer reads ''OUR LADY OF MOUNT CARMEL, 910 BIRCH STREET, BOONTON, NJ, 07005'' with admin@olmcboonton.org.
     The redirect is to the parish''s own new domain, not to Sts. Cyril and Methodius (stscm.org).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: GCatholic 18974 St. Bernard of Clairvaux, Church, 446 Mount Hope Rd., Wharton, New Jersey 07885,
     Plus Code 87G7WF97+G5; 1855; parish 1861.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: 651 Millbrook Ave., Randolph, New Jersey 07869
   note: GCatholic 19016 'Resurrection', Church, Plus Code 87G7RCMG+8C.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -28,6 +28,7 @@ evidence:
 revisit: Check whether the parish site has posted an issue newer than 11 October 2026, and look again
   for its Bon Venture sponsor page; pin the recipe the fetch check prints once it picks a current issue.
 revisit_after: 2026-11-19
+promoted: 2026-11-05
 research:
 - method: 'Looked for St. John Kanty''s Bon Venture sponsor page (printer code 021C): the bulletin''s
     footer, the parish site, and www.bonventure.net''s pages (weeklybulletins.php has no parish list or

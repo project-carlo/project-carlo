@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: OSM node 357742217 'Our Lady of Lourdes Roman Catholic Church, River Street' at 40.9295429, -74.1609773,
     a few metres from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

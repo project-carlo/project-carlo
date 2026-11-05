@@ -18,6 +18,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403, Cloudflare). eCatholic site id 13399;
     the page lists 'November 1, 2026' https://files.ecatholic.com/13399/bulletins/20261101.pdf and 'October
     25, 2026' .../20261025.pdf, newest first.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -23,6 +23,7 @@ evidence:
   note: The parish's eCatholic site (site id 11335, behind Cloudflare; read in headed Chrome with parish-site-access
     visit.py). The Bulletins page lists weekly issues at files.ecatholic.com/11335/bulletins/<YYYYMMDD>.pdf,
     newest November 1, 2026, then October 25, 18, 11, 4, September 27 ...
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

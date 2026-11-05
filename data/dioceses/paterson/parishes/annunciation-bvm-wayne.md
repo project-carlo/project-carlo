@@ -22,6 +22,7 @@ evidence:
   note: Finder pin directory:11842 'Annunciation of the Blessed Virgin Mary, Wayne', 45 Urban Club Road,
     website abvm-wayne.org; Saturday 8:30 AM and 5:30 PM, Sunday 8:00, 10:00 and 11:45 AM, Mon-Fri 12:05
     PM.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

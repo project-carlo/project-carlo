@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   quote: We are located at 2 Miller Road in Kinnelon, NJ
   note: Read with visit.py; eCatholic site 11409 (the finder pin id).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

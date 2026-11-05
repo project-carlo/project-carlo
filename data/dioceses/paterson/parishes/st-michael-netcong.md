@@ -9,7 +9,9 @@ evidence:
 - url: https://files.ecatholic.com/10927/bulletins/20261025.pdf
   seen: 2026-11-04
   quote: Schedule of Masses
-  note: 'Page 1 masthead of the 25 October 2026 issue: SAINT MICHAEL, 4 CHURCH STREET, NETCONG, NJ 07857, ROMAN CATHOLIC CHURCH, October 25, 2026; Saturday 5:00 pm; Sunday 7:00, 9:30, 11:30 am; Misa en Español 1:30 pm; Weekdays 10:00 am.'
+  note: 'Page 1 masthead of the 25 October 2026 issue: SAINT MICHAEL, 4 CHURCH STREET, NETCONG, NJ 07857,
+    ROMAN CATHOLIC CHURCH, October 25, 2026; Saturday 5:00 pm; Sunday 7:00, 9:30, 11:30 am; Misa en Español
+    1:30 pm; Weekdays 10:00 am.'
 - url: https://files.ecatholic.com/10927/bulletins/20261101.pdf
   seen: 2026-11-04
   quote: The Church of Saint Michael
@@ -22,6 +24,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site id 10927; the page
     lists weekly files.ecatholic.com/10927/bulletins/ PDFs, newest 'November 1, 2026' (20261101.pdf),
     back to 26 July 2026.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

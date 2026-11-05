@@ -30,6 +30,7 @@ evidence:
   note: 'GCatholic 19036''s website (www.goodshepherd-church.com) now loads ''Good Shepherd Mission Church'',
     a mission founded at Mamallapuram, Tamil Nadu (read with visit.py): a lapsed domain unrelated to this
     parish, not used.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

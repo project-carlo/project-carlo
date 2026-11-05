@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 125520358, amenity place_of_worship "Saint Mary's Church", 15 Myers Avenue, Denville 07834,
     at 40.8948609, -74.4821925.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

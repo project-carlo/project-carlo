@@ -23,6 +23,7 @@ evidence:
   note: 'Diocese of Paterson parish finder (directory:13010): ''Saint Agnes, Paterson'', 681 Main Street,
     Paterson 07503, website https://saintagnesrcchurch.org/; Saturday 7:00 PM Spanish, Sunday 10:00 AM
     English and 11:30 AM Spanish.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

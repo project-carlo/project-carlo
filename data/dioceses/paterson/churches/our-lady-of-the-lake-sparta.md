@@ -31,6 +31,7 @@ evidence:
   note: Reverse lookup at the Plus Code returns OSM way 87081516, amenity=place_of_worship 'Our Lady of
     the Lake Church', Sparta Township 07871 (centre 41.0334050, -74.6643650); the Plus Code point lies
     inside its bounding box.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

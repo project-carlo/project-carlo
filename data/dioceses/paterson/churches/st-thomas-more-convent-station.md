@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   quote: Madison Ave., Convent Station, New Jersey 07961
   note: GCatholic 19012 'St. Thomas More', Church, Plus Code 87G7QHG4+QJ.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

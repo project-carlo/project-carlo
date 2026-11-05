@@ -23,6 +23,7 @@ evidence:
     visit.py). Its ''Bulletins'' menu link goes to https://sponsors.bonventure.net/?page=1561; there is
     no /bulletins page. Mass Times: Saturday 5:30 PM (Vigil), Sunday 8:00 AM, 10:00 AM, (12:00 PM), Monday
     - Saturday 8:30 AM.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

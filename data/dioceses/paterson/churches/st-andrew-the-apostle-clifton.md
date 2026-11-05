@@ -32,6 +32,7 @@ evidence:
   note: Reverse lookup at the Plus Code returns OSM way 277916496, amenity place_of_worship 'St. Andrew
     the Apostle Church', Mount Prospect Avenue, Clifton 07012 (centre 40.8554991, -74.1621896, about 22
     m west).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   note: 'probe url: status 200, title ''Saint Joseph, Newton - Newton, New Jeresey'', publication ecatholic:11734;
     it also links copies of the same issues under files.ecatholic.com/11734/documents/2026/10/. Finder
     pin directory:11734 gives this website.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

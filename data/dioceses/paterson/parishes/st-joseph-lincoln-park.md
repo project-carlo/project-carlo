@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe url: the parish site links https://www.jppc.net/onlinebulletins/6047template.pdf and https://church-bulletin.org/?id=6047,
     both of which land on the church-bulletin.org listing above.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

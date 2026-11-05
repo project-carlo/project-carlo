@@ -33,6 +33,7 @@ evidence:
   note: Returns only the Unionville Avenue street way 11766906 with an interpolated house number 47; no
     building or place_of_worship. Searches for 'Saint Monica' and 'church' bounded to Sussex borough found
     nothing.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

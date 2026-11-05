@@ -26,6 +26,7 @@ evidence:
     website saintjamesthomas.org, Masses at both churches (Saturday 4:30 PM and Sunday 9:30 AM at St.
     Thomas; Sunday 8:00 and 11:30 AM at St. James). Pin directory:5728 'St. Thomas the Apostle, Sandyston'
     gives www.saintjamesthomas.org too.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

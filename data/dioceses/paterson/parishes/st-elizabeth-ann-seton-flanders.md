@@ -18,6 +18,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site id 23931; the page
     lists weekly files.ecatholic.com/23931/bulletins/ PDFs, newest 'November 1, 2026' (20261101.pdf),
     then 25 October, 18 October and back to 2 August 2026.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -14,6 +14,7 @@ evidence:
     schedule: Monday-Saturday 8:30 AM; Saturday 5 PM, 7 PM (Español); Sunday 7:15 AM, 9 AM, 10:30AM, 12
     PM, 5 PM; pastor Very Rev. Canon Owen B. Moran. Twelve pages; a grep for Chapel and Mission finds
     no other worship site.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

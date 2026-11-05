@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: GCatholic 18973 St. Pius X, Church, 24 Changebridge Rd., Montville, New Jersey 07045, Plus Code
     87G7WJ6R+C7; 1959, parish 1960.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

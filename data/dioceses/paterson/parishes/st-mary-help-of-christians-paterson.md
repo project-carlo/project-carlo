@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   note: Finder pin directory:25394 'St. Mary Help of Christians', 410 Union Ave, Paterson 07502, website
     http://www.stmarypaterson.org; no Mass times given.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

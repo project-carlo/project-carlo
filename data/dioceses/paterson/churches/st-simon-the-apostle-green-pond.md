@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM node 357741284 Saint Simon Roman Catholic Church, Green Pond Road, Green Pond 07435, at 41.01454,
     -74.47293.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

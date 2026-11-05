@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: Listed in Diocese of Paterson parish finder (eCatholic map) as "St. Virgil's Parish", 250 Speedwell
     Avenue, Morris Plains, NJ, 07950
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

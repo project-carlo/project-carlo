@@ -28,6 +28,7 @@ evidence:
   quote: SUNDAY 7:30, 9:30, 11:30 am,
   note: 'Page 2 of the 1 November 2026 bulletin: Mass schedule, and the rectory at 1050 Littleton Road,
     Parsippany, NJ 07054.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

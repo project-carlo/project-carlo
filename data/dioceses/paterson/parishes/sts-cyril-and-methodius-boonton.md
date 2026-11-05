@@ -23,6 +23,7 @@ evidence:
   note: The root page is a bare meta refresh to https://www.stscm.org/joomla/index.php/en-us/ (why probe
     url reports NO-PARISH-WORDS there); the Joomla home is titled 'Sts Cyril And Methodius Church' and
     links /wiadomossci-2/bulletin and /wiadomossci-2/mass-times.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

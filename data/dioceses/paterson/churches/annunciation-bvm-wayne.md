@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM node 5605978361 'Church of the Annunciation of the Blessed Virgin Mary' (tagged amenity=school),
     45 Urban Club Road, at 40.96118, -74.22252, about 17 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

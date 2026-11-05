@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: Reverse lookup at the Plus Code returns OSM way 11733025, a house at 39 Speer Avenue (centre 40.8547846,
     -74.1458679), not a named church; OSM has no place_of_worship for St. John Kanty at this point.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

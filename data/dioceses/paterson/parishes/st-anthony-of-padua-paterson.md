@@ -23,6 +23,7 @@ evidence:
   note: Finder pin directory:11877 'St. Anthony of Padua, Paterson', 138 Beech Street, Paterson 07501,
     website https://stanthonypaterson.com/; Sunday 8:00 AM English/Portuguese, 10:00 AM Spanish, 11:30
     AM English/Italian.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

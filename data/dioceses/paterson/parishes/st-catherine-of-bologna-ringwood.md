@@ -28,6 +28,7 @@ evidence:
 revisit: The 1 November 2026 issue was not posted by 4 November; confirm the parish keeps posting weekly
   (issues.py ecatholic ecatholic:33389).
 revisit_after: 2026-11-09
+promoted: 2026-11-05
 research:
 - method: visit.py on /bulletins and issues.py ecatholic ecatholic:33389 --weeks 3
   url: https://stcatherineofbologna.org/bulletins

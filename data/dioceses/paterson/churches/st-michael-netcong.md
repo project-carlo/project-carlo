@@ -16,7 +16,9 @@ evidence:
 - url: https://files.ecatholic.com/10927/bulletins/20261025.pdf
   seen: 2026-11-04
   quote: Schedule of Masses
-  note: 'Page 1 masthead of the 25 October 2026 issue: SAINT MICHAEL, 4 CHURCH STREET, NETCONG, NJ 07857; Saturday 5:00 pm; Sunday 7:00, 9:30, 11:30 am; Misa en Español todos los Domingos 1:30 pm; Weekdays 10:00 am.'
+  note: 'Page 1 masthead of the 25 October 2026 issue: SAINT MICHAEL, 4 CHURCH STREET, NETCONG, NJ 07857;
+    Saturday 5:00 pm; Sunday 7:00, 9:30, 11:30 am; Misa en Español todos los Domingos 1:30 pm; Weekdays
+    10:00 am.'
 - url: https://files.ecatholic.com/10927/bulletins/20261101.pdf
   seen: 2026-11-04
   quote: Mass Intentions for the Week
@@ -34,6 +36,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 230160724, place_of_worship St Michael's Catholic Church, 4 Church Street, Netcong 07857,
     at 40.89621, -74.70867; St. Michael School is next door at 10 Church Street.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

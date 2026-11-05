@@ -24,6 +24,7 @@ evidence:
   note: 'probe container 04/1007: the same LPi bulletin, 8 November 2026 issue, page 1 identical masthead
     (MASS TIMES ... www.holyspiritparishnj.org ... FR. CESAR JARAMILLO). No ParishesOnline org slug found
     (probe po on holy-spirit-church-07440 and variants: no such organization).'
+promoted: 2026-11-05
 research:
 - method: probe po on org slugs holy-spirit-church-07440, holy-spirit-07440, holy-spirit-pequannock, holy-spirit-parish-07440,
     holy-spirit-roman-catholic-church-07440, holy-spirit-catholic-church-07440, holy-spirit-rc-church-07440;

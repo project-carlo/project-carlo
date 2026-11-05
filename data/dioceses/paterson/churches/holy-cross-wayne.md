@@ -34,6 +34,7 @@ evidence:
   note: OSM way 239911902 'Holy Cross Roman Catholic Church' (alt_name 'Church of the Holy Cross'), building=church,
     address tags 18 Van Duyne Avenue, Wayne 07470, centroid 40.91052, -74.26100, about 37 m from the Plus
     Code. OSM's Holy Cross School node 357723498 is also at 18 Van Duyne Avenue.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe url: status 200, title ''St. Monica, Sussex - Sussex, NJ'', publication ecatholic:12096.
     Finder pin directory:12096 gives this website.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

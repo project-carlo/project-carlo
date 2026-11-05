@@ -27,6 +27,7 @@ evidence:
   quote: 234 Southern Boulevard, Chatham, New Jersey 07928
   note: Page 2 of the 1 November 2026 bulletin; page 1 gives Saturday 5:00pm and Sunday 7:30am, 8:45am,
     11:00am, 6:00pm Masses.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

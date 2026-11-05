@@ -23,6 +23,7 @@ evidence:
   note: The parish's eCatholic site (site id 12019; read in headed Chrome with parish-site-access visit.py,
     probe get answered 403). The Bulletins page lists November 8, 2026, November 1, 2026 and October 25,
     2026 at files.ecatholic.com/12019/bulletins/<YYYYMMDD>.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

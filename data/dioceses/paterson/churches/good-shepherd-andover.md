@@ -33,6 +33,7 @@ evidence:
   note: Returns way 545501023 'good shepherd church', amenity=place_of_worship, Tranquility Road, Andover
     07821, centre 40.9762181, -74.7484895 (about 30 m east of the Plus Code). A bounded name search for
     'Good Shepherd' finds the same way.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

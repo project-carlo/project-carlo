@@ -22,6 +22,7 @@ evidence:
   note: 'visit.py: verdict ok, title ''Our Lady of Mount Carmel, Swartswood - Swartswoood, NJ'', publications
     ecatholic:11903 and ecatholic:5303 (the diocese''s own site, not recorded). Finder pin directory:11903
     gives this website.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

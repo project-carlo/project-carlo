@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 535307923, amenity=place_of_worship (no name), Haledon Avenue, Prospect Park, centre 40.93492,
     -74.17809, about 20 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

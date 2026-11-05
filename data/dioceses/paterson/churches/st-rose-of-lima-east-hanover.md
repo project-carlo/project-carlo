@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: Listed in Diocese of Paterson parish finder (eCatholic map) as 'St. Rose of Lima, East Hanover',
     312 Ridgedale Avenue, East Hanover, NJ, 07936
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

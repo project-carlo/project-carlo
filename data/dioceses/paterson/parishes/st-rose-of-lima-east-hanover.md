@@ -23,6 +23,7 @@ evidence:
 revisit: Check /parish-bulletins lists the 1 November 2026 issue and fetch:check picks it; on 5 November
   the newest was 25 October.
 revisit_after: 2026-11-09
+promoted: 2026-11-05
 research:
 - method: 'Reconcile fetch:check (page-pdfs on /parish-bulletins) and visit.py --links on the listing:
     newest link October 25 2026; probe get of documents/2026/10 and 2026/11 ''November 1 2026.pdf'' answered

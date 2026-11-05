@@ -36,6 +36,7 @@ evidence:
   seen: 2026-11-04
   note: Reverse lookup at the Plus Code returns OSM node 357747296, place_of_worship 'Saint Thomas of
     Aquinas Church', Kennedy Avenue, Ogdensburg 07439, at 41.0841667, -74.5955556 (about 16 m away).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -36,6 +36,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/reverse?lat=41.1381875&lon=-74.7401875&format=json&zoom=18
   seen: 2026-11-04
   note: Returns only US 206 (way 116632793); no building or place_of_worship mapped.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

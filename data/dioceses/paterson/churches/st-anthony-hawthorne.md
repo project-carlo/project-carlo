@@ -32,6 +32,7 @@ evidence:
   note: OSM node 357743324 'Saint Anthony's Roman Catholic Church', amenity=place_of_worship, at 40.94899,
     -74.15103, about 25 m south of the Plus Code; the Plus Code falls on OSM building way 217943820, addressed
     '276, Diamond Bridge Avenue'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

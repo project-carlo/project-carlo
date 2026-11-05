@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 1190213062, an unnamed amenity=place_of_worship on Beaver Run Road, Hardyston Township,
     centre 41.15359, -74.59535, about 25 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

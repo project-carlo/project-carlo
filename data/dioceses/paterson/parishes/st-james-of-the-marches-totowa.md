@@ -26,6 +26,7 @@ evidence:
   note: 'Read with visit.py (probe url gets 403). eCatholic site 11368, title ''St. James of the Marches,
     Totowa - Totowa, NJ''; lists files.ecatholic.com/11368/bulletins/ issues newest first: ''November
     8, 2026'' (20261108.pdf), ''November 1, 2026'', ''October 25, 2026'', ... posted weekly.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

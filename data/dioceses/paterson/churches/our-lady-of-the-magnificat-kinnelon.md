@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM has no place_of_worship for the church (name searches empty); '2 Miller Road' resolves to
     the street way 11718555 at 40.97727, -74.37896, not a building.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-05
   note: 'eCatholic site 14735 (read with visit.py): Bulletin archive newest November 8, 2026, then November
     1, October 25, 18, back to 2016.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

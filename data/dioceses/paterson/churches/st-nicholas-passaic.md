@@ -40,6 +40,7 @@ evidence:
   seen: 2026-11-05
   note: OSM way 274713707, place_of_worship Saint Nicholas Catholic Church, Washington Place, Passaic,
     centroid 40.8619012, -74.1228035.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

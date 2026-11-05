@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: 427 Stanhope Rd., Sparta, New Jersey 07871
   note: GCatholic 19037 'St. Kateri Tekakwitha', Church, Plus Code 87H7282W+6G.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -39,6 +39,7 @@ evidence:
     The reverse lookup at the Plus Code returns instead the St Joseph Regional High School building (way
     196940267, 20 Jefferson Street); a search for '24 Halsted Street Newton NJ' returns house way 964760233
     at 41.0549714, -74.7528704, beside the place_of_worship.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

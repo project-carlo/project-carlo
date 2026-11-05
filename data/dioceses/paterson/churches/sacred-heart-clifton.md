@@ -32,6 +32,7 @@ evidence:
   note: 'OSM has two building ways addressed ''145, Randolph Avenue'': 279619670 (centre 40.87966, -74.12548,
     about 18 m east of the Plus Code) and 584073771 (40.87941, -74.12496). No OSM place_of_worship named
     Sacred Heart in Clifton was found (name search).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

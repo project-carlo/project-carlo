@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 272161157 'Our Lady of the Valley Roman Catholic Church', amenity=place_of_worship, address
     tags 630 Valley Road, Wayne 07470, centroid 40.93304, -74.22687, about 37 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

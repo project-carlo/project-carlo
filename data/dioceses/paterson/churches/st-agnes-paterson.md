@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: Finder pin directory:13010 'Saint Agnes, Paterson', 681 Main Street, 07503, at 40.9030061, -74.167282
     (about 10 m from the Plus Code).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

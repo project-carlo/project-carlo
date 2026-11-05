@@ -33,6 +33,7 @@ evidence:
   quote: 7 Hunter St., Succasunna, New Jersey 07876
   note: GCatholic 19044 'St. Therese', Church, Plus Code 87G7V9F4+FJ (40.87369, -74.64344), on the Main
     Street building rather than the Hunter St. address it gives.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

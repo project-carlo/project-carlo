@@ -37,6 +37,7 @@ evidence:
   note: Finder pin directory:11969 'Our Lady of the Valley & Holy Cross, Wayne NJ', 614 Valley Road, website
     olvwayne.org; Saturday 5:00 PM, Sunday 8:00, 10:00 AM, 12:00 PM, Mon-Fri 9:00 AM. The finder has no
     separate Holy Cross pin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

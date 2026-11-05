@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 288862333, place_of_worship 'Saint John Viannery Church' (sic), Lake Shore Road East,
     Stockholm, Hardyston Township, centre 41.09818, -74.53187, within 20 m of the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

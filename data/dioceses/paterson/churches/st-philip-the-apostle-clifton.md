@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-05
   note: Reverse lookup at the Plus Code returns OSM way 277915551, amenity place_of_worship 'St. Philip
     the Apostle Church', Valley Road (centre 40.8728962, -74.1869659, about 32 m south).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   note: eCatholic site 11657 (Cloudflare; read in headed Chrome with parish-site-access visit.py). Bulletins
     page lists files.ecatholic.com/11657/bulletins/<YYYYMMDD>.pdf, newest 20261101.pdf, then 20261025,
     20261011, 20261004, 20260920 (some Sundays have no file).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -31,6 +31,7 @@ evidence:
   note: 'OSM around the Plus Code: a surface parking lot (way 1325581994), two unnamed buildings (ways
     1015168358, 1015169074) and a gazebo; no place_of_worship is tagged. Nominatim places 61 Main Street
     by interpolation on the Main Street road way (32539429) near the finder pin.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

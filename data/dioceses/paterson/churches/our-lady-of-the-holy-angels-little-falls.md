@@ -29,6 +29,7 @@ evidence:
   note: OSM way 274398070 'Holy Angels Church', amenity=place_of_worship, Main Street, Little Falls, centre
     40.8852547, -74.2441366, about 20 m from the finder pin; OSM's '465, Main Street' building (way 224940669)
     is about 70 m north, at 40.8859, -74.2440.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

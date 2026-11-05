@@ -19,6 +19,7 @@ evidence:
 - url: http://sponsors.bonventure.net/?page=1554
   seen: 2026-11-04
   note: Bon Venture sponsor page; probe url finds the bulletin link http://sponsors.bonventure.net/pdfs/1554/2026-11-01.pdf.
+promoted: 2026-11-05
 research:
 - method: visit.py --links on the eCatholic /bulletins page (site id 28421)
   url: https://resurrectionparishnj.org/bulletins

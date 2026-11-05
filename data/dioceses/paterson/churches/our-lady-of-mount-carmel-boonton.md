@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: GCatholic 18972 Our Lady of Mount Carmel, Church, 910 Birch St., Boonton, New Jersey 07005, Plus
     Code 87G7WH5P+4F; 1847, parish 1860.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   quote: 40 Myrtle Ave Dover, NJ 07801 (Misa Dominical 8:00 a.m.)
   note: 'Home page (visit.py) footer: Sacred Heart & Our Lady Queen of the Most Holy Rosary Parish, 4
     Richards Ave Dover, NJ 07801; 40 Myrtle Ave Dover (Misa Dominical 8:00 a.m.). eCatholic site id 25510.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

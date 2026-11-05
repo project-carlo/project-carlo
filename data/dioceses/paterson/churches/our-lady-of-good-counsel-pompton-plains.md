@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 268467108, place_of_worship 'Our Lady of Good Counsel Church', 155 West Parkway, at 40.96828,
     -74.31146.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

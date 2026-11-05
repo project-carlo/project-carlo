@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: Reverse lookup at the Plus Code returns OSM way 277926166, amenity place_of_worship 'St. Clare
     Catholic Church', 69 Allwood Road (centre 40.8325923, -74.1424905, about 29 m south-west).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

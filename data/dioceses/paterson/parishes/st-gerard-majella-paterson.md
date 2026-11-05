@@ -22,6 +22,7 @@ evidence:
   note: 'Diocese of Paterson parish finder (directory:16550): ''St. Gerard Majella, Paterson'', 501 West
     Broadway, website https://stgerardmajella.org/; a second pin, directory:30898 ''St. Gerard Majella
     School'', has no address, no Mass times and website https://stgerardschool.org/.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

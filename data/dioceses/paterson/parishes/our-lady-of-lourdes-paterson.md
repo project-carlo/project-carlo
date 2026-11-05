@@ -29,6 +29,7 @@ evidence:
   note: Finder pin directory:11325 'Our Lady of Lourdes, Paterson', 440 River Street, Paterson 07524,
     website https://ollourdespaterson.org/; Sunday 9:00 AM Spanish, 11:00 AM English, 12:30 PM Spanish;
     Monday-Saturday 7:00 PM Spanish.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

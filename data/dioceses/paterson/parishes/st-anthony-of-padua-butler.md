@@ -22,6 +22,7 @@ evidence:
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site 11662; the Bulletin
     page links parishesonline.com/publication-page/st-anthony-of-padua-church-07405 issues 20261108B,
     20261101B, 20261025B, 20261018B in container 03/1080.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

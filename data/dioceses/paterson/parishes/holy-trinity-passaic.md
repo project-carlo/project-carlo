@@ -23,6 +23,7 @@ evidence:
   note: 'eCatholic site 11689 (read with visit.py): the Bulletin page has no issue links, and the site
     menu links no bulletin. issues.py ecatholic:11689 found no Sunday, Saturday or Friday file for the
     last 4-6 weeks (403).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

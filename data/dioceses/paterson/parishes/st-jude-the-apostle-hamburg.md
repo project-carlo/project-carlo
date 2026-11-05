@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-04
   note: Finder pin directory:11766 'St. Jude the Apostle, Hardyston', website stjudehamburg.org, Saturday
     5:00 PM, Sunday 7:30, 9:30 and 11:30 AM.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

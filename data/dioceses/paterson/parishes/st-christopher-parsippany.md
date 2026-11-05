@@ -19,6 +19,7 @@ evidence:
   seen: 2026-11-04
   note: The parish's eCatholic site (site id 11387, behind Cloudflare; read in headed Chrome with visit.py).
     Its Weekly Bulletins page links "Weekly Bulletin" to http://sponsors.bonventure.net/?page=6154.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

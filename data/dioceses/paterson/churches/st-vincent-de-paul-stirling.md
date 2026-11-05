@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   quote: Bebout Ave., Stirling, New Jersey 07980
   note: GCatholic 19014 'St. Vincent de Paul', Church, Plus Code 87G7MGG4+8Q.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

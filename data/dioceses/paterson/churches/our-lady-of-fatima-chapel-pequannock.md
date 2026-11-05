@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 11686136, a building (place=house) at 32 West Franklin Avenue, 40.94854, -74.29324; no
     place_of_worship tag.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

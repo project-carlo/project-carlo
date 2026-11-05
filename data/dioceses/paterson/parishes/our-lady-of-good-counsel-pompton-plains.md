@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: Read with parish-site-access visit.py (probe url gets 403). eCatholic site (id 23104) embedding
     po-org:our-lady-of-good-counsel-church-07444; bulletin link https://goodcounsel.org/sunday-bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

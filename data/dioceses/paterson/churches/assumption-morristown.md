@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   quote: 91 Maple Ave., Morristown, New Jersey 07960
   note: GCatholic 19015 'Assumption of the Blessed Virgin Mary', Church, Plus Code 87G7QGRC+HW.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

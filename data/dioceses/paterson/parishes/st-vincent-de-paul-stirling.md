@@ -21,6 +21,7 @@ evidence:
 - url: http://sponsors.bonventure.net/?page=10184
   seen: 2026-11-04
   note: Bon Venture sponsor page; probe url finds the bulletin link http://sponsors.bonventure.net/pdfs/10184/2026-11-08.pdf.
+promoted: 2026-11-05
 research:
 - method: issues.py ecatholic ecatholic:11664 --weeks 4
   url: https://files.ecatholic.com/11664/bulletins/20261108.pdf

@@ -19,6 +19,7 @@ evidence:
   note: Bulletin page (read with parish-site-access visit.py; probe url gets 403) lists an Archive of
     weekly issues for 2026, newest November 1, 2026, back to January 4, 2026, plus 2025 and 2024 folders.
     visit.py on the home page found ecatholic:11358.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

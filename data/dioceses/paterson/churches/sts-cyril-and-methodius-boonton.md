@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: GCatholic 18967 Sts. Cyril and Methodius, Church, 215 Hill St., Boonton, New Jersey 07005, Plus
     Code 87G7WH5M+9F; 1907.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -19,6 +19,7 @@ evidence:
   note: 'eCatholic site 11442 (read with visit.py): Bulletins newest November 1, 2026, then October 25,
     18, 11, 4, weekly back to June 2026 and earlier. The 8 November file (20261108.pdf) answered 403 on
     2026-11-05: not yet posted.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

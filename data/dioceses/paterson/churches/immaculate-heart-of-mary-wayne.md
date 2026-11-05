@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 993572378 'Immaculate Heart of Mary Church', amenity=place_of_worship, addressed 588 Ratzer
     Road, centre 40.94877, -74.25236, about 20 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

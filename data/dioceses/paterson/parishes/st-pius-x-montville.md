@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe po: St. Pius X Church, 24 Changebridge Rd, Montville 07045, LPi id 0018000000QxAWWAA3,
     with no publications (''this organization does not publish a bulletin here now'').'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

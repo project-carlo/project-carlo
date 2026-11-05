@@ -18,6 +18,7 @@ evidence:
   note: eCatholic site 6224 (Cloudflare; read in headed Chrome with parish-site-access visit.py). Bulletins
     page lists files.ecatholic.com/6224/bulletins/<YYYYMMDD>.pdf weekly, newest 20261108.pdf. ecatholic:5303
     on the homepage is the diocese's own site.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -25,6 +25,7 @@ evidence:
     Little Falls - Little Falls, NJ''; lists files.ecatholic.com/11688/bulletins/ issues newest first:
     ''November 1, 2026'' (20261101.pdf), ''October 25, 2026'', ''October 18, 2026'', ''October 10, 2026'',
     ''October 4, 2026'' ..., posted weekly.'
+promoted: 2026-11-05
 research:
 - method: probe po on slugs our-lady-of-the-holy-angels-church-07424, our-lady-of-the-holy-angels-07424,
     holy-angels-church-07424, our-lady-of-the-holy-angels-little-falls, our-lady-of-holy-angels-church-07424,

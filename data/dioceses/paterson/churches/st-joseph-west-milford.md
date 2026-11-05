@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 103764610, place_of_worship 'Saint Joseph Roman Catholic Church', 454 Germantown Road,
     West Milford 07480, centre 41.04482, -74.39119, about 15 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-04
   note: eCatholic site 11380 (Cloudflare; read in headed Chrome with parish-site-access visit.py). Bulletins
     page lists files.ecatholic.com/11380/bulletins/<YYYYMMDD>.pdf weekly, newest 20261108.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

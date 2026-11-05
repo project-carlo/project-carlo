@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 1194172833, place_of_worship 'St. Francis DeSales R.C. Church', McAfee - Glenwood Road,
     McAfee, Vernon Township 07461, centre 41.20914, -74.51235, about 30 m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

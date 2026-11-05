@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: Finder pin directory:13525 St. Anthony Padua, Passaic, 101-103 Myrtle Ave., pin 40.86470, -74.13389,
     with the same weekend Mass times as the bulletin.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass
