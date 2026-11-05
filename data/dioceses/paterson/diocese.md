@@ -111,6 +111,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick Publishing here: an eCatholic /bulletins page links jppc.net/onlinebulletins/<customer>template.pdf, which redirects (HTML, not a PDF) to a church-bulletin.org/<parish-slug> listing of bulletin/<slug>/<YYYY-MM-DD>.pdf issues. Record url:<listing> and use page-pdfs on the church-bulletin.org listing; fetch:check dates the pick from the file name.
 - A Bon Venture ad footer (e.g. '150C (PK) - <parish> ... Bon Venture Services') also appears in bulletins the parish posts on eCatholic; it doesn't mean Bon Venture hosts the issue. Record the host the site's bulletin page links (eCatholic bulletins/ files or a sponsors.bonventure.net/?page=<n> link).
 - page-pdfs on a monthly newsletter listing (labels like 'November 2026') picks the right issue as first-listed, but fetch:check reports date and freshness unknown: check the pick by hand.
+- Some eCatholic bulletins here have a text layer shifted by 29 code points (e.g. '0$66(6' for 'MASSES', digits dropped): probe pdf text can't give Mass times, so render page 1 with render.py; fetch:check reports identity unverified.
 
 
 ## Rules settled for this diocese
