@@ -144,6 +144,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - One parish can have two finder pins when two domains serve the same eCatholic site (scobp.org and stcatherineofbologna.org both load site 33389): the pin with no address carries the site id. Link both to one church.
 - When a Nominatim name search finds no church, a Nominatim reverse lookup (zoom=18) at the GCatholic Plus Code coordinates often returns the named place_of_worship node or way; Overpass via probe get failed here.
 - A second finder pin with only a P.O. Box address and an old schedule in its notes (Fatima directory:5707) is a legacy entry for the same parish, and its pin is not the church (1.45 km off there): link it to the one church and take coordinates from the Plus Code.
+- Some eCatholic parishes here post whole issues as scanned images (sites 6889, 11776): probe pdf reports no extractable text, so render page 1 with render.py for masthead and Mass times; fetch:check's identity unverified is then expected.
 
 ## Rules settled for this diocese
 
