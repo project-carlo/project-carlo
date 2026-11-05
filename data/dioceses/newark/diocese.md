@@ -206,6 +206,8 @@ Tools named here are in `scratch/newark-map-1/tools/`.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- GoDaddy Website Builder sites (img1.wsimg.com/blobby/... PDFs named 'November 1, 2026.pdf') can repost an LPi bulletin: grep the last page for the '<Parish>, <Town>, NJ 03-xxxx' footer and record the ParishesOnline org, not the copies.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them. None yet; the survey's
