@@ -214,6 +214,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Some eCatholic parishes post one monthly issue dated its first Sunday (headed 'Sundays of November 1st, 8th, 15th and 22nd'), so later weeks answer 403: that is not a lapse. Add research to recheck freshness after the next issue, because the 14-day window can call it stale mid-month.
 - When probe url says UNREACHABLE ('EOF', maybe IPv6-only) or probe pdf says RemoteDisconnected, the headed fetch:check can still download from the site (sjanj.net): read the PDFs with visit.py --screenshot '#page=N&zoom=…' and run fetch:check before recording any fetch_gap.
 - A WordPress site posting one bulletin per post (category /category/bulletin/, PDF embedded in the post): unpinned, fetch:check resolves `page-pdfs` on the newest post's URL, which won't move to later issues; pin `dated-post <category URL>` instead. When the proxy can't reach the host, `visit.py --text` on wp-json/wp/v2/media?mime_type=application/pdf lists the uploads.
+- The Eparchy of Passaic's parish list (eparchyofpassaic.com/parishes, eCatholic, 403 to probe) reads with visit.py --html; its state tabs are all in the HTML, so grep the saved file to confirm Ruthenian churches GCatholic lists.
 
 ## Rules settled for this diocese
 
