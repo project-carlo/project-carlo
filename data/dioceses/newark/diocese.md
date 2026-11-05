@@ -210,6 +210,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A monastery or convent chapel with public Mass but no bulletin (the Rosary Shrine in Summit) becomes a church row under its own no_bulletin parish row, so it stays in the records while promote leaves it off the site.
 - pnpm diocese probe get --out resolves a relative path from the worktree root, not the shell's directory: always pass an absolute path into your scratch folder.
 - A John Patrick listing page (church-bulletin.org/<id>) shows the parish's website as its 'Visit Parish Website' link. When that domain and GCatholic's are dead and the directory gives none, use the listing as the row's website with page-pdfs on it.
+- An eCatholic PDF whose probe pdf text reads as glyph codes ('/0/1/2/i255/…') has an unreadable font encoding: treat it like an image-only issue and read it with render.py.
+- Some eCatholic parishes post one monthly issue dated its first Sunday (headed 'Sundays of November 1st, 8th, 15th and 22nd'), so later weeks answer 403: that is not a lapse. Add research to recheck freshness after the next issue, because the 14-day window can call it stale mid-month.
 
 ## Rules settled for this diocese
 
