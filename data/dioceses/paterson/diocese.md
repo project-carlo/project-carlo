@@ -165,6 +165,8 @@ page links, not the printer.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- eCatholic copies of a John Patrick bulletin can lag its church-bulletin.org listing by weeks while the /bulletins archive still looks live (Fatima & St. Nicholas: eCatholic copies end 18 Oct, listing has 1 Nov). When the footer shows a JPP customer number, open https://church-bulletin.org/?id=<n> and compare the newest dates before choosing ecatholic.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
