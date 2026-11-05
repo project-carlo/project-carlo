@@ -212,6 +212,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A John Patrick listing page (church-bulletin.org/<id>) shows the parish's website as its 'Visit Parish Website' link. When that domain and GCatholic's are dead and the directory gives none, use the listing as the row's website with page-pdfs on it.
 - An eCatholic PDF whose probe pdf text reads as glyph codes ('/0/1/2/i255/…') has an unreadable font encoding: treat it like an image-only issue and read it with render.py.
 - Some eCatholic parishes post one monthly issue dated its first Sunday (headed 'Sundays of November 1st, 8th, 15th and 22nd'), so later weeks answer 403: that is not a lapse. Add research to recheck freshness after the next issue, because the 14-day window can call it stale mid-month.
+- When probe url says UNREACHABLE ('EOF', maybe IPv6-only) or probe pdf says RemoteDisconnected, the headed fetch:check can still download from the site (sjanj.net): read the PDFs with visit.py --screenshot '#page=N&zoom=…' and run fetch:check before recording any fetch_gap.
 
 ## Rules settled for this diocese
 
