@@ -112,6 +112,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Bon Venture ad footer (e.g. '150C (PK) - <parish> ... Bon Venture Services') also appears in bulletins the parish posts on eCatholic; it doesn't mean Bon Venture hosts the issue. Record the host the site's bulletin page links (eCatholic bulletins/ files or a sponsors.bonventure.net/?page=<n> link).
 - page-pdfs on a monthly newsletter listing (labels like 'November 2026') picks the right issue as first-listed, but fetch:check reports date and freshness unknown: check the pick by hand.
 - Some eCatholic bulletins here have a text layer shifted by 29 code points (e.g. '0$66(6' for 'MASSES', digits dropped): probe pdf text can't give Mass times, so render page 1 with render.py; fetch:check reports identity unverified.
+- Finder and GCatholic addresses here can be the parish office rather than the church (finder pin on the office too): take the church address from the bulletin masthead and check it against the OSM building or the GCatholic Plus Code.
 
 
 ## Rules settled for this diocese
