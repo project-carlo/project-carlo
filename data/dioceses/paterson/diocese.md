@@ -153,6 +153,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - visit.py can hang with no output (past 500 s) on an eCatholic site's home page while the same site's /bulletins page loads at once (stgerardmajella.org, stgerardschool.org, 2026-11-04): visit the bulletin page URL directly rather than --follow from the home page.
 - An eCatholic /bulletins page that shows only the 'Bulletin' and 'Archive' headings, with no file links, means the parish posts nothing there; confirm with issues.py (Sunday and --day sat names, 403 = not posted) and record no_bulletin with a revisit (four Paterson parishes so far).
 - An eCatholic parish can post one bulletin per language each week as separate dated files (St. Stephen Paterson 33773: Friday-dated English, Saturday-dated Polish, Sunday-dated Spanish): the Sunday file isn't the English edition, so read each file's language before picking a recipe, and run issues.py with --day fri and --day sat as well.
+- The John Patrick customer number in a bulletin's footer ('6059 Our Lady of Lourdes, Paterson, NJ John Patrick Publishing') opens its church-bulletin.org listing via https://church-bulletin.org/?id=<n> even when the parish site links only eCatholic copies. Guessed church-bulletin.org slugs return a generic 200 page, not a 404.
+- Before recording no_bulletin for an eCatholic parish with an empty /bulletins page, run probe po <name>-church-<zip>: a ParishesOnline org can exist with no publications (Blessed Sacrament Paterson). It confirms nothing is published there, and its ids are the ones to use if issues appear.
 
 ## Rules settled for this diocese
 
