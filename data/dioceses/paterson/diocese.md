@@ -102,9 +102,10 @@ page links, not the printer.
   - **An archive file never posted answers 403, not 404.** When `/bulletins` stops weeks
     ago, `probe get` on the next Sundays' names confirms the parish hasn't posted.
   - **Empty `/bulletins`** (only "Bulletin" and "Archive" headings, no links): the parish
-    posts nothing there. Confirm with `issues.py` (Sunday, `--day sat`; 403 = not posted)
-    and `probe po <name>-church-<zip>` (an org can exist with no publications; its ids are
-    the ones to use if issues appear), then record no_bulletin with a revisit.
+    posts nothing there, but may still publish weekly on ParishesOnline with no link from
+    the site. Run `probe po <name>-church-<zip>` first (an org can also exist with no
+    publications; its ids are the ones to use if issues appear) and `issues.py` (Sunday,
+    `--day sat`; 403 = not posted); only then record no_bulletin with a revisit.
   - **One bulletin per language** can be posted each week as separate dated files (one
     parish: Friday English, Saturday Polish, Sunday Spanish): run `issues.py` with `--day
     fri` and `--day sat` too, and read each file's language before picking a recipe.
@@ -149,10 +150,15 @@ page links, not the printer.
   name. Where the site links only eCatholic copies, the customer number in the footer ("6059
   <parish>, Paterson, NJ John Patrick Publishing") opens the listing via
   `https://church-bulletin.org/?id=<n>`; a guessed slug returns a generic 200 page, not 404.
+  The eCatholic copies can lag the listing by weeks while `/bulletins` still looks live:
+  whenever the footer gives a customer number, compare the listing's newest date before
+  choosing ecatholic.
 - **WordPress parish sites** can post one `/bulletin/<month>-<day>-<year>/` post per issue
   with the PDF inside: fetch's dated-post recipe on the listing page picks the current
   issue. `/wp-json/wp/v2/media?mime_type=application/pdf` lists every uploaded issue with
-  its upload date, which shows how often the parish posts.
+  its upload date, which shows how often the parish posts. Where `/bulletins/` only links
+  per-year pages (`/2025-2/`, `/2026-2/`), fetch can't resolve from it: pin page-pdfs on
+  the current year's page and set a revisit for early January to repin to the new year's.
 - **A fixed Dropbox file** (`dropbox.com/s/<id>/Bulletin.pdf?dl=0`, seen on a Wix site): page-pdfs
   gets Dropbox's HTML preview (not_pdf). Pin `redirected-pdf <same URL>?dl=1`; fetch:check
   then reports date and freshness unknown, so check the masthead date by hand.
@@ -165,9 +171,6 @@ page links, not the printer.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
-- eCatholic copies of a John Patrick bulletin can lag its church-bulletin.org listing by weeks while the /bulletins archive still looks live (Fatima & St. Nicholas: eCatholic copies end 18 Oct, listing has 1 Nov). When the footer shows a JPP customer number, open https://church-bulletin.org/?id=<n> and compare the newest dates before choosing ecatholic.
-- An eCatholic parish site whose /bulletins page is empty can still publish weekly through ParishesOnline with no link from the site (Holy Trinity, Passaic): run probe po <name>-church-<zip> before recording no_bulletin.
-- WordPress sites that file bulletins on per-year pages (/bulletins/ links /2025-2/, /2026-2/): fetch can't resolve from /bulletins/, so pin page-pdfs on the current year's page and set a revisit for early January to repin it to the new year's page.
 
 ## Rules settled for this diocese
 
