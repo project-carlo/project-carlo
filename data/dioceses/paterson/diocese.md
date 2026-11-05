@@ -141,6 +141,9 @@ page links, not the printer.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- One parish can have two finder pins when two domains serve the same eCatholic site (scobp.org and stcatherineofbologna.org both load site 33389): the pin with no address carries the site id. Link both to one church.
+- When a Nominatim name search finds no church, a Nominatim reverse lookup (zoom=18) at the GCatholic Plus Code coordinates often returns the named place_of_worship node or way; Overpass via probe get failed here.
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them.
