@@ -210,6 +210,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - catholicchurch.directory listings carry old parish website domains that no roster has (olgc-ic.org); worth checking, with Wayback CDX, when a parish has no website.
 - A parish can send its own bulletin PDF only as a link inside its Constant Contact newsletter (files.constantcontact.com/<acct>/<uuid>.pdf): follow the conta.cc links on its site to the newest email, and date the channel by the newest newsletter listed.
 - Wix bulletin pages that label undated _files/ugd PDFs only 'Month D', in month blocks out of date order: page-pdfs first-listed picks an old issue and no glob can choose, so record unsupported with fetch_gap first-pdf-not-current. Watch for 'coming soon' placeholder PDFs posted under the next date.
+- A Parish Mission Partners group under We Are His Witnesses (2026) is a planning collaboration: Westfield/Scotch Plains's four partners still print four separate bulletins, so read each masthead before merging; don't merge on the group name.
 
 ## Rules settled for this diocese
 
