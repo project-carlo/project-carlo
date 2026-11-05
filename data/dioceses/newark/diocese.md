@@ -103,21 +103,22 @@ in the territory.
 
 ### Bulletin publishers here
 
-Tools named here are in `scratch/newark-map-1/tools/`.
+Tools named here are in `scratch/newark-map-1/tools/`. `probe get --out` resolves a relative
+path from the worktree root: pass an absolute path.
 
-- **Start a site with `probe url`**: it lists the publishers a
-  page links and its builder. Open `parish-site-access`'s `visit.py` when it says HTTP4XX or
-  NO-PARISH-WORDS or finds no publications. When `visit.py` hangs (an eCatholic homepage
-  that never settles), `quick_snap.py` loads it with hard time limits.
+- **Start a site with `probe url`**: it lists a page's publishers and builder. Open `parish-site-access`'s `visit.py` when it says HTTP4XX or
+  NO-PARISH-WORDS or finds no publications. When `visit.py` hangs, `quick_snap.py` loads with
+  hard time limits. After UNREACHABLE ('EOF') or `probe pdf`'s RemoteDisconnected, run
+  fetch:check (headed) before any `fetch_gap`.
 - **Finding a site:** a parish can move domain while the directory and GCatholic keep the
-  old one; when its own bulletins are stale, read the current issue's masthead website line
-  and the ParishesOnline org's website field. Guess domains
-  (`sjb<town>.org`, `<name><town>nj.org`) and confirm the masthead address; a 403 with 0 bytes can be eCatholic behind Cloudflare, so try
-  `visit.py`. For searches, the Wikipedia API (`w/api.php?action=query&list=search&srsearch=…`,
+  old one; read the current issue's masthead website line, the ParishesOnline org's website
+  field or a JP listing's 'Visit Parish Website' link (when every domain is dead, the listing
+  can be the row's website). Guess domains
+  (`sjb<town>.org`, `<name><town>nj.org`) and confirm the masthead address. The Wikipedia API (`w/api.php?action=query&list=search&srsearch=…`,
   then `prop=extracts&explaintext=1`) gives merger histories; Bing searches only the first
   word. DuckDuckGo answers `probe get` with a bot check, but
-  `visit.py --text` on `html.duckduckgo.com/html/?q=…` returns results. catholicchurch.directory keeps old parish domains. For an order's parish,
-  search the order's site (`wp-json/wp/v2/search?search=<town>`). A directory entry in no
+  `visit.py --text` on `html.duckduckgo.com/html/?q=…` returns results. catholicchurch.directory
+  keeps old parish domains. A directory entry in no
   other list can be a parish's office across a town line: `diocese search` the name and read
   its JP listing's website and masthead before creating a row.
 - **A site that is down or lost:** the Wayback CDX (`probe get
@@ -125,16 +126,15 @@ Tools named here are in `scratch/newark-map-1/tools/`.
   and `archive.org/wayback/available?url=<domain>` answer when `web.archive.org` gives 429. The CDX dates a lapse:
   ~930-byte captures are an LPi WeConnect site's "temporarily unavailable" page, and the last
   larger capture (`id_` URL) shows the old site. `quick_snap.py` or `visit.py` on
-  `web.archive.org/web/<year>/<url>` opens a copy; its HTML gives an eCatholic id
-  (`files.ecatholic.com/<id>`) for `issues.py`.
+  `web.archive.org/web/<year>/<url>` opens a copy (its HTML can give an eCatholic id).
 - **Image-only issues are common** (John Patrick, LPi, eCatholic): read pages 1–2 with
-  `render.py` and cite the masthead by note. A PDF on a host the probe proxy can't reach
-  opens with `visit.py --screenshot`; add `#page=N&zoom=50` to see more of a page.
+  `render.py` and cite the masthead by note; so is a PDF whose text reads as glyph codes
+  (`/0/1/2/i255/…`). A PDF the probe proxy can't reach opens with `visit.py --screenshot`
+  (`#page=N&zoom=50`).
 - **Read the footer of a self-hosted bulletin** for the printer's code (formats below)
-  before deciding the publisher. A parish's own archive or eCatholic reposts of an LPi bulletin
-  can lag the publisher's listing by years: record the publisher, not the copy, and leave the
-  eCatholic id out of `publication` when it is only the website. A parish can also change
-  printer without changing its links: when an LPi container stops while the parish still
+  before deciding the publisher. A parish's own archive or eCatholic and GoDaddy
+  (`img1.wsimg.com/blobby/…`) reposts of an LPi bulletin can lag the publisher's listing by
+  years: record the publisher, not the copy. A parish can also change printer without changing its links: when an LPi container stops while the parish still
   says "take a bulletin", look for a John Patrick listing.
 - **John Patrick Publishing** is the most common. Pin `page-pdfs
   https://church-bulletin.org/<id>` (`?id=<id>` runs a week ahead; don't pin it). The id is
@@ -142,8 +142,7 @@ Tools named here are in `scratch/newark-map-1/tools/`.
   <Town>, NJ (B) … John Patrick Publishing` and self-hosted names `<id><MMDDYY>.pdf`, which
   can zero-pad it (`0667bulletin…` = 667). One account can carry several bulletins as
   letter-suffixed listings (`6051O`, `6051A`) while the bare id is empty and the footer names
-  every parish: pin the listing the site links, try other letters when a shared pastor or
-  two-parish footer suggests a second bulletin, and read each masthead. To find an unlinked
+  every parish: pin the listing the site links, try other letters, and read each masthead. To find an unlinked
   listing, grep the saved scans (`029-map/jp-*.tsv`; ids here run 400–799 and 6000–6060)
   for the town or zip, then run `jp_scan.sh`. A listing showing only the week's readings is
   a parish posting nothing: `no_bulletin` with research to recheck, not a `fetch_gap`; so is
@@ -151,33 +150,31 @@ Tools named here are in `scratch/newark-map-1/tools/`.
   Wayback capture gives the schedule). Campus ministries can hold an empty listing: grep for
   the campus, and keep it in the exclusion's revisit.
 - **Bon Venture Services:** sites link `sponsors.bonventure.net/?page=<id>`. Record provider
-  `other`, `page-pdfs` and `publication: url:` on that page; names like `2026-11-08..pdf` still date. Self-hosted copies carry the footer
+  `other`, `page-pdfs` and `publication: url:` on that page. Self-hosted copies carry the footer
   `<code> · (<initials>) <Parish> · <Town>, NJ … Bon Venture Services`; codes like `142E` have
   no listing, so read the parish's bulletin page.
 - **ParishesOnline / LPi:** slugs follow `<name>-church-<zip>`, sometimes without the zip's
   leading zero (`-7105`; try both); `probe po <slug>` gives org, LPi id
-  and container: try it before `no_bulletin` and when a site's bulletins are old. The ad-page footer names the container (`<Parish>, <Town>, NJ 03-0374` or `<Parish> |
+  and container: try it before `no_bulletin` and when a site's bulletins are old. The ad-page footer names it (`<Parish>, <Town>, NJ 03-0374` or `<Parish> |
   04-0064` = `po-container:03/0374`; `probe container` confirms it). WeConnect (Duda) sites
   embed `publicationWidget?…&id=<18-char id>` on `/bulletin`, for `probe po <id>`. When
   guesses fail, `visit.py` on the bulletin page reports `po-org:<slug>` (some lack the zip).
   A current container whose org can't be found: keep `po-container` in `publication`,
   unsupported with fetch_gap `po-org-unknown`, and research.
-  A stray template date in the text layer can make fetch:check report freshness `unknown`:
-  check the file name and date line.
 - **eCatholic behind Cloudflare** answers `probe get` with 403; fetch:check runs headed and
-  reads it, so no `fetch_gap`. **Discover Mass** reposts on eCatholic
+  reads it, so no `fetch_gap`; `visit.py --html` saves such a page to grep (the Eparchy of
+  Passaic's tabbed parish list). A monthly issue dated its first Sunday
+  ('Sundays of November 1st, 8th…') makes later weeks 403 and can read stale mid-month: add
+  research to recheck after the next issue. **Discover Mass** reposts on eCatholic
   (`files.ecatholic.com/<id>/bulletins/<yyyymmdd>.pdf`, "©2026 Diocesan"): provider
-  `ecatholic`, both `ecatholic:` and `discovermass:` ids; Discover Mass caps downloads per IP
-  per day.
-- **Trinity Publishing** sites link one overwritten `/images/pdf/bulletin.pdf`, often months
-  stale: read page 1's date.
+  `ecatholic`, both `ecatholic:` and `discovermass:` ids; downloads are capped per IP per day.
+- **Trinity Publishing** sites link one overwritten `/images/pdf/bulletin.pdf`: read page 1's date.
 - **Wix and Duda:** a Duda `/bulletin` page listing dated PDFs reads with `page-pdfs` on it.
   Otherwise `page-pdfs <homepage>` (`first-listed`) picks the linked PDF, freshness
   `unknown`: confirm it is the bulletin. When a logo or coat-of-arms PDF is listed first and
   undated `_files/ugd/` names allow no glob, record unsupported with fetch_gap
   `first-pdf-not-bulletin`; when undated PDFs are labelled only "Month D" out of date order,
-  `first-pdf-not-current` (watch for "coming soon" placeholders under the next date). The
-  CDX for `<host>/_files/ugd/` counts uploads: lagging or abandoned? A Wix
+  `first-pdf-not-current`. The CDX for `<host>/_files/ugd/` counts uploads. A Wix
   site that is one embedded `filesusr.com/html/<id>.html` app: `probe get` the embed for its
   links (Drive folders read with `provider_id 'drive-folder <URL>'`). **Sitelio** sites
   build links in JavaScript: `visit.py --text --links`, cite by note.
@@ -185,11 +182,11 @@ Tools named here are in `scratch/newark-map-1/tools/`.
   other PDFs sit beside the issues, filter on what issue names share: Weebly hand-typed names
   (`filename=*_-_*.pdf`), 32-hex upload names (32 `?` + `.pdf`), a two-digit year prefix
   (`26-*.pdf`, set `revisit_after` in late December); freshness reads `unknown`, so add
-  research to recheck the glob. Link text is not the file's date (Squarespace `/s/` links
-  labelled 2026 pointing at 2025 files): check the picked name gives the issue date.
+  research to recheck the glob. Link text is not the file's date: check the picked name.
   WordPress: `wp-json/wp/v2/media?mime_type=application/pdf&per_page=20` lists uploads with
-  dates (weekly or sporadic?); an archive of one post per issue reads with `provider_id
-  'dated-post <archive URL>'`. Joomla `weblink.go` redirects defeat `page-pdfs` (`probe get`
+  dates (weekly or sporadic?; `visit.py --text` if the proxy can't reach it). One post
+  per issue: pin `provider_id 'dated-post <category URL>'`; unpinned, fetch:check stays on
+  the newest post it found. Joomla `weblink.go` redirects defeat `page-pdfs` (`probe get`
   one to read it): unsupported, fetch_gap `joomla-weblink-redirect`. A Canva design
   updated in place (`canva.com/design/<id>/…/view`; `visit.py --text`, `#N` for page N):
   unsupported, fetch_gap `canva-design-viewer`, `publication url:` the design. A PDF sent
@@ -197,24 +194,14 @@ Tools named here are in `scratch/newark-map-1/tools/`.
 - **Institute of Christ the King** oratories post at `institute-christ-king.org/bulletins-<city>`
   (dated `/images/<city>/bulletins/<yyyy>/<MMDDYYYY>.pdf`, newest first): provider `other`,
   `page-pdfs` on that page, website `<city>-home`.
-- **Languages:** 83 parishes are tagged Spanish; Korean, Polish, Portuguese and Italian
-  communities may print their own bulletins. Korean WordPress MangBoard boards
+- **Languages:** Korean, Polish, Portuguese and Italian communities may print their own
+  bulletins. Korean WordPress MangBoard boards
   (`/jubo/?vid=<n>`) post JPEG pages weekly, often Korean and English editions of one
   bulletin: one row, unsupported, fetch_gap `board-post-images`.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- GoDaddy Website Builder sites (img1.wsimg.com/blobby/... PDFs named 'November 1, 2026.pdf') can repost an LPi bulletin: grep the last page for the '<Parish>, <Town>, NJ 03-xxxx' footer and record the ParishesOnline org, not the copies.
-- A monastery or convent chapel with public Mass but no bulletin (the Rosary Shrine in Summit) becomes a church row under its own no_bulletin parish row, so it stays in the records while promote leaves it off the site.
-- pnpm diocese probe get --out resolves a relative path from the worktree root, not the shell's directory: always pass an absolute path into your scratch folder.
-- A John Patrick listing page (church-bulletin.org/<id>) shows the parish's website as its 'Visit Parish Website' link. When that domain and GCatholic's are dead and the directory gives none, use the listing as the row's website with page-pdfs on it.
-- An eCatholic PDF whose probe pdf text reads as glyph codes ('/0/1/2/i255/…') has an unreadable font encoding: treat it like an image-only issue and read it with render.py.
-- Some eCatholic parishes post one monthly issue dated its first Sunday (headed 'Sundays of November 1st, 8th, 15th and 22nd'), so later weeks answer 403: that is not a lapse. Add research to recheck freshness after the next issue, because the 14-day window can call it stale mid-month.
-- When probe url says UNREACHABLE ('EOF', maybe IPv6-only) or probe pdf says RemoteDisconnected, the headed fetch:check can still download from the site (sjanj.net): read the PDFs with visit.py --screenshot '#page=N&zoom=…' and run fetch:check before recording any fetch_gap.
-- A WordPress site posting one bulletin per post (category /category/bulletin/, PDF embedded in the post): unpinned, fetch:check resolves `page-pdfs` on the newest post's URL, which won't move to later issues; pin `dated-post <category URL>` instead. When the proxy can't reach the host, `visit.py --text` on wp-json/wp/v2/media?mime_type=application/pdf lists the uploads.
-- The Eparchy of Passaic's parish list (eparchyofpassaic.com/parishes, eCatholic, 403 to probe) reads with visit.py --html; its state tabs are all in the HTML, so grep the saved file to confirm Ruthenian churches GCatholic lists.
 
 ## Rules settled for this diocese
 
@@ -227,6 +214,9 @@ proposals are in `scratch/newark-map-1/survey.json` for `survey-review`.
 - A DEAD-DNS verdict from `probe url` before 2026-11-03's PR #205 is not evidence that a domain is dead; confirm with `probe get` or `visit.py` before recording a lost site. Since that PR, DEAD-DNS means the proxy's resolver found no such host. (accepted by survey-review, 002-survey-review, 2026-11-03; updated by the owner for PR #205, 2026-11-03)
 - A parish's Korean (or other language) community that GCatholic lists as a second entry with the same Plus Code as the parish church is linked to that one church row when the parish's schedule includes the community's Masses (GCatholic 18377/18378, St. Joseph, Demarest). (map batch `b-cresskill`, 2026-11-03)
 - A Parish Mission Partners group under We Are His Witnesses (2026) is a planning collaboration, not a shared bulletin: record it in `group`, and merge partners' bulletins only when their mastheads show one (the four Westfield/Scotch Plains partners print four). (map batch `j-westfield`, 2026-11-05)
+- A convent or monastery chapel with public Mass but no bulletin is a church row under its own
+  `no_bulletin` parish row, so it stays in the records while promote leaves it off the site
+  (Rosary Shrine, Summit). (map batch `j-summit`, 2026-11-05)
 
 ## Log
 
