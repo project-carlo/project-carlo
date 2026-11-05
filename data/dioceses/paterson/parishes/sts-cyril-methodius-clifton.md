@@ -26,6 +26,18 @@ evidence:
   seen: 2026-11-05
   note: 'issues.py ecatholic: 20261108 and 20261101 answer 403 (not posted yet); 20261025 is the newest
     issue.'
+revisit: Check the 1 November 2026 issue was posted (issues.py ecatholic ecatholic:14179); on 5 November
+  the newest was 25 October.
+revisit_after: 2026-11-09
+research:
+- method: Reconcile fetch:check (headed Chrome) and probe get of the Sunday-dated eCatholic files 18 October-8
+    November (newest posted 25 October, uploaded 22 October; 31 October, 1 and 8 November answer 403)
+  url: https://files.ecatholic.com/14179/bulletins/20261101.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Rerun fetch:check; if it still picks an issue older than two weeks, look for another place
+    the parish posts its bulletin
+  retry_when: On or after 2026-11-09, or when the parish posts the 1 November issue
 bulletin_status: available
 ---
 

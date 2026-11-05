@@ -185,6 +185,17 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-05: Reconcile (factory run paterson-map-1, 30 map batches of 6-12 roster entries,
+  usually 8). Coverage: directory 117/117 accounted for (106/114 modelled), gcatholic 122/122
+  (101/109); one church in no roster (Carnevale Center, Pompton Lakes, from the bulletin). 105
+  parish rows (7 `no_bulletin`, 1 `unsupported`), 111 churches, 16 exclusions, 1 `open/`
+  (Our Lady of Fatima church, Passaic, still undecided). No merges and no moves: audit --fetch
+  found no candidate pairs, the St. Mary's Abbey row stands, and nothing read puts St. Michael,
+  Paterson under the Cathedral. fetch:check on 97 rows: all downloaded. Not current: Holy Spirit
+  Pequannock (the site posts LPi copies 1-3 weeks late), Highland Lakes, Ringwood, Sts. Cyril &
+  Methodius Clifton and St. Rose East Hanover (1 November not yet posted), Branchville and
+  St. John Kanty (nothing since 11 October).
+
 - 2026-11-04: Survey (factory run paterson-map-1). Created the diocese; rosters `gcatholic`
   (122) and `directory` (117, the eCatholic parish finder with Mass times); planned 30 batches
   in `batches.json`. No parish records yet.

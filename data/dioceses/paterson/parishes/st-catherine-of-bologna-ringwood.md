@@ -37,6 +37,14 @@ research:
     within two weeks
   retry_when: After Sunday 8 November 2026
   revisit_after: 2026-11-09
+- method: Reconcile fetch:check (headed Chrome) and probe get of the Sunday-dated eCatholic files 18 October-8
+    November (newest posted 25 October; 31 October, 1 and 8 November answer 403)
+  url: https://files.ecatholic.com/33389/bulletins/20261101.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Rerun fetch:check; if it still picks an issue older than two weeks, look for another place
+    the parish posts its bulletin
+  retry_when: On or after 2026-11-09, or when the parish posts the 1 November issue
 bulletin_status: available
 ---
 

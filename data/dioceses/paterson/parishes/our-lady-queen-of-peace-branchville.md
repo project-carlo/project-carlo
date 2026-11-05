@@ -39,6 +39,15 @@ research:
     is listed, confirm its masthead and Mass times
   retry_when: On or after 2026-11-11, or when the parish posts a new issue (it skipped 20 September before,
     then resumed)
+- method: Reconcile fetch:check (headed Chrome) and probe get of the Sunday-dated eCatholic files 18 October-8
+    November (newest posted still 11 October, 25 days old (freshness stale); 18 October-8 November answer
+    403; the 11 October issue is self-published, no printer footer)
+  url: https://files.ecatholic.com/11413/bulletins/20261101.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Rerun fetch:check; if it still picks an issue older than two weeks, look for another place
+    the parish posts its bulletin
+  retry_when: On or after 2026-11-11, or when the parish posts the 1 November issue
 bulletin_status: available
 ---
 

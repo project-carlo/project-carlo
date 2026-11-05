@@ -20,6 +20,12 @@ evidence:
   note: 'GCatholic 19003 ''St. George'', ''Rite: Roman (Latin)'', ''History: 1897'', 408 Getty Ave., Paterson
     07503, Plus Code 87G7VRVV+8G, ''Last updated on 2025.12.21''. Out of date on the jurisdiction: it
     still files the church under the Latin diocese.'
+- url: http://sponsors.bonventure.net/pdfs/1455/2026-11-01.pdf
+  seen: 2026-11-05
+  quote: 154 EAST FIRST STREET
+  note: '1 November 2026 St. Brendan & St. George bulletin (probe pdf), page 1: one ''Celebration of the
+    Eucharist'' schedule and the Clifton address only; the Mass intentions on page 2 name no Mass at St.
+    George, Paterson. Consistent with the church having passed to the Syro-Malabar parish.'
 ---
 
 ## Why it is excluded

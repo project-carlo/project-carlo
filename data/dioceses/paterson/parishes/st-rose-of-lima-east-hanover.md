@@ -20,6 +20,18 @@ evidence:
     Its Parish Bulletins page lists weekly PDFs in the eCatholic documents folder, newest first: "Parish
     Bulletin October 25, 2026" (files.ecatholic.com/11932/documents/2026/10/October%2025%202026.pdf),
     then October 18, 11, 4 and September 27. No 1 November issue was posted on 4 November.'
+revisit: Check /parish-bulletins lists the 1 November 2026 issue and fetch:check picks it; on 5 November
+  the newest was 25 October.
+revisit_after: 2026-11-09
+research:
+- method: 'Reconcile fetch:check (page-pdfs on /parish-bulletins) and visit.py --links on the listing:
+    newest link October 25 2026; probe get of documents/2026/10 and 2026/11 ''November 1 2026.pdf'' answered
+    403'
+  url: https://saintroseoflimachurch.org/parish-bulletins
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Rerun fetch:check and confirm it picks the 1 November or a later issue
+  retry_when: On or after 2026-11-09, or when the listing shows a November issue
 bulletin_status: available
 ---
 

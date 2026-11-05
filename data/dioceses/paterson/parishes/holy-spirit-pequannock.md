@@ -35,6 +35,14 @@ research:
     the eCatholic copies
   retry_when: An org slug or LPi id for container 04/1007 turns up, or the eCatholic copies stop being
     posted
+- method: Reconcile fetch:check and visit.py --links on /bulletins (upload stamps), with probe get on
+    LPi container 04/1007
+  url: https://holyspiritparishnj.org/bulletins
+  checked: '2026-11-05'
+  outcome: found
+  next_action: Find the ParishesOnline org for container 04/1007 and switch the row to parishes_online;
+    until then fetch takes the eCatholic copy
+  retry_when: An org slug or LPi id for container 04/1007 turns up
 bulletin_status: available
 ---
 
@@ -50,7 +58,7 @@ The finder has two pins for this parish, directory:30384 (the eCatholic site id,
 
 ## Website and bulletin provider
 
-`holyspiritparishnj.org` is the parish's eCatholic site (id 30384, the finder pin id), and `probe url` reads it. Its /bulletins page lists weekly issues as `files.ecatholic.com/30384/bulletins/<YYYYMMDD>.pdf`; on 2026-11-04 the newest was 25 October (1 and 8 November answered 403). Provider `ecatholic` from the website; `fetch:check` on 2026-11-04 picked `20261025.pdf` (10 days old: fresh). The LPi container 04/1007 already had the 8 November issue, but no ParishesOnline org was found for it, so `fetch` can't read it by org slug (see research). The container id is recorded as a publication form of this bulletin.
+`holyspiritparishnj.org` is the parish's eCatholic site (id 30384, the finder pin id), and `probe url` reads it. Its /bulletins page lists weekly issues as `files.ecatholic.com/30384/bulletins/<YYYYMMDD>.pdf`; on 2026-11-04 the newest was 25 October (1 and 8 November answered 403). Provider `ecatholic` from the website; `fetch:check` on 2026-11-04 picked `20261025.pdf` (10 days old: fresh). The LPi container 04/1007 already had the 8 November issue, but no ParishesOnline org was found for it, so `fetch` can't read it by org slug (see research). The container id is recorded as a publication form of this bulletin. Reconcile's fetch:check on 2026-11-05 again picked the 25 October copy while the container had 1 and 8 November. The `?t=` upload stamps on /bulletins show the site posts in batches, one to three weeks late: 27 September, 4 and 11 October all uploaded on 12 October, then 18 and 25 October on 28 October. So the live row will usually trail the printed bulletin by a week or more, and it will stay that way until the container's org slug is found.
 
 ## Not yet confirmed
 

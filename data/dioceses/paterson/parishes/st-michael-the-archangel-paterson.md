@@ -25,6 +25,13 @@ evidence:
   note: Finder pin directory:13153 'St. Michael the Archangel, Paterson', 70 Cianci St, 07501, website
     https://stmichaelpaterson.com/; Saturday 7:00 PM Spanish; Sunday 10:00 AM Italian/English, 11:30 AM
     and 1:00 PM Spanish; Tuesday 12:00 PM Spanish.
+- url: https://beaconnj.org/bishop-visits-sisters-of-mercy-of-alma-serving-the-cathedral/
+  seen: 2026-11-05
+  quote: welcomed Bishop Kevin J. Sweeney into their convent, established at nearby St. Michael Parish,
+    also in Paterson
+  note: 'Beacon, 22 December 2025: the Sisters serving the Cathedral live in a convent at St. Michael;
+    the article still calls St. Michael a parish. The priest directory (visit.py, 2026-11-05) lists no
+    pastor or administrator for St. Michael, Paterson, and no Cathedral priest with it.'
 revisit: Reopen https://stmichaelpaterson.com/bulletins with visit.py and run issues.py ecatholic ecatholic:13153;
   check the parish Facebook page and Discover Mass for a posted bulletin, and whether the Cathedral's
   site now lists Mass at St. Michael.
@@ -45,6 +52,16 @@ research:
   outcome: not-found
   next_action: Rerun issues.py discovermass discovermass:st-michael-the-archangel-paterson-nj
   retry_when: Discover Mass lists issues for this church
+- method: 'Lead check: who administers St. Michael. Priest directory (rcdop.org/priest-directory, visit.py)
+    and The Beacon API search for St. Michael Paterson'
+  url: https://rcdop.org/priest-directory
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Look for a decree or Beacon notice naming a pastor or administrator of St. Michael, Paterson,
+    or the Cathedral listing Mass at 70 Cianci St; if the Cathedral runs it, move the church to cathedral-st-john-the-baptist-paterson
+  retry_when: The priest directory names a priest for St. Michael, Paterson, or the Cathedral's site or
+    a bulletin mentions it
+  revisit_after: 2027-02-01
 bulletin_status: not-found
 ---
 
@@ -62,5 +79,5 @@ One church, `st-michael-the-archangel-paterson` (70 Cianci Street). The diocese'
 
 ## Not yet confirmed
 
-- Whether St. Michael is still a parish of its own. The home page sends sacramental-records requests to the Cathedral of St. John the Baptist, which suggests the Cathedral now administers it, but no source read states a merger, and the Cathedral's Mass page (rcdopcathedral.org/mass-schedule-1, read 2026-11-05) does not mention St. Michael. A lead to batch `paterson-downtown` asks it to check. If the Cathedral turns out to run it, the church belongs on the Cathedral's row (`reconcile`).
+- Whether St. Michael is still a parish of its own. The home page sends sacramental-records requests to the Cathedral of St. John the Baptist, which suggests the Cathedral now administers it, but no source read states a merger, and the Cathedral's Mass page (rcdopcathedral.org/mass-schedule-1, read 2026-11-05) does not mention St. Michael. Reconcile checked on 2026-11-05: the priest directory names no pastor or administrator for St. Michael, Paterson, and no Cathedral priest with it; The Beacon (22 December 2025) still calls it "St. Michael Parish", where the Sisters who serve the Cathedral have their convent. Nothing read says the Cathedral administers it, so the church stays here. If a source shows the Cathedral runs it, move the church to `cathedral-st-john-the-baptist-paterson` (also `no_bulletin` today, so the site is unaffected either way).
 - Whether the finder's Mass times are current: the parish's own site gives none. Revisit after 2027-02-01.

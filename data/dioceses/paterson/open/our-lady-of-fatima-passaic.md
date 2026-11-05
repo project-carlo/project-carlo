@@ -41,6 +41,14 @@ research:
   next_action: Search The Beacon (diocesan paper) for the 2022 Fatima-St. Nicholas merger article and
     what it says of the Exchange Place church
   retry_when: The Beacon search loads, or a browser search is available
+- method: The Beacon WordPress API search via probe get (search=Fatima Nicholas; search=Fatima limited
+    to June 2021 - June 2023; search=Exchange Place); read the three 2026 articles on the parish
+  url: https://beaconnj.org/wp-json/wp/v2/posts?search=Fatima%20Nicholas&_fields=date,link,title
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Ask the parish office (973-472-0815) whether any Mass is celebrated at 32 Exchange Place,
+    or read a future bulletin for a notice about the building
+  retry_when: A bulletin or diocesan notice names the Exchange Place church, or a phone check is possible
 ---
 
 ## What is known
@@ -49,4 +57,4 @@ Our Lady of Fatima church, 32 Exchange Place (corner of Park), was dedicated on 
 
 ## Why it is not decided
 
-Nothing read shows Mass in the building now, but nothing says it closed, was sold or was relegated either: the bulletin and site use it only as the office address. Checked: the 1 November and 18 October 2026 bulletins, the 12 June 2022 bulletin, the parish site's home, Mass times and history pages, the legacy St. Nicholas site. Not checked: a news report of the merger (The Beacon's search failed to load on 2026-11-05) and the parish office.
+Nothing read shows Mass in the building now, but nothing says it closed, was sold or was relegated either: the bulletin and site use it only as the office address. Checked: the 1 November and 18 October 2026 bulletins, the 12 June 2022 bulletin, the parish site's home, Mass times and history pages, the legacy St. Nicholas site. The Beacon (beaconnj.org, searched through its WordPress API on 2026-11-05 by reconcile) has no merger article from 2021-2023 and nothing on Exchange Place; its 2026 articles on the parish (Easter Vigil, 30 May confirmations, the bishop's 16 August visit) name the parish but never the church building. Not checked: the parish office.
