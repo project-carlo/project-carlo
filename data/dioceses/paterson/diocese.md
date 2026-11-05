@@ -118,6 +118,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Parishes here often post next Sunday's issue mid-week: fetch:check then reports freshness 'future' (age -4 days) for the newest file, which is the correct pick; confirm the masthead date rather than treating it as an error.
 - Bon Venture seasonal covers (All Saints/All Souls) replace the masthead on page 1 of eCatholic-hosted issues here too: read the address and Mass times from the previous week's page 1 or the schedule on page 2.
 - A Squarespace parish site here can post /s/<YYYYMMDD>B.pdf copies of an LPi bulletin: the LPi ad footer '<parish> | 03-NNNN' gives the ParishesOnline container, and probe po on '<name>-church-<zip>' finds the org; record parishes_online, not the site copies.
+- LPi bulletins posted as eCatholic bulletins/ copies here carry an ad footer '<parish>, <town>, NJ 04-NNNN': container 04/NNNN can have next Sunday's issue before the eCatholic copy, but probe po may find no org slug for it; then keep provider ecatholic and record po-container as a publication form, with research to find the org.
+- A bulletin posted as one fixed Dropbox file (dropbox.com/s/<id>/Bulletin.pdf?dl=0 on a Wix site) gets Dropbox's HTML preview under page-pdfs (not_pdf): pin 'redirected-pdf <same URL>?dl=1'; fetch:check then downloads the PDF but reports date and freshness unknown, so check the masthead date by hand.
 
 
 ## Rules settled for this diocese
