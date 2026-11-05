@@ -151,6 +151,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A parish can move its bulletin between its own eCatholic site ids (Our Lady of Consolation: 11364 to Jan 2026, 700 to Nov 2026, then all 2026 issues back-filled onto 11364): compare the ?t= upload stamps on each site's /bulletins links to see which site is posting now, record every site id carrying the issues in publication, and set a revisit.
 - John Patrick church-bulletin.org issues can be image-only (St. Paul Prospect Park, JPPC 6012): probe pdf finds no text, so render page 1 for masthead and Mass times; fetch:check dates the pick from the file name but reports identity unverified.
 - visit.py can hang with no output (past 500 s) on an eCatholic site's home page while the same site's /bulletins page loads at once (stgerardmajella.org, stgerardschool.org, 2026-11-04): visit the bulletin page URL directly rather than --follow from the home page.
+- An eCatholic /bulletins page that shows only the 'Bulletin' and 'Archive' headings, with no file links, means the parish posts nothing there; confirm with issues.py (Sunday and --day sat names, 403 = not posted) and record no_bulletin with a revisit (four Paterson parishes so far).
 
 ## Rules settled for this diocese
 
