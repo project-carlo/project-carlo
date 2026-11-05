@@ -156,6 +156,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - The John Patrick customer number in a bulletin's footer ('6059 Our Lady of Lourdes, Paterson, NJ John Patrick Publishing') opens its church-bulletin.org listing via https://church-bulletin.org/?id=<n> even when the parish site links only eCatholic copies. Guessed church-bulletin.org slugs return a generic 200 page, not a 404.
 - Before recording no_bulletin for an eCatholic parish with an empty /bulletins page, run probe po <name>-church-<zip>: a ParishesOnline org can exist with no publications (Blessed Sacrament Paterson). It confirms nothing is published there, and its ids are the ones to use if issues appear.
 - An eCatholic /bulletins page titled 'Bulletins (up to 2023)' is a frozen archive: the site's top-menu 'Bulletins' item can point to a Bon Venture sponsor page instead (St. Brendan & St. George, 11777), so read the menu links, not just the page's file list.
+- Bon Venture codes in the ad footer ('021C (JA) - St. John Kanty', '139B (JR) - St. Philip') don't map to sponsors.bonventure.net ?page=<n> ids, and bonventure.net has no parish list or search: the sponsor page can only be found where a site links it.
+- WordPress parish sites here can post one /bulletin/<month>-<day>-<year>/ post per issue with the PDF inside (stphilip.org): fetch's dated-post recipe on the listing page picks the current issue; a WordPress /wp-json/wp/v2/media?mime_type=application/pdf query lists every uploaded issue with its upload date, which shows how often a parish posts.
 
 ## Rules settled for this diocese
 
