@@ -114,6 +114,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - ParishesOnline often has empty orgs (no issues) for Brooklyn parishes that self-publish, e.g. slugs <name>-11385 / <name>-church-11385; probe po can find them, but an org with no issues is not a publication id and doesn't make the parish a parishes_online row.
 - A self-hosted bulletin page that keeps one stale file gets 'ok' from fetch:check with freshness 'unknown', not 'stale'; check the issue date yourself before pinning a recipe.
+- Tilma also runs parish sites on custom domains (sjaparish.com, bsjh.org), and these serve PDFs from <site>/system/resources/<token>/ instead of files.tilmaplatform.com. The same `page-pdfs https://<site>/bulletins` recipe works for them.
+- When the directory's homepage is dead or parked, look up the parish's Discover Mass church page (discovermass.com/church/<name>-<town>-ny/). It names the parish's current website even when it lists no bulletins; that is how bsjh.org was found for Blessed Sacrament.
 
 
 ## Rules settled for this diocese
