@@ -124,6 +124,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Google Drive folder page (drive/folders/<id>) serves only its first 50 files, name order, so drive-folder can pick a years-old issue; list the whole folder with drive.google.com/embeddedfolderview?id=<id>#list to see whether it is still kept current before pinning it.
 - On JavaScript-only parish sites (Next.js /_next/static chunks, Vite /assets/index-*.js) whose bulletin menu has no links in the HTML, grep the JS bundle for drive.google.com, docs.google.com/spreadsheets or supabase.co to find where the issues live; when the link only exists in JS, the row is unsupported with a fetch_gap.
 - Joomla DOCman bulletin lists (/news/bulletin/<n>-<title>/file, class docman_track_download) answer 403 to probes and fetch; the link's title attribute gives the file name, and a name like 03-NNNN.MMDD.pdf is an LPi container 03/NNNN, so probe po finds a parishes_online row. tools/browser-pdf.py downloads such a file through the browser.
+- A Tilma bulletins page whose files are named YYYYMMDDB.pdf (LPi's naming) is reposting an LPi issue: probe po <name>-church-<zip> finds the live container, and the row is parishes_online rather than an `other` Tilma recipe.
 
 
 ## Rules settled for this diocese
