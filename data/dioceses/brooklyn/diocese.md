@@ -156,6 +156,9 @@ touch it.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A merged parish can post the same eCatholic bulletin on each former parish's eCatholic site (RA-OLA: 24728 and 29323): compare page-1 mastheads, keep one row and record both ecatholic ids as its publication ids.
+- The diocesan archives' List of Parishes (dioceseofbrooklyn.org/offices/diocesan-archives/parishes/) lists chapels and apostolates with 'Closed YYYY' notes; use it for a chapel's listed status and contacts, not as Mass evidence.
+
 ## Rules settled for this diocese
 
 None yet. Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
