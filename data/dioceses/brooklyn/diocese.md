@@ -194,6 +194,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Some Tilma parish themes list /bulletins as '<Month DD, YYYY> / Download Bulletin' cards (not 'Bulletin for Sunday, <date>'), with PDFs at <site>/system/resources/<token>/: grep the page text for the dates, not the 'Bulletin for' wording.
 - A Tilma /bulletins page that is months stale can still sit beside a live LPi container: run probe po <name>-church-<zip> before recording no_bulletin (sfdsparish.org's last card 23 Aug 2026; container 03/4055 current).
 - A Joomla DOCman bulletin list (403 to probes and fetch) whose files are the parish's own Word PDFs with no LPi footer and no ParishesOnline org with issues is unsupported with fetch_gap kind joomla-docman-file-403; read the issues with tools/browser-pdf.py.
+- Some self-made bulletins posted on Tilma have a text layer in a shifted font encoding ('3KRQH' for 'Phone', digits dropped), so probe pdf greps miss Mass times and fetch:check reports issue-date conflicts: render.py page 1 for the masthead and take per-church Mass assignments from the site's /mass-times page.
 
 ## Rules settled for this diocese
 
