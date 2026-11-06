@@ -166,6 +166,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Newer Tilma 'webstudio' sites (api.tilmaplatform.com, /cgi/asset/ paths) render /bulletins in JavaScript, so probe get shows no cards; the homepage HTML embeds latestBulletinData with the Bulletins collection's totalCount, and visit.py shows the cards (or 'NOTHING TO SHOW').
 - A WordPress dFlip flipbook over one fixed, weekly-overwritten PDF fails the unpinned resolver ('No bulletin page link found'); pinning 'page-pdfs <bulletin page>' reads the dFlip source and fetch:check dates the issue from its text.
 - When a WordPress parish site has no bulletin menu, list its PDF uploads newest first with probe get '<site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=50' to find and date the last bulletin it posted.
+- Squarespace sites can repost LPi issues as /s/03-0NNNNMMDDYY.pdf (container number zero-padded to 5 digits: 03-04068 is po-container 03/4068); probe container 03/NNNN directly. The org slug may lack a zip suffix (st-mary-gate-of-heaven-church), so try the bare <name>-church slug when the -<zip> forms don't exist.
+- WordPress pages with the 3D FlipBook plugin (div class _3d-flip-book data-id=N, plugin interactive-3d-flipbook-powered-physics-engine) show no PDF link in the HTML, but a pinned 'page-pdfs <bulletin page>' recipe resolves the flipbook's current upload in fetch:check.
+- render.py can't download from the WordPress multisite hosts that drop probe connections; download with tools/fetch-pdf.py (run without python -I, which hides pdf_extract) and pass render.py the local file path.
 
 ## Rules settled for this diocese
 
