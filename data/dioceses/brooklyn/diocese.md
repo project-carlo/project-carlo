@@ -169,6 +169,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Squarespace sites can repost LPi issues as /s/03-0NNNNMMDDYY.pdf (container number zero-padded to 5 digits: 03-04068 is po-container 03/4068); probe container 03/NNNN directly. The org slug may lack a zip suffix (st-mary-gate-of-heaven-church), so try the bare <name>-church slug when the -<zip> forms don't exist.
 - WordPress pages with the 3D FlipBook plugin (div class _3d-flip-book data-id=N, plugin interactive-3d-flipbook-powered-physics-engine) show no PDF link in the HTML, but a pinned 'page-pdfs <bulletin page>' recipe resolves the flipbook's current upload in fetch:check.
 - render.py can't download from the WordPress multisite hosts that drop probe connections; download with tools/fetch-pdf.py (run without python -I, which hides pdf_extract) and pass render.py the local file path.
+- A Tilma site's /bulletins can redirect to parishesonline.com/organization/<slug> (probe get shows it as final_url, while probe url lists no bulletin links). Run probe po on that slug: the row is parishes_online.
+- Google Sites parish pages can embed each issue as a Drive file preview (iframe data-src drive.google.com/file/d/<id>/preview) with no folder or PDF link, so fetch can't resolve them. Record unsupported with fetch_gap kind drive-preview-embed, and read the issue through drive.google.com/uc?id=<id>&export=download.
 
 ## Rules settled for this diocese
 
