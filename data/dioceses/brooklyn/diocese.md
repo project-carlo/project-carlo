@@ -116,6 +116,9 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A self-hosted bulletin page that keeps one stale file gets 'ok' from fetch:check with freshness 'unknown', not 'stale'; check the issue date yourself before pinning a recipe.
 - Tilma also runs parish sites on custom domains (sjaparish.com, bsjh.org), and these serve PDFs from <site>/system/resources/<token>/ instead of files.tilmaplatform.com. The same `page-pdfs https://<site>/bulletins` recipe works for them.
 - When the directory's homepage is dead or parked, look up the parish's Discover Mass church page (discovermass.com/church/<name>-<town>-ny/). It names the parish's current website even when it lists no bulletins; that is how bsjh.org was found for Blessed Sacrament.
+- Parish sites on the WordPress multisite with uploads under /wp-content/uploads/sites/<n>/ (olschurch-corona.org, stbartselmhurst.org) drop probe url and probe pdf connections (UNREACHABLE, RemoteDisconnected) but load in visit.py and fetch. Their bulletin page is /important-information/bulletin/, newest first, and tools/fetch-pdf.py downloads a PDF for pdftotext.
+- A self-hosted bulletin PDF can be an LPi issue. Grep its last page for the footer '<Parish> | 03-NNNN': that is po-container 03/NNNN, and probe po on the org gives a parishes_online row with real publication ids.
+- A Tilma bulletins page can post the coming week's card before its file (the card links /bulletins/null). fetch then picks the previous issue, so record a research recheck after the weekend, not a gap.
 
 
 ## Rules settled for this diocese
