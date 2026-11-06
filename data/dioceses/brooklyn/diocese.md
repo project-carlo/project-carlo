@@ -165,6 +165,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - John Patrick Publishing prints in Brooklyn too: sites link jppc.net/onlinebulletins/<id>template.pdf; record other with 'page-pdfs https://church-bulletin.org/<id>' (fetch:check resolves it). Its issues can be all images: render.py them.
 - Newer Tilma 'webstudio' sites (api.tilmaplatform.com, /cgi/asset/ paths) render /bulletins in JavaScript, so probe get shows no cards; the homepage HTML embeds latestBulletinData with the Bulletins collection's totalCount, and visit.py shows the cards (or 'NOTHING TO SHOW').
 - A WordPress dFlip flipbook over one fixed, weekly-overwritten PDF fails the unpinned resolver ('No bulletin page link found'); pinning 'page-pdfs <bulletin page>' reads the dFlip source and fetch:check dates the issue from its text.
+- When a WordPress parish site has no bulletin menu, list its PDF uploads newest first with probe get '<site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=50' to find and date the last bulletin it posted.
 
 ## Rules settled for this diocese
 
