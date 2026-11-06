@@ -126,6 +126,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Joomla DOCman bulletin lists (/news/bulletin/<n>-<title>/file, class docman_track_download) answer 403 to probes and fetch; the link's title attribute gives the file name, and a name like 03-NNNN.MMDD.pdf is an LPi container 03/NNNN, so probe po finds a parishes_online row. tools/browser-pdf.py downloads such a file through the browser.
 - A Tilma bulletins page whose files are named YYYYMMDDB.pdf (LPi's naming) is reposting an LPi issue: probe po <name>-church-<zip> finds the live container, and the row is parishes_online rather than an `other` Tilma recipe.
 - Some Brooklyn bulletins on Tilma sites are printed by The Church Bulletin Inc. (West Babylon; ad-page footer 'THE CHURCH BULLETIN INC., 200 DALE ST.' with a '#NNN' number): no online container, so record them as `other` page-pdfs with no publication id; their page 1 is often an image, so render it (render.py) for the masthead and Mass times.
+- A self-hosted bulletin kept as one fixed file behind a redirect (/bulletin -> /files/bulletin.pdf) fails fetch:check when the redirect URL is the website; set website to the homepage and fetch:check resolves and prints recipe 'redirected-pdf <site>/bulletin' (freshness stays unknown, so check the issue date yourself).
+- The deanery roster's Q10 'Immaculate Conception Center' (like the diocesan offices) is the deanery page's Contact Us footer read as a parish entry, not a deanery member.
 
 
 ## Rules settled for this diocese
