@@ -162,6 +162,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - WordPress pages with dFlip flipbooks (plugin flipbook-dflip-lite) hide the PDFs in inline scripts: grep the page HTML for '"source":' in window.option_df_* to get the file URLs (here LPi-named YYYYMMDDB.pdf reposts).
 - When a parish site answers 403, try `probe po <name>-church-<zip>` before the browser: it found live LPi orgs for two such sites at once, and their front pages are images, so render.py pages 1-2 for masthead and Mass times.
 - Catholic Cemeteries pages (ccbklyn.org/our-cemeteries/<name>/) state cemetery Mass times (St. John: Mon-Fri 9:30 AM); GCatholic lists only St. John cemetery chapel, but Holy Cross and Mount St. Mary pages may list Masses too: a cemetery chapel with listed public Mass and no bulletin is excluded as no-bulletin.
+- John Patrick Publishing prints in Brooklyn too: sites link jppc.net/onlinebulletins/<id>template.pdf; record other with 'page-pdfs https://church-bulletin.org/<id>' (fetch:check resolves it). Its issues can be all images: render.py them.
+- Newer Tilma 'webstudio' sites (api.tilmaplatform.com, /cgi/asset/ paths) render /bulletins in JavaScript, so probe get shows no cards; the homepage HTML embeds latestBulletinData with the Bulletins collection's totalCount, and visit.py shows the cards (or 'NOTHING TO SHOW').
 
 ## Rules settled for this diocese
 
