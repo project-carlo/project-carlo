@@ -11,7 +11,7 @@ longitude: -74.1791875
 coordinates_from: gcatholic-plus-code
 name_verified: true
 address_verified: true
-roster: ['gcatholic:18362', 'directory:6']
+roster: ['gcatholic:18362', 'directory:6', 'directory:134']
 evidence:
 - url: https://www.stantbell.org/uploads/1774ff66a67d452da88dfaac543c8c8a.pdf
   seen: 2026-11-03
@@ -35,4 +35,4 @@ Yes. Page 1 of the 1 November 2026 bulletin gives Saturday 5:30pm vigil, Sunday 
 
 ## Name and address
 
-The bulletin masthead ("St. Anthony of Padua Church, 63 Franklin Street (Silver Lake)"), the parish site's directions link, GCatholic (18362, "St. Anthony") and the archdiocese directory (6) all give 63 Franklin Street, Belleville, NJ 07109. The bulletin's parish office address, 750 N. 7th Street, Newark, is an office, not the church. Coordinates from GCatholic's Plus Code 87G7QRHC+V8; the directory pin (40.77958, -74.17928) is about 10 m away.
+The bulletin masthead ("St. Anthony of Padua Church, 63 Franklin Street (Silver Lake)"), the parish site's directions link, GCatholic (18362, "St. Anthony") and the archdiocese directory (6) all give 63 Franklin Street, Belleville, NJ 07109. The bulletin's parish office address, 750 N. 7th Street, Newark, is an office, not the church. The directory also lists that office as a second entry, 134 "St. Anthony of Padua Parish, 750 N 7th Street, Newark" (no website, in no other list, absent from the planning areas); it is this parish's office, so it is linked here rather than given a record of its own (reconcile, 2026-11-05). Coordinates from GCatholic's Plus Code 87G7QRHC+V8; the directory pin (40.77958, -74.17928) is about 10 m away.

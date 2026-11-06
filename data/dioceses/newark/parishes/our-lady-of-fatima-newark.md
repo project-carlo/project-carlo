@@ -4,7 +4,7 @@ website: https://www.fatimachurchnewark.com/
 bulletin_provider: parishes_online
 provider_id: our-lady-of-fatima-church-7105
 publication: ['po-org:our-lady-of-fatima-church-7105', 'lpi:0018000000Qbz8BAAR', 'po-container:04/1091']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.fatimachurchnewark.com/bulletin
   seen: 2026-11-04

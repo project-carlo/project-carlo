@@ -4,7 +4,7 @@ website: https://stjosephjc.com/index.html
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6015
 publication: ['url:https://www.church-bulletin.org/saint-joseph-roman-catholic-church-jersey-city-nj-07306']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-joseph-roman-catholic-church-jersey-city-nj-07306/2026-11-01.pdf
   seen: 2026-11-03

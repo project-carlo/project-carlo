@@ -4,7 +4,7 @@ website: https://www.saint-peter.org/
 bulletin_provider: parishes_online
 provider_id: st-peter-the-apostle-church-07661
 publication: ['po-org:st-peter-the-apostle-church-07661', 'lpi:0018000000QxAC3AAN', 'po-container:03/4009']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4009/20261101B.pdf
   seen: 2026-11-03

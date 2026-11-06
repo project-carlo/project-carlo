@@ -4,7 +4,7 @@ website: https://www.stmargaretlfnj.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stmargaretlfnj.org/bulletins
 publication: ['url:https://www.stmargaretlfnj.org/bulletins']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://www.stmargaretlfnj.org/_files/ugd/1b4306_9553c92555884ef786650c5a4289b60f.pdf
   seen: 2026-11-03

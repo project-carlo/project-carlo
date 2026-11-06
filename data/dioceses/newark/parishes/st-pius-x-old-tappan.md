@@ -4,7 +4,7 @@ website: https://spxot.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:29146']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/29146/bulletins/20261101.pdf
   seen: 2026-11-03

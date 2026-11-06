@@ -4,7 +4,7 @@ website: http://stnicholaschurchorg.weebly.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/681
 publication: ['url:https://www.church-bulletin.org/saint-nicholas-church-jersey-city-nj-07307']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-nicholas-church-jersey-city-nj-07307/2026-11-01.pdf
   seen: 2026-11-03

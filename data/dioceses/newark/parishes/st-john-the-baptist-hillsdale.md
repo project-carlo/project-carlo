@@ -4,7 +4,7 @@ website: https://www.stjohnhillsdale.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stjohnhillsdale.org/
 publication: ['url:https://www.stjohnhillsdale.org/']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.stjohnhillsdale.org/_files/ugd/f67067_dab717a18fea43e981f1450a04963537.pdf
   seen: 2026-11-03

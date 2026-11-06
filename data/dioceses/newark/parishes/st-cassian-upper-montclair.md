@@ -4,7 +4,7 @@ website: https://stcassianchurchuppermontclair.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/616
 publication: ['url:https://www.church-bulletin.org/saint-cassian-parish-upper-montclair-nj-07043']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-cassian-parish-upper-montclair-nj-07043/2026-11-01.pdf
   seen: 2026-11-03

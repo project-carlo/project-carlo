@@ -4,7 +4,7 @@ website: https://mountcarmelnewark.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6017
 publication: ['url:https://church-bulletin.org/6017#john-patrick']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://church-bulletin.org/6017
   seen: 2026-11-04

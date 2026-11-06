@@ -4,7 +4,7 @@ website: https://iccsecaucus.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/582
 publication: ['url:https://www.church-bulletin.org/the-parish-family-of-immaculate-conception-secaucus-nj-07094']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-parish-family-of-immaculate-conception-secaucus-nj-07094/2026-11-01.pdf
   seen: 2026-11-03

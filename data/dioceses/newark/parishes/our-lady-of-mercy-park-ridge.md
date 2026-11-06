@@ -4,7 +4,7 @@ website: https://www.urolm.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:19845']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/19845/bulletins/20261101.pdf
   seen: 2026-11-03

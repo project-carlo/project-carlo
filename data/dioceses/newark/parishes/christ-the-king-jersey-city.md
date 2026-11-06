@@ -4,7 +4,7 @@ website: https://christthekingjerseycity.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/693
 publication: ['url:https://www.church-bulletin.org/christ-the-king-roman-catholic-parish-jersey-city-nj-07304']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/christ-the-king-roman-catholic-parish-jersey-city-nj-07304/2026-11-01.pdf
   seen: 2026-11-03

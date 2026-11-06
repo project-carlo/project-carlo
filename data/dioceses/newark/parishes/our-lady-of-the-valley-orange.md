@@ -4,7 +4,7 @@ website: https://olvsalesianchurch.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:20387']
-group: Planning Area H
+group: ''
 evidence:
 - url: https://files.ecatholic.com/20387/bulletins/20261011.pdf
   seen: 2026-11-04

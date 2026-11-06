@@ -4,7 +4,7 @@ website: https://www.stvalentinechurch.com/
 bulletin_provider: other
 provider_id: page-pdfs https://www.stvalentinechurch.com/ filename=*_-_*.pdf
 publication: ['url:https://www.stvalentinechurch.com/']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.stvalentinechurch.com/uploads/4/9/1/6/4916586/allsaintsday_-_2026.pdf
   seen: 2026-11-03

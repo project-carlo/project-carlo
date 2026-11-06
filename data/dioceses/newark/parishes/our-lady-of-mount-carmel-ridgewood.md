@@ -4,7 +4,7 @@ website: https://www.olmcridgewood.com/weekly-bulletins
 bulletin_provider: other
 provider_id: page-pdfs https://www.olmcridgewood.com/weekly-bulletins
 publication: ['url:https://www.olmcridgewood.com/weekly-bulletins']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://www.olmcridgewood.com/images/bulletins/bulletin110126.pdf
   seen: 2026-11-03

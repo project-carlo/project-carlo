@@ -3,7 +3,7 @@ name: Bella Vista (Saturday Spanish Mass, Sts. Joseph and Michael)
 revisit: 'Find where ''Bella Vista'' is and whether its Saturday 4:00PM Spanish Mass is open to the public:
   ask or read the Sts. Joseph and Michael site or a later bulletin; if a parish-schedule Mass at a public
   place, make it a church row of ss-joseph-and-michael-union-city, otherwise exclude as no-public-mass.'
-revisit_after: 2026-12-01
+revisit_after: 2026-12-15
 roster: []
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0699/20261101B.pdf
@@ -33,6 +33,15 @@ research:
   next_action: Read the parish site's other pages (calendar, I'm new here) with visit.py, or a later bulletin,
     for the Bella Vista address and who may attend
   retry_when: A later Sts. Joseph and Michael bulletin or site page mentions Bella Vista
+- method: probe pdf grep of the 8 November 2026 Sts. Joseph and Michael bulletin for 'Bella'; rcan.org
+    search for 'bella vista'
+  url: https://container.parishesonline.com/bulletins/03/0699/20261108B.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Ask the parish office or read the Sts. Joseph and Michael site for where Bella Vista is;
+    the 8 November issue lists only 'Saturday 4:00PM (Español - Bella Vista)' and a $37 collection at
+    that Mass, no address
+  retry_when: A later bulletin or the parish site gives the Bella Vista address or says who may attend
 ---
 
 ## What is known

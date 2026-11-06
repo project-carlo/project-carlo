@@ -26,15 +26,17 @@ evidence:
   quote: Very Reverend Charles Pinyan has been appointed pastor of
   note: The archdiocese's Clergy Appointments post of 23 June 2026 (read from the survey's saved copy)
     appoints him pastor of Saint Mary, Rutherford, effective July 1, 2026, and ending June 30, 2032.
-revisit: Read the current Mass schedule from the parish site or bulletin (see parish st-mary-rutherford's
-  revisit) and quote it here.
-revisit_after: 2026-11-10
+- url: http://sponsors.bonventure.net/pdfs/1558/2026-11-08.pdf
+  seen: 2026-11-05
+  quote: 91 HOME AVENUE
+  note: '8 November 2026 bulletin, page 4: ''CHURCH OF SAINT MARY 91 HOME AVENUE RUTHERFORD, NEW JERSEY
+    07070''; Saturday 5:00 pm, Sunday 8:00, 10:00 & 12:00 noon, Monday-Friday 8:30 am.'
 ---
 
 ## Holds Mass
 
-Inferred, not read: no current Mass schedule could be read on 2026-11-03 because the parish site blocked every load (see the parish record). The archdiocese appointed a pastor of Saint Mary, Rutherford effective 1 July 2026 (Clergy Appointments, 23 June 2026), and the directory lists it as an active parish at this address, so it is the parish's church. Confirm the schedule at the revisit.
+Yes. Page 4 of the 8 November 2026 bulletin (Bon Venture page 1558) gives Saturday 5:00 pm (Sunday obligation), Sunday 8:00, 10:00 and 12:00 noon, and Monday to Friday 8:30 am, with confessions Saturday 4:15 pm.
 
 ## Name and address
 
-The archdiocese directory (91 Home Avenue, 07070), GCatholic (91 Home Ave.) and the ParishesOnline org (91 Home Ave) agree. The coordinates come from GCatholic's Plus Code (87G7RVHW+R8).
+The bulletin masthead ('CHURCH OF SAINT MARY 91 HOME AVENUE RUTHERFORD, NEW JERSEY 07070'), the archdiocese directory (91 Home Avenue, 07070), GCatholic (91 Home Ave.) and the ParishesOnline org (91 Home Ave) agree. The coordinates come from GCatholic's Plus Code (87G7RVHW+R8).

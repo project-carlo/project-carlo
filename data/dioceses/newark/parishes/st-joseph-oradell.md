@@ -4,7 +4,7 @@ website: https://sjcnj.org/
 bulletin_provider: parishes_online
 provider_id: saint-joseph-roman-catholic-church
 publication: ['po-org:saint-joseph-roman-catholic-church', 'lpi:0018000000Qc1SHAAZ', 'po-container:04/0064']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0064/20261101B.pdf
   seen: 2026-11-03

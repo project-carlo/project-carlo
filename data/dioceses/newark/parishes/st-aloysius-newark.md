@@ -4,7 +4,7 @@ website: https://www.saintaloysiusnewark.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:st-aloysius-church-07105', 'lpi:0018000000QxAAuAAN']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.saintaloysiusnewark.org/
   seen: 2026-11-04

@@ -4,7 +4,7 @@ website: https://www.holyspiritunion.org/
 bulletin_provider: parishes_online
 provider_id: holy-spirit-roman-catholic-church-07083
 publication: ['po-org:holy-spirit-roman-catholic-church-07083', 'lpi:0018000000QxAAWAA3', 'po-container:03/1121']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1121/20261101B.pdf
   seen: 2026-11-05

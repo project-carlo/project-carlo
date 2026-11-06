@@ -4,7 +4,7 @@ website: https://stanthonyuc.com/bulletins
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area E
+group: ''
 evidence:
 - url: https://stanthonyuc.com/bulletins
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.lourdeswestorange.org/index.php/sunday-bulletins
 bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://www.lourdeswestorange.org/index.php/sunday-bulletins']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.lourdeswestorange.org/images/bulletin2026/bulletin110126.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.holyredeemer-wny.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6041
 publication: ['url:https://www.church-bulletin.org/holy-redeemer-parish-west-new-york-nj-07093']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/holy-redeemer-parish-west-new-york-nj-07093/2026-11-01.pdf
   seen: 2026-11-03

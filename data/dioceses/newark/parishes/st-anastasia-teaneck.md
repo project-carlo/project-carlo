@@ -4,7 +4,7 @@ website: https://www.saintanastasia.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:25519']
-group: Planning Area D
+group: 'Parish Mission Partners: Teaneck and Bogota'
 evidence:
 - url: https://files.ecatholic.com/25519/bulletins/20261025.pdf
   seen: 2026-11-03

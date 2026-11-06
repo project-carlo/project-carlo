@@ -4,7 +4,7 @@ website: https://stroccounioncity.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/670
 publication: ['url:https://www.church-bulletin.org/the-parish-community-of-saint-rocco-saint-brigid-union-city-nj-07087']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-parish-community-of-saint-rocco-saint-brigid-union-city-nj-07087/2026-11-01.pdf
   seen: 2026-11-03

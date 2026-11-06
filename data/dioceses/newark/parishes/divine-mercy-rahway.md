@@ -4,7 +4,7 @@ website: https://www.divinemercyrahway.church/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:20836']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://files.ecatholic.com/20836/bulletins/20261101.pdf
   seen: 2026-11-05

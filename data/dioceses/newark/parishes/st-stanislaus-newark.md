@@ -4,7 +4,7 @@ website: https://www.ststanislausnewark.com/
 bulletin_provider: other
 provider_id: page-pdfs https://www.ststanislausnewark.com/
 publication: ['url:https://www.ststanislausnewark.com/']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.ststanislausnewark.com/_files/ugd/a1e20e_f15583c353854a12bbd93e6cdcd9d0d1.pdf
   seen: 2026-11-04

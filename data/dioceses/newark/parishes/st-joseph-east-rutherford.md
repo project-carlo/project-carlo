@@ -4,7 +4,7 @@ website: https://stjosepher.com/
 bulletin_provider: parishes_online
 provider_id: st-joseph-church-07073
 publication: ['po-org:st-joseph-church-07073', 'lpi:0018000000QxAAPAA3', 'po-container:03/1088']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1088/20261101B.pdf
   seen: 2026-11-03

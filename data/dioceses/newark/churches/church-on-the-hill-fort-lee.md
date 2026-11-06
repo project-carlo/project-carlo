@@ -33,6 +33,17 @@ evidence:
     Lee
   note: Gothic Revival church completed 1854, NRHP 1976; article coordinates 40.86028, -73.97889, next
     to the Cemetery of the Madonna (OSM way 41914950).
+research:
+- method: probe get of the parish homepage and its 'small-chapel-location' page for an address of the
+    Church on the Hill
+  url: https://www.madonnachurch.org/small-chapel-location
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Ask for or find a parish notice (bulletin page 1 or a Christmas/Easter schedule) that gives
+    the Church on the Hill's street address; the chapel-location page shows only the parish logo and the
+    340 Main Street office
+  retry_when: A bulletin or parish page names the building's address
+  revisit_after: 2026-12-20
 ---
 
 ## Holds Mass

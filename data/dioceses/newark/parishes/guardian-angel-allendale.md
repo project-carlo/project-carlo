@@ -4,7 +4,7 @@ website: https://guardianangelchurch.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:11383']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://files.ecatholic.com/11383/bulletins/20261025.pdf
   seen: 2026-11-03

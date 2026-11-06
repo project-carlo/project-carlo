@@ -4,7 +4,7 @@ website: https://www.iccmahwah.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/598
 publication: ['url:https://www.church-bulletin.org/immaculate-conception-roman-catholic-church-mahwah-nj-07430']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/immaculate-conception-roman-catholic-church-mahwah-nj-07430/2026-11-01.pdf
   seen: 2026-11-03

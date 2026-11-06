@@ -4,7 +4,7 @@ website: https://ihmcmahwah.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:5565']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://files.ecatholic.com/5565/bulletins/20261101.pdf
   seen: 2026-11-03

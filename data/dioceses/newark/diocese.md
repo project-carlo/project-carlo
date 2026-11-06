@@ -203,6 +203,9 @@ path from the worktree root: pass an absolute path.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- Planning areas don't go in `group` (see *Sources*): 171 rows carried `Planning Area <letter>`, and `audit` paired every member of each area (993 unresolved pairs). Reconcile cleared them on 2026-11-05; `group` holds only the Parish Mission Partners groups, whose pairs have masthead-supported `separate` reviews. (reconcile, 2026-11-05)
+- A parish site behind Cloudflare that never loads can still give its publisher through the Wayback `id_` capture of its homepage: St. Mary, Rutherford's linked Bon Venture page 1558. (reconcile, 2026-11-05)
+
 ## Rules settled for this diocese
 
 Decisions that apply to more than one record, and who made them. None yet; the survey's
@@ -221,6 +224,8 @@ proposals are in `scratch/newark-map-1/survey.json` for `survey-review`.
 ## Log
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
+
+- 2026-11-05: Reconcile (factory run newark-map-1), after 60 map batches of usually 8 roster entries (4 to 10). Coverage: `directory` 218/218 accounted for, 186/216 modelled (86%); `gcatholic` 257/257, 190/225 modelled (84%). No merges. Linked directory:134 (St. Anthony of Padua's Newark office) to `st-anthony-of-padua-belleville`; listed `st-augustine-newark` in `st-columba-newark`'s worship sites (the batch had already made it that row's church). St. Mary, Rutherford found on Bon Venture page 1558 (was `no_bulletin`); St. Anthony of Padua, Belleville repinned to John Patrick 644. Cleared the planning-area `group` on 171 rows, set the Teaneck-Bogota and Transfiguration-St. Antoninus partner groups, recorded `separate` reviews for the four Bayonne partners: audit 38 pairs, all separate. Six `open/` records retried, none settled. Fetch check: 184 rows, 180 ok on the first run, 3 more on retry; Presentation (Upper Saddle River) still times out in the browser; stale as documented: Holy Family (Union City), Our Lady of the Valley (Orange), St. Stanislaus (Newark), St. Mary (Plainfield).
 
 - 2026-11-03: Survey (factory run newark-map-1). Rosters: `gcatholic` 257, `directory` 218.
   `batches.json`: 60 batches, every roster entry assigned; `batches validate` passed. No

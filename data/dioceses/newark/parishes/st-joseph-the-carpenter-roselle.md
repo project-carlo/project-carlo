@@ -4,7 +4,7 @@ website: https://parishesonline.com/organization/st-joseph-the-carpenter
 bulletin_provider: parishes_online
 provider_id: st-joseph-the-carpenter
 publication: ['po-org:st-joseph-the-carpenter', 'lpi:0018000000Qc1V7AAJ', 'po-container:04/0041']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0041/20261108B.pdf
   seen: 2026-11-05

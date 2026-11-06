@@ -4,7 +4,7 @@ website: http://www.olgrc.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1445
 publication: ['url:http://sponsors.bonventure.net/?page=1445']
-group: Planning Area D
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1445/2026-11-01.pdf
   seen: 2026-11-03

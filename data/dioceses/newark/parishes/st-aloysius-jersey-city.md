@@ -4,7 +4,7 @@ website: https://www.staloysiuschurch.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6058
 publication: ['url:https://www.church-bulletin.org/the-parish-of-saint-aloysius-jersey-city-nj-07304']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-parish-of-saint-aloysius-jersey-city-nj-07304/2026-11-01.pdf
   seen: 2026-11-03

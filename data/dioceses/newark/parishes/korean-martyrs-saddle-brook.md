@@ -4,7 +4,7 @@ website: https://www.rcckm.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.rcckm.org/
   seen: 2026-11-03

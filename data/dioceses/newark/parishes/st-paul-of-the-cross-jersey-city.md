@@ -4,7 +4,7 @@ website: https://discovermass.com/church/st-paul-of-the-cross-jersey-city-nj/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area E
+group: ''
 evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03

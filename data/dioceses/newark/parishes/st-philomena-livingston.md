@@ -4,7 +4,7 @@ website: https://www.stphilomena.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:34818']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://files.ecatholic.com/34818/bulletins/20261101.pdf
   seen: 2026-11-04

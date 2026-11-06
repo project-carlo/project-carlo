@@ -4,7 +4,7 @@ website: https://iccnorwood.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:6955']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/6955/bulletins/20261025.pdf
   seen: 2026-11-03

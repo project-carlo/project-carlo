@@ -4,7 +4,7 @@ website: http://stjohnscatholicchurch.net/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:st-john-church-07050', 'lpi:0018000000QxAACAA3']
-group: Planning Area H
+group: ''
 evidence:
 - url: http://stjohnscatholicchurch.net/bulletins/
   seen: 2026-11-04

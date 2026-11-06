@@ -4,7 +4,7 @@ website: https://www.stcatharinechurch.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:14116']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://files.ecatholic.com/14116/bulletins/20261101.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://sjrc.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6050
 publication: ['url:https://www.church-bulletin.org/saint-john-the-evangelist-roman-catholic-church-bergenfield-nj-07621']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-evangelist-roman-catholic-church-bergenfield-nj-07621/2026-11-01.pdf
   seen: 2026-11-03

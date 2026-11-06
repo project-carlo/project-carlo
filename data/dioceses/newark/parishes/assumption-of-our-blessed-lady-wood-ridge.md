@@ -4,7 +4,7 @@ website: https://www.assumptionparishwr.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/643
 publication: ['url:https://church-bulletin.org/643']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/church-of-the-assumption-of-our-blessed-lady-wood-ridge-nj-07075/2026-11-01.pdf
   seen: 2026-11-03

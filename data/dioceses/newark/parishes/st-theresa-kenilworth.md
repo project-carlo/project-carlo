@@ -4,7 +4,7 @@ website: https://www.thechurchofsttheresa.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1766
 publication: ['url:http://sponsors.bonventure.net/?page=1766']
-group: Planning Area K
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1766/2026-11-08.pdf
   seen: 2026-11-05

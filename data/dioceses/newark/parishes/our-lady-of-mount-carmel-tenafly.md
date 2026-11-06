@@ -4,7 +4,7 @@ website: https://olmc.us/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:36339']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/36339/bulletins/20261101.pdf
   seen: 2026-11-03

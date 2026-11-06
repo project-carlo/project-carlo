@@ -4,7 +4,7 @@ website: https://www.instagram.com/goodcounselchurch_newark/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area I
+group: ''
 evidence:
 - url: https://rcan.org/clergy-appointments-june-2025/
   seen: 2026-11-04

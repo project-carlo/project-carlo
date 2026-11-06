@@ -5,7 +5,7 @@ bulletin_provider: google_drive
 provider_id: drive-folder https://drive.google.com/drive/folders/1hoeusEJqpRDahxMdP1zpmg-cyTZFfLFZ
 publication: ['url:https://drive.google.com/drive/folders/1hoeusEJqpRDahxMdP1zpmg-cyTZFfLFZ', 'po-org:st-columba-church-07114',
   'lpi:0018000000QxAB6AAN']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://drive.google.com/uc?export=download&id=1HSdIP-f2oQeWopV2z6ub85cUa5wLGBYM
   seen: 2026-11-04
@@ -53,7 +53,10 @@ The parish publishes its own bulletin as weekly PDFs in a public Google Drive fo
 
 ## Worship sites
 
-`st-columba-newark`, 25 Thomas Street. The same schedule also lists a Sunday 9:30 AM bilingual Mass "AT SAINT AUGUSTINE CHURCH… 170 Sussex Ave.": that is St. Augustine, Newark (directory 128, GCatholic 18500), which is in the `i-newark-downtown` batch, so no church row is written for it here; reconcile decides whether it belongs to this row (see the handoff lead and flag). The site puts the daily Masses under "St. Mary's Chapel", which no source locates: probably a weekday chapel at St. Columba (inferred, not checked; see research).
+Two churches:
+
+- `st-columba-newark`, 25 Thomas Street.
+- `st-augustine-newark`, 170 Sussex Avenue. The same schedule lists a Sunday 9:30 AM bilingual Mass "AT SAINT AUGUSTINE CHURCH… 170 Sussex Ave." This is St. Augustine, Newark (directory 128, GCatholic 18500). It has no bulletin of its own: its ParishesOnline org and Discover Mass listing publish nothing, no John Patrick listing matches, and it has no website (the `i-newark-downtown` batch checked these; see that church's record). So it is a church of this row. The site puts the daily Masses under "St. Mary's Chapel", which no source locates: probably a weekday chapel at St. Columba (inferred, not checked; see research).
 
 ## Website and bulletin provider
 
@@ -61,4 +64,4 @@ The Wix site (https://www.stcolumbachurchnewark.org/) is one embedded HTML page 
 
 ## Not yet confirmed
 
-Where St. Mary's Chapel is (research). Whether St. Augustine Church belongs to this row (lead for `i-newark-downtown`).
+Where St. Mary's Chapel is (research).

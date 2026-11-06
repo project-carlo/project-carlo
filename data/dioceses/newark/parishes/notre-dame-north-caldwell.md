@@ -4,7 +4,7 @@ website: https://www.ndparishnc.com/
 bulletin_provider: parishes_online
 provider_id: notre-dame-church-07006
 publication: ['po-org:notre-dame-church-07006', 'lpi:0018000000QxACCAA3', 'po-container:03/4004']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4004/20261101B.pdf
   seen: 2026-11-04

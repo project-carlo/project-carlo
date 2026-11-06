@@ -4,7 +4,7 @@ website: https://christthekinghillsidenj.org/
 bulletin_provider: other
 provider_id: dated-post https://christthekinghillsidenj.org/category/bulletin/
 publication: ['url:https://christthekinghillsidenj.org/category/bulletin/']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://christthekinghillsidenj.org/wp-content/uploads/2026/10/CTK20261101.pdf
   seen: 2026-11-05

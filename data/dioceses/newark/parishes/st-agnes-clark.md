@@ -4,7 +4,7 @@ website: https://www.stagnesparish.com/
 bulletin_provider: parishes_online
 provider_id: st-agnes-church-07066
 publication: ['po-org:st-agnes-church-07066', 'lpi:0018000000QxAAJAA3', 'po-container:03/4010']
-group: Planning Area J
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4010/20261101B.pdf
   seen: 2026-11-05

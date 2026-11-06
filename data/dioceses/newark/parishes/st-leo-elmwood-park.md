@@ -4,7 +4,7 @@ website: https://www.stleosep.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6001
 publication: ['url:https://www.church-bulletin.org/the-catholic-community-of-saint-leo-elmwood-park-nj-07407']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-catholic-community-of-saint-leo-elmwood-park-nj-07407/2026-11-01.pdf
   seen: 2026-11-03

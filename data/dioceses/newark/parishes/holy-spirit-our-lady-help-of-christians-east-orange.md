@@ -4,7 +4,7 @@ website: https://www.holyspiritandolhc.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area H
+group: ''
 evidence:
 - url: https://www.holyspiritandolhc.org/
   seen: 2026-11-04
@@ -44,6 +44,16 @@ research:
     parish still uses besides 17 North Clinton Street, and record the other as excluded closed with a
     dated source
   retry_when: A parish or archdiocesan source names the former church building and its status
+- method: rcan.org wp-json search for 'help of christians', 'holy spirit orange' and 'all souls east orange',
+    and Wikipedia search, for the former Holy Spirit (Orange) church and the closed Our Lady of All Souls
+    and Most Blessed Sacrament (East Orange)
+  url: https://rcan.org/wp-json/wp/v2/search?search=help+of+christians
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Read the parish's site or a current bulletin for any second worship site; the archdiocese's
+    results are planning pages, the records table and an OLHC school property listing, none naming a church
+    building or its status
+  retry_when: holyspiritandolhc.org loads again or a bulletin for the parish turns up
 bulletin_status: not-found
 ---
 

@@ -4,7 +4,7 @@ website: https://www.stphilipsb.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/518
 publication: ['url:https://www.church-bulletin.org/saint-philip-the-apostle-saddle-brook-nj-07662']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-philip-the-apostle-saddle-brook-nj-07662/2026-11-01.pdf
   seen: 2026-11-03

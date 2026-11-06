@@ -4,7 +4,7 @@ website: https://www.sjanj.net/bulletin/
 bulletin_provider: other
 provider_id: page-pdfs https://www.sjanj.net/bulletin/ filename=20??????-*.pdf
 publication: ['url:https://www.sjanj.net/bulletin/']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://www.sjanj.net/wp-content/uploads/2026/11/20261108-Thirty-Second-Sunday-in-Ordinary-Time.pdf
   seen: 2026-11-05

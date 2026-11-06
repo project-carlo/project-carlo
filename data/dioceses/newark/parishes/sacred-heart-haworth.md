@@ -4,7 +4,7 @@ website: https://sacredhearthaworth.com/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:18510']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/18510/bulletins/20261101.pdf
   seen: 2026-11-03

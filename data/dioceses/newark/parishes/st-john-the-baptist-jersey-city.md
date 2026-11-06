@@ -4,7 +4,7 @@ website: https://stjohnbjc.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/688
 publication: ['url:https://www.church-bulletin.org/saint-john-the-baptist-jersey-city-nj-07306']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-john-the-baptist-jersey-city-nj-07306/2026-11-01.pdf
   seen: 2026-11-03

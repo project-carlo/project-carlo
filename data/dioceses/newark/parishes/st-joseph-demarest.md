@@ -4,7 +4,7 @@ website: https://www.stjosephdemarest.com/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.stjosephdemarest.com/images/pdf/bulletin.pdf
   seen: 2026-11-03

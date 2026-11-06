@@ -4,7 +4,7 @@ website: https://stpaasjc.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['url:https://stpaasjc.org/']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://stpaasjc.org/wp-content/uploads/2026/04/April-5-2025.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.olcjc.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/660
 publication: ['url:https://www.church-bulletin.org/our-lady-of-czestochowa-catholic-church-jersey-city-nj-07302']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-czestochowa-catholic-church-jersey-city-nj-07302/2026-11-01.pdf
   seen: 2026-11-03

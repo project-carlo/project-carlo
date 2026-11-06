@@ -4,7 +4,7 @@ website: https://www.shcbloomfield.org/
 bulletin_provider: parishes_online
 provider_id: sacred-heart-church-7003
 publication: ['po-org:sacred-heart-church-7003', 'lpi:0018000000Qc04YAAR', 'po-container:04/1021']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1021/20261101B.pdf
   seen: 2026-11-03

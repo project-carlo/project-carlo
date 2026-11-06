@@ -4,7 +4,7 @@ website: https://parishesonline.com/organization/st-elizabeth-of-hungary-church-
 bulletin_provider: parishes_online
 provider_id: st-elizabeth-of-hungary-church-07036
 publication: ['po-org:st-elizabeth-of-hungary-church-07036', 'lpi:0018000000QxAA5AAN', 'po-container:03/1108']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1108/20261108B.pdf
   seen: 2026-11-05

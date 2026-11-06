@@ -4,7 +4,7 @@ website: https://www.stceciliachurch.com/
 bulletin_provider: parishes_online
 provider_id: st-cecilia-church-07631
 publication: ['po-org:st-cecilia-church-07631', 'lpi:0018000000QxABsAAN', 'po-container:03/4014']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4014/20261101B.pdf
   seen: 2026-11-03

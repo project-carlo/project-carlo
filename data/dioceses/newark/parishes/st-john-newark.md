@@ -4,7 +4,7 @@ website: https://www.njsk.org/mass-schedule-sj
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:st-john-church-07102', 'lpi:0018000000QxACJAA3', 'discovermass:st-john-newark-nj']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://parishesonline.com/organization/st-john-church-07102
   seen: 2026-11-04

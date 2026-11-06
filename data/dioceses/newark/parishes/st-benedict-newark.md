@@ -4,7 +4,7 @@ website: https://www.saintbenedictnewark.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:st-benedict-church-07105', 'lpi:0018000000Qc0DFAAZ']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.saintbenedictnewark.org/
   seen: 2026-11-04

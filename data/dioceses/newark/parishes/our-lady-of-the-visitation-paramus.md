@@ -4,7 +4,7 @@ website: https://www.olvparamus.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=4283
 publication: ['url:http://sponsors.bonventure.net/?page=4283']
-group: Planning Area B
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/4283/2026-11-01.pdf
   seen: 2026-11-03

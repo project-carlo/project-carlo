@@ -4,7 +4,7 @@ website: https://www.iccmontclair.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6037
 publication: ['url:https://www.church-bulletin.org/immaculate-conception-church-saint-teresa-of-calcutta-parish-montclair-nj-07042']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/immaculate-conception-church-saint-teresa-of-calcutta-parish-montclair-nj-07042/2026-11-01.pdf
   seen: 2026-11-03

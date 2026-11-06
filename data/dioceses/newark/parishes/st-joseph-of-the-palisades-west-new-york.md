@@ -4,7 +4,7 @@ website: https://sjpwny.org/
 bulletin_provider: parishes_online
 provider_id: st-joseph-of-the-palisades
 publication: ['po-org:st-joseph-of-the-palisades', 'lpi:0018000000QxAAiAAN', 'po-container:03/4003']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4003/20261101B.pdf
   seen: 2026-11-03

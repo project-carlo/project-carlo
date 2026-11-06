@@ -4,7 +4,7 @@ website: https://www.stmichaelunion.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/622
 publication: ['url:https://www.church-bulletin.org/saint-michael-s-parish-union-nj-07083']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-michael-s-parish-union-nj-07083/2026-11-01.pdf
   seen: 2026-11-05

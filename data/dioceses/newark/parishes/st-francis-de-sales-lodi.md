@@ -4,7 +4,7 @@ website: https://www.saintfrancisdesaleslodinj.org/bulletin
 bulletin_provider: parishes_online
 provider_id: st-francis-de-sales-church-07644
 publication: ['po-org:st-francis-de-sales-church-07644', 'lpi:0018000000Qc1KNAAZ', 'po-container:04/0124']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0124/20261101B.pdf
   seen: 2026-11-03

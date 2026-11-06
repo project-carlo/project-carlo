@@ -4,7 +4,7 @@ website: https://www.stannefairlawnnj.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1444
 publication: ['url:http://sponsors.bonventure.net/?page=1444']
-group: Planning Area C
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1444/2026-11-01.pdf
   seen: 2026-11-03

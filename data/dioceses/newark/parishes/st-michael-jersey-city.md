@@ -4,7 +4,7 @@ website: https://stmichaeljerseycity.org/
 bulletin_provider: parishes_online
 provider_id: st-michael-catholic-church-07303
 publication: ['po-org:st-michael-catholic-church-07303', 'lpi:001C000001C8NfJIAV', 'po-container:03/1021']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1021/20261101B.pdf
   seen: 2026-11-03

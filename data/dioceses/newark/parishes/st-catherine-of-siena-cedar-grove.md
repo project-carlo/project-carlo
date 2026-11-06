@@ -4,7 +4,7 @@ website: https://www.scscedargrove.org/
 bulletin_provider: parishes_online
 provider_id: st-catherine-of-siena-07009
 publication: ['po-org:st-catherine-of-siena-07009', 'lpi:0018000000QxA9lAAF', 'po-container:03/1394']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1394/20261101B.pdf
   seen: 2026-11-04

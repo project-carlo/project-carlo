@@ -4,7 +4,7 @@ website: https://www.spbnj.org/
 bulletin_provider: parishes_online
 provider_id: st-peter-church-07109
 publication: ['po-org:st-peter-church-07109', 'lpi:0018000000QxAB1AAN', 'po-container:03/4015']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4015/20261101B.pdf
   seen: 2026-11-03

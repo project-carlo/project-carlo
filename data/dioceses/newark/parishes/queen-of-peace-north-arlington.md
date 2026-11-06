@@ -4,7 +4,7 @@ website: https://qpcna.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/621
 publication: ['url:https://www.church-bulletin.org/queen-of-peace-church-north-arlington-nj-07031']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/queen-of-peace-church-north-arlington-nj-07031/2026-11-01.pdf
   seen: 2026-11-03

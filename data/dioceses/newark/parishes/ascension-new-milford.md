@@ -4,7 +4,7 @@ website: https://www.churchoftheascension.com/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:39014']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/39014/bulletins/20261101.pdf
   seen: 2026-11-03

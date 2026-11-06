@@ -4,7 +4,7 @@ website: https://www.churchofpresentation.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.churchofpresentation.org/weekly-bulletins/
 publication: ['url:https://www.churchofpresentation.org/weekly-bulletins/']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://www.churchofpresentation.org/wp-content/uploads/2026/10/11-1-26.pdf
   seen: 2026-11-03
@@ -22,6 +22,17 @@ evidence:
 - url: https://www.churchofpresentation.org/weekly-bulletins/
   seen: 2026-11-03
   note: Weekly Bulletins page links wp-content/uploads/2026/10/10-18-26.pdf, 10-25-26.pdf and 11-1-26.pdf.
+research:
+- method: fetch:check (headed) on the pinned page-pdfs recipe
+  url: https://www.churchofpresentation.org/weekly-bulletins/
+  checked: '2026-11-05'
+  outcome: access-blocked
+  next_action: Rerun PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese newark --parish
+    church-of-the-presentation-upper-saddle-river; the browser's Page.goto timed out at 30 s twice on
+    2026-11-05, while probe get read the page (HTTP 200) and found wp-content/uploads/2026/11/11-8-26.pdf,
+    so the recipe and site are fine
+  retry_when: Next fetch:check run (the 2026-11-03 check on the same recipe was ok)
+  revisit_after: 2026-11-09
 bulletin_status: available
 ---
 

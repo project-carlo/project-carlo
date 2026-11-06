@@ -4,7 +4,7 @@ website: https://www.bestchurch.net/
 bulletin_provider: other
 provider_id: page-pdfs https://www.bestchurch.net/
 publication: ['url:https://www.bestchurch.net/downloads/']
-group: Planning Area J
+group: ''
 evidence:
 - url: https://www.bestchurch.net/downloads/2026_11_01.pdf
   seen: 2026-11-05

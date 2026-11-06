@@ -4,7 +4,7 @@ website: https://stmarysnutley.org/
 bulletin_provider: other
 provider_id: dated-post https://stmarysnutley.org/category/bulletin-archive/
 publication: ['url:https://stmarysnutley.org/category/bulletin-archive/']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://stmarysnutley.org/wp-content/uploads/2026/10/108-November-1-St-Marys-Final.pdf
   seen: 2026-11-03

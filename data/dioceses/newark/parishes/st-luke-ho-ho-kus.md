@@ -4,7 +4,7 @@ website: https://www.churchofstluke.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=11148
 publication: ['url:http://sponsors.bonventure.net/?page=11148']
-group: Planning Area A
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/11148/2026-11-01.pdf
   seen: 2026-11-03

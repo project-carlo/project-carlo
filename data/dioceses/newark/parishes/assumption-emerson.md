@@ -4,7 +4,7 @@ website: https://www.assumptionemersonnj.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:36468']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/36468/bulletins/20261025.pdf
   seen: 2026-11-03

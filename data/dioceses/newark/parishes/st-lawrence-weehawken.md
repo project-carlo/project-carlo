@@ -4,7 +4,7 @@ website: http://stlweehawken.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6019
 publication: ['url:https://www.church-bulletin.org/saint-lawrence-roman-catholic-church-weehawken-nj-07086']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-lawrence-roman-catholic-church-weehawken-nj-07086/2026-11-01.pdf
   seen: 2026-11-03

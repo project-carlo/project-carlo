@@ -4,7 +4,7 @@ website: https://church-bulletin.org/657
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/657
 publication: ['url:https://www.church-bulletin.org/saint-rose-of-lima-newark-nj-07107']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-rose-of-lima-newark-nj-07107/2026-11-01.pdf
   seen: 2026-11-04

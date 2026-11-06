@@ -4,7 +4,7 @@ website: https://stachurchbloomfield.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/595
 publication: ['url:https://www.church-bulletin.org/saint-thomas-the-apostle-roman-catholic-church-bloomfield-nj-07003']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-thomas-the-apostle-roman-catholic-church-bloomfield-nj-07003/2026-11-01.pdf
   seen: 2026-11-03

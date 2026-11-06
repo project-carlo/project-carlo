@@ -4,7 +4,7 @@ website: https://www.olphoakland.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:2310']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://files.ecatholic.com/2310/bulletins/20261101.pdf
   seen: 2026-11-03

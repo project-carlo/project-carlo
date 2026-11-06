@@ -4,7 +4,7 @@ website: https://olschurch.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/620
 publication: ['url:https://www.church-bulletin.org/our-lady-of-sorrows-south-orange-nj-07079']
-group: Planning Area H
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-sorrows-south-orange-nj-07079/2026-11-01.pdf
   seen: 2026-11-04

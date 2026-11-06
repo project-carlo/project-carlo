@@ -4,7 +4,7 @@ website: https://www.stfrancisrp.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=6339
 publication: ['url:http://sponsors.bonventure.net/?page=6339']
-group: Planning Area D
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/6339/2026-11-01.pdf
   seen: 2026-11-03

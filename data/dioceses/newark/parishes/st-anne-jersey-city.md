@@ -4,7 +4,7 @@ website: http://stannesjc.com/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area E
+group: ''
 evidence:
 - url: http://stannesjc.com/aabulletins.htm
   seen: 2026-11-03

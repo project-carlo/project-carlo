@@ -4,7 +4,7 @@ website: https://holyrosaryedgewater.org/
 bulletin_provider: parishes_online
 provider_id: holy-rosary-church-07020
 publication: ['po-org:holy-rosary-church-07020', 'lpi:0018000000QxA9pAAF', 'po-container:03/4019']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4019/20261101B.pdf
   seen: 2026-11-03

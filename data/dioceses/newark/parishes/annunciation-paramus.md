@@ -4,7 +4,7 @@ website: https://www.annunciationchurch.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/639
 publication: ['url:https://www.church-bulletin.org/church-of-the-annunciation-paramus-nj-07652']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/church-of-the-annunciation-paramus-nj-07652/2026-11-01.pdf
   seen: 2026-11-03

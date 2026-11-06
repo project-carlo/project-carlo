@@ -4,7 +4,7 @@ website: https://www.olbs.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/686
 publication: ['url:https://www.church-bulletin.org/our-lady-of-the-blessed-sacrament-roseland-nj-07068']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-the-blessed-sacrament-roseland-nj-07068/2026-11-01.pdf
   seen: 2026-11-04

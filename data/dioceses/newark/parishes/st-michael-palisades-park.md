@@ -4,7 +4,7 @@ website: https://www.stmichael-catholic.org/
 bulletin_provider: parishes_online
 provider_id: st-michael-church-07650
 publication: ['po-org:st-michael-church-07650', 'lpi:0018000000Qc2IjAAJ', 'po-container:04/1031']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1031/20261101B.pdf
   seen: 2026-11-03

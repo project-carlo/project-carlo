@@ -4,7 +4,7 @@ website: https://www.sacredheartlynd.org/church/
 bulletin_provider: other
 provider_id: page-pdfs https://www.sacredheartlynd.org/church/28229-2/ filename=26-*.pdf
 publication: ['url:https://www.sacredheartlynd.org/church/28229-2/']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://www.sacredheartlynd.org/church/wp-content/uploads/2026/11/26-11-08.pdf
   seen: 2026-11-03

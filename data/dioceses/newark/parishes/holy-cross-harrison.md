@@ -4,7 +4,7 @@ website: https://www.harrisoncatholic.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6018
 publication: ['url:https://www.church-bulletin.org/catholic-communities-of-holy-cross-parish-harrison-nj-07029']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/catholic-communities-of-holy-cross-parish-harrison-nj-07029/2026-11-01.pdf
   seen: 2026-11-04

@@ -4,7 +4,7 @@ website: https://nativitynj.org/bulletins/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/689
 publication: ['url:https://www.church-bulletin.org/church-of-the-nativity-midland-park-nj-07432']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/church-of-the-nativity-midland-park-nj-07432/2026-11-01.pdf
   seen: 2026-11-03

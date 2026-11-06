@@ -4,7 +4,7 @@ website: https://www.holyrosarychurch.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/619
 publication: ['url:https://www.church-bulletin.org/holy-rosary-church-jersey-city-nj-07302']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/holy-rosary-church-jersey-city-nj-07302/2026-11-01.pdf
   seen: 2026-11-03

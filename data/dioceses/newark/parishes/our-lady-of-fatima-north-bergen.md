@@ -4,7 +4,7 @@ website: http://www.ourladyoffatimanb.org/
 bulletin_provider: parishes_online
 provider_id: our-lady-of-fatima-church-07047
 publication: ['po-org:our-lady-of-fatima-church-07047', 'lpi:0018000000Qbz89AAB', 'po-container:04/0460']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0460/20261101B.pdf
   seen: 2026-11-03

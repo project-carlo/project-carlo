@@ -4,7 +4,7 @@ website: https://parishesonline.com/organization/immaculate-heart-of-mary-church
 bulletin_provider: parishes_online
 provider_id: immaculate-heart-of-mary-church-07105
 publication: ['po-org:immaculate-heart-of-mary-church-07105', 'lpi:0018000000QxAAsAAN', 'po-container:04/0806']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0806/20261025B.pdf
   seen: 2026-11-04

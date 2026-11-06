@@ -4,7 +4,7 @@ website: https://mostblessedsacrament.ws/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:14258']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://files.ecatholic.com/14258/bulletins/20261101.pdf
   seen: 2026-11-03

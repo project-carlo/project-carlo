@@ -4,7 +4,7 @@ website: https://www.sjbfairview.org/
 bulletin_provider: other
 provider_id: page-pdfs https://www.sjbfairview.org/bulletin
 publication: ['url:https://www.sjbfairview.org/bulletin']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://irp.cdn-website.com/a088fbb0/files/uploaded/November+1-+2026.pdf
   seen: 2026-11-03
@@ -34,6 +34,14 @@ research:
   next_action: 'Only if the 2023 arrangement with St. Cecilia, Englewood matters: look for a 2023 St.
     Cecilia bulletin naming St. John the Baptist'
   retry_when: The St. Cecilia, Englewood batch finds 2023 issues
+- method: St. Cecilia, Englewood's bulletin archives for January-May 2023 (eCatholic 25501, LPi container
+    03/4014)
+  url: https://container.parishesonline.com/bulletins/03/4014/20230604B.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: 'None: no archive covers January-May 2023, and the question doesn''t bear on the current
+    row'
+  retry_when: Only if a 2023 St. Cecilia or St. John the Baptist bulletin turns up in another archive
 bulletin_status: available
 ---
 
@@ -57,4 +65,4 @@ Fetch check (2026-11-03, headed): transport ok, PDF, resolved `page-pdfs on http
 
 ## Not yet confirmed
 
-Whether the parish shared St. Cecilia, Englewood's bulletin in 2023 (see research); it has no bearing on the current row.
+Nothing for the current row. Whether the parish shared St. Cecilia, Englewood's bulletin in 2023 can't be settled from the archives: St. Cecilia's eCatholic archive (25501) ends 13 March 2022 and its LPi container 03/4014 starts 4 June 2023, and neither the 4 June 2023 nor the 1 November 2026 issue mentions Fairview (see `st-cecilia-englewood`). The question is closed as exhausted; it has no bearing on the current row.

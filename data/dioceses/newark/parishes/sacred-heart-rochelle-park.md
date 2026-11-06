@@ -4,7 +4,7 @@ website: https://www.wearesacredheart.org/
 bulletin_provider: parishes_online
 provider_id: sacred-heart-church-07662
 publication: ['po-org:sacred-heart-church-07662', 'lpi:0018000000Qc04XAAR', 'po-container:04/0961']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0961/20261101B.pdf
   seen: 2026-11-03

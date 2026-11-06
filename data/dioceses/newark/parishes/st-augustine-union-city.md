@@ -4,7 +4,7 @@ website: https://agustinosrecoletos.org/2025/09/union-city-celebra-san-agustin-c
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area E
+group: ''
 evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03

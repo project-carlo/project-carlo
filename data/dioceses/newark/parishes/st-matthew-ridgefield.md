@@ -4,7 +4,7 @@ website: https://stmatthewridgefield.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6014
 publication: ['url:https://www.church-bulletin.org/the-roman-catholic-community-of-saint-matthew-ridgefield-nj-07657']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-roman-catholic-community-of-saint-matthew-ridgefield-nj-07657/2026-11-01.pdf
   seen: 2026-11-03

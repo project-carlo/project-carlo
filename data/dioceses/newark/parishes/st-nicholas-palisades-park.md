@@ -4,7 +4,7 @@ website: https://stnicholasrcchurch.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6046
 publication: ['url:https://www.church-bulletin.org/saint-nicholas-r-c-church-palisades-park-nj-07650']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-nicholas-r-c-church-palisades-park-nj-07650/2026-11-01.pdf
   seen: 2026-11-03

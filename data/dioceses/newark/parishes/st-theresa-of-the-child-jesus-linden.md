@@ -4,7 +4,7 @@ website: https://www.sttheresalinden.com/announcements
 bulletin_provider: other
 provider_id: page-pdfs https://www.sttheresalinden.com/announcements
 publication: ['url:https://www.sttheresalinden.com/announcements']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://www.sttheresalinden.com/_files/ugd/098478_b58f87b5313642f994428695edc31b80.pdf
   seen: 2026-11-05

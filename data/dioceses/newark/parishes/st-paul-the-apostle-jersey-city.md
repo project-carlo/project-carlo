@@ -4,7 +4,7 @@ website: https://www.stpaulrcc.com/
 bulletin_provider: parishes_online
 provider_id: st-paul-the-apostle-church-07305
 publication: ['po-org:st-paul-the-apostle-church-07305', 'lpi:0018000000Qc2NQAAZ', 'po-container:04/0442']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/0442/20261101B.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://stjosephbogota.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6032
 publication: ['url:https://www.church-bulletin.org/saint-joseph-church-bogota-nj-07603']
-group: Planning Area D
+group: 'Parish Mission Partners: Teaneck and Bogota'
 evidence:
 - url: https://church-bulletin.org/bulletin/saint-joseph-church-bogota-nj-07603/2026-11-01.pdf
   seen: 2026-11-03

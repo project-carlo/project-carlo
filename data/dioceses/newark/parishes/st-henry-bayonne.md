@@ -31,6 +31,43 @@ evidence:
   quote: St. Henry Parish, Bayonne
   note: One of the four Bayonne Parish Mission Partners pilot parishes (June 2026); recorded in group.
 bulletin_status: available
+publication_reviews:
+- parish: blessed-miriam-teresa-demjanovich-bayonne
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-henry-roman-catholic-church-bayonne-nj-07002/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (John Patrick 667, page 1) names St. Henry R.C. Church, 82 West
+      29th Street, alone, with its own Mass times (Sun 8:00, 10:00am, 12:00pm).
+  - url: https://container.parishesonline.com/bulletins/03/1002/20261101B.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (LPi container 03/1002, page 1) names Blessed Miriam Teresa Demjanovich's
+      St. Mary, Star of the Sea Church, 326 Avenue C, alone, with pastor Very Rev. Philip Sanders and
+      its own Mass times (Sat 4:00pm; Sun 8:30, 10:00, 11:30am).
+- parish: st-john-paul-ii-bayonne
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-henry-roman-catholic-church-bayonne-nj-07002/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (John Patrick 667, page 1) names St. Henry R.C. Church, 82 West
+      29th Street, alone, with its own Mass times (Sun 8:00, 10:00am, 12:00pm).
+  - url: https://www.church-bulletin.org/bulletin/saint-john-paul-ii-parish-bayonne-nj-07002/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (John Patrick 6040, page 1, read rendered) names Saint John Paul
+      II Parish, Church of Our Lady of Mount Carmel, alone, with pastor Rev. Tadeusz Majcher SDS and its
+      own Mass times (Sat 4:30pm; Sun 7:30, 8:30am...).
+- parish: st-vincent-de-paul-bayonne
+  decision: separate
+  evidence:
+  - url: https://www.church-bulletin.org/bulletin/saint-henry-roman-catholic-church-bayonne-nj-07002/2026-11-01.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (John Patrick 667, page 1) names St. Henry R.C. Church, 82 West
+      29th Street, alone, with its own Mass times (Sun 8:00, 10:00am, 12:00pm).
+  - url: https://container.parishesonline.com/bulletins/03/1237/20261101B.pdf
+    seen: 2026-11-03
+    note: The 1 November 2026 masthead (LPi container 03/1237, page 1) names St. Vincent de Paul, 979
+      Avenue C, alone, with pastor Rev. Alfie A. Pangilinan and its own Mass times (Sat 5pm; Sun 8, 10am,
+      12:30pm).
 ---
 
 ## Publisher

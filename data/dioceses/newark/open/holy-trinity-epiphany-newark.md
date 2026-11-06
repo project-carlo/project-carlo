@@ -58,6 +58,14 @@ research:
   next_action: Retry visit.py to see whether the listing gives a Mass schedule and its source (an aggregator,
     so only a lead)
   retry_when: Cloudflare lets visit.py through
+- method: probe pdf grep of Our Lady of Mount Carmel's 8 November 2026 John Patrick 6017 issue for Trinity,
+    Epiphany and Adams; rcan.org search for 'holy trinity epiphany' and 'epiphany newark'
+  url: https://www.church-bulletin.org/bulletin/our-lady-of-mount-carmel-chiesa-della-madonna-del-carmine-newark-nj-07105/2026-11-08.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Call the parish (973) 344-6847 or find a parish page or listing that gives a current Mass
+    schedule for 207 Adams Street; rcan.org returns only clergy-appointment posts
+  retry_when: A Holy Trinity-Epiphany site, bulletin or archdiocesan notice appears
 ---
 
 ## What is known

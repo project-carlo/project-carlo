@@ -4,7 +4,7 @@ website: https://stmarysparishjc.com/bulletin/
 bulletin_provider: other
 provider_id: page-pdfs https://stmarysparishjc.com/bulletin/ filename=bulletin-*.pdf
 publication: ['url:https://stmarysparishjc.com/bulletin/']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://stmarysparishjc.com/wp-content/uploads/2026/10/bulletin-2026-11-01.pdf
   seen: 2026-11-03

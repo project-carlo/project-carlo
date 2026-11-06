@@ -4,7 +4,7 @@ website: https://stmarysplainfield.org/en/Bulletin
 bulletin_provider: other
 provider_id: page-pdfs https://stmarysplainfield.org/en/Bulletin
 publication: ['url:https://stmarysplainfield.org/en/Bulletin']
-group: Planning Area J
+group: ''
 evidence:
 - url: https://stmarysplainfield.org/media/47761/Bulletin-091326.pdf
   seen: 2026-11-05

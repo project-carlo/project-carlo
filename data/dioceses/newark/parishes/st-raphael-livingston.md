@@ -4,7 +4,7 @@ website: https://www.straphaelnj.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/526
 publication: ['url:https://www.church-bulletin.org/the-parish-family-of-saint-raphael-church-livingston-nj-07039']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-parish-family-of-saint-raphael-church-livingston-nj-07039/2026-11-01.pdf
   seen: 2026-11-03

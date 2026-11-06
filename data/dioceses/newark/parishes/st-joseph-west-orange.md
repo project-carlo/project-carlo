@@ -4,7 +4,7 @@ website: https://www.stjosephwestorange.org/
 bulletin_provider: parishes_online
 provider_id: saint-joseph-church
 publication: ['po-org:saint-joseph-church', 'lpi:0018000000QxAAFAA3', 'po-container:04/1242']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1242/20261101B.pdf
   seen: 2026-11-03

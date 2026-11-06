@@ -4,7 +4,7 @@ website: https://www.corpuschristihh.org/ccp/
 bulletin_provider: parishes_online
 provider_id: corpus-christi-church
 publication: ['po-org:corpus-christi-church', 'lpi:0018000000Qbyy1AAB', 'po-container:03/0649']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0649/20261101B.pdf
   seen: 2026-11-03

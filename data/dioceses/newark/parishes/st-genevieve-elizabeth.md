@@ -4,7 +4,7 @@ website: https://www.saintgens.com/
 bulletin_provider: parishes_online
 provider_id: st-genevieve-church
 publication: ['po-org:st-genevieve-church', 'lpi:0018000000Qc1LiAAJ', 'po-container:04/1051']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1051/20261108B.pdf
   seen: 2026-11-05

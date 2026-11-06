@@ -4,7 +4,7 @@ website: https://stanthonysnv.org/
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=1627
 publication: ['url:http://sponsors.bonventure.net/?page=1627']
-group: Planning Area B
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/1627/2026-11-08..pdf
   seen: 2026-11-03

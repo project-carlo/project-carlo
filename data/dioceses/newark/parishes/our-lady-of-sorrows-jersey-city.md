@@ -4,7 +4,7 @@ website: https://olsnj.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:our-lady-of-sorrows-church-07305', 'lpi:0018000000QxACQAA3']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://olsnj.org/
   seen: 2026-11-03

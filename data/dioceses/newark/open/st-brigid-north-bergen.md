@@ -37,6 +37,15 @@ research:
     North Bergen
   retry_when: A web search is available, or a later bulletin mentions St. Brigid's building
   revisit_after: 2027-02-01
+- method: probe pdf grep of the 8 November 2026 St. Rocco/St. Brigid bulletin (John Patrick 670) for Brigid,
+    Liberty and North Bergen; rcan.org search for 'brigid north bergen' and 'decree'
+  url: https://www.church-bulletin.org/bulletin/the-parish-community-of-saint-rocco-saint-brigid-union-city-nj-07087/2026-11-08.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Read the parish's Facebook page or a closure or sale notice; the 8 November issue names
+    St. Brigid only in the parish name and mentions North Bergen only for a municipal parking lot and
+    an advertiser
+  retry_when: A St. Rocco/St. Brigid bulletin or notice names the 4501 Liberty Avenue church
 ---
 
 ## What is known

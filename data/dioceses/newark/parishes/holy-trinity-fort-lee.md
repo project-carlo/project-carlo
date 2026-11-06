@@ -4,7 +4,7 @@ website: https://www.holytrinityfortlee.org/
 bulletin_provider: parishes_online
 provider_id: holy-trinity-church-07024
 publication: ['po-org:holy-trinity-church-07024', 'lpi:0018000000QxA9rAAF', 'po-container:03/4013']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4013/20261101B.pdf
   seen: 2026-11-03

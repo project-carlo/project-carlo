@@ -42,6 +42,14 @@ research:
   outcome: not-found
   next_action: Read pages 3-6 of a current bulletin (render.py) for any mention of the Assumption church
   retry_when: Next check of this row
+- method: probe pdf grep of all 6 pages of the 8 November 2026 St. John Paul II bulletin (John Patrick
+    6040) for 'Assumption' and '23rd'; rcan.org search for 'assumption bayonne' and 'decree'
+  url: https://www.church-bulletin.org/bulletin/saint-john-paul-ii-parish-bayonne-nj-07002/2026-11-08.pdf
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Look for a feast-day (15 August) or funeral notice in St. John Paul II's 2027 summer issues,
+    or a closure or sale notice; no decree is posted for this church
+  retry_when: St. John Paul II's August 2027 issues are posted or an archdiocesan decree names the church
 ---
 
 ## What is known

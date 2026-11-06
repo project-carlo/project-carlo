@@ -5,7 +5,7 @@ bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/655
 publication: ['url:https://www.church-bulletin.org/the-parish-family-of-saint-james-newark-nj-07105',
   'po-org:st-james-church-7105', 'lpi:0018000000Qc2aEAAR']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-parish-family-of-saint-james-newark-nj-07105/2026-11-01.pdf
   seen: 2026-11-04

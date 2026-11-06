@@ -4,7 +4,7 @@ website: https://www.sacredheartnorthbergen.com/bulletin.html
 bulletin_provider: other
 provider_id: page-pdfs http://sponsors.bonventure.net/?page=11263
 publication: ['url:http://sponsors.bonventure.net/?page=11263']
-group: Planning Area E
+group: ''
 evidence:
 - url: http://sponsors.bonventure.net/pdfs/11263/2026-11-08.pdf
   seen: 2026-11-03

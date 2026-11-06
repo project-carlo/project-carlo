@@ -4,7 +4,7 @@ website: https://www.stgabrielsr.org/index.php?page=mass
 bulletin_provider: other
 provider_id: page-pdfs https://www.stgabrielsr.org/index.php?page=mass
 publication: ['po-container:03/0374']
-group: Planning Area A
+group: ''
 evidence:
 - url: https://www.stgabrielsr.org/_content/sidebar/mass/2026-11-01%20Bulletin.pdf
   seen: 2026-11-03

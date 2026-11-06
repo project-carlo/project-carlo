@@ -4,7 +4,7 @@ website: https://www.bsscb.org/bulletins
 bulletin_provider: unsupported
 provider_id: page-pdfs https://www.bsscb.org/bulletins
 publication: ['url:https://www.bsscb.org/bulletins']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.bsscb.org/_files/ugd/3c4934_eb9ebe1a47b7453cbcb9d45c8fe6e037.pdf
   seen: 2026-11-04

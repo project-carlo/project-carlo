@@ -4,7 +4,7 @@ website: https://olvhp.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:12991', 'po-container:03/4002']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://files.ecatholic.com/12991/bulletins/20261101.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://holyfamilyunioncitynj.org/
 bulletin_provider: ecatholic
 provider_id: ''
 publication: ['ecatholic:29344']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://files.ecatholic.com/29344/bulletins/20261011.pdf
   seen: 2026-11-03

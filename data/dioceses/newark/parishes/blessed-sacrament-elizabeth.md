@@ -4,7 +4,7 @@ website: https://parishesonline.com/organization/blessed-sacrament-church-07201
 bulletin_provider: parishes_online
 provider_id: blessed-sacrament-church-07201
 publication: ['po-org:blessed-sacrament-church-07201', 'lpi:0018000000QbyvyAAB', 'po-container:04/1050']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1050/20261108B.pdf
   seen: 2026-11-05

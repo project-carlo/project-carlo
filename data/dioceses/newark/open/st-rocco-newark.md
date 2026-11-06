@@ -47,6 +47,14 @@ research:
   next_action: Ask the parish or read a bulletin or Mass listing that names the building
   retry_when: Revisit date, or the parish posts a bulletin
   revisit_after: 2027-02-01
+- method: probe url of John Patrick listing 585 (no PDF issues listed); rcan.org search for 'rocco newark'
+    and 'rocco hunterdon'
+  url: https://church-bulletin.org/585
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Ask the parish (973-642-4217) or find a current Mass listing naming 212 Hunterdon Street;
+    rcan.org returns only clergy-appointment posts
+  retry_when: Listing 585 posts an issue or a Transfiguration notice names St. Rocco's
 ---
 
 ## What is known

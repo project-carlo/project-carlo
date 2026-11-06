@@ -4,7 +4,7 @@ website: https://ollverona.org/
 bulletin_provider: parishes_online
 provider_id: church-of-our-lady-of-the-lake-church
 publication: ['po-org:church-of-our-lady-of-the-lake-church', 'lpi:0018000000QxAABAA3', 'po-container:04/1252']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1252/20261101B.pdf
   seen: 2026-11-04

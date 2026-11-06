@@ -4,7 +4,7 @@ website: https://www.ssjmnj.org/
 bulletin_provider: parishes_online
 provider_id: ss-joseph-and-michael-church
 publication: ['po-container:03/0699', 'po-org:ss-joseph-and-michael-church', 'lpi:0018000000Qc07DAAR']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/0699/20261101B.pdf
   seen: 2026-11-03

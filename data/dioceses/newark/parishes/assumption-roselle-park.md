@@ -4,7 +4,7 @@ website: https://www.assumptionrp.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6034
 publication: ['url:https://www.church-bulletin.org/church-of-the-assumption-roselle-park-nj-07204']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/church-of-the-assumption-roselle-park-nj-07204/2026-11-08.pdf
   seen: 2026-11-05

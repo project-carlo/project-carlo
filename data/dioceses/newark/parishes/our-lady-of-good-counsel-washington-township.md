@@ -4,7 +4,7 @@ website: https://www.olgcwt.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/586
 publication: ['url:https://www.church-bulletin.org/our-lady-of-good-counsel-roman-catholic-church-washington-township-nj-07675']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-good-counsel-roman-catholic-church-washington-township-nj-07675/2026-11-01.pdf
   seen: 2026-11-03

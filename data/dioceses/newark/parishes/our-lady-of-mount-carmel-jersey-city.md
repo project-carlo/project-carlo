@@ -4,7 +4,7 @@ website: https://olmcjc.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6051O
 publication: ['url:https://www.church-bulletin.org/our-lady-of-mount-carmel-jersey-city-nj-07306-o']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-mount-carmel-jersey-city-nj-07306-o/2026-11-01.pdf
   seen: 2026-11-03

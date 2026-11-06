@@ -4,7 +4,7 @@ website: https://www.olczestochowa.com/
 bulletin_provider: parishes_online
 provider_id: our-lady-of-czestochowa
 publication: ['po-org:our-lady-of-czestochowa', 'lpi:0018000000Qc01YAAR', 'po-container:04/1010']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1010/20261101B.pdf
   seen: 2026-11-04

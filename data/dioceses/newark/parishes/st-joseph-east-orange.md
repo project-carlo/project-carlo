@@ -4,7 +4,7 @@ website: https://stjosepheo.weconnect.com/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:st-joseph-church-07018', 'lpi:0018000000Qc1URAAZ']
-group: Planning Area H
+group: ''
 evidence:
 - url: https://stjosepheo.weconnect.com/
   seen: 2026-11-04

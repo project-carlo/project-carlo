@@ -4,7 +4,7 @@ website: http://www.stmchurch.net/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/578
 publication: ['url:https://www.church-bulletin.org/saint-thomas-more-church-fairfield-nj-07004']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-thomas-more-church-fairfield-nj-07004/2026-11-01.pdf
   seen: 2026-11-04

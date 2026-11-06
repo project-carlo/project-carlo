@@ -4,7 +4,7 @@ website: https://www.hnjeo.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['po-org:holy-name-of-jesus-church-07017', 'lpi:0018000000QxA9nAAF']
-group: Planning Area H
+group: ''
 evidence:
 - url: https://www.hnjeo.org/
   seen: 2026-11-04

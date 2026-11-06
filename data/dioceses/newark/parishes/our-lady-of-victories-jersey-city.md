@@ -4,7 +4,7 @@ website: https://www.olvjc.org/treasure
 bulletin_provider: unsupported
 provider_id: page-pdfs https://www.olvjc.org/treasure
 publication: ['url:https://www.olvjc.org/treasure']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://www.olvjc.org/_files/ugd/c03d65_8e910910e703498f8bbca8a6aa91a3dc.pdf
   seen: 2026-11-03

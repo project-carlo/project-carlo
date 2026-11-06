@@ -4,7 +4,7 @@ website: https://olmc-nutley.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/577
 publication: ['url:https://www.church-bulletin.org/our-lady-of-mount-carmel-church-nutley-nj-07110']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/our-lady-of-mount-carmel-church-nutley-nj-07110/2026-11-01.pdf
   seen: 2026-11-03

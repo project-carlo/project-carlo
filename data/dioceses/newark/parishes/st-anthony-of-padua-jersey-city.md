@@ -4,7 +4,7 @@ website: https://www.saintanthonyjc.com/
 bulletin_provider: parishes_online
 provider_id: st-anthony-of-padua-church-07302
 publication: ['po-org:st-anthony-of-padua-church-07302', 'lpi:0018000000Qc0C9AAJ', 'po-container:04/1040']
-group: Planning Area F
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1040/20261101B.pdf
   seen: 2026-11-03

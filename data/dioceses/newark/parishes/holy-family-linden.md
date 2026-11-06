@@ -4,7 +4,7 @@ website: https://holyfamilylinden.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area K
+group: ''
 evidence:
 - url: https://holyfamilylinden.org/
   seen: 2026-11-05

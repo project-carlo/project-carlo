@@ -4,7 +4,7 @@ website: https://www.olqp.org/
 bulletin_provider: parishes_online
 provider_id: our-lady-queen-of-peace-church-07607
 publication: ['po-org:our-lady-queen-of-peace-church-07607', 'lpi:0018000000QxABkAAN', 'po-container:03/4020']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4020/20261101B.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.stcatherinehillside.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/651
 publication: ['url:https://www.church-bulletin.org/the-church-of-saint-catherine-of-siena-hillside-nj-07205']
-group: Planning Area K
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/the-church-of-saint-catherine-of-siena-hillside-nj-07205/2026-11-01.pdf
   seen: 2026-11-05

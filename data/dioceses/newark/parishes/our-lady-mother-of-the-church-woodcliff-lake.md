@@ -4,7 +4,7 @@ website: https://motherofthechurch.org/
 bulletin_provider: parishes_online
 provider_id: our-lady-mother-of-the-church-07677
 publication: ['po-org:our-lady-mother-of-the-church-07677', 'lpi:0018000000QxAC8AAN', 'po-container:03/1048']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1048/20261101B.pdf
   seen: 2026-11-03

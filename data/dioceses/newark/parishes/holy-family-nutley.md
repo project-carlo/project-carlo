@@ -4,7 +4,7 @@ website: https://holyfamilynutley.org/
 bulletin_provider: parishes_online
 provider_id: holy-family-church-07110
 publication: ['po-org:holy-family-church-07110', 'lpi:0018000000QxAB2AAN', 'po-container:03/4012']
-group: Planning Area G
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4012/20261101B.pdf
   seen: 2026-11-03

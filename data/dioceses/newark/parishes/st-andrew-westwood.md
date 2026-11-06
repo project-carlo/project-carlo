@@ -4,7 +4,7 @@ website: https://standrewcc.com/
 bulletin_provider: parishes_online
 provider_id: church-of-st-andrew-07675
 publication: ['po-org:church-of-st-andrew-07675', 'lpi:0018000000Qc09qAAB', 'po-container:04/1253']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/04/1253/20261101B.pdf
   seen: 2026-11-03

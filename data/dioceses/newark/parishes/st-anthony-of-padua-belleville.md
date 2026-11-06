@@ -2,9 +2,9 @@
 name: St. Anthony of Padua, Belleville
 website: https://www.stantbell.org/
 bulletin_provider: other
-provider_id: page-pdfs https://www.stantbell.org/ filename=????????????????????????????????.pdf
-publication: ['url:https://www.stantbell.org/']
-group: Planning Area G
+provider_id: page-pdfs https://church-bulletin.org/644
+publication: ['url:https://www.stantbell.org/', 'url:https://www.church-bulletin.org/saint-anthony-of-padua-church-newark-nj-07107']
+group: ''
 evidence:
 - url: https://www.stantbell.org/uploads/1774ff66a67d452da88dfaac543c8c8a.pdf
   seen: 2026-11-03
@@ -22,6 +22,14 @@ evidence:
     hash-named file under /uploads/ (Nov 1 = 1774ff66a67d452da88dfaac543c8c8a.pdf); the page also links
     OnlineGiving_instructions.pdf before them. The directory's www.saintanthonybelleville.org redirects
     here.
+- url: https://www.church-bulletin.org/bulletin/saint-anthony-of-padua-church-newark-nj-07107/2026-11-01.pdf
+  seen: 2026-11-05
+  quote: 644 St. Anthony of Padua, Belleville, NJ
+  note: 'John Patrick listing 644 (church-bulletin.org/644 redirects to saint-anthony-of-padua-church-newark-nj-07107),
+    1 November 2026 issue, 6 pages: page 1 masthead ''St. Anthony of Padua Church 63 Franklin Street (Silver
+    Lake) Belleville, NJ 07109'', website www.stantbell.org, ''5:30PM (Sunday Vigil Mass)'', the same
+    page as the stantbell.org upload of that week; footer names John Patrick Publishing. The listing has
+    dated issues through 2026-11-08.'
 bulletin_status: available
 ---
 
@@ -35,9 +43,11 @@ One church, `st-anthony-of-padua-belleville`. Page 1's schedule gives Saturday 5
 
 ## Website and bulletin provider
 
-The directory's https://www.saintanthonybelleville.org/ redirects to https://www.stantbell.org/, which the masthead prints. Its homepage builds its links in JavaScript (probe url sees none; visit.py does) and lists the four latest issues newest first as undated 32-character hash names under /uploads/, after a giving-instructions PDF. Provider `other`, pinned to `page-pdfs` on the homepage with a glob of 32 characters plus .pdf, which keeps only the issue files; freshness reads `unknown` because the names carry no date.
+The directory's https://www.saintanthonybelleville.org/ redirects to https://www.stantbell.org/, which the masthead prints. Its homepage builds its links in JavaScript (probe url sees none; visit.py does) and lists the four latest issues newest first as undated 32-character hash names under /uploads/, after a giving-instructions PDF.
 
-Fetch check (2026-11-03, headed): ok. `page-pdfs on https://www.stantbell.org/: first-listed` picked uploads/1774ff66a67d452da88dfaac543c8c8a.pdf, freshness `unknown`, identity `unverified`; that is the 1 November 2026 issue whose masthead I read.
+The bulletin is printed by John Patrick Publishing: the footer reads '644 St. Anthony of Padua, Belleville, NJ ... John Patrick Publishing Company', and listing https://church-bulletin.org/644 (slug saint-anthony-of-padua-church-newark-nj-07107, after the office's Newark zip) posts the same issue under dated names (1 November 2026 page 1 identical to the stantbell.org upload; 8 November already listed on 2026-11-05). Reconcile (2026-11-05) moved the pin from the hash-named uploads, whose freshness read `unknown`, to the dated listing: provider `other`, `page-pdfs https://church-bulletin.org/644`. Both pages are kept in `publication`.
+
+Earlier fetch check (2026-11-03, headed) on the homepage recipe: ok, picked uploads/1774ff66a67d452da88dfaac543c8c8a.pdf, freshness `unknown`; that is the 1 November 2026 issue. Fetch check (2026-11-05, headed) on the new pin: ok, `page-pdfs on https://church-bulletin.org/644: current`, picked saint-anthony-of-padua-church-newark-nj-07107/2026-11-08.pdf (issue date from the URL, 8 November 2026).
 
 ## Not yet confirmed
 

@@ -4,7 +4,7 @@ website: https://www.stjohnleonia.org/
 bulletin_provider: parishes_online
 provider_id: st-john-the-evangelist-church-07605
 publication: ['po-org:st-john-the-evangelist-church-07605', 'lpi:0018000000QxABjAAN', 'po-container:03/1379']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1379/20261101B.pdf
   seen: 2026-11-03

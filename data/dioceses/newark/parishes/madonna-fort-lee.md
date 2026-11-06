@@ -4,7 +4,7 @@ website: https://www.madonnachurch.org/
 bulletin_provider: parishes_online
 provider_id: madonna-church
 publication: ['po-org:madonna-church', 'lpi:0018000000QxA9sAAF', 'po-container:03/1309']
-group: Planning Area D
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/1309/20261101B.pdf
   seen: 2026-11-03

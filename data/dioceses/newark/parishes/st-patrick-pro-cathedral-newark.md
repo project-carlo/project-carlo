@@ -4,7 +4,7 @@ website: https://www.spnewark.com/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: ['url:https://www.church-bulletin.org/saint-patrick-s-pro-cathedral-newark-nj-07102']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.spnewark.com/worship-schedule
   seen: 2026-11-04

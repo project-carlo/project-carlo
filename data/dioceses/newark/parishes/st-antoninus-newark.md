@@ -4,7 +4,7 @@ website: https://www.saintantoninuschurch.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area I
+group: 'Parish Mission Partners: Transfiguration and St. Antoninus, Newark'
 evidence:
 - url: https://files.constantcontact.com/9566502f601/2f812d57-6e54-490c-b5e8-acab61a578fb.pdf
   seen: 2026-11-04

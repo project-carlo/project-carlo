@@ -4,7 +4,7 @@ website: https://www.staedans.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6056
 publication: ['url:https://www.church-bulletin.org/saint-aedan-s-church-jersey-city-nj-07306']
-group: Planning Area E
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-aedan-s-church-jersey-city-nj-07306/2026-11-01.pdf
   seen: 2026-11-03

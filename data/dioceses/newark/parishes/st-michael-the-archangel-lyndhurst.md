@@ -4,7 +4,7 @@ website: https://stmichaellyndhurst.org/
 bulletin_provider: parishes_online
 provider_id: st-michael-church-07071
 publication: ['po-org:st-michael-church-07071', 'lpi:0018000000QxAAOAA3', 'po-container:03/4017']
-group: Planning Area C
+group: ''
 evidence:
 - url: https://container.parishesonline.com/bulletins/03/4017/20261108B.pdf
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.ilovesak.org/v2/jubo/
 bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://www.ilovesak.org/v2/jubo/']
-group: Planning Area H
+group: ''
 evidence:
 - url: https://www.ilovesak.org/v2/jubo/
   seen: 2026-11-04

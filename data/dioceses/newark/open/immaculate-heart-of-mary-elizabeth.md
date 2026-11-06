@@ -40,6 +40,14 @@ research:
   next_action: Ask the parish office or the archdiocese whether the E Jersey St. church is still used
     or was closed/relegated; check rcan.org decrees for Immaculate Heart of Mary, Elizabeth
   retry_when: A bulletin, decree or parish page mentions the Immaculate Heart of Mary church building
+- method: rcan.org search for 'immaculate heart elizabeth' and 'decree' (closure decrees posted as news)
+  url: https://rcan.org/wp-json/wp/v2/search?search=decree
+  checked: '2026-11-05'
+  outcome: not-found
+  next_action: Read later IHM-St. Patrick bulletins for a Mass or event at 205 East Jersey Street, or
+    ask the parish office (908-354-0023); the only decrees posted are St. Andrew, Bayonne and St. Anthony,
+    East Newark
+  retry_when: A later IHM-St. Patrick bulletin or an archdiocesan decree names the church
 ---
 
 ## What is known

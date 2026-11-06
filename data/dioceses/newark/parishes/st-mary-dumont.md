@@ -4,7 +4,7 @@ website: https://stmarysdumont.org/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6036
 publication: ['url:https://www.church-bulletin.org/saint-mary-s-church-dumont-nj-07628']
-group: Planning Area B
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-mary-s-church-dumont-nj-07628/2026-11-01.pdf
   seen: 2026-11-03

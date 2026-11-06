@@ -4,7 +4,7 @@ website: http://saintpeterclaverchurch.org/
 bulletin_provider: no_bulletin
 provider_id: ''
 publication: []
-group: Planning Area G
+group: ''
 evidence:
 - url: http://saintpeterclaverchurch.org/
   seen: 2026-11-03

@@ -4,7 +4,7 @@ website: https://www.stcasimirnewark.com/
 bulletin_provider: other
 provider_id: page-pdfs https://church-bulletin.org/6033
 publication: ['url:https://www.church-bulletin.org/saint-casimir-roman-catholic-church-newark-nj-07105']
-group: Planning Area I
+group: ''
 evidence:
 - url: https://www.church-bulletin.org/bulletin/saint-casimir-roman-catholic-church-newark-nj-07105/2026-11-01.pdf
   seen: 2026-11-04
