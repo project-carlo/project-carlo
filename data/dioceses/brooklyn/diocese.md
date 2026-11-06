@@ -199,6 +199,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Wix bulletin pages can show the issue only as a slideshow of hash-named static.wixstatic.com JPEGs with empty alt text (no PDF, no date): page-pdfs and page-images both fail, so the row is unsupported with fetch_gap kind wix-image-slideshow. Read the slides at static.wixstatic.com/media/<id>~mv2.jpg, and use tools/frames-requests.py to list them.
 - Parishes that share a pastor can each print both churches' Mass schedules on page 1 of separate bulletins: compare mastheads, intentions and collections before merging, and record a separate review.
 - Diocesan WordPress-multisite parish sites post each issue as <mon><d>_<yyyy>_<parish>_compressed.pdf: some are LPi reposts (probe po <name>-church-<zip> finds the live container), others self-made with no cover page and no LPi footer (record other with page-pdfs on /important-information/bulletin/ or /weekly-bulletin/).
+- Tilma sites that repost an LPi issue under a date name (110826.pdf) instead of LPi's YYYYMMDDB.pdf can still keep LPi's naming on some older cards: check a few cards' file names, or run probe po <name>-church-<zip>, before recording a Tilma page-pdfs row.
 
 ## Rules settled for this diocese
 
