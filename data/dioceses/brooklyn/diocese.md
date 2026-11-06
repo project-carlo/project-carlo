@@ -171,6 +171,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - render.py can't download from the WordPress multisite hosts that drop probe connections; download with tools/fetch-pdf.py (run without python -I, which hides pdf_extract) and pass render.py the local file path.
 - A Tilma site's /bulletins can redirect to parishesonline.com/organization/<slug> (probe get shows it as final_url, while probe url lists no bulletin links). Run probe po on that slug: the row is parishes_online.
 - Google Sites parish pages can embed each issue as a Drive file preview (iframe data-src drive.google.com/file/d/<id>/preview) with no folder or PDF link, so fetch can't resolve them. Record unsupported with fetch_gap kind drive-preview-embed, and read the issue through drive.google.com/uc?id=<id>&export=download.
+- GoDaddy Website Builder sites (PDFs on img1.wsimg.com/blobby/go/...) can repost LPi issues with the footer pages cut and all pages images, so no 'NN-NNNN' text shows: try probe po <name>-church-<zip> (Our Lady of Grace's was container 04/1011).
+- visit.py can call a WordPress multisite parish site SPAM-SQUAT when injected betting text sits on a still-working parish homepage; if the address, bulletin page and weekly PDFs are the parish's own, keep it as the website and note the compromise.
 
 ## Rules settled for this diocese
 
