@@ -196,6 +196,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Joomla DOCman bulletin list (403 to probes and fetch) whose files are the parish's own Word PDFs with no LPi footer and no ParishesOnline org with issues is unsupported with fetch_gap kind joomla-docman-file-403; read the issues with tools/browser-pdf.py.
 - Some self-made bulletins posted on Tilma have a text layer in a shifted font encoding ('3KRQH' for 'Phone', digits dropped), so probe pdf greps miss Mass times and fetch:check reports issue-date conflicts: render.py page 1 for the masthead and take per-church Mass assignments from the site's /mass-times page.
 - John Patrick Publishing's church-bulletin.org/<id> page (redirects to a slug page) links each issue as church-bulletin.org/bulletin/<slug>/YYYY-MM-DD.pdf, while the jppc.net <id>template.pdf link answers HTML to probe pdf: read issues from the slug URLs, and record url:<slug page> as the publication id.
+- Wix bulletin pages can show the issue only as a slideshow of hash-named static.wixstatic.com JPEGs with empty alt text (no PDF, no date): page-pdfs and page-images both fail, so the row is unsupported with fetch_gap kind wix-image-slideshow. Read the slides at static.wixstatic.com/media/<id>~mv2.jpg, and use tools/frames-requests.py to list them.
+- Parishes that share a pastor can each print both churches' Mass schedules on page 1 of separate bulletins: compare mastheads, intentions and collections before merging, and record a separate review.
 
 ## Rules settled for this diocese
 
