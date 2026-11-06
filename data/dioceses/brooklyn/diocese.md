@@ -121,6 +121,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - A Tilma bulletins page can post the coming week's card before its file (the card links /bulletins/null). fetch then picks the previous issue, so record a research recheck after the weekend, not a gap.
 - eCatholic parish sites in Brooklyn (e.g. holytrinityrcparish.org) answer 403 to probe url; visit.py gives the ecatholic:<id>, and issues.py ecatholic reads the issues from files.ecatholic.com without a browser.
 - Self-hosted bulletins named MMDDYY.pdf (no year) in a non-chronological archive table fool the unpinned resolver into a past year's file as 'current'; pin the homepage's 'This Week's Bulletin' link with a digit filter (page-pdfs <home> filename=[0-9][0-9][0-9][0-9][0-9][0-9].pdf).
+- A Google Drive folder page (drive/folders/<id>) serves only its first 50 files, name order, so drive-folder can pick a years-old issue; list the whole folder with drive.google.com/embeddedfolderview?id=<id>#list to see whether it is still kept current before pinning it.
+- On JavaScript-only parish sites (Next.js /_next/static chunks, Vite /assets/index-*.js) whose bulletin menu has no links in the HTML, grep the JS bundle for drive.google.com, docs.google.com/spreadsheets or supabase.co to find where the issues live; when the link only exists in JS, the row is unsupported with a fetch_gap.
 
 
 ## Rules settled for this diocese
