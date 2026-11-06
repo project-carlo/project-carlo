@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-04
   note: 'Redirects to church-bulletin.org/sacred-heart-of-jesus-irvington-nj-07111 (John Patrick Publishing,
     ''Sacred Heart of Jesus Bulletin''): dated issues 2026-10-04 to 2026-11-01, over 100 issues listed.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

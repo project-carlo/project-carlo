@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   quote: Mon-Fri 9:00 am Saturday 5:00 pm Sunday 8 am 10 am 12 noon
   note: Parish Joomla site; its Bulletins menu item links http://sponsors.bonventure.net/?page=11148.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

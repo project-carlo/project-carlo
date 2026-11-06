@@ -26,6 +26,7 @@ evidence:
   note: '1 November 2026 bulletin page 1 (image only, rendered): Contact Us 88 East Saddle River Road,
     Saddle River, NJ 07458; Saturday 5:00pm (Vigil); Sunday 8:00am, 10:00am, 11:30am, 6:00pm; weekdays
     9:00am, Tue-Thu also 6:30am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

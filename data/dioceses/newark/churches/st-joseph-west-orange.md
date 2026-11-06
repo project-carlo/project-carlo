@@ -28,6 +28,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 210: St. Joseph Parish, 44 Benvenue Avenue, West Orange, NJ 07052.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

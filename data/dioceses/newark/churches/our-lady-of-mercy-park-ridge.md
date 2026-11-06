@@ -26,6 +26,7 @@ evidence:
   note: '1 November 2026 bulletin page 1 (image, rendered): masthead ''Our Lady of Mercy Church, Park
     Ridge, New Jersey 07656''; MASS SCHEDULE Daily Monday-Friday 6:30am, 8:30am, Saturday 8:30am; Saturday
     Vigil 5:30pm; Sunday 7:30am, 9:30am, 11:00am, 12:30pm Spanish, 6:15pm.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 124: Our Lady of Peace Parish, 111 South Street, New Providence,
     NJ 07974.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   quote: 9:30 am Misa en Español
   note: The 1 November 2026 masthead gives 8101 Kennedy Boulevard and Sunday Masses at 8:00, 9:30 (Spanish),
     11:00 and 12:30 (Spanish), Saturday 5:00 pm.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

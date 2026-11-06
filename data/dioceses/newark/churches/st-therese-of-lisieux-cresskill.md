@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   quote: 120 Monroe Ave., Cresskill, New Jersey 07626
   note: GCatholic 'St. Therese of Lisieux', Plus Code 87G8W2RJ+PG.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

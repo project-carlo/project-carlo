@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   quote: Sacred Heart (f1871) on Spring Street
   note: Seen as a DuckDuckGo result snippet; the basis for inferring this is the former Sacred Heart church.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

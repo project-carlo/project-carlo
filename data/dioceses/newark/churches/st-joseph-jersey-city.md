@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 89: St. Joseph Parish, 511 Pavonia Avenue, Jersey City, NJ 07306;
     languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   quote: 510 Valley St., Orange, New Jersey 07050
   note: GCatholic 'Our Lady of the Valley', Plus Code 87G7QQ82+2C.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

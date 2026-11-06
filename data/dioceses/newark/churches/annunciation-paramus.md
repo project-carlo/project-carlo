@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 167: Annunciation Parish, 50 West Midland Avenue, Paramus, NJ 07652.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

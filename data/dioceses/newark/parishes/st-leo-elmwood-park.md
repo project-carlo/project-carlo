@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-03
   note: 'The John Patrick listing for id 6001 links weekly issues newest first: 2026-11-01, 2026-10-25,
     2026-10-18, 2026-10-11.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

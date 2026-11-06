@@ -28,6 +28,7 @@ evidence:
   note: 'Last Wayback capture in the CDX (2026-06-17): a WeConnect site titled ''Church of Saint Joseph
     the Carpenter'' linking https://parishesonline.com/publication-page/st-joseph-the-carpenter and container
     04/0041 issues to 20260614B.pdf.'
+promoted: 2026-11-05
 research:
 - method: probe url and visit.py on the directory website; Wayback CDX for its homepage
   url: https://www.stjosephroselle.com/

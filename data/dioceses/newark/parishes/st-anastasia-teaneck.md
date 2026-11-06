@@ -31,6 +31,7 @@ evidence:
     1, rendered): masthead names ST. JOSEPH CHURCH, 115 East Fort Lee Road, Bogota alone, with Rev. Scott
     Attanasio, Pastor and Rev. Eduardo Bustamante, Vicar, and its own Mass times. The two parishes share
     a vicar but not a bulletin.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-bogota

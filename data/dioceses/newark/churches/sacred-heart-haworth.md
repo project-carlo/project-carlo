@@ -32,6 +32,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/357742999
   seen: 2026-11-03
   note: OSM node 'Sacred Heart Church', Saint Nicholas Avenue, Haworth (40.95954, -73.99208), via Nominatim.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

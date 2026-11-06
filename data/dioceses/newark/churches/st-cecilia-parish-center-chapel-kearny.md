@@ -23,6 +23,7 @@ evidence:
   quote: The Chapel is located in our Parish Center 119 Chestnut Street Kearny, New Jersey 07032
   note: 'Same Mass schedule: ''7:30 PM Wednesday | Portuguese (Chapel)'', ''First Saturday of each month
     10:00 AM Spanish Mass (Chapel)''; the chapel is open for personal prayer during office hours.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

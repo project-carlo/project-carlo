@@ -22,6 +22,7 @@ evidence:
   note: 'The parish''s own copy of the 1 November 2026 issue on stannegarwood.com/bulletins (GoDaddy builder,
     files named ''November 1, 2026.pdf''): page 4 LPi ad-page footer names container 03-4018, so the self-hosted
     PDFs are reposts of the LPi bulletin.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

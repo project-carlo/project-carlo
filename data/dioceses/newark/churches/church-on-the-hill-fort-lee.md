@@ -33,6 +33,7 @@ evidence:
     Lee
   note: Gothic Revival church completed 1854, NRHP 1976; article coordinates 40.86028, -73.97889, next
     to the Cemetery of the Madonna (OSM way 41914950).
+promoted: 2026-11-05
 research:
 - method: probe get of the parish homepage and its 'small-chapel-location' page for an address of the
     Church on the Hill

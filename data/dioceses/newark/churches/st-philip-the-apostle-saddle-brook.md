@@ -26,6 +26,7 @@ evidence:
   quote: 488 Saddle River Road, Saddle Brook, New Jersey 07663
   note: The 1 November 2026 bulletin's page-9 Sunday Mass Schedule gives Saturday 5:30 PM and Sunday 7:00,
     8:30, 10:00 AM and 12:00 PM.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

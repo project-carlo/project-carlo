@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 7: St. Peter Parish, 155 William Street, Belleville, NJ 07109 (English,
     Spanish).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

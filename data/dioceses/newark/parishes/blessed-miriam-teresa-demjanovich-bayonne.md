@@ -28,6 +28,7 @@ evidence:
   note: The 12 June 2026 letter names the four Bayonne parishes (St. Henry, St. John Paul II, St. Vincent
     de Paul, Blessed Miriam Teresa Demjanovich) among the twelve Parish Mission Partners pilot parishes;
     recorded in group. Each publishes its own bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-henry-bayonne

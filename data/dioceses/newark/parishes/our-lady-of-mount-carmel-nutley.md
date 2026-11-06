@@ -22,6 +22,7 @@ evidence:
 - url: https://church-bulletin.org/577
   seen: 2026-11-03
   note: The John Patrick listing for id 577 lists dated issues from 2024-11-10 to 2026-11-01 under /bulletin/our-lady-of-mount-carmel-church-nutley-nj-07110/.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

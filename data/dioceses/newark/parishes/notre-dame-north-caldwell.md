@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe po 0018000000QxACCAA3: org ''Notre Dame Church'', 359 Central Ave, North Caldwell, New
     Jersey, 07006-4287, website ndparishnc.com, container 03/4004, latest issue 2026-11-01.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

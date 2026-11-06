@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: No OSM place_of_worship found for St. Aloysius in Caldwell (also searched 'Saint Aloysius, Caldwell,
     NJ'); reverse lookup at the Plus Code gives only Bloomfield Avenue.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

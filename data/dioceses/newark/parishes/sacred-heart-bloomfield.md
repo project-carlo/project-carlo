@@ -20,6 +20,7 @@ evidence:
 - url: https://www.shcbloomfield.org/bulletin
   seen: 2026-11-03
   note: The parish site (Duda / LPi WeConnect) bulletin page embeds parishesonline.com/publicationWidget?type=bulletin&id=0018000000Qc04YAAR.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

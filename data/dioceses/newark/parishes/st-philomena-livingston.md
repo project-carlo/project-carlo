@@ -18,6 +18,7 @@ evidence:
   note: 'eCatholic site behind Cloudflare (probe url HTTP 403; read with visit.py). Bulletin archive lists
     ''November 1, 2026'', ''October 25, 2026'' ... weekly, linking files.ecatholic.com/34818/bulletins/<yyyymmdd>.pdf.
     Footer: ''The Church of Saint Philomena 386 South Livingston Avenue Livingston, NJ 07039''.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

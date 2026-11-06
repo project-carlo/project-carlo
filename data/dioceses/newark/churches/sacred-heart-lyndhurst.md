@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: The archdiocese parish directory (entry 108) lists Sacred Heart Parish, 324 Ridge Road, Lyndhurst,
     NJ 07071 (English, Spanish).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

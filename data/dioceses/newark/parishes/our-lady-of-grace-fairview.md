@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   note: eCatholic parish site (files.ecatholic.com/26942 hosts its safe-environment PDFs; probe get reads
     it). Its bulletin link is https://sponsors.bonventure.net/?page=1445.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

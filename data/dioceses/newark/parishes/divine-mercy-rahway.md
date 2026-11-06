@@ -26,6 +26,7 @@ evidence:
   note: 'Read with visit.py. Also: Fr. Dennis Kaelin was pastor of St. Mary''s ''until its merger with
     nearby St. Mark''s Church in 2010 to form the Divine Mercy Parish'', and ''The old bells of St. Mark''s
     Church were placed in front of the rectory to serve as reminder of the previous church edifice''.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

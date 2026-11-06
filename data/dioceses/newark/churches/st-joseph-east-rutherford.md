@@ -26,6 +26,7 @@ evidence:
   quote: 120 Hoboken Road, East Rutherford, NJ
   note: The 1 November 2026 masthead; page 3 lists Masses Saturday 5:00 pm and Sunday 8:00 am, 10:00 am,
     12:00 pm and 1:30 pm.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

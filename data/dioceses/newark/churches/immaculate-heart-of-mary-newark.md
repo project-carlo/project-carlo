@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 436652103, building=church, 'Immaculate Heart of Mary Church, Lafayette Street', centre
     40.72919,-74.16365.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
     ...) and older CBSH-Monumental-Faith-<MMDDYY>.pdf issues back to 2024 and CBSH-<MMDDYY>.pdf from 2023.
     Two links labelled 'November 2, 2026' and 'November 9, 2026' point to 2025 files (CBSH-Monumental-Faith-103125.pdf,
     -110825.pdf).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

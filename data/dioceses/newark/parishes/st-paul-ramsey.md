@@ -21,6 +21,7 @@ evidence:
 - url: https://www.stpaulrcchurch.org/
   seen: 2026-11-03
   note: Parish Wix site; its bulletin link points to https://sponsors.bonventure.net/?page=1553.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -29,6 +29,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 199: 4206 Kennedy Boulevard, Union City, NJ 07087 (pin 40.7786, -74.0269).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

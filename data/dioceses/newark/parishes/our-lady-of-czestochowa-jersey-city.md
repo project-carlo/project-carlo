@@ -27,6 +27,7 @@ evidence:
     copies of the John Patrick issues, newest https://www.olcjc.org/s/_660-November-1-2026-1.pdf, then
     660-October-25-2026-1.pdf and so on (the 660 prefix is the account). Homepage Mass Schedule: Saturday
     5:00 PM; Sunday 10:00 AM & 12:30 PM; Tuesday-Friday 12:30 PM.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

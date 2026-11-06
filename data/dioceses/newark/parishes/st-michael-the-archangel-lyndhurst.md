@@ -27,6 +27,7 @@ evidence:
     'BULLETINS 2025- 2026', newest 'October 25, 2026 - 30th Sunday in Ordinary Time', each a copy of the
     LPi file uploaded as files.ecatholic.com/28406/documents/<yyyy>/<m>/<yyyymmdd>B.pdf (e.g. 20261025B.pdf,
     whose page-8 footer also reads 'St. Michael Church | 03-4017').
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

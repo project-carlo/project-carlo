@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'probe po: org ''St. Stanislaus Kostka RC Church'', 184 Ray St, Garfield, lpi 0018000000Qc2SiAAJ,
     container 04/1035, weekly issues through 2026-11-01.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

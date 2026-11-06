@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 6: St. Anthony of Padua Parish, 63 Franklin Street, Belleville, NJ
     07109.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 95: Our Lady of Sorrows Parish, 136 Davis Avenue, Kearny, NJ 07032.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

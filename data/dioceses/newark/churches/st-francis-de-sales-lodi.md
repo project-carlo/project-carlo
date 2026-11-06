@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: Pages 1 and 2 are images. The 1 November 2026 masthead gives 125 Union Street, Lodi, NJ 07644,
     and page 2 gives the Saturday and Sunday Masses in English, Spanish and Portuguese.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 143: St. Francis Xavier Parish, 243 Abington Avenue West, Newark,
     NJ 07107.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

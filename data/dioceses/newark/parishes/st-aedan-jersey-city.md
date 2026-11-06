@@ -34,6 +34,7 @@ evidence:
     9:00 AM at the Parish Center Chapel, 5:00 PM; Monday to Friday 12:10 PM; 7:00 PM (Spanish) on Friday
     at the Parish Center Chapel. Weekly ''Announcements'' blog posts (latest 18 October) say ''take a
     bulletin''. No bulletin PDFs on the site.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

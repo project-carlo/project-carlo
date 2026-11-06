@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: The parish's Weebly Bulletin page ('Current Bulletins') lists self-hosted issues from 2019 to
     February 2023 only (last 021223ws.pdf, 'February 11, 2023'); it links no ParishesOnline page.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

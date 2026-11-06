@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: '1 November 2026 bulletin, page 1 masthead (image): ''400 Maywood Avenue, Maywood, NJ 07607'';
     Mass Schedule Saturday 5:00 PM, Sunday 8:00, 10:00 AM and 12:00 Noon, Monday-Saturday 8:30 AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

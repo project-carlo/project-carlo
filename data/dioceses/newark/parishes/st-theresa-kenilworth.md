@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe url: the parish site links https://sponsors.bonventure.net/?page=1766, its only bulletin
     link.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

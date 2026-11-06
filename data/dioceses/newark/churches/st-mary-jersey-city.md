@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 80: St. Mary of the Immaculate Conception Parish, 209 Third Street,
     Jersey City, NJ 07302; languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

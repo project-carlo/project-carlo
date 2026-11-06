@@ -30,6 +30,7 @@ evidence:
   quote: has been appointed pastor of Holy Family, Union City, effective August 1, 2026
 revisit: Check that holyfamilyunioncitynj.org/bulletins has issues newer than 11 October 2026.
 revisit_after: 2026-11-24
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

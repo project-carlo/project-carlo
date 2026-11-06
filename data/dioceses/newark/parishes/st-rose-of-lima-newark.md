@@ -16,6 +16,7 @@ evidence:
   seen: 2026-11-04
   note: 'John Patrick listing saint-rose-of-lima-newark-nj-07107: weekly PDFs from 2024-11-10 to 2026-11-01.
     It gives no parish website, and the directory (140) and GCatholic (18512) give none either.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

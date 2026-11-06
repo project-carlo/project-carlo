@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   quote: 103 S Center St., Orange, New Jersey 07050
   note: GCatholic 'Our Lady of Mount Carmel', Plus Code 87G7QQ9C+H2.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

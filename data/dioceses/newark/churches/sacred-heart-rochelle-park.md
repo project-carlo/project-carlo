@@ -26,6 +26,7 @@ evidence:
   quote: Sunday 10AM & 12PM
   note: The 1 November 2026 bulletin's page 1 gives the church at 12 Terrace Ave, Rochelle Park, with
     weekend Masses Saturday 4PM and 5:30PM and Sunday 10AM and 12PM.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

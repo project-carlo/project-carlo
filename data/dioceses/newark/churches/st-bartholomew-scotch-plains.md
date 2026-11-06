@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 186: St. Bartholomew Parish, 2032 Westfield Avenue, Scotch Plains,
     NJ 07076.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: 23 Crestmont Rd., Verona, New Jersey 07044
   note: GCatholic 'Divine Mercy Hill', type Monastery, website veronasds.com, Plus Code 87G7RQHG+XP.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

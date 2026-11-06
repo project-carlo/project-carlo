@@ -32,6 +32,7 @@ evidence:
   note: OSM way 321679555 'Church of the Little Flower', amenity=place_of_worship, at 40.678612, -74.4395213,
     tagged 110 Roosevelt Avenue, Berkeley Heights 07922; about 50 m from the directory pin and the 310
     Plainfield Avenue house way.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

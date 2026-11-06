@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-03
   note: Duda homepage links the current issue (irp.cdn-website.com/33cf997d/files/uploaded/142e_2026_11_01+web+copy.pdf)
     from a graphic button; the /bulletin page loads an empty Google viewer and links no PDF in its HTML.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

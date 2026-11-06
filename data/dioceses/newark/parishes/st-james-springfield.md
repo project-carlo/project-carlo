@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-05
   note: The masthead's domain redirects to https://saintjamestheapostle.org/ (its https answers with a
     self-signed certificate).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

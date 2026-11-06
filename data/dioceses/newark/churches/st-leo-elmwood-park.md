@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: Page 1 is an image. The 1 November 2026 masthead gives 324 Market Street, Elmwood Park, NJ 07407,
     and the schedule box gives Saturday 5:00 PM and Sunday 8:30 AM, 10:30 AM and 12:30 PM (Español).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

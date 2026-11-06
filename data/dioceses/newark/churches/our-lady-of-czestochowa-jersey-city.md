@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 87: Our Lady of Czestochowa Parish, 120 Sussex Street, Jersey City,
     NJ 07302.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

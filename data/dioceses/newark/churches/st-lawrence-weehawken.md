@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: Page 1 (image, rendered) of the 1 November 2026 issue gives 22 Hackensack Avenue, Weehawken and
     Sunday Masses 8 am, 10:30 am, 12 pm.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

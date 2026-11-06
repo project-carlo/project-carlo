@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 145: St. Casimir Parish, 164 Nichols Street, Newark, NJ 07105, website
     stcnewark.com.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

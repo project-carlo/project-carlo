@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: '1 November 2026 bulletin page 1 (image only, rendered): masthead 905 South Maple Avenue, Glen
     Rock; Weekend Masses Saturday 5 pm, Sunday 8 am, 10am, 12 pm.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

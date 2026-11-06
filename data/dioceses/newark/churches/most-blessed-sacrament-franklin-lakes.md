@@ -26,6 +26,7 @@ evidence:
   note: '1 November 2026 bulletin (image-only, rendered): masthead ''Most Blessed Sacrament Roman Catholic
     Church, Franklin Lakes''; page 2 parish office 787 Franklin Lake Road, Franklin Lakes 07417; Mass
     Schedule Saturday 5:30 pm; Sunday 8:00 am, 10:00 am, 12:00 pm; weekdays 9:00 am Mon/Sat, 7:30 am Tue-Fri.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

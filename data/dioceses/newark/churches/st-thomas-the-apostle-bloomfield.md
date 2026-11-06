@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 10: St. Thomas the Apostle Parish, 60 Byrd Avenue, Bloomfield, NJ
     07003.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

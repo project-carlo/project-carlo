@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 11: St. Valentine Parish, 125 N Spring Street, Bloomfield, NJ 07003.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

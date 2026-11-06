@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 208 (Holy Redeemer Parish): 569 - 65th Street, West New York, NJ
     07093.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

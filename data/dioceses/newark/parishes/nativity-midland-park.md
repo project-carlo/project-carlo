@@ -27,6 +27,7 @@ evidence:
   quote: Anticipated Sunday Mass 5:00 pm
   note: 'Homepage Mass schedule: Saturday 5:00 pm in the Church; Sunday 8:00 am, 10:15 & 12:00 pm in the
     Church; weekdays Monday-Saturday 12:10 pm.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

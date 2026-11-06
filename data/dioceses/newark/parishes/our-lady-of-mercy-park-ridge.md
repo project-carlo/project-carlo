@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-03
   note: Parish eCatholic site (probe get answered the homepage); it links files.ecatholic.com/19845/documents/...
     and a /bulletins page, which answered probe get with 403 (Cloudflare).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   note: The listing is titled 'Saint Philip the Apostle Bulletin' and lists 2026-11-01.pdf first, then
     weekly issues back from 2026-10-25.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

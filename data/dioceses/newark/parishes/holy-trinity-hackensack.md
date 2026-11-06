@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-03
   quote: Mon- Fri 7:00 AM Parish Center Chapel 12:10 PM Main Church
   note: Parish site Mass Times page; Saturday 8:00 AM also in the Parish Center Chapel.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

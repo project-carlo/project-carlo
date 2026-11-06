@@ -37,6 +37,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 98: St. John the Evangelist Parish, 235 Harrison Street, Leonia,
     NJ 07605.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

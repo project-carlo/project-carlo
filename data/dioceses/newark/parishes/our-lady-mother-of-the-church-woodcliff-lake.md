@@ -23,6 +23,7 @@ evidence:
   note: Parish Joomla site; the link goes to parishesonline.com/find/our-lady-mother-of-the-church-07677.
     The homepage also links a self-hosted copy, /images/OLMC%20Bulletin%2011.01.26.pdf (6 pages, same
     page 1 masthead and schedule, no ad pages).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

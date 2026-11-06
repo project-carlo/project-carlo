@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: 'Daily Mass: Monday through Friday at 8am and Saturday at 9am in the MINISTRY CENTER CHAPEL.'
   note: Read with parish-site-access visit.py (Cloudflare 403 to probe get).
+promoted: 2026-11-05
 research:
 - method: Read the bulletin's page 1 and the site's Mass Schedules and Contact Us pages for the Ministry
     Center's address

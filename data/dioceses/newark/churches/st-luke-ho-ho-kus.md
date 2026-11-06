@@ -26,6 +26,7 @@ evidence:
   quote: 340 N. FRANKLIN TURNPIKE HO-HO-KUS, NJ 07423
   note: '1 November 2026 bulletin page 1: Saturday 5:00 PM; Sunday 8:00 AM, 10:00 AM, 12:00 PM; Daily
     M-F 9:00AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

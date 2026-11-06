@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   note: 'Wix bulletins page: five thumbnails Nov1, Oct25, Oct18, Oct11, Oct4 linking undated _files/ugd/24af01_*.pdf
     copies.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

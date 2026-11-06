@@ -25,6 +25,7 @@ evidence:
   note: 'Parish homepage links the John Patrick template jppc.net/onlinebulletins/578template.pdf (probe
     url: jppc.net x5). Mass Times: Saturday 5 PM (Vigil); Sunday 8 AM, 10 AM, 12 PM; Monday-Saturday 9
     AM.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

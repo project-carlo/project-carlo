@@ -28,6 +28,7 @@ evidence:
   note: 'Earliest issue in container 03/4014 (probe container: 4 June 2023 answers 200, every Sunday 9
     April-28 May 2023 answers 403 while the container is live). No mention of Fairview or St. John the
     Baptist (grep: 0 hits).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe po: Blessed Sacrament Church, 1096 North Ave, Elizabeth, New Jersey, 07201; lpi 0018000000QbyvyAAB;
     container 04/1050; latest issues 2026-11-08, 11-01, 10-25. Website field ''No website''.'
+promoted: 2026-11-05
 research:
 - method: Directory (32) and GCatholic (18386) website fields; ParishesOnline org website field; bulletin
     masthead

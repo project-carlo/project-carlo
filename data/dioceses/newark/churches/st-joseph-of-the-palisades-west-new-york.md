@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 209: 6401 Palisade Avenue, West New York, NJ 07093 (pin 40.791721,
     -74.0113454).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

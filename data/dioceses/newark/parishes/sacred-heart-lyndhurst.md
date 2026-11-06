@@ -24,6 +24,7 @@ evidence:
 revisit: Update provider_id's filename filter to the 2027 file names (27-MM-DD.pdf) once the first 2027
   issue is posted.
 revisit_after: 2026-12-28
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

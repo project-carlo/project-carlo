@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: The WordPress homepage links https://www.jppc.net/onlinebulletins/621template.pdf as its bulletin
     (read from the page source with probe get).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

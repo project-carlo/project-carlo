@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 165: St. Michael Parish, 19 E Central Boulevard, Palisades Park,
     NJ 07650, website https://www.stmichael-catholic.org/.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

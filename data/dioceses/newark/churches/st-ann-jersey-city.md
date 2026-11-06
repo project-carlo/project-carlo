@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 85: St. Ann Parish (Polish), 291 St. Paul Avenue, Jersey City, NJ
     07306; no website.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

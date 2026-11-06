@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 92: St. Anthony of Padua Parish, 330 Sixth Street, Jersey City, NJ
     07302.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

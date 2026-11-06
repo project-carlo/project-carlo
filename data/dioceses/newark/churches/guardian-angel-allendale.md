@@ -26,6 +26,7 @@ evidence:
   quote: 320 Franklin Turnpike
   note: '25 October 2026 bulletin page 2: Church of the Guardian Angel, 320 Franklin Turnpike, Allendale,
     New Jersey 07401; Saturday 5:30 p.m.; Sunday 7:30, 9:30, 11:30 a.m.; Monday-Friday 9:00 a.m.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

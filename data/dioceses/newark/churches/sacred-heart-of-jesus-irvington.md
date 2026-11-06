@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 73: Sacred Heart of Jesus Parish, 537 Grove Street, Irvington, NJ
     07111.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: The parish site's Bulletin page (Zumu, read with parish-site-access visit.py) links parishesonline.com/publication-page/corpus-christi-church
     issues of container 03/0649 (2026-11-01, 10-25, 10-18, 10-11).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-east-rutherford

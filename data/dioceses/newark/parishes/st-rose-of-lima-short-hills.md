@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-05
   note: 'Joomla (Helix Ultimate) page: current issue at /images/Weeklypdfs/bulletin.pdf (overwritten weekly)
     and an archive /images/bulletins/bulletin<MMDDYY>.pdf back to 2022, newest bulletin110126.pdf.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

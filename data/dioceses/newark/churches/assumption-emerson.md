@@ -28,6 +28,7 @@ evidence:
 - url: https://www.openstreetmap.org/node/4632246695
   seen: 2026-11-03
   note: OSM node 'Assumption Church', 29 Jefferson Avenue, Emerson (40.97655, -74.02515), via Nominatim.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

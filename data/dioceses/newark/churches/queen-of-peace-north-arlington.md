@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: The archdiocese parish directory (entry 151) lists Queen of Peace Parish, 10 Franklin Place, North
     Arlington, NJ 07031 (English, Spanish).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

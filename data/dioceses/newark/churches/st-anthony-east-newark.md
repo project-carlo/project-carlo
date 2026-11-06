@@ -44,6 +44,7 @@ revisit: St. Anthony closes for worship on 23 Nov 2026 (archdiocesan decree, 10 
   Cross bulletin issues of 8-29 November for the final Mass, then exclude this church as closed with that
   last_mass.
 revisit_after: 2026-11-24
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   note: Parish site (the masthead's stcassianchurch.org redirects here); probe url lists its bulletin
     link https://www.jppc.net/onlinebulletins/616template.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-teresa-of-calcutta-montclair

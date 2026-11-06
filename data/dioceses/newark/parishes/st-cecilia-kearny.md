@@ -25,6 +25,7 @@ evidence:
   note: WordPress site 'Proudly Designed and Hosted by John Patrick Publishing Company'; 'Current Bulletin'
     links http://www.jppc.net/onlinebulletins/630template.pdf. Its Mass schedule matches the bulletin's
     (Wednesday 7:30 PM Portuguese and First Saturday 10:00 AM Spanish in the Chapel).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-sorrows-kearny

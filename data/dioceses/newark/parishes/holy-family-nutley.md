@@ -24,6 +24,7 @@ evidence:
     newest 'SUN, NOV 1' (container 03/4012, 20261101B.pdf). Its Mass Times box says 'The Main Church is
     currently under construction and restoration. Weekday Masses are temporarily being celebrated in the
     Mother Cabrini Chapel.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Wix site (probe url): links https://www.jppc.net/onlinebulletins/651template.pdf and some undated
     _files/ugd PDFs (the first, 4e29f1_a090e18c…, is 2 image pages, not a dated issue).'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: christ-the-king-hillside

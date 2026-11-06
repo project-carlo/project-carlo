@@ -18,6 +18,7 @@ evidence:
   note: eCatholic site 'Our Lady of Perpetual Help Church | Oakland, NJ' embedding ecatholic:2310, footer
     address '117 Franklin Avenue / Oakland, NJ 07436'; behind Cloudflare (probe get 403), read in a browser
     (parish-site-access visit.py).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

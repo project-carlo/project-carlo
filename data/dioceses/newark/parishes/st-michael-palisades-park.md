@@ -31,6 +31,7 @@ evidence:
     1 November 2026 issue (3 pages, text layer): ''2026년 11월 01일'', ''ST. MICHAEL ROMAN CATHOLIC CHURCH'',
     ''19 E Central Blvd., Palisades Park, NJ 07650'', pastor 조민현 요셉 (Minhyun Cho), the same Mass schedule
     as the English issue. A second edition of this parish''s bulletin, not a separate parish.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

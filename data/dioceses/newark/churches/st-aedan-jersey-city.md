@@ -28,6 +28,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 77: St. Aedan''s, 800 Bergen Avenue, Jersey City, NJ 07306.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

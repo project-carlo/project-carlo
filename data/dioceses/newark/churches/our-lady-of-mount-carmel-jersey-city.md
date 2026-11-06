@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 90: Our Lady of Mount Carmel Parish, 99 Broadway, Jersey City, NJ
     07306; languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

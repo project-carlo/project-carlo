@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 159: St. Mary Parish, 17 Msgr. Owens Place, Nutley, NJ 07110.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

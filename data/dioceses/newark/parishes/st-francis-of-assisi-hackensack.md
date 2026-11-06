@@ -27,6 +27,7 @@ evidence:
   quote: 50 Lodi Street, Hackensack, N.J. 07601
   note: 'eCatholic site (site id 16524) behind a bot check: probe get answered HTTP 403, visit.py loaded
     it on the first try and found po-org:st-francis-of-assisi-church-07601 on it.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

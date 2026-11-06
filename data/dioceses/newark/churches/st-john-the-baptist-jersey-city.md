@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 74: St. John the Baptist Parish, 3026 Kennedy Boulevard, Jersey City,
     NJ 07306.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

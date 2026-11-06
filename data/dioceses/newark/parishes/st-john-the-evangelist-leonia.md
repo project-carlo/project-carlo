@@ -29,6 +29,7 @@ evidence:
   note: 'Mass times page (eCatholic, behind Cloudflare; read with visit.py): Saturday 5:00 PM; Sunday
     7:30 AM, 9:30 AM, 11:30 AM, 1:30 PM Spanish, 6:00 PM; Mon-Sat 9:00 AM; 1st Friday 7:00 PM. ''Mailing
     Address: St. John Rectory Office 235 Harrison Street''.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

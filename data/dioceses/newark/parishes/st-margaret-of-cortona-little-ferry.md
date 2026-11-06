@@ -30,6 +30,7 @@ evidence:
 revisit: Check whether https://www.stmargaretlfnj.org/bulletins lists an issue newer than 13 September
   2026, and rerun fetch:check.
 revisit_after: 2026-11-17
+promoted: 2026-11-05
 research:
 - method: probe get and visit.py on the parish Bulletins page and homepage; probe pdf on each linked PDF;
     probe po on st-margaret-of-cortona-church-07643

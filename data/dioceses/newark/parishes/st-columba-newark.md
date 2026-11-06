@@ -35,6 +35,7 @@ evidence:
 revisit: The Drive folder is the site's '2026 Bulletins'; check whether 2027 issues go to a new folder
   and repoint provider_id
 revisit_after: 2027-01-05
+promoted: 2026-11-05
 research:
 - method: Read the 1 November 2026 bulletin and the site's schedule for where 'St. Mary's Chapel' (the
     site's heading over the daily Masses) is

@@ -18,6 +18,7 @@ evidence:
   note: eCatholic bulletins page listing files.ecatholic.com/11383/bulletins/YYYYMMDD.pdf weekly, newest
     20261025.pdf on 2026-11-03 (20261101.pdf answered 403, not yet posted). Behind Cloudflare (probe get
     403); read in a browser (parish-site-access visit.py).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

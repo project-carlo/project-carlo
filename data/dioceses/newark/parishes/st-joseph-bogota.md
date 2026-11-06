@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-03
   note: Parish WordPress site; its 'Current Bulletin' menu item links https://www.jppc.net/onlinebulletins/6032template.pdf,
     which redirects to the church-bulletin.org listing.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-anastasia-teaneck

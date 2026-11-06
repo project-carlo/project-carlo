@@ -26,6 +26,7 @@ evidence:
   quote: SUNDAY MASS
   note: '1 November 2026 bulletin page 1: Sunday 8:00 AM Español, 10:00 AM English, 12:00 PM Español;
     Saturday 5:00 PM; masthead address 99 Marsellus Place.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-03
   note: 'eCatholic bulletin page (read with parish-site-access visit.py): weekly files.ecatholic.com/36339/bulletins/YYYYMMDD.pdf
     issues, newest ''November 1, 2026'', then October 25, 18, 11.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe url: LPi WeConnect site embedding lpi:0018000000Qc01YAAR, links /bulletins. ''Mass Times'':
     Sunday 8:00am, 9:30am (Children''s), 11:00am (Polish), 7:00pm.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

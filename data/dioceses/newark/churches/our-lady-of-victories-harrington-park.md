@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-03
   note: OSM building way 'Our Lady of Victories Church', Lynn Street, Harrington Park (centre 40.98558,
     -73.98161), via Nominatim.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

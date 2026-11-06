@@ -29,6 +29,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 154: Notre Dame Parish, 359 Central Avenue, North Caldwell, NJ 07006.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

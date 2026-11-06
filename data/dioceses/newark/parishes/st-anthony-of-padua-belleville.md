@@ -30,6 +30,7 @@ evidence:
     Lake) Belleville, NJ 07109'', website www.stantbell.org, ''5:30PM (Sunday Vigil Mass)'', the same
     page as the stantbell.org upload of that week; footer names John Patrick Publishing. The listing has
     dated issues through 2026-11-08.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

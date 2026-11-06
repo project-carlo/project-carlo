@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 104: St. Raphael Parish, 346 E Mount Pleasant Ave, Livingston, NJ
     07039.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

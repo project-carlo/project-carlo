@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 47: Holy Trinity Parish, 2367 Lemoine Avenue, Fort Lee, NJ 07024
     (no website).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

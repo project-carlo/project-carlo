@@ -26,6 +26,7 @@ evidence:
   quote: 200 Wyckoff Avenue, Ramsey, NJ 07446
   note: '1 November 2026 bulletin page 2: Monday through Friday 7:30am and Noon; Saturday 9am, 5pm; Sunday
     8am, 10am, 12 pm, 1:30pm (Spanish), 5pm.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

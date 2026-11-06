@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 3: St. Henry Parish, 82 W 29th Street, Bayonne, NJ 07002.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

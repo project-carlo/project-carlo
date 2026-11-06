@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-04
   note: '''Church of the Immaculate Heart of Mary'', language Spanish, 114 Prospect St., Newark 07105,
     phone (973) 589-8249 (the bulletin''s office number).'
+promoted: 2026-11-05
 research:
 - method: 'Looked for a parish website: ParishesOnline org website field, GCatholic 18492, rcan.org directory,
     DuckDuckGo html search (bot check)'

@@ -26,6 +26,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 140: St. Rose of Lima Parish, 11 Gray Street, Newark, NJ 07107.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

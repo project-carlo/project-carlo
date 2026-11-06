@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 217 Prospect St., South Orange, New Jersey 07079
   note: GCatholic 'Our Lady of Sorrows', Plus Code 87G7PPRR+GG.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

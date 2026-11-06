@@ -26,6 +26,7 @@ evidence:
   quote: 8:00 AM, 10:00 AM, 12:00 PM
   note: 'November 1-2, 2026 bulletin page 1: Saturday Vigil 5:00 PM; Sunday 8:00 AM, 10:00 AM, 12:00 PM;
     Weekdays & Saturday 8:00 AM; page 2 lists that week''s Mass intentions.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

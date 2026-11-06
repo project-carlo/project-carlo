@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe url: the parish''s WordPress site (the directory''s website) links the ParishesOnline org
     three times.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

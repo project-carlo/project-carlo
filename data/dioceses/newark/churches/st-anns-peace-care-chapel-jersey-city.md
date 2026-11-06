@@ -34,6 +34,7 @@ revisit: 'Settle whether the Sunday 11AM Mass is open to the public: read the ne
   and Peace Care''s pages for wording such as ''residents only'' or ''all welcome''; if residents only,
   exclude as no-public-mass.'
 revisit_after: 2026-12-01
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

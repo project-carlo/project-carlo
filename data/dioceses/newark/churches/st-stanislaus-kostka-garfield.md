@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 12:00 PM (EN),7:00PM(PL)
   note: 1 November 2026 bulletin page 1 Sunday Mass times; masthead address 184 Ray Street.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

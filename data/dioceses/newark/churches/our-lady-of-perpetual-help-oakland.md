@@ -30,6 +30,7 @@ evidence:
   note: Parish site footer '117 Franklin Avenue / Oakland, NJ 07436'; its embedded Google map pins 117
     Franklin Ave at 41.02906, -74.22743, a few metres from GCatholic's Plus Code. Behind Cloudflare; read
     in a browser (parish-site-access visit.py).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

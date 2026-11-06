@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-03
   note: OSM node 'Saint Andrew's Roman Catholic Church', Washington Avenue, Westwood (40.9927778, -74.0366667),
     via Nominatim.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

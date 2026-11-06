@@ -22,6 +22,7 @@ evidence:
   note: 'probe url: http://www.stgensrcc.com/ (directory and masthead website) redirects to https://www.saintgens.com/,
     a Wix site titled ''SaintGens | Catholic Church | 200 Monmouth Road, Elizabeth, NJ, USA'' that links
     https://parishesonline.com/organization/st-genevieve-church.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

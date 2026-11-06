@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 13: St. Joseph Parish, 115 E Fort Lee Road, Bogota, NJ 07603, website
     stjosephbogota.org.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

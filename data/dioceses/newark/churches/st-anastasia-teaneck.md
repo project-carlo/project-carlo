@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 193: St. Anastasia Parish, 1095 Teaneck Road, Teaneck, NJ 07666,
     website saintanastasia.org.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

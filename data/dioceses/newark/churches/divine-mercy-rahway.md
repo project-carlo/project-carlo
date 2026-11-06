@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 172: Divine Mercy Parish, 232 Central Avenue, Rahway, NJ 07065 (english
     spanish).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

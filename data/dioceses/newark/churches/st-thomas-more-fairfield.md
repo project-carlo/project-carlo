@@ -33,6 +33,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 43: St. Thomas More Parish, 210 Horseneck Road, Fairfield, NJ 07004.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   quote: 'Daily Mass: Monday through Friday at 8am and Saturday at 9am in the MINISTRY CENTER CHAPEL.'
   note: Read with visit.py (Cloudflare 403 to probe get).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

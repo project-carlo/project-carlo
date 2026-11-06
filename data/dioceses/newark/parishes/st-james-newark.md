@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: 'probe po: ''St. James Church'', 142 Jefferson St, Newark, lpi 0018000000Qc2aEAAR, website stjameschurchrc.com;
     no publications now.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

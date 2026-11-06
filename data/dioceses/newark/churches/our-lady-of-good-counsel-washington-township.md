@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: '1 November 2026 bulletin page 1 (image, rendered): 668 Ridgewood Road, Washington Township, New
     Jersey 07676; MASS SCHEDULE Saturday 5:00pm; Sunday 8:00am, 10:30am, 12:00pm, 6:00pm; Daily 8:45am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

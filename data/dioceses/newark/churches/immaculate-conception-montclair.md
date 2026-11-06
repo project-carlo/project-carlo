@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 120: St. Teresa of Calcutta Parish, 30 N. Fullerton Avenue, Montclair,
     NJ 07042.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

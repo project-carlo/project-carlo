@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 34: St. Genevieve Parish, 200 Monmouth Road, Elizabeth, NJ 07208.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

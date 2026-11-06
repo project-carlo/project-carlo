@@ -35,6 +35,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese ''Location of Records for Closed or Merged Parishes'' table (modified 2025-05-22):
     Saint John Nepomucene, Guttenberg, Merged, records at Holy Redeemer, West New York.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

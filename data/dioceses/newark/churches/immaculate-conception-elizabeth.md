@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 30: Immaculate Conception Parish, 417 Union Avenue, Elizabeth, NJ
     07208.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

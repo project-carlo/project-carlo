@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: 'Redirects to church-bulletin.org/saint-joseph-parish-maplewood-nj-07040 (John Patrick Publishing):
     dated issues from 2024-11-10 to 2026-11-01.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

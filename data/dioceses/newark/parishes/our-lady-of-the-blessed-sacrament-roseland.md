@@ -23,6 +23,7 @@ evidence:
   quote: Current Bulletin
   note: 'Weebly page: ''Current Bulletin'' links https://www.jppc.net/onlinebulletins/686template.pdf;
     the embedded document is an old upload, /uploads/4/7/3/0/47306681/686_bulletin_03.24.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

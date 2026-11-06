@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 136: St. Michael Parish, 172 Broadway, Newark, NJ 07104.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

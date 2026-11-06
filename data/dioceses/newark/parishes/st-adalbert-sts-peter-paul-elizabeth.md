@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 37: St. Adalbert/Ss. Peter & Paul Parish, 250 E Jersey Street, Elizabeth,
     website https://www.stadalbert.us/st-adalbert.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

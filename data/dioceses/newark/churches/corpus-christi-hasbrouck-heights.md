@@ -26,6 +26,7 @@ evidence:
   quote: 'Saturday Vigil:   5:00 PM'
   note: The 1 November 2026 masthead gives Parish Offices and Center, 218 Washington Place, and Sundays
     8:00 AM, 10:00 AM, 12 NN.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

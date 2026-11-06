@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 45: Our Lady of Grace Parish, 395 Delano Place, Fairview, NJ 07022,
     website http://www.olgrc.org/.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

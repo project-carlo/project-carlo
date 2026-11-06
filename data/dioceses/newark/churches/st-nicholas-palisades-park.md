@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 166: St. Nicholas Parish, 442 E Brinkerhoff Avenue, Palisades Park,
     NJ 07650, website https://stnicholasrcchurch.org/.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

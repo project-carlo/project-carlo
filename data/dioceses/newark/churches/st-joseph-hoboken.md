@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: GCatholic St. Joseph, 61 Monroe St., Hoboken, New Jersey 07030, Plus Code 87G7PXQ5+5R, phone +1
     (201) 659-0221.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

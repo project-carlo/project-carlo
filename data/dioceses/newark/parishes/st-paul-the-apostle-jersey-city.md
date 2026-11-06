@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: Read The Bulletin
   note: Squarespace site; links parishesonline.com/organization/st-paul-the-apostle-church-07305#download-latest.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

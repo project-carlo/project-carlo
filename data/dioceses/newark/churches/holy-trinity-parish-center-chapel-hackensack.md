@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: Saturday 8:00 AM Parish Center Chapel
   note: Parish site Mass Times page; also Mon-Fri 7:00 AM Parish Center Chapel.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

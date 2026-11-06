@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   quote: St. Henry Parish, Bayonne
   note: One of the four Bayonne Parish Mission Partners pilot parishes (June 2026); recorded in group.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: blessed-miriam-teresa-demjanovich-bayonne

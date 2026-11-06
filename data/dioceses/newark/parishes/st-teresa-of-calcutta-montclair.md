@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-03
   note: Wix site 'Immaculate Conception Church | Montclair, NJ' (montclaircatholics.org redirects here);
     probe url lists its bulletin link https://church-bulletin.org/?id=6037.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-mount-carmel-oratory-montclair

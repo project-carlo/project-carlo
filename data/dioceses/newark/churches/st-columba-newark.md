@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18504
   seen: 2026-11-03
   note: '''St. Columba'', 25 Thomas St., Newark 07114, Plus Code 87G7PRF9+VJ.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   note: eCatholic site, 403 to probe get; read in Chrome with scratch/newark-map-1/tools/quick_snap.py
     (visit.py hung on the homepage). Its 'Bulletins' link is https://parishesonline.com/organization/st-michael-catholic-church-07303;
     Mass Times Saturday 4:00 pm, Sunday 8:30 am Vietnamese, 10:30 am, 6:30 pm, Mon-Fri 12:05 pm.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

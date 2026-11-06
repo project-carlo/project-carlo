@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-03
   note: eCatholic bulletin page (answers probe get 403; read with visit.py). Lists weekly files.ecatholic.com/36468/bulletins/YYYYMMDD.pdf
     issues, newest 20261025.pdf; no 1 November 2026 issue posted as of 3 November.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

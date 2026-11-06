@@ -35,6 +35,7 @@ evidence:
   note: Homepage (visit.py) announces a Mass of Remembrance on Monday, November 2, 2026 at 12:00 Noon
     and the pastor's anniversary Mass on 22 November 2026 at 11:30 AM, and says the choir sings at the
     11:30 Mass every Sunday.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

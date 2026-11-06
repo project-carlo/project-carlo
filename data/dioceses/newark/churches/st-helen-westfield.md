@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 213: St. Helen Parish, 1600 Rahway Avenue, Westfield, NJ 07090.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

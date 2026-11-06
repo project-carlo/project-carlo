@@ -16,6 +16,7 @@ evidence:
 - url: https://stfrancishoboken.net/weekly-bulletin/
   seen: 2026-11-03
   note: WordPress 'Weekly Bulletin' page links one PDF, wp-content/uploads/2026/11/11013424B.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

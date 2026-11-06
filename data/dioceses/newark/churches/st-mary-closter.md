@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 20 Legion Place, Closter, New Jersey 07624
   note: GCatholic 'St. Mary', Plus Code 87G8X2FM+5P.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

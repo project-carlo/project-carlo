@@ -22,6 +22,7 @@ evidence:
   note: The parish site's Bulletins page lists nothing and does not link the John Patrick listing; the
     homepage (index.php?page=1) gives Masses Monday thru Friday 7:30 AM, Saturday 5:30 PM, Sunday 9:00
     AM and 11:00 AM.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

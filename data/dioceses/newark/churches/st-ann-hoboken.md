@@ -28,6 +28,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 67: St. Ann Parish, 704 Jefferson Street, Hoboken, NJ 07030.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

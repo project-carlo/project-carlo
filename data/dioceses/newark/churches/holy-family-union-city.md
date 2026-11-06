@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 198: Holy Family Parish, 530 35th Street, Union City, NJ 07087, no
     website.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

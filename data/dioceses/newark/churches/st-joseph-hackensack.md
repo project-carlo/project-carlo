@@ -27,6 +27,7 @@ evidence:
   quote: Saturday  7:30 AM (English) & 5:30 PM Vigil Mass (English)
   note: 1 November 2026 bulletin, HOLY MASS SCHEDULE; masthead address 460 Hudson Street, Hackensack NJ
     07601.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

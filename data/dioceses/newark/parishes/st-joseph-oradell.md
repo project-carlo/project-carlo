@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: Parish WordPress page; visit.py reports po-org:saint-joseph-roman-catholic-church on it, and it
     links yearly bulletin pages (/2026-bulletins/, newest 2026-Nov1-Bulletin.pdf).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-evangelist-bergenfield

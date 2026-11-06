@@ -18,6 +18,7 @@ evidence:
   seen: 2026-11-03
   note: eCatholic site 'Church of the Most Blessed Sacrament - Franklin Lakes, NJ' embedding ecatholic:14258
     and linking /bulletins; behind Cloudflare (probe get 403), read in a browser (parish-site-access visit.py).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

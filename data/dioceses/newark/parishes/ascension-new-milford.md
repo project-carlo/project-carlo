@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-03
   note: eCatholic site's Bulletins page (probe get) links files.ecatholic.com/39014/bulletins/YYYYMMDD.pdf
     issues, newest 20261101; issues.py found 2026-11-08 not yet posted (403).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-evangelist-bergenfield

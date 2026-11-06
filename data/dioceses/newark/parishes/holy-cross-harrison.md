@@ -39,6 +39,7 @@ revisit: 'After 23 Nov 2026, read the latest issue: St. Anthony should have left
   12:30pm Spanish Mass moved or dropped; exclude st-anthony-east-newark as closed with last_mass from
   the bulletin.'
 revisit_after: 2026-11-24
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -32,6 +32,7 @@ evidence:
   note: OSM node 357743460 'Saint Bernard's Church', George Street, at 40.63316, -74.40348; 1235 George
     Street geocodes to 40.63326, -74.40301 and 368 Sumner Avenue to 40.63383, -74.40403, either side of
     it.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

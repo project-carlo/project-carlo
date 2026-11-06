@@ -23,6 +23,7 @@ evidence:
     MASS SCHEDULE: Monday to Friday 7:00 AM; Saturday 5:00 PM (English), 6:00 PM (Español); Sunday 9:00
     AM (English), 10:30 AM (Español), 12:00 PM (Español). Address 155 Washington Avenue Elizabeth, NJ
     07202.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

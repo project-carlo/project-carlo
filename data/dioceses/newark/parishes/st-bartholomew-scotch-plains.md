@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe po: org St. Bartholomew Church, website https://stbartholomewchurch.org/, lpi:0018000000QxAASAA3,
     no issues listed: dormant account.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: holy-trinity-westfield

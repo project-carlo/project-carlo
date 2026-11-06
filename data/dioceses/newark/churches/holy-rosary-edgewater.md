@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 28: Holy Rosary Parish, 365 Undercliff Avenue, Edgewater, NJ 07020.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

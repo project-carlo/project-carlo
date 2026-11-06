@@ -23,6 +23,7 @@ evidence:
   note: 'eCatholic site (ecatholic:22793) behind Cloudflare: probe url HTTP 403, read with parish-site-access
     visit.py. ''Current Bulletin'' links https://www.jppc.net/onlinebulletins/693template.pdf; Sunday
     Mass 8:00 AM, 10:00 AM; daily Monday, Wednesday, Thursday, Friday 9:00 AM.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

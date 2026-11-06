@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday Eve: 5:30 pm'
   note: 1 November 2026 bulletin, Eucharistic Liturgy box; masthead St. Mary's Church, 280 Washington
     Avenue.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

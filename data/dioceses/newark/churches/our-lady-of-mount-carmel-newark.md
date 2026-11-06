@@ -28,6 +28,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18495
   seen: 2026-11-03
   note: GCatholic 'Our Lady of Mount Carmel', 259 Oliver St., Newark, New Jersey 07105, Plus Code 87G7PRFQ+48.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

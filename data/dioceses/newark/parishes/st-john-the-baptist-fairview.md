@@ -25,6 +25,7 @@ evidence:
   quote: Church of St. John the Baptist
   note: 'Parish homepage: ''Anderson Avenue, Fairview, New Jersey 0702[2]''; Mass Times section and a
     Bulletin menu item (/bulletin, /es/bulletin).'
+promoted: 2026-11-05
 research:
 - method: Wayback availability API for sjbfairview.org and sjbfairview.org/bulletin at 2023-02-01 (probe
     get archive.org/wayback/available)

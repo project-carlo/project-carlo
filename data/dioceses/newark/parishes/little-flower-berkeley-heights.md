@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: 'Wix homepage: the menu''s ''Bulletin'' item links https://sponsors.bonventure.net/?page=4589.
     The site''s _files/ugd/ PDFs are forms and flyers.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

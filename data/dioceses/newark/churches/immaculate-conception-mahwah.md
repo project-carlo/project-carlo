@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: '1 November 2026 bulletin: page 1 masthead (image) gives 900 Darlington Ave., Mahwah, NJ 07430;
     page 7 lists Masses Saturday 5:00 p.m., Sunday 7:30, 9:30, 11:30 a.m., Tuesday-Friday 12:00 p.m.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

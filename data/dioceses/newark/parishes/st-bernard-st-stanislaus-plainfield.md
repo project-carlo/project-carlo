@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Wayback copy of the parish''s Mass Schedule page from 6 May 2006, six months after the merger:
     one schedule (Saturday 5:30 P.M.; Sunday 8:00, 9:30, 11:00 A.M. Polish, 12:30 P.M.), no second church.'
+promoted: 2026-11-05
 research:
 - method: Current bulletin, parish site (home, history, Mass schedule, Polish Community pages), 2006 Wayback
     copy of the Mass schedule, GCatholic 18537, Nominatim and Wikipedia searches for the former St. Stanislaus

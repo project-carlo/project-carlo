@@ -26,6 +26,7 @@ evidence:
   quote: Saturday .......................... 8:45 am & 5:15 pm
   note: The 1 November 2026 bulletin's page-1 masthead gives 15-05 Saint Anne Street, Fair Lawn, and its
     Mass list Sunday 7:30, 9:30, 11:30 am and 6:00 pm (October to June).
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

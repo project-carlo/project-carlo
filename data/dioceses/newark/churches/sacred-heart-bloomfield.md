@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 12: Sacred Heart Parish, 76 Broad Street, Bloomfield, NJ 07003.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

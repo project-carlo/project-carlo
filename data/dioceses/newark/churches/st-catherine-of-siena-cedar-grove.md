@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 15: St. Catherine of Siena Parish, 339 Pompton Avenue, Cedar Grove,
     NJ 07009.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

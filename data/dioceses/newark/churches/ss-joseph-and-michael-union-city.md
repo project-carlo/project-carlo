@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-03
   note: 'ParishesOnline org (probe po): SS Joseph and Michael Church, 1314 Central Ave, Union City, New
     Jersey, 07087-3124.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

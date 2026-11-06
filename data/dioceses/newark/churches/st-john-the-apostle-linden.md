@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 102: St. John the Apostle Parish, 1805 Penbrook Terrace, Linden,
     NJ 07036.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

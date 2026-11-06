@@ -36,6 +36,7 @@ evidence:
     91 HOME AVENUE RUTHERFORD, NEW JERSEY 07070''; Saturday 5:00 pm, Sunday 8:00, 10:00 & 12:00 noon,
     Monday-Friday 8:30 am; ''Rev. Charles Pinyan ... Pastor''; footer ''002D (CK) - St. Mary''s, Rutherford
     ... BON VENTURE SERVICES, LLC''.'
+promoted: 2026-11-05
 research:
 - method: probe get and parish-site-access visit.py --bulletin on the parish site
   url: https://www.stmaryrutherford.org/

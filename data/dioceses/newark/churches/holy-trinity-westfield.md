@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 214: Holy Trinity Parish, 315 First Street, Westfield, NJ 07090.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

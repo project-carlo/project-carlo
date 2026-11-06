@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 35: St. Mary of the Assumption Parish, 155 Washington Avenue, Elizabeth,
     NJ 07202.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

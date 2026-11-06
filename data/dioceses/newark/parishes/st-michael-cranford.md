@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-05
   note: 'eCatholic site (ecatholic:2202) behind a 403 to probe url; opened with parish-site-access visit.py:
     its ''Bulletin'' link goes to parishesonline.com/organization/st-michael-church-07016.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

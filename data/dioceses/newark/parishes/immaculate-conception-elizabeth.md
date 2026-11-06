@@ -24,6 +24,7 @@ evidence:
   note: 'The parish''s Tithely site (directory website; visit.py --text): ''Visita la parroquia 425 Union
     Ave., Elizabeth, NJ 07208 Oficina en el tráiler del estacionamiento''; same Mass times as the bulletin.
     Its Boletín section posts no issues and links no publisher.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

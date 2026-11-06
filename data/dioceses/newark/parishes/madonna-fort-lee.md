@@ -30,6 +30,7 @@ evidence:
   note: 'probe po 0018000000QxA9sAAF: org madonna-church, ''Madonna Church'', 340 Main St, Fort Lee, New
     Jersey, 07024, container 03/1309; issues 2026-11-01, 10-25, 10-18, 10-04, 09-27 plus a user upload
     ''revised_bulletine10102026.pdf'' for 10 October.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: epiphany-cliffside-park

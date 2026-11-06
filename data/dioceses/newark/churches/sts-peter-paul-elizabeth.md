@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: The parish site's page for the church (visit.py --text) gives its Lithuanian founding history
     and only the parish office address, 250 East Jersey Street; no street address for the church.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

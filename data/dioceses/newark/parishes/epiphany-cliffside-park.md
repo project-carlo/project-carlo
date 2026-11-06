@@ -19,6 +19,7 @@ evidence:
 - url: http://sponsors.bonventure.net/?page=1454
   seen: 2026-11-03
   note: 'Bon Venture sponsors page 1454: newest bulletin link pdfs/1454/2026-11-01.pdf.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: madonna-fort-lee

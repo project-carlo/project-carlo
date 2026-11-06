@@ -21,6 +21,7 @@ evidence:
   note: 'Parish''s eCatholic site (ecatholic:31394), Bulletins/Boletin Parroquial page read with visit.py:
     ''CLICK THE IMAGE TO READ OUR BULLETINS'', the image links http://sponsors.bonventure.net/?page=1627.
     issues.py found no files.ecatholic.com/31394/bulletins issue for 25 Oct, 1 Nov or 8 Nov (403).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

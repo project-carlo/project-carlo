@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 72: Good Shepherd Parish, 954 Stuyvesant Avenue, Irvington, NJ 07111.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -36,6 +36,7 @@ evidence:
   seen: 2026-11-04
   note: Discover Mass listing, 170 Sussex Ave., COVID-era notice, 'Mass Times Sunday 8:30am , 9:30am';
     no bulletins.
+promoted: 2026-11-05
 research:
 - method: 'Looked for St. Augustine''s own bulletin: ParishesOnline org st-augustine-church-07103, Discover
     Mass listing, John Patrick scans (029-map jp-*.tsv) grepped for Augustine and 07103, DuckDuckGo html

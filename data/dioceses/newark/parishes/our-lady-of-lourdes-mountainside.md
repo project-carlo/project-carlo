@@ -19,6 +19,7 @@ evidence:
 - url: https://www.ollmountainside.org/bulletins
   seen: 2026-11-05
   note: The 'bulletins' page embeds parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxAAgAAN.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

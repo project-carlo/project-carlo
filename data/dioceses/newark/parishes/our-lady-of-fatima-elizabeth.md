@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe url and probe get: the egress proxy''s DNS finds no such host (with and without www.).
     The Wayback CDX has captures only from 2014-2016. The archdiocese directory (entry 36) gives no website.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

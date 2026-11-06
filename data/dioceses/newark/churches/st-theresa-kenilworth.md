@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 97: St. Theresa Parish, 541 Washington Avenue, Kenilworth, NJ 07033.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

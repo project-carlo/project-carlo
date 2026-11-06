@@ -20,6 +20,7 @@ evidence:
 - url: https://www.iccmahwah.org/
   seen: 2026-11-03
   note: Parish Wix site; its Bulletin link points to https://church-bulletin.org/?id=598.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

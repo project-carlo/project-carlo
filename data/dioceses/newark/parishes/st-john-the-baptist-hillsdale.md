@@ -19,6 +19,7 @@ evidence:
   note: Parish Wix homepage; its WEEKEND BULLETIN button links the _files/ugd/f67067_dab717a1... PDF above.
     The homepage also links other ugd PDFs (a message from Fr. Peter, a letter). No separate bulletin
     page or archive in the site menu.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

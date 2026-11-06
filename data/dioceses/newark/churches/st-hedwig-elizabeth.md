@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 38: St. Hedwig Parish, 717 Polonia Avenue, Elizabeth, NJ 07202 (the
     parish office, per the bulletin).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

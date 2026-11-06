@@ -27,6 +27,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 114: St. Joseph Parish, 767 Prospect Street, Maplewood, NJ 07040.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

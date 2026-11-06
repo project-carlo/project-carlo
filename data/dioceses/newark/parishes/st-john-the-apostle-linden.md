@@ -25,6 +25,7 @@ evidence:
   note: 'Homepage: ''Daily Mass Schedule Monday – Friday 7a | 8:30a || Saturday 8:30a''; ''Address: 1805
     Penbrook Terrace, Linden, NJ 07036''; ''Adoration Chapel … Open 24/7''. probe url reports UNREACHABLE
     (proxy EOF, possibly IPv6-only); visit.py reads it.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

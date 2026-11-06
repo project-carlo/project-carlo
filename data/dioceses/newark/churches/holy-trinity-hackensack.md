@@ -29,6 +29,7 @@ evidence:
 - url: https://www.hthackensack.org/mass-times
   seen: 2026-11-03
   quote: 12:10 PM Main Church
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

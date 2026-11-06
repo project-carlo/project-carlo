@@ -27,6 +27,7 @@ evidence:
   note: The parish's Weebly site has no bulletin page or bulletin link (its menu lists Home, Livestream
     Masses, Calendar, Sacraments, Ministries, Online Giving and others; the only PDF is a 4 March 2026
     letter from Cardinal Tobin). Checked with probe get and visit.py --bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

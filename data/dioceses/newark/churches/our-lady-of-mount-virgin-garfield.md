@@ -26,6 +26,7 @@ evidence:
   quote: 'Saturday:     5:00 PM Vigil Mass'
   note: '1 November 2026 bulletin page 1: weekend and weekday Mass; CHURCH/RECTORY ADDRESS 188 Mac Arthur
     Ave.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

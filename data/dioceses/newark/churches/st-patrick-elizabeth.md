@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 31: Immaculate Heart of Mary/St. Patrick Parish, 215 Court Street,
     Elizabeth, NJ 07206.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

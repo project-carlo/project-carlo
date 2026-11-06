@@ -29,6 +29,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 191: St. James Parish, 45 S Springfield Avenue, Springfield, NJ 07081.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

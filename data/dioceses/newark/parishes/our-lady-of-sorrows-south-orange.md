@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-04
   note: 'Redirects to the ''Our Lady of Sorrows Bulletin'' listing, newest first: 2026-11-01, 2026-10-25,
     2026-10-18, 2026-10-11 issues.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

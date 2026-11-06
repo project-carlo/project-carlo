@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: 'Directory and GCatholic website. probe url: HTTP 404; visit.py: page title ''Reconnect Your Domain
     | Wix.com'', status 404: the Wix site''s domain is disconnected.'
+promoted: 2026-11-05
 research:
 - method: probe url and visit.py on the directory/GCatholic website; Wayback availability API
   url: https://www.saintlucy.net/

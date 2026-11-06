@@ -26,6 +26,7 @@ evidence:
   quote: Sunday 8:30 am & 10:30 am
   note: '1 November 2026 bulletin page 1: Monday-Friday 8:30 am; Saturday 5:30 pm, 8:00 pm (Neocatechumenal
     Way Eucharist); Sunday 8:30 am & 10:30 am; with that week''s Mass intentions.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

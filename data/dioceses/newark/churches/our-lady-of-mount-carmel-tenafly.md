@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   quote: 10 County Rd., Tenafly, New Jersey 07670
   note: GCatholic 'Our Lady of Mount Carmel', Plus Code 87G8W2FP+H8.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

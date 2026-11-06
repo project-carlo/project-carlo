@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 82: St. Paul the Apostle Parish, 14 Greenville Avenue, Jersey City,
     NJ 07305; languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

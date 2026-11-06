@@ -18,6 +18,7 @@ evidence:
   note: 'eCatholic bulletin page (probe get 403; read with visit.py): newest link ''October 25, 2026''
     files.ecatholic.com/6955/bulletins/20261025.pdf, then October 18, October 11 ...; issues.py found
     no 1 November issue (403).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

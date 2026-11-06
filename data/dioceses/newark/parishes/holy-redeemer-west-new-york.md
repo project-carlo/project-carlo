@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 208: Holy Redeemer Parish, 569 - 65th Street, West New York, NJ 07093,
     website https://www.holyredeemer-wny.org/, English and Spanish.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

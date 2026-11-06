@@ -24,6 +24,7 @@ evidence:
   quote: Tues., Wed. &amp; Thurs. 9:30am Mass
   note: The parish's Squarespace homepage links https://www.jppc.net/onlinebulletins/6019template.pdf
     for the bulletin and gives Sunday Masses 8am, 10:30am and 12 noon.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

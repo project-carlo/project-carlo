@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 192: St. Teresa of Avila Parish, 306 Morris Avenue, Summit, NJ 07901;
     languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

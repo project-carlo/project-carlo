@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 127: Cathedral Basilica of the Sacred Heart, 89 Ridge Street, Newark,
     NJ 07104; pin 40.7548332, -74.1784444.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

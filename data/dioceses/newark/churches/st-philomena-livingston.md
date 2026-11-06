@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 105: St. Philomena Parish, 386 S Livingston Avenue, Livingston, NJ
     07039.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

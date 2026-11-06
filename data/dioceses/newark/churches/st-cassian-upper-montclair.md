@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 202: St. Cassian Parish, 187 Bellevue Avenue, Upper Montclair, NJ
     07043.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

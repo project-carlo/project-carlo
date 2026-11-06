@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 79: St. Aloysius Parish, 691 Westside Avenue, Jersey City, NJ 07304;
     languages english, spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

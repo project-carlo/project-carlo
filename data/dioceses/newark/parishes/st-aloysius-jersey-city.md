@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'probe url: parish site, title ''Saint Aloysius Parish - Saint Aloysius Catholic Church, Jersey
     City, NJ''; bulletin links /church-bulletin.html and https://church-bulletin.org/?id=6058.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

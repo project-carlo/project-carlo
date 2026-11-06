@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 168: Our Lady of the Visitation, 234 N. Farview Avenue, Paramus,
     NJ 07652.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

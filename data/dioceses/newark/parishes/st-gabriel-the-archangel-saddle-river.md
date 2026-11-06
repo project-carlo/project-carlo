@@ -23,6 +23,7 @@ evidence:
   quote: _content/sidebar/mass/2026-11-01 Bulletin.pdf
   note: Parish Mass Schedule page (the menu's 'Sunday Bulletin' link points here); lists issues newest
     first, named 'YYYY-M-D Bulletin.pdf'.
+promoted: 2026-11-05
 research:
 - method: probe po on guessed org slugs (st-gabriel-the-archangel, -church, -saddle-river, -church-saddle-river)
   url: https://parishesonline.com/organization/st-gabriel-the-archangel-church

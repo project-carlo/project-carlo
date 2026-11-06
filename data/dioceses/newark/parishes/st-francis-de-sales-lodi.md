@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   note: The parish's Wix site Bulletin page, rendered in the browser (parish-site-access visit.py), embeds
     LPi id 0018000000Qc1KNAAZ.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 187: Immaculate Heart of Mary Parish, 1571 S Martine Avenue, Scotch
     Plains, NJ 07076.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

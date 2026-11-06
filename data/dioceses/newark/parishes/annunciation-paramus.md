@@ -23,6 +23,7 @@ evidence:
     links http://www.jppc.net/onlinebulletins/639template.pdf. The site''s /bulletins page (''Bulletin
     Archives'') lists no files.ecatholic.com issues, and issues.py ecatholic:20359 found none for 18 Oct-1
     Nov 2026.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-the-visitation-paramus

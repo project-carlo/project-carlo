@@ -23,6 +23,7 @@ evidence:
 - url: https://parishesonline.com/organization/st-helen-church-07090
   seen: 2026-11-05
   note: 'probe po: org St. Helen Church, website sainthelen.org, lpi:0018000000QxAAeAAN, no issues listed.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: holy-trinity-westfield

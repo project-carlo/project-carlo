@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   note: Discover Mass page 'St. Ann', 704 Jefferson Street, Hoboken, NJ 07030; issues.py reads its latest
     issue as 2026-11-01, 8 pages, page 1 text identical to the eCatholic copy ('NOVEMBER 1, 2026').
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

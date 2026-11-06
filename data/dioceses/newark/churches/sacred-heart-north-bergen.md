@@ -26,6 +26,7 @@ evidence:
   quote: 'Sunday: 9:00 am & 12:00 noon'
   note: The 8 November 2026 masthead gives 9035 Barr Place (with '9034 BARR PLACE' in a heading) and the
     Mass Schedule.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

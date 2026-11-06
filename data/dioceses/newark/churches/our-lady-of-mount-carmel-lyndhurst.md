@@ -30,6 +30,7 @@ evidence:
 - url: https://nominatim.openstreetmap.org/search?q=Our+Lady+of+Mount+Carmel,+Lyndhurst,+NJ&format=json
   seen: 2026-11-03
   note: OSM node 357743192, 'Our Lady of Mount Carmel Church', Kingsland Avenue, at 40.80927, -74.13459.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

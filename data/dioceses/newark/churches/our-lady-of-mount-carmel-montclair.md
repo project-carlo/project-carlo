@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 118: Our Lady of Mount Carmel Oratory, 94 Pine Street, Montclair,
     NJ 07042 (English, Spanish).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

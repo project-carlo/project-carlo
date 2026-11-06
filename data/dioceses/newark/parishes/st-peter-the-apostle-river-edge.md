@@ -19,6 +19,7 @@ evidence:
 - url: https://www.saint-peter.org/bulletins
   seen: 2026-11-03
   note: Parish Squarespace bulletin page (probe get) links parishesonline.com/organization/st-peter-the-apostle-church-07661.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

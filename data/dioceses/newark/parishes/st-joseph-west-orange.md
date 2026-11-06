@@ -20,6 +20,7 @@ evidence:
   seen: 2026-11-03
   note: 'probe po 0018000000QxAAFAA3: org ''Saint Joseph Church'', 44 Benvenue Ave, West Orange, NJ 07052,
     website stjosephwestorange.org, container 04/1242, latest issue 2026-11-01.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-raphael-livingston

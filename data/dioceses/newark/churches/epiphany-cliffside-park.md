@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 17: Epiphany Parish, 247 Knox Avenue, Cliffside Park, NJ 07010.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -23,12 +23,14 @@ evidence:
     NJ 07644.
 - url: https://stjosephchurchlodi.org/
   seen: 2026-11-03
-  note: The homepage footer reads 'St. Joseph Roman Catholic Church, 40 Spring Street, Lodi, New Jersey 07644 USA'. The page is built by JavaScript; it was rendered with parish-site-access visit.py.
+  note: The homepage footer reads 'St. Joseph Roman Catholic Church, 40 Spring Street, Lodi, New Jersey
+    07644 USA'. The page is built by JavaScript; it was rendered with parish-site-access visit.py.
 - url: https://container.parishesonline.com/bulletins/03/0076/20261101B.pdf
   seen: 2026-11-03
   quote: St. Joseph Church, Lodi, NJ 03-0076
   note: The 1 November 2026 bulletin's page-2 MASS SCHEDULE gives Saturday 7:30am and 5:00pm, and Sunday
     7:30am, 9:30am (Italian), 11:30am and 5:00pm.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

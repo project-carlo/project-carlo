@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: A Wix site; its 'Parish Bulletin' link goes to https://www.jppc.net/onlinebulletins/643template.pdf.
     It gives Saturday Vigil 5:30 PM and Sunday 8:00 AM, 9:30 AM, 11:00 AM.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: corpus-christi-hasbrouck-heights

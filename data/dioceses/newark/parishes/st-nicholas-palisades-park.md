@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-03
   note: Parish WordPress site (probe get). Links http://www.jppc.net/onlinebulletins/6046template.pdf
     and self-hosted copies that stop in April 2024 (wp-content/uploads/2024/04/6046bulletin042124.pdf).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

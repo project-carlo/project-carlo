@@ -24,6 +24,7 @@ evidence:
 - url: http://www.icchackensack.com/
   seen: 2026-11-03
   note: Parish WordPress site; its bulletin link is an Outlook safelinks wrapper around https://www.jppc.net/onlinebulletins/597template.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

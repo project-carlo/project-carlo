@@ -17,6 +17,7 @@ evidence:
   seen: 2026-11-03
   note: 'West Orange bulletin page listing dated issues newest first: /images/westorange/bulletins/2026/11012026.pdf,
     10252026.pdf, 10182026.pdf …'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

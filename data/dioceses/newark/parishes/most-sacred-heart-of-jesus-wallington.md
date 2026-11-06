@@ -28,6 +28,7 @@ evidence:
 - url: https://mshchurch.com/bulletin/
   seen: 2026-11-03
   note: The parish's WordPress Bulletin page (visit.py) embeds po-org:most-sacred-heart-of-jesus-church.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

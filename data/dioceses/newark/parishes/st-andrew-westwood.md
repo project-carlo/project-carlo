@@ -24,6 +24,7 @@ evidence:
   note: Parish eCatholic site (ecatholic:13436; answers probe get 403, read with visit.py). Its 'Bulletins'
     menu item links parishesonline.com/organization/church-of-st-andrew-07675; no files.ecatholic.com
     bulletins (issues.py found none for 18 Oct-1 Nov 2026).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

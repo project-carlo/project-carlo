@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'Image-only issue, page 2 (rendered): ''555 Prospect Avenue • Ridgefield • New Jersey 07657'',
     Saturday Mass of Anticipation 4:00PM, Sunday 8:00AM, 10:00AM & 12NN, Monday-Friday 7:30AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

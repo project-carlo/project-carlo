@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 78: St. Nicholas Parish, 122 Ferry Street, Jersey City, NJ 07307.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

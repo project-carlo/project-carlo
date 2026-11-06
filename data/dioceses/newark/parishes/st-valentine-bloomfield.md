@@ -24,6 +24,7 @@ evidence:
     oct_25_2026_-_30th_wk__sunday_in_ordinary_time.pdf, oct_18…, oct_11…, oct_04…, sep_20…) and, before
     them in the page, a 'Liturgical Ministry Monthly Schedule' PDF (liturgical_ministers_november_2026_schedule.pdf).
     There is no separate bulletin page.
+promoted: 2026-11-05
 research:
 - method: fetch:check with filename=*_-_*.pdf on the homepage
   url: https://www.stvalentinechurch.com/

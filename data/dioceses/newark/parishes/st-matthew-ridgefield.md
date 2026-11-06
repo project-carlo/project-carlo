@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: The parish homepage (probe get) links https://www.jppc.net/onlinebulletins/6014template.pdf as
     its bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

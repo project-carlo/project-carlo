@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: In February 2014, the parish cluster was suppressed. St. Michael and St. Mary became St. Michael's
     Parish and St. Mary's Parish respectively, once again.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

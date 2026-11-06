@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 38: St. Hedwig Parish, 717 Polonia Avenue, Elizabeth, NJ 07202, website
     https://sainthedwignj.org/.'
+promoted: 2026-11-05
 research:
 - method: issues.py ecatholic:34102 --weeks 4
   url: https://files.ecatholic.com/34102/bulletins/20261101.pdf

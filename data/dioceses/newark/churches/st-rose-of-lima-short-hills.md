@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 189: St. Rose of Lima Parish, 50 Short Hills Avenue, Short Hills,
     NJ 07078.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

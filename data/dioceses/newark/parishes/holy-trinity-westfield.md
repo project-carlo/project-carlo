@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: Squarespace 'Parish Bulletins' page embeds parishesonline.com/publicationWidget?type=bulletin&color=gray&id=0018000000QxAAdAAN,
     and links a Google Drive folder.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-helen-westfield

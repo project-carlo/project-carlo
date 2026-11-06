@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 32: Blessed Sacrament Parish, 1096 North Avenue, Elizabeth, NJ 07201.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

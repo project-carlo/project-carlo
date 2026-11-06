@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 199 Walnut St. 07647, Northvale, New Jersey 07047
   note: GCatholic 'St. Anthony', Plus Code 87H82343+3H.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

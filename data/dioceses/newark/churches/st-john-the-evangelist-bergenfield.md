@@ -27,6 +27,7 @@ evidence:
   note: 'Page 1 (image): masthead ''29 N. WASHINGTON AVE, BERGENFIELD, NJ''; Mass schedule Sat Vigil 5:30,
     7:00 PM (Sp); Sun 7:30, 9:00, 10:30 AM, 12:00, 1:15 PM (Sp); Mon-Fri 7:00, 9:00 AM, 6:30 PM; Sat 7:00,
     9:00 AM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

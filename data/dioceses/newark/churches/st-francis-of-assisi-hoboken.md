@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 69: St. Francis of Assisi Parish, 308 Jefferson Street, Hoboken,
     NJ 07030.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

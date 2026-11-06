@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   note: 'rcan.org clergy appointments post (2026): Reverend Aro Nathan granted an extension to his pastorate
     at Saints Joseph and Michael, Union City, ending June 30, 2028.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

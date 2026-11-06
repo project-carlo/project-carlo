@@ -25,7 +25,9 @@ evidence:
 - url: https://stjosephchurchlodi.org/
   seen: 2026-11-03
   note: The homepage (a sitelio/mywebsitebuilder site, rendered with parish-site-access visit.py because
-    its text and links are built by JavaScript, so recheck cannot see them). Its 'CLICK HERE FOR THE LATEST COPY OF THE PARISH BULLETIN' links to https://www.parishesonline.com/find/st-joseph-church-07644.
+    its text and links are built by JavaScript, so recheck cannot see them). Its 'CLICK HERE FOR THE LATEST
+    COPY OF THE PARISH BULLETIN' links to https://www.parishesonline.com/find/st-joseph-church-07644.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

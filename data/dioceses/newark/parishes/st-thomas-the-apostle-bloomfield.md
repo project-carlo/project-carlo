@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   note: 'probe url: the parish site (Squarespace; www.stachurchbloomfield.org redirects here) links https://www.jppc.net/onlinebulletins/595template.pdf
     as its bulletin.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

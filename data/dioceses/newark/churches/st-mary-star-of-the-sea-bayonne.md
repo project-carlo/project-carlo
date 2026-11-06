@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-03
   quote: all worship services for the blessed Miriam Teresa Demjanovich Parish will continue at St. Mary,
     Star of the Sea Church, located at 326 Avenue C in Bayonne
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

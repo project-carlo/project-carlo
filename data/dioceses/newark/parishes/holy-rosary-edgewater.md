@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'probe po: org ''Holy Rosary Church'', 26 Edgewater Pl, Edgewater, New Jersey, 07020, LPi id 0018000000QxA9pAAF,
     container 03/4019; weekly issues 2026-10-11 to 2026-11-01.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: epiphany-cliffside-park

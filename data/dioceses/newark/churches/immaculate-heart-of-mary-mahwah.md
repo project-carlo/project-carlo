@@ -26,6 +26,7 @@ evidence:
   quote: 'Sunday:  7:30am, 9am (Polish),'
   note: '1 November 2026 bulletin page 1: 47 Island Road Mahwah; Weekdays and Saturday 8am, Saturday Vigil
     5pm, Sunday 7:30am, 9am (Polish), 10:30am, 12 Noon.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

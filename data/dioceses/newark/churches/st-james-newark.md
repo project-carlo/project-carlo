@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-04
   note: OSM way 436600168 'Saint James Church, Jefferson Street', centre 40.72807,-74.16273, about 25
     m from the Plus Code.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

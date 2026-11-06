@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   quote: Holy Trinity Church, Fort Lee, NJ 03-4013
   note: The eCatholic copy of 20 September 2026 is the LPi bulletin (page 4 footer, container 03-4013).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: epiphany-cliffside-park

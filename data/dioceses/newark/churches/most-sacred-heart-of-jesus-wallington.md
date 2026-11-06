@@ -26,6 +26,7 @@ evidence:
   quote: 'Weekdays: POL: 7:00AM ENG: 8:00AM'
   note: 1 November 2026 bulletin page 1 Mass Schedule; the masthead banner names Most Sacred Heart of
     Jesus Church, Wallington, NJ.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

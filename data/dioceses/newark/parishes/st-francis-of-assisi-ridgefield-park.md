@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: The parish homepage (Squarespace, probe get) links https://sponsors.bonventure.net/?page=6339
     for the bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

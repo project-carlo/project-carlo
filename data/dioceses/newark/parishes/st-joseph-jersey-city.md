@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   note: Parish site (probe get) linking https://jppc.net/onlinebulletins/6015template.pdf, John Patrick
     id 6015.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

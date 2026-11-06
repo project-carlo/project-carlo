@@ -31,6 +31,7 @@ evidence:
   quote: Parroquia de la Sagrada Familia. Parroquia de San Agustín.
   note: The Augustinian Recollects' page on their Union City house (founded 1997) lists the two parishes
     it serves.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

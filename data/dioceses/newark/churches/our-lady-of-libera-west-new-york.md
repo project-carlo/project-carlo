@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   quote: 5808 Kennedy Blvd., West New York, New Jersey 07093
   note: GCatholic Our Lady of Libera, Plus Code 87G7QXRH+62.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

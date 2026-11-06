@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 157: Our Lady of Mount Carmel Parish, 120 Prospect Street, Nutley,
     NJ 07110.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

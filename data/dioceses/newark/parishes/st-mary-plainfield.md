@@ -32,6 +32,7 @@ evidence:
 revisit: 'The parish''s bulletin page stopped at the 13 September 2026 issue: check whether newer issues
   are posted and rerun fetch:check'
 revisit_after: 2026-11-20
+promoted: 2026-11-05
 research:
 - method: Bulletin page listing and ParishesOnline org st-mary-church-07060
   url: https://stmarysplainfield.org/en/Bulletin

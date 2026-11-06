@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: The archdiocese parish directory (entry 110) lists St. Michael the Archangel Parish, 624 Page
     Avenue, Lyndhurst, NJ 07071.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

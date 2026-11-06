@@ -24,6 +24,7 @@ evidence:
   note: 'The directory''s website. probe url: redirects to datapengeluaran.life, a lottery-results spam
     page (verdict SPAM-SQUAT). The survey had seen it redirect to nabatara.org (HTTP 522). The domain
     is lost; the bulletin itself says the website is ''Coming soon!''.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

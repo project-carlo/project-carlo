@@ -22,6 +22,7 @@ evidence:
   quote: Click For This Week
   note: Parish WordPress homepage; the button 'Click For This Week's Bulletin' links https://www.jppc.net/onlinebulletins/586template.pdf
     (John Patrick id 586).
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

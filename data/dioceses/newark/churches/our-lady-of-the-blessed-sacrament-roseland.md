@@ -28,6 +28,7 @@ evidence:
   seen: 2026-11-04
   note: 'Archdiocese directory entry 179: Our Lady of the Bl. Sacrament Parish, 28 Livingston Avenue,
     Roseland, NJ 07068.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

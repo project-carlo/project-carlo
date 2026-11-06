@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: CLICK FOR PARISH BULLETIN
   note: The parish site's (Weebly) Bulletin page button links http://sponsors.bonventure.net/?page=11263.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

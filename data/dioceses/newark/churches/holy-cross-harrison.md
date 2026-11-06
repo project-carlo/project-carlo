@@ -30,6 +30,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 59: Holy Cross Parish, 16 Church Square, Harrison, NJ 07029.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

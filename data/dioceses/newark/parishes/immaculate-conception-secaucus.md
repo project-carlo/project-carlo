@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-03
   note: The parish's Wix homepage links the same church-bulletin.org 2026-11-01.pdf and gives 'Anticipated
     Sunday Mass 5:30 PM'.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

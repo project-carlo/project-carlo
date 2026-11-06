@@ -31,6 +31,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 41: St. Cecilia Parish, 55 W. Demarest Avenue, Englewood, NJ 07631.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

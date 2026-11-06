@@ -34,6 +34,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 101: St. Theresa of the Child Jesus, 131 E Edgar Road, Linden, NJ
     07036.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

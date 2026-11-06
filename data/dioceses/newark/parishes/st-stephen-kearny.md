@@ -24,6 +24,7 @@ evidence:
   note: eCatholic site (ecatholic:13535; probe get answers 403, visit.py loads it, title 'St. Stephens
     Church - Kearny, NJ'). It links https://www.jppc.net/onlinebulletins/628template.pdf and https://www.church-bulletin.org/saint-stephen-s-church-kearny-nj-07032;
     its files.ecatholic.com PDFs are newsletters and forms, not bulletins.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

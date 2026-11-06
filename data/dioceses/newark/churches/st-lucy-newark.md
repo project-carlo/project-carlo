@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 135: St. Lucy Parish, 118 Seventh Avenue, Newark, NJ 07104.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

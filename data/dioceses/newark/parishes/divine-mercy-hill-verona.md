@@ -23,6 +23,7 @@ evidence:
     (z niedzieli) Niedziela: 8:00am i 11:00am'', weekdays Monday-Friday 8:00am.'
 revisit: Confirm the December 2026 newsletter is named Ogloszenia* and picked by fetch:check.
 revisit_after: 2026-12-07
+promoted: 2026-11-05
 research:
 - method: fetch:check with page-pdfs on the homepage filtered to Ogloszenia*.pdf
   url: https://www.veronasds.com/

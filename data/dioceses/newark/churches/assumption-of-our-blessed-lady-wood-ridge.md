@@ -26,6 +26,7 @@ evidence:
   quote: CHURCH OF THE ASSUMPTION OF OUR BLESSED LADY
   note: The 1 November 2026 masthead gives '143 1 Street Wood-Ridge NJ 07075' and the Mass schedule Saturday
     Vigil 5:30PM, Sunday 8:00AM, 9:30AM & 11:00AM.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

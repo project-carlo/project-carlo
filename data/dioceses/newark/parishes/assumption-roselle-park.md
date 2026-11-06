@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'visit.py: the eCatholic bulletin archive lists files.ecatholic.com/36278/bulletins/ issues to
     20261025.pdf (October 25, 2026), two weeks behind the John Patrick listing.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

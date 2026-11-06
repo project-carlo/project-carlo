@@ -30,6 +30,7 @@ evidence:
   quote: Sunday, November 8
   note: '1 November 2026 bulletin page 3 Mass intentions: Saturday 9:00am, 5:00pm; Sunday 7:30am, 9:00am,
     10:30am, 12:00pm, 6:15pm; weekdays 7:00am, 9:00am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

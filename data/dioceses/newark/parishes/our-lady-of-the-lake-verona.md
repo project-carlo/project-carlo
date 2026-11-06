@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: WordPress parish site; probe url found its bulletin link parishesonline.com/publication-page/church-of-our-lady-of-the-lake-church
     with container 04/1252/20261101B.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

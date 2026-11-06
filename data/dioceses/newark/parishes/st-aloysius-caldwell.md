@@ -24,6 +24,7 @@ evidence:
   note: 'eCatholic site (id 14348); probe url got 403, visit.py (headed Chrome) read it: title ''Saint
     Aloysius Parish'', links ''Current Bulletin'' to jppc.net/onlinebulletins/691template.pdf, ''Bulletins''
     to church-bulletin.org/?id=691 and ''Bulletin Archive'' to /bulletins.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Page 1 of the 1 November 2026 bulletin (image only, rendered): Saturday 5:30PM (EN) and 7PM (SP),
     Sunday 8AM (EN/SP), 9:30AM (IT), 11AM (EN), 12:30PM (SP); address 50 Lodi Street, Hackensack.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
 - url: https://www.olghoboken.com/
   seen: 2026-11-03
   note: Parish homepage (Joomla) links https://www.jppc.net/onlinebulletins/665template.pdf as its bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

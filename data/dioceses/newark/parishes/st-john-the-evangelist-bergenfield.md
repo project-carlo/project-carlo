@@ -28,6 +28,7 @@ evidence:
   quote: 2026-08-30.pdf
   note: The parish WordPress media library's newest PDF is the 30 August 2026 bulletin, uploaded 2026-09-05;
     the site's /bulletin page (modified 2026-09-05) lists nothing later.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-mary-dumont

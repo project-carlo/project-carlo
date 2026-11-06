@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 177: St. Peter the Apostle Parish, 445 Fifth Avenue, River Edge,
     NJ 07661.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

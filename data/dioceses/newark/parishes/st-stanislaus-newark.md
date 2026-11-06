@@ -26,6 +26,7 @@ evidence:
 revisit: 'Rerun fetch:check: on 2026-11-04 the homepage still linked the 11 October 2026 issue (24 days
   old, freshness stale). If it stays weeks behind, note the posting rhythm.'
 revisit_after: 2026-11-16
+promoted: 2026-11-05
 research:
 - method: fetch:check with page-pdfs on the homepage (first-listed)
   url: https://www.ststanislausnewark.com/

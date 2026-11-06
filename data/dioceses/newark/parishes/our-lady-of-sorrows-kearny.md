@@ -22,6 +22,7 @@ evidence:
   note: probe get and visit.py both answer '503 Service Temporarily Unavailable'; https://www. has a self-signed
     certificate. Kept as the website because the 1 November masthead and the ParishesOnline org both still
     give it.
+promoted: 2026-11-05
 research:
 - method: probe get and visit.py on the parish website
   url: http://olskearny.org/

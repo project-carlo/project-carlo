@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-04
   quote: Father Antonio F. DaSilva has been granted another term as pastor of Our Lady of Fatima Parish,
     Newark, ending June 30, 2029.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

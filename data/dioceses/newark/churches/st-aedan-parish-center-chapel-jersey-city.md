@@ -23,6 +23,7 @@ evidence:
   note: 'Parish homepage (Wix, visit.py --text): ''SATURDAY 9:00 AM (English) at the Parish Center Chapel'';
     ''7:00 PM (Spanish) on Friday at the Parish Center Chapel.''; ''Our Parish office is at the St. Aedan''s
     Parish Center, 39 Tuers Ave., Jersey City, NJ 07306.'' Its map link pins 40.7263385, -74.0665446.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

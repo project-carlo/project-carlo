@@ -30,6 +30,7 @@ evidence:
   note: OSM place_of_worship 'Church of the Assumption, Roosevelt Street, Aldene, Roselle Park, 07204'
     at 40.66094, -74.27431. OSM has a Chiego Place beside it (40.66079, -74.27507) and no Coolidge Place
     in Roselle Park.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

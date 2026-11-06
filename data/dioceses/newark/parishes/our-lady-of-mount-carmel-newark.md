@@ -33,6 +33,7 @@ evidence:
     Trinity – Epiphany, Newark, effective September 8, 2025, and ending June 30, 2031.
   note: 'Shared pastor with Holy Trinity-Epiphany (also 2022: rcan.org/clergy-appointments-june-2022/);
     the bulletin nonetheless covers Mount Carmel alone.'
+promoted: 2026-11-05
 research:
 - method: John Patrick suffixed listings 6017A-E, H, O, P, S, T (jp_scan.sh) and ParishesOnline slugs
     for a Holy Trinity-Epiphany bulletin on the shared account

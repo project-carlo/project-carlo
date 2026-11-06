@@ -54,6 +54,7 @@ evidence:
   quote: Sunday 7:30am, 9am,
   note: '1 November 2026 bulletin, page 1 Mass schedule: Saturday 5:00 pm; Sunday 7:30, 9, 10:30 am, 12
     noon; Monday - Saturday 8:30 am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

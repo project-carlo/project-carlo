@@ -27,6 +27,7 @@ evidence:
   quote: 'Saturday Eve: 5:00 pm'
   note: 1 November 2026 bulletin, Liturgical Celebrations; masthead Immaculate Conception Church, 49 Vreeland
     Avenue.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

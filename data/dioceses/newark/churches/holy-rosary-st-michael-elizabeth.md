@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 29: Holy Rosary/St. Michael Parish, 52 Smith Street, Elizabeth, NJ
     07201, languages english spanish.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

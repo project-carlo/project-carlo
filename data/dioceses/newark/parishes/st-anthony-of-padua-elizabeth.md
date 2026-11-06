@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 33: St. Anthony of Padua Parish, 853 Third Avenue, Elizabeth, NJ
     07202, website https://stanthonyelizabeth.com/.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

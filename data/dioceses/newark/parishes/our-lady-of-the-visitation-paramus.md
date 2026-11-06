@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: GCatholic website for 18534; now a squatted gambling page (title SAHAMTOTO … Bandar Togel Online).
     Not the parish.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: annunciation-paramus

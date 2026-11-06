@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 268 Old Tappan Rd., Old Tappan, New Jersey 07675
   note: GCatholic 'St. Pius X', Plus Code 87H82276+CC.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

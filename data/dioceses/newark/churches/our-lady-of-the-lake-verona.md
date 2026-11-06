@@ -25,6 +25,7 @@ evidence:
 - url: https://gcatholic.org/churches/usa-03/18572
   seen: 2026-11-04
   note: GCatholic 18572 Our Lady of the Lake, 32 Lakeside Ave., Verona, New Jersey 07044; Plus Code 87G7RQJ3+6G.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

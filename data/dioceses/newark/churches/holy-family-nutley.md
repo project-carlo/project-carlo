@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 158: Holy Family Parish, 28 Brookline Avenue, Nutley, NJ 07110.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

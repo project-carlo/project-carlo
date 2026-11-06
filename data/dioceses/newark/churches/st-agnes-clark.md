@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 16: St. Agnes Parish, 332 Madison Hill Road, Clark, NJ 07066.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: Directory entry 139 'St. Stanislaus Parish', 146 Irvine Turner Boulevard, Newark 07103.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

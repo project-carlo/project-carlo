@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: Page 1 (image, rendered) of the 1 November 2026 issue gives 1219 Paterson Plank Road, Secaucus
     and Sunday Masses 7:30 AM, 9 AM (Spanish), 10:30 AM, 12 Noon.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

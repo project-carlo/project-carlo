@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 70: Our Lady of Grace/St. Joseph Parish, 400 Willow Avenue, Hoboken,
     NJ 07030.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

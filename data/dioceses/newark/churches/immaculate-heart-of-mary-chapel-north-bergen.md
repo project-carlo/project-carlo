@@ -33,6 +33,7 @@ evidence:
   seen: 2026-11-03
   quote: 7615 Broadway, North Bergen, New Jersey 07047
   note: GCatholic 'Immaculate Heart of Mary', kind Chapel, Plus Code 87G7QXXX+22.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

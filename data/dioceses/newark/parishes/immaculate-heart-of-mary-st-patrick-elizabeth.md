@@ -26,6 +26,7 @@ evidence:
 - url: https://ihmsp.org/
   seen: 2026-11-05
   note: 'probe url: the parish''s one-page WordPress site (directory website) links https://www.jppc.net/onlinebulletins/6020template.pdf.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

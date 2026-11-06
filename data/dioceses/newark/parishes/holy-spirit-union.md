@@ -20,6 +20,7 @@ evidence:
 - url: https://www.holyspiritunion.org/bulletin
   seen: 2026-11-05
   note: 'Duda site bulletin page (probe url): embeds the LPi publication widget, lpi:0018000000QxAAWAA3.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

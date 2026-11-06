@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-05
   note: 'Archdiocese directory entry 334: St. Michael Parish, 40 Alden Street, Cranford, NJ 07016.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

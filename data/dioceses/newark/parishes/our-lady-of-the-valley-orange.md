@@ -19,6 +19,7 @@ evidence:
     lists October 11, 2026, October 4, September 27, September 20, September 13 … as files.ecatholic.com/20387/bulletins/<yyyymmdd>.pdf.
     The 4 October and 27 September files carry upload stamps from the same day, so the parish posts in
     batches.'
+promoted: 2026-11-05
 research:
 - method: visit.py on the eCatholic bulletin archive; probe get on files.ecatholic.com/20387/bulletins/20261018,
     20261025 and 20261101.pdf (403, Cloudflare, so inconclusive)

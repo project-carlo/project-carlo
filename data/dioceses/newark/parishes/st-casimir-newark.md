@@ -25,6 +25,7 @@ evidence:
     Bulletins link is https://www.jppc.net/onlinebulletins/6033template.pdf; footer 'St. Casimir R.C.
     Church 91 Pulaski Street, Newark, NJ 07105'. The directory's https://stcnewark.com/ serves the same
     eCatholic site.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

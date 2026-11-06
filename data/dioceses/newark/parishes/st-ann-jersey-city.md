@@ -19,6 +19,7 @@ evidence:
   note: 'John Patrick listing titled ''Our Lady of Mount Carmel Bulletin'' (canonical slug our-lady-of-mount-carmel-jersey-city-nj-07306-a):
     49 dated issues, 2025-11-30 to 2026-11-01. The contents are St. Ann''s bulletin despite the account
     name. I checked suffixes A to Z on 6051: only A and O have issues.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: our-lady-of-mount-carmel-jersey-city

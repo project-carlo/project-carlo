@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: 'Parish WordPress site (''Saint Michael''s Parish - Staffed by the Vocationist Fathers''), read
     with visit.py (probe url: UNREACHABLE through the proxy). The Weekly Bulletins page links https://www.jppc.net/onlinebulletins/6052template.pdf.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

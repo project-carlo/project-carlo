@@ -27,6 +27,7 @@ evidence:
   note: 'probe url: HTTP 403. visit.py (browser) loads an eCatholic site (ecatholic:36975), title ''Holy
     Rosary Church - Jersey City, NJ'', ''344 Sixth St., Jersey City''; its bulletin link is https://www.jppc.net/onlinebulletins/619template.pdf
     (John Patrick account 619).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

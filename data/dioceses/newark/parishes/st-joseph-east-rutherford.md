@@ -28,6 +28,7 @@ evidence:
     its text. It gives Saturday 5:00 PM, Sunday 8:00 AM, 10:00 AM, 12:00 PM and Spanish Mass 1:30 PM,
     and the footer 120 Hoboken Road, East Rutherford, NJ 07073. Neither the homepage nor /news-announcements
     links a bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

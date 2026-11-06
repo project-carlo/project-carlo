@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: John Patrick keeps a listing 'Saint Mary's Parish Bulletin' (saint-mary-s-parish-nutley-nj-07110,
     id 656) that shows only the week's readings and no issues; the parish posts its own bulletin instead.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -35,6 +35,7 @@ evidence:
   note: 'Weekend: Saturday (English) 4:30 PM; Sunday (English) 11:00 AM; Sunday (Spanish) 6:00 PM; weekdays
     Monday, Wednesday, Thursday, Friday 8:30 AM. Footer: ''An Oratory of the Archdiocese of Newark … 94
     Pine Street, Montclair, NJ 07042''.'
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-teresa-of-calcutta-montclair

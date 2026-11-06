@@ -27,6 +27,7 @@ evidence:
     Mass schedule Monday-Friday 7:00 AM and 7:00 PM (alternating Polish, English, Spanish), Saturday 8:00
     AM (PL), 5:00 PM (EN) Vigil Mass; Sunday 7:30 AM (PL), 9:30 AM (EN), 11:00 AM (PL), 12:30 PM (SP),
     7:00 PM (PL); ''7:30 AM (chapel)'' Monday-Saturday.'
+promoted: 2026-11-05
 research:
 - method: page-pdfs first-listed on a Wix page with undated _files/ugd names
   url: https://www.sttheresalinden.com/announcements

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-05
   note: 'probe url: the parish site embeds lpi:0018000000QxAAJAA3 and links parishesonline.com; its bulletin
     page is /about/weekly-bulletin.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

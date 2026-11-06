@@ -30,6 +30,7 @@ evidence:
   seen: 2026-11-03
   quote: Anticipated Sunday Mass 5:00 pm
   note: Parish homepage Mass schedule, Saturday and Sunday Masses 'in the Church'.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: WordPress homepage (olpnp.com redirects here) links https://sponsors.bonventure.net/?page=4590
     for the bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

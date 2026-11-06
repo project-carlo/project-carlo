@@ -26,6 +26,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-04
   note: 'Archdiocese directory entry 60: Our Lady of Czestochowa Parish, 115 S 3rd St, Harrison, NJ 07029.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

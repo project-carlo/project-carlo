@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 64: Christ the King Parish, 411 Rutgers Avenue, Hillside, NJ 07205.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

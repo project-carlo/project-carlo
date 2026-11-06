@@ -24,6 +24,7 @@ evidence:
   note: WordPress homepage (visit.py; probe url UNREACHABLE, RemoteDisconnected). Recent posts 'Bulletin
     – Nov 1, 2026', 'Bulletin – Oct 25, 2026', 'Bulletin – Oct, 18, 2026' (category /category/bulletin/),
     each embedding that week's CTK<yyyymmdd>.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-catherine-of-siena-hillside

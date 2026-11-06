@@ -32,6 +32,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 209: St. Joseph of the Palisades, 6401 Palisade Avenue, West New
     York, NJ 07093, website https://saintjosephpalisades.com/, English and Spanish.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

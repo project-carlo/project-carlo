@@ -29,6 +29,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 99: St. Elizabeth of Hungary Parish, 220 East Blanke Street, Linden,
     NJ 07036.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

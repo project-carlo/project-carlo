@@ -24,6 +24,7 @@ evidence:
   quote: November 1st, 2026 - All Saints
   note: The parish site (Google Sites) lists the 2026 bulletins as Google Drive copies, newest 'November
     1st, 2026 - All Saints' Day', and links one old container 03/4015 issue (20230219B.pdf).
+promoted: 2026-11-05
 research:
 - method: Read the 1 November 2026 bulletin and the parish homepage for the Convent Chapel's location
   url: https://www.spbnj.org/

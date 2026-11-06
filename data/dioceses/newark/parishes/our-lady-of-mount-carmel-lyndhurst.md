@@ -24,6 +24,7 @@ evidence:
 - url: http://sponsors.bonventure.net/?page=1482
   seen: 2026-11-03
   note: 'probe get: the Bon Venture sponsors page lists pdfs/1482/2026-11-01.pdf.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

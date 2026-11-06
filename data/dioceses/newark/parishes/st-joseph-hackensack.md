@@ -21,6 +21,7 @@ evidence:
   quote: St. Joseph's R.C. Church
   note: Joomla homepage (Polish default, /index.php/en-us/ English) links one PDF per Sunday at /images/Bulletins/M_D_YYYY.pdf,
     newest 11_1_2026.pdf; one file is misnamed 9_202_2026.pdf.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

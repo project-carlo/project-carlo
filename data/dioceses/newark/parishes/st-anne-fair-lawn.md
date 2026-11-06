@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: The parish homepage (Wix) links http://sponsors.bonventure.net/?page=1444 from its 'Bulletins'
     menu item.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

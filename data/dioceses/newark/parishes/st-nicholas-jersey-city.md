@@ -23,6 +23,7 @@ evidence:
   note: 'The parish''s Weebly site (visit.py): its bulletin link is http://www.jppc.net/onlinebulletins/681template.pdf.
     The directory''s http://saintnicholaschurch.org/ is a 499-byte frameset that loads this Weebly site;
     GCatholic''s http://www.saintnicholasparishofjcnj.org answered HTTP 502.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -17,6 +17,7 @@ evidence:
   note: 'Parish site, ''Login powered by eCatholic''; HTTP 403 to probe get, loaded with parish-site-access
     visit.py, which reported ecatholic:5565 and a Bulletins page. Homepage Mass schedule: SAT 5:00 PM;
     SUN 7:30 AM, 9:00 AM PL, 10:30 AM, 12:00 PM; M-Sa 8:00 AM.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

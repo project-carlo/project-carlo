@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-03
   note: WordPress site (probe get) linking https://www.jppc.net/onlinebulletins/688template.pdf, John
     Patrick id 688.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

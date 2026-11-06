@@ -18,6 +18,7 @@ evidence:
   note: 'Wix homepage (probe get): the ''Sunday Bulletin November 1, 2026'' link is the first _files/ugd/
     PDF on the page (b2c90c_4a1ba061...pdf); the other 13 ugd PDFs are flyers and reports (e.g. ''2025-2026
     Fiscal Year'').'
+promoted: 2026-11-05
 research:
 - method: fetch:check page-pdfs first-listed on the Wix homepage; undated _files/ugd/ names give freshness
     unknown

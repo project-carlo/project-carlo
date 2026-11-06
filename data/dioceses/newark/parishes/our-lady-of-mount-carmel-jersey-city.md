@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-03
   quote: Current Bulletin &#038; Archive
   note: Homepage menu links https://church-bulletin.org/?id=6051O; probe get, no mention of St. Ann.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-ann-jersey-city

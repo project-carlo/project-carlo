@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-05
   note: Wix 'Bulletins' page (probe url) lists undated _files/ugd PDFs; the first listed, 36d9e4_c1e44a94….pdf,
     is the 'January 25, 2026 THIRD SUNDAY IN ORDINARY TIME' issue.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

@@ -21,6 +21,7 @@ evidence:
   seen: 2026-11-04
   note: eCatholic site (id 32185) reposts the same LPi issues as files.ecatholic.com/32185/bulletins/<yyyymmdd>.pdf,
     2022-05-15 to 2026-11-01; the 20261101.pdf copy carries the same 03-1394 footer.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

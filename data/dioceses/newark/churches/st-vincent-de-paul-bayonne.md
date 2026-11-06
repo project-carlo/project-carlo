@@ -25,6 +25,7 @@ evidence:
 - url: https://rcan.org/parishes/
   seen: 2026-11-03
   note: 'Archdiocese directory entry 4: St. Vincent de Paul Parish, 979 Avenue C, Bayonne, NJ 07002.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -26,6 +26,7 @@ evidence:
   note: The parish's 'Bulletin & Worship Aids' page links church-bulletin.org/?id=6036 under that title,
     then lists self-hosted copies (newest 'November 1, 2026 Bulletin', wp-content/uploads/2026/10/bull-11-01-26.pdf)
     interleaved with weekly worship aids.
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-john-the-evangelist-bergenfield

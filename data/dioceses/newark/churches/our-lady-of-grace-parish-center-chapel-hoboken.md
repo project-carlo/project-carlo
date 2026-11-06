@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   quote: DAILY MASS IN OLG CHAPEL (411 CLINTON ST.)
   note: 'Parish Mass Schedule page: Monday to Friday 12:30 PM; Monday to Thursday 7 PM.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

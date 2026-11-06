@@ -21,6 +21,7 @@ evidence:
 - url: https://www.olmcridgewood.com/worship/mass-schedule
   seen: 2026-11-03
   quote: 'Sunday: 8:00am, 9:30am, 11:00am, 12:30pm, 3:00pm (Spanish) and 6:30pm'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

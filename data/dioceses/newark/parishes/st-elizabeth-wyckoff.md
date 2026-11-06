@@ -18,6 +18,7 @@ evidence:
   quote: 700 Wyckoff Avenue, Wyckoff, New Jersey 07481
   note: 'eCatholic parish site (files.ecatholic.com/19230). Mass Times page: Saturday 5:00 PM vigil; Sunday
     7:30, 9:00, 10:30 AM ...; the bulletins page answered probe get with 403 (Cloudflare).'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

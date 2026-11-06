@@ -27,6 +27,7 @@ evidence:
   quote: 7:30 am, 9:30 am
   note: '1 November 2026 bulletin, page 1 Eucharistic Celebration box: Saturday 5:30 pm Vigil, Sunday
     7:30, 9:30 & 11:30 am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

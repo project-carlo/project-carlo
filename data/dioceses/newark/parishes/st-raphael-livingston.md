@@ -23,6 +23,7 @@ evidence:
   seen: 2026-11-03
   note: Wix site; probe url lists the bulletin link https://www.jppc.net/onlinebulletins/526template.pdf
     (John Patrick id 526).
+promoted: 2026-11-05
 bulletin_status: available
 publication_reviews:
 - parish: st-joseph-west-orange

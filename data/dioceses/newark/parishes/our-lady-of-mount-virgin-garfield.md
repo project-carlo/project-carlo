@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-03
   note: eCatholic Bulletins page (visit.py) lists files.ecatholic.com/25201/bulletins/ PDFs weekly, newest
     20261101.pdf, then 20261025, 20261018, 20261011.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

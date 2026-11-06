@@ -27,6 +27,7 @@ evidence:
     12:05 PM, 4:00 PM Anticipatory Mass (English), 7:30 PM Anticipatory Mass (Spanish); Sunday 8:00 AM,
     10:00 AM, 12:00 PM; weekdays 8:00 AM and 12:05 PM; ''Every Second Sunday of the month Mass with the
     Filipino Apostolate''.'
+promoted: 2026-11-05
 research:
 - method: fetch:check freshness on a biweekly container
   url: https://parishesonline.com/organization/st-elizabeth-of-hungary-church-07036

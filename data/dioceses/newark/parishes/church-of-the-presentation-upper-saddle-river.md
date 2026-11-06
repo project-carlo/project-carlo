@@ -22,6 +22,7 @@ evidence:
 - url: https://www.churchofpresentation.org/weekly-bulletins/
   seen: 2026-11-03
   note: Weekly Bulletins page links wp-content/uploads/2026/10/10-18-26.pdf, 10-25-26.pdf and 11-1-26.pdf.
+promoted: 2026-11-05
 research:
 - method: fetch:check (headed) on the pinned page-pdfs recipe
   url: https://www.churchofpresentation.org/weekly-bulletins/

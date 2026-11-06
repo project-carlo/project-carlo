@@ -31,6 +31,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 180: St. Joseph the Carpenter Parish, 157 E Fourth Avenue, Roselle,
     NJ 07203.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

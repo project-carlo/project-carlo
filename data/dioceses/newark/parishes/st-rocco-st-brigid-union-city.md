@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 199: St. Rocco/ St. Brigid Parish, 4206 Kennedy Boulevard, Union
     City, NJ 07087, website https://stroccounioncity.org/, English and Spanish.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

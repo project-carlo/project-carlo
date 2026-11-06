@@ -26,6 +26,7 @@ evidence:
   seen: 2026-11-05
   note: 'Archdiocese directory entry 121: Our Lady of Lourdes Parish, 300 Central Avenue, Mountainside,
     NJ 07092.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

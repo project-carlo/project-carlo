@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   note: 'Page 2 (image) of the 1 November 2026 bulletin: ''Church of Saint Francis of Assisi, 114 Mount
     Vernon Street, Ridgefield Park'', Saturday 5:00pm, Sunday 8:00am, 10:00am and 12 noon (Spanish).'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

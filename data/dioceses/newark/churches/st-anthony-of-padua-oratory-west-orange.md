@@ -27,6 +27,7 @@ evidence:
   seen: 2026-11-03
   note: 'Archdiocese directory entry 211: St. Anthony of Padua Oratory, 1360 Pleasant Valley Way, West
     Orange, NJ 07052.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

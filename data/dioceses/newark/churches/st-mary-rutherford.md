@@ -31,6 +31,7 @@ evidence:
   quote: 91 HOME AVENUE
   note: '8 November 2026 bulletin, page 4: ''CHURCH OF SAINT MARY 91 HOME AVENUE RUTHERFORD, NEW JERSEY
     07070''; Saturday 5:00 pm, Sunday 8:00, 10:00 & 12:00 noon, Monday-Friday 8:30 am.'
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

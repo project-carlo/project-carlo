@@ -19,6 +19,7 @@ evidence:
 - url: https://www.saintanthonyjc.com/
   seen: 2026-11-03
   note: 'Squarespace parish site; ''Weekly Bulletins: click here'' links https://parishesonline.com/find/st-anthony-of-padua-church-07302.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

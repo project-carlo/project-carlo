@@ -17,6 +17,7 @@ evidence:
   note: 'visit.py (probe url got HTTP 403, eCatholic behind Cloudflare): the parish''s eCatholic site
     (ecatholic:5321) lists weekly issues files.ecatholic.com/5321/bulletins/<yyyymmdd>.pdf, newest 20261101,
     then 20261025, 20261018, 20261011.'
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

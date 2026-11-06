@@ -25,6 +25,7 @@ evidence:
   seen: 2026-11-03
   quote: 211 Summit St., Norwood, New Jersey 07648
   note: GCatholic 'Immaculate Conception', Plus Code 87G8X2WQ+6M.
+promoted: 2026-11-05
 ---
 
 ## Holds Mass

@@ -24,6 +24,7 @@ evidence:
   seen: 2026-11-03
   note: The parish homepage (probe get) links https://www.parishesonline.com/find/our-lady-of-fatima-church-07047
     for the bulletin.
+promoted: 2026-11-05
 bulletin_status: available
 ---
 

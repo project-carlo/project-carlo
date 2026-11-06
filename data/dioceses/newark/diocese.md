@@ -2,8 +2,9 @@
 name: Roman Catholic Archdiocese of Newark
 state: NJ
 website: https://www.rcan.org
-status: exploring
+status: promoted
 gcatholic: newa0
+promoted: 2026-11-05
 ---
 
 The Archdiocese of Newark covers four counties of northern New Jersey: Bergen (Hackensack,
