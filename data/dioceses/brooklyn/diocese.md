@@ -190,6 +190,8 @@ touch it.
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
 
+- A Tilma /bulletins page whose newest card is months old still passes fetch:check ('first-listed', freshness unknown, not stale): read the newest card's date, and if no issue has been posted for months record the row no_bulletin with bulletin_status not-found and a research recheck, keeping the page-pdfs recipe in the research next_action.
+
 ## Rules settled for this diocese
 
 Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
