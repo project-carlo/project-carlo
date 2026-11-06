@@ -164,6 +164,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Catholic Cemeteries pages (ccbklyn.org/our-cemeteries/<name>/) state cemetery Mass times (St. John: Mon-Fri 9:30 AM); GCatholic lists only St. John cemetery chapel, but Holy Cross and Mount St. Mary pages may list Masses too: a cemetery chapel with listed public Mass and no bulletin is excluded as no-bulletin.
 - John Patrick Publishing prints in Brooklyn too: sites link jppc.net/onlinebulletins/<id>template.pdf; record other with 'page-pdfs https://church-bulletin.org/<id>' (fetch:check resolves it). Its issues can be all images: render.py them.
 - Newer Tilma 'webstudio' sites (api.tilmaplatform.com, /cgi/asset/ paths) render /bulletins in JavaScript, so probe get shows no cards; the homepage HTML embeds latestBulletinData with the Bulletins collection's totalCount, and visit.py shows the cards (or 'NOTHING TO SHOW').
+- A WordPress dFlip flipbook over one fixed, weekly-overwritten PDF fails the unpinned resolver ('No bulletin page link found'); pinning 'page-pdfs <bulletin page>' reads the dFlip source and fetch:check dates the issue from its text.
 
 ## Rules settled for this diocese
 
