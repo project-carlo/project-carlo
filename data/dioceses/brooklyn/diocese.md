@@ -108,6 +108,14 @@ touch it.
 - The neighbouring Archdiocese of New York has only one mapped parish (a self-hosted
   bulletin page) and no publisher notes yet; Rockville Centre isn't mapped.
 
+## New lessons
+
+Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
+
+- ParishesOnline often has empty orgs (no issues) for Brooklyn parishes that self-publish, e.g. slugs <name>-11385 / <name>-church-11385; probe po can find them, but an org with no issues is not a publication id and doesn't make the parish a parishes_online row.
+- A self-hosted bulletin page that keeps one stale file gets 'ok' from fetch:check with freshness 'unknown', not 'stale'; check the issue date yourself before pinning a recipe.
+
+
 ## Rules settled for this diocese
 
 None yet. Proposals are in `scratch/brooklyn-map-1/survey.json` for survey-review.
