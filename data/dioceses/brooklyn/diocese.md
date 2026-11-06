@@ -125,6 +125,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - On JavaScript-only parish sites (Next.js /_next/static chunks, Vite /assets/index-*.js) whose bulletin menu has no links in the HTML, grep the JS bundle for drive.google.com, docs.google.com/spreadsheets or supabase.co to find where the issues live; when the link only exists in JS, the row is unsupported with a fetch_gap.
 - Joomla DOCman bulletin lists (/news/bulletin/<n>-<title>/file, class docman_track_download) answer 403 to probes and fetch; the link's title attribute gives the file name, and a name like 03-NNNN.MMDD.pdf is an LPi container 03/NNNN, so probe po finds a parishes_online row. tools/browser-pdf.py downloads such a file through the browser.
 - A Tilma bulletins page whose files are named YYYYMMDDB.pdf (LPi's naming) is reposting an LPi issue: probe po <name>-church-<zip> finds the live container, and the row is parishes_online rather than an `other` Tilma recipe.
+- Some Brooklyn bulletins on Tilma sites are printed by The Church Bulletin Inc. (West Babylon; ad-page footer 'THE CHURCH BULLETIN INC., 200 DALE ST.' with a '#NNN' number): no online container, so record them as `other` page-pdfs with no publication id; their page 1 is often an image, so render it (render.py) for the masthead and Mass times.
 
 
 ## Rules settled for this diocese
