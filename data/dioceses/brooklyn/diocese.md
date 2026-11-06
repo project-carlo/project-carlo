@@ -158,6 +158,10 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - A merged parish can post the same eCatholic bulletin on each former parish's eCatholic site (RA-OLA: 24728 and 29323): compare page-1 mastheads, keep one row and record both ecatholic ids as its publication ids.
 - The diocesan archives' List of Parishes (dioceseofbrooklyn.org/offices/diocesan-archives/parishes/) lists chapels and apostolates with 'Closed YYYY' notes; use it for a chapel's listed status and contacts, not as Mass evidence.
+- LPi containers in Brooklyn are not only 03/NNNN: Sacred Heart Glendale's footer reads 'Sacred Heart, Glendale, NY 04-0247' (po-container 04/0247); read the prefix from the footer.
+- WordPress pages with dFlip flipbooks (plugin flipbook-dflip-lite) hide the PDFs in inline scripts: grep the page HTML for '"source":' in window.option_df_* to get the file URLs (here LPi-named YYYYMMDDB.pdf reposts).
+- When a parish site answers 403, try `probe po <name>-church-<zip>` before the browser: it found live LPi orgs for two such sites at once, and their front pages are images, so render.py pages 1-2 for masthead and Mass times.
+- Catholic Cemeteries pages (ccbklyn.org/our-cemeteries/<name>/) state cemetery Mass times (St. John: Mon-Fri 9:30 AM); GCatholic lists only St. John cemetery chapel, but Holy Cross and Mount St. Mary pages may list Masses too: a cemetery chapel with listed public Mass and no bulletin is excluded as no-bulletin.
 
 ## Rules settled for this diocese
 
