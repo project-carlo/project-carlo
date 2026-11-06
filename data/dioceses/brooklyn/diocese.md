@@ -119,6 +119,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Parish sites on the WordPress multisite with uploads under /wp-content/uploads/sites/<n>/ (olschurch-corona.org, stbartselmhurst.org) drop probe url and probe pdf connections (UNREACHABLE, RemoteDisconnected) but load in visit.py and fetch. Their bulletin page is /important-information/bulletin/, newest first, and tools/fetch-pdf.py downloads a PDF for pdftotext.
 - A self-hosted bulletin PDF can be an LPi issue. Grep its last page for the footer '<Parish> | 03-NNNN': that is po-container 03/NNNN, and probe po on the org gives a parishes_online row with real publication ids.
 - A Tilma bulletins page can post the coming week's card before its file (the card links /bulletins/null). fetch then picks the previous issue, so record a research recheck after the weekend, not a gap.
+- eCatholic parish sites in Brooklyn (e.g. holytrinityrcparish.org) answer 403 to probe url; visit.py gives the ecatholic:<id>, and issues.py ecatholic reads the issues from files.ecatholic.com without a browser.
+- Self-hosted bulletins named MMDDYY.pdf (no year) in a non-chronological archive table fool the unpinned resolver into a past year's file as 'current'; pin the homepage's 'This Week's Bulletin' link with a digit filter (page-pdfs <home> filename=[0-9][0-9][0-9][0-9][0-9][0-9].pdf).
 
 
 ## Rules settled for this diocese
