@@ -10,7 +10,7 @@ city_aliases:
   Ocean Pines: Berlin
   Oak Orchard: Millsboro
   Golden Hill: Church Creek
-promoted: 2026-10-27
+promoted: 2026-11-07
 ---
 
 All of Delaware (New Castle, Kent and Sussex counties: Wilmington, Newark, New Castle,
