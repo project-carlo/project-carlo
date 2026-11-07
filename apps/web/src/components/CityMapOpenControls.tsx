@@ -52,6 +52,11 @@ export default function CityMapOpenControls({
     filterPanelOpen && !isDesktop,
   );
   const { selectChurch, selectPlace, clearPlace, centerOn } = selection;
+  const getSearchCenter = useCallback(() => {
+    if (!map) return null;
+    const { lat, lng } = map.getCenter();
+    return { lat, lng };
+  }, [map]);
   const {
     status: locateStatus,
     error: locateError,
@@ -98,6 +103,7 @@ export default function CityMapOpenControls({
           onFilterPanelOpenChange={noop}
           onChurchSelect={selectChurch}
           onPlaceSelect={selectPlace}
+          getSearchCenter={getSearchCenter}
           pinnedPlaceTitle={centerOn?.placeTitle}
           onClearPlace={clearPlace}
         />

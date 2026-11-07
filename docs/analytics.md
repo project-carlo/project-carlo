@@ -53,7 +53,7 @@ them as `blobN`, `doubleN` and `index1`:
 | Event | Sent when | `kind` | `target` | `detail` |
 | :-- | :-- | :-- | :-- | :-- |
 | `pageview` | A page is shown (prerendered or in the app) | | | |
-| `search_select` | A search result is picked | `church` or `place` | Church slug | |
+| `search_select` | A search result is picked | `church`, `city` (one Carlo serves, from local search) or `place` | Church slug | |
 | `locate` | "Use my location" answers | `located`, `denied`, `unavailable`, `unsupported` | | |
 | `filter` | A map filter changes | `event_type`, `days`, `clear` | | Event type |
 | `map_open` | A city or church page's map opens full screen | | | |

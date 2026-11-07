@@ -17,7 +17,7 @@ The confirmed first-release scope is the current public church-finder features p
 | `packages/core/src/`: `schedule.ts`, `eventRollup.ts`, `types.ts`, `constants/*`, `utils.ts` | Mostly reusable TypeScript, with clock and timezone behavior to make explicit. |
 | `components/filterState.ts`, `lib/mapView.ts`, `lib/currentLocationQuery.ts` | Reuse filter semantics, link parameters, and current-location query recognition. Move these out of UI directories where appropriate. |
 | `lib/mapClusters.ts` | Pure clustering algorithm worth sharing. Native viewport, zoom, camera, and marker integration need an adapter. |
-| `components/SearchTypeahead.tsx`, `placeSearch.ts` | Extract Fuse search configuration and Geoapify request/result logic; rebuild the search UI and inject configuration. |
+| `components/SearchTypeahead.tsx`, `placeSearch.ts` | Reuse `lib/localSearch.ts` (cities, churches and how they merge with Geoapify) and the Geoapify request/result logic; rebuild the search UI and inject configuration. |
 | `components/ChurchMap.tsx` | Leaflet, DOM markers, and DOM measurements require a native map implementation. |
 | React Router, Radix/shadcn, Tailwind, `tally.ts`, browser hooks | Replace their presentation/platform integration. CSS classes and HTML components do not transfer to native views. |
 | Web prerendering and SEO | Stay in `apps/web`; public church URLs continue to work in browsers. |
@@ -113,7 +113,7 @@ Recompute derived schedules on foregrounding and at the church-local date bounda
 
 **Map:** reuse clustering and viewport culling, not Leaflet components. Convert native camera/region information into the shared algorithm's bounds and zoom convention; verify cluster expansion, padding for the results sheet, and selection persistence on each platform. Start with simple image markers and cluster counts, then add branding after profiling. Keep map attributions visible. The library is not chosen yet; see [Map library decision](#map-library-decision).
 
-**Search and location:** inject Geoapify configuration instead of reading `import.meta.env`. Preserve debounce, request cancellation, country restriction, ZIP handling, and local Fuse ranking. Review the current Rochester proximity bias for broader coverage. Request foreground location only after the user taps the action; support denial, approximate location, timeout, and disabled services with manual search. No background-location permission is needed.
+**Search and location:** inject Geoapify configuration instead of reading `import.meta.env`. Preserve debounce, request cancellation, country restriction, ZIP handling, and local city and church ranking. Rank around the map's center, as the web app does. Request foreground location only after the user taps the action; support denial, approximate location, timeout, and disabled services with manual search. No background-location permission is needed.
 
 **API configuration:** Expo public environment variables are bundled into the application. Confirm Geoapify's supported mobile-client restrictions, attribution, and quota configuration. If the browser-only key policy does not support native clients, use a small rate-limited proxy for place search. If `react-native-maps` is chosen, Google Maps Android configuration requires a restricted key and build-variant signing fingerprints; if MapLibre is chosen, the tile source needs its own key and usage terms. Keep R2 credentials and extraction-service keys out of the app.
 

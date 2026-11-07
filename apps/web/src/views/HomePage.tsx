@@ -161,6 +161,13 @@ export function HomePage() {
   const latestMapViewRef = useRef<MapView | null>(null);
   // Set while the router is on its way to another page; see below.
   const leavingRef = useRef(false);
+  // A map opened from a link hasn't moved yet, but the URL says where it is.
+  const getSearchCenter = useCallback(
+    () =>
+      latestMapViewRef.current ??
+      decodeMapViewFromParams(new URLSearchParams(window.location.search)),
+    [],
+  );
   const handleMapViewChange = useCallback(
     (view: MapView) => {
       latestMapViewRef.current = view;
@@ -366,6 +373,7 @@ export function HomePage() {
         onFilterPanelOpenChange={setFilterPanelOpen}
         onChurchSelect={handleChurchSelect}
         onPlaceSelect={handlePlaceSelect}
+        getSearchCenter={getSearchCenter}
         pinnedPlaceTitle={pinnedPlaceTitle}
         onClearPlace={handleClearPlace}
       >
