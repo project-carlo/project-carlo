@@ -194,6 +194,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Parishes sharing a pastor here can each print 'In partnership with <other parish>' and both rectories' contacts on page 1 of their own LPi bulletins (OLA 03/4061 and St. Anselm 03/4053), while the schedules and intentions stay separate; read the schedule and intentions, not the masthead line, and record separate reviews.
 - The Tablet (thetablet.org) asks for a login after a few paragraphs; its WordPress API (wp-json/wp/v2/posts?search=<words>&_fields=link,date,title) lists dated articles for closures and sales, and probe get on an article still returns the opening paragraphs to quote.
 - The Church Bulletin Inc. ad-page footer number (#167, #117, #224) is per parish: different numbers plus different mastheads support a 'separate' review between neighbouring Church Bulletin Inc. rows, which have no publication id to compare.
+- Mass finder place pages for merged parishes list every worship site under 'All Worship Sites', but the roster line can pair one church's street with another's pin: link the massfinder entry to the church at its pin and give the other church its own record from the page's address.
 
 ## Rules settled for this diocese
 
