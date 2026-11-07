@@ -197,13 +197,19 @@ export function SearchTypeahead({
   const showDropdown =
     isOpen && (showCurrentLocationOption || trimmedQuery.length >= 2);
   const hasResults = placeResults.length > 0 || churchResults.length > 0;
-  // Results kept up from the last search aren't an answer to this one, so
-  // while they're showing an empty list only means it hasn't come back yet.
-  const isLoading = placesLoading || placesPending || churchesLoading;
   // "No results" only once a search has run on what's in the box: not while
   // the debounce lags the typing, and not for a query too short to search,
   // which would otherwise read as a search that found nothing.
   const searchSettled = debouncedQuery === query;
+  // Results kept up from the last search aren't an answer to this one, so
+  // while they're showing an empty list only means it hasn't come back yet.
+  // Nor has one that waits on the debounce, which would otherwise leave the
+  // dropdown blank, as it was after correcting "biston ma" to "boston ma".
+  const isLoading =
+    placesLoading ||
+    placesPending ||
+    churchesLoading ||
+    (!searchSettled && canSearchPlaces(trimmedQuery));
   // Echo what was searched, so a typo is easy to spot, and say what to try.
   const emptyMessage = !searchSettled
     ? null

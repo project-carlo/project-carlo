@@ -182,3 +182,79 @@ test("typing on keeps the list up while more results load", async ({ page }) => 
   await expect(street).toBeVisible();
   await expect(page.getByText("Searching places…")).toHaveCount(0);
 });
+
+test("correcting a misspelling searches again, state spelled out", async ({
+  page,
+}) => {
+  const requests: string[] = [];
+  await page.route(GEOAPIFY, async (route) => {
+    const text = new URL(route.request().url()).searchParams.get("text") ?? "";
+    requests.push(text);
+    if (!text.startsWith("boston")) {
+      return route.fulfill({ json: { results: [] } });
+    }
+    await new Promise((done) => setTimeout(done, 800));
+    await route.fulfill({
+      json: {
+        results: [
+          {
+            address_line1: "Boston, MA",
+            address_line2: "United States of America",
+            name: "Boston",
+            state_code: "MA",
+            result_type: "city",
+            lat: 42.36,
+            lon: -71.06,
+          },
+        ],
+      },
+    });
+  });
+  const input = await openMap(page);
+  await input.pressSequentially("biston ma");
+  await expect(page.getByText("Nothing matches “biston ma”")).toBeVisible();
+
+  // The "i" becomes an "o", in the middle of what's typed.
+  await input.evaluate((el: HTMLInputElement) => el.setSelectionRange(1, 2));
+  await input.press("o");
+  await expect(input).toHaveValue("boston ma");
+  await expect(page.getByText("Searching places…")).toBeVisible();
+  await expect(option(page, /Boston, MA/)).toBeVisible();
+  expect(requests.at(-1)).toBe("boston Massachusetts");
+});
+
+test("a church far from the map's view is shown with its pins", async ({
+  page,
+}) => {
+  await mockPlaceSearch(page, []);
+  // Boston, where Carlo has no churches, at the zoom a searched place opens at.
+  await page.goto("/?lat=42.36&lng=-71.06&z=12");
+  const input = page.getByRole("combobox");
+  await expect(input).toBeVisible({ timeout: 15_000 });
+  await input.pressSequentially("blessed sacrament rochester");
+  await option(page, /Blessed Sacrament.*Rochester/).first().click();
+
+  const popup = page.locator(".leaflet-popup");
+  await expect(popup).toContainText("Blessed Sacrament");
+  await expect(popup).toContainText("Rochester");
+  await expect(page.locator(".leaflet-marker-icon").first()).toBeVisible();
+  await expect.poll(() => new URL(page.url()).searchParams.get("lng")).toMatch(
+    /^-77\./,
+  );
+});
+
+test("a church picked on the landing page opens on the map", async ({
+  page,
+}) => {
+  await mockPlaceSearch(page, []);
+  await page.goto("/landing");
+  const input = page.getByRole("combobox");
+  await expect(input).toBeVisible({ timeout: 15_000 });
+  await input.pressSequentially("blessed sacrament albany");
+  await option(page, /Blessed Sacrament.*Albany/).first().click();
+
+  const popup = page.locator(".leaflet-popup");
+  await expect(popup).toContainText("Blessed Sacrament");
+  await expect(popup).toContainText("Albany");
+  await expect(page.locator(".leaflet-marker-icon").first()).toBeVisible();
+});

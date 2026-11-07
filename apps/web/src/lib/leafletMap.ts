@@ -1,5 +1,15 @@
-import { createContext, useContext, useEffect } from "react";
-import type { LeafletEventHandlerFnMap, Map as LeafletMap } from "leaflet";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from "react";
+import type {
+  LeafletEvent,
+  LeafletEventHandlerFnMap,
+  Map as LeafletMap,
+} from "leaflet";
 
 /**
  * The Leaflet map a `MapContainer` (components/Leaflet.tsx) has created,
@@ -16,17 +26,35 @@ export function useMap(): LeafletMap {
 }
 
 /**
- * Listens to the map's events while mounted. The handlers are bound again
- * whenever the object changes, so one written inline sees the latest render's
- * props and state; memoize it to keep the same listeners across renders.
+ * Listens to the map's events while mounted, calling the latest render's
+ * handlers. The listeners stay bound from one render to the next: bound
+ * again on each, they would be off the map while React swaps them, and an
+ * event fired then, such as the moveend of a long jump another component's
+ * effect makes, would be lost.
  */
 export function useMapEvents(handlers: LeafletEventHandlerFnMap): LeafletMap {
   const map = useMap();
+  const handlersRef = useRef(handlers);
+  // Before any effect runs, so one that moves the map reaches these handlers.
+  useLayoutEffect(() => {
+    handlersRef.current = handlers;
+  });
+  const types = Object.keys(handlers).sort().join(" ");
   useEffect(() => {
-    map.on(handlers);
+    const listeners: Record<string, (event: LeafletEvent) => void> = {};
+    for (const type of types.split(" ").filter(Boolean)) {
+      listeners[type] = (event) => {
+        const latest = handlersRef.current as Record<
+          string,
+          ((event: LeafletEvent) => void) | undefined
+        >;
+        latest[type]?.(event);
+      };
+    }
+    map.on(listeners);
     return () => {
-      map.off(handlers);
+      map.off(listeners);
     };
-  }, [map, handlers]);
+  }, [map, types]);
   return map;
 }

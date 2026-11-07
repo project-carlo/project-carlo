@@ -37,6 +37,12 @@ describe("placeSearchParams", () => {
   it("trims the query", () => {
     expect(placeSearchParams("  Erie ", null).get("text")).toBe("Erie");
   });
+
+  it("spells out a state code, which the provider is slow to match", () => {
+    expect(placeSearchParams("boston ma", null).get("text")).toBe(
+      "boston Massachusetts",
+    );
+  });
 });
 
 describe("parsePlaceResults", () => {

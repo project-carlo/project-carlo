@@ -47,6 +47,27 @@ const KNOWN_STATE_CODES = new Set(Object.values(STATE_CODES));
 /** Longest first, so "West Virginia" isn't taken for Virginia. */
 const STATE_NAMES = Object.keys(STATE_CODES).sort((a, b) => b.length - a.length);
 
+/** "NY" as "New York". */
+const STATE_NAMES_BY_CODE = new Map(
+  Object.entries(STATE_CODES).map(([name, code]) => [
+    code,
+    name.replace(/\b(?!of\b)[a-z]/g, (letter) => letter.toUpperCase()),
+  ]),
+);
+
+/**
+ * The query with a state code at its end spelled out: "Boston, MA" as
+ * "Boston, Massachusetts". The place-search provider takes the last word for
+ * the start of a longer one, and a two-letter start fits so many that
+ * "Boston MA" took it seven seconds to answer, against two for "Boston
+ * Massachusetts", and found the district of Boston instead of the city.
+ */
+export function spellOutState(query: string): string {
+  const match = /^(.*[a-z0-9].*?[\s,]+)([a-z]{2})$/i.exec(query.trim());
+  const name = match && STATE_NAMES_BY_CODE.get(match[2].toUpperCase());
+  return match && name ? match[1] + name : query.trim();
+}
+
 /** The abbreviations place names are spelled both ways with. */
 const SPELLED_OUT: Record<string, string> = {
   st: "saint",

@@ -1,6 +1,6 @@
 import { YOUR_LOCATION } from "./copy";
 import type { LatLng } from "./lib/cities";
-import { normalizePlaceName } from "./lib/localSearch";
+import { normalizePlaceName, spellOutState } from "./lib/localSearch";
 
 const GEOAPIFY_AUTOCOMPLETE_URL =
   "https://api.geoapify.com/v1/geocode/autocomplete";
@@ -12,6 +12,11 @@ const GEOAPIFY_AUTOCOMPLETE_URL =
  */
 const PLACE_RESULT_REQUEST_LIMIT = "10";
 export const PLACE_SEARCH_ZOOM = 12;
+
+/** How long a place search may take before it counts as failed, rather than
+ *  leave the dropdown saying it's searching. Slow answers take about seven
+ *  seconds. */
+const PLACE_SEARCH_TIMEOUT_MS = 10_000;
 
 /** A bias coordinate's precision: a tenth of a degree, about 10 km. Ranking
  *  can't tell the difference, and more precision would only miss the cache. */
@@ -178,7 +183,7 @@ export function placeSearchParams(
 ): URLSearchParams {
   const trimmed = query.trim();
   const params = new URLSearchParams({
-    text: trimmed,
+    text: spellOutState(trimmed),
     format: "json",
     limit: PLACE_RESULT_REQUEST_LIMIT,
     lang: "en",
@@ -204,12 +209,21 @@ export async function searchPlaces(
 
   const params = placeSearchParams(query, options.near ?? null);
   params.set("apiKey", apiKey);
-  const response = await fetch(`${GEOAPIFY_AUTOCOMPLETE_URL}?${params}`, {
-    signal: options.signal,
-  });
-  if (!response.ok) {
-    throw new Error(`Place search failed with status ${response.status}.`);
+  const controller = new AbortController();
+  const abort = () => controller.abort();
+  if (options.signal?.aborted) abort();
+  options.signal?.addEventListener("abort", abort);
+  const timeout = setTimeout(abort, PLACE_SEARCH_TIMEOUT_MS);
+  try {
+    const response = await fetch(`${GEOAPIFY_AUTOCOMPLETE_URL}?${params}`, {
+      signal: controller.signal,
+    });
+    if (!response.ok) {
+      throw new Error(`Place search failed with status ${response.status}.`);
+    }
+    return parsePlaceResults((await response.json()) as GeoapifyResponse);
+  } finally {
+    clearTimeout(timeout);
+    options.signal?.removeEventListener("abort", abort);
   }
-
-  return parsePlaceResults((await response.json()) as GeoapifyResponse);
 }
