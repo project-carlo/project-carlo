@@ -103,9 +103,6 @@ class LocalBlobStore:
             self.path(key).unlink(missing_ok=True)
 
     def list(self, prefix: str) -> Iterator[str]:
-        return (key for key, _size in self.list_sizes(prefix))
-
-    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]:
         # Walk only the folder the prefix names, not the whole cache.
         folder = prefix.rsplit("/", 1)[0] if "/" in prefix else ""
         base = self.root / _check_key(folder) if folder else self.root
@@ -114,7 +111,11 @@ class LocalBlobStore:
                 continue
             key = path.relative_to(self.root).as_posix()
             if key.startswith(prefix):
-                yield key, path.stat().st_size
+                yield key
+
+    def list_sizes(self, prefix: str) -> Iterator[tuple[str, int]]:
+        for key in self.list(prefix):
+            yield key, self.path(key).stat().st_size
 
 
 # ── S3-compatible (Cloudflare R2) ───────────────────────────────────────────

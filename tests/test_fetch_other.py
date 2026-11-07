@@ -1171,6 +1171,36 @@ def test_http_get_reads_a_declared_body_unsized_so_a_cut_off_read_raises(monkeyp
     assert response.sized_reads == [None]
 
 
+def test_http_get_caps_a_chunked_body_whatever_its_content_length_says(monkeypatch):
+    # http.client ignores Content-Length on a chunked body, so it limits nothing.
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    response = _SizedResponse(b"%PDF-big", content_length="4")
+    response.headers["Transfer-Encoding"] = "chunked"
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_an_oversized_download_over_https_is_not_swallowed(monkeypatch):
+    # The bot check's page must not be taken for the bulletin it stands in front of.
+    from pdf_extract import fetch
+
+    def get(url, **_):
+        if url.startswith("http://"):
+            return fetch._Response(b"<html>sgcaptcha</html>")
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="http://example.org/b.pdf", source_url="http://example.org/page",
+        )
+
+
 def test_an_oversized_download_is_not_retried_from_the_source_address(monkeypatch):
     from pdf_extract import fetch
 

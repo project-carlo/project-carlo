@@ -50,8 +50,9 @@ LOGGER = logging.getLogger(__name__)
 
 PIPELINE_PREFIX = "pipeline"
 BULLETINS_PREFIX = "bulletins"
-# Above anything Ghostscript has produced, so these were never compacted and
-# no JPEG is compressed twice.
+# Above anything Ghostscript's first pass has produced, so these were almost
+# certainly never compacted. Only its fallbacks can leave a compacted copy over
+# this, and compacting one of those again compresses its JPEGs twice.
 DEFAULT_RECOMPACT_MIN_BYTES = 10_000_000
 LATEST_KEY = f"{PIPELINE_PREFIX}/latest.json"
 SNAPSHOT_PATH = DEST_SNAPSHOT
@@ -436,9 +437,12 @@ def recompact(
     for key, size in sorted(store.list_sizes(f"{BULLETINS_PREFIX}/"), key=lambda item: -item[1]):
         if size < min_bytes or not key.endswith(".pdf"):
             continue
-        data = store.get(key)
-        if data is None:
-            raise BlobStoreError(f"{key} is listed but could not be read")
+        # Not `store.get`: the local copy may not be the object being replaced.
+        data = store.get(key) if store.remote is None else store.get_remote(key)
+        if data is None:  # A lifecycle rule can expire one after the listing.
+            LOGGER.warning("%s is gone since it was listed", key)
+            results.append({"key": key, "status": "missing", "bytes": size, "compacted_bytes": 0})
+            continue
         compacted = compact_bulletin_pdf(data, max_pages=max_pages_for(key.split("/")[1]))
         if len(compacted) >= len(data):
             status = "no_smaller"

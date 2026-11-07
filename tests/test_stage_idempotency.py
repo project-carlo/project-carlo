@@ -483,6 +483,26 @@ def test_fetch_reports_a_download_over_the_limit_as_too_large(monkeypatch, db: P
     assert _results(db, "run-1")["test-parish"]["status"] == "too_large"
 
 
+def test_fetch_does_not_count_an_oversized_recheck_as_a_failure(monkeypatch, db: Path) -> None:
+    _add_bulletin(
+        db, source_url="https://example.org/bulletin.pdf", content_hash="had",
+        fetched_at="2026-09-26T09:00:00Z",
+    )
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**_):
+        raise DownloadTooLarge("Over 1000 MB: https://example.org/bulletin.pdf")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1", today=date(2026, 9, 26))
+
+    assert result["failed_parishes"] == 0
+    assert _results(db, "run-1")["test-parish"]["status"] == "recheck_failed"
+
+
 def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:
     # A PDF stored by a run whose database was not published: the stored copy
     # is not rewritten.

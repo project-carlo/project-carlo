@@ -31,11 +31,13 @@ import logging
 import shutil
 import subprocess
 import tempfile
+import threading
 import time
 from collections.abc import Callable
 from io import BytesIO
 from pathlib import Path
 
+import pypdfium2 as pdfium
 from PIL import Image, UnidentifiedImageError
 from pypdf import PdfReader, PdfWriter
 
@@ -59,12 +61,18 @@ _LOW_RESOLUTION = (
     *_KEEP_COLOURS,
     "-dColorImageResolution=110", "-dColorImageDownsampleThreshold=1.0",
     "-dGrayImageResolution=110", "-dGrayImageDownsampleThreshold=1.0",
-    "-dMonoImageResolution=220",
 )
+# PDFium is not thread-safe, and `fetch` compacts from several workers.
+_PDFIUM_LOCK = threading.Lock()
 
 
 def _page_count(data: bytes) -> int:
     return len(PdfReader(BytesIO(data)).pages)
+
+
+def _pdfium_page_count(data: bytes) -> int:
+    with _PDFIUM_LOCK, pdfium.PdfDocument(data) as document:
+        return len(document)
 
 
 def _truncate(data: bytes, pages: int) -> bytes:
@@ -173,10 +181,16 @@ def compact_bulletin_pdf(data: bytes, *, max_pages: int = MAX_BULLETIN_PAGES) ->
             LOGGER.warning("Not compacting an unreadable PDF (%d bytes)", len(data), exc_info=True)
             return data
         # pypdf gives up on very large streams that Ghostscript reads, and this
-        # one is not stored as it is, so there is nothing to lose by trying.
+        # one is not stored as it is, so there is nothing to lose by trying. The
+        # page count still has to come from somewhere other than Ghostscript:
+        # it can recover part of a damaged file and report success.
         LOGGER.warning("Compacting a PDF pypdf cannot read (%d bytes)", len(data), exc_info=True)
-        pages = None
-    keep = max_pages if pages is None else min(pages, max_pages)
+        try:
+            pages = _pdfium_page_count(data)
+        except Exception:
+            LOGGER.warning("Not compacting an unreadable PDF (%d bytes)", len(data), exc_info=True)
+            return data
+    keep = min(pages, max_pages)
 
     best = data
 
@@ -191,20 +205,23 @@ def compact_bulletin_pdf(data: bytes, *, max_pages: int = MAX_BULLETIN_PAGES) ->
         except Exception:
             LOGGER.warning("Compacting with %s failed", name, exc_info=True)
             return False
-        if count != keep if pages is not None else not 1 <= count <= keep:
+        if count != keep:
             LOGGER.warning("Discarding %s output: expected %d pages", name, keep)
             return False
         if len(candidate) < len(best):
             best = candidate
         return True
 
-    if not attempt("ghostscript", lambda: _ghostscript(data, keep)):
-        attempt("ghostscript keeping colours", lambda: _ghostscript(
-            data, keep, options=_KEEP_COLOURS, timeout=GHOSTSCRIPT_RETRY_TIMEOUT_SECONDS,
-        ))
-    if pages is not None and pages > keep:
+    ghostscript_worked = attempt(
+        "ghostscript", lambda: _ghostscript(data, keep),
+    ) or attempt("ghostscript keeping colours", lambda: _ghostscript(
+        data, keep, options=_KEEP_COLOURS, timeout=GHOSTSCRIPT_RETRY_TIMEOUT_SECONDS,
+    ))
+    if pages > keep:
         attempt("truncate", lambda: _truncate(data, keep))
-    if len(best) > MAX_STORED_BULLETIN_BYTES:
+    # When Ghostscript failed twice on these same bytes a third pass would most
+    # likely fail too, and could take as long again, every week.
+    if len(best) > MAX_STORED_BULLETIN_BYTES and (ghostscript_worked or best is not data):
         attempt("ghostscript at low resolution", lambda: _ghostscript(
             best, keep, options=_LOW_RESOLUTION, jpeg=_SMALLER_JPEG,
             timeout=GHOSTSCRIPT_RETRY_TIMEOUT_SECONDS,
@@ -212,7 +229,7 @@ def compact_bulletin_pdf(data: bytes, *, max_pages: int = MAX_BULLETIN_PAGES) ->
 
     if best is not data:
         LOGGER.info(
-            "Compacted bulletin %.1f MB -> %.1f MB (%d of %s pages)",
-            len(data) / 1e6, len(best) / 1e6, keep, "?" if pages is None else pages,
+            "Compacted bulletin %.1f MB -> %.1f MB (%d of %d pages)",
+            len(data) / 1e6, len(best) / 1e6, keep, pages,
         )
     return best

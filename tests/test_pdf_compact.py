@@ -188,22 +188,75 @@ def test_returns_what_it_has_when_nothing_gets_under_the_limit(
     assert compact_bulletin_pdf(original) is original
 
 
+def test_does_not_try_a_lower_resolution_after_ghostscript_failed_twice(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    passes = _gs_recording(monkeypatch, [None, None])
+
+    compact_bulletin_pdf(_photo_pdf(1, px=64))
+
+    assert len(passes) == 2
+
+
+def test_a_lower_resolution_can_follow_a_ghostscript_copy_that_saved_nothing(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # Ghostscript worked, so it can be expected to work on the third pass.
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    original = _photo_pdf(1, px=64)
+    passes = _gs_recording(monkeypatch, [original + b"\n", None])
+
+    compact_bulletin_pdf(original)
+
+    assert len(passes) == 2
+    assert passes[1]["options"] == pdf_compact._LOW_RESOLUTION
+
+
+def _pypdf_cannot_read(monkeypatch: pytest.MonkeyPatch, source: bytes) -> None:
+    """Make pypdf refuse `source`, as it refuses very large streams, and nothing else."""
+    page_count = pdf_compact._page_count
+
+    def count(data: bytes) -> int:
+        if data == source:
+            raise ValueError("Declared stream length exceeds maximum allowed length")
+        return page_count(data)
+
+    monkeypatch.setattr(pdf_compact, "_page_count", count)
+
+
 def test_gives_ghostscript_a_pdf_too_large_to_store_that_pypdf_cannot_read(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    unreadable = b"%PDF-1.4 not really"
+    source = _photo_pdf(2, px=64)
     monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    _pypdf_cannot_read(monkeypatch, source)
     readable = _blank_pdf(2)
     _gs_recording(monkeypatch, [readable])
 
-    # Repeated only so that the two blank pages count as smaller.
-    assert compact_bulletin_pdf(unreadable * 1000) == readable
+    assert compact_bulletin_pdf(source) == readable
 
 
-@needs_gs
-def test_ghostscript_accepts_a_last_page_past_the_end() -> None:
-    # An unreadable PDF's page count is unknown, so `max_pages` is passed as it is.
-    assert _pages(pdf_compact._ghostscript(_photo_pdf(2, px=64), 10)) == 2
+def test_discards_part_of_a_bulletin_that_pypdf_cannot_read(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # Ghostscript can repair a damaged file, report success and give only some
+    # of its pages. Its output is no measure of how many there should be.
+    source = _photo_pdf(3, px=64)
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    _pypdf_cannot_read(monkeypatch, source)
+    _gs_recording(monkeypatch, [_blank_pdf(1), _blank_pdf(1)])
+
+    assert compact_bulletin_pdf(source) is source
+
+
+def test_leaves_a_pdf_nothing_can_count_the_pages_of(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    passes = _gs_recording(monkeypatch, [])
+    unreadable = b"%PDF-1.4 not really" * 1000
+
+    assert compact_bulletin_pdf(unreadable) is unreadable
+    assert passes == []
 
 
 @needs_gs
