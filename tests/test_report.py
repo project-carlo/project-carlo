@@ -14,7 +14,7 @@ from pdf_extract.report import (
     render_markdown,
     verify_databases,
 )
-from pdf_extract.runs import record_parish_result, start_run
+from pdf_extract.runs import FETCH_TOO_LARGE, record_parish_result, start_run
 from pdf_extract.storage import connect_db, insert_bulletin, save_processed_bulletin, utc_now_iso
 from pdf_extract.verify_frontend_snapshot import GATE_POLICY_VERSION
 
@@ -357,6 +357,26 @@ def test_report_warns_about_big_drops_without_holding_for_them(pipeline_dir: Pat
 
     assert report["attention"]["big_drops"] == ["test-parish"]
     assert not any("big" in g["name"].lower() for g in report["gates"])
+
+
+def test_report_lists_a_bulletin_too_large_to_store(
+    pipeline_dir: Path, ticking_clock: None,
+) -> None:
+    before, after = _before_and_after(pipeline_dir, [MASS_9])
+    conn = connect_db(after)
+    try:
+        start_run(conn, "run-1", git_sha=None, trigger=None)
+        record_parish_result(conn, "run-1", "test-parish", "fetch", FETCH_TOO_LARGE, detail="big")
+    finally:
+        conn.close()
+
+    report = build_report(
+        run_id="run-1", before_db=before, after_db=after, stages={},
+        snapshot_verification=None,
+    )
+
+    [failure] = report["attention"]["failures"]
+    assert (failure["status"], failure["detail"]) == ("too_large", "big")
 
 
 def test_report_lists_failures_with_consecutive_failure_streak(

@@ -26,6 +26,7 @@ from pdf_extract.datasync import (
     prune,
     pull,
     push_candidate,
+    recompact,
     run_key,
     run_out_dir,
     status,
@@ -604,6 +605,141 @@ def _weekly_runs(client: Any) -> list[str]:
         _seed_run(client, run_id, f"2026-{month:02d}-{day:02d}T08:17:00Z")
         run_ids.append(run_id)
     return run_ids
+
+
+def _big_bulletin(client: Any, slug: str = "st-ann", size: int = 100) -> str:
+    key = f"bulletins/{slug}/{'a' * 64}.pdf"
+    client.put_object(Bucket=BUCKET, Key=key, Body=b"%PDF" + b"x" * (size - 4))
+    return key
+
+
+def _stored_size(client: Any, key: str) -> int:
+    return client.head_object(Bucket=BUCKET, Key=key)["ContentLength"]
+
+
+def test_recompact_is_a_dry_run_by_default(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    key = _big_bulletin(s3_client)
+    monkeypatch.setattr(datasync, "compact_bulletin_pdf", lambda data, **_: b"%PDF small")
+
+    result = recompact(min_bytes=50)
+
+    assert result["saved_bytes"] == 90
+    assert [b["status"] for b in result["bulletins"]] == ["would_replace"]
+    assert _stored_size(s3_client, key) == 100
+
+
+def test_recompact_replaces_the_bytes_under_the_same_key(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    key = _big_bulletin(s3_client)
+    small = _big_bulletin(s3_client, slug="st-paul", size=10)
+    monkeypatch.setattr(datasync, "compact_bulletin_pdf", lambda data, **_: b"%PDF small")
+
+    result = recompact(min_bytes=50, apply=True)
+
+    assert [b["key"] for b in result["bulletins"]] == [key]
+    assert s3_client.get_object(Bucket=BUCKET, Key=key)["Body"].read() == b"%PDF small"
+    assert s3_client.head_object(Bucket=BUCKET, Key=key)["ContentType"] == "application/pdf"
+    assert remote_store.local.get(key) == b"%PDF small"
+    assert _stored_size(s3_client, small) == 10
+
+
+def test_recompact_reads_each_parish_page_limit(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    _big_bulletin(s3_client, slug="st-paul")
+    limits = []
+    monkeypatch.setattr(datasync, "max_pages_for", lambda slug: limits.append(slug) or 12)
+    pages = []
+    monkeypatch.setattr(
+        datasync, "compact_bulletin_pdf",
+        lambda data, *, max_pages: pages.append(max_pages) or data,
+    )
+
+    recompact(min_bytes=50)
+
+    assert (limits, pages) == (["st-paul"], [12])
+
+
+@pytest.mark.parametrize(
+    ("compacted", "status"),
+    [(b"%PDF" + b"y" * 96, "no_smaller"), (b"%PDF" + b"y" * 46, "still_too_large")],
+)
+def test_recompact_leaves_a_bulletin_it_cannot_improve(
+    remote_store: CachedBlobStore,
+    s3_client: Any,
+    monkeypatch: pytest.MonkeyPatch,
+    compacted: bytes,
+    status: str,
+) -> None:
+    key = _big_bulletin(s3_client)
+    monkeypatch.setattr(datasync, "compact_bulletin_pdf", lambda data, **_: compacted)
+    monkeypatch.setattr(datasync, "MAX_STORED_BULLETIN_BYTES", 40)
+
+    result = recompact(min_bytes=50, apply=True)
+
+    assert [b["status"] for b in result["bulletins"]] == [status]
+    assert result["saved_bytes"] == 0
+    assert _stored_size(s3_client, key) == 100
+
+
+def test_recompact_works_from_the_object_it_replaces_not_the_local_copy(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # As an --apply that wrote locally and then failed against R2 leaves things.
+    key = _big_bulletin(s3_client)
+    remote_store.local.put(key, b"%PDF stale")
+    seen = []
+    monkeypatch.setattr(
+        datasync, "compact_bulletin_pdf",
+        lambda data, **_: seen.append(len(data)) or b"%PDF small",
+    )
+
+    recompact(min_bytes=50, apply=True)
+
+    assert seen == [100]
+    assert _stored_size(s3_client, key) == len(b"%PDF small")
+
+
+def test_recompact_dry_run_leaves_the_local_cache_alone(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    key = _big_bulletin(s3_client)
+    monkeypatch.setattr(datasync, "compact_bulletin_pdf", lambda data, **_: b"%PDF small")
+
+    recompact(min_bytes=50)
+
+    assert not remote_store.local.exists(key)
+
+
+def test_recompact_goes_on_past_a_bulletin_that_has_expired(
+    remote_store: CachedBlobStore, s3_client: Any, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    gone = _big_bulletin(s3_client, size=200)
+    key = _big_bulletin(s3_client, slug="st-paul")
+    monkeypatch.setattr(datasync, "compact_bulletin_pdf", lambda data, **_: b"%PDF small")
+    read = remote_store.get_remote
+    monkeypatch.setattr(
+        remote_store, "get_remote", lambda wanted: None if wanted == gone else read(wanted),
+    )
+
+    result = recompact(min_bytes=50, apply=True)
+
+    assert [(b["key"], b["status"]) for b in result["bulletins"]] == [
+        (gone, "missing"), (key, "replaced"),
+    ]
+    assert result["saved_bytes"] == 90
+
+
+def test_recompact_refuses_to_apply_without_remote_writes(
+    remote_store: CachedBlobStore, s3_client: Any,
+) -> None:
+    remote_store.remote_write = False
+
+    with pytest.raises(BlobStoreError):
+        recompact(apply=True)
 
 
 def test_prune_is_a_dry_run_by_default(remote_store: CachedBlobStore, s3_client: Any) -> None:
