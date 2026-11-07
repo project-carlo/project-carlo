@@ -6,7 +6,7 @@ status: promoted
 gcatholic: phil0
 city_aliases:
   Buckingham: Doylestown
-promoted: 2026-10-29
+promoted: 2026-11-07
 ---
 
 The City and County of Philadelphia and the four suburban counties of southeastern
