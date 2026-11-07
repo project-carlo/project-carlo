@@ -326,6 +326,46 @@ def test_import_roster_accepts_loose_keys(root: Path, tmp_path: Path) -> None:
         "St. Mary", "Pavilion", "#14", "st-mary-pavilion")
 
 
+def _import_help(capsys: pytest.CaptureFixture[str]) -> str:
+    with pytest.raises(SystemExit):
+        main(["diocese", "roster", "import", "--help"])
+    return capsys.readouterr().out
+
+
+def test_roster_import_help_documents_every_entry_field(capsys) -> None:
+    assert set(rosters._ENTRY_NOTES) == set(rosters.ENTRY_FIELDS)
+    assert set(rosters._IMPORT_EXAMPLE) == set(rosters.ENTRY_FIELDS)
+    assert set(rosters._IMPORT_ALIASES.values()) <= set(rosters.ENTRY_FIELDS)
+    out = _import_help(capsys)
+    for field in rosters.ENTRY_FIELDS:
+        assert f"  {field} " in out
+
+
+def test_roster_import_help_examples_import_as_shown(root: Path, tmp_path: Path, capsys) -> None:
+    out = _import_help(capsys)
+    lines = [line.strip() for line in out.splitlines()]
+    header = lines.index(",".join(rosters.ENTRY_FIELDS))
+    src = tmp_path / "list.csv"
+    src.write_text("\n".join(lines[header:header + 2]) + "\n", encoding="utf-8")
+    rosters.import_roster("test", "from-csv", src)
+    entry = rosters.load_roster("test", "from-csv")["entries"][0]
+    expected = {k: str(v) for k, v in rosters._IMPORT_EXAMPLE.items()}
+    assert entry == expected | {"latitude": 40.5, "longitude": -74.3}
+
+    src = tmp_path / "list.json"
+    src.write_text(next(line for line in lines if line.startswith("[{")), encoding="utf-8")
+    rosters.import_roster("test", "from-json", src)
+    entry = rosters.load_roster("test", "from-json")["entries"][0]
+    assert (entry["id"], entry["group"], entry["line1"]) == ("st-ann-town", "Family 12", "")
+
+
+def test_import_roster_keeps_a_blank_id_as_the_help_warns(root: Path, tmp_path: Path) -> None:
+    src = tmp_path / "list.csv"
+    src.write_text("id,name\n,St. Ann\n", encoding="utf-8")
+    rosters.import_roster("test", "blank", src)
+    assert rosters.load_roster("test", "blank")["entries"][0]["id"] == ""
+
+
 def test_audit_sorts_groups_by_what_is_recorded(root: Path) -> None:
     _parish("a", group="Family #1", publication=["po-container:1/1"])
     _parish("b", group="Family #1", publication=["po-container:1/2"])
