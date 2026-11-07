@@ -256,12 +256,12 @@ counts. `--file -` reads stdin. Use `--create` only when explicitly creating a n
 
 To extend a record, add `--append`: each supplied list, such as `evidence`, `research` or
 `publication_reviews`, gains its new items instead of being replaced, and items already
-stored aren't repeated. Other fields still patch as usual.
+stored aren't repeated. It changes nothing else: other fields and the body patch as usual.
 
 Supplying `body` replaces the explanation, so include the complete intended body. To change
-one section, send `body_sections` instead, `{"Worship sites": "..."}`, with the heading as
-the body writes it, without its `#`s. It replaces that section's text, or adds to its end
-with `--append`, and leaves the rest of the body alone. A heading the body doesn't have
+one section and leave the rest alone, send `body_sections`, `{"Worship sites": "..."}`, with
+the heading as the body writes it, without its `#`s. It replaces that section's text, or
+`body_append`, the same shape, adds to the end of it. A heading the body doesn't have
 becomes a new `##` section at the end, so copy headings exactly.
 
 For example, a patch to an existing parish (illustrative only):

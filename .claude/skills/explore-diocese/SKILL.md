@@ -49,7 +49,8 @@ Then, cheapest first:
    Discover Mass issues the way `probe container` reads ParishesOnline ones.
 3. **Write records:** `uv run python -m pdf_extract diocese write <d> <kind> <slug>
    --file record.json` patches flat fields plus `body`; lists replace existing lists, and
-   `--append` adds to them instead. `body_sections` changes one section of the body.
+   `--append` adds to them instead. `body_sections` replaces one section of the body, and
+   `body_append` adds to one.
    Add `--create` only for explicit new records; `--file -` reads stdin. Quote the heredoc
    (`<<'JSON'`) and write URLs out in full: record bodies use backticks, and an unquoted
    heredoc runs each one as a command. It validates and

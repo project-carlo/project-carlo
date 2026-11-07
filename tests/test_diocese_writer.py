@@ -101,8 +101,8 @@ Nothing.
 """
 
 
-def _body(sections, **kwargs):
-    _write(payload={"body_sections": sections}, **kwargs)
+def _body(sections, key="body_sections", **kwargs):
+    _write(payload={key: sections}, **kwargs)
     return records.load("test").of(records.PARISH)["anne"]["body"]
 
 
@@ -119,15 +119,27 @@ def test_body_sections_replace_one_section_and_keep_the_rest(root):
 def test_body_sections_append_to_a_section_or_add_a_missing_one(root):
     _write(create=True)
     _write(payload={"body": BODY})
-    body = _body({"Worship sites": "Also a chapel.", "Clergy": "Fr. Ann."}, append=True)
+    body = _body({"Worship sites": "Also a chapel.", "Clergy": "Fr. Ann."}, key="body_append")
     assert "St. Old, closed.\n\nAlso a chapel.\n\n## Not yet confirmed" in body
     assert body.endswith("Nothing.\n\n## Clergy\n\nFr. Ann.")
 
 
+def test_append_extends_lists_while_body_sections_still_replace(root):
+    _write(create=True)
+    _write(payload={"body": BODY})
+    other = {"url": "https://example.org/two", "seen": "2026-10-20", "note": "Another page."}
+    _write(append=True, payload={"evidence": [other],
+                                 "body_sections": {"Not yet confirmed": "Her Mass times."}})
+    record = records.load("test").of(records.PARISH)["anne"]
+    assert record["evidence"] == [*EVIDENCE, other]
+    assert record["body"] == BODY.strip().replace("Nothing.", "Her Mass times.")
+
+
 @pytest.mark.parametrize("payload,kwargs,message", [
-    ({"body": "New."}, {"append": True}, "body_sections"),
     ({"body": "New.", "body_sections": {"A": "b"}}, {}, "body_sections"),
+    ({"body": "New.", "body_append": {"A": "b"}}, {}, "body_append"),
     ({"body_sections": {"## A": "b"}}, {}, "without their #s"),
+    ({"body_append": {"## A": "b"}}, {}, "without their #s"),
     ({"body_sections": {"A": " "}}, {}, "non-empty"),
     ({"body_sections": ["A"]}, {}, "must map"),
     ({"name": "New"}, {"append": True, "create": True, "slug": "bede"}, "--append"),

@@ -11,7 +11,7 @@ city_aliases:
   Piscataway Township: Piscataway
   Plainsboro Township: Plainsboro
   Oxford Township: Oxford
-promoted: 2026-11-03
+promoted: 2026-11-07
 ---
 
 Four counties of central and northwestern New Jersey: Middlesex (New Brunswick, Perth Amboy,

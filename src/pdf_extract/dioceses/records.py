@@ -1207,12 +1207,12 @@ def write_help() -> str:
     lines += [
         "",
         "evidence items: {url, seen, quote?, note?}. Lists replace the stored list; with",
-        "--append, their items are added to it instead. Roster links (<roster>:<id>) go on",
+        "--append, their items are added to it. Roster links (<roster>:<id>) go on",
         "churches, exclusions and open records, never on a parish.",
         "",
-        "body_sections: {\"<heading>\": \"<text>\"} changes one section of the body and keeps",
-        "the rest: replaces it, or adds to its end with --append. A heading the body lacks",
-        "becomes a new ## section at the end. Use it or body, never both.",
+        "body_sections: {\"<heading>\": \"<text>\"} replaces one section of the body and keeps",
+        "the rest; body_append, the same shape, adds to the end of a section. A heading the",
+        "body lacks becomes a new ## section at the end. Use them or body, never both.",
         "",
         "example: a new church, linked to two roster entries",
         "  pnpm --silent diocese write <d> church st-ann-town --create --file - <<'JSON'",
@@ -1227,6 +1227,7 @@ def write_help() -> str:
 
 
 _HEADING_RE = re.compile(r"^(#{1,6})[ \t]+(.+?)[ \t]*$", re.MULTILINE)
+_BODY_PATCHES = {"body_sections": False, "body_append": True}  # does it keep the section's text?
 
 
 def _valid_sections(value: Any) -> bool:
@@ -1264,9 +1265,10 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
     """Patch one record from typed JSON, validating before any file changes.
 
     Lists replace their previous value, or gain their new items with `append`;
-    omitted fields remain unchanged. `body_sections` patches the body section by
-    section. Creation must be explicit so a mistyped slug cannot silently produce
-    a second record. Incomplete drafts are allowed and reported, just as with `new`.
+    omitted fields remain unchanged. `body_sections` and `body_append` patch the
+    body section by section. Creation must be explicit so a mistyped slug cannot
+    silently produce a second record. Incomplete drafts are allowed and reported,
+    just as with `new`.
     """
     if kind_name not in KINDS:
         raise DioceseError(f"unknown record kind {kind_name!r}")
@@ -1277,21 +1279,22 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
     kind = KINDS[kind_name]
     if append and create:
         raise DioceseError("--append adds to a stored record; a new record has none yet")
-    if "body" in payload and (append or "body_sections" in payload):
-        raise DioceseError("body replaces the whole explanation; to add to it or change one "
-                           "section, send body_sections. Nothing was written.")
-    unknown = sorted(set(payload) - set(kind.fields) - {"body", "body_sections"})
+    if "body" in payload and _BODY_PATCHES.keys() & payload.keys():
+        raise DioceseError("body replaces the whole explanation, so it can't go with "
+                           "body_sections or body_append. Nothing was written.")
+    unknown = sorted(set(payload) - set(kind.fields) - {"body", *_BODY_PATCHES})
     if unknown:
         hints = list(dict.fromkeys(h for f in unknown if (h := _ELSEWHERE.get((kind_name, f)))))
         raise DioceseError(
             f"{kind_name} has no writable fields: {', '.join(unknown)}"
             + "".join(f"\n  {h}" for h in hints)
-            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body, body_sections"
+            + f"\n  {kind_name} fields: {', '.join(kind.fields)}, body, "
+            + ", ".join(_BODY_PATCHES) +
             " (types and an example: `diocese write --help`). Nothing was written.")
     for key, value in payload.items():
-        if key == "body_sections":
+        if key in _BODY_PATCHES:
             if not _valid_sections(value):
-                raise DioceseError("body_sections must map headings, without their #s, to "
+                raise DioceseError(f"{key} must map headings, without their #s, to "
                                    "non-empty text. Nothing was written.")
             continue
         if key in _LIST_FIELDS:
@@ -1324,7 +1327,7 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
             raise DioceseError(f"{kind.dir}/{slug}.md does not parse; repair it before editing")
         record = _deep_copy(_get(before, kind, slug))
     changes = _deep_copy(dict(payload))
-    sections = changes.pop("body_sections", {})
+    patches = {key: changes.pop(key, {}) for key in _BODY_PATCHES}
     if append:
         for key in changes.keys() & (_LIST_FIELDS | _OBJECT_LIST_FIELDS):
             merged = list(record.get(key) or [])
@@ -1332,8 +1335,9 @@ def write_record(diocese: str, kind_name: str, slug: str, payload: Mapping[str, 
                        if item not in merged and item not in changes[key][:i]]
             changes[key] = merged
     record.update(changes)
-    for heading, text in sections.items():
-        record["body"] = _patch_section(record.get("body") or "", heading, text, append=append)
+    for key, keep in _BODY_PATCHES.items():
+        for heading, text in patches[key].items():
+            record["body"] = _patch_section(record.get("body") or "", heading, text, append=keep)
     # JSON uses the stored types, never flag-style coercion. Reject invalid data
     # rather than silently dropping an evidence item during serialization.
     target_problems = Problems()

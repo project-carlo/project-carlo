@@ -4,7 +4,7 @@ state: NJ
 website: https://rcdop.org
 status: promoted
 gcatholic: pate0
-promoted: 2026-11-05
+promoted: 2026-11-07
 ---
 
 Three counties of northern New Jersey: Passaic (Paterson, Passaic, Clifton, Wayne, West
