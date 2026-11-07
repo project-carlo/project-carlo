@@ -1108,6 +1108,88 @@ def test_a_page_whose_cards_render_late_is_read_again() -> None:
     assert source_url == f"{HOME}/_files/ugd/23b1db_bb.pdf"
 
 
+class _SizedResponse:
+    """A response with `body`, declaring `content_length` if given."""
+
+    def __init__(self, body, content_length=None):
+        self.body = body
+        self.headers = {} if content_length is None else {"Content-Length": content_length}
+        self.sized_reads = []
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def read(self, size=None):
+        self.sized_reads.append(size)
+        return self.body if size is None else self.body[:size]
+
+
+def test_http_get_refuses_a_declared_size_over_the_limit_without_reading_it(monkeypatch):
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"", content_length="1000000001")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == []
+
+
+def test_http_get_stops_reading_a_body_of_unknown_size_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF-big"))
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._http_get("https://example.org/b.pdf")
+
+
+def test_http_get_keeps_a_body_at_the_limit(monkeypatch):
+    from pdf_extract import fetch
+
+    monkeypatch.setattr(fetch, "MAX_DOWNLOAD_BYTES", 4)
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: _SizedResponse(b"%PDF"))
+
+    assert fetch._http_get("https://example.org/b.pdf").body == b"%PDF"
+
+
+def test_http_get_reads_a_declared_body_unsized_so_a_cut_off_read_raises(monkeypatch):
+    # http.client only raises IncompleteRead from an unsized read: a sized one
+    # would quietly return, and store, a truncated PDF.
+    from pdf_extract import fetch
+
+    response = _SizedResponse(b"%PDF", content_length="4")
+    monkeypatch.setattr(fetch, "urlopen", lambda req, timeout: response)
+
+    fetch._http_get("https://example.org/b.pdf")
+
+    assert response.sized_reads == [None]
+
+
+def test_an_oversized_download_is_not_retried_from_the_source_address(monkeypatch):
+    from pdf_extract import fetch
+
+    calls = []
+
+    def get(url, **_):
+        calls.append(url)
+        raise fetch.DownloadTooLarge("Over 1000 MB")
+
+    monkeypatch.setattr(fetch, "_http_get", get)
+
+    with pytest.raises(fetch.DownloadTooLarge):
+        fetch._download_bulletin(
+            fetch_url="https://example.org/b.pdf", source_url="https://example.org/page",
+        )
+
+    assert calls == ["https://example.org/b.pdf"]
+
+
 def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
     # A WordPress file name with an en dash used to raise UnicodeEncodeError
     # when it was sent as the Referer of the next request.
@@ -1124,7 +1206,7 @@ def test_http_get_percent_encodes_a_non_ascii_referer(monkeypatch):
         def __exit__(self, *exc):
             return False
 
-        def read(self):
+        def read(self, _size=-1):
             return b"%PDF"
 
     def fake_urlopen(req, timeout):

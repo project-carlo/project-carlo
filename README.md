@@ -131,6 +131,7 @@ prints its result as JSON on success.
 | `pnpm data:pull [--run-id ID] [--snapshot-only] [--no-snapshot]` | Replace the local database (and snapshot) with a published run |
 | `pnpm data:status` | Which run is published, and recent runs |
 | `pnpm data:prune [--apply]` | Which old runs pruning would delete |
+| `pnpm data:recompact [--min-mb N] [--apply]` | Which large stored bulletins compacting again would shrink |
 | `pnpm db:create` / `pnpm db:drop` | An empty database (schema and CSVs, no bulletins) / delete it |
 | **Fetching and parish data** | |
 | `pnpm fetch:check [--parish SLUG] [--provider P] [--record DIR]` | Dry-run the bulletin resolvers ([docs/fetching.md](docs/fetching.md)) |

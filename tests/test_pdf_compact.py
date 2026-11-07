@@ -109,14 +109,14 @@ def test_keeps_the_original_when_ghostscript_output_is_wrong(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     # A tiny but wrong result (one page instead of three) must not be stored.
-    monkeypatch.setattr(pdf_compact, "_ghostscript", lambda _data, _pages: _blank_pdf(1))
+    monkeypatch.setattr(pdf_compact, "_ghostscript", lambda _data, _pages, **_: _blank_pdf(1))
     original = _photo_pdf(3, px=64)
 
     assert compact_bulletin_pdf(original) is original
 
 
 def test_keeps_the_original_when_ghostscript_fails(monkeypatch: pytest.MonkeyPatch) -> None:
-    def boom(_data: bytes, _pages: int) -> bytes:
+    def boom(_data: bytes, _pages: int, **_: object) -> bytes:
         raise RuntimeError("gs crashed")
 
     monkeypatch.setattr(pdf_compact, "_ghostscript", boom)
@@ -131,3 +131,104 @@ def test_stores_unreadable_bytes_unchanged(caplog: pytest.LogCaptureFixture) -> 
     with caplog.at_level(logging.WARNING):
         assert compact_bulletin_pdf(data) is data
     assert "unreadable PDF" in caplog.text
+
+
+def _gs_recording(monkeypatch: pytest.MonkeyPatch, results: list[bytes | None]) -> list[dict]:
+    """Make each Ghostscript pass give the next of `results`; returns the passes' options."""
+    passes: list[dict] = []
+    outcomes = iter(results)
+
+    def fake(_data: bytes, _pages: int, **options: object) -> bytes | None:
+        passes.append(options)
+        return next(outcomes)
+
+    monkeypatch.setattr(pdf_compact, "_ghostscript", fake)
+    return passes
+
+
+def test_retries_without_converting_colours_when_ghostscript_times_out(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    original = _photo_pdf(2, px=64)
+    smaller = _blank_pdf(2)
+    passes = _gs_recording(monkeypatch, [None, smaller])
+
+    assert compact_bulletin_pdf(original) == smaller
+    assert passes[1]["options"] == pdf_compact._KEEP_COLOURS
+    assert passes[1]["timeout"] > pdf_compact.GHOSTSCRIPT_TIMEOUT_SECONDS
+
+
+def test_does_not_retry_when_ghostscript_worked(monkeypatch: pytest.MonkeyPatch) -> None:
+    passes = _gs_recording(monkeypatch, [_blank_pdf(2)])
+
+    compact_bulletin_pdf(_photo_pdf(2, px=64))
+
+    assert len(passes) == 1
+
+
+def test_a_copy_over_the_limit_tries_a_lower_resolution(monkeypatch: pytest.MonkeyPatch) -> None:
+    original = _photo_pdf(2, px=256)
+    first = _blank_pdf(2) + b"\n" * 2000
+    second = _blank_pdf(2)
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", len(second) + 1000)
+    passes = _gs_recording(monkeypatch, [first, second])
+
+    assert compact_bulletin_pdf(original) == second
+    assert passes[1]["options"] == pdf_compact._LOW_RESOLUTION
+
+
+def test_returns_what_it_has_when_nothing_gets_under_the_limit(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    # What to do about it is the caller's: compaction only reports the size.
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    original = _photo_pdf(1, px=64)
+    _gs_recording(monkeypatch, [None, None, None])
+
+    assert compact_bulletin_pdf(original) is original
+
+
+def test_gives_ghostscript_a_pdf_too_large_to_store_that_pypdf_cannot_read(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    unreadable = b"%PDF-1.4 not really"
+    monkeypatch.setattr(pdf_compact, "MAX_STORED_BULLETIN_BYTES", 10)
+    readable = _blank_pdf(2)
+    _gs_recording(monkeypatch, [readable])
+
+    # Repeated only so that the two blank pages count as smaller.
+    assert compact_bulletin_pdf(unreadable * 1000) == readable
+
+
+@needs_gs
+def test_ghostscript_accepts_a_last_page_past_the_end() -> None:
+    # An unreadable PDF's page count is unknown, so `max_pages` is passed as it is.
+    assert _pages(pdf_compact._ghostscript(_photo_pdf(2, px=64), 10)) == 2
+
+
+@needs_gs
+@pytest.mark.parametrize(
+    ("options", "jpeg"),
+    [
+        (pdf_compact._KEEP_COLOURS, pdf_compact._HIGH_QUALITY_JPEG),
+        (pdf_compact._LOW_RESOLUTION, pdf_compact._SMALLER_JPEG),
+    ],
+)
+def test_ghostscript_runs_with_each_fallback(options: tuple[str, ...], jpeg: str) -> None:
+    original = _photo_pdf(2)
+
+    compacted = pdf_compact._ghostscript(original, 2, options=options, jpeg=jpeg)
+
+    assert compacted is not None and _pages(compacted) == 2
+    assert len(compacted) < len(original) / 2
+
+
+@needs_gs
+def test_low_resolution_is_smaller_than_the_ordinary_copy() -> None:
+    ordinary = pdf_compact._ghostscript(_photo_pdf(2), 2)
+
+    low = pdf_compact._ghostscript(
+        ordinary, 2, options=pdf_compact._LOW_RESOLUTION, jpeg=pdf_compact._SMALLER_JPEG,
+    )
+
+    assert len(low) < len(ordinary)

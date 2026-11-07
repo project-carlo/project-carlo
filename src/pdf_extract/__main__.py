@@ -37,12 +37,14 @@ from pdf_extract.compare import compare
 from pdf_extract.datasync import (
     DEFAULT_KEEP_MONTHLY,
     DEFAULT_KEEP_RECENT,
+    DEFAULT_RECOMPACT_MIN_BYTES,
     build_deploy_snapshot,
     promote,
     pull,
     push_candidate,
 )
 from pdf_extract.datasync import prune as data_prune
+from pdf_extract.datasync import recompact as data_recompact
 from pdf_extract.datasync import status as data_status
 from pdf_extract.db import create_db, ensure_db
 from pdf_extract.detect import run_detection
@@ -351,6 +353,10 @@ def _cmd_data_prune(args: argparse.Namespace) -> Result:
     return data_prune(
         keep_recent=args.keep_recent, keep_monthly=args.keep_monthly, apply=args.apply,
     )
+
+
+def _cmd_data_recompact(args: argparse.Namespace) -> Result:
+    return data_recompact(min_bytes=int(args.min_mb * 1e6), apply=args.apply)
 
 
 def _cmd_db_create(args: argparse.Namespace) -> Result:
@@ -741,6 +747,22 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     data_prune_parser.set_defaults(handler=_cmd_data_prune)
     _add_common_args(data_prune_parser)
+
+    data_recompact_parser = data_subparsers.add_parser(
+        "recompact",
+        help="Compact stored bulletins over a size again, keeping their keys",
+    )
+    data_recompact_parser.add_argument(
+        "--min-mb", type=float, default=DEFAULT_RECOMPACT_MIN_BYTES / 1e6,
+        help="Stored size to start from "
+        f"(default {DEFAULT_RECOMPACT_MIN_BYTES / 1e6:.0f} MB)",
+    )
+    data_recompact_parser.add_argument(
+        "--apply", action="store_true",
+        help="Replace them; without it, only report what would change",
+    )
+    data_recompact_parser.set_defaults(handler=_cmd_data_recompact)
+    _add_common_args(data_recompact_parser)
 
     # -- diocese (exploring new dioceses; quiet by default, the JSON is the output) --
     add_diocese_parser(

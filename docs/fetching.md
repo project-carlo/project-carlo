@@ -35,9 +35,29 @@ week's bulletin at the same one.
 `fetch` stores a compacted copy of each bulletin: the first 10 pages, which is
 all the classifiers read, with images downsampled to 150 dpi by Ghostscript.
 `data/bulletin_page_limits.csv` raises the page limit, with the reason, for a
-parish whose schedule runs past page 10. When compaction fails or saves nothing,
-the PDF is stored as downloaded. The storage key's hash is of the PDF as
+parish whose schedule runs past page 10. The storage key's hash is of the PDF as
 downloaded. Without `gs` installed, long bulletins are only truncated.
+
+Compaction takes as many steps as a bulletin needs (`src/pdf_extract/pdf_compact.py`):
+
+1. Ghostscript, with a 180-second limit. Time goes on converting colours rather
+   than on file size, so a 39 MB bulletin can take longer than a 515 MB one.
+2. If that fails, Ghostscript again without converting colours. It takes seconds
+   on the same files; the result can be larger, since CMYK images stay CMYK.
+3. If what is left is still over 20 MB, Ghostscript at 110 dpi.
+
+**A bulletin over 20 MB after all of that is not stored** (`too_large` in the run
+report, which counts it as a failure). Nothing is recorded for it, so the parish
+keeps its last bulletin and the next run tries again. Under 20 MB a failure is
+harmless: when compaction fails or saves nothing, the smallest copy available is
+stored, which may be the PDF as downloaded. A download over 1 GB is stopped and
+reported the same way.
+
+When a parish shows up as `too_large`, the file itself is the place to start:
+page through it, and work out what makes it big. `pnpm data:recompact` shrinks
+bulletins already in the bucket. It lists what it would change, and `--apply`
+(with `CARLO_REMOTE_WRITE=1` and write credentials) replaces them under the same
+keys, so no bulletin row, label or cached result changes.
 
 ## Checking the fetch stage
 

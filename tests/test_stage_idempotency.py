@@ -17,6 +17,7 @@ from pdf_extract.duplicates import Validators
 from pdf_extract.fetch import (
     BulletinLink,
     Download,
+    DownloadTooLarge,
     FetchSource,
     _site_for_source,
     _site_for_url,
@@ -429,6 +430,57 @@ def test_fetch_stores_a_compacted_copy_under_the_downloaded_hash(monkeypatch, db
     assert get_store().get(
         bulletin_pdf_key("test-parish", bulletin["content_hash"])
     ) == b"%PDF small"
+
+
+def test_fetch_stores_nothing_over_the_size_limit(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 big")
+    monkeypatch.setattr("pdf_extract.fetch.MAX_STORED_BULLETIN_BYTES", 8)
+    monkeypatch.setattr(
+        "pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: b"%PDF still too big",
+    )
+    _fake_browser(monkeypatch)
+    puts = []
+    monkeypatch.setattr(get_store(), "put", lambda key, *_a, **_k: puts.append(key))
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+
+    assert puts == []
+    assert _bulletins(db) == []
+    assert result["failed_parishes"] == 1
+    outcome = _results(db, "run-1")["test-parish"]
+    assert outcome["status"] == "too_large"
+    assert "not stored" in outcome["detail"]
+
+
+def test_fetch_stores_a_bulletin_exactly_at_the_size_limit(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+    _serve(monkeypatch, b"%PDF-1.4 big")
+    monkeypatch.setattr("pdf_extract.fetch.MAX_STORED_BULLETIN_BYTES", 10)
+    monkeypatch.setattr("pdf_extract.fetch.compact_bulletin_pdf", lambda data, **_: b"%PDF small")
+    _fake_browser(monkeypatch)
+
+    fetch_bulletins(parish_name="Test Parish")
+
+    assert len(_bulletins(db)) == 1
+
+
+def test_fetch_reports_a_download_over_the_limit_as_too_large(monkeypatch, db: Path) -> None:
+    _link_to(monkeypatch, "https://example.org/bulletin.pdf")
+
+    def download(**_):
+        raise DownloadTooLarge("Over 1000 MB: https://example.org/bulletin.pdf")
+
+    monkeypatch.setattr("pdf_extract.fetch._download_bulletin", download)
+    _fake_browser(monkeypatch)
+    _start_run(db, "run-1")
+
+    result = fetch_bulletins(parish_name="Test Parish", run_id="run-1")
+
+    assert result["failed_parishes"] == 1
+    assert _bulletins(db) == []
+    assert _results(db, "run-1")["test-parish"]["status"] == "too_large"
 
 
 def test_fetch_keeps_an_already_stored_bulletin(monkeypatch, db: Path) -> None:

@@ -197,6 +197,21 @@ def test_cached_store_exists_checks_local_then_remote(tmp_path: Path) -> None:
     assert not store.exists("neither")
 
 
+def test_local_store_lists_sizes(tmp_path: Path) -> None:
+    store = LocalBlobStore(tmp_path)
+    store.put("bulletins/a/1.pdf", b"123")
+    store.put("other/2.pdf", b"12345")
+
+    assert list(store.list_sizes("bulletins/")) == [("bulletins/a/1.pdf", 3)]
+
+
+def test_s3_store_lists_sizes(s3_client: Any) -> None:
+    store = S3BlobStore(bucket=BUCKET, client=s3_client)
+    store.put("bulletins/a/1.pdf", b"123")
+
+    assert list(store.list_sizes("bulletins/")) == [("bulletins/a/1.pdf", 3)]
+
+
 def test_cached_store_lists_remote_when_configured(tmp_path: Path) -> None:
     local = LocalBlobStore(tmp_path / "local")
     remote = LocalBlobStore(tmp_path / "remote")

@@ -42,11 +42,17 @@ from pdf_extract.extract_frontend_db import (
     read_snapshot,
 )
 from pdf_extract.paths import DATA_DIR
+from pdf_extract.pdf_compact import MAX_STORED_BULLETIN_BYTES, compact_bulletin_pdf
+from pdf_extract.pdf_truncate import max_pages_for
 from pdf_extract.storage import DEFAULT_DB_PATH, connect_db, utc_now_iso
 
 LOGGER = logging.getLogger(__name__)
 
 PIPELINE_PREFIX = "pipeline"
+BULLETINS_PREFIX = "bulletins"
+# Above anything Ghostscript has produced, so these were never compacted and
+# no JPEG is compressed twice.
+DEFAULT_RECOMPACT_MIN_BYTES = 10_000_000
 LATEST_KEY = f"{PIPELINE_PREFIX}/latest.json"
 SNAPSHOT_PATH = DEST_SNAPSHOT
 OUT_DIR = DATA_DIR / "out"
@@ -408,6 +414,49 @@ def prune(
         "deleted": deleted,
         "ignored": ignored,
     }
+
+
+def recompact(
+    *, min_bytes: int = DEFAULT_RECOMPACT_MIN_BYTES, apply: bool = False,
+) -> dict[str, Any]:
+    """Compact stored bulletins of at least `min_bytes` again.
+
+    For the bulletins `fetch` stored uncompacted. Each key stays the same, and
+    with it every bulletin row, label and cached result, since the key's hash is
+    of the PDF as downloaded rather than of the stored bytes. A bulletin is only
+    replaced by a copy that is smaller and within the limit. Without `apply`,
+    only reports what it would do.
+    """
+    store = get_store()
+    if apply and not (store.remote_write or store.remote is None):
+        raise BlobStoreError(
+            "Remote writes are disabled: set R2 credentials and CARLO_REMOTE_WRITE=1"
+        )
+    results = []
+    for key, size in sorted(store.list_sizes(f"{BULLETINS_PREFIX}/"), key=lambda item: -item[1]):
+        if size < min_bytes or not key.endswith(".pdf"):
+            continue
+        data = store.get(key)
+        if data is None:
+            raise BlobStoreError(f"{key} is listed but could not be read")
+        compacted = compact_bulletin_pdf(data, max_pages=max_pages_for(key.split("/")[1]))
+        if len(compacted) >= len(data):
+            status = "no_smaller"
+        elif len(compacted) > MAX_STORED_BULLETIN_BYTES:
+            status = "still_too_large"
+        else:
+            status = "replaced" if apply else "would_replace"
+            if apply:
+                store.put(key, compacted, content_type="application/pdf")
+        LOGGER.info("%s: %s, %d -> %d bytes", key, status, len(data), len(compacted))
+        results.append({
+            "key": key, "status": status, "bytes": len(data), "compacted_bytes": len(compacted),
+        })
+    saved = sum(
+        r["bytes"] - r["compacted_bytes"] for r in results
+        if r["status"] in {"replaced", "would_replace"}
+    )
+    return {"applied": apply, "min_bytes": min_bytes, "saved_bytes": saved, "bulletins": results}
 
 
 def build_deploy_snapshot(
