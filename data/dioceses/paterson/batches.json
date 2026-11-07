@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "diocese": "paterson",
+  "first_batch": "hanover",
+  "batches": [
+    {
+      "id": "hanover",
+      "name": "Hanover, Whippany, Cedar Knolls and Morris Plains",
+      "why": "Four suburban Eastern Morris parishes, each with its own pastor and eCatholic site (finder id = eCatholic site id). A typical batch: settle the publisher pattern here first.",
+      "entries": [
+        "directory:10966",
+        "directory:12015",
+        "directory:11932",
+        "directory:21425",
+        "gcatholic:18952",
+        "gcatholic:18953",
+        "gcatholic:18955",
+        "gcatholic:18956"
+      ]
+    },
+    {
+      "id": "parsippany",
+      "name": "Parsippany and Mountain Lakes",
+      "why": "Three Parsippany parishes and St. Catherine of Siena, Mountain Lakes (Eastern Morris deanery), each with its own pastor.",
+      "entries": [
+        "directory:11387",
+        "directory:11974",
+        "directory:11690",
+        "directory:11637",
+        "gcatholic:18951",
+        "gcatholic:18957",
+        "gcatholic:18954",
+        "gcatholic:18950"
+      ]
+    },
+    {
+      "id": "chatham-madison",
+      "name": "Chatham, Chatham Township, Madison and Florham Park",
+      "why": "Southeastern Morris parishes in adjoining towns, each with its own pastor.",
+      "entries": [
+        "directory:11878",
+        "directory:15732",
+        "directory:11416",
+        "directory:12451",
+        "gcatholic:19011",
+        "gcatholic:19009",
+        "gcatholic:19013",
+        "gcatholic:19010"
+      ]
+    },
+    {
+      "id": "new-vernon-stirling",
+      "name": "New Vernon, Convent Station and Stirling, with their shrines",
+      "why": "Christ the King, St. Thomas More and St. Vincent de Paul. GCatholic adds the Blessed Miriam Teresa shrine (Convent Station, Sisters of Charity) and the Shrine of St. Joseph, Stirling: check whether each has public Mass and under whose bulletin.",
+      "entries": [
+        "directory:12066",
+        "directory:11361",
+        "directory:11664",
+        "gcatholic:19008",
+        "gcatholic:19012",
+        "gcatholic:40308",
+        "gcatholic:19014",
+        "gcatholic:33104"
+      ]
+    },
+    {
+      "id": "morristown-mendham",
+      "name": "Morristown and Mendham",
+      "why": "Assumption and St. Margaret of Scotland (Morristown), St. Joseph (Mendham). GCatholic adds St. Mary's Abbey (Benedictine, Delbarton): check for public Mass.",
+      "entries": [
+        "directory:11358",
+        "directory:17644",
+        "directory:11841",
+        "gcatholic:19015",
+        "gcatholic:19019",
+        "gcatholic:39120",
+        "gcatholic:19017"
+      ]
+    },
+    {
+      "id": "long-valley-chester",
+      "name": "Long Valley and Chester",
+      "why": "Three Long Valley parishes (Our Lady of the Mountain, St. Luke, St. Mark) and St. Lawrence, Chester. The finder also pins Saint Luke Academy (a school).",
+      "entries": [
+        "directory:12054",
+        "directory:13158",
+        "directory:36637",
+        "directory:12055",
+        "directory:11023",
+        "gcatholic:19020",
+        "gcatholic:19021",
+        "gcatholic:19023",
+        "gcatholic:19018"
+      ]
+    },
+    {
+      "id": "randolph-succasunna",
+      "name": "Randolph and Succasunna",
+      "why": "Resurrection and St. Matthew (Randolph), St. Therese (Succasunna/Roxbury).",
+      "entries": [
+        "directory:28421",
+        "directory:11896",
+        "directory:11753",
+        "gcatholic:19016",
+        "gcatholic:19024",
+        "gcatholic:19044"
+      ]
+    },
+    {
+      "id": "mount-olive-netcong",
+      "name": "Budd Lake, Flanders and Netcong",
+      "why": "St. Jude (Budd Lake) and St. Elizabeth Ann Seton (Flanders), both in Mount Olive, and St. Michael (Netcong).",
+      "entries": [
+        "directory:20010",
+        "directory:23931",
+        "directory:10927",
+        "gcatholic:19039",
+        "gcatholic:19022",
+        "gcatholic:19041"
+      ]
+    },
+    {
+      "id": "lake-hopatcong",
+      "name": "Lake Hopatcong churches",
+      "why": "Our Lady of the Lake (Mount Arlington), Our Lady Star of the Sea (Lake Hopatcong), St. Jude (Hopatcong): the diocesan history notes the lake's four churches are now three.",
+      "entries": [
+        "directory:13399",
+        "directory:14033",
+        "directory:13527",
+        "gcatholic:19042",
+        "gcatholic:19043",
+        "gcatholic:19040"
+      ]
+    },
+    {
+      "id": "dover-wharton",
+      "name": "Dover, Wharton and Green Pond",
+      "why": "Sacred Heart & Our Lady Queen of the Most Holy Rosary (merged 2018; check whether both Dover churches still have Mass), St. Mary (Dover/Wharton), St. Bernard (Mount Hope), St. Simon the Apostle (Green Pond, an administrator).",
+      "entries": [
+        "directory:5701",
+        "directory:6893",
+        "directory:14262",
+        "directory:11628",
+        "gcatholic:18980",
+        "gcatholic:18979",
+        "gcatholic:18978",
+        "gcatholic:18974",
+        "gcatholic:18982"
+      ]
+    },
+    {
+      "id": "rockaway-denville",
+      "name": "Rockaway, Rockaway Township and Denville",
+      "why": "Sacred Heart of Jesus and St. Cecilia (Rockaway borough), St. Clement (Rockaway Township), St. Mary (Denville), each with its own pastor.",
+      "entries": [
+        "directory:11380",
+        "directory:6224",
+        "directory:11657",
+        "directory:11353",
+        "gcatholic:18981",
+        "gcatholic:18975",
+        "gcatholic:18976",
+        "gcatholic:18977"
+      ]
+    },
+    {
+      "id": "boonton-montville",
+      "name": "Boonton and Montville",
+      "why": "Our Lady of Mount Carmel and Sts. Cyril & Methodius (Boonton; olmcboonton.org redirects offsite: check whether to the other Boonton parish), St. Pius X (Montville).",
+      "entries": [
+        "directory:20171",
+        "directory:20172",
+        "directory:11408",
+        "gcatholic:18972",
+        "gcatholic:18967",
+        "gcatholic:18973"
+      ]
+    },
+    {
+      "id": "pequannock-kinnelon",
+      "name": "Pequannock, Pompton Plains, Lincoln Park and Kinnelon",
+      "why": "Holy Spirit (two finder pins), Our Lady of Good Counsel, St. Joseph Lincoln Park, Our Lady of the Magnificat. GCatholic adds Our Lady of Fatima Chapel, Pequannock (FSSP, Latin Mass): check its own bulletin.",
+      "entries": [
+        "directory:30384",
+        "directory:5732",
+        "directory:23104",
+        "directory:6376",
+        "directory:11409",
+        "gcatholic:18968",
+        "gcatholic:38951",
+        "gcatholic:18970",
+        "gcatholic:18969",
+        "gcatholic:18971"
+      ]
+    },
+    {
+      "id": "northern-passaic",
+      "name": "Pompton Lakes, Haskell, Ringwood and Butler",
+      "why": "St. Mary Pompton Lakes (Franciscan), St. Francis Haskell, St. Catherine of Bologna (two finder pins, two websites), St. Anthony Butler (Franciscan).",
+      "entries": [
+        "directory:21395",
+        "directory:11332",
+        "directory:6362",
+        "directory:33389",
+        "directory:11662",
+        "gcatholic:18987",
+        "gcatholic:18985",
+        "gcatholic:18984",
+        "gcatholic:18983"
+      ]
+    },
+    {
+      "id": "west-milford-vernon",
+      "name": "West Milford, Hewitt, Highland Lakes and McAfee",
+      "why": "St. Joseph West Milford and Our Lady Queen of Peace Hewitt (West Milford), Our Lady of Fatima Highland Lakes (two finder pins) and St. Francis de Sales McAfee (Vernon).",
+      "entries": [
+        "directory:24657",
+        "directory:12049",
+        "directory:25267",
+        "directory:5707",
+        "directory:11490",
+        "gcatholic:18986",
+        "gcatholic:18988",
+        "gcatholic:19031",
+        "gcatholic:19025"
+      ]
+    },
+    {
+      "id": "oak-ridge-stockholm",
+      "name": "Oak Ridge, Stockholm and Franklin",
+      "why": "St. Thomas the Apostle (Oak Ridge) and St. John Vianney (Stockholm) share a pastor (priest directory) and a website (ststhomasjohn.org): likely one bulletin. Immaculate Conception, Franklin is the neighbour.",
+      "entries": [
+        "directory:6889",
+        "directory:5676",
+        "directory:11776",
+        "gcatholic:19045",
+        "gcatholic:19028",
+        "gcatholic:19027"
+      ]
+    },
+    {
+      "id": "montague-sandyston-sussex",
+      "name": "Montague, Sandyston, Sussex and Hamburg",
+      "why": "St. James the Greater (Montague) and St. Thomas (Sandyston) share a pastor and saintjamesthomas.org (finder entry 11980 names both): likely one bulletin. St. Monica (Sussex) and St. Jude (Hamburg/Hardyston) are neighbours.",
+      "entries": [
+        "directory:11980",
+        "directory:5728",
+        "directory:12096",
+        "directory:11766",
+        "gcatholic:19046",
+        "gcatholic:19038",
+        "gcatholic:19030",
+        "gcatholic:19026"
+      ]
+    },
+    {
+      "id": "newton-branchville",
+      "name": "Newton, Swartswood, Branchville and Andover",
+      "why": "St. Joseph Newton, Our Lady of Mount Carmel Swartswood, Our Lady Queen of Peace Branchville, Good Shepherd Andover. GCatholic adds St. Paul's Abbey, Newton (Benedictine, Korean) and Our Lady of the Holy Spirit Sanctuary, Branchville: check for public Mass.",
+      "entries": [
+        "directory:11734",
+        "directory:11903",
+        "directory:11413",
+        "directory:11119",
+        "gcatholic:19029",
+        "gcatholic:39141",
+        "gcatholic:19033",
+        "gcatholic:19034",
+        "gcatholic:37948",
+        "gcatholic:19036"
+      ]
+    },
+    {
+      "id": "sparta-ogdensburg",
+      "name": "Sparta and Ogdensburg",
+      "why": "Our Lady of the Lake and St. Kateri Tekakwitha (Sparta), St. Thomas of Aquin (Ogdensburg).",
+      "entries": [
+        "directory:13971",
+        "directory:11335",
+        "directory:12019",
+        "gcatholic:19032",
+        "gcatholic:19037",
+        "gcatholic:19035"
+      ]
+    },
+    {
+      "id": "wayne",
+      "name": "Wayne",
+      "why": "Annunciation BVM, Immaculate Heart of Mary, Our Lady of Consolation (three finder pins, two of them old eCatholic sites), Our Lady of the Valley & Holy Cross (one bulletin heads both churches: settle whether Holy Cross is still a worship site). The finder's Prince of Peace Chapel is William Paterson University's campus ministry.",
+      "entries": [
+        "directory:11842",
+        "directory:11350",
+        "directory:11364",
+        "directory:660",
+        "directory:700",
+        "directory:11969",
+        "directory:12280",
+        "gcatholic:18958",
+        "gcatholic:18961",
+        "gcatholic:18963",
+        "gcatholic:18965",
+        "gcatholic:18960"
+      ]
+    },
+    {
+      "id": "totowa-little-falls-hawthorne",
+      "name": "Totowa, Little Falls, Prospect Park and Hawthorne",
+      "why": "St. James of the Marches, Our Lady of the Holy Angels (GCatholic does not list it: its Little Falls entry is the Armenian church), St. Paul Prospect Park, St. Anthony Hawthorne.",
+      "entries": [
+        "directory:11368",
+        "directory:11688",
+        "directory:11956",
+        "directory:12069",
+        "gcatholic:18962",
+        "gcatholic:18966",
+        "gcatholic:18959"
+      ]
+    },
+    {
+      "id": "paterson-padre-pio",
+      "name": "Padre Pio Parish, St. Gerard Majella and St. Therese (Paterson)",
+      "why": "Padre Pio Parish was formed 12 April 2026 from St. Bonaventure and Our Lady of Pompei (both churches open, one eCatholic bulletin 39965); the finder still pins all three. St. Gerard Majella (and its school's pin) and St. Therese.",
+      "entries": [
+        "directory:39965",
+        "directory:11320",
+        "directory:22616",
+        "directory:16550",
+        "directory:30898",
+        "directory:11749",
+        "gcatholic:19001",
+        "gcatholic:19049",
+        "gcatholic:19004",
+        "gcatholic:19052"
+      ]
+    },
+    {
+      "id": "paterson-downtown",
+      "name": "Paterson: Cathedral, Our Lady of Victories, St. Joseph, St. Agnes",
+      "why": "The cathedral (GCatholic omits it), Our Lady of Victories (administrator is also a cathedral parochial vicar; site olvjude.org), St. Joseph (sanjosepaterson.org) and St. Agnes. GCatholic's St. Casimir closed in 2018 (diocesan history).",
+      "entries": [
+        "directory:11263",
+        "directory:11314",
+        "directory:11440",
+        "directory:13010",
+        "gcatholic:19050",
+        "gcatholic:19006",
+        "gcatholic:18998",
+        "gcatholic:19002"
+      ]
+    },
+    {
+      "id": "paterson-east",
+      "name": "Paterson: St. Michael, St. Anthony of Padua, St. Stephen",
+      "why": "Three city parishes with Spanish, Polish and Italian communities.",
+      "entries": [
+        "directory:13153",
+        "directory:11877",
+        "directory:33773",
+        "gcatholic:19047",
+        "gcatholic:18999",
+        "gcatholic:19051"
+      ]
+    },
+    {
+      "id": "paterson-north",
+      "name": "Paterson: Blessed Sacrament, Our Lady of Lourdes, St. Mary Help of Christians",
+      "why": "Three city parishes north and east of downtown.",
+      "entries": [
+        "directory:12000",
+        "directory:11325",
+        "directory:25394",
+        "gcatholic:19000",
+        "gcatholic:19048",
+        "gcatholic:19007"
+      ]
+    },
+    {
+      "id": "clifton-a",
+      "name": "Clifton: St. Paul, Sts. Cyril & Methodius, Sacred Heart, St. Brendan & St. George",
+      "why": "St. Brendan merged with St. George (Paterson) in 2011; the St. George church is now the Syro-Malabar parish (in the other-jurisdiction batch). GCatholic adds Holy Face Monastery, Clifton: check for public Mass.",
+      "entries": [
+        "directory:6361",
+        "directory:14179",
+        "directory:11647",
+        "directory:11777",
+        "gcatholic:18949",
+        "gcatholic:18945",
+        "gcatholic:18948",
+        "gcatholic:18943",
+        "gcatholic:37950"
+      ]
+    },
+    {
+      "id": "clifton-b",
+      "name": "Clifton: St. Andrew, St. Clare, St. John Kanty, St. Philip",
+      "why": "Four Clifton parishes; St. John Kanty is run by the Conventual Franciscans.",
+      "entries": [
+        "directory:5838",
+        "directory:11620",
+        "directory:6358",
+        "directory:6359",
+        "gcatholic:18942",
+        "gcatholic:18944",
+        "gcatholic:18946",
+        "gcatholic:18947"
+      ]
+    },
+    {
+      "id": "passaic-a",
+      "name": "Passaic: Fatima & St. Nicholas, Mount Carmel, St. Anthony, Holy Rosary",
+      "why": "Our Lady of Fatima and St. Nicholas merged in 2022; the finder keeps St. Nicholas's old pin and eCatholic site (14090): check whether St. Nicholas church still has Mass; Holy Rosary is the Diocesan Shrine of St. John Paul II.",
+      "entries": [
+        "directory:14272",
+        "directory:14090",
+        "directory:37734",
+        "directory:13525",
+        "directory:14735",
+        "gcatholic:18995",
+        "gcatholic:18994",
+        "gcatholic:18996",
+        "gcatholic:18989",
+        "gcatholic:18991"
+      ]
+    },
+    {
+      "id": "passaic-b",
+      "name": "Passaic: Holy Trinity, St. Joseph, St. Mary, St. Stephen",
+      "why": "St. Stephen has two finder pins (22153 and the address-less 40503 'St. Stephen's RC Magyar Church').",
+      "entries": [
+        "directory:11689",
+        "directory:11442",
+        "directory:14062",
+        "directory:22153",
+        "directory:40503",
+        "gcatholic:18992",
+        "gcatholic:18993",
+        "gcatholic:18990",
+        "gcatholic:18997"
+      ]
+    },
+    {
+      "id": "eastern-and-other-jurisdiction",
+      "name": "Eastern Catholic churches in the territory",
+      "why": "GCatholic's Ruthenian (Holy Wisdom Flanders; St. Michael cathedral chapel Woodland Park), Ukrainian (St. Nicholas Passaic, St. John the Baptist Whippany), Melkite (St. Ann Woodland Park) and Armenian (Sacred Heart Little Falls) churches, and St. George, Paterson, now the Syro-Malabar parish (diocesan history). Expect other-jurisdiction exclusions.",
+      "entries": [
+        "gcatholic:17175",
+        "gcatholic:17191",
+        "gcatholic:17491",
+        "gcatholic:17496",
+        "gcatholic:16545",
+        "gcatholic:15216",
+        "gcatholic:19003"
+      ]
+    }
+  ],
+  "excluded": []
+}
