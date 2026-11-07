@@ -203,6 +203,8 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - An LPi repost on a diocesan WordPress-multisite site whose ParishesOnline org slug can't be found by probe po (name-church-zip variants all empty) can be recorded other with page-pdfs on the site's bulletin page and po-container:<a/b> as its publication id, with a research item to find the org later.
 - A parish whose weekly bulletin is a Constant Contact email newsletter (Tilma webstudio homepage 'Bulletins & News' card linking conta.cc/<id> -> myemail.constantcontact.com/<title>.html?soid=...) has no PDF: record unsupported with fetch_gap kind constant-contact-html-newsletter; its old Tilma /bulletins archive may still list years-old PDFs that page-pdfs would wrongly pick.
 - Tilma sites can repost a John Patrick Publishing issue as '<id>-<Parish> MM-DD-YYYY.pdf' (page-8 footer '<id> <Parish>, Brooklyn, NY (B)' and 'John Patrick Publishing Company'), with no jppc.net link: record other with page-pdfs https://church-bulletin.org/<id>, which posts each issue days before the Tilma page does.
+- A Tilma webstudio /bulletins page whose Bulletins collection is empty (totalCount 0) can still show cards from an embedded ParishesOnline widget (publicationWidget?type=bulletin&id=<lpi id>): tools/frames-requests.py lists the iframe, and probe po <lpi id> gives the parishes_online row.
+- Diocesan WordPress-multisite sites can repost an LPi issue with its ad pages cut (no 04-NNNN footer left, only '©LPi' on the cover art); the ParishesOnline org may have no zip suffix (st-saviour-church), so try probe po <name>-church as well as <name>-church-<zip>.
 
 ## Rules settled for this diocese
 
