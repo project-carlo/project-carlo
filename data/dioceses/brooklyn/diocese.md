@@ -193,6 +193,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Wix blog bulletins (a /sunday-bulletin blog index, one /post/<slug> per issue with a 'Download PDF' file widget): the PDF URL comes only from a click-time Wix API, so fetch finds no PDF links; record unsupported with fetch_gap kind wix-blog-file-download. tools/click-requests.py gives the ugd/<id>.pdf, readable at <site>/_files/ugd/<id>.pdf.
 - Parishes sharing a pastor here can each print 'In partnership with <other parish>' and both rectories' contacts on page 1 of their own LPi bulletins (OLA 03/4061 and St. Anselm 03/4053), while the schedules and intentions stay separate; read the schedule and intentions, not the masthead line, and record separate reviews.
 - The Tablet (thetablet.org) asks for a login after a few paragraphs; its WordPress API (wp-json/wp/v2/posts?search=<words>&_fields=link,date,title) lists dated articles for closures and sales, and probe get on an article still returns the opening paragraphs to quote.
+- The Church Bulletin Inc. ad-page footer number (#167, #117, #224) is per parish: different numbers plus different mastheads support a 'separate' review between neighbouring Church Bulletin Inc. rows, which have no publication id to compare.
 
 ## Rules settled for this diocese
 
