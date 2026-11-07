@@ -184,7 +184,6 @@ export function LandingPage() {
           )}
         >
           <SearchTypeahead
-            hideModeToggle
             size="lg"
             filterButton={null}
             onChurchSelect={handleChurchSelect}
