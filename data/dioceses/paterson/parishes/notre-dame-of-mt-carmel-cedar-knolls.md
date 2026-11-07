@@ -1,7 +1,7 @@
 ---
 name: Notre Dame of Mt. Carmel
 website: https://ndcarmel.com/
-bulletin_provider: unsupported
+bulletin_provider: other
 provider_id: page-pdfs https://ndcarmel.com/parish-updates
 publication: ['ecatholic:10966']
 group: ''
@@ -25,6 +25,13 @@ evidence:
   note: The site's Bulletins page lists eCatholic bulletins/<YYYYMMDD>.pdf files only to 20200531 (31
     May 2020); issues.py ecatholic ecatholic:10966 got 403 for 18 Oct-8 Nov 2026. The parish replaced
     the bulletin with the Parish Update.
+- url: https://files.ecatholic.com/10966/documents/2026/11/Parish%20Update%20November%203%202026.pdf?t=1793829629000
+  seen: 2026-11-07
+  quote: 'Parish Update: November 3, 2026'
+  note: '24-page weekly issue: the pick of fetch:check with page-pdfs on the Parish Updates page. Page
+    2 is an image (read rendered): masthead ''Notre Dame of Mt. Carmel Church, 75 Ridgedale Ave., Cedar
+    Knolls, NJ'', with the same Mass schedule. Names no other church.'
+promoted: 2026-11-07
 research:
 - method: fetch:check with recipe page-pdfs https://ndcarmel.com/parish-updates (with and without filename=Parish*Update*.pdf)
   url: https://ndcarmel.com/parish-updates
@@ -35,16 +42,11 @@ research:
     fetch_gap
   retry_when: The parish posts an issue with a dated label, or the page-pdfs resolver learns to date links
     from URL-encoded file names
-bulletin_status: available
-fetch_gap:
-  kind: undated-link-label
-  seen: 2026-11-04
-  note: The parish's weekly bulletin is a 'Parish Update' PDF in its eCatholic documents folder, listed
-    on https://ndcarmel.com/parish-updates. The resolver dates these links only by their label (it does
-    not read the URL-encoded file name 'Parish%20Update%20October%2021%202026-1.pdf'), and the newest
-    issue's two links are labelled 'October' and nothing, so fetch:check (page-pdfs on that page) picked
-    the 14 October 2026 issue, 21 days old, over the 21 October one.
+- method: fetch:check with recipe page-pdfs https://ndcarmel.com/parish-updates
   url: https://ndcarmel.com/parish-updates
+  checked: '2026-11-07'
+  outcome: found
+bulletin_status: available
 ---
 
 ## Publisher
@@ -59,8 +61,8 @@ The diocese's finder (directory:10966) and GCatholic (18952) list this one churc
 
 ## Website and bulletin provider
 
-`bulletin_provider: unsupported`, with a `fetch_gap`. The recipe `page-pdfs https://ndcarmel.com/parish-updates` reads the right page, but on 2026-11-04 `fetch:check` picked the 14 October 2026 issue ("newest-recent, dated 2026-10-14", stale at 21 days): the 21 October issue's links are labelled "October" and nothing, and the resolver does not date links from their URL-encoded file names. Adding `filename=Parish*Update*.pdf` gave the same pick. The recipe is kept in `provider_id` for when the gap clears.
+`other`, recipe `page-pdfs https://ndcarmel.com/parish-updates`. `fetch:check` on 2026-11-07 picked the 3 November 2026 issue, 4 days old. On 2026-11-04 it had picked the 14 October issue over the 21 October one, whose links are labelled "October" and nothing; the date parser now reads URL-encoded file names, which closed the `undated-link-label` gap.
 
 ## Not yet confirmed
 
-Whether the next issue is labelled with its full date, which would let the recipe pick it (see `research`). No 28 October issue was posted by 4 November.
+Nothing about the bulletin. Issues aren't posted every week: none was listed for 28 October by 4 November.

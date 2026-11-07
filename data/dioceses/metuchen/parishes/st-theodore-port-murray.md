@@ -1,8 +1,8 @@
 ---
 name: St. Theodore
 website: https://sttheodorenj.org/bulletins
-bulletin_provider: unsupported
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://sttheodorenj.org/bulletins
 publication: ['url:https://sttheodorenj.org/bulletins']
 group: ''
 evidence:
@@ -29,6 +29,12 @@ evidence:
   note: 'The finder lists St. Theodore, 855 Route 57, Port Murray, NJ 07865, mailing P. O. Box 146, website
     http://www.sttheodorenj.com (which answered HTTP 502 on 2026-11-03), ''Administrator: Rev. Damian
     Tomiczek SDS''.'
+- url: https://storage.googleapis.com/production-sitebuilder-v1-0-9/209/781209/ACJ3WL1E/93e204e4edc245c58b0b822a5ed2f09a?fileName=11.08.26%20web.pdf
+  seen: 2026-11-07
+  quote: Sunday, November 8th ~ Thirty- Second Sunday in Ordinary Time
+  note: '8 November 2026 issue, 4 pages, text layer: the pick of fetch:check with page-pdfs on the Bulletins
+    page. Its first page names Saint Theodore Roman Catholic Church alone.'
+promoted: 2026-11-07
 research:
 - method: DuckDuckGo search (visit.py) for sponsors.bonventure.net and St. Theodore, Port Murray
   checked: '2026-11-03'
@@ -37,14 +43,6 @@ research:
     site stops posting issues
   retry_when: The parish Bulletins page stops posting current issues
 bulletin_status: available
-fetch_gap:
-  kind: filename-date-misread
-  seen: 2026-11-03
-  url: https://sttheodorenj.org/bulletins
-  note: GoDaddy site-builder page; each PDF is storage.googleapis.com/production-sitebuilder-v1-0-9/209/781209/ACJ3WL1E/<hash>?fileName=<name>.
-    page-pdfs reads the list (newest first, '11.01.26 web.pdf' for 1 November 2026) but parses an archived
-    'Nov 7.21.pdf' (7 November 2021) as 7 November 2026 and picks it as current. A filename= glob can't
-    exclude it, since the recipe matches the hash path, not the fileName query.
 ---
 
 ## Publisher
@@ -57,10 +55,10 @@ One church, 855 Route 57 (directory:24532, gcatholic:18689). The masthead's Mass
 
 ## Website and bulletin provider
 
-`other`, website https://sttheodorenj.org/bulletins, a GoDaddy site-builder page listing issues newest first as storage.googleapis.com PDFs whose names sit in a `fileName=` query ("11.01.26 web.pdf"). The finder's and GCatholic's domain `sttheodorenj.com` answered HTTP 502 on 2026-11-03; the live `sttheodorenj.org`, found by search, is the one the masthead prints ("Web ... www.sttheodorenj.org"), and ParishesOnline's dormant org `st-theodore-church-07865` (LPi id 0018000000QxA2pAAF, no publications) also gives it. `probe url` reported DEAD-DNS, but `probe get` and the browser loaded it.
+`other`, recipe `page-pdfs https://sttheodorenj.org/bulletins`, a GoDaddy site-builder page listing issues newest first as storage.googleapis.com PDFs whose names sit in a `fileName=` query ("11.08.26 web.pdf"). The finder's and GCatholic's domain `sttheodorenj.com` answered HTTP 502 on 2026-11-03; the live `sttheodorenj.org`, found by search, is the one the masthead prints ("Web ... www.sttheodorenj.org"), and ParishesOnline's dormant org `st-theodore-church-07865` (LPi id 0018000000QxA2pAAF, no publications) also gives it. `probe url` reported DEAD-DNS, but `probe get` and the browser loaded it.
 
-`fetch:check` (2026-11-03) with `page-pdfs` on the Bulletins page picked an archived "Nov 7.21.pdf" (7 November 2021), whose name it reads as 7 November 2026; no `filename=` glob can exclude it because the recipe matches the hashed path. No recipe is recorded, and `fetch_gap` `filename-date-misread` holds the problem.
+`fetch:check` on 2026-11-07 with this recipe picked the 8 November 2026 issue, dated from its link. It used to pick the archived "Nov 7.21.pdf" (7 November 2021), reading it as 7 November this year; the date parser now reads that name's year, which closed the `filename-date-misread` gap. `fetch:check`'s own issue-date check still says unknown, since it doesn't read a `fileName=` query, so the issue was confirmed from the PDF's text.
 
 ## Not yet confirmed
 
-Nothing about the bulletin itself; the fetch gap stays until a collector reads the newest-first order or the fileName query.
+Nothing.

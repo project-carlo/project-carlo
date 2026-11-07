@@ -1259,6 +1259,30 @@ def test_document_base_url_honours_base_href():
     assert document_base_url("<base target='_blank'>", page) == page
 
 
+@pytest.mark.parametrize("text,expected", [
+    ("046a_2026_11_01-1.pdf", date(2026, 11, 1)),
+    ("046a_2026_11_01.pdf", date(2026, 11, 1)),
+    ("046a_2026_08_09-6f3z.pdf", date(2026, 8, 9)),
+    ("CSJ-2026_9_27-bulletin-combined.pdf", date(2026, 9, 27)),
+    ("6400_12_25_Bulletin_2026-11-01.pdf", date(2026, 11, 1)),
+    ("Nov 7.21.pdf", date(2021, 11, 7)),
+    ("Nov 7.26.pdf", date(2026, 11, 7)),
+    ("Oct 11.12.pdf", date(2026, 10, 11)),  # a weekend, not 2012
+    ("Oct 11.27.pdf", date(2026, 10, 11)),  # next year's isn't an issue yet
+    ("Oct 11.10am.pdf", date(2026, 10, 11)),
+    ("Oct 31.01.pdf", date(2026, 10, 31)),  # a weekend across the month's end, not 2001
+    ("bulletin-2022-october-23.24.pdf", date(2022, 10, 23)),  # the year came first
+    ("2024 Oct 11.21.pdf", date(2024, 10, 11)),
+    ("Parish%20Update%20October%2021%202026-1.pdf", date(2026, 10, 21)),
+    ("Bulletin%20October%2025%2C%202026.pdf", date(2026, 10, 25)),
+    ("Bulletin%2010-18-26.pdf", date(2026, 10, 18)),
+    ("Nov%207.21.pdf", date(2021, 11, 7)),
+    ("Sig=DlUk8bsZExGj1HJ%2B6bGSZd%2FGq2ZVLx%3D", None),
+])
+def test_parse_date_reads_joined_and_encoded_file_names(text, expected):
+    assert parse_date_from_texts([text], date(2026, 11, 7)) == expected
+
+
 def test_parse_date_reads_an_unseparated_month_day_year_near_the_reference():
     ref = date(2026, 10, 21)
     assert parse_date_from_texts(["10112026.jpg"], ref) == date(2026, 10, 11)

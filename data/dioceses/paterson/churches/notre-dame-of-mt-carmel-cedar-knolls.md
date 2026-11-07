@@ -22,6 +22,7 @@ evidence:
   seen: 2026-11-04
   note: Listed in Diocese of Paterson parish finder (eCatholic map) as 'Notre Dame of Mt. Carmel, Cedar
     Knolls', 75 Ridgedale Avenue, Cedar Knolls, NJ, 07927
+promoted: 2026-11-07
 ---
 
 ## Holds Mass

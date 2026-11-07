@@ -23,7 +23,8 @@ plans*, *Sources*) are the standard you judge by.
    to find pairs split across batches. Batches should hold about eight parishes (parishes, not roster
    entries: a parish usually has several, so that is often around 20 entries), fewer for a
    big family or a city centre full of closures; Eastern Catholic and other-jurisdiction entries get their
-   own. `first_batch` should be typical, not the hardest.
+   own. `first_batch` should be typical, not the hardest. A deanery, vicariate, county or
+   planning region in a roster's `group` is a problem: `audit` would pair every member.
 4. **Exclusions.** Each `excluded` entry needs a reason that holds: a duplicate names the
    entry it duplicates, and that entry is in a batch; "outside the diocese" names where it
    belongs. Spot-check them; check every one when there are only a few.
