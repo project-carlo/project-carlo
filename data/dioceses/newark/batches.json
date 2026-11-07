@@ -1,0 +1,903 @@
+{
+ "version": 1,
+ "diocese": "newark",
+ "first_batch": "d-hackensack",
+ "batches": [
+  {
+   "id": "d-hackensack",
+   "name": "Hackensack",
+   "why": "Four Hackensack parishes, no shared pastor in the 2021-26 appointments. Immaculate Conception links a John Patrick (jppc.net) template; St. Francis of Assisi has a Capuchin pastor from Sept 2026.",
+   "entries": [
+    "directory:56",
+    "gcatholic:18415",
+    "directory:57",
+    "gcatholic:18416",
+    "directory:55",
+    "gcatholic:18417",
+    "directory:54",
+    "gcatholic:18418"
+   ]
+  },
+  {
+   "id": "a-ridgewood",
+   "name": "Ridgewood, Glen Rock, Ho-Ho-Kus, Saddle River",
+   "why": "Planning Area A. OLMC Ridgewood self-hosts weekly PDFs (/images/bulletins/bulletinMMDDYY.pdf). Separate parishes; no shared pastor found.",
+   "entries": [
+    "directory:176",
+    "gcatholic:18544",
+    "directory:53",
+    "gcatholic:18413",
+    "directory:66",
+    "gcatholic:18432",
+    "directory:185",
+    "gcatholic:18553"
+   ]
+  },
+  {
+   "id": "a-mahwah",
+   "name": "Mahwah, Ramsey, Upper Saddle River",
+   "why": "Planning Area A. Two Mahwah parishes (Immaculate Conception, Immaculate Heart of Mary): check whether they share anything. Ukrainian St. Paul (Ramsey) and Ruthenian Holy Spirit (Mahwah) are in the eastern batches, not here.",
+   "entries": [
+    "directory:112",
+    "gcatholic:18475",
+    "directory:111",
+    "gcatholic:18476",
+    "directory:173",
+    "gcatholic:18541",
+    "directory:203",
+    "gcatholic:18571"
+   ]
+  },
+  {
+   "id": "a-wyckoff",
+   "name": "Wyckoff, Franklin Lakes, Midland Park, Oakland, Allendale",
+   "why": "Planning Area A, five suburban parishes. Guardian Angel (Allendale) is eCatholic 11383 behind Cloudflare (probe get 403; visit.py loads it).",
+   "entries": [
+    "directory:218",
+    "gcatholic:18586",
+    "directory:48",
+    "gcatholic:18407",
+    "directory:116",
+    "gcatholic:18480",
+    "directory:160",
+    "gcatholic:18525",
+    "directory:1",
+    "gcatholic:18353"
+   ]
+  },
+  {
+   "id": "b-park-ridge",
+   "name": "Park Ridge, Woodcliff Lake, Hillsdale, Washington Twp",
+   "why": "Pascack Valley, Planning Area B. Separate parishes.",
+   "entries": [
+    "directory:169",
+    "gcatholic:18536",
+    "directory:216",
+    "gcatholic:18584",
+    "directory:63",
+    "gcatholic:18424",
+    "directory:206",
+    "gcatholic:18574"
+   ]
+  },
+  {
+   "id": "b-westwood",
+   "name": "Westwood, Emerson, Haworth, Harrington Park",
+   "why": "Planning Area B. GCatholic has Harrington Park as its own city name; the directory says 'Harrington Pk'.",
+   "entries": [
+    "directory:215",
+    "gcatholic:18583",
+    "directory:40",
+    "gcatholic:18399",
+    "directory:62",
+    "gcatholic:18423",
+    "directory:58",
+    "gcatholic:18419"
+   ]
+  },
+  {
+   "id": "b-northern-valley",
+   "name": "Old Tappan, Northvale, Norwood, Closter",
+   "why": "Northern Valley, Planning Area B. Separate parishes.",
+   "entries": [
+    "directory:161",
+    "gcatholic:18526",
+    "directory:155",
+    "gcatholic:18520",
+    "directory:156",
+    "gcatholic:18521",
+    "directory:18",
+    "gcatholic:18374"
+   ]
+  },
+  {
+   "id": "b-cresskill",
+   "name": "Cresskill, Demarest, Tenafly",
+   "why": "Planning Area B. GCatholic lists St. Joseph, Demarest twice (18377 at 280 County Rd., 18378 at 274 County Rd.): probably one building listed twice, or a chapel next door. St. Therese, Cresskill is eCatholic 10734 behind Cloudflare.",
+   "entries": [
+    "directory:20",
+    "gcatholic:18376",
+    "directory:21",
+    "gcatholic:18377",
+    "gcatholic:18378",
+    "directory:194",
+    "gcatholic:18562"
+   ]
+  },
+  {
+   "id": "b-bergenfield",
+   "name": "Bergenfield, Dumont, New Milford",
+   "why": "Planning Area B. Two New Milford parishes (Ascension; St. Joseph, which GCatholic places in Oradell).",
+   "entries": [
+    "directory:8",
+    "gcatholic:18364",
+    "directory:22",
+    "gcatholic:18379",
+    "directory:122",
+    "gcatholic:18485",
+    "directory:123",
+    "gcatholic:18527"
+   ]
+  },
+  {
+   "id": "b-paramus",
+   "name": "Paramus and River Edge",
+   "why": "Planning Area B. Annunciation is eCatholic 20359. GCatholic's Carmelite chapel of St. Therese, Paramus (18535) is here: check for public Mass.",
+   "entries": [
+    "directory:167",
+    "gcatholic:18533",
+    "gcatholic:18535",
+    "directory:168",
+    "gcatholic:18534",
+    "directory:177",
+    "gcatholic:18545"
+   ]
+  },
+  {
+   "id": "c-garfield",
+   "name": "Garfield and Wallington",
+   "why": "Three Garfield parishes, one Polish (St. Stanislaus Kostka), plus Most Sacred Heart, Wallington (Polish site). Our Lady of Sorrows, Garfield (GCatholic 18410) merged into Our Lady of Mount Virgin (sacramental-records list): check whether its church still has Mass. GCatholic's Syro-Malabar mission in Garfield is in an eastern batch.",
+   "entries": [
+    "directory:50",
+    "gcatholic:18408",
+    "directory:51",
+    "gcatholic:18409",
+    "gcatholic:18410",
+    "directory:49",
+    "gcatholic:18411",
+    "directory:205",
+    "gcatholic:18573"
+   ]
+  },
+  {
+   "id": "c-lodi",
+   "name": "Lodi and Elmwood Park",
+   "why": "Planning Area C. Two Lodi parishes and St. Leo, Elmwood Park.",
+   "entries": [
+    "directory:107",
+    "gcatholic:18470",
+    "directory:106",
+    "gcatholic:18471",
+    "directory:39",
+    "gcatholic:18398"
+   ]
+  },
+  {
+   "id": "c-fair-lawn",
+   "name": "Fair Lawn, Rochelle Park, Saddle Brook",
+   "why": "Planning Area C. Church of the Korean Martyrs (Saddle Brook) is a Korean community parish: its bulletin may be in Korean.",
+   "entries": [
+    "directory:42",
+    "gcatholic:18402",
+    "directory:178",
+    "gcatholic:18546",
+    "directory:183",
+    "gcatholic:18551",
+    "directory:184",
+    "gcatholic:18552"
+   ]
+  },
+  {
+   "id": "c-lyndhurst",
+   "name": "Lyndhurst and North Arlington",
+   "why": "Three Lyndhurst parishes and Queen of Peace, North Arlington.",
+   "entries": [
+    "directory:109",
+    "gcatholic:18472",
+    "directory:108",
+    "gcatholic:18473",
+    "directory:110",
+    "gcatholic:18474",
+    "directory:151",
+    "gcatholic:18515"
+   ]
+  },
+  {
+   "id": "c-rutherford",
+   "name": "Rutherford, East Rutherford, Wood-Ridge, Hasbrouck Heights",
+   "why": "Planning Area C. Separate parishes.",
+   "entries": [
+    "directory:182",
+    "gcatholic:18550",
+    "directory:27",
+    "gcatholic:18384",
+    "directory:217",
+    "gcatholic:18585",
+    "directory:61",
+    "gcatholic:18422"
+   ]
+  },
+  {
+   "id": "d-fort-lee",
+   "name": "Fort Lee, Edgewater, Cliffside Park",
+   "why": "Planning Area D. Madonna (Fort Lee) has a Korean pastor and may print in Korean. Holy Trinity, Fort Lee has no website in the directory. The draft models paired Holy Rosary, Edgewater with Hudson parishes.",
+   "entries": [
+    "directory:47",
+    "gcatholic:18405",
+    "directory:46",
+    "gcatholic:18406",
+    "directory:28",
+    "gcatholic:18385",
+    "directory:17",
+    "gcatholic:18373"
+   ]
+  },
+  {
+   "id": "d-fairview",
+   "name": "Fairview and Palisades Park",
+   "why": "Two Fairview and two Palisades Park parishes. St. John the Baptist, Fairview had a temporary administrator from St. Cecilia, Englewood (Jan 2023): check for a shared bulletin then and now.",
+   "entries": [
+    "directory:45",
+    "gcatholic:18403",
+    "directory:44",
+    "gcatholic:18404",
+    "directory:165",
+    "gcatholic:18531",
+    "directory:166",
+    "gcatholic:18532"
+   ]
+  },
+  {
+   "id": "d-teaneck",
+   "name": "Teaneck, Bogota, Englewood, Leonia",
+   "why": "St. Anastasia (Teaneck) and St. Joseph (Bogota) are a 'Parish Mission Partners' pair (June 2026 letter) and share a parochial vicar (June 2026 appointments): check whether they now share a bulletin. Bogota uses John Patrick (jppc.net).",
+   "entries": [
+    "directory:193",
+    "gcatholic:18561",
+    "directory:13",
+    "gcatholic:18369",
+    "directory:41",
+    "gcatholic:18400",
+    "directory:98",
+    "gcatholic:18462"
+   ]
+  },
+  {
+   "id": "d-ridgefield",
+   "name": "Ridgefield, Ridgefield Park, Little Ferry, Maywood",
+   "why": "Planning Area D. Separate parishes.",
+   "entries": [
+    "directory:174",
+    "gcatholic:18542",
+    "directory:175",
+    "gcatholic:18543",
+    "directory:103",
+    "gcatholic:18467",
+    "directory:115",
+    "gcatholic:18479"
+   ]
+  },
+  {
+   "id": "e-hoboken",
+   "name": "Hoboken",
+   "why": "Four Hoboken parishes. Our Lady of Grace and St. Joseph is one parish with two GCatholic churches (18427, 18430): check whether St. Joseph still has Mass.",
+   "entries": [
+    "directory:70",
+    "gcatholic:18427",
+    "gcatholic:18430",
+    "directory:68",
+    "gcatholic:18431",
+    "directory:67",
+    "gcatholic:18428",
+    "directory:69",
+    "gcatholic:18429"
+   ]
+  },
+  {
+   "id": "e-north-bergen",
+   "name": "North Bergen, Secaucus, Weehawken",
+   "why": "Planning Area E. GCatholic's Immaculate Heart of Mary chapel, North Bergen (18587) is here: check for public Mass.",
+   "entries": [
+    "directory:152",
+    "gcatholic:18516",
+    "directory:153",
+    "gcatholic:18517",
+    "gcatholic:18587",
+    "directory:188",
+    "gcatholic:18556",
+    "directory:207",
+    "gcatholic:18575"
+   ]
+  },
+  {
+   "id": "e-union-city",
+   "name": "Union City (Holy Family, St. Augustine, St. Anthony, Sts. Joseph and Michael)",
+   "why": "The 2025 draft models paired Holy Family with St. Augustine and St. Anthony with Sts. Joseph and Michael; the 2024 attendance for St. Anthony is blank there. Sts. Joseph and Michael merged two Passionist parishes; GCatholic's former St. Michael monastery (38915) is here.",
+   "entries": [
+    "directory:198",
+    "gcatholic:18565",
+    "directory:200",
+    "gcatholic:18567",
+    "directory:197",
+    "gcatholic:18566",
+    "directory:201",
+    "gcatholic:18568",
+    "gcatholic:38915"
+   ]
+  },
+  {
+   "id": "e-west-new-york",
+   "name": "West New York, Union City (St. Rocco/St. Brigid)",
+   "why": "Few parishes, many churches: Holy Redeemer has three GCatholic churches (incl. St. John Nepomucene, Guttenberg, merged per the records list, and Our Lady of Libera); St. Rocco/St. Brigid has St. Brigid in North Bergen. Holy Redeemer's Wix site links a jppc.net template and Wix PDFs; St. Rocco uses jppc.net.",
+   "entries": [
+    "directory:199",
+    "gcatholic:18518",
+    "gcatholic:18569",
+    "directory:208",
+    "gcatholic:18414",
+    "gcatholic:18578",
+    "gcatholic:18579",
+    "directory:209",
+    "gcatholic:18580"
+   ]
+  },
+  {
+   "id": "e-jc-heights",
+   "name": "Jersey City Heights: Mount Carmel, St. Ann, St. John the Baptist, St. Joseph",
+   "why": "Our Lady of Mount Carmel's pastor is administrator of St. Ann (Polish) since Nov 2025: check for one bulletin. St. Ann had no 2024 Mass attendance in the draft models.",
+   "entries": [
+    "directory:90",
+    "gcatholic:18441",
+    "directory:85",
+    "gcatholic:18449",
+    "directory:74",
+    "gcatholic:18452",
+    "directory:89",
+    "gcatholic:18453"
+   ]
+  },
+  {
+   "id": "e-jc-greenville",
+   "name": "Jersey City: St. Aedan, St. Anne, St. Nicholas, St. Paul of the Cross",
+   "why": "Planning Area E. St. Aedan stands next to Saint Peter's University (Benedictine pastor from Sept 2026). Separate parishes so far.",
+   "entries": [
+    "directory:77",
+    "gcatholic:18447",
+    "directory:86",
+    "gcatholic:18450",
+    "directory:78",
+    "gcatholic:18454",
+    "directory:84",
+    "gcatholic:18457"
+   ]
+  },
+  {
+   "id": "f-bayonne",
+   "name": "Bayonne",
+   "why": "All four Bayonne parishes, a 'Parish Mission Partners' group (June 2026). Merged parishes: St. John Paul II (from OLMC, Assumption, St. Michael, St. Joseph) and Blessed Miriam Teresa (St. Andrew, closed for worship 2024-09-22, decree 2025-05-28; St. Mary Star of the Sea). Check which merged churches still have Mass. JPII links church-bulletin.org; BMT has ParishesOnline/LPi.",
+   "entries": [
+    "directory:5",
+    "gcatholic:18356",
+    "gcatholic:18359",
+    "directory:3",
+    "gcatholic:18357",
+    "directory:2",
+    "gcatholic:18354",
+    "gcatholic:18355",
+    "directory:4",
+    "gcatholic:18361"
+   ]
+  },
+  {
+   "id": "f-jc-downtown",
+   "name": "Downtown Jersey City",
+   "why": "City centre with closures: St. Mary (Parish of the Resurrection in GCatholic, with St. Bridget, which the records list calls closed; St. Mary 'reopened'), St. Michael (also 'reopened'), St. Patrick & Assumption/All Saints (directory card has no URL). Check which buildings still have Mass.",
+   "entries": [
+    "directory:80",
+    "gcatholic:18444",
+    "gcatholic:18446",
+    "directory:92",
+    "gcatholic:18451",
+    "directory:81",
+    "gcatholic:18436",
+    "gcatholic:18455",
+    "directory:88",
+    "gcatholic:18445"
+   ]
+  },
+  {
+   "id": "f-jc-south",
+   "name": "Jersey City: Christ the King, Our Lady of Sorrows, Our Lady of Victories, St. Paul the Apostle",
+   "why": "Christ the King and Our Lady of Sorrows share a pastor (appointments 2023-06, 2024-04): check for one bulletin. Our Lady of Sorrows has a Traditional Latin Mass community (chaplain appointed April 2026).",
+   "entries": [
+    "directory:75",
+    "gcatholic:18437",
+    "directory:76",
+    "gcatholic:18442",
+    "directory:91",
+    "gcatholic:18443",
+    "directory:82",
+    "gcatholic:18456"
+   ]
+  },
+  {
+   "id": "f-jc-west",
+   "name": "Jersey City: Holy Rosary, Czestochowa, Mercy, St. Aloysius",
+   "why": "Planning Area F. Holy Rosary (Italian) and Our Lady of Czestochowa (Polish) are ethnic parishes. Separate pastors.",
+   "entries": [
+    "directory:93",
+    "gcatholic:18438",
+    "directory:87",
+    "gcatholic:18439",
+    "directory:83",
+    "gcatholic:18440",
+    "directory:79",
+    "gcatholic:18448"
+   ]
+  },
+  {
+   "id": "g-montclair",
+   "name": "Montclair",
+   "why": "St. Teresa of Calcutta merged Immaculate Conception and Our Lady of Mount Carmel (records list), and Our Lady of Mount Carmel is listed as an oratory of it: likely one bulletin over 118 and 120. GCatholic's Divine Mercy Hill (Verona, 47767) is here. Newman Center Chapel (Montclair State) is a campus chapel: check for public Mass.",
+   "entries": [
+    "directory:120",
+    "gcatholic:18481",
+    "gcatholic:47767",
+    "directory:118",
+    "gcatholic:18482",
+    "directory:119",
+    "gcatholic:18483",
+    "directory:202",
+    "gcatholic:18570",
+    "directory:117"
+   ]
+  },
+  {
+   "id": "g-bloomfield",
+   "name": "Bloomfield and St. Peter, Belleville",
+   "why": "Planning Area G. Separate parishes.",
+   "entries": [
+    "directory:12",
+    "gcatholic:18366",
+    "directory:10",
+    "gcatholic:18367",
+    "directory:11",
+    "gcatholic:18368",
+    "directory:7",
+    "gcatholic:18363"
+   ]
+  },
+  {
+   "id": "g-nutley-belleville",
+   "name": "Nutley and St. Anthony, Belleville",
+   "why": "Planning Area G. Three Nutley parishes.",
+   "entries": [
+    "directory:158",
+    "gcatholic:18522",
+    "directory:157",
+    "gcatholic:18523",
+    "directory:159",
+    "gcatholic:18524",
+    "directory:6",
+    "gcatholic:18362"
+   ]
+  },
+  {
+   "id": "g-west-orange",
+   "name": "West Orange and St. Raphael, Livingston",
+   "why": "St. Joseph (West Orange) and St. Raphael (Livingston) had one pastor from 2022: check whether that still holds and whether they share a bulletin. St. Anthony of Padua Oratory is the Institute of Christ the King's (not in the planning-area list); St. Cloud monastery (GCatholic 39184) is here.",
+   "entries": [
+    "directory:210",
+    "gcatholic:18582",
+    "gcatholic:39184",
+    "directory:212",
+    "gcatholic:18581",
+    "directory:211",
+    "gcatholic:38950",
+    "directory:104",
+    "gcatholic:18469"
+   ]
+  },
+  {
+   "id": "g-livingston",
+   "name": "Livingston, Roseland, Verona, Fairfield",
+   "why": "Planning Area G. Separate parishes.",
+   "entries": [
+    "directory:105",
+    "gcatholic:18468",
+    "directory:179",
+    "gcatholic:18547",
+    "directory:204",
+    "gcatholic:18572",
+    "directory:43",
+    "gcatholic:18401"
+   ]
+  },
+  {
+   "id": "g-caldwells",
+   "name": "Caldwell, North Caldwell, Cedar Grove",
+   "why": "Planning Area G. Separate parishes.",
+   "entries": [
+    "directory:14",
+    "gcatholic:18370",
+    "directory:154",
+    "gcatholic:18519",
+    "directory:15",
+    "gcatholic:18371"
+   ]
+  },
+  {
+   "id": "h-east-orange",
+   "name": "East Orange and St. John, Orange",
+   "why": "Holy Spirit-Our Lady Help of Christians merged two parishes (records list); two closed East Orange parishes (Our Lady of All Souls, Most Blessed Sacrament) are not on any roster.",
+   "entries": [
+    "directory:26",
+    "gcatholic:18381",
+    "directory:25",
+    "gcatholic:18382",
+    "directory:24",
+    "gcatholic:18383",
+    "directory:162",
+    "gcatholic:18530"
+   ]
+  },
+  {
+   "id": "h-orange",
+   "name": "Orange, South Orange, St. Andrew Kim (Maplewood)",
+   "why": "Seton Hall's Immaculate Conception Chapel (GCatholic 40399) is with Our Lady of Sorrows: a campus chapel, check for public Mass. St. Andrew Kim is a Korean parish.",
+   "entries": [
+    "directory:163",
+    "gcatholic:18528",
+    "directory:164",
+    "gcatholic:18529",
+    "directory:190",
+    "gcatholic:18558",
+    "gcatholic:40399",
+    "directory:113",
+    "gcatholic:18477"
+   ]
+  },
+  {
+   "id": "h-irvington",
+   "name": "Irvington and St. Joseph, Maplewood",
+   "why": "Good Shepherd absorbed St. Paul the Apostle and Immaculate Heart of Mary, Maplewood (records list).",
+   "entries": [
+    "directory:72",
+    "gcatholic:18435",
+    "directory:73",
+    "gcatholic:18433",
+    "directory:71",
+    "gcatholic:18434",
+    "directory:114",
+    "gcatholic:18478"
+   ]
+  },
+  {
+   "id": "i-harrison",
+   "name": "Harrison and East Newark",
+   "why": "Holy Cross includes St. Anthony, East Newark, which closes for worship on 2026-11-23 (decree posted 2026-10-10); one pastor for both. Our Lady of Czestochowa (Polish) is separate.",
+   "entries": [
+    "directory:59",
+    "gcatholic:18420",
+    "directory:23",
+    "gcatholic:18380",
+    "directory:60",
+    "gcatholic:18421"
+   ]
+  },
+  {
+   "id": "i-kearny",
+   "name": "Kearny",
+   "why": "Our Lady of Sorrows and St. Cecilia share a pastor (appointments 2023-06, 2024-05): check for one bulletin. St. Cecilia uses jppc.net. GCatholic's Redemptoris Mater seminary (125251) is with St. Stephen.",
+   "entries": [
+    "directory:95",
+    "gcatholic:18458",
+    "directory:96",
+    "gcatholic:18459",
+    "directory:94",
+    "gcatholic:125251",
+    "gcatholic:18460"
+   ]
+  },
+  {
+   "id": "i-ironbound",
+   "name": "Newark Ironbound: Mount Carmel, Holy Trinity-Epiphany, Fatima",
+   "why": "Our Lady of Mount Carmel and Holy Trinity-Epiphany share a pastor (2022, 2025): check for one bulletin. Portuguese and Spanish. GCatholic's Stella Maris chapel (Port Newark, 37946) is here.",
+   "entries": [
+    "directory:149",
+    "gcatholic:18495",
+    "gcatholic:37946",
+    "directory:148",
+    "gcatholic:18490",
+    "directory:133",
+    "gcatholic:18493"
+   ]
+  },
+  {
+   "id": "i-newark-east",
+   "name": "Newark: St. Benedict, St. Aloysius, St. Casimir",
+   "why": "St. Benedict and St. Aloysius have had one pastor since at least 2021: check for one bulletin.",
+   "entries": [
+    "directory:147",
+    "gcatholic:18501",
+    "directory:146",
+    "gcatholic:18497",
+    "directory:145",
+    "gcatholic:18502"
+   ]
+  },
+  {
+   "id": "i-newark-st-james",
+   "name": "Newark: St. James, Immaculate Heart of Mary, St. Columba",
+   "why": "The directory lists St. James twice (130 and 142, same address; only 142 has a website). The planning areas and GCatholic list Immaculate Heart of Mary, Newark (GCatholic 18492, 114 Prospect St.), which the directory does not.",
+   "entries": [
+    "directory:130",
+    "gcatholic:18492",
+    "gcatholic:18506",
+    "directory:142",
+    "directory:129",
+    "gcatholic:18504"
+   ]
+  },
+  {
+   "id": "i-newark-downtown",
+   "name": "Downtown Newark",
+   "why": "St. Patrick Pro-Cathedral and St. John had one pastor (2021-27): check for one bulletin. St. Stanislaus is with GCatholic's Queen of Angels (closed per the records list). St. Augustine's directory address is a PO box.",
+   "entries": [
+    "directory:132",
+    "directory:131",
+    "gcatholic:18507",
+    "directory:139",
+    "gcatholic:18496",
+    "gcatholic:18513",
+    "directory:128",
+    "gcatholic:18500"
+   ]
+  },
+  {
+   "id": "i-newark-cathedral",
+   "name": "Newark: Cathedral Basilica, St. Lucy, St. Mary, St. Michael",
+   "why": "The Cathedral Basilica self-hosts its bulletin on Squarespace ('Monumental Faith'). St. Mary is the Benedictine abbey church; GCatholic's former St. Joseph church (38882) is with it. GCatholic has no entry for the cathedral.",
+   "entries": [
+    "directory:127",
+    "directory:135",
+    "gcatholic:18508",
+    "directory:276",
+    "gcatholic:18509",
+    "gcatholic:38882",
+    "directory:136",
+    "gcatholic:18510"
+   ]
+  },
+  {
+   "id": "i-newark-north",
+   "name": "North Newark",
+   "why": "Immaculate Conception and Our Lady of Good Counsel share an address and a pastor (2025): likely one bulletin. St. Francis Xavier's directory domain stfxp.com redirects to nabatara.org (HTTP 522): possibly lost. St. Anthony of Padua (750 N 7th St) is in no other list.",
+   "entries": [
+    "directory:125",
+    "gcatholic:18491",
+    "directory:126",
+    "gcatholic:18494",
+    "directory:143",
+    "gcatholic:18505",
+    "directory:134"
+   ]
+  },
+  {
+   "id": "i-newark-west",
+   "name": "Newark: Transfiguration, St. Antoninus, St. Rose of Lima",
+   "why": "Transfiguration and St. Antoninus are a 'Parish Mission Partners' pair (June 2026). Transfiguration absorbed St. Ann and St. Rocco (records list); GCatholic still lists St. Rocco. GCatholic's Most Blessed Sacrament friary (153721) is with St. Antoninus.",
+   "entries": [
+    "directory:138",
+    "gcatholic:18511",
+    "directory:141",
+    "gcatholic:153721",
+    "gcatholic:18499",
+    "directory:140",
+    "gcatholic:18512"
+   ]
+  },
+  {
+   "id": "i-newark-south",
+   "name": "Newark: Blessed Sacrament-St. Charles, St. Thomas Aquinas",
+   "why": "Blessed Sacrament-St. Charles has two GCatholic churches. The records list says a St. Thomas Aquinas, Newark closed (records at Blessed Sacrament, Elizabeth), yet the directory lists St. Thomas Aquinas at 40 Ludlow St: settle which.",
+   "entries": [
+    "directory:144",
+    "gcatholic:18489",
+    "gcatholic:18503",
+    "directory:137",
+    "gcatholic:18514"
+   ]
+  },
+  {
+   "id": "j-westfield",
+   "name": "Westfield and Scotch Plains",
+   "why": "A 'Parish Mission Partners' group (June 2026): check whether any bulletin is now shared. Immaculate Heart of Mary uses jppc.net.",
+   "entries": [
+    "directory:214",
+    "gcatholic:18576",
+    "directory:213",
+    "gcatholic:18577",
+    "directory:187",
+    "gcatholic:18554",
+    "directory:186",
+    "gcatholic:18555"
+   ]
+  },
+  {
+   "id": "j-cranford",
+   "name": "Cranford, Garwood, Mountainside, Springfield",
+   "why": "Planning Area J. Separate parishes.",
+   "entries": [
+    "directory:334",
+    "gcatholic:18375",
+    "directory:52",
+    "gcatholic:18412",
+    "directory:121",
+    "gcatholic:18484",
+    "directory:191",
+    "gcatholic:18559"
+   ]
+  },
+  {
+   "id": "j-summit",
+   "name": "Summit, New Providence, Berkeley Heights, Short Hills",
+   "why": "St. Teresa of Avila has a temporary administrator to Feb 2027. GCatholic's Rosary Shrine (Dominican nuns' monastery, 33105) is here: check for public Mass.",
+   "entries": [
+    "directory:192",
+    "gcatholic:18560",
+    "gcatholic:33105",
+    "directory:124",
+    "gcatholic:18486",
+    "directory:9",
+    "gcatholic:18365",
+    "directory:189",
+    "gcatholic:18557"
+   ]
+  },
+  {
+   "id": "j-plainfield",
+   "name": "Plainfield",
+   "why": "St. Bernard and St. Stanislaus is one merged parish; GCatholic has one church for it, so check whether St. Stanislaus still has Mass. St. Mary self-hosts PDFs; the newest seen was 13 September 2026.",
+   "entries": [
+    "directory:170",
+    "gcatholic:18537",
+    "directory:171",
+    "gcatholic:18538"
+   ]
+  },
+  {
+   "id": "k-elizabeth-north",
+   "name": "Elizabeth: Holy Rosary-St. Michael, Immaculate Conception, IHM-St. Patrick, Fatima",
+   "why": "Merged parishes with several GCatholic churches (IHM-St. Patrick has two). Our Lady of Fatima absorbed Sacred Heart (records list).",
+   "entries": [
+    "directory:29",
+    "gcatholic:18390",
+    "directory:30",
+    "gcatholic:18387",
+    "directory:31",
+    "gcatholic:18388",
+    "gcatholic:18396",
+    "directory:36",
+    "gcatholic:18389"
+   ]
+  },
+  {
+   "id": "k-elizabeth-south",
+   "name": "Elizabeth: St. Adalbert-Sts. Peter and Paul, St. Hedwig, St. Mary, St. Anthony",
+   "why": "St. Adalbert (Polish) and Sts. Peter and Paul (Lithuanian) merged; GCatholic lists both churches. St. Mary of the Assumption links ParishesOnline.",
+   "entries": [
+    "directory:37",
+    "gcatholic:18391",
+    "gcatholic:18397",
+    "directory:38",
+    "gcatholic:18394",
+    "directory:35",
+    "gcatholic:18395",
+    "directory:33",
+    "gcatholic:18392"
+   ]
+  },
+  {
+   "id": "k-elizabeth-roselle",
+   "name": "Elizabeth (Blessed Sacrament, St. Genevieve), Roselle, Roselle Park",
+   "why": "Planning Area K. Separate parishes.",
+   "entries": [
+    "directory:32",
+    "gcatholic:18386",
+    "directory:34",
+    "gcatholic:18393",
+    "directory:180",
+    "gcatholic:18548",
+    "directory:181",
+    "gcatholic:18549"
+   ]
+  },
+  {
+   "id": "k-linden",
+   "name": "Linden",
+   "why": "Four Linden parishes. St. Theresa of the Child Jesus houses the Shrine of St. John Paul II (GCatholic group).",
+   "entries": [
+    "directory:100",
+    "gcatholic:18463",
+    "directory:99",
+    "gcatholic:18464",
+    "directory:102",
+    "gcatholic:18465",
+    "directory:101",
+    "gcatholic:18466"
+   ]
+  },
+  {
+   "id": "k-hillside-union",
+   "name": "Hillside and Union",
+   "why": "St. Catherine of Siena and Christ the King, Hillside have one pastor from July 2026: check whether they now share a bulletin.",
+   "entries": [
+    "directory:64",
+    "gcatholic:18425",
+    "directory:65",
+    "gcatholic:18426",
+    "directory:195",
+    "gcatholic:18563",
+    "directory:196",
+    "gcatholic:18564"
+   ]
+  },
+  {
+   "id": "k-rahway",
+   "name": "Rahway, Clark, Kenilworth",
+   "why": "Divine Mercy merged St. Mary and St. Mark (records list); GCatholic lists both churches. The workbook title says 'Divine Mercy-Includes 603'.",
+   "entries": [
+    "directory:172",
+    "gcatholic:18540",
+    "gcatholic:59526",
+    "directory:16",
+    "gcatholic:18372",
+    "directory:97",
+    "gcatholic:18461"
+   ]
+  },
+  {
+   "id": "eastern-ruthenian",
+   "name": "Eastern Catholic: Ruthenian (Byzantine Eparchy of Passaic)",
+   "why": "GCatholic lists these Ruthenian churches in the archdiocese's territory; they belong to the Eparchy of Passaic. Record each as other-jurisdiction after confirming the church exists.",
+   "entries": [
+    "gcatholic:17170",
+    "gcatholic:17174",
+    "gcatholic:17177",
+    "gcatholic:17178",
+    "gcatholic:17179",
+    "gcatholic:17181",
+    "gcatholic:17187"
+   ]
+  },
+  {
+   "id": "eastern-other",
+   "name": "Eastern Catholic: Ukrainian, Melkite, Syro-Malabar, Syro-Malankara, Syriac",
+   "why": "Ukrainian (Archeparchy of Philadelphia), Melkite (Newton), Syro-Malabar (Chicago), Syro-Malankara and Syriac churches GCatholic lists here. Our Lady of Deliverance (25653) is in Woodland Park, Passaic County, outside the archdiocese. Record each as other-jurisdiction.",
+   "entries": [
+    "gcatholic:16550",
+    "gcatholic:16962",
+    "gcatholic:17006",
+    "gcatholic:17480",
+    "gcatholic:17483",
+    "gcatholic:17486",
+    "gcatholic:17487",
+    "gcatholic:17490",
+    "gcatholic:17493",
+    "gcatholic:25653"
+   ]
+  }
+ ],
+ "excluded": []
+}
