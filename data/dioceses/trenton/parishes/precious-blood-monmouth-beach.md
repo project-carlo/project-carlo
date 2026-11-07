@@ -26,6 +26,19 @@ evidence:
   note: 'July 2024 cohort list: Cohort 28 is Precious Blood (Monmouth Beach), St. Dorothea (Eatontown),
     Immaculate Conception (Eatontown, in parentheses) and St. Anselm (Wayside).'
 promoted: 2026-10-30
+research:
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese trenton (hand refresh
+    against main), then probe url on /bulletin and visit.py on the homepage
+  url: https://www.churchofthepreciousblood.org/bulletin
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Re-run fetch:check for this row once /bulletin posts a November issue. On 2026-11-07 the
+    page still listed 27 Sep to 25 Oct 2026 (oldest first) and no 1 or 8 November issue, so the recipe
+    fell back to the first listed, 27 September (stale). Its file names are dated, so a current issue
+    would be picked as 'current'. If the page stays behind, look for another channel (the homepage links
+    only this page).
+  retry_when: The /bulletin page lists an issue dated within a week
+  revisit_after: 2026-11-21
 bulletin_status: available
 publication_reviews:
 - parish: st-dorothea-eatontown
@@ -79,4 +92,4 @@ A self-hosted bulletin page; the row is `other` with a `page-pdfs` recipe on /bu
 
 ## Not yet confirmed
 
-Nothing outstanding.
+On 2026-11-07 (hand refresh) /bulletin still ended at the 25 October issue, so `fetch:check` fell back to the oldest one listed (27 September). The recipe reads dated file names and would pick a current issue; whether the parish has stopped posting is in `research`.

@@ -73,7 +73,7 @@ St. Raphael-Holy Angels Parish, Hamilton (Cohort 6 "Lumen Christi"), formed 1 Ju
 
 ## Worship sites
 
-One church with public Mass: St. Raphael, 3500 South Broad Street. The history page says the two predecessor communities celebrated Mass "in two worship spaces" until the 2005 merger; the 2017 Faith in Our Future decisions (Cohort 6, item 4) planned "Periodic review of St. Raphael-Holy Angels; potential suspension of operations of Holy Angels Church as early as July 1, 2017". Today's bulletin and site list one Mass schedule at one address and name no Holy Angels Mass. GCatholic still lists Holy Angels Church, 1717 S Broad St. (18822), and phone-book aggregators still list it. I found no source that says Holy Angels closed or was sold, so it is not excluded as closed: it is in `open/holy-angels-hamilton` with the checks made and the next step.
+One church with public Mass: St. Raphael, 3500 South Broad Street. The history page says the two predecessor communities celebrated Mass "in two worship spaces" until the 2005 merger; the 2017 Faith in Our Future decisions (Cohort 6, item 4) planned "Periodic review of St. Raphael-Holy Angels; potential suspension of operations of Holy Angels Church as early as July 1, 2017". Today's bulletin and site list one Mass schedule at one address and name no Holy Angels Mass. GCatholic still lists Holy Angels Church, 1717 S Broad St. (18822), and phone-book aggregators still list it. The Monitor's story of its last Mass (2 July 2017; the Coptic Orthodox community buying the building) closed it: it is `excluded/holy-angels-hamilton`, moved there from `open/` in the hand refresh of 2026-11-07.
 
 ## Website and bulletin provider
 

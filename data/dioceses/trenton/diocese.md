@@ -425,6 +425,24 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-07: Hand refresh against main (PR #179, branch `refresh/trenton-map-1`): main merged in,
+  then a reconcile and an integrate by hand under main's rules, no new batches (the 30 map batches
+  of 2026-10-30 stand). Coverage: directory 98/98 accounted for (94 modelled as churches on the
+  site), GCatholic 136/136 (116 of the 122 non-excluded modelled). 93 parish rows, 4 of them
+  `unsupported` with a `fetch_gap` (Immaculate Conception, Eatontown `extensionless-download-link`;
+  Epiphany, Brick `joomla-weblink-redirect` and St. Catharine, Holmdel
+  `constant-contact-html-newsletter`, both `no_bulletin` until now; St. Mary, Colts Neck
+  `first-pdf-not-current`), 125 churches, 14 exclusions, 3 open. Three `open/` records became
+  closed exclusions on sources found by web search: Holy Angels, Hamilton (last Mass 2 July 2017),
+  Christ the Redeemer, Mount Holly (23 May 2021) and Our Lady of Peace, Normandy Beach (closed
+  after Sandy, demolished 2016). Renamed `st-joseph-millstone` to `st-joseph-millstone-township`
+  (parish and church), since Metuchen's St. Joseph, Millstone takes that slug. Nothing merged or
+  moved. `audit --fetch`: 239 pairs, all `separate` (5 new reviews for the two rows that left
+  `no_bulletin`). `fetch:check` on all 91 rows it read: 86 picked the 8 November issue; St. John
+  Neumann, Mount Laurel's eCatholic site was a week behind its John Patrick listing, so the row now
+  reads the listing (rechecked: 8 November); St. Mary, Colts Neck and Immaculate Conception became
+  `unsupported` (above); St. Dorothea's site was down and Precious Blood's page still ends at 25
+  October (both in `research`). The playbook's two sections were condensed to their targets.
 - 2026-10-30: Reconcile (045-reconcile) after 30 map batches (4-12 roster entries each, usually
   about 8). Coverage: directory 98/98 accounted for (96 modelled as churches on the site),
   GCatholic 136/136 (118 of the 125 non-excluded modelled). 93 parish rows (2 `no_bulletin`:

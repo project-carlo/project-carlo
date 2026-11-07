@@ -1,10 +1,23 @@
 ---
 name: Holy Angels Church
-revisit: 'Find whether Holy Angels Church, 1717 S Broad St, still holds public Mass: ask for a source
-  that dates its closing or sale, or a bulletin or schedule that lists a Mass there.'
-revisit_after: 2027-01-31
+reason: closed
+line1: 1717 S Broad St.
+city: Hamilton
+state: NJ
+postal_code: 08610
+decided: 2026-11-07
 roster: ['gcatholic:18822']
 evidence:
+- url: https://trentonmonitor.com/2019/07/29/last-mass-in-holy-angels-church-marks-end-of-an-er/
+  seen: 2026-11-07
+  quote: The final Mass in Holy Angels Church was celebrated July 2 with Father Gene Daguplo serving as
+    principal celebrant.
+  note: 'The Monitor, ''Last Mass in Holy Angels Church marks end of an era'' (REST date 2019-07-29 is
+    the site migration, not publication). The story also says Holy Angels ''will no longer serve the Roman
+    Catholic community in that area'' and that ''Coptic Orthodox faithful ... are purchasing the building''.
+    Year inferred, not read: the 2017 decisions set a ''potential suspension ... as early as July 1, 2017'',
+    the story puts the repair problem ''in January'' after the Faith in Our Future process ''culminated
+    in the fall'', and 2 July 2017 was a Sunday (2 July 2019 was a Tuesday).'
 - url: https://gcatholic.org/churches/usa-03/18822
   seen: 2026-10-30
   quote: 1717 S Broad St., Hamilton, New Jersey 08610
@@ -46,16 +59,15 @@ evidence:
     the building. The Monitor's REST search for 'Holy Angels Hamilton' and 'Holy Angels Church closing'
     found no article about it.
 parish: st-raphael-holy-angels-hamilton
-line1: 1717 S Broad St.
-city: Hamilton
-state: NJ
-postal_code: 08610
+last_mass: 2017-07-02
 ---
 
-## What is known
+## Why it is excluded
 
-Holy Angels was one of the two parishes that merged on 1 July 2005 into St. Raphael-Holy Angels, Hamilton (parish site, History). The January 2017 decisions put a 'potential suspension of operations of Holy Angels Church as early as July 1, 2017' on the table. Nothing I read says whether it happened. The parish's current bulletin and site list a single Mass schedule at 3500 South Broad Street (St. Raphael) and never print the 1717 South Broad Street address; GCatholic and phone-book aggregators still list Holy Angels Church there. OSM shows no church at that point. The parish's one row is in `parishes/st-raphael-holy-angels-hamilton` with St. Raphael as its only church.
+**Holy Angels Church, 1717 South Broad Street, Hamilton: closed, last Mass 2 July 2017.** The Monitor's story 'Last Mass in Holy Angels Church marks end of an era' says 'The final Mass in Holy Angels Church was celebrated July 2', that the church 'will no longer serve the Roman Catholic community in that area', and that Coptic Orthodox faithful were buying the building. Its parish, St. Raphael-Holy Angels, moved its operations to St. Raphael, 3500 South Broad Street, which is its only Mass site in the 1 November 2026 bulletin and on its site.
 
-## Why it is not decided
+The story carries the Monitor's 2019-07-29 migration date. I dated the Mass to 2017 from the 2017 decisions ('potential suspension of operations of Holy Angels Church as early as July 1, 2017'), the story's own sequence (the planning process 'culminated in the fall', repairs found 'in January'), and the weekday: 2 July 2017 was a Sunday. This record was in `open/` until the hand refresh of 2026-11-07 found the story by web search. GCatholic (18822) still lists the church.
 
-Every source I found is either a 2017 plan, a stale directory or an absence in a schedule that names no building, so none states that Mass ended or continues at Holy Angels. An exclusion needs a source that says so (closing Mass, relegation, sale) and a church row needs a Mass held there. A text-layer bulletin from a week with a funeral, a Holy Week or a parish-wide event might name the building; so would the parish office, a county deed or tax record, or a diocesan closure notice. Until then it stays off both lists.
+## What would change this
+
+A St. Raphael-Holy Angels bulletin listing a Catholic Mass at 1717 South Broad Street again. The building's use by a Coptic Orthodox community, if it is, makes it `not-catholic` rather than a Catholic worship site either way.

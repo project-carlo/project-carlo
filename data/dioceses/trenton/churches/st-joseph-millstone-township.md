@@ -1,5 +1,5 @@
 ---
-parish: st-joseph-millstone
+parish: st-joseph-millstone-township
 name: St. Joseph Church
 line1: 91 Stillhouse Road
 line2: ''
@@ -26,6 +26,7 @@ evidence:
   seen: 2026-10-30
   note: The finder (roster directory:14615) lists 'St. Joseph Church', 91 Stillhouse Rd, Millstone Twp,
     NJ 08510-9414, coordinates 40.2181263, -74.4010830.
+replaces: [st-joseph-millstone]
 promoted: 2026-10-30
 ---
 

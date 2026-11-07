@@ -1,8 +1,8 @@
 ---
 name: St. John Neumann Roman Catholic Church
 website: https://www.sjnmtl.org/
-bulletin_provider: ecatholic
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/saint-john-neumann-roman-catholic-church-mt-laurel-nj-08054
 publication: ['ecatholic:2914', 'url:https://www.church-bulletin.org/saint-john-neumann-roman-catholic-church-mt-laurel-nj-08054']
 group: Cohort 26 (Moorestown, Mount Laurel, Marlton)
 evidence:
@@ -23,6 +23,12 @@ evidence:
   seen: 2026-10-30
   note: The parish's own eCatholic site (id 2914; plain fetch answers 403, read in the browser). Its Bulletins
     page links files.ecatholic.com/2914/bulletins/20261101.pdf and 20261025.pdf.
+- url: https://www.church-bulletin.org/bulletin/saint-john-neumann-roman-catholic-church-mt-laurel-nj-08054/2026-11-08.pdf
+  seen: 2026-11-07
+  note: 'Cover (page 1, image-only, read from a render) of the 8 November 2026 issue on John Patrick listing
+    6000: ''St. John Neumann Roman Catholic Church, 560 Walton Ave., Mt. Laurel, NJ 08054, Pastor - Rev.
+    Fr. Michael Dunn, 8 November 2026 - Thirty-second Sunday in Ordinary Time''. The eCatholic site''s
+    newest issue the same day was 1 November.'
 promoted: 2026-10-30
 research:
 - method: pnpm fetch:check --diocese trenton --parish st-john-neumann-mount-laurel (headed Chrome)
@@ -30,6 +36,16 @@ research:
   checked: '2026-10-30'
   outcome: found
   next_action: None
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese trenton (hand refresh
+    against main), then probe url on John Patrick listing 6000, probe get on sjnmtl.org/bulletins and
+    render.py page 1 of the listing's 8 November issue
+  url: https://www.church-bulletin.org/bulletin/saint-john-neumann-roman-catholic-church-mt-laurel-nj-08054/2026-11-08.pdf
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: on 2026-11-07 the eCatholic resolver picked 2914/bulletins/20261101.pdf (the 1 November
+    issue, the newest on sjnmtl.org/bulletins) while the listing already had the 8 November issue (image-only;
+    rendered cover: ''St. John Neumann Roman Catholic Church, 560 Walton Ave., Mt. Laurel ... 8 November
+    2026''). Under the settled rule the row reads the listing; ecatholic:2914 stays in publication.'
 bulletin_status: available
 publication_reviews:
 - parish: st-isaac-jogues-marlton
@@ -58,4 +74,4 @@ One church, 560 Walton Ave. (see `st-john-neumann-mount-laurel`). Page 2 also gi
 
 ## Website and bulletin provider
 
-The directory's and GCatholic's site (sjnmtl.org) is an eCatholic site (id 2914) whose Bulletins page links the newest issue, 1 November, the same Sunday as the John Patrick listing, so the row reads eCatholic (text layer) and keeps the listing in `publication`. The homepage also embeds ecatholic:15175, not identified here (diocese.md lists 15175 as one of St. Benedict's two ids), so it is not recorded.
+The directory's and GCatholic's site (sjnmtl.org) is an eCatholic site (id 2914). On 2026-10-30 its Bulletins page and John Patrick listing 6000 both had the 1 November issue, so the row read eCatholic (text layer). On 2026-11-07 (hand refresh) the listing already had the 8 November issue while the site still ended at 1 November, so under the settled rule (the channel with the latest issue is the row) it now reads the listing with `page-pdfs`, and keeps `ecatholic:2914` in `publication`. The listing's issues are image-only. The homepage also embeds ecatholic:15175, not identified here (diocese.md lists 15175 as one of St. Benedict's two ids), so it is not recorded.

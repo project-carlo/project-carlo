@@ -45,4 +45,4 @@ Yes. The 1 November 2026 bulletin and the parish site list the parish's whole Ma
 
 ## Name and address
 
-GCatholic names this building 'St. Raphael' (its own entry; Holy Angels is another, see `open/holy-angels-hamilton`). The bulletin and site never name the building apart from the parish ('St. Raphael-Holy Angels Church'); 'St. Raphael Church' is GCatholic's name and the one the parish history uses for the 3500 South Broad community. Address agrees in the bulletin, site, GCatholic and finder. Coordinates are GCatholic's Plus Code; OSM's house point is about 100 m away.
+GCatholic names this building 'St. Raphael' (its own entry; Holy Angels is another, see `excluded/holy-angels-hamilton`). The bulletin and site never name the building apart from the parish ('St. Raphael-Holy Angels Church'); 'St. Raphael Church' is GCatholic's name and the one the parish history uses for the 3500 South Broad community. Address agrees in the bulletin, site, GCatholic and finder. Coordinates are GCatholic's Plus Code; OSM's house point is about 100 m away.

@@ -1,9 +1,9 @@
 ---
 name: Princeton University Catholic Campus Ministry (Aquinas Institute), University Chapel
-revisit: 'Read the Aquinas Institute''s ''GET UPDATES'' newsletter sign-up and the University Chapel''s
-  own schedule page: is there a weekly bulletin or newsletter the pipeline could read, and are the Masses
-  open to the public? Then exclude it as no-bulletin (public Mass, nothing to read) or add a parish row
-  if a readable weekly schedule exists.'
+revisit: 'Find whether the Aquinas Institute''s University Chapel Masses are open to the public (ask the
+  Institute, 609-924-1820, or read a University Chapel or Aquinas page that says so): then exclude it
+  as no-bulletin (public Mass, nothing to read; its newsletter is a sign-up with no archive) or as no-public-mass,
+  or add a parish row if a readable weekly schedule appears.'
 revisit_after: 2027-01-31
 roster: []
 evidence:
@@ -32,6 +32,17 @@ research:
     Chapel Masses are public; decide no-bulletin exclusion or parish row.
   retry_when: Revisit date, or the owner decides whether campus ministries with term-time Mass count as
     worship sites
+  revisit_after: 2027-01-31
+- method: visit.py --text on the homepage and on the 'GET UPDATES' page (hand refresh against main)
+  url: https://princetoncatholic.org/newsletter/
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: 'The ''GET UPDATES'' page is a sign-up form only (''Which Newsletter? Alumni, Parent, Friend
+    / Student''), with no archive, so there is no readable weekly schedule. Still unread: whether the
+    University Chapel Masses are open to the public; ask the Aquinas Institute (609-924-1820), then exclude
+    as no-bulletin or leave open.'
+  retry_when: The Aquinas Institute posts a bulletin or newsletter archive, or says whether its Masses
+    are public
   revisit_after: 2027-01-31
 ---
 

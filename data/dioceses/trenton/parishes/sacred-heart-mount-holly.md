@@ -85,13 +85,13 @@ publication_reviews:
 
 Sacred Heart, Mount Holly publishes one weekly bulletin through John Patrick Publishing (listing 512 on church-bulletin.org). The 1 November 2026 issue is headed 'Sacred Heart Church, 260 High Street, Mount Holly' with Rev. John P. Czahur as pastor and one Mass schedule (Saturday 4:30pm vigil; Sunday 7:30, 9:30, 11:30; weekdays 7:00 and 8:30; Saturday 8:30am). The parish's own site (sacredheartmh.org, eCatholic 14457) links the listing as its 'current bulletin'; its eCatholic archive stopped in March 2025.
 
-The 2017 *Faith in Our Future* decisions (https://dioceseoftrenton.org/decisions, Cohort 4, item 3) continued the linkage of Christ the Redeemer and Sacred Heart, 'with Christ the Redeemer designated as Center For Hispanic Ministry'. The July 2024 cohort list names Sacred Heart, Mount Holly and not Christ the Redeemer. The two parishes never had separate rows in this batch: no Christ the Redeemer bulletin was found, and the Sacred Heart masthead does not name it now (see `christ-the-redeemer-mount-holly` in `open/`).
+The 2017 *Faith in Our Future* decisions (https://dioceseoftrenton.org/decisions, Cohort 4, item 3) continued the linkage of Christ the Redeemer and Sacred Heart, 'with Christ the Redeemer designated as Center For Hispanic Ministry'. The July 2024 cohort list names Sacred Heart, Mount Holly and not Christ the Redeemer. The two parishes never had separate rows in this batch: no Christ the Redeemer bulletin was found, and the Sacred Heart masthead does not name it now (the parish was suppressed and its church closed in May 2021: `excluded/christ-the-redeemer-mount-holly`).
 
 It is Cohort 4 with Hainesport, Browns Mills and New Egypt; a cohort is not a shared bulletin, and each publishes its own.
 
 ## Worship sites
 
-One church, Sacred Heart, 260 High Street (see `sacred-heart-mount-holly`). The Chapel of the Two Hearts and the Eucharistic Chapel the bulletin mentions are inside the church/parish buildings. GCatholic's Christ the Redeemer, 113 South Avenue is not a row here: the 2018 to January 2020 Sacred Heart mastheads list it only as the priests' 'Residence', and it is in `open/`.
+One church, Sacred Heart, 260 High Street (see `sacred-heart-mount-holly`). The Chapel of the Two Hearts and the Eucharistic Chapel the bulletin mentions are inside the church/parish buildings. GCatholic's Christ the Redeemer, 113 South Avenue is not a row here: the 2018 to January 2020 Sacred Heart mastheads list it only as the priests' 'Residence', and the diocese closed its church after a last Mass on 23 May 2021 (`excluded/christ-the-redeemer-mount-holly`, found in the hand refresh of 2026-11-07).
 
 ## Website and bulletin provider
 
@@ -99,4 +99,4 @@ The finder's website, parishofsacredheart.org, has moved to sacredheartmh.org (t
 
 ## Not yet confirmed
 
-`fetch:check` (2026-10-30) picks the 1 November 2026 issue from the listing. Nothing else about this bulletin. Whether Christ the Redeemer still holds Mass is open; see its record.
+`fetch:check` (2026-10-30) picks the 1 November 2026 issue from the listing. Nothing else about this bulletin. Christ the Redeemer's closing is in its `excluded/` record.

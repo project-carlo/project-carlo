@@ -25,6 +25,19 @@ evidence:
   note: 'July 2024 cohort list: Cohort 28 is Precious Blood (Monmouth Beach), St. Dorothea (Eatontown),
     Immaculate Conception (Eatontown, in parentheses) and St. Anselm (Wayside).'
 promoted: 2026-10-30
+research:
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese trenton (hand refresh
+    against main), then visit.py --text on the homepage and probe get on the expected WeConnect file names
+  url: https://www.saintdorothea.org/
+  checked: '2026-11-07'
+  outcome: access-blocked
+  next_action: 'Re-run pnpm fetch:check --diocese trenton --parish st-dorothea-eatontown once the site
+    is back and confirm it picks the newest Bulletin DOR <date> issue. On 2026-11-07 the homepage answered
+    200 with only ''Unfortunately, this site is temporarily unavailable.'' (fetch:check: ''No PDF links
+    found on bulletin page''), and the guessed names Bulletin DOR Nov 1 2026 O31.pdf and Nov 8 2026 O32.pdf
+    answered 403 on uploads.weconnect.com.'
+  retry_when: saintdorothea.org serves its homepage again
+  revisit_after: 2026-11-14
 bulletin_status: available
 publication_reviews:
 - parish: precious-blood-monmouth-beach
@@ -56,4 +69,4 @@ A self-hosted page linking WeConnect uploads; the row is `other` with a `page-pd
 
 ## Not yet confirmed
 
-Nothing outstanding.
+On 2026-11-07 (hand refresh) the site answered only 'this site is temporarily unavailable', so `fetch:check` found no PDF links; the 1 and 8 November issues weren't read. A retry is in `research`.

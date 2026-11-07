@@ -1,7 +1,7 @@
 ---
 name: Church of Immaculate Conception
 website: http://eatoncatholic.org/
-bulletin_provider: other
+bulletin_provider: unsupported
 provider_id: page-pdfs http://eatoncatholic.org/WeeklyBulletin/list.asp
 publication: ['url:http://eatoncatholic.org/WeeklyBulletin/list.asp']
 group: Cohort 28 (Eatontown, Monmouth Beach, Wayside)
@@ -36,7 +36,25 @@ research:
     Fetching one issue by hand (probe pdf, probe get --out) works and the 25 Oct file is a readable 2-page
     Korean PDF.'
   retry_when: A collector that follows extensionless document links (opendoc.asp?b_id=) exists in src/pdf_extract/parish_sites/collectors.py
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese trenton (hand refresh
+    against main)
+  url: http://eatoncatholic.org/WeeklyBulletin/list.asp
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Set bulletin_provider back to other (page-pdfs on list.asp, or the new collector's recipe)
+    once a collector follows extensionless document links, run fetch:check, and clear fetch_gap when it
+    picks this week's issue.
+  retry_when: A collector for extensionless download links (fetch_gap kind extensionless-download-link)
+    exists
 bulletin_status: available
+fetch_gap:
+  kind: extensionless-download-link
+  seen: 2026-11-07
+  note: 'Each issue on http://eatoncatholic.org/WeeklyBulletin/list.asp (ASP, EUC-KR, newest first) is
+    linked as a relative opendoc.asp?b_id=<n> with no .pdf in the address; it answers 200 application/pdf,
+    but page-pdfs skips it (fetch:check 2026-11-07: ''No PDF links found on bulletin page''). The issue
+    number and date are in the list row''s text.'
+  url: http://eatoncatholic.org/WeeklyBulletin/opendoc.asp?b_id=7387
 publication_reviews:
 - parish: precious-blood-monmouth-beach
   decision: separate
@@ -112,8 +130,8 @@ One church, Immaculate Conception at 64 Broad St. The bulletin lists the Sunday 
 
 ## Website and bulletin provider
 
-A self-hosted ASP site. The row is `other` with a `page-pdfs` recipe on the list page, but the fetch resolver cannot collect it: each issue is an extensionless `opendoc.asp?b_id=<n>` link that serves a PDF, so every recipe fails with 'No PDF links found'. See the research item; the bulletin itself is readable by hand.
+A self-hosted ASP site. The fetch resolver cannot collect it: each issue is an extensionless `opendoc.asp?b_id=<n>` link that serves a PDF, so every recipe fails with 'No PDF links found' (`fetch:check` 2026-10-30 and again 2026-11-07). The row is therefore `unsupported` with a `fetch_gap` of kind `extensionless-download-link` (hand refresh, 2026-11-07): it stays in the records with its publication id and is left off the site until a collector reads these links. The `provider_id` keeps the `page-pdfs` recipe on the list page, the one to try first when the collector lands. The bulletin itself is readable by hand.
 
 ## Not yet confirmed
 
-The fetch resolver does not collect this site's issues (research). The bulletin is in Korean: identity and Mass times were read from its Latin-script address line and numerals. No English-language Mass at this church was seen.
+The fetch resolver does not collect this site's issues (`fetch_gap`, research). The bulletin is in Korean: identity and Mass times were read from its Latin-script address line and numerals. No English-language Mass at this church was seen.

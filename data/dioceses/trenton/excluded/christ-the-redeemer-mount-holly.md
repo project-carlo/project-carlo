@@ -1,11 +1,22 @@
 ---
 name: Christ the Redeemer Church
-revisit: 'Find whether Christ the Redeemer, 113 South Avenue, Mount Holly holds public Mass: ask the Sacred
-  Heart parish office (609-267-0209) or read a Sacred Heart or diocesan source that lists a Mass or Spanish
-  Mass there, or one that dates its closing, sale or merger into Sacred Heart.'
-revisit_after: 2027-01-31
+reason: closed
+line1: 113 South Avenue
+city: Mount Holly
+state: NJ
+postal_code: 08060
+decided: 2026-11-07
 roster: ['gcatholic:18698']
 evidence:
+- url: https://14277.sites.ecatholic.com/news/christ-the-redeemer-parish-to-close-in-may
+  seen: 2026-11-07
+  quote: the final date for Masses to be celebrated in Christ the Redeemer Church will be Pentecost Sunday,
+    May 23, 2021
+  note: 'Diocese of Trenton news release, 23 March 2021, ''Christ the Redeemer Parish to close in May'':
+    the parish ''will close its church and undergo canonical suppression''; records go to Sacred Heart,
+    and ''the church and other property connected to the parish will be sold''. The Monitor carried the
+    same story (trentonmonitor.com/2021/03/24/christ-the-redeemer-parish-to-close-in-may/, body behind
+    its reader wall).'
 - url: https://dioceseoftrenton.org/decisions
   seen: 2026-10-30
   quote: Continue current Linkage Model for Christ the Redeemer and Sacred Heart Parishes with Christ
@@ -45,27 +56,15 @@ evidence:
     Redeemer Parish, 35 South Ave, Mount Holly' with 'Weekend Mass Schedule Sunday 10:00 AM'. Its street
     number differs from GCatholic's and the bulletins' 113 and it has no source; not relied on.
 parish: sacred-heart-mount-holly
-line1: 113 South Avenue
-city: Mount Holly
-state: NJ
-postal_code: 08060
-research:
-- method: Sacred Heart bulletins grepped across 2018 to 2026 (eCatholic archive and John Patrick listing);
-    the July 2024 cohort list; The Monitor REST search for 'Christ the Redeemer' and Mount Holly
-  checked: '2026-10-30'
-  outcome: not-found
-  next_action: Ask the Sacred Heart parish office whether Mass is held at 113 South Avenue, or find a
-    dated closing or merger notice; check the next Sacred Heart bulletins for a Spanish Mass line.
-  retry_when: A Sacred Heart bulletin or the diocese names Christ the Redeemer or a Spanish Mass, or the
-    parish office answers
+last_mass: 2021-05-23
 ---
 
-## What is known
+## Why it is excluded
 
-Christ the Redeemer, 113 South Avenue, Mount Holly was a parish linked to Sacred Heart under one pastor, and the January 2017 decisions made it the Center for Hispanic Ministry. From 2018 to January 2020 Sacred Heart's masthead lists it as 'Residence: Christ The Redeemer Church, 113 South Avenue' (a priests' residence), and Sacred Heart's Mass schedules, both then and in the 1 November 2026 issue, list only Sacred Heart's Masses. The diocese's July 2024 cohort list and the finder no longer have the parish.
+**Christ the Redeemer Church, 113 South Avenue, Mount Holly: closed, last Mass 23 May 2021.** The Diocese of Trenton's release of 23 March 2021 says the parish 'will close its church and undergo canonical suppression' and that 'the final date for Masses to be celebrated in Christ the Redeemer Church will be Pentecost Sunday, May 23, 2021'; its records went to Sacred Heart, Mount Holly, and the property was to be sold. The date is the one the release fixed in advance; nothing later read (Sacred Heart's 2020-2026 bulletins, the July 2024 cohort list, the finder) puts a Mass there.
 
-So the parish ended, but nothing read says whether the church building still holds Mass, is used as a residence only, or was closed or sold.
+This record was in `open/` until the hand refresh of 2026-11-07 found the release by web search. GCatholic (18698) and the diocese's own 'Mass in a foreign language' page still list Christ the Redeemer; that page also still lists Holy Spirit, Asbury Park, closed in 2021, so it is stale.
 
-## Why it is not decided
+## What would change this
 
-The evidence is absence: no current bulletin line puts a Mass there, and none says it closed. Under the README an exclusion needs a source that states the fact, so it stays open rather than excluded as closed or no-public-mass. A third-party aggregator's single Sunday 10:00 AM line at '35 South Ave' conflicts with the bulletins' number and is unsourced. The next step is a call to the parish office or a bulletin or diocesan notice (see `revisit`).
+A Sacred Heart bulletin or diocesan source listing a public Mass at 113 South Avenue again.

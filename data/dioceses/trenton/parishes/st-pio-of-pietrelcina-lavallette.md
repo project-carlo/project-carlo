@@ -74,4 +74,4 @@ The row uses St. Pio's site (the Lavallette address is the one the listing is fi
 
 ## Worship sites
 
-Three: Sacred Heart, Bay Head; St. Pio of Pietrelcina Church, 1100 Grand Central Avenue, Lavallette; St. Bonaventure Chapel, 1206 Grand Central Avenue, Lavallette, where weekday Mass is said (`sacred-heart-bay-head`, `st-pio-of-pietrelcina-church-lavallette`, `st-bonaventure-chapel-lavallette`). GCatholic's Our Lady of Peace, Normandy Beach is in `open/our-lady-of-peace-normandy-beach`.
+Three: Sacred Heart, Bay Head; St. Pio of Pietrelcina Church, 1100 Grand Central Avenue, Lavallette; St. Bonaventure Chapel, 1206 Grand Central Avenue, Lavallette, where weekday Mass is said (`sacred-heart-bay-head`, `st-pio-of-pietrelcina-church-lavallette`, `st-bonaventure-chapel-lavallette`). GCatholic's Our Lady of Peace, Normandy Beach never reopened after Superstorm Sandy and was demolished in 2016 (`excluded/our-lady-of-peace-normandy-beach`).

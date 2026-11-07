@@ -39,6 +39,14 @@ evidence:
   note: OpenStreetMap has unnamed house points for 1139 (40.10241, -74.16977) and 1141 (40.10240, -74.16973)
     County Line Road East, about 290 m east of GCatholic's Plus Code. No OpenStreetMap place of worship
     named Holy Family turned up in two searches.
+- url: https://nominatim.openstreetmap.org/search?q=1139+East+County+Line+Road+Lakewood+NJ&format=json&limit=5
+  seen: 2026-11-07
+  note: 'OSM''s ''1139, County Line Road East'' result (40.10241, -74.16977) is a house number on way
+    11758633, which nominatim''s lookup shows is the road itself (County Line Road East, CR 63, highway
+    tertiary): an interpolated point along the street, not a building. Reverse lookup at the Plus Code
+    gives a house point ''1199, East County Line'' a few metres away. So OSM has no building or place
+    of worship for Holy Family to weigh against GCatholic''s Plus Code, which stays the coordinate (hand
+    refresh against main).'
 promoted: 2026-10-30
 ---
 
@@ -48,4 +56,4 @@ Yes. The 1 November 2026 bulletin (page 1) and the parish site's schedule give H
 
 ## Name and address
 
-The bulletin prints Holy Family Church at 1139 East County Line Road; GCatholic lists the same campus as "St. Mary of the Lake" at 1141 E County Line Rd (a pre-merger parish name, with no Holy Family entry anywhere in the rosters), and the finder has no pin for it. The bulletin's 1139 and GCatholic's 1141 differ, and GCatholic's Plus Code is about 290 m west of OpenStreetMap's points for both numbers, so address_verified stays false: the number follows the bulletin, the coordinates GCatholic's Plus Code (the only building-precise source), and a geocode after promotion should check them. gcatholic:18818 is linked here by street and campus, not by name.
+The bulletin prints Holy Family Church at 1139 East County Line Road; GCatholic lists the same campus as "St. Mary of the Lake" at 1141 E County Line Rd (a pre-merger parish name, with no Holy Family entry anywhere in the rosters), and the finder has no pin for it. The bulletin's 1139 and GCatholic's 1141 differ, and GCatholic's Plus Code is about 290 m west of OpenStreetMap's points for both numbers, so address_verified stays false: the number follows the bulletin, the coordinates GCatholic's Plus Code (the only building-precise source). OSM's points are not buildings: its 1139 is a house number interpolated along County Line Road East (the matched way is the road, CR 63; read 2026-11-07), so they don't count against the Plus Code. gcatholic:18818 is linked here by street and campus, not by name.

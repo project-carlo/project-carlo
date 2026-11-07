@@ -45,6 +45,19 @@ line1: 118 Broad Street
 city: Keyport
 state: NJ
 postal_code: '07735'
+research:
+- method: Web search for a Jesus the Lord Mass schedule; the diocese's 'Mass in a foreign language' page;
+    Our Lady of Fatima's 8 November 2026 bulletin (container 04/0792) grepped for Jesus, Señor, Misa,
+    118 Broad (hand refresh against main)
+  url: https://14277.sites.ecatholic.com/mass-in-a-foreign-language
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the Our Lady of Fatima office (732-264-0322) which church each Mass is in. The diocesan
+    page lists 'Jesus the Lord Parish/Jesús el Señor | 123 Broad Street | Keyport ... Domingo a las 11:30
+    a.m.', but it also still lists Christ the Redeemer, Mount Holly (closed May 2021), so it is stale
+    and doesn't settle a current Mass. The 8 November bulletin names the church only on its cover and
+    in the prayer-group and Cursillo lines (pages 3, 4, 6 and 10 have no text layer).
+  retry_when: The parish publishes a per-church Mass schedule, or the parish office answers
 ---
 
 ## What is known

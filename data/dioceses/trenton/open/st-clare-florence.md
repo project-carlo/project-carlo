@@ -50,6 +50,14 @@ line1: 242 E Front St.
 city: Florence
 state: NJ
 postal_code: 08518
+research:
+- method: Web search for a closing, sale or reuse of St. Clare Church, East Front Street, Florence (hand
+    refresh against main)
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the Mary, Mother of the Church office (609-298-0261), or read a 2008-2018 Sts. Francis
+    and Clare bulletin or the Burlington County deed for 232/242 E Front St.
+  retry_when: A parish, diocesan or county source names the building, or the parish office answers
 ---
 
 ## What is known

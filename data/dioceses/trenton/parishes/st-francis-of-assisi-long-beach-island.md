@@ -46,6 +46,14 @@ research:
     October file 046A_2026_10_25.pdf has no suffix).
   retry_when: The next Sunday's issue is posted, or the resolver reads a trailing -1 in the file name
     correctly
+- method: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese trenton (hand refresh
+    against main), then probe pdf --pages 1 on the pick
+  url: https://www.stfrancisparishlbi.org/s/046a_2026_11_08.pdf
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: the recipe picked 046a_2026_11_08.pdf (''current''), whose page 1 reads ''THE BRIDGE
+    NOVEMBER 8, 2026''. The 1 January misreading was of the one suffixed file name (046a_2026_11_01-1.pdf);
+    recheck only if a later suffixed name is picked as stale.'
 bulletin_status: available
 publication_reviews:
 - parish: st-theresa-little-egg-harbor
@@ -81,4 +89,4 @@ The finder's site stfrancisparishlbi.org is a Squarespace site; GCatholic's lbis
 
 ## Not yet confirmed
 
-The `fetch:check` run on 2026-10-30 picks the right file (the 1 November 2026 issue) but reports it stale: the resolver reads the file name `046a_2026_11_01-1.pdf` as 2026-01-01. The cover says November 1, 2026, and identity matched with `--expected-identity "St. Francis of Assisi"`. Recheck when the next week's normally named issue is posted (see research). The three island churches' winter and 2027 summer schedules are not yet read (see their revisits).
+The `fetch:check` run on 2026-10-30 picked the right file (the 1 November 2026 issue) but reported it stale: the resolver read the file name `046a_2026_11_01-1.pdf` as 2026-01-01. The hand refresh's run on 2026-11-07 picked `046a_2026_11_08.pdf`, the 8 November issue (cover read), as current, so the row collects; only a suffixed file name trips the date reading (see research). The three island churches' winter and 2027 summer schedules are not yet read (see their revisits).

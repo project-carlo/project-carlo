@@ -37,7 +37,7 @@ research:
   retry_when: strobert.cc stops answering HTTP 403 to probe get, or listing 558 falls behind the site
 bulletin_status: available
 publication_reviews:
-- parish: st-joseph-millstone
+- parish: st-joseph-millstone-township
   decision: separate
   evidence:
   - url: https://www.church-bulletin.org/bulletin/co-cathedral-of-saint-robert-bellarmine-freehold-nj-07728/2026-11-01.pdf
