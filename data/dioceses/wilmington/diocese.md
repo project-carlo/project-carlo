@@ -130,163 +130,99 @@ Diocese-wide lists worth reading, what each is good for, and how far to trust it
 From `probe url` on every roster website and the browser on 38 of them (2026-10-27); each
 batch settles its own rows.
 
-- **John Patrick Publishing** prints a good share of New Castle County and the upper shore:
-  parish sites link `jppc.net/onlinebulletins/<id>template.pdf`, which redirects to a
-  `church-bulletin.org/<slug>` listing of dated PDFs (Downtown Catholic 309, St. Joseph,
-  Middletown 319, St. Polycarp 301, St. Margaret of Scotland 306; listings for St. Helena,
-  Our Lady of Fatima 304 and St. Dennis 732; St. Mary Magdalen's too; St. Hedwig 317, whose
-  home page links `church-bulletin.org/?id=317`, which redirects the same way). Record it as
-  `page-pdfs https://www.church-bulletin.org/<slug>`, as Harrisburg and Allentown do. To
-  find which parish a number is, `curl -L` the template URL and read the slug it lands on
-  (Delaware's are 300-320 and 732); never guess a slug, since a wrong one returns the generic
-  home page with HTTP 200. A listing can outlive its parish (313, Christ Our King, lists no
-  PDFs). A parish site's link to the template is often only an href on a "Bulletin" button:
-  quote visible text (the listing's title, the cover) as evidence, not the href.
-  church-bulletin.org answers 406 to a bare "Mozilla/5.0" user agent; plain curl (the
-  survey) and a full Chrome-style agent (map 003) worked, but in maps 004 and 012 the
-  sandbox refused curl with a spoofed agent, here and on other sites, so use plain curl,
-  `probe pdf` or `visit.py`. When the parish site itself answers 403 or 500 to curl, or
-  doesn't connect at all (saintpolycarp.org, stdennischurch.org on 2026-10-27), the
-  jppc.net template redirect still gives the listing. Pin the listing even when the parish
-  site has its own bulletin page: that page can be a week behind (St. Joseph, Middletown).
-  Many covers are scanned images (St. Mary Magdalen's whole file; page 1 of St. Margaret's,
-  Holy Family's, Resurrection's and St. Joseph, Middletown's): `probe pdf` finds no text
-  there, so render page 1 with parish-site-access `render.py` to read the masthead;
-  `fetch:check` still passes. A rendered cover can list each church with its times and a
-  status line ("The Church is currently closed for repairs", St. Francis Xavier Shrine),
-  which is the current-Mass evidence for a mission or shrine. Some
-  eCatholic sites (Resurrection) link their bulletin to the church-bulletin.org listing and
-  host no eCatholic files: see that bullet.
-- **LPi / ParishesOnline** prints most of the Ocean Deanery (containers `04/xxxx`: St.
-  Edmond 04/0887, St. Luke 04/0763, St. Mary & Holy Savior 04/0790, St. Mary, Cambridge
-  04/0661, St. Michael/Mary Mother of Peace 04/0868; St. Jude, Lewes and St. Francis de
-  Sales, Salisbury are 03/1013 and 03/1207), the mid-shore and
-  Kent (Our Mother of Sorrows/St. Peter 04/0487, Sts. Peter and Paul, Easton 04/0450, St.
-  John/St. Bernadette, Milford 04/0120) and several in the north (Holy Child, IHM, St. John
-  the Beloved, St. Catherine of Siena, Holy Spirit/St. Peter, St. Matthew/Corpus Christi,
-  St. Joseph on the Brandywine). Parish sites on other platforms hide the link: a Wix
-  site's Bulletin button goes to `parishesonline.com/find/<slug>` while the home page's only
-  PDF links are one-page inserts (stjohnsmilford.com); an eCatholic site can host no
-  bulletins and link ParishesOnline (sorrowsparish.org, 11311: record the po ids, not the
-  eCatholic id); a Duda or WeConnect (LPi's own platform) bulletins page can embed
-  `publicationWidget?id=<lpi id>`, and `probe po` resolves the id to the container.
-  `probe url` reports it as `lpi:<id>` on some sites (St. Mary, Cambridge; smammop.com;
-  visitstfrancis.org) but not others, where the widget is only in the page source
-  (stedmond.org/bulletins, stjudelewes.org): grep the HTML for `id=0018` (the widget can
-  be written `publicationWidget?type=bulletin&color=gray&id=<lpi id>`, id not first, as
-  on St. Luke's and St. Mary & Holy Savior's), and
-  quote the bulletin rather than the href, which recheck can't find. A WeConnect
-  `/publications` page (stjohnneumannrcc.com) links each issue as
-  `parishesonline.com/publication-page/<org>?selectedPublication=<container url>`. Such sites' menu links
-  can carry a hash suffix (smammop.com/mass-schedulef0423bfb,
-  stjudelewes.org/bulletin<hash>): use `visit.py --follow` and read `final_url` rather than
-  guessing the path. The directory's website can be a sister institution's with no bulletin link
-  (Easton's ssppeaston.org is the parish-and-schools site): look at the parish's other
-  directory entries for its own site (ssppeastonmd.org). One container can have an
-  organization account for each church (St. John, Milford 19963 and St. Bernadette,
-  Harrington 19952 both serve 04/0120): record every po-org id on the one row.
-  ParishesOnline org names that join two parishes
-  (`holy-spirit-st-peter-the-apostle`, `st-matthew-parish-and-corpus-christi`,
-  `our-mother-of-sorrows-st-peter-the-apostle`, `st-michael-mary-mother-of-peace-parish`)
-  are leads, not proof: read the masthead.
-  A cover can print a "United in Christ" deanery Mass-time box naming several parishes
-  (Immaculate Heart of Mary's lists six): that is a deanery schedule, not a shared masthead,
-  so take the parish and staff from page 2 or later. Covers are often image-only, with text
-  only on the ad pages at the end (St. John the Beloved 03/1288, St. Catherine 03/1410; no
-  text on pages 1-5 of Our Mother of Sorrows 04/0487, 1-6 of St. Edmond 04/0887, 1-9 of St.
-  Francis de Sales 03/1207): render page 1 with `render.py` for the masthead, and quote the
-  LPi footer ('Parish, City, DE 03-NNNN' or 'Parish | 04-NNNN') as the text that names the
-  container. For each church's current Mass times, render the Mass-schedule box on the
-  cover or the Mass-intentions page (page 3 of St. Michael/Mary Mother of Peace's, one
-  column per church); summer issues add the seasonal sites to the box (St. Edmond).
-  `probe pdf --grep` returns pages 1-3 whether or not they match, so find a notice's page
-  with `--pages N`. Issues go up before their weekend, so
-  `fetch:check` freshness `future` (St. Catherine's 20261101 on 2026-10-27) is not a wrong
-  pick, and a cover printing two dates ('October 25, 2026 / November 1, 2026') makes it
-  report issue_date `conflict` for a correct current pick. Don't take coordinates from a ParishesOnline org's own pin (St. Catherine's is about
+- **John Patrick Publishing** (church-bulletin.org) prints much of New Castle County and the
+  upper shore. Parish sites link `jppc.net/onlinebulletins/<id>template.pdf` (or
+  `church-bulletin.org/?id=<id>`), which redirects to a `church-bulletin.org/<slug>` listing
+  of dated PDFs; Delaware's numbers are 300-320 and 732. Follow the redirect to learn the
+  slug; never guess one, since a wrong slug returns the generic home page with HTTP 200.
+  Record `page-pdfs https://www.church-bulletin.org/<slug>`, as Harrisburg and Allentown do,
+  even when the parish site has its own bulletin page (it can be a week behind), and use the
+  redirect when the parish site answers 403 or 500 or doesn't connect. A listing can outlive
+  its parish (313, Christ Our King, lists no PDFs). A "Bulletin" button is often only an
+  href to the template: quote visible text (the listing's title, the cover), not the href.
+  The site answers 406 to a bare "Mozilla/5.0" agent and the sandbox refuses curl with a
+  browser agent, so read it with `pnpm diocese probe get`, `probe pdf` or `visit.py`. Many
+  covers are scanned images: render page 1 with `render.py` for the masthead (`fetch:check`
+  still passes). A rendered cover lists each church with its times and any status line ("The
+  Church is currently closed for repairs"): the current-Mass evidence for a mission or shrine.
+- **LPi / ParishesOnline** prints most of the Ocean Deanery, the mid-shore and Kent
+  (containers `04/xxxx`) and several northern parishes (`03/xxxx`). Sites on other platforms
+  hide the link: a Wix "Bulletin" button goes to `parishesonline.com/find/<slug>` while the
+  home page's only PDFs are one-page inserts; an eCatholic site can host no bulletins and link
+  ParishesOnline (record the po ids, not the eCatholic id); a Duda or WeConnect page embeds
+  `publicationWidget?...id=<lpi id>`, sometimes only in the page source and with the id not
+  first (`publicationWidget?type=bulletin&color=gray&id=...`), so grep the HTML for `id=0018`
+  and resolve it with `probe po`; quote the bulletin, not the href, which `recheck` can't find. A WeConnect `/publications` page links each issue as
+  `parishesonline.com/publication-page/<org>?selectedPublication=<container url>`. Menu links
+  can carry a hash suffix (`/bulletin<hash>`): use `visit.py --follow` and read `final_url`.
+  The directory's website can be a sister institution's with no bulletin link (Easton's
+  parish-and-schools site): try the parish's other directory entries. One container can have
+  an organization account per church: record every po-org id on the one row. Org names
+  joining two parishes are leads, not proof. A cover's "United in Christ" box of Mass times
+  for several parishes is a deanery schedule, not a shared masthead: take the parish and staff
+  from page 2 or later. Covers are often image-only, with text only on the ad pages: render
+  page 1, and quote the LPi footer ('Parish, City, DE 03-NNNN') as the text naming the
+  container; for each church's times render the cover's Mass box or the Mass-intentions page,
+  which adds the seasonal sites in summer. `probe pdf --grep` returns pages 1-3 whether or not
+  they match: find a notice's page with `--pages N`. In `fetch:check`, freshness `future` is
+  normal (issues go up before their weekend), and a cover printing two dates gives issue_date
+  `conflict` for a correct pick. Don't take coordinates from an org's own pin (one was about
   3 km off).
-- **eCatholic:** about 14 sites (Resurrection, St. Margaret, Seton, St. Mary of the
-  Assumption, St. Mary Magdalen, St. Ann, St. Elizabeth, St. Paul, St. Joseph on the
-  Brandywine, Good Shepherd, Sacred Heart, St. Christopher, beparish.com, Our Mother of
-  Sorrows). Unlike Harrisburg's, most answered plain `probe url` here, but sites behind
-  Cloudflare answer 403 to curl and `probe url` (resurrectionde.org, setonparish.net,
-  stjosephmiddletown.com, goodshepherdcecilmd.org's inner pages) and load in the browser,
-  where `visit.py` reads /mass-times and /church-addresses. `issues.py ecatholic` reads the files without one.
-  A home page's first PDF link can be a Mass insert (`files.ecatholic.com/<id>/documents/...`,
-  beparish.com's Holy Week schedule), not the bulletin: the weekly issues are
-  `/<id>/bulletins/YYYYMMDD.pdf` on the /bulletins page. Some of these sites host no bulletins on eCatholic and link another publisher instead:
-  the John Patrick listing (Resurrection: site 5398's files answer 403 for every Sunday) or
-  FATA Online (Good Shepherd, 17337), or ParishesOnline (see that bullet). Pin that listing with `page-pdfs` and leave the
-  eCatholic id out of `publication`. Issues go up before their Sunday, so `fetch:check` freshness `future` (St.
-  Mary of the Assumption, 20261101 on 2026-10-27) is not a wrong pick.
-  A parish in both this list and LPi's can serve one issue on both (St. Joseph on the
-  Brandywine: eCatholic 30639 and container 03/4127): compare the issues and record both
-  ids on one row. A file can also carry a sister parish's pages (St. Ann's 38453 holds St.
-  Thomas's): read page 1. A site's /bulletins list can stop months early (St. Paul,
-  Wilmington: last file 2 August 2026; Sacred Heart, Chestertown's stops at 27 September):
-  before calling it stale, check the home page's bulletin link for another publisher; it can
-  be only an image link on the /bulletin page (Sacred Heart's goes to Bonventure). When a parish domain fails TLS in curl and Chrome
-  (ERR_CERT_COMMON_NAME_INVALID), its Wayback copy (`archive.org/wayback/available?url=...`)
-  still shows the eCatholic id, and the bulletin's letterhead can name the working domain
-  (St. Joseph, Wilmington: stjosephfrenchst.org fails, sjfschurch.org is the same site 14048).
-- **J.S. Paluch on Discover Mass:** St. Ann, Bethany Beach (`discovermass:st-ann-bethany-beach-de`)
-  and Holy Cross, Dover (`holy-cross-dover-de`), whose listing serves the same issue as
-  the parish's own copy (12 pages against 10, the text oddly spaced): when the parish site
-  carries the issue, pin the copy plain curl reads and keep the listing in `publication`
-  only. Discover Mass caps downloads per
-  IP per day (a 134-byte "Maximum number of files downloaded today" reply, which
-  `fetch:check` reports as `not_pdf`): that is the cap, not the row.
-- **Bonventure** (OSV/Duda parish sites, e.g. hrparish.com, Holy Rosary, Claymont; St.
-  John-Holy Angels, 2103; Sacred Heart, Chestertown, 2169, linked from an eCatholic site;
-  Our Lady of Lourdes, Seaford, 2167, from a GoDaddy site whose bulletin page is a stub with
-  one "CLICK HERE" button): `probe url` misses the bulletin link, and a site can answer 403
-  to curl (St. John-Holy Angels); `visit.py --text --links` in the browser shows "Bulletin"
-  going to `sponsors.bonventure.net/?page=<n>`, and the PDF's page 1 names the parish
-  (it has a text layer). Issues are at
-  `/pdfs/<n>/<YYYY-MM-DD>.pdf`. The
-  https host fails TLS verification from Python (`probe pdf`, `recheck`) but loads in
-  Chrome: use the `http://` form in recipes and evidence (`page-pdfs
-  http://sponsors.bonventure.net/?page=<n>`), and `tools/browser_download.py` if you need
-  the https file. A Bon Venture ad footer on a bulletin's last pages ("D86910 (JB) - St.
-  Anthony of Padua") only means Bon Venture sells the ads; the PDF can be self-hosted.
-- **FATA Online** (`fataonline.com/bulletins/<code>`): Good Shepherd, Perryville links
-  `GoodShepherdPerryville` from its eCatholic site. Plain curl works (Harrisburg). Record
+- **eCatholic** (about 14 sites): most answered plain `probe url` here; those behind
+  Cloudflare answer 403 and load with `visit.py`, and `issues.py ecatholic` reads the files
+  without a browser. The weekly issues are `/<id>/bulletins/YYYYMMDD.pdf` on the /bulletins
+  page, often up before their Sunday (`fetch:check` freshness `future`); a home page's first PDF link can be a Mass insert under `/documents/`. Some sites host
+  no eCatholic bulletins and link John Patrick, FATA Online or ParishesOnline instead: pin
+  that listing with `page-pdfs` and leave the eCatholic id out of `publication`. A parish on
+  eCatholic and LPi can serve one issue on both (St. Joseph on the Brandywine): compare the
+  issues and record both ids on one row. A file can carry a sister parish's pages (St. Ann's
+  holds St. Thomas's): read page 1. A /bulletins list can stop months early: before calling
+  it stale, check the home page's bulletin link, which can be only an image link to another
+  publisher (Bonventure); the `?t=<ms>` upload stamps on the file links show whether a
+  parish posts in batches. When a parish domain fails TLS in curl and Chrome
+  (ERR_CERT_COMMON_NAME_INVALID), its Wayback copy still shows the eCatholic id, and the
+  bulletin's letterhead can name the working domain.
+- **J.S. Paluch on Discover Mass** (`discovermass:<church slug>`): a listing can serve the
+  same issue as the parish's own copy, re-laid-out (12 pages against 10, the text oddly
+  spaced): when the parish site carries the issue, pin that copy and keep the listing in
+  `publication` only. Discover Mass caps downloads per IP per day: a 134-byte "Maximum number
+  of files downloaded today" reply, which `fetch:check` reports as `not_pdf`, is the cap, not
+  the row; retry after the reset.
+- **Bonventure** (`sponsors.bonventure.net`, from OSV/Duda, eCatholic and GoDaddy sites, the
+  last a stub page with one "CLICK HERE" button): `probe url` misses the link and some sites
+  answer 403; `visit.py --text --links` shows "Bulletin" going to
+  `sponsors.bonventure.net/?page=<n>`, with issues at `/pdfs/<n>/<YYYY-MM-DD>.pdf` whose page
+  1 names the parish (text layer). The https host fails TLS verification from Python but
+  loads in Chrome: use `http://` in recipes and evidence (`page-pdfs
+  http://sponsors.bonventure.net/?page=<n>`), and `tools/browser_download.py` for the https
+  file. A Bon Venture ad footer ("D86910 (JB) - <parish>") only means it sells the ads; the
+  PDF can be self-hosted.
+- **FATA Online** (`fataonline.com/bulletins/<code>`, linked from an eCatholic site): record
   `page-pdfs http://fataonline.com/bulletins/<code>`. File names carry no date, so
-  `fetch:check` reports `unverified`: take identity and date from the cover. A cover can
-  put the church names of its Mass boxes in an image layer, leaving only the times in the
-  text: render page 1 to see which churches it lists, and quote trustee or calendar lines
-  from the text.
-- **Self-hosted:** Holy Family, Newark (`bulletin.php`), Immaculate Conception, Elkton,
-  Holy Cross/Immaculate Conception, Marydel (Weebly, iccmarydel.org/bulletin.html; Holy
-  Cross's own holycrossdover.org, which the directory doesn't give, answers 403 to curl but
-  lists the same dated files in the browser), St. Anthony of Padua (`/bulletin-archive/`), St. John Neumann (weconnect), Our Lady of Good Counsel,
-  Secretary, St. Paul, Delaware City. Duda sites list weekly PDFs on /bulletins as
+  `fetch:check` reports `unverified`: take identity and date from the cover. The Mass boxes'
+  church names can be in an image layer, leaving only the times in the text: render page 1 to
+  see the churches, and quote trustee or calendar lines.
+- **Self-hosted:** Duda sites list weekly PDFs on /bulletins as
   `irp.cdn-website.com/<site>/files/uploaded/<date>.pdf`, newest first, so `page-pdfs
-  <bulletins page>` needs no filter (iccelkton.org); but a Duda bulletins page can be
-  abandoned while the home page links the live bulletin elsewhere (St. Hedwig's stops in
-  December 2024; it is John Patrick 317). A Duda-style page linking
-  `/images/Bulletin_<M.D.YY>.pdf` lists them oldest first; `page-pdfs` filtered to
-  `filename=Bulletin_*.pdf` still picks the newest (Our Lady of Good Counsel, Secretary). A WordPress archive page that also lists forms and
-  calendars needs a filename filter (St. Anthony of Padua: `page-pdfs
-  https://sapde.org/bulletin-archive/ filename=Bulletin-*.pdf`). A WordPress bulletins
-  page can list dated posts (category "bulletin") that each wrap a PDF, with no PDF link on
-  the listing: record `dated-post <bulletins page>`, not `page-pdfs` (St. Paul, Delaware
-  City), and confirm the uploads with the site's
-  `/wp-json/wp/v2/media?mime_type=application/pdf`.
-- **HTML-only bulletins:** a site's "Bulletin" menu item can lead to a page whose slug
-  doesn't say bulletin (Holy Name of Jesus, Pocomoke's Wix site: `/fr-dan-s-corner`), so
-  read the menu labels and hrefs in the page source, not only links named for bulletins. A
-  page of weekly announcements as HTML text with no PDF or image is `no_bulletin` with
-  `bulletin_status: unsupported-format` (map 024; whether to support such pages is flagged
-  to the owner).
-- **Sites that didn't load in the browser either (2026-10-27):** stpatschapel.org
-  (Conowingo); stjosephfrenchst.org and
-  iccparish.org are dead old domains (St. Joseph and Immaculate Conception read on
-  sjfschurch.org and iccelkton.org); saintpolycarp.org and stdennischurch.org failed in
-  curl and the browser (both on John Patrick, see that bullet). Try again later before
-  recording a site as blocked: visitstfrancis.org (St. Francis de Sales, Salisbury), down in
-  the survey, loaded for map 024 the same day. Then look for the bulletin on a publisher
-  (see the parish-site-access skill).
+  <bulletins page>` needs no filter; but a Duda bulletins page can be abandoned while the home
+  page links the live bulletin elsewhere (St. Hedwig's stops in December 2024; it is John
+  Patrick). A page linking `/images/Bulletin_<M.D.YY>.pdf` lists them oldest first; `page-pdfs`
+  with `filename=Bulletin_*.pdf` still picks the newest. A WordPress archive that also lists
+  forms and calendars needs a filename filter (`filename=Bulletin-*.pdf`). A WordPress page
+  can list dated posts that each wrap the PDF in an iframe, with no PDF link on the listing:
+  record `dated-post <bulletins page>`, not `page-pdfs`, and confirm the uploads with
+  `/wp-json/wp/v2/media?mime_type=application/pdf`; a check run while the newest post is
+  going up can fail once with `NoBulletin`, so rerun it before recording a block. A site that
+  answers 403 to curl can list the same dated files in the browser (holycrossdover.org).
+- **HTML-only bulletins:** a "Bulletin" menu item can lead to a page whose slug doesn't say
+  bulletin (a Wix `/fr-dan-s-corner`), so read the menu labels and hrefs in the page source,
+  not only links named for bulletins. Weekly announcements as HTML text with no PDF or image
+  are `bulletin_provider: unsupported` with `fetch_gap` kind `html-only-bulletin` (README,
+  *What to flag*), not `no_bulletin`.
+- **Sites that fail in the browser too:** many roster websites are dead old domains; read
+  the parish's working domain or its publisher instead. A site down in one session can load
+  later the same day (visitstfrancis.org, map 024): try again before recording a block, then
+  look for the bulletin on a publisher (parish-site-access skill).
 
 ## New lessons
 
