@@ -27,7 +27,6 @@ evidence:
   seen: 2026-10-29
   note: 'Summer guide lists ''Epiphany Church'', Longport, under Holy Trinity Parish: Sat 5:30 PM; Sun
     8 & 5 PM.'
-promoted: 2026-10-30
 ---
 
 ## Holds Mass

@@ -35,7 +35,6 @@ revisit: 'Find the ParishesOnline organization slug for container 03/1233 (or se
   then set bulletin_provider parishes_online with the slug, add po-org: and lpi: ids, clear fetch_gap
   and run fetch:check'
 revisit_after: 2026-12-01
-promoted: 2026-10-30
 research:
 - method: probe po with slug guesses (st-bridget-university-parish, saint-bridget-university-parish and
     -glassboro/-08028 variants, saint-bridget), the widget id and container 03/1233; probe get on the

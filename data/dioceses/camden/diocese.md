@@ -9,7 +9,7 @@ city_aliases:
   Haddon Twp: Haddon Township
   Gloucester: Gloucester City
   Margate: Margate City
-promoted: 2026-10-30
+promoted: 2026-11-07
 ---
 
 The six southernmost counties of New Jersey: Camden (Camden, Cherry Hill, Pennsauken,
