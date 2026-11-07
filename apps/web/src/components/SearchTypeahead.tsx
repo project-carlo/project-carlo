@@ -60,8 +60,8 @@ const PLACE_RESULT_CACHE_MS = 10 * 60 * 1000;
 
 const RESULT_ITEM_CLASS =
   "group relative cursor-pointer gap-0 rounded-none border-l-2 border-transparent px-3 py-2.5 font-serif text-base text-ink data-[selected=true]:border-rubric data-[selected=true]:bg-paper-deep/60 data-[selected=true]:text-ink";
-const GROUP_HEADING_CLASS =
-  "px-3 pt-1 pb-1 smallcaps text-[0.8125rem] text-ink-soft";
+const RESULT_GROUP_CLASS =
+  "**:[[cmdk-group-heading]]:px-2 **:[[cmdk-group-heading]]:pt-0 **:[[cmdk-group-heading]]:pb-1 **:[[cmdk-group-heading]]:text-[0.8125rem] **:[[cmdk-group-heading]]:font-normal **:[[cmdk-group-heading]]:text-ink-soft";
 const STATUS_CLASS =
   "px-3 py-4 text-center font-serif text-sm text-ink-soft";
 
@@ -133,6 +133,7 @@ export function SearchTypeahead({
   const {
     data: providerPlaces = [],
     isLoading: placesLoading,
+    isPlaceholderData: placesPending,
     error: placeError,
   } = useQuery({
     queryKey: ["place-search", trimmedDebouncedQuery, biasLat, biasLng],
@@ -153,6 +154,13 @@ export function SearchTypeahead({
     },
   });
 
+  // What the debounce last let through still belongs in the list if the box
+  // only added to it or took from it, but not if it now holds something else.
+  const showsDebouncedSearch =
+    trimmedQuery !== "" &&
+    (trimmedQuery.startsWith(trimmedDebouncedQuery) ||
+      trimmedDebouncedQuery.startsWith(trimmedQuery));
+
   // Cities answer on every keystroke. The rest waits for the pause in typing.
   const placeResults = useMemo(
     () =>
@@ -160,15 +168,25 @@ export function SearchTypeahead({
         ? rankPlaces(
             trimmedQuery,
             localIndex,
-            shouldSearchPlaces ? providerPlaces : [],
+            shouldSearchPlaces && showsDebouncedSearch ? providerPlaces : [],
             near,
           )
         : [],
-    [trimmedQuery, localIndex, shouldSearchPlaces, providerPlaces, near],
+    [
+      trimmedQuery,
+      localIndex,
+      shouldSearchPlaces,
+      showsDebouncedSearch,
+      providerPlaces,
+      near,
+    ],
   );
   const churchResults = useMemo(
-    () => searchChurches(trimmedDebouncedQuery, localIndex, near),
-    [trimmedDebouncedQuery, localIndex, near],
+    () =>
+      showsDebouncedSearch
+        ? searchChurches(trimmedDebouncedQuery, localIndex, near)
+        : [],
+    [showsDebouncedSearch, trimmedDebouncedQuery, localIndex, near],
   );
 
   const hasTypedQuery = trimmedQuery.length > 0;
@@ -179,7 +197,9 @@ export function SearchTypeahead({
   const showDropdown =
     isOpen && (showCurrentLocationOption || trimmedQuery.length >= 2);
   const hasResults = placeResults.length > 0 || churchResults.length > 0;
-  const isLoading = placesLoading || churchesLoading;
+  // Results kept up from the last search aren't an answer to this one, so
+  // while they're showing an empty list only means it hasn't come back yet.
+  const isLoading = placesLoading || placesPending || churchesLoading;
   // "No results" only once a search has run on what's in the box: not while
   // the debounce lags the typing, and not for a query too short to search,
   // which would otherwise read as a search that found nothing.
@@ -248,59 +268,57 @@ export function SearchTypeahead({
 
   const placeGroup =
     placeResults.length > 0 ? (
-      <>
-        <div className={GROUP_HEADING_CLASS}>Places</div>
-        <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
-          {placeResults.map((place) => (
-            <CommandItem
-              key={place.id}
-              value={`${place.title} ${place.subtitle ?? ""}`}
-              onSelect={() => handlePlaceSelect(place)}
-              className={RESULT_ITEM_CLASS}
-            >
-              <div className="min-w-0">
-                <div className="truncate">{place.title}</div>
-                {place.subtitle ? (
-                  <div className="mt-0.5 truncate text-sm text-ink-soft">
-                    {place.subtitle}
-                  </div>
-                ) : null}
-              </div>
-            </CommandItem>
-          ))}
-        </CommandGroup>
-      </>
+      <CommandGroup
+        heading={<span className="smallcaps">Places</span>}
+        className={RESULT_GROUP_CLASS}
+      >
+        {placeResults.map((place) => (
+          <CommandItem
+            key={place.id}
+            value={`${place.title} ${place.subtitle ?? ""}`}
+            onSelect={() => handlePlaceSelect(place)}
+            className={RESULT_ITEM_CLASS}
+          >
+            <div className="min-w-0">
+              <div className="truncate">{place.title}</div>
+              {place.subtitle ? (
+                <div className="mt-0.5 truncate text-sm text-ink-soft">
+                  {place.subtitle}
+                </div>
+              ) : null}
+            </div>
+          </CommandItem>
+        ))}
+      </CommandGroup>
     ) : null;
 
   const churchGroup =
     churchResults.length > 0 ? (
-      <>
-        <div className={GROUP_HEADING_CLASS}>Churches</div>
-        <CommandGroup className="[&_[cmdk-group-heading]]:hidden">
-          {churchResults.map((church) => {
-            const locationText = getChurchLocationText(church);
-            return (
-              <CommandItem
-                key={church.id}
-                value={`${church.name ?? `church-${church.id}`} ${locationText}`}
-                onSelect={() => handleChurchSelect(church)}
-                className={RESULT_ITEM_CLASS}
-              >
-                <div className="min-w-0">
-                  <div className="truncate">
-                    {church.name ?? UNNAMED_CHURCH}
+      <CommandGroup
+        heading={<span className="smallcaps">Churches</span>}
+        className={RESULT_GROUP_CLASS}
+      >
+        {churchResults.map((church) => {
+          const locationText = getChurchLocationText(church);
+          return (
+            <CommandItem
+              key={church.id}
+              value={`${church.name ?? `church-${church.id}`} ${locationText}`}
+              onSelect={() => handleChurchSelect(church)}
+              className={RESULT_ITEM_CLASS}
+            >
+              <div className="min-w-0">
+                <div className="truncate">{church.name ?? UNNAMED_CHURCH}</div>
+                {locationText ? (
+                  <div className="mt-0.5 truncate text-sm text-ink-soft">
+                    {locationText}
                   </div>
-                  {locationText ? (
-                    <div className="mt-0.5 truncate text-sm text-ink-soft">
-                      {locationText}
-                    </div>
-                  ) : null}
-                </div>
-              </CommandItem>
-            );
-          })}
-        </CommandGroup>
-      </>
+                ) : null}
+              </div>
+            </CommandItem>
+          );
+        })}
+      </CommandGroup>
     ) : null;
 
   return (

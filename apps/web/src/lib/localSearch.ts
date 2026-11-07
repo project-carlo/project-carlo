@@ -15,7 +15,7 @@ import type { PlaceSearchResult } from "../placeSearch";
  * returns. A city Carlo serves answers at once, spelling slips included, and
  * outranks a same-named place far away that has no churches to show.
  *
- * The rules came from a benchmark on 180 queries (issue #198). Simpler ones
+ * The rules came from a benchmark on 182 queries (issue #198). Simpler ones
  * did as well as weighted scoring, and a stricter match beat a fuzzier one.
  */
 
@@ -44,6 +44,8 @@ const STATE_CODES: Record<string, string> = {
   wyoming: "WY",
 };
 const KNOWN_STATE_CODES = new Set(Object.values(STATE_CODES));
+/** Longest first, so "West Virginia" isn't taken for Virginia. */
+const STATE_NAMES = Object.keys(STATE_CODES).sort((a, b) => b.length - a.length);
 
 /** The abbreviations place names are spelled both ways with. */
 const SPELLED_OUT: Record<string, string> = {
@@ -52,17 +54,22 @@ const SPELLED_OUT: Record<string, string> = {
   ft: "fort",
 };
 
-/** Words too common in church names to mean a church was asked for. */
-const GENERIC_CHURCH_WORDS = new Set([
+/** Words a search may include whether or not the church's name does. */
+const CHURCH_FILLER_WORDS = new Set([
   "and",
   "catholic",
   "church",
   "of",
-  "our",
   "parish",
+  "the",
+]);
+
+/** Words too common in church names to mean a church was asked for. */
+const GENERIC_CHURCH_WORDS = new Set([
+  ...CHURCH_FILLER_WORDS,
+  "our",
   "saint",
   "st",
-  "the",
 ]);
 
 /** A place's name in the one form names are compared in. */
@@ -91,12 +98,14 @@ export function parsePlaceQuery(query: string): PlaceQuery {
       state: lastWord.toUpperCase(),
     };
   }
-  for (const [stateName, code] of Object.entries(STATE_CODES)) {
-    if (folded.endsWith(` ${stateName}`)) {
-      return {
-        name: normalizePlaceName(folded.slice(0, -stateName.length - 1)),
-        state: code,
-      };
+  if (!Object.hasOwn(STATE_CODES, folded)) {
+    for (const stateName of STATE_NAMES) {
+      if (folded.endsWith(` ${stateName}`)) {
+        return {
+          name: normalizePlaceName(folded.slice(0, -stateName.length - 1)),
+          state: STATE_CODES[stateName],
+        };
+      }
     }
   }
   return { name: normalizePlaceName(folded), state: null };
@@ -213,15 +222,26 @@ function cityMatchKind(typed: string, name: string): CityMatchKind | null {
   return isTypoOf(typed, name) ? "typo" : null;
 }
 
+/** The states a partly typed one could still become. */
+function statesStartingWith(typed: string): Set<string> {
+  const states = new Set<string>();
+  for (const [name, code] of Object.entries(STATE_CODES)) {
+    if (name.startsWith(typed) || code.toLowerCase().startsWith(typed)) {
+      states.add(code);
+    }
+  }
+  return states;
+}
+
 function findCities(
   typed: string,
-  state: string | null,
+  states: ReadonlySet<string> | null,
   index: LocalSearchIndex,
   near: LatLng | null,
 ): CityMatch[] {
   const matches: CityMatch[] = [];
   for (const { city, name } of index.cities) {
-    if (state && city.state !== state) continue;
+    if (states && !(city.state && states.has(city.state))) continue;
     const kind = cityMatchKind(typed, name);
     if (kind) matches.push({ city, kind });
   }
@@ -245,10 +265,19 @@ function matchCities(
 ): CityMatch[] {
   const { name, state } = parsePlaceQuery(query);
   if (name.length < MIN_QUERY_LENGTH || /\d/.test(name)) return [];
-  const withState = state ? findCities(name, state, index, near) : [];
+  const withState = state ? findCities(name, new Set([state]), index, near) : [];
   if (withState.length > 0) return withState;
   // "Fort Washington" ends in a state and is still a place of its own.
-  return findCities(normalizePlaceName(query), null, index, near);
+  const whole = findCities(normalizePlaceName(query), null, index, near);
+  if (whole.length > 0) return whole;
+  // "Buffalo, New" is on its way to a state, and Buffalo stays listed meanwhile.
+  const comma = query.indexOf(",");
+  if (comma < 0) return [];
+  const beforeComma = normalizePlaceName(query.slice(0, comma));
+  const partialState = foldSearchText(query.slice(comma + 1));
+  return beforeComma.length < MIN_QUERY_LENGTH
+    ? []
+    : findCities(beforeComma, statesStartingWith(partialState), index, near);
 }
 
 function cityPlace(city: City): PlaceSearchResult {
@@ -306,13 +335,14 @@ export function rankPlaces(
         ...others.filter((place) => place.stateCode !== state),
       ]
     : others;
+  // "Fort Washington" ends in a state and is still a place of its own.
+  const wholeName = normalizePlaceName(query);
   const exactPlace = remaining.find(
     (place) =>
       SETTLEMENT_TYPES.has(place.resultType) &&
-      place.placeName === name &&
-      (state
-        ? place.stateCode === state
-        : place.stateCode != null && index.states.has(place.stateCode)),
+      (place.placeName === wholeName
+        ? place.stateCode != null && index.states.has(place.stateCode)
+        : place.placeName === name && place.stateCode === state),
   );
   return [
     ...cities.filter(({ kind }) => kind === "exact").map(({ city }) => cityPlace(city)),
@@ -322,40 +352,72 @@ export function rankPlaces(
   ].slice(0, PLACE_RESULT_LIMIT);
 }
 
-function wordMatches(typed: string, words: string[]): boolean {
-  return words.some(
-    (word) => word.startsWith(typed) || isTypoOf(typed, word),
+/** How far off `typed` is from the closest of `words`: 0 when one starts with
+ *  it, 1 when it's a slip for one, Infinity when it's neither. */
+function wordSlips(typed: string, words: string[]): number {
+  if (words.some((word) => word.startsWith(typed))) return 0;
+  return words.some((word) => isTypoOf(typed, word)) ? 1 : Infinity;
+}
+
+interface ChurchMatch {
+  church: ChurchBase;
+  /** How many of the query's words only matched as misspellings. */
+  slips: number;
+}
+
+function findChurches(
+  words: string[],
+  state: string | null,
+  index: LocalSearchIndex,
+): ChurchMatch[] {
+  const required = words.filter((word) => !CHURCH_FILLER_WORDS.has(word));
+  const named = required.filter(
+    (word) => word.length >= MIN_QUERY_LENGTH && !GENERIC_CHURCH_WORDS.has(word),
   );
+  if (named.length === 0) return [];
+  const matches: ChurchMatch[] = [];
+  for (const { church, nameWords, cityWords } of index.churches) {
+    if (state && church.state !== state) continue;
+    if (!named.some((word) => wordSlips(word, nameWords) < Infinity)) continue;
+    const slips = required.reduce(
+      (total, word) =>
+        total + Math.min(wordSlips(word, nameWords), wordSlips(word, cityWords)),
+      0,
+    );
+    if (slips < Infinity) matches.push({ church, slips });
+  }
+  return matches;
 }
 
 /**
  * The churches a query names: every word has to be in the church's name or
  * its city's, and something other than a town or a word like "saint" has to
- * be in its name, so "Erie" doesn't list every church in Erie.
+ * be in its name, so "Erie" doesn't list every church in Erie. Words like
+ * "church" can be left out of a name, and a state at the end narrows the
+ * search. Churches spelled as typed go ahead of ones that only resemble the
+ * query, so "St Mark" doesn't turn into every St. Mary nearby; among equals,
+ * the nearest comes first.
  */
 export function searchChurches(
   query: string,
   index: LocalSearchIndex,
   near: LatLng | null,
 ): ChurchBase[] {
-  const words = foldSearchText(query).split(" ").filter(Boolean);
-  const named = words.filter(
-    (word) => word.length >= MIN_QUERY_LENGTH && !GENERIC_CHURCH_WORDS.has(word),
-  );
-  if (named.length === 0) return [];
-  const matches = index.churches.filter(
-    ({ nameWords, cityWords }) =>
-      words.every(
-        (word) => wordMatches(word, nameWords) || wordMatches(word, cityWords),
-      ) && named.some((word) => wordMatches(word, nameWords)),
-  );
-  const away = ({ church }: IndexedChurch) =>
+  const { name, state } = parsePlaceQuery(query);
+  const inState = state ? findChurches(name.split(" "), state, index) : [];
+  // "St Mary Washington" ends in a state, and may be the town of that name.
+  const matches =
+    inState.length > 0
+      ? inState
+      : findChurches(foldSearchText(query).split(" ").filter(Boolean), null, index);
+  const away = ({ church }: ChurchMatch) =>
     near && church.latitude != null && church.longitude != null
       ? distanceMiles(near, { lat: church.latitude, lng: church.longitude })
       : 0;
   return matches
     .sort(
       (a, b) =>
+        a.slips - b.slips ||
         away(a) - away(b) ||
         (a.church.name ?? "").localeCompare(b.church.name ?? ""),
     )

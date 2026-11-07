@@ -82,9 +82,20 @@ describe("parsePlaceQuery", () => {
     });
   });
 
+  it("takes a two-word state whole when its last word is a state too", () => {
+    expect(parsePlaceQuery("Morgantown West Virginia")).toEqual({
+      name: "morgantown",
+      state: "WV",
+    });
+  });
+
   it("leaves a query that is only a state's name alone", () => {
     expect(parsePlaceQuery("New York")).toEqual({
       name: "new york",
+      state: null,
+    });
+    expect(parsePlaceQuery("West Virginia")).toEqual({
+      name: "west virginia",
       state: null,
     });
   });
@@ -124,6 +135,23 @@ describe("rankPlaces", () => {
       "Greece, NY",
       "Greene, NY",
     ]);
+  });
+
+  it("keeps a served city up while its state is being typed", () => {
+    expect(titles(rankPlaces("Corning, New", index, [], null))).toEqual([
+      "Corning, NY",
+    ]);
+    expect(titles(rankPlaces("Corning, Oh", index, [], null))).toEqual([]);
+  });
+
+  it("takes a name ending in a state for a place of its own", () => {
+    const provider = [
+      place("Greene Road", "greene road", "NY", "street"),
+      place("Fort Washington, PA", "fort washington", "PA"),
+    ];
+    expect(titles(rankPlaces("Fort Washington", index, provider, null))[0]).toBe(
+      "Fort Washington, PA",
+    );
   });
 
   it("doesn't take a street for the exact place", () => {
@@ -228,6 +256,52 @@ describe("searchChurches", () => {
   it("forgives a slip", () => {
     expect(names(searchChurches("Sacred Hart", index, null))).toEqual([
       "Sacred Heart Cathedral, Rochester",
+    ]);
+  });
+
+  it("doesn't let a similar name crowd out the one typed", () => {
+    const stMark = church("St. Mark", "Corning", "NY", 42.14, -77.05);
+    const similar = ["St. Mary", "St. Mara", "St. Marc"].map((name) =>
+      church(name, "Rochester", "NY", 43.16, -77.61),
+    );
+    const crowded = buildLocalSearchIndex([...similar, stMark]);
+    expect(names(searchChurches("St Mark", crowded, ROCHESTER))[0]).toBe(
+      "St. Mark, Corning",
+    );
+  });
+
+  it("doesn't need a name to say church or parish", () => {
+    expect(names(searchChurches("Sacred Heart Church", index, null))).toEqual([
+      "Sacred Heart Cathedral, Rochester",
+    ]);
+    expect(
+      names(searchChurches("St Mary Catholic Parish Corning", index, null)),
+    ).toEqual(["St. Mary's, Corning"]);
+  });
+
+  it("takes a state at the end", () => {
+    expect(names(searchChurches("Sacred Heart Rochester NY", index, null))).toEqual(
+      ["Sacred Heart Cathedral, Rochester"],
+    );
+    expect(names(searchChurches("St Mary Corning New York", index, null))).toEqual(
+      ["St. Mary's, Corning"],
+    );
+    expect(searchChurches("Sacred Heart Rochester PA", index, null)).toEqual([]);
+  });
+
+  it("keeps a town named like a state", () => {
+    const washington = church("St. Hilary", "Washington", "PA", 40.17, -80.24);
+    const town = buildLocalSearchIndex([washington]);
+    expect(names(searchChurches("St Hilary Washington", town, null))).toEqual([
+      "St. Hilary, Washington",
+    ]);
+  });
+
+  it("spells fort both ways", () => {
+    const lee = church("Madonna", "Fort Lee", "NJ", 40.85, -73.97);
+    const town = buildLocalSearchIndex([lee]);
+    expect(names(searchChurches("Madonna Ft Lee", town, null))).toEqual([
+      "Madonna, Fort Lee",
     ]);
   });
 

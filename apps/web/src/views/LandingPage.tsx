@@ -185,6 +185,7 @@ export function LandingPage() {
         >
           <SearchTypeahead
             size="lg"
+            placeholder={isDesktop ? undefined : "City, ZIP, or church…"}
             filterButton={null}
             onChurchSelect={handleChurchSelect}
             onPlaceSelect={handlePlaceSelect}

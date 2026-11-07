@@ -135,6 +135,24 @@ test("served cities still answer when place search fails", async ({ page }) => {
   await expect(page.getByText("Couldn’t search places")).toBeVisible();
 });
 
+test("says nothing matches only once the search has answered", async ({
+  page,
+}) => {
+  await page.route(GEOAPIFY, async (route) => {
+    const text = new URL(route.request().url()).searchParams.get("text");
+    if (text === "zzqq") return route.fulfill({ json: { results: [] } });
+    await new Promise((done) => setTimeout(done, 800));
+    await route.fulfill({ json: { results: [] } });
+  });
+  const input = await openMap(page);
+  await input.pressSequentially("zzqq");
+  await expect(page.getByText("Nothing matches “zzqq”")).toBeVisible();
+
+  await input.pressSequentially("x");
+  await expect(page.getByText("Searching places…")).toBeVisible();
+  await expect(page.getByText("Nothing matches “zzqqx”")).toBeVisible();
+});
+
 test("typing on keeps the list up while more results load", async ({ page }) => {
   await page.route(GEOAPIFY, async (route) => {
     const text = new URL(route.request().url()).searchParams.get("text");
