@@ -92,120 +92,101 @@ touch it.
 
 ### Bulletin publishers here
 
-- **Tilma parish sites are common.** 47 of the directory's 169 homepages are
-  `<name>-brooklyn.org` / `-queens.org` and load from Tilma; Tilma also runs custom domains
-  (e.g. `bsjh.org`). `probe url` reports them `ok` with no platform and no publisher. The
-  bulletins page (`/bulletins`) is server-rendered and lists cards "Bulletin for Sunday,
-  <date>" newest first, each linking a PDF at
-  `files.tilmaplatform.com/system/resources/<token>/<file>.pdf` (custom domains serve
-  `<site>/system/resources/<token>/` instead). Record `other` with a `page-pdfs
-  https://<site>/bulletins` recipe, `fetch:check` it, and confirm the pick is this week's
-  issue. A card for the coming week can be posted before its file (it links
-  `/bulletins/null`), so fetch picks the previous issue: record a research recheck after the
-  weekend, not a gap. Newer Tilma "webstudio" sites (`api.tilmaplatform.com`, `/cgi/asset/`
-  paths) render `/bulletins` in JavaScript, so `probe get` shows no cards: the homepage HTML
-  embeds `latestBulletinData` with the Bulletins collection's `totalCount`, and `visit.py`
-  shows the cards (or "NOTHING TO SHOW"). Tilma is only the host; check who prints the PDF:
-  - `/bulletins` can redirect to `parishesonline.com/organization/<slug>` (`probe get`
-    shows it as `final_url`; `probe url` lists no bulletin links): `probe po` that slug, and
-    the row is `parishes_online`;
-  - files named `YYYYMMDDB.pdf` (LPi's naming) are a reposted LPi issue: `probe po
-    <name>-church-<zip>` finds the live container and the row is `parishes_online`, not a
-    Tilma recipe;
-  - an ad-page footer "THE CHURCH BULLETIN INC., 200 DALE ST." with a `#NNN` number is The
-    Church Bulletin Inc. (West Babylon), which has no online container: keep `other`
-    page-pdfs with no publication id. Its page 1 is often an image; `render.py` it for the
-    masthead and Mass times.
-- **LPi / ParishesOnline.** Some parishes embed it; many self-hosted, Tilma, WordPress,
-  Squarespace or GoDaddy PDFs are LPi issues in disguise. Grep the last page for the footer
-  `<Parish> | 03-NNNN` (or `<Parish>, <Town>, NY 04-NNNN`): the prefix is the container
-  group, so `03-NNNN` is po-container 03/NNNN and `04-NNNN` is 04/NNNN; read it from the
-  footer, don't assume 03. File names say the same: `03-NNNN.MMDD.pdf`, and Squarespace's
-  `/s/03-0NNNNMMDDYY.pdf` pads the number to 5 digits (`03-04068` is 03/4068). `probe po`
-  on the org gives a `parishes_online` row with real publication ids. A repost can have
-  every page an image and the footer pages cut (GoDaddy `img1.wsimg.com/blobby/go/...`), so
-  no number shows: try `probe po <name>-church-<zip>`, then the bare `<name>-church` slug
-  (some orgs have no zip suffix). Try that before the browser for a site that answers 403
-  too. LPi front pages are often images: `render.py` pages 1-2 for masthead and Mass
-  times. ParishesOnline also holds empty orgs (no issues) for parishes that self-publish,
-  slugs like `<name>-11385` / `<name>-church-11385`: an org with no issues is not a
-  publication id and doesn't make the parish a `parishes_online` row.
+- **Tilma parish sites** (`<name>-brooklyn.org` / `-queens.org`, and custom domains) are
+  common; `probe url` reports them `ok` with no platform or publisher. `/bulletins` is
+  server-rendered, cards newest first, worded "Bulletin for Sunday, <date>" or, in some
+  themes, "<Month DD, YYYY> / Download Bulletin" (grep for the dates), each linking a PDF
+  under `files.tilmaplatform.com/system/resources/<token>/` or `<site>/system/resources/`.
+  Record `other` with `page-pdfs https://<site>/bulletins`, `fetch:check` it, and read the
+  newest card's date yourself: a page months stale still passes (`first-listed`, freshness
+  `unknown`). If stale, `probe po <name>-church-<zip>` first (a live LPi container can sit
+  beside it); with none, record `no_bulletin`, status `not-found`, a research recheck, and
+  keep the recipe in its next_action. A card for the coming week can precede its file
+  (`/bulletins/null`), so fetch picks the previous issue: recheck after the weekend, not a
+  gap. Webstudio sites (`api.tilmaplatform.com`, `/cgi/asset/`) render `/bulletins` in JS:
+  the homepage HTML embeds `latestBulletinData` with the collection's `totalCount`, and
+  `visit.py` shows the cards. Tilma is only the host; check who prints the PDF:
+  - `/bulletins` redirecting to `parishesonline.com/organization/<slug>` (`final_url` in
+    `probe get`), or a webstudio page with `totalCount` 0 showing an embedded
+    `publicationWidget?type=bulletin&id=<lpi id>` (`tools/frames-requests.py` lists the
+    iframe): `probe po` the slug or id; the row is `parishes_online`.
+  - LPi reposts: files named `YYYYMMDDB.pdf`, or date names (`110826.pdf`) with LPi's
+    naming left on older cards, so check several cards: `probe po` finds the container and
+    the row is `parishes_online`.
+  - John Patrick reposts `<id>-<Parish> MM-DD-YYYY.pdf` (last-page footer `<id> <Parish>,
+    Brooklyn, NY` and "John Patrick Publishing Company"): use the JPP recipe below, which
+    gets each issue days before Tilma.
+  - Footer "THE CHURCH BULLETIN INC., 200 DALE ST." with `#NNN`: The Church Bulletin Inc.,
+    no online container: keep `other` page-pdfs with no publication id.
+  - Self-made PDFs whose text layer is in a shifted font ('3KRQH' for 'Phone', digits
+    dropped): greps miss Mass times and `fetch:check` reports issue-date conflicts;
+    `render.py` page 1 for the masthead and take per-church Masses from `/mass-times`.
+  - A webstudio "Bulletins & News" card linking `conta.cc/<id>` is a Constant Contact email
+    newsletter, no PDF: unsupported, `fetch_gap` kind `constant-contact-html-newsletter`.
+    The old `/bulletins` archive may still list years-old PDFs page-pdfs would pick.
+- **LPi / ParishesOnline.** Many self-hosted, Tilma, WordPress, Squarespace or GoDaddy PDFs
+  are LPi issues in disguise. Grep the last page for `<Parish> | 03-NNNN` (or `<Parish>,
+  <Town>, NY 04-NNNN`): the prefix is the container group, so read it, don't assume 03.
+  File names say the same: `03-NNNN.MMDD.pdf`, `<...>-Account-03-NNNN.pdf`, Squarespace's
+  `/s/03-0NNNNMMDDYY.pdf` (5-digit pad: `03-04068` is 03/4068). Reposts can have the ad
+  pages cut or every page an image, leaving no number (only "©LPi" on the cover art). Then
+  try `probe po` on `<name>-church-<zip>`, `<name>-church`, and a shortened name dropping
+  "of <...>" (Holy Name of Jesus is `holy-name-church-11215`); do this before the browser
+  for a site that answers 403. If the container number is known but no org is found,
+  record `other` page-pdfs on the bulletin page with `po-container:<a/b>` as publication
+  id and a research item to find the org. Front pages are often images: `render.py` pages
+  1-2. An org with no issues (self-publishing parishes have them) is not a publication id.
 - **eCatholic sites** answer 403 to `probe url`; `visit.py` gives the `ecatholic:<id>`, and
-  `issues.py ecatholic` reads the issues from `files.ecatholic.com` without a browser. A
-  merged parish can post one bulletin on each former parish's eCatholic site: compare
-  page-1 mastheads, keep one row and record both ecatholic ids as its publication ids.
-- **John Patrick Publishing** sites link `jppc.net/onlinebulletins/<id>template.pdf`:
-  record `other` with `page-pdfs https://church-bulletin.org/<id>` (`fetch:check` resolves
-  it). Its issues can be all images: `render.py` them.
-- **WordPress.** With no bulletin menu, list the PDF uploads newest first with `probe get
-  '<site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=50'` to find and date the
-  last bulletin posted.
-  - Flipbook plugins hide the PDF from the HTML. dFlip (`flipbook-dflip-lite`): grep the
-    page for `"source":` in `window.option_df_*` for the file URLs. 3D FlipBook (`div
-    class="_3d-flip-book" data-id=N`): no URL in the HTML. For both, a pinned `page-pdfs
-    <bulletin page>` recipe resolves the current upload in `fetch:check`, even for one fixed,
-    weekly-overwritten PDF the unpinned resolver misses ("No bulletin page link found").
-  - Multisite (uploads under `/wp-content/uploads/sites/<n>/`) drops `probe url`, `probe
-    pdf` and `render.py` connections (UNREACHABLE, RemoteDisconnected) but loads in
-    `visit.py` and fetch. The bulletin page is `/important-information/bulletin/`, newest
-    first. Download with `tools/fetch-pdf.py` (run without `python -I`, which hides
-    `pdf_extract`) and give `render.py` the local file. `visit.py` can call such a site
-    SPAM-SQUAT when betting spam is injected into a working parish homepage: if the address,
-    bulletin page and weekly PDFs are the parish's own, keep it as the website and note the
-    compromise.
-- **Joomla DOCman lists** (`/news/bulletin/<n>-<title>/file`, class
-  `docman_track_download`) answer 403 to probes and fetch. The link's `title` attribute
-  gives the file name (often the LPi `03-NNNN.MMDD.pdf` form above);
-  `tools/browser-pdf.py` downloads the file through the browser.
-- **Self-hosted bulletin pages.** `fetch:check` gives a page that keeps one stale file
-  `ok` with freshness `unknown`, not `stale`: check the issue date yourself before pinning.
-  - Files named `MMDDYY.pdf` (no year) in a non-chronological archive table fool the
-    unpinned resolver into a past year's file; pin the homepage's "This Week's Bulletin"
-    link with a digit filter (`page-pdfs <home> filename=[0-9][0-9][0-9][0-9][0-9][0-9].pdf`).
-  - One fixed file behind a redirect (`/bulletin` -> `/files/bulletin.pdf`) fails
-    `fetch:check` when the redirect URL is the website; set website to the homepage and
-    `fetch:check` resolves to recipe `redirected-pdf <site>/bulletin` (freshness still
-    `unknown`).
-- **Google Drive.** A `drive/folders/<id>` page serves only its first 50 files in name
-  order, so `drive-folder` can pick a years-old issue. List the whole folder with
-  `drive.google.com/embeddedfolderview?id=<id>#list` to see whether it is kept current
-  before pinning it. Google Sites pages can embed each issue as a Drive file preview (iframe
-  `data-src` `drive.google.com/file/d/<id>/preview`) with no folder or PDF link: fetch can't
-  resolve that, so the row is unsupported with `fetch_gap` kind `drive-preview-embed`; read
-  the issue through `drive.google.com/uc?id=<id>&export=download`.
-- **JavaScript-only sites** (Next.js `/_next/static` chunks, Vite `/assets/index-*.js`) whose
-  bulletin menu has no links in the HTML: grep the JS bundle for `drive.google.com`,
-  `docs.google.com/spreadsheets` or `supabase.co` to find where the issues live. When the
-  link exists only in JS, the row is unsupported with a `fetch_gap`.
-- **Other blocked or odd sites:** some parish sites answer 403 to `probe url` (try `probe
-  po` as above, then parish-site-access `visit.py`), and some redirect off-site; read the
-  target first.
-- **Finding a current site.** When the directory's homepage is dead or parked, the parish's
-  Discover Mass page (`discovermass.com/church/<name>-<town>-ny/`) names its current website
-  even when it lists no bulletins.
-- The neighbouring Archdiocese of New York has only one mapped parish (a self-hosted
-  bulletin page) and no publisher notes yet; Rockville Centre isn't mapped.
+  `issues.py ecatholic` reads `files.ecatholic.com` without a browser. A merged parish can
+  post one bulletin on each former parish's site: compare mastheads, keep one row with both
+  ids.
+- **John Patrick Publishing**: `church-bulletin.org/<id>` redirects to a slug page listing
+  `church-bulletin.org/bulletin/<slug>/YYYY-MM-DD.pdf`; the sites' `jppc.net/onlinebulletins/
+  <id>template.pdf` answers HTML to `probe pdf`. Record `other` with `page-pdfs
+  https://church-bulletin.org/<id>` and publication `url:<slug page>`; read the slug PDFs,
+  often all images (`render.py`).
+- **WordPress.** With no bulletin menu, list PDF uploads newest first with `probe get
+  '<site>/wp-json/wp/v2/media?mime_type=application/pdf&per_page=50'`.
+  - Flipbooks hide the PDF. dFlip: grep `"source":` in `window.option_df_*`. 3D FlipBook
+    (`_3d-flip-book`): no URL in the HTML. A pinned `page-pdfs <bulletin page>` resolves
+    both, even one weekly-overwritten PDF the unpinned resolver misses.
+  - Diocesan multisite (`/wp-content/uploads/sites/<n>/`): issues at
+    `/important-information/bulletin/` or `/weekly-bulletin/`, named
+    `<mon><d>_<yyyy>_<parish>_compressed.pdf`, either LPi reposts (above) or self-made
+    (`other` page-pdfs on that page). `probe url`, `probe pdf` and `render.py` drop the
+    connection; `visit.py` and fetch work. Download with `tools/fetch-pdf.py` (not `python
+    -I`) and `render.py` the file. `visit.py` may call one SPAM-SQUAT for injected betting
+    spam: if address, bulletin page and PDFs are the parish's own, keep it and note it.
+- **Joomla DOCman lists** (`docman_track_download`) answer 403 to probes and fetch; the
+  link's `title` gives the file name, `tools/browser-pdf.py` downloads it. LPi files go
+  `parishes_online`; the parish's own PDFs (no footer, no org with issues) are unsupported,
+  `fetch_gap` kind `joomla-docman-file-403`.
+- **Wix** pages can show the issue only as a slideshow of hash-named
+  `static.wixstatic.com/media/<id>~mv2.jpg` slides (no PDF, no date): unsupported,
+  `fetch_gap` kind `wix-image-slideshow`; `tools/frames-requests.py` lists the slides.
+- **Self-hosted pages.** `fetch:check` calls one stale file `ok`, freshness `unknown`:
+  check the date before pinning. `MMDDYY.pdf` names in an unordered archive fool the
+  resolver: pin the homepage link with `filename=[0-9][0-9][0-9][0-9][0-9][0-9].pdf`. A
+  fixed file behind a redirect (`/bulletin` -> `/files/bulletin.pdf`): set the website to
+  the homepage and `fetch:check` resolves `redirected-pdf <site>/bulletin`.
+- **Google Drive.** `drive/folders/<id>` serves its first 50 files in name order, so
+  `drive-folder` can pick a years-old issue: list it all with
+  `drive.google.com/embeddedfolderview?id=<id>#list` before pinning. Google Sites embedding
+  each issue as `drive.google.com/file/d/<id>/preview` is unsupported, `fetch_gap` kind
+  `drive-preview-embed`; read it via `drive.google.com/uc?id=<id>&export=download`.
+- **JavaScript-only sites** (Next.js `/_next/static`, Vite `/assets/index-*.js`): grep the
+  bundle for `drive.google.com`, `docs.google.com/spreadsheets` or `supabase.co`. A link
+  that exists only in JS makes the row unsupported with a `fetch_gap`.
+- **Shared pastors.** Parishes sharing a pastor can each print both churches' Mass times on
+  page 1 of separate bulletins: compare mastheads, intentions and collections before
+  merging, and record the review.
+- **Finding a current site.** When the directory's homepage is dead or parked, Discover
+  Mass (`discovermass.com/church/<name>-<town>-ny/`) names the current website. Sites
+  answering 403 or redirecting off-site: try `probe po`, then `visit.py`; read the target.
 
 ## New lessons
 
 Lessons map jobs reported, as written, for the next `integrate` to merge into *Bulletin publishers here* and *Rules settled*. Every map job reads them.
-
-- A Tilma /bulletins page whose newest card is months old still passes fetch:check ('first-listed', freshness unknown, not stale): read the newest card's date, and if no issue has been posted for months record the row no_bulletin with bulletin_status not-found and a research recheck, keeping the page-pdfs recipe in the research next_action.
-- Some Tilma parish themes list /bulletins as '<Month DD, YYYY> / Download Bulletin' cards (not 'Bulletin for Sunday, <date>'), with PDFs at <site>/system/resources/<token>/: grep the page text for the dates, not the 'Bulletin for' wording.
-- A Tilma /bulletins page that is months stale can still sit beside a live LPi container: run probe po <name>-church-<zip> before recording no_bulletin (sfdsparish.org's last card 23 Aug 2026; container 03/4055 current).
-- A Joomla DOCman bulletin list (403 to probes and fetch) whose files are the parish's own Word PDFs with no LPi footer and no ParishesOnline org with issues is unsupported with fetch_gap kind joomla-docman-file-403; read the issues with tools/browser-pdf.py.
-- Some self-made bulletins posted on Tilma have a text layer in a shifted font encoding ('3KRQH' for 'Phone', digits dropped), so probe pdf greps miss Mass times and fetch:check reports issue-date conflicts: render.py page 1 for the masthead and take per-church Mass assignments from the site's /mass-times page.
-- John Patrick Publishing's church-bulletin.org/<id> page (redirects to a slug page) links each issue as church-bulletin.org/bulletin/<slug>/YYYY-MM-DD.pdf, while the jppc.net <id>template.pdf link answers HTML to probe pdf: read issues from the slug URLs, and record url:<slug page> as the publication id.
-- Wix bulletin pages can show the issue only as a slideshow of hash-named static.wixstatic.com JPEGs with empty alt text (no PDF, no date): page-pdfs and page-images both fail, so the row is unsupported with fetch_gap kind wix-image-slideshow. Read the slides at static.wixstatic.com/media/<id>~mv2.jpg, and use tools/frames-requests.py to list them.
-- Parishes that share a pastor can each print both churches' Mass schedules on page 1 of separate bulletins: compare mastheads, intentions and collections before merging, and record a separate review.
-- Diocesan WordPress-multisite parish sites post each issue as <mon><d>_<yyyy>_<parish>_compressed.pdf: some are LPi reposts (probe po <name>-church-<zip> finds the live container), others self-made with no cover page and no LPi footer (record other with page-pdfs on /important-information/bulletin/ or /weekly-bulletin/).
-- Tilma sites that repost an LPi issue under a date name (110826.pdf) instead of LPi's YYYYMMDDB.pdf can still keep LPi's naming on some older cards: check a few cards' file names, or run probe po <name>-church-<zip>, before recording a Tilma page-pdfs row.
-- An LPi repost on a diocesan WordPress-multisite site whose ParishesOnline org slug can't be found by probe po (name-church-zip variants all empty) can be recorded other with page-pdfs on the site's bulletin page and po-container:<a/b> as its publication id, with a research item to find the org later.
-- A parish whose weekly bulletin is a Constant Contact email newsletter (Tilma webstudio homepage 'Bulletins & News' card linking conta.cc/<id> -> myemail.constantcontact.com/<title>.html?soid=...) has no PDF: record unsupported with fetch_gap kind constant-contact-html-newsletter; its old Tilma /bulletins archive may still list years-old PDFs that page-pdfs would wrongly pick.
-- Tilma sites can repost a John Patrick Publishing issue as '<id>-<Parish> MM-DD-YYYY.pdf' (page-8 footer '<id> <Parish>, Brooklyn, NY (B)' and 'John Patrick Publishing Company'), with no jppc.net link: record other with page-pdfs https://church-bulletin.org/<id>, which posts each issue days before the Tilma page does.
-- A Tilma webstudio /bulletins page whose Bulletins collection is empty (totalCount 0) can still show cards from an embedded ParishesOnline widget (publicationWidget?type=bulletin&id=<lpi id>): tools/frames-requests.py lists the iframe, and probe po <lpi id> gives the parishes_online row.
-- Diocesan WordPress-multisite sites can repost an LPi issue with its ad pages cut (no 04-NNNN footer left, only '©LPi' on the cover art); the ParishesOnline org may have no zip suffix (st-saviour-church), so try probe po <name>-church as well as <name>-church-<zip>.
-- A ParishesOnline org slug can be a shortened parish name (Holy Name of Jesus is holy-name-church-11215): when <full-name>-church-<zip> is empty, try dropping the 'of <...>' part; WordPress reposts named '<...>-Account-03-NNNN.pdf' give the container number directly.
 
 ## Rules settled for this diocese
 
