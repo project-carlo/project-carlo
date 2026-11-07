@@ -203,6 +203,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 
 - A parish CMS that links each issue as `/download/<epoch>-<hash>` (no .pdf; page-1 PNG under `/storage/Newspaper/`, card date 'data dodania: niedziela, DD.MM.YYYY', seen on Polish parish sites) serves real PDFs that page-pdfs skips: `unsupported`, fetch_gap kind `extensionless-download-link`.
 - DuckDuckGo's html endpoint returns a bot challenge after about six `probe get` queries in a row; use The Tablet's API and Nominatim (`nominatim.openstreetmap.org/search?q=<address>&format=jsonv2`) to check a building, and space out searches.
+- Wix sites showing the current bulletin in a certifiedcode.io pdf-viewer iframe (/bulletin) have no PDF link in the HTML; a Past Bulletins page linking `_files/ugd/<id>.pdf` works as `other` page-pdfs on that page (fetch:check picks the newest).
 
 ## Rules settled for this diocese
 
