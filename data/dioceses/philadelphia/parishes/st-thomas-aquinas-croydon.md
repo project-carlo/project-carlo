@@ -1,8 +1,8 @@
 ---
 name: St. Thomas Aquinas Parish
 website: https://www.staq.org
-bulletin_provider: ecatholic
-provider_id: ''
+bulletin_provider: other
+provider_id: page-pdfs https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021
 publication: ['ecatholic:2517', 'url:https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021']
 group: ''
 evidence:
@@ -30,6 +30,13 @@ evidence:
   quote: 'Merged with St. Elizabeth Ann Seton, Bensalem: 2014'
   note: 'Directory: Rev. David A. Fernandes; 601 Bristol Pike; ''Weekdays, 8:30 AM (Chapel, 126 Walnut
     Ave.)''.'
+- url: https://www.church-bulletin.org/bulletin/saint-thomas-aquinas-parish-croydon-pa-19021/2026-11-08.pdf
+  seen: 2026-11-07
+  note: '8 November 2026 issue on John Patrick listing 77, page 1 rendered (image-only): masthead ''St.
+    Thomas Aquinas Parish, Established July 1, 2014, Joining The Parishes of St. Thomas Aquinas (1922
+    - 2014) & St. Elizabeth Ann Seton (1976 - 2014), 601 Bristol Pike, Croydon, PA 19021''; Mass schedule
+    Saturday Vigil 4:30 PM, Sundays 9:00 AM and 11:00 AM, Monday-Friday 8:30 AM (Chapel at 126 Walnut
+    Ave.). It names no Mass at Park Ave.'
 promoted: 2026-10-29
 research:
 - method: Rendered pages 1-2 of the 25 October 2026 issue; compared md5 of the eCatholic and listing copies;
@@ -37,6 +44,15 @@ research:
   url: https://files.ecatholic.com/2517/bulletins/20261025.pdf
   checked: '2026-10-29'
   outcome: found
+- method: 'Hand refresh against main: fetch:check (ecatholic) picked the 25 October 2026 issue; visit.py
+    on https://www.staq.org/bulletins listed nothing newer, while the John Patrick listing 77 had 1 and
+    8 November; switched the row to other with page-pdfs on the listing and re-ran fetch:check'
+  url: https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021
+  checked: '2026-11-07'
+  outcome: found
+  next_action: None; if the listing goes silent while staq.org/bulletins carries new issues, switch back
+    to ecatholic
+  retry_when: ''
 bulletin_status: available
 ---
 
@@ -50,7 +66,7 @@ St. Thomas Aquinas Church, 601 Bristol Pike, with the weekday Mass in the parish
 
 ## Website and bulletin provider
 
-`https://www.staq.org` is eCatholic (2517); its /bulletins page carries the current file, so the `ecatholic` row is used with the listing as a second publication id.
+`https://www.staq.org` is eCatholic (2517), and the parish posts the same file on John Patrick listing 77 (both publication ids are recorded). On 2026-11-07 (hand refresh against main) the eCatholic /bulletins page stopped at 25 October 2026 while the listing had 1 and 8 November, so the row reads the listing: `other` with `page-pdfs https://www.church-bulletin.org/saint-thomas-aquinas-parish-croydon-pa-19021`, as the diocese's other John Patrick rows do.
 
 ## Not yet confirmed
 
@@ -58,4 +74,4 @@ Whether Mass is ever celebrated at Park Avenue (see open record).
 
 ## Fetch check
 
-`fetch:check` (2026-10-29) with the `ecatholic` provider picked `files.ecatholic.com/2517/bulletins/20261025.pdf`: transport ok, PDF, fresh; identity `unverified` because the PDF has no text layer, so the masthead was read by hand above.
+`fetch:check` (2026-10-29) with the `ecatholic` provider picked `files.ecatholic.com/2517/bulletins/20261025.pdf`: transport ok, PDF, fresh; identity `unverified` because the PDF has no text layer, so the masthead was read by hand above. On 2026-11-07, with `ecatholic` it picked the 25 October issue again (13 days old, eCatholic not updated since); with the listing recipe it picked `church-bulletin.org/bulletin/saint-thomas-aquinas-parish-croydon-pa-19021/2026-11-08.pdf` (transport ok, PDF, this Sunday's issue; page 1 rendered by hand shows the St. Thomas Aquinas masthead).

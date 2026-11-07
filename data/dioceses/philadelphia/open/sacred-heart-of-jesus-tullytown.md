@@ -66,6 +66,17 @@ research:
     bulletin or the Catholic Directory
   retry_when: A St. Mark or St. Michael bulletin, a parish site, a CatholicPhilly notice or the parish
     office names a Mass or the closure of Sacred Heart, Tullytown
+- method: 'Hand refresh against main (reconcile step 3, one more try): St. Mark''s 8 November 2026 issue
+    (text layer) grepped for ''Tullytown'', ''Sacred Heart'' and ''Main St'': no match. Also re-read https://archphila.org/features/parish-planning-initiatives/
+    (no decree naming it) and searched CatholicPhilly''s REST API for posts since 2026-09-01 by the church''s
+    name (nothing about it).'
+  url: https://www.church-bulletin.org/bulletin/saint-mark-parish-bristol-pa-19007/2026-11-08.pdf
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (see revisit) or read a later bulletin for a Mass line naming the
+    church or a closure notice
+  retry_when: A parish bulletin, the parish's Mass page or a decree or news story names the church's Mass
+    or closure
 ---
 
 ## What is known

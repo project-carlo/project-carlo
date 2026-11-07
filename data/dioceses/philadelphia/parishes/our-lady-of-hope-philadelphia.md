@@ -1,7 +1,7 @@
 ---
 name: Our Lady of Hope Parish
 website: https://www.olhcatholic.org/bulletins
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://www.olhcatholic.org/bulletins#our-lady-of-hope']
 group: ''
@@ -30,10 +30,10 @@ evidence:
     C.I.C.M. (Parochial Administrator)''; Vigil Saturdays 4:30 PM, Sundays 8:30, 10:30 (Spanish), 12:30
     PM, which differs from the parish''s own 4:00, 9:00 and 11:00. No John Patrick listing exists for
     it (scan of ids 1-1300).'
-revisit: Check whether the resolver reads a Google Sites page that embeds each Sunday as a Drive /preview
-  iframe, or whether the parish posts a link/folder or moves its bulletin to a John Patrick listing, ParishesOnline
-  or eCatholic.
-revisit_after: 2027-01-15
+revisit: When a collector reads Drive /preview iframes on a page (pnpm diocese gaps --kind drive-preview-embed),
+  set bulletin_provider other on https://www.olhcatholic.org/bulletins, run fetch:check and clear fetch_gap
+  once it picks this week's issue; or switch to google_drive if the parish shares a folder.
+revisit_after: 2027-02-01
 research:
 - method: pnpm fetch:check --diocese philadelphia --parish our-lady-of-hope-philadelphia with provider
     other, page-pdfs on olhcatholic.org/bulletins
@@ -64,7 +64,24 @@ research:
   outcome: found
   next_action: None
   retry_when: ''
+- method: 'Hand refresh against main: probe get on the bulletins page; fetch:check with provider other
+    on https://www.olhcatholic.org/bulletins'
+  url: https://www.olhcatholic.org/bulletins
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Wait for a collector for Drive /preview iframes (fetch_gap drive-preview-embed)
+  retry_when: pnpm diocese gaps shows a collector for drive-preview-embed, or the page links its files
+    or a folder
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: drive-preview-embed
+  seen: 2026-11-07
+  url: https://www.olhcatholic.org/bulletins
+  note: 'olhcatholic.org/bulletins is a Google Sites page that embeds each Sunday''s bulletin as a Google
+    Drive file preview (iframe drive.google.com/file/d/<id>/preview, captioned ''Bulletin 102526.pdf''),
+    newest first, with no link or shared folder. On 2026-11-07 the newest issue was 25 October 2026 (headings
+    11/1, 11/8 and 11/15 are empty). fetch:check 2026-11-07 with provider other: ''No PDF links found
+    on bulletin page''. The embedded file downloads from drive.google.com/uc?export=download&id=<id>.'
 publication_reviews:
 - parish: st-james-elkins-park
   decision: separate
@@ -91,7 +108,7 @@ One church: the Church of the Holy Child at 5200 N. Broad St. The 'Chapel' in th
 
 ## Website and bulletin provider
 
-Google Sites page with embedded Drive file previews. The pipeline can't read it. The page embeds each Sunday as an iframe (`drive.google.com/file/d/<id>/preview`), not as a link, so `page-pdfs` found no PDF (fetch:check `resolve_failed`: 'No PDF links found on bulletin page') and Chrome sees only the iframes. No folder is shared. The row is `no_bulletin` with `bulletin_status: unsupported-format` (settled policy 4): a person can read the bulletin, and this record keeps its evidence for when the resolver or the page changes. The `publication` id is a `url:` with a fragment naming the publisher, since no other identity exists.
+Google Sites page with embedded Drive file previews. The pipeline can't read it. The page embeds each Sunday as an iframe (`drive.google.com/file/d/<id>/preview`), not as a link, so `page-pdfs` found no PDF (fetch:check `resolve_failed`: 'No PDF links found on bulletin page') and Chrome sees only the iframes. No folder is shared. The row is `unsupported` with a `fetch_gap` of kind `drive-preview-embed` and `bulletin_status: unsupported-format` (settled policy 4: kept in the records, left off the site): a person can read the bulletin, and this record keeps its evidence for when the resolver or the page changes. Rechecked 2026-11-07 (hand refresh against main): the newest embedded issue is still 25 October 2026, and `fetch:check` still finds no PDF link. The `publication` id is a `url:` with a fragment naming the publisher, since no other identity exists.
 
 ## Not yet confirmed
 

@@ -1,9 +1,9 @@
 ---
 name: St. Vincent de Paul
 website: https://www.saint-vincent-church.org/
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
-publication: []
+publication: ['url:https://us16.campaign-archive.com/home/?u=3e023a9d5646bd96aafe4420f&id=ac149a954f']
 group: ''
 evidence:
 - url: https://us16.campaign-archive.com/home/?u=3e023a9d5646bd96aafe4420f&id=ac149a954f
@@ -34,8 +34,10 @@ evidence:
     St. 19144, Rev. William J. Chiriaco (Parochial Administrator); ''Merged with St. Francis of Assisi
     and Immaculate Conception: 2012''; no deanery. The eBulletin names Fr. Sy Peterka, CM as pastor, so
     the directory''s pastor line is out of date.'
-revisit: Check whether the parish posts a PDF bulletin or a reader for Mailchimp eBulletins exists
-revisit_after: 2027-01-31
+revisit: When a collector reads Mailchimp campaign archives (pnpm diocese gaps --kind mailchimp-html-newsletter),
+  set the row's provider and recipe, run fetch:check and clear fetch_gap; or switch to other if the parish
+  posts a PDF bulletin.
+revisit_after: 2027-02-01
 research:
 - method: 'Looked for a PDF bulletin: probe url and home-page links on saint-vincent-church.org; the Mailchimp
     eBulletin archive and its latest issue; probe po on the ParishesOnline organization; John Patrick
@@ -47,12 +49,29 @@ research:
   next_action: Read the weekly eBulletin as the bulletin if the pipeline gains an HTML-email reader, or
     find a PDF bulletin if the parish starts posting one (website or John Patrick listing)
   retry_when: The pipeline can read Mailchimp campaign pages, or the parish posts a PDF
+- method: 'Hand refresh against main: probe get on the Mailchimp campaign archive; probe url on saint-vincent-church.org;
+    fetch:check with provider other'
+  url: https://us16.campaign-archive.com/home/?u=3e023a9d5646bd96aafe4420f&id=ac149a954f
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Wait for a collector for Mailchimp HTML newsletters (fetch_gap mailchimp-html-newsletter),
+    or for a PDF bulletin
+  retry_when: pnpm diocese gaps shows a collector for mailchimp-html-newsletter, or the parish posts a
+    PDF
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: mailchimp-html-newsletter
+  seen: 2026-11-07
+  url: https://us16.campaign-archive.com/home/?u=3e023a9d5646bd96aafe4420f&id=ac149a954f
+  note: 'The parish''s weekly bulletin is an HTML Mailchimp email, ''St. Vincent''s <date> eBulletin'',
+    archived each Wednesday on its us16.campaign-archive.com list (newest ''11/04/2026 - St. Vincent''s
+    November 4 eBulletin'' on 2026-11-07). No PDF anywhere; saint-vincent-church.org links no bulletin.
+    fetch:check 2026-11-07 with provider other: ''No bulletin page link found for other provider at https://www.saint-vincent-church.org/''.'
 ---
 
 ## Publisher
 
-St. Vincent de Paul, Germantown (the 2012 merger of St. Vincent de Paul, St. Francis of Assisi and Immaculate Conception) has no PDF bulletin that was found. Its home page links no bulletin; the only Mass publication is a weekly 'eBulletin', an HTML email archived on Mailchimp (28 October 2026 issue read, giving Mass times and the pastor). Its ParishesOnline organization is empty, and the John Patrick listings of the two merged parishes (100 and 185) carry readings only. An HTML email cannot be read by `page-pdfs` or `dated-post`, so the row is `no_bulletin` with `bulletin_status: unsupported-format`, following the Holy Redeemer precedent in this diocese, and it stays off the site until a readable bulletin exists.
+St. Vincent de Paul, Germantown (the 2012 merger of St. Vincent de Paul, St. Francis of Assisi and Immaculate Conception) has no PDF bulletin that was found. Its home page links no bulletin; the only Mass publication is a weekly 'eBulletin', an HTML email archived on Mailchimp (28 October 2026 issue read, giving Mass times and the pastor). Its ParishesOnline organization is empty, and the John Patrick listings of the two merged parishes (100 and 185) carry readings only. An HTML email cannot be read by `page-pdfs` or `dated-post`, so the row is `unsupported` with a `fetch_gap` of kind `mailchimp-html-newsletter` and `bulletin_status: unsupported-format`, kept in the records and off the site (Settled policy 4) until a collector reads it. On 2026-11-07 (hand refresh against main) the archive's newest issue was the 4 November 2026 eBulletin, so the parish publishes weekly.
 
 ## Worship sites
 
@@ -60,7 +79,7 @@ One church, St. Vincent de Paul (109 E. Price St., at Lena St.). The eBulletin's
 
 ## Website and bulletin provider
 
-`no_bulletin`: see Publisher and `research`.
+`unsupported`, with its `fetch_gap`: see Publisher and `research`.
 
 ## Not yet confirmed
 

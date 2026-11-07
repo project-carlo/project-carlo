@@ -55,6 +55,19 @@ research:
   retry_when: A St. Charles bulletin or website page places a Mass at Street Road, or a relegation or
     closure notice names Our Lady of Fatima
   revisit_after: 2027-01-31
+- method: 'Hand refresh against main (reconcile step 3, one more try): St. Charles Borromeo''s 8 November
+    2026 issue (text layer): the masthead still carries ''Our Lady of Fatima Worship Site'' over one Mass
+    schedule that names no place; 2913 Street Rd. appears only as the ''Fatima Catholic Outreach Center''
+    (faith formation office hours, immigration legal consultations at ''Centro Católico Fatima''). Also
+    re-read https://archphila.org/features/parish-planning-initiatives/ (no decree naming it) and searched
+    CatholicPhilly''s REST API for posts since 2026-09-01 by the church''s name (nothing about it).'
+  url: https://www.church-bulletin.org/bulletin/saint-charles-borromeo-parish-bensalem-pa-19020/2026-11-08.pdf
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (see revisit) or read a later bulletin for a Mass line naming the
+    church or a closure notice
+  retry_when: A parish bulletin, the parish's Mass page or a decree or news story names the church's Mass
+    or closure
 ---
 
 ## What is known

@@ -1,7 +1,7 @@
 ---
 name: St. Catherine of Siena Parish
 website: https://stcatherineschurch.org
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://stcatherineschurch.org/news/bulletin']
 group: ''
@@ -25,9 +25,10 @@ evidence:
   seen: 2026-10-28
   note: 'Directory entry: Rev. Joseph F. Rymdeika; 321 Witmer Rd.; website stcatherineschurch.org; Mass
     times Saturday vigil 5 PM, Sunday 7, 9, 11:15 AM, weekdays 9 AM.'
-revisit: Retry fetch:check when the resolver can read Squarespace /file links (or the site stops answering
-  403 to plain downloads); the row then becomes `other` with a page-pdfs recipe on https://stcatherineschurch.org/news/bulletin.
-revisit_after: 2026-12-01
+revisit: When a collector reads browser-only /file links (pnpm diocese gaps --kind squarespace-file-403),
+  set bulletin_provider other with page-pdfs https://stcatherineschurch.org/news/bulletin, run fetch:check
+  and clear fetch_gap once it picks this week's issue.
+revisit_after: 2027-02-01
 research:
 - method: fetch:check with page-pdfs, dated-post, linked-issue-page and redirected-pdf recipes, and with
     no recipe, on https://stcatherineschurch.org/news/bulletin
@@ -45,7 +46,25 @@ research:
   outcome: not-found
   next_action: Look again if the parish moves its bulletin to a listing or provider
   retry_when: The John Patrick listing 117 shows an edition or the site changes provider
+- method: 'Hand refresh against main: visit.py in Chrome on the bulletin page (links matched on /news/bulletin/),
+    probe get on the newest /file link, fetch:check with provider other and page-pdfs https://stcatherineschurch.org/news/bulletin'
+  url: https://stcatherineschurch.org/news/bulletin
+  checked: '2026-11-07'
+  outcome: access-blocked
+  next_action: Wait for a collector that downloads /file links inside the browser session (fetch_gap squarespace-file-403);
+    then switch the row to other with the page-pdfs recipe
+  retry_when: pnpm diocese gaps shows a collector for squarespace-file-403, or the site stops answering
+    403 to plain downloads
 bulletin_status: access-blocked
+fetch_gap:
+  kind: squarespace-file-403
+  seen: 2026-11-07
+  url: https://stcatherineschurch.org/news/bulletin/202-november-8-2026/file
+  note: 'The parish posts each weekly issue on https://stcatherineschurch.org/news/bulletin as a link
+    ending in /file (newest ''November 8, 2026'', 202-november-8-2026/file, read in Chrome 2026-11-07).
+    The site answers HTTP 403 to every plain client, the page and the /file links alike (probe get 2026-11-07);
+    only an in-page fetch() inside a browser session downloads the PDF. fetch:check 2026-11-07 with page-pdfs
+    on the bulletin page: ''No PDF links found on bulletin page''.'
 ---
 
 ## Publisher
@@ -58,7 +77,7 @@ One church, 321 Witmer Rd. The cover's Mass box names one location; the director
 
 ## Website and bulletin provider
 
-The bulletin is real and current, but the pipeline can't fetch it. The site answers HTTP 403 to `probe url` and `probe get`, including for the `/file` issue links; `fetch:check` found no PDF links on the bulletin page or the post pages under any recipe tried (page-pdfs, dated-post, linked-issue-page, redirected-pdf, none). Chrome opens the `/file` URL and an in-page `fetch()` returns the PDF (200, application/pdf), so a collector for Squarespace `/file` links could read it. Until then the row is `no_bulletin` (Settled policy 4: kept in the records, left off the site) with `bulletin_status: access-blocked`.
+The bulletin is real and current, but the pipeline can't fetch it. The site answers HTTP 403 to `probe url` and `probe get`, including for the `/file` issue links; `fetch:check` found no PDF links on the bulletin page or the post pages under any recipe tried (page-pdfs, dated-post, linked-issue-page, redirected-pdf, none). Chrome opens the `/file` URL and an in-page `fetch()` returns the PDF (200, application/pdf), so a collector for Squarespace `/file` links could read it. Until then the row is `unsupported` with a `fetch_gap` of kind `squarespace-file-403` (Settled policy 4: kept in the records, left off the site), with `bulletin_status: access-blocked`. On 2026-11-07 the page listed the 8 November 2026 issue, so the parish is still publishing; `probe get` still got 403 and `fetch:check` with `page-pdfs` still found no PDF link.
 
 ## Not yet confirmed
 

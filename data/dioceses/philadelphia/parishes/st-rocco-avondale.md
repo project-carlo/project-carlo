@@ -31,16 +31,14 @@ evidence:
     Pike''.'
 promoted: 2026-10-29
 research:
-- method: pnpm fetch:check --diocese philadelphia (page-pdfs on schedule.jsp) and probe get of b20261025.pdf
-    / b20261101.pdf
-  url: https://www.stroccochurch.org/schedule.jsp
-  checked: '2026-10-29'
-  outcome: not-found
-  next_action: Rerun pnpm fetch:check --diocese philadelphia --parish st-rocco-avondale and confirm it
-    picks an issue dated within a week; if the site stays two or more weeks behind, record it as a late
-    publisher
-  retry_when: After Sunday 1 November 2026, when the 25 October or 1 November file should be posted
-  revisit_after: 2026-11-03
+- method: 'Hand refresh against main: PLAYWRIGHT_BROWSER_CHANNEL=chrome xvfb-run -a pnpm fetch:check --diocese
+    philadelphia; probe pdf on the picked file (the retry the 2026-10-29 check scheduled for after 1 November,
+    when b20261025.pdf and b20261101.pdf answered 404)'
+  url: https://www.stroccochurch.org/src/en/pdfs/b20261101.pdf
+  checked: '2026-11-07'
+  outcome: found
+  next_action: 'None: fetch picks this week''s issue'
+  retry_when: ''
 ---
 
 ## Publisher
@@ -59,4 +57,4 @@ The bulletin's Mass schedule covers St. Rocco Church (Avondale) and, every Sunda
 
 ## Not yet confirmed
 
-The site posts late. Reconcile's fetch check on 2026-10-29 picked `b20261018.pdf` (18 October 2026, page 1 names Saint Rocco Parish), still the newest file on the Schedules page; `b20261025.pdf` and `b20261101.pdf` both answered 404. Transport, document type and parish identity are fine; freshness is one week behind (within the 14-day threshold). See `research` for the retry.
+The site posts late. Reconcile's fetch check on 2026-10-29 picked `b20261018.pdf` (18 October 2026, page 1 names Saint Rocco Parish), still the newest file on the Schedules page; `b20261025.pdf` and `b20261101.pdf` both answered 404. Transport, document type and parish identity are fine; freshness is one week behind (within the 14-day threshold). The retry on 2026-11-07 (hand refresh against main) picked `b20261101.pdf`, the 1 November 2026 issue, this week's (page 1: 'Saint Rocco Parish, 313 Sunny Dell Road, Avondale'); `b20261108.pdf` was not yet posted (404). The site posts each issue around its Sunday, which fetch handles.

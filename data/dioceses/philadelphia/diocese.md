@@ -622,6 +622,22 @@ Decisions that apply to more than one record, and who made them.
 
 Newest first: date, what was done, and the `pnpm diocese coverage` numbers after it.
 
+- 2026-11-07: Hand refresh against main (PR #174, Run philadelphia-map-1, ~87 commits behind):
+  main merged in, then reconcile and integrate redone by hand under main's rules. Coverage
+  unchanged: `directory` 218/218 accounted for, 205/217 modelled (94%); `gcatholic` 293/293,
+  212/233 (91%); `worship-sites` 29/29, 12/19 (63%); 5 churches in no roster. `coverage --link`
+  added nothing (the stray Eastern ids stay off the Latin records). Four rows that publish a
+  bulletin no collector reads are now `unsupported` with a `fetch_gap`: St. Catherine of
+  Siena, Horsham (`squarespace-file-403`), Our Lady of Hope (`drive-preview-embed`), Holy
+  Redeemer (`html-only-bulletin`) and St. Vincent de Paul (`mailchimp-html-newsletter`); 7
+  rows stay `no_bulletin`. St. Thomas Aquinas, Croydon now reads its John Patrick listing
+  (eCatholic stopped at 25 October). Our Lady of Hope's church is named Church of the Holy
+  Child, as its masthead has it. Open records: the seminary chapel at Ambler excluded
+  `no-public-mass` (its visitor policy), St. Ignatius Nursing Home's chapel added; 9 open.
+  Records: 214 parish rows, 242 churches, 77 exclusions. No merges or moves; audit found no
+  shared publisher account, page, document or id (its unresolved pairs are deanery groups
+  only). Fetch check: 203 rows, all PDFs, all this week's or tomorrow's issue.
+
 - 2026-10-29: Reconcile (job 081, Run philadelphia-map-1) after 59 map batches (usually 2–5
   parishes each, two Eastern Catholic). Coverage: `directory` 218/218 accounted for, 205/217
   modelled (94%); `gcatholic` 293/293, 212/233 (91%); `worship-sites` 29/29, 12/19 (63%); 5

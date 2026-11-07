@@ -1,7 +1,7 @@
 ---
 name: Holy Redeemer Chinese Catholic Church
 website: https://holyredeemerccc.org
-bulletin_provider: no_bulletin
+bulletin_provider: unsupported
 provider_id: ''
 publication: ['url:https://holyredeemerccc.org/category/bulletin/#holy-redeemer']
 group: ''
@@ -59,12 +59,29 @@ research:
     box.'
   retry_when: The organization gains issues, or the church site links church-bulletin.org, ParishesOnline
     or eCatholic
+- method: 'Hand refresh against main: WordPress REST posts list (wp-json/wp/v2/posts) and the newest bulletin
+    post via probe get; fetch:check with provider other on https://holyredeemerccc.org'
+  url: https://holyredeemerccc.org/wp-json/wp/v2/posts?per_page=6&_fields=date,link,title
+  checked: '2026-11-07'
+  outcome: unsupported-format
+  next_action: Wait for a collector for HTML-only bulletins (fetch_gap html-only-bulletin), or for posts
+    to attach a PDF or image
+  retry_when: pnpm diocese gaps shows a collector for html-only-bulletin, a post links a PDF or bulletin
+    image, or the owner decides to file the church under St. John the Evangelist
 bulletin_status: unsupported-format
+fetch_gap:
+  kind: html-only-bulletin
+  seen: 2026-11-07
+  url: https://holyredeemerccc.org/2026/10/09/october-11-2026/
+  note: 'The church posts its bulletin as a WordPress post in the ''Bulletin'' category of holyredeemerccc.org
+    (readings and announcements as HTML text, no PDF or image), irregularly: the REST posts list on 2026-11-07
+    has ''October 11, 2026'' (posted 2026-10-09) newest, after four August-September issues posted together
+    on 2026-09-11. fetch:check 2026-11-07 with provider other: ''No PDF links found on bulletin page''.'
 ---
 
 ## Publisher
 
-Holy Redeemer Chinese Catholic Church (915 Vine St., Chinatown) keeps its own website, holyredeemerccc.org, and posts a weekly 'Bulletin' there as an HTML page (readings and announcements, no PDF). The newest is 11 October 2026, two Sundays behind. The pipeline reads PDFs and images, so the row is `no_bulletin` with `bulletin_status: unsupported-format`, kept in the records and off the site until a readable bulletin appears.
+Holy Redeemer Chinese Catholic Church (915 Vine St., Chinatown) keeps its own website, holyredeemerccc.org, and posts a weekly 'Bulletin' there as an HTML page (readings and announcements, no PDF). The newest is 11 October 2026 (still the newest on 2026-11-07); posts come irregularly, four August-September issues having been posted together on 2026-09-11. No collector reads an HTML-only bulletin, so the row is `unsupported` with a `fetch_gap` of kind `html-only-bulletin` and `bulletin_status: unsupported-format`, kept in the records and off the site (Settled policy 4) until a collector or a PDF appears. (It was `no_bulletin` until the hand refresh against main on 2026-11-07, when `unsupported` became the provider for a bulletin that is published but can't be collected.)
 
 ## One bulletin or several?
 

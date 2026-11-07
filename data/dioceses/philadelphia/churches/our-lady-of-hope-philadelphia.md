@@ -1,6 +1,6 @@
 ---
 parish: our-lady-of-hope-philadelphia
-name: Our Lady of Hope Church
+name: Church of the Holy Child
 line1: 5200 North Broad Street
 line2: ''
 city: Philadelphia
@@ -42,4 +42,4 @@ Yes. The 25 October 2026 bulletin and the parish home page give Saturday 4:00 PM
 
 ## Name and address
 
-The address 5200 N. Broad St. agrees across the bulletin, the parish site, the directory and GCatholic. The name does not: the parish is Our Lady of Hope (formed from a merger; GCatholic and the directory), but its bulletin and site call the church 'Church of the Holy Child', quoting canon 1218 that the church keeps its title. I kept 'Our Lady of Hope Church', the roster name, and left `name_verified` false until the owner says which name the site should show. Coordinates are GCatholic's Plus Code; Nominatim found no named node for the church.
+The address 5200 N. Broad St. agrees across the bulletin, the parish site, the directory and GCatholic. The name does not: the parish is Our Lady of Hope (formed from a merger; GCatholic and the directory), but its bulletin and site call the church 'Church of the Holy Child', quoting canon 1218 that the church keeps its title. Following the README (use what the parish calls the building, and keep the roster's name in the roster link), the row is named 'Church of the Holy Child', from the masthead and the parish site (hand refresh against main, 2026-11-07; the map batch had kept the roster name). `name_verified` stays false: the bulletin and the site are one source, and GCatholic and the directory give the parish's name instead. Coordinates are GCatholic's Plus Code; Nominatim found no named node for the church.

@@ -65,6 +65,18 @@ research:
     relegation decrees again
   retry_when: A bulletin, decree or CatholicPhilly story names the building, or the parish office answers
   revisit_after: 2027-01-31
+- method: 'Hand refresh against main (reconcile step 3, one more try): Holy Innocents'' 1 November 2026
+    issue (the newest on its bulletin page on 2026-11-07; text layer on 11 of 12 pages) grepped for ''Joachim''
+    and ''Griscom'': no match. Also re-read https://archphila.org/features/parish-planning-initiatives/
+    (no decree naming it) and searched CatholicPhilly''s REST API for posts since 2026-09-01 by the church''s
+    name (nothing about it).'
+  url: https://www.holyinnocentsrc.org/s/2026_11_01.pdf
+  checked: '2026-11-07'
+  outcome: not-found
+  next_action: Ask the parish office (see revisit) or read a later bulletin for a Mass line naming the
+    church or a closure notice
+  retry_when: A parish bulletin, the parish's Mass page or a decree or news story names the church's Mass
+    or closure
 ---
 
 ## What is known
