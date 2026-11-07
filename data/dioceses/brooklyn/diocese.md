@@ -205,6 +205,7 @@ Lessons map jobs reported, as written, for the next `integrate` to merge into *B
 - Tilma sites can repost a John Patrick Publishing issue as '<id>-<Parish> MM-DD-YYYY.pdf' (page-8 footer '<id> <Parish>, Brooklyn, NY (B)' and 'John Patrick Publishing Company'), with no jppc.net link: record other with page-pdfs https://church-bulletin.org/<id>, which posts each issue days before the Tilma page does.
 - A Tilma webstudio /bulletins page whose Bulletins collection is empty (totalCount 0) can still show cards from an embedded ParishesOnline widget (publicationWidget?type=bulletin&id=<lpi id>): tools/frames-requests.py lists the iframe, and probe po <lpi id> gives the parishes_online row.
 - Diocesan WordPress-multisite sites can repost an LPi issue with its ad pages cut (no 04-NNNN footer left, only '©LPi' on the cover art); the ParishesOnline org may have no zip suffix (st-saviour-church), so try probe po <name>-church as well as <name>-church-<zip>.
+- A ParishesOnline org slug can be a shortened parish name (Holy Name of Jesus is holy-name-church-11215): when <full-name>-church-<zip> is empty, try dropping the 'of <...>' part; WordPress reposts named '<...>-Account-03-NNNN.pdf' give the container number directly.
 
 ## Rules settled for this diocese
 
